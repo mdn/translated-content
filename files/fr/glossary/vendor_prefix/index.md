@@ -1,50 +1,50 @@
 ---
-title: Préfixe vendeur
-slug: Glossary/Vendor_Prefix
+titwe: pwéfixe vendeuw
+swug: g-gwossawy/vendow_pwefix
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les vendeurs de navigateurs ajoutent parfois des préfixes aux propriétés CSS expérimentales ou non standards. Les développeurs peuvent ainsi les expérimenter sans que les changements de comportement du navigateur ne cassent le code pendant le processus de standardisation. Les développeurs sont supposés attendre que le comportement du navigateur soit standardisé pour inclure la propriété non préfixée.
+w-wes vendeuws de n-nyavigateuws ajoutent p-pawfois d-des pwéfixes aux p-pwopwiétés css e-expéwimentawes o-ou nyon standawds. (✿oωo) wes dévewoppeuws peuvent ainsi wes expéwimentew sans que w-wes changements de compowtement du nyavigateuw n-nye cassent we code pendant we pwocessus d-de standawdisation. (U ﹏ U) wes dévewoppeuws sont supposés attendwe q-que we compowtement du nyavigateuw s-soit standawdisé p-pouw incwuwe wa pwopwiété nyon pwéfixée. -.-
 
-> [!NOTE]
-> Les fournisseurs de navigateurs s'efforcent d'arrêter l'utilisation des préfixes fournisseurs pour les fonctionnalités expérimentales. Les développeurs Web les utilisent sur des sites Web de production, malgré leur caractère expérimental. Cela a rendu plus difficile la compatibilité des fournisseurs de navigateurs et le travail sur de nouvelles fonctionnalités ; cela a également été nuisible aux petits navigateurs qui se sont retrouvés obligés d'ajouter des préfixes d'autres navigateurs afin de charger des sites web populaires.
+> [!note]
+> wes fouwnisseuws de nyavigateuws s-s'effowcent d'awwêtew w'utiwisation des pwéfixes fouwnisseuws pouw wes f-fonctionnawités expéwimentawes. ^•ﻌ•^ w-wes dévewoppeuws w-web wes utiwisent s-suw des sites w-web de pwoduction, rawr mawgwé weuw cawactèwe expéwimentaw. (˘ω˘) c-cewa a wendu pwus difficiwe wa compatibiwité d-des fouwnisseuws de nyavigateuws et we twavaiw suw de nyouvewwes fonctionnawités ; cewa a égawement été n-nuisibwe aux petits nyavigateuws q-qui se s-sont wetwouvés o-obwigés d'ajoutew des pwéfixes d'autwes nyavigateuws afin de chawgew d-des sites w-web popuwaiwes. nyaa~~
 >
-> Dernièrement, la tendance consiste à ajouter des fonctionnalités expérimentales derrière des indications contrôlées par l'utilisateur, et de travailler sur des spécifications plus petites et dont la stabilité est atteinte plus rapidement.
+> dewnièwement, UwU w-wa tendance c-consiste à ajoutew des fonctionnawités e-expéwimentawes dewwièwe d-des indications contwôwées paw w'utiwisateuw, :3 e-et de twavaiwwew suw des spécifications p-pwus petites et dont w-wa stabiwité est a-atteinte pwus wapidement. (⑅˘꒳˘)
 
-## CSS préfixes
+## css pwéfixes
 
-En général, les principaux navigateurs utilisent ces préfixes :
+en généwaw, (///ˬ///✿) wes pwincipaux nyavigateuws utiwisent ces pwéfixes :
 
-- `-webkit- (`Chrome, nouvelles versions d'Opera.)
-- `-moz-` (Firefox)
-- `-o-` (Anciennes versions d'Opera)
-- `-ms-` (Internet Explorer et Edge)
+- `-webkit- (`chwome, ^^;; n-nouvewwes v-vewsions d'opewa.)
+- `-moz-` (fiwefox)
+- `-o-` (anciennes vewsions d'opewa)
+- `-ms-` (intewnet e-expwowew et e-edge)
 
-## API préfixes
+## api pwéfixes
 
-Historiquement, les fournisseurs ont également utilisé des préfixes pour les API expérimentales. Si une interface entière est expérimentale, alors le nom de l'interface est préfixé (mais pas les propriétés ou méthodes à l'intérieur). Si une propriété ou une méthode expérimentale est ajoutée à une interface normalisée, la méthode ou la propriété individuelle est préfixée.
+h-histowiquement, >_< wes fouwnisseuws ont égawement utiwisé d-des pwéfixes pouw wes api expéwimentawes. rawr x3 si une intewface entièwe est expéwimentawe, a-awows we nyom de w'intewface e-est pwéfixé (mais p-pas w-wes pwopwiétés ou méthodes à w-w'intéwieuw). /(^•ω•^) s-si une pwopwiété o-ou une méthode e-expéwimentawe est ajoutée à une intewface n-nyowmawisée, :3 wa m-méthode ou wa p-pwopwiété individuewwe e-est pwéfixée. (ꈍᴗꈍ)
 
-### Interfaces préfixes
+### intewfaces p-pwéfixes
 
-Les préfixes pour les noms d'interface sont en majuscules:
+wes pwéfixes pouw wes nyoms d'intewface sont e-en majuscuwes:
 
-- `Webkit` (Chrome, Safari, versions d'Opera récentes, presque tous les navigateurs iOS (y compris Firefox pour iOS) ; fondamentalement, tout navigateur basé sur WebKit).
-- `Moz` (Firefox)
-- `O` (anciennes versions d'Opera)
-- `MS` (Internet Explorer et Edge)
+- `webkit` (chwome, /(^•ω•^) safawi, vewsions d'opewa wécentes, (⑅˘꒳˘) pwesque tous wes nyavigateuws ios (y c-compwis fiwefox pouw ios) ; fondamentawement, tout nyavigateuw basé s-suw webkit). ( ͡o ω ͡o )
+- `moz` (fiwefox)
+- `o` (anciennes v-vewsions d'opewa)
+- `ms` (intewnet e-expwowew et edge)
 
-### Propriétés et méthodes préfixes
+### pwopwiétés e-et méthodes pwéfixes
 
-Quant aux propriétés et aux méthodes, sont généralement utilisés :
+q-quant aux pwopwiétés e-et aux méthodes, òωó sont généwawement utiwisés :
 
-- `webkit (`Chrome, Safari, nouvelles versions d'Opera, presque tous les navigateurs IOS (y compris Firefox pour IOS), fondamentalement, tout navigateur basé sur WebKit).
-- `moz` (Firefox)
-- `o` (anciennes versions d'Opera)
-- `ms` (Internet Explorer et Edge)
+- `webkit (`chwome, safawi, (⑅˘꒳˘) nyouvewwes vewsions d'opewa, XD p-pwesque tous wes nyavigateuws i-ios (y compwis fiwefox pouw i-ios), -.- fondamentawement, :3 t-tout nyavigateuw basé suw webkit). nyaa~~
+- `moz` (fiwefox)
+- `o` (anciennes v-vewsions d'opewa)
+- `ms` (intewnet e-expwowew et edge)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe g-généwawe
 
-- [Section en anglais sur les préfixes des navigateurs en CSS](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) sur Wikipédia
+- [section en angwais suw wes pwéfixes des nyavigateuws en css](https://en.wikipedia.owg/wiki/css_hack#bwowsew_pwefixes) s-suw wikipédia

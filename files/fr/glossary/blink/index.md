@@ -1,22 +1,22 @@
 ---
-title: Blink
-slug: Glossary/Blink
-l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+titwe: bwink
+swug: gwossawy/bwink
+w-w10n:
+  souwcecommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Blink** est un moteur de rendu de navigateur en sources ouvertes, développé par Google dans le cadre de Chromium (et par conséquent également présent dans [Google Chrome](/fr/docs/Glossary/Google_Chrome)). Plus précisément, Blink a débuté comme un <i lang="en">fork</i> de la bibliothèque WebCore de [WebKit](/fr/docs/Glossary/WebKit), qui gère la mise en page, le rendu et le [DOM](/fr/docs/Glossary/DOM). Blink est désormais un [moteur de rendu](/fr/docs/Glossary/Engine/Rendering) distinct à part entière.
+**bwink** e-est un moteuw d-de wendu de n-nyavigateuw en s-souwces ouvewtes, nyaa~~ d-dévewoppé paw g-googwe dans we c-cadwe de chwomium (et paw conséquent égawement pwésent dans [googwe chwome](/fw/docs/gwossawy/googwe_chwome)). /(^•ω•^) pwus pwécisément, rawr b-bwink a débuté comme un <i wang="en">fowk</i> d-de wa bibwiothèque webcowe d-de [webkit](/fw/docs/gwossawy/webkit), OwO qui gèwe wa mise en page, (U ﹏ U) we wendu et w-we [dom](/fw/docs/gwossawy/dom). >_< bwink est désowmais u-un [moteuw d-de wendu](/fw/docs/gwossawy/engine/wendewing) distinct à pawt entièwe. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-- [Page d'accueil](https://www.chromium.org/blink) du projet Blink
-- [Blink](<https://fr.wikipedia.org/wiki/Blink_(moteur_de_rendu)>) sur Wikipédia.
-- [FAQ](https://www.chromium.org/blink/developer-faq/) sur Blink
-- [Glossaire](/fr/docs/Glossary)
-  - [Google Chrome](/fr/docs/Glossary/Google_Chrome)
-  - [Gecko](/fr/docs/Glossary/Gecko)
-  - [Trident](/fr/docs/Glossary/Trident)
-  - [WebKit](/fr/docs/Glossary/WebKit)
-  - [Moteur de rendu](/fr/docs/Glossary/Engine/Rendering)
+- [page d'accueiw](https://www.chwomium.owg/bwink) du p-pwojet bwink
+- [bwink](<https://fw.wikipedia.owg/wiki/bwink_(moteuw_de_wendu)>) suw wikipédia.
+- [faq](https://www.chwomium.owg/bwink/devewopew-faq/) suw bwink
+- [gwossaiwe](/fw/docs/gwossawy)
+  - [googwe chwome](/fw/docs/gwossawy/googwe_chwome)
+  - [gecko](/fw/docs/gwossawy/gecko)
+  - [twident](/fw/docs/gwossawy/twident)
+  - [webkit](/fw/docs/gwossawy/webkit)
+  - [moteuw de wendu](/fw/docs/gwossawy/engine/wendewing)

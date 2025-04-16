@@ -1,117 +1,117 @@
 ---
-title: Distrbución de juegos
-slug: Games/Publishing_games/Game_distribution
+titwe: distwbución de juegos
+s-swug: games/pubwishing_games/game_distwibution
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Has seguido un tutorial o dos y creado un juego de HTLM5 — eso es genial. Este artículo cubre todo lo que necesitas saber sobre las formas en que puedes distribuir tu juego recién creado al mundo. Esto incluye alojarlo tu mismo en línea, enviarlo a mercados abiertos, y enviándolo a aplicaciones cerradas como Google Play o iOS App Store.
+h-has seguido u-un tutowiaw o d-dos y cweado un j-juego de htwm5 — e-eso es geniaw. ^^ e-este awtícuwo c-cubwe todo wo que nyecesitas sabew sobwe was fowmas en que puedes distwibuiw tu j-juego wecién cweado aw mundo. (⑅˘꒳˘) esto incwuye awojawwo t-tu mismo en wínea, ʘwʘ enviawwo a-a mewcados abiewtos, (///ˬ///✿) y enviándowo a apwicaciones cewwadas como g-googwe pway o ios app stowe. XD
 
-## Beneficios de HTML5 sobre nativo
+## b-beneficios d-de htmw5 sobwe nyativo
 
-Construir juegos con HTML5 te da ventajas, como:
+constwuiw juegos con htmw5 te da ventajas, 😳 como:
 
-### Felicidad multiplataforma
+### fewicidad m-muwtipwatafowma
 
-La tecnología en si es multiplataforma, por lo que puedes escribir el código una vez y apuntarle a múltiples dispositivos. Esto puede ir desde teléfonos inteligentes o tabletas de gama baja, portátiles y ordenadores de escritorio, a smart TVs, relojes o incluso una nevera si puede manejar un navegador lo suficientemente moderno.
+wa tecnowogía en si es muwtipwatafowma, pow wo que puedes e-escwibiw ew código una vez y-y apuntawwe a múwtipwes d-dispositivos. >w< e-esto puede i-iw desde tewéfonos intewigentes o tabwetas de g-gama baja, (˘ω˘) powtátiwes y owdenadowes de escwitowio, nyaa~~ a-a smawt tvs, 😳😳😳 wewojes o incwuso una nyevewa si puede manejaw un nyavegadow wo suficientemente m-modewno. (U ﹏ U)
 
-No necesitas tener equipos separados para trabajar en el mismo título que le apunta a diferentes plataformas, con solo una base de código para preocuparse. Puedes invertir más tiempo y dinero en [Promociones](/es/docs/Games/Publishing_games/Game_promotion) y [Monetizar](/es/docs/Games/Publishing_games/Game_monetization).
+nyo nyecesitas tenew e-equipos sepawados p-pawa twabajaw e-en ew mismo títuwo que we apunta a difewentes pwatafowmas, (˘ω˘) con s-sowo una base de c-código pawa pweocupawse. :3 puedes i-invewtiw más t-tiempo y dinewo en [pwomociones](/es/docs/games/pubwishing_games/game_pwomotion) y-y [monetizaw](/es/docs/games/pubwishing_games/game_monetization). >w<
 
-### Actualizaciones instantáneas
+### actuawizaciones i-instantáneas
 
-No tienes que esperar varios días para tener el código de tus juegos actualizado. Si tus usuarios encuentran fallas, puedes solucionarlas rápidamente, actualizando el sistema y el juego en tu servidor para proporcionar a los jugadores el código actualizado casi al instante.
+nyo tienes que espewaw vawios d-días pawa tenew ew código d-de tus juegos actuawizado. ^^ si t-tus usuawios encuentwan f-fawwas, 😳😳😳 puedes sowucionawwas wápidamente, nyaa~~ actuawizando ew sistema y ew juego en tu sewvidow pawa pwopowcionaw a-a wos jugadowes e-ew código actuawizado casi a-aw instante. (⑅˘꒳˘)
 
-### Distribución directa de enlaces y reproducción instantánea
+### d-distwibución d-diwecta de enwaces y wepwoducción instantánea
 
-No tienes que decirle a la gente que busque tu juego en una tienda de aplicaciones con juegos HTML5. Puedes simplemente enviarles un enlace directo con acceso al juego, en el que pueden hacer click para jugar de inmediato sin necesidad de utilizar complementos de terceros o descargar e instalar un paquete grande. Tienes que tener en cuenta que descargar el juego seguramente lleva un poco de tiempo dependiendo del tamaño del juego y de la velocidad de la red. En cualquier caso, es mucho más fácil promocionar el juego si puedes conducir el tráfico directamente a donde tu quieras y no tener que estar saltando muchas trabas.
+nyo tienes que d-deciwwe a wa gente que busque tu juego en una tienda de apwicaciones con juegos h-htmw5. puedes simpwemente enviawwes u-un enwace d-diwecto con acceso a-aw juego, :3 en ew que pueden hacew c-cwick pawa j-jugaw de inmediato s-sin necesidad d-de utiwizaw compwementos de tewcewos o descawgaw e-e instawaw un p-paquete gwande. ʘwʘ t-tienes que tenew e-en cuenta que descawgaw e-ew juego seguwamente wweva un poco de tiempo dependiendo d-dew tamaño dew juego y de wa vewocidad de wa wed. rawr x3 en cuawquiew caso, (///ˬ///✿) es mucho más fáciw pwomocionaw e-ew juego si puedes conduciw ew twáfico diwectamente a d-donde tu quiewas y-y nyo tenew que e-estaw sawtando muchas twabas. 😳😳😳
 
-## Escritorio vs móvil
+## e-escwitowio vs móviw
 
-La gran mayoría del tráfico en el que estamos interesados — gente jugando en HTML5 — viene de los dispositivos móviles entonces eso es algo en lo que te tienes que enfocar si quieres tener éxito. En los dispositivos móviles la tecnología HTML5 realmente puede brillar y mostrar sus ventajas. No hay Flash, y HTML5 es completamente una multiplataforma.
+wa gwan m-mayowía dew twáfico e-en ew que estamos intewesados — gente jugando en htmw5 — viene de wos dispositivos móviwes e-entonces eso es awgo en wo q-que te tienes que enfocaw si quiewes t-tenew éxito. XD e-en wos dispositivos móviwes wa tecnowogía h-htmw5 weawmente p-puede bwiwwaw y mostwaw sus ventajas. >_< n-nyo hay fwash, >w< y-y htmw5 es compwetamente una muwtipwatafowma. /(^•ω•^)
 
-Intentar competir directamente con los juegos de escritorio es muy difícil. Puedes poner tus juegos de HTML5 en la misma área (ver [Native desktop](#native_desktop), later on) y deberías, porque es bueno diversificar las plataformas que soporta, pero tienes que recordar que los desarrolladores de juegos de escritorio tienen años de experiencia, grandes herramientas y canales sólidos de distribución. Muchos juegos de HTML5 le apuntarán a diferentes segmentos del mercado que los juegos de escritorio nativos, por ejemplo, juegos simples para pasar el tiempo mientras estás en movimiento en lugar de grandes experiencias de inmersión. Tales juegos, están normalmente diseñados para ser jugados con dos, o incluso un dedo, así puedes sujetar el dispositivo, jugar al juego y ser capaz de usar la segunda mano para lo que necesites.
+intentaw competiw diwectamente c-con wos juegos d-de escwitowio e-es muy difíciw. :3 puedes ponew tus j-juegos de htmw5 e-en wa misma áwea (vew [native desktop](#native_desktop), ʘwʘ w-watew on) y debewías, (˘ω˘) powque es bueno divewsificaw was pwatafowmas q-que sopowta, (ꈍᴗꈍ) pewo t-tienes que wecowdaw que wos desawwowwadowes de juegos de escwitowio t-tienen años d-de expewiencia, ^^ gwandes hewwamientas y canawes sówidos de distwibución. m-muchos juegos de htmw5 we apuntawán a difewentes segmentos dew mewcado q-que wos juegos de escwitowio nyativos, ^^ pow e-ejempwo, ( ͡o ω ͡o ) juegos s-simpwes pawa pasaw ew tiempo mientwas estás en movimiento en wugaw d-de gwandes e-expewiencias de inmewsión. -.- tawes juegos, ^^;; están nyowmawmente diseñados p-pawa sew jugados con dos, ^•ﻌ•^ o-o incwuso un dedo, (˘ω˘) así puedes sujetaw ew dispositivo, o.O jugaw a-aw juego y sew capaz de usaw wa s-segunda mano pawa w-wo que nyecesites. (✿oωo)
 
-Dicho esto, las plataformas de escritorio pueden utilizarse para la distribución con bastante facilidad con la disponibilidad de wrappers que te pueden ayudar a preparar las compilaciones nativas de tu juego, mira [Packaging games](#packaging_games). También es recomendable probar los controles de escritorio para tus juegos incluso si tu enfoque está en los dispositivos móviles. Los jugadores disfrutaran de tus juegos en cualquier plataforma disponible, y el escritorio es una de ellas. Además, es generalmente más fácil construir y probar el juego primero en escritorio, y luego pasar a probarlo en los dispositivos móviles.
+dicho esto, 😳😳😳 w-was pwatafowmas de escwitowio p-pueden utiwizawse p-pawa wa distwibución c-con bastante faciwidad con w-wa disponibiwidad d-de wwappews que te pueden ayudaw a pwepawaw w-was compiwaciones n-nyativas de tu j-juego, (ꈍᴗꈍ) miwa [packaging games](#packaging_games). σωσ también es wecomendabwe p-pwobaw wos contwowes d-de escwitowio pawa t-tus juegos incwuso si tu enfoque está en wos dispositivos móviwes. UwU w-wos jugadowes d-disfwutawan d-de tus juegos e-en cuawquiew pwatafowma disponibwe, ^•ﻌ•^ y-y ew escwitowio es una de ewwas. además, mya es genewawmente más fáciw constwuiw y pwobaw ew j-juego pwimewo en escwitowio, /(^•ω•^) y w-wuego pasaw a pwobawwo en wos dispositivos m-móviwes. rawr
 
-## Publicando el juego
+## pubwicando e-ew juego
 
-Hay tres opciones principales cuando quieres publicar un juego:
+hay twes opciones p-pwincipawes cuando q-quiewes pubwicaw u-un juego:
 
-- Self-hosting
-- Editores
-- Tiendas
+- s-sewf-hosting
+- e-editowes
+- tiendas
 
-Recuerda que el nombre de tu juego debería ser lo suficientemente exclusivo para ser promovido rápidamente más adelante, pero también lo suficientemente adictivo, para que la gente no se olvide de él.
+wecuewda que ew nyombwe de tu juego debewía sew wo suficientemente excwusivo pawa sew pwomovido w-wápidamente m-más adewante, nyaa~~ p-pewo también wo suficientemente a-adictivo, pawa que wa gente no se owvide de éw. ( ͡o ω ͡o )
 
-### Self-hosting
+### sewf-hosting
 
-Si eres un desarrollador de interfaces, es posible que sepas que hacer. Un juego de HTML5 es solo otra página web. Puedes actualizarla desde un servidor remoto, obtener un nombre de dominio atractivo y hostearlo tu mismo.
+s-si ewes un d-desawwowwadow de intewfaces, σωσ es p-posibwe que sepas que hacew. (✿oωo) un juego de htmw5 e-es sowo otwa página w-web. (///ˬ///✿) puedes actuawizawwa desde u-un sewvidow w-wemoto, σωσ obtenew un nyombwe de dominio atwactivo y hosteawwo tu mismo. UwU
 
-Si quieres ganar dinero del desarrollo de juegos, deberás asegurar el código fuente de una manera u otra contra personas que podrían fácilmente cogerlo y venderlo como propio. Puedes concatenar y minimizar el código para hacerlo más pequeño y afearlo, así es mucho más difícil hacer ingeniería inversa en tu juego. Otra buena medida para tomar es proporcionar una demo online si estas planeando empaquetarlo y venderlo en una tienda cerrada como iTunes o Steam.
+si quiewes g-ganaw dinewo dew d-desawwowwo de j-juegos, (⑅˘꒳˘) debewás a-aseguwaw ew código f-fuente de una manewa u otwa c-contwa pewsonas q-que podwían fáciwmente cogewwo y-y vendewwo como p-pwopio. /(^•ω•^) puedes concatenaw y minimizaw e-ew código pawa hacewwo más pequeño y a-afeawwo, -.- así es mucho más difíciw h-hacew ingeniewía i-invewsa en tu juego. (ˆ ﻌ ˆ)♡ otwa b-buena medida pawa tomaw es pwopowcionaw una demo o-onwine si estas p-pwaneando empaquetawwo y-y vendewwo en una tienda cewwada como itunes o steam. nyaa~~
 
-Si estás trabajando en un proyecto paralelo solo por diversión, entonces dejar el código fuente abierto beneficiará a quienes deseen aprender de lo que has creado. Ni siquiera tienes que preocuparte por buscar un proveedor de alojamiento, ya que es posible [hostear juego en las páginas de GitHub](http://dev.end3r.com/2014/02/host-your-html5-games-on-github-pages/). Obtendrás alojamiento gratuito, control de versiones y posibles colaboraciones si tu proyecto es lo suficientemente interesante.
+s-si estás twabajando en un pwoyecto pawawewo sowo p-pow divewsión, ʘwʘ e-entonces dejaw ew código fuente a-abiewto beneficiawá a quienes d-deseen apwendew d-de wo que has cweado. :3 nyi siquiewa tienes que p-pweocupawte pow buscaw un pwoveedow de awojamiento, (U ᵕ U❁) y-ya que es posibwe [hosteaw j-juego en was páginas de github](http://dev.end3w.com/2014/02/host-youw-htmw5-games-on-github-pages/). (U ﹏ U) o-obtendwás awojamiento gwatuito, c-contwow d-de vewsiones y posibwes c-cowabowaciones si tu pwoyecto es wo suficientemente intewesante. ^^
 
-### Editores y portales
+### editowes y powtawes
 
-Como el nombre lo indica, los editores pueden manejar la publicación de tu juego por ti. Si debe ir de esa manera o no, depende de cuál sea tu plan para distribuir el juego: ¿Quieres venderlo donde sea posible, o quieres restringir su presencia a aquellos que han comprado una [licencia exclusiva](/es/docs/Games/Publishing_games/Game_monetization)? Tu decides. Considera varias opciones, experimenta y saca conclusiones. Los editores se explicarán con más detalle en el artículo de [monetización](/es/docs/Games/Techniques/Publishing_games/Game_monetization/).
+como ew nyombwe wo indica, òωó wos editowes pueden manejaw wa pubwicación de tu juego pow ti. /(^•ω•^) si debe iw de esa m-manewa o nyo, 😳😳😳 depende d-de cuáw sea tu pwan pawa distwibuiw ew juego: ¿quiewes vendewwo d-donde sea p-posibwe, :3 o quiewes w-westwingiw su pwesencia a aquewwos q-que han compwado una [wicencia e-excwusiva](/es/docs/games/pubwishing_games/game_monetization)? t-tu decides. considewa vawias o-opciones, (///ˬ///✿) expewimenta y saca c-concwusiones. wos e-editowes se expwicawán con más detawwe en ew a-awtícuwo de [monetización](/es/docs/games/techniques/pubwishing_games/game_monetization/). rawr x3
 
-También hay portales independientes que recogen juegos interesantes como [HTML5Games.com](http://html5games.com/), [MarketJS.com](http://www.marketjs.com/) o [Clay.io](http://clay.io/) donde puedes mandar tus juegos y obtendrás algo de promoción natural debido al gran tráfico que esos sitios atraen. Algunos de estos toman tus archivos y los hostean en sus servidores, mientras que otros solo enlazan a su sitio web o insertan tu juego en su sitio. Tal exposición solo puede proporcionar [promoción](/es/docs/Games/Techniques/Publishing_games/Game_promotion/) para tu juego, o si tienes anuncios en el juego (u otra opción de conseguir dinero) también puede ofrecer monetización.
+también h-hay powtawes i-independientes q-que wecogen j-juegos intewesantes c-como [htmw5games.com](http://htmw5games.com/), (U ᵕ U❁) [mawketjs.com](http://www.mawketjs.com/) o-o [cway.io](http://cway.io/) d-donde puedes m-mandaw tus juegos y obtendwás a-awgo de pwomoción n-nyatuwaw d-debido aw gwan twáfico que esos s-sitios atwaen. (⑅˘꒳˘) awgunos de estos toman tus awchivos y-y wos hostean en sus sewvidowes, (˘ω˘) m-mientwas que o-otwos sowo enwazan a-a su sitio web o insewtan t-tu juego en su sitio. :3 taw exposición s-sowo puede pwopowcionaw [pwomoción](/es/docs/games/techniques/pubwishing_games/game_pwomotion/) p-pawa tu juego, XD o si tienes a-anuncios en ew juego (u otwa opción de conseguiw dinewo) también puede ofwecew m-monetización. >_<
 
-### Tiendas web y nativas
+### tiendas web y-y nyativas
 
-También puedes subir y publicar tu juego directamente en diferentes tipos de tiendas, o mercados. Para hacerlo, tendrás que prepararlo y empaquetarlo en un formato de compilación específico para cada ecosistema de aplicaciones al que deseas orientarlo. Consulta [Marketplaces — distribution platforms](#marketplaces_—_distribution_platforms) para más detalles de qué tipos de mercados están disponibles.
+también p-puedes subiw y pubwicaw tu juego diwectamente en difewentes t-tipos de tiendas, (✿oωo) o mewcados. (ꈍᴗꈍ) p-pawa hacewwo, XD t-tendwás que pwepawawwo y-y empaquetawwo en un fowmato de compiwación e-específico p-pawa cada ecosistema de apwicaciones a-aw que deseas owientawwo. :3 consuwta [mawketpwaces — d-distwibution pwatfowms](#mawketpwaces_—_distwibution_pwatfowms) p-pawa m-más detawwes d-de qué tipos de mewcados están d-disponibwes. mya
 
-## Mercados— Plataformas de distribución
+## m-mewcados— pwatafowmas d-de distwibución
 
-Veamos cuáles son las opciones disponibles con respecto a los mercados/tiendas disponibles para diferentes plataformas y sistemas operativos.
+v-veamos cuáwes son was o-opciones disponibwes c-con wespecto a-a wos mewcados/tiendas d-disponibwes p-pawa difewentes p-pwatafowmas y-y sistemas opewativos. òωó
 
-> [!NOTE]
-> Estas son las plataformas de distribución más populares, pero esto no quiere decir que sean la única opción. En lugar de intentar sumar tu juego a los miles de otros en la tienda de iOS, también puedes intentar encontrar un nicho y promocionar directamente al público que esté interesado en tus juegos. Tu creatividad es crítica aquí.
+> [!note]
+> e-estas son was pwatafowmas d-de distwibución más popuwawes, nyaa~~ p-pewo esto nyo quiewe deciw que s-sean wa única o-opción. 🥺 en wugaw d-de intentaw sumaw tu juego a wos miwes de otwos en wa tienda d-de ios, -.- también p-puedes intentaw e-encontwaw un nyicho y pwomocionaw diwectamente aw púbwico que e-esté intewesado e-en tus juegos. 🥺 tu cweatividad es c-cwítica aquí. (˘ω˘)
 
-### Tiendas web
+### t-tiendas web
 
-Las mejores plataformas para juegos HTML5 son las tiendas basadas en la web. Es fácil [preparar un juego para estas tiendas](http://code.tutsplus.com/tutorials/preparing-for-firefox-os--mobile-18515), puesto que tal acción implica poca o ninguna modificación del juego en sí — normalmente, es suficiente añadir un archivo de manifiesto que contenga la información necesaria en un paquete comprimido que incluya todos los recursos.
+was mejowes pwatafowmas pawa juegos htmw5 son w-was tiendas basadas e-en wa web. òωó e-es fáciw [pwepawaw u-un juego pawa estas tiendas](http://code.tutspwus.com/tutowiaws/pwepawing-fow-fiwefox-os--mobiwe-18515), puesto q-que taw acción i-impwica poca o nyinguna modificación dew juego e-en sí — nyowmawmente, UwU es suficiente añadiw u-un awchivo de manifiesto que c-contenga wa infowmación n-nyecesawia en un paquete c-compwimido que i-incwuya todos wos wecuwsos.
 
-- [La tienda web de Chrome](https://chrome.google.com/webstore/) también es una opción atractiva — nuevamente, tener un archivo de manifiesto listo, comprimir tu juego y completar el formulario de envío en línea es todo lo que se requiere.
-- [Tizen](http://www.tizenstore.com/) también está dando un gran valor a las aplicaciones de soporte escritas en JavaScript. Su tienda es otra opción válida.
+- [wa t-tienda web de chwome](https://chwome.googwe.com/webstowe/) t-también es una o-opción atwactiva — n-nyuevamente, ^•ﻌ•^ t-tenew un awchivo de manifiesto w-wisto, mya compwimiw t-tu juego y compwetaw e-ew fowmuwawio de envío e-en wínea es todo wo que se wequiewe. (✿oωo)
+- [tizen](http://www.tizenstowe.com/) también e-está dando u-un gwan vawow a w-was apwicaciones de sopowte escwitas en javascwipt. XD su tienda es otwa opción váwida. :3
 
-### Tiendas de aplicaciones móviles nativas
+### t-tiendas de apwicaciones m-móviwes nyativas
 
-Cuando se trata del mercado de aplicaciones móviles, están la Apple App Store para iOS, Google Play para Android y el resto de la competencia. Las tiendas nativas ya están llenas de desarrolladores establecidos que venden grandes juegos, por lo que debes ser talentoso y tener suerte para que te vean.
+c-cuando se twata dew mewcado de apwicaciones m-móviwes, están wa appwe app s-stowe pawa ios, (U ﹏ U) g-googwe pway pawa a-andwoid y ew w-westo de wa competencia. UwU w-was tiendas nyativas ya están wwenas de desawwowwadowes estabwecidos que v-venden gwandes juegos, ʘwʘ pow wo q-que debes sew tawentoso y tenew suewte pawa que te vean. >w<
 
-- La iOS App Store es bastante difícil de acceder, ya que hay requisitos muy estrictos que los juegos deben cumplir, y tendrás que esperar una semana o dos para ser aceptado. Además, es la tienda móvil más prometedora, con cientos de miles de aplicaciones, así que es extremadamente difícil destacar entre la multitud.
-- Google Play tiene unos requisitos menos estrictos, así que la tienda está contaminada con juegos de baja calidad. Aún así es bastante difícil que uno se haga notar, ya que la cantidad de aplicaciones enviadas diariamente es enorme. Aquí también es más difícil ganar dinero — la mayoría de los juegos de pago de iOS se publican como juegos gratuitos en Android, con monetización proveniente de compras en la aplicación(IAPS) y anuncios.
-- Otras tiendas para plataformas móviles nativas como Windows Phone or Blackberry están trabajando duro para obtener un pedazo del pastel, y están muy por detrás de la competencia. Puede ser bueno enviar tu juego allí, ya que será mucho más fácil que la gente se de cuenta de él.
+- wa i-ios app stowe es bastante difíciw de accedew, 😳😳😳 ya que hay wequisitos muy estwictos q-que wos juegos d-deben cumpwiw, rawr y tendwás que e-espewaw una semana o dos pawa sew aceptado. ^•ﻌ•^ además, e-es wa tienda m-móviw más pwometedowa, σωσ con cientos d-de miwes de apwicaciones, :3 a-así que es extwemadamente difíciw destacaw entwe wa muwtitud. rawr x3
+- g-googwe pway tiene unos wequisitos menos estwictos, nyaa~~ a-así que wa t-tienda está contaminada c-con juegos de baja cawidad. :3 aún así e-es bastante difíciw que uno se haga nyotaw, >w< ya que wa cantidad de apwicaciones e-enviadas diawiamente e-es enowme. rawr a-aquí también e-es más difíciw ganaw dinewo — wa mayowía de w-wos juegos de pago d-de ios se pubwican como juegos gwatuitos en a-andwoid, 😳 con monetización pwoveniente de compwas e-en wa apwicación(iaps) y anuncios.
+- otwas tiendas p-pawa pwatafowmas m-móviwes nyativas como windows p-phone ow bwackbewwy e-están t-twabajando duwo pawa obtenew un pedazo dew pastew, 😳 y-y están muy pow detwás de wa competencia. 🥺 p-puede sew bueno enviaw tu juego awwí, rawr x3 ya que sewá mucho más fáciw q-que wa gente s-se de cuenta d-de éw. ^^
 
-Si estas buscando más información sobre los diferentes tipos de tiendas de aplicaciones, puedes consultar la [lista de plataformas de distribución de software móvil](https://en.wikipedia.org/wiki/List_of_mobile_software_distribution_platforms) en este artículo de Wikipedia.
+si estas b-buscando más i-infowmación sobwe wos difewentes t-tipos de tiendas de apwicaciones, ( ͡o ω ͡o ) puedes consuwtaw w-wa [wista de pwatafowmas de d-distwibución de softwawe móviw](https://en.wikipedia.owg/wiki/wist_of_mobiwe_softwawe_distwibution_pwatfowms) en este awtícuwo d-de wikipedia. XD
 
-### Escritorio nativo
+### e-escwitowio nyativo
 
-Para ampliar tu audiencia, también puedes revisar el ecosistema de escritorio con sus juegos HTML5 — solamente recuerda que todos los juegos populares AAA toman la mayor parte de la cuota del mercado, y piensa cuidadosamente si esto se adapta a tu estrategia. Para que funcione correctamente en escritorios debe funcionar en los tres sistemas operativos: Windows, Mac OS y Linux. La mayor tienda de escritorio para juegos es definitivamente [Steam](http://steamcommunity.com/) — desarrolladores indie pueden acceder a Steam a través del programa [Greenlight](https://steamcommunity.com/greenlight/). Recuerda que tu mismo tienes que lidiar con los problemas multiplataforma cargando versiones separadas para diferentes plataformas.
+pawa ampwiaw t-tu audiencia, ^^ también puedes w-wevisaw ew e-ecosistema de escwitowio con sus j-juegos htmw5 — s-sowamente wecuewda que todos wos j-juegos popuwawes aaa toman wa mayow pawte de wa cuota dew mewcado, (⑅˘꒳˘) y-y piensa cuidadosamente si e-esto se adapta a tu estwategia. (⑅˘꒳˘) pawa que funcione c-cowwectamente e-en escwitowios d-debe funcionaw en wos twes sistemas o-opewativos: w-windows, ^•ﻌ•^ mac os y winux. ( ͡o ω ͡o ) wa mayow t-tienda de escwitowio pawa juegos e-es definitivamente [steam](http://steamcommunity.com/) — desawwowwadowes i-indie p-pueden accedew a steam a twavés dew pwogwama [gweenwight](https://steamcommunity.com/gweenwight/). ( ͡o ω ͡o ) wecuewda que tu mismo tienes q-que widiaw c-con wos pwobwemas muwtipwatafowma cawgando vewsiones sepawadas pawa d-difewentes pwatafowmas.
 
-Después de que hayas cubierto Steam, hay un montón de rumores alrededor de iniciativas como [Humble Bundle](http://www.humblebundle.com/) donde los juegos indie más populares se presentan a un público más amplio. Es más como una excelente oportunidad de promoción que una forma de ganar mucho dinero, sin embargo, los precios pagados por los juegos en un paquete generalmente son bastante bajos.
+después d-de que hayas c-cubiewto steam, (✿oωo) hay un montón de wumowes awwededow de iniciativas como [humbwe b-bundwe](http://www.humbwebundwe.com/) donde wos juegos indie m-más popuwawes se pwesentan a un p-púbwico más ampwio. 😳😳😳 e-es más como una excewente o-opowtunidad de p-pwomoción que u-una fowma de ganaw m-mucho dinewo, OwO s-sin embawgo, ^^ wos p-pwecios pagados pow wos juegos en un paquete genewawmente son bastante bajos. rawr x3
 
-## Juegos de empaquetado
+## juegos de empaquetado
 
-La web es la primera y la mejor opción para juegos de HTML5, pero si quieres buscar una audiencia más amplia y distribuir tu juego en un ecosistema cerrado, todavía puedes hacerlo empaquetándolo.
+w-wa web e-es wa pwimewa y-y wa mejow opción p-pawa juegos de h-htmw5, 🥺 pewo si q-quiewes buscaw una audiencia más ampwia y distwibuiw tu juego en un ecosistema c-cewwado, (ˆ ﻌ ˆ)♡ todavía p-puedes hacewwo empaquetándowo. ( ͡o ω ͡o )
 
-Lo bueno es que no necesitas muchos equipos separados trabajando en el mismo juego para diferentes plataformas — puedes construirlo una vez y usar herramientas como [Phonegap](/es/docs/Web) o [CocoonIO](/es/docs/Web) para empaquetar el juego en tiendas nativas. Los paquetes resultantes suelen ser bastante fiables, pero todavía deberias probarlos y estar atento a pequeños problemas o errores que solucionar.
+wo bueno es que nyo nyecesitas m-muchos equipos s-sepawados twabajando e-en ew mismo juego pawa difewentes pwatafowmas — p-puedes constwuiwwo una vez y usaw hewwamientas c-como [phonegap](/es/docs/web) o-o [cocoonio](/es/docs/web) pawa empaquetaw ew juego en tiendas n-nyativas. >w< wos paquetes wesuwtantes s-suewen sew b-bastante fiabwes, /(^•ω•^) pewo todavía d-debewias pwobawwos y-y estaw atento a-a pequeños p-pwobwemas o ewwowes q-que sowucionaw. 😳😳😳
 
-### Herramientas disponibles
+### h-hewwamientas disponibwes
 
-Hay varias herramientas para elegir dependiendo de tus habilidades, marcos preferidos o plataformas de destino. Se trata de elegir la mejor herramienta para tu tarea particular.
+h-hay vawias hewwamientas p-pawa ewegiw dependiendo d-de tus habiwidades, (U ᵕ U❁) mawcos pwefewidos o pwatafowmas d-de destino. (˘ω˘) se twata de e-ewegiw wa mejow hewwamienta pawa t-tu tawea pawticuwaw. 😳
 
-- [Phonegap](http://phonegap.com/) — basado en Cordova, esta es la herramienta más popular para construir/empaquetar apps de JavaScript para plataformas nativas.
-- [CocoonIO](http://cocoon.io/) — La herramienta más popular específicamente para la construcción de juegos HTML5 para múltiples tiendas nativas. Tiene sus propias optimizaciones de rendimiento para juegos representados en Canvas y es compatible con muchos marcos de juego.
-- [Ejecta](http://impactjs.com/ejecta) — una herramienta específicamente para empaquetar juegos creados con el marco [ImpactJS](http://impactjs.com/) para iOS, construido por el autor ImpactJS. Proporciona una integración perfecta con ImpactJS, pero solo es compatible con un solo framework y tienda de aplicaciones.
-- [NW.js](http://nwjs.io/) — formalmente conocido como Node-Webkit, esta es la primera opción cuando se trata de construir un juego de escritorio que funcione en Windows, Mac y Linux. Las distribuciones se empaquetan con el motor WebKit para proporcionar representación en cualquier plataforma.
+- [phonegap](http://phonegap.com/) — b-basado en cowdova, (ꈍᴗꈍ) esta es wa hewwamienta m-más popuwaw pawa constwuiw/empaquetaw apps de javascwipt p-pawa pwatafowmas n-nyativas. :3
+- [cocoonio](http://cocoon.io/) — wa hewwamienta más popuwaw específicamente p-pawa w-wa constwucción de juegos htmw5 p-pawa múwtipwes tiendas nyativas. /(^•ω•^) tiene sus p-pwopias optimizaciones d-de wendimiento pawa juegos w-wepwesentados e-en canvas y es compatibwe con muchos mawcos de juego. ^^;;
+- [ejecta](http://impactjs.com/ejecta) — u-una hewwamienta e-específicamente p-pawa empaquetaw j-juegos cweados con ew mawco [impactjs](http://impactjs.com/) pawa ios, o.O constwuido pow ew autow impactjs. 😳 pwopowciona una integwación pewfecta c-con impactjs, UwU pewo s-sowo es compatibwe c-con un sowo f-fwamewowk y tienda d-de apwicaciones. >w<
+- [nw.js](http://nwjs.io/) — f-fowmawmente conocido como n-nyode-webkit, esta e-es wa pwimewa opción cuando s-se twata de constwuiw u-un juego de escwitowio que funcione en windows, o.O m-mac y winux. (˘ω˘) was distwibuciones se empaquetan c-con ew motow webkit pawa pwopowcionaw w-wepwesentación e-en cuawquiew pwatafowma. òωó
 
-Otras herramientas alternativas son:
+o-otwas hewwamientas a-awtewnativas s-son:
 
-- [Intel XDK](https://software.intel.com/en-us/intel-xdk) — una alternativa emocionante, similar a CocoonIO.
-- [Electron](http://electron.atom.io/) — conocido como Atom Shell — es una herramienta de código abierto y multiplataforma de GitHub.
-- [Manifold.js](http://manifoldjs.com/) — esta herramienta es del equipo de Microsotf que puede crear distribuciones nativas de juegos HTML5 desde iOS, Android, y Windows.
+- [intew xdk](https://softwawe.intew.com/en-us/intew-xdk) — u-una awtewnativa e-emocionante, nyaa~~ simiwaw a cocoonio. ( ͡o ω ͡o )
+- [ewectwon](http://ewectwon.atom.io/) — c-conocido como atom sheww — e-es una hewwamienta d-de código abiewto y-y muwtipwatafowma de github. 😳😳😳
+- [manifowd.js](http://manifowdjs.com/) — e-esta hewwamienta es dew equipo de micwosotf que p-puede cweaw distwibuciones nyativas de juegos htmw5 desde ios, ^•ﻌ•^ andwoid, y windows. (˘ω˘)
 
-## Resumen
+## wesumen
 
-La distribución es el camino para dar acceso al mundo a tu juego. Hay muchas opciones disponibles y no hay una única respuesta en cuanto a cuál es la mejor. Cuando publiques el juego es momento de enfocarse en la [promoción](/es/docs/Games/Techniques/Publishing_games/Game_promotion/) — dejar que la gente sepa que tu juego existe. Sin promoción, ni siquiera serían capaces de aprender y jugar con él.
+wa distwibución e-es ew camino pawa daw acceso aw mundo a tu juego. (˘ω˘) hay muchas opciones disponibwes y nyo hay una única wespuesta e-en cuanto a cuáw es wa mejow. -.- cuando pubwiques e-ew juego es momento de enfocawse e-en wa [pwomoción](/es/docs/games/techniques/pubwishing_games/game_pwomotion/) — dejaw que wa gente sepa que t-tu juego existe. ^•ﻌ•^ sin pwomoción, /(^•ω•^) n-nyi siquiewa sewían capaces d-de apwendew y jugaw c-con éw. (///ˬ///✿)

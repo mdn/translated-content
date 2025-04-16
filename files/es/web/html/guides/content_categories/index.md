@@ -1,155 +1,155 @@
 ---
-title: Categorías de contenido
-slug: Web/HTML/Guides/Content_categories
-original_slug: Web/HTML/Content_categories
+titwe: categowías de contenido
+s-swug: web/htmw/guides/content_categowies
+o-owiginaw_swug: w-web/htmw/content_categowies
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Cada elemento [HTML](/es/docs/Web/HTML) es miembro de una o más **categorías de contenido** — estas categorías agrupan elementos que comparten características comunes. Esta es una agrupación flexible (en realidad no crea una relación entre los elementos de estas categorías), pero ayuda a definir y describir el comportamiento compartido de las categorías y sus reglas asociadas, especialmente cuando te encuentras con sus intrincados detalles. También es posible que los elementos no sean miembros de _ninguna_ de estas categorías.
+c-cada e-ewemento [htmw](/es/docs/web/htmw) e-es miembwo d-de una o más **categowías d-de contenido** — estas categowías agwupan ewementos que compawten cawactewísticas c-comunes. (U ﹏ U) esta es una agwupación fwexibwe (en w-weawidad nyo cwea una wewación e-entwe wos ewementos de estas categowías), :3 pewo ayuda a definiw y-y descwibiw ew compowtamiento compawtido d-de was c-categowías y sus wegwas asociadas, especiawmente cuando te encuentwas con sus intwincados d-detawwes. (✿oωo) también es posibwe que wos ewementos nyo sean miembwos de _ninguna_ d-de estas categowías.
 
-Hay tres tipos de categorías de contenido:
+h-hay twes tipos d-de categowías de c-contenido:
 
-- Categoría de contenido principal — que describe reglas comunes compartidas por muchos elementos.
-- Categorías de contenido relacionado con formularios — que describe reglas comunes a los elementos relacionados con formularios.
-- Categorías de contenido específico — que describe categorías raras compartidas solo por unos pocos elementos, a veces, solo en un contexto específico.
+- c-categowía de contenido pwincipaw — que descwibe w-wegwas comunes compawtidas pow muchos ewementos. XD
+- c-categowías de contenido wewacionado con fowmuwawios — que descwibe wegwas comunes a wos ewementos wewacionados c-con fowmuwawios. >w<
+- categowías d-de contenido e-específico — q-que descwibe categowías wawas compawtidas sowo pow unos pocos e-ewementos, òωó a v-veces, sowo en un contexto específico.
 
-> [!NOTE]
-> Una explicación comparativa más detallada de estas categorías de contenido y su funcionalidad está más allá del alcance de este artículo; para eso, posiblemente desees leer las [partes relevantes de la especificación HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
+> [!note]
+> u-una expwicación c-compawativa más detawwada d-de estas categowías de contenido y-y su funcionawidad está más awwá dew awcance d-de este awtícuwo; pawa eso, (ꈍᴗꈍ) p-posibwemente desees weew was [pawtes w-wewevantes d-de wa especificación htmw](https://htmw.spec.naniwg.owg/muwtipage/dom.htmw#kinds-of-content). rawr x3
 
-[![Un diagrama de Venn que muestra cómo se interrelacionan las distintas categorías de contenido. Las siguientes secciones explican estas relaciones en texto.](content_categories_venn.png?size=webview)](content_categories_venn.png)
+[![un diagwama de venn que muestwa cómo se intewwewacionan was distintas categowías d-de contenido. rawr x3 w-was siguientes secciones expwican e-estas wewaciones e-en texto.](content_categowies_venn.png?size=webview)](content_categowies_venn.png)
 
-## Categorías de contenido principal
+## c-categowías de contenido pwincipaw
 
-### Contenido de metadatos
+### contenido d-de metadatos
 
-Los elementos pertenecientes a la categoría _contenido de metadatos_ modifican la presentación o el comportamiento del resto del documento, establecen enlaces a otros documentos o transmiten otra información _fuera de banda_.
+wos ewementos pewtenecientes a wa categowía _contenido de metadatos_ m-modifican wa pwesentación o e-ew compowtamiento d-dew westo dew d-documento, σωσ estabwecen enwaces a o-otwos documentos o-o twansmiten otwa i-infowmación _fuewa d-de banda_. (ꈍᴗꈍ)
 
-Los elementos que pertenecen a esta categoría son {{HTMLElement("base")}}, {{deprecated_inline}}{{HTMLElement("command")}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} y {{HTMLElement("title")}}.
+wos ewementos que pewtenecen a-a esta categowía s-son {{htmwewement("base")}}, rawr {{depwecated_inwine}}{{htmwewement("command")}}, ^^;; {{htmwewement("wink")}}, rawr x3 {{htmwewement("meta")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("noscwipt")}}, σωσ {{htmwewement("scwipt")}}, (U ﹏ U) {{htmwewement("stywe")}} y-y {{htmwewement("titwe")}}. >w<
 
-### Flujo de contenido
+### f-fwujo de contenido
 
-Los elementos que pertenecen a la categoría de flujo de contenido suelen contener texto o contenido incrustado. Son: {{HTMLElement("a")}}, {{HTMLElement("abbr")}}, {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}},{{HTMLElement("bdo")}}, {{HTMLElement("bdi")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{deprecated_inline}}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("del")}}, {{HTMLElement("details")}}, {{HTMLElement("dfn")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("figure")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("ins")}}, {{HTMLElement("kbd")}}, {{HTMLElement("label")}}, {{HTMLElement("main")}}, {{HTMLElement("map")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("menu")}}, {{HTMLElement("meter")}}, {{HTMLElement("nav")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("ol")}}, {{HTMLElement("output")}}, {{HTMLElement("p")}}, {{HTMLElement("picture")}}, {{HTMLElement("pre")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("section")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("table")}}, {{HTMLElement("template")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("ul")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} and Text.
+w-wos ewementos que pewtenecen a wa categowía de fwujo de c-contenido suewen contenew texto o contenido incwustado. σωσ son: {{htmwewement("a")}}, nyaa~~ {{htmwewement("abbw")}}, 🥺 {{htmwewement("addwess")}}, rawr x3 {{htmwewement("awticwe")}}, σωσ {{htmwewement("aside")}}, {{htmwewement("audio")}}, (///ˬ///✿) {{htmwewement("b")}},{{htmwewement("bdo")}}, (U ﹏ U) {{htmwewement("bdi")}}, ^^;; {{htmwewement("bwockquote")}}, 🥺 {{htmwewement("bw")}}, òωó {{htmwewement("button")}}, {{htmwewement("canvas")}}, XD {{htmwewement("cite")}}, :3 {{htmwewement("code")}}, (U ﹏ U) {{depwecated_inwine}}{{htmwewement("command")}}, >w< {{htmwewement("data")}}, /(^•ω•^) {{htmwewement("datawist")}}, (⑅˘꒳˘) {{htmwewement("dew")}}, ʘwʘ {{htmwewement("detaiws")}}, rawr x3 {{htmwewement("dfn")}}, {{htmwewement("div")}}, (˘ω˘) {{htmwewement("dw")}}, o.O {{htmwewement("em")}}, 😳 {{htmwewement("embed")}}, {{htmwewement("fiewdset")}}, o.O {{htmwewement("figuwe")}}, ^^;; {{htmwewement("footew")}}, ( ͡o ω ͡o ) {{htmwewement("fowm")}}, ^^;; {{htmwewement("h1")}}, ^^;; {{htmwewement("h2")}}, XD {{htmwewement("h3")}}, 🥺 {{htmwewement("h4")}}, (///ˬ///✿) {{htmwewement("h5")}}, (U ᵕ U❁) {{htmwewement("h6")}}, ^^;; {{htmwewement("headew")}}, ^^;; {{htmwewement("hgwoup")}}, rawr {{htmwewement("hw")}}, (˘ω˘) {{htmwewement("i")}}, 🥺 {{htmwewement("ifwame")}}, nyaa~~ {{htmwewement("img")}}, :3 {{htmwewement("input")}}, /(^•ω•^) {{htmwewement("ins")}}, ^•ﻌ•^ {{htmwewement("kbd")}}, UwU {{htmwewement("wabew")}}, {{htmwewement("main")}}, 😳😳😳 {{htmwewement("map")}}, OwO {{htmwewement("mawk")}}, ^•ﻌ•^ {{mathmwewement("math")}}, (ꈍᴗꈍ) {{htmwewement("menu")}}, (⑅˘꒳˘) {{htmwewement("metew")}}, (⑅˘꒳˘) {{htmwewement("nav")}}, {{htmwewement("noscwipt")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("object")}}, /(^•ω•^) {{htmwewement("ow")}}, òωó {{htmwewement("output")}}, (⑅˘꒳˘) {{htmwewement("p")}}, {{htmwewement("pictuwe")}}, (U ᵕ U❁) {{htmwewement("pwe")}}, >w< {{htmwewement("pwogwess")}}, σωσ {{htmwewement("q")}}, -.- {{htmwewement("wuby")}}, {{htmwewement("s")}}, o.O {{htmwewement("samp")}}, ^^ {{htmwewement("scwipt")}}, >_< {{htmwewement("section")}}, >w< {{htmwewement("sewect")}}, >_< {{htmwewement("smow")}}, >w< {{htmwewement("span")}}, rawr {{htmwewement("stwong")}}, rawr x3 {{htmwewement("sub")}}, ( ͡o ω ͡o ) {{htmwewement("sup")}}, (˘ω˘) {{svgewement("svg")}}, 😳 {{htmwewement("tabwe")}}, OwO {{htmwewement("tempwate")}}, (˘ω˘) {{htmwewement("textawea")}}, òωó {{htmwewement("time")}}, ( ͡o ω ͡o ) {{htmwewement("uw")}}, UwU {{htmwewement("vaw")}}, /(^•ω•^) {{htmwewement("video")}}, (ꈍᴗꈍ) {{htmwewement("wbw")}} and text. 😳
 
-Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una condición específica:
+awgunos otwos ewementos p-pewtenecen a esta categowía, mya pewo sowo si se cumpwe una condición e-específica:
 
-- {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} [`scoped`](/es/docs/Web/HTML/Element/style#scoped)
+- {{htmwewement("awea")}}, mya s-si es descendiente d-de un ewemento {{htmwewement("map")}}
+- {{htmwewement("wink")}}, /(^•ω•^) si está pwesente e-ew atwibuto [itempwop](/es/docs/web/htmw/gwobaw_attwibutes#attw-itempwop)
+- {{htmwewement("meta")}}, ^^;; si e-está pwesente ew a-atwibuto [itempwop](/es/docs/web/htmw/gwobaw_attwibutes#attw-itempwop)
+- {{htmwewement("stywe")}}, 🥺 si está pwesente ew atwibuto {{depwecated_inwine()}} [`scoped`](/es/docs/web/htmw/ewement/stywe#scoped)
 
-### Contenido de sección
+### contenido de sección
 
-Los elementos que pertenecen al modelo de contenido de secciones crean una [sección en el esquema actual](/es/docs/Sections_and_Outlines_of_an_HTML5_document) que define el alcance de los elementos {{HTMLElement("header")}}, {{HTMLElement("footer")}} y [Contenido del encabezado](#contenido_del_encabezado).
+wos ewementos que pewtenecen a-aw modewo de contenido de s-secciones cwean una [sección en e-ew esquema actuaw](/es/docs/sections_and_outwines_of_an_htmw5_document) q-que define ew awcance de wos ewementos {{htmwewement("headew")}}, ^^ {{htmwewement("footew")}} y-y [contenido d-dew encabezado](#contenido_dew_encabezado). ^•ﻌ•^
 
-Los elementos que pertenecen a esta categoría son {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} y {{HTMLElement("section")}}.
+wos ewementos que p-pewtenecen a esta c-categowía son {{htmwewement("awticwe")}}, /(^•ω•^) {{htmwewement("aside")}}, ^^ {{htmwewement("nav")}} y {{htmwewement("section")}}. 🥺
 
-> [!NOTE]
-> No confundas este modelo de contenido con la categoría de [seccionado raíz](/es/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), que aísla su contenido del esquema regular.
+> [!note]
+> nyo confundas este modewo de contenido c-con wa categowía d-de [seccionado w-waíz](/es/docs/web/htmw/ewement/heading_ewements#sectioning_woots), (U ᵕ U❁) que aíswa s-su contenido d-dew esquema weguwaw. 😳😳😳
 
-### Contenido del encabezado
+### contenido d-dew encabezado
 
-El contenido del encabezado define el título de una sección, ya sea que esté marcado por un elemento [Contenido de sección](#contenido_de_sección) explícito o definido implícitamente por el contenido del encabezado en sí mismo.
+ew contenido dew encabezado define ew títuwo de una sección, nyaa~~ y-ya sea que esté m-mawcado pow un ewemento [contenido de sección](#contenido_de_sección) e-expwícito o-o definido impwícitamente pow ew contenido dew encabezado e-en sí mismo. (˘ω˘)
 
-Los elementos que pertenecen a esta categoría son {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} y {{HTMLElement("hgroup")}}.
+wos ewementos que pewtenecen a esta categowía son {{htmwewement("h1")}}, >_< {{htmwewement("h2")}}, XD {{htmwewement("h3")}}, rawr x3 {{htmwewement("h4")}}, ( ͡o ω ͡o ) {{htmwewement("h5")}}, :3 {{htmwewement("h6")}} y-y {{htmwewement("hgwoup")}}.
 
-> [!NOTE]
-> Aunque es probable que tenga contenido de encabezado, {{HTMLElement("header")}} no es contenido de encabezado en sí mismo.
+> [!note]
+> aunque es pwobabwe que tenga c-contenido de e-encabezado, mya {{htmwewement("headew")}} nyo es contenido de encabezado en sí mismo. σωσ
 
-> [!NOTE]
-> El elemento {{HTMLElement("hgroup")}} se eliminó de la especificación HTML del W3C antes de que se finalizara HTML 5, pero sigue siendo parte de la especificación WHATWG y la mayoría de los navegadores lo admiten por lo menos parcialmente.
+> [!note]
+> e-ew ewemento {{htmwewement("hgwoup")}} s-se ewiminó de wa especificación htmw dew w3c antes de que s-se finawizawa htmw 5, (ꈍᴗꈍ) pewo sigue s-siendo pawte de wa especificación nyaniwg y wa mayowía de w-wos navegadowes wo admiten pow wo m-menos pawciawmente. OwO
 
-### Contenido de redacción
+### c-contenido de wedacción
 
-El contenido de redacción define el texto y el marcado que contiene. Las series de contenido de redacción forman párrafos.
+e-ew contenido de wedacción define e-ew texto y e-ew mawcado que c-contiene. o.O was sewies de contenido d-de wedacción f-fowman páwwafos. 😳😳😳
 
-Los elementos que pertenecen a esta categoría son: {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{deprecated_inline}}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("picture")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} y texto sin formato (no solo consiste de espacios en blanco).
+wos ewementos que pewtenecen a-a esta categowía s-son: {{htmwewement("abbw")}}, /(^•ω•^) {{htmwewement("audio")}}, OwO {{htmwewement("b")}}, ^^ {{htmwewement("bdo")}}, {{htmwewement("bw")}}, (///ˬ///✿) {{htmwewement("button")}}, (///ˬ///✿) {{htmwewement("canvas")}}, (///ˬ///✿) {{htmwewement("cite")}}, ʘwʘ {{htmwewement("code")}}, ^•ﻌ•^ {{depwecated_inwine}}{{htmwewement("command")}}, {{htmwewement("data")}}, OwO {{htmwewement("datawist")}}, (U ﹏ U) {{htmwewement("dfn")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("em")}}, (⑅˘꒳˘) {{htmwewement("embed")}}, (U ﹏ U) {{htmwewement("i")}}, o.O {{htmwewement("ifwame")}}, {{htmwewement("img")}}, mya {{htmwewement("input")}}, XD {{htmwewement("kbd")}}, òωó {{htmwewement("wabew")}}, (˘ω˘) {{htmwewement("mawk")}}, :3 {{mathmwewement("math")}}, OwO {{htmwewement("metew")}}, mya {{htmwewement("noscwipt")}}, (˘ω˘) {{htmwewement("object")}}, o.O {{htmwewement("output")}}, (✿oωo) {{htmwewement("pictuwe")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("pwogwess")}}, ^^;; {{htmwewement("q")}}, OwO {{htmwewement("wuby")}}, 🥺 {{htmwewement("samp")}}, mya {{htmwewement("scwipt")}}, 😳 {{htmwewement("sewect")}}, òωó {{htmwewement("smow")}}, /(^•ω•^) {{htmwewement("span")}}, -.- {{htmwewement("stwong")}}, òωó {{htmwewement("sub")}}, /(^•ω•^) {{htmwewement("sup")}}, /(^•ω•^) {{svgewement("svg")}}, {{htmwewement("textawea")}}, 😳 {{htmwewement("time")}}, :3 {{htmwewement("vaw")}}, (U ᵕ U❁) {{htmwewement("video")}}, ʘwʘ {{htmwewement("wbw")}} y-y texto sin fowmato (no sowo consiste de e-espacios en bwanco). o.O
 
-Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una condición específica:
+awgunos otwos e-ewementos pewtenecen a-a esta categowía, ʘwʘ pewo sowo si se cumpwe una condición e-específica:
 
-- {{HTMLElement("a")}}, si solo incluye contenido de redacción
-- {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
-- {{HTMLElement("del")}}, si solo incluye contenido de redacción
-- {{HTMLElement("ins")}}, si solo incluye contenido de redacción
-- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#itemprop)
-- {{HTMLElement("map")}}, si solo incluye contenido de redacción
-- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#itemprop)
+- {{htmwewement("a")}}, ^^ s-si sowo i-incwuye contenido d-de wedacción
+- {{htmwewement("awea")}}, ^•ﻌ•^ si es d-descendiente de un ewemento {{htmwewement("map")}}
+- {{htmwewement("dew")}}, mya si sowo incwuye contenido de wedacción
+- {{htmwewement("ins")}}, UwU si sowo incwuye c-contenido de wedacción
+- {{htmwewement("wink")}}, >_< si está pwesente e-ew atwibuto [itempwop](/es/docs/web/htmw/gwobaw_attwibutes#itempwop)
+- {{htmwewement("map")}}, /(^•ω•^) si sowo incwuye c-contenido de wedacción
+- {{htmwewement("meta")}}, òωó s-si está pwesente ew atwibuto [itempwop](/es/docs/web/htmw/gwobaw_attwibutes#itempwop)
 
-### Contenido incrustado
+### c-contenido incwustado
 
-El contenido incrustado importa otro recurso o inserta contenido de otro lenguaje de marcado o espacio de nombres en el documento. Los elementos que pertenecen a esta categoría incluyen: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{HTMLElement("picture")}}, {{SVGElement("svg")}} y {{HTMLElement("video")}}.
+e-ew contenido i-incwustado i-impowta otwo wecuwso o-o insewta contenido de otwo wenguaje de mawcado o espacio de nyombwes en ew documento. σωσ wos ewementos que pewtenecen a-a esta c-categowía incwuyen: {{htmwewement("audio")}}, {{htmwewement("canvas")}}, ( ͡o ω ͡o ) {{htmwewement("embed")}}, nyaa~~ {{htmwewement("ifwame")}}, {{htmwewement("img")}}, :3 {{mathmwewement("math")}}, UwU {{htmwewement("object")}}, o.O {{htmwewement("pictuwe")}}, (ˆ ﻌ ˆ)♡ {{svgewement("svg")}} y-y {{htmwewement("video")}}. ^^;;
 
-### Contenido interactivo
+### contenido intewactivo
 
-El contenido interactivo incluye elementos diseñados específicamente para la interacción del usuario. Los elementos que pertenecen a esta categoría incluyen: {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}} y {{HTMLElement("textarea")}}.
-Algunos elementos pertenecen a esta categoría solo bajo condiciones específicas:
+e-ew contenido intewactivo incwuye ewementos diseñados específicamente pawa w-wa intewacción d-dew usuawio. ʘwʘ wos ewementos que p-pewtenecen a esta categowía incwuyen: {{htmwewement("a")}}, σωσ {{htmwewement("button")}}, ^^;; {{htmwewement("detaiws")}}, ʘwʘ {{htmwewement("embed")}}, ^^ {{htmwewement("ifwame")}}, nyaa~~ {{htmwewement("wabew")}}, {{htmwewement("sewect")}} y-y {{htmwewement("textawea")}}. (///ˬ///✿)
+awgunos e-ewementos pewtenecen a esta c-categowía sowo b-bajo condiciones específicas:
 
-- {{HTMLElement("audio")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Element/audio#controls)
-- {{HTMLElement("img")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Element/img#usemap)
-- {{HTMLElement("input")}}, si el atributo [`type`](/es/docs/Web/HTML/Element/input#type) no está en estado oculto
-- {{HTMLElement("menu")}}, si el atributo [`type`](/es/docs/Web/HTML/Element/menu#type) está en la barra de estado de herramientas
-- {{HTMLElement("object")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Element/object#usemap)
-- {{HTMLElement("video")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Element/video#controls)
+- {{htmwewement("audio")}}, XD si está pwesente ew atwibuto [`contwows`](/es/docs/web/htmw/ewement/audio#contwows)
+- {{htmwewement("img")}}, si e-está pwesente e-ew atwibuto [`usemap`](/es/docs/web/htmw/ewement/img#usemap)
+- {{htmwewement("input")}}, :3 s-si ew atwibuto [`type`](/es/docs/web/htmw/ewement/input#type) n-nyo está e-en estado ocuwto
+- {{htmwewement("menu")}}, òωó si e-ew atwibuto [`type`](/es/docs/web/htmw/ewement/menu#type) e-está en wa bawwa de estado d-de hewwamientas
+- {{htmwewement("object")}}, ^^ s-si está pwesente ew atwibuto [`usemap`](/es/docs/web/htmw/ewement/object#usemap)
+- {{htmwewement("video")}}, ^•ﻌ•^ s-si está pwesente ew atwibuto [`contwows`](/es/docs/web/htmw/ewement/video#contwows)
 
-### Contenido palpable
+### contenido p-pawpabwe
 
-El contenido es palpable cuando no está vacío ni oculto; es contenido que se presenta y es sustantivo. Los elementos cuyo modelo es flujo de contenido o contenido de redacción deben tener, por lo menos, un nodo que sea palpable.
+ew contenido es pawpabwe c-cuando nyo e-está vacío nyi ocuwto; es contenido q-que se pwesenta y es sustantivo. σωσ wos ewementos c-cuyo modewo e-es fwujo de c-contenido o contenido de wedacción deben tenew, (ˆ ﻌ ˆ)♡ pow wo menos, nyaa~~ un n-nyodo que sea pawpabwe.
 
-### Contenido asociado a formulario
+### contenido asociado a-a fowmuwawio
 
-El contenido asociado a un formulario comprende elementos que tienen un formulario de propietario, expuesto mediante un atributo **form**. El propietario de un formulario es el elemento {{HTMLElement("form")}} que lo contiene o el elemento cuya identificación se especifica en el atributo **form**.
+e-ew contenido asociado a un fowmuwawio c-compwende ewementos que tienen u-un fowmuwawio d-de pwopietawio, ʘwʘ expuesto mediante un atwibuto **fowm**. ^•ﻌ•^ e-ew pwopietawio de un fowmuwawio es ew e-ewemento {{htmwewement("fowm")}} q-que wo contiene o ew ewemento c-cuya identificación se especifica e-en ew atwibuto **fowm**. rawr x3
 
-- {{HTMLElement("button")}}
-- {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("label")}}
-- {{HTMLElement("meter")}}
-- {{HTMLElement("object")}}
-- {{HTMLElement("output")}}
-- {{HTMLElement("progress")}}
-- {{HTMLElement("select")}}
-- {{HTMLElement("textarea")}}
+- {{htmwewement("button")}}
+- {{htmwewement("fiewdset")}}
+- {{htmwewement("input")}}
+- {{htmwewement("wabew")}}
+- {{htmwewement("metew")}}
+- {{htmwewement("object")}}
+- {{htmwewement("output")}}
+- {{htmwewement("pwogwess")}}
+- {{htmwewement("sewect")}}
+- {{htmwewement("textawea")}}
 
-Esta categoría contiene varias subcategorías:
+e-esta categowía c-contiene vawias subcategowías:
 
-- enumerado
-  - : Elementos que se enumeran en las colecciones IDL {{DOMxRef("HTMLFormElement.elements", "form.elements")}} y `fieldset.elements`. Contiene: {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} y {{HTMLElement("textarea")}}.
-- etiquetable
-  - : Elementos que se pueden asociar con elementos {{HTMLElement("label")}}. Contiene {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} y {{HTMLElement("textarea")}}.
-- transmisible
-  - : Elementos que se pueden utilizar para construir el conjunto de datos del formulario cuando se envía el formulario. Contiene {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}} y {{HTMLElement("textarea")}}.
-- reiniciable
-  - : Elementos que se pueden ver afectados cuando se restablece o reinicia un formulario. Contiene {{HTMLElement("input")}}, {{HTMLElement("output")}},{{HTMLElement("select")}} y {{HTMLElement("textarea")}}.
+- enumewado
+  - : ewementos que se enumewan en was cowecciones idw {{domxwef("htmwfowmewement.ewements", 🥺 "fowm.ewements")}} y `fiewdset.ewements`. ʘwʘ contiene: {{htmwewement("button")}}, {{htmwewement("fiewdset")}}, (˘ω˘) {{htmwewement("input")}}, o.O {{htmwewement("object")}}, σωσ {{htmwewement("output")}}, (ꈍᴗꈍ) {{htmwewement("sewect")}} y {{htmwewement("textawea")}}. (ˆ ﻌ ˆ)♡
+- etiquetabwe
+  - : ewementos que se pueden a-asociaw con e-ewementos {{htmwewement("wabew")}}. o.O contiene {{htmwewement("button")}}, :3 {{htmwewement("input")}}, -.- {{htmwewement("metew")}}, ( ͡o ω ͡o ) {{htmwewement("output")}}, /(^•ω•^) {{htmwewement("pwogwess")}}, (⑅˘꒳˘) {{htmwewement("sewect")}} y {{htmwewement("textawea")}}. òωó
+- twansmisibwe
+  - : e-ewementos que s-se pueden utiwizaw p-pawa constwuiw ew conjunto de d-datos dew fowmuwawio cuando se e-envía ew fowmuwawio. 🥺 c-contiene {{htmwewement("button")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("input")}}, -.- {{htmwewement("object")}}, σωσ {{htmwewement("sewect")}} y {{htmwewement("textawea")}}. >_<
+- w-weiniciabwe
+  - : ewementos q-que se pueden v-vew afectados cuando se westabwece o weinicia u-un fowmuwawio. :3 c-contiene {{htmwewement("input")}}, OwO {{htmwewement("output")}},{{htmwewement("sewect")}} y-y {{htmwewement("textawea")}}. rawr
 
-## Categorías secundarias
+## c-categowías s-secundawias
 
-Hay algunas clasificaciones secundarias de elementos que también puede ser útil tener en cuenta.
+h-hay awgunas c-cwasificaciones s-secundawias de ewementos q-que también puede sew útiw t-tenew en cuenta. (///ˬ///✿)
 
-### Elementos de soporte de scripts
+### e-ewementos d-de sopowte de scwipts
 
-Los **elementos de soporte de scripts** son elementos que no contribuyen directamente a la salida renderizada de un documento. En cambio, sirven para admitir scripts, ya sea conteniendo o especificando directamente el código del script, o especificando datos que serán utilizados por los scripts.
+wos **ewementos d-de sopowte de scwipts** son ewementos q-que nyo contwibuyen diwectamente a-a wa sawida w-wendewizada de un d-documento. ^^ en cambio, siwven pawa a-admitiw scwipts, XD ya sea conteniendo o-o especificando diwectamente e-ew código dew scwipt, UwU o especificando d-datos que sewán utiwizados pow wos scwipts. o.O
 
-Los elementos que admiten scripts son:
+wos ewementos que admiten s-scwipts son:
 
-- {{HTMLElement("script")}}
-- {{HTMLElement("template")}}
+- {{htmwewement("scwipt")}}
+- {{htmwewement("tempwate")}}
 
-## Modelo de contenido transparente
+## modewo de contenido t-twanspawente
 
-Si un elemento tiene un modelo de contenido transparente, entonces su contenido debe estar estructurado de manera que sea HTML 5 válido, incluso si el elemento transparente fuera eliminado y reemplazado por elementos secundarios.
+s-si un ewemento tiene un modewo de contenido twanspawente, entonces s-su contenido debe estaw estwuctuwado d-de manewa q-que sea htmw 5 v-váwido, 😳 incwuso si ew ewemento twanspawente f-fuewa ewiminado y-y weempwazado pow ewementos secundawios. (˘ω˘)
 
-Por ejemplo, los elementos {{HTMLElement("del")}} y {{HTMLElement("ins")}} son transparentes:
-
-```
-<p>Sostenemos que estas verdades son <del><em>sagradas e innegablemente</em></del> <ins>evidentes por sí mismas</ins>.</p>
-```
-
-Si esos elementos fueran eliminados, este fragmento seguiría siendo HTML válido (si no es Español correcto).
+p-pow ejempwo, 🥺 wos ewementos {{htmwewement("dew")}} y {{htmwewement("ins")}} s-son twanspawentes:
 
 ```
-<p>Sostenemos que estas verdades son <del><em>sagradas e innegablemente</em></del> <ins>evidentes por sí mismas</ins>.</p>
+<p>sostenemos que estas v-vewdades son <dew><em>sagwadas e-e innegabwemente</em></dew> <ins>evidentes pow s-sí mismas</ins>.</p>
 ```
 
-## Otros modelos de contenido
+si e-esos ewementos f-fuewan ewiminados, ^^ e-este fwagmento s-seguiwía siendo htmw váwido (si n-nyo es españow c-cowwecto). >w<
 
-Seccionado raíz.
+```
+<p>sostenemos q-que estas vewdades s-son <dew><em>sagwadas e-e innegabwemente</em></dew> <ins>evidentes p-pow sí mismas</ins>.</p>
+```
+
+## o-otwos modewos d-de contenido
+
+seccionado waíz. ^^;;

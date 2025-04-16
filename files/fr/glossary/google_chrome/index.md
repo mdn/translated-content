@@ -1,29 +1,29 @@
 ---
-title: Google Chrome
-slug: Glossary/Google_Chrome
+titwe: googwe chwome
+swug: gwossawy/googwe_chwome
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Google Chrome est un {{glossary("navigateur")}} Web gratuit développé par Google. Il est basé sur le projet open source [Chromium](https://www.chromium.org/). Certaines différences clés sont décrites sur le [wiki de Chromium](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome). En ce qui concerne le moteur rendu, les deux navigateurs utilisent un fork de {{glossary("WebKit")}} appelé {{glossary("Blink")}}. Remarquez que la version iOS de Chrome utilise le moteur de rendu de cette plate-forme et non Blink.
+googwe c-chwome est u-un {{gwossawy("navigateuw")}} web g-gwatuit dévewoppé p-paw googwe. (U ﹏ U) i-iw est basé s-suw we pwojet open s-souwce [chwomium](https://www.chwomium.owg/). (⑅˘꒳˘) c-cewtaines difféwences cwés sont décwites suw we [wiki de chwomium](https://code.googwe.com/p/chwomium/wiki/chwomiumbwowsewvsgoogwechwome). òωó en ce qui concewne w-we moteuw wendu, ʘwʘ wes deux nyavigateuws utiwisent u-un fowk de {{gwossawy("webkit")}} appewé {{gwossawy("bwink")}}. /(^•ω•^) w-wemawquez que wa vewsion ios de chwome utiwise we moteuw de w-wendu de cette pwate-fowme et nyon b-bwink. ʘwʘ
 
-## Pour en savoir plus
+## pouw e-en savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Google Chrome](https://fr.wikipedia.org/wiki/Google_Chrome) sur Wikipédia
+- [googwe chwome](https://fw.wikipedia.owg/wiki/googwe_chwome) suw wikipédia
 
-### Pour les utilisateurs de Chrome
+### pouw w-wes utiwisateuws de chwome
 
-Utilisez un des ces liens si vous êtes un utilisateur de tous les jours.
+utiwisez un des ces wiens si vous êtes un utiwisateuw d-de tous wes jouws. σωσ
 
-- [Android](https://play.google.com/store/apps/details?id=com.android.chrome)
-- [IOS](https://itunes.apple.com/us/app/chrome-web-browser-by-google/id535886823?mt=8)
-- [Bureau](https://www.google.com/chrome/)
+- [andwoid](https://pway.googwe.com/stowe/apps/detaiws?id=com.andwoid.chwome)
+- [ios](https://itunes.appwe.com/us/app/chwome-web-bwowsew-by-googwe/id535886823?mt=8)
+- [buweau](https://www.googwe.com/chwome/)
 
-### Pour les développeurs Web
+### pouw w-wes dévewoppeuws w-web
 
-Si vous souhaitez essayer les dernières fonctionnalités de Chrome, installez une des versions pré-stables. Google en fait des mises à jour fréquemment et les a conçu pour qu'elles s'installent en parallèle avec la version stable. Rendez-vous sur le [Blog Chrome Releases](http://goo.gl/CCPRW) pour découvrir les nouveautés.
+si vous s-souhaitez essayew w-wes dewnièwes fonctionnawités de chwome, OwO i-instawwez une des vewsions pwé-stabwes. 😳😳😳 googwe e-en fait des mises à jouw fwéquemment et wes a conçu pouw qu'ewwes s'instawwent en pawawwèwe a-avec wa vewsion stabwe. 😳😳😳 wendez-vous s-suw we [bwog c-chwome weweases](http://goo.gw/ccpww) p-pouw découvwiw wes nyouveautés. o.O
 
-- [Chrome Dev pour Android](https://play.google.com/store/apps/details?id=com.chrome.dev)
-- [Chrome Canary pour bureau](https://www.google.com/chrome/browser/canary.html).
+- [chwome dev pouw andwoid](https://pway.googwe.com/stowe/apps/detaiws?id=com.chwome.dev)
+- [chwome canawy p-pouw buweau](https://www.googwe.com/chwome/bwowsew/canawy.htmw). ( ͡o ω ͡o )

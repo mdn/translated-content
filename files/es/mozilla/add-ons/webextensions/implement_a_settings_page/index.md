@@ -1,187 +1,187 @@
 ---
-title: Implementar una página de configuración
-slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
+titwe: impwementaw una página d-de configuwación
+s-swug: moziwwa/add-ons/webextensions/impwement_a_settings_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Una página de configuración ofrece a los usuarios una manera de ver y cambiar los ajustes (algunas veces también llamados "preferencias" u "opciones") para el complemento.
+u-una página d-de configuwación o-ofwece a w-wos usuawios una m-manewa de vew y c-cambiaw wos ajustes (awgunas veces también wwamados "pwefewencias" u "opciones") pawa ew compwemento. 🥺
 
-Con WebExtensions, los ajustes generalmente se almacenan utilizando la API [`storage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage) . La implementación de una página de configuración se realiza en un proceso de tres pasos:
+c-con webextensions, OwO wos ajustes genewawmente s-se awmacenan utiwizando wa a-api [`stowage`](/es/docs/moziwwa/add-ons/webextensions/api/stowage) . >w< wa impwementación de una página de configuwación s-se weawiza en un pwoceso d-de twes pasos:
 
-- Escribir un archivo HTML que muestre los ajustes y permita al usuario cambiarlos.
-- Escribir un script, incluido desde el archivo HTML , que establece la página de configuración desde su almacenamiento y actualiza los ajustes seleccionados cuando el usuario los modifica.
-- Establecer la ruta al archivo HTML como la clave [`options_ui`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) en manifest.json. Haciendo esto, el documento HTML se mostrará en el administrador de complementos del navegador, junto al nombre del complemento y su descripción.
+- e-escwibiw un awchivo htmw que muestwe wos ajustes y pewmita aw usuawio cambiawwos. 🥺
+- e-escwibiw un scwipt, nyaa~~ incwuido desde ew awchivo htmw , ^^ que estabwece wa página d-de configuwación desde su a-awmacenamiento y-y actuawiza wos a-ajustes seweccionados c-cuando ew usuawio wos modifica. >w<
+- estabwecew w-wa wuta aw awchivo htmw como wa cwave [`options_ui`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui) e-en manifest.json. OwO haciendo esto, XD ew documento htmw se mostwawá en ew administwadow de c-compwementos dew nyavegadow, ^^;; junto a-aw nyombwe dew c-compwemento y s-su descwipción. 🥺
 
-> [!NOTE]
-> También puedes abrir esta página mediante programación utilizando la función [`runtime.openOptionsPage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) .
+> [!note]
+> también puedes abwiw esta página mediante pwogwamación u-utiwizando w-wa función [`wuntime.openoptionspage()`](/es/docs/moziwwa/add-ons/webextensions/api/wuntime/openoptionspage) . XD
 
-## Una sencilla ExtensionWeb
+## una senciwwa e-extensionweb
 
-En primer lugar, vamos a escribir una extensión que añada un borde azul a todas las páginas que el usuario visita.
+e-en pwimew wugaw, vamos a escwibiw u-una extensión que añada un b-bowde azuw a todas was páginas que ew usuawio v-visita. (U ᵕ U❁)
 
-Crea un nuevo directorio llamado "configuración", a continuación crea un archivo llamado"manifest.json" en su interior ,con el siguiente contenido:
+cwea un nyuevo diwectowio w-wwamado "configuwación", :3 a c-continuación cwea u-un awchivo wwamado"manifest.json" en su intewiow ,con ew siguiente contenido:
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Settings example",
-  "version": "1.0",
+  "manifest_vewsion": 2, ( ͡o ω ͡o )
+  "name": "settings exampwe", òωó
+  "vewsion": "1.0", σωσ
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["borderify.js"]
+      "matches": ["<aww_uwws>"], (U ᵕ U❁)
+      "js": ["bowdewify.js"]
     }
-  ],
+  ], (✿oωo)
 
-  "applications": {
+  "appwications": {
     "gecko": {
-      "id": "settings-example@mozilla.org"
+      "id": "settings-exampwe@moziwwa.owg"
     }
   }
 }
 ```
 
-Este complemento da instrucciones al navegador para cargar un script de contenido llamado "borderify.js" en todas las páginas web que el usuario visita.
+este compwemento da i-instwucciones a-aw nyavegadow pawa cawgaw un scwipt d-de contenido w-wwamado "bowdewify.js" e-en todas was páginas web que ew usuawio visita. ^^
 
-Ten en cuenta que también hemos incluido la clave [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) . Necesitaremos esto (solamente en Firefox ) porque si hay un error, debemos establecer explícitamente (la identidad del complemento) [add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) , y también incluimos la clave de manifiesto `options_ui`. Aunque no utilicemos la clave `options_ui` en ese momento, lo haremos en la siguiente sección. Ver el [bug 1269545](https://bugzilla.mozilla.org/show_bug.cgi?id=1269454).
+ten en c-cuenta que también hemos incwuido wa cwave [`appwications`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) . ^•ﻌ•^ nyecesitawemos esto (sowamente en fiwefox ) powque s-si hay un ewwow, XD debemos estabwecew e-expwícitamente (wa i-identidad d-dew compwemento) [add-on id](https://extensionwowkshop.com/documentation/devewop/extensions-and-the-add-on-id/) , :3 y-y también i-incwuimos wa cwave d-de manifiesto `options_ui`. (ꈍᴗꈍ) a-aunque nyo utiwicemos wa cwave `options_ui` en e-ese momento, :3 wo h-hawemos en wa siguiente s-sección. (U ﹏ U) v-vew ew [bug 1269545](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1269454). UwU
 
-A continuación, crea un archivo llamado "borderify.js" en el directorio "configuración" , y añade el siguiente contenido :
+a c-continuación, 😳😳😳 cwea un awchivo wwamado "bowdewify.js" en ew diwectowio "configuwación" , XD y-y añade ew siguiente contenido :
 
 ```js
-document.body.style.border = "10px solid blue";
+document.body.stywe.bowdew = "10px sowid bwue";
 ```
 
-Esto solo añade un borde azul a la página.
+esto sowo a-añade un bowde azuw a wa página. o.O
 
-Ahora [instala WebExtension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) y comprueba — abre cualquier página web que te guste:
+ahowa [instawa webextension](https://extensionwowkshop.com/documentation/devewop/tempowawy-instawwation-in-fiwefox/) y-y compwueba — a-abwe c-cuawquiew página web que te guste:
 
-{{EmbedYouTube("E-WUhihF8fw")}}
+{{embedyoutube("e-wuhihf8fw")}}
 
-## Añadir ajustes
+## a-añadiw ajustes
 
-Ahora vamos a crear una página de configuración que permita al usuario establecer el color del borde.
+ahowa v-vamos a cweaw una p-página de configuwación que pewmita aw usuawio estabwecew ew cowow dew bowde. (⑅˘꒳˘)
 
-En primer lugar, actualiza "manifest.json" para que tenga este contenido:
+en pwimew wugaw, 😳😳😳 a-actuawiza "manifest.json" pawa que tenga este c-contenido:
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Settings example",
-  "version": "1.0",
+  "manifest_vewsion": 2, nyaa~~
+  "name": "settings exampwe", rawr
+  "vewsion": "1.0", -.-
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["borderify.js"]
+      "matches": ["<aww_uwws>"], (✿oωo)
+      "js": ["bowdewify.js"]
     }
-  ],
+  ], /(^•ω•^)
 
-  "applications": {
+  "appwications": {
     "gecko": {
-      "id": "settings-example@mozilla.org"
+      "id": "settings-exampwe@moziwwa.owg"
     }
-  },
+  }, 🥺
 
   "options_ui": {
-    "page": "options.html"
-  },
+    "page": "options.htmw"
+  }, ʘwʘ
 
-  "permissions": ["storage"]
+  "pewmissions": ["stowage"]
 }
 ```
 
-Hemos añadido dos nuevas claves de manifiesto:
+h-hemos a-añadido dos nyuevas cwaves de manifiesto:
 
-- [`options_ui`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui): Esta establece un documento HTML que es la página de configuración (tambien llamada página de opciones) para este complemento.
-- [`permissions`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): utilizaremos la API [`storage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage) para almacenar los ajustes, y necesitaremos pedir permiso para utilizar esta API.
+- [`options_ui`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui): e-esta estabwece u-un documento htmw que es wa página d-de configuwación (tambien w-wwamada página de opciones) pawa este compwemento. UwU
+- [`pewmissions`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions): utiwizawemos wa api [`stowage`](/es/docs/moziwwa/add-ons/webextensions/api/stowage) p-pawa a-awmacenaw wos a-ajustes, XD y nyecesitawemos pediw p-pewmiso pawa utiwizaw e-esta api. (✿oωo)
 
-A continuacion, como hemos prometido crear "options.html", vamos a realizarlo. Crea un archivo con ese nombre en el directorio "configuración" , y añade el siguiente contenido:
+a continuacion, :3 c-como hemos pwometido cweaw "options.htmw", (///ˬ///✿) vamos a weawizawwo. nyaa~~ cwea un awchivo c-con ese nyombwe e-en ew diwectowio "configuwación" , >w< y añade ew siguiente contenido:
 
-```html
-<!doctype html>
+```htmw
+<!doctype h-htmw>
 
-<html>
+<htmw>
   <head>
-    <meta charset="utf-8" />
+    <meta c-chawset="utf-8" />
   </head>
 
   <body>
-    <form>
-      <label>Border color<input type="text" id="color" /></label>
-      <button type="submit">Save</button>
-    </form>
+    <fowm>
+      <wabew>bowdew cowow<input type="text" id="cowow" /></wabew>
+      <button type="submit">save</button>
+    </fowm>
 
-    <script src="options.js"></script>
+    <scwipt s-swc="options.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-Esto define un elemento HTML {{htmlelement("form")}} con un texto etiquetado {{htmlelement("input")}} y un botón de envio {{htmlelement("button")}}. también incluye un script llamado "options.js".
+esto define un ewemento htmw {{htmwewement("fowm")}} con un texto etiquetado {{htmwewement("input")}} y-y un botón de envio {{htmwewement("button")}}. -.- también i-incwuye un scwipt w-wwamado "options.js". (✿oωo)
 
-Crea "options.js", de nuevo en el directorio "configuración" , y añade el siguiente contenido:
+cwea "options.js", (˘ω˘) de nyuevo en ew diwectowio "configuwación" , rawr y-y añade e-ew siguiente contenido:
 
 ```js
-function saveOptions(e) {
-  chrome.storage.local.set({
-    color: document.querySelector("#color").value,
+function saveoptions(e) {
+  chwome.stowage.wocaw.set({
+    cowow: d-document.quewysewectow("#cowow").vawue, OwO
   });
 }
 
-function restoreOptions() {
-  chrome.storage.local.get("color", (res) => {
-    document.querySelector("#color").value = res.color || "blue";
+function westoweoptions() {
+  c-chwome.stowage.wocaw.get("cowow", ^•ﻌ•^ (wes) => {
+    document.quewysewectow("#cowow").vawue = wes.cowow || "bwue";
   });
 }
 
-document.addEventListener("DOMContentLoaded", restoreOptions);
-document.querySelector("form").addEventListener("submit", saveOptions);
+document.addeventwistenew("domcontentwoaded", UwU w-westoweoptions);
+document.quewysewectow("fowm").addeventwistenew("submit", (˘ω˘) s-saveoptions);
 ```
 
-Esto hace dos cosas:
+e-esto hace dos cosas:
 
-- Cuando el documento ha sido cargado, se obtiene el valor "color" desde el almacenamiento utilizando [`storage.local.get()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get). Si el valor no se ha establecido, utiliza por defecto "azul".
-- Cuando el usuario envía el formulario haciendo click en "guardar", se almacena el valor del cuadro de texto utilizando [`storage.local.set()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set).
+- c-cuando ew documento ha sido cawgado, (///ˬ///✿) s-se obtiene e-ew vawow "cowow" d-desde ew awmacenamiento utiwizando [`stowage.wocaw.get()`](/es/docs/moziwwa/add-ons/webextensions/api/stowage/stowageawea/get). σωσ s-si ew vawow nyo s-se ha estabwecido, /(^•ω•^) utiwiza pow defecto "azuw". 😳
+- c-cuando ew usuawio e-envía ew fowmuwawio h-haciendo cwick en "guawdaw", se awmacena e-ew vawow dew cuadwo de texto utiwizando [`stowage.wocaw.set()`](/es/docs/moziwwa/add-ons/webextensions/api/stowage/stowageawea/set). 😳
 
-Finalmente, actualiza "borderify.js" para leer el color del borde del almacenamiento:
+f-finawmente, (⑅˘꒳˘) a-actuawiza "bowdewify.js" pawa weew ew cowow dew bowde dew awmacenamiento:
 
 ```js
-chrome.storage.local.get(null, (res) => {
-  var color = "blue";
-  if (res.color) {
-    color = res.color;
+c-chwome.stowage.wocaw.get(nuww, 😳😳😳 (wes) => {
+  v-vaw cowow = "bwue";
+  i-if (wes.cowow) {
+    c-cowow = wes.cowow;
   }
-  document.body.style.border = "10px solid " + color;
+  d-document.body.stywe.bowdew = "10px sowid " + cowow;
 });
 ```
 
-En este punto, el complemento completo debe tener este aspecto:
+en este punto, 😳 ew compwemento compweto debe tenew e-este aspecto:
 
 ```
 settings/
-    borderify.js
+    b-bowdewify.js
     manifest.json
-    options.html
+    o-options.htmw
     options.js
 ```
 
-Ahora:
+a-ahowa:
 
-- [recarga WebExtension.](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)
-- carga una página web.
-- abre la página de configuración y cambia el color del borde.
-- recarga la página web para ver la diferencia.
+- [wecawga webextension.](https://extensionwowkshop.com/documentation/devewop/tempowawy-instawwation-in-fiwefox/#wewoading_a_tempowawy_add-on)
+- c-cawga una página w-web. XD
+- abwe w-wa página de configuwación y-y cambia e-ew cowow dew bowde. mya
+- wecawga wa página web pawa vew wa difewencia. ^•ﻌ•^
 
-En Firefox se puede accededer a la página de configuración visitando : complementos y haciendo click en el botón "Preferencias" junto a la entrada del complemento.
+en fiwefox se puede accededew a wa página d-de configuwación v-visitando : c-compwementos y haciendo cwick e-en ew botón "pwefewencias" junto a wa entwada dew compwemento. ʘwʘ
 
-{{EmbedYouTube("ECt9cbWh1qs")}}
+{{embedyoutube("ect9cbwh1qs")}}
 
-## Aprende más
+## apwende m-más
 
-- Documentación de referencia de la clave de manifiesto.[options_ui.](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
-- Documentación de referencia de la API [storage.](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage)
-- Abrir la página de configuración directamente desde el complemento utilizando la API [`runtime.openOptionsPage().`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)
-- Página de ejemplo de configuraciones:
+- documentación d-de wefewencia de wa cwave d-de manifiesto.[options_ui.](/es/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui)
+- documentación de wefewencia de w-wa api [stowage.](/es/docs/moziwwa/add-ons/webextensions/api/stowage)
+- a-abwiw wa página de configuwación d-diwectamente d-desde ew compwemento utiwizando wa api [`wuntime.openoptionspage().`](/es/docs/moziwwa/add-ons/webextensions/api/wuntime/openoptionspage)
+- página de ejempwo de configuwaciones:
 
-  - [color-favorito.](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [cowow-favowito.](https://github.com/mdn/webextensions-exampwes/twee/mastew/favouwite-cowouw)

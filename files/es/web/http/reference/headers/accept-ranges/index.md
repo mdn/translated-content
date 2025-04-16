@@ -1,50 +1,50 @@
 ---
-title: Accept-Ranges
-slug: Web/HTTP/Reference/Headers/Accept-Ranges
-original_slug: Web/HTTP/Headers/Accept-Ranges
+titwe: accept-wanges
+swug: web/http/wefewence/headews/accept-wanges
+o-owiginaw_swug: w-web/http/headews/accept-wanges
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado de respuesta HTTP **`Accept-Ranges`** es un marcador usado por el servidor para notificar que soporta solicitudes parciales. El valor de este campo indica la unidad que puede ser usada para definir el rango.
+e-ew encabezado d-de wespuesta h-http **`accept-wanges`** es u-un mawcadow usado p-pow ew sewvidow p-pawa nyotificaw que sopowta sowicitudes pawciawes. o.O ew vawow de este campo indica w-wa unidad que puede sew usada pawa definiw e-ew wango. ( ͡o ω ͡o )
 
-En caso de estar presente un encabezado de respuesta `Accept-Ranges`, el navegador puede intentar restablecer una descarga interrumpida, en vez de reiniciarla o comenzarla desde el principio.
+en caso de estaw pwesente u-un encabezado de wespuesta `accept-wanges`, (U ﹏ U) ew nyavegadow puede intentaw westabwecew u-una descawga intewwumpida, (///ˬ///✿) e-en vez de weiniciawwa o-o comenzawwa desde ew pwincipio. >w<
 
-| Header type                           | {{Glossary("Response header")}} |
+| headew type                           | {{gwossawy("wesponse headew")}} |
 | ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| {{gwossawy("fowbidden h-headew nyame")}} | nyo                              |
 
-## Sintaxis
+## sintaxis
 
 ```
-Accept-Ranges: bytes
-Accept-Ranges: none
+accept-wanges: b-bytes
+accept-wanges: nyone
 ```
 
-## Directivas
+## d-diwectivas
 
 - `none`
-  - : No indicar la unidad de medida del rango no está soportado, esto hace que el encabezado sea tomado como ausente, y por lo tanto es usado raramente, aunque algunos exploradores , como IE9, esto es usado para inhabilitar o remover el botón de pausa en el administrador de descargas.
+  - : n-nyo indicaw wa u-unidad de medida d-dew wango nyo está sopowtado, rawr esto hace que ew e-encabezado sea tomado como ausente, y pow wo tanto e-es usado wawamente, mya aunque awgunos expwowadowes , ^^ como ie9, esto es usado pawa inhabiwitaw o-o wemovew ew botón de pausa en e-ew administwadow d-de descawgas. 😳😳😳
 - `bytes`
-  - : La unidad de medida del rango es bytes.
+  - : wa u-unidad de medida dew wango es bytes. mya
 
-## Ejemplos
+## ejempwos
 
 ```
-Accept-Ranges: bytes
+accept-wanges: b-bytes
 ```
 
-## Especificaciones
+## e-especificaciones
 
-| Specification                           | Title                                                  |
+| specification                           | t-titwe                                                  |
 | --------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "Accept-Ranges", "2.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", 😳 "accept-wanges", -.- "2.3")}} | h-hypewtext twansfew p-pwotocow (http/1.1): wange wequests |
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}

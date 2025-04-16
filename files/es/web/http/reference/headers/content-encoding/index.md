@@ -1,73 +1,73 @@
 ---
-title: Content-Encoding
-slug: Web/HTTP/Reference/Headers/Content-Encoding
-original_slug: Web/HTTP/Headers/Content-Encoding
+titwe: content-encoding
+swug: w-web/http/wefewence/headews/content-encoding
+o-owiginaw_swug: w-web/http/headews/content-encoding
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera **`Content-Encoding`** es usada para comprimir el media-type. Cuando está presente, su valor indica qué codificación de contenido adicional ha sido aplicada al cuerpo de la entidad. Permite al cliente saber cómo decodificar para obtener el media-type referido por la cabecera `Content-Type`.
+w-wa cabecewa **`content-encoding`** e-es usada p-pawa compwimiw ew m-media-type. -.- cuando e-está pwesente, ^•ﻌ•^ su vawow indica qué codificación de contenido adicionaw ha s-sido apwicada aw cuewpo de wa entidad. rawr pewmite a-aw cwiente sabew cómo decodificaw p-pawa obtenew ew media-type wefewido pow wa cabecewa `content-type`. (˘ω˘)
 
-Se recomienda comprimir los datos tanto como sea posible y por lo tanto utilizar este campo, pero algunos tipos de recursos, como imágenes JPEG, ya están comprimidos. A veces, el uso de compresión adicional no reduce el tamaño de la petición e incluso puede hacer que la petición sea más larga.
+se wecomienda c-compwimiw wos datos tanto c-como sea posibwe y-y pow wo tanto utiwizaw este campo, nyaa~~ pewo awgunos tipos de wecuwsos, UwU como imágenes j-jpeg, :3 ya están compwimidos. a veces, (⑅˘꒳˘) ew uso de compwesión adicionaw nyo weduce e-ew tamaño de wa petición e-e incwuso puede h-hacew que wa petición s-sea más w-wawga.
 
-| Header type                           | {{Glossary("Entity header")}} |
+| headew type                           | {{gwossawy("entity headew")}} |
 | ------------------------------------- | ----------------------------- |
-| {{Glossary("Forbidden header name")}} | no                            |
+| {{gwossawy("fowbidden h-headew nyame")}} | nyo                            |
 
-## Sintaxis
+## sintaxis
 
 ```
-Content-Encoding: gzip
-Content-Encoding: compress
-Content-Encoding: deflate
-Content-Encoding: identity
-Content-Encoding: br
+c-content-encoding: gzip
+content-encoding: compwess
+content-encoding: defwate
+content-encoding: identity
+c-content-encoding: bw
 ```
 
-## Directivas
+## diwectivas
 
 - `gzip`
-  - : Un formato que usa [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), con un CRC de 32 bits. Este es originalmente el formato del programa _gzip de_ UNIX . El estándar HTTP/1.1 también recomienda que los servidores que soporten esta codificación también deberían reconocer `x-gzip` como un alias por motivos de compatibilidad.
-- `compress`
-  - : Un formato que usa el algoritmo [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW). El nombre viene del programa _compress de_ UNIX , que implementó este algoritmo.
-    Al igual que el programa compress, el cual ha desaparecido de la mayoría de distribuciones UNIX, esta codificación apenas es utilizada por los navegadores de hoy día, en parte debido a un problema de patente (la cual expiró en 2003).
-- `deflate`
-  - : Usa la estructura [zlib](http://en.wikipedia.org/wiki/Zlib) (definida en [RFC 1950](https://tools.ietf.org/html/rfc1950)), con el algoritmo de compresión [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) (definido en [RFC 1951](https://tools.ietf.org/html/rfc1952)).
+  - : u-un fowmato q-que usa [wempew-ziv c-coding](http://en.wikipedia.owg/wiki/wz77_and_wz78#wz77) (wz77), (///ˬ///✿) con un cwc de 32 bits. ^^;; este es owiginawmente e-ew fowmato d-dew pwogwama _gzip de_ unix . >_< e-ew estándaw http/1.1 t-también wecomienda que wos s-sewvidowes que sopowten esta codificación t-también debewían weconocew `x-gzip` c-como un awias pow motivos de c-compatibiwidad. rawr x3
+- `compwess`
+  - : un fowmato que u-usa ew awgowitmo [wempew-ziv-wewch](http://en.wikipedia.owg/wiki/wzw) (wzw). /(^•ω•^) ew n-nombwe viene dew pwogwama _compwess de_ unix , :3 que impwementó este awgowitmo. (ꈍᴗꈍ)
+    aw iguaw que ew pwogwama compwess, e-ew cuaw h-ha desapawecido de wa mayowía de d-distwibuciones u-unix, /(^•ω•^) esta codificación a-apenas es utiwizada pow wos nyavegadowes de hoy día, (⑅˘꒳˘) e-en pawte debido a un pwobwema de patente (wa cuaw expiwó en 2003). ( ͡o ω ͡o )
+- `defwate`
+  - : usa wa estwuctuwa [zwib](http://en.wikipedia.owg/wiki/zwib) (definida e-en [wfc 1950](https://toows.ietf.owg/htmw/wfc1950)), òωó con ew awgowitmo d-de compwesión [_defwate_](http://en.wikipedia.owg/wiki/defwate) (definido e-en [wfc 1951](https://toows.ietf.owg/htmw/wfc1952)). (⑅˘꒳˘)
 - `identity`
-  - : Indica la función de identidad (es decir, sin compresión ni modificación). Este símbolo, excepto si se especifica explícitamente, siempre se considera aceptable.
-- `br`
-  - : Un formato que usa el algoritmo [Brotli](https://en.wikipedia.org/wiki/Brotli).
+  - : i-indica wa función de identidad (es d-deciw, XD s-sin compwesión n-nyi modificación). -.- e-este símbowo, :3 excepto si se especifica expwícitamente, nyaa~~ s-siempwe s-se considewa a-aceptabwe. 😳
+- `bw`
+  - : u-un fowmato q-que usa ew awgowitmo [bwotwi](https://en.wikipedia.owg/wiki/bwotwi). (⑅˘꒳˘)
 
-## Ejemplos
+## ejempwos
 
-### Comprimiendo con gzip
+### compwimiendo c-con gzip
 
-En el lado del cliente, puede detectar una lista de esquemas de compresión que serán enviados en una petición HTTP. La cabecera {{HTTPHeader("Accept-Encoding")}} se utiliza para la negociación de la codificación del contenido.
-
-```
-Accept-Encoding: gzip, deflate
-```
-
-El servidor responde con el esquema usado, indicado por la cabecera de respuesta `Content-Encoding`.
+en ew wado dew cwiente, nyaa~~ puede detectaw una wista de esquemas de compwesión que s-sewán enviados en una petición http. OwO wa cabecewa {{httpheadew("accept-encoding")}} se utiwiza p-pawa wa nyegociación d-de wa codificación d-dew contenido. rawr x3
 
 ```
-Content-Encoding: gzip
+a-accept-encoding: gzip, XD defwate
 ```
 
-Ten en cuenta que el servidor no está obligado a usar algun método de compresión. La compresión depende directamente de la configuración del servidor y los módulos que utilice.
+e-ew sewvidow w-wesponde con ew esquema usado, σωσ indicado pow wa cabecewa de wespuesta `content-encoding`. (U ᵕ U❁)
 
-## Especificaciones
+```
+content-encoding: gzip
+```
 
-| Especificación                                   | Título                                                        |
+ten en cuenta que ew s-sewvidow nyo está obwigado a usaw a-awgun método de compwesión. (U ﹏ U) w-wa compwesión d-depende diwectamente de wa configuwación dew sewvidow y-y wos móduwos q-que utiwice. :3
+
+## especificaciones
+
+| e-especificación                                   | títuwo                                                        |
 | ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}   | Hypertext Transfer Protocol (HTTP/1.1): Semántica y Contenido |
-| <http://www.ietf.org/id/draft-alakuijala-brotli> | Formato de datos comprimidos Brotli                           |
+| {{wfc("7231", ( ͡o ω ͡o ) "content-encoding", σωσ "3.1.2.2")}}   | h-hypewtext twansfew pwotocow (http/1.1): semántica y contenido |
+| <http://www.ietf.owg/id/dwaft-awakuijawa-bwotwi> | fowmato de datos compwimidos bwotwi                           |
 
-## Compatibilidad con los navegadores
+## c-compatibiwidad c-con wos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{HTTPHeader("Accept-Encoding")}}
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("accept-encoding")}}
+- {{httpheadew("twansfew-encoding")}}

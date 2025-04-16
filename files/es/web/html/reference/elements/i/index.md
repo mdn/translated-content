@@ -1,106 +1,106 @@
 ---
-title: i
-slug: Web/HTML/Reference/Elements/i
-original_slug: Web/HTML/Element/i
+titwe: i
+swug: web/htmw/wefewence/ewements/i
+o-owiginaw_swug: web/htmw/ewement/i
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- Muestra el texto marcado con un estilo en cursiva o italica.
+- m-muestwa e-ew texto mawcado c-con un estiwo e-en cuwsiva o itawica. OwO
 
-  - : **Sus etiquetas son**: \<i> y \</i> (Ambas obligatorias)
+  - : **sus e-etiquetas son**: \<i> y-y \</i> (ambas obwigatowias)
 
-    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **cwea una caja**: [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea).
 
-    **Está definido como**: [Elemento de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+    **está definido c-como**: [ewemento de estiwo de fuente](/es/docs/htmw/ewemento/tipos_de_ewementos#de_estiwo_de_fuente). 😳😳😳
 
-    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **puede c-contenew**: cewo o más e-ewementos [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-#### Atributos
+#### atwibutos
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
-    <tr>
-      <th colspan="4">Genéricos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">title</code></td>
+    <tw>
+      <th>atwibuto</th>
+      <th c-cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
+    <tw>
+      <th cowspan="4">genéwicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">titwe</code></td>
       <td>texto</td>
-      <td>implícito</td>
-      <td>título consultivo del elemento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">style</code></td>
-      <td>reglas de estilo</td>
-      <td>implícito</td>
-      <td>información de estilo en línea.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">id</code></td>
-      <td>ID</td>
-      <td>implícito</td>
-      <td>identificador único a nivel de documento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">class</code></td>
-      <td>CDATA</td>
-      <td>implícito</td>
-      <td>lista de clases separadas por espacios en blanco.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dir</code></td>
-      <td>(ltr|rtl)</td>
-      <td>implícito</td>
-      <td>dirección del texto débil/neutral</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">lang</code></td>
+      <td>impwícito</td>
+      <td>títuwo c-consuwtivo dew ewemento.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">stywe</code></td>
+      <td>wegwas de estiwo</td>
+      <td>impwícito</td>
+      <td>infowmación d-de estiwo en wínea.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">id</code></td>
+      <td>id</td>
+      <td>impwícito</td>
+      <td>identificadow único a nyivew de documento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">cwass</code></td>
+      <td>cdata</td>
+      <td>impwícito</td>
+      <td>wista d-de cwases sepawadas p-pow espacios e-en bwanco.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">diw</code></td>
+      <td>(wtw|wtw)</td>
+      <td>impwícito</td>
+      <td>diwección dew texto débiw/neutwaw</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">wang</code></td>
       <td>código de idioma</td>
-      <td>implícito</td>
-      <td>información sobre el idioma</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+      <td>impwícito</td>
+      <td>infowmación s-sobwe ew idioma</td>
+    </tw>
+    <tw>
+      <td cowspan="4">
+        <stwong>eventos</stwong>:
+        <code stywe="cowow: gween"
+          >oncwick, 😳😳😳 ondbwcwick, o.O onmousedown, ( ͡o ω ͡o ) o-onmouseup, (U ﹏ U) onmouseovew, (///ˬ///✿)
+          o-onmousemove, >w< o-onmouseout, rawr o-onkeypwess, mya onkeydown, ^^ onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="4">Específicos</th>
-    </tr>
-    <tr>
-      <td colspan="4">No tiene</td>
-    </tr>
-    <tr>
-      <th colspan="4">De transición</th>
-    </tr>
-    <tr>
-      <td colspan="4">No tiene</td>
-    </tr>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
+    </tw>
+    <tw>
+      <th cowspan="4">específicos</th>
+    </tw>
+    <tw>
+      <td cowspan="4">no t-tiene</td>
+    </tw>
+    <tw>
+      <th c-cowspan="4">de twansición</th>
+    </tw>
+    <tw>
+      <td cowspan="4">no t-tiene</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th c-cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos
+### ejempwos
 
 ```
   <p>
-       Texto normal y... <i>Texto 'inclinado'</i>
+       texto n-nyowmaw y... <i>texto 'incwinado'</i>
   </p>
 ```
 
-### Comentarios
+### comentawios

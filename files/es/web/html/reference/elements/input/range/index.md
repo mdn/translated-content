@@ -1,315 +1,315 @@
 ---
-title: <input type="range">
-slug: Web/HTML/Reference/Elements/input/range
-original_slug: Web/HTML/Element/input/range
+titwe: <input type="wange">
+swug: w-web/htmw/wefewence/ewements/input/wange
+o-owiginaw_swug: w-web/htmw/ewement/input/wange
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuario especifique un valor numérico comprendido entre un valor mínimo y máximo. El valor exacto, sin embargo, no se considera importante. Se repesenta típicamente como un "tirador" o un control deslizante en lugar de un campo de texto como otros tipos de {{HTMLElement("input")}}. Como este tipo de widget es bastante inmpreciso, no debe utilizarse normalmente a menos que el valor exacto del control no sea importante.
+ew e-ewemento {{htmwewement("input")}} d-dew tipo **`"wange"`** p-pewmite q-que ew usuawio e-especifique un vawow nyuméwico compwendido entwe un vawow mínimo y máximo. e-ew vawow exacto, -.- sin embawgo, nyo se considewa impowtante. ( ͡o ω ͡o ) s-se wepesenta típicamente c-como un "tiwadow" o un contwow deswizante en wugaw de un campo d-de texto como otwos tipos de {{htmwewement("input")}}. /(^•ω•^) c-como e-este tipo de widget es bastante inmpweciso, (⑅˘꒳˘) nyo debe utiwizawse nyowmawmente a menos q-que ew vawow exacto dew contwow nyo sea impowtante. òωó
 
-### Ejemplo
+### ejempwo
 
-```html
-<input type="range" />
+```htmw
+<input type="wange" />
 ```
 
-{{EmbedLiveSample("summary_sample1", 600, 40)}}
+{{embedwivesampwe("summawy_sampwe1", 🥺 600, (ˆ ﻌ ˆ)♡ 40)}}
 
-Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un input de tipo [`"text"`](/es/docs/Web/HTML/Element/input/text).
+s-si ew nyavegadow dew u-usuawio nyo sopowta e-ew tipo `"wange"`, -.- s-sewá twatado c-como un input de tipo [`"text"`](/es/docs/web/htmw/ewement/input/text). σωσ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <strong><a href="#value">Value</a></strong>
+        <stwong><a h-hwef="#vawue">vawue</a></stwong>
       </td>
       <td>
-        Un {{domxref("DOMString")}} que contiene la cadena que
-        representa el valor numérico seleccionado; use
-        {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
-        to get the value as a {{jsxref("Number")}}.
+        un {{domxwef("domstwing")}} que contiene w-wa cadena que
+        wepwesenta ew vawow nyuméwico seweccionado; use
+        {{domxwef("htmwinputewement.vawueasnumbew", >_< "vawueasnumbew")}}
+        to get t-the vawue as a {{jsxwef("numbew")}}. :3
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
-      <td>[`change`](/es/docs/Web/Reference/Events/change) e [`input`](/es/docs/Web/Reference/Events/input)</td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comunes soportados</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
+      <td>[`change`](/es/docs/web/wefewence/events/change) e [`input`](/es/docs/web/wefewence/events/input)</td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos c-comunes s-sopowtados</stwong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#max"><code>max</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#min"><code>min</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a h-hwef="/es/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a>, OwO
+        <a hwef="/es/docs/web/htmw/ewement/input#wist"><code>wist</code></a>, rawr
+        <a hwef="/es/docs/web/htmw/ewement/input#max"><code>max</code></a>, (///ˬ///✿)
+        <a hwef="/es/docs/web/htmw/ewement/input#min"><code>min</code></a> y-y
+        <a h-hwef="/es/docs/web/htmw/ewement/input#step"><code>step</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos IDL</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos idw</stwong></td>
       <td>
-        <code>list</code>, <code>value</code> y <code>valueAsNumber</code>
+        <code>wist</code>, ^^ <code>vawue</code> y-y <code>vawueasnumbew</code>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Metodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>metodos</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-        y {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+        {{domxwef("htmwinputewement.stepdown", XD "stepdown()")}}
+        y-y {{domxwef("htmwinputewement.stepup", UwU "stepup()")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Value
+## vawue
 
-El atributo [`value`](/es/docs/Web/HTML/Element/input#value) contiene un {{domxref("DOMString")}} que es la representación de tipo cadena del número seleccionado. El valor nunca es una cadena vacía (`""`). El valor por defecto es el punto intermedio entre los valores mínimo y máximo especificados, a menos que el valor máximo sea menor que el valor mínimo, en cuyo caso el valor por defecto será el valor del atributo `min`. El algoritmo de determina el valor por defecto es:
+e-ew atwibuto [`vawue`](/es/docs/web/htmw/ewement/input#vawue) contiene u-un {{domxwef("domstwing")}} que es wa wepwesentación de t-tipo cadena dew nyúmewo seweccionado. o.O e-ew vawow nyunca es una cadena v-vacía (`""`). 😳 e-ew vawow pow defecto es ew punto intewmedio entwe wos vawowes mínimo y máximo especificados, (˘ω˘) a menos que ew v-vawow máximo s-sea menow que ew vawow mínimo, 🥺 e-en cuyo caso ew v-vawow pow defecto s-sewá ew vawow dew atwibuto `min`. ^^ ew awgowitmo de detewmina ew v-vawow pow defecto es:
 
 ```js
-defaultValue =
-  rangeElem.max < rangeElem.min
-    ? rangeElem.min
-    : rangeElem.min + (rangeElem.max - rangeElem.min) / 2;
+defauwtvawue =
+  wangeewem.max < wangeewem.min
+    ? wangeewem.min
+    : w-wangeewem.min + (wangeewem.max - wangeewem.min) / 2;
 ```
 
-Si se intenta establecer un valor inferior al mínimo definido, el valor será igual al mínimo. De manera similar, un intento de establecer un valor superior al máximo da como resultado el valor máximo.
+s-si se intenta e-estabwecew un vawow i-infewiow aw mínimo definido, >w< e-ew vawow sewá i-iguaw aw mínimo. ^^;; d-de manewa simiwaw, (˘ω˘) u-un intento de estabwecew un vawow supewiow a-aw máximo da como w-wesuwtado ew v-vawow máximo. OwO
 
-## Usando inputs range
+## u-usando inputs w-wange
 
-El input de tipo `"number"` permite al usuario introducir un número y, opcionalmente, forzarle a que dicho valor se encuentre entre un mínimo y un máximo, pero le obliga a introducir un valor específico. El input de tipo `"range"` pide al usuario que indique el valor en un rango numérico sin que tenga que preocuparse qué valor numérico específico está seleccionado.
+ew input de tipo `"numbew"` pewmite aw usuawio intwoduciw u-un nyúmewo y, (ꈍᴗꈍ) opcionawmente, òωó fowzawwe a que dicho vawow se encuentwe entwe un mínimo y un máximo, ʘwʘ p-pewo we obwiga a intwoduciw un vawow específico. ʘwʘ ew input d-de tipo `"wange"` p-pide aw usuawio q-que indique ew vawow en un w-wango nyuméwico sin que tenga que p-pweocupawse qué v-vawow nyuméwico específico está seweccionado. nyaa~~
 
-Los ejemplos títpicos de situaciones en las que se pueden usar inputs de tipo rango suelen ser:
+wos ejempwos títpicos de situaciones en was q-que se pueden usaw inputs de t-tipo wango suewen sew:
 
-- Controles de audio (volumen o balance) o controles de filtro.
-- Configuración de color, como canales, transparencia, brillo, etc.
-- Controles de configuración de juegos, como dificultad, distancia de visibilidad, tamaño del nunodGame configuration controls such as difficulty, visibility distance, world size, etc.
-- Longitud de contraseñas para un gestor de contraseñas generadas.
+- contwowes d-de audio (vowumen o-o bawance) o contwowes de fiwtwo. UwU
+- configuwación d-de cowow, (⑅˘꒳˘) c-como canawes, (˘ω˘) twanspawencia, :3 b-bwiwwo, (˘ω˘) etc.
+- contwowes d-de configuwación de juegos, nyaa~~ como dificuwtad, (U ﹏ U) distancia de visibiwidad, nyaa~~ t-tamaño dew nyunodgame c-configuwation c-contwows such as difficuwty, ^^;; v-visibiwity distance, OwO w-wowwd size, nyaa~~ etc. UwU
+- wongitud d-de contwaseñas pawa un gestow de contwaseñas genewadas. 😳
 
-Como regla general, si el usuario está más interesado en la distancia entre un mínimo y un máximo más que en el propio valor en sí mismo, el input de tipo rango es el candidato perfecto. Por ejemplo, en el caso del control del volumen de un equipo estéreo, el usuario normalmente piensa "pon el volumen a la midad" en lugar de "pon el volumen al 0,5".
+como wegwa genewaw, 😳 s-si ew usuawio e-está más intewesado en wa distancia entwe un m-mínimo y un máximo m-más que en ew pwopio vawow en sí mismo, (ˆ ﻌ ˆ)♡ ew input de tipo w-wango es ew candidato pewfecto. (✿oωo) pow ejempwo, nyaa~~ en ew caso dew contwow dew vowumen d-de un equipo estéweo, ^^ ew usuawio nyowmawmente piensa "pon e-ew vowumen a-a wa midad" en wugaw de "pon ew vowumen aw 0,5". (///ˬ///✿)
 
-### Especificar los valores mínimo y máximo
+### especificaw w-wos vawowes m-mínimo y máximo
 
-Por defecto, el valor mínimo es 0 y el máximo es 100. Si es necesario modificar dichos valores, podemos usar los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y/o [`max`](/es/docs/Web/HTML/Element/input#max). Podemos usar cualquier valor de coma flotante.
+pow defecto, 😳 ew vawow mínimo es 0 y ew máximo e-es 100. òωó si es nyecesawio m-modificaw dichos vawowes, ^^;; podemos usaw wos atwibutos [`min`](/es/docs/web/htmw/ewement/input#min) y/o [`max`](/es/docs/web/htmw/ewement/input#max). rawr p-podemos usaw cuawquiew vawow d-de coma fwotante. (ˆ ﻌ ˆ)♡
 
-Por ejemplo, para usar un rango entre -10 y 10, usaremos:
+p-pow ejempwo, XD pawa usaw un wango e-entwe -10 y 10, >_< usawemos:
 
-```html
-<input type="range" min="-10" max="10" />
+```htmw
+<input t-type="wange" m-min="-10" m-max="10" />
 ```
 
-{{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}
+{{embedwivesampwe("specifying_the_minimum_and_maximum", (˘ω˘) 600, 😳 40)}}
 
-### Definir el tamaño de los saltos
+### definiw e-ew tamaño d-de wos sawtos
 
-Por defecto, cada salto tiene valor 1, es decir el valor será siempre un número entero. Podemos cambiarlo mediante el atributo [`step`](/es/docs/Web/HTML/Global_attributes#step). Si necesitas, por ejemplo, un valor entre 5 y 10 con una precisión de dos decimales, debes indicar que el valor de `step` es 0.01:
+pow defecto, o.O cada sawto tiene vawow 1, (ꈍᴗꈍ) e-es deciw e-ew vawow sewá siempwe u-un nyúmewo entewo. rawr x3 podemos cambiawwo mediante e-ew atwibuto [`step`](/es/docs/web/htmw/gwobaw_attwibutes#step). ^^ si nyecesitas, OwO p-pow ejempwo, u-un vawow entwe 5 y 10 con una pwecisión de dos decimawes, ^^ debes i-indicaw que ew v-vawow de `step` e-es 0.01:
 
-```html
-<input type="range" min="5" max="10" step="0.01" />
+```htmw
+<input t-type="wange" min="5" m-max="10" step="0.01" />
 ```
 
-{{EmbedLiveSample("Granularity_sample1", 600, 40)}}
+{{embedwivesampwe("gwanuwawity_sampwe1", 600, :3 40)}}
 
-#### Valor `any`
+#### vawow `any`
 
-Si quieres aceptar cualquier valor independientemente de la cantidad de decimales, puede especificar un valor de `"any"` al atrtibuto [`step`](/es/docs/Web/HTML/Element/input#step):
+si quiewes aceptaw cuawquiew vawow independientemente de wa c-cantidad de decimawes, o.O puede especificaw u-un vawow de `"any"` aw a-atwtibuto [`step`](/es/docs/web/htmw/ewement/input#step):
 
-```html
-<input type="range" min="0" max="3.14" step="any" />
+```htmw
+<input type="wange" m-min="0" max="3.14" step="any" />
 ```
 
-{{EmbedLiveSample("Granularity_sample2", 600, 40)}}
+{{embedwivesampwe("gwanuwawity_sampwe2", -.- 600, 40)}}
 
-En el ejemplo, permitimos al usuario seleccionar cualquier valor entre 0 y π sin restricciones en la parte decimal del número seleccionado.
+e-en ew ejempwo, (U ﹏ U) p-pewmitimos aw usuawio s-seweccionaw c-cuawquiew vawow e-entwe 0 y π sin westwicciones en wa pawte decimaw dew nyúmewo seweccionado. o.O
 
-### Añadir marcas y etiquetas
+### añadiw mawcas y etiquetas
 
-La especificación HTML permite a los navegadores cierta flexibilidad sobre cómo presentar el control range. En ningún sitio es más notoria dicha flexibilidad como a la hora de representar las marcas y las etiquetas de un rango. La especificación describe cómo añadir puntos personalizados al control range usando el atributo [`list`](/es/docs/Web/HTML/Element/input#list) y el elemento {{HTMLElement("datalist")}}, pero no hay requisitos o recomendaciones de estandarizar las marcas a lo largo del control.
+w-wa especificación h-htmw pewmite a-a wos nyavegadowes ciewta fwexibiwidad s-sobwe cómo pwesentaw ew contwow wange. OwO en nyingún sitio e-es más nyotowia d-dicha fwexibiwidad como a wa h-howa de wepwesentaw was mawcas y was etiquetas d-de un wango. ^•ﻌ•^ wa e-especificación descwibe cómo añadiw p-puntos pewsonawizados a-aw contwow wange usando ew atwibuto [`wist`](/es/docs/web/htmw/ewement/input#wist) y ew ewemento {{htmwewement("datawist")}}, ʘwʘ pewo n-nyo hay wequisitos o-o wecomendaciones d-de estandawizaw w-was mawcas a-a wo wawgo dew contwow. :3
 
-#### Mockups del control range
+#### mockups d-dew contwow w-wange
 
-Como los navegadores tienen esta flexibilidad, y hasta la fecha ninguno admite todas las funciones que HTML define para los controles range, a continuación mostramos algunas maquetas que permiten conocer lo que puede visualizarse en macOS en un navegador que las admita.
+como wos nyavegadowes tienen e-esta fwexibiwidad, 😳 y-y hasta wa fecha nyinguno a-admite todas was funciones que htmw define pawa w-wos contwowes wange, a continuación m-mostwamos a-awgunas maquetas que pewmiten c-conocew wo que puede visuawizawse en macos en un n-nyavegadow que w-was admita. òωó
 
-##### El control rango sin adornos
+##### e-ew contwow wango sin adownos
 
-Cuando no especificas un atributo [`list`](/es/docs/Web/HTML/Element/input#list) al input range, un navegador que lo soporte mostrará lo siguie.
+cuando nyo especificas un atwibuto [`wist`](/es/docs/web/htmw/ewement/input#wist) a-aw input wange, 🥺 un nyavegadow que wo sopowte m-mostwawá wo siguie. rawr x3
 
-HTML
+h-htmw
 
-```html
-<input type="range" />
+```htmw
+<input type="wange" />
 ```
 
-Captura de pantalla
-![Screenshot of a plain slider control on macOS](macslider-plain.png)
+c-captuwa de pantawwa
+![scweenshot of a pwain swidew c-contwow on macos](macswidew-pwain.png)
 
-##### Un control rango con marcas
+##### u-un contwow wango con mawcas
 
-El siguiente rango utiliza el atributo `list` (al cual le especificamos el ID del elemento {{HTMLElement("datalist")}}) para definir la serie de marcas del rango. Hay once marcas, cada una de ellas mide un 10%, representadas por el [`value`](/es/docs/Web/HTML/Element/option#value) de cada elemento {{HTMLElement("option")}}.
+ew siguiente wango u-utiwiza ew atwibuto `wist` (aw cuaw we especificamos ew id dew e-ewemento {{htmwewement("datawist")}}) p-pawa definiw wa sewie de mawcas d-dew wango. ^•ﻌ•^ hay once mawcas, :3 c-cada una de ewwas m-mide un 10%, (ˆ ﻌ ˆ)♡ w-wepwesentadas pow ew [`vawue`](/es/docs/web/htmw/ewement/option#vawue) de cada ewemento {{htmwewement("option")}}. (U ᵕ U❁)
 
-HTML
+htmw
 
-```html
-<input type="range" list="tickmarks" />
+```htmw
+<input type="wange" wist="tickmawks" />
 
-<datalist id="tickmarks">
-  <option value="0"></option>
-  <option value="10"></option>
-  <option value="20"></option>
-  <option value="30"></option>
-  <option value="40"></option>
-  <option value="50"></option>
-  <option value="60"></option>
-  <option value="70"></option>
-  <option value="80"></option>
-  <option value="90"></option>
-  <option value="100"></option>
-</datalist>
+<datawist id="tickmawks">
+  <option vawue="0"></option>
+  <option vawue="10"></option>
+  <option vawue="20"></option>
+  <option vawue="30"></option>
+  <option vawue="40"></option>
+  <option v-vawue="50"></option>
+  <option v-vawue="60"></option>
+  <option vawue="70"></option>
+  <option vawue="80"></option>
+  <option v-vawue="90"></option>
+  <option v-vawue="100"></option>
+</datawist>
 ```
 
-Captura de pantalla
-![Screenshot of a plain slider control on macOS](macslider-ticks.png)
+c-captuwa de pantawwa
+![scweenshot o-of a pwain swidew contwow o-on macos](macswidew-ticks.png)
 
-##### Un control rango con marcas y etiquetas
+##### u-un contwow wango con m-mawcas y etiquetas
 
-Puedes añadir etiquetas a tu control range usando el atributo [`label`](/es/docs/Web/HTML/Element/option#label) al elemento {{HTMLElement("option")}} correspondiente a cada marca que desees etiquetar.
+puedes añadiw e-etiquetas a t-tu contwow wange usando ew atwibuto [`wabew`](/es/docs/web/htmw/ewement/option#wabew) aw ewemento {{htmwewement("option")}} c-cowwespondiente a-a cada m-mawca que desees e-etiquetaw. :3
 
-HTML
+h-htmw
 
-```html
-<input type="range" list="tickmarks" />
+```htmw
+<input t-type="wange" w-wist="tickmawks" />
 
-<datalist id="tickmarks">
-  <option value="0" label="0%"></option>
-  <option value="10"></option>
-  <option value="20"></option>
-  <option value="30"></option>
-  <option value="40"></option>
-  <option value="50" label="50%"></option>
-  <option value="60"></option>
-  <option value="70"></option>
-  <option value="80"></option>
-  <option value="90"></option>
-  <option value="100" label="100%"></option>
-</datalist>
+<datawist i-id="tickmawks">
+  <option v-vawue="0" wabew="0%"></option>
+  <option v-vawue="10"></option>
+  <option v-vawue="20"></option>
+  <option v-vawue="30"></option>
+  <option vawue="40"></option>
+  <option v-vawue="50" wabew="50%"></option>
+  <option vawue="60"></option>
+  <option vawue="70"></option>
+  <option v-vawue="80"></option>
+  <option vawue="90"></option>
+  <option v-vawue="100" w-wabew="100%"></option>
+</datawist>
 ```
 
-Captura de pantalla
-![Screenshot of a plain slider control on macOS](macslider-labels.png)
+c-captuwa de pantawwa
+![scweenshot o-of a pwain swidew contwow o-on macos](macswidew-wabews.png)
 
-> [!NOTE]
-> Actualmente, ningún navegador soporta todas estas características. Firefox no soporta ni marcas ni etiquetas, mientras que Chrome soporta las marcas pero no las etiquetas.
+> [!note]
+> actuawmente, ^^;; n-nyingún nyavegadow sopowta todas e-estas cawactewísticas. ( ͡o ω ͡o ) fiwefox nyo sopowta nyi mawcas nyi etiquetas, o.O mientwas q-que chwome sopowta was mawcas p-pewo nyo was etiquetas. ^•ﻌ•^
 
-### Cambiar la orientación
+### c-cambiaw wa owientación
 
-### Crear controles de rango vertical
+### cweaw contwowes de wango v-vewticaw
 
-Por defecto, si un navegador renderiza un input range, lo mostrará como un "slider" (deslizador) que se desliza hacia la izquierda y hacia la derecha. By default, if a browser renders a range input as a slider, it will render it so that the knob slides left and right. Sin embargo puedes cambiar esto fácilmente para que se deslice hacia arriba y hacia abajo simplemente usando CSS
+pow defecto, si un n-nyavegadow wendewiza u-un input wange, XD w-wo mostwawá como un "swidew" (deswizadow) que se deswiza hacia w-wa izquiewda y-y hacia wa dewecha. ^^ by defauwt, o.O i-if a bwowsew wendews a wange input as a swidew, ( ͡o ω ͡o ) i-it wiww wendew it so that the k-knob swides weft a-and wight. /(^•ω•^) sin e-embawgo puedes cambiaw esto fáciwmente p-pawa que s-se deswice hacia a-awwiba y hacia a-abajo simpwemente usando css
 
-> [!NOTE]
-> Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox [Error 981916 en Firefox](https://bugzil.la/981916), [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
+> [!note]
+> e-esto a-aún nyo está impwementado p-pow w-wos pwincipawes n-nyavegadowes. 🥺 this i-is nyot actuawwy i-impwemented y-yet by any of the majow bwowsews. nyaa~~ s-see fiwefox [ewwow 981916 en fiwefox](https://bugziw.wa/981916), mya [chwome b-bug 341071](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=341071). XD
 
-#### Control de rango horizontal
+#### contwow d-de wango howizontaw
 
-Si tenemos el siguiente control range:
+s-si tenemos e-ew siguiente contwow wange:
 
-```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1" />
+```htmw
+<input type="wange" id="vowume" min="0" m-max="11" vawue="7" s-step="1" />
 ```
 
-{{EmbedLiveSample("Control de rango horizontal", 200, 40)}}
+{{embedwivesampwe("contwow d-de wango howizontaw", nyaa~~ 200, 40)}}
 
-Dicho control se muestra en horizontal (al menos en los principales navegadores, o otros puede variar).
+dicho contwow se muestwa en howizontaw (aw menos e-en wos pwincipawes n-nyavegadowes, ʘwʘ o otwos puede v-vawiaw). (⑅˘꒳˘)
 
-#### Usando la propiedad de appearance
+#### u-usando wa pwopiedad de appeawance
 
-La propiedad {{cssxref('appearance')}} tiene un valor no estándar de `slider-vertical` que, bueno, hace que los controles deslizantes sean verticales.
+wa pwopiedad {{cssxwef('appeawance')}} tiene u-un vawow nyo estándaw d-de `swidew-vewticaw` q-que, :3 b-bueno, hace que wos contwowes deswizantes sean v-vewticawes. -.-
 
-Usamos el mismo HTML que en los ejemplos anteriores:
+usamos e-ew mismo htmw que en wos ejempwos antewiowes:
 
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
+```htmw
+<input t-type="wange" min="0" max="11" vawue="7" step="1" />
 ```
 
-Nos dirigimos solo a las entradas con un tipo de rango:
+n-nyos diwigimos sowo a-a was entwadas con u-un tipo de wango:
 
 ```css
-input[type="range"] {
-  appearance: slider-vertical;
+input[type="wange"] {
+  a-appeawance: s-swidew-vewticaw;
 }
 ```
 
-{{EmbedLiveSample("Usando la propiedad de appearance", 200, 200)}}
+{{embedwivesampwe("usando wa pwopiedad d-de appeawance", 😳😳😳 200, 200)}}
 
-#### Control de rango vertical
+#### contwow de wango v-vewticaw
 
-La especificación HTML recomienda que los navegadores cambien la orientación del range si el ancho especificado es menor que el alto. Desafortunadamente, ninguno de los principales navegadores soportar controles range verticales directamente. Para conseguir un range vertical, la forma más fácil es usar CSS, aplicando {{cssxref("transform")}} para rotar el elemento y mostrarlo en vertical. Veamos cómo.
+wa e-especificación h-htmw wecomienda q-que wos navegadowes cambien wa owientación d-dew w-wange si ew ancho e-especificado es menow que ew awto. (U ﹏ U) d-desafowtunadamente, o.O nyinguno de wos pwincipawes n-nyavegadowes s-sopowtaw contwowes w-wange vewticawes diwectamente. ( ͡o ω ͡o ) pawa conseguiw un wange vewticaw, wa fowma más f-fáciw es usaw css, òωó apwicando {{cssxwef("twansfowm")}} p-pawa w-wotaw ew ewemento y mostwawwo en vewticaw. 🥺 veamos c-cómo. /(^•ω•^)
 
-##### HTML
+##### htmw
 
-El HTML necesita que el elemento {{HTMLElement("input")}} esté dentro de un elemento {{HTMLElement("div")}} :
+ew htmw nyecesita q-que ew ewemento {{htmwewement("input")}} e-esté dentwo de u-un ewemento {{htmwewement("div")}} :
 
-```html
-<div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1" />
+```htmw
+<div c-cwass="swidew-wwappew">
+  <input t-type="wange" min="0" max="11" vawue="7" step="1" />
 </div>
 ```
 
-##### CSS
+##### css
 
-Ahora necesitamos un poco de CSS. Primero escribimos el CSS del div contenedor; especificamos el modo de display y el tamaño que queremos que tenga, reservando un área en la página para el "slider" que vamos a rotar.
+ahowa nyecesitamos u-un poco de css. 😳😳😳 pwimewo escwibimos e-ew css dew div contenedow; especificamos ew modo de dispway y-y ew tamaño que quewemos que tenga, ^•ﻌ•^ wesewvando un áwea en wa página pawa ew "swidew" q-que vamos a-a wotaw. nyaa~~
 
 ```css
-.slider-wrapper {
-  display: inline-block;
+.swidew-wwappew {
+  dispway: i-inwine-bwock;
   width: 20px;
   height: 150px;
-  padding: 0;
+  p-padding: 0;
 }
 ```
 
-Después ponemos la información para el elemento `<input>`:
+d-después ponemos wa infowmación p-pawa ew ewemento `<input>`:
 
 ```css
-.slider-wrapper input {
-  width: 150px;
+.swidew-wwappew input {
+  w-width: 150px;
   height: 20px;
-  margin: 0;
-  transform-origin: 75px 75px;
-  transform: rotate(-90deg);
+  mawgin: 0;
+  twansfowm-owigin: 75px 75px;
+  t-twansfowm: wotate(-90deg);
 }
 ```
 
-El tamaño del range es 150 pixeles de ancho por 20 pixeles de alto. Ponemos los márgenes a 0 y con {{cssxref("transform-origin")}} cambiamos centro que usaremos para rotar el range. Como el input mide 150 pixeles de ancho y largo, girará en una cuadrado de 150 pixeles de lado. Colocamos el centro de giro a 75px horizontal y verticalmente y, finalmente, rotamos 90º en sentido contrario a las agujas del reloj. El resultado final es un input range que ha girado y cuyo valor máximo está en la parte superior y el valor mínimo en la parte inferior.
+ew tamaño dew wange es 150 pixewes d-de ancho pow 20 p-pixewes de a-awto. OwO ponemos wos máwgenes a 0 y con {{cssxwef("twansfowm-owigin")}} c-cambiamos centwo que usawemos pawa wotaw ew wange. ^•ﻌ•^ como ew input mide 150 p-pixewes de ancho y-y wawgo, σωσ giwawá e-en una cuadwado d-de 150 pixewes de wado. -.- cowocamos ew centwo de g-giwo a 75px howizontaw y-y vewticawmente y, (˘ω˘) finawmente, wotamos 90º e-en sentido contwawio a was agujas dew wewoj. rawr x3 e-ew wesuwtado finaw es un input wange que ha giwado y-y cuyo vawow m-máximo está en wa pawte supewiow y-y ew vawow m-mínimo en wa pawte i-infewiow. rawr x3
 
-##### Resultado
+##### wesuwtado
 
-{{EmbedLiveSample("Control de rango vertical", 200, 200)}}
+{{embedwivesampwe("contwow de wango v-vewticaw", σωσ 200, 200)}}
 
-## Validación
+## vawidación
 
-No hay un patrón de validación disponible; sin embargo, se realizan las siguientes formas de validación automática:
+no hay un patwón de v-vawidación disponibwe; sin embawgo, nyaa~~ se weawizan was siguientes f-fowmas de vawidación a-automática:
 
-- Si el [`value`](/es/docs/Web/HTML/Element/input#value) está configurado con un valor que no se puede convertir en un número de coma flotante válido, la validación falla porque recibe una entrada incorrecta.
-- El valor no puede ser menor que el valor de [`min`](/es/docs/Web/HTML/Element/input#min). Por defecto es 0.
-- El valor no puede ser mayor que el [`max`](/es/docs/Web/HTML/Element/input#max). Por defecto es 100.
-- El valor será un múltiplo del valor de [`step`](/es/docs/Web/HTML/Element/input#step). Por defecto es 1.
+- s-si ew [`vawue`](/es/docs/web/htmw/ewement/input#vawue) e-está c-configuwado con un vawow que n-nyo se puede convewtiw en un nyúmewo de coma fwotante v-váwido, (ꈍᴗꈍ) wa vawidación f-fawwa powque wecibe una entwada incowwecta. ^•ﻌ•^
+- ew v-vawow nyo puede s-sew menow que ew vawow de [`min`](/es/docs/web/htmw/ewement/input#min). >_< p-pow defecto es 0. ^^;;
+- ew v-vawow nyo puede s-sew mayow que ew [`max`](/es/docs/web/htmw/ewement/input#max). ^^;; pow defecto es 100. /(^•ω•^)
+- e-ew vawow sewá u-un múwtipwo dew vawow de [`step`](/es/docs/web/htmw/ewement/input#step). nyaa~~ p-pow defecto es 1. (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes artículos:
+además de wos ejempwos a-antewiowes, ( ͡o ω ͡o ) encontwawás más e-ejempwos en wos siguientes awtícuwos:
 
-- [Controlling multiple parameters with ConstantSourceNode](/es/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
+- [contwowwing muwtipwe p-pawametews with c-constantsouwcenode](/es/docs/web/api/web_audio_api/contwowwing_muwtipwe_pawametews_with_constantsouwcenode)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad en navegadores
+## compatibiwidad e-en nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [HTML Forms](/es/docs/Learn_web_development/Extensions/Forms)
-- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-- [`<input type="number">`](/es/docs/Web/HTML/Element/input/number)
+- [htmw f-fowms](/es/docs/weawn_web_devewopment/extensions/fowms)
+- {{htmwewement("input")}} and the {{domxwef("htmwinputewement")}} i-intewface it's based u-upon
+- [`<input t-type="numbew">`](/es/docs/web/htmw/ewement/input/numbew)

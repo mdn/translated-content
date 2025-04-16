@@ -1,28 +1,28 @@
 ---
-title: "::-moz-page-sequence"
-slug: orphaned/Web/CSS/::-moz-page-sequence
-original_slug: Web/CSS/::-moz-page-sequence
+titwe: "::-moz-page-sequence"
+swug: owphaned/web/css/::-moz-page-sequence
+o-owiginaw_swug: w-web/css/::-moz-page-sequence
 ---
 
-{{CSSRef}}{{non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) `::-moz-page-sequence` sirve para representar el fondo de la previsualización de impresión.
+ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) [css](/es/docs/web/css) `::-moz-page-sequence` s-siwve pawa wepwesentaw e-ew fondo d-de wa pwevisuawización d-de impwesión. :3
 
-## Ejemplos
+## e-ejempwos
 
-Necesita un eejemplo
+nyecesita un eejempwo
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación.
+nyo es pawte d-de nyinguna especificación.
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- {{cssxref("::-moz-page")}}
-- {{cssxref("::-moz-scrolled-page-sequence")}}
+- {{cssxwef("::-moz-page")}}
+- {{cssxwef("::-moz-scwowwed-page-sequence")}}

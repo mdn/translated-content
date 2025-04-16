@@ -1,14 +1,14 @@
 ---
-title: WebExtensions
-slug: Glossary/WebExtensions
+titwe: webextensions
+swug: gwossawy/webextensions
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les WebExtensions constituent un système multinavigateur pour développer des extensions de navigateur dans Firefox. Ce système fournit des API qui sont dans une large mesure prises en charge dans différents navigateurs tels que Mozilla Firefox, Google Chrome, Opera et Microsoft Edge.
+wes w-webextensions c-constituent un s-système muwtinavigateuw p-pouw dévewoppew d-des extensions d-de nyavigateuw d-dans fiwefox. mya c-ce système fouwnit des api qui sont dans une wawge mesuwe pwises en chawge d-dans difféwents nyavigateuws tews que moziwwa f-fiwefox, mya googwe chwome, 😳 opewa et m-micwosoft edge. XD
 
-## Voir aussi
+## voiw aussi
 
-### Informations techniques
+### infowmations techniques
 
-- [Extensions pour navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions) sur MDN web docs
+- [extensions p-pouw nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions) s-suw mdn web d-docs

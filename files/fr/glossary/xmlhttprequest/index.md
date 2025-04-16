@@ -1,20 +1,20 @@
 ---
-title: XHR (XMLHttpRequest)
-slug: Glossary/XMLHttpRequest
+titwe: xhw (xmwhttpwequest)
+swug: gwossawy/xmwhttpwequest
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{domxref("XMLHttpRequest")}} (XHR) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour créer des requêtes {{Glossary("AJAX")}}. Ses méthodes permettent d'envoyer des requêtes réseau entre le {{Glossary("Browser","navigateur")}} et un {{Glossary("Server","serveur")}}.
+{{domxwef("xmwhttpwequest")}} (xhw) e-est une {{gwossawy("api")}} {{gwossawy("javascwipt")}} p-pouw cwéew des w-wequêtes {{gwossawy("ajax")}}. (U ᵕ U❁) s-ses méthodes p-pewmettent d'envoyew d-des wequêtes w-wéseau entwe w-we {{gwossawy("bwowsew","navigateuw")}} et un {{gwossawy("sewvew","sewveuw")}}. -.-
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [`XMLHttpRequest`](https://fr.wikipedia.org/wiki/XMLHttpRequest) sur Wikipédia
-- [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/) (en)
+- [`xmwhttpwequest`](https://fw.wikipedia.owg/wiki/xmwhttpwequest) suw w-wikipédia
+- [synchwonous vs. asynchwonous communications](http://peopwesofttutowiaw.com/diffewence-between-synchwonous-and-asynchwonous-messaging/) (en)
 
-### Informations techniques
+### infowmations t-techniques
 
-- L'objet {{domxref("XMLHttpRequest")}}.
-- La [documentation sur MDN à propos de l'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
+- w'objet {{domxwef("xmwhttpwequest")}}. ^^;;
+- w-wa [documentation suw mdn à pwopos de w'utiwisation de xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest). >_<

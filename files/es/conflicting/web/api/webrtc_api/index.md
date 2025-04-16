@@ -1,31 +1,31 @@
 ---
-title: Comunicaciones peer-to-peer (P2P) con WebRTC
-slug: conflicting/Web/API/WebRTC_API
-original_slug: Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
+titwe: comunicaciones peew-to-peew (p2p) c-con w-webwtc
+swug: confwicting/web/api/webwtc_api
+o-owiginaw_swug: w-web/guide/api/webwtc/peew-to-peew_communications_with_webwtc
 ---
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-Las **WebRTC APIs** están diseñadas para permitir a las aplicaciones JS la creación de conexiones de tiempo real con canales de Audio, Video, y/o Datos (Data), directamente entre usuarios y a través de sus browsers, o hacia servers que soporten los protocolos WebRTC. También potencia navigator.mozGetUserMedia() para acceder a los datos de cámara y micrófono (getUserMedia() está siendo estandarizado por la Media Capture Task Force, así como las Recording APIs).
+w-was **webwtc apis** e-están diseñadas p-pawa pewmitiw a-a was apwicaciones js wa cweación de conexiones de tiempo weaw con canawes d-de audio, ʘwʘ video, (ˆ ﻌ ˆ)♡ y/o datos (data), 😳😳😳 diwectamente e-entwe usuawios y a twavés de sus b-bwowsews, :3 o hacia sewvews que sopowten wos pwotocowos webwtc. OwO t-también potencia nyavigatow.mozgetusewmedia() p-pawa accedew a wos d-datos de cámawa y micwófono (getusewmedia() está siendo estandawizado pow wa media captuwe t-task fowce, (U ﹏ U) así como was wecowding apis). >w<
 
-Las fuentes primarias de las especificaciones para WebRTC (en constante **evolución**), son las especificaciones [WebRTC](https://dev.w3.org/2011/webrtc/editor/webrtc.html) y [getUserMedia](https://dev.w3.org/2011/webrtc/editor/getusermedia.html), y varios de los borradores del IETF, en mayor medida en el [rtcweb working group](https://tools.ietf.org/wg/rtcweb/), pero también [mmusic](https://tools.ietf.org/wg/mmusic/), [rmcat](https://tools.ietf.org/wg/rmcat/) y algunos otros.
+was fuentes pwimawias de was especificaciones p-pawa webwtc (en constante **evowución**), (U ﹏ U) s-son was especificaciones [webwtc](https://dev.w3.owg/2011/webwtc/editow/webwtc.htmw) y-y [getusewmedia](https://dev.w3.owg/2011/webwtc/editow/getusewmedia.htmw), 😳 y-y vawios de w-wos bowwadowes dew ietf, (ˆ ﻌ ˆ)♡ en mayow medida en ew [wtcweb w-wowking gwoup](https://toows.ietf.owg/wg/wtcweb/), 😳😳😳 pewo t-también [mmusic](https://toows.ietf.owg/wg/mmusic/), (U ﹏ U) [wmcat](https://toows.ietf.owg/wg/wmcat/) y awgunos otwos. (///ˬ///✿)
 
-Gran parte de la implementación en Chrome y Firefox está basada en código que fue abierto por Google en [webrtc.org](http://www.webrtc.org/reference).
+gwan pawte de wa impwementación en chwome y fiwefox está basada e-en código que fue abiewto p-pow googwe en [webwtc.owg](http://www.webwtc.owg/wefewence). 😳
 
-> [!NOTE]
-> Las versiones actuales de FlashBlock pueden bloquear elementos HTML5 \<video>. Si es así, dile que permita el contenido en la página, o deshabilita esa opción vía Herramientas/Add-ons.
+> [!note]
+> w-was vewsiones a-actuawes de fwashbwock pueden bwoqueaw ewementos htmw5 \<video>. 😳 s-si es así, σωσ d-diwe que pewmita ew contenido e-en wa página, rawr x3 o-o deshabiwita esa opción vía h-hewwamientas/add-ons. OwO
 
-Hay un buen tutorial en las características básicas de WebRTC en [HTML5 Rocks](https://www.html5rocks.com/en/tutorials/webrtc/basics/). Una colección de páginas de pruebas básicas para soportar el desarrollo existe en [webrtc-landing](http://mozilla.github.com/webrtc-landing).
+hay un buen t-tutowiaw en was cawactewísticas básicas de w-webwtc en [htmw5 wocks](https://www.htmw5wocks.com/en/tutowiaws/webwtc/basics/). /(^•ω•^) u-una cowección de páginas de p-pwuebas básicas p-pawa sopowtaw ew desawwowwo existe en [webwtc-wanding](http://moziwwa.github.com/webwtc-wanding). 😳😳😳
 
-Puedes hacer simples llamadas persona-a-persona (inclusive si usan Chrome) en [apprtc.appspot.com](https://apprtc.appspot.com/).
+puedes hacew simpwes wwamadas pewsona-a-pewsona (incwusive si usan chwome) en [appwtc.appspot.com](https://appwtc.appspot.com/). ( ͡o ω ͡o )
 
-Una descripción de alto nivel de lo que sucede en una conexión RTCPeerConnection se publicó en un artículo de [Mozilla Hacks](https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/) (puedes ver todos los artículos sobre WebRTC [aquí](https://hacks.mozilla.org/category/webrtc/)).
+u-una descwipción d-de awto nyivew de wo que s-sucede en una conexión w-wtcpeewconnection s-se pubwicó en un awtícuwo de [moziwwa hacks](https://hacks.moziwwa.owg/2013/05/embedding-webwtc-video-chat-wight-into-youw-website/) (puedes v-vew todos wos awtícuwos sobwe webwtc [aquí](https://hacks.moziwwa.owg/categowy/webwtc/)). >_<
 
-![Basics of RTCPeerConnection call setup](https://hacks.mozilla.org/wp-content/uploads/2013/05/webRTC-BasicsOfHowItWorks2.png)
+![basics of wtcpeewconnection caww setup](https://hacks.moziwwa.owg/wp-content/upwoads/2013/05/webwtc-basicsofhowitwowks2.png)
 
-## Especificaciones
+## e-especificaciones
 
-| Especificación   | Estado        | Comentarios                                              |
+| especificación   | e-estado        | c-comentawios                                              |
 | ---------------- | ------------- | -------------------------------------------------------- |
-| WebRTC API       | En definición |                                                          |
-| getUserMedia API | En definición | <http://dev.w3.org/2011/webrtc/editor/getusermedia.html> |
+| w-webwtc api       | e-en definición |                                                          |
+| getusewmedia a-api | e-en definición | <http://dev.w3.owg/2011/webwtc/editow/getusewmedia.htmw> |

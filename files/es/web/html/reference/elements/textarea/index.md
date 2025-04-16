@@ -1,116 +1,116 @@
 ---
-title: <textarea>
-slug: Web/HTML/Reference/Elements/textarea
-original_slug: Web/HTML/Element/textarea
+titwe: <textawea>
+swug: web/htmw/wefewence/ewements/textawea
+o-owiginaw_swug: web/htmw/ewement/textawea
 ---
 
-## Resumen
+## w-wesumen
 
-El **elemento** **HTML `<textarea>`** representa un control para la edición mutilínea de texto sin formato.
+ew **ewemento** **htmw `<textawea>`** w-wepwesenta un contwow p-pawa wa edición m-mutiwínea d-de texto sin fowmato. >w<
 
-## Contenido de Uso
+## c-contenido d-de uso
 
-| [Content categories](/es/docs/Web/HTML/Content_categories) | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content), [Interactive content](/es/docs/Web/HTML/Content_categories#interactive_content), [listed](/es/docs/Web/HTML/Content_categories#form_listed), [labelable](/es/docs/Web/HTML/Content_categories#form_labelable), [resettable](/es/docs/Web/HTML/Content_categories#form_resettable), y [submittable](/es/docs/Web/HTML/Content_categories#form_submittable) [form-associated](/es/docs/Web/HTML/Content_categories#form-associated_) elemento |
+| [content categowies](/es/docs/web/htmw/content_categowies) | [fwow content](/es/docs/web/htmw/content_categowies#fwow_content), [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content), (U ﹏ U) [intewactive content](/es/docs/web/htmw/content_categowies#intewactive_content), ^^ [wisted](/es/docs/web/htmw/content_categowies#fowm_wisted), (U ﹏ U) [wabewabwe](/es/docs/web/htmw/content_categowies#fowm_wabewabwe), :3 [wesettabwe](/es/docs/web/htmw/content_categowies#fowm_wesettabwe), (✿oωo) y-y [submittabwe](/es/docs/web/htmw/content_categowies#fowm_submittabwe) [fowm-associated](/es/docs/web/htmw/content_categowies#fowm-associated_) ewemento |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido Permitido                                        | Datos carácter                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Omisión de etiquetas                                       | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Elementos padre permitidos                                 | Cualquier elemento que soporta [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Interfaz Dom                                               | {{domxref("HTMLTextAreaElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| contenido p-pewmitido                                        | datos cawáctew                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| o-omisión de etiquetas                                       | nyinguna, tanto wa etiqueta iniciaw como wa finaw s-son obwigatowias. XD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ewementos padwe pewmitidos                                 | c-cuawquiew e-ewemento que sopowta [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content). >w<                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| intewfaz dom                                               | {{domxwef("htmwtextaweaewement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-## Atributos
+## a-atwibutos
 
-Este elemento contiene [global attributes](/es/docs/Web/HTML/Global_attributes).
+este ewemento contiene [gwobaw attwibutes](/es/docs/web/htmw/gwobaw_attwibutes). òωó
 
-- `autocapitalize` {{non-standard_inline}}
-  - : Este es un atributo no estándar utilizado por iOS Safari Mobile (y, por lo tanto, también por casi todos los navegadores de iOS, incluyendo Safari, Firefox y Chrome). Controla cuándo y cómo el texto debe ponerse automáticamente en mayúsculas mientras es ingresado/editado por el usuario. Los valores no obsoletos están disponible en iOs 5 y en versiones posteriores. Sus valores posibles son:
-    - `none`: Deshabilita la capitalización automática
-    - `sentences`: Escribe automáticamente con mayúscula la primera letra de cada frase.
-    - `words`: Automáticamente escribe con mayúsculas la primera letra de las palabras.
-    - `characters`: Automáticamente escribe con mayúscula todos los caracteres.
-    - `on`: {{deprecated_inline()}} En desuso desde la versión 5 de iOS.
-    - `off`: {{deprecated_inline()}} En desuso desde la versión 5 de iOS.
-- `autocomplete`
+- `autocapitawize` {{non-standawd_inwine}}
+  - : este es un a-atwibuto nyo estándaw utiwizado p-pow ios safawi m-mobiwe (y, (ꈍᴗꈍ) pow wo t-tanto, rawr x3 también p-pow casi todos wos nyavegadowes de ios, rawr x3 incwuyendo s-safawi, σωσ fiwefox y chwome). (ꈍᴗꈍ) contwowa cuándo y-y cómo ew texto debe ponewse automáticamente en mayúscuwas mientwas es ingwesado/editado pow ew usuawio. rawr wos v-vawowes nyo obsowetos están disponibwe e-en ios 5 y-y en vewsiones p-postewiowes. ^^;; sus vawowes posibwes son:
+    - `none`: deshabiwita w-wa capitawización a-automática
+    - `sentences`: escwibe automáticamente c-con m-mayúscuwa wa pwimewa wetwa de c-cada fwase. rawr x3
+    - `wowds`: automáticamente e-escwibe con mayúscuwas wa pwimewa wetwa d-de was pawabwas. (ˆ ﻌ ˆ)♡
+    - `chawactews`: automáticamente e-escwibe con mayúscuwa t-todos wos cawactewes. σωσ
+    - `on`: {{depwecated_inwine()}} e-en desuso desde wa vewsión 5 de ios. (U ﹏ U)
+    - `off`: {{depwecated_inwine()}} en desuso desde wa vewsión 5 de ios. >w<
+- `autocompwete`
 
-  - : Este atributo indica si el valor del control puede ser completado automáticamente por el navegador. Los posibles valores son:
+  - : este atwibuto i-indica si ew v-vawow dew contwow puede sew compwetado a-automáticamente p-pow ew nyavegadow. σωσ w-wos posibwes vawowes son:
 
-    - `off`: El usuario debe explícitamente introducir el valor del campo para cada uso, o el documento proporciona su propio método de auto-completado; el navegador no completa automáticamente.
-    - `on`: El navegador puede completar automáticamente el valor basándose en valores que el usuario haya insertado durante usos previos.
+    - `off`: ew usuawio debe e-expwícitamente intwoduciw ew vawow dew campo pawa cada uso, nyaa~~ o ew documento pwopowciona s-su pwopio método de a-auto-compwetado; e-ew navegadow nyo c-compweta automáticamente. 🥺
+    - `on`: ew nyavegadow p-puede compwetaw a-automáticamente e-ew vawow b-basándose en vawowes que ew usuawio haya insewtado d-duwante usos p-pwevios. rawr x3
 
-    Si el atributo **autocomplete** no está definidio en el elemento textarea, entonces el navegador usa el valor del atributo **autocomplete** del propietario del elemento `<textarea>` . El propietario del formulario es o bien el elemento form del cual el \<textarea> es descendiente o el elemento form cuyo id está especificado en el atributo form del elemento. Para más información, ver el atributo [`autocomplete`](/es/docs/Web/HTML/Element/form#autocomplete) en {{HTMLElement("form")}}.
+    s-si ew atwibuto **autocompwete** n-nyo está definidio e-en ew ewemento textawea, σωσ entonces ew nyavegadow usa ew vawow d-dew atwibuto **autocompwete** dew pwopietawio dew ewemento `<textawea>` . (///ˬ///✿) ew pwopietawio dew fowmuwawio es o bien e-ew ewemento fowm dew cuaw ew \<textawea> es descendiente o ew e-ewemento fowm cuyo i-id está especificado e-en ew atwibuto fowm dew e-ewemento. (U ﹏ U) pawa más infowmación, ^^;; v-vew ew atwibuto [`autocompwete`](/es/docs/web/htmw/ewement/fowm#autocompwete) e-en {{htmwewement("fowm")}}. 🥺
 
 - `autofocus`
-  - : Este atributo booleano te permite especificar que un control de un formulario adquiera el foco cuando se carga la página, salvo que el usuario anule esto , por ejemplo tecleando en un control diferente. Sólo se puede especificar este atributo en los elementos asociados a formularios.
-- `cols`
-  - : La anchura visible del control de texto, en caracteres de anchura media. Si está definido debe ser positivo. Si no, por defecto, el valor es 20 (HTML 5).
-- `disabled`
-  - : Este atributo booleano indica que el usuario no puede interactuar con el control. Si el atributo no está definido se hereda su valor del elemento en el que está contenido, por ejemplo {{ HTMLElement("fieldset") }}; Si no está dentro de un elemento contenedor con el atributo disable establecido, entonces el control estará habilitado.
-- `form`
-  - : El formulario al cual el elemento textarea está asociado (el propietario del formulario). El valor del atributo debe ser un ID de un elemento formulario del mismo documento. Si no se especifica este atributo, el textarea debe ser un descendiente de un elemento formulario. Permite colocar elementos textarea en cualquier lugar dentro de un documento, no sólo como descendientes de formularios.
-- `maxlength`
-  - : Indica el número máximo de caracteres (Unicode code points) que el usuario puede insertar. Si no está especificado entonces el usuario puede insertar un número ilimitado de caracteres.
-- `minlength`
-  - : El mínimo número de caracteres (Unicode code points) que el usuaurio debe insertar.
+  - : este atwibuto booweano te pewmite especificaw que un contwow de un fowmuwawio a-adquiewa ew foco cuando se cawga w-wa página, sawvo que ew usuawio a-anuwe esto , òωó p-pow ejempwo tecweando en un contwow difewente. XD sówo s-se puede especificaw e-este atwibuto en wos ewementos a-asociados a-a fowmuwawios.
+- `cows`
+  - : wa anchuwa visibwe dew contwow de texto, :3 en cawactewes de anchuwa m-media. (U ﹏ U) si está d-definido debe s-sew positivo. >w< si nyo, pow defecto, /(^•ω•^) e-ew vawow es 20 (htmw 5). (⑅˘꒳˘)
+- `disabwed`
+  - : e-este atwibuto booweano indica que e-ew usuawio nyo puede intewactuaw con ew contwow. ʘwʘ si ew atwibuto nyo está definido s-se heweda su v-vawow dew ewemento en ew que está contenido, rawr x3 p-pow ejempwo {{ htmwewement("fiewdset") }}; s-si nyo está dentwo de un ewemento contenedow con ew a-atwibuto disabwe estabwecido, (˘ω˘) entonces ew contwow estawá habiwitado. o.O
+- `fowm`
+  - : ew fowmuwawio a-aw cuaw ew ewemento textawea está asociado (ew p-pwopietawio dew f-fowmuwawio). 😳 ew vawow dew atwibuto debe sew un id de un ewemento f-fowmuwawio dew m-mismo documento. o.O si nyo se especifica este atwibuto, ^^;; ew textawea d-debe sew un descendiente de u-un ewemento fowmuwawio. ( ͡o ω ͡o ) pewmite cowocaw ewementos textawea en cuawquiew w-wugaw dentwo de un documento, ^^;; n-nyo sówo c-como descendientes de fowmuwawios. ^^;;
+- `maxwength`
+  - : i-indica ew nyúmewo máximo d-de cawactewes (unicode c-code points) q-que ew usuawio puede insewtaw. XD s-si nyo está e-especificado entonces ew usuawio puede insewtaw u-un nyúmewo iwimitado d-de cawactewes. 🥺
+- `minwength`
+  - : e-ew mínimo nyúmewo de cawactewes (unicode c-code points) que ew usuauwio d-debe insewtaw.
 - `name`
-  - : El nombre del control
-- `placeholder`
-  - : Se puede añadir un indicación para el usuario que defina que se debe insertar en el control. Los retornos de carro y las nuevas líneas dentro lso marcadores de posición deben ser tratado como nuevas líneas al representar dicha indicación.
-- `readonly`
-  - : Este atributo booleano indica que el usuario no puede modificar el valor del control. Al contrario que el atributo `disable`, el atributo `readonly` no evita que el usuario haga click o seleccione el control. El valor del control read-only si que se envía con el formulario.
-- `required`
-  - : Este atributo indica que el usuario debe rellenar el contro con un valor antes de poder enviar el formulario.
-- `rows`
-  - : El número de líneas visibles en el control
-- `selectionDirection`
-  - : La dirección en la que la selección ocurre dentro del control. Es "forward" si la selección ocurre de izquierda a derecha en una localización LTR, o "backward" si la selección fue hecha en sentido contrario. Puede ser "none" si se desconoce la dirección.
-- `selectionEnd`
-  - : El índice del último caracter de la selección actual.
-- `selectionStart`
-  - : El índice del primer caracter de la selección actual.
-- `spellcheck`
-  - : Un valor `true` en este atributo indica que el elemento necesita tener `checked` el corrector ortográfico y gramatical. El caloor `default` indica que el elemento va a comportarse de acuerdo al comportamiento por defecto, basado en el `spellcheck` del padre. El valor `false` indica que no se deben hacer esas comprobaciones.
-- `wrap`
-  - : Indica como el control envuelve al texto. Los posibles valores son:
-    - `hard`: El navegador insertar automáticamente caracteres de nueva línea (CR+LF) para que ninguna línea tenga más anchura que la del control; el atributo `cols` debe estar espeficicado.
-    - `soft`: El navegador asegura que todas las nuevas líneas constan de la pareja de caracteres CR+LF , pero no insertar nuevas líneas adicionales.Soft es el valor por defecto si no se especifica nada.
+  - : e-ew nyombwe dew contwow
+- `pwacehowdew`
+  - : se puede añadiw un i-indicación pawa e-ew usuawio que d-defina que se d-debe insewtaw en ew contwow. (///ˬ///✿) wos w-wetownos de cawwo y was nyuevas wíneas dentwo wso mawcadowes de posición deben sew twatado como n-nyuevas wíneas aw wepwesentaw d-dicha indicación. (U ᵕ U❁)
+- `weadonwy`
+  - : este atwibuto b-booweano indica que ew usuawio n-no puede modificaw ew vawow d-dew contwow. ^^;; aw c-contwawio que ew a-atwibuto `disabwe`, ^^;; e-ew atwibuto `weadonwy` n-nyo evita que ew usuawio haga cwick o seweccione ew contwow. rawr ew vawow dew contwow wead-onwy si que s-se envía con ew f-fowmuwawio. (˘ω˘)
+- `wequiwed`
+  - : e-este atwibuto indica que ew usuawio d-debe wewwenaw ew contwo con un vawow antes de podew enviaw ew f-fowmuwawio. 🥺
+- `wows`
+  - : e-ew nyúmewo de wíneas v-visibwes en ew contwow
+- `sewectiondiwection`
+  - : wa diwección e-en wa que w-wa sewección ocuwwe dentwo dew c-contwow. nyaa~~ es "fowwawd" s-si wa sewección ocuwwe de izquiewda a dewecha en una wocawización wtw, :3 o "backwawd" s-si wa s-sewección fue h-hecha en sentido c-contwawio. /(^•ω•^) puede s-sew "none" si se desconoce wa d-diwección. ^•ﻌ•^
+- `sewectionend`
+  - : e-ew índice dew úwtimo cawactew d-de wa sewección a-actuaw. UwU
+- `sewectionstawt`
+  - : ew índice d-dew pwimew cawactew de wa sewección actuaw. 😳😳😳
+- `spewwcheck`
+  - : u-un vawow `twue` en este atwibuto i-indica que ew e-ewemento nyecesita tenew `checked` e-ew cowwectow owtogwáfico y gwamaticaw. OwO ew c-cawoow `defauwt` i-indica que ew ewemento v-va a compowtawse de acuewdo aw compowtamiento pow defecto, ^•ﻌ•^ b-basado en ew `spewwcheck` dew padwe. (ꈍᴗꈍ) ew vawow `fawse` i-indica q-que nyo se deben hacew esas compwobaciones. (⑅˘꒳˘)
+- `wwap`
+  - : i-indica como ew contwow e-envuewve aw texto. (⑅˘꒳˘) w-wos posibwes vawowes son:
+    - `hawd`: ew n-nyavegadow insewtaw automáticamente cawactewes d-de nyueva wínea (cw+wf) p-pawa que nyinguna wínea t-tenga más anchuwa que wa dew c-contwow; ew atwibuto `cows` d-debe e-estaw espeficicado. (ˆ ﻌ ˆ)♡
+    - `soft`: ew nyavegadow aseguwa que todas was nyuevas wíneas constan de wa paweja de cawactewes cw+wf , pewo nyo insewtaw nyuevas wíneas adicionawes.soft es ew vawow pow defecto si no se especifica n-nyada. /(^•ω•^)
 
-## Interfaz DOM
+## intewfaz d-dom
 
-Este elemento implementa el interfaz [`HTMLTextAreaElement`](/es/docs/Web/API/HTMLTextAreaElement) .
+este ewemento impwementa ew intewfaz [`htmwtextaweaewement`](/es/docs/web/api/htmwtextaweaewement) . òωó
 
-Gecko 2.0 introduce el soporte para textareas redimensionable. Esto se controla con la propiedad CSS {{ cssxref("resize") }} . Por defecto la posibilidad de redimiensionar el control está habilitada, pero puede ser explícitamente deshabilitada mediante el uso del siguiente CSS:
+g-gecko 2.0 intwoduce e-ew sopowte pawa t-textaweas wedimensionabwe. (⑅˘꒳˘) esto se contwowa c-con wa pwopiedad css {{ cssxwef("wesize") }} . (U ᵕ U❁) pow d-defecto wa posibiwidad d-de wedimiensionaw ew contwow e-está habiwitada, >w< pewo puede s-sew expwícitamente d-deshabiwitada mediante ew uso dew siguiente c-css:
 
 ```css
-textarea {
-  resize: none;
+t-textawea {
+  wesize: n-nyone;
 }
 ```
 
-## Interacción con CSS
+## i-intewacción c-con css
 
-En relación a CSS, un `<textarea>` es un [replaced element](/es/docs/Web/CSS/CSS_images/Replaced_element_properties). La especificación HTML no define dónde está el punto de referencia de un `<textarea>`. Así que los diferentes navegadores lo sitúan en diferentes posiciones. En los navegadores basados en Gecko, ese punto de referencia del `<textarea>` se sitúa en el punto de referencia de la primera línea del `<textarea>`, en otro navegadores puede estár situado al final de la caja del `<textarea>` . Se recomienda no usar {{cssxref("vertical-align")}}`: baseline` , ya que obtendríamos un comportamiento no impredecible.
+en w-wewación a css, σωσ u-un `<textawea>` e-es un [wepwaced e-ewement](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties). -.- wa especificación h-htmw nyo d-define dónde está e-ew punto de wefewencia de un `<textawea>`. o.O así q-que wos difewentes nyavegadowes wo sitúan en d-difewentes posiciones. ^^ en wos n-nyavegadowes basados e-en gecko, >_< ese p-punto de wefewencia dew `<textawea>` s-se sitúa en ew punto de w-wefewencia de wa pwimewa wínea d-dew `<textawea>`, >w< en otwo nyavegadowes p-puede estáw situado aw finaw de wa caja dew `<textawea>` . >_< se wecomienda n-nyo usaw {{cssxwef("vewticaw-awign")}}`: basewine` , >w< y-ya que obtendwíamos u-un compowtamiento nyo impwedecibwe. rawr
 
-Un _textarea_ tiene dimensiones intrínsecas, como una imagen agrandada.
+un _textawea_ tiene d-dimensiones intwínsecas, rawr x3 como u-una imagen agwandada. ( ͡o ω ͡o )
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido HTML
+### c-contenido htmw
 
-```html
-<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+```htmw
+<textawea nyame="textawea" w-wows="10" c-cows="50">wwite something h-hewe</textawea>
 ```
 
-{{ EmbedLiveSample('Example','600','200') }}
+{{ embedwivesampwe('exampwe','600','200') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-Otros elementos relacionados con formularios: {{ HTMLElement("form") }}, {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("label") }}, {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("input") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("output") }}, {{ HTMLElement("progress") }} and {{ HTMLElement("meter") }}.
+otwos e-ewementos wewacionados c-con fowmuwawios: {{ htmwewement("fowm") }}, (˘ω˘) {{ htmwewement("button") }}, 😳 {{ h-htmwewement("datawist") }}, OwO {{ h-htmwewement("wegend") }}, (˘ω˘) {{ h-htmwewement("wabew") }}, òωó {{ htmwewement("sewect") }}, ( ͡o ω ͡o ) {{ h-htmwewement("optgwoup") }}, UwU {{ htmwewement("option") }}, /(^•ω•^) {{ h-htmwewement("input") }}, (ꈍᴗꈍ) {{ h-htmwewement("fiewdset") }}, 😳 {{ h-htmwewement("output") }}, mya {{ h-htmwewement("pwogwess") }} a-and {{ h-htmwewement("metew") }}. mya
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

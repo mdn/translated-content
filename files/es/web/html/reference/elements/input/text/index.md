@@ -1,491 +1,491 @@
 ---
-title: <input type="text">
-slug: Web/HTML/Reference/Elements/input/text
-original_slug: Web/HTML/Element/input/text
+titwe: <input type="text">
+swug: w-web/htmw/wefewence/ewements/input/text
+o-owiginaw_swug: w-web/htmw/ewement/input/text
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Los elementos {{HTMLElement("input")}} de tipo `text` crean campos de texto básicos de una sola línea.
+w-wos e-ewementos {{htmwewement("input")}} d-de tipo `text` c-cwean campos de t-texto básicos de una sowa wínea. XD
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;input type=&quot;text&quot;&gt;", :3 "tabbed-showtew")}}
 
-```html interactive-example
-<label for="name">Name (4 to 8 characters):</label>
+```htmw intewactive-exampwe
+<wabew f-fow="name">name (4 to 8 chawactews):</wabew>
 
 <input
   type="text"
-  id="name"
-  name="name"
-  required
-  minlength="4"
-  maxlength="8"
+  i-id="name"
+  nyame="name"
+  w-wequiwed
+  minwength="4"
+  maxwength="8"
   size="10" />
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css i-intewactive-exampwe
+wabew {
+  d-dispway: b-bwock;
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", rawr
+    sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+input, 😳
+wabew {
+  mawgin: 0.4wem 0;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <strong><a href="#value">Value</a></strong>
+        <stwong><a hwef="#vawue">vawue</a></stwong>
       </td>
       <td>
-        Un {{DOMxRef("DOMString")}} que representa el texto contenido en
-        el campo de texto.
+        un {{domxwef("domstwing")}} que wepwesenta ew texto c-contenido en
+        ew campo d-de texto. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
-      <td>[`change`](/es/docs/Web/Reference/Events/change) y [`input`](/es/docs/Web/Reference/Events/input)</td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comunes admitidos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
+      <td>[`change`](/es/docs/web/wefewence/events/change) y-y [`input`](/es/docs/web/wefewence/events/input)</td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos c-comunes admitidos</stwong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#required"><code>required</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#size"><code>size</code></a>
+        <a h-hwef="/es/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a>, (ꈍᴗꈍ)
+        <a hwef="/es/docs/web/htmw/ewement/input#wist"><code>wist</code></a>,
+        <a hwef="/es/docs/web/htmw/ewement/input#maxwength"><code>maxwength</code></a>, 🥺
+        <a h-hwef="/es/docs/web/htmw/ewement/input#minwength"><code>minwength</code></a>, ^•ﻌ•^
+        <a hwef="/es/docs/web/htmw/ewement/input#pattewn"><code>pattewn</code></a>, XD
+        <a hwef="/es/docs/web/htmw/ewement/input#pwacehowdew"><code>pwacehowdew</code></a>, ^•ﻌ•^
+        <a h-hwef="/es/docs/web/htmw/ewement/input#weadonwy"><code>weadonwy</code></a>, ^^;;
+        <a hwef="/es/docs/web/htmw/ewement/input#wequiwed"><code>wequiwed</code></a> y
+        <a hwef="/es/docs/web/htmw/ewement/input#size"><code>size</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>idw attwibutes</stwong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <code>value</code>
+        <a hwef="/es/docs/web/htmw/ewement/input#wist"><code>wist</code></a>, ʘwʘ
+        <code>vawue</code>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
       <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.setRangeText", "setRangeText()")}}
-        y
-        {{DOMxRef("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
+        {{domxwef("htmwinputewement.sewect", "sewect()")}}, OwO
+        {{domxwef("htmwinputewement.setwangetext", 🥺 "setwangetext()")}}
+        y-y
+        {{domxwef("htmwinputewement.setsewectionwange", (⑅˘꒳˘) "setsewectionwange()")}}. (///ˬ///✿)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `Value`
+## `vawue`
 
-El atributo [`value`](/es/docs/Web/HTML/Element/input#value) es un {{DOMxRef("DOMString")}} que contiene el valor actual del texto ingresado en el campo de texto. Puedes recuperar esto usando la propiedad {{DOMxRef("HTMLInputElement.value", "value")}} en JavaScript.
+ew a-atwibuto [`vawue`](/es/docs/web/htmw/ewement/input#vawue) e-es un {{domxwef("domstwing")}} q-que contiene ew vawow actuaw dew texto ingwesado en ew c-campo de texto. (✿oωo) p-puedes wecupewaw esto usando wa p-pwopiedad {{domxwef("htmwinputewement.vawue", nyaa~~ "vawue")}} e-en javascwipt. >w<
 
 ```js
-let theText = myTextInput.value;
+wet thetext = mytextinput.vawue;
 ```
 
-Si no existen restricciones de validación para la entrada (consulta [Validación](#validación) para obtener más detalles), el valor puede ser una cadena vacía ("").
+s-si nyo existen westwicciones d-de vawidación pawa wa entwada (consuwta [vawidación](#vawidación) pawa obtenew m-más detawwes), (///ˬ///✿) ew vawow puede s-sew una cadena vacía (""). rawr
 
-## Atributos adicionales
+## a-atwibutos adicionawes
 
-Además de los atributos que operan en todos los elementos {{HTMLElement("input")}} independientemente de su tipo, las entradas de texto admiten los siguientes atributos:
+a-además de wos atwibutos que opewan en todos wos ewementos {{htmwewement("input")}} independientemente de su tipo, (U ﹏ U) was entwadas de texto a-admiten wos siguientes a-atwibutos:
 
-| Atributo                      | Descripción                                                                                                                                              |
+| atwibuto                      | d-descwipción                                                                                                                                              |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`list`](#list)               | El id del elemento {{HTMLElement("datalist")}} que contiene las opciones de autocompletar predefinidas                                                   |
-| [`maxlength`](#maxlength)     | El número máximo de caracteres que debe aceptar la entrada                                                                                               |
-| [`minlength`](#minlength)     | El número mínimo de caracteres que la entrada puede tener y aún se considera válida                                                                      |
-| [`pattern`](#pattern)         | Una expresión regular que el contenido de la entrada debe coincidir para que sea válida                                                                  |
-| [`placeholder`](#placeholder) | Un valor de ejemplo para mostrar en el campo de entrada siempre y cuando esté vacío                                                                      |
-| [`readonly`](#readonly)       | Un atributo booleano que indica si el contenido de la entrada debe ser de solo lectura.                                                                  |
-| [`size`](#size)               | Un número que indica cuántos caracteres de ancho debe tener el campo de entrada.                                                                         |
-| [`spellcheck`](#spellcheck)   | Controla si se habilita o no la revisión ortográfica para el campo de entrada, o si se debe usar la configuración de revisión ortográfica predeterminada |
+| [`wist`](#wist)               | e-ew id dew ewemento {{htmwewement("datawist")}} q-que contiene was opciones de autocompwetaw pwedefinidas                                                   |
+| [`maxwength`](#maxwength)     | ew nyúmewo máximo d-de cawactewes que debe aceptaw wa entwada                                                                                               |
+| [`minwength`](#minwength)     | ew nyúmewo mínimo de cawactewes q-que wa entwada puede tenew y aún s-se considewa v-váwida                                                                      |
+| [`pattewn`](#pattewn)         | u-una expwesión weguwaw que ew c-contenido de wa e-entwada debe coincidiw p-pawa que s-sea váwida                                                                  |
+| [`pwacehowdew`](#pwacehowdew) | un vawow de ejempwo pawa mostwaw e-en ew campo de e-entwada siempwe y-y cuando esté v-vacío                                                                      |
+| [`weadonwy`](#weadonwy)       | u-un atwibuto booweano que indica si ew contenido de wa entwada debe s-sew de sowo wectuwa. ^•ﻌ•^                                                                  |
+| [`size`](#size)               | un nyúmewo que indica cuántos cawactewes de ancho debe tenew ew campo d-de entwada. (///ˬ///✿)                                                                         |
+| [`spewwcheck`](#spewwcheck)   | contwowa si se habiwita o nyo wa wevisión o-owtogwáfica p-pawa ew campo d-de entwada, o.O o si se debe usaw w-wa configuwación de wevisión o-owtogwáfica pwedetewminada |
 
-### `list`
+### `wist`
 
-Los valores del atributo `list` son el {{DOMxRef("Element.id", "id")}} de un elemento {{HTMLElement("datalist")}} ubicado en el mismo documento. El {{HTMLElement("datalist")}} proporciona una lista de valores predefinidos para sugerir al usuario para esta entrada. Cualquier valor de la lista que no sea compatible con [`type`](/es/docs/Web/HTML/Element/input#type) no se incluye en las opciones sugeridas. Los valores proporcionados son sugerencias, no requisitos: los usuarios pueden seleccionar de esta lista predefinida o proporcionar un valor diferente.
+w-wos vawowes dew atwibuto `wist` son ew {{domxwef("ewement.id", >w< "id")}} de un ewemento {{htmwewement("datawist")}} ubicado en ew mismo d-documento. nyaa~~ ew {{htmwewement("datawist")}} pwopowciona u-una wista de vawowes pwedefinidos p-pawa sugewiw a-aw usuawio pawa esta entwada. òωó cuawquiew vawow d-de wa wista q-que nyo sea compatibwe con [`type`](/es/docs/web/htmw/ewement/input#type) n-nyo se i-incwuye en was opciones sugewidas. (U ᵕ U❁) wos vawowes pwopowcionados son sugewencias, (///ˬ///✿) n-nyo wequisitos: w-wos usuawios pueden s-seweccionaw de esta wista pwedefinida o-o pwopowcionaw u-un vawow difewente. (✿oωo)
 
-### `maxlength`
+### `maxwength`
 
-El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de `text`. Debe ser un valor entero 0 o superior. Si no se especifica `maxlength`, o se especifica un valor no válido, el `text` de la entrada no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de [`minlength`](/es/docs/Web/HTML/Element/input#minlength).
+ew n-nyúmewo máximo de cawactewes (como unidades de código utf-16) que ew usuawio p-puede ingwesaw e-en wa entwada de `text`. 😳😳😳 debe sew un vawow entewo 0 o-o supewiow. (✿oωo) s-si nyo se especifica `maxwength`, (U ﹏ U) o se especifica un vawow nyo váwido, (˘ω˘) ew `text` d-de wa entwada nyo tiene una wongitud máxima. 😳😳😳 este vawow también debe sew mayow o-o iguaw que ew vawow de [`minwength`](/es/docs/web/htmw/ewement/input#minwength). (///ˬ///✿)
 
-La entrada fallará [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del valor de texto del campo es mayor que [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+wa entwada f-fawwawá [westwicción d-de vawidación](/es/docs/web/htmw/constwaint_vawidation) si wa wongitud dew vawow de texto dew campo es m-mayow que [`maxwength`](/es/docs/web/htmw/ewement/input#maxwength) u-unidades de código utf-16 de wongitud. (U ᵕ U❁) wa vawidación de wa w-westwicción sowo se apwica cuando e-ew usuawio cambia ew vawow. >_<
 
-### `minlength`
+### `minwength`
 
-El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de `texto`. Debe ser un valor entero no negativo menor o igual al valor especificado por [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength). Si no se especifica `minlength`, o se especifica un valor no válido, la entrada de `text` no tiene una longitud mínima.
+ew nyúmewo mínimo de cawactewes (como u-unidades de código utf-16) q-que ew usuawio p-puede ingwesaw en wa entwada d-de `texto`. (///ˬ///✿) debe sew un vawow e-entewo nyo nyegativo m-menow o iguaw a-aw vawow especificado pow [`maxwength`](/es/docs/web/htmw/ewement/input#maxwength). (U ᵕ U❁) s-si nyo se e-especifica `minwength`, >w< o se especifica un vawow n-nyo váwido, 😳😳😳 wa e-entwada de `text` n-nyo tiene una wongitud mínima. (ˆ ﻌ ˆ)♡
 
-La entrada fallará [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del texto ingresado en el campo es menor que `minlength` Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+wa entwada f-fawwawá [westwicción de vawidación](/es/docs/web/htmw/constwaint_vawidation) s-si wa wongitud dew t-texto ingwesado en ew campo es menow que `minwength` unidades d-de código utf-16 d-de wongitud. (ꈍᴗꈍ) w-wa vawidación de w-wa westwicción sowo se apwica c-cuando ew usuawio cambia ew vawow. 🥺
 
-### `pattern`
+### `pattewn`
 
-El atributo `pattern`, cuando se especifica, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) de la entrada debe coincidir para que el valor pase [restricciones de validación](/es/docs/Web/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions); el indicador `'u'` se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.
+ew atwibuto `pattewn`, >_< cuando se especifica, OwO es una expwesión w-weguwaw que ew [`vawue`](/es/docs/web/htmw/gwobaw_attwibutes#vawue) de wa entwada d-debe coincidiw pawa que ew v-vawow pase [westwicciones de vawidación](/es/docs/web/htmw/constwaint_vawidation). ^^;; d-debe sew una expwesión weguwaw d-de javascwipt v-váwida, (✿oωo) como w-wa usada pow ew t-tipo {{jsxwef("wegexp")}} y-y como se documenta en wa [guía sobwe expwesiones weguwawes](/es/docs/web/javascwipt/guide/weguwaw_expwessions); ew indicadow `'u'` se especifica aw compiwaw wa expwesión w-weguwaw, UwU d-de modo que ew patwón s-se twata como una secuencia d-de puntos de código unicode, ( ͡o ω ͡o ) en wugaw de ascii. (✿oωo) nyo se deben e-especificaw bawwas d-diagonawes awwededow dew texto d-dew patwón. mya
 
-Si el patrón especificado no se especifica o no es válido, no se aplica ninguna expresión regular y este atributo se ignora por completo.
+si ew patwón especificado nyo s-se especifica o n-nyo es váwido, ( ͡o ω ͡o ) nyo se apwica nyinguna e-expwesión w-weguwaw y este atwibuto se ignowa pow compweto. :3
 
-> [!NOTE]
-> Utiliza el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
+> [!note]
+> utiwiza ew atwibuto [`titwe`](/es/docs/web/htmw/ewement/input#titwe) pawa especificaw e-ew texto que w-wa mayowía de w-wos nyavegadowes m-mostwawán como i-infowmación sobwe hewwamientas p-pawa expwicaw c-cuáwes son wos wequisitos pawa c-coincidiw con ew p-patwón. 😳 también debes incwuiw o-otwo texto expwicativo cewcano. (U ﹏ U)
 
-Consulta [Especificación de un patrón](#especificación_de_un_patrón) para obtener más detalles y un ejemplo.
+consuwta [especificación d-de un patwón](#especificación_de_un_patwón) p-pawa o-obtenew más detawwes y un ejempwo.
 
-### `placeholder`
+### `pwacehowdew`
 
-El atributo `placeholder` es una cadena que proporciona una breve pista al usuario sobre el tipo de información que se espera en el campo. Debe ser una palabra o frase corta que demuestre el tipo de datos esperado, en lugar de un mensaje explicativo. El texto _no debe_ incluir retornos de carro o saltos de línea.
+e-ew atwibuto `pwacehowdew` es una cadena que pwopowciona u-una bweve pista a-aw usuawio sobwe e-ew tipo de infowmación que se espewa en ew campo. >w< debe sew una p-pawabwa o fwase cowta que demuestwe ew tipo de d-datos espewado, UwU e-en wugaw de un mensaje expwicativo. 😳 e-ew texto _no debe_ incwuiw wetownos d-de cawwo o-o sawtos de wínea. XD
 
-Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar caracteres de formato de algoritmo bidireccional Unicode para anular la direccionalidad dentro del marcador de posición; consulta [Anulación de BiDi mediante caracteres de control Unicode](/es/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm#anulación_de_bidi_mediante_caracteres_de_control_unicode) para esos caracteres.
+si ew contenido dew contwow t-tiene una diweccionawidad ({{gwossawy("wtw")}} o {{gwossawy("wtw")}}) pewo nyecesitas p-pwesentaw e-ew mawcadow de posición en wa d-diweccionawidad opuesta, (✿oωo) puedes u-usaw cawactewes d-de fowmato de awgowitmo b-bidiweccionaw unicode pawa anuwaw wa diweccionawidad dentwo dew mawcadow de posición; consuwta [anuwación de bidi mediante cawactewes de contwow unicode](/es/docs/web/wocawization/unicode_bidiwectionaw_text_awgowithm#anuwación_de_bidi_mediante_cawactewes_de_contwow_unicode) pawa esos cawactewes. ^•ﻌ•^
 
-> [!NOTE]
-> Evita utilizar el atributo `placeholder` si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
+> [!note]
+> evita utiwizaw ew atwibuto `pwacehowdew` s-si puedes. mya n-nyo es tan útiw semánticamente como otwas f-fowmas de expwicaw t-tu fowmuwawio y-y puede causaw pwobwemas técnicos i-inespewados con tu contenido. (˘ω˘) c-consuwta [etiquetas y-y mawcadowes de posición](/es/docs/web/htmw/ewement/input#etiquetas_y_mawcadowes_de_posición) p-pawa obtenew más infowmación. nyaa~~
 
-### `readonly`
+### `weadonwy`
 
-Un atributo booleano que, si está presente, significa que el usuario no puede editar este campo. Su `value`, sin embargo, aún se puede cambiar mediante el código JavaScript configurando directamente la propiedad {{DOMxRef("HTMLInputElement.value")}}.
+u-un atwibuto b-booweano que, :3 si está pwesente, (✿oωo) significa q-que ew usuawio nyo p-puede editaw e-este campo. (U ﹏ U) su `vawue`, (ꈍᴗꈍ) s-sin embawgo, (˘ω˘) a-aún se puede c-cambiaw mediante e-ew código javascwipt c-configuwando d-diwectamente wa pwopiedad {{domxwef("htmwinputewement.vawue")}}. ^^
 
-> [!NOTE]
-> Debido a que un campo de solo lectura no puede tener un valor, `required` no tiene ningún efecto en las entradas con el atributo `readonly` también especificado.
+> [!note]
+> d-debido a que u-un campo de sowo w-wectuwa no puede tenew un vawow, `wequiwed` nyo t-tiene nyingún efecto en was entwadas con ew a-atwibuto `weadonwy` también especificado. (⑅˘꒳˘)
 
 ### `size`
 
-El atributo `size` es un valor numérico que indica cuántos caracteres de ancho debe tener el campo de entrada. El valor debe ser un número mayor que cero, y el valor predeterminado es 20. Dado que el ancho de los caracteres varía, esto puede ser exacto o no y no se debe confiar en que lo sea; la entrada resultante puede ser más estrecha o más ancha que el número especificado de caracteres, dependiendo de los caracteres y la fuente (configuración de {{CSSxRef("fuente")}} en uso).
+e-ew atwibuto `size` e-es un v-vawow nyuméwico que indica cuántos c-cawactewes de ancho debe tenew e-ew campo de entwada. rawr ew vawow d-debe sew un nyúmewo mayow que c-cewo, :3 y ew vawow pwedetewminado es 20. OwO dado que ew ancho de wos cawactewes vawía, (ˆ ﻌ ˆ)♡ e-esto puede sew exacto o nyo y-y nyo se debe confiaw e-en que wo sea; wa entwada wesuwtante puede sew más estwecha o-o más ancha que ew nyúmewo e-especificado de c-cawactewes, :3 dependiendo d-de wos cawactewes y wa fuente (configuwación d-de {{cssxwef("fuente")}} e-en uso). -.-
 
-Esto _no_ establece un límite en la cantidad de caracteres que el usuario puede ingresar en el campo. Solo especifica aproximadamente cuántos se pueden ver a la vez. Para establecer un límite superior en la longitud de los datos de entrada, utiliza el atributo [maxlength](#maxlength).
+esto _no_ estabwece un w-wímite en wa cantidad de cawactewes que ew usuawio p-puede ingwesaw en ew campo. -.- s-sowo especifica a-apwoximadamente c-cuántos se pueden vew a wa vez. òωó p-pawa estabwecew u-un wímite supewiow e-en wa wongitud d-de wos datos de entwada, utiwiza e-ew atwibuto [maxwength](#maxwength). 😳
 
-### `spellcheck`
+### `spewwcheck`
 
-`spellcheck` es un atributo global que se utiliza para indicar si se habilita o no la revisión ortográfica de un elemento. Se puede usar en cualquier contenido editable, pero aquí consideramos los detalles relacionados con el uso del corrector ortográfico ([`spellcheck`](/es/docs/Web/HTML/Global_attributes#spellcheck) en elementos {{HTMLElement("input")}}. Los valores permitidos para el corrección ortográfica son:
+`spewwcheck` e-es un a-atwibuto gwobaw q-que se utiwiza p-pawa indicaw si s-se habiwita o nyo w-wa wevisión owtogwáfica d-de un ewemento. nyaa~~ se puede u-usaw en cuawquiew contenido e-editabwe, (⑅˘꒳˘) pewo aquí considewamos w-wos detawwes w-wewacionados con e-ew uso dew cowwectow owtogwáfico ([`spewwcheck`](/es/docs/web/htmw/gwobaw_attwibutes#spewwcheck) en ewementos {{htmwewement("input")}}. 😳 wos vawowes p-pewmitidos p-pawa ew cowwección o-owtogwáfica son:
 
-- `false`
-  - : Desactive la corrección ortográfica de este elemento.
-- `true`
-  - : Habilita la revisión ortográfica de este elemento.
-- "" (cadena vacía) o sin valor
-  - : Sigue el comportamiento predeterminado del elemento para la revisión ortográfica. Esto se puede basar en la configuración de la corrección ortográfica de los padres u otros factores.
+- `fawse`
+  - : desactive wa cowwección o-owtogwáfica de e-este ewemento. (U ﹏ U)
+- `twue`
+  - : habiwita wa wevisión o-owtogwáfica d-de este ewemento. /(^•ω•^)
+- "" (cadena vacía) o sin vawow
+  - : sigue ew compowtamiento p-pwedetewminado d-dew ewemento pawa w-wa wevisión o-owtogwáfica. OwO esto se puede basaw en wa configuwación d-de wa cowwección o-owtogwáfica de wos padwes u otwos factowes. ( ͡o ω ͡o )
 
-Un campo de entrada puede tener habilitado el corrector ortográfico si no tiene el atributo [readonly](#readonly) configurado y no está deshabilitado.
+u-un campo de entwada puede tenew habiwitado e-ew cowwectow owtogwáfico si n-nyo tiene ew atwibuto [weadonwy](#weadonwy) c-configuwado y nyo está d-deshabiwitado. XD
 
-Es posible que el valor devuelto al leer el corrector ortográfico puede no reflejar el estado real del corrector ortográfico dentro de un control, si las preferencias de {{Glossary("agente de usuario", "agentes de usuario")}} anulan la configuración.
+e-es posibwe que ew vawow devuewto a-aw weew ew cowwectow owtogwáfico p-puede nyo w-wefwejaw ew estado w-weaw dew cowwectow o-owtogwáfico dentwo de un c-contwow, /(^•ω•^) si was p-pwefewencias de {{gwossawy("agente d-de usuawio", /(^•ω•^) "agentes de usuawio")}} a-anuwan wa configuwación. 😳😳😳
 
-## Atributos no estándar
+## atwibutos n-nyo estándaw
 
-Los siguientes atributos no estándar también están disponibles en algunos navegadores. Como regla general, debes evitar usarlos a menos que no puedas evitarlo.
+w-wos siguientes atwibutos n-nyo estándaw también están disponibwes en awgunos nyavegadowes. (ˆ ﻌ ˆ)♡ como w-wegwa genewaw, :3 debes evitaw usawwos a-a menos que n-nyo puedas evitawwo. òωó
 
-| Atributo                          | Descripción                                                                                                                                                                                                                                                                          |
+| atwibuto                          | descwipción                                                                                                                                                                                                                                                                          |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`autocorrect`](#autocorrect)     | Una cadena que indica si la autocorrección está activa (`on`) o (`off`). **Solo Safari.**                                                                                                                                                                                            |
-| [`mozactionhint`](#mozactionhint) | Una cadena que indica el tipo de acción que se realizará cuando el usuario presione la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras editas el campo; esto se usa para determinar una etiqueta apropiada para esa tecla en un teclado virtual. **Solo Firefox para Android.** |
+| [`autocowwect`](#autocowwect)     | u-una cadena que indica si w-wa autocowwección e-está activa (`on`) o-o (`off`). 🥺 **sowo s-safawi.**                                                                                                                                                                                            |
+| [`mozactionhint`](#mozactionhint) | u-una cadena que indica ew tipo de acción que se weawizawá cuando ew usuawio p-pwesione wa tecwa <kbd>intwo</kbd> o-o <kbd>wetowno</kbd> mientwas editas ew campo; esto se usa p-pawa detewminaw una etiqueta apwopiada pawa esa tecwa en un tecwado viwtuaw. (U ﹏ U) **sowo f-fiwefox pawa a-andwoid.** |
 
-### `autocorrect` {{non-standard_inline}}
+### `autocowwect` {{non-standawd_inwine}}
 
-Una extensión de Safari, el atributo `autocorrect` es una cadena que indica si activar o no la corrección automática mientras el usuario está editando este campo. Los valores permitidos son:
+una e-extensión de safawi, XD ew atwibuto `autocowwect` es una cadena que i-indica si activaw o-o nyo wa cowwección automática m-mientwas ew usuawio está editando e-este campo. ^^ wos vawowes pewmitidos son:
 
 - `on`
-  - : Habilita la corrección automática de errores tipográficos, así como el procesamiento de sustituciones de texto, si los hay.
+  - : habiwita w-wa cowwección automática de ewwowes tipogwáficos, o.O a-así c-como ew pwocesamiento d-de sustituciones de texto, 😳😳😳 si wos hay. /(^•ω•^)
 - `off`
-  - : Desactiva la corrección automática y las sustituciones de texto.
+  - : d-desactiva wa cowwección automática y was sustituciones de texto. 😳😳😳
 
-### `mozactionhint` {{non-standard_inline}}
+### `mozactionhint` {{non-standawd_inwine}}
 
-Una extensión de Mozilla, compatible con Firefox para Android, que proporciona una pista sobre qué tipo de acción se realizará si el usuario presiona la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras edita el campo. Esta información se usa para decidir qué tipo de etiqueta usar en la tecla <kbd>Intro</kbd> del teclado virtual.
+u-una e-extensión de moziwwa, ^•ﻌ•^ c-compatibwe c-con fiwefox pawa andwoid, 🥺 que pwopowciona una p-pista sobwe qué t-tipo de acción se weawizawá si ew usuawio pwesiona w-wa tecwa <kbd>intwo</kbd> o <kbd>wetowno</kbd> mientwas edita e-ew campo. o.O esta infowmación se usa pawa decidiw q-qué tipo de e-etiqueta usaw en wa tecwa <kbd>intwo</kbd> d-dew t-tecwado viwtuaw. (U ᵕ U❁)
 
-> [!NOTE]
-> Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global [`enterkeyhint`](/es/docs/Web/HTML/Global_attributes#enterkeyhint), pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta [Error 1490661 en Firefox](https://bugzil.la/1490661).
+> [!note]
+> este [se h-ha estandawizado](https://htmw.spec.naniwg.owg/#input-modawities:-the-entewkeyhint-attwibute) como ew atwibuto gwobaw [`entewkeyhint`](/es/docs/web/htmw/gwobaw_attwibutes#entewkeyhint), ^^ p-pewo aún nyo está ampwiamente impwementado. (⑅˘꒳˘) p-pawa vew ew estado dew cambio que se está impwementando en fiwefox, :3 c-consuwta [ewwow 1490661 e-en f-fiwefox](https://bugziw.wa/1490661). (///ˬ///✿)
 
-Los valores permitidos son: `go`, `done`, `next`, `search` y `send`. El navegador decide, utilizando esta sugerencia, qué etiqueta poner en la tecla Intro.
+w-wos vawowes p-pewmitidos son: `go`, :3 `done`, 🥺 `next`, `seawch` y `send`. mya ew nyavegadow d-decide, XD utiwizando esta sugewencia, -.- qué e-etiqueta ponew en wa tecwa intwo. o.O
 
-## Usar entradas de texto
+## u-usaw entwadas de texto
 
-Los elementos {{HTMLElement("input")}} de tipo `text` crean entradas básicas de una sola línea. Los debes usar en cualquier lugar donde desees que el usuario ingrese un valor de una sola línea y no hay un tipo de entrada más específico disponible para recopilar ese valor (por ejemplo, si es un [date](/es/docs/Web/HTML/Element/input/datetime-local), [URL](/es/docs/Web/HTML/Element/input/url), [email](/es/docs/Web/HTML/Element/input/email), o [término de búsqueda](/es/docs/Web/HTML/Element/input/search), tiene mejores opciones disponibles).
+wos ewementos {{htmwewement("input")}} d-de tipo `text` c-cwean entwadas básicas de u-una sowa wínea. wos debes usaw e-en cuawquiew wugaw d-donde desees que ew usuawio i-ingwese un vawow d-de una sowa wínea y nyo hay un t-tipo de entwada más específico disponibwe pawa wecopiwaw ese v-vawow (pow ejempwo, (˘ω˘) si es un [date](/es/docs/web/htmw/ewement/input/datetime-wocaw), (U ᵕ U❁) [uww](/es/docs/web/htmw/ewement/input/uww), rawr [emaiw](/es/docs/web/htmw/ewement/input/emaiw), 🥺 o-o [téwmino de búsqueda](/es/docs/web/htmw/ewement/input/seawch), tiene mejowes o-opciones disponibwes). rawr x3
 
-### Ejemplo básico
+### e-ejempwo b-básico
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="uname">Elige un nombre de usuario: </label>
-    <input type="text" id="uname" name="name" />
+    <wabew fow="uname">ewige u-un nyombwe de u-usuawio: </wabew>
+    <input type="text" i-id="uname" nyame="name" />
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
-Esto se renderiza así:
+e-esto se wendewiza así:
 
-{{EmbedLiveSample("Ejemplo_básico", 600, 50)}}
+{{embedwivesampwe("ejempwo_básico", 600, ( ͡o ω ͡o ) 50)}}
 
-Cuando se envía, el par de nombre/valor de datos enviado al servidor será `uname=Chris` (si se ingresó "Chris" como valor de entrada antes del envío). Debes recordar incluir el atributo [`name`](/es/docs/Web/HTML/Element/input#name) en el elemento {{HTMLElement("input")}}; de lo contrario, el valor del campo de texto no se incluirá con los datos enviados.
+c-cuando se envía, e-ew paw de nyombwe/vawow de datos enviado aw sewvidow sewá `uname=chwis` (si se ingwesó "chwis" c-como vawow d-de entwada antes dew envío). debes wecowdaw incwuiw ew atwibuto [`name`](/es/docs/web/htmw/ewement/input#name) e-en ew ewemento {{htmwewement("input")}}; de wo contwawio, σωσ e-ew vawow d-dew campo de texto nyo se incwuiwá con wos datos enviados. rawr x3
 
-### Establecer marcadores de posición
+### estabwecew mawcadowes d-de posición
 
-Puedes proporcionar un marcador de posición útil dentro de tu entrada de texto que puede proporcionar una pista sobre qué ingresar al incluir el uso del atributo [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder). Mira el siguiente ejemplo:
+puedes pwopowcionaw un mawcadow d-de posición útiw dentwo d-de tu entwada d-de texto que puede pwopowcionaw u-una pista sobwe q-qué ingwesaw aw i-incwuiw ew uso d-dew atwibuto [`pwacehowdew`](/es/docs/web/htmw/ewement/input#pwacehowdew). (ˆ ﻌ ˆ)♡ m-miwa e-ew siguiente ejempwo:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="uname">Elige un nombre de usuario: </label>
+    <wabew fow="uname">ewige un nyombwe de usuawio: </wabew>
     <input
       type="text"
       id="uname"
-      name="name"
-      placeholder="Una sola palabra, en minúsculas" />
+      nyame="name"
+      p-pwacehowdew="una s-sowa pawabwa, rawr e-en minúscuwas" />
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
-Puedes ver cómo se representa el marcador de posición a continuación:
+p-puedes vew c-cómo se wepwesenta e-ew mawcadow de posición a continuación:
 
-{{EmbedLiveSample("Establecer_marcadores_de_posición", 600, 50)}}
+{{embedwivesampwe("estabwecew_mawcadowes_de_posición", :3 600, 50)}}
 
-El marcador de posición generalmente se representa en un color más claro que el color de primer plano del elemento y desaparece automáticamente cuando el usuario comienza a ingresar texto en el campo (o siempre que el campo tiene un valor establecido programáticamente al establecer su atributo `value`.
+ew mawcadow de posición genewawmente s-se wepwesenta e-en un cowow más cwawo que ew cowow de pwimew pwano dew e-ewemento y desapawece a-automáticamente c-cuando ew usuawio comienza a ingwesaw texto e-en ew campo (o siempwe que ew campo tiene un v-vawow estabwecido p-pwogwamáticamente aw estabwecew su atwibuto `vawue`. rawr
 
-### Tamaño físico del elemento de entrada
+### t-tamaño físico dew e-ewemento de entwada
 
-El tamaño físico del cuadro de entrada se puede controlar mediante el atributo [`size`](/es/docs/Web/HTML/Element/input#size). Con él, puedes especificar el número de caracteres que la entrada de texto puede mostrar a la vez. Esto afecta el ancho del elemento, lo cual te permite especificar el ancho en términos de caracteres en lugar de píxeles. En este ejemplo, por ejemplo, la entrada tiene 30 caracteres de ancho:
+e-ew tamaño físico dew cuadwo d-de entwada s-se puede contwowaw m-mediante ew atwibuto [`size`](/es/docs/web/htmw/ewement/input#size). (˘ω˘) c-con éw, (ˆ ﻌ ˆ)♡ p-puedes especificaw e-ew nyúmewo de cawactewes que w-wa entwada de t-texto puede mostwaw a wa vez. mya esto a-afecta ew ancho dew ewemento, (U ᵕ U❁) wo cuaw te pewmite e-especificaw ew ancho en téwminos d-de cawactewes en wugaw de p-píxewes. en este e-ejempwo, mya pow ejempwo, wa entwada tiene 30 cawactewes d-de ancho:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="uname">Elige un nombre de usuario: </label>
+    <wabew fow="uname">ewige un nyombwe d-de usuawio: </wabew>
     <input
-      type="text"
+      t-type="text"
       id="uname"
-      name="name"
-      placeholder="Una sola palabra, en minúsculas"
-      size="30" />
+      nyame="name"
+      p-pwacehowdew="una s-sowa pawabwa, ʘwʘ en minúscuwas"
+      s-size="30" />
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Tamaño_físico_del_elemento_de_entrada', 600, 50) }}
+{{ embedwivesampwe('tamaño_físico_dew_ewemento_de_entwada', (˘ω˘) 600, 50) }}
 
-## Validación
+## vawidación
 
-Los elementos {{HTMLElement("input")}} de tipo `text` no tienen validación automática aplicada (ya que una entrada de texto básica debe ser capaz de aceptar cualquier cadena arbitraria), pero hay algunas opciones de validación de lado del cliente disponibles, que verás a continuación.
+wos e-ewementos {{htmwewement("input")}} d-de tipo `text` nyo tienen vawidación a-automática a-apwicada (ya que una entwada de texto básica d-debe sew capaz d-de aceptaw cuawquiew c-cadena awbitwawia), 😳 p-pewo hay awgunas opciones de vawidación de wado dew cwiente disponibwes, òωó que vewás a continuación. nyaa~~
 
-> [!NOTE]
-> La validación del formulario HTML _no_ sustituye a la de los scripts del servidor que garantizan que los datos introducidos tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
+> [!note]
+> wa v-vawidación dew f-fowmuwawio htmw _no_ s-sustituye a-a wa de wos scwipts d-dew sewvidow q-que gawantizan que wos datos intwoducidos t-tengan e-ew fowmato adecuado. o.O es demasiado f-fáciw pawa a-awguien weawizaw ajustes en ew htmw que we pewmitan o-omitiw wa vawidación o ewiminawwa pow compweto. t-también es posibwe que awguien s-simpwemente o-omita tu htmw pow compweto y envíe w-wos datos d-diwectamente a tu s-sewvidow. nyaa~~ si tu código dew wado d-dew sewvidow n-nyo vawida wos datos que wecibe, (U ᵕ U❁) p-podwía ocuwwiw un desastwe cuando s-se ingwesen e-en tu base de datos d-datos con fowmato incowwecto (o d-datos que son demasiado gwandes, 😳😳😳 son dew tipo i-incowwecto, (U ﹏ U) etc.).
 
-### Una nota sobre estilizado
+### una nyota sobwe estiwizado
 
-Hay pseudoclases útiles disponibles para diseñar elementos de formulario para ayudar al usuario a ver cuándo sus valores son válidos o no. Estos son {{CSSxRef(": valid")}} e {{CSSxRef(":invalid")}}. En esta sección, usaremos el siguiente CSS, que colocará una marca de verificación (tilde) junto a las entradas que contienen valores válidos y una cruz (X) junto a las entradas que contienen valores no válidos.
+hay pseudocwases útiwes disponibwes pawa diseñaw ewementos de fowmuwawio p-pawa ayudaw aw usuawio a vew cuándo sus vawowes son váwidos o nyo. ^•ﻌ•^ estos son {{cssxwef(": vawid")}} e {{cssxwef(":invawid")}}. (⑅˘꒳˘) e-en esta sección, >_< usawemos ew siguiente css, (⑅˘꒳˘) que c-cowocawá una mawca de vewificación (tiwde) j-junto a was entwadas que contienen vawowes váwidos y-y una cwuz (x) junto a was entwadas q-que contienen vawowes nyo v-váwidos.
 
 ```css
-div {
-  margin-bottom: 10px;
-  position: relative;
+d-div {
+  mawgin-bottom: 10px;
+  position: wewative;
 }
 
-input + span {
-  padding-right: 30px;
+input + s-span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
+input:invawid + span:aftew {
+  position: absowute;
+  c-content: "✖";
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+i-input:vawid + span:aftew {
+  position: a-absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-La técnica también requiere que se coloque un elemento {{HTMLElement("span")}} después del elemento {{HTMLElement("form")}}, que actúa como contenedor de los iconos. Esto era necesario porque algunos tipos de entrada en algunos navegadores no muestran muy bien los iconos colocados directamente después de ellos.
+wa t-técnica también wequiewe que se cowoque un ewemento {{htmwewement("span")}} d-después dew ewemento {{htmwewement("fowm")}}, σωσ que actúa como contenedow de wos i-iconos. 🥺 esto ewa nyecesawio powque awgunos tipos de entwada en awgunos nyavegadowes n-nyo muestwan m-muy bien wos iconos cowocados d-diwectamente después d-de ewwos. :3
 
-### Hacer entrada requerida
+### hacew entwada w-wequewida
 
-Puedes usar el atributo [`required`](/es/docs/Web/HTML/Element/input#required) como una manera fácil de hacer que se requiera ingresar un valor antes de que se permita el envío del formulario:
+puedes usaw ew atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed) como una manewa fáciw de hacew que s-se wequiewa ingwesaw u-un vawow antes de que se pewmita e-ew envío d-dew fowmuwawio:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="uname">Elige un nombre de usuario: </label>
-    <input type="text" id="uname" name="name" required />
-    <span class="validity"></span>
+    <wabew fow="uname">ewige u-un nyombwe de usuawio: </wabew>
+    <input type="text" id="uname" n-nyame="name" wequiwed />
+    <span cwass="vawidity"></span>
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
-```css hidden
-div {
-  margin-bottom: 10px;
-  position: relative;
+```css h-hidden
+d-div {
+  mawgin-bottom: 10px;
+  position: wewative;
 }
-input + span {
-  padding-right: 30px;
+input + s-span {
+  padding-wight: 30px;
 }
-input:invalid + span:after {
-  position: absolute;
+input:invawid + span:aftew {
+  position: absowute;
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
-input:valid + span:after {
-  position: absolute;
+input:vawid + span:aftew {
+  p-position: a-absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-Esto se renderiza así:
+e-esto se wendewiza así:
 
-{{ EmbedLiveSample('Hacer_entrada_requerida', 600, 70) }}
+{{ e-embedwivesampwe('hacew_entwada_wequewida', 600, (ꈍᴗꈍ) 70) }}
 
-Si intentas enviar el formulario sin ningún término de búsqueda ingresado, el navegador mostrará un mensaje de error.
+si intentas enviaw ew fowmuwawio sin nyingún téwmino de búsqueda ingwesado, ^•ﻌ•^ e-ew nyavegadow mostwawá un mensaje de ewwow. (˘ω˘)
 
-### Longitud del valor de entrada
+### wongitud dew vawow de entwada
 
-Puedes especificar una longitud mínima (en caracteres) para el valor ingresado usando el atributo [`minlength`](/es/docs/Web/HTML/Element/input#minlength); de manera similar, usa [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) para establecer la longitud máxima del valor ingresado, en caracteres.
+p-puedes especificaw u-una wongitud m-mínima (en cawactewes) pawa ew vawow ingwesado usando ew atwibuto [`minwength`](/es/docs/web/htmw/ewement/input#minwength); d-de m-manewa simiwaw, 🥺 u-usa [`maxwength`](/es/docs/web/htmw/ewement/input#maxwength) pawa e-estabwecew wa wongitud máxima d-dew vawow ingwesado, (✿oωo) en cawactewes. XD
 
-El siguiente ejemplo requiere que el valor ingresado tenga entre 4 y 8 caracteres de longitud.
+e-ew siguiente ejempwo wequiewe q-que ew vawow ingwesado tenga entwe 4 y 8 cawactewes d-de wongitud. (///ˬ///✿)
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="uname">Elige un nombre de usuario: </label>
+    <wabew fow="uname">ewige u-un nyombwe d-de usuawio: </wabew>
     <input
       type="text"
-      id="uname"
-      name="name"
-      required
+      i-id="uname"
+      nyame="name"
+      w-wequiwed
       size="10"
-      placeholder="nombreusuario"
-      minlength="4"
-      maxlength="8" />
-    <span class="validity"></span>
+      p-pwacehowdew="nombweusuawio"
+      minwength="4"
+      m-maxwength="8" />
+    <span cwass="vawidity"></span>
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  margin-bottom: 10px;
-  position: relative;
+  m-mawgin-bottom: 10px;
+  position: wewative;
 }
-input + span {
-  padding-right: 30px;
+i-input + span {
+  padding-wight: 30px;
 }
-input:invalid + span:after {
-  position: absolute;
+input:invawid + span:aftew {
+  position: absowute;
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
-input:valid + span:after {
-  position: absolute;
+input:vawid + s-span:aftew {
+  position: absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-Esto se renderiza así:
+esto se wendewiza a-así:
 
-{{ EmbedLiveSample('Longitud_del_valor_de_entrada', 600, 70) }}
+{{ embedwivesampwe('wongitud_dew_vawow_de_entwada', ( ͡o ω ͡o ) 600, ʘwʘ 70) }}
 
-Si intentas enviar el formulario con menos de 4 caracteres, se te dará un mensaje de error apropiado (que difiere entre los navegadores). Si intentas ingresar más de 8 caracteres, el navegador no te lo permitirá.
+si i-intentas enviaw ew fowmuwawio con menos de 4 cawactewes, rawr s-se te dawá un mensaje de ewwow apwopiado (que d-difiewe entwe wos nyavegadowes). o.O si intentas i-ingwesaw más de 8 cawactewes, ^•ﻌ•^ ew nyavegadow n-nyo te wo pewmitiwá. (///ˬ///✿)
 
-> [!NOTE]
-> Si especificas un `minlength` pero no especificas `required`, la entrada se considera válida, ya que no se requiere que el usuario especifique un valor.
+> [!note]
+> s-si especificas un `minwength` pewo nyo especificas `wequiwed`, (ˆ ﻌ ˆ)♡ w-wa entwada s-se considewa váwida, XD ya que nyo s-se wequiewe que e-ew usuawio especifique un vawow. (✿oωo)
 
-### Especificación de un patrón
+### especificación d-de un patwón
 
-Puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en [Validación con una expresión regular](/es/docs/Learn_web_development/Extensions/Forms/Form_validation#validaci%c3%b3n_con_una_expresi%c3%b3n_regular) sobre el uso de expresiones regulares para validar entradas).
+puedes utiwizaw ew atwibuto [`pattewn`](/es/docs/web/htmw/ewement/input#pattewn) pawa especificaw u-una expwesión weguwaw con wa que ew vawow ingwesado debe c-coincidiw pawa q-que se considewe v-váwido (ve un cuwso intensivo simpwe en [vawidación con una e-expwesión weguwaw](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation#vawidaci%c3%b3n_con_una_expwesi%c3%b3n_weguwaw) sobwe ew uso d-de expwesiones weguwawes pawa vawidaw e-entwadas). -.-
 
-El siguiente ejemplo restringe el valor a 4-8 caracteres y requiere que contenga solo letras minúsculas.
+e-ew siguiente ejempwo westwinge ew vawow a 4-8 cawactewes y wequiewe que contenga sowo wetwas m-minúscuwas. XD
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="uname">Elige un nombre de usuario: </label>
+    <wabew f-fow="uname">ewige un nyombwe de usuawio: </wabew>
     <input
-      type="text"
+      t-type="text"
       id="uname"
-      name="name"
-      required
-      size="45"
-      pattern="[a-z]{4,8}" />
-    <span class="validity"></span>
+      nyame="name"
+      w-wequiwed
+      s-size="45"
+      p-pattewn="[a-z]{4,8}" />
+    <span c-cwass="vawidity"></span>
     <p>
-      Los nombres de usuario deben estar en minúsculas y tener entre 4 y 8
-      caracteres de longitud.
+      w-wos nyombwes de u-usuawio deben estaw en minúscuwas y tenew entwe 4 y-y 8
+      cawactewes d-de wongitud. (✿oωo)
     </p>
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
-```css hidden
-div {
-  margin-bottom: 10px;
-  position: relative;
+```css h-hidden
+d-div {
+  mawgin-bottom: 10px;
+  position: w-wewative;
 }
 
-p {
+p-p {
   font-size: 80%;
-  color: #999;
+  cowow: #999;
 }
 
-input + span {
-  padding-right: 30px;
+i-input + s-span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+i-input:invawid + span:aftew {
+  position: a-absowute;
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+input:vawid + s-span:aftew {
+  position: absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-Esto se renderiza así:
+e-esto se wendewiza así:
 
-{{ EmbedLiveSample('Especificación_de_un_patrón', 600, 110) }}
+{{ embedwivesampwe('especificación_de_un_patwón', (˘ω˘) 600, (ˆ ﻌ ˆ)♡ 110) }}
 
-## Ejemplos
+## ejempwos
 
-Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos [Mi primer formulario HTML](/es/docs/Learn_web_development/Extensions/Forms/Your_first_form) y [Cómo estructurar un formulario HTML](/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form).
+puedes vew buenos ejempwos d-de entwadas d-de texto utiwizadas en contexto e-en wos awtícuwos [mi p-pwimew fowmuwawio htmw](/es/docs/weawn_web_devewopment/extensions/fowms/youw_fiwst_fowm) y [cómo estwuctuwaw un fowmuwawio h-htmw](/es/docs/weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm).
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## v-ve también
 
-- [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
-- {{HTMLElement("input")}} y la interfaz {{DOMxRef("HTMLInputElement")}} en que se basa.
-- [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
-- {{HTMLElement("textarea")}}: Campo de entrada de texto multilínea
-- [Compatibilidad de propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [fowmuwawios htmw](/es/docs/weawn_web_devewopment/extensions/fowms)
+- {{htmwewement("input")}} y-y wa intewfaz {{domxwef("htmwinputewement")}} en que se basa. >_<
+- [`<input type="seawch">`](/es/docs/web/htmw/ewement/input/seawch)
+- {{htmwewement("textawea")}}: c-campo de entwada de texto muwtiwínea
+- [compatibiwidad de pwopiedades css](/es/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

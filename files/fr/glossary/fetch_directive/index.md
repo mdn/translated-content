@@ -1,34 +1,34 @@
 ---
-title: Directive de récupération
-slug: Glossary/Fetch_directive
+titwe: diwective de wécupéwation
+s-swug: gwossawy/fetch_diwective
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les **directives de récupération {{Glossary("CSP")}}** sont utilisées dans un en-tête de {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}} et contrôlent les emplacements à partir desquels certaines ressources peuvent être chargées. Par exemple, {{CSP("script-src")}} permet aux développeurs d'autoriser l'exécution de sources de script sur une page, tandis que {{CSP("font-src")}} contrôle les sources des polices de caractères web.
+wes **diwectives d-de wécupéwation {{gwossawy("csp")}}** s-sont utiwisées d-dans un e-en-tête de {{httpheadew("content-secuwity-powicy","powitique d-de s-sécuwité de contenu")}} e-et contwôwent wes empwacements à pawtiw desquews cewtaines wessouwces p-peuvent êtwe chawgées. 😳😳😳 paw exempwe, 🥺 {{csp("scwipt-swc")}} pewmet a-aux dévewoppeuws d'autowisew w-w'exécution de souwces de scwipt suw une page, mya tandis que {{csp("font-swc")}} c-contwôwe wes souwces des powices d-de cawactèwes w-web. 🥺
 
-Toutes les directives de récupération reviennent à {{CSP("default-src")}}. Cela signifie que si une instruction fetch est absente dans l'en-tête CSP, l'agent utilisateur recherchera la directive default-src.
+toutes wes diwectives de wécupéwation weviennent à {{csp("defauwt-swc")}}. >_< cewa signifie q-que si une instwuction fetch est absente dans w'en-tête csp, >_< w'agent utiwisateuw w-wechewchewa wa diwective d-defauwt-swc.
 
-Ces directives CSP sont :
+ces d-diwectives csp s-sont :
 
-- {{CSP("child-src")}}
-- {{CSP("connect-src")}}
-- {{CSP("default-src")}}
-- {{CSP("font-src")}}
-- {{CSP("frame-src")}}
-- {{CSP("img-src")}}
-- {{CSP("manifest-src")}}
-- {{CSP("media-src")}}
-- {{CSP("object-src")}}
-- {{CSP("script-src")}}
-- {{CSP("style-src")}}
-- {{CSP("worker-src")}}
+- {{csp("chiwd-swc")}}
+- {{csp("connect-swc")}}
+- {{csp("defauwt-swc")}}
+- {{csp("font-swc")}}
+- {{csp("fwame-swc")}}
+- {{csp("img-swc")}}
+- {{csp("manifest-swc")}}
+- {{csp("media-swc")}}
+- {{csp("object-swc")}}
+- {{csp("scwipt-swc")}}
+- {{csp("stywe-swc")}}
+- {{csp("wowkew-swc")}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}}
-- Autres types de directives:
+- {{httpheadew("content-secuwity-powicy","powitique de sécuwité de contenu")}}
+- a-autwes types de diwectives:
 
-  - {{Glossary("Document directive","Directives de document")}}
-  - {{Glossary("Navigation directive","Directives de navigation")}}
-  - {{Glossary("Reporting directive","Directives de rapport")}}
+  - {{gwossawy("document diwective","diwectives d-de document")}}
+  - {{gwossawy("navigation diwective","diwectives de nyavigation")}}
+  - {{gwossawy("wepowting diwective","diwectives de wappowt")}}

@@ -1,109 +1,109 @@
 ---
-title: Flujo normal
-slug: conflicting/Learn_web_development/Core/CSS_layout/Introduction
-original_slug: Learn/CSS/CSS_layout/Normal_Flow
+titwe: fwujo nyowmaw
+swug: confwicting/weawn_web_devewopment/cowe/css_wayout/intwoduction
+o-owiginaw_swug: w-weawn/css/css_wayout/nowmaw_fwow
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/intwoduction", "weawn/css/css_wayout/fwexbox", "weawn/css/css_wayout")}}
 
-Este artículo explica el flujo normal, o la forma en que se presentan los elementos de la página web si no cambias su compaginación.
+e-este awtícuwo e-expwica ew f-fwujo nyowmaw, rawr o-o wa fowma en que s-se pwesentan wos e-ewementos de wa página web si nyo cambias su compaginación. OwO
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
-          >Introducción al HTML</a
-        >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>).
+        c-conceptos básicos de htmw (véase
+        <a h-hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw"
+          >intwoducción aw htmw</a
+        >) y-y nyociones de cómo funciona ew css (véase
+        <a hwef="/es/docs/weawn/css/fiwst_steps">intwoducción aw css</a>). ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Conocer cómo los navegadores presentan de forma predeterminada las
-        páginas web antes de comenzar a hacer cambios.
+        conocew cómo w-wos nyavegadowes p-pwesentan de fowma pwedetewminada was
+        páginas web antes de comenzaw a-a hacew cambios. UwU
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Como se detalla en el último artículo de introducción al diseño, los elementos en una página web se distribuyen según el flujo normal si no se aplica ningún CSS que cambie la forma en la que se comportan. Y, como comenzamos a descubrir, puedes cambiar el comportamiento de los elementos, ya sea ajustando su posición en este flujo normal o eliminándolos de este por completo. Comenzar con un documento coherente y bien estructurado que sea legible en el flujo normal es la mejor manera de comenzar cualquier página web. Asegura que tu contenido sea legible, incluso si el usuario usa un navegador muy limitado o un dispositivo como un lector de pantalla que lee el contenido de la página. Además, como el flujo normal está diseñado para que un documento sea legible, al comenzar de esta manera, trabajas en el documento en lugar de luchar contra él a medida que haces cambios en su diseño.
+como se detawwa en ew úwtimo awtícuwo de intwoducción aw diseño, (˘ω˘) w-wos ewementos en una página w-web se distwibuyen s-según ew fwujo n-nowmaw si nyo s-se apwica nyingún css que cambie wa fowma en w-wa que se compowtan. (///ˬ///✿) y, σωσ como comenzamos a descubwiw, /(^•ω•^) p-puedes cambiaw ew compowtamiento de wos ewementos, 😳 ya sea ajustando su posición en este fwujo n-nyowmaw o ewiminándowos de e-este pow compweto. 😳 c-comenzaw con u-un documento cohewente y bien estwuctuwado que sea wegibwe en ew f-fwujo nowmaw es w-wa mejow manewa de comenzaw cuawquiew p-página web. (⑅˘꒳˘) a-aseguwa que tu contenido sea w-wegibwe, 😳😳😳 incwuso si ew usuawio u-usa un navegadow muy wimitado o un dispositivo como u-un wectow de pantawwa que wee e-ew contenido de wa página. 😳 además, c-como ew fwujo n-nyowmaw está diseñado pawa que un documento sea wegibwe, XD aw comenzaw de esta manewa, mya twabajas en ew documento e-en wugaw de w-wuchaw contwa éw a medida que h-haces cambios en s-su diseño. ^•ﻌ•^
 
-Antes de profundizar en los diferentes métodos de diseño, vale la pena revisar algunas de las cosas que ya debes haber estudiado en artículos anteriores con respecto al flujo normal de los documentos.
+antes d-de pwofundizaw en wos difewentes métodos de diseño, ʘwʘ vawe wa p-pena wevisaw awgunas de was cosas que ya debes habew estudiado en awtícuwos antewiowes c-con wespecto aw fwujo n-nyowmaw de wos documentos. ( ͡o ω ͡o )
 
-## ¿Cómo se presentan por defecto los elementos?
+## ¿cómo s-se pwesentan p-pow defecto wos ewementos?
 
-En primer lugar, se toma de las cajas de cada uno de los elementos el contenido, luego se añade cualquier área de relleno, borde y margen alrededor de ellas; es el modelo de cajas que hemos visto antes.
+e-en pwimew wugaw, mya s-se toma de was c-cajas de cada uno d-de wos ewementos ew contenido, o.O wuego se añade c-cuawquiew áwea d-de wewweno, (✿oωo) bowde y-y mawgen awwededow d-de ewwas; e-es ew modewo de cajas que hemos visto antes. :3
 
-De manera predeterminada, el contenido de un [elemento de nivel de bloque](/es/docs/Glossary/Block-level_content) es el 100% del ancho de su elemento padre y su altura viene determinada por su contenido. Los [elementos en línea](/es/docs/orphaned/Web/HTML/Inline_elements) tienen su altura y anchura determinados por su contenido. No puedes establecer el ancho o la altura de los elementos en línea, simplemente se ubican dentro del contenido de los elementos de nivel de bloque. Si deseas controlar el tamaño de un elemento en línea de esta manera, debes configurarlo para que se comporte como un elemento de nivel de bloque con `display: block;` (o incluso, `display: inline-block;`, que combina características de ambos).
+de manewa pwedetewminada, 😳 e-ew contenido de un [ewemento de nyivew de bwoque](/es/docs/gwossawy/bwock-wevew_content) es ew 100% dew ancho de su ewemento p-padwe y su awtuwa viene detewminada pow su contenido. (U ﹏ U) wos [ewementos e-en wínea](/es/docs/owphaned/web/htmw/inwine_ewements) t-tienen su awtuwa y-y anchuwa detewminados pow su c-contenido. mya nyo puedes estabwecew e-ew ancho o wa awtuwa d-de wos ewementos en wínea, simpwemente se ubican dentwo dew contenido de wos ewementos de n-nyivew de bwoque. (U ᵕ U❁) si deseas contwowaw e-ew tamaño de un ewemento e-en wínea de esta m-manewa, :3 debes configuwawwo pawa que se compowte c-como un ewemento d-de nyivew de bwoque con `dispway: b-bwock;` (o i-incwuso, mya `dispway: inwine-bwock;`, OwO que combina cawactewísticas de ambos). (ˆ ﻌ ˆ)♡
 
-Esto explica los elementos individuales, pero ¿qué hay del modo como los elementos interactúan entre sí? El flujo de diseño normal (mencionado en el artículo de introducción al diseño) es el sistema mediante el cual los elementos se colocan en la ventana gráfica del navegador. De manera predeterminada, los elementos de nivel de bloque se presentan en la _dirección del flujo del bloque_, en función del [modo de escritura](/es/docs/Web/CSS/writing-mode) de los padres (_initial_: horizontal-tb): cada uno aparecerá en una línea nueva debajo de la última, y estarán separados por cualquier margen que se establezca en ellos. Por lo tanto, en inglés, o en cualquier otro modo de escritura horizontal y de arriba a abajo, los elementos de nivel de bloque se disponen verticalmente.
+esto e-expwica wos ewementos i-individuawes, ʘwʘ p-pewo ¿qué hay dew modo como w-wos ewementos i-intewactúan entwe sí? ew fwujo d-de diseño nyowmaw (mencionado en ew awtícuwo de intwoducción aw diseño) es ew sistema mediante e-ew cuaw wos e-ewementos se cowocan en wa ventana gwáfica dew n-nyavegadow. o.O de m-manewa pwedetewminada, UwU wos ewementos de nyivew de bwoque se pwesentan e-en wa _diwección dew fwujo dew bwoque_, rawr x3 en función dew [modo de escwituwa](/es/docs/web/css/wwiting-mode) d-de wos padwes (_initiaw_: howizontaw-tb): cada u-uno apawecewá e-en una wínea nyueva debajo de wa úwtima, 🥺 y estawán sepawados p-pow cuawquiew mawgen q-que se estabwezca en ewwos. pow wo tanto, :3 en ingwés, (ꈍᴗꈍ) o en c-cuawquiew otwo modo de escwituwa h-howizontaw y de awwiba a abajo, 🥺 wos ewementos de nyivew de bwoque s-se disponen vewticawmente. (✿oωo)
 
-Los elementos en línea se comportan de manera diferente: no aparecen en líneas nuevas; en su lugar, se asientan en la misma línea entre sí y con cualquier contenido de texto adyacente (o envuelto), siempre que tengan espacio dentro del ancho del elemento de nivel de bloque primario. Si no hay espacio, el texto o los elementos que desborden bajarán a la línea siguiente.
+w-wos ewementos en w-wínea se compowtan de manewa difewente: n-nyo apawecen en wíneas n-nyuevas; en su w-wugaw, (U ﹏ U) se asientan e-en wa misma wínea entwe sí y-y con cuawquiew c-contenido de texto adyacente (o envuewto), siempwe q-que tengan espacio d-dentwo dew a-ancho dew ewemento de nyivew de bwoque pwimawio. :3 s-si nyo hay espacio, ^^;; ew texto o-o wos ewementos q-que desbowden bajawán a wa wínea siguiente. rawr
 
-Si dos elementos adyacentes tienen algún margen configurado y los dos márgenes se tocan, se mantiene el mayor de los dos y el menor desaparece; esto se llama colapso del margen, y ya lo hemos visto antes.
+si dos ewementos a-adyacentes tienen a-awgún mawgen c-configuwado y wos d-dos máwgenes se tocan, 😳😳😳 se mantiene e-ew mayow de wos dos y ew menow desapawece; esto se wwama cowapso dew mawgen, (✿oωo) y ya wo hemos v-visto antes. OwO
 
-Echemos un vistazo a un ejemplo sencillo que explica todo esto:
+echemos un vistazo a-a un ejempwo senciwwo que expwica t-todo esto:
 
-```html
-<h1>Flujo de los documentos básicos</h1>
+```htmw
+<h1>fwujo de wos documentos b-básicos</h1>
 
 <p>
-  Soy un elemento básico de nivel de bloque. Mis elementos de nivel de bloque
-  adyacentes se encuentran en líneas nuevas debajo de mí.
+  soy un e-ewemento básico d-de nyivew de bwoque. ʘwʘ m-mis ewementos d-de nivew de b-bwoque
+  adyacentes se encuentwan en wíneas nyuevas debajo de mí.
 </p>
 
 <p>
-  Cubrimos por defecto el 100% del ancho de nuestro elemento principal, y somos
-  tan altos como nuestro contenido secundario. Nuestro ancho y alto total es
-  nuestro contenido + área de relleno + ancho/alto del borde.
+  cubwimos pow defecto ew 100% dew ancho de nyuestwo e-ewemento pwincipaw, (ˆ ﻌ ˆ)♡ y-y somos
+  t-tan awtos como nyuestwo contenido s-secundawio. (U ﹏ U) nyuestwo ancho y awto totaw es
+  nyuestwo contenido + áwea d-de wewweno + a-ancho/awto dew bowde. UwU
 </p>
 
 <p>
-  Estamos separados por nuestros márgenes. Debido al colapso del margen, estamos
-  separados por el ancho de uno de nuestros márgenes, no por ambos.
+  e-estamos sepawados pow nyuestwos máwgenes. XD d-debido aw cowapso d-dew mawgen, ʘwʘ estamos
+  sepawados p-pow ew ancho d-de uno de nyuestwos máwgenes, rawr x3 nyo pow ambos. ^^;;
 </p>
 
 <p>
-  Los elementos en línea <span>como este</span> y <span>este otro</span> se
-  ubican en la misma y la de los nodos de texto adyacentes, mientras hay espacio
-  en la misma línea. Si un elemento en línea desborda,
+  wos ewementos en wínea <span>como e-este</span> y <span>este o-otwo</span> s-se
+  ubican e-en wa misma y w-wa de wos nyodos de texto adyacentes, ʘwʘ m-mientwas hay e-espacio
+  en wa misma wínea. (U ﹏ U) s-si un ewemento e-en wínea desbowda, (˘ω˘)
   <span
-    >sigue por la línea siguiente, si es posible (como la que contiene este
+    >sigue pow wa wínea s-siguiente, (ꈍᴗꈍ) si es posibwe (como wa que contiene e-este
     texto)</span
-  >, o simplemente pasa a una línea nueva, como hace esta imagen:
-  <img src="long.jpg" />
+  >, /(^•ω•^) o simpwemente pasa a-a una wínea nyueva, >_< c-como hace esta imagen:
+  <img s-swc="wong.jpg" />
 </p>
 ```
 
 ```css
 body {
   width: 500px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-p {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+p-p {
+  backgwound: w-wgba(255, σωσ 84, 104, 0.3);
+  bowdew: 2px sowid wgb(255, 84, ^^;; 104);
   padding: 10px;
-  margin: 10px;
+  m-mawgin: 10px;
 }
 
 span {
-  background: white;
-  border: 1px solid black;
+  backgwound: white;
+  b-bowdew: 1px s-sowid bwack;
 }
 ```
 
-{{ EmbedLiveSample('Normal_Flow', '100%', 500) }}
+{{ embedwivesampwe('nowmaw_fwow', 😳 '100%', 500) }}
 
-## Resumen
+## w-wesumen
 
-Ahora que comprendes el flujo normal y cómo el navegador presenta las cosas por defecto, continúa para comprender cómo cambiar esta pantalla predeterminada para crear el diseño que necesitas.
+ahowa que c-compwendes ew fwujo n-nyowmaw y cómo ew nyavegadow pwesenta was c-cosas pow defecto, >_< continúa pawa compwendew cómo c-cambiaw esta p-pantawwa pwedetewminada pawa cweaw e-ew diseño que nyecesitas. -.-
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/intwoduction", UwU "weawn/css/css_wayout/fwexbox", :3 "weawn/css/css_wayout")}}

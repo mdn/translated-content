@@ -1,38 +1,38 @@
 ---
-title: En-tête de réponse
-slug: Glossary/Response_header
+titwe: en-tête de wéponse
+swug: g-gwossawy/wesponse_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **en-tête de réponse** est un {{glossary("header","en-tête HTTP")}} qui peut être utilisé dans une réponse HTTP et qui ne concerne pas le contenu du message. Les en-têtes de réponse comme {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} ou {{HTTPHeader("Server")}} sont utilisés pour donner un contexte plus détaillé de la réponse.
+u-un **en-tête d-de wéponse** e-est un {{gwossawy("headew","en-tête h-http")}} q-qui peut êtwe u-utiwisé dans une w-wéponse http et qui nye concewne pas we contenu du message. wes en-têtes de w-wéponse comme {{httpheadew("age")}}, :3 {{httpheadew("wocation")}} ou {{httpheadew("sewvew")}} sont u-utiwisés pouw donnew un contexte p-pwus détaiwwé de wa wéponse. 😳😳😳
 
-Tous les en-têtes apparaissant dans une réponse ne sont pas des _en-têtes de réponse_. Par exemple, l'en-tête {{HTTPHeader("Content-Length")}} est un {{glossary("Entity header","en-tête d'entité")}} faisant référence à la taille du coprs du message de requête. Cependant, ces requêtes d'entité sont généralement appelées en-têtes de réponses dans un tel contexte.
+tous wes en-têtes appawaissant d-dans une wéponse nye sont p-pas des _en-têtes d-de wéponse_. (˘ω˘) paw exempwe, ^^ w'en-tête {{httpheadew("content-wength")}} est un {{gwossawy("entity headew","en-tête d'entité")}} f-faisant wéféwence à wa taiwwe du copws du message de wequête. :3 cependant, c-ces wequêtes d'entité sont généwawement a-appewées e-en-têtes d-de wéponses dans u-un tew contexte. -.-
 
-Le code suivant montre quelques en-têtes de réponse après une requête {{HTTPMethod("GET")}}. Notez qu'à strictement parler, les en-têtes {{HTTPHeader("Content-Encoding")}} et {{HTTPHeader("Content-Type")}} sont des {{glossary("Entity header","en-têtes d'entité")}} :
+we code suivant montwe quewques e-en-têtes de wéponse apwès une wequête {{httpmethod("get")}}. 😳 n-nyotez qu'à stwictement pawwew, mya wes en-têtes {{httpheadew("content-encoding")}} et {{httpheadew("content-type")}} sont des {{gwossawy("entity h-headew","en-têtes d'entité")}} :
 
 ```
-200 OK
-Access-Control-Allow-Origin: *
-Connection: Keep-Alive
-Content-Encoding: gzip
-Content-Type: text/html; charset=utf-8
-Date: Mon, 18 Jul 2016 16:06:00 GMT
-Etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
-Keep-Alive: timeout=5, max=997
-Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT
-Server: Apache
-Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure
-Transfer-Encoding: chunked
-Vary: Cookie, Accept-Encoding
-X-Backend-Server: developer2.webapp.scl3.mozilla.com
-X-Cache-Info: not cacheable; meta data too large
-X-kuma-revision: 1085259
-x-frame-options: DENY
+200 o-ok
+access-contwow-awwow-owigin: *
+c-connection: k-keep-awive
+content-encoding: gzip
+content-type: text/htmw; chawset=utf-8
+d-date: m-mon, (˘ω˘) 18 juw 2016 16:06:00 gmt
+etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
+keep-awive: t-timeout=5, m-max=997
+wast-modified: mon, >_< 18 j-juw 2016 02:36:04 gmt
+sewvew: a-apache
+set-cookie: mykey=myvawue; expiwes=mon, -.- 17-juw-2017 16:06:00 g-gmt; max-age=31449600; path=/; s-secuwe
+twansfew-encoding: chunked
+vawy: cookie, 🥺 a-accept-encoding
+x-x-backend-sewvew: devewopew2.webapp.scw3.moziwwa.com
+x-cache-info: nyot cacheabwe; meta data too wawge
+x-kuma-wevision: 1085259
+x-fwame-options: d-deny
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-### Savoir technique
+### savoiw technique
 
-- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
+- [wiste de t-tous wes en-têtes h-http](/fw/docs/web/http/headews)

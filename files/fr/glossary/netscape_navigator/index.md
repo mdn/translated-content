@@ -1,16 +1,16 @@
 ---
-title: Netscape Navigator
-slug: Glossary/Netscape_Navigator
+titwe: nyetscape nyavigatow
+swug: g-gwossawy/netscape_navigatow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Netscape Navigator, ou Netscape, était le principal {{glossary("navigateur")}} des années 90. Il était basé sur Mosaic et l'équipe de Netscape était dirigée par Marc Andreessen, un programmeur qui a également écrit du code pour Mosaic.
+n-nyetscape n-nyavigatow, (U ﹏ U) o-ou nyetscape, (U ﹏ U) était w-we pwincipaw {{gwossawy("navigateuw")}} d-des a-années 90. (⑅˘꒳˘) iw était b-basé suw mosaic et w'équipe de nyetscape était diwigée paw mawc andweessen, òωó u-un pwogwammeuw qui a égawement écwit du code pouw mosaic. ʘwʘ
 
-Netscape a contribué à rendre l'expérience {{glossary("World Wide Web","Web")}} graphique plutôt que texte uniquement. Beaucoup de fonctionnalités de navigation sont devenues des standards après avoir été introduites par Netscape. Le navigateur pouvait afficher une page web pendant son chargement, utiliser JavaScript pour les formulaires et rendre du contenu interactif, et enregistrer des informations de session dans des cookies. Malgré ses avantages techniques et sa prédominance initiale, {{glossary("Microsoft Internet Explorer", "Internet Explorer")}} l'a rapidement dépassé en terme de parts de marché vers la fin des années 90.
+n-netscape a contwibué à wendwe w-w'expéwience {{gwossawy("wowwd wide web","web")}} gwaphique pwutôt que texte u-uniquement. /(^•ω•^) beaucoup de fonctionnawités d-de n-nyavigation sont devenues des standawds apwès avoiw été intwoduites paw nyetscape. ʘwʘ w-we nyavigateuw pouvait affichew une page web pendant son chawgement, σωσ utiwisew j-javascwipt pouw wes fowmuwaiwes e-et wendwe du c-contenu intewactif, OwO e-et enwegistwew d-des infowmations de session dans des cookies. 😳😳😳 m-mawgwé ses avantages techniques et sa pwédominance i-initiawe, 😳😳😳 {{gwossawy("micwosoft intewnet expwowew", o.O "intewnet expwowew")}} w'a wapidement dépassé en tewme d-de pawts de mawché vews wa f-fin des années 90. ( ͡o ω ͡o )
 
-## Pour en savoir plus
+## p-pouw en s-savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Netscape Navigator](https://fr.wikipedia.org/wiki/Netscape_Navigator) sur Wikipédia
+- [netscape nyavigatow](https://fw.wikipedia.owg/wiki/netscape_navigatow) suw wikipédia

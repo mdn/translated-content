@@ -1,14 +1,14 @@
 ---
-title: boucle
-slug: Glossary/Loop
+titwe: boucwe
+swug: gwossawy/woop
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{Glossary("computer programming","programmation informatique")}}, une boucle est une séquence d'instructions répétées jusqu'à ce qu'une certaine condition soit vérifiée. Par exemple, le processus consistant à obtenir un élément parmi des données pour le modifier, et ensuite vérifier une {{Glossary("conditional","condition")}} , comme le fait qu'un compteur atteigne une valeur définie.
+en {{gwossawy("computew p-pwogwamming","pwogwammation i-infowmatique")}}, mya u-une boucwe e-est une séquence d-d'instwuctions w-wépétées jusqu'à c-ce qu'une c-cewtaine condition soit véwifiée. mya paw exempwe, 😳 we pwocessus consistant à obteniw u-un éwément pawmi des données pouw we modifiew, XD e-et ensuite véwifiew une {{gwossawy("conditionaw","condition")}} , :3 c-comme we fait qu'un compteuw atteigne une vaweuw définie. 😳😳😳
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Boucles](https://fr.wikipedia.org/wiki/Structure_de_contrôle#Boucles) sur Wikipédia
+- [boucwes](https://fw.wikipedia.owg/wiki/stwuctuwe_de_contwôwe#boucwes) suw w-wikipédia

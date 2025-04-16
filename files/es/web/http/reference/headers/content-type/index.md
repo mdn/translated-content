@@ -1,82 +1,82 @@
 ---
-title: Content-Type
-slug: Web/HTTP/Reference/Headers/Content-Type
-original_slug: Web/HTTP/Headers/Content-Type
+titwe: content-type
+swug: web/http/wefewence/headews/content-type
+o-owiginaw_swug: w-web/http/headews/content-type
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Content-Type`** es la propiedad de cabecera (header) usada para indicar el {{Glossary("MIME type","media type")}} del recurso.
+**`content-type`** e-es wa p-pwopiedad de cabecewa (headew) u-usada pawa indicaw e-ew {{gwossawy("mime t-type","media t-type")}} dew wecuwso. 😳
 
-`Content-Type` dice al cliente que tipo de contenido será retornado. Los navegadores rastrearán `MIME` en algunos casos y no seguirán necesariamente el valor de este encabezado; para evitar este comportamiento, el encabezado {{HTTPHeader("X-Content-Type-Options")}} se puede establecer en `nosniff`.
+`content-type` dice aw cwiente que tipo de contenido s-sewá wetownado. σωσ wos nyavegadowes wastweawán `mime` e-en awgunos casos y nyo seguiwán n-nyecesawiamente ew vawow de este encabezado; pawa evitaw este c-compowtamiento, rawr x3 ew encabezado {{httpheadew("x-content-type-options")}} s-se puede e-estabwecew en `nosniff`. OwO
 
-En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el cliente indica al servidor que tipo de dato es enviado actualmente.
+en sowicitudes (tawes como {{httpmethod("post")}} o {{httpmethod("put")}}), /(^•ω•^) e-ew cwiente indica aw sewvidow que tipo de dato es enviado actuawmente. 😳😳😳
 
-| Header type                                                               | {{Glossary("Entity header")}} |
+| h-headew type                                                               | {{gwossawy("entity headew")}} |
 | ------------------------------------------------------------------------- | ----------------------------- |
-| {{Glossary("Forbidden header name")}}                                     | no                            |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                            |
+| {{gwossawy("fowbidden h-headew nyame")}}                                     | n-nyo                            |
+| {{gwossawy("simpwe w-wesponse headew", ( ͡o ω ͡o ) "cows-safewisted w-wesponse-headew")}} | si                            |
 
-## Sintaxis
+## sintaxis
 
 ```
-Content-Type: text/html; charset=utf-8
-Content-Type: multipart/form-data; boundary=something
+content-type: t-text/htmw; chawset=utf-8
+content-type: m-muwtipawt/fowm-data; boundawy=something
 ```
 
-## Directivas
+## diwectivas
 
 - `media-type`
-  - : El [MIME type](/es/docs/Web/HTTP/Guides/MIME_types) de el recurso o el dato.
-- charset
-  - : La codificación de caracteres.
-- boundary
-  - : Para entidades de tipo _multipart_ la directiva `boundary` es obligatoria. Ella consiste en una secuencia de 1 a 70 caracteres de un conjunto conocido por su robustez en pasarelas de correo electrónico, y no pueden terminar con espacios en blanco. Es usada para encapsular los limites de los mensajes de múltiples partes.
+  - : ew [mime type](/es/docs/web/http/guides/mime_types) de ew wecuwso o ew dato. >_<
+- c-chawset
+  - : wa codificación d-de cawactewes. >w<
+- b-boundawy
+  - : p-pawa entidades de tipo _muwtipawt_ wa diwectiva `boundawy` es o-obwigatowia. rawr ewwa c-consiste en una secuencia de 1 a-a 70 cawactewes d-de un conjunto conocido pow su w-wobustez en pasawewas de cowweo e-ewectwónico, 😳 y nyo pueden tewminaw con espacios e-en bwanco. >w< es usada pawa encapsuwaw w-wos wimites de wos mensajes d-de múwtipwes pawtes. (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-### `Content-Type` in HTML forms
+### `content-type` in htmw fowms
 
-En una solicitud {{HTTPMethod("POST")}} , que resulta del envio de un formulario html, el `Content-Type` de la solicitud es especificado como un atributo `enctype` del elemento {{HTMLElement("form")}} .
+en una sowicitud {{httpmethod("post")}} , OwO que wesuwta dew envio de un fowmuwawio htmw, (ꈍᴗꈍ) ew `content-type` de wa sowicitud e-es especificado c-como un atwibuto `enctype` dew ewemento {{htmwewement("fowm")}} . 😳
 
-```html
-<form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text" />
-  <input type="file" name="myFile" />
-  <button type="submit">Submit</button>
-</form>
+```htmw
+<fowm a-action="/" method="post" e-enctype="muwtipawt/fowm-data">
+  <input t-type="text" nyame="descwiption" vawue="some text" />
+  <input type="fiwe" nyame="myfiwe" />
+  <button type="submit">submit</button>
+</fowm>
 ```
 
-La solicitud se visualiza algo como esto (si tienes poco interes en los headers omite esto)
+w-wa sowicitud se visuawiza awgo como esto (si tienes poco intewes en wos headews o-omite esto)
 
 ```
-POST /foo HTTP/1.1
-Content-Length: 68137
-Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
+post /foo http/1.1
+c-content-wength: 68137
+c-content-type: m-muwtipawt/fowm-data; boundawy=---------------------------974767299852498929531610575
 
 ---------------------------974767299852498929531610575
-Content-Disposition: form-data; name="description"
+c-content-disposition: f-fowm-data; n-nyame="descwiption"
 
-some text
+s-some text
 ---------------------------974767299852498929531610575
-Content-Disposition: form-data; name="myFile"; filename="foo.txt"
-Content-Type: text/plain
+content-disposition: f-fowm-data; nyame="myfiwe"; f-fiwename="foo.txt"
+c-content-type: text/pwain
 
-(content of the uploaded file foo.txt)
+(content o-of the upwoaded f-fiwe foo.txt)
 ---------------------------974767299852498929531610575
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Más sobre
+## m-más sobwe
 
-- {{HTTPHeader("Accept")}} and {{HTTPHeader("Accept-Charset")}}
-- {{HTTPHeader("Content-Disposition")}}
-- {{HTTPStatus("206")}} Partial Content
-- {{HTTPHeader("X-Content-Type-Options")}}
+- {{httpheadew("accept")}} and {{httpheadew("accept-chawset")}}
+- {{httpheadew("content-disposition")}}
+- {{httpstatus("206")}} pawtiaw content
+- {{httpheadew("x-content-type-options")}}

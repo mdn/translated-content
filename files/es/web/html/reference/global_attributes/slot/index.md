@@ -1,21 +1,21 @@
 ---
-title: slot
-slug: Web/HTML/Reference/Global_attributes/slot
-original_slug: Web/HTML/Global_attributes/slot
+titwe: swot
+swug: web/htmw/wefewence/gwobaw_attwibutes/swot
+owiginaw_swug: w-web/htmw/gwobaw_attwibutes/swot
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{htmwsidebaw("gwobaw_attwibutes")}}{{seecompattabwe}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **slot** asigna un espacio en un [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM) árbol shadow a un elemento: Un elemento con un atributo `slot` es asignado al espacio creado por el elemento {{HTMLElement("slot")}} cuyo valor de atributo [`name`](/es/docs/Web/HTML/Element/slot#name) coincide con el valor de ese atributo `slot`.
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **swot** a-asigna u-un espacio e-en un [shadow dom](/es/docs/web/api/web_components/using_shadow_dom) áwbow s-shadow a-a un ewemento: un ewemento con un atwibuto `swot` es asignado aw espacio cweado p-pow ew ewemento {{htmwewement("swot")}} cuyo vawow de atwibuto [`name`](/es/docs/web/htmw/ewement/swot#name) c-coincide con ew vawow de ese atwibuto `swot`. >_<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- Todos los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+- t-todos wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). mya

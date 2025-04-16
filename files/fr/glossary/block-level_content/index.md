@@ -1,120 +1,120 @@
 ---
-title: Éléments de bloc
-slug: Glossary/Block-level_content
+titwe: Éwéments de bwoc
+swug: g-gwossawy/bwock-wevew_content
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les éléments HTML (**Hypertext Markup Language**) étaient historiquement catégorisés comme des éléments de type "block" ou de type "inline". Comme il s'agit d'une caractéristique de présentation, elle est aujourd'hui spécifiée par CSS dans la [disposition en flux](/fr/docs/Web/CSS/CSS_flow_layout). Un élément de type bloc occupe tout l'espace horizontal de son élément parent (conteneur), et un espace vertical égal à la hauteur de son contenu, créant ainsi un bloc. Dans cet article, nous examinerons les éléments HTML de type bloc et comment ils diffèrent des [éléments en ligne](/fr/docs/Glossary/Inline-level_content).
+w-wes éwéments h-htmw (**hypewtext m-mawkup w-wanguage**) étaient h-histowiquement c-catégowisés c-comme des éwéments de type "bwock" ou de type "inwine". 😳 comme iw s'agit d'une c-cawactéwistique de pwésentation, 🥺 ewwe est a-aujouwd'hui spécifiée paw css d-dans wa [disposition en fwux](/fw/docs/web/css/css_fwow_wayout). rawr x3 un éwément de type bwoc occupe t-tout w'espace howizontaw de son éwément p-pawent (conteneuw), o.O e-et un espace vewticaw égaw à wa hauteuw de son contenu, rawr cwéant ainsi un bwoc. ʘwʘ dans cet awticwe, 😳😳😳 n-nyous examinewons wes éwéments htmw de type bwoc et comment iws diffèwent d-des [éwéments en wigne](/fw/docs/gwossawy/inwine-wevew_content). ^^;;
 
-Les navigateurs affichent généralement un élément de type bloc avec une nouvelle ligne avant et après l'élément. Vous pouvez les visualiser comme une pile de boîtes.
+w-wes nyavigateuws a-affichent généwawement u-un éwément d-de type bwoc avec une nouvewwe wigne a-avant et apwès w'éwément. o.O vous pouvez wes visuawisew c-comme une piwe de boîtes. (///ˬ///✿)
 
-> [!NOTE]
-> Un élément de bloc commence toujours sur une nouvelle ligne et prend toute la largeur disponible (autrement dit, il s'étend le plus possible vers la droite et vers la gauche).
+> [!note]
+> un éwément de bwoc commence toujouws suw une nyouvewwe wigne et p-pwend toute wa wawgeuw disponibwe (autwement dit, σωσ i-iw s'étend w-we pwus possibwe v-vews wa dwoite et vews wa gauche). nyaa~~
 
-## Éléments de type bloc
+## Éwéments de type bwoc
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Ce paragraphe est un élément de bloc. Son fond a été coloré pour illustrer son
-  conteneur.
+  c-ce pawagwaphe e-est un éwément de bwoc. ^^;; s-son fond a été c-cowowé pouw iwwustwew son
+  conteneuw. ^•ﻌ•^
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
 p {
-  background-color: #8abb55;
+  backgwound-cowow: #8abb55;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Éléments_de_type_bloc','100%',100)}}
+{{embedwivesampwe('Éwéments_de_type_bwoc','100%',100)}}
 
-## Utilisation
+## utiwisation
 
-Les éléments de bloc ne peuvent apparaître qu'au sein d'un élément [`<body>`](/fr/docs/Web/HTML/Element/body).
+wes éwéments d-de bwoc nye peuvent appawaîtwe q-qu'au sein d'un éwément [`<body>`](/fw/docs/web/htmw/ewement/body). σωσ
 
-## Éléments blocs vs éléments en ligne
+## Éwéments b-bwocs v-vs éwéments en wigne
 
-Les éléments de bloc diffèrent des éléments en ligne par :
+wes éwéments de bwoc diffèwent des éwéments en wigne paw :
 
-- La mise en forme par défaut
-  - : Par défaut, les éléments de bloc commencent sur des nouvelles lignes.
-- Le modèle de contenu
-  - : De façon générale, les éléments de bloc peuvent contenir des éléments en ligne et d'autres éléments de bloc. L'idée structurelle sous-jacente est que les éléments de bloc créent de plus grandes structures que les éléments en ligne.
+- wa mise en fowme paw d-défaut
+  - : paw d-défaut, -.- wes éwéments de bwoc c-commencent suw d-des nyouvewwes w-wignes. ^^;;
+- we modèwe de contenu
+  - : de façon généwawe, XD wes éwéments d-de bwoc peuvent conteniw des éwéments en wigne et d'autwes éwéments de bwoc. w'idée s-stwuctuwewwe sous-jacente est q-que wes éwéments d-de bwoc cwéent d-de pwus gwandes stwuctuwes q-que wes éwéments e-en wigne. 🥺
 
-La distinction entre bloc et ligne est utilisée dans les spécifications HTML jusqu'à la version 4.01. En HTML5, cette distinction binaire est remplacée par un ensemble plus complexe de [catégories de contenu](/fr/docs/Web/HTML/Content_categories). La catégorie des éléments en bloc correspond approximativement à la catégorie de [contenu de flux](/fr/docs/Web/HTML/Content_categories#phrasing_content) en HTML5, celle des éléments en ligne correspond à la catégorie de [contenu phrasé](/fr/docs/Web/HTML/Content_categories#flow_content). Il y a également d'autres catégories ([le contenu interactif](/fr/docs/Web/HTML/Content_categories#interactive_content) par exemple).
+wa d-distinction entwe b-bwoc et wigne est utiwisée dans wes spécifications h-htmw jusqu'à w-wa vewsion 4.01. òωó e-en htmw5, (ˆ ﻌ ˆ)♡ c-cette distinction b-binaiwe est wempwacée paw un ensembwe pwus compwexe de [catégowies d-de contenu](/fw/docs/web/htmw/content_categowies). -.- wa catégowie des éwéments en bwoc cowwespond appwoximativement à wa catégowie de [contenu d-de fwux](/fw/docs/web/htmw/content_categowies#phwasing_content) en htmw5, :3 cewwe des éwéments en wigne c-cowwespond à w-wa catégowie de [contenu p-phwasé](/fw/docs/web/htmw/content_categowies#fwow_content). ʘwʘ iw y a égawement d-d'autwes catégowies ([we c-contenu intewactif](/fw/docs/web/htmw/content_categowies#intewactive_content) p-paw exempwe). 🥺
 
-## Éléments
+## Éwéments
 
-La liste qui suit contient tous les éléments HTML de type bloc (cette catégorie n'est pas strictement applicable pour les éléments apparus avec HTML5).
+wa wiste qui suit contient tous wes éwéments htmw de type bwoc (cette catégowie n-ny'est pas stwictement appwicabwe p-pouw wes éwéments appawus a-avec htmw5). >_<
 
-- [`<address>`](/fr/docs/Web/HTML/Element/address)
-  - : Information de contact.
-- [`<article>`](/fr/docs/Web/HTML/Element/article)
-  - : Contenu d'un article.
-- [`<aside>`](/fr/docs/Web/HTML/Element/aside)
-  - : Contenu tangentiel.
-- [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote)
-  - : Long bloc de citation.
-- [`<details>`](/fr/docs/Web/HTML/Element/details)
-  - : Outil permettant de révéler des informations sur la page.
-- [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
-  - : Boîte de dialogue.
-- [`<dd>`](/fr/docs/Web/HTML/Element/dd)
-  - : Description d'une définition.
-- [`<div>`](/fr/docs/Web/HTML/Element/div)
-  - : Division d'un document.
-- [`<dl>`](/fr/docs/Web/HTML/Element/dl)
-  - : Liste de définitions.
-- [`<dt>`](/fr/docs/Web/HTML/Element/dt)
-  - : Définition/description d'un terme.
-- [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset)
-  - : Ensemble de champs.
-- [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption)
-  - : Légende d'une image.
-- [`<figure>`](/fr/docs/Web/HTML/Element/figure)
-  - : Permet de grouper des médias avec une légende (voir [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption)).
-- [`<footer>`](/fr/docs/Web/HTML/Element/footer)
-  - : Bas de page ou de section.
-- [`<form>`](/fr/docs/Web/HTML/Element/form)
-  - : Formulaire.
-- [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-  - : Éléments de titre de niveau 1 à 6.
-- [`<header>`](/fr/docs/Web/HTML/Element/header)
-  - : En-tête de page ou de section.
-- [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup)
-  - : Information d'en-tête de groupe.
-- [`<hr>`](/fr/docs/Web/HTML/Element/hr)
-  - : Ligne de division horizontale.
-- [`<li>`](/fr/docs/Web/HTML/Element/li)
-  - : Élément d'une liste.
-- [`<main>`](/fr/docs/Web/HTML/Element/main)
-  - : Contient le contenu central unique au document.
-- [`<nav>`](/fr/docs/Web/HTML/Element/nav)
-  - : Contient des liens de navigation.
-- [`<ol>`](/fr/docs/Web/HTML/Element/ol)
-  - : Liste ordonnée.
-- [`<p>`](/fr/docs/Web/HTML/Element/p)
-  - : Paragraphe.
-- [`<pre>`](/fr/docs/Web/HTML/Element/pre)
-  - : Texte pré-formaté.
-- [`<section>`](/fr/docs/Web/HTML/Element/section)
-  - : Section d'une page web.
-- [`<table>`](/fr/docs/Web/HTML/Element/table)
-  - : Tableau.
-- [`<ul>`](/fr/docs/Web/HTML/Element/ul)
-  - : Liste non-ordonnée.
+- [`<addwess>`](/fw/docs/web/htmw/ewement/addwess)
+  - : i-infowmation de contact. ʘwʘ
+- [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe)
+  - : contenu d-d'un awticwe. (˘ω˘)
+- [`<aside>`](/fw/docs/web/htmw/ewement/aside)
+  - : c-contenu tangentiew. (✿oωo)
+- [`<bwockquote>`](/fw/docs/web/htmw/ewement/bwockquote)
+  - : wong bwoc d-de citation. (///ˬ///✿)
+- [`<detaiws>`](/fw/docs/web/htmw/ewement/detaiws)
+  - : o-outiw pewmettant de wévéwew des infowmations suw wa page.
+- [`<diawog>`](/fw/docs/web/htmw/ewement/diawog)
+  - : boîte d-de diawogue. rawr x3
+- [`<dd>`](/fw/docs/web/htmw/ewement/dd)
+  - : d-descwiption d-d'une définition. -.-
+- [`<div>`](/fw/docs/web/htmw/ewement/div)
+  - : division d-d'un document. ^^
+- [`<dw>`](/fw/docs/web/htmw/ewement/dw)
+  - : w-wiste de définitions. (⑅˘꒳˘)
+- [`<dt>`](/fw/docs/web/htmw/ewement/dt)
+  - : définition/descwiption d-d'un tewme. nyaa~~
+- [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset)
+  - : ensembwe de champs. /(^•ω•^)
+- [`<figcaption>`](/fw/docs/web/htmw/ewement/figcaption)
+  - : wégende d'une image. (U ﹏ U)
+- [`<figuwe>`](/fw/docs/web/htmw/ewement/figuwe)
+  - : p-pewmet de g-gwoupew des médias avec une wégende (voiw [`<figcaption>`](/fw/docs/web/htmw/ewement/figcaption)). 😳😳😳
+- [`<footew>`](/fw/docs/web/htmw/ewement/footew)
+  - : bas d-de page ou de s-section. >w<
+- [`<fowm>`](/fw/docs/web/htmw/ewement/fowm)
+  - : fowmuwaiwe. XD
+- [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements), o.O [`<h2>`](/fw/docs/web/htmw/ewement/heading_ewements), mya [`<h3>`](/fw/docs/web/htmw/ewement/heading_ewements), 🥺 [`<h4>`](/fw/docs/web/htmw/ewement/heading_ewements), ^^;; [`<h5>`](/fw/docs/web/htmw/ewement/heading_ewements), :3 [`<h6>`](/fw/docs/web/htmw/ewement/heading_ewements)
+  - : Éwéments de titwe de nyiveau 1 à 6. (U ﹏ U)
+- [`<headew>`](/fw/docs/web/htmw/ewement/headew)
+  - : e-en-tête de page ou de section. OwO
+- [`<hgwoup>`](/fw/docs/web/htmw/ewement/hgwoup)
+  - : infowmation d'en-tête de gwoupe. 😳😳😳
+- [`<hw>`](/fw/docs/web/htmw/ewement/hw)
+  - : w-wigne de division howizontawe. (ˆ ﻌ ˆ)♡
+- [`<wi>`](/fw/docs/web/htmw/ewement/wi)
+  - : Éwément d'une wiste. XD
+- [`<main>`](/fw/docs/web/htmw/ewement/main)
+  - : c-contient we contenu c-centwaw unique au document. (ˆ ﻌ ˆ)♡
+- [`<nav>`](/fw/docs/web/htmw/ewement/nav)
+  - : contient des wiens de nyavigation. ( ͡o ω ͡o )
+- [`<ow>`](/fw/docs/web/htmw/ewement/ow)
+  - : w-wiste owdonnée. rawr x3
+- [`<p>`](/fw/docs/web/htmw/ewement/p)
+  - : p-pawagwaphe. nyaa~~
+- [`<pwe>`](/fw/docs/web/htmw/ewement/pwe)
+  - : texte pwé-fowmaté. >_<
+- [`<section>`](/fw/docs/web/htmw/ewement/section)
+  - : section d'une page w-web. ^^;;
+- [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe)
+  - : tabweau. (ˆ ﻌ ˆ)♡
+- [`<uw>`](/fw/docs/web/htmw/ewement/uw)
+  - : w-wiste nyon-owdonnée. ^^;;
 
-## Voir aussi
+## voiw aussi
 
-- [Les éléments en ligne](/fr/docs/Glossary/Inline-level_content)
-- [`display`](/fr/docs/Web/CSS/display)
-- [Les éléments de bloc et les éléments en ligne dans le flux normal](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [wes éwéments en wigne](/fw/docs/gwossawy/inwine-wevew_content)
+- [`dispway`](/fw/docs/web/css/dispway)
+- [wes éwéments d-de bwoc et wes éwéments e-en wigne dans we f-fwux nyowmaw](/fw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow)
 
-{{QuickLinksWithSubpages("/fr/docs/Web/HTML/")}}
+{{quickwinkswithsubpages("/fw/docs/web/htmw/")}}

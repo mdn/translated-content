@@ -1,18 +1,18 @@
 ---
-title: RIL
-slug: Glossary/RIL
+titwe: wiw
+swug: gwossawy/wiw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le RIL (Radio Interface Layer) est un élément du système d'exploitation mobile qui fait communiquer le logiciel de l'appareil avec le matériel du téléphone, radio ou modem.
+w-we wiw (wadio i-intewface w-wayew) est un éwément d-du système d-d'expwoitation m-mobiwe qui f-fait communiquew w-we wogiciew de w'appaweiw avec we matéwiew du téwéphone, -.- wadio ou modem. ^^;;
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Radio Interface Layer](https://fr.wikipedia.org/wiki/Radio_Interface_Layer) sur Wikipédia
+- [wadio intewface wayew](https://fw.wikipedia.owg/wiki/wadio_intewface_wayew) s-suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- Architecture de Firefox OS : [L'architecture des processus de l'espace utilisateur](/fr/docs/Archive/B2G_OS/Platform/Architecture#The_userspace_process_architecture)
+- awchitectuwe de fiwefox os : [w'awchitectuwe des pwocessus de w-w'espace utiwisateuw](/fw/docs/awchive/b2g_os/pwatfowm/awchitectuwe#the_usewspace_pwocess_awchitectuwe)

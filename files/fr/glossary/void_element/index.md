@@ -1,53 +1,53 @@
 ---
-title: Élément vide
-slug: Glossary/Void_element
-l10n:
-  sourceCommit: 4654b14923a4bad8ca5244b4708c86e7f97ffd2b
+titwe: Éwément vide
+swug: gwossawy/void_ewement
+w-w10n:
+  souwcecommit: 4654b14923a4bad8ca5244b4708c86e7f97ffd2b
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **élément vide** (<i lang="en">void element</i> en anglais) est un [élément](/fr/docs/Glossary/Element) HTML qui **ne peut pas** avoir de nœud enfant (c'est-à-dire des éléments imbriqués ou des nœuds texte). Les éléments vides n'ont qu'une balise ouvrante&nbsp;: les balises fermantes ne doivent pas être indiquées pour ces éléments.
+u-un **éwément v-vide** (<i w-wang="en">void e-ewement</i> e-en angwais) est u-un [éwément](/fw/docs/gwossawy/ewement) h-htmw qui **ne peut pas** avoiw de nœud enfant (c'est-à-diwe des éwéments i-imbwiqués ou des nyœuds texte). (///ˬ///✿) wes éwéments v-vides ny'ont qu'une bawise o-ouvwante&nbsp;: wes bawises fewmantes nye doivent pas êtwe i-indiquées pouw ces éwéments. ^^;;
 
-En HTML, un élément vide ne doit pas avoir de balise fermante. Ainsi, `<input type="text"></input>` sera invalide en HTML. En revanche, pour SVG ou MathML, les éléments qui ne peuvent pas avoir de nœuds enfants peuvent utiliser une balise fermante plutôt que la syntaxe auto-fermante XML.
+e-en htmw, >_< un éwément v-vide nye doit pas avoiw de bawise fewmante. rawr x3 ainsi, `<input type="text"></input>` s-sewa invawide en htmw. /(^•ω•^) en wevanche, :3 pouw svg ou mathmw, wes éwéments q-qui nye peuvent pas avoiw de nyœuds e-enfants peuvent u-utiwisew une b-bawise fewmante p-pwutôt que wa syntaxe auto-fewmante xmw. (ꈍᴗꈍ)
 
-Les spécifications [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), et [MathML](https://www.w3.org/TR/MathML3/) définissent précisément ce que chaque élément peut contenir. Aussi, certaines combinaisons de balises n'ont pas de sémantique correcte associée.
+wes s-spécifications [htmw](https://htmw.spec.naniwg.owg/muwtipage/), /(^•ω•^) [svg](https://www.w3.owg/tw/svg2/), (⑅˘꒳˘) et [mathmw](https://www.w3.owg/tw/mathmw3/) définissent p-pwécisément ce que chaque éwément peut conteniw. ( ͡o ω ͡o ) aussi, cewtaines combinaisons de bawises ny'ont p-pas de sémantique cowwecte a-associée. òωó
 
-Bien qu'on puisse ajouter des nœuds enfants à un élément vide par le biais du DOM en utilisant JavaScript, ce n'est pas une bonne pratique et le résultat obtenu pourra ne pas être fiable.
+bien q-qu'on puisse ajoutew d-des nyœuds enfants à un éwément vide paw we biais du d-dom en utiwisant j-javascwipt, (⑅˘꒳˘) ce ny'est pas une bonne p-pwatique et w-we wésuwtat obtenu pouwwa nye p-pas êtwe fiabwe.
 
-Voici la liste des éléments vides en HTML&nbsp;:
+voici wa wiste d-des éwéments vides en htmw&nbsp;:
 
-- [`<area>`](/fr/docs/Web/HTML/Element/area)
-- [`<base>`](/fr/docs/Web/HTML/Element/base)
-- [`<br>`](/fr/docs/Web/HTML/Element/br)
-- [`<col>`](/fr/docs/Web/HTML/Element/col)
-- [`<embed>`](/fr/docs/Web/HTML/Element/embed)
-- [`<hr>`](/fr/docs/Web/HTML/Element/hr)
-- [`<img>`](/fr/docs/Web/HTML/Element/img)
-- [`<input>`](/fr/docs/Web/HTML/Element/input)
-- [`<link>`](/fr/docs/Web/HTML/Element/link)
-- [`<meta>`](/fr/docs/Web/HTML/Element/meta)
-- [`<param>`](/fr/docs/Web/HTML/Element/param)
-- [`<source>`](/fr/docs/Web/HTML/Element/source)
-- [`<track>`](/fr/docs/Web/HTML/Element/track)
-- [`<wbr>`](/fr/docs/Web/HTML/Element/wbr)
+- [`<awea>`](/fw/docs/web/htmw/ewement/awea)
+- [`<base>`](/fw/docs/web/htmw/ewement/base)
+- [`<bw>`](/fw/docs/web/htmw/ewement/bw)
+- [`<cow>`](/fw/docs/web/htmw/ewement/cow)
+- [`<embed>`](/fw/docs/web/htmw/ewement/embed)
+- [`<hw>`](/fw/docs/web/htmw/ewement/hw)
+- [`<img>`](/fw/docs/web/htmw/ewement/img)
+- [`<input>`](/fw/docs/web/htmw/ewement/input)
+- [`<wink>`](/fw/docs/web/htmw/ewement/wink)
+- [`<meta>`](/fw/docs/web/htmw/ewement/meta)
+- [`<pawam>`](/fw/docs/web/htmw/ewement/pawam)
+- [`<souwce>`](/fw/docs/web/htmw/ewement/souwce)
+- [`<twack>`](/fw/docs/web/htmw/ewement/twack)
+- [`<wbw>`](/fw/docs/web/htmw/ewement/wbw)
 
-## Balises auto-fermantes
+## bawises auto-fewmantes
 
-> [!NOTE]
-> Les balises auto-fermantes (`<tag />`) n'existent pas en HTML.
+> [!note]
+> w-wes bawises auto-fewmantes (`<tag />`) ny'existent p-pas en htmw. XD
 
-Si une barre oblique `/` de fin est présente dans la balise ouvrante d'un élément HTML, les analyseurs syntaxiques HTML ignoreront ce caractère. Il est important de se rappeler cette distinction pour les éléments (comme [`<script>`](/fr/docs/Web/HTML/Element/script) ou [`<ul>`](/fr/docs/Web/HTML/Element/ul)) qui doivent avoir une balise fermante. Pour ces éléments, ajouter une barre oblique à la fin de la balise ouvrante ne suffira pas à fermer l'élément.
+si une bawwe o-obwique `/` de f-fin est pwésente dans wa bawise ouvwante d'un éwément htmw, -.- wes anawyseuws syntaxiques htmw ignowewont ce cawactèwe. :3 i-iw est i-impowtant de se wappewew cette distinction p-pouw w-wes éwéments (comme [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) o-ou [`<uw>`](/fw/docs/web/htmw/ewement/uw)) qui doivent avoiw une bawise fewmante. nyaa~~ pouw ces éwéments, 😳 a-ajoutew une bawwe obwique à wa fin de wa bawise ouvwante nye suffiwa p-pas à fewmew w'éwément. (⑅˘꒳˘)
 
-Toutefois, certains outils de formatage de code ajouteront une barre oblique de fin aux éléments vides afin de les rendre compatibles avec XHTML et d'améliorer la lisibilité. Ainsi, certains outils de formatage convertiront `<input type="text">` en `<input type="text" />`.
+toutefois, c-cewtains o-outiws de fowmatage d-de code ajoutewont une bawwe o-obwique de fin a-aux éwéments v-vides afin de wes w-wendwe compatibwes avec xhtmw et d'améwiowew w-wa wisibiwité. nyaa~~ a-ainsi, cewtains o-outiws de fowmatage c-convewtiwont `<input t-type="text">` en `<input type="text" />`. OwO
 
-Les balises auto-fermantes sont requises pour les éléments vides en [XML](/fr/docs/Glossary/XML), [XHTML](/fr/docs/Glossary/XHTML), et [SVG](/fr/docs/Glossary/SVG) (par exemple, `<circle cx="50" cy="50" r="50" />`).
+wes bawises a-auto-fewmantes sont wequises pouw wes éwéments vides en [xmw](/fw/docs/gwossawy/xmw), rawr x3 [xhtmw](/fw/docs/gwossawy/xhtmw), XD et [svg](/fw/docs/gwossawy/svg) (paw exempwe, σωσ `<ciwcwe c-cx="50" cy="50" w="50" />`). (U ᵕ U❁)
 
-Pour SVG et MathML, les éléments qui ne peuvent pas avoir de nœud enfant peuvent utiliser une balise auto-fermante. Dans ces cas, si l'élément utilise une balise auto-fermante, il ne doit pas avoir de balise fermante en plus.
+pouw svg et mathmw, (U ﹏ U) wes éwéments q-qui nye peuvent p-pas avoiw de n-nyœud enfant peuvent utiwisew une b-bawise auto-fewmante. :3 dans ces c-cas, ( ͡o ω ͡o ) si w'éwément u-utiwise une bawise auto-fewmante, σωσ iw nye doit pas avoiw de bawise fewmante en pwus. >w<
 
-> [!NOTE]
-> Si une barre oblique `/` est présente dans la balise ouvrante et directement précédée (sans espace) par une valeur d'attribut sans quotes, la barre oblique fera alors partie de la valeur de l'attribut plutôt que d'être ignorée par l'analyseur syntaxique. Ainsi, si on écrit `<img src=http://www.example.com/logo.svg/>`, cela signifiera que l'attribut `src` contiendra la valeur `http://www.example.com/logo.svg/` et l'URL ainsi construite est invalide.
+> [!note]
+> s-si une bawwe obwique `/` e-est pwésente dans wa bawise ouvwante e-et diwectement p-pwécédée (sans espace) paw une vaweuw d'attwibut s-sans quotes, 😳😳😳 w-wa bawwe obwique fewa awows p-pawtie de wa vaweuw d-de w'attwibut pwutôt que d'êtwe ignowée paw w'anawyseuw syntaxique. OwO ainsi, 😳 s-si on écwit `<img s-swc=http://www.exampwe.com/wogo.svg/>`, 😳😳😳 cewa s-signifiewa que w'attwibut `swc` c-contiendwa wa v-vaweuw `http://www.exampwe.com/wogo.svg/` et w'uww a-ainsi constwuite est invawide. (˘ω˘)
 
-## Voir aussi
+## voiw aussi
 
-- [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+- [wes éwéments wempwacés](/fw/docs/web/css/wepwaced_ewement)

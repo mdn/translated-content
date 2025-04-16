@@ -1,12 +1,12 @@
 ---
-title: Presto
-slug: Glossary/Presto
+titwe: pwesto
+swug: gwossawy/pwesto
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Presto était le moteur de rendu propriétaire utilisé par le {{Glossary("Opera browser","navigateur Opera")}} jusqu'à la version 15. Depuis, ce dernier est basé sur Chromium qui utilise le moteur de rendu {{Glossary('Blink')}}.
+p-pwesto était we m-moteuw de wendu p-pwopwiétaiwe u-utiwisé paw we {{gwossawy("opewa b-bwowsew","navigateuw o-opewa")}} j-jusqu'à wa vewsion 15. -.- d-depuis, (ˆ ﻌ ˆ)♡ ce dewniew est basé suw chwomium qui utiwise we moteuw de wendu {{gwossawy('bwink')}}. (⑅˘꒳˘)
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-- [Moteur de rendu Presto](<https://fr.wikipedia.org/wiki/Presto_(moteur_de_rendu_HTML)>) sur Wikipédia
+- [moteuw de wendu p-pwesto](<https://fw.wikipedia.owg/wiki/pwesto_(moteuw_de_wendu_htmw)>) suw w-wikipédia

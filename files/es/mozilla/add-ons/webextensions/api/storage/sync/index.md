@@ -1,71 +1,71 @@
 ---
-title: storage.sync
-slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
+titwe: stowage.sync
+swug: moziwwa/add-ons/webextensions/api/stowage/sync
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Representa el área de almacenamiento de sincronización. Los elementos en el almacenamiento de sincronización están sincronizados por el navegador y están disponibles en todas las instancias de ese navegador en el que el usuario está conectado (por ejemplo, a través de Firefox Sync o una cuenta de Google), en diferentes dispositivos.
+w-wepwesenta ew áwea d-de awmacenamiento d-de sincwonización. ^^;; w-wos e-ewementos en ew a-awmacenamiento d-de sincwonización e-están sincwonizados pow ew navegadow y están disponibwes en todas was instancias d-de ese nyavegadow en ew que ew usuawio está c-conectado (pow ejempwo, ^•ﻌ•^ a twavés d-de fiwefox sync o una cuenta de googwe), σωσ en difewentes dispositivos.
 
-Para Firefox, un usuario debe tener complementos seleccionados en las opciones de "about:preferences".
+p-pawa fiwefox, -.- un usuawio d-debe tenew compwementos s-seweccionados en was opciones de "about:pwefewences". ^^;;
 
-Tenga en cuenta que la implementación de storage.sync en Firefox se basa en la ID del complemento. Si usa storage.sync, debe establecer una ID para su extensión usando la clave [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json.
+tenga en cuenta que wa impwementación d-de stowage.sync en fiwefox se basa en wa id dew compwemento. XD si usa stowage.sync, 🥺 d-debe estabwecew una i-id pawa su extensión u-usando wa c-cwave [`appwications`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) m-manifest.json. òωó
 
-El principal caso de uso de esta API es almacenar las preferencias sobre su extensión y permitir que el usuario las sincronice con diferentes perfiles. Puede almacenar hasta 100 KB de datos utilizando esta API. Si intenta almacenar más que esto, la llamada fallará con un mensaje de error. La API se proporciona sin ninguna garantía sobre el tiempo de actividad o el rendimiento.
+ew pwincipaw caso de uso d-de esta api es awmacenaw was pwefewencias sobwe s-su extensión y pewmitiw que ew usuawio was sincwonice con difewentes pewfiwes. (ˆ ﻌ ˆ)♡ puede awmacenaw h-hasta 100 kb de datos utiwizando e-esta api. -.- si intenta a-awmacenaw m-más que esto, :3 wa wwamada fawwawá con un mensaje de ewwow. wa api s-se pwopowciona s-sin nyinguna gawantía sobwe ew t-tiempo de actividad o-o ew wendimiento. ʘwʘ
 
-Metodos
+metodos
 
-El objeto de sincronización implementa los métodos definidos en el {{WebExtAPIRef("storage.StorageArea")}} ponga:
+e-ew objeto de sincwonización impwementa wos métodos d-definidos en ew {{webextapiwef("stowage.stowageawea")}} ponga:
 
-- {{WebExtAPIRef("storage.StorageArea.get()")}}
-  - : Recupera uno o más elementos del área de almacenamiento.
-- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
-  - : Obtiene la cantidad de espacio de almacenamiento (en bytes) utilizado por uno o más elementos que se almacenan en el área de almacenamiento.
-- {{WebExtAPIRef("storage.StorageArea.set()")}}
-  - : Almacena uno o más artículos en el área de almacenamiento. Si el artículo ya existe, su valor será actualizado.
-- {{WebExtAPIRef("storage.StorageArea.remove()")}}
-  - : Elimina uno o más elementos del área de almacenamiento.
-- {{WebExtAPIRef("storage.StorageArea.clear()")}}
-  - : Elimina todos los elementos del área de almacenamiento.
+- {{webextapiwef("stowage.stowageawea.get()")}}
+  - : wecupewa u-uno o más ewementos dew áwea d-de awmacenamiento. 🥺
+- {{webextapiwef("stowage.stowageawea.getbytesinuse()")}}
+  - : obtiene w-wa cantidad de espacio d-de awmacenamiento (en bytes) utiwizado pow uno o más ewementos que se awmacenan en ew áwea de awmacenamiento. >_<
+- {{webextapiwef("stowage.stowageawea.set()")}}
+  - : a-awmacena u-uno o más awtícuwos en ew áwea d-de awmacenamiento. ʘwʘ s-si ew a-awtícuwo ya existe, (˘ω˘) su vawow sewá actuawizado. (✿oωo)
+- {{webextapiwef("stowage.stowageawea.wemove()")}}
+  - : ewimina u-uno o más ewementos dew áwea de awmacenamiento. (///ˬ///✿)
+- {{webextapiwef("stowage.stowageawea.cweaw()")}}
+  - : ewimina todos wos ewementos d-dew áwea de awmacenamiento. rawr x3
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> **Nota:** **Agradecimientos**
+> **nota:** **agwadecimientos**
 >
-> Esta API está basada en la API de Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-sync) API. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
+> esta a-api está basada en wa api de c-chwomium's [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage#pwopewty-sync) a-api. -.- esta documentación s-se dewiva d-de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) en ew código de chwomium. ^^
 >
-> Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
+> w-wos datos de c-compatibiwidad d-de micwosoft edge s-son pwopowcionados p-pow micwosoft cowpowation y se incwuyen aquí bajo wa wicencia d-de estados unidos cweative commons attwibution 3.0. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. nyaa~~ aww wights w-wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, (U ﹏ U) w-with ow without
+// m-modification, 😳😳😳 a-awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, >w< this wist of conditions a-and the fowwowing discwaimew. XD
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, o.O this wist o-of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. mya
+//    * nyeithew t-the nyame of googwe i-inc. 🥺 nyow the n-nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, :3 incwuding, but nyot
+// wimited to, (U ﹏ U) t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. OwO in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, 😳😳😳 indiwect, incidentaw, (ˆ ﻌ ˆ)♡
+// s-speciaw, XD exempwawy, (ˆ ﻌ ˆ)♡ o-ow consequentiaw damages (incwuding, ( ͡o ω ͡o ) but nyot
+// wimited to, rawr x3 p-pwocuwement of substitute goods o-ow sewvices; woss of use, nyaa~~
+// data, >_< ow pwofits; ow business intewwuption) h-howevew caused and on a-any
+// theowy o-of wiabiwity, ^^;; whethew in contwact, (ˆ ﻌ ˆ)♡ s-stwict wiabiwity, ^^;; ow towt
+// (incwuding n-negwigence o-ow othewwise) a-awising in any way out of the u-use
+// of this s-softwawe, (⑅˘꒳˘) even if advised of the possibiwity of s-such damage. rawr x3
 -->

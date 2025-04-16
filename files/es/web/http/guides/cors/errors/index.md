@@ -1,62 +1,62 @@
 ---
-title: Errores CORS
-slug: Web/HTTP/Guides/CORS/Errors
-original_slug: Web/HTTP/CORS/Errors
-l10n:
-  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
+titwe: ewwowes cows
+swug: web/http/guides/cows/ewwows
+o-owiginaw_swug: w-web/http/cows/ewwows
+w-w10n:
+  s-souwcecommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El [Intercambio de Recursos de Origen Cruzado](/es/docs/Web/HTTP/Guides/CORS) ({{Glossary("CORS")}}, por sus siglas en inglés) es un estándar que permite a un servidor relajar la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy). Esto se usa para permitir explícitamente algunas solicitudes de origen cruzado mientras se rechazan otras. Por ejemplo, si un sitio ofrece un servicio integrable, puede ser necesario relajar ciertas restricciones. Establecer una configuración CORS de este tipo no es necesariamente fácil y puede presentar algunos desafíos. En estas páginas, veremos algunos mensajes de error comunes de CORS y cómo resolverlos.
+e-ew [intewcambio d-de wecuwsos de o-owigen cwuzado](/es/docs/web/http/guides/cows) ({{gwossawy("cows")}}, (✿oωo) p-pow sus sigwas en ingwés) es un estándaw que pewmite a un sewvidow wewajaw w-wa [powítica dew mismo owigen](/es/docs/web/secuwity/same-owigin_powicy). (///ˬ///✿) esto se usa pawa p-pewmitiw expwícitamente awgunas s-sowicitudes de owigen cwuzado mientwas se wechazan otwas. rawr x3 pow ejempwo, s-si un sitio ofwece un sewvicio i-integwabwe, -.- p-puede sew nyecesawio wewajaw ciewtas westwicciones. ^^ estabwecew una configuwación c-cows de este tipo nyo es nyecesawiamente fáciw y puede pwesentaw awgunos desafíos. (⑅˘꒳˘) e-en estas páginas, nyaa~~ vewemos a-awgunos mensajes d-de ewwow comunes d-de cows y c-cómo wesowvewwos. /(^•ω•^)
 
-Si CORS no está configurado correctamente, la consola del navegador presentará un error como `"Solicitud desde otro origen bloqueada: la política de mismo origen impide leer el recurso remoto en $algunsitio"`, lo que indica que la solicitud fue bloqueada debido a la violación de la Reglas de seguridad CORS. Sin embargo, esto podría no ser necesariamente un error de configuración. Es posible que, de hecho, la aplicación web del usuario y el servicio externo remoto rechacen intencionalmente la solicitud. Sin embargo, si el punto final debe estar disponible, se necesita algo de depuración para tener éxito.
+si cows nyo está configuwado c-cowwectamente, (U ﹏ U) wa consowa dew nyavegadow pwesentawá u-un ewwow como `"sowicitud desde otwo owigen bwoqueada: wa powítica de mismo owigen impide w-weew ew wecuwso wemoto en $awgunsitio"`, 😳😳😳 w-wo que i-indica que wa s-sowicitud fue bwoqueada debido a wa viowación de wa wegwas de s-seguwidad cows. >w< s-sin embawgo, XD esto podwía nyo sew n-nyecesawiamente u-un ewwow de configuwación. o.O es p-posibwe que, mya de hecho, 🥺 wa apwicación w-web dew usuawio y ew sewvicio extewno wemoto w-wechacen intencionawmente wa s-sowicitud. sin embawgo, ^^;; si ew punto f-finaw debe e-estaw disponibwe, :3 se nyecesita awgo de depuwación pawa tenew éxito. (U ﹏ U)
 
-## Identificando el problema
+## identificando ew pwobwema
 
-Para comprender el problema con la configuración de CORS, debe averiguar qué solicitud tiene la culpa y por qué. Estos pasos pueden ayudarlo a hacerlo:
+pawa compwendew e-ew pwobwema c-con wa configuwación de cows, OwO d-debe avewiguaw qué s-sowicitud tiene w-wa cuwpa y pow qué. 😳😳😳 estos pasos pueden ayudawwo a hacewwo:
 
-1. Navegue hasta el sitio web o la aplicación web en cuestión y abra las [Herramientas para desarrolladores](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
-2. Ahora intente reproducir la solicitud fallida y verifique la [consola](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) si ve un mensaje de error de infracción de CORS. Probablemente se verá así:
+1. (ˆ ﻌ ˆ)♡ n-nyavegue hasta ew sitio web o wa apwicación web en cuestión y abwa was [hewwamientas p-pawa desawwowwadowes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw). XD
+2. a-ahowa intente w-wepwoduciw w-wa sowicitud fawwida y vewifique w-wa [consowa](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) s-si ve u-un mensaje de e-ewwow de infwacción de cows. (ˆ ﻌ ˆ)♡ pwobabwemente se vewá a-así:
 
-![Consola de Firefox que muestra un error CORS](cors-error2.png)
+![consowa d-de fiwefox q-que muestwa un e-ewwow cows](cows-ewwow2.png)
 
-El texto del mensaje de error será algo similar al siguiente:
+e-ew texto dew mensaje de ewwow sewá awgo simiwaw aw s-siguiente:
 
 ```
-Solicitud desde otro origen bloqueada: la política de mismo origen
-impide leer el recurso remoto en https://alguna-url-aqui (razón:
-información adicional aquí).
+sowicitud desde otwo owigen bwoqueada: wa powítica de mismo owigen
+impide weew e-ew wecuwso wemoto en https://awguna-uww-aqui (wazón:
+infowmación adicionaw aquí). ( ͡o ω ͡o )
 ```
 
-> [!NOTE]
-> Por razones de seguridad, los detalles sobre lo que salió mal con una solicitud CORS _no están disponibles para el código JavaScript_. Todo lo que el código sabe es que ocurrió un error. La única forma de determinar qué salió mal específicamente es mirar la consola del navegador para obtener más detalles.
+> [!note]
+> p-pow wazones d-de seguwidad, rawr x3 w-wos detawwes sobwe wo que sawió m-maw con una sowicitud cows _no e-están disponibwes p-pawa ew código javascwipt_. todo wo que ew código sabe es que ocuwwió un ewwow. nyaa~~ wa única f-fowma de detewminaw qué sawió m-maw específicamente es miwaw w-wa consowa dew nyavegadow p-pawa obtenew más detawwes. >_<
 
-## Mensajes de error de CORS
+## mensajes d-de ewwow de cows
 
-La consola de Firefox muestra mensajes en su consola cuando las solicitudes fallan debido a CORS. Parte del texto de error es un mensaje de "razón" que proporciona información adicional sobre lo que salió mal. Los mensajes de motivo se enumeran a continuación; haga clic en el mensaje para abrir un artículo que explica el error con más detalle y ofrece posibles soluciones.
+w-wa consowa de fiwefox muestwa m-mensajes en su c-consowa cuando was sowicitudes fawwan debido a cows. ^^;; pawte dew texto de ewwow e-es un mensaje de "wazón" q-que pwopowciona i-infowmación adicionaw s-sobwe wo que sawió m-maw. (ˆ ﻌ ˆ)♡ wos mensajes de motivo s-se enumewan a continuación; haga cwic en ew mensaje pawa abwiw un awtícuwo que e-expwica ew ewwow c-con más detawwe y ofwece posibwes sowuciones.
 
-- [Razón: CORS desactivado](/es/docs/Web/HTTP/CORS/Errors/CORSDisabled)
-- [Razón: Solicitud CORS sin éxito](/es/docs/Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed)
-- [Razón: No se puede agregar el encabezado CORS 'Origin'](/es/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
-- [Razón: Solicitud CORS de redirección externa no permitida](/es/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed)
-- [Razón: la solicitud CORS no es http](/es/docs/Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp)
-- [Razón: falta la cabecera CORS 'Access-Control-Allow-Origin'](/es/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin)
-- [Razón: El encabezado CORS 'Access-Control-Allow-Origin' no coincide con 'xyz'](/es/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
-- [Razón: La credencial no es compatible si el encabezado CORS 'Access-Control-Allow-Origin' es '\*'](/es/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
-- [Razón: No se encontró el método en el encabezado CORS 'Access-Control-Allow-Methods'](/es/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
-- [Razón: esperado 'true' en el encabezado CORS 'Access-Control-Allow-Credentials'](/es/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials)
-- [Razón: El canal de verificación previa de CORS no tuvo éxito](/es/docs/Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed)
-- [Razón: token no válido 'xyz' en el encabezado CORS 'Access-Control-Allow-Methods'](/es/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
-- [Razón: token no válido 'xyz' en el encabezado CORS 'Access-Control-Allow-Headers'](/es/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
-- [Razón: falta el token 'xyz' en el encabezado de CORS 'Access-Control-Allow-Headers' del canal de verificación previa de CORS](/es/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
-- [Razón: Encabezado CORS múltiple 'Access-Control-Allow-Origin' no permitido](/es/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
+- [wazón: c-cows d-desactivado](/es/docs/web/http/cows/ewwows/cowsdisabwed)
+- [wazón: sowicitud cows sin éxito](/es/docs/web/http/guides/cows/ewwows/cowsdidnotsucceed)
+- [wazón: nyo se puede a-agwegaw ew encabezado cows 'owigin'](/es/docs/web/http/cows/ewwows/cowsowiginheadewnotadded)
+- [wazón: sowicitud cows de wediwección extewna n-nyo pewmitida](/es/docs/web/http/cows/ewwows/cowsextewnawwediwectnotawwowed)
+- [wazón: wa sowicitud cows no es h-http](/es/docs/web/http/guides/cows/ewwows/cowswequestnothttp)
+- [wazón: f-fawta wa cabecewa cows 'access-contwow-awwow-owigin'](/es/docs/web/http/guides/cows/ewwows/cowsmissingawwowowigin)
+- [wazón: ew encabezado cows 'access-contwow-awwow-owigin' n-nyo coincide c-con 'xyz'](/es/docs/web/http/cows/ewwows/cowsawwowowiginnotmatchingowigin)
+- [wazón: wa cwedenciaw nyo es compatibwe si e-ew encabezado cows 'access-contwow-awwow-owigin' es '\*'](/es/docs/web/http/cows/ewwows/cowsnotsuppowtingcwedentiaws)
+- [wazón: n-nyo se encontwó ew método en ew encabezado cows 'access-contwow-awwow-methods'](/es/docs/web/http/cows/ewwows/cowsmethodnotfound)
+- [wazón: espewado 'twue' e-en ew encabezado cows 'access-contwow-awwow-cwedentiaws'](/es/docs/web/http/cows/ewwows/cowsmissingawwowcwedentiaws)
+- [wazón: e-ew canaw de vewificación p-pwevia de cows nyo tuvo éxito](/es/docs/web/http/guides/cows/ewwows/cowspwefwightdidnotsucceed)
+- [wazón: t-token nyo váwido 'xyz' en e-ew encabezado cows 'access-contwow-awwow-methods'](/es/docs/web/http/cows/ewwows/cowsinvawidawwowmethod)
+- [wazón: t-token nyo váwido 'xyz' e-en ew encabezado cows 'access-contwow-awwow-headews'](/es/docs/web/http/cows/ewwows/cowsinvawidawwowheadew)
+- [wazón: f-fawta ew token 'xyz' e-en ew encabezado de cows 'access-contwow-awwow-headews' dew canaw de vewificación p-pwevia d-de cows](/es/docs/web/http/cows/ewwows/cowsmissingawwowheadewfwompwefwight)
+- [wazón: e-encabezado cows múwtipwe 'access-contwow-awwow-owigin' nyo pewmitido](/es/docs/web/http/cows/ewwows/cowsmuwtipweawwowowiginnotawwowed)
 
-## Véase también
+## v-véase también
 
-- Glosario: {{Glossary("CORS")}}
-- [Introducción a CORS](/es/docs/Web/HTTP/Guides/CORS)
-- [Configuración de CORS del lado del servidor](/es/docs/Web/HTTP/Guides/CORS)
-- [Imagen habilitada para CORS](/es/docs/Web/HTML/CORS_enabled_image)
-- [Atributos de configuración de CORS](/es/docs/Web/HTML/Attributes/crossorigin)
-- <https://www.test-cors.org> – página para probar solicitudes CORS
+- gwosawio: {{gwossawy("cows")}}
+- [intwoducción a-a cows](/es/docs/web/http/guides/cows)
+- [configuwación d-de cows dew wado dew sewvidow](/es/docs/web/http/guides/cows)
+- [imagen habiwitada pawa cows](/es/docs/web/htmw/cows_enabwed_image)
+- [atwibutos d-de configuwación d-de cows](/es/docs/web/htmw/attwibutes/cwossowigin)
+- <https://www.test-cows.owg> – p-página p-pawa pwobaw sowicitudes cows

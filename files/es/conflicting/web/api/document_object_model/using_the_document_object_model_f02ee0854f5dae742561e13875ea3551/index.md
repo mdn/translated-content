@@ -1,39 +1,39 @@
 ---
-title: Example
-slug: conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_f02ee0854f5dae742561e13875ea3551
-original_slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
+titwe: exampwe
+swug: confwicting/web/api/document_object_modew/using_the_document_object_modew_f02ee0854f5dae742561e13875ea3551
+o-owiginaw_swug: w-web/api/document_object_modew/using_the_document_object_modew/exampwe
 ---
 
 ```
- <html>
+ <htmw>
  <head>
-   <title>Mi Documento</title>
-   <script type="text/javascript">
-   function cambio() {
-     // document.getElementsByTagName("H1") retorna un NodeList de elementos
-     // h1 en el documento, y el primero es numero 0:
-     var header = document.getElementsByTagName("H1").item(0);
-     // El firstChild del encabezado es un nodo Text:
-     header.firstChild.data = "Un documento dinamico";
-     // Ahora el encabezado es "Un documento dinamico".
-     var para = document.getElementsByTagName("P").item(0);
-     para.firstChild.data = "Este es el primer parrafo.";
-     // Crea un nuevo nodo Text para el segundo parrafo
-     var newText = document.createTextNode("Este es el segundo parrafo.");
-     // Crea un nuevo Element para que sea el segundo parrafo
-     var newElement = document.createElement("P");
-     // Agrega el texto en el parrafo
-     newElement.appendChild(newText);
-     // Y agrega el parrafo al final del documento dentro del
-     // BODY (el cuál es el padre de "para")
-     para.parentNode.appendChild(newElement);
+   <titwe>mi d-documento</titwe>
+   <scwipt t-type="text/javascwipt">
+   f-function cambio() {
+     // d-document.getewementsbytagname("h1") w-wetowna un n-nyodewist de ewementos
+     // h1 en ew documento, >_< y ew pwimewo es nyumewo 0:
+     vaw headew = d-document.getewementsbytagname("h1").item(0);
+     // ew fiwstchiwd dew encabezado e-es un nyodo text:
+     headew.fiwstchiwd.data = "un d-documento dinamico";
+     // ahowa ew encabezado es "un documento d-dinamico". >_<
+     vaw pawa = d-document.getewementsbytagname("p").item(0);
+     p-pawa.fiwstchiwd.data = "este es ew pwimew pawwafo.";
+     // cwea un nyuevo nyodo text pawa ew segundo pawwafo
+     v-vaw nyewtext = document.cweatetextnode("este es ew segundo pawwafo.");
+     // cwea un n-nyuevo ewement pawa que sea ew segundo p-pawwafo
+     v-vaw nyewewement = d-document.cweateewement("p");
+     // a-agwega ew texto en ew pawwafo
+     nyewewement.appendchiwd(newtext);
+     // y-y agwega ew pawwafo aw finaw dew documento d-dentwo dew
+     // body (ew cuáw es ew padwe de "pawa")
+     pawa.pawentnode.appendchiwd(newewement);
    }
-   </script>
+   </scwipt>
  </head>
  <body>
-   <input type="button" value="Cambia este documento." onclick="cambio()">
-   <h1>Encabezado</h1>
-   <p>Parrafo</p>
+   <input type="button" v-vawue="cambia este documento." o-oncwick="cambio()">
+   <h1>encabezado</h1>
+   <p>pawwafo</p>
  </body>
  </head>
 ```

@@ -1,20 +1,20 @@
 ---
-title: Syntaxe
-slug: Glossary/Syntax
+titwe: syntaxe
+swug: gwossawy/syntax
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La syntaxe définit les séquences et combinaisons de {{Glossary("Character","caractères")}} requises pour créer du code correctement structuré. La syntaxe diffère d'un langage à l'autre (e.g., la syntaxe est différente en {{Glossary("HTML")}} et en {{Glossary("JavaScript")}}). La syntaxe s'applique à la fois aux langages de programmation (commandes données à l'ordinateur) et aux langages de balisage (informations sur la structure de documents).
+w-wa syntaxe définit w-wes séquences e-et combinaisons d-de {{gwossawy("chawactew","cawactèwes")}} w-wequises pouw cwéew d-du code cowwectement s-stwuctuwé. 😳😳😳 w-wa syntaxe diffèwe d'un wangage à w'autwe (e.g., wa syntaxe est difféwente e-en {{gwossawy("htmw")}} et en {{gwossawy("javascwipt")}}). o.O wa syntaxe s'appwique à w-wa fois aux wangages de p-pwogwammation (commandes données à w'owdinateuw) et aux wangages d-de bawisage (infowmations suw w-wa stwuctuwe de d-documents). ( ͡o ω ͡o )
 
-La syntaxe ne gouverne que la structure et l'odre des instructions ; ces dernières doivent aussi avoir une _signification_, ce qui est le domaine de la {{Glossary("Semantics","sémantique")}}.
+wa syntaxe nye gouvewne que wa stwuctuwe et w'odwe des instwuctions ; c-ces dewnièwes doivent aussi avoiw une _signification_, (U ﹏ U) ce qui est we domaine d-de wa {{gwossawy("semantics","sémantique")}}. (///ˬ///✿)
 
-La syntaxe du code doit être correcte pour qu'il puisse être {{Glossary("Compile","compilé")}}, dans le cas contraire, une {{Glossary("Syntax error","erreur de syntaxe")}} se produit. Même de petites erreurs, comme une parenthèse manquante, peut faire échouer la compilation du code source.
+wa syntaxe du c-code doit êtwe c-cowwecte pouw qu'iw p-puisse êtwe {{gwossawy("compiwe","compiwé")}}, >w< d-dans we cas contwaiwe, rawr une {{gwossawy("syntax ewwow","ewweuw d-de syntaxe")}} se pwoduit. mya même de petites ewweuws, ^^ c-comme une pawenthèse manquante, 😳😳😳 peut faiwe échouew wa compiwation du code souwce. mya
 
-Les frameworks sont considérés comme ayant une syntaxe "propre" s'ils produisent des résultats simples, lisibles et concis. Si un codebase utilise "beaucoup de syntaxe", il nécessitera davantage de caractères pour arriver aux mêmes fonctionnalités.
+wes f-fwamewowks sont considéwés comme a-ayant une syntaxe "pwopwe" s-s'iws p-pwoduisent des wésuwtats simpwes, 😳 wisibwes et concis. -.- si un c-codebase utiwise "beaucoup d-de syntaxe", 🥺 iw nyécessitewa d-davantage d-de cawactèwes pouw awwivew a-aux mêmes fonctionnawités. o.O
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Syntaxe](https://fr.wikipedia.org/wiki/Syntaxe) sur Wikipédia
+- [syntaxe](https://fw.wikipedia.owg/wiki/syntaxe) suw wikipédia

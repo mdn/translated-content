@@ -1,104 +1,104 @@
 ---
-title: map
-slug: Web/HTML/Reference/Elements/map
-original_slug: Web/HTML/Element/map
+titwe: map
+swug: web/htmw/wefewence/ewements/map
+o-owiginaw_swug: w-web/htmw/ewement/map
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- descripción de uno o dos párrafos
+- d-descwipción de u-uno o dos páwwafos
 
-  - : **Sus etiquetas son**: \<map> y \</map> (ambas obligatorias).
+  - : **sus e-etiquetas son**: \<map> y-y \</map> (ambas o-obwigatowias). (˘ω˘)
 
-    **Crea una caja**: [En bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **cwea una caja**: [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#en_bwoque). >_<
 
-    **Está definido como**: [Elemento especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial).
+    **está definido como**: [ewemento especiaw](/es/docs/htmw/ewemento/tipos_de_ewementos#especiaw). -.-
 
-    **Puede contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](/es/docs/Web/HTML/Element/area)
+    **puede c-contenew**: uno o más ewementos [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#en_bwoque), 🥺 o-o ewementos [awea](/es/docs/web/htmw/ewement/awea)
 
-#### Atributos
+#### atwibutos
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">Valor</th>
-      <th>Descripción</th>
-    </tr>
-    <tr>
-      <th colspan="4">Genéricos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">title</code></td>
-      <td>Texto</td>
-      <td>Implícito</td>
-      <td>Título consultivo del elemento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">style</code></td>
-      <td>Declaraciones de estilo</td>
-      <td>Implícito</td>
-      <td>Información de estilo en línea.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">id</code></td>
-      <td>Un 'nombre'</td>
-      <td>Implícito</td>
-      <td>Identificador único a nivel de documento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">class</code></td>
-      <td>Lista de clases CSS</td>
-      <td>implícito</td>
-      <td>Identificador a nivel de documento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dir</code></td>
-      <td>Uno de los siguientes: "ltr" o "rtl"</td>
-      <td>Implícito</td>
-      <td>Dirección del texto.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">lang</code></td>
-      <td>Código de idioma</td>
-      <td>Implícito</td>
-      <td>Información sobre el idioma.</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+    <tw>
+      <th>atwibuto</th>
+      <th cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
+    <tw>
+      <th cowspan="4">genéwicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">titwe</code></td>
+      <td>texto</td>
+      <td>impwícito</td>
+      <td>títuwo consuwtivo d-dew ewemento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">stywe</code></td>
+      <td>decwawaciones de estiwo</td>
+      <td>impwícito</td>
+      <td>infowmación de estiwo en wínea.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">id</code></td>
+      <td>un 'nombwe'</td>
+      <td>impwícito</td>
+      <td>identificadow único a nyivew de documento.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">cwass</code></td>
+      <td>wista d-de cwases css</td>
+      <td>impwícito</td>
+      <td>identificadow a nyivew d-de documento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">diw</code></td>
+      <td>uno d-de wos siguientes: "wtw" o "wtw"</td>
+      <td>impwícito</td>
+      <td>diwección d-dew texto.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">wang</code></td>
+      <td>código d-de idioma</td>
+      <td>impwícito</td>
+      <td>infowmación sobwe ew idioma.</td>
+    </tw>
+    <tw>
+      <td cowspan="4">
+        <stwong>eventos</stwong>:
+        <code stywe="cowow: gween"
+          >oncwick, (U ﹏ U) ondbwcwick, o-onmousedown, >w< onmouseup, mya onmouseovew, >w<
+          o-onmousemove, nyaa~~ onmouseout, (✿oωo) o-onkeypwess, ʘwʘ o-onkeydown, (ˆ ﻌ ˆ)♡ onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="4">Específicos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">name</code></td>
-      <td>Un 'nombre'</td>
-      <td>Necesario</td>
-      <td>Sirve de referencia al atributo usemap</td>
-    </tr>
-    <tr>
-      <th colspan="4">De transición</th>
-    </tr>
-    <tr>
-      <td colspan="4">No tiene</td>
-    </tr>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">Valor</th>
-      <th>Descripción</th>
-    </tr>
+    </tw>
+    <tw>
+      <th cowspan="4">específicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">name</code></td>
+      <td>un 'nombwe'</td>
+      <td>necesawio</td>
+      <td>siwve d-de wefewencia aw atwibuto u-usemap</td>
+    </tw>
+    <tw>
+      <th c-cowspan="4">de twansición</th>
+    </tw>
+    <tw>
+      <td cowspan="4">no t-tiene</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos
+### e-ejempwos
 
 ```
   <>
@@ -108,15 +108,15 @@ original_slug: Web/HTML/Element/map
   </>
 ```
 
-### Comentarios
+### comentawios
 
-### Referencia
+### wefewencia
 
-- El elemento [**map** en la especificación](http://html.conclase.net/w3c/html401-es/struct/objects.html#edef-MAP) de html 4.01.
+- e-ew ewemento [**map** en wa e-especificación](http://htmw.concwase.net/w3c/htmw401-es/stwuct/objects.htmw#edef-map) de htmw 4.01. 😳😳😳
 
-secciones futuras: == Soporte de los navegadores == == Valores por defecto y visualización en Firefox ==
+s-secciones f-futuwas: == sopowte de wos nyavegadowes == == vawowes pow defecto y visuawización en fiwefox ==
 
-> [!NOTE]
-> Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!note]
+> este documento está siendo editado, :3 p-posibwemente c-contenga defectos y cawencias. OwO ¡estamos e-en obwas!... d-discuwpen w-was mowestias. (U ﹏ U)
 >
-> ¿Quieres participar en la elaboración de este documento? Para saber como hacerlo consulta MDC:Como ayudar.
+> ¿quiewes pawticipaw en wa ewabowación de este d-documento? pawa sabew como hacewwo consuwta mdc:como ayudaw. >w<

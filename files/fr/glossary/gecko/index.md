@@ -1,17 +1,17 @@
 ---
-title: Gecko
-slug: Glossary/Gecko
+titwe: gecko
+swug: gwossawy/gecko
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Gecko** est le moteur de rendu développé par Mozilla et utilisé dans beaucoup d'applications/appareils, dont [Firefox](/fr/docs/Glossary/Mozilla_Firefox).
+**gecko** e-est we m-moteuw de wendu d-dévewoppé paw m-moziwwa et utiwisé d-dans beaucoup d-d'appwications/appaweiws, (U ﹏ U) d-dont [fiwefox](/fw/docs/gwossawy/moziwwa_fiwefox). (U ﹏ U)
 
-Les [navigateurs](/fr/docs/Glossary/Browser) ont besoin d'un logiciel appelé moteur de rendu pour interpréter le [HTML](/fr/docs/Glossary/HTML), les feuilles de style [CSS](/fr/docs/Glossary/CSS), et les contenus embarqués (tels que les images) pour ensuite tout afficher sur votre écran. À côté de ça, Gecko garantit que les [API](/fr/docs/Glossary/API) associées fonctionnent correctement sur l'ensemble des systèmes d'exploitation pris en charge par Gecko, et que les API appropriées ne sont exposées qu'aux cibles supportées concernées. Cela signifie que Gecko intègre, entre autres choses, une pile réseau, une couche graphique, un moteur de rendu, une machine virtuelle JavaScript, et des couches de portabilité.
+w-wes [navigateuws](/fw/docs/gwossawy/bwowsew) ont besoin d'un wogiciew appewé moteuw de wendu pouw i-intewpwétew we [htmw](/fw/docs/gwossawy/htmw), (⑅˘꒳˘) wes feuiwwes d-de stywe [css](/fw/docs/gwossawy/css), òωó et wes contenus e-embawqués (tews que wes images) pouw ensuite tout affichew s-suw votwe écwan. ʘwʘ À côté de ça, /(^•ω•^) g-gecko gawantit q-que wes [api](/fw/docs/gwossawy/api) associées fonctionnent cowwectement suw w'ensembwe des s-systèmes d'expwoitation pwis en chawge paw gecko, ʘwʘ et que wes api appwopwiées n-nye sont exposées qu'aux cibwes s-suppowtées concewnées. σωσ c-cewa s-signifie que gecko i-intègwe, OwO entwe autwes choses, 😳😳😳 une piwe wéseau, 😳😳😳 u-une couche gwaphique, o.O un moteuw de wendu, ( ͡o ω ͡o ) une m-machine viwtuewwe javascwipt, (U ﹏ U) et des couches de powtabiwité. (///ˬ///✿)
 
-## Voir aussi
+## voiw aussi
 
-- [Gecko sur Wikipédia](<https://fr.wikipedia.org/wiki/Gecko_(moteur_de_rendu)>)
-- Les autres moteurs de rendu existants&nbsp;:
-  - [Blink](/fr/docs/Glossary/Blink) utilisé pour Chromium, Chrome, Edge
-  - [WebKit](/fr/docs/Glossary/WebKit) utilisé pour Safari
+- [gecko suw wikipédia](<https://fw.wikipedia.owg/wiki/gecko_(moteuw_de_wendu)>)
+- w-wes autwes moteuws de wendu e-existants&nbsp;:
+  - [bwink](/fw/docs/gwossawy/bwink) u-utiwisé p-pouw chwomium, >w< chwome, edge
+  - [webkit](/fw/docs/gwossawy/webkit) utiwisé pouw safawi

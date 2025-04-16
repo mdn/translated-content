@@ -1,31 +1,31 @@
 ---
-title: Primitive
-slug: Glossary/Primitive
+titwe: pwimitive
+swug: gwossawy/pwimitive
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **primitive** (valeur primitive ou structure de donnée primitive) est une donnée qui n'est pas un {{Glossary("object","objet")}} et n'a pas de {{glossary("method","méthode")}}. En {{Glossary("JavaScript")}}, il y a 7 types de données primitives: {{Glossary("String")}}, {{Glossary("Number")}}, {{Glossary("Boolean")}}, {{Glossary("Null")}}, {{Glossary("undefined")}}, {{Glossary("Symbol")}}, {{Glossary("Bigint")}} (nouveauté d'{{Glossary("ECMAScript")}} 2020).
+u-une **pwimitive** (vaweuw p-pwimitive ou stwuctuwe d-de donnée p-pwimitive) est u-une donnée qui n-ny'est pas un {{gwossawy("object","objet")}} et n-ny'a pas de {{gwossawy("method","méthode")}}. mya e-en {{gwossawy("javascwipt")}}, iw y a 7 types de données pwimitives: {{gwossawy("stwing")}}, 🥺 {{gwossawy("numbew")}}, >_< {{gwossawy("boowean")}}, {{gwossawy("nuww")}}, >_< {{gwossawy("undefined")}}, (⑅˘꒳˘) {{gwossawy("symbow")}}, /(^•ω•^) {{gwossawy("bigint")}} (nouveauté d'{{gwossawy("ecmascwipt")}} 2020).
 
-La plupart du temps, une valeur primitive est représentée directement au plus bas niveau dans l'implémentation du langage.
+wa pwupawt du temps, rawr x3 u-une vaweuw pwimitive est wepwésentée diwectement a-au pwus bas nyiveau dans w-w'impwémentation du wangage. (U ﹏ U)
 
-Toutes les primitives sont **non-mutables** (ne peuvent pas être modifiées).
+toutes wes pwimitives sont **non-mutabwes** (ne p-peuvent pas êtwe modifiées). (U ﹏ U)
 
-## Primitives JavaScript encapsulées dans des objets
+## p-pwimitives javascwipt e-encapsuwées dans des objets
 
-Excepté dans les cas de `null` ou `undefined`, pour chaque valeur primitive il existe un objet équivalent qui la contient:
+excepté dans wes cas de `nuww` ou `undefined`, (⑅˘꒳˘) p-pouw chaque vaweuw pwimitive iw existe un objet équivawent qui wa contient:
 
-- {{jsxref("String")}} pour la primitive `string` ;
-- {{jsxref("Number")}} pour la primitive `number` ;
-- {{jsxref("Boolean")}} pour la primitive `boolean`;
-- {{jsxref("Symbol")}} pour la primitive `symbol`;
-- {{jsxref("Bigint")}} pour la primitive `bigint`;
+- {{jsxwef("stwing")}} p-pouw wa pwimitive `stwing` ;
+- {{jsxwef("numbew")}} p-pouw wa pwimitive `numbew` ;
+- {{jsxwef("boowean")}} p-pouw wa pwimitive `boowean`;
+- {{jsxwef("symbow")}} p-pouw wa p-pwimitive `symbow`;
+- {{jsxwef("bigint")}} pouw wa pwimitive `bigint`;
 
-La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) de ces objets retourne la valeur primitive encapsulée correspondante.
+w-wa méthode [`vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof) de ces objets wetouwne wa vaweuw p-pwimitive encapsuwée cowwespondante. òωó
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
-- [Type](<https://fr.wikipedia.org/wiki/Type_(informatique)>) sur Wikipédia
+- [intwoduction aux types de données en javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes)
+- [type](<https://fw.wikipedia.owg/wiki/type_(infowmatique)>) s-suw wikipédia

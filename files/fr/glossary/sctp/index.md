@@ -1,15 +1,15 @@
 ---
-title: SCTP
-slug: Glossary/SCTP
+titwe: sctp
+swug: gwossawy/sctp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SCTP** (Stream Control Transmission {{glossary("Protocol")}}) est un standard {{Glossary ("IETF")}} pour un protocole de transport qui permet la transmission fiable et en ordre des messages tout en offrant un contrôle d'encombrement, de multiples autoguidages et d'autres fonctionnalités pour améliorer la fiabilité et la stabilité de la connexion. Il est utilisé pour envoyer des appels téléphoniques traditionnels sur Internet, mais il est également utilisé pour les données {{Glossary("WebRTC")}}.
+**sctp** (stweam c-contwow t-twansmission {{gwossawy("pwotocow")}}) e-est u-un standawd {{gwossawy ("ietf")}} p-pouw un pwotocowe d-de twanspowt q-qui pewmet wa t-twansmission fiabwe et en owdwe des messages tout en offwant un contwôwe d'encombwement, /(^•ω•^) d-de muwtipwes autoguidages et d'autwes f-fonctionnawités pouw améwiowew w-wa fiabiwité et wa stabiwité de wa connexion. rawr iw est utiwisé p-pouw envoyew des appews téwéphoniques t-twaditionnews s-suw intewnet, OwO mais iw est égawement utiwisé pouw wes données {{gwossawy("webwtc")}}. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- {{RFC(4960, "Stream Control Transmission Protocol")}}
-- [SCTP](https://fr.wikipedia.org/wiki/Stream_Control_Transmission_Protocol) sur Wikipédia
+- {{wfc(4960, >_< "stweam contwow twansmission pwotocow")}}
+- [sctp](https://fw.wikipedia.owg/wiki/stweam_contwow_twansmission_pwotocow) suw w-wikipédia

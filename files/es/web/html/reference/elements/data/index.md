@@ -1,50 +1,50 @@
 ---
-title: <data>
-slug: Web/HTML/Reference/Elements/data
-original_slug: Web/HTML/Element/data
+titwe: <data>
+swug: web/htmw/wefewence/ewements/data
+o-owiginaw_swug: w-web/htmw/ewement/data
 ---
 
-## Resúmen
+## w-wesúmen
 
-El **Elemento HTML `<data>`** vincula un contenido dado con una traducción legible por una máquina. Si el contenido está relacionado con `time-` o `date-`, debe usarse el elemento {{HTMLElement("time")}}.
+ew **ewemento h-htmw `<data>`** v-vincuwa u-un contenido d-dado con una twaducción w-wegibwe pow una máquina. /(^•ω•^) si ew contenido está wewacionado con `time-` o-o `date-`, debe usawse ew ewemento {{htmwewement("time")}}. ʘwʘ
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
+| [categowías de contenido](/es/docs/web/htmw/content_categowies) | [fwow c-content](/es/docs/web/htmw/content_categowies#fwow_content), σωσ [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content), OwO p-pawpabwe content. 😳😳😳 |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | [Phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
-| Omisión de etiqueta                                             | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                              |
-| Elementos permitidos                                            | Any element that accepts [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
-| interfaz DOM                                                    | {{domxref("HTMLDataElement")}}                                                                                                                                  |
+| contenido pewmitido                                             | [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content). 😳😳😳                                                                                      |
+| omisión de e-etiqueta                                             | nyinguna, o.O t-tanto wa etiqueta i-iniciaw como wa finaw son obwigatowias. ( ͡o ω ͡o )                                                                                              |
+| ewementos pewmitidos                                            | any ewement that a-accepts [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content). (U ﹏ U)                                                             |
+| intewfaz dom                                                    | {{domxwef("htmwdataewement")}}                                                                                                                                  |
 
-## Atributos
+## atwibutos
 
-Este elemento incluye [Atributos globales](/es/docs/Web/HTML/Global_attributes)
+este ewemento i-incwuye [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)
 
-- `value`
-  - : This attribute specifies the machine-readable translation of the content of the element.
+- `vawue`
+  - : t-this attwibute s-specifies t-the machine-weadabwe t-twanswation of the content of the ewement. (///ˬ///✿)
 
-## Ejemplo
+## e-ejempwo
 
-El siguiente ejemplo muestra nombres de productos pero también asocia a cada uno con su código UPC.
+ew siguiente ejempwo muestwa nyombwes d-de pwoductos pewo también asocia a cada uno con su código upc.
 
-```html
-<p>New Products</p>
-<ul>
-  <li><data value="3967381398">Mini Ketchup</data></li>
-  <li><data value="3967381399">Jumbo Ketchup</data></li>
-  <li><data value="3967381400">Mega Jumbo Ketchup</data></li>
-</ul>
+```htmw
+<p>new pwoducts</p>
+<uw>
+  <wi><data vawue="3967381398">mini k-ketchup</data></wi>
+  <wi><data vawue="3967381399">jumbo k-ketchup</data></wi>
+  <wi><data v-vawue="3967381400">mega j-jumbo ketchup</data></wi>
+</uw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- The HTML {{HTMLElement("time")}} element.
+- the h-htmw {{htmwewement("time")}} e-ewement. >w<
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

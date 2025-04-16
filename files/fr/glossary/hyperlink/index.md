@@ -1,25 +1,25 @@
 ---
-title: Hyperlien
-slug: Glossary/Hyperlink
+titwe: hypewwien
+swug: gwossawy/hypewwink
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les hyperliens connectent des pages web ou des données à une autre. En HTML, l'élément {{HTMLElement("a")}} définit un hyperlien d'un endroit sur une page web (comme une chaîne de caractères ou une image) à un autre endroit sur une autre page web (ou même sur la même page).
+w-wes hypewwiens c-connectent d-des pages web ou d-des données à u-une autwe. nyaa~~ en h-htmw, /(^•ω•^) w'éwément {{htmwewement("a")}} d-définit u-un hypewwien d'un endwoit suw une page web (comme une chaîne de cawactèwes ou u-une image) à un autwe endwoit suw une autwe page w-web (ou même suw wa même page). rawr
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Hyperlien](https://fr.wikipedia.org/wiki/Hyperlien) sur Wikipédia
-- Le guide [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) sur MDN
+- [hypewwien](https://fw.wikipedia.owg/wiki/hypewwien) suw wikipédia
+- w-we guide [cwéation d'hypewwiens](/fw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks) s-suw mdn
 
-### Référence technique
+### w-wéféwence technique
 
-- [Links in HTML Documents - W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)
-- [HTML5 a - hyperlink - W3C](https://w3c.github.io/html-reference/a.html)
+- [winks in htmw documents - w3c](https://www.w3.owg/tw/1999/wec-htmw401-19991224/stwuct/winks.htmw)
+- [htmw5 a - hypewwink - w3c](https://w3c.github.io/htmw-wefewence/a.htmw)
 
-### Apprendre sur le sujet
+### a-appwendwe suw we sujet
 
-- [`<a>` sur MDN](/fr/docs/Web/HTML/Element/a)
-- [`<link>` sur MDN](/fr/docs/Web/HTML/Element/link)
+- [`<a>` suw mdn](/fw/docs/web/htmw/ewement/a)
+- [`<wink>` suw mdn](/fw/docs/web/htmw/ewement/wink)

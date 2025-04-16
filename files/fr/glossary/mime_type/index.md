@@ -1,22 +1,22 @@
 ---
-title: Type MIME
-slug: Glossary/MIME_type
+titwe: type mime
+swug: gwossawy/mime_type
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **type MIME** (désormais correctement appelé "media type", mais aussi parfois "content type") est une chaîne de caractères envoyée avec un fichier pour en indiquer le type (par exemple, un fichier sonore sera étiqueté `audio/ogg` ou un fichier graphique `image/png`).
+u-un **type m-mime** (désowmais c-cowwectement a-appewé "media t-type", rawr x3 mais aussi p-pawfois "content t-type") est une c-chaîne de cawactèwes envoyée avec un fichiew pouw en indiquew we type (paw e-exempwe, (✿oωo) un fichiew sonowe sewa étiqueté `audio/ogg` ou un fichiew g-gwaphique `image/png`). (ˆ ﻌ ˆ)♡
 
-Il répond au même objectif que les extensions de fichiers traditionnellement utilisées sous Windows. Le nom vient de la norme MIME initialement utilisée dans E-Mail.
+iw w-wépond au même objectif que wes extensions de fichiews twaditionnewwement u-utiwisées sous windows. (˘ω˘) w-we nyom vient d-de wa nyowme mime initiawement utiwisée dans e-maiw. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Type de médias](https://fr.wikipedia.org/wiki/Type_de_médias) sur Wikipédia
+- [type de médias](https://fw.wikipedia.owg/wiki/type_de_médias) suw wikipédia
 
-### Référence technique
+### wéféwence technique
 
-- [Liste des types MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)
-- [Configurer correctement les types MIME sur un serveur](/fr/docs/Learn/Server-side/Configuring_server_MIME_types)
-- Détails sur l'utilisation des [types MIME](/fr/docs/Web/HTTP/MIME_types) dans un contexte Web.
+- [wiste d-des types mime](https://www.iana.owg/assignments/media-types/media-types.xhtmw)
+- [configuwew c-cowwectement w-wes types mime s-suw un sewveuw](/fw/docs/weawn/sewvew-side/configuwing_sewvew_mime_types)
+- détaiws s-suw w'utiwisation des [types mime](/fw/docs/web/http/mime_types) d-dans un contexte web. (///ˬ///✿)

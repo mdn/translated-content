@@ -1,16 +1,16 @@
 ---
-title: Identificateur
-slug: Glossary/Identifier
+titwe: identificateuw
+swug: gwossawy/identifiew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une séquence de caractères dans le code qui identifie une **{{glossary("Variable","variable")}}, une {{glossary("Function","fonction")}}, ou une {{glossary("Property","propriété")}}**.
+u-une s-séquence de cawactèwes d-dans we c-code qui identifie u-une **{{gwossawy("vawiabwe","vawiabwe")}}, rawr x3 u-une {{gwossawy("function","fonction")}}, mya o-ou une {{gwossawy("pwopewty","pwopwiété")}}**. nyaa~~
 
-En {{glossary("JavaScript")}}, les identifiants ne peuvent contenir que des caractères alphanumériques (ou "$" ou "\_"), et ne doivent pas commencer par un chiffre. Un identifiant diffère d'une **chaîne de caractères** dans la mesure où une chaîne est une donnée, tandis qu'un identifiant fait partie du code. En JavaScript, il n'existe pas de moyen pour convertir un identifiant en chaîne, mais il est parfois possible de **convertir** une chaîne en identifiant.
+e-en {{gwossawy("javascwipt")}}, (⑅˘꒳˘) wes identifiants nye peuvent conteniw que des cawactèwes a-awphanuméwiques (ou "$" ou "\_"), rawr x3 et nye doivent p-pas commencew paw un chiffwe. (✿oωo) u-un identifiant diffèwe d'une **chaîne de cawactèwes** dans w-wa mesuwe où une chaîne est u-une donnée, (ˆ ﻌ ˆ)♡ tandis q-qu'un identifiant fait pawtie du code. (˘ω˘) en javascwipt, (⑅˘꒳˘) iw ny'existe pas de moyen p-pouw convewtiw un identifiant en chaîne, (///ˬ///✿) mais iw est pawfois possibwe de **convewtiw** u-une chaîne en identifiant. 😳😳😳
 
-## Voir aussi
+## v-voiw a-aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Identificateur](https://fr.wikipedia.org/wiki/Identificateur) sur Wikipédia
+- [identificateuw](https://fw.wikipedia.owg/wiki/identificateuw) s-suw wikipédia

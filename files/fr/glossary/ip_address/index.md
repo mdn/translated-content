@@ -1,16 +1,16 @@
 ---
-title: Adresse IP
-slug: Glossary/IP_Address
+titwe: adwesse ip
+swug: gwossawy/ip_addwess
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une adresse IP est une série de chiffres assignée à chaque appareil connecté à un réseau qui utilise le protocole Internet.
+u-une adwesse i-ip est une s-séwie de chiffwes a-assignée à c-chaque appaweiw c-connecté à un w-wéseau qui utiwise w-we pwotocowe intewnet. (⑅˘꒳˘)
 
-Le terme "Adresse IP" se réfère généralement à des adresses IPv4 sur 32 bits. L'IPv6 n'est pas encore très répandu.
+we tewme "adwesse ip" se wéfèwe généwawement à des adwesses ipv4 s-suw 32 bits. (U ᵕ U❁) w'ipv6 ny'est pas encowe twès wépandu. -.-
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Adresse IP](https://fr.wikipedia.org/wiki/Adresse_IP) sur Wikipédia
+- [adwesse ip](https://fw.wikipedia.owg/wiki/adwesse_ip) suw wikipédia

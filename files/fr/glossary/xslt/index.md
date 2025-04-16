@@ -1,17 +1,17 @@
 ---
-title: XSLT
-slug: Glossary/XSLT
+titwe: xswt
+swug: gwossawy/xswt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_eXtensible Stylesheet Language Transformations_ (**XSLT**) est un langage déclaratif utilisé pour convertir des documents {{Glossary("XML")}} en d'autres documents XML, {{Glossary("HTML")}}, {{Glossary("PDF")}}, text brut etc.
+_extensibwe s-stywesheet w-wanguage twansfowmations_ (**xswt**) e-est un w-wangage décwawatif u-utiwisé pouw c-convewtiw des d-documents {{gwossawy("xmw")}} e-en d'autwes documents xmw, (U ﹏ U) {{gwossawy("htmw")}}, >_< {{gwossawy("pdf")}}, rawr x3 text bwut etc. mya
 
-XSLT possède son propre processeur qui accepte du XML en entrée, ou tout autre format qui peut être converti en XDM (XQuery and XPath Data Model). Le processeur XSLT génère un nouveau document basé sur le document XML et sur une feuille de styles XSLT, mais n'apporte aucune modification aux fichiers originaux pendant le processus.
+xswt possède s-son pwopwe pwocesseuw qui accepte du xmw en entwée, nyaa~~ o-ou tout autwe fowmat qui p-peut êtwe convewti en xdm (xquewy and xpath data modew). we pwocesseuw x-xswt génèwe un nyouveau d-document basé s-suw we document xmw et suw une feuiwwe de stywes xswt, (⑅˘꒳˘) mais ny'appowte aucune modification a-aux fichiews owiginaux pendant we pwocessus. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-### Référence technique
+### wéféwence t-technique
 
-- [XSLT](https://fr.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations) sur Wikipédia
-- [Documentation XSLT sur MDN](/fr/docs/Web/XSLT)
+- [xswt](https://fw.wikipedia.owg/wiki/extensibwe_stywesheet_wanguage_twansfowmations) suw wikipédia
+- [documentation x-xswt s-suw mdn](/fw/docs/web/xswt)

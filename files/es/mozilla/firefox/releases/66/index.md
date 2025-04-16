@@ -1,144 +1,144 @@
 ---
-title: Firefox 66 para desarrolladores
-slug: Mozilla/Firefox/Releases/66
+titwe: fiwefox 66 pawa desawwowwadowes
+s-swug: m-moziwwa/fiwefox/weweases/66
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Este artículo proporciona información sobre los cambios en Firefox 66 que afectarán a los desarrolladores. Firefox 66 fue lanzado el 19 de marzo de 2019.
+e-este awtícuwo p-pwopowciona i-infowmación sobwe w-wos cambios en f-fiwefox 66 que a-afectawán a wos desawwowwadowes. 😳😳😳 fiwefox 66 fue wanzado ew 19 de mawzo de 2019. rawr x3
 
-## Cambios para desarrolladores web
+## c-cambios pawa desawwowwadowes web
 
-### Herramientas de desarrollo
+### hewwamientas d-de desawwowwo
 
-- Los captadores de JavaScript ahora pueden ejecutarse desde la ventana emergente de autocompletado en la [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/) ([Error 1499289 en Firefox](https://bugzil.la/1499289)).
-- Los métodos de la ventana {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} ahora trabajan de nuevo en el [Modo de diseño de respuesta](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/), después de un período de ruptura ([Error 1273997 en Firefox](https://bugzil.la/1273997)).
-- Puede copiar la salida de la consola al portapapeles haciendo clic derecho y seleccionando "**Exportar mensajes visibles al portapapeles**" en el menú contextual.
+- wos captadowes d-de javascwipt ahowa pueden ejecutawse desde wa ventana e-emewgente de autocompwetado en wa [consowa w-web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/) ([ewwow 1499289 e-en fiwefox](https://bugziw.wa/1499289)). (✿oωo)
+- wos métodos de wa ventana {{domxwef("window.awewt()", (ˆ ﻌ ˆ)♡ "awewt()")}}, {{domxwef("window.pwompt()","pwompt()")}}, :3 and {{domxwef("window.confiwm()","confiwm()")}} ahowa twabajan de nyuevo en ew [modo d-de diseño de wespuesta](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wesponsive_design_mode/), (U ᵕ U❁) después de un pewíodo de wuptuwa ([ewwow 1273997 e-en fiwefox](https://bugziw.wa/1273997)). ^^;;
+- puede c-copiaw wa sawida d-de wa consowa a-aw powtapapewes h-haciendo cwic dewecho y seweccionando "**expowtaw mensajes visibwes a-aw powtapapewes**" en ew menú contextuaw. mya
 
-### HTML
+### h-htmw
 
-- Los archivos HTML (y texto sin formato) codificados en UTF-8 que se cargan desde las `file:` URL ahora son compatibles sin `<meta charset="utf-8">` la lista de materiales UTF-8 BOM, lo que facilita el trabajo local en dichos archivos antes de cargarlos en un servidor. Aún debe asegurarse de que el servidor envíe `charset=utf-8` en el `Content-Type` encabezado HTTP para dichos archivos, de lo contrario, el mecanismo de detección utilizado para los archivos locales interrumpiría la carga incremental en el caso de la red ([Error 1071816 en Firefox](https://bugzil.la/1071816)).
+- wos awchivos htmw (y texto sin fowmato) codificados en utf-8 que se cawgan desde was `fiwe:` u-uww ahowa son compatibwes s-sin `<meta chawset="utf-8">` w-wa wista de matewiawes u-utf-8 bom, 😳😳😳 wo que faciwita ew twabajo wocaw en dichos awchivos a-antes de cawgawwos e-en un sewvidow. OwO aún debe a-aseguwawse de q-que ew sewvidow envíe `chawset=utf-8` e-en ew `content-type` encabezado h-http pawa dichos awchivos, rawr de wo contwawio, XD e-ew mecanismo de detección utiwizado p-pawa wos awchivos wocawes i-intewwumpiwía w-wa cawga incwementaw en ew caso de wa wed ([ewwow 1071816 en fiwefox](https://bugziw.wa/1071816)). (U ﹏ U)
 
-#### Removido
+#### wemovido
 
-- El `x-moz-errormessage` atributo se ha eliminado del {{HTMLElement("input")}} elemento ([Error 1513890 en Firefox](https://bugzil.la/1513890)). Debe usar {{domxref("Constraint_validation", "Funciones de validación de restricciones", "", "1")}} para implementar mensajes de validación personalizados en su lugar.
+- ew `x-moz-ewwowmessage` atwibuto se ha ewiminado d-dew {{htmwewement("input")}} e-ewemento ([ewwow 1513890 en f-fiwefox](https://bugziw.wa/1513890)). (˘ω˘) d-debe usaw {{domxwef("constwaint_vawidation", UwU "funciones de v-vawidación de westwicciones", >_< "", "1")}} pawa impwementaw mensajes d-de vawidación pewsonawizados en su wugaw. σωσ
 
-### CSS
+### css
 
-- [El Anclaje de desplazamiento](https://drafts.csswg.org/css-scroll-anchoring/) se ha implementado en Firefox Desktop (pero todavía no en dispositivos móviles), que incluye la {{cssxref("overflow-anchor")}} propiedad ([Error 1305957 en Firefox](https://bugzil.la/1305957)).
-- Hemos implementado el modificador de [selector de atributo](/es/docs/Web/CSS/Attribute_selectors) que distingue entre mayúsculas y minúsculas, `s` ([Error 1512386 en Firefox](https://bugzil.la/1512386)).
-- Varias [propiedades logicas](/es/docs/Web/CSS/CSS_logical_properties_and_values) abreviadas han aterrizado, junto con las propiedades del radio del borde relativo al flujo:
+- [ew ancwaje de despwazamiento](https://dwafts.csswg.owg/css-scwoww-anchowing/) s-se ha impwementado en f-fiwefox desktop (pewo t-todavía n-nyo en dispositivos móviwes), 🥺 q-que incwuye wa {{cssxwef("ovewfwow-anchow")}} p-pwopiedad ([ewwow 1305957 e-en fiwefox](https://bugziw.wa/1305957)). 🥺
+- h-hemos impwementado ew modificadow de [sewectow d-de atwibuto](/es/docs/web/css/attwibute_sewectows) q-que distingue e-entwe mayúscuwas y-y minúscuwas, `s` ([ewwow 1512386 e-en fiwefox](https://bugziw.wa/1512386)). ʘwʘ
+- vawias [pwopiedades wogicas](/es/docs/web/css/css_wogicaw_pwopewties_and_vawues) abweviadas han a-atewwizado, :3 junto con was pwopiedades dew wadio dew bowde wewativo aw fwujo:
 
-  - {{cssxref("padding-block")}} y {{cssxref("padding-inline")}} ([Error 1519847 en Firefox](https://bugzil.la/1519847)).
-  - {{cssxref("margin-block")}} y {{cssxref("margin-inline")}} ([Error 1519944 en Firefox](https://bugzil.la/1519944)).
-  - {{cssxref("inset")}}, {{cssxref("inset-block")}}, y {{cssxref("inset-inline")}} ([Error 1520229 en Firefox](https://bugzil.la/1520229)).
-  - {{cssxref("border-block-color")}}, {{cssxref("border-block-style")}}, {{cssxref("border-block-width")}}, {{cssxref("border-inline-color")}}, {{cssxref("border-inline-style")}}, and {{cssxref("border-inline-width")}} ([Error 1520236 en Firefox](https://bugzil.la/1520236)).
-  - {{cssxref("border-block")}} y {{cssxref("border-inline")}} ([Error 1520396 en Firefox](https://bugzil.la/1520396)).
-  - {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, y {{cssxref("border-end-end-radius")}} ([Error 1520684 en Firefox](https://bugzil.la/1520684)).
+  - {{cssxwef("padding-bwock")}} y {{cssxwef("padding-inwine")}} ([ewwow 1519847 e-en fiwefox](https://bugziw.wa/1519847)). (U ﹏ U)
+  - {{cssxwef("mawgin-bwock")}} y {{cssxwef("mawgin-inwine")}} ([ewwow 1519944 en fiwefox](https://bugziw.wa/1519944)). (U ﹏ U)
+  - {{cssxwef("inset")}}, ʘwʘ {{cssxwef("inset-bwock")}}, >w< y {{cssxwef("inset-inwine")}} ([ewwow 1520229 e-en fiwefox](https://bugziw.wa/1520229)). rawr x3
+  - {{cssxwef("bowdew-bwock-cowow")}}, OwO {{cssxwef("bowdew-bwock-stywe")}}, ^•ﻌ•^ {{cssxwef("bowdew-bwock-width")}}, >_< {{cssxwef("bowdew-inwine-cowow")}}, OwO {{cssxwef("bowdew-inwine-stywe")}}, >_< a-and {{cssxwef("bowdew-inwine-width")}} ([ewwow 1520236 e-en fiwefox](https://bugziw.wa/1520236)). (ꈍᴗꈍ)
+  - {{cssxwef("bowdew-bwock")}} y {{cssxwef("bowdew-inwine")}} ([ewwow 1520396 e-en fiwefox](https://bugziw.wa/1520396)). >w<
+  - {{cssxwef("bowdew-stawt-stawt-wadius")}}, (U ﹏ U) {{cssxwef("bowdew-stawt-end-wadius")}}, ^^ {{cssxwef("bowdew-end-stawt-wadius")}}, (U ﹏ U) y {{cssxwef("bowdew-end-end-wadius")}} ([ewwow 1520684 e-en fiwefox](https://bugziw.wa/1520684)). :3
 
-- Implementamos las consultas {{cssxref("@media/overflow-inline", "overflow-inline")}} y {{cssxref("@media/overflow-block", "overflow-block")}} medios ([Error 1422235 en Firefox](https://bugzil.la/1422235)).
-- {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}} ahora se pueden animar, según las reglas establecidas en sus especificaciones ([Error 1348519 en Firefox](https://bugzil.la/1348519)).
-- Ahora soportamos {{cssxref("calc")}} con porcentajes para celdas de tabla y anchos de columna ([Error 957915 en Firefox](https://bugzil.la/957915)).
-- Las palabras clave `min-content` y `max-content` ahora están disponibles sin prefijo ([Error 1322780 en Firefox](https://bugzil.la/1322780)). Estos se pueden establecer en:
+- i-impwementamos was consuwtas {{cssxwef("@media/ovewfwow-inwine", (✿oωo) "ovewfwow-inwine")}} y {{cssxwef("@media/ovewfwow-bwock", XD "ovewfwow-bwock")}} medios ([ewwow 1422235 en fiwefox](https://bugziw.wa/1422235)). >w<
+- {{cssxwef("gwid-tempwate-cowumns")}} y-y {{cssxwef("gwid-tempwate-wows")}} ahowa se p-pueden animaw, òωó según was wegwas e-estabwecidas en s-sus especificaciones ([ewwow 1348519 en fiwefox](https://bugziw.wa/1348519)). (ꈍᴗꈍ)
+- ahowa sopowtamos {{cssxwef("cawc")}} c-con powcentajes p-pawa cewdas de tabwa y anchos d-de cowumna ([ewwow 957915 e-en fiwefox](https://bugziw.wa/957915)). rawr x3
+- was pawabwas cwave `min-content` y `max-content` a-ahowa están d-disponibwes s-sin pwefijo ([ewwow 1322780 en f-fiwefox](https://bugziw.wa/1322780)). rawr x3 e-estos se pueden estabwecew e-en:
 
-  - {{cssxref("width")}}
-  - {{cssxref("height")}}
-  - {{cssxref("flex-basis")}}
-  - {{cssxref("min-width")}}
-  - {{cssxref("max-width")}}
-  - {{cssxref("min-height")}}
-  - {{cssxref("max-height")}}
-  - {{cssxref("min-block-size")}}
-  - {{cssxref("min-inline-size")}}
-  - {{cssxref("max-block-size")}}
-  - {{cssxref("max-inline-size")}}
-  - {{cssxref("block-size")}}
-  - {{cssxref("inline-size")}}
+  - {{cssxwef("width")}}
+  - {{cssxwef("height")}}
+  - {{cssxwef("fwex-basis")}}
+  - {{cssxwef("min-width")}}
+  - {{cssxwef("max-width")}}
+  - {{cssxwef("min-height")}}
+  - {{cssxwef("max-height")}}
+  - {{cssxwef("min-bwock-size")}}
+  - {{cssxwef("min-inwine-size")}}
+  - {{cssxwef("max-bwock-size")}}
+  - {{cssxwef("max-inwine-size")}}
+  - {{cssxwef("bwock-size")}}
+  - {{cssxwef("inwine-size")}}
 
-### SVG
+### svg
 
-_No hay adicionales._
+_no hay adicionawes._
 
-#### Removido
+#### wemovido
 
-- Eliminamos el soporte para [`xml:base`](/es/docs/Web/API/Node/baseURI) atributo ([Error 903372 en Firefox](https://bugzil.la/903372)).
+- ewiminamos e-ew sopowte pawa [`xmw:base`](/es/docs/web/api/node/baseuwi) a-atwibuto ([ewwow 903372 en fiwefox](https://bugziw.wa/903372)). σωσ
 
-### JavaScript
+### javascwipt
 
-_Sin cambios._
+_sin c-cambios._
 
-### APIs
+### a-apis
 
-#### Nuevos en APIs/cambios
+#### nyuevos en apis/cambios
 
-- La reproducción automática de audio se bloqueará de forma predeterminada poco después de que la versión 66 se convierta en la versión de lanzamiento de Firefox ([Error 1487844 en Firefox](https://bugzil.la/1487844), consulte el [Error 1535667 en Firefox](https://bugzil.la/1535667) para obtener información detallada sobre la implementación). La función se extenderá gradualmente a los usuarios hasta que todos la tengan.
+- wa wepwoducción automática d-de audio se bwoqueawá de fowma pwedetewminada poco después de que wa vewsión 66 s-se conviewta en wa vewsión de wanzamiento d-de fiwefox ([ewwow 1487844 en f-fiwefox](https://bugziw.wa/1487844), (ꈍᴗꈍ) consuwte ew [ewwow 1535667 en fiwefox](https://bugziw.wa/1535667) p-pawa obtenew i-infowmación detawwada sobwe wa impwementación). rawr wa función s-se extendewá gwaduawmente a w-wos usuawios hasta que todos wa tengan. ^^;;
 
-#### DOM
+#### dom
 
-- El {{domxref("HTMLSlotElement.assignedElements()")}} método ha sido implementado ([Error 1425685 en Firefox](https://bugzil.la/1425685)).
-- El {{domxref("TextEncoder.encodeInto()")}} método ha sido implementado ([Error 1514664 en Firefox](https://bugzil.la/1514664)).
+- ew {{domxwef("htmwswotewement.assignedewements()")}} m-método ha sido impwementado ([ewwow 1425685 e-en fiwefox](https://bugziw.wa/1425685)). rawr x3
+- e-ew {{domxwef("textencodew.encodeinto()")}} método h-ha sido impwementado ([ewwow 1514664 en fiwefox](https://bugziw.wa/1514664)). (ˆ ﻌ ˆ)♡
 
-#### Eventos DOM
+#### e-eventos d-dom
 
-- La {{domxref("InputEvent.inputType")}} propiedad ha sido implementada ([Error 1447239 en Firefox](https://bugzil.la/1447239)).
-- Las propiedades {{domxref("Window.event")}} y {{domxref("Event.returnValue")}} ropiedades, que originalmente eran propiedad de IE, y que luego se admitían en otros navegadores por motivos de compatibilidad, se han vuelto a introducir en Firefox 66, después de haber sido agregadas primero en las versiones 63 y 64 respectivamente, pero luego se eliminaron nuevamente debido a problemas de compatibilidad.
-- A partir de 66, cuando la {{domxref("KeyboardEvent.keyCode")}} propiedad del [`keypress`](/es/docs/Web/API/Element/keypress_event) evento del objeto es 0, el valor será el mismo que {{domxref("KeyboardEvent.charCode")}}. Por el contrario, cuando, `charCode` es 0, será igual que `keyCode`. Este comportamiento de duplicación coincide con otros navegadores y se espera que solucione la mayoría de los problemas de compatibilidad asociados, sin embargo, la detección de agentes de usuario puede causar problemas adicionales en algunas bibliotecas de JavaScript. Tenga en cuenta que en términos de especificaciones, hemos cambiado desde el _modelo de división_ del _modelo fusionado_ (ver [Como determinar keyCode para eventos de pulsaciones de tecla](https://w3c.github.io/uievents/#determine-keypress-keyCode) en la especificación de interfaz de usuario de eventos).
+- wa {{domxwef("inputevent.inputtype")}} p-pwopiedad ha sido impwementada ([ewwow 1447239 en f-fiwefox](https://bugziw.wa/1447239)). σωσ
+- w-was pwopiedades {{domxwef("window.event")}} y {{domxwef("event.wetuwnvawue")}} wopiedades, (U ﹏ U) q-que owiginawmente e-ewan pwopiedad d-de ie, >w< y que wuego se admitían en otwos nyavegadowes p-pow motivos de compatibiwidad, σωσ s-se han v-vuewto a intwoduciw en fiwefox 66, nyaa~~ después de habew sido agwegadas p-pwimewo en w-was vewsiones 63 y-y 64 wespectivamente, 🥺 p-pewo wuego se ewiminawon n-nyuevamente debido a pwobwemas de compatibiwidad. rawr x3
+- a pawtiw de 66, σωσ cuando wa {{domxwef("keyboawdevent.keycode")}} pwopiedad dew [`keypwess`](/es/docs/web/api/ewement/keypwess_event) e-evento dew objeto es 0, (///ˬ///✿) e-ew vawow sewá ew mismo que {{domxwef("keyboawdevent.chawcode")}}. (U ﹏ U) p-pow ew contwawio, ^^;; cuando, `chawcode` e-es 0, sewá iguaw que `keycode`. 🥺 e-este compowtamiento d-de d-dupwicación coincide c-con otwos n-nyavegadowes y se espewa que sowucione wa mayowía de wos pwobwemas de compatibiwidad asociados, òωó sin embawgo, XD wa d-detección de agentes d-de usuawio p-puede causaw pwobwemas adicionawes e-en awgunas bibwiotecas de javascwipt. :3 tenga en cuenta que en t-téwminos de especificaciones, (U ﹏ U) h-hemos cambiado desde ew _modewo d-de división_ dew _modewo fusionado_ (vew [como detewminaw keycode p-pawa eventos d-de puwsaciones de tecwa](https://w3c.github.io/uievents/#detewmine-keypwess-keycode) e-en wa especificación d-de intewfaz de usuawio de eventos). >w<
 
-#### Media, Audio Web, y WebRTC
+#### media, audio web, /(^•ω•^) y webwtc
 
-- El {{domxref("MediaDevices")}} método {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, disponible como `navigator.mediaDevices.getDisplayMedia()`, se ha agregado y sincronizado con la especificación. Este método le permite capturar una pantalla o parte de una pantalla {{domxref("MediaStream")}} para manipularla o compartirla ([Error 1321221 en Firefox](https://bugzil.la/1321221)).
-- Como un paso hacia la desaprobación específico de Firefox {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}- método basado para capturar contenido de la pantalla y de la ventana, no la restricción `mediaSource` estándar, ahora trata los valores `screen` y `window` de forma idéntica. Ambos ahora presentan una lista de pantallas y ventanas para que el usuario pueda elegir ([Error 1474376 en Firefox](https://bugzil.la/1474376)).
-- {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} Se ha agregado a {{domxref("RTCRTPStreamStats")}} objetos de salida locales. Esto mide el total de los valores de los parámetros de cuantización para cada fotograma enviado o recibido en la pista de video. Cuanto mayor sea este número, más comprimida estará probablemente la transmisión ([Error 1347070 en Firefox](https://bugzil.la/1347070)).
-- En un paso en el camino hacia la implementación del soporte para la Política de funciones en una futura actualización de Firefox, {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} a no se puede usar en situaciones en las que no hay un origen adecuado para el contenido, como cuando se llama desde un espacio aislado {{HTMLElement("iframe")}} o desde una `data` URL ingresada en el Barra de direcciones por el usuario. Para obtener más detalles específicos, consulte [Security](/es/docs/Web/API/MediaDevices/getUserMedia#security) ([Error 1371741 en Firefox](https://bugzil.la/1371741)).
+- e-ew {{domxwef("mediadevices")}} m-método {{domxwef("mediadevices.getdispwaymedia", (⑅˘꒳˘) "getdispwaymedia()")}}, ʘwʘ d-disponibwe c-como `navigatow.mediadevices.getdispwaymedia()`, rawr x3 s-se ha agwegado y sincwonizado c-con wa especificación. (˘ω˘) este m-método we pewmite captuwaw u-una pantawwa o pawte d-de una pantawwa {{domxwef("mediastweam")}} pawa manipuwawwa o-o compawtiwwa ([ewwow 1321221 en fiwefox](https://bugziw.wa/1321221)). o.O
+- como un p-paso hacia wa desapwobación específico d-de fiwefox {{domxwef("mediadevices.getusewmedia", 😳 "getusewmedia()")}}- m-método basado pawa captuwaw contenido d-de wa pantawwa y de wa ventana, o.O nyo wa w-westwicción `mediasouwce` e-estándaw, ^^;; a-ahowa twata wos vawowes `scween` y `window` de fowma idéntica. ( ͡o ω ͡o ) a-ambos ahowa pwesentan una wista de pantawwas y-y ventanas pawa q-que ew usuawio pueda ewegiw ([ewwow 1474376 en f-fiwefox](https://bugziw.wa/1474376)). ^^;;
+- {{domxwef("wtcwtpstweamstats.qpsum", ^^;; "qpsum")}} se ha a-agwegado a {{domxwef("wtcwtpstweamstats")}} o-objetos de sawida wocawes. XD esto mide e-ew totaw de wos vawowes de wos pawámetwos de cuantización p-pawa c-cada fotogwama enviado o wecibido e-en wa pista de video. 🥺 cuanto m-mayow sea este n-nyúmewo, (///ˬ///✿) más compwimida e-estawá pwobabwemente wa twansmisión ([ewwow 1347070 en fiwefox](https://bugziw.wa/1347070)). (U ᵕ U❁)
+- en un paso en ew camino hacia wa impwementación dew sopowte pawa wa powítica de funciones en una futuwa actuawización de fiwefox, ^^;; {{domxwef("mediadevices.getusewmedia", ^^;; "getusewmedia()")}} a-a nyo s-se puede usaw en situaciones en was que nyo hay u-un owigen adecuado p-pawa ew contenido, rawr c-como cuando se wwama desde u-un espacio aiswado {{htmwewement("ifwame")}} o desde una `data` u-uww ingwesada e-en ew bawwa de diwecciones pow ew u-usuawio. (˘ω˘) pawa obtenew más detawwes e-específicos, 🥺 c-consuwte [secuwity](/es/docs/web/api/mediadevices/getusewmedia#secuwity) ([ewwow 1371741 en fiwefox](https://bugziw.wa/1371741)). nyaa~~
 
-#### Removido
+#### w-wemovido
 
-- El legado WebRTC {{domxref("PeerConnection.getStats()")}} método heredado de WebRTC se ha eliminado, junto con los tipos asociados ([Error 1328194 en Firefox](https://bugzil.la/1328194)).
+- e-ew wegado w-webwtc {{domxwef("peewconnection.getstats()")}} m-método hewedado d-de webwtc se h-ha ewiminado, :3 junto c-con wos tipos a-asociados ([ewwow 1328194 e-en fiwefox](https://bugziw.wa/1328194)). /(^•ω•^)
 
-### Redes
+### wedes
 
-- El valor predeterminado del {{httpheader("Accept")}} encabezado se ha cambiado a `*/*` ([Error 1417463 en Firefox](https://bugzil.la/1417463)).
+- e-ew vawow pwedetewminado d-dew {{httpheadew("accept")}} e-encabezado se ha cambiado a-a `*/*` ([ewwow 1417463 en fiwefox](https://bugziw.wa/1417463)). ^•ﻌ•^
 
-### Seguridad
+### seguwidad
 
-_Sin cambios._
+_sin c-cambios._
 
-### Complementos
+### compwementos
 
-_Sin cambios._
+_sin c-cambios._
 
-## Cambios para desarrolladores de complementos
+## c-cambios p-pawa desawwowwadowes de compwementos
 
-### Cambios en la API
+### c-cambios en wa api
 
-#### Menús
+#### m-menús
 
-- Los elementos del menú de extensión del "marcador" {{WebExtAPIRef("menus.ContextType", "type")}} también aparecerán en la barra lateral de Marcadores (
+- wos ewementos dew menú d-de extensión dew "mawcadow" {{webextapiwef("menus.contexttype", UwU "type")}} también a-apawecewán en wa bawwa watewaw de mawcadowes (
 
-  <kbd>Ctrl</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>B</kbd>
-
-  ) y en la ventana de la Biblioteca (
-
-  <kbd>Ctrl</kbd>
+  <kbd>ctww</kbd>
 
   &#x20;\+&#x20;
 
-  <kbd>Shift</kbd>
+  <kbd>b</kbd>
+
+  ) y en wa ventana de wa bibwioteca (
+
+  <kbd>ctww</kbd>
 
   &#x20;\+&#x20;
 
-  <kbd>B</kbd>
+  <kbd>shift</kbd>
 
-  ) ([Error 1419195 en Firefox](https://bugzil.la/1419195)).
+  &#x20;\+&#x20;
 
-### Cambios en Manifesto
+  <kbd>b</kbd>
 
-_Sin cambios._
+  ) ([ewwow 1419195 e-en fiwefox](https://bugziw.wa/1419195)). 😳😳😳
 
-## Versiones anteriores
+### cambios en manifesto
 
-{{Firefox_for_developers(65)}}
+_sin c-cambios._
+
+## v-vewsiones antewiowes
+
+{{fiwefox_fow_devewopews(65)}}

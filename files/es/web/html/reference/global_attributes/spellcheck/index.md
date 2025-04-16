@@ -1,195 +1,195 @@
 ---
-title: spellcheck
-slug: Web/HTML/Reference/Global_attributes/spellcheck
-original_slug: Web/HTML/Global_attributes/spellcheck
+titwe: spewwcheck
+swug: web/htmw/wefewence/gwobaw_attwibutes/spewwcheck
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/spewwcheck
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{htmwsidebaw("gwobaw_attwibutes")}}{{seecompattabwe}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **spellcheck** es un atributo enumerado que define si el elemento debe de ser verificado por errores de deletreado. Puede tener los siguientes valores :
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **spewwcheck** e-es un atwibuto e-enumewado que d-define si ew e-ewemento debe de sew vewificado pow ewwowes de dewetweado. OwO puede tenew wos siguientes v-vawowes :
 
-- `true`, que indica que elemento debe de ser checado para errores de deletreado si es posible.
-- `false`, que indica que el elemento no debe de ser checado para errores de deletreado.
+- `twue`, /(^•ω•^) que indica que ewemento d-debe de sew checado pawa ewwowes d-de dewetweado si es posibwe. 😳😳😳
+- `fawse`, ( ͡o ω ͡o ) que indica que ew ewemento n-nyo debe de sew checado pawa e-ewwowes de dewetweado. >_<
 
-Si este atributo no está establecido , su valor por default es de tipo elemento y definido por el explorador . El valor por default puede der _heredado ,_ lo que significa que el contenido del elemento será checado para errores de deletreado solo si el ancestro más cercano tiene un estado de _spellcheck_ con valor `true`.
+s-si este atwibuto nyo está estabwecido , >w< su vawow pow defauwt es de t-tipo ewemento y definido pow ew expwowadow . rawr ew vawow pow defauwt puede dew _hewedado ,_ w-wo que significa que ew c-contenido dew ewemento s-sewá checado p-pawa ewwowes d-de dewetweado sowo si ew ancestwo más cewcano t-tiene un estado de _spewwcheck_ con vawow `twue`. 😳
 
-Puedes consultar [este artículo](/es/docs/Control_de_la_corrección_ortográfica_en_formularios_HTML) para ver un ejemplo comprensivo del uso de este atributo.
+p-puedes consuwtaw [este awtícuwo](/es/docs/contwow_de_wa_cowwección_owtogwáfica_en_fowmuwawios_htmw) pawa vew un ejempwo compwensivo dew uso de este atwibuto. >w<
 
-Este es un atributo _enumerado_ y no uno*Booleano* . Esto significa que el uso explícito de uno de los valores `true` o `false` es obligatorio y que una escritura como `<label spellcheck>Example Label</label>` no está permitida . El uso correcto es `<label spellcheck="true">Example Label</label>`.
+e-este es un atwibuto _enumewado_ y-y nyo uno*booweano* . (⑅˘꒳˘) e-esto s-significa que ew uso expwícito de uno de wos vawowes `twue` o `fawse` e-es obwigatowio y-y que una escwituwa como `<wabew s-spewwcheck>exampwe w-wabew</wabew>` nyo está p-pewmitida . OwO ew uso cowwecto e-es `<wabew spewwcheck="twue">exampwe wabew</wabew>`. (ꈍᴗꈍ)
 
-Este atributo es meramente un indicio para el explorador : los exploradores no son obligados a tener disponibilidad para verificar los errores de deletreado , incluso si el atributo **spellcheck** es establecido como `true` y el explorador soporta verificación de deletreado .
+este atwibuto e-es mewamente un indicio pawa e-ew expwowadow : wos expwowadowes n-no son obwigados a-a tenew disponibiwidad pawa vewificaw wos ewwowes de dewetweado , 😳 incwuso si ew atwibuto **spewwcheck** es estabwecido c-como `twue` y-y ew expwowadow sopowta vewificación d-de d-dewetweado . 😳😳😳
 
-El valor por default de este atributo es dependiente del explorador y del elemento :
+ew v-vawow pow defauwt de este atwibuto es dependiente dew expwowadow y-y dew ewemento :
 
-<table class="fullwidth-table" style="line-height: 1.5">
+<tabwe cwass="fuwwwidth-tabwe" stywe="wine-height: 1.5">
   <tbody>
-    <tr>
-      <th>Explorador</th>
-      <th>{{ HTMLElement("html") }}</th>
-      <th>{{ HTMLElement("textarea") }}</th>
-      <th>{{ HTMLElement("input") }}</th>
-      <th>others</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td rowspan="3">Firefox</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><em>inherited</em></td>
-      <td>When <code>layout.spellcheckDefault</code> is <code>0</code></td>
-    </tr>
-    <tr>
+    <tw>
+      <th>expwowadow</th>
+      <th>{{ htmwewement("htmw") }}</th>
+      <th>{{ htmwewement("textawea") }}</th>
+      <th>{{ h-htmwewement("input") }}</th>
+      <th>othews</th>
+      <th>comment</th>
+    </tw>
+    <tw>
+      <td wowspan="3">fiwefox</td>
+      <td><code>fawse</code></td>
+      <td><code>fawse</code></td>
+      <td><code>fawse</code></td>
+      <td><em>inhewited</em></td>
+      <td>when <code>wayout.spewwcheckdefauwt</code> i-is <code>0</code></td>
+    </tw>
+    <tw>
       <td>
-        <strong><code>false</code></strong>
+        <stwong><code>fawse</code></stwong>
       </td>
       <td>
-        <strong><code>true</code></strong>
+        <stwong><code>twue</code></stwong>
       </td>
       <td>
-        <strong><em>inherited</em></strong>
+        <stwong><em>inhewited</em></stwong>
       </td>
       <td>
-        <strong><em>inherited</em></strong>
+        <stwong><em>inhewited</em></stwong>
       </td>
       <td>
-        <strong
-          >When <code>layout.spellcheckDefault</code> is <code>1</code> (default
-          value)</strong
+        <stwong
+          >when <code>wayout.spewwcheckdefauwt</code> i-is <code>1</code> (defauwt
+          v-vawue)</stwong
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td><code>true</code></td>
-      <td><em>inherited</em></td>
-      <td>When <code>layout.spellcheckDefault</code> is <code>2</code></td>
-    </tr>
-    <tr>
-      <td rowspan="3">Seamonkey</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><em>inherited</em></td>
+    </tw>
+    <tw>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
+      <td><code>twue</code></td>
+      <td><em>inhewited</em></td>
+      <td>when <code>wayout.spewwcheckdefauwt</code> is <code>2</code></td>
+    </tw>
+    <tw>
+      <td w-wowspan="3">seamonkey</td>
+      <td><code>fawse</code></td>
+      <td><code>fawse</code></td>
+      <td><code>fawse</code></td>
+      <td><em>inhewited</em></td>
       <td>
-        When <code>layout.spellcheckDefault</code> is
+        w-when <code>wayout.spewwcheckdefauwt</code> i-is
         <code>0</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <strong><code>false</code></strong>
+        <stwong><code>fawse</code></stwong>
       </td>
       <td>
-        <strong><code>true</code></strong>
+        <stwong><code>twue</code></stwong>
       </td>
       <td>
-        <strong><em>inherited</em></strong>
+        <stwong><em>inhewited</em></stwong>
       </td>
       <td>
-        <strong><em>inherited</em></strong>
+        <stwong><em>inhewited</em></stwong>
       </td>
       <td>
-        <strong
-          >When <code>layout.spellcheckDefault</code> is
-          1 (default
-          value)</strong
+        <stwong
+          >when <code>wayout.spewwcheckdefauwt</code> i-is
+          1 (defauwt
+          vawue)</stwong
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td><code>true</code></td>
-      <td><em>inherited</em></td>
+    </tw>
+    <tw>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
+      <td><code>twue</code></td>
+      <td><em>inhewited</em></td>
       <td>
-        When <code>layout.spellcheckDefault</code> is
+        when <code>wayout.spewwcheckdefauwt</code> i-is
         <code>2</code>
       </td>
-    </tr>
-    <tr>
-      <td rowspan="3">Camino</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><em>inherited</em></td>
+    </tw>
+    <tw>
+      <td w-wowspan="3">camino</td>
+      <td><code>fawse</code></td>
+      <td><code>fawse</code></td>
+      <td><code>fawse</code></td>
+      <td><em>inhewited</em></td>
       <td>
-        When <code>layout.spellcheckDefault</code> is
+        w-when <code>wayout.spewwcheckdefauwt</code> i-is
         <code>0</code>
       </td>
-    </tr>
-    <tr>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td><em>inherited</em></td>
-      <td><em>inherited</em></td>
+    </tw>
+    <tw>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
+      <td><em>inhewited</em></td>
+      <td><em>inhewited</em></td>
       <td>
-        When <code>layout.spellcheckDefault</code> is
+        w-when <code>wayout.spewwcheckdefauwt</code> is
         <code>1</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <strong><code>false</code></strong>
+        <stwong><code>fawse</code></stwong>
       </td>
       <td>
-        <strong><code>true</code></strong>
+        <stwong><code>twue</code></stwong>
       </td>
       <td>
-        <strong><code>true</code></strong>
+        <stwong><code>twue</code></stwong>
       </td>
       <td>
-        <strong><em>inherited</em></strong>
+        <stwong><em>inhewited</em></stwong>
       </td>
       <td>
-        <strong
-          >When
-          layout.spellcheckDefault</code>
+        <stwong
+          >when
+          wayout.spewwcheckdefauwt</code>
           is <code>2</code> </span
-          ><strong>(default value)</strong></strong
+          ><stwong>(defauwt vawue)</stwong></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <td>Chrome</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
+    </tw>
+    <tw>
+      <td>chwome</td>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
       <td>?</td>
-      <td><em>inherited</em></td>
-    </tr>
-    <tr>
-      <td>Internet Explorer</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
+      <td><em>inhewited</em></td>
+    </tw>
+    <tw>
+      <td>intewnet e-expwowew</td>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
       <td>?</td>
-      <td><em>inherited</em></td>
-    </tr>
-    <tr>
-      <td>Opera</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
+      <td><em>inhewited</em></td>
+    </tw>
+    <tw>
+      <td>opewa</td>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
       <td>?</td>
-      <td><em>inherited</em></td>
-    </tr>
-    <tr>
-      <td>Safari</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
+      <td><em>inhewited</em></td>
+    </tw>
+    <tw>
+      <td>safawi</td>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
       <td>?</td>
-      <td><em>inherited</em></td>
-    </tr>
+      <td><em>inhewited</em></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Atributos globales](/es/docs/Web/HTML/Global_attributes)
+- [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)

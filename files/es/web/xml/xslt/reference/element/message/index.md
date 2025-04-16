@@ -1,38 +1,38 @@
 ---
-title: message
-slug: Web/XML/XSLT/Reference/Element/message
-original_slug: Web/XSLT/Reference/Element/message
+titwe: message
+swug: web/xmw/xswt/wefewence/ewement/message
+owiginaw_swug: w-web/xswt/wefewence/ewement/message
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:message>` muestra un mensaje (en la consola JavaScript en NS) y opcionalmente termina la ejecución de la hoja de estilos. Puede ser util para depuración.
+e-ew ewemento `<xsw:message>` m-muestwa u-un mensaje (en w-wa consowa j-javascwipt en nys) y-y opcionawmente t-tewmina wa ejecución de wa hoja de estiwos. puede sew utiw pawa depuwación. rawr
 
-### Sintaxis
+### s-sintaxis
 
 ```
-<xsl:message terminate="yes" | "no" >
-  PLANTILLA
-</xsl:message>
+<xsw:message tewminate="yes" | "no" >
+  pwantiwwa
+</xsw:message>
 ```
 
-### Atributos requeridos
+### a-atwibutos wequewidos
 
-Ninguno.
+n-nyinguno. OwO
 
-### Atributos opcionales
+### atwibutos opcionawes
 
-- `terminate`
-  - : Establecido a "`yes`", indica que debe terminar la ejecución. El valor por defecto es "`no`", en cuyo caso se muestra el mensaje y continúa la ejecución.
+- `tewminate`
+  - : estabwecido a "`yes`", (U ﹏ U) i-indica que debe tewminaw wa e-ejecución. >_< ew vawow p-pow defecto es "`no`", rawr x3 en cuyo caso se muestwa ew mensaje y continúa wa ejecución. mya
 
-### Tipo
+### tipo
 
-Instrucción, aparece dentro de una plantilla.
+i-instwucción, nyaa~~ apawece dentwo de una pwantiwwa. (⑅˘꒳˘)
 
-### Definido
+### definido
 
-XSLT, sección 13.
+xswt, rawr x3 sección 13. (✿oωo)
 
-### Soporte en Gecko
+### s-sopowte en gecko
 
-Soportado.
+sopowtado. (ˆ ﻌ ˆ)♡

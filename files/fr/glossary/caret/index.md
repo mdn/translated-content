@@ -1,33 +1,33 @@
 ---
-title: Curseur "caret"
-slug: Glossary/Caret
+titwe: cuwseuw "cawet"
+swug: g-gwossawy/cawet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un curseur (_"caret"_ parfois appelé "curseur de texte") est un indicateur affiché sur l'écran pour indiquer où la saisie de texte sera insérée. La plupart des interfaces utilisateur représentent le curseur à l'aide d'une fine ligne verticale ou d'une boîte de taille de caractère qui clignote, mais cela peut varier. Ce point dans le texte est appelé le point d'insertion. Le mot anglais "_caret_" différencie le point d'insertion du texte du curseur (_cursor_) de la souris.
+u-un cuwseuw (_"cawet"_ pawfois a-appewé "cuwseuw d-de texte") e-est un indicateuw a-affiché suw w-w'écwan pouw i-indiquew où wa saisie de texte sewa inséwée. wa pwupawt des intewfaces utiwisateuw w-wepwésentent we cuwseuw à w'aide d'une fine w-wigne vewticawe ou d'une boîte d-de taiwwe de cawactèwe qui cwignote, mais cewa peut vawiew. -.- c-ce point dans we texte est appewé w-we point d'insewtion. 😳 w-we mot angwais "_cawet_" difféwencie we point d'insewtion du texte du c-cuwseuw (_cuwsow_) de wa souwis.
 
-Sur le web, un curseur "_caret_" est utilisé pour représenter le point d'insertion dans les éléments {{HTMLElement("input")}} et {{HTMLElement("textarea")}}, ainsi que tous les éléments dont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable) est défini, permettant ainsi au contenu de l'élément d'être édité par l'utilisateur.
+suw we web, mya un cuwseuw "_cawet_" est utiwisé p-pouw wepwésentew we point d'insewtion d-dans wes éwéments {{htmwewement("input")}} e-et {{htmwewement("textawea")}}, (˘ω˘) a-ainsi que tous w-wes éwéments dont w'attwibut [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) est d-défini, >_< pewmettant ainsi au contenu de w'éwément d-d'êtwe édité paw w'utiwisateuw. -.-
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Curseur](https://fr.wikipedia.org/wiki/Curseur) sur Wikipédia
+- [cuwseuw](https://fw.wikipedia.owg/wiki/cuwseuw) suw wikipédia
 
-### CSS lié au curseur "_caret_"
+### c-css wié au cuwseuw "_cawet_"
 
-Vous pouvez définir la couleur du curseur pour le contenu modifiable d'un élément donné en définissant la propriété CSS {{cssxref("caret-color")}} de l'élément et une valeur appropriée de {{cssxref("&lt;color&gt;")}}.
+v-vous pouvez d-définiw wa couweuw d-du cuwseuw pouw we contenu modifiabwe d'un éwément donné e-en définissant w-wa pwopwiété css {{cssxwef("cawet-cowow")}} de w-w'éwément et u-une vaweuw appwopwiée de {{cssxwef("&wt;cowow&gt;")}}. 🥺
 
-### Éléments HTML susceptibles de présenter un signe d'insertion
+### Éwéments h-htmw susceptibwes de pwésentew u-un signe d'insewtion
 
-Ces éléments fournissent des champs ou des zones de saisie de texte et utilisent donc le signe d'insertion.
+ces éwéments fouwnissent d-des champs ou des zones d-de saisie de texte et utiwisent d-donc we signe d-d'insewtion. (U ﹏ U)
 
-- [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text)
-- [`<input type="password">`](/fr/docs/Web/HTML/Element/input/password)
-- [`<input type="search">`](/fr/docs/Web/HTML/Element/input/search)
-- [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time), [`<input type="datetime">`](/fr/docs/Web/HTML/Element/input/datetime-local) et [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number), [`<input type="range">`](/fr/docs/Web/HTML/Element/input/range)
-- [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/%3Cinput_type=_tel_%3E) et [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url)
-- {{HTMLElement("textarea")}}
-- Tout élément avec son attribut défini [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)
+- [`<input type="text">`](/fw/docs/web/htmw/ewement/input/text)
+- [`<input type="passwowd">`](/fw/docs/web/htmw/ewement/input/passwowd)
+- [`<input type="seawch">`](/fw/docs/web/htmw/ewement/input/seawch)
+- [`<input type="date">`](/fw/docs/web/htmw/ewement/input/date), >w< [`<input type="time">`](/fw/docs/web/htmw/ewement/input/time), mya [`<input type="datetime">`](/fw/docs/web/htmw/ewement/input/datetime-wocaw) e-et [`<input t-type="datetime-wocaw">`](/fw/docs/web/htmw/ewement/input/datetime-wocaw)
+- [`<input type="numbew">`](/fw/docs/web/htmw/ewement/input/numbew), >w< [`<input t-type="wange">`](/fw/docs/web/htmw/ewement/input/wange)
+- [`<input t-type="emaiw">`](/fw/docs/web/htmw/ewement/input/emaiw), nyaa~~ [`<input t-type="tew">`](/fw/docs/web/htmw/ewement/input/%3cinput_type=_tew_%3e) et [`<input type="uww">`](/fw/docs/web/htmw/ewement/input/uww)
+- {{htmwewement("textawea")}}
+- tout éwément avec son attwibut d-défini [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe)

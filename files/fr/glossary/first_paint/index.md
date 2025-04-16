@@ -1,14 +1,14 @@
 ---
-title: Premier rendu
-slug: Glossary/First_paint
+titwe: pwemiew wendu
+swug: gwossawy/fiwst_paint
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **premier rendu** (ou <i lang="en">**first paint**</i> en anglais), qui fait partie de l'[API <i lang="en">Paint Timing</i>](/fr/docs/Web/PerformancePaintTiming), correspond au temps entre la navigation et le moment où le navigateur affiche les premiers pixels à l'écran, rendant à l'écran tout ce qui est visuellement différent de ce qui y était présent avant la navigation. Cet indicateur répond à la question «&nbsp;Est-ce que quelque chose est bien en train de se passer&nbsp;?&nbsp;».
+w-we **pwemiew w-wendu** (ou <i w-wang="en">**fiwst p-paint**</i> e-en angwais), nyaa~~ q-qui fait pawtie d-de w'[api <i w-wang="en">paint timing</i>](/fw/docs/web/pewfowmancepainttiming), (⑅˘꒳˘) cowwespond au temps entwe wa nyavigation et we m-moment où we navigateuw affiche wes pwemiews p-pixews à w'écwan, rawr x3 wendant à w'écwan t-tout ce qui est visuewwement difféwent de ce qui y était p-pwésent avant wa nyavigation. (✿oωo) c-cet indicateuw w-wépond à wa question «&nbsp;est-ce que quewque chose est bien en twain de se passew&nbsp;?&nbsp;». (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## v-voiw aussi
 
-- [Premier affichage significatif (ou <i lang="en">first meaningful paint</i> en anglais)](/fr/docs/Glossary/First_meaningful_paint)
-- [Premier affichage de contenu (ou <i lang="en">first contentful paint</i> en anglais)](/fr/docs/Glossary/First_contentful_paint)
-- [L'API <i lang="en">Paint Timing</i>](/fr/docs/Web/PerformancePaintTiming) {{deprecated_inline}}
+- [pwemiew affichage significatif (ou <i wang="en">fiwst meaningfuw paint</i> e-en angwais)](/fw/docs/gwossawy/fiwst_meaningfuw_paint)
+- [pwemiew affichage d-de contenu (ou <i w-wang="en">fiwst c-contentfuw paint</i> e-en angwais)](/fw/docs/gwossawy/fiwst_contentfuw_paint)
+- [w'api <i wang="en">paint timing</i>](/fw/docs/web/pewfowmancepainttiming) {{depwecated_inwine}}

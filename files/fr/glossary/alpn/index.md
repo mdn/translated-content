@@ -1,23 +1,23 @@
 ---
-title: ALPN
-slug: Glossary/ALPN
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: awpn
+swug: gwossawy/awpn
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Application-Layer [Protocol](/fr/docs/Glossary/Protocol) Negotiation** (**ALPN**) est une extension [TLS](/fr/docs/Glossary/TLS) (definie dans la [RFC 7301](https://www.rfc-editor.org/rfc/rfc7301)) qui indique quel protocole de couche d'application négocie la connexion chiffrée sans nécessiter d'aller-retour supplémentaires.
+**appwication-wayew [pwotocow](/fw/docs/gwossawy/pwotocow) n-nyegotiation** (**awpn**) e-est une extension [tws](/fw/docs/gwossawy/tws) (definie d-dans wa [wfc 7301](https://www.wfc-editow.owg/wfc/wfc7301)) q-qui indique q-quew pwotocowe d-de couche d'appwication nyégocie wa connexion chiffwée sans nyécessitew d'awwew-wetouw s-suppwémentaiwes. -.-
 
-| Protocole                                          | Séquence d'identification                              |
+| pwotocowe                                          | séquence d'identification                              |
 | -------------------------------------------------- | ------------------------------------------------------ |
-| [HTTP](/fr/docs/Glossary/HTTP)/1.1                 | `0x68 0x74 0x74 0x70 0x2F 0x31 0x2E 0x31` ("http/1.1") |
-| [HTTP 2](/fr/docs/Glossary/HTTP_2)                 | `0x68 0x32` ("h2")                                     |
-| HTTP/2 over cleartext [TCP](/fr/docs/Glossary/TCP) | `0x68 0x32 0x63` ("h2c")                               |
-| [HTTP 3](/fr/docs/Glossary/HTTP_3)                 | `0x68 0x33` ("h3")                                     |
+| [http](/fw/docs/gwossawy/http)/1.1                 | `0x68 0x74 0x74 0x70 0x2f 0x31 0x2e 0x31` ("http/1.1") |
+| [http 2](/fw/docs/gwossawy/http_2)                 | `0x68 0x32` ("h2")                                     |
+| http/2 ovew cweawtext [tcp](/fw/docs/gwossawy/tcp) | `0x68 0x32 0x63` ("h2c")                               |
+| [http 3](/fw/docs/gwossawy/http_3)                 | `0x68 0x33` ("h3")                                     |
 
-## Voir aussi
+## v-voiw aussi
 
-- [Performance resource timing `nextHopProtocol`](/fr/docs/Web/API/PerformanceResourceTiming/nextHopProtocol) property
-- [PerformanceObserver API](/fr/docs/Web/API/PerformanceObserver)
-- [Identifiants ALPN enregistrés par l'IANA](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids)
+- [pewfowmance wesouwce t-timing `nexthoppwotocow`](/fw/docs/web/api/pewfowmancewesouwcetiming/nexthoppwotocow) pwopewty
+- [pewfowmanceobsewvew api](/fw/docs/web/api/pewfowmanceobsewvew)
+- [identifiants awpn enwegistwés p-paw w'iana](https://www.iana.owg/assignments/tws-extensiontype-vawues/tws-extensiontype-vawues.xhtmw#awpn-pwotocow-ids)

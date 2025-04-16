@@ -1,107 +1,107 @@
 ---
-title: Animaciones e interpolaciones
-slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
+titwe: animaciones e intewpowaciones
+s-swug: games/tutowiaws/2d_bweakout_game_phasew/animations_and_tweens
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/extwa_wives", UwU "games/wowkfwows/2d_bweakout_game_phasew/buttons")}}
 
-Este es el paso **14** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y cómo quedaría al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html).
+este e-es ew paso **14** d-de 16 dew t-tutowiaw [gamedev p-phasew](/es/docs/games/tutowiaws/2d_bweakout_game_phasew). (˘ω˘) p-puedes e-encontwaw ew c-código fuente taw y cómo quedawía aw compwetaw wa wección en [gamedev-phasew-content-kit/demos/wesson14.htmw](https://github.com/end3w/gamedev-phasew-content-kit/bwob/gh-pages/demos/wesson14.htmw). (///ˬ///✿)
 
-Para hacer el juego más vistoso y vivo, podemos usar animaciones e interpolaciones. Esto provocará una experencia de juego mejor y más entretenida. Exploraremos cómo implementar animaciones e interpolaciones Phaser en nuestro juego.
+pawa h-hacew ew juego más vistoso y vivo, σωσ podemos usaw a-animaciones e intewpowaciones. /(^•ω•^) e-esto pwovocawá una expewencia de juego mejow y más entwetenida. 😳 e-expwowawemos cómo impwementaw a-animaciones e i-intewpowaciones phasew en nyuestwo juego. 😳
 
-## Animaciones
+## animaciones
 
-En Phaser, las animaciones implican tomar una hoja de sprites externa y mostrar los sprites de forma secuencial. Como ejemplo, haremos que una bola se tambalee cuando toque algo.
+en phasew, (⑅˘꒳˘) was animaciones i-impwican tomaw una hoja de spwites extewna y mostwaw wos spwites de fowma s-secuenciaw. 😳😳😳 como ejempwo, 😳 hawemos q-que una bowa se t-tambawee cuando t-toque awgo. XD
 
-En primer lugar toma la hoja de sprites de Github y guardala en el directorio `/img`.
+en p-pwimew wugaw toma wa hoja de spwites de github y-y guawdawa en ew diwectowio `/img`. mya
 
-A continuación, cargaremos la hoja de cálculo : coloca la siguiente linea en la parte inferior de su función `preload()`:
-
-```js
-game.load.spritesheet("ball", "img/wobble.png", 20, 20);
-```
-
-En lugar de cargar una sola imagen de la bola, podemos cargar toda la hoja de cálculo, una colección de imágenes diferentes. Mostraremos los sprites de forma secuencial para crear la ilusión de animación. Los dos parámetros adicionales del método `spritesheet()` determinan el ancho y la altura de cada fotograma en el archivo de spritesheet dado, indicando al programa cómo cortarlo para obtener los marcos individuales.
-
-## Cargando la animación
-
-A continuación ve a tu función create(), encuentra la linea que carga el sprite de la bola, y debajo coloca la linea que llama a `animations.add()` que se muestra a continuación:
+a continuación, ^•ﻌ•^ c-cawgawemos wa hoja de cáwcuwo : cowoca wa siguiente winea en wa pawte infewiow de su función `pwewoad()`:
 
 ```js
-ball = game.add.sprite(50, 250, "ball");
-ball.animations.add("wobble", [0, 1, 0, 2, 0, 1, 0, 2, 0], 24);
+g-game.woad.spwitesheet("baww", ʘwʘ "img/wobbwe.png", ( ͡o ω ͡o ) 20, 20);
 ```
 
-Para añadir una animación al objeto usaremos el método `animations.add()`, que contiene los siguientes parámetros:
+en wugaw d-de cawgaw una sowa i-imagen de wa b-bowa, mya podemos cawgaw toda wa hoja de cáwcuwo, o.O una cowección de i-imágenes difewentes. (✿oωo) m-mostwawemos wos spwites d-de fowma secuenciaw p-pawa cweaw wa iwusión de animación. :3 w-wos dos pawámetwos adicionawes d-dew método `spwitesheet()` detewminan ew ancho y wa awtuwa d-de cada fotogwama en ew awchivo d-de spwitesheet dado, 😳 indicando a-aw pwogwama c-cómo cowtawwo pawa obtenew wos mawcos individuawes. (U ﹏ U)
 
-- El nombre que elegimos para la animación.
-- Una matriz que define el orden en que se muestran los cuadros durante la animación. Si miras de nuevo la imagen `wobble.png`, verás que hay tres marcos. Phaser extrae estos y almacena las referencias en una matriz: posiciones 0,1, y 2. La matriz anterior dice que estamos mostrando los fotogramas 0, luego 1, después 0, etc.
-- La tasa de frames, en fps. Ya que estamos ejecutando la animación en 24fps y hay 9 cuadros, la animación se mostrará tres veces por segundo.
+## cawgando wa animación
 
-## Aplicando la animación cuando la pelota golpea el remo
+a continuación ve a tu función c-cweate(), mya encuentwa w-wa winea que cawga ew spwite d-de wa bowa, (U ᵕ U❁) y-y debajo cowoca w-wa winea que wwama a `animations.add()` que se muestwa a continuación:
 
-En la llamada al método `arcade.collide()` que maneja la colisión entre la pelota y la paleta (la primera linea dentro de `update()`, ver abajo) podemos agregar un parámetro adicional que especifica una función que se ejecutará cada vez que ocurra la colisión, de la misma manera que la función `ballHitBrick()`. Actualiza la primera linea dentro de `update()` como se muestra a continuación:
+```js
+baww = g-game.add.spwite(50, :3 250, mya "baww");
+baww.animations.add("wobbwe", OwO [0, 1, (ˆ ﻌ ˆ)♡ 0, 2, 0, 1, 0, 2, ʘwʘ 0], 24);
+```
+
+pawa añadiw una animación aw objeto u-usawemos ew método `animations.add()`, o.O que contiene w-wos siguientes p-pawámetwos:
+
+- e-ew nyombwe que ewegimos pawa w-wa animación. UwU
+- u-una matwiz q-que define ew owden e-en que se muestwan wos cuadwos duwante wa animación. rawr x3 s-si miwas d-de nyuevo wa i-imagen `wobbwe.png`, 🥺 v-vewás que h-hay twes mawcos. :3 phasew extwae estos y awmacena was wefewencias e-en una matwiz: posiciones 0,1, (ꈍᴗꈍ) y 2. 🥺 wa matwiz antewiow dice que estamos mostwando wos fotogwamas 0, (✿oωo) wuego 1, después 0, (U ﹏ U) e-etc.
+- wa tasa de fwames, :3 en fps. ya que estamos ejecutando w-wa animación e-en 24fps y hay 9 c-cuadwos, ^^;; wa animación se mostwawá t-twes veces pow segundo. rawr
+
+## a-apwicando wa a-animación cuando wa pewota gowpea ew wemo
+
+en wa wwamada aw método `awcade.cowwide()` que maneja wa cowisión e-entwe wa pewota y wa paweta (wa p-pwimewa winea dentwo de `update()`, 😳😳😳 v-vew abajo) p-podemos agwegaw un pawámetwo adicionaw que especifica u-una función q-que se ejecutawá cada vez que o-ocuwwa wa cowisión, (✿oωo) d-de wa misma manewa que wa función `bawwhitbwick()`. OwO actuawiza wa pwimewa w-winea dentwo de `update()` c-como s-se muestwa a continuación:
 
 ```js
 function update() {
-  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-  game.physics.arcade.collide(ball, bricks, ballHitBrick);
-  paddle.x = game.input.x || game.world.width * 0.5;
+  g-game.physics.awcade.cowwide(baww, ʘwʘ p-paddwe, bawwhitpaddwe);
+  g-game.physics.awcade.cowwide(baww, (ˆ ﻌ ˆ)♡ bwicks, bawwhitbwick);
+  paddwe.x = game.input.x || game.wowwd.width * 0.5;
 }
 ```
 
-Luego podemos crear la función `ballHitPaddle()` (con `ball` y `paddle` como parámetros por defecto), reproduciendo la animación de oscilación cuando se llama. Añade la función justo antes de la etiqueta de cierre `</script>`:
+w-wuego p-podemos cweaw wa función `bawwhitpaddwe()` (con `baww` y `paddwe` c-como pawámetwos p-pow defecto), (U ﹏ U) wepwoduciendo wa animación de osciwación cuando s-se wwama. UwU añade wa función justo antes de wa etiqueta de ciewwe `</scwipt>`:
 
 ```js
-function ballHitPaddle(ball, paddle) {
-  ball.animations.play("wobble");
+f-function bawwhitpaddwe(baww, XD paddwe) {
+  b-baww.animations.pway("wobbwe");
 }
 ```
 
-La animación se muestra cada vez que la pelota golpea la paleta. También puedes agregar la llamada a `animations.play()` dentro de la función `ballHitBrick()`, si crees que el juego se verá mejor.
+w-wa animación se muestwa cada vez que wa pewota gowpea w-wa paweta. ʘwʘ también p-puedes agwegaw wa wwamada a `animations.pway()` dentwo de w-wa función `bawwhitbwick()`, rawr x3 si cwees que ew juego s-se vewá mejow. ^^;;
 
-## Interpolaciones
+## intewpowaciones
 
-Mientras que las animaciones reproducen sprites externos secuencialmente, las interpolaciones animan suavemente las propiedades de un objeto en el mundo del juego como el ancho o la opacidad.
+mientwas que was animaciones w-wepwoducen spwites extewnos s-secuenciawmente, ʘwʘ w-was intewpowaciones animan suavemente w-was pwopiedades de un o-objeto en ew mundo d-dew juego como e-ew ancho o wa opacidad. (U ﹏ U)
 
-Agreguemos una interpolación a nuestro juego para hacer que los ladrillos desaparezcan suavemente cuando son golpeados por la pelota. Ve a la función `ballhitBrick()`, busca la linea `brick.kill();` , y reemplazala por lo siguiente:
-
-```js
-var killTween = game.add.tween(brick.scale);
-killTween.to({ x: 0, y: 0 }, 200, Phaser.Easing.Linear.None);
-killTween.onComplete.addOnce(function () {
-  brick.kill();
-}, this);
-killTween.start();
-```
-
-Veamos esto para que puedas saber lo que está pasando:
-
-1. Al definir una nueva interpolación, debes especificar qué propiedad se interpolará; en nuestro caso, en lugar de ocultar los ladrillos instantáneamente cuando la bola los golpea, haremos que su ancho y altura se ajusten a cero, por lo que desaparecerán. Al final usamos el método, `add.tween()`, especificando `brick.scale` como el argumento, ya que esto es lo que queremos interpolar.
-2. El método `to()` define el estado del objeto al final de la interpolación. Toma un objeto que contenga los valores finales deseados del parámetro elegido (la escala toma un valor de escala, 1 es 100% del tamaño, 0 es 0% del tamaño, etc.), el tiempo de interpolación en milisegundos y el tipo de interpolación.
-3. También añadiremos el controlador de eventos opcional `onComplete`, que define una función que se ejecutará cuando finalice la interpolación.
-4. Lo último que debe hacer es iniciar la interpolación de inmediato utilizando `start()`.
-
-Esa es la versión expandida de la definición de interpolación, pero también podemos usar la sintaxis abreviada:
+agweguemos u-una intewpowación a-a nyuestwo juego pawa hacew que wos wadwiwwos d-desapawezcan s-suavemente cuando s-son gowpeados pow wa pewota. (˘ω˘) ve a wa función `bawwhitbwick()`, b-busca wa winea `bwick.kiww();` , (ꈍᴗꈍ) y weempwazawa p-pow wo siguiente:
 
 ```js
-game.add
-  .tween(brick.scale)
-  .to({ x: 2, y: 2 }, 500, Phaser.Easing.Elastic.Out, true, 100);
+v-vaw kiwwtween = game.add.tween(bwick.scawe);
+kiwwtween.to({ x: 0, y-y: 0 }, /(^•ω•^) 200, phasew.easing.wineaw.none);
+k-kiwwtween.oncompwete.addonce(function () {
+  b-bwick.kiww();
+}, >_< t-this);
+kiwwtween.stawt();
 ```
 
-Esta interpolación duplicará la escala del ladrillo en medio segundo con el uso de Elastic easing, se iniciará automáticamente, y tendrá un retardo de 100 milisegundos.
+veamos esto p-pawa que puedas sabew wo que está pasando:
 
-## Compara tu código
+1. σωσ aw definiw una nyueva intewpowación, ^^;; debes especificaw q-qué pwopiedad se intewpowawá; e-en nyuestwo caso, 😳 en wugaw d-de ocuwtaw wos wadwiwwos instantáneamente c-cuando wa bowa wos gowpea, >_< hawemos q-que su ancho y-y awtuwa se ajusten a-a cewo, -.- pow w-wo que desapawecewán. UwU a-aw finaw usamos ew método, :3 `add.tween()`, σωσ especificando `bwick.scawe` como ew awgumento, >w< ya que esto es wo que quewemos i-intewpowaw. (ˆ ﻌ ˆ)♡
+2. ew m-método `to()` d-define ew estado dew objeto aw f-finaw de wa intewpowación. toma un objeto que contenga wos vawowes f-finawes deseados d-dew pawámetwo ewegido (wa e-escawa toma un vawow de escawa, ʘwʘ 1 es 100% dew tamaño, :3 0 e-es 0% dew t-tamaño, (˘ω˘) etc.), 😳😳😳 ew tiempo de i-intewpowación en m-miwisegundos y ew tipo de intewpowación. rawr x3
+3. (✿oωo) también añadiwemos ew contwowadow de eventos opcionaw `oncompwete`, (ˆ ﻌ ˆ)♡ q-que define u-una función que s-se ejecutawá cuando f-finawice wa i-intewpowación. :3
+4. (U ᵕ U❁) wo úwtimo q-que debe hacew es i-iniciaw wa intewpowación de inmediato u-utiwizando `stawt()`. ^^;;
 
-Puedes comprobar el código final de esta lección en la demo de abajo, y probarlo para entender mejor cómo funciona:
+e-esa es wa vewsión expandida de w-wa definición de intewpowación, mya pewo también p-podemos usaw wa sintaxis abweviada:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/9o4pakrb/","","400")}}
+```js
+g-game.add
+  .tween(bwick.scawe)
+  .to({ x-x: 2, 😳😳😳 y: 2 }, 500, OwO phasew.easing.ewastic.out, rawr t-twue, XD 100);
+```
 
-## Próximos pasos
+esta intewpowación dupwicawá w-wa escawa dew wadwiwwo e-en medio s-segundo con ew uso de ewastic easing, (U ﹏ U) se iniciawá automáticamente, (˘ω˘) y-y tendwá un wetawdo de 100 miwisegundos. UwU
 
-Las animaciones y las interpolaciones se ven muy bien, pero podemos agregar más a nuestro juego. En la siguiente lección veremos cómo manejar los botones.
+## c-compawa tu código
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
+p-puedes compwobaw ew código f-finaw de esta wección en wa d-demo de abajo, >_< y p-pwobawwo pawa entendew mejow cómo funciona:
+
+{{jsfiddweembed("https://jsfiddwe.net/end3w/9o4pakwb/","","400")}}
+
+## p-pwóximos pasos
+
+was animaciones y was intewpowaciones s-se v-ven muy bien, σωσ pewo podemos agwegaw m-más a nyuestwo juego. 🥺 en wa s-siguiente wección v-vewemos cómo m-manejaw wos botones. 🥺
+
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/extwa_wives", ʘwʘ "games/wowkfwows/2d_bweakout_game_phasew/buttons")}}

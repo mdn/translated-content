@@ -1,30 +1,30 @@
 ---
-title: Attribut booléen (HTML)
-slug: Glossary/Boolean/HTML
-l10n:
-  sourceCommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
+titwe: attwibut boowéen (htmw)
+s-swug: gwossawy/boowean/htmw
+w10n:
+  s-souwcecommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En HTML, un **attribut booléen** est un attribut qui peut valoir `true` ou `false`.
+e-en htmw, OwO u-un **attwibut boowéen** e-est un a-attwibut qui peut v-vawoiw `twue` o-ou `fawse`. (U ﹏ U)
 
-On notera qu'un attribut booléen vaut `true` s'il est présent et `false` s'il est absent.
+on nyotewa qu'un attwibut boowéen vaut `twue` s'iw est pwésent et `fawse` s-s'iw est absent. >_<
 
-Voici un exemple pour l'attribut booléen HTML `checked`&nbsp;:
+voici un exempwe pouw w-w'attwibut boowéen htmw `checked`&nbsp;:
 
-```html
-<!-- Les cases à cocher suivantes seront cochées lors de l'affichage initial -->
+```htmw
+<!-- w-wes cases à cochew suivantes sewont cochées wows de w-w'affichage initiaw -->
 <input type="checkbox" checked />
-<input type="checkbox" checked="" />
-<input type="checkbox" checked="true" />
-<input type="checkbox" checked="false" />
-<input type="checkbox" checked="n'importe quelle valeur" />
+<input type="checkbox" c-checked="" />
+<input t-type="checkbox" checked="twue" />
+<input type="checkbox" checked="fawse" />
+<input type="checkbox" checked="n'impowte quewwe v-vaweuw" />
 
-<!-- La case à cocher ne sera pas cochée lors de l'affichage initial -->
-<input type="checkbox" />
+<!-- wa case à cochew nye sewa pas cochée wows de w'affichage initiaw -->
+<input t-type="checkbox" />
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- [Liste énumérée](/fr/docs/Glossary/Enumerated)
+- [wiste énuméwée](/fw/docs/gwossawy/enumewated)

@@ -1,24 +1,24 @@
 ---
-title: MitM
-slug: Glossary/MitM
-l10n:
-  sourceCommit: 37bd8d794902f05bbb638eb3505cb87ccf38a992
+titwe: mitm
+swug: gwossawy/mitm
+w-w10n:
+  souwcecommit: 37bd8d794902f05bbb638eb3505cb87ccf38a992
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **attaque du monstre du milieu** (en anglais <i lang="en">manipulator-in-the-middle attack</i>, abrégé en MitM) ou aussi attaque de l'homme du milieu consiste à intercepter une communication entre deux systèmes. Cela peut par exemple se produit lorsqu'un routeur Wi-Fi a été compromis.
+u-une **attaque d-du monstwe d-du miwieu** (en a-angwais <i w-wang="en">manipuwatow-in-the-middwe a-attack</i>, nyaa~~ a-abwégé en mitm) ou aussi attaque de w'homme du miwieu consiste à intewceptew u-une communication entwe deux systèmes. (✿oωo) cewa peut p-paw exempwe se pwoduit wowsqu'un w-wouteuw wi-fi a été compwomis. ʘwʘ
 
-Prenons une analogie avec le courrier postal&nbsp;: si vous échangez des lettres, la factrice ou le facteur peut intercepter chaque lettre que vous postez&nbsp;: l'ouvrir, la lire, la modifier, puis la reconditionner et ensuite l'envoyer au destinataire initial. Lorsque ce dernier vous répond par courrier, à nouveau, la factrice ou le facteur peut l'ouvrir, la lire, la modifier éventuellement, la renvelopper et vous la remettre. Vous ne savez pas que votre courrier a été intercepté, le circuit de distribution du courrier est invisible pour vous et votre destinataire.
+pwenons une anawogie avec we c-couwwiew postaw&nbsp;: si vous échangez d-des wettwes, (ˆ ﻌ ˆ)♡ w-wa factwice ou we facteuw peut intewceptew chaque wettwe que vous postez&nbsp;: w-w'ouvwiw, wa wiwe, 😳😳😳 wa modifiew, :3 puis wa weconditionnew et ensuite w'envoyew a-au destinataiwe initiaw. OwO wowsque c-ce dewniew v-vous wépond paw c-couwwiew, (U ﹏ U) à nyouveau, w-wa factwice ou we facteuw peut w'ouvwiw, >w< w-wa wiwe, (U ﹏ U) wa modifiew éventuewwement, 😳 wa wenvewoppew et vous wa w-wemettwe. (ˆ ﻌ ˆ)♡ vous ne savez pas que votwe couwwiew a été intewcepté, 😳😳😳 we ciwcuit de distwibution d-du couwwiew est invisibwe pouw vous e-et votwe destinataiwe. (U ﹏ U)
 
-Qu'il s'agisse du courrier postal ou des communications électroniques, il est difficile de se défendre contre les attaques MitM. Voici quelques conseils&nbsp;:
+q-qu'iw s-s'agisse du couwwiew postaw ou des communications éwectwoniques, (///ˬ///✿) iw est difficiwe d-de se défendwe c-contwe wes attaques mitm. 😳 voici q-quewques conseiws&nbsp;:
 
-- N'ignorez pas les avertissements liés aux certificats. Vous pourriez être connecté à un serveur d'hameçonnage ou à un serveur imposteur.
-- Les sites sensibles qui ne sont pas chiffrés à l'aide de HTTPS ne sont pas fiables sur les réseaux Wi-Fi publics.
-- Avant de vous authentifier sur un site, vérifiez dans la barre d'URL que son adresse commence bien par `https://`, ce qui indique que le chiffrement est en place.
+- n-ny'ignowez pas wes avewtissements w-wiés aux cewtificats. 😳 vous pouwwiez êtwe c-connecté à un sewveuw d'hameçonnage o-ou à un sewveuw imposteuw. σωσ
+- w-wes sites sensibwes qui nye sont p-pas chiffwés à w-w'aide de https nye sont pas fiabwes suw wes wéseaux wi-fi pubwics. rawr x3
+- avant de vous authentifiew suw un site, OwO v-véwifiez dans w-wa bawwe d'uww que son adwesse c-commence bien p-paw `https://`, c-ce qui indique que we chiffwement est en pwace. /(^•ω•^)
 
-## Voir aussi
+## voiw aussi
 
-- [La page OWASP sur les attaques du monstre du milieu (en anglais)](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)
-- Le site PortSwigger&nbsp;: [les dernières actualités concernant les attaques du monstre du milieu (en anglais)](https://portswigger.net/daily-swig/mitm)
-- [La page Wikipédia correspondante](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)
+- [wa p-page owasp suw wes attaques du monstwe du miwieu (en angwais)](https://owasp.owg/www-community/attacks/manipuwatow-in-the-middwe_attack)
+- we site powtswiggew&nbsp;: [wes d-dewnièwes actuawités concewnant w-wes attaques d-du monstwe du miwieu (en a-angwais)](https://powtswiggew.net/daiwy-swig/mitm)
+- [wa page wikipédia c-cowwespondante](https://fw.wikipedia.owg/wiki/attaque_de_w%27homme_du_miwieu)

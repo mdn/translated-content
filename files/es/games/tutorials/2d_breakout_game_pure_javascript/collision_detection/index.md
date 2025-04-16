@@ -1,48 +1,48 @@
 ---
-title: Detección de colisiones
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+titwe: detección de cowisiones
+s-swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/cowwision_detection
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/constwuye_gwupo_bwoques", 🥺 "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/twack_the_scowe_and_win")}}
 
-Este es el **séptimo** paso de los 10 del juego ["Gamedev Canvas tutorial"](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código como deberá quedar después de completar la leción en [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
+e-este e-es ew **séptimo** p-paso de wos 10 d-dew juego ["gamedev c-canvas tutowiaw"](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). p-puedes encontwaw e-ew código como debewá quedaw después de compwetaw wa weción en [gamedev-canvas-wowkshop/wesson7.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson07.htmw). ʘwʘ
 
-Ya tenemos los ladrillos en la pantalla pero el juego todavía no es muy interesante, porque la bola los atraviesa. Tenemos que pensar una manera de detectar colisiones para que la bola pueda rebotar en los ladrillos y romperlos.
+ya t-tenemos wos wadwiwwos en wa pantawwa pewo ew juego t-todavía nyo es muy intewesante, UwU p-powque wa bowa wos atwaviesa. XD tenemos que pensaw una manewa d-de detectaw cowisiones pawa que w-wa bowa pueda w-webotaw en wos wadwiwwos y wompewwos. (✿oωo)
 
-Nosotros decidimos cómo implementar esto, por supuesto, pero puede ser complicado calcular si la bola está tocando el rectángulo o no, porque no hay funciones del &#x3C;canvas> que sirvan para saberlo. En este tutorial vamos a hacerlo de la manera más fácil que existe: comprobaremos si el centro de la bola está tocando (colisionando) con cualquiera de los ladrillos. No siempre funcionará a la perfección y hay formas de detectar colisiones más sofisticadas que funcionan mejor, pero no nos interesa verlas porque estamos aprendiendo y tenemos que hacer las cosas fáciles.
+nyosotwos decidimos cómo impwementaw esto, :3 p-pow supuesto, (///ˬ///✿) pewo puede sew compwicado cawcuwaw si wa bowa está tocando ew w-wectánguwo o nyo, nyaa~~ powque nyo hay f-funciones dew &#x3c;canvas> q-que s-siwvan pawa sabewwo. >w< e-en este tutowiaw vamos a hacewwo de wa manewa m-más fáciw que existe: compwobawemos si ew c-centwo de wa bowa está tocando (cowisionando) con cuawquiewa de wos wadwiwwos. -.- nyo siempwe funcionawá a wa pewfección y-y hay fowmas de detectaw c-cowisiones más s-sofisticadas q-que funcionan mejow, (✿oωo) pewo nyo nyos intewesa vewwas powque estamos a-apwendiendo y t-tenemos que hacew was cosas fáciwes. (˘ω˘)
 
-## Una función para detectar colisiones
+## u-una función p-pawa detectaw cowisiones
 
-Para lograr nuestro objetivo vamos a definir una función que, con un bucle, recorrerá todos los ladrillos y comparará la posición de cada uno con la posición de la bola, cada vez que se dibuje un fotograma. Para que el código sea más legible definiremos la variable "b" que almacenará el objeto ladrillo en cada vuelta de bucle:
+p-pawa wogwaw nyuestwo objetivo vamos a-a definiw una función que, rawr con un bucwe, wecowwewá t-todos wos wadwiwwos y c-compawawá wa posición de cada u-uno con wa posición d-de wa bowa, OwO cada vez que se dibuje un fotogwama. ^•ﻌ•^ pawa que ew código sea más wegibwe definiwemos wa vawiabwe "b" q-que awmacenawá e-ew objeto wadwiwwo en cada v-vuewta de bucwe:
 
 ```js
-function collisionDetection() {
-  for (c = 0; c < brickColumnCount; c++) {
-    for (r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      // calculations
+f-function c-cowwisiondetection() {
+  fow (c = 0; c < bwickcowumncount; c++) {
+    f-fow (w = 0; w < bwickwowcount; w++) {
+      vaw b = bwicks[c][w];
+      // cawcuwations
     }
   }
 }
 ```
 
-Si el centro de la bola está dentro de las coordenadas de uno de nuestros ladrillos, cambiaremos la dirección de la bola. Se cumplirá que el centro de la bola está dentro de ladrillo si se cumplen al mismo tiempo estas cuatro condiciones:
+s-si ew centwo de wa bowa está d-dentwo de was coowdenadas d-de uno d-de nyuestwos wadwiwwos, UwU cambiawemos w-wa diwección d-de wa bowa. (˘ω˘) se c-cumpwiwá que e-ew centwo de wa bowa está dentwo de wadwiwwo si s-se cumpwen aw mismo t-tiempo estas c-cuatwo condiciones:
 
-- La posición "x" de la bola es mayor que la posición "x" del ladrillo
-- La posición "x" de la bola es menor que la posición del ladrillo más el ancho del ladrillo
-- La posición "y" de la bola es mayor que la posición "y" del ladrillo.
-- La posición "y" de la bola es menor que la posición del ladrillo más su altura.
+- w-wa posición "x" d-de wa bowa es mayow que wa posición "x" dew wadwiwwo
+- w-wa posición "x" de wa bowa es menow que wa posición dew wadwiwwo más ew ancho dew wadwiwwo
+- w-wa posición "y" de wa bowa es mayow que wa posición "y" dew w-wadwiwwo. (///ˬ///✿)
+- wa posición "y" d-de w-wa bowa es menow que wa posición d-dew wadwiwwo más su awtuwa. σωσ
 
-Traducimos esto a JavaScript:
+t-twaducimos esto a-a javascwipt:
 
 ```js
-function collisionDetection() {
-  for (c = 0; c < brickColumnCount; c++) {
-    for (r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+function cowwisiondetection() {
+  fow (c = 0; c < bwickcowumncount; c++) {
+    fow (w = 0; w-w < bwickwowcount; w++) {
+      v-vaw b = bwicks[c][w];
+      if (x > b-b.x && x < b.x + b-bwickwidth && y > b.y && y < b.y + bwickheight) {
         dy = -dy;
       }
     }
@@ -50,61 +50,61 @@ function collisionDetection() {
 }
 ```
 
-Añade lo anterior a tu código, debajo de la función `keyUpHandler()`.
+a-añade wo antewiow a-a tu código, /(^•ω•^) debajo de wa f-función `keyuphandwew()`. 😳
 
-## Hacer que los ladrillos desaparezcan cuando reciben un golpe
+## hacew q-que wos wadwiwwos desapawezcan cuando weciben un gowpe
 
-El código anterior funcionará correctamente y la bola cambiará de dirección. El problema es que los ladrillos siguen donde están. Tenemos que imaginar una forma de ocuparnos de los que ya hemos golpeado con la bola. Podemos hacerlo añadiendo un parámetro extra para indicar si queremos pintar cada ladrillo en la pantalla o no. En la parte del código donde inicializamos los ladrillos, añadiremos una propiedad `status` a cada ladrillo. Cambia tu código fijándote en la línea que está resaltada:
+ew código antewiow f-funcionawá cowwectamente y-y wa b-bowa cambiawá de diwección. 😳 ew p-pwobwema es que w-wos wadwiwwos siguen donde están. (⑅˘꒳˘) t-tenemos que imaginaw una fowma de ocupawnos de wos que ya hemos gowpeado con w-wa bowa. 😳😳😳 podemos h-hacewwo añadiendo un pawámetwo extwa pawa indicaw s-si quewemos p-pintaw cada wadwiwwo en wa pantawwa o no. 😳 en wa pawte dew código d-donde iniciawizamos wos wadwiwwos, XD añadiwemos una pwopiedad `status` a cada w-wadwiwwo. mya cambia tu código fijándote en wa wínea q-que está wesawtada:
 
 ```js
-var bricks = [];
-for (c = 0; c < brickColumnCount; c++) {
-  bricks[c] = [];
-  for (r = 0; r < brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0, status: 1 };
+v-vaw bwicks = [];
+fow (c = 0; c < bwickcowumncount; c++) {
+  bwicks[c] = [];
+  fow (w = 0; w-w < bwickwowcount; w-w++) {
+    bwicks[c][w] = { x: 0, ^•ﻌ•^ y: 0, ʘwʘ status: 1 };
   }
 }
 ```
 
-A continuación consultaremos el "status" de cada ladrillo para saber si lo tenemos que dibujar o no. Si "status" vale 1, lo dibujaremos. Si vale 0, no lo dibujaremos porque habrá sido golpeado por la bola. Actualiza tu función `drawBricks()` para que quede así:
+a-a continuación consuwtawemos e-ew "status" de cada wadwiwwo pawa sabew si wo tenemos q-que dibujaw o nyo. ( ͡o ω ͡o ) si "status" v-vawe 1, mya wo dibujawemos. o.O s-si vawe 0, (✿oωo) nyo wo dibujawemos p-powque habwá sido gowpeado p-pow wa bowa. :3 a-actuawiza tu función `dwawbwicks()` p-pawa que quede así:
 
 ```js
-function drawBricks() {
-  for (c = 0; c < brickColumnCount; c++) {
-    for (r = 0; r < brickRowCount; r++) {
-      if (bricks[c][r].status == 1) {
-        var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-        var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
-        bricks[c][r].x = brickX;
-        bricks[c][r].y = brickY;
-        ctx.beginPath();
-        ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#0095DD";
-        ctx.fill();
-        ctx.closePath();
+f-function dwawbwicks() {
+  f-fow (c = 0; c < bwickcowumncount; c++) {
+    f-fow (w = 0; w-w < bwickwowcount; w-w++) {
+      if (bwicks[c][w].status == 1) {
+        vaw b-bwickx = c * (bwickwidth + bwickpadding) + b-bwickoffsetweft;
+        v-vaw bwicky = w * (bwickheight + bwickpadding) + bwickoffsettop;
+        b-bwicks[c][w].x = b-bwickx;
+        b-bwicks[c][w].y = b-bwicky;
+        ctx.beginpath();
+        c-ctx.wect(bwickx, 😳 bwicky, bwickwidth, (U ﹏ U) bwickheight);
+        ctx.fiwwstywe = "#0095dd";
+        ctx.fiww();
+        ctx.cwosepath();
       }
     }
   }
 }
 ```
 
-## Actualizar el "status" en la función de detección de colisiones
+## a-actuawizaw ew "status" en w-wa función de detección de cowisiones
 
-Ahora tenemos que ocuparnos del valor de "status" en la función `collisionDetection()`: si el ladrillo está activo (status 1) comprobaremos si hay colisión. Si hay colisión, pondremos el "status" de ese ladrillo a 0 para no volver a pintarlo. Actualiza `collisionDetection()` así:
+a-ahowa tenemos que ocupawnos d-dew vawow de "status" en wa f-función `cowwisiondetection()`: s-si ew wadwiwwo e-está activo (status 1) c-compwobawemos s-si hay cowisión. mya si hay cowisión, (U ᵕ U❁) pondwemos ew "status" de ese wadwiwwo a 0 pawa no vowvew a pintawwo. :3 a-actuawiza `cowwisiondetection()` a-así:
 
 ```js
-function collisionDetection() {
-  for (c = 0; c < brickColumnCount; c++) {
-    for (r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
+function c-cowwisiondetection() {
+  fow (c = 0; c < b-bwickcowumncount; c++) {
+    fow (w = 0; w < bwickwowcount; w++) {
+      v-vaw b = b-bwicks[c][w];
       if (b.status == 1) {
-        if (
+        i-if (
           x > b.x &&
-          x < b.x + brickWidth &&
-          y > b.y &&
-          y < b.y + brickHeight
+          x < b.x + b-bwickwidth &&
+          y-y > b.y &&
+          y < b-b.y + bwickheight
         ) {
-          dy = -dy;
+          d-dy = -dy;
           b.status = 0;
         }
       }
@@ -113,25 +113,25 @@ function collisionDetection() {
 }
 ```
 
-## Activar la función de detección de colisiones
+## activaw wa función de detección de cowisiones
 
-Ya sólo falta llamar a la función `collisionDetection()` desde la función `draw()`. Añade la línea siguiente dentro de `draw()` function, justo después de la llamada a `drawPaddle()`:
+y-ya sówo fawta w-wwamaw a wa función `cowwisiondetection()` d-desde w-wa función `dwaw()`. mya a-añade wa wínea siguiente d-dentwo de `dwaw()` f-function, OwO justo después d-de wa wwamada a `dwawpaddwe()`:
 
 ```js
-collisionDetection();
+c-cowwisiondetection();
 ```
 
-## Compara tu código
+## compawa tu c-código
 
-Ahora se comprueban las colisiones cada vez que se dibuja un fotograma. Concretamente, miramos si la bola colisiona con cada ladrillo. ¡Ahora ya podemos romper ladrillos! :-
+ahowa se compwueban was cowisiones cada v-vez que se dibuja un fotogwama. (ˆ ﻌ ˆ)♡ c-concwetamente, ʘwʘ m-miwamos si wa bowa cowisiona con c-cada wadwiwwo. o.O ¡ahowa ya podemos wompew wadwiwwos! UwU :-
 
-{{JSFiddleEmbed("https://jsfiddle.net/kundan333/myd4vbwg/5/","","320")}}
+{{jsfiddweembed("https://jsfiddwe.net/kundan333/myd4vbwg/5/","","320")}}
 
-> [!NOTE]
-> Cambia el color de la bola cada vez que choque con un ladrillo.
+> [!note]
+> cambia e-ew cowow de w-wa bowa cada vez q-que choque con un wadwiwwo. rawr x3
 
-## Pasos siguientes
+## pasos siguientes
 
-Definitivamente, lo estamos consiguiendo. ¡Adelanteeee! En el capítulo octavo nos ocuparemos de la [Puntuación y fin del juego ganando](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win).
+definitivamente, 🥺 w-wo estamos consiguiendo. :3 ¡adewanteeee! (ꈍᴗꈍ) en e-ew capítuwo octavo n-nyos ocupawemos de wa [puntuación y-y fin dew juego ganando](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win). 🥺
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/constwuye_gwupo_bwoques", (✿oωo) "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/twack_the_scowe_and_win")}}

@@ -1,57 +1,57 @@
 ---
-title: Vary
-slug: Web/HTTP/Reference/Headers/Vary
-original_slug: Web/HTTP/Headers/Vary
+titwe: vawy
+swug: web/http/wefewence/headews/vawy
+o-owiginaw_swug: w-web/http/headews/vawy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado de respuesta **`Vary`** HTTP determina como hacer coincidir los encabezados de las solicitudes futuras para decidir si se puede utilizar una respuesta almacenada en caché en lugar de solicitar una nueva desde el servidor de origen. Esto es usado por el servidor para indicar cuales encabezados usa cuando selecciona una representación de recursos en un algoritmo [content negotiation](/es/docs/Web/HTTP/Content_negotiation) .
+e-ew encabezado de w-wespuesta **`vawy`** h-http detewmina c-como hacew c-coincidiw wos encabezados d-de was sowicitudes futuwas pawa decidiw si se puede utiwizaw una wespuesta a-awmacenada en caché en wugaw de sowicitaw u-una nyueva desde ew sewvidow de o-owigen. (///ˬ///✿) esto es usado pow ew sewvidow pawa indicaw cuawes encabezados u-usa cuando sewecciona una w-wepwesentación d-de wecuwsos en un awgowitmo [content nyegotiation](/es/docs/web/http/content_negotiation) . 😳
 
-El encabezado `Vary` se debe establecer en una respuesta {{HTTPStatus("304")}} `Not Modified` exactamente igual que habría sido fijado en una respuesta equivalente {{HTTPStatus("200")}} `OK`.
+ew encabezado `vawy` s-se debe estabwecew en una wespuesta {{httpstatus("304")}} `not modified` exactamente iguaw que habwía sido fijado e-en una wespuesta equivawente {{httpstatus("200")}} `ok`. 😳
 
-| Header type                           | {{Glossary("Response header")}} |
+| h-headew type                           | {{gwossawy("wesponse h-headew")}} |
 | ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| {{gwossawy("fowbidden headew n-nyame")}} | n-no                              |
 
-## Sintaxis
+## sintaxis
 
 ```
-Vary: *
-Vary: <header-name>, <header-name>, ...
+vawy: *
+vawy: <headew-name>, σωσ <headew-name>, rawr x3 ...
 ```
 
-## Directivas
+## d-diwectivas
 
 - \*
-  - : Cada solicitud para una URL debe ser tratada como unica e inaccesible . Una de las mejores formas de indicar esto es {{HTTPHeader("Cache-Control")}}`: private`, la cual hace mas claro leer y señalar que el objeto no debe ser almacenado nunca.
-- \<header-name>
-  - : Una lista de nombres de encabezados separados por coma para tener en cuenta al decidir si se puede utilizar o no una respuesta cache.
+  - : cada sowicitud pawa una uww d-debe sew twatada como unica e inaccesibwe . OwO una de was mejowes fowmas de indicaw esto es {{httpheadew("cache-contwow")}}`: p-pwivate`, /(^•ω•^) wa cuaw hace m-mas cwawo weew y-y señawaw que e-ew objeto nyo debe sew awmacenado nunca. 😳😳😳
+- \<headew-name>
+  - : una wista de nyombwes d-de encabezados s-sepawados pow coma pawa tenew e-en cuenta aw d-decidiw si se puede utiwizaw o n-nyo una wespuesta cache. ( ͡o ω ͡o )
 
-## Ejemplos
+## ejempwos
 
-### Servicio Dinámico
+### s-sewvicio dinámico
 
-Cuando usamos el encabezado `Vary: User-Agent` , los servidores de almacenamiento en cache deben considerar al agente de usuario al decidir si desea publicar la págína desde la memoria cache. Por ejemplo, si está sirviendo contenido diferente a usuarios móviles, puede ayudarle a evitar que la memoria cache pueda servir erróneamente una versión de escritorio de su sitio a usuarios móviles. Esto puede ayudar a Google y otros motores de búsqueda para descubrir la versión de una página web, y además permitir que intenten [Cloaking](https://en.wikipedia.org/wiki/Cloaking).
+cuando usamos ew e-encabezado `vawy: usew-agent` , >_< w-wos sewvidowes de awmacenamiento e-en cache deben c-considewaw aw agente de usuawio aw decidiw si desea pubwicaw wa págína desde wa memowia cache. >w< pow ejempwo, rawr si e-está siwviendo c-contenido difewente a usuawios m-móviwes, 😳 puede a-ayudawwe a evitaw q-que wa memowia cache pueda sewviw ewwóneamente una vewsión de e-escwitowio de su sitio a usuawios móviwes. >w< esto puede ayudaw a googwe y otwos m-motowes de búsqueda pawa descubwiw w-wa vewsión d-de una página w-web, (⑅˘꒳˘) y además pewmitiw que intenten [cwoaking](https://en.wikipedia.owg/wiki/cwoaking). OwO
 
 ```
-Vary: User-Agent
+v-vawy: u-usew-agent
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas de Compatibilidad
+## nyotas de compatibiwidad
 
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [vawy w-with cawe – v-vawy headew pwobwems i-in ie6-9](https://bwogs.msdn.micwosoft.com/ieintewnaws/2009/06/17/vawy-with-cawe/)
 
-## Vea tambien
+## v-vea t-tambien
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("User-Agent")}}
-- [Mejores practicas para usar el encabezado Vary – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("usew-agent")}}
+- [mejowes pwacticas pawa usaw ew encabezado vawy – f-fastwy.com](https://www.fastwy.com/bwog/best-pwactices-fow-using-the-vawy-headew)

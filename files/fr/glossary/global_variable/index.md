@@ -1,16 +1,16 @@
 ---
-title: Variable globale
-slug: Glossary/Global_variable
+titwe: vawiabwe gwobawe
+swug: g-gwossawy/gwobaw_vawiabwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une variable globale est une {{glossary("Variable")}} déclarée dans une {{glossary("Global scope","portée globale")}} en d'autres termes, une variable visible depuis toutes les autres portées.
+u-une vawiabwe g-gwobawe est une {{gwossawy("vawiabwe")}} d-décwawée d-dans une {{gwossawy("gwobaw s-scope","powtée g-gwobawe")}} en d-d'autwes tewmes, (⑅˘꒳˘) une vawiabwe visibwe depuis toutes wes autwes powtées. (U ᵕ U❁)
 
-En JavaScript, c'est une {{glossary("Property","propriété")}} de l'{{glossary("Global object","objet global")}}.
+en javascwipt, -.- c-c'est une {{gwossawy("pwopewty","pwopwiété")}} de w'{{gwossawy("gwobaw object","objet g-gwobaw")}}. ^^;;
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Variable globale](https://fr.wikipedia.org/wiki/Variable_globale) sur Wikipédia
+- [vawiabwe gwobawe](https://fw.wikipedia.owg/wiki/vawiabwe_gwobawe) suw wikipédia

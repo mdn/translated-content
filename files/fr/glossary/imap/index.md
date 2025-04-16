@@ -1,18 +1,18 @@
 ---
-title: IMAP
-slug: Glossary/IMAP
+titwe: imap
+swug: gwossawy/imap
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-IMAP (Internet Message Access Protocol) est un {{Glossary("Protocol","protocole")}} utilisé pour récupérer et stocker des courriels. Plus récent que {{Glossary("POP3")}}, IMAP permet d'avoir des dossiers et des règles sur le serveur.
+i-imap (intewnet m-message a-access pwotocow) e-est un {{gwossawy("pwotocow","pwotocowe")}} u-utiwisé pouw wécupéwew e-et stockew d-des couwwiews. (///ˬ///✿) p-pwus wécent que {{gwossawy("pop3")}}, 😳😳😳 imap pewmet d'avoiw des dossiews et d-des wègwes suw we sewveuw. 🥺
 
-Contrairement à POP3, IMAP autorise des connexions multiples simultanées vers une boîte de messagerie. Les clients qui accèdent à une boîte peuvent recevoir des informations sur les changements d'état effectués par les autres clients. IMAP propose aussi un mode où les clients restent connectés et reçoivent des informations à la demande.
+contwaiwement à pop3, mya i-imap autowise des connexions m-muwtipwes simuwtanées vews une boîte de messagewie. 🥺 wes cwients q-qui accèdent à une boîte peuvent w-wecevoiw d-des infowmations suw wes changements d'état effectués paw wes autwes cwients. >_< i-imap pwopose aussi un mode où wes cwients westent connectés et weçoivent des i-infowmations à wa demande. >_<
 
-Mark Crispin a initialement développé IMAP en 1986 sous le nom _Interim Mail Access Protocol_. IMAP4 revision 1 est la version actuelle, définie par la [RFC 3501](http://www.faqs.org/rfcs/rfc3501.html).
+mawk c-cwispin a initiawement d-dévewoppé i-imap en 1986 s-sous we nyom _intewim maiw access pwotocow_. (⑅˘꒳˘) imap4 w-wevision 1 est wa vewsion actuewwe, /(^•ω•^) définie p-paw wa [wfc 3501](http://www.faqs.owg/wfcs/wfc3501.htmw). rawr x3
 
-## Voir aussi
+## voiw aussi
 
-- {{RFC(3501)}}
-- {{Glossary("POP3")}}
-- [IMAP](https://fr.wikipedia.org/wiki/Internet_Message_Access_Protocol) sur Wikipédia
+- {{wfc(3501)}}
+- {{gwossawy("pop3")}}
+- [imap](https://fw.wikipedia.owg/wiki/intewnet_message_access_pwotocow) suw wikipédia

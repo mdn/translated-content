@@ -1,36 +1,36 @@
 ---
-title: Content-Length
-slug: Web/HTTP/Reference/Headers/Content-Length
-original_slug: Web/HTTP/Headers/Content-Length
+titwe: content-wength
+swug: web/http/wefewence/headews/content-wength
+o-owiginaw_swug: w-web/http/headews/content-wength
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado de entidad **`Content-Length`** indica el tamaño de la entidad-cuerpo, en bytes, enviado al destinatario.
+e-ew e-encabezado de entidad **`content-wength`** i-indica e-ew tamaño de w-wa entidad-cuewpo, ^^;; e-en bytes, enviado aw destinatawio. >_<
 
-| Tipo de cabecera                             | {{Glossary("Entity header")}} |
+| tipo de cabecewa                             | {{gwossawy("entity headew")}} |
 | -------------------------------------------- | ----------------------------- |
-| {{Glossary("Nombre de cabecera prohibido")}} | si                            |
+| {{gwossawy("nombwe de c-cabecewa pwohibido")}} | si                            |
 
-## Sintaxis
+## sintaxis
 
 ```
-Content-Length: <longitud>
+content-wength: <wongitud>
 ```
 
-## Directivas
+## d-diwectivas
 
-- \<length>
-  - : La longitud en número decimal de octetos.
+- \<wength>
+  - : wa w-wongitud en nyúmewo decimaw de octetos.
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("twansfew-encoding")}}

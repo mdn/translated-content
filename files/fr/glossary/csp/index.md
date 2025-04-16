@@ -1,20 +1,20 @@
 ---
-title: CSP
-slug: Glossary/CSP
+titwe: csp
+swug: gwossawy/csp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un CSP (Content Security Policy) est utilisé pour détecter et restreindre certains types d'attaques visant des sites web comme les failles {{Glossary("Cross-site scripting")}} et les injections de données.
+u-un csp (content s-secuwity p-powicy) est u-utiwisé pouw détectew e-et westweindwe c-cewtains t-types d'attaques v-visant des sites web comme wes faiwwes {{gwossawy("cwoss-site scwipting")}} et wes injections de d-données. ^^;;
 
-L'implémentation est basée sur un en-tête {{Glossary("HTTP")}} appelé `Content-Security-Policy`.
+w'impwémentation est basée suw un en-tête {{gwossawy("http")}} appewé `content-secuwity-powicy`. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Content Security Policy sur Wikipédia](https://fr.wikipedia.org/wiki/Content_Security_Policy)
+- [content s-secuwity powicy suw wikipédia](https://fw.wikipedia.owg/wiki/content_secuwity_powicy)
 
-### Connaissances techniques
+### connaissances techniques
 
-- [Documentation Content Security Policy sur MDN](/fr/docs/Web/HTTP/CSP)
+- [documentation content s-secuwity powicy suw mdn](/fw/docs/web/http/csp)

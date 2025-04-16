@@ -1,18 +1,18 @@
 ---
-title: RSS
-slug: Glossary/RSS
+titwe: wss
+swug: gwossawy/wss
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**RSS** (Really Simple Syndication) désigne plusieurs formats de documents XML conçus pour annoncer des mises à jour de sites. Lorsque vous vous inscrivez au flux RSS d'un site web, ce dernier envoie des informations et annonces de mises à jour à votre lecteur RSS dans un document RSS appelé un _flux_, la consultation manuelle de tous vos sites préférés n'est donc plus nécessaire.
+**wss** (weawwy s-simpwe s-syndication) désigne p-pwusieuws f-fowmats de documents x-xmw conçus p-pouw annoncew d-des mises à jouw d-de sites. rawr x3 wowsque vous vous inscwivez au fwux wss d'un site web, nyaa~~ ce dewniew envoie d-des infowmations et annonces de mises à jouw à v-votwe wecteuw wss dans un d-document wss appewé un _fwux_, /(^•ω•^) wa consuwtation manuewwe de tous v-vos sites pwéféwés ny'est donc p-pwus nyécessaiwe. rawr
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [RSS](https://fr.wikipedia.org/wiki/RSS) sur Wikipédia
+- [wss](https://fw.wikipedia.owg/wiki/wss) suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [La spécification la plus récente](http://www.rssboard.org/rss-specification)
+- [wa spécification wa pwus wécente](http://www.wssboawd.owg/wss-specification)

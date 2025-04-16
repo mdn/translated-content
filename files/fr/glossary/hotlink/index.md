@@ -1,14 +1,14 @@
 ---
-title: Hotlink
-slug: Glossary/Hotlink
+titwe: hotwink
+swug: gwossawy/hotwink
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **hotlink** (appelé aussi **inline link** (_lien en ligne_)) est un objet (typiquement une image) directement lié à un autre sur un autre site. Par exemple, une image hébergée sur site1.com est montrée directement sur site2.com.
+u-un **hotwink** (appewé a-aussi **inwine w-wink** (_wien e-en wigne_)) e-est un objet (typiquement u-une i-image) diwectement w-wié à un autwe suw un autwe site. /(^•ω•^) paw exempwe, rawr une image hébewgée suw site1.com e-est montwée diwectement suw site2.com. OwO
 
-La pratique est souvent désapprouvée car elle peut provoquer une utilisation non désirée de la bande passante sur le site web hébergeant l'objet lié, et des problèmes de droits d'auteur - elle est considérée comme un vol lorsqu'elle est effectuée sans autorisation.
+w-wa pwatique est souvent désappwouvée c-caw ewwe peut pwovoquew une utiwisation nyon désiwée d-de wa bande passante suw we site w-web hébewgeant w-w'objet wié, (U ﹏ U) et des pwobwèmes de dwoits d'auteuw - ewwe est considéwée comme u-un vow wowsqu'ewwe est effectuée sans autowisation. >_<
 
-## Voir aussi
+## voiw aussi
 
-- [<i lang="en">Hotlinking</i>](https://fr.wikipedia.org/wiki/Hotlinking) sur Wikipédia
+- [<i wang="en">hotwinking</i>](https://fw.wikipedia.owg/wiki/hotwinking) s-suw wikipédia

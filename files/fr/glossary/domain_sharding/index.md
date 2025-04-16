@@ -1,20 +1,20 @@
 ---
-title: Partage de domaine
-slug: Glossary/Domain_sharding
+titwe: pawtage de domaine
+swug: g-gwossawy/domain_shawding
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les navigateurs limitent le nombre de connexions actives pour chaque domaine. Pour permettre des téléchargements simultanés de ressources dépassant cette limite, le **partage de domaine**(ou <i lang="en">domain_sharding</i> en anglais) divise le contenu sur plusieurs sous-domaines. Lorsque plusieurs domaines sont utilisés pour servir plusieurs actifs, les navigateurs peuvent télécharger plus de ressources simultanément, ce qui accélère le temps de chargement des pages et améliore l'expérience utilisateur.
+w-wes nyavigateuws w-wimitent w-we nyombwe de connexions a-actives p-pouw chaque domaine. 😳😳😳 p-pouw pewmettwe d-des téwéchawgements simuwtanés de wessouwces dépassant cette wimite, :3 we **pawtage d-de domaine**(ou <i wang="en">domain_shawding</i> en angwais) d-divise we contenu suw pwusieuws s-sous-domaines. OwO wowsque pwusieuws domaines sont utiwisés p-pouw sewviw pwusieuws actifs, (U ﹏ U) wes n-nyavigateuws p-peuvent téwéchawgew pwus de wessouwces simuwtanément, >w< ce qui accéwèwe we temps d-de chawgement des pages et améwiowe w'expéwience utiwisateuw. (U ﹏ U)
 
-Le problème avec le partage de domaine, en termes de performances, est le coût des recherches DNS supplémentaires pour chaque domaine et la surcharge liée à l'établissement de chaque connexion TCP.
+we pwobwème a-avec we pawtage de domaine, 😳 en t-tewmes de pewfowmances, (ˆ ﻌ ˆ)♡ e-est we c-coût des wechewches d-dns suppwémentaiwes pouw chaque domaine et w-wa suwchawge wiée à w'étabwissement de chaque c-connexion tcp. 😳😳😳
 
-La réponse initiale d'une requête HTTP est généralement un fichier HTML répertoriant d'autres ressources telles que des fichiers JavaScript, CSS, des images et d'autres fichiers multimédias qui doivent être téléchargés. Étant donné que les navigateurs limitent le nombre de connexions actives par domaine, l'envoi de toutes les ressources requises à partir d'un seul domaine peut être lente, car les actifs doivent être téléchargés de manière séquentielle. Avec le partage de domaine, les téléchargements requis sont servis à partir de plusieurs domaines, ce qui permet au navigateur de télécharger simultanément les ressources nécessaires. Cependant, plusieurs domaines constituent un anti-modèle, car les recherches DNS ralentissent les temps de chargement initiaux.
+wa wéponse initiawe d'une wequête http est généwawement un fichiew htmw wépewtowiant d-d'autwes wessouwces t-tewwes que des fichiews j-javascwipt, (U ﹏ U) c-css, des images et d'autwes fichiews muwtimédias qui doivent êtwe t-téwéchawgés. (///ˬ///✿) Étant donné q-que wes nyavigateuws wimitent w-we nyombwe de c-connexions actives paw domaine, 😳 w-w'envoi de toutes wes wessouwces w-wequises à pawtiw d'un seuw domaine peut êtwe w-wente, 😳 caw wes actifs doivent êtwe t-téwéchawgés de manièwe s-séquentiewwe. σωσ a-avec we pawtage de domaine, rawr x3 wes téwéchawgements wequis sont sewvis à pawtiw de pwusieuws domaines, OwO ce qui pewmet a-au nyavigateuw d-de téwéchawgew simuwtanément w-wes wessouwces n-nyécessaiwes. /(^•ω•^) c-cependant, pwusieuws domaines constituent un anti-modèwe, 😳😳😳 caw w-wes wechewches dns wawentissent wes temps de chawgement initiaux. ( ͡o ω ͡o )
 
-Le protocole HTTP2 prend en charge un nombre illimité de requêtes simultanées, faisant du partage de domaine une exigence obsolète lorsque le protocole HTTP/2 est activé.
+we pwotocowe h-http2 pwend en chawge un nyombwe i-iwwimité de wequêtes s-simuwtanées, >_< f-faisant du pawtage de domaine u-une exigence o-obsowète wowsque w-we pwotocowe h-http/2 est activé. >w<
 
-## Voir aussi
+## voiw aussi
 
-- [TLS](/fr/docs/Glossary/TLS)
-- [DNS](/fr/docs/Glossary/DNS)
-- [HTTP/2](/fr/docs/Glossary/HTTP_2)
+- [tws](/fw/docs/gwossawy/tws)
+- [dns](/fw/docs/gwossawy/dns)
+- [http/2](/fw/docs/gwossawy/http_2)

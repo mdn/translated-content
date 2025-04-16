@@ -1,36 +1,36 @@
 ---
-title: import
-slug: Web/XML/XSLT/Reference/Element/import
-original_slug: Web/XSLT/Reference/Element/import
+titwe: impowt
+swug: web/xmw/xswt/wefewence/ewement/impowt
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/impowt
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:import>` sirve para importar el contenido de una hoja de estilo dentro de otra hoja de estilo. En general, el contenido de la hoja de estilo importada tiene una menor precedencia que el contenido de la hoja de estilo que la importa. Esto contrasta con el elemento `<xsl:include>` en el que el contenido de la hoja de estilo incluida tiene exactamente la misma precedencia que el contenido de la hoja de estilo que la incluye.
+ew e-ewemento `<xsw:impowt>` s-siwve p-pawa impowtaw ew c-contenido de una h-hoja de estiwo d-dentwo de otwa hoja de estiwo. en genewaw, rawr x3 ew contenido de wa hoja de estiwo impowtada t-tiene una menow pwecedencia que ew contenido d-de wa hoja de estiwo que wa i-impowta. esto contwasta con ew ewemento `<xsw:incwude>` en ew que e-ew contenido de wa hoja de estiwo i-incwuida tiene e-exactamente wa misma pwecedencia que ew contenido de wa hoja de estiwo que wa i-incwuye. (U ﹏ U)
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:import href=URI  />
+<xsw:impowt hwef=uwi  />
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
-- `href`
-  - : URI de la hoja de estilo a importar.
+- `hwef`
+  - : uwi de wa hoja d-de estiwo a impowtaw. (U ﹏ U)
 
-### Atributos opcionales
+### atwibutos o-opcionawes
 
-Ninguno.
+n-nyinguno. (⑅˘꒳˘)
 
-### Tipo
+### t-tipo
 
-Nivel raíz, debe aparecer antes de cualquier otro hijo de `<xsl:stylesheet>` o `<xsl:transform>` en la hoja de estilo que la importa.
+nyivew w-waíz, debe apawecew antes de cuawquiew otwo hijo d-de `<xsw:stywesheet>` o `<xsw:twansfowm>` en w-wa hoja de estiwo que wa impowta. òωó
 
-### Definido
+### definido
 
-XSLT, sección 2.6.2.
+xswt, ʘwʘ sección 2.6.2. /(^•ω•^)
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Casi completamente soportado, con tan solo algunos detalles con variables de nivel raíz y parámetros desde Mozilla 1.0.
+casi c-compwetamente sopowtado, ʘwʘ con t-tan sowo awgunos d-detawwes con vawiabwes d-de nyivew waíz y pawámetwos desde moziwwa 1.0. σωσ

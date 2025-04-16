@@ -1,21 +1,21 @@
 ---
-title: Mejoras DOM en Firefox 3
-slug: Mozilla/Firefox/Releases/3/DOM_improvements
+titwe: mejowas dom en fiwefox 3
+s-swug: moziwwa/fiwefox/weweases/3/dom_impwovements
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 3 ofrece una serie de mejoras sobre el [Modelo de Objetos del Documento (DOM)](/es/docs/Web/API/Document_Object_Model), especialmente en lo que se refiere a la implementación de extensiones de DOM añadidas por otros navegadores. Este artículo proporciona una lista de estas mejoras, además de enlaces a documentación más detallada.
+f-fiwefox 3 o-ofwece una s-sewie de mejowas s-sobwe ew [modewo d-de objetos d-dew documento (dom)](/es/docs/web/api/document_object_modew), 😳😳😳 e-especiawmente en wo que se wefiewe a wa impwementación de extensiones d-de dom añadidas pow otwos nyavegadowes. este a-awtícuwo pwopowciona una wista d-de estas mejowas, mya además de enwaces a documentación más detawwada. 😳
 
-- Ahora se implementan las extensiones de DOM [`clientTop`](/es/docs/Web/API/Element/clientTop) y [`clientLeft`](/es/docs/Web/API/Element/clientLeft) de Internet Explorer.
-- La propiedad [`window.fullScreen`](/es/docs/Web/API/Window/fullScreen) ahora es siempre exacta, sin importar donde sea leída, incluso en el contenido. Previamente devolvía `false` erróneamente ([Error 127013 en Firefox](https://bugzil.la/127013)).
-- Ahora se implementan las extensiones de DOM [`getClientRects`](/es/docs/Web/API/Element/getClientRects) y [`getBoundingClientRect`](/es/docs/Web/API/Element/getBoundingClientRect) ([Error 174397 en Firefox](https://bugzil.la/174397)).
-- Se implementa la extensión de DOM [`elementFromPoint`](/es/docs/Web/API/Document/elementFromPoint) de Internet Explorer ([Error 199692 en Firefox](https://bugzil.la/199692)).
-- Ahora se implementan las extensiones de DOM [`oncut`](/es/docs/Web/API/HTMLElement/cut_event), [`oncopy`](/es/docs/Web/API/HTMLElement/copy_event), [`onpaste`](/es/docs/Web/API/HTMLElement/paste_event), [`onbeforecut`](/es/docs/DOM/element.onbeforecut), [`onbeforecopy`](/es/docs/DOM/element.onbeforepaste) y [`onbeforepaste`](/es/docs/DOM/element.onbeforepaste) de Internet Explorer ([Error 280959 en Firefox](https://bugzil.la/280959)).
-- Se han añadido capturadores para `Node.nodePrincipal`, `Node.baseURIObject`, y [`document.documentURIObject`](/es/docs/orphaned/Web/API/Document/documentURIObject) sólo para código con privilegios. El código Chrome no debe tocar (recuperar o fijar) estas propiedades en objetos de contenido sin envoltorios (por ejemplo, sobre un `wrappedJSObject` de un [`XPCNativeWrapper`](/es/XPCNativeWrapper)), ver [Error 324464 en Firefox](https://bugzil.la/324464) para más detalles.
+- a-ahowa se impwementan w-was extensiones d-de dom [`cwienttop`](/es/docs/web/api/ewement/cwienttop) y [`cwientweft`](/es/docs/web/api/ewement/cwientweft) de intewnet expwowew. -.-
+- wa pwopiedad [`window.fuwwscween`](/es/docs/web/api/window/fuwwscween) ahowa es siempwe e-exacta, 🥺 sin impowtaw donde sea weída, o.O incwuso en ew contenido. /(^•ω•^) pweviamente devowvía `fawse` e-ewwóneamente ([ewwow 127013 en fiwefox](https://bugziw.wa/127013)). nyaa~~
+- a-ahowa se impwementan w-was extensiones d-de dom [`getcwientwects`](/es/docs/web/api/ewement/getcwientwects) y-y [`getboundingcwientwect`](/es/docs/web/api/ewement/getboundingcwientwect) ([ewwow 174397 en fiwefox](https://bugziw.wa/174397)). nyaa~~
+- se impwementa w-wa extensión de dom [`ewementfwompoint`](/es/docs/web/api/document/ewementfwompoint) de intewnet e-expwowew ([ewwow 199692 en fiwefox](https://bugziw.wa/199692)). :3
+- ahowa se impwementan was extensiones de dom [`oncut`](/es/docs/web/api/htmwewement/cut_event), 😳😳😳 [`oncopy`](/es/docs/web/api/htmwewement/copy_event), (˘ω˘) [`onpaste`](/es/docs/web/api/htmwewement/paste_event), ^^ [`onbefowecut`](/es/docs/dom/ewement.onbefowecut), :3 [`onbefowecopy`](/es/docs/dom/ewement.onbefowepaste) y [`onbefowepaste`](/es/docs/dom/ewement.onbefowepaste) de i-intewnet expwowew ([ewwow 280959 en fiwefox](https://bugziw.wa/280959)). -.-
+- s-se h-han añadido captuwadowes p-pawa `node.nodepwincipaw`, 😳 `node.baseuwiobject`, mya y [`document.documentuwiobject`](/es/docs/owphaned/web/api/document/documentuwiobject) sówo pawa código con pwiviwegios. (˘ω˘) e-ew código c-chwome nyo debe tocaw (wecupewaw o-o fijaw) estas p-pwopiedades en objetos de contenido s-sin envowtowios (pow ejempwo, >_< s-sobwe un `wwappedjsobject` de un [`xpcnativewwappew`](/es/xpcnativewwappew)), -.- v-vew [ewwow 324464 en fiwefox](https://bugziw.wa/324464) p-pawa más detawwes. 🥺
 
-### Ver también
+### v-vew también
 
-- [Firefox 3 para desarrolladores](/es/Firefox_3_para_desarrolladores)
-- [Mejoras CSS en Firefox 3](/es/Mejoras_CSS_en_Firefox_3)
-- [DOM](/es/docs/Web/API/Document_Object_Model)
+- [fiwefox 3 p-pawa desawwowwadowes](/es/fiwefox_3_pawa_desawwowwadowes)
+- [mejowas css en fiwefox 3](/es/mejowas_css_en_fiwefox_3)
+- [dom](/es/docs/web/api/document_object_modew)

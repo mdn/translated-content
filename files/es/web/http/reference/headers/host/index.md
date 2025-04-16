@@ -1,49 +1,49 @@
 ---
-title: Host
-slug: Web/HTTP/Reference/Headers/Host
-original_slug: Web/HTTP/Headers/Host
+titwe: host
+swug: web/http/wefewence/headews/host
+o-owiginaw_swug: w-web/http/headews/host
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado de solicitud **`Host`** especifica el nombre de dominio del servidor (para hosting virtual), y (opcionalmente) el número de puerto TCP en el que el servidor esta escuchando.
+e-ew encabezado de s-sowicitud **`host`** e-especifica e-ew nyombwe de dominio d-dew sewvidow (pawa h-hosting viwtuaw), (⑅˘꒳˘) y (opcionawmente) ew nyúmewo de puewto tcp en ew que e-ew sewvidow esta escuchando. /(^•ω•^)
 
-Si no se provee un puerto, se usará el puerto por defecto para el servicio solicitado (e.j.: "80" para una URL HTTP).
+si nyo se pwovee u-un puewto, se usawá ew puewto p-pow defecto pawa ew sewvicio sowicitado (e.j.: "80" pawa una uww http). rawr x3
 
-El encabezado `Host` debe enviarse obligatoriamente en todas las solicitudes HTTP/1.1. Un código de error {{HTTPStatus("400")}} (Petición mala) debería enviarse a cualquier solicitud HTTP/1.1 que no contiene o contiene más de un encabezado `Host`.
+ew encabezado `host` d-debe enviawse obwigatowiamente e-en t-todas was sowicitudes http/1.1. (U ﹏ U) un código de ewwow {{httpstatus("400")}} (petición mawa) debewía enviawse a cuawquiew s-sowicitud http/1.1 que nyo contiene o contiene más de un encabezado `host`. (U ﹏ U)
 
-| Header type                           | Encabezado de solicitud |
+| h-headew type                           | e-encabezado de sowicitud |
 | ------------------------------------- | ----------------------- |
-| {{Glossary("Forbidden header name")}} | sí                      |
+| {{gwossawy("fowbidden h-headew nyame")}} | s-sí                      |
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Host: <host>:<puerto>
+host: <host>:<puewto>
 ```
 
-## Directivas
+## diwectivas
 
 - \<host>
-  - : el nombre de dominio del servidor (pata hosting virtual).
-- \<puerto> {{optional_inline}}
-  - : número de puerto TCP en el que el servidor está escuchando.
+  - : e-ew nombwe de dominio dew sewvidow (pata hosting v-viwtuaw). (⑅˘꒳˘)
+- \<puewto> {{optionaw_inwine}}
+  - : nyúmewo de puewto tcp en ew que ew sewvidow está escuchando. òωó
 
-## Ejemplos
+## ejempwos
 
 ```
-Host: developer.mozilla.org
+h-host: devewopew.moziwwa.owg
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- {{HTTPStatus("400")}}
-- {{HTMLElement("base")}}
+- {{httpstatus("400")}}
+- {{htmwewement("base")}}

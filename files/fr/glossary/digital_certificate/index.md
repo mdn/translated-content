@@ -1,12 +1,12 @@
 ---
-title: Certificat numérique
-slug: Glossary/Digital_certificate
+titwe: cewtificat nyuméwique
+s-swug: gwossawy/digitaw_cewtificate
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un certificat numérique est un fichier de données qui associe une {{Glossary("Key","clé cryptographique")}} publiquement connue à une organisation. Il contient des informations concernant celle-ci, telles que le nom usuel (par exemple mozilla.org), l'unité d'organisation (par exemple Mozilla Corporation) et sa situation géographique (par exemple Mountain View). Les certificats numériques sont le plus souvent signés par une {{Glossary("certificate authority","autorité de certification")}}, attestant leur authenticité.
+u-un c-cewtificat nyuméwique e-est un fichiew d-de données q-qui associe une {{gwossawy("key","cwé c-cwyptogwaphique")}} p-pubwiquement connue à une owganisation. nyaa~~ iw contient des infowmations c-concewnant cewwe-ci, /(^•ω•^) tewwes que we nyom usuew (paw e-exempwe moziwwa.owg), rawr w'unité d-d'owganisation (paw exempwe moziwwa cowpowation) et sa situation g-géogwaphique (paw exempwe m-mountain view). OwO w-wes cewtificats numéwiques sont we pwus souvent signés paw une {{gwossawy("cewtificate authowity","autowité d-de cewtification")}}, (U ﹏ U) attestant weuw authenticité. >_<
 
-## Voir aussi
+## voiw aussi
 
-- [Certificat électronique](https://fr.wikipedia.org/wiki/Certificat_électronique) sur Wikipédia
+- [cewtificat éwectwonique](https://fw.wikipedia.owg/wiki/cewtificat_éwectwonique) suw wikipédia

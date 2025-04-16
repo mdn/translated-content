@@ -1,12 +1,12 @@
 ---
-title: non-normatif
-slug: Glossary/Non-normative
+titwe: nyon-nowmatif
+swug: gwossawy/non-nowmative
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les {{Glossary("Specification","spécifications")}} logicielles contiennent souvent des informations marquées comme _non normatives_ ou _informatives,_ ce qui signifie qu'elles sont fournies dans le but d'aider le lecteur à mieux comprendre la spécification ou pour montrer un exemple ou une bonne pratique, et qu'il n'est pas nécessaire de les suivre comme une règle. Les sections qui contiennent les informations officielles à respecter sont souvent marquées comme {{Glossary("Normative", "normatives")}}.
+wes {{gwossawy("specification","spécifications")}} w-wogiciewwes contiennent s-souvent d-des infowmations m-mawquées comme _non n-nyowmatives_ o-ou _infowmatives,_ c-ce qui s-signifie qu'ewwes sont fouwnies dans we but d'aidew we wecteuw à mieux compwendwe w-wa spécification ou pouw montwew un exempwe o-ou une bonne pwatique, rawr x3 et qu'iw n-ny'est pas nyécessaiwe de wes suivwe comme une wègwe. nyaa~~ wes sections q-qui contiennent wes infowmations o-officiewwes à w-wespectew sont souvent mawquées comme {{gwossawy("nowmative", "nowmatives")}}. /(^•ω•^)
 
-## Voir aussi
+## voiw aussi
 
-- Description de [contenu normatif et informatif](https://wiki.whatwg.org/wiki/Specs/howto#Content) sur le wiki WHATWG
+- descwiption d-de [contenu nyowmatif et infowmatif](https://wiki.naniwg.owg/wiki/specs/howto#content) suw we wiki nyaniwg

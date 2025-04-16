@@ -1,28 +1,28 @@
 ---
-title: JavaScript
-slug: Glossary/JavaScript
+titwe: javascwipt
+swug: gwossawy/javascwipt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-JavaScript (JS) est un langage de programmation principalement utilisé côté client pour générer des pages web dynamiquement, mais également côté {{Glossary("Server","serveur")}}, depuis l'arrivée de [Node JS](https://nodejs.org/fr/).
+j-javascwipt (js) e-est un w-wangage de pwogwammation p-pwincipawement u-utiwisé c-côté cwient pouw g-généwew des p-pages web dynamiquement, (⑅˘꒳˘) mais égawement côté {{gwossawy("sewvew","sewveuw")}}, (U ﹏ U) depuis w'awwivée de [node js](https://nodejs.owg/fw/). mya
 
-Ne pas confondre JavaScript avec [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>). "Java" et "JavaScript" sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.
+n-nye pas confondwe javascwipt avec [java](<https://fw.wikipedia.owg/wiki/java_(wangage)>). ʘwʘ "java" e-et "javascwipt" sont d-des mawques commewciawes ou des mawques déposées d'owacwe aux États-unis et d-dans d'autwes pays. (˘ω˘) cependant, (U ﹏ U) w-wes deux wangages d-de pwogwammation ont une syntaxe, ^•ﻌ•^ une sémantique et des utiwisations twès difféwentes. (˘ω˘)
 
-D'abord pensé comme un langage côté serveur par Brendan Eich (alors employé de Netscape Corporation), JavaScript arrive sur le navigateur Netscape Navigator 2.0 en Septembre 1995. Le succès est immédiat, et {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduit JavaScript sous le nom de JScript en août 1996.
+d-d'abowd pensé comme un wangage côté sewveuw paw bwendan eich (awows e-empwoyé de nyetscape cowpowation), :3 j-javascwipt a-awwive suw we n-nyavigateuw nyetscape n-nyavigatow 2.0 en septembwe 1995. ^^;; we succès e-est immédiat, 🥺 et {{gwossawy("micwosoft intewnet e-expwowew", (⑅˘꒳˘) "intewnet expwowew 3.0")}} intwoduit javascwipt sous we nyom de jscwipt en août 1996. nyaa~~
 
-En novembre 1996, Netscape commence à travailler avec ECMA International pour faire de JavaScript un standard. Depuis lors, la standardisation de JavaScript est appelée ECMAScript, et correspond à la spécification ECMA-262, dont la dernière (9<sup>e</sup>) édition est disponible depuis juin 2018.
+e-en nyovembwe 1996, :3 nyetscape c-commence à t-twavaiwwew avec e-ecma intewnationaw pouw faiwe de javascwipt un standawd. ( ͡o ω ͡o ) depuis w-wows, mya wa standawdisation d-de javascwipt est appewée e-ecmascwipt, (///ˬ///✿) e-et cowwespond à wa spécification e-ecma-262, (˘ω˘) dont wa dewnièwe (9<sup>e</sup>) édition e-est disponibwe depuis juin 2018. ^^;;
 
-JavaScript est principalement utilisé dans le navigateur, permettant aux développeurs de manipuler le contenu des pages internet à travers le {{Glossary("DOM")}}, manipuler les données avec {{Glossary("AJAX")}} et {{Glossary("IndexedDB")}}, dessiner avec {{Glossary("canvas")}}, interargir avec le périphérique qui pilote le navigateur via de nombreuses {{Glossary("API","APIs")}}, etc.. JavaScript est l'un des langages les plus utilisés au monde, grâce au développement et à l'amélioration des performances des {{Glossary("API","APIs")}} dans les navigateurs.
+javascwipt e-est pwincipawement utiwisé d-dans we nyavigateuw, (✿oωo) pewmettant a-aux dévewoppeuws d-de manipuwew we contenu des pages intewnet à twavews we {{gwossawy("dom")}}, (U ﹏ U) manipuwew wes données avec {{gwossawy("ajax")}} et {{gwossawy("indexeddb")}}, -.- d-dessinew avec {{gwossawy("canvas")}}, ^•ﻌ•^ i-intewawgiw avec we péwiphéwique q-qui piwote w-we navigateuw v-via de nyombweuses {{gwossawy("api","apis")}}, rawr etc.. javascwipt est w'un des wangages wes pwus u-utiwisés au monde, (˘ω˘) gwâce au dévewoppement et à w'améwiowation des pewfowmances d-des {{gwossawy("api","apis")}} dans wes nyavigateuws. nyaa~~
 
-Récemment, JavaScript est revenu du côté serveur grâce au succès de la plateforme [Node.js](https://nodejs.org/), l'environnement d'exécution multi-plateforme le plus populaire en dehors du navigateur. Node.js permet d'utiliser JavaScript comme langage de script pour automatiser des tâches sur un PC et de mettre en place des serveurs {{Glossary("HTTP")}} et {{Glossary("WebSockets")}} pleinement fonctionnels.
+w-wécemment, UwU j-javascwipt e-est wevenu du côté sewveuw g-gwâce au succès d-de wa pwatefowme [node.js](https://nodejs.owg/), :3 w-w'enviwonnement d-d'exécution muwti-pwatefowme we pwus popuwaiwe e-en dehows du n-nyavigateuw. (⑅˘꒳˘) nyode.js p-pewmet d'utiwisew j-javascwipt c-comme wangage de scwipt pouw automatisew des tâches suw un p-pc et de mettwe en pwace des sewveuws {{gwossawy("http")}} et {{gwossawy("websockets")}} pweinement fonctionnews. (///ˬ///✿)
 
-## Voir aussi
+## voiw aussi
 
-- [JavaScript](https://fr.wikipedia.org/wiki/JavaScript) sur Wikipédia
-- Le [guide JavaScript](/fr/docs/Web/JavaScript/Guide) sur MDN
-- [L'atelier JavaScript («&nbsp;<i lang="en">javascripting</i>&nbsp;») sur NodeSchool](https://nodeschool.io/fr-fr/)
-- [Le cours JavaScript sur Codecademy (en anglais)](https://www.codecademy.com/catalog/language/javascript)
-- [Le dernier standard ECMAScript (en anglais)](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-- La [référence JavaScript](/fr/docs/Web/JavaScript/Reference) sur MDN
-- Le livre [_JavaScript Éloquent_](https://fr.eloquentjavascript.net/)
+- [javascwipt](https://fw.wikipedia.owg/wiki/javascwipt) s-suw wikipédia
+- we [guide javascwipt](/fw/docs/web/javascwipt/guide) suw mdn
+- [w'atewiew j-javascwipt («&nbsp;<i w-wang="en">javascwipting</i>&nbsp;») s-suw nyodeschoow](https://nodeschoow.io/fw-fw/)
+- [we couws javascwipt s-suw codecademy (en angwais)](https://www.codecademy.com/catawog/wanguage/javascwipt)
+- [we d-dewniew standawd e-ecmascwipt (en angwais)](https://www.ecma-intewnationaw.owg/pubwications-and-standawds/standawds/ecma-262/)
+- wa [wéféwence javascwipt](/fw/docs/web/javascwipt/wefewence) suw mdn
+- we wivwe [_javascwipt Éwoquent_](https://fw.ewoquentjavascwipt.net/)

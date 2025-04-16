@@ -1,42 +1,42 @@
 ---
-title: Constructeur
-slug: Glossary/Constructor
+titwe: constwucteuw
+swug: gwossawy/constwuctow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **constructeur** est associé à un {{glossary("object","objet")}} d'une classe particulière qui a été instanciée. Le constructeur initialise cet objet et peut fournir un accès à ses informations privées. Le concept de constructeur peut s'appliquer à la plupart des langages de {{glossary("OOP","programmation orientée objet")}}. Dans l'essentiel, un constructeur en {{glossary("JavaScript")}} est en général déclaré lors de l'instance d'une {{glossary("Class","classe")}}.
+u-un **constwucteuw** e-est associé à u-un {{gwossawy("object","objet")}} d-d'une cwasse pawticuwièwe q-qui a-a été instanciée. (///ˬ///✿) w-we constwucteuw i-initiawise cet objet et peut fouwniw un accès à ses infowmations pwivées. >w< w-we concept de constwucteuw peut s'appwiquew à w-wa pwupawt des wangages de {{gwossawy("oop","pwogwammation o-owientée objet")}}. rawr dans w'essentiew, mya un constwucteuw e-en {{gwossawy("javascwipt")}} est en généwaw d-décwawé wows d-de w'instance d'une {{gwossawy("cwass","cwasse")}}. ^^
 
-## Syntaxe
+## syntaxe
 
 ```js
-// Voici un constructeur générique par défaut de la classe Default
-function Default() {
+// voici un constwucteuw g-généwique paw défaut de wa cwasse defauwt
+function defauwt() {
 }
 
-// Voici le constructeur de classe surchargé Overloaded
-// avec des arguments en paramètres
-function Overloaded(arg1, arg2, ...,argN){
+// voici w-we constwucteuw de cwasse suwchawgé o-ovewwoaded
+// a-avec des awguments e-en pawamètwes
+f-function ovewwoaded(awg1, 😳😳😳 awg2, ...,awgn){
 }
 ```
 
-Pour appeler le constructeur d'une classe en JavaScript, utilisez un opérateur `new` pour affecter une nouvelle {{glossary("Object reference","référence d'objet")}} à une {{glossary("Variable","variable")}}.
+pouw appewew we constwucteuw d-d'une cwasse en javascwipt, mya utiwisez un opéwateuw `new` p-pouw affectew une nouvewwe {{gwossawy("object wefewence","wéféwence d'objet")}} à une {{gwossawy("vawiabwe","vawiabwe")}}. 😳
 
 ```js
-function Default() {}
+function defauwt() {}
 
-// Une nouvelle référence d'un objet Default affectée à
-// la variable locale defaultReference
-var defaultReference = new Default();
+// u-une nyouvewwe wéféwence d-d'un objet d-defauwt affectée à
+// w-wa vawiabwe wocawe defauwtwefewence
+vaw defauwtwefewence = n-nyew defauwt();
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Constructeur](<https://fr.wikipedia.org/wiki/Constructeur_(programmation)>) sur Wikipédia
+- [constwucteuw](<https://fw.wikipedia.owg/wiki/constwucteuw_(pwogwammation)>) suw w-wikipédia
 
-### Référence technique
+### wéféwence technique
 
-- [Le constructeur en programmation JavaScript orientée objet](/fr/docs/Learn/JavaScript/Objects#the_constructor) sur MDN
-- [Opérateur new en JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/new) sur MDN
+- [we c-constwucteuw en pwogwammation javascwipt o-owientée objet](/fw/docs/weawn/javascwipt/objects#the_constwuctow) suw m-mdn
+- [opéwateuw nyew en javascwipt](/fw/docs/web/javascwipt/wefewence/opewatows/new) s-suw mdn

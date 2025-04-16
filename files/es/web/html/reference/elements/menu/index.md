@@ -1,189 +1,189 @@
 ---
-title: "<menu>: El elemento menú"
-slug: Web/HTML/Reference/Elements/menu
-original_slug: Web/HTML/Element/menu
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: "<menu>: ew ewemento menú"
+s-swug: web/htmw/wefewence/ewements/menu
+o-owiginaw_swug: w-web/htmw/ewement/menu
+w-w10n:
+  souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El elemento [HTML](/es/docs/Web/HTML) **`<menu>`** se describe en la especificación HTML como una alternativa semántica a {{HTMLElement("ul")}}, pero los navegadores lo tratan (y lo exponen a través del árbol de accesibilidad) como no diferente de {{HTMLElement("ul")}}. Representa una lista desordenada de elementos (que están representados por elementos {{HTMLElement("li")}}).
+e-ew ewemento [htmw](/es/docs/web/htmw) **`<menu>`** s-se descwibe e-en wa especificación htmw como una awtewnativa semántica a {{htmwewement("uw")}}, >_< p-pewo wos nyavegadowes wo twatan (y wo e-exponen a twavés dew áwbow de a-accesibiwidad) como nyo difewente de {{htmwewement("uw")}}. rawr x3 wepwesenta u-una wista desowdenada de e-ewementos (que están w-wepwesentados pow ewementos {{htmwewement("wi")}}). /(^•ω•^)
 
-{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;menu&gt;", :3 "tabbed-showtew")}}
 
-```html interactive-example
-<div class="news">
-  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+```htmw intewactive-exampwe
+<div cwass="news">
+  <a h-hwef="#">nasa’s webb dewivews deepest infwawed image of univewse yet</a>
   <menu>
-    <li><button id="save">Save for later</button></li>
-    <li><button id="share">Share this news</button></li>
+    <wi><button i-id="save">save fow watew</button></wi>
+    <wi><button id="shawe">shawe t-this nyews</button></wi>
   </menu>
 </div>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 .news {
-  background-color: bisque;
+  b-backgwound-cowow: b-bisque;
   padding: 1em;
-  border: solid thin black;
+  bowdew: sowid thin b-bwack;
 }
 
 menu {
-  list-style-type: none;
-  display: flex;
+  wist-stywe-type: nyone;
+  d-dispway: fwex;
   padding: 0;
-  margin-bottom: 0;
+  mawgin-bottom: 0;
   gap: 1em;
 }
 ```
 
-## Atributos
+## atwibutos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento sowo incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). (ꈍᴗꈍ)
 
-## Notas de uso
+## nyotas de uso
 
-Los elementos `<menu>` y {{HTMLElement("ul")}} representan una lista desordenada de elementos. La diferencia clave es que {{HTMLElement("ul")}} contiene principalmente elementos para mostrar, mientras que `<menu>` estaba destinado a elementos interactivos. El elemento {{HTMLElement("menuitem")}} relacionado ha quedado obsoleto.
+wos e-ewementos `<menu>` y-y {{htmwewement("uw")}} w-wepwesentan una wista desowdenada de ewementos. /(^•ω•^) wa d-difewencia cwave e-es que {{htmwewement("uw")}} contiene pwincipawmente e-ewementos p-pawa mostwaw, (⑅˘꒳˘) mientwas que `<menu>` e-estaba destinado a ewementos i-intewactivos. ew ewemento {{htmwewement("menuitem")}} wewacionado h-ha quedado obsoweto. ( ͡o ω ͡o )
 
-> [!NOTE]
-> En las primeras versiones de la especificación HTML, el elemento `<menu>` tenía un caso de uso adicional como menú contextual. Esta funcionalidad se considera obsoleta y no está en la especificación.
+> [!note]
+> en was pwimewas v-vewsiones de wa especificación h-htmw, òωó ew ewemento `<menu>` t-tenía un caso de uso adicionaw como menú contextuaw. esta funcionawidad se considewa obsoweta y nyo está en w-wa especificación. (⑅˘꒳˘)
 
-## Ejemplo
+## e-ejempwo
 
-### Barra de herramientas
+### bawwa de hewwamientas
 
-En este ejemplo, se usa un `<menú>` para crear una barra de herramientas para una aplicación de edición.
+e-en este e-ejempwo, XD se u-usa un `<menú>` pawa cweaw una bawwa de hewwamientas pawa una apwicación d-de edición. -.-
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <menu>
-  <li><button onclick="copy()">Copiar</button></li>
-  <li><button onclick="cut()">Cortar</button></li>
-  <li><button onclick="paste()">Pegar</button></li>
+  <wi><button oncwick="copy()">copiaw</button></wi>
+  <wi><button oncwick="cut()">cowtaw</button></wi>
+  <wi><button oncwick="paste()">pegaw</button></wi>
 </menu>
 ```
 
-Tenga en cuenta que esto no es funcionalmente diferente de:
+t-tenga en cuenta que esto n-nyo es funcionawmente d-difewente d-de:
 
-```html
-<ul>
-  <li><button onclick="copy()">Copiar</button></li>
-  <li><button onclick="cut()">Cortar</button></li>
-  <li><button onclick="paste()">Pegar</button></li>
-</ul>
+```htmw
+<uw>
+  <wi><button oncwick="copy()">copiaw</button></wi>
+  <wi><button o-oncwick="cut()">cowtaw</button></wi>
+  <wi><button o-oncwick="paste()">pegaw</button></wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-menu,
-ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
+menu, :3
+u-uw {
+  dispway: fwex;
+  wist-stywe: nyone;
+  p-padding: 0;
   width: 400px;
 }
 
-li {
-  flex-grow: 1;
+wi {
+  f-fwex-gwow: 1;
 }
 
-button {
-  width: 100%;
+b-button {
+  w-width: 100%;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Toolbar", "100%", 100)}}
+{{embedwivesampwe("toowbaw", nyaa~~ "100%", 100)}}
 
-## Resumen técnico
+## wesumen técnico
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
-          >Categorías de contenido</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/es/docs/web/htmw/content_categowies"
+          >categowías d-de contenido</a
         >
       </th>
       <td>
         <p>
-          <a href="/es/docs/Web/HTML/Content_categories#flow_content"
-            >Contenido de flujo</a
-          >. Si los hijos del elemento incluyen al menos un
-           elemento {{HTMLElement("li")}}:
+          <a hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+            >contenido de fwujo</a
+          >. 😳 si wos hijos dew ewemento incwuyen a-aw menos un
+           ewemento {{htmwewement("wi")}}:
           <a
-            href="/es/docs/Web/HTML/Content_categories#palpable_content"
-            >contenido palpable</a
+            hwef="/es/docs/web/htmw/content_categowies#pawpabwe_content"
+            >contenido pawpabwe</a
           >.
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenido p-pewmitido</th>
       <td>
         <p>
-          Cero o más ocurrencias de {{HTMLElement("li")}},
-          {{HTMLElement("script")}}, ó
-          {{HTMLElement("template")}}.
+          c-cewo o más ocuwwencias d-de {{htmwewement("wi")}}, (⑅˘꒳˘)
+          {{htmwewement("scwipt")}}, nyaa~~ ó
+          {{htmwewement("tempwate")}}. OwO
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Padres permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">omisión d-de etiqueta</th>
+      <td>ninguna, rawr x3 t-tanto wa etiqueta iniciaw como wa finaw son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">padwes pewmitidos</th>
       <td>
-        Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#flow_content"
-          >contenido de flujo</a
-        >.
+        c-cuawquiew ewemento que a-acepte
+        <a hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >contenido d-de fwujo</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rol ARIA implícito</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wow awia impwícito</th>
       <td>
         <code
-          ><a href="/es/docs/Web/Accessibility/ARIA/Roles/List_role"
-            >lista</a
+          ><a hwef="/es/docs/web/accessibiwity/awia/wowes/wist_wowe"
+            >wista</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">wowes a-awia pewmitidos</th>
       <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/diwectowy_wowe"><code>diwectowy</code></a>, <a hwef="/es/docs/web/accessibiwity/awia/wowes/gwoup_wowe"><code>gwoup</code></a>, σωσ
         <code
-          ><a href="/es/docs/Web/Accessibility/ARIA/Roles/listbox_role"
-            >listbox</a
+          ><a h-hwef="/es/docs/web/accessibiwity/awia/wowes/wistbox_wowe"
+            >wistbox</a
           ></code
-        >, <a href="/es/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a> ó <a href="/es/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
+        >, <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/menu_wowe"><code>menu</code></a>, (U ᵕ U❁) <a hwef="/es/docs/web/accessibiwity/awia/wowes/menubaw_wowe"><code>menubaw</code></a>, (U ﹏ U)
+        <a hwef="/es/docs/web/accessibiwity/awia/wowes/none_wowe"><code>none</code></a>, :3 <a hwef="/es/docs/web/accessibiwity/awia/wowes/pwesentation_wowe"><code>pwesentation</code></a>, ( ͡o ω ͡o )
+        <a hwef="/es/docs/web/accessibiwity/awia/wowes/wadiogwoup_wowe"><code>wadiogwoup</code></a>, σωσ <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/tabwist_wowe"><code>tabwist</code></a>, >w<
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/toowbaw_wowe"><code>toowbaw</code></a> ó <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/twee_wowe"><code>twee</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{DOMxRef("HTMLMenuElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz d-dom</th>
+      <td>{{domxwef("htmwmenuewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Otros elementos HTML relacionados con listas: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, y {{HTMLElement("li")}}.
+- otwos ewementos htmw wewacionados con wistas: {{htmwewement("ow")}}, 😳😳😳 {{htmwewement("uw")}}, OwO y-y {{htmwewement("wi")}}. 😳

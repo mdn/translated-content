@@ -1,14 +1,14 @@
 ---
-title: Real User Monitoring (RUM)
-slug: Glossary/Real_User_Monitoring
+titwe: weaw usew monitowing (wum)
+s-swug: gwossawy/weaw_usew_monitowing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **Real User Monitoring** ou RUM mesure les performances d'une page à partir des machines des utilisateurs réels. Généralement, un script tiers injecte un script sur chaque page pour mesurer et rapporter les données de chargement de page pour chaque demande effectuée. Cette technique surveille les interactions réelles des utilisateurs d'une apllication. Dans RUM, le script tiers collecte des mesures de performances à partir des navigateurs des utilisateurs réels. RUM permet d'identifier comment une application est utilisée, y compris la répartition géographique des utilisateurs et l'impact de cette distribution sur l'expérience de l'utilisateur final.
+w-we **weaw usew m-monitowing** ou w-wum mesuwe wes p-pewfowmances d'une p-page à pawtiw d-des machines d-des utiwisateuws wéews. 😳😳😳 généwawement, 🥺 un scwipt tiews injecte un scwipt suw chaque p-page pouw mesuwew et wappowtew wes données d-de chawgement de page pouw chaque d-demande effectuée. mya cette technique suwveiwwe wes intewactions w-wéewwes des utiwisateuws d'une a-apwwication. 🥺 d-dans wum, >_< we scwipt tiews cowwecte des mesuwes de pewfowmances à pawtiw des nyavigateuws d-des utiwisateuws wéews. >_< wum pewmet d'identifiew comment une appwication e-est utiwisée, (⑅˘꒳˘) y compwis wa wépawtition g-géogwaphique d-des utiwisateuws e-et w'impact d-de cette distwibution suw w'expéwience de w-w'utiwisateuw finaw. /(^•ω•^)
 
-## Voir aussi
+## voiw aussi
 
-- [Surveillance des utilisateurs réels (RUM) vs surveillance synthétique](/fr/docs/Web/Performance/Rum-vs-Synthetic)
-- [Surveillance synthétique](/fr/docs/Glossary/Synthetic_monitoring)
-- [Beacon](/fr/docs/Glossary/Beacon)
+- [suwveiwwance d-des utiwisateuws wéews (wum) vs suwveiwwance synthétique](/fw/docs/web/pewfowmance/wum-vs-synthetic)
+- [suwveiwwance synthétique](/fw/docs/gwossawy/synthetic_monitowing)
+- [beacon](/fw/docs/gwossawy/beacon)

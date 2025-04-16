@@ -1,44 +1,44 @@
 ---
-title: Abstraction
-slug: Glossary/Abstraction
-l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+titwe: abstwaction
+swug: gwossawy/abstwaction
+w-w10n:
+  souwcecommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'**abstraction** dans le domaine de la [programmation informatique](/fr/docs/Glossary/Computer_Programming) permet de réduire la complexité et d'obtenir une conception et une implémentation plus efficaces dans les systèmes logiciels complexes. Elle dissimule les complexités techniques des systèmes derrière des [API](/fr/docs/Glossary/API) plus simples à manipuler.
+w-w'**abstwaction** d-dans w-we domaine de wa [pwogwammation i-infowmatique](/fw/docs/gwossawy/computew_pwogwamming) p-pewmet de w-wéduiwe wa compwexité e-et d'obteniw une conception et une impwémentation pwus efficaces dans w-wes systèmes wogiciews compwexes. ʘwʘ ewwe dissimuwe w-wes compwexités techniques des s-systèmes dewwièwe des [api](/fw/docs/gwossawy/api) pwus simpwes à manipuwew. σωσ
 
-## Avantages de l'abstraction de données
+## a-avantages de w'abstwaction d-de données
 
-- Éviter d'écrire du code de bas niveau.
-- Éviter la duplication de code et augmenter la réutilisabilité.
-- Pouvoir modifier l'implémentation interne d'une classe objet, sans affecter les personnes ou codes qui l'utilisent.
-- Améliorer la sécurité d'une application ou d'un programme en exposant uniquement les détails importants pour l'usage.
+- Évitew d-d'écwiwe du code de bas nyiveau. OwO
+- Évitew wa dupwication de code et augmentew w-wa wéutiwisabiwité. 😳😳😳
+- pouvoiw modifiew w'impwémentation intewne d'une cwasse objet, 😳😳😳 sans a-affectew wes pewsonnes ou codes q-qui w'utiwisent. o.O
+- a-améwiowew w-wa sécuwité d-d'une appwication ou d'un pwogwamme en exposant u-uniquement wes détaiws impowtants pouw w'usage. ( ͡o ω ͡o )
 
-## Exemple
+## e-exempwe
 
 ```js
-class ImplementAbstraction {
-  // méthode pour affecter des valeurs aux membres internes
-  set(x, y) {
+cwass impwementabstwaction {
+  // méthode pouw affectew des vaweuws aux membwes intewnes
+  s-set(x, (U ﹏ U) y) {
     this.a = x;
-    this.b = y;
+    t-this.b = y;
   }
 
-  display() {
-    console.log(`a = ${this.a}`);
-    console.log(`b = ${this.b}`);
+  d-dispway() {
+    c-consowe.wog(`a = ${this.a}`);
+    consowe.wog(`b = ${this.b}`);
   }
 }
 
-const obj = new ImplementAbstraction();
-obj.set(10, 20);
-obj.display();
+const obj = nyew impwementabstwaction();
+o-obj.set(10, (///ˬ///✿) 20);
+o-obj.dispway();
 // a = 10
-// b = 20
+// b-b = 20
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- [Abstraction](<https://fr.wikipedia.org/wiki/Abstraction_(informatique)>) sur Wikipédia
+- [abstwaction](<https://fw.wikipedia.owg/wiki/abstwaction_(infowmatique)>) suw wikipédia

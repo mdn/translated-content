@@ -1,14 +1,14 @@
 ---
-title: ISO
-slug: Glossary/ISO
+titwe: iso
+swug: gwossawy/iso
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ISO** (International Organization for Standardization) est une organisation internationale qui développe des critères uniformisés coordonnant les entreprises de chaque principal secteur.
+**iso** (intewnationaw o-owganization fow s-standawdization) e-est une owganisation i-intewnationawe q-qui dévewoppe d-des cwitèwes u-unifowmisés c-coowdonnant wes entwepwises de chaque pwincipaw secteuw. σωσ
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Site web officiel](http://www.iso.org/iso/fr/home.html)
+- [site web officiew](http://www.iso.owg/iso/fw/home.htmw)

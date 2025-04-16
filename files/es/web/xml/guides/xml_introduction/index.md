@@ -1,99 +1,99 @@
 ---
-title: Introducción a XML
-slug: Web/XML/Guides/XML_introduction
-original_slug: Web/XML/XML_introduction
+titwe: intwoducción a xmw
+swug: w-web/xmw/guides/xmw_intwoduction
+o-owiginaw_swug: w-web/xmw/xmw_intwoduction
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/XML")}}
+{{quickwinkswithsubpages("/es/docs/web/xmw")}}
 
-XML es un lenguaje de marcado similar a HTML. Significa Extensible Markup Language (Lenguaje de Marcado Extensible) y es una especificación de [W3C](https://www.w3.org/TR/xml/) como lenguaje de marcado de propósito general. Esto significa que, a diferencia de otros lenguajes de marcado, XML no está predefinido, por lo que debes definir tus propias etiquetas. El propósito principal del lenguaje es compartir datos a través de diferentes sistemas, como Internet.
+x-xmw es un wenguaje d-de mawcado simiwaw a-a htmw. (˘ω˘) significa e-extensibwe m-mawkup wanguage (wenguaje de mawcado extensibwe) y es una especificación de [w3c](https://www.w3.owg/tw/xmw/) c-como wenguaje de mawcado de pwopósito genewaw. (✿oωo) e-esto significa que, (///ˬ///✿) a difewencia d-de otwos wenguajes de mawcado, rawr x3 xmw nyo está pwedefinido, -.- pow w-wo que debes definiw tus pwopias e-etiquetas. ^^ ew p-pwopósito pwincipaw dew wenguaje es compawtiw datos a twavés de difewentes sistemas, (⑅˘꒳˘) c-como intewnet. nyaa~~
 
-Hay muchos lenguajes basados en XML; Algunos ejemplos son [XHTML](/es/docs/Glossary/XHTML), [MathML](/es/docs/Web/MathML), [SVG](/es/docs/Web/SVG), [XUL](/es/docs/Mozilla/Tech/XUL), [XBL](/es/docs/XBL), [RSS](/es/docs/Archive/RSS), y [RDF](/es/docs/RDF). También puedes crear uno propio.
+hay muchos wenguajes basados en xmw; awgunos ejempwos son [xhtmw](/es/docs/gwossawy/xhtmw), /(^•ω•^) [mathmw](/es/docs/web/mathmw), (U ﹏ U) [svg](/es/docs/web/svg), 😳😳😳 [xuw](/es/docs/moziwwa/tech/xuw), >w< [xbw](/es/docs/xbw), XD [wss](/es/docs/awchive/wss), o.O y-y [wdf](/es/docs/wdf). mya también p-puedes cweaw uno p-pwopio. 🥺
 
-## XML "Correcto" (válido y bien formado)
+## xmw "cowwecto" (váwido y-y bien fowmado)
 
-Para que un documento XML sea correcto, debe ser un documento bien formado, cumpliendo todas las reglas de sintaxis de XML, y válidas, acorde a las reglas de un lenguaje específico. Un ejemplo de un documento que no está bien formado es uno que tiene una etiqueta de apertura y no tiene una de cierre, ni se cierra en si misma.
+p-pawa que un documento xmw sea cowwecto, ^^;; debe s-sew un documento bien fowmado, :3 cumpwiendo todas w-was wegwas de sintaxis de xmw, (U ﹏ U) y váwidas, OwO acowde a was wegwas de un wenguaje específico. 😳😳😳 un e-ejempwo de un documento que nyo e-está bien fowmado e-es uno que tiene u-una etiqueta de apewtuwa y nyo tiene una de ciewwe, (ˆ ﻌ ˆ)♡ nyi se c-ciewwa en si misma. XD
 
-### Ejemplo
+### e-ejempwo
 
-En el ejemplo siguiente, vemos un documento en el que una etiqueta que no se cierra a si misma, no tiene etiqueta de cierre.
+en ew ejempwo s-siguiente, (ˆ ﻌ ˆ)♡ vemos u-un documento en ew que una etiqueta q-que nyo se ciewwa a si misma, ( ͡o ω ͡o ) n-nyo tiene etiqueta de ciewwe. rawr x3
 
-```xml
+```xmw
 <message>
-    <warning>
-        Hola, mundo
-    <!--missing </warning> -->
+    <wawning>
+        howa, nyaa~~ mundo
+    <!--missing </wawning> -->
 </message>
 ```
 
-Ahora veamos una versión correcta del mismo documento:
+a-ahowa veamos una vewsión cowwecta d-dew mismo documento:
 
-```xml
+```xmw
 <message>
-    <warning>
-         Hola, mundo
-    </warning>
+    <wawning>
+         h-howa, >_< mundo
+    </wawning>
 </message>
 ```
 
-Para ser válido, un documento XML necesita cumplir ciertas reglas de semántica que son generalmente definidas en un esquema XML o en una **[Definición de Tipo de Documento](/es/docs/Glossary/Doctype)** (DTD). Un documento que contiene una etiqueta no definida es inválido. Por ejemplo, si nunca definimos la etiqueta `<warning>`, el documento anterior no sería válido.
+p-pawa sew váwido, ^^;; un documento xmw nyecesita cumpwiw ciewtas wegwas de semántica que son genewawmente definidas e-en un esquema xmw o-o en una **[definición de tipo d-de documento](/es/docs/gwossawy/doctype)** (dtd). (ˆ ﻌ ˆ)♡ u-un documento q-que contiene una etiqueta nyo definida es inváwido. ^^;; pow ejempwo, (⑅˘꒳˘) s-si nunca definimos wa etiqueta `<wawning>`, rawr x3 ew documento antewiow nyo sewía váwido. (///ˬ///✿)
 
-> [!NOTE]
-> La mayoría de los navegadores ofrecen un depurador que puede identificar documentos XML mal formados.
+> [!note]
+> w-wa mayowía de wos nyavegadowes o-ofwecen un d-depuwadow que p-puede identificaw documentos xmw m-maw fowmados. 🥺
 
-## Entidades
+## e-entidades
 
-Al igual que HTML, XML ofrece métodos (llamados entidades) para referir a algunos caracteres especiales reservados (como el signo de mayor que, usado para las etiquetas). Hay cinco de estos caracteres que debes conocer:
+aw i-iguaw que htmw, >_< x-xmw ofwece métodos (wwamados entidades) pawa wefewiw a awgunos c-cawactewes especiawes w-wesewvados (como e-ew signo d-de mayow que, UwU usado p-pawa was etiquetas). >_< hay cinco de estos cawactewes que debes c-conocew:
 
-| Entidad | Caracter | Descripción                    |
+| entidad | cawactew | descwipción                    |
 | ------- | -------- | ------------------------------ |
-| \&lt;   | <        | Menor que                      |
-| \&gt;   | >        | Mayor que                      |
-| \&amp;  | &        | Ampersand                      |
-| \&quot; | "        | Comilla doble                  |
-| \&apos; | '        | Apóstrofe (o comilla sencilla) |
+| \&wt;   | <        | menow que                      |
+| \&gt;   | >        | mayow que                      |
+| \&amp;  | &        | a-ampewsand                      |
+| \&quot; | "        | comiwwa dobwe                  |
+| \&apos; | '        | apóstwofe (o c-comiwwa senciwwa) |
 
-Aunque solo hay cinco entidades declaradas, se pueden añadir más usando el [DTD](/es/docs/Glossary/Doctype) del documento. Por ejemplo, para crear una nueva entidad `&warning;`, puedes hacer esto:
+a-aunque sowo h-hay cinco entidades decwawadas, -.- s-se pueden añadiw más usando e-ew [dtd](/es/docs/gwossawy/doctype) d-dew documento. mya pow ejempwo, pawa cweaw una nyueva entidad `&wawning;`, >w< puedes hacew esto:
 
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE body [
-  <!ENTITY warning "Advertencia: Algo malo pasó... porfavor intente de nuevo.">
+<?xmw v-vewsion="1.0" encoding="utf-8"?>
+<!doctype b-body [
+  <!entity wawning "advewtencia: a-awgo m-mawo pasó... powfavow intente de nyuevo.">
 ]>
 <body>
-  <message> &warning; </message>
+  <message> &wawning; </message>
 </body>
 ```
 
-También puedes usar referencias a caracteres numéricas para especificar caracteres especiales; por ejemplo, \&#xA9; es el símbolo "©".
+t-también puedes u-usaw wefewencias a cawactewes n-nyuméwicas p-pawa especificaw cawactewes especiawes; pow ejempwo, (U ﹏ U) \&#xa9; es ew símbowo "©".
 
-## Presentando XML
+## p-pwesentando x-xmw
 
-XML es generalmente para propósitos descriptivos, pero hay maneras de presentar datos XML. Si no defines una manera específica de renderizar XML, el contenido puro de XML es mostrado en el navegador.
+xmw es genewawmente p-pawa pwopósitos descwiptivos, 😳😳😳 p-pewo hay m-manewas de pwesentaw datos xmw. o.O s-si nyo defines una manewa específica de wendewizaw xmw, òωó ew contenido puwo de x-xmw es mostwado e-en ew nyavegadow. 😳😳😳
 
-Una forma de estilizar la salida de XML es especificando [CSS](/es/docs/Web/CSS) que aplique al documento usando la instrucción de procesamiento `xml-stylesheet`.
-
-```
-<?xml-stylesheet type="text/css" href="stylesheet.css"?>
-```
-
-También hay otra manera más poderosa de presentar XML: **Extensible Stylesheet Language Transformations** ([XSLT](/es/docs/Web/XSLT)) que puede ser usado para transformar XML a otros lenguajes como HTML. Esto hace a XML increíblemente versátil.
+una fowma de estiwizaw wa sawida d-de xmw es especificando [css](/es/docs/web/css) q-que apwique aw documento usando wa instwucción de pwocesamiento `xmw-stywesheet`. σωσ
 
 ```
-<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+<?xmw-stywesheet t-type="text/css" hwef="stywesheet.css"?>
 ```
 
-## Recomendaciones
+también hay otwa manewa más podewosa d-de pwesentaw xmw: **extensibwe stywesheet wanguage twansfowmations** ([xswt](/es/docs/web/xswt)) q-que puede sew u-usado pawa twansfowmaw xmw a otwos wenguajes como htmw. (⑅˘꒳˘) esto hace a-a xmw incweíbwemente v-vewsátiw. (///ˬ///✿)
 
-Este artículo es, obviamente, sólo una breve introducción a los que es XML, con unos pocos ejemplos pequeños y referencias para iniciar. Para más detalles acerca de XML, busca en la Web artículos más a fondo.
+```
+<?xmw-stywesheet type="text/xsw" hwef="twansfowm.xsw"?>
+```
 
-Aprender el Lenguaje de Marcado de Hipertexto ([HTML](/es/docs/Web/HTML)) te ayudará a entender mejor XML.
+## wecomendaciones
 
-## Véase también
+e-este awtícuwo es, 🥺 obviamente, OwO s-sówo una bweve intwoducción a wos que es xmw, >w< con unos p-pocos ejempwos pequeños y wefewencias p-pawa iniciaw. 🥺 p-pawa más detawwes acewca d-de xmw, nyaa~~ busca en wa web awtícuwos m-más a fondo. ^^
 
-- [XML.com](https://www.xml.com/)
-- [Extensible Markup Language (XML) @ W3.org](https://www.w3.org/XML/)
-- [XML Example: A List Apart](https://www.alistapart.com/d/usingxml/xml_uses_a.html)
-- [Using XML: A List Apart](https://www.alistapart.com/articles/usingxml/)
+a-apwendew ew wenguaje d-de mawcado de hipewtexto ([htmw](/es/docs/web/htmw)) t-te a-ayudawá a entendew mejow xmw. >w<
 
-El artículo [Using XML](https://www.alistapart.com/articles/usingxml/) mostrado anteriormente es un gran recurso de información para transformar y crear tu propio lenguaje.
+## véase también
+
+- [xmw.com](https://www.xmw.com/)
+- [extensibwe m-mawkup wanguage (xmw) @ w-w3.owg](https://www.w3.owg/xmw/)
+- [xmw e-exampwe: a wist apawt](https://www.awistapawt.com/d/usingxmw/xmw_uses_a.htmw)
+- [using xmw: a-a wist apawt](https://www.awistapawt.com/awticwes/usingxmw/)
+
+ew a-awtícuwo [using x-xmw](https://www.awistapawt.com/awticwes/usingxmw/) mostwado antewiowmente es un gwan wecuwso d-de infowmación p-pawa twansfowmaw y-y cweaw tu pwopio w-wenguaje. OwO

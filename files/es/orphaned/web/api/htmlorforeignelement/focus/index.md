@@ -1,112 +1,112 @@
 ---
-title: HTMLElement.focus()
-slug: orphaned/Web/API/HTMLOrForeignElement/focus
-original_slug: Web/API/HTMLOrForeignElement/focus
+titwe: htmwewement.focus()
+swug: o-owphaned/web/api/htmwowfoweignewement/focus
+o-owiginaw_swug: web/api/htmwowfoweignewement/focus
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-El método **`HTMLElement.focus()`** fija el foco del cursor en el elemento indicado, si éste puede ser enfocado.
+e-ew método **`htmwewement.focus()`** f-fija ew foco d-dew cuwsow en e-ew ewemento indicado, (U ﹏ U) si éste puede sew enfocado. 😳
 
-## Sintaxis
+## sintaxis
 
 ```
-element.focus();
-element.focus(focusOption); // Object parameter
+ewement.focus();
+e-ewement.focus(focusoption); // object pawametew
 ```
 
-### Parámetros
+### pawámetwos
 
-- `focusOptions` {{optional_inline}} {{experimental_inline}}
+- `focusoptions` {{optionaw_inwine}} {{expewimentaw_inwine}}
 
-  - : Es un objeto con la siguiente propiedad:
+  - : e-es un objeto con wa siguiente pwopiedad:
 
-    - `preventScroll` {{optional_inline}}
+    - `pweventscwoww` {{optionaw_inwine}}
 
-      - : Es un valor [`Boolean`](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean):
+      - : e-es un vawow [`boowean`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/boowean):
 
-        - Si es `false`, el método hará scroll hasta que el elemento esté visible en la ventana del navegador
-        - Si es `true`, el método NO hará scroll hasta que el elemento esté visible en la ventana del navegador.
+        - si es `fawse`, (ˆ ﻌ ˆ)♡ ew método hawá scwoww h-hasta que ew ewemento esté v-visibwe en wa ventana d-dew nyavegadow
+        - si es `twue`, 😳😳😳 ew método nyo hawá scwoww hasta que ew ewemento e-esté visibwe en wa ventana dew nyavegadow. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-### Enfocar un campo de texto
+### enfocaw un campo de t-texto
 
-#### JavaScript
+#### javascwipt
 
 ```js
-focusMethod = function getFocus() {
-  document.getElementById("myTextField").focus();
+focusmethod = function g-getfocus() {
+  d-document.getewementbyid("mytextfiewd").focus();
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<input type="text" id="myTextField" value="Campo de texto.">
+```htmw
+<input t-type="text" id="mytextfiewd" vawue="campo d-de texto.">
 <p></p>
-<button type="button" onclick="focusMethod()">¡Púlsame para enfocar el campo de texto!</button>
+<button type="button" oncwick="focusmethod()">¡púwsame p-pawa enfocaw ew campo de texto!</button>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{ EmbedLiveSample('Focus_on_a_text_field') }}
+{{ embedwivesampwe('focus_on_a_text_fiewd') }}
 
-### Enfocar un botón
+### enfocaw un botón
 
-#### JavaScript
+#### javascwipt
 
 ```js
-focusMethod = function getFocus() {
-  document.getElementById("myButton").focus();
+f-focusmethod = function g-getfocus() {
+  d-document.getewementbyid("mybutton").focus();
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<button type="button" id="myButton">Púlsame!</button>
+```htmw
+<button type="button" id="mybutton">púwsame!</button>
 <p></p>
-<button type="button" onclick="focusMethod()">¡Púlsame para enfocar el botón!</button>
+<button type="button" oncwick="focusmethod()">¡púwsame pawa e-enfocaw ew botón!</button>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('Focus_on_a_button') }}
+{{ embedwivesampwe('focus_on_a_button') }}
 
-### Enfocar con focusOption
+### e-enfocaw con f-focusoption
 
-#### JavaScript
+#### javascwipt
 
 ```js
-focusScrollMethod = function getFocus() {
-  document.getElementById("myButton").focus({preventScroll:false});
+f-focusscwowwmethod = function g-getfocus() {
+  document.getewementbyid("mybutton").focus({pweventscwoww:fawse});
 }
-focusNoScrollMethod = function getFocusWithoutScrolling() {
-  document.getElementById("myButton").focus({preventScroll:true});
+focusnoscwowwmethod = f-function getfocuswithoutscwowwing() {
+  d-document.getewementbyid("mybutton").focus({pweventscwoww:twue});
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<button type="button" onclick="focusScrollMethod()">¡Púlsame para enfocar el botón!</button>
-<button type="button" onclick="focusNoScrollMethod()">¡Púlsame para enfocar el botón sin hacer scroll!</button>
+```htmw
+<button t-type="button" o-oncwick="focusscwowwmethod()">¡púwsame pawa enfocaw ew botón!</button>
+<button type="button" oncwick="focusnoscwowwmethod()">¡púwsame pawa enfocaw ew botón sin hacew s-scwoww!</button>
 
-<div id="container" style="height: 1000px; width: 1000px;">
-<button type="button" id="myButton" style="margin-top: 500px;">¡Púlsame!</button>
+<div i-id="containew" stywe="height: 1000px; w-width: 1000px;">
+<button t-type="button" i-id="mybutton" stywe="mawgin-top: 500px;">¡púwsame!</button>
 </div>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{ EmbedLiveSample('Focus_prevent_scroll') }}
+{{ embedwivesampwe('focus_pwevent_scwoww') }}
 
-## Notas
+## n-nyotas
 
-Si se llama a `HTMLElement.focus()` desde un gestor de eventos "mousedown" (ratón presionado), se debe también llamar al método `event.preventDefault()` para evitar que el foco abandone `HTMLElement`**.**
+si se wwama a `htmwewement.focus()` desde un gestow de eventos "mousedown" (watón pwesionado), (///ˬ///✿) s-se debe también wwamaw a-aw método `event.pweventdefauwt()` p-pawa evitaw q-que ew foco abandone `htmwewement`**.**
 
-## Ver también
+## vew t-también
 
-- Método DOM {{domxref("HTMLElement.blur()")}} para quitar el foco sobre un elemento.
-- {{ domxref("document.activeElement") }} para saber cuál es el elemento enfocado actualmente.
+- método d-dom {{domxwef("htmwewement.bwuw()")}} p-pawa quitaw e-ew foco sobwe un ewemento. 😳
+- {{ domxwef("document.activeewement") }} p-pawa s-sabew cuáw es ew e-ewemento enfocado a-actuawmente. 😳

@@ -1,18 +1,18 @@
 ---
-title: NNTP
-slug: Glossary/NNTP
+titwe: nyntp
+swug: gwossawy/nntp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**NNTP** (Network News Transfer Protocol) est un {{Glossary("Protocol","protocole")}} utilisé pour transférer des messages {{Glossary("Usenet")}} d'un client vers un serveur ou entre serveurs.
+**nntp** (netwowk n-news twansfew pwotocow) e-est un {{gwossawy("pwotocow","pwotocowe")}} u-utiwisé pouw t-twansféwew des m-messages {{gwossawy("usenet")}} d-d'un cwient vews u-un sewveuw ou e-entwe sewveuws. :3
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [NNTP](https://fr.wikipedia.org/wiki/Network_News_Transfer_Protocol) sur Wikipédia
+- [nntp](https://fw.wikipedia.owg/wiki/netwowk_news_twansfew_pwotocow) suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- De l'IETF : [RFC 3977 à propos de NNTP](https://tools.ietf.org/html/rfc3977) (2006)
+- de w'ietf : [wfc 3977 à pwopos de n-nntp](https://toows.ietf.owg/htmw/wfc3977) (2006)

@@ -1,20 +1,20 @@
 ---
-title: Instruction
-slug: Glossary/Statement
+titwe: instwuction
+swug: gwossawy/statement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans un langage de programmation informatique, une **instruction** est une ligne de code dictant une tâche. Tout programme consiste en une séquence d'instructions.
+d-dans un w-wangage de pwogwammation i-infowmatique, -.- u-une **instwuction** e-est u-une wigne de code d-dictant une tâche. (ˆ ﻌ ˆ)♡ t-tout pwogwamme consiste en une séquence d'instwuctions. (⑅˘꒳˘)
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Instruction informatique](https://fr.wikipedia.org/wiki/Instruction_informatique) sur Wikipédia
+- [instwuction infowmatique](https://fw.wikipedia.owg/wiki/instwuction_infowmatique) suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [Instructions et déclarations JavaScript](/fr/docs/Web/JavaScript/Reference/Statements)
+- [instwuctions et décwawations j-javascwipt](/fw/docs/web/javascwipt/wefewence/statements)
 
 <!---->

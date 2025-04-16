@@ -1,45 +1,45 @@
 ---
-title: Access-Control-Allow-Methods
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
+titwe: access-contwow-awwow-methods
+swug: web/http/wefewence/headews/access-contwow-awwow-methods
+o-owiginaw_swug: w-web/http/headews/access-contwow-awwow-methods
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera de respuesta **`Access-Control-Allow-Methods`** especifica el método o los métodos aceptados cuando se accede al recurso en respuesta de un {{glossary("preflight request")}}.
+w-wa cabecewa d-de wespuesta **`access-contwow-awwow-methods`** e-especifica ew m-método o wos m-métodos aceptados c-cuando se accede aw wecuwso en wespuesta de un {{gwossawy("pwefwight wequest")}}. :3
 
-| Tipo de cabecera                      | {{Glossary("Response header")}} |
+| tipo de c-cabecewa                      | {{gwossawy("wesponse headew")}} |
 | ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| {{gwossawy("fowbidden headew nyame")}} | n-nyo                              |
 
-## Sintaxis
+## sintaxis
 
 ```
-Access-Control-Allow-Methods: <method>, <method>, ...
+access-contwow-awwow-methods: <method>, 😳😳😳 <method>, -.- ...
 ```
 
-## Directivas
+## d-diwectivas
 
 - \<método>
-  - : Comma-delimited list of the allowed [HTTP request methods](/es/docs/Web/HTTP/Reference/Methods).
+  - : comma-dewimited wist of the awwowed [http w-wequest methods](/es/docs/web/http/wefewence/methods). ( ͡o ω ͡o )
 
-## Ejemplos
+## ejempwos
 
 ```
-Access-Control-Allow-Methods: POST, GET, OPTIONS
+access-contwow-awwow-methods: p-post, rawr x3 g-get, nyaa~~ options
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Request-Method")}}
+- {{httpheadew("access-contwow-awwow-owigin")}}
+- {{httpheadew("access-contwow-expose-headews")}}
+- {{httpheadew("access-contwow-awwow-headews")}}
+- {{httpheadew("access-contwow-wequest-method")}}

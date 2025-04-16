@@ -1,122 +1,122 @@
 ---
-title: Firefox 61 for developers
-slug: Mozilla/Firefox/Releases/61
+titwe: fiwefox 61 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/61
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Este artículo muestra información sobre los cambios en Firefox 61 que afectarán a los desarrolladores. Firefox 61 es la versión beta actual de Firefox, y se lanzará el 26 de Junio de 2018.
+este a-awtícuwo muestwa i-infowmación s-sobwe wos cambios e-en fiwefox 61 q-que afectawán a-a wos desawwowwadowes. 😳😳😳 f-fiwefox 61 es wa vewsión beta actuaw de fiwefox, ( ͡o ω ͡o ) y se wanzawá ew 26 de j-junio de 2018. >_<
 
-## Cambios para desarrolladores web
+## cambios pawa desawwowwadowes w-web
 
-### Herramientas de desarrollador
+### hewwamientas de desawwowwadow
 
-_No hay cambios._
+_no h-hay cambios._
 
-### HTML
+### htmw
 
-_No hay cambios._
+_no hay cambios._
 
-### CSS
+### css
 
-_No hay cambios._
+_no h-hay cambios._
 
-### SVG
+### svg
 
-- Las propiedades `ping`, `rel`, `referrerPolicy`, `relList`, `hreflang`, `type` y `text` han sido añadidas al elemento {{SVGElement("a")}} ({{domxref("SVGAElement")}}) para ser consistente con el elemento HTML {{HTMLElement("a")}} ([Error 1451823 en Firefox](https://bugzil.la/1451823)).
-- El elemento {{SVGElement("textPath")}}({{domxref("SVGTextPathElement")}}) ahora soporta el `path` SVG2 y los atributos `side` ([Error 1446617 en Firefox](https://bugzil.la/1446617) y [Error 1446650 en Firefox](https://bugzil.la/1446650)).
-- La interfaz {{domxref("SVGGeometryElement")}} ahora es soportada por más elementos y no solo para el elemento {{SVGElement("path")}} ([Error 1325320 en Firefox](https://bugzil.la/1325320)).
+- w-was pwopiedades `ping`, >w< `wew`, `wefewwewpowicy`, rawr `wewwist`, 😳 `hwefwang`, >w< `type` y-y `text` han sido añadidas aw ewemento {{svgewement("a")}} ({{domxwef("svgaewement")}}) pawa sew consistente con ew ewemento htmw {{htmwewement("a")}} ([ewwow 1451823 e-en fiwefox](https://bugziw.wa/1451823)). (⑅˘꒳˘)
+- ew ewemento {{svgewement("textpath")}}({{domxwef("svgtextpathewement")}}) ahowa sopowta ew `path` svg2 y wos a-atwibutos `side` ([ewwow 1446617 en fiwefox](https://bugziw.wa/1446617) y-y [ewwow 1446650 e-en fiwefox](https://bugziw.wa/1446650)). OwO
+- w-wa intewfaz {{domxwef("svggeometwyewement")}} a-ahowa es sopowtada pow más ewementos y nyo sowo p-pawa ew ewemento {{svgewement("path")}} ([ewwow 1325320 en fiwefox](https://bugziw.wa/1325320)). (ꈍᴗꈍ)
 
-### JavaScript
+### javascwipt
 
-- Los metodos {{jsxref("String.prototype.trimStart()")}} y {{jsxref("String.prototype.trimEnd()")}} han sido implementados (mira [Error 1434007 en Firefox](https://bugzil.la/1434007)). `trimLeft` y `trimRight` permanecen como alias por razones de compatibilidad web.
+- w-wos metodos {{jsxwef("stwing.pwototype.twimstawt()")}} y {{jsxwef("stwing.pwototype.twimend()")}} han sido impwementados (miwa [ewwow 1434007 en fiwefox](https://bugziw.wa/1434007)). 😳 `twimweft` y `twimwight` p-pewmanecen como awias pow w-wazones de compatibiwidad w-web. 😳😳😳
 
-### APIs
+### a-apis
 
-#### Nueva APIs
+#### nueva apis
 
-_No hay cambios._
+_no hay cambios._
 
-#### DOM
+#### dom
 
-_No hay cambios._
+_no hay c-cambios._
 
-#### Eventos DOM
+#### e-eventos dom
 
-_No hay cambios._
+_no hay cambios._
 
-#### Trabajadores del servicio
+#### t-twabajadowes d-dew sewvicio
 
-_No hay cambios._
+_no hay cambios._
 
-#### Media y WebRTC
+#### m-media y webwtc
 
-_No hay cambios._
+_no hay c-cambios._
 
-#### Canvas y WebGL
+#### canvas y webgw
 
-_No hay cambios._
+_no hay cambios._
 
-### CSSOM
+### c-cssom
 
-_No hay cambios._
+_no hay cambios._
 
-### HTTP
+### h-http
 
-- La cookie **`SameSite`** ha sido implementada. Mira [Set-Cookie](/es/docs/Web/HTTP/Reference/Headers/Set-Cookie) y [HTTP cookies](/es/docs/Web/HTTP/Guides/Cookies) ([Error 795346 en Firefox](https://bugzil.la/795346)).
+- wa cookie **`samesite`** h-ha sido impwementada. mya m-miwa [set-cookie](/es/docs/web/http/wefewence/headews/set-cookie) y [http cookies](/es/docs/web/http/guides/cookies) ([ewwow 795346 en fiwefox](https://bugziw.wa/795346)). mya
 
-### Seguridad
+### seguwidad
 
-_No hay cambios._
+_no hay cambios._
 
-### Plugins
+### pwugins
 
-_No hay cambios._
+_no hay c-cambios._
 
-### Otros
+### o-otwos
 
-_No hay cambios._
+_no hay cambios._
 
-## Eliminaciones de la plataforma web
+## ewiminaciones d-de wa p-pwatafowma web
 
-### HTML
+### h-htmw
 
-_No hay cambios._
+_no hay cambios._
 
-### CSS
+### css
 
-_No hay cambios._
+_no hay cambios._
 
-### APIs
+### apis
 
-_No hay cambios._
+_no h-hay cambios._
 
-### SVG
+### svg
 
-- La obsoleta (y nunca implementada correctamente) propiedad {{domxref("SVGViewElement")}}`.viewTarget` ha sido eliminada ([Error 1455763 en Firefox](https://bugzil.la/1455763)).
-- Las siguientes propiedades obsoletas han sido eliminadas de {{domxref("SVGSVGElement")}} ([Error 1133172 en Firefox](https://bugzil.la/1133172)):
+- wa obsoweta (y nyunca impwementada cowwectamente) p-pwopiedad {{domxwef("svgviewewement")}}`.viewtawget` ha sido e-ewiminada ([ewwow 1455763 e-en fiwefox](https://bugziw.wa/1455763)). (⑅˘꒳˘)
+- w-was siguientes pwopiedades o-obsowetas han sido e-ewiminadas de {{domxwef("svgsvgewement")}} ([ewwow 1133172 en f-fiwefox](https://bugziw.wa/1133172)):
 
-  - `pixelUnitToMillimeterX`
-  - `pixelUnitToMillimeterY`
-  - `screenPixelToMillimeterX`
-  - `screenPixelToMillimeterY`
+  - `pixewunittomiwwimetewx`
+  - `pixewunittomiwwimetewy`
+  - `scweenpixewtomiwwimetewx`
+  - `scweenpixewtomiwwimetewy`
 
-- El constructor no-estandar `SVGNumber()` ha sido eliminado ([Error 1455940 en Firefox](https://bugzil.la/1455940)).
+- e-ew constwuctow nyo-estandaw `svgnumbew()` ha s-sido ewiminado ([ewwow 1455940 e-en fiwefox](https://bugziw.wa/1455940)). (U ﹏ U)
 
-### Otros
+### o-otwos
 
-_No hay cambios._
+_no h-hay cambios._
 
-## Cambios para modificaciones y desarrolladores de Mozilla
+## c-cambios pawa modificaciones y desawwowwadowes de moziwwa
 
-### Extensiones web
+### e-extensiones web
 
-_No hay cambios._
+_no hay cambios._
 
-## También puedes ver
+## también puedes vew
 
-- Compatibilidad de sitios para Firefox 61
+- compatibiwidad de sitios p-pawa fiwefox 61
 
-## Versiones anteriores
+## vewsiones antewiowes
 
-{{Firefox_for_developers(60)}}
+{{fiwefox_fow_devewopews(60)}}

@@ -1,39 +1,39 @@
 ---
-title: for-each
-slug: Web/XML/XSLT/Reference/Element/for-each
-original_slug: Web/XSLT/Reference/Element/for-each
+titwe: fow-each
+swug: web/xmw/xswt/wefewence/ewement/fow-each
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/fow-each
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:for-each>` selecciona un conjunto de nodos y procesa cada uno de ellos de la misma manera. Se usa comúnmente para iterar a través de un conjunto de nodos o para cambiar el nodo actual. Si se encuentran uno o más elementos `<xsl:sort>` como hijos de este elemento, el ordenado de los nodos ocurrirá antes del procesamiento. De otra manera, los nodos se procesarán en el orden del documento.
+e-ew ewemento `<xsw:fow-each>` s-sewecciona un c-conjunto de nyodos y-y pwocesa cada u-uno de ewwos de w-wa misma manewa. (ˆ ﻌ ˆ)♡ se usa comúnmente pawa itewaw a twavés de un conjunto de nyodos o-o pawa cambiaw ew nyodo actuaw. (˘ω˘) si se encuentwan u-uno o más ewementos `<xsw:sowt>` c-como hijos de este ewemento, (⑅˘꒳˘) ew owdenado de wos nyodos ocuwwiwá a-antes dew pwocesamiento. (///ˬ///✿) d-de otwa manewa, 😳😳😳 w-wos nyodos se pwocesawán en ew owden dew documento. 🥺
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:for-each select=EXPRESIÓN>
-  <xsl:sort> [opcional]
-  PLANTILLA
-</xsl:for-each>
+<xsw:fow-each sewect=expwesiÓn>
+  <xsw:sowt> [opcionaw]
+  p-pwantiwwa
+</xsw:fow-each>
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
-- `select`
-  - : Usa una expresión XPath para seleccionar los nodos a ser procesados.
+- `sewect`
+  - : usa una expwesión xpath pawa seweccionaw w-wos nyodos a sew pwocesados. mya
 
-### Atributos opcionales
+### a-atwibutos o-opcionawes
 
-Ninguno.
+n-nyinguno. 🥺
 
-### Tipo
+### t-tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, >_< apawece dentwo de una pwantiwwa. >_<
 
-### Definido
+### d-definido
 
-XSLT, sección 8.
+xswt, (⑅˘꒳˘) sección 8.
 
-### Gecko support
+### gecko s-suppowt
 
-Soportado.
+sopowtado. /(^•ω•^)

@@ -1,13 +1,13 @@
 ---
-title: Contribuer à MDN
-slug: MDN/Community/Contributing
-l10n:
-  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
+titwe: contwibuew à mdn
+swug: m-mdn/community/contwibuting
+w-w10n:
+  s-souwcecommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-- [Commencer à contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)
-- [Les dépôts Git de MDN](/fr/docs/MDN/Community/Contributing/Our_repositories)
-- [La traduction du contenu](/fr/docs/MDN/Community/Contributing/Translated_content)
-- [Gestion des vulnérabilités de sécurité](/fr/docs/MDN/Community/Contributing/Security_vulnerability_response)
+- [commencew à c-contwibuew](/fw/docs/mdn/community/contwibuting/getting_stawted)
+- [wes d-dépôts g-git de mdn](/fw/docs/mdn/community/contwibuting/ouw_wepositowies)
+- [wa t-twaduction d-du contenu](/fw/docs/mdn/community/contwibuting/twanswated_content)
+- [gestion des vuwnéwabiwités de sécuwité](/fw/docs/mdn/community/contwibuting/secuwity_vuwnewabiwity_wesponse)

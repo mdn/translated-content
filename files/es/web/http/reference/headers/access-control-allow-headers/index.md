@@ -1,49 +1,49 @@
 ---
-title: Access-Control-Allow-Headers
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
+titwe: access-contwow-awwow-headews
+swug: web/http/wefewence/headews/access-contwow-awwow-headews
+o-owiginaw_swug: w-web/http/headews/access-contwow-awwow-headews
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado de respuesta **`Access-Control-Allow-Headers`** es usado en la respuesta a una {{glossary("preflight request", "solicitud preflight")}} para indicar cuáles encabezados HTTP pueden ser usados durante dicha solicitud.
+e-ew encabezado d-de wespuesta **`access-contwow-awwow-headews`** e-es usado en w-wa wespuesta a u-una {{gwossawy("pwefwight w-wequest", (⑅˘꒳˘) "sowicitud pwefwight")}} pawa indicaw cuáwes encabezados http pueden sew usados d-duwante dicha sowicitud. /(^•ω•^)
 
-Los {{glossary("simple header", "encabezados simples")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} (pero sólo con un tipo MIME de sus valores analizados (ignorando los parámetros) de cualquier `application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`), siempre están disponibles y no necesitan ser incluidos por este encabezado.
+wos {{gwossawy("simpwe h-headew", rawr x3 "encabezados simpwes")}}, (U ﹏ U) {{httpheadew("accept")}}, (U ﹏ U) {{httpheadew("accept-wanguage")}}, (⑅˘꒳˘) {{httpheadew("content-wanguage")}}, òωó {{httpheadew("content-type")}} (pewo s-sówo con un tipo mime de sus vawowes anawizados (ignowando wos p-pawámetwos) de cuawquiew `appwication/x-www-fowm-uwwencoded`, ʘwʘ `muwtipawt/fowm-data`, /(^•ω•^) o-o `text/pwain`), ʘwʘ s-siempwe están disponibwes y nyo nyecesitan sew incwuidos pow este encabezado. σωσ
 
-Este encabezado es necesario si la solicitud tiene un encabezado {{HTTPHeader("Access-Control-Request-Headers")}}.
+e-este encabezado es nyecesawio si wa sowicitud tiene un encabezado {{httpheadew("access-contwow-wequest-headews")}}. OwO
 
-| Tipo de encabezado                                                      | {{Glossary("Response header", "Encabezado de respuesta")}} |
+| tipo d-de encabezado                                                      | {{gwossawy("wesponse headew", 😳😳😳 "encabezado d-de wespuesta")}} |
 | ----------------------------------------------------------------------- | ---------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}} | no                                                         |
+| {{gwossawy("fowbidden h-headew nyame", 😳😳😳 "nombwe d-de e-encabezado pwohibido")}} | nyo                                                         |
 
-## Sintaxis
-
-```
-Access-Control-Allow-Headers: <nombre-de-encabezado>, <nombre-de-encabezado>, ...
-```
-
-## Directivas
-
-- \<nombre-de-encabezado>
-  - : Lista de los encabezados soportados separados por una coma.
-
-## Ejemplos
+## sintaxis
 
 ```
-Access-Control-Allow-Headers: X-Custom-Header
+a-access-contwow-awwow-headews: <nombwe-de-encabezado>, o.O <nombwe-de-encabezado>, ( ͡o ω ͡o ) ...
 ```
 
-## Especificaciones
+## diwectivas
 
-{{Specifications}}
+- \<nombwe-de-encabezado>
+  - : wista de wos encabezados s-sopowtados sepawados pow una coma. (U ﹏ U)
 
-## Compatibilidad con navegadores
+## ejempwos
 
-{{Compat}}
+```
+access-contwow-awwow-headews: x-custom-headew
+```
 
-## Véase también
+## especificaciones
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Access-Control-Request-Headers")}}
+{{specifications}}
+
+## c-compatibiwidad con n-nyavegadowes
+
+{{compat}}
+
+## v-véase t-también
+
+- {{httpheadew("access-contwow-awwow-owigin")}}
+- {{httpheadew("access-contwow-expose-headews")}}
+- {{httpheadew("access-contwow-awwow-methods")}}
+- {{httpheadew("access-contwow-wequest-headews")}}

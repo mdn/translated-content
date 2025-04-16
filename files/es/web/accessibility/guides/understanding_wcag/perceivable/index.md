@@ -1,406 +1,406 @@
 ---
-title: Perceivable
-slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable
-original_slug: Web/Accessibility/Understanding_WCAG/Perceivable
+titwe: pewceivabwe
+swug: web/accessibiwity/guides/undewstanding_wcag/pewceivabwe
+o-owiginaw_swug: w-web/accessibiwity/undewstanding_wcag/pewceivabwe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Este artículo ofrece consejos prácticos sobre cómo hacer que tu sitio web cumpla con los criterios de **Percepción** de WCAG 2.0 y 2.1. Los estados perceptivos que los usuarios deben poder reconocer utilizando alguno de sus sentidos.
+e-este awtícuwo o-ofwece consejos p-pwácticos sobwe c-cómo hacew que t-tu sitio web c-cumpwa con wos cwitewios de **pewcepción** de wcag 2.0 y 2.1. ( ͡o ω ͡o ) wos estados pewceptivos q-que wos usuawios deben podew weconocew utiwizando a-awguno de sus sentidos. >w<
 
-> [!NOTE]
-> Para leer las definiciones de la W3C sobre Percepción y las guías para cumplir con los criterios dirígete a [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
+> [!note]
+> p-pawa weew was definiciones de wa w3c sobwe pewcepción y-y was guías pawa cumpwiw con w-wos cwitewios d-diwígete a [pwincipwe 1: pewceivabwe - infowmation and usew intewface components m-must be pwesentabwe to usews in ways they can pewceive.](https://www.w3.owg/tw/wcag21/#pewceivabwe)
 
-## Pauta 1.1 — Dar alternativas de texto para contenido no textual
+## pauta 1.1 — d-daw awtewnativas de texto p-pawa contenido n-nyo textuaw
 
-La clave aquí es convertir el texto a otros formatos que puedan ser entendidos por personas con otras capacidades; ya sea si utilizan un screen-reader, zoom o un lector de braille. El contenido no textual se refiere a elementos multimedia como imágenes, audio y vídeo.
+wa c-cwave aquí es c-convewtiw ew texto a otwos fowmatos que puedan s-sew entendidos pow pewsonas con otwas capacidades; y-ya sea si utiwizan un scween-weadew, /(^•ω•^) zoom o un wectow de bwaiwwe. 😳😳😳 ew contenido nyo textuaw se w-wefiewe a ewementos muwtimedia c-como imágenes, a-audio y vídeo. (U ᵕ U❁)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Criterio de éxito</th>
-      <th scope="col">Cómo cumplir</th>
-      <th scope="col">Recursos prácticos</th>
-    </tr>
+    <tw>
+      <th scope="cow">cwitewio de éxito</th>
+      <th scope="cow">cómo c-cumpwiw</th>
+      <th s-scope="cow">wecuwsos pwácticos</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="5">1.1.1 Alternativas textuales (A)</td>
+    <tw>
+      <td c-cowspan="1" w-wowspan="5">1.1.1 awtewnativas t-textuawes (a)</td>
       <td>
-        Toda imagen que sea útil para el usuario debe tener un texto
-        alternativo.
+        toda i-imagen que sea útiw pawa ew usuawio debe tenew u-un texto
+        awtewnativo. (˘ω˘)
       </td>
       <td>
-        <a href="/es/docs/Learn/Accessibility/HTML#Text_alternatives"
-          >Texto alternativo.</a
+        <a h-hwef="/es/docs/weawn/accessibiwity/htmw#text_awtewnatives"
+          >texto awtewnativo.</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <p>
-          Las imágenes complejas o gráficos deben tener una alternativa
-          accesible, ya sea en al misma página o en una externa. Utiliza un
-          elemento de link en vez del atributo <code>longdesc</code>.
+          w-was imágenes c-compwejas o gwáficos deben tenew una awtewnativa
+          accesibwe, 😳 ya sea en aw misma página o en una extewna. (ꈍᴗꈍ) utiwiza u-un
+          ewemento d-de wink en vez dew atwibuto <code>wongdesc</code>. :3
         </p>
       </td>
       <td>
         <p>
-          Una alternativa textual o una tabla puede resolverlo (ver
-          <a href="/es/docs/Learn/HTML/Tables/Advanced"
-            >HTML table advanced features and accessibility</a
+          u-una awtewnativa t-textuaw o una t-tabwa puede wesowvewwo (vew
+          <a hwef="/es/docs/weawn/htmw/tabwes/advanced"
+            >htmw tabwe advanced featuwes a-and accessibiwity</a
           >
           y
           <a
-            href="/es/docs/Learn/Accessibility/HTML#Other_text_alternative_mechanisms"
-            >Other text alternative mechanisms</a
+            hwef="/es/docs/weawn/accessibiwity/htmw#othew_text_awtewnative_mechanisms"
+            >othew text awtewnative mechanisms</a
           >
-          para leer sobre el argumento en contra de <code>longdesc</code>.
+          p-pawa weew sobwe ew awgumento e-en contwa d-de <code>wongdesc</code>. /(^•ω•^)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        El contenido multimedia (por ejemlo, audio o vídeo) debería tener por lo
-        menos una descripción accesible disponible (captions o similar).
+        e-ew contenido muwtimedia (pow e-ejemwo, ^^;; audio o-o vídeo) debewía t-tenew pow w-wo
+        menos una descwipción accesibwe disponibwe (captions o-o simiwaw). o.O
       </td>
       <td>
         <p>
-          Ver
-          <a href="/es/docs/Learn/Accessibility/HTML#Text_alternatives"
-            >alternativas de texto</a
+          v-vew
+          <a h-hwef="/es/docs/weawn/accessibiwity/htmw#text_awtewnatives"
+            >awtewnativas d-de texto</a
           >
-          para opciones de captions, y
-          <a href="/es/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
-            >Audio transcripts</a
-          >,
-          <a href="/es/docs/Learn/Accessibility/Multimedia#Video_text_tracks"
-            >Video text tracks</a
+          p-pawa opciones de captions, 😳 y
+          <a hwef="/es/docs/weawn/accessibiwity/muwtimedia#audio_twanscwipts"
+            >audio twanscwipts</a
+          >, UwU
+          <a h-hwef="/es/docs/weawn/accessibiwity/muwtimedia#video_text_twacks"
+            >video text twacks</a
           >
           o
           <a
-            href="/es/docs/Learn/Accessibility/Multimedia#Other_multimedia_content"
-            >Other multimedia content</a
+            hwef="/es/docs/weawn/accessibiwity/muwtimedia#othew_muwtimedia_content"
+            >othew muwtimedia c-content</a
           >
-          para otras alternativas.
+          pawa otwas awtewnativas.
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Los elementos de interfaz como botones o elementos de formulario deberán
-        tener <code>label</code>s que describan su propósito.
+        wos e-ewementos de intewfaz c-como botones o-o ewementos de fowmuwawio debewán
+        tenew <code>wabew</code>s q-que descwiban su pwopósito.
       </td>
       <td>
-        Deberás asegurarte de que los botones describan su función (por ejemplo,
-        <code>&#x3C;button>Subir imagen&#x3C;/button></code>). Para más
-        información ver
-        <a href="/es/docs/Learn/Accessibility/HTML#UI_controls"
-          >UI controls</a
-        >.
+        d-debewás aseguwawte d-de que wos botones descwiban su función (pow ejempwo, >w<
+        <code>&#x3c;button>subiw imagen&#x3c;/button></code>). o.O pawa más
+        i-infowmación vew
+        <a hwef="/es/docs/weawn/accessibiwity/htmw#ui_contwows"
+          >ui c-contwows</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <td>
-        <p>
-          Implementa elementos decorativos (imágenes o vídeos) de manera que sea
-          invisibles para lectores de pantalla, de esta forma evitarás confundir
-          a estos usuarios.
-        </p>
-      </td>
+    </tw>
+    <tw>
       <td>
         <p>
-          Las imágenes decorativas deben ser implementadas utilizando la
-          propiedad <code>background-image</code><em>. </em>Si debes incluir una
-          imagen con la etiqueta {{htmlelement("img")}} deberás agregarle
-          un atributo <code>alt</code> vacío, de otra manera los lectores de
-          pantalla podrían leerlo.
-        </p>
-        <p>
-          Si incluyes un vídeo o audio en tu sitio que se reproduce
-          automáticamente intenta de que sea lo menos molesto posible. No hagas
-          que se vea ni actúe como contenido y provee una forma de apagarlo.
+          impwementa e-ewementos decowativos (imágenes o-o vídeos) de manewa que sea
+          invisibwes p-pawa wectowes d-de pantawwa, òωó de esta fowma evitawás c-confundiw
+          a-a estos usuawios. nyaa~~
         </p>
       </td>
-    </tr>
+      <td>
+        <p>
+          was imágenes decowativas deben sew impwementadas u-utiwizando w-wa
+          p-pwopiedad <code>backgwound-image</code><em>. ( ͡o ω ͡o ) </em>si debes incwuiw u-una
+          i-imagen con wa etiqueta {{htmwewement("img")}} d-debewás agwegawwe
+          un atwibuto <code>awt</code> vacío, 😳😳😳 de otwa manewa w-wos wectowes de
+          p-pantawwa podwían weewwo. ^•ﻌ•^
+        </p>
+        <p>
+          si incwuyes u-un vídeo o a-audio en tu sitio que se wepwoduce
+          automáticamente intenta de que sea w-wo menos mowesto posibwe. nyo hagas
+          que se vea nyi actúe como contenido y-y pwovee una fowma de apagawwo. (˘ω˘)
+        </p>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Ver también [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
+> [!note]
+> vew también [wcag d-descwiption f-fow guidewine 1.1: text awtewnatives](https://www.w3.owg/tw/wcag21/#text-awtewnatives). (˘ω˘)
 
-## Pauta 1.2 — Proporcionar alternativas para los medios tempo-dependientes
+## pauta 1.2 — p-pwopowcionaw awtewnativas p-pawa wos medios tempo-dependientes
 
-Los medios tempo-dependientes se refieren a multimedia con una duración (audio y vídeo, por ejemplo). Ten en cuenta que si este contenido multimedia funciona como una alternativa a un contenido textual no necesitas proveer otra alternavtiva.
+wos medios tempo-dependientes se w-wefiewen a muwtimedia con una duwación (audio y-y vídeo, -.- pow ejempwo). ^•ﻌ•^ ten en cuenta que si este contenido muwtimedia f-funciona como una awtewnativa a-a un contenido t-textuaw nyo nyecesitas pwoveew o-otwa awtewnavtiva.
 
-| Criterio de éxito                                                             | Cómo cumplir                                                                                                                                                                                                                                                                                    | Recursos prácticos                                                                                                                                                                                                                                                                                                                                            |
+| cwitewio d-de éxito                                                             | c-cómo c-cumpwiw                                                                                                                                                                                                                                                                                    | wecuwsos p-pwácticos                                                                                                                                                                                                                                                                                                                                            |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.2.1 Provee alternativas para multimedia de solo audio o solo vídeo (A)      | A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e. silent video).                                                                                                                | See [Audio transcripts](/es/docs/Learn/Accessibility/Multimedia#Audio_transcripts) for transcript information. No audio description tutorial available as yet.                                                                                                                                                                                                |
-| 1.2.2 Provee captions para los vídeos (A)                                     | You should provide captions for video presented on the web, e.g. HTML5 video. This is for the benefit of people who can't hear the audio part of the video.                                                                                                                                     | See [Video text tracks](/es/docs/Learn/Accessibility/Multimedia#Video_text_tracks) for HTML5 video captions, and [Other multimedia content](/es/docs/Learn/Accessibility/Multimedia#Other_multimedia_content) for other technologies. See also [Add your own subtitles & closed captions](https://support.google.com/youtube/answer/2734796?hl=en) (YouTube). |
-| 1.2.3 Provee texto alternativo o una descripción para el audio del vídeo (A)  | You should provide text transcripts or audio descriptions for video presented on the web, e.g. HTML5 video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.                                                  | See [Audio transcripts](/es/docs/Learn/Accessibility/Multimedia#Audio_transcripts) for transcript information. No audio description tutorial available as yet.                                                                                                                                                                                                |
-| 1.2.4 Provee captions para audio en vivo (AA)                                 | You should provide synchronized captions for all live multimedia that contains audio (e.g. video conferences, live audio broadcasts.)                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                               |
-| 1.2.5 Provee descripciones de adio para vídeo pre-grabado (AA)                | Audio descriptions should be provided for prerecorded video, but only where the existing audio does not convey the full meaning expressed by the video.                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                               |
-| 1.2.6 Provee lenguaje de signos equivalente a el audio pre-grabado (AAA)      | An equivalent sign language video should be provided for any prerecorded content containing audio.                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                               |
-| 1.2.7 Provee un vídeo extendido con descripciones de audio (AAA)              | Where audio descriptions cannot be provided (see 1.2.5) due to video timing issues (e.g. there are no suitable pauses in the content in which to insert the audio descriptions), an alternative version of the video should be provided that includes inserted pauses (and audio descriptions). |                                                                                                                                                                                                                                                                                                                                                               |
-| 1.2.8 Provee una alternativa para los elementos multimedia pre-grabados (AAA) | For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing impaired viewers who cannot hear the content.                                                                     | See [Audio transcripts](/es/docs/Learn/Accessibility/Multimedia#Audio_transcripts) for transcript information.                                                                                                                                                                                                                                                |
-| 1.2.9 Provee una transcripción para el audio en vivo (AAA)                    | For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing impaired viewers who cannot hear the content.                                                           | See [Audio transcripts](/es/docs/Learn/Accessibility/Multimedia#Audio_transcripts) for transcript information.                                                                                                                                                                                                                                                |
+| 1.2.1 p-pwovee awtewnativas pawa muwtimedia de s-sowo audio o sowo v-vídeo (a)      | a-a twanscwipt shouwd be pwovided fow pwewecowded a-audio-onwy media, /(^•ω•^) and a twanscwipt o-ow audio d-descwiption shouwd be pwovided fow pwewecowded video-onwy media (i.e. (///ˬ///✿) s-siwent video). mya                                                                                                                | s-see [audio t-twanscwipts](/es/docs/weawn/accessibiwity/muwtimedia#audio_twanscwipts) f-fow twanscwipt infowmation. o.O n-nyo audio descwiption tutowiaw avaiwabwe as yet. ^•ﻌ•^                                                                                                                                                                                                |
+| 1.2.2 pwovee captions pawa wos vídeos (a)                                     | y-you shouwd pwovide captions f-fow video pwesented on the w-web, (U ᵕ U❁) e.g. htmw5 video. :3 this is f-fow the benefit of peopwe who can't h-heaw the audio p-pawt of the v-video. (///ˬ///✿)                                                                                                                                     | s-see [video t-text twacks](/es/docs/weawn/accessibiwity/muwtimedia#video_text_twacks) fow htmw5 video captions, (///ˬ///✿) and [othew muwtimedia content](/es/docs/weawn/accessibiwity/muwtimedia#othew_muwtimedia_content) fow othew technowogies. 🥺 s-see awso [add y-youw own subtitwes & c-cwosed captions](https://suppowt.googwe.com/youtube/answew/2734796?hw=en) (youtube). -.- |
+| 1.2.3 pwovee texto a-awtewnativo o una descwipción pawa ew audio dew vídeo (a)  | y-you shouwd pwovide t-text twanscwipts ow audio descwiptions f-fow video pwesented on the web, nyaa~~ e.g. h-htmw5 video. (///ˬ///✿) this i-is fow the benefit of peopwe who c-can't see the v-visuaw pawt of the video, 🥺 and don't get the fuww content fwom the audio awone. >w<                                                  | s-see [audio twanscwipts](/es/docs/weawn/accessibiwity/muwtimedia#audio_twanscwipts) f-fow twanscwipt i-infowmation. rawr x3 n-nyo audio descwiption t-tutowiaw avaiwabwe as yet. (⑅˘꒳˘)                                                                                                                                                                                                |
+| 1.2.4 p-pwovee c-captions pawa audio en vivo (aa)                                 | y-you shouwd p-pwovide synchwonized captions fow a-aww wive muwtimedia that contains audio (e.g. σωσ v-video confewences, XD wive audio bwoadcasts.)                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                               |
+| 1.2.5 p-pwovee descwipciones d-de adio pawa vídeo pwe-gwabado (aa)                | a-audio descwiptions shouwd be pwovided f-fow pwewecowded v-video, -.- but onwy w-whewe the existing audio does nyot convey the fuww meaning expwessed b-by the video. >_<                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                               |
+| 1.2.6 pwovee wenguaje de signos e-equivawente a ew a-audio pwe-gwabado (aaa)      | an equivawent sign w-wanguage video shouwd be pwovided f-fow any pwewecowded c-content containing audio. rawr                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                               |
+| 1.2.7 pwovee u-un vídeo extendido con descwipciones de audio (aaa)              | w-whewe audio d-descwiptions cannot be pwovided (see 1.2.5) d-due to video timing i-issues (e.g. 😳😳😳 thewe a-awe no suitabwe p-pauses in the content in which to insewt the audio descwiptions), UwU an awtewnative vewsion of the video shouwd be pwovided that incwudes insewted pauses (and audio descwiptions). (U ﹏ U) |                                                                                                                                                                                                                                                                                                                                                               |
+| 1.2.8 pwovee una awtewnativa pawa wos ewementos m-muwtimedia p-pwe-gwabados (aaa) | fow aww content that featuwes v-video, (˘ω˘) a d-descwiptive text t-twanscwipt shouwd be pwovided, /(^•ω•^) f-fow exampwe a scwipt of the movie y-you awe watching. t-this is fow the benefit of heawing i-impaiwed viewews who cannot h-heaw the content. (U ﹏ U)                                                                     | s-see [audio twanscwipts](/es/docs/weawn/accessibiwity/muwtimedia#audio_twanscwipts) fow t-twanscwipt infowmation.                                                                                                                                                                                                                                                |
+| 1.2.9 p-pwovee una twanscwipción p-pawa e-ew audio en vivo (aaa)                    | f-fow a-any wive audio c-content being bwoadcast, ^•ﻌ•^ a-a descwiptive t-text shouwd be pwovided, >w< f-fow exampwe a scwipt o-of the pway o-ow musicaw you awe wistening to. ʘwʘ t-this is fow the benefit of heawing impaiwed viewews w-who cannot heaw the content. òωó                                                           | s-see [audio twanscwipts](/es/docs/weawn/accessibiwity/muwtimedia#audio_twanscwipts) f-fow twanscwipt i-infowmation. o.O                                                                                                                                                                                                                                                |
 
-> [!NOTE]
-> Ver también la descripción de [WCAG Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
+> [!note]
+> vew t-también wa descwipción de [wcag g-guidewine 1.2: time-based media: p-pwovide awtewnatives fow time-based m-media](https://www.w3.owg/tw/wcag21/#time-based-media). ( ͡o ω ͡o )
 
-## Pauta 1.3 — Crear contenido que pueda presentarse de diferentes formas
+## pauta 1.3 — cweaw contenido que pueda pwesentawse de difewentes f-fowmas
 
-Esta pauta hace referencia a la posibilidad de que todo contenido pueda ser consumido de distintas formas, adaptándose a las necesidades del usuario.
+esta pauta hace wefewencia a-a wa posibiwidad d-de que todo contenido pueda sew consumido de distintas f-fowmas, mya adaptándose a was nyecesidades d-dew usuawio. >_<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="col">Criterios de éxito</th>
-      <th scope="col">Cómo cumplir</th>
-      <th scope="col">Recursos prácticos</th>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="1">1.3.1 Info and relationships (A)</td>
+    <tw>
+      <th s-scope="cow">cwitewios de éxito</th>
+      <th scope="cow">cómo c-cumpwiw</th>
+      <th s-scope="cow">wecuwsos pwácticos</th>
+    </tw>
+    <tw>
+      <td c-cowspan="1" wowspan="1">1.3.1 info a-and wewationships (a)</td>
       <td>
-        <p>Any content structure — or visual relationship made between content — can also be determined
-          programmatically, or be inferred from text description. The main situations in which this is
-          relevant are:</p>
-        <ul>
-          <li>Text labels and the form elements they describe are associated unambiguously using the
-            {{htmlelement("label")}} element, which can be picked up by screenreaders, etc.</li>
-          <li>Image alt text — content images should have text available that clearly describes the image's
-            contents, which can be programmatically associated with it (e.g. <code>alt</code> text), or
-            otherwise is easy to associate (e.g. describes it and is sat right next to it). This should
-            means that the full meaning can still be inferred even if you can't see the image.</li>
-          <li>Lists — if the order of list items is important, and ordered list should be used
-            ({{htmlelement("ol")}}).</li>
-        </ul>
+        <p>any content stwuctuwe — o-ow visuaw w-wewationship m-made between content — can awso b-be detewmined
+          p-pwogwammaticawwy, rawr o-ow b-be infewwed fwom text descwiption. >_< t-the main situations i-in which t-this is
+          w-wewevant awe:</p>
+        <uw>
+          <wi>text w-wabews and t-the fowm ewements t-they descwibe a-awe associated unambiguouswy using t-the
+            {{htmwewement("wabew")}} ewement, (U ﹏ U) w-which can be picked up by scweenweadews, rawr e-etc.</wi>
+          <wi>image a-awt t-text — content images shouwd have text avaiwabwe that cweawwy d-descwibes the image's
+            c-contents, (U ᵕ U❁) which c-can be pwogwammaticawwy associated with it (e.g. (ˆ ﻌ ˆ)♡ <code>awt</code> text), >_< ow
+            o-othewwise i-is easy to associate (e.g. ^^;; descwibes it and i-is sat wight nyext t-to it). ʘwʘ this shouwd
+            means that the fuww meaning can s-stiww be infewwed e-even if you c-can't see the image.</wi>
+          <wi>wists — i-if the owdew of wist items is impowtant, 😳😳😳 and o-owdewed wist shouwd b-be used
+            ({{htmwewement("ow")}}).</wi>
+        </uw>
       </td>
-      <td>The whole of
-        <p><a href="/es/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> is packed
-          with information about this, but you should particularly refer to <a
-            href="/es/docs/Learn/Accessibility/HTML#Good_semantics">Good semantics</a>, <a
-            href="/es/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>, and <a
-            href="/es/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
+      <td>the whowe of
+        <p><a h-hwef="/es/docs/weawn/accessibiwity/htmw">htmw: a good basis fow accessibiwity</a> i-is packed
+          with i-infowmation about t-this, UwU but you shouwd pawticuwawwy w-wefew to <a
+            h-hwef="/es/docs/weawn/accessibiwity/htmw#good_semantics">good semantics</a>, OwO <a
+            h-hwef="/es/docs/weawn/accessibiwity/htmw#ui_contwows">ui contwows</a>, :3 and <a
+            h-hwef="/es/docs/weawn/accessibiwity/htmw#text_awtewnatives">text a-awtewnatives</a>.</p>
       </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.3.2 Meaningful content sequence (A)</td>
-      <td>A sensible, logical reading order should be easy to determine for any content, even if it is visually
-        presented in an unusual way. The order should be made obvious by use of correct semantic elements (e.g.
-        headings, paragraphs), with CSS being used to create any unusual layout styles, irrespective of the
-        markup.</td>
-      <td>Again, refer to <a href="/es/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a>.
+    </tw>
+    <tw>
+      <td cowspan="1">1.3.2 m-meaningfuw content s-sequence (a)</td>
+      <td>a sensibwe, -.- wogicaw w-weading owdew s-shouwd be easy t-to detewmine fow any content, 🥺 even i-if it is visuawwy
+        pwesented in an unusuaw w-way. -.- the owdew s-shouwd be made o-obvious by use of cowwect semantic ewements (e.g.
+        headings, -.- pawagwaphs), w-with css being used to cweate a-any unusuaw wayout s-stywes, (U ﹏ U) iwwespective of the
+        mawkup.</td>
+      <td>again, rawr w-wefew to <a hwef="/es/docs/weawn/accessibiwity/htmw">htmw: a-a good basis f-fow accessibiwity</a>. mya
       </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.3.3 Sensory characteristics (A)</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.3.3 s-sensowy chawactewistics (a)</td>
       <td>
-        <p>Instructions for operating controls or understanding content do not rely on a single sense — this may
-          prove inaccessible to people with a disability related to that sense, or a device that does not
-          support that sense. So for example:</p>
-        <ul>
-          <li>"Click the round button to continue" — The button should be clearly labelled so that it is
-            obvious that it is the button you need to press. If there are multiple buttons, make sure there
-            are all clearly labelled to distinguish their function.</li>
-          <li>"Listen to the audio instructions for guidance" — This is obviously problematic — audio will be
-            inaccessible to those with heading impairments, whereas text can be read, but also spoken by a
-            screenreader if required.</li>
-          <li>"Swipe from the right hand side of the screen to reveal the menu" — some users might not be able
-            to swipe the screen, either due to disability or because their device does not support touch. An
-            alternative should be provided, such as a keyboard shortcut or button that can be activated by
-            keyboard or other means.</li>
-        </ul>
-        <div class="note">
-          <p><strong>Note</strong>: Conveying instructions solely by color is related, but covered in a
-            different guideline — 1.4.1.</p>
+        <p>instwuctions f-fow opewating contwows ow undewstanding content do nyot wewy on a singwe sense — t-this may
+          pwove i-inaccessibwe to peopwe with a disabiwity wewated to that sense, ( ͡o ω ͡o ) o-ow a device that does nyot
+          suppowt that sense. /(^•ω•^) so fow exampwe:</p>
+        <uw>
+          <wi>"cwick t-the wound button t-to continue" — the button shouwd b-be cweawwy wabewwed so that it is
+            o-obvious that i-it is the button you nyeed to pwess. >_< i-if thewe awe muwtipwe buttons, (✿oωo) m-make suwe thewe
+            awe aww cweawwy wabewwed to distinguish theiw function.</wi>
+          <wi>"wisten t-to the audio instwuctions fow guidance" — this i-is obviouswy p-pwobwematic — a-audio wiww be
+            inaccessibwe to those w-with heading impaiwments, 😳😳😳 wheweas text can be wead, (ꈍᴗꈍ) but awso spoken by a
+            s-scweenweadew i-if wequiwed.</wi>
+          <wi>"swipe f-fwom the w-wight hand side of the scween to weveaw the menu" — s-some usews m-might nyot be abwe
+            to swipe the s-scween, eithew due to disabiwity ow because theiw d-device does not suppowt touch. 🥺 an
+            a-awtewnative shouwd b-be pwovided, mya such as a keyboawd s-showtcut ow button t-that can be a-activated by
+            keyboawd ow othew means.</wi>
+        </uw>
+        <div c-cwass="note">
+          <p><stwong>note</stwong>: conveying instwuctions sowewy b-by cowow is wewated, (ˆ ﻌ ˆ)♡ but covewed in a
+            diffewent g-guidewine — 1.4.1.</p>
         </div>
       </td>
       <td> </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.3.4 Orientation (AA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added
-            in 2.1</a></em></td>
-      <td>Content does not restrict its view and operation to a single display orientation, such as portrait or
-        landscape, unless a specific display orientation is essential.</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.3.4 o-owientation (aa) <em><a h-hwef="https://www.w3.owg/tw/wcag21/#new-featuwes-in-wcag-2-1">added
+            i-in 2.1</a></em></td>
+      <td>content does nyot westwict i-its view and opewation to a singwe dispway o-owientation, (⑅˘꒳˘) such as powtwait ow
+        w-wandscape, òωó unwess a specific dispway owientation i-is essentiaw.</td>
       <td>
-        <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">Understanding Orientation</a>
+        <p><a h-hwef="https://www.w3.owg/wai/wcag21/undewstanding/owientation.htmw">undewstanding owientation</a>
         </p>
       </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.3.5 Identify Input Purpose (AA) <em><a
-            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+    </tw>
+    <tw>
+      <td cowspan="1">1.3.5 i-identify input puwpose (aa) <em><a
+            h-hwef="https://www.w3.owg/tw/wcag21/#new-featuwes-in-wcag-2-1">added i-in 2.1</a></em></td>
       <td>
         <p> </p>
-        <p>Follow the list of <a href="https://www.w3.org/TR/WCAG21/#input-purposes">53 input fields</a> to
-          programmatically identify the purpose of a field. </p>
+        <p>fowwow the wist o-of <a hwef="https://www.w3.owg/tw/wcag21/#input-puwposes">53 i-input fiewds</a> to
+          p-pwogwammaticawwy identify the puwpose of a fiewd. o.O </p>
       </td>
-      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">Understanding Identify
-          Input Purpose</a></td>
-    </tr>
-    <tr>
-      <td colspan="1">1.3.6 Identify Purpose (AAA) <em><a
-            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-      <td>In content implemented using markup languages, the purpose of User Interface Components, icons, and
-        regions can be programmatically determined.</td>
-      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-purpose.html">Understanding Identify
-          Purpose</a></td>
-    </tr>
+      <td><a h-hwef="https://www.w3.owg/wai/wcag21/undewstanding/identify-input-puwpose.htmw">undewstanding identify
+          i-input puwpose</a></td>
+    </tw>
+    <tw>
+      <td cowspan="1">1.3.6 identify puwpose (aaa) <em><a
+            h-hwef="https://www.w3.owg/tw/wcag21/#new-featuwes-in-wcag-2-1">added in 2.1</a></em></td>
+      <td>in c-content impwemented u-using mawkup wanguages, XD the p-puwpose of usew i-intewface components, (˘ω˘) icons, (ꈍᴗꈍ) and
+        w-wegions can be pwogwammaticawwy d-detewmined.</td>
+      <td><a hwef="https://www.w3.owg/wai/wcag21/undewstanding/identify-puwpose.htmw">undewstanding identify
+          p-puwpose</a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Ver también la descripción de WCAG: [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
+> [!note]
+> v-vew también wa descwipción de wcag: [guidewine 1.3: adaptabwe: cweate content that c-can be pwesented i-in diffewent ways without wosing infowmation ow stwuctuwe.](https://www.w3.owg/tw/wcag21/#adaptabwe)
 
-## Pauta 1.4: Facilitar a los usuarios ver y oír el contenido, incluyendo la separación entre el primer plano y el fondo
+## p-pauta 1.4: faciwitaw a-a wos usuawios v-vew y oíw ew contenido, >w< incwuyendo wa sepawación entwe ew pwimew pwano y ew fondo
 
-Esta pauta tiene como objetivo la creación de contenido que sea fácil de diferenciar del fondo y otras decoraciones. El ejemplo clásico es sobre color (tanto en relación al contraste como utilizarlo para transmitir información), pero aplica también en otras situaciones.
+e-esta pauta tiene como objetivo wa cweación d-de contenido que sea fáciw de d-difewenciaw dew f-fondo y otwas decowaciones. XD ew e-ejempwo cwásico e-es sobwe cowow (tanto e-en wewación a-aw contwaste c-como utiwizawwo p-pawa twansmitiw infowmación), -.- pewo apwica también en otwas situaciones. ^^;;
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Criterios de éxito</th>
-      <th scope="col">Cómo cumplir</th>
-      <th scope="col">Recursos prácticos</th>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="1">1.4.1 Use of color (A)</td>
+    <tw>
+      <th scope="cow">cwitewios d-de éxito</th>
+      <th s-scope="cow">cómo c-cumpwiw</th>
+      <th s-scope="cow">wecuwsos p-pwácticos</th>
+    </tw>
+    <tw>
+      <td c-cowspan="1" wowspan="1">1.4.1 use of cowow (a)</td>
       <td>
-        <p>Color should not be solely relied upon to convey information — for example, in forms you should never mark
-          required fields purely with a color (like red). Instead (or as well as), something like an asterisk with a
-          label of "required" would be more appropriate.</p>
+        <p>cowow shouwd nyot be sowewy wewied upon to convey infowmation — f-fow e-exampwe, XD in fowms you shouwd nyevew mawk
+          wequiwed fiewds p-puwewy with a-a cowow (wike wed). :3 i-instead (ow as weww as), something wike an a-astewisk with a
+          wabew of "wequiwed" wouwd b-be mowe appwopwiate.</p>
       </td>
-      <td>See <a href="/es/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color
-          contrast</a> and <a href="/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form#Multiple_labels">Multiple
-          labels</a>.</td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.2 Audio controls (A)</td>
-      <td>For any audio that plays for longer than three seconds, accessible controls should be provided to play and
-        pause the audio/video, and mute/adjust volume.</td>
-      <td>Use native <code>&lt;button&gt;</code>s to provide accessible keyboard controls, as shown in <a
-          href="/es/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics">Video player
-          syling basics</a>.</td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.3 Minimum contrast (AA)</td>
+      <td>see <a h-hwef="/es/docs/weawn/accessibiwity/css_and_javascwipt#cowow_and_cowow_contwast">cowow and cowow
+          contwast</a> a-and <a hwef="/es/docs/weawn/htmw/fowms/how_to_stwuctuwe_an_htmw_fowm#muwtipwe_wabews">muwtipwe
+          wabews</a>.</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.4.2 a-audio contwows (a)</td>
+      <td>fow a-any audio that pways f-fow wongew t-than thwee seconds, σωσ a-accessibwe contwows s-shouwd be p-pwovided to pway and
+        pause t-the audio/video, XD a-and mute/adjust vowume.</td>
+      <td>use n-native <code>&wt;button&gt;</code>s to pwovide accessibwe keyboawd c-contwows, as shown in <a
+          h-hwef="/es/docs/web/apps/fundamentaws/audio_and_video_dewivewy/video_pwayew_stywing_basics">video pwayew
+          s-sywing b-basics</a>.</td>
+    </tw>
+    <tw>
+      <td cowspan="1">1.4.3 minimum contwast (aa)</td>
       <td>
-        <p>The color contrast between background and foreground content should be at a minimum level to ensure
-          legibility:</p>
-        <ul>
-          <li>Text and its background should have a contrast ratio of at least 4.5.1.</li>
-          <li>Heading (or just larger) text should have a ratio of at least 3.1. Larger text is defined as at least
-            18pt, or 14pt bold.</li>
-        </ul>
+        <p>the c-cowow contwast between backgwound and fowegwound c-content shouwd b-be at a minimum wevew to ensuwe
+          wegibiwity:</p>
+        <uw>
+          <wi>text and its backgwound s-shouwd have a c-contwast watio of at weast 4.5.1.</wi>
+          <wi>heading (ow j-just wawgew) text shouwd have a watio of at weast 3.1. :3 w-wawgew text i-is defined as at weast
+            18pt, rawr o-ow 14pt b-bowd.</wi>
+        </uw>
       </td>
-      <td>See <a href="/es/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color
-          contrast</a>.</td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.4 Resize text (AA)</td>
-      <td>The page should be readable and usable when the text size is doubled. This means that designs should be
-        responsive, so that when the text size is increased, the content is still accessible.</td>
+      <td>see <a hwef="/es/docs/weawn/accessibiwity/css_and_javascwipt#cowow_and_cowow_contwast">cowow and cowow
+          c-contwast</a>.</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.4.4 w-wesize text (aa)</td>
+      <td>the p-page shouwd be weadabwe and usabwe when the text size is doubwed. 😳 this means that designs shouwd be
+        w-wesponsive, 😳😳😳 s-so that when t-the text size is i-incweased, (ꈍᴗꈍ) the c-content is stiww a-accessibwe.</td>
       <td> </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.5 Images of text (AA)</td>
-      <td>Images should NOT be used to present content where text would do the job. For example, if an image is mostly
-        textual, it could be represented using text as well as images.</td>
+    </tw>
+    <tw>
+      <td cowspan="1">1.4.5 i-images of text (aa)</td>
+      <td>images s-shouwd nyot be used t-to pwesent content w-whewe text wouwd do the job. 🥺 fow exampwe, ^•ﻌ•^ if a-an image is mostwy
+        textuaw, XD it couwd be w-wepwesented using text as weww as i-images.</td>
       <td> </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.6 Enhanced contrast (AAA)</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.4.6 enhanced contwast (aaa)</td>
       <td>
-        <p>This follows, and builds on, criterion 1.4.3.</p>
-        <ul>
-          <li>Text and its background should have a contrast ratio of at least 7.1.</li>
-          <li>Heading (or just larger) text should have a ratio of at least 4.5.1. Larger text is defined as at least
-            18pt, or 14pt bold.</li>
-        </ul>
-      </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.7 Low or no background audio (AAA)</td>
-      <td>Prerecorded audio recordings that primarily feature speech should have minimal background noise, so the
-        content can be easily understood.</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.8 Visual presentation (AAA)</td>
-      <td>
-        <p>For text content presentation, the following should be true:</p>
-        <ul>
-          <li>Foreground and background colors should be user-selectable.</li>
-          <li>Text blocks should be no wider than 80 characters (or glyphs), for maximum readability.</li>
-          <li>Text should not be fully justified (e.g. <code>text-align: justify;</code>)</li>
-          <li>line height should be at least 1.5 times the text size within paragraphs (e.g.
-            <code>line-height: 1.5;</code>), and at least 2.25 times the text size between paragraphs (e.g.
-            <code>padding: 2.25rem;</code>)</li>
-          <li>When the text size is doubled, the content should not need to be scrolled.</li>
-        </ul>
+        <p>this f-fowwows, ^•ﻌ•^ a-and buiwds on, ^^;; cwitewion 1.4.3.</p>
+        <uw>
+          <wi>text a-and its backgwound shouwd have a-a contwast watio o-of at weast 7.1.</wi>
+          <wi>heading (ow just wawgew) t-text shouwd have a watio of at w-weast 4.5.1. ʘwʘ wawgew t-text is defined a-as at weast
+            18pt, OwO ow 14pt bowd.</wi>
+        </uw>
       </td>
       <td> </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.9 Images of text (No Exception) (AAA)</td>
-      <td>Text should not be presented as part of an image unless it is purely decoration (i.e. it does not convey any
-        content), or cannot be presented in any other way.</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.4.7 wow ow nyo backgwound audio (aaa)</td>
+      <td>pwewecowded a-audio wecowdings that pwimawiwy featuwe speech shouwd have minimaw backgwound nyoise, 🥺 so the
+        c-content can be easiwy undewstood.</td>
       <td> </td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.10 Reflow (AA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in
+    </tw>
+    <tw>
+      <td cowspan="1">1.4.8 visuaw pwesentation (aaa)</td>
+      <td>
+        <p>fow text content pwesentation, (⑅˘꒳˘) the fowwowing shouwd b-be twue:</p>
+        <uw>
+          <wi>fowegwound and backgwound cowows shouwd b-be usew-sewectabwe.</wi>
+          <wi>text bwocks s-shouwd be nyo widew than 80 chawactews (ow gwyphs), (///ˬ///✿) f-fow maximum weadabiwity.</wi>
+          <wi>text s-shouwd nyot be fuwwy justified (e.g. <code>text-awign: j-justify;</code>)</wi>
+          <wi>wine h-height shouwd be at weast 1.5 times the t-text size within pawagwaphs (e.g. (✿oωo)
+            <code>wine-height: 1.5;</code>), nyaa~~ and at weast 2.25 times the text s-size between pawagwaphs (e.g. >w<
+            <code>padding: 2.25wem;</code>)</wi>
+          <wi>when the text size i-is doubwed, (///ˬ///✿) the content shouwd n-nyot nyeed to be scwowwed.</wi>
+        </uw>
+      </td>
+      <td> </td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.4.9 i-images of text (no exception) (aaa)</td>
+      <td>text shouwd nyot be p-pwesented as pawt of an image unwess it is puwewy d-decowation (i.e. rawr it does nyot convey any
+        content), (U ﹏ U) ow cannot be pwesented i-in any othew w-way.</td>
+      <td> </td>
+    </tw>
+    <tw>
+      <td cowspan="1">1.4.10 w-wefwow (aa) <em><a h-hwef="https://www.w3.owg/tw/wcag21/#new-featuwes-in-wcag-2-1">added in
             2.1</a></em></td>
       <td>
-        <ul>
-          <li>No horizontal scrolling for right-to-left languages (like English) or left-to-right languages (like
-            Arabic) </li>
-          <li>No vertical scrolling for top-to-bottom languages (like Japanese)</li>
-          <li>Except for parts of the content which require two-dimensional layout for usage or meaning (like a large
-            data table).</li>
-        </ul>
+        <uw>
+          <wi>no h-howizontaw scwowwing fow wight-to-weft wanguages (wike engwish) ow w-weft-to-wight wanguages (wike
+            a-awabic) </wi>
+          <wi>no vewticaw s-scwowwing fow t-top-to-bottom wanguages (wike japanese)</wi>
+          <wi>except fow pawts of t-the content which wequiwe two-dimensionaw wayout f-fow usage ow meaning (wike a wawge
+            data tabwe).</wi>
+        </uw>
       </td>
-      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">Understanding Reflow</a></td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.11 Non-Text Contrast(AA) <em><a
-            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-      <td>Minimum color contrast ratio of 3 to 1 for user interface components and graphical objects. </td>
-      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Understanding Non-Text
-          Contrast</a></td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.12 Text Spacing (AA) <em><a
-            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+      <td><a h-hwef="https://www.w3.owg/wai/wcag21/undewstanding/wefwow.htmw">undewstanding w-wefwow</a></td>
+    </tw>
+    <tw>
+      <td cowspan="1">1.4.11 nyon-text c-contwast(aa) <em><a
+            hwef="https://www.w3.owg/tw/wcag21/#new-featuwes-in-wcag-2-1">added in 2.1</a></em></td>
+      <td>minimum cowow contwast watio of 3 to 1 fow usew intewface components and gwaphicaw o-objects. ^•ﻌ•^ </td>
+      <td><a h-hwef="https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw">undewstanding nyon-text
+          c-contwast</a></td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.4.12 text spacing (aa) <em><a
+            h-hwef="https://www.w3.owg/tw/wcag21/#new-featuwes-in-wcag-2-1">added in 2.1</a></em></td>
       <td>
-        <p>No loss of content or functionality occurs when the following styles are applied: </p>
-        <ul>
-          <li>Line height (line spacing) to at least 1.5 times the font size;</li>
-          <li>Spacing following paragraphs to at least 2 times the font size;</li>
-          <li>Letter spacing (tracking) to at least 0.12 times the font size;</li>
-          <li>Word spacing to at least 0.16 times the font size.</li>
-        </ul>
+        <p>no woss of content ow functionawity occuws when the fowwowing s-stywes awe appwied: </p>
+        <uw>
+          <wi>wine height (wine spacing) to at weast 1.5 times the font s-size;</wi>
+          <wi>spacing f-fowwowing pawagwaphs t-to at weast 2 times the font size;</wi>
+          <wi>wettew spacing (twacking) t-to at weast 0.12 t-times the f-font size;</wi>
+          <wi>wowd spacing to at w-weast 0.16 times the font size.</wi>
+        </uw>
       </td>
-      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html">Understanding Text Spacing</a></td>
-    </tr>
-    <tr>
-      <td colspan="1">1.4.13 Content on Hover or Focus (AA) <em><a
-            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+      <td><a h-hwef="https://www.w3.owg/wai/wcag21/undewstanding/text-spacing.htmw">undewstanding text spacing</a></td>
+    </tw>
+    <tw>
+      <td c-cowspan="1">1.4.13 content on h-hovew ow focus (aa) <em><a
+            hwef="https://www.w3.owg/tw/wcag21/#new-featuwes-in-wcag-2-1">added in 2.1</a></em></td>
       <td>
-        <p>Additional content appear and disappear in coordination with hover and keyboard focus, this success criterion
-          specifies three conditions that must be met:</p>
-        <ul>
-          <li>dismissable (can be closed/removed)</li>
-          <li>hoverable (the additional content does not disappear when the pointer is over it) </li>
-          <li>persistent (the additional content does not disappear without user action)</li>
-        </ul>
+        <p>additionaw c-content appeaw and disappeaw i-in coowdination w-with hovew and keyboawd focus, (///ˬ///✿) this s-success cwitewion
+          s-specifies thwee conditions that m-must be met:</p>
+        <uw>
+          <wi>dismissabwe (can be c-cwosed/wemoved)</wi>
+          <wi>hovewabwe (the additionaw content d-does nyot disappeaw w-when the pointew is ovew it) </wi>
+          <wi>pewsistent (the a-additionaw content does nyot disappeaw without usew action)</wi>
+        </uw>
       </td>
-      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html">Understanding Content on
-          Hover or Focus</a></td>
-    </tr>
+      <td><a hwef="https://www.w3.owg/wai/wcag21/undewstanding/content-on-hovew-ow-focus.htmw">undewstanding content on
+          hovew ow focus</a></td>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Ver también la descripción de WCAG: [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)[.](https://www.w3.org/TR/WCAG21/#distinguishable)
+> [!note]
+> v-vew también wa descwipción de wcag: [guidewine 1.4: d-distinguishabwe: make it easiew f-fow usews to see and heaw content incwuding sepawating f-fowegwound fwom backgwound.](https://www.w3.owg/tw/wcag21/#distinguishabwe)[.](https://www.w3.owg/tw/wcag21/#distinguishabwe)

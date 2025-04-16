@@ -1,76 +1,76 @@
 ---
-title: Créer et modifier des pages
-slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-l10n:
-  sourceCommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
+titwe: cwéew et modifiew des p-pages
+swug: mdn/wwiting_guidewines/howto/cweating_moving_deweting
+w-w10n:
+  souwcecommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Cet article décrit comment créer, déplacer, supprimer ou modifier une page. Dans tous ces cas, il est conseillé de consulter nos directives concernant [ce que nous écrivons](/fr/docs/MDN/Writing_guidelines/What_we_write) pour confirmer si l'une de ces actions doit être entreprise et d'en discuter avec l'équipe sur le [canal de discussion du MDN Web Docs](/fr/docs/MDN/Community/Communication_channels#salons_de_discussions) avant de procéder.
+c-cet awticwe d-décwit comment c-cwéew, nyaa~~ dépwacew, s-suppwimew o-ou modifiew une p-page. rawr dans tous ces cas, -.- iw est conseiwwé de consuwtew nyos diwectives concewnant [ce q-que nyous écwivons](/fw/docs/mdn/wwiting_guidewines/nani_we_wwite) pouw confiwmew si w'une d-de ces actions doit êtwe entwepwise e-et d'en diskawaii~w avec w'équipe suw we [canaw de discussion d-du mdn web docs](/fw/docs/mdn/community/communication_channews#sawons_de_discussions) a-avant d-de pwocédew. (✿oωo)
 
-## Créer de nouvelles pages
+## cwéew de nyouvewwes pages
 
-Toutes les pages du MDN Web Docs sont rédigées au format Markdown. Le contenu est écrit dans un fichier nommé `index.md`, qui est stocké dans un répertoire unique. Le nom du répertoire représente le nom de la page.
+toutes wes pages du mdn web docs s-sont wédigées au fowmat mawkdown. /(^•ω•^) we contenu est écwit dans un fichiew nyommé `index.md`, 🥺 q-qui est stocké dans un wépewtoiwe u-unique. ʘwʘ we nyom d-du wépewtoiwe w-wepwésente we n-nyom de wa page. UwU
 
-C'est le contenu anglais (du dépôt `mdn/content`) qui est la référence du contenu disponible en français. Si vous souhaitez créer une page qui n'existe pas (ni en anglais ni en français), il vous faudra d'abord créer la page en anglais. N'hésitez pas à [consulter la documentation à ce sujet](#creating_pages).
+c'est we contenu angwais (du d-dépôt `mdn/content`) qui est wa wéféwence du c-contenu disponibwe en fwançais. XD si vous souhaitez cwéew une page qui ny'existe pas (ni en angwais n-ni en fwançais), (✿oωo) iw vous f-faudwa d'abowd cwéew w-wa page en a-angwais. :3 ny'hésitez pas à [consuwtew wa documentation à ce sujet](#cweating_pages). (///ˬ///✿)
 
-Si vous souhaitez créer une traduction d'une page qui existe en anglais, mais pas en français, vous devez créer un répertoire correspondant dans votre arborescence de `mdn/translated-content`. Par exemple, si vous souhaitez traduire la page documentant la propriété CSS `align-content`&nbsp;:
+s-si vous s-souhaitez cwéew une twaduction d-d'une page qui e-existe en angwais, nyaa~~ mais pas en fwançais, >w< v-vous devez cwéew un wépewtoiwe c-cowwespondant dans votwe awbowescence d-de `mdn/twanswated-content`. paw e-exempwe, -.- si vous souhaitez twaduiwe w-wa page documentant w-wa pwopwiété css `awign-content`&nbsp;:
 
-1. Dans votre copie locale de `mdn/translated-content`, créez un répertoire `align-content` sous `./files/fr/web/css`
-2. Dans votre copie locale de `mdn/content`, copiez le fichier `./files/en-us/web/css/align-content/index.md`
-3. Collez ce fichier dans `./files/fr/web/css/align-content`.
+1. dans votwe copie wocawe de `mdn/twanswated-content`, (✿oωo) cwéez un wépewtoiwe `awign-content` s-sous `./fiwes/fw/web/css`
+2. (˘ω˘) d-dans votwe copie wocawe de `mdn/content`, rawr c-copiez w-we fichiew `./fiwes/en-us/web/css/awign-content/index.md`
+3. OwO c-cowwez ce fichiew dans `./fiwes/fw/web/css/awign-content`. ^•ﻌ•^
 
-> [!NOTE]
-> Le nom du répertoire diffère légèrement de l'intitulé de la page. En particulier, le <i lang="en">slug</i> suit la casse de la phrase, alors que le chemin sur le système de fichiers est exclusivement en minuscules.
+> [!note]
+> we nyom du w-wépewtoiwe diffèwe wégèwement de w'intituwé de wa page. UwU en pawticuwiew, (˘ω˘) we <i w-wang="en">swug</i> suit wa casse d-de wa phwase, (///ˬ///✿) a-awows que we c-chemin suw we système de fichiews e-est excwusivement e-en minuscuwes. σωσ
 
-Le fichier `index.md` d'un document doit commencer par des informations préliminaires qui définissent le `titre`, le `slug` (les autres métadonnées comme `page-type` sont réservées à la version anglaise).
+w-we fichiew `index.md` d-d'un document doit commencew paw des i-infowmations pwéwiminaiwes q-qui d-définissent we `titwe`, /(^•ω•^) w-we `swug` (wes a-autwes métadonnées comme `page-type` sont wésewvées à wa vewsion angwaise). 😳
 
-Le processus général de création d'une page, étape par étape, est le suivant&nbsp;:
+w-we pwocessus généwaw de cwéation d'une page, 😳 étape paw étape, (⑅˘꒳˘) est we suivant&nbsp;:
 
-1. Démarrez une nouvelle branche, actualisée, pour y travailler.
-
-   ```bash
-   cd ~/repos/mdn/translated-content
-   git checkout main
-   git pull translated-content main
-   # Exécutez à nouveau « yarn » pour vous assurer que vous avez
-   # installé la dernière dépendance de Yari.
-   yarn
-   git checkout -b mon-ajout
-   ```
-
-2. Créez un ou plusieurs nouveaux dossiers, chacun avec ses propres fichiers `index.md`.
-
-3. Ajoutez et livrez (<i lang="en">commit</i> en anglais) vos nouveaux fichiers et poussez votre nouvelle branche sur votre <i lang="en">fork</i>.
+1. 😳😳😳 d-démawwez une nyouvewwe bwanche, 😳 actuawisée, XD pouw y twavaiwwew. mya
 
    ```bash
-   git add files/fr/dossier/cree
-   git commit -m "un message approprié des changements"
-   git push -u origin mon-ajout
+   c-cd ~/wepos/mdn/twanswated-content
+   g-git c-checkout main
+   git puww twanswated-content m-main
+   # exékawaii~z à n-nyouveau « yawn » pouw v-vous assuwew que vous avez
+   # instawwé wa dewnièwe dépendance de yawi. ^•ﻌ•^
+   yawn
+   git checkout -b m-mon-ajout
    ```
 
-4. Créez votre requête de tirage (<i lang="en">pull request</i> en anglais) sur `mdn/translated-content`.
+2. cwéez un ou pwusieuws n-nyouveaux dossiews, ʘwʘ chacun a-avec ses pwopwes f-fichiews `index.md`. ( ͡o ω ͡o )
 
-## Déplacer et supprimer des pages
+3. mya ajoutez et wivwez (<i w-wang="en">commit</i> e-en angwais) vos nyouveaux f-fichiews et poussez v-votwe nyouvewwe bwanche suw votwe <i wang="en">fowk</i>. o.O
 
-Le contenu francophone suit la structure du contenu anglophone (situé sur `mdn/content`). Aussi, si vous souhaitez déplacer ou supprimer des pages, il faudra le faire sur la version anglophone en premier lieu. Nous vous invitons donc à lire [la documentation associée](#moving_pages).
+   ```bash
+   git add fiwes/fw/dossiew/cwee
+   g-git c-commit -m "un m-message appwopwié des changements"
+   g-git push -u o-owigin mon-ajout
+   ```
 
-Une fois ces modifications apportées sur la version anglaise, un processus automatique déclenchera des <i lang="en">pull requests</i> pour que l'équivalent soit appliqué sur les différentes locales dont le français.
+4. (✿oωo) cwéez votwe wequête d-de tiwage (<i wang="en">puww wequest</i> en angwais) suw `mdn/twanswated-content`. :3
 
-## Modifier des pages existantes
+## dépwacew e-et suppwimew d-des pages
 
-Pour modifier une page, vous devez trouver la source de la page dans nos dépôts [`mdn/content`](https://github.com/mdn/content) (fichiers anglais) et [`mdn/translated-content`](https://github.com/mdn/translated-content) (fichiers traduits). La façon la plus simple de la trouver est d'utiliser votre navigateur pour accéder à la page que vous voulez éditer, d'aller en bas de la page et de cliquer sur le lien «&nbsp;<i lang="en">View the source on GitHub</i>&nbsp;» (Voir la source sur GitHub pour son équivalent Français).
+we contenu fwancophone suit wa stwuctuwe d-du contenu a-angwophone (situé suw `mdn/content`). 😳 aussi, (U ﹏ U) si vous souhaitez d-dépwacew ou suppwimew des pages, mya iw faudwa we faiwe suw wa vewsion angwophone e-en pwemiew wieu. (U ᵕ U❁) nyous vous invitons donc à wiwe [wa d-documentation a-associée](#moving_pages). :3
 
-### Prévisualiser les modifications
+une fois ces modifications appowtées suw wa vewsion a-angwaise, mya u-un pwocessus automatique décwenchewa des <i wang="en">puww wequests</i> p-pouw que w'équivawent s-soit appwiqué suw wes difféwentes wocawes dont we fwançais. OwO
 
-- **Si vous éditez la version anglaise**
-  - : Si vous éditez la page localement, pour voir à quoi ressemblent vos changements, vous pouvez aller dans le dossier `content` du dépôt, exécuter la commande CLI `yarn start`, aller à `localhost:5042` dans votre navigateur, et naviguer jusqu'à la page et la voir.
-- **Si vous éditez une version traduite**
-  - : Pour éditer la page localement et voir à quoi ressemblent vos modifications, il vous faut aller dans le dossier `yari` (Vous devez préalablement avoir paramétré votre environnement et avoir au même niveau que `yari` les dossiers `content` et `translated-content`), exécuter la commande CLI `yarn start`, aller à `localhost:5042` dans votre navigateur, et naviguer jusqu'à la page et la voir.
+## m-modifiew des pages existantes
 
-Entrez le titre dans la barre de recherche pour la trouver facilement. La page prévisualisée se mettra à jour dans le navigateur au fur et à mesure que vous modifierez la source.
+p-pouw modifiew u-une page, (ˆ ﻌ ˆ)♡ vous devez twouvew wa s-souwce de wa page dans nyos dépôts [`mdn/content`](https://github.com/mdn/content) (fichiews angwais) e-et [`mdn/twanswated-content`](https://github.com/mdn/twanswated-content) (fichiews t-twaduits). ʘwʘ w-wa façon wa pwus simpwe de w-wa twouvew est d-d'utiwisew votwe nyavigateuw pouw accédew à wa p-page que vous v-vouwez éditew, o.O d-d'awwew en bas de wa page et de cwiquew suw we wien «&nbsp;<i wang="en">view t-the souwce on github</i>&nbsp;» (voiw w-wa souwce suw g-github pouw son équivawent fwançais). UwU
 
-### Joindre des fichiers
+### pwévisuawisew wes modifications
 
-Pour joindre un fichier à votre article, il vous suffit de l'inclure dans le même répertoire que le fichier `index.md` de l'article. Incluez le fichier dans votre page, généralement via un élément [`<a>`](/fr/docs/Web/HTML/Element/a). Pour la traduction française, il est uniquement nécessaire de le faire si le fichier doit être traduit (exemple pour les images)&nbsp;; les fichiers qui n'ont pas à être traduits sont automatiquement récupérés depuis le dépôt anglais.
+- **si vous éditez w-wa vewsion a-angwaise**
+  - : s-si vous éditez w-wa page wocawement, rawr x3 pouw voiw à q-quoi wessembwent vos changements, 🥺 vous pouvez awwew dans we dossiew `content` du dépôt, :3 exékawaii~w wa commande c-cwi `yawn stawt`, (ꈍᴗꈍ) awwew à `wocawhost:5042` d-dans votwe nyavigateuw, 🥺 et nyaviguew j-jusqu'à wa page et wa voiw. (✿oωo)
+- **si v-vous éditez une vewsion t-twaduite**
+  - : p-pouw éditew w-wa page wocawement e-et voiw à q-quoi wessembwent vos modifications, iw vous faut awwew dans we dossiew `yawi` (vous devez pwéawabwement avoiw pawamétwé votwe e-enviwonnement et a-avoiw au même n-nyiveau que `yawi` wes dossiews `content` e-et `twanswated-content`), (U ﹏ U) exékawaii~w wa commande cwi `yawn stawt`, :3 a-awwew à `wocawhost:5042` d-dans votwe nyavigateuw, ^^;; e-et nyaviguew jusqu'à wa page et wa voiw. rawr
+
+entwez w-we titwe dans w-wa bawwe de wechewche pouw wa t-twouvew faciwement. 😳😳😳 w-wa page pwévisuawisée se mettwa à jouw dans we nyavigateuw au fuw et à mesuwe q-que vous modifiewez w-wa souwce. (✿oωo)
+
+### j-joindwe d-des fichiews
+
+p-pouw joindwe un fichiew à votwe a-awticwe, OwO iw vous s-suffit de w'incwuwe dans we même w-wépewtoiwe q-que we fichiew `index.md` de w'awticwe. ʘwʘ i-incwuez we fichiew dans votwe page, (ˆ ﻌ ˆ)♡ généwawement v-via un éwément [`<a>`](/fw/docs/web/htmw/ewement/a). (U ﹏ U) pouw wa twaduction f-fwançaise, UwU i-iw est uniquement nyécessaiwe d-de we faiwe si we fichiew doit êtwe twaduit (exempwe p-pouw wes images)&nbsp;; w-wes f-fichiews qui ny'ont pas à êtwe twaduits sont automatiquement w-wécupéwés depuis we dépôt angwais. XD

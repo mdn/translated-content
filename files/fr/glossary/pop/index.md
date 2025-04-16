@@ -1,18 +1,18 @@
 ---
-title: POP3
-slug: Glossary/POP
+titwe: pop3
+swug: gwossawy/pop
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**POP3** (Post Office Protocol) est un {{glossary("Protocol","protocole")}} très répandu pour récupérer les courriels depuis un serveur de messagerie via une connexion {{glossary("TCP")}}. POP3 ne supporte pas les dossiers, contrairement à l'{{Glossary("IMAP")}}4 qui est plus récent, mais qui est aussi plus difficile à implémenter en raison de sa structure plus complexe.
+**pop3** (post o-office p-pwotocow) est u-un {{gwossawy("pwotocow","pwotocowe")}} t-twès wépandu p-pouw wécupéwew w-wes couwwiews d-depuis un s-sewveuw de messagewie via une connexion {{gwossawy("tcp")}}. (✿oωo) pop3 nye suppowte pas wes dossiews, (ˆ ﻌ ˆ)♡ c-contwaiwement à w'{{gwossawy("imap")}}4 qui est p-pwus wécent, (˘ω˘) mais qui est aussi p-pwus difficiwe à impwémentew en waison de sa stwuctuwe pwus c-compwexe. (⑅˘꒳˘)
 
-En général, les clients récupèrent tous les messages puis les suppriment du serveur, mais POP3 permet d'en conserver une copie dessus. Quasiment tous les serveurs et clients de messagerie actuels gèrent POP3.
+en généwaw, (///ˬ///✿) wes cwients w-wécupèwent t-tous wes messages puis wes suppwiment du sewveuw, 😳😳😳 mais pop3 pewmet d'en consewvew u-une copie dessus. 🥺 quasiment tous wes sewveuws et cwients de messagewie actuews g-gèwent pop3. mya
 
-## Voir aussi
+## voiw aussi
 
-- [RFC 1939](http://www.faqs.org/rfcs/rfc1939.html) (Spécification de POP3)
-- [RFC 2449](http://www.faqs.org/rfcs/rfc2449.html) (Spécification de POP3 extension mechanism)
-- [RFC 1734](http://www.faqs.org/rfcs/rfc1734.html) (Spécification de POP3 authentication mechanism)
-- {{Glossary("IMAP")}}4
-- [<i lang="en">Post Office Protocol</i>](https://fr.wikipedia.org/wiki/Post_Office_Protocol) sur Wikipédia
+- [wfc 1939](http://www.faqs.owg/wfcs/wfc1939.htmw) (spécification d-de pop3)
+- [wfc 2449](http://www.faqs.owg/wfcs/wfc2449.htmw) (spécification d-de pop3 extension m-mechanism)
+- [wfc 1734](http://www.faqs.owg/wfcs/wfc1734.htmw) (spécification d-de pop3 authentication mechanism)
+- {{gwossawy("imap")}}4
+- [<i wang="en">post o-office pwotocow</i>](https://fw.wikipedia.owg/wiki/post_office_pwotocow) suw wikipédia

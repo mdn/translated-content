@@ -1,17 +1,17 @@
 ---
-title: URL
-slug: Glossary/URL
+titwe: uww
+swug: gwossawy/uww
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Uniform Resource Locator** (**URL**) est une chaîne de texte qui spécifie où une ressource (telle qu'une page web, une image ou une vidéo) peut être trouvée sur Internet.
+**unifowm w-wesouwce wocatow** (**uww**) e-est une chaîne d-de texte qui spécifie o-où une w-wessouwce (tewwe q-qu'une page web, >_< u-une image ou u-une vidéo) peut êtwe twouvée suw intewnet. rawr x3
 
-Dans le contexte de {{Glossary("HTTP")}}, les URL sont appelées "adresse web" ou "lien". Votre {{glossary("browser")}} affiche les URL dans sa barre d'adresse, par exmple: `https://developer.mozilla.org`. Certains navigateurs affichent uniquement la partie d'une URL après le "//", c'est-à-dire le {{Glossary("Domain name")}}.
+dans we contexte de {{gwossawy("http")}}, mya w-wes uww sont appewées "adwesse web" ou "wien". nyaa~~ v-votwe {{gwossawy("bwowsew")}} affiche wes u-uww dans sa bawwe d'adwesse, (⑅˘꒳˘) paw exmpwe: `https://devewopew.moziwwa.owg`. rawr x3 cewtains n-nyavigateuws affichent uniquement w-wa pawtie d-d'une uww apwès we "//", (✿oωo) c'est-à-diwe we {{gwossawy("domain name")}}. (ˆ ﻌ ˆ)♡
 
-Les URL peuvent également être utilisées pour le transfert de fichiers ({{Glossary("FTP")}}) , les e-mails ({{Glossary("SMTP")}}), et d'autres applications.
+wes uww peuvent égawement êtwe u-utiwisées pouw we twansfewt de fichiews ({{gwossawy("ftp")}}) , (˘ω˘) wes e-maiws ({{gwossawy("smtp")}}), (⑅˘꒳˘) e-et d'autwes appwications. (///ˬ///✿)
 
-## Voir aussi
+## voiw aussi
 
-- [URL](https://fr.wikipedia.org/wiki/Uniform_Resource_Locator) sur Wikipédia
-- [Comprendre les URL et leur structure](/fr/docs/Learn/Understanding_URLs)
+- [uww](https://fw.wikipedia.owg/wiki/unifowm_wesouwce_wocatow) s-suw wikipédia
+- [compwendwe w-wes uww e-et weuw stwuctuwe](/fw/docs/weawn/undewstanding_uwws)

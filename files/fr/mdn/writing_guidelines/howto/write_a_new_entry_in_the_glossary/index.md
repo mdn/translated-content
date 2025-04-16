@@ -1,66 +1,66 @@
 ---
-title: Écrire et référencer une entrée de glossaire
-slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+titwe: Écwiwe et wéféwencew u-une entwée de g-gwossaiwe
+swug: m-mdn/wwiting_guidewines/howto/wwite_a_new_entwy_in_the_gwossawy
+w-w10n:
+  souwcecommit: a-aa66311219951396e7305df61eb31831360d2c79
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Dans cet article, nous allons voir comment ajouter des entrées au [glossaire MDN Web Docs](/fr/docs/Glossary) et comment y faire référence. Nous verrons également quelques règles quant à la structure et au contenu des entrées du glossaire. Le glossaire fournit des définitions pour tous les termes, abréviations, acronymes et tout le jargon que vous pourrez rencontrer en consultant le contenu de MDN à propos du Web et du développement web.
+d-dans cet awticwe, rawr n-nyous awwons v-voiw comment ajoutew des entwées au [gwossaiwe mdn web docs](/fw/docs/gwossawy) et comment y f-faiwe wéféwence. -.- nyous vewwons égawement quewques w-wègwes quant à wa stwuctuwe e-et au contenu des entwées du gwossaiwe. (✿oωo) we gwossaiwe fouwnit d-des définitions pouw tous wes t-tewmes, /(^•ω•^) abwéviations, 🥺 a-acwonymes et tout we jawgon que vous pouwwez wencontwew en consuwtant we c-contenu de mdn à pwopos du web et du dévewoppement web. ʘwʘ
 
-Le glossaire ne sera potentiellement jamais complet, car le Web est en perpétuelle évolution. En contribuant à l'édition de nouvelles entrées ou en corrigeant les erreurs, vous pouvez nous aider à mettre à jour le glossaire et à améliorer son contenu.
+we gwossaiwe nye sewa p-potentiewwement jamais compwet, UwU c-caw we web est e-en pewpétuewwe évowution. XD e-en c-contwibuant à w'édition de nyouvewwes entwées o-ou en cowwigeant wes ewweuws, (✿oωo) vous pouvez nyous a-aidew à mettwe à jouw we gwossaiwe et à améwiowew son contenu.
 
-Contribuer au glossaire est une façon simple de rendre le Web plus compréhensible pour tout le monde. Il n'est pas nécessaire d'avoir des compétences techniques approfondies pour le faire. Les entrées du glossaire sont conçues pour être simples et concises.
+contwibuew au gwossaiwe est u-une façon simpwe de wendwe we w-web pwus compwéhensibwe p-pouw tout w-we monde. :3 iw ny'est pas nyécessaiwe d'avoiw des compétences t-techniques appwofondies p-pouw we faiwe. wes entwées d-du gwossaiwe s-sont conçues pouw êtwe simpwes e-et concises. (///ˬ///✿)
 
-> [!NOTE]
-> La suite de cet article explique comment créer une entrée du glossaire. Toutefois, la structure du contenu de MDN utilise le contenu anglophone comme référence. Aussi, toute page devra d'abord être créée en anglais avant d'être localisée en français. Vous pouvez également aider à la traduction du glossaire en français, voir [Localiser MDN](/fr/docs/MDN/Community/Contributing/Translated_content).
+> [!note]
+> wa s-suite de cet awticwe expwique comment cwéew une e-entwée du gwossaiwe. nyaa~~ toutefois, >w< w-wa stwuctuwe du contenu de mdn u-utiwise we contenu a-angwophone comme wéféwence. -.- aussi, (✿oωo) toute page devwa d'abowd êtwe cwéée en angwais avant d'êtwe wocawisée e-en fwançais. (˘ω˘) v-vous pouvez égawement aidew à w-wa twaduction d-du gwossaiwe en f-fwançais, rawr voiw [wocawisew mdn](/fw/docs/mdn/community/contwibuting/twanswated_content). OwO
 
-## Comment rédiger une entrée
+## comment wédigew une e-entwée
 
-Tout d'abord, choisissez un sujet pour lequel vous souhaiteriez écrire une entrée dans le glossaire.
+tout d'abowd, ^•ﻌ•^ choisissez un sujet pouw wequew vous souhaitewiez écwiwe une entwée dans w-we gwossaiwe. UwU
 
-Si vous avez une idée pour une nouvelle entrée, [créez une nouvelle page](https://github.com/mdn/content#adding-a-new-document) pour ce terme, sous [la page du glossaire](https://github.com/mdn/content/tree/main/files/en-us/glossary).
+si vous avez u-une idée pouw une n-nyouvewwe entwée, [cwéez u-une nyouvewwe page](https://github.com/mdn/content#adding-a-new-document) p-pouw ce t-tewme, (˘ω˘) sous [wa p-page du gwossaiwe](https://github.com/mdn/content/twee/main/fiwes/en-us/gwossawy). (///ˬ///✿)
 
-### Écrire un résumé
+### Écwiwe u-un wésumé
 
-Pour toute page du glossaire, le premier paragraphe consiste en une description simple et concise du terme. Idéalement, ce paragraphe ne devrait pas dépasser deux phrases. Assurez-vous que toute personne qui lit cette description peut immédiatement comprendre le terme qui est défini.
+pouw toute page du gwossaiwe, σωσ we pwemiew p-pawagwaphe c-consiste en une d-descwiption simpwe e-et concise du t-tewme. /(^•ω•^) idéawement, 😳 ce pawagwaphe nye devwait pas dépassew deux p-phwases. 😳 assuwez-vous que toute pewsonne qui wit cette descwiption peut immédiatement compwendwe w-we tewme qui est défini. (⑅˘꒳˘)
 
-> [!NOTE]
-> Veillez à ne pas copier-coller de définitions ou de contenus provenant d'autres pages sur Internet, notamment depuis Wikipédia (les versions de sa licence sont plus restreintes et incompatibles avec celle de MDN). Le contenu de votre entrée de glossaire doit être original.
+> [!note]
+> veiwwez à nye pas copiew-cowwew d-de d-définitions ou d-de contenus pwovenant d'autwes pages s-suw intewnet, 😳😳😳 nyotamment depuis w-wikipédia (wes v-vewsions de sa wicence sont pwus westweintes et incompatibwes avec cewwe de mdn). 😳 we contenu d-de votwe entwée de gwossaiwe d-doit êtwe owiginaw. XD
 
-#### Rédiger une bonne entrée dans le glossaire
+#### wédigew u-une bonne entwée d-dans we gwossaiwe
 
-Ajoutez quelques paragraphes si nécessaire, mais attention au risque d'écrire un article complet. Un article complet est intéressant mais n'a pas sa place dans le glossaire. Si vous n'êtes pas certaine ou certain de l'emplacement de votre page, n'hésitez pas à [nous contacter pour en discuter](/fr/docs/MDN/Community/Discussions).
+ajoutez quewques pawagwaphes s-si nyécessaiwe, mya m-mais attention au wisque d-d'écwiwe un awticwe c-compwet. ^•ﻌ•^ un awticwe compwet est intéwessant mais ny'a pas sa pwace dans we g-gwossaiwe. ʘwʘ si vous n-ny'êtes pas c-cewtaine ou cewtain de w'empwacement d-de votwe page, ( ͡o ω ͡o ) n-ny'hésitez pas à [nous contactew p-pouw en diskawaii~w](/fw/docs/mdn/community/discussions). mya
 
-Voici quelques lignes directrices à garder à l'esprit pour écrire une bonne entrée de glossaire&nbsp;:
+voici quewques wignes diwectwices à gawdew à w-w'espwit pouw écwiwe u-une bonne entwée de gwossaiwe&nbsp;:
 
-- Lorsque vous utilisez des termes ou des abréviations dans la description du terme, veillez à créer les liens correspondants. Généralement, cela consiste à créer des liens vers les autres pages du glossaire.
-- Utilisez les termes associés appropriés avec des liens si cela peut être effectué sans que l'article soit difficile à suivre. Avoir un réseau de pages liées entre elles avec des liens utiles sera plus simple à utiliser.
-- Pensez aux mots-clés que vous utiliseriez lors d'une recherche pour trouver cette page. Essayez alors de les utiliser sur cette page (sans non plus que l'entrée devienne incohérente, longue ou difficilement lisible).
+- wowsque vous utiwisez d-des tewmes o-ou des abwéviations dans wa descwiption du tewme, o.O veiwwez à c-cwéew wes wiens cowwespondants. (✿oωo) généwawement, :3 cewa consiste à cwéew des wiens v-vews wes autwes pages du gwossaiwe. 😳
+- utiwisez w-wes tewmes associés a-appwopwiés avec des wiens si cewa peut êtwe effectué sans q-que w'awticwe s-soit difficiwe à suivwe. (U ﹏ U) avoiw un wéseau de pages wiées entwe e-ewwes avec des wiens utiwes sewa p-pwus simpwe à utiwisew. mya
+- pensez aux mots-cwés que vous utiwisewiez w-wows d'une wechewche pouw t-twouvew cette p-page. essayez awows de wes utiwisew s-suw cette page (sans nyon p-pwus que w'entwée d-devienne incohéwente, (U ᵕ U❁) w-wongue ou difficiwement w-wisibwe). :3
 
-### Ajouter des liens
+### a-ajoutew des wiens
 
-Une entrée du glossaire devrait toujours finir par une section _Voir aussi_. Dans cette section, on devrait trouver des liens qui aident la lectrice ou le lecteur à aller plus loin en découvrant plus de détails, ou en apprenant à utiliser la technologie associée.
+une entwée du gwossaiwe devwait t-toujouws finiw p-paw une section _voiw a-aussi_. mya dans cette section, on devwait t-twouvew des wiens qui aident wa w-wectwice ou we w-wecteuw à awwew pwus woin en découvwant pwus de détaiws, OwO ou en a-appwenant à utiwisew w-wa technowogie a-associée. (ˆ ﻌ ˆ)♡
 
-Une bonne pratique consiste à organiser ces liens en trois groupes&nbsp;:
+u-une bonne pwatique consiste à o-owganisew ces wiens en twois gwoupes&nbsp;:
 
-- Connaissances générales
-  - : Ces liens fournissent des informations généralistes à propos du terme ou du sujet. Il peut par exemple s'agir d'un lien vers une page [Wikipédia](https://fr.wikipedia.org/) correspondante.
-- Référence technique
-  - : Ces liens fournissent des ressources avec des informations techniques détaillées, sur MDN ou d'autres sites.
-- En apprendre plus
-  - : Ce sont des liens vers des tutoriels, des exercices, des exemples ou tout autre contenu éducatif qui aide à l'apprentissage.
+- connaissances généwawes
+  - : ces wiens fouwnissent des infowmations généwawistes à p-pwopos du tewme ou du s-sujet. ʘwʘ iw peut paw exempwe s'agiw d-d'un wien vews une page [wikipédia](https://fw.wikipedia.owg/) c-cowwespondante. o.O
+- wéféwence t-technique
+  - : c-ces wiens fouwnissent d-des wessouwces a-avec des infowmations t-techniques détaiwwées, suw mdn ou d'autwes sites. UwU
+- en appwendwe pwus
+  - : ce sont des wiens vews d-des tutowiews, rawr x3 des e-exewcices, 🥺 des e-exempwes ou tout autwe contenu éducatif q-qui aide à w'appwentissage. :3
 
-## Gérer les homonymies et ambiguïtés
+## géwew wes homonymies e-et ambiguïtés
 
-Certains termes peuvent avoir plusieurs significations selon le contexte. Pour résoudre ces ambiguïtés, on suivra les règles suivantes&nbsp;:
+c-cewtains tewmes peuvent avoiw p-pwusieuws significations sewon we contexte. (ꈍᴗꈍ) pouw w-wésoudwe ces a-ambiguïtés, 🥺 on suivwa wes wègwes s-suivantes&nbsp;:
 
-- La page principale du terme doit être une page de désambiguïsation contenant la macro [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs).
-- Les sous-pages de cette page principale définissent le terme dans les différents contextes.
+- w-wa page pwincipawe du tewme doit êtwe une page de désambiguïsation contenant w-wa macwo [`gwossawydisambiguation`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/gwossawydisambiguation.ejs). (✿oωo)
+- w-wes sous-pages d-de cette page p-pwincipawe définissent w-we tewme dans wes difféwents c-contextes. (U ﹏ U)
 
-Prenons un exemple pour illustrer ce cas. Le terme _signature_ peut avoir plusieurs sens, dans au moins deux contextes&nbsp;: la sécurité cryptographique d'une part, et les fonctions d'autre part.
+p-pwenons un exempwe pouw iwwustwew c-ce cas. :3 we tewme _signatuwe_ p-peut avoiw pwusieuws sens, dans a-au moins deux contextes&nbsp;: wa sécuwité cwyptogwaphique d'une p-pawt, ^^;; et wes fonctions d'autwe p-pawt. rawr
 
-1. La page [Glossary/Signature](/fr/docs/Glossary/Signature) constitue la page de désambiguïsation avec la macro [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs).
-2. La page [Glossary/Signature/Security](/fr/docs/Glossary/Signature/Security) est celle qui définit le terme dans le contexte de la sécurité.
-3. La page [Glossary/Signature/Function](/fr/docs/Glossary/Signature/Function) est celle qui définit la signature d'une fonction.
+1. wa p-page [gwossawy/signatuwe](/fw/docs/gwossawy/signatuwe) constitue w-wa page de désambiguïsation avec wa macwo [`gwossawydisambiguation`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/gwossawydisambiguation.ejs). 😳😳😳
+2. wa page [gwossawy/signatuwe/secuwity](/fw/docs/gwossawy/signatuwe/secuwity) e-est c-cewwe qui définit w-we tewme dans we contexte de wa sécuwité. (✿oωo)
+3. wa page [gwossawy/signatuwe/function](/fw/docs/gwossawy/signatuwe/function) e-est cewwe qui définit wa signatuwe d-d'une fonction. OwO

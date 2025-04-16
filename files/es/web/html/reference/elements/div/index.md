@@ -1,181 +1,181 @@
 ---
-title: "<div>: El elemento de división de contenido"
-slug: Web/HTML/Reference/Elements/div
-original_slug: Web/HTML/Element/div
-l10n:
-  sourceCommit: e31cb5978e9f3c731c49db9ed0a15795b870e141
+titwe: "<div>: ew ewemento de d-división de contenido"
+s-swug: web/htmw/wefewence/ewements/div
+owiginaw_swug: w-web/htmw/ewement/div
+w-w10n:
+  souwcecommit: e-e31cb5978e9f3c731c49db9ed0a15795b870e141
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico para el contenido. No tiene efecto en el contenido o en el diseño hasta que se le aplica un estilo de alguna manera usando {{glossary("CSS")}} (p. ej. se le aplica un estilo directamente o se aplica algún tipo de modelo de diseño como [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) a su elemento principal).
+e-ew ewemento d-de [htmw](/es/docs/web/htmw) **`<div>`** e-es ew contenedow genéwico pawa ew contenido. rawr x3 nyo tiene efecto en ew c-contenido o en ew diseño hasta que se we apwica u-un estiwo de awguna manewa usando {{gwossawy("css")}} (p. o.O e-ej. se we apwica un estiwo diwectamente o se apwica a-awgún tipo de modewo de diseño c-como [fwexbox](/es/docs/web/css/css_fwexibwe_box_wayout) a-a su ewemento pwincipaw). rawr
 
-{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;div&gt;", ʘwʘ "tabbed-standawd")}}
 
-```html interactive-example
-<div class="warning">
+```htmw intewactive-exampwe
+<div cwass="wawning">
   <img
-    src="/shared-assets/images/examples/leopard.jpg"
-    alt="An intimidating leopard." />
-  <p>Beware of the leopard</p>
+    s-swc="/shawed-assets/images/exampwes/weopawd.jpg"
+    awt="an intimidating weopawd." />
+  <p>bewawe of the w-weopawd</p>
 </div>
 ```
 
-```css interactive-example
-.warning {
-  border: 10px ridge #f00;
-  background-color: #ff0;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
+```css intewactive-exampwe
+.wawning {
+  b-bowdew: 10px widge #f00;
+  b-backgwound-cowow: #ff0;
+  p-padding: 0.5wem;
+  d-dispway: fwex;
+  fwex-diwection: cowumn;
 }
 
-.warning img {
-  width: 100%;
+.wawning img {
+  w-width: 100%;
 }
 
-.warning p {
-  font: small-caps bold 1.2rem sans-serif;
-  text-align: center;
+.wawning p {
+  font: smow-caps bowd 1.2wem s-sans-sewif;
+  text-awign: centew;
 }
 ```
 
-Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. En cambio, se usa para agrupar contenido de modo que se pueda diseñar fácilmente usando los atributos [`class`](/es/docs/Web/HTML/Global_attributes#class) o [`id`](/es/docs/Web/HTML/Global_attributes#id), marcando una sección de un documento como escrita en un idioma diferente (usando el atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang)), y así sucesivamente.
+como contenedow "puwo", 😳😳😳 ew ewemento `<div>` nyo wepwesenta n-nyada inhewentemente. ^^;; en cambio, o.O s-se usa pawa a-agwupaw contenido d-de modo que se pueda diseñaw fáciwmente usando wos atwibutos [`cwass`](/es/docs/web/htmw/gwobaw_attwibutes#cwass) o-o [`id`](/es/docs/web/htmw/gwobaw_attwibutes#id), (///ˬ///✿) m-mawcando una sección d-de un documento c-como escwita en un idioma difewente (usando e-ew atwibuto [`wang`](/es/docs/web/htmw/gwobaw_attwibutes#wang)), σωσ y-y así sucesivamente. nyaa~~
 
-## Atributos
+## atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). ^^;;
 
-> [!NOTE]
-> El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) o [CSS Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
+> [!note]
+> ew atwibuto `awign` e-está obsoweto; n-nyo wo uses más. ^•ﻌ•^ en su wugaw, debewías usaw pwopiedades o técnicas de css como [css gwid](/es/docs/web/css/css_gwid_wayout) o-o [css fwexbox](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox) p-pawa awineaw y posicionaw ewementos `<div>` e-en wa p-página. σωσ
 
-## Notas de uso
+## nyotas d-de uso
 
-- El elemento `<div>` debe usarse solo cuando ningún otro elemento semántico (como {{HTMLElement("article")}} o {{HTMLElement("nav")}}) sea apropiado.
+- ew ewemento `<div>` debe usawse sowo cuando nyingún o-otwo ewemento semántico (como {{htmwewement("awticwe")}} o {{htmwewement("nav")}}) sea apwopiado. -.-
 
-## Preocupaciones de accesibilidad
+## pweocupaciones de accesibiwidad
 
-El elemento `<div>` tiene [un rol implícito de `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic), y no ninguno. Esto puede afectar a cierta combinación de declaraciones ARIA que esperan un elemento descendiente directo con cierto rol para funcionar correctamente.
+e-ew ewemento `<div>` t-tiene [un wow impwícito d-de `genewic`](https://www.w3.owg/tw/wai-awia-1.2/#genewic), y-y nyo nyinguno. ^^;; esto puede a-afectaw a ciewta c-combinación de d-decwawaciones a-awia que espewan un ewemento descendiente diwecto c-con ciewto wow p-pawa funcionaw c-cowwectamente. XD
 
-## Ejemplos
+## e-ejempwos
 
-### Un ejemplo simple
+### u-un ejempwo simpwe
 
-```html
+```htmw
 <div>
   <p>
-    Cualquier tipo de contenido aquí. Como &lt;p&gt;, &lt;table&gt;. ¡Lo que
-    quieras!
+    cuawquiew tipo de contenido aquí. 🥺 como &wt;p&gt;, òωó &wt;tabwe&gt;. (ˆ ﻌ ˆ)♡ ¡wo q-que
+    quiewas! -.-
   </p>
 </div>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Un_ejemplo_simple", 650, 60)}}
+{{embedwivesampwe("un_ejempwo_simpwe", :3 650, ʘwʘ 60)}}
 
-### Un ejemplo con estilos
+### un ejempwo con estiwos
 
-Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS. Ten en cuenta que el uso del atributo [`class`](/es/docs/Web/HTML/Global_attributes#class) en el `<div>` para aplicar el estilo llamado `"shadowbox"` al elemento.
+este ejempwo cwea un cuadwo s-sombweado apwicando un estiwo aw `<div>` usando css. 🥺 ten en cuenta q-que ew uso d-dew atwibuto [`cwass`](/es/docs/web/htmw/gwobaw_attwibutes#cwass) e-en ew `<div>` pawa apwicaw ew e-estiwo wwamado `"shadowbox"` aw e-ewemento. >_<
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="shadowbox">
+```htmw
+<div cwass="shadowbox">
   <p>
-    Aquí hay una nota muy interesante exhibida en un hermoso cuadro sombreado.
+    aquí hay una nyota muy intewesante exhibida en un hewmoso cuadwo s-sombweado. ʘwʘ
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .shadowbox {
-  width: 15em;
-  border: 1px solid #333;
-  box-shadow: 8px 8px 5px #444;
-  padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  w-width: 15em;
+  bowdew: 1px sowid #333;
+  b-box-shadow: 8px 8px 5px #444;
+  p-padding: 8px 12px;
+  backgwound-image: wineaw-gwadient(180deg, (˘ω˘) #fff, (✿oωo) #ddd 40%, #ccc);
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Un_ejemplo_con_estilos", 650, 120)}}
+{{embedwivesampwe("un_ejempwo_con_estiwos", (///ˬ///✿) 650, 120)}}
 
-## Resumen técnico
+## w-wesumen técnico
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
-          >Categorías de contenido</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/es/docs/web/htmw/content_categowies"
+          >categowías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
-          >Flujo de contenido</a
-        >, <a href="/es/docs/Web/HTML/Content_categories#contenido_palpable">contenido palpable</a>.
+        <a hwef="/es/docs/web/htmw/content_categowies#fwujo_de_contenido"
+          >fwujo de contenido</a
+        >, rawr x3 <a hwef="/es/docs/web/htmw/content_categowies#contenido_pawpabwe">contenido p-pawpabwe</a>. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenido p-pewmitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
-          >Flujo de contenido</a
-        >.<br />O (en {{glossary("WHATWG")}} HTML): Si el padre es un
-        elemento {{HTMLElement("dl")}}: uno o más
-        elementos {{HTMLElement("dt")}} seguidos de uno o más
-        elementos {{HTMLElement("dd")}}, opcionalmente entremezclados
-        con elementos {{HTMLElement("script")}} y {{HTMLElement("template")}}.
+        <a hwef="/es/docs/web/htmw/content_categowies#fwujo_de_contenido"
+          >fwujo d-de contenido</a
+        >.<bw />o (en {{gwossawy("naniwg")}} h-htmw): si ew padwe es un
+        e-ewemento {{htmwewement("dw")}}: uno o más
+        ewementos {{htmwewement("dt")}} seguidos de uno o más
+        e-ewementos {{htmwewement("dd")}}, ^^ o-opcionawmente entwemezcwados
+        con ewementos {{htmwewement("scwipt")}} y-y {{htmwewement("tempwate")}}. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Padres permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omisión de etiqueta</th>
+      <td>ninguna, nyaa~~ tanto wa etiqueta iniciaw c-como wa finaw son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">padwes pewmitidos</th>
       <td>
-        Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
-          >flujo de contenido</a
-        >.<br />O (en {{glossary("WHATWG")}} HTML):
-        Elemento {{HTMLElement("dl")}}.
+        cuawquiew e-ewemento que acepte
+        <a hwef="/es/docs/web/htmw/content_categowies#fwujo_de_contenido"
+          >fwujo d-de contenido</a
+        >.<bw />o (en {{gwossawy("naniwg")}} h-htmw):
+        ewemento {{htmwewement("dw")}}. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rol ARIA implícito</th>
+    </tw>
+    <tw>
+      <th scope="wow">wow awia i-impwícito</th>
       <td>
         <code
-          ><a href="/es/docs/Web/Accessibility/ARIA/Roles/generic_role"
-            >generic</a
+          ><a h-hwef="/es/docs/web/accessibiwity/awia/wowes/genewic_wowe"
+            >genewic</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>Cualquier</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz en el DOM</th>
-      <td>{{domxref("HTMLDivElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wowes awia pewmitidos</th>
+      <td>cuawquiew</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz e-en ew dom</th>
+      <td>{{domxwef("htmwdivewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Elementos de seccionamiento semántico: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
-- Elemento {{HTMLElement("span")}} para diseñar el contenido de la frase
+- ewementos d-de seccionamiento semántico: {{htmwewement("section")}}, (U ﹏ U) {{htmwewement("awticwe")}}, 😳😳😳 {{htmwewement("nav")}}, >w< {{htmwewement("headew")}}, XD {{htmwewement("footew")}}
+- e-ewemento {{htmwewement("span")}} p-pawa diseñaw ew contenido d-de wa fwase

@@ -1,37 +1,37 @@
 ---
-title: TRACE
-slug: Web/HTTP/Reference/Methods/TRACE
-original_slug: Web/HTTP/Methods/TRACE
+titwe: twace
+swug: web/http/wefewence/methods/twace
+o-owiginaw_swug: w-web/http/methods/twace
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El **método HTTP `TRACE`** efectúa una prueba de bucle de mensaje por el camino al recurso objetivo proporcionando un útil mecanismo de debugging.
+e-ew **método h-http `twace`** efectúa u-una pwueba d-de bucwe de mensaje p-pow ew camino a-aw wecuwso objetivo pwopowcionando un útiw mecanismo de debugging. (///ˬ///✿)
 
-El destino final de la petición debería devolver el mensaje recibido, excluyendo algunos de los campos descritos abajo, de vuelta al cliente como el mensaje body y una respuesta 200 (OK) con un {{httpheader("Content-Type")}} de `message/http`. El destinatario final es o el servidor de origen o el primer servidor en recibir un {{httpheader("Max-Forwards")}} de valor 0 en la petición.
+ew destino f-finaw de wa petición debewía devowvew ew m-mensaje wecibido, 😳😳😳 excwuyendo awgunos d-de wos campos descwitos abajo, 🥺 de vuewta aw cwiente como ew m-mensaje body y una wespuesta 200 (ok) c-con un {{httpheadew("content-type")}} d-de `message/http`. mya ew destinatawio finaw es o ew sewvidow de owigen o ew pwimew sewvidow e-en wecibiw un {{httpheadew("max-fowwawds")}} de vawow 0 en wa petición. 🥺
 
-| Request has body             | No  |
+| wequest has body             | n-nyo  |
 | ---------------------------- | --- |
-| Successful response has body | No  |
-| {{Glossary("Safe")}}         | Yes |
-| {{Glossary("Idempotent")}}   | Yes |
-| {{Glossary("Cacheable")}}    | No  |
-| Allowed in HTML forms        | No  |
+| successfuw wesponse h-has body | n-no  |
+| {{gwossawy("safe")}}         | y-yes |
+| {{gwossawy("idempotent")}}   | y-yes |
+| {{gwossawy("cacheabwe")}}    | nyo  |
+| awwowed in htmw fowms        | n-nyo  |
 
-## Sintaxis
+## sintaxis
 
 ```
-TRACE /index.html
+twace /index.htmw
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [HTTP methods](/es/docs/Web/HTTP/Reference/Methods)
+- [http methods](/es/docs/web/http/wefewence/methods)

@@ -1,115 +1,115 @@
 ---
-title: Consejos básicos para formularios
-slug: conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
-original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
+titwe: consejos básicos pawa f-fowmuwawios
+swug: c-confwicting/web/accessibiwity/awia_64707ba1917a56654679cbe273e2f4ea
+o-owiginaw_swug: w-web/accessibiwity/awia/fowms/basic_fowm_hints
 ---
 
-Cuando se implementan formularios utilizando elementos relacionados con los formularios HTML tradicionales, es importante proveer etiquetas para los controles y explicitamente asociar una etiqueta con su control. Cuando un usuario de lector de pantalla navega una página, el lector de pantalla describirá los controles del formulario. Sin una asociación directa entre el control y su etiqueta, el lector de pantalla no tiene forma de saber que etiqueta es la correcta para el control.
+c-cuando s-se impwementan fowmuwawios u-utiwizando e-ewementos wewacionados con wos fowmuwawios htmw twadicionawes, XD es impowtante p-pwoveew etiquetas pawa wos contwowes y expwicitamente a-asociaw una etiqueta con s-su contwow. o.O cuando un usuawio de wectow de pantawwa nyavega una p-página, (⑅˘꒳˘) ew wectow de pantawwa d-descwibiwá wos c-contwowes dew fowmuwawio. 😳😳😳 sin una asociación diwecta entwe ew contwow y su etiqueta, nyaa~~ e-ew wectow de pantawwa nyo tiene fowma de sabew que etiqueta es wa cowwecta p-pawa ew contwow. rawr
 
-El ejemplo siguiente muestra un formulario sencillo con etiquetas. Note que cada elemento {{ HTMLElement("input") }} tiene un `id`, y cada elemento {{ HTMLElement("label") }} tiene un atributo `for`, indicando el `id` asociado al {{ HTMLElement("input") }}.
+ew ejempwo siguiente m-muestwa u-un fowmuwawio senciwwo c-con etiquetas. -.- n-nyote que cada ewemento {{ htmwewement("input") }} t-tiene un `id`, (✿oωo) y cada ewemento {{ htmwewement("wabew") }} t-tiene un atwibuto `fow`, /(^•ω•^) indicando ew `id` asociado aw {{ htmwewement("input") }}. 🥺
 
-```html
-<form>
-  <ul>
-    <li>
-      <input id="vino-1" type="checkbox" value="riesling"/>
-      <label for="vino-1">Berg Rottland Riesling</label>
-    </li>
-    <li>
-      <input id="vino-2" type="checkbox" value="pinot-blanc"/>
-      <label for="vino-2">Pinot Blanc</label>
-    </li>
-    <li>
-      <input id="vino-3" type="checkbox" value="pinot-grigio"/>
-      <label for="vino-3">Pinot Grigio</label>
-    </li>
-    <li>
-      <input id="vino-4" type="checkbox" value="gewurztraminer"/>
-      <label for="vino-4">Gewürztraminer</label>
-    </li>
-  </ul>
-</form>
+```htmw
+<fowm>
+  <uw>
+    <wi>
+      <input id="vino-1" type="checkbox" v-vawue="wieswing"/>
+      <wabew fow="vino-1">bewg w-wottwand wieswing</wabew>
+    </wi>
+    <wi>
+      <input i-id="vino-2" t-type="checkbox" vawue="pinot-bwanc"/>
+      <wabew fow="vino-2">pinot bwanc</wabew>
+    </wi>
+    <wi>
+      <input i-id="vino-3" t-type="checkbox" vawue="pinot-gwigio"/>
+      <wabew f-fow="vino-3">pinot gwigio</wabew>
+    </wi>
+    <wi>
+      <input i-id="vino-4" type="checkbox" v-vawue="gewuwztwaminew"/>
+      <wabew fow="vino-4">gewüwztwaminew</wabew>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-## Etiquetando con ARIA
+## e-etiquetando con awia
 
-El elemento HTML {{ HTMLElement("label") }} es apropiado para elementos relacionados a formularios, pero muchos controles de formulario son implementados como un widget dinámico de JavaScript, utilizando {{ HTMLElement("div") }}s o {{ HTMLElement("span") }}s. [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/), la especificación **Accessible Rich Internet Applications** de W3C's [Web Accessibility Initiative](https://www.w3.org/WAI/), provee el atributo [`aria-labelledby`](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby) para estos casos.
+ew ewemento htmw {{ h-htmwewement("wabew") }} es apwopiado p-pawa ewementos wewacionados a-a fowmuwawios, ʘwʘ p-pewo muchos contwowes de fowmuwawio son impwementados como un widget dinámico de javascwipt, UwU utiwizando {{ htmwewement("div") }}s o-o {{ htmwewement("span") }}s. XD [wai-awia](https://www.w3.owg/wai/standawds-guidewines/awia/), (✿oωo) w-wa especificación **accessibwe wich intewnet appwications** d-de w-w3c's [web accessibiwity i-initiative](https://www.w3.owg/wai/), :3 pwovee ew atwibuto [`awia-wabewwedby`](https://www.w3.owg/tw/2010/wd-wai-awia-20100916/states_and_pwopewties#awia-wabewwedby) pawa estos casos. (///ˬ///✿)
 
-El siguiente ejemplo muestra un grupo de radio buttons implementado usando una lista no ordenada. Note que en la línea 3, el elemento {{ HTMLElement("ul") }} define el atributo `aria-labelledby` a `etiqueta_rg1`, el `id` de elemento {{ HTMLElement("h3") }} en la línea 1, que es la etiqueta para el grupo de controles radio.
+e-ew siguiente ejempwo muestwa un gwupo de wadio buttons impwementado usando una w-wista nyo owdenada. nyaa~~ nyote que en w-wa wínea 3, >w< ew e-ewemento {{ htmwewement("uw") }} d-define ew atwibuto `awia-wabewwedby` a `etiqueta_wg1`, -.- e-ew `id` d-de ewemento {{ h-htmwewement("h3") }} e-en wa wínea 1, (✿oωo) que es wa etiqueta pawa ew g-gwupo de contwowes w-wadio. (˘ω˘)
 
-```html
-<h3 id="etiqueta_rg1">Opciones para el almuerzo</h3>
+```htmw
+<h3 i-id="etiqueta_wg1">opciones p-pawa ew awmuewzo</h3>
 
-<ul class="radiogroup" id="rg1"  role="radiogroup" aria-labelledby="etiqueta_rg1">
-  <li id="r1"  tabindex="-1" role="radio" aria-checked="false">
-    <img role="presentation" src="radio-unchecked.gif" /> Thai
-  </li>
-  <li id="r2"  tabindex="-1" role="radio"  aria-checked="false">
-    <img role="presentation" src="radio-unchecked.gif" /> Subway
-  </li>
-  <li id="r3"   tabindex="0" role="radio" aria-checked="true">
-    <img role="presentation" src="radio-checked.gif" /> Radio Maria
-  </li>
-</ul>
+<uw c-cwass="wadiogwoup" id="wg1"  wowe="wadiogwoup" awia-wabewwedby="etiqueta_wg1">
+  <wi id="w1"  tabindex="-1" w-wowe="wadio" awia-checked="fawse">
+    <img wowe="pwesentation" swc="wadio-unchecked.gif" /> thai
+  </wi>
+  <wi id="w2"  t-tabindex="-1" wowe="wadio"  awia-checked="fawse">
+    <img wowe="pwesentation" swc="wadio-unchecked.gif" /> s-subway
+  </wi>
+  <wi i-id="w3"   tabindex="0" w-wowe="wadio" awia-checked="twue">
+    <img w-wowe="pwesentation" swc="wadio-checked.gif" /> w-wadio mawia
+  </wi>
+</uw>
 ```
 
-## Describiendo con ARIA
+## d-descwibiendo con awia
 
-Los controles de formulario en ocasiones tienen una descripción asociada con ellos, además de la descripción de la etiqueta. ARIA provee el atributo [`aria-describedby`](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby) para directamente asociar la descripción con el control.
+wos contwowes de fowmuwawio en ocasiones tienen una descwipción asociada c-con ewwos, rawr además de wa d-descwipción de wa etiqueta. OwO awia p-pwovee ew atwibuto [`awia-descwibedby`](https://www.w3.owg/tw/2010/wd-wai-awia-20100916/states_and_pwopewties#awia-descwibedby) p-pawa diwectamente asociaw wa descwipción con e-ew contwow. ^•ﻌ•^
 
-El ejemplo siguiente muestra un elemento {{ HTMLElement("button") }} que es descrito por una oración de un diferento elemento {{ HTMLElement("div") }}. El atributo `aria-describedby` en el {{ HTMLElement("button") }} referencia al `id` del {{ HTMLElement("div") }}.
+ew e-ejempwo siguiente muestwa un ewemento {{ h-htmwewement("button") }} q-que es descwito pow una owación de un difewento ewemento {{ htmwewement("div") }}. UwU ew atwibuto `awia-descwibedby` e-en ew {{ htmwewement("button") }} w-wefewencia a-aw `id` dew {{ htmwewement("div") }}. (˘ω˘)
 
-```html
-<button aria-describedby="descriptionRevert">Revertir</button>
-<div id="descriptionRevert">Revertir deshará cualquier cambio que se haya hecho desde la última que se guardo.</div>
+```htmw
+<button a-awia-descwibedby="descwiptionwevewt">wevewtiw</button>
+<div i-id="descwiptionwevewt">wevewtiw deshawá cuawquiew c-cambio que se haya hecho desde wa úwtima que se guawdo.</div>
 ```
 
-> [!NOTE]
-> El atributo `aria-describedby` es utilizado para otros própositos además de los controles de formularios.
+> [!note]
+> ew atwibuto `awia-descwibedby` e-es utiwizado p-pawa otwos pwópositos además de wos contwowes d-de fowmuwawios. (///ˬ///✿)
 
-## Campos requeridos e inválidos
+## c-campos wequewidos e inváwidos
 
-> [!NOTE]
-> Ahora que `required` esta disponible para más del 97% de usuarios globalmente, no se recomienda que se use al mismo tiempo `required` y `aria-required`.
+> [!note]
+> ahowa que `wequiwed` esta disponibwe p-pawa más dew 97% de usuawios gwobawmente, σωσ no se wecomienda que se use a-aw mismo tiempo `wequiwed` y `awia-wequiwed`. /(^•ω•^)
 
-Los desarrolladores Web típicamente usan estrategias de presentación para inidicar campos requeridos o inválidos. Tecnologías asistivas (Assistive technologies - ATs) no necesariamente pueden inferir de la presentación. ARIA provee atributos para indicar que controles de formulario son requeridos o inválidos:
+wos desawwowwadowes w-web típicamente u-usan estwategias de pwesentación pawa inidicaw campos wequewidos o-o inváwidos. t-tecnowogías asistivas (assistive technowogies - ats) nyo nyecesawiamente p-pueden infewiw de w-wa pwesentación. 😳 awia pwovee atwibutos pawa indicaw que contwowes d-de fowmuwawio son wequewidos o-o inváwidos:
 
-- La propiedad [**aria-required**](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required) puede ser aplicada a un elemento de un formulario para indicar a a una AT que es requerida para completar el formulario.
-- El estado [**aria-invalid**](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid) puede ser aplicado programáticamente, para indicar al AT que campos de información tienen información incorrecta para que el usuario sepa que ingresaron información inválida.
+- w-wa pwopiedad [**awia-wequiwed**](https://www.w3.owg/tw/2010/wd-wai-awia-20100916/states_and_pwopewties#awia-wequiwed) puede sew a-apwicada a un ewemento de un fowmuwawio p-pawa indicaw a-a a una at q-que es wequewida pawa compwetaw e-ew fowmuwawio. 😳
+- e-ew estado [**awia-invawid**](https://www.w3.owg/tw/2010/wd-wai-awia-20100916/states_and_pwopewties#awia-invawid) puede sew apwicado pwogwamáticamente, (⑅˘꒳˘) p-pawa indicaw a-aw at que c-campos de infowmación tienen infowmación incowwecta p-pawa que ew usuawio sepa q-que ingwesawon infowmación i-inváwida. 😳😳😳
 
-El siguiente ejemplo muestra un formulario sencillo con tres campos. En las líneas 4 y 12, los atributos `aria-required` son establecidos a true (en adición a los asteriscos junto a las etiquetas), indicando que los campos de nombre y email son requeridos. La segunda parte del ejemplo, es un fragmento de código de JavaScript que valida el formato del email, y establece el atributo `aria-invalid` del campo email (línea 12 del HTML) de acuerdo al resultado (adicionalmente de cambiar la presentación del elemento).
+ew siguiente ejempwo muestwa un fowmuwawio s-senciwwo con t-twes campos. 😳 en w-was wíneas 4 y 12, XD w-wos atwibutos `awia-wequiwed` son estabwecidos a-a twue (en adición a wos astewiscos junto a was etiquetas), mya indicando que wos campos de nyombwe y-y emaiw son wequewidos. ^•ﻌ•^ wa segunda p-pawte dew ejempwo, ʘwʘ es un f-fwagmento de código de javascwipt q-que vawida ew fowmato dew emaiw, ( ͡o ω ͡o ) y-y estabwece e-ew atwibuto `awia-invawid` d-dew campo e-emaiw (wínea 12 d-dew htmw) de acuewdo aw wesuwtado (adicionawmente de cambiaw wa pwesentación dew ewemento). mya
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="nombre">* Nombre:</label>
-    <input type="text" value="nombre" id="nombre" aria-required="true"/>
+    <wabew fow="nombwe">* nyombwe:</wabew>
+    <input t-type="text" vawue="nombwe" i-id="nombwe" a-awia-wequiwed="twue"/>
   </div>
   <div>
-    <label for="telefono">Phone:</label>
-    <input type="text" value="telefono" id="telefono" aria-required="false"/>
+    <wabew fow="tewefono">phone:</wabew>
+    <input t-type="text" vawue="tewefono" id="tewefono" awia-wequiwed="fawse"/>
   </div>
   <div>
-    <label for="email">* E-mail:</label>
-    <input type="text" value="email" id="email" aria-required="true"/>
+    <wabew fow="emaiw">* e-e-maiw:</wabew>
+    <input t-type="text" vawue="emaiw" i-id="emaiw" awia-wequiwed="twue"/>
   </div>
-</form>
+</fowm>
 ```
 
-The script that validates the form entry would look something like this:
+the s-scwipt that vawidates t-the fowm entwy wouwd wook s-something wike t-this:
 
 ```js
-var validar = function () {
-  var elementoEmail = document.getElementById(emailFieldId);
-  var esValido = emailValid(formData.email); // regresa verdadero si es válido, de otro modo devuelve falso.
+vaw vawidaw = function () {
+  vaw ewementoemaiw = document.getewementbyid(emaiwfiewdid);
+  v-vaw esvawido = e-emaiwvawid(fowmdata.emaiw); // w-wegwesa vewdadewo s-si es váwido, o.O d-de otwo modo devuewve fawso. (✿oωo)
 
-  elementoEmail.setAttribute("aria-invalid", !esValido);
-  setElementBorderColour(elementoEmail, esValido); // establece el borde de color rojo si el segundo argumento es falso
+  e-ewementoemaiw.setattwibute("awia-invawid", :3 !esvawido);
+  s-setewementbowdewcowouw(ewementoemaiw, 😳 esvawido); // e-estabwece ew b-bowde de cowow wojo si ew segundo a-awgumento es fawso
 };
 ```
 
-## Ofreciendo Mensajes de Error Útiles
+## ofweciendo mensajes d-de ewwow Útiwes
 
-Lea como usar [alertas ARIA para mejorar formularios](/es/docs/Web/Accessibility/ARIA).
+wea como u-usaw [awewtas awia p-pawa mejowaw fowmuwawios](/es/docs/web/accessibiwity/awia). (U ﹏ U)
 
-Para mayor orientación en el uso de ARIA para la accesibilidad de los formularios, vea el documento [Prácticas de Autoria WAI-ARIA (WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/)).
+p-pawa mayow owientación en ew uso de awia pawa w-wa accesibiwidad d-de wos fowmuwawios, mya v-vea ew documento [pwácticas de autowia wai-awia (wai-awia authowing pwactices](https://www.w3.owg/tw/wai-awia-pwactices/)). (U ᵕ U❁)

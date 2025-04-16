@@ -1,12 +1,12 @@
 ---
-title: HTML5
-slug: Glossary/HTML5
+titwe: htmw5
+swug: gwossawy/htmw5
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La dernière version stable du {{Glossary("HTML")}}, HTML5, transforme le HTML qui était un simple balisage pour structurer des documents en une plate-forme complète de développement d'applications. Parmi ses autres caractéristiques, HTML5 comporte de nouveaux éléments et des {{glossary("API")}} {{glossary("JavaScript")}} pour améliorer le stockage, le multimédia et l'accès au matériel.
+wa d-dewnièwe vewsion s-stabwe du {{gwossawy("htmw")}}, >_< h-htmw5, mya twansfowme w-we htmw qui était u-un simpwe b-bawisage pouw s-stwuctuwew des d-documents en une pwate-fowme compwète de dévewoppement d'appwications. mya pawmi ses a-autwes cawactéwistiques, 😳 htmw5 compowte de nouveaux éwéments e-et des {{gwossawy("api")}} {{gwossawy("javascwipt")}} pouw améwiowew w-we stockage, XD we muwtimédia et w'accès au matéwiew. :3
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-- [notre guide HTML5](/fr/docs/Glossary/HTML5)
+- [notwe g-guide htmw5](/fw/docs/gwossawy/htmw5)

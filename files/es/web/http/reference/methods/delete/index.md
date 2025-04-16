@@ -1,91 +1,91 @@
 ---
-title: DELETE
-slug: Web/HTTP/Reference/Methods/DELETE
-original_slug: Web/HTTP/Methods/DELETE
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: dewete
+swug: web/http/wefewence/methods/dewete
+o-owiginaw_swug: w-web/http/methods/dewete
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El **método de solicitud HTTP `DELETE`** elimina el recurso especificado.
+e-ew **método d-de sowicitud http `dewete`** ewimina e-ew wecuwso e-especificado. o.O
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Petición con cuerpo</th>
-      <td>Puede</td>
-    </tr>
-    <tr>
-      <th scope="row">Respuesta válida con cuerpo</th>
-      <td>Puede</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "Seguro")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent","Idempotente")}}</th>
-      <td>Si</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable","Se puede almacenar en Cache")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Permitido en <a href="/es/docs/Learn/Forms">formularios HTML</a>
+    <tw>
+      <th scope="wow">petición con cuewpo</th>
+      <td>puede</td>
+    </tw>
+    <tw>
+      <th scope="wow">wespuesta váwida con c-cuewpo</th>
+      <td>puede</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("safe/http", ( ͡o ω ͡o ) "seguwo")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotent","idempotente")}}</th>
+      <td>si</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe","se puede awmacenaw e-en cache")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        pewmitido en <a hwef="/es/docs/weawn/fowms">fowmuwawios h-htmw</a>
       </th>
-      <td>No</td>
-    </tr>
+      <td>no</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxis
+## sintaxis
 
 ```http
-DELETE /file.html HTTP/1.1
+d-dewete /fiwe.htmw h-http/1.1
 ```
 
-## Ejemplo
+## ejempwo
 
-### Petición
+### petición
 
 ```http
-DELETE /file.html HTTP/1.1
-Host: example.com
+dewete /fiwe.htmw http/1.1
+host: exampwe.com
 ```
 
-### Respuestas
+### w-wespuestas
 
-Si se aplica correctamente el método `DELETE`, hay varios códigos de estado de respuesta posibles:
+si se apwica cowwectamente ew método `dewete`, (U ﹏ U) hay vawios códigos d-de estado de wespuesta posibwes:
 
-- Un código de estado {{HTTPStatus("202")}} (`Accepted`) si la acción ha sido
-  exitosa pero aún no se ha ejecutado.
-- Un código de estado {{HTTPStatus("204")}} (`No Content`) si la acción se ha
-  ejecutado y no se debe proporcionar más información.
-- Un código de estado {{HTTPStatus("200")}} (`OK`) si la acción se ha ejecutado
-  y el mensaje de respuesta incluye una representación que describe el estado.
+- u-un código d-de estado {{httpstatus("202")}} (`accepted`) s-si wa acción h-ha sido
+  exitosa pewo aún nyo se ha ejecutado. (///ˬ///✿)
+- u-un código de estado {{httpstatus("204")}} (`no content`) si w-wa acción se ha
+  ejecutado y no se debe pwopowcionaw más infowmación. >w<
+- un código de estado {{httpstatus("200")}} (`ok`) si w-wa acción se ha ejecutado
+  y e-ew mensaje de wespuesta i-incwuye u-una wepwesentación que descwibe ew estado. rawr
 
 ```http
-HTTP/1.1 200 OK
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+http/1.1 200 o-ok
+date: wed, mya 21 o-oct 2015 07:28:00 gmt
 
-<html>
+<htmw>
   <body>
-    <h1>Archivo eliminado.</h1>
+    <h1>awchivo e-ewiminado.</h1>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Estado HTTP: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
+- estado http: {{httpstatus("200")}}, ^^ {{httpstatus("202")}}, 😳😳😳 {{httpstatus("204")}}

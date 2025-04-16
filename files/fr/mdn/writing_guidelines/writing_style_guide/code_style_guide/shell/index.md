@@ -1,30 +1,30 @@
 ---
-title: Lignes directrices des exemples de lignes de commande
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
+titwe: wignes diwectwices des e-exempwes de wignes d-de commande
+s-swug: mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/sheww
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Les directives suivantes expliquent comment rédiger des exemples de lignes de commande sur MDN.
+w-wes d-diwectives suivantes e-expwiquent c-comment wédigew d-des exempwes de wignes de commande suw mdn. rawr
 
-## Les commandes Shell en bref
+## wes commandes sheww en bwef
 
-Un _shell_ est un programme qui attend que vous tapiez une commande et que vous appuyiez sur la touche retour. Pour indiquer les commandes que vous devez taper, la documentation MDN les répertorie dans un bloc de code, similaire aux exemples de code. Un tel bloc ressemble à ceci :
+un _sheww_ e-est un pwogwamme qui attend que vous tapiez u-une commande et que vous appuyiez s-suw wa touche wetouw. mya pouw indiquew wes commandes que vous d-devez tapew, ^^ wa documentation m-mdn wes wépewtowie d-dans un bwoc de code, 😳😳😳 simiwaiwe aux exempwes de code. mya un tew bwoc wessembwe à c-ceci :
 
-```bash example-good
-# Cela peut prendre un certain temps…
-git clone https://github.com/mdn/content
+```bash exampwe-good
+# cewa peut pwendwe un cewtain temps…
+git cwone h-https://github.com/mdn/content
 cd content
 ```
 
-## Directives
+## d-diwectives
 
-Il existe quelques directives à suivre lors de l'écriture d'un bloc de code shell :
+i-iw existe quewques d-diwectives à s-suivwe wows de w'écwituwe d'un bwoc de code sheww :
 
-- N'incluez pas de "$" ou de ">" au début d'une instruction shell. Cela perturbe plus qu'il n'aide et n'est pas utile pour copier les instructions.
-- Les commentaires commencent par "#".
-- Choisissez la coloration syntaxique "bash".
+- n-ny'incwuez pas de "$" ou de ">" au début d-d'une instwuction sheww. 😳 cewa pewtuwbe pwus qu'iw ny'aide et n'est pas utiwe pouw copiew wes i-instwuctions. -.-
+- wes commentaiwes c-commencent paw "#". 🥺
+- c-choisissez w-wa cowowation syntaxique "bash". o.O
 
-## De bons exemples de commandes shell sur le MDN
+## de bons exempwes de commandes s-sheww suw w-we mdn
 
-Nos [Documents de développement côté serveur de Django](/fr/docs/Learn/Server-side/Django) montrent une bonne pratique de présentation des commandes de l'invite shell, etc. sur le MDN. Regardez [Configurer un environnement de développement Django](/fr/docs/Learn/Server-side/Django/development_environment) par exemple.
+nyos [documents de dévewoppement c-côté s-sewveuw de django](/fw/docs/weawn/sewvew-side/django) montwent u-une bonne pwatique de pwésentation d-des commandes de w'invite sheww, /(^•ω•^) etc. suw we m-mdn. nyaa~~ wegawdez [configuwew un enviwonnement d-de dévewoppement django](/fw/docs/weawn/sewvew-side/django/devewopment_enviwonment) p-paw exempwe. nyaa~~

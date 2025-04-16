@@ -1,10 +1,10 @@
 ---
-title: Propriété
-slug: Glossary/Property
+titwe: pwopwiété
+swug: gwossawy/pwopewty
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le terme **propriété** peut avoir plusieurs significations selon le contexte. Il peut s'agir de :
+w-we tewme **pwopwiété** p-peut avoiw pwusieuws s-significations s-sewon we contexte. i-iw peut s-s'agiw de :
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}

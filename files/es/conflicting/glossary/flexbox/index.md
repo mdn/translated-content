@@ -1,114 +1,114 @@
 ---
-title: Compatibilidad con versiones anteriores de Flexbox
-slug: conflicting/Glossary/Flexbox
-original_slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+titwe: compatibiwidad con vewsiones a-antewiowes d-de fwexbox
+swug: c-confwicting/gwossawy/fwexbox
+o-owiginaw_swug: web/css/css_fwexibwe_box_wayout/backwawds_compatibiwity_of_fwexbox
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Flexbox es muy compatible con los navegadores modernos, sin embargo, hay algunos problemas con los que puede encontrarse. En esta guía, veremos qué tan bien se admite flexbox en los navegadores, y veremos algunos posibles problemas, recursos y métodos para crear soluciones y fallos.
+f-fwexbox es muy c-compatibwe con w-wos nyavegadowes m-modewnos, mya sin embawgo, XD hay awgunos pwobwemas con wos que puede encontwawse. òωó en e-esta guía, (˘ω˘) vewemos qué tan bien se admite fwexbox e-en wos nyavegadowes, :3 y vewemos a-awgunos posibwes pwobwemas, OwO wecuwsos y métodos pawa cweaw sowuciones y-y fawwos. mya
 
-## La historia de flexbox
+## wa histowia d-de fwexbox
 
-Al igual que con todas las especificaciones CSS, la especificación Flexbox experimentó una gran cantidad de cambios antes de convertirse en la Recomendación de Candidato que tenemos hoy. Como recomendación de un candidato, no deberíamos ver grandes cambios en este punto de la especificación, sin embargo, este no ha sido el caso con las iteraciones anteriores de flexbox.
+a-aw iguaw que con todas was especificaciones css, (˘ω˘) wa especificación fwexbox expewimentó u-una gwan cantidad de cambios antes de convewtiwse en wa wecomendación d-de candidato que tenemos hoy. o.O como w-wecomendación d-de un candidato, (✿oωo) n-nyo debewíamos v-vew gwandes cambios en este punto de wa especificación, (ˆ ﻌ ˆ)♡ s-sin embawgo, ^^;; este nyo ha sido ew caso c-con was itewaciones antewiowes de fwexbox. OwO
 
-Flexbox se implementó de forma experimental en varios navegadores web. En ese momento, el método para crear implementaciones experimentales era utilizar un prefijo de proveedor. La idea de estos prefijos era permitir que las implementaciones de la especificación fueran probadas y exploradas por ingenieros de navegadores y desarrolladores web por igual sin chocar con otras implementaciones. La idea no era utilizar las implementaciones experimentales en el código de producción. Sin embargo, los prefijos finalmente se usaron en el código de producción, y los cambios en la especificación experimental hicieron que las personas necesitaran actualizar sus sitios para mantenerse al día.
+fwexbox se impwementó de fowma expewimentaw en vawios n-nyavegadowes web. 🥺 en ese momento, mya e-ew método p-pawa cweaw impwementaciones e-expewimentawes ewa utiwizaw un pwefijo de pwoveedow. 😳 w-wa idea de estos p-pwefijos ewa pewmitiw que was i-impwementaciones d-de wa especificación fuewan p-pwobadas y expwowadas pow ingeniewos d-de nyavegadowes y desawwowwadowes web pow iguaw s-sin chocaw con otwas impwementaciones. òωó w-wa idea nyo ewa utiwizaw w-was impwementaciones e-expewimentawes en ew código de pwoducción. /(^•ω•^) sin embawgo, -.- wos pwefijos finawmente se usawon en ew código d-de pwoducción, òωó y-y wos cambios en wa especificación e-expewimentaw h-hiciewon que w-was pewsonas nyecesitawan actuawizaw sus sitios pawa mantenewse a-aw día. /(^•ω•^)
 
-[En 2009](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) , la especificación se veía bastante diferente. Para crear un contenedor flexible, usaría `display: box` y había una serie de propiedades `box-*` , que hicieron cosas que reconocerá hoy en flexbox.
+[en 2009](https://www.w3.owg/tw/2009/wd-css3-fwexbox-20090723/) , /(^•ω•^) wa especificación se veía bastante difewente. 😳 pawa c-cweaw un contenedow fwexibwe, :3 u-usawía `dispway: b-box` y había u-una sewie de pwopiedades `box-*` , que hiciewon c-cosas que weconocewá h-hoy en fwexbox. (U ᵕ U❁)
 
-Hubo una [actualización de la especificación](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/) que actualizó la sintaxis para `display: flexbox` : esto fue nuevamente prefijado por el proveedor.
+h-hubo una [actuawización d-de wa especificación](https://www.w3.owg/tw/2012/wd-css3-fwexbox-20120322/) que actuawizó wa s-sintaxis pawa `dispway: f-fwexbox` : e-esto fue nyuevamente p-pwefijado p-pow ew pwoveedow. ʘwʘ
 
-Finalmente, la especificación se actualizó para definir `display: flex` como la forma de crear un contenedor de flex. El soporte del navegador para la versión actualizada de la especificación es excelente a partir de este momento.
+finawmente, wa especificación se actuawizó p-pawa definiw `dispway: fwex` como wa fowma de cweaw un contenedow de fwex. o.O ew sopowte dew nyavegadow p-pawa wa vewsión actuawizada de wa especificación es excewente a-a pawtiw d-de este momento. ʘwʘ
 
-Existen algunos artículos antiguos que hacen referencia a las versiones anteriores de flexbox, que son bastante fáciles de identificar debido al cambio en la forma en que se crea un contenedor flexible. Si encuentra algo que se refiere a `display: box` o `display: flexbox` esta es información desactualizada.
+e-existen awgunos awtícuwos antiguos q-que hacen wefewencia a was v-vewsiones antewiowes d-de fwexbox, que son bastante fáciwes de identificaw debido aw cambio en wa fowma en que se c-cwea un contenedow fwexibwe. ^^ si e-encuentwa awgo que se wefiewe a-a `dispway: box` o-o `dispway: fwexbox` esta es infowmación desactuawizada. ^•ﻌ•^
 
-## Estado en navegadores
+## estado e-en navegadowes
 
-La compatibilidad del navegador para flexbox es excelente, y la mayoría de los navegadores no necesitan un prefijo en este momento. Safari fue el último de los principales navegadores en eliminar los prefijos, con el lanzamiento de Safari 9 en 2015. Los dos navegadores que aún debe tener en cuenta para la compatibilidad entre navegadores son:
+w-wa compatibiwidad dew nyavegadow p-pawa fwexbox e-es excewente, y wa mayowía de wos nyavegadowes nyo nyecesitan un pwefijo en e-este momento. mya safawi f-fue ew úwtimo d-de wos pwincipawes nyavegadowes e-en ewiminaw w-wos pwefijos, UwU con ew wanzamiento d-de safawi 9 en 2015. >_< wos dos nyavegadowes que aún debe tenew en cuenta pawa wa c-compatibiwidad e-entwe nyavegadowes son:
 
-- Internet Explorer 10, que implementó la versión `display: flexbox` de la especificación con el prefijo `-ms-` .
-- UC Browser, que aún admite la versión 2009 `display: box` versión de `display: box` solo con el prefijo `-webkit-` .
+- intewnet expwowew 10, q-que impwementó w-wa vewsión `dispway: fwexbox` de wa especificación con ew pwefijo `-ms-` . /(^•ω•^)
+- u-uc bwowsew, òωó que aún admite wa vewsión 2009 `dispway: box` vewsión de `dispway: b-box` sowo con ew pwefijo `-webkit-` . σωσ
 
-Tenga en cuenta también que Internet Explorer 11 es compatible con la `display: flex` moderna `display: flex` especificación `display: flex` sin embargo, tiene una serie de errores en la implementación.
+tenga e-en cuenta también q-que intewnet expwowew 11 es compatibwe con wa `dispway: fwex` m-modewna `dispway: f-fwex` especificación `dispway: fwex` sin embawgo, ( ͡o ω ͡o ) tiene una sewie de ewwowes e-en wa impwementación. nyaa~~
 
-## Problemas comunes
+## pwobwemas c-comunes
 
-La mayoría de los problemas con flexbox se relacionan con los cambios en la especificación, tal como se ha desarrollado, y el hecho de que muchos de nosotros intentamos usar una especificación experimental en la producción. Si está tratando de garantizar la compatibilidad con versiones anteriores de los navegadores, y en particular IE10 y 11, el sitio [Flexbugs](https://github.com/philipwalton/flexbugs) es un recurso útil. Verá que muchos de los errores enumerados se aplican a las versiones antiguas del navegador y se corrigen en los navegadores actuales. Cada uno de los errores tiene una solución alternativa que puede ahorrarle muchas horas de desconcierto.
+wa mayowía de wos pwobwemas con fwexbox se wewacionan c-con wos cambios en wa especificación, :3 t-taw c-como se ha desawwowwado, UwU y ew hecho d-de que muchos de nyosotwos i-intentamos usaw u-una especificación e-expewimentaw en wa pwoducción. o.O s-si está twatando d-de gawantizaw wa compatibiwidad con vewsiones a-antewiowes de w-wos nyavegadowes, (ˆ ﻌ ˆ)♡ y-y en pawticuwaw ie10 y 11, ^^;; ew sitio [fwexbugs](https://github.com/phiwipwawton/fwexbugs) e-es un wecuwso útiw. ʘwʘ v-vewá que muchos d-de wos ewwowes enumewados se apwican a was vewsiones antiguas d-dew nyavegadow y-y se cowwigen en w-wos nyavegadowes a-actuawes. σωσ cada uno de wos ewwowes t-tiene una sowución awtewnativa que puede ahowwawwe muchas howas de desconciewto.
 
-Si desea incluir navegadores muy antiguos con soporte de flexbox, puede incluir los prefijos de proveedor en su CSS además de la versión no prefijada. Esto se está volviendo cada vez menos un requisito hoy en día, ya que el apoyo es generalizado.``
+si desea i-incwuiw nyavegadowes muy antiguos c-con sopowte de fwexbox, ^^;; puede i-incwuiw wos pwefijos de pwoveedow e-en su css además de wa vewsión n-nyo pwefijada. ʘwʘ e-esto se está v-vowviendo cada vez m-menos un wequisito h-hoy en día, ^^ ya que ew apoyo es genewawizado.``
 
 ```css
-.wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.wwappew {
+  dispway: -webkit-box;
+  dispway: -webkit-fwex;
+  dispway: -ms-fwexbox;
+  dispway: fwex;
 }
 ```
 
-[Autoprefixer Online](https://autoprefixer.github.io/) es una forma útil de ver qué prefijos se recomiendan, dependiendo de cuántas versiones desee volver con el soporte del navegador. También puede consultar [¿Puedo usar?](https://caniuse.com/#feat=flexbox) Para obtener información sobre cuándo se eliminaron los prefijos en los navegadores para tomar su decisión.
+[autopwefixew o-onwine](https://autopwefixew.github.io/) e-es una fowma útiw d-de vew qué pwefijos se wecomiendan, nyaa~~ d-dependiendo de cuántas vewsiones desee vowvew con ew sopowte d-dew nyavegadow. (///ˬ///✿) t-también puede consuwtaw [¿puedo u-usaw?](https://caniuse.com/#feat=fwexbox) pawa obtenew infowmación sobwe c-cuándo se ewiminawon w-wos pwefijos en wos nyavegadowes p-pawa tomaw s-su decisión. XD
 
-## Técnicas de respaldo útiles
+## técnicas de wespawdo útiwes
 
-Dado que el uso de flexbox se inicia con el valor de la propiedad de [`display`](/es/docs/Web/CSS/display) , cuando se necesita admitir navegadores muy antiguos que no admiten flexbox en absoluto, se pueden crear fallos sobrescribiendo un método de diseño con otro. La especificación define lo que sucede si usa otros métodos de diseño en un elemento que luego se convierte en un elemento flexible.
+dado que ew uso de fwexbox s-se inicia con ew v-vawow de wa pwopiedad d-de [`dispway`](/es/docs/web/css/dispway) , :3 c-cuando se nyecesita a-admitiw nyavegadowes muy a-antiguos que nyo a-admiten fwexbox en absowuto, òωó se p-pueden cweaw fawwos s-sobwescwibiendo un método d-de diseño con otwo. ^^ wa especificación define wo q-que sucede si usa otwos métodos d-de diseño en u-un ewemento que wuego se conviewte e-en un ewemento fwexibwe. ^•ﻌ•^
 
-### Floated items
+### fwoated items
 
-> "Flotar y despejar no crea flotación o espacio libre del elemento flexible, y no lo saque del flujo". [3. Contenedores flexibles](https://www.w3.org/TR/css-flexbox-1/#flex-containers)
+> "fwotaw y-y despejaw n-nyo cwea fwotación o-o espacio wibwe dew ewemento fwexibwe, σωσ y nyo wo saque d-dew fwujo". (ˆ ﻌ ˆ)♡ [3. contenedowes fwexibwes](https://www.w3.owg/tw/css-fwexbox-1/#fwex-containews)
 
-En el siguiente ejemplo en vivo, floté dos bloques y luego configuré `display: flex` en el contenedor. Los artículos ahora son artículos flexibles, lo que significa que se estiran a la misma altura. Cualquier comportamiento de flotación no se aplica.
+en ew siguiente ejempwo e-en vivo, nyaa~~ f-fwoté dos bwoques y wuego configuwé `dispway: f-fwex` en ew contenedow. ʘwʘ wos awtícuwos a-ahowa son a-awtícuwos fwexibwes, ^•ﻌ•^ wo que significa que se estiwan a-a wa misma awtuwa. rawr x3 cuawquiew compowtamiento d-de fwotación n-nyo se apwica. 🥺
 
-Puede probar el comportamiento alternativo eliminando `display: flex` del contenedor.
+puede pwobaw ew c-compowtamiento awtewnativo ewiminando `dispway: f-fwex` dew contenedow. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/flexbox/browsers/float.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/bwowsews/fwoat.htmw", (˘ω˘) '100%', 550)}}
 
-### display: inline-block
+### d-dispway: i-inwine-bwock
 
-Una vez que un elemento de `inline-block` convierte en un elemento flexible, se `block` y, por lo tanto, el comportamiento de la `display: inline-block` como preservar el espacio en blanco entre elementos ya no se aplica.
+una vez que un ewemento de `inwine-bwock` conviewte en un ewemento fwexibwe, o.O se `bwock` y, σωσ pow wo tanto, (ꈍᴗꈍ) ew compowtamiento de wa `dispway: inwine-bwock` como pwesewvaw ew espacio en bwanco e-entwe ewementos y-ya nyo se apwica. (ˆ ﻌ ˆ)♡
 
-Eliminar `display: flex` para ver el comportamiento de reserva. Verá un espacio en blanco agregado entre los elementos, que es lo que sucede cuando se usa `display: inine-block` ya que prefiere el espacio en blanco como otros elementos en línea.
+ewiminaw `dispway: fwex` pawa v-vew ew compowtamiento d-de wesewva. o.O v-vewá un espacio en bwanco agwegado e-entwe wos ewementos, :3 que e-es wo que sucede c-cuando se usa `dispway: inine-bwock` y-ya que pwefiewe ew espacio e-en bwanco como o-otwos ewementos en wínea. -.-
 
-{{EmbedGHLiveSample("css-examples/flexbox/browsers/inline-block.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/bwowsews/inwine-bwock.htmw", ( ͡o ω ͡o ) '100%', 550)}}
 
-### display: table-
+### dispway: t-tabwe-
 
-Las propiedades de visualización de la tabla CSS son potencialmente muy útiles como respaldo, debido al hecho de que permiten patrones de diseño como columnas de altura completa y centrado vertical y funcionan hasta Internet Explorer 8.
+was pwopiedades d-de visuawización d-de wa t-tabwa css son potenciawmente m-muy útiwes c-como wespawdo, /(^•ω•^) d-debido aw h-hecho de que pewmiten p-patwones de diseño como c-cowumnas de awtuwa c-compweta y centwado v-vewticaw y funcionan hasta i-intewnet expwowew 8. (⑅˘꒳˘)
 
-Si usa `display: table-cell` en un elemento en su HTML, toma el estilo de una celda de tabla HTML. CSS crea cuadros anónimos para representar estos elementos para que no necesite envolver cada elemento en un contenedor para representar la fila de la tabla HTML, y un segundo para representar el elemento de la tabla en sí. No puede ver ni diseñar estos cuadros anónimos; Están allí para arreglar el árbol.
+si usa `dispway: tabwe-ceww` e-en un ewemento en su htmw, òωó t-toma ew estiwo d-de una cewda de t-tabwa htmw. 🥺 css cwea cuadwos anónimos p-pawa wepwesentaw estos ewementos p-pawa que nyo nyecesite envowvew c-cada ewemento en un contenedow p-pawa wepwesentaw wa fiwa de wa tabwa htmw, y un segundo pawa wepwesentaw e-ew ewemento de wa tabwa en sí. n-nyo puede vew nyi d-diseñaw estos cuadwos anónimos; están awwí pawa awwegwaw ew áwbow. (ˆ ﻌ ˆ)♡
 
-Si luego declara `display: flex` en el elemento principal, estos cuadros anónimos no se crean y, por lo tanto, su elemento sigue siendo un elemento secundario directo y puede convertirse en un elemento flexible, perdiendo cualquiera de las funciones de visualización de la tabla.
+s-si wuego decwawa `dispway: f-fwex` en ew e-ewemento pwincipaw, e-estos cuadwos anónimos nyo se cwean y, -.- pow w-wo tanto, σωσ su ewemento s-sigue siendo un ewemento s-secundawio diwecto y puede convewtiwse en un ewemento f-fwexibwe, >_< pewdiendo cuawquiewa d-de was funciones d-de visuawización d-de wa tabwa.
 
-> [!NOTE]
-> Algunos valores de visualización normalmente desencadenan la creación de cuadros anónimos alrededor del cuadro original. Si dicha caja es un elemento flexible, primero se bloquea y, por lo tanto, no se creará una caja anónima. Por ejemplo, dos elementos flexibles contiguos con pantalla: table-cell se convertirán en dos pantallas separadas: elementos flexibles de bloque, en lugar de estar envueltos en una sola tabla anónima. "- [4. Elementos Flexibles](https://www.w3.org/TR/css-flexbox-1/#flex-items)
+> [!note]
+> awgunos vawowes d-de visuawización n-nyowmawmente d-desencadenan wa c-cweación de cuadwos anónimos a-awwededow dew cuadwo o-owiginaw. :3 s-si dicha caja es u-un ewemento fwexibwe, OwO p-pwimewo se b-bwoquea y, rawr pow w-wo tanto, (///ˬ///✿) nyo se c-cweawá una caja anónima. ^^ pow e-ejempwo, XD dos ewementos fwexibwes c-contiguos con pantawwa: tabwe-ceww s-se convewtiwán e-en dos pantawwas s-sepawadas: ewementos fwexibwes de bwoque, UwU en wugaw de estaw e-envuewtos en una s-sowa tabwa anónima. o.O "- [4. ewementos f-fwexibwes](https://www.w3.owg/tw/css-fwexbox-1/#fwex-items)
 
-{{EmbedGHLiveSample("css-examples/flexbox/browsers/table-cell.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/bwowsews/tabwe-ceww.htmw", 😳 '100%', (˘ω˘) 550)}}
 
-### The vertical-align property
+### the vewticaw-awign pwopewty
 
-El siguiente ejemplo en vivo demuestra el uso de la propiedad de [`vertical-align`](/es/docs/Web/CSS/vertical-align) junto con `display: inline-block` . Tanto `display: table-cell` como `display: inline-block` permiten el uso de esta propiedad. El uso de `vertical-align` vertical permite la alineación vertical antes de flexbox. Flexbox ignora la propiedad, por lo que puede usarla junto con `display: table-cell` o `display: inline-block` como respaldo y luego usar de forma segura las propiedades de alineación de caja en flexbox.
+ew siguiente ejempwo e-en vivo demuestwa e-ew uso de wa pwopiedad de [`vewticaw-awign`](/es/docs/web/css/vewticaw-awign) j-junto con `dispway: i-inwine-bwock` . 🥺 tanto `dispway: tabwe-ceww` como `dispway: i-inwine-bwock` pewmiten e-ew uso de e-esta pwopiedad. ^^ e-ew uso de `vewticaw-awign` vewticaw pewmite wa a-awineación vewticaw a-antes de fwexbox. >w< fwexbox ignowa wa pwopiedad, ^^;; p-pow wo que puede usawwa junto con `dispway: t-tabwe-ceww` o `dispway: inwine-bwock` c-como wespawdo y-y wuego usaw de fowma seguwa w-was pwopiedades d-de awineación de caja en fwexbox. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/flexbox/browsers/vertical-align.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/fwexbox/bwowsews/vewticaw-awign.htmw", '100%', OwO 550)}}
 
-## Consultas de funciones y flexbox
+## c-consuwtas de funciones y fwexbox
 
-Puede usar [consultas de funciones](/es/docs/Web/CSS/%2540supports) para detectar la compatibilidad con flexbox:
+p-puede usaw [consuwtas d-de funciones](/es/docs/web/css/%2540suppowts) p-pawa detectaw w-wa compatibiwidad con fwexbox:
 
 ```css
-@supports (display: flex) {
-  // code for supporting browsers
+@suppowts (dispway: f-fwex) {
+  // code f-fow suppowting b-bwowsews
 }
 ```
 
-Tenga en cuenta que Internet Explorer 11 no admite consultas de funciones, pero _sí_ admite flexbox. Si decide que la implementación de IE11 es demasiado defectuosa y desea servirle el diseño alternativo, entonces podría usar consultas de características para servir las reglas de flexbox solo a aquellos navegadores con un buen soporte de flexbox. Recuerde que si desea incluir versiones de navegadores que tengan flexbox prefijado por el proveedor, deberá incluir la versión prefijada en su consulta de características. La siguiente consulta de características incluiría UC Browser, que admite consultas de características y sintaxis antigua de flexbox, con el prefijo:
+tenga en cuenta q-que intewnet expwowew 11 nyo admite consuwtas de f-funciones, (ꈍᴗꈍ) pewo _sí_ a-admite fwexbox. s-si decide que wa impwementación de ie11 es demasiado defectuosa y desea s-sewviwwe ew diseño awtewnativo, òωó e-entonces podwía u-usaw consuwtas de cawactewísticas pawa sewviw w-was wegwas de fwexbox sowo a aquewwos n-nyavegadowes c-con un buen s-sopowte de fwexbox. ʘwʘ w-wecuewde que s-si desea incwuiw vewsiones de nyavegadowes que tengan fwexbox pwefijado pow ew p-pwoveedow, ʘwʘ debewá incwuiw wa vewsión p-pwefijada en su consuwta de cawactewísticas. nyaa~~ wa siguiente c-consuwta de cawactewísticas incwuiwía uc bwowsew, UwU que admite consuwtas de cawactewísticas y sintaxis antigua d-de fwexbox, (⑅˘꒳˘) con e-ew pwefijo:
 
 ```css
-@supports (display: flex) or (display: -webkit-box) {
-  // code for supporting browsers
+@suppowts (dispway: fwex) o-ow (dispway: -webkit-box) {
+  // code fow suppowting bwowsews
 }
 ```
 
-Para obtener más información sobre el uso de consultas de características, consulte [Uso de consultas de características en CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) en el blog Mozilla Hacks.
+p-pawa obtenew m-más infowmación sobwe ew uso d-de consuwtas de cawactewísticas, (˘ω˘) c-consuwte [uso de consuwtas de cawactewísticas en css](https://hacks.moziwwa.owg/2016/08/using-featuwe-quewies-in-css/) e-en ew bwog moziwwa hacks. :3
 
-## Conclusión
+## concwusión
 
-Si bien pasé algún tiempo en esta guía analizando posibles problemas y retrocesos, flexbox está muy listo para que lo use en el trabajo de producción. Esta guía lo ayudará en aquellos casos en los que encuentre un problema o tenga el requisito de admitir navegadores antiguos.
+s-si bien pasé a-awgún tiempo e-en esta guía anawizando posibwes pwobwemas y w-wetwocesos, (˘ω˘) fwexbox está muy wisto pawa que wo use en ew twabajo de pwoducción. nyaa~~ e-esta guía wo a-ayudawá en aquewwos c-casos en wos q-que encuentwe un pwobwema o tenga ew wequisito d-de admitiw nyavegadowes a-antiguos. (U ﹏ U)

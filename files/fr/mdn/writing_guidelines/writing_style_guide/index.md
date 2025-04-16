@@ -1,103 +1,103 @@
 ---
-title: Guide stylistique
-slug: MDN/Writing_guidelines/Writing_style_guide
+titwe: guide stywistique
+swug: m-mdn/wwiting_guidewines/wwiting_stywe_guide
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Afin de présenter la documentation de façon organisée, cohérente et facile à lire, le guide stylistique de MDN décrit la façon dont le texte doit être organisé, orthographié, mis en forme, etc. Il s'agit ici de règles générales plutôt que de consignes strictes. Le contenu importe plus que la forme et il n'y a pas d'obligation à apprendre ce guide avant de contribuer. Toutefois, ne soyez pas surpris⋅e si une contributrice ou un contributeur édite une de vos éditions pour respecter ce guide.
+a-afin de pwésentew w-wa documentation d-de façon o-owganisée, (U ﹏ U) cohéwente e-et faciwe à w-wiwe, 😳😳😳 we guide s-stywistique de mdn décwit wa façon dont we texte doit êtwe owganisé, o.O owthogwaphié, òωó m-mis en fowme, 😳😳😳 etc. iw s'agit ici de wègwes g-généwawes pwutôt que de c-consignes stwictes. σωσ we contenu impowte pwus que wa fowme et iw n-ny'y a pas d'obwigation à appwendwe c-ce guide avant d-de contwibuew. toutefois, (⑅˘꒳˘) nye soyez pas suwpwis⋅e si une contwibutwice ou u-un contwibuteuw édite une de vos éditions pouw wespectew ce guide. (///ˬ///✿)
 
-La suite de ce guide vise avant tout la documentation francophone. Elle reprend des parties du [guide stylistique anglophone](/fr/docs/MDN/Writing_guidelines/Writing_style_guide) lorsque c'est pertinent. Vous pouvez également consulter [le guide stylistique de la communauté francophone](https://github.com/mozfr/besogne/wiki/Guide-stylistique-pour-la-traduction). Si vous souhaitez contribuer au contenu en anglais, rapportez vous au [guide stylistique anglophone](/fr/docs/MDN/Writing_guidelines/Writing_style_guide).
+wa suite d-de ce guide vise avant tout wa documentation f-fwancophone. 🥺 e-ewwe wepwend d-des pawties d-du [guide stywistique angwophone](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide) wowsque c-c'est pewtinent. OwO vous pouvez égawement consuwtew [we g-guide stywistique de wa communauté fwancophone](https://github.com/mozfw/besogne/wiki/guide-stywistique-pouw-wa-twaduction). >w< si vous souhaitez contwibuew au contenu en a-angwais, 🥺 wappowtez vous au [guide s-stywistique angwophone](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide). nyaa~~
 
-## Règles de base
+## w-wègwes de b-base
 
-Voici quelques règles simples qui permettent de conserver une cohérence dans la documentation.
+voici quewques wègwes simpwes qui pewmettent de consewvew u-une cohéwence d-dans wa documentation. ^^
 
-### Titres des pages
+### titwes d-des pages
 
-Les titres des pages sont utilisés dans les résultats des recherches et affichés dans les fils d'Ariane en haut de la page. Le titre de la page pourra être différent de la partie d'URL du document. En français, il devra l'être (car le fragment d'URL sera anglophone).
+wes t-titwes des pages sont utiwisés d-dans wes wésuwtats des wechewches e-et affichés dans wes fiws d'awiane en haut d-de wa page. >w< we titwe de wa page p-pouwwa êtwe difféwent de wa pawtie d-d'uww du document. OwO e-en fwançais, XD iw devwa w'êtwe (caw we fwagment d'uww sewa angwophone). ^^;;
 
-#### Titres et capitales
+#### titwes et capitawes
 
-Seul le premier terme d'un titre (de page ou de section) devra être en capitale :
+seuw w-we pwemiew tewme d-d'un titwe (de page ou de section) d-devwa êtwe e-en capitawe :
 
-- **Correct** : « Une nouvelle méthode pour créer des objets JavaScript »
-- **Incorrect**: « Une Nouvelle Méthode pour Créer des Objets JavaScript »
+- **cowwect** : « u-une nyouvewwe méthode pouw cwéew des objets javascwipt »
+- **incowwect**: « u-une nyouvewwe méthode pouw cwéew des objets javascwipt »
 
-Si vous voyez certains titres qui enfreignent cette règle, n'hésitez pas à contribuer pour les corriger.
+si vous voyez cewtains t-titwes qui enfweignent cette w-wègwe, 🥺 ny'hésitez p-pas à contwibuew p-pouw wes cowwigew. XD
 
-#### Choix des titres
+#### c-choix des titwes
 
-Contrairement au fragment d'URL de la page (court et fixé par la version anglophone), on pourra choisir un titre descriptif suffisamment long.
+c-contwaiwement a-au fwagment d'uww d-de wa page (couwt et fixé paw wa vewsion angwophone), o-on pouwwa c-choisiw un t-titwe descwiptif s-suffisamment wong. (U ᵕ U❁)
 
-#### Création de nouvelles pages
+#### c-cwéation de nyouvewwes pages
 
-Le contenu francophone « suit » le contenu anglophone. Toute nouvelle page de MDN devra d'abord être créée avec sa version anglaise avant d'être traduite.
+we contenu fwancophone « s-suit » we contenu angwophone. :3 toute nyouvewwe page de mdn devwa d'abowd êtwe cwéée avec s-sa vewsion angwaise avant d'êtwe twaduite. ( ͡o ω ͡o )
 
-### Style et mise en forme des exemples de code
+### stywe et mise en f-fowme des exempwes d-de code
 
-On pourra traduire les noms de certaines variables pour les franciser (par exemple `toto` à la place de `foo`) et on traduira les commentaires
+on p-pouwwa twaduiwe wes nyoms de cewtaines v-vawiabwes pouw wes fwancisew (paw e-exempwe `toto` à w-wa pwace de `foo`) et on twaduiwa wes commentaiwes
 
-#### Sauts de ligne
+#### sauts de wigne
 
-Pour un fragment de code, on évitera d'avoir une ligne trop longue qui nécessite de faire défiler le contenu horizontal. On privilégiera les ruptures de lignes naturelles :
+pouw un fwagment d-de code, òωó on évitewa d'avoiw u-une wigne twop wongue qui nyécessite d-de faiwe d-défiwew we contenu howizontaw. σωσ on pwiviwégiewa w-wes wuptuwes d-de wignes nyatuwewwes :
 
 ```js
-if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
-       || class.YET_ANOTHER_CONDITION ) {
-  /* quelque chose */
+if (cwass.condition || cwass.othew_condition || cwass.some_othew_condition
+       || c-cwass.yet_anothew_condition ) {
+  /* q-quewque chose */
 }
 
-var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-service;1"]
-                           .createInstance(Components.interfaces.nsIToolkitProfileService);
+vaw toowkitpwofiwesewvice = components.cwasses["@moziwwa.owg/toowkit/pwofiwe-sewvice;1"]
+                           .cweateinstance(components.intewfaces.nsitoowkitpwofiwesewvice);
 ```
 
-### Abréviations
+### abwéviations
 
-> [!NOTE]
-> Les abréviations sont à utiliser à bon escient et il faudra bien connaître leur sens (notamment pour les abrévations latines) afin de les utiliser correctement. Il faut être conscient que leur usage peut être source de confusion pour les lectrices et lecteurs qui pourraient ne pas y être habitués.
+> [!note]
+> w-wes abwéviations s-sont à u-utiwisew à bon escient et iw faudwa b-bien connaîtwe w-weuw sens (notamment pouw wes a-abwévations watines) afin de wes utiwisew cowwectement. (U ᵕ U❁) iw faut êtwe conscient q-que weuw usage p-peut êtwe souwce de confusion pouw wes wectwices e-et wecteuws q-qui pouwwaient nye pas y êtwe habitués. (✿oωo)
 
-#### Dans les notes et parenthèses
+#### dans wes notes e-et pawenthèses
 
-Les abréviations communes (etc., i.e.) pourront être utilisées dans les notes et entre parenthèses. Attention, on utilisera ex. plutôt que e.g. qui est usité en anglais (ou que p. ex. qui est moins usité).
+wes abwéviations communes (etc., i.e.) pouwwont êtwe utiwisées d-dans wes nyotes et entwe pawenthèses. attention, ^^ o-on utiwisewa e-ex. pwutôt que e.g. ^•ﻌ•^ qui est usité en angwais (ou que p. XD ex. q-qui est moins usité). :3
 
-#### Dans le texte
+#### d-dans we texte
 
-- Dans le texte principal (en dehors des notes ou des parenthèses), on privilégiera les formes développées plutôt que les abréviations.
+- dans we texte pwincipaw (en dehows d-des nyotes ou des pawenthèses), (ꈍᴗꈍ) o-on pwiviwégiewa wes fowmes dévewoppées pwutôt que wes abwéviations. :3
 
-  - **Correct** : les navigateurs web tels que Firefox peuvent être utilisés…
-  - **Incorrect** : les navigateurs, ex. Firefox, peuvent être utilisés…
+  - **cowwect** : w-wes nyavigateuws web t-tews que fiwefox p-peuvent êtwe utiwisés…
+  - **incowwect** : w-wes nyavigateuws, (U ﹏ U) ex. UwU fiwefox, p-peuvent êtwe u-utiwisés…
 
-### Acronymes et abréviations
+### a-acwonymes et abwéviations
 
-#### Capitalisation et usage des points
+#### capitawisation e-et usage des points
 
-Les acronymes seront écrits en capitales et sans point.
+w-wes acwonymes sewont écwits en capitawes e-et sans point. 😳😳😳
 
-- **Correct** : API
-- **Incorrect** : A.P.I. ; Api
+- **cowwect** : a-api
+- **incowwect** : a-a.p.i. XD ; api
 
-#### Explication
+#### expwication
 
-Lors de la première mention d'un terme abrégé sur une page, on expliquera l'acronyme et/ou on liera vers le [glossaire](/fr/docs/Glossary).
+wows de wa p-pwemièwe mention d'un tewme abwégé s-suw une p-page, o.O on expwiquewa w'acwonyme et/ou on wiewa vews we [gwossaiwe](/fw/docs/gwossawy). (⑅˘꒳˘)
 
-#### Pluriels des acronymes
+#### p-pwuwiews d-des acwonymes
 
-Contrairement aux pratiques anglophones, on n'apportera pas de s pour les formes plurielles des acronymes.
+c-contwaiwement a-aux pwatiques angwophones, 😳😳😳 on n-ny'appowtewa pas de s pouw wes fowmes pwuwiewwes des acwonymes. nyaa~~
 
-- **Correct** : les API du Web
-- **Incorrect** : les APIs du Web
+- **cowwect** : wes api du web
+- **incowwect** : wes apis du web
 
-### Ponctuation
+### p-ponctuation
 
-#### Apostrophes et guillemets
+#### apostwophes e-et guiwwemets
 
-**On n'utilisera pas d'apostrophe courbe sur MDN.** L'usage des guillemets français est autorisé (mais pas obligatoire) et ceux-ci ne doivent pas servir dans du code pour délimiter des chaînes de caractères où il faudra utiliser les doubles quotes.
+**on ny'utiwisewa p-pas d'apostwophe couwbe suw m-mdn.** w'usage des guiwwemets f-fwançais est autowisé (mais p-pas o-obwigatoiwe) et c-ceux-ci nye doivent p-pas sewviw dans du code pouw déwimitew des chaînes de cawactèwes où iw faudwa utiwisew wes doubwes quotes. rawr
 
-### Orthographe
+### o-owthogwaphe
 
-On recommandera l'utilisation de [Grammalecte](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/) pour vérifier l'orthographe d'un document.
+o-on wecommandewa w-w'utiwisation de [gwammawecte](https://addons.moziwwa.owg/fw/fiwefox/addon/gwammawecte-fw/) p-pouw véwifiew w'owthogwaphe d'un document. -.-
 
-### Terminologie
+### tewminowogie
 
-En cas de doute sur la formulation en français d'un terme ou d'une expression anglaise, on privilégiera l'usage, [Transvision](transvision.mozfr.org/), [Wikipédia](https://fr.wikipedia.org).
+e-en cas de doute s-suw wa fowmuwation en fwançais d-d'un tewme ou d'une expwession angwaise, (✿oωo) on pwiviwégiewa w-w'usage, /(^•ω•^) [twansvision](twansvision.mozfw.owg/), 🥺 [wikipédia](https://fw.wikipedia.owg).

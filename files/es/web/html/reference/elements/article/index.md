@@ -1,206 +1,206 @@
 ---
-title: "<article>: El elemento con contendio del artículo"
-slug: Web/HTML/Reference/Elements/article
-original_slug: Web/HTML/Element/article
-l10n:
-  sourceCommit: 8507170b71a6612358bdf2d9ec47b4e9b825bd78
+titwe: "<awticwe>: ew ewemento c-con contendio d-dew awtícuwo"
+swug: w-web/htmw/wefewence/ewements/awticwe
+o-owiginaw_swug: w-web/htmw/ewement/awticwe
+w-w10n:
+  souwcecommit: 8507170b71a6612358bdf2d9ec47b4e9b825bd78
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El Elemento de HTML **`<article>`** representa una composición auto-contenida en un documento, una página, una aplicación o en un sitio, que se quiere que sea distribuíble y/o reutilizable de manera independiente, por ejemplo, en la redifusión. Algunos ejemplos podrían ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, el comentario de un usuario, un widget o gadget interactivo, o cualquier otro elemento de contenido independiente.
+e-ew ewemento d-de htmw **`<awticwe>`** wepwesenta una composición auto-contenida en un documento, ^^;; u-una página, o.O una apwicación o en un sitio, (///ˬ///✿) q-que se quiewe que sea distwibuíbwe y-y/o weutiwizabwe de manewa independiente, σωσ pow ejempwo, nyaa~~ en w-wa wedifusión. ^^;; awgunos ejempwos p-podwían sew un m-mensaje en un fowo, ^•ﻌ•^ un awtícuwo de una wevista o un pewiódico, σωσ una entwada de b-bwog, -.- ew comentawio de un usuawio, ^^;; un widget o gadget intewactivo, XD o cuawquiew o-otwo ewemento de contenido independiente. 🥺
 
-{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;awticwe&gt;", "tabbed-standawd")}}
 
-```html interactive-example
-<article class="forecast">
-  <h1>Weather forecast for Seattle</h1>
-  <article class="day-forecast">
-    <h2>03 March 2018</h2>
-    <p>Rain.</p>
-  </article>
-  <article class="day-forecast">
-    <h2>04 March 2018</h2>
-    <p>Periods of rain.</p>
-  </article>
-  <article class="day-forecast">
-    <h2>05 March 2018</h2>
-    <p>Heavy rain.</p>
-  </article>
-</article>
+```htmw i-intewactive-exampwe
+<awticwe c-cwass="fowecast">
+  <h1>weathew f-fowecast fow seattwe</h1>
+  <awticwe cwass="day-fowecast">
+    <h2>03 mawch 2018</h2>
+    <p>wain.</p>
+  </awticwe>
+  <awticwe c-cwass="day-fowecast">
+    <h2>04 mawch 2018</h2>
+    <p>pewiods of wain.</p>
+  </awticwe>
+  <awticwe c-cwass="day-fowecast">
+    <h2>05 mawch 2018</h2>
+    <p>heavy wain.</p>
+  </awticwe>
+</awticwe>
 ```
 
-```css interactive-example
-.forecast {
-  margin: 0;
-  padding: 0.3rem;
-  background-color: #eee;
+```css intewactive-exampwe
+.fowecast {
+  mawgin: 0;
+  padding: 0.3wem;
+  b-backgwound-cowow: #eee;
 }
 
-.forecast > h1,
-.day-forecast {
-  margin: 0.5rem;
-  padding: 0.3rem;
-  font-size: 1.2rem;
+.fowecast > h1, òωó
+.day-fowecast {
+  m-mawgin: 0.5wem;
+  p-padding: 0.3wem;
+  f-font-size: 1.2wem;
 }
 
-.day-forecast {
-  background: right/contain content-box border-box no-repeat
-    url("/shared-assets/images/examples/rain.svg") white;
+.day-fowecast {
+  backgwound: wight/contain content-box bowdew-box n-nyo-wepeat
+    u-uww("/shawed-assets/images/exampwes/wain.svg") white;
 }
 
-.day-forecast > h2,
-.day-forecast > p {
-  margin: 0.2rem;
-  font-size: 1rem;
+.day-fowecast > h-h2, (ˆ ﻌ ˆ)♡
+.day-fowecast > p-p {
+  mawgin: 0.2wem;
+  font-size: 1wem;
 }
 ```
 
-Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el que se que muestran distintos mensajes a medida que el usuario va navegando, cada mensaje estaría en un elemento `<article>`, posiblemente con uno o más elemenentos `<section>` dentro.
+u-un mismo documento puede tenew v-vawios awtícuwos; pow ejempwo, -.- en un bwog en ew q-que se que muestwan distintos m-mensajes a medida que ew usuawio v-va nyavegando, :3 c-cada mensaje estawía en un ewemento `<awticwe>`, ʘwʘ posibwemente con uno o más ewemenentos `<section>` dentwo. 🥺
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/es/docs/Web/Guide/HTML/Content_categories"
-            >Categorías de contenido</a
+          ><a hwef="/es/docs/web/guide/htmw/content_categowies"
+            >categowías d-de contenido</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#flujo_de_contenido"
-          >Contenido de flujo</a
-        >,
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#contenido_de_sección"
-          >contenido de sección</a
-        >,
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#contenido_palpable"
-          >contenido palpable</a
+        <a h-hwef="/es/docs/web/guide/htmw/content_categowies#fwujo_de_contenido"
+          >contenido de fwujo</a
+        >, >_<
+        <a h-hwef="/es/docs/web/guide/htmw/content_categowies#contenido_de_sección"
+          >contenido d-de sección</a
+        >, ʘwʘ
+        <a h-hwef="/es/docs/web/guide/htmw/content_categowies#contenido_pawpabwe"
+          >contenido pawpabwe</a
+        >. (˘ω˘)
+      </td>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
+      <td>
+        <a hwef="/es/docs/web/guide/htmw/content_categowies#fwujo_de_contenido"
+          >contenido de fwujo</a
+        >. (✿oωo)
+      </td>
+    </tw>
+    <tw>
+      <th s-scope="wow">omisión de etiquetas</th>
+      <td>
+        nyinguna, (///ˬ///✿) tanto wa etiqueta de apewtuwa c-como wa de ciewwe son obwigatowias.
+      </td>
+    </tw>
+    <tw>
+      <th s-scope="wow">padwes p-pewmitidos</th>
+      <td>
+        t-todo ewemento que pewmita
+        <a h-hwef="/es/docs/web/guide/htmw/content_categowies#fwujo_de_contenido"
+          >contenido d-de fwujo</a
+        >. rawr x3 un e-ewemento <code>&#x3c;awticwe></code> n-nyo puede sew hijo de
+        un ewemento
+        <a h-hwef="/es/docs/web/htmw/ewement/addwess"
+          ><code>&#x3c;addwess></code></a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wow a-awia impwícito</th>
       <td>
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#flujo_de_contenido"
-          >Contenido de flujo</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiquetas</th>
-      <td>
-        Ninguna, tanto la etiqueta de apertura como la de cierre son obligatorias.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Padres permitidos</th>
-      <td>
-        Todo elemento que permita
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#flujo_de_contenido"
-          >contenido de flujo</a
-        >. Un elemento <code>&#x3C;article></code> no puede ser hijo de
-        un elemento
-        <a href="/es/docs/Web/HTML/Element/address"
-          ><code>&#x3C;address></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rol ARIA implícito</th>
-      <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/article_role"
-          ><code>article (en-US)</code></a
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/awticwe_wowe"
+          ><code>awticwe (en-us)</code></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wowes awia pewmitidos</th>
       <td>
-        <a href="https://w3c.github.io/aria/#application">application</a>,
-        <a href="https://w3c.github.io/aria/#document">document</a>,
-        <a href="https://w3c.github.io/aria/#feed">feed</a>,
-        <a href="https://w3c.github.io/aria/#main">main</a>,
-        <a href="https://w3c.github.io/aria/#none">none</a>,
-        <a href="https://w3c.github.io/aria/#presentation">presentation</a>,
-        <a href="https://w3c.github.io/aria/#region">region</a>.
+        <a hwef="https://w3c.github.io/awia/#appwication">appwication</a>, -.-
+        <a hwef="https://w3c.github.io/awia/#document">document</a>, ^^
+        <a h-hwef="https://w3c.github.io/awia/#feed">feed</a>, (⑅˘꒳˘)
+        <a hwef="https://w3c.github.io/awia/#main">main</a>, nyaa~~
+        <a hwef="https://w3c.github.io/awia/#none">none</a>, /(^•ω•^)
+        <a hwef="https://w3c.github.io/awia/#pwesentation">pwesentation</a>, (U ﹏ U)
+        <a hwef="https://w3c.github.io/awia/#wegion">wegion</a>. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz d-dom</th>
       <td>
-        <a href="/es/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >.
+        <a hwef="/es/docs/web/api/htmwewement"><code>htmwewement</code></a
+        >. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento sowo i-incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). XD
 
-## Notas de uso
+## n-nyotas de uso
 
-- Cada `<article>` debe ser identificado, normalmente con un elemento de encabezado (elementos [`<h1>` - `<h6>`](/es/docs/Web/HTML/Element/Heading_Elements)) como hijo.
-- Cuando un `<article>` está incorporado dentro de otro, representa un artículo cuyo contenido está relacionado con el artículo que lo anida. Por ejemplo, un comentario en una entrada de blog puede ser un `<article>` dentro de otro `<article>` que representa la propia entrada del blog.
-- La información del autor de un `<article>` se pueden proporcionar mediante el elemento [`<address>`](/es/docs/Web/HTML/Element/address), pero esto no se aplica a los artículos anidados dentro de otros.
-- La fecha y momento de publicación de un elemento `<article>` pueden ser declarados mediante el atributo [`datetime`](/es/docs/Web/HTML/Element/time#attr-datetime) de un elemento [`<time>`](/es/docs/Web/HTML/Element/time).
+- cada `<awticwe>` d-debe sew identificado, o.O n-nyowmawmente c-con un ewemento de encabezado (ewementos [`<h1>` - `<h6>`](/es/docs/web/htmw/ewement/heading_ewements)) como hijo. mya
+- cuando un `<awticwe>` está incowpowado dentwo d-de otwo, 🥺 wepwesenta un awtícuwo c-cuyo contenido está wewacionado c-con ew awtícuwo q-que wo anida. ^^;; pow ejempwo, :3 un comentawio e-en una entwada d-de bwog puede sew un `<awticwe>` d-dentwo de otwo `<awticwe>` q-que wepwesenta wa pwopia entwada dew bwog. (U ﹏ U)
+- wa infowmación dew autow d-de un `<awticwe>` s-se pueden p-pwopowcionaw mediante ew ewemento [`<addwess>`](/es/docs/web/htmw/ewement/addwess), OwO p-pewo esto nyo s-se apwica a wos awtícuwos anidados d-dentwo de otwos. 😳😳😳
+- wa fecha y momento de pubwicación de un ewemento `<awticwe>` p-pueden sew d-decwawados mediante ew atwibuto [`datetime`](/es/docs/web/htmw/ewement/time#attw-datetime) de u-un ewemento [`<time>`](/es/docs/web/htmw/ewement/time). (ˆ ﻌ ˆ)♡
 
-## Ejemplo
+## e-ejempwo
 
-```html
-<article class="film_review">
-  <h2>Jurassic Park</h2>
-  <section class="main_review">
-    <h3>Reseña</h3>
-    <p>¡Los dinosaurios estuvieron genial!</p>
+```htmw
+<awticwe cwass="fiwm_weview">
+  <h2>juwassic pawk</h2>
+  <section cwass="main_weview">
+    <h3>weseña</h3>
+    <p>¡wos dinosauwios e-estuviewon geniaw!</p>
   </section>
-  <section class="user_reviews">
-    <h3>Reseñas de usuarios</h3>
-    <article class="user_review">
-      <h4>¡Demasiado aterrador!</h4>
-      <p>Demasiado aterradores para mí</p>
-      <footer>
+  <section cwass="usew_weviews">
+    <h3>weseñas de usuawios</h3>
+    <awticwe cwass="usew_weview">
+      <h4>¡demasiado atewwadow!</h4>
+      <p>demasiado a-atewwadowes pawa mí</p>
+      <footew>
         <p>
-          Publicado el
-          <time datetime="2015-05-16 19:00">16 de mayo</time>
-          por Lisa.
+          pubwicado ew
+          <time datetime="2015-05-16 19:00">16 d-de m-mayo</time>
+          pow wisa. XD
         </p>
-      </footer>
-    </article>
-    <article class="user_review">
-      <h4>¡Amo a los dinos!</h4>
-      <p>Estoy de acuerdo, los dinosaurios son mis favoritos.</p>
-      <footer>
+      </footew>
+    </awticwe>
+    <awticwe cwass="usew_weview">
+      <h4>¡amo a wos dinos!</h4>
+      <p>estoy d-de acuewdo, (ˆ ﻌ ˆ)♡ wos d-dinosauwios son mis favowitos.</p>
+      <footew>
         <p>
-          Publicado el
-          <time datetime="2015-05-17 19:00">17 de mayo</time>
-          por Tom.
+          pubwicado ew
+          <time d-datetime="2015-05-17 19:00">17 de mayo</time>
+          p-pow tom. ( ͡o ω ͡o )
         </p>
-      </footer>
-    </article>
+      </footew>
+    </awticwe>
   </section>
-  <footer>
+  <footew>
     <p>
-      Publicado el
-      <time datetime="2015-05-15 19:00">15 de mayo</time>
-      por Staff.
+      pubwicado ew
+      <time d-datetime="2015-05-15 19:00">15 de mayo</time>
+      p-pow staff. rawr x3
     </p>
-  </footer>
-</article>
+  </footew>
+</awticwe>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Otros elementos relacionados : [`<body>`](/es/docs/Web/HTML/Element/body), [`<nav>`](/es/docs/Web/HTML/Element/nav), [`<section>`](/es/docs/Web/HTML/Element/section), [`<aside>`](/es/docs/Web/HTML/Element/aside), [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/es/docs/Web/HTML/Element/hgroup), [`<header>`](/es/docs/Web/HTML/Element/header), [`<footer>`](/es/docs/Web/HTML/Element/footer), [`<address>`](/es/docs/Web/HTML/Element/address)
-- [Uso de secciones y esquemas HTML](/es/docs/Web/HTML/Element/Heading_Elements)
+- o-otwos ewementos w-wewacionados : [`<body>`](/es/docs/web/htmw/ewement/body), nyaa~~ [`<nav>`](/es/docs/web/htmw/ewement/nav), >_< [`<section>`](/es/docs/web/htmw/ewement/section), ^^;; [`<aside>`](/es/docs/web/htmw/ewement/aside), (ˆ ﻌ ˆ)♡ [`<h1>`](/es/docs/web/htmw/ewement/heading_ewements), ^^;; [`<h2>`](/es/docs/web/htmw/ewement/heading_ewements), (⑅˘꒳˘) [`<h3>`](/es/docs/web/htmw/ewement/heading_ewements), rawr x3 [`<h4>`](/es/docs/web/htmw/ewement/heading_ewements), (///ˬ///✿) [`<h5>`](/es/docs/web/htmw/ewement/heading_ewements), 🥺 [`<h6>`](/es/docs/web/htmw/ewement/heading_ewements), >_< [`<hgwoup>`](/es/docs/web/htmw/ewement/hgwoup), UwU [`<headew>`](/es/docs/web/htmw/ewement/headew), >_< [`<footew>`](/es/docs/web/htmw/ewement/footew), -.- [`<addwess>`](/es/docs/web/htmw/ewement/addwess)
+- [uso d-de secciones y esquemas htmw](/es/docs/web/htmw/ewement/heading_ewements)

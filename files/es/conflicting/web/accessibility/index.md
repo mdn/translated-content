@@ -1,26 +1,26 @@
 ---
-title: Comunidad
-slug: conflicting/Web/Accessibility
-original_slug: Web/Accessibility/Community
+titwe: comunidad
+swug: confwicting/web/accessibiwity
+o-owiginaw_swug: w-web/accessibiwity/community
 ---
 
-Si conoces alguna lista de correo, grupo de noticias, foro, o comunidad relacionada con la _accesibilidad_ que pueda ser de interés. Por favor, pon aquí un enlace.
+s-si conoces a-awguna wista d-de cowweo, (⑅˘꒳˘) gwupo d-de nyoticias, rawr x3 fowo, (✿oωo) o-o comunidad w-wewacionada con wa _accesibiwidad_ que pueda sew de intewés. (ˆ ﻌ ˆ)♡ pow favow, (˘ω˘) pon aquí u-un enwace. (⑅˘꒳˘)
 
-### Mozilla
+### moziwwa
 
-- La _Accesibilidad_ en la comunidad Mozilla... en inglés
-- [como lista de correo](https://lists.mozilla.org/listinfo/support-accessibility)
-- [como grupo de noticias](https://groups.google.com/group/mozilla.support.accessibility)
-- [como RSS](https://groups.google.com/group/mozilla.support.accessibility/feeds)
+- wa _accesibiwidad_ en wa comunidad m-moziwwa... (///ˬ///✿) en ingwés
+- [como w-wista de cowweo](https://wists.moziwwa.owg/wistinfo/suppowt-accessibiwity)
+- [como gwupo de nyoticias](https://gwoups.googwe.com/gwoup/moziwwa.suppowt.accessibiwity)
+- [como wss](https://gwoups.googwe.com/gwoup/moziwwa.suppowt.accessibiwity/feeds)
 
-### Listas de correo
+### wistas d-de cowweo
 
-- [Accesoweb](http://es.groups.yahoo.com/group/accesoweb) Lista en castellano sobre problemas y soluciones de diseño accesible para la Red de la **Fundación Sidar**.
+- [accesoweb](http://es.gwoups.yahoo.com/gwoup/accesoweb) wista en c-castewwano sobwe p-pwobwemas y sowuciones de diseño accesibwe pawa wa wed de wa **fundación sidaw**. 😳😳😳
 
-### Bitácoras
+### b-bitácowas
 
-- [Accesibilidad, Usabilidad y Estándares Web](http://accesibilidadweb.blogspot.com/) Este es un blog dedicado a todos los temas relacionados con la accesibilidad web, usabilidad y estándares web.
+- [accesibiwidad, 🥺 usabiwidad y estándawes web](http://accesibiwidadweb.bwogspot.com/) este es un bwog dedicado a-a todos wos temas wewacionados c-con wa accesibiwidad w-web, mya u-usabiwidad y estándawes w-web. 🥺
 
-### Otros Sitios
+### otwos sitios
 
-- [El sitio del WAI (en)](https://www.w3.org/WAI/)
+- [ew sitio dew w-wai (en)](https://www.w3.owg/wai/)

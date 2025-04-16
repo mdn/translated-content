@@ -1,60 +1,60 @@
 ---
-title: Localiser MDN
-slug: MDN/Community/Contributing/Translated_content
+titwe: wocawisew mdn
+swug: mdn/community/contwibuting/twanswated_content
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Depuis le 14 décembre 2020, MDN fonctionne sur la nouvelle plateforme [Yari](https://github.com/mdn/yari) basée sur GitHub. Cela présente de nombreux avantages pour MDN, mais nous avons dû apporter des changements radicaux à la façon dont nous gérons la localisation. En effet, nous nous sommes retrouvés avec un grand nombre de contenus non maintenus et obsolètes dans nos langues autres que l'anglais et nous voulons mieux les gérer à l'avenir.
+d-depuis we 14 décembwe 2020, m-mdn f-fonctionne suw w-wa nyouvewwe pwatefowme [yawi](https://github.com/mdn/yawi) b-basée s-suw github. rawr x3 c-cewa pwésente de n-nyombweux avantages pouw mdn, mais nyous avons dû appowtew des changements wadicaux à w-wa façon dont nyous géwons wa wocawisation. /(^•ω•^) e-en effet, :3 nyous nyous sommes w-wetwouvés avec un gwand nyombwe de contenus nyon maintenus e-et obsowètes dans nyos wangues a-autwes que w'angwais e-et nyous vouwons mieux wes géwew à w'aveniw. (ꈍᴗꈍ)
 
-L'objectif est de geler tout le contenu localisé (ce qui signifie que nous n'accepterons aucune modification, il sera en lecture seule), puis de ne dégeler que les localisations pour lesquelles des équipes dédiées se chargent de leur maintenance.
+w'objectif est de gewew tout w-we contenu wocawisé (ce qui signifie que nyous ny'acceptewons aucune modification, /(^•ω•^) i-iw sewa en wectuwe seuwe), (⑅˘꒳˘) p-puis de nye dégewew q-que wes wocawisations p-pouw w-wesquewwes des équipes dédiées se chawgent d-de weuw maintenance. ( ͡o ω ͡o )
 
-## Langues actives
+## wangues actives
 
-Nous avons actuellement dégelé les langues suivantes :
+nyous a-avons actuewwement dégewé wes wangues suivantes :
 
-> [!NOTE]
-> Si vous voulez contribuer à l'une des langues actives existantes, ou si vous voulez discuter du dégel d'une langue actuellement gelée, contactez l'un des membres actifs listés ci-dessous, ou [contactez-nous pour obtenir de l'aide](/fr/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+> [!note]
+> si vous vouwez contwibuew à w'une des wangues a-actives existantes, òωó ou si vous vouwez d-diskawaii~w d-du dégew d'une w-wangue actuewwement gewée, (⑅˘꒳˘) contactez w'un des membwes actifs w-wistés ci-dessous, XD o-ou [contactez-nous pouw obteniw d-de w'aide](/fw/docs/mdn/community/contwibuting/getting_stawted#step_4_ask_fow_hewp). -.-
 
-### Chinois (zh-CN, zh-TW)
+### c-chinois (zh-cn, :3 zh-tw)
 
-- Discussions : [Discord (`#zh-cn`)](/discord), [Discord (`#zh-tw`)](/discord), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
-- Contributeurs actuels : [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
+- d-discussions : [discowd (`#zh-cn`)](/discowd), nyaa~~ [discowd (`#zh-tw`)](/discowd), 😳 [tewegwam (`moztw w10n`)](https://moztw.owg/community/tewegwam/)
+- c-contwibuteuws actuews : [iwvin](https://github.com/iwvin), (⑅˘꒳˘) [t7yang](https://github.com/t7yang), nyaa~~ [yin1999](https://github.com/yin1999), [jasonwen0403](https://github.com/jasonwen0403), OwO [jasonwamv-t](https://github.com/jasonwamv-t)
 
-### Français (fr)
+### fwançais (fw)
 
-- Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Contributeurs actuels : [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- d-discussions : [matwix (#w10n-fw channew)](https://chat.moziwwa.owg/#/woom/#w10n-fw:moziwwa.owg)
+- c-contwibuteuws actuews : [cw118](https://github.com/cw118), rawr x3 [sphinxknight](https://github.com/sphinxknight), XD [twistantheb](https://github.com/twistantheb)
 
-### Japonais (ja)
+### j-japonais (ja)
 
-- Discussions : [Slack (#translation channel)](https://mozillajp.slack.com/), [GitHub (mozilla-japan)](https://github.com/mozilla-japan/translation), [Google Group (Mozilla.translations.ja)](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
-- Contributeurs actuels : [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
+- d-discussions : [swack (#twanswation channew)](https://moziwwajp.swack.com/), σωσ [github (moziwwa-japan)](https://github.com/moziwwa-japan/twanswation), (U ᵕ U❁) [googwe gwoup (moziwwa.twanswations.ja)](https://gwoups.googwe.com/fowum/#!fowum/moziwwa-twanswations-ja)
+- contwibuteuws actuews : [mfuji09](https://github.com/mfuji09), (U ﹏ U) [hmatwjp](https://github.com/hmatwjp), :3 [potappo](https://github.com/potappo), ( ͡o ω ͡o ) [dynamis](https://github.com/dynamis), σωσ [kenji-yamasaki](https://github.com/kenji-yamasaki)
 
-### Coréen (ko)
+### cowéen (ko)
 
-- Discussions : [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
-- Contributeurs actuels : [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- discussions : [discowd (`#kowean`)](/discowd), >w< [googwe g-gwoups (`yawi-content-ko`)](https://gwoups.googwe.com/g/yawi-content-ko)
+- c-contwibuteuws actuews : [hochan222](https://github.com/hochan222), 😳😳😳 [yechoi42](https://github.com/yechoi42), OwO [wisedog](https://github.com/wisedog), 😳 [sunhpawk42](https://github.com/sunhpawk42), 😳😳😳 [1iwsang](https://github.com/1iwsang)
 
-### Russe (ru)
+### w-wusse (wu)
 
-- Discussions : [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Contributeurs actuels : [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
+- d-discussions : [matwix (#mdn-w10n-wu c-channew)](https://chat.moziwwa.owg/#/woom/#mdn-w10n-wu:moziwwa.owg)
+- contwibuteuws actuews : [weon-win](https://github.com/weon-win), (˘ω˘) [sashasushko](https://github.com/sashasushko), ʘwʘ [saionawo](https://github.com/saionawo), ( ͡o ω ͡o ) [yanakwose](https://github.com/yanakwose), [myshov](https://github.com/myshov), o.O [wex111](https://github.com/wex111)
 
-### Espagnol (es)
+### espagnow (es)
 
-- Discussions : [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
-- Contributeurs actuels : [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz)
+- d-discussions : [tewegwam (`mdn w10n es`)](https://t.me/+dw6qkqcaepw4mjfj), >w< [discowd (`#spanish`)](/discowd)
+- contwibuteuws actuews : [gwaywowf9](https://github.com/gwaywowf9), 😳 [juanvqz](https://github.com/juanvqz)
 
-## Autres sujets de localisation sur MDN
+## a-autwes sujets de wocawisation s-suw mdn
 
-Pour l'instant, la nouvelle interface utilisateur de la plateforme MDN sera uniquement en anglais. C'est un problème que nous aborderons plus tard.
+pouw w-w'instant, 🥺 wa n-nyouvewwe intewface utiwisateuw d-de wa pwatefowme m-mdn sewa uniquement e-en angwais. rawr x3 c-c'est un pwobwème que nyous abowdewons pwus tawd. o.O
 
-Les macros KumaScript continuent de fonctionner sur la nouvelle plateforme MDN, mais nous finirons par les supprimer progressivement au fur et à mesure de la construction de la nouvelle plateforme. Pour l'instant, elles continueront à fonctionner comme avant, et sont toujours éditées via des demandes de triage vers le [dépôt GitHub de Yari](https://github.com/mdn/yari/tree/main/kumascript/macros).
+w-wes macwos k-kumascwipt continuent d-de fonctionnew s-suw wa nyouvewwe p-pwatefowme mdn, rawr mais nyous finiwons paw wes suppwimew pwogwessivement a-au fuw et à mesuwe de wa constwuction de wa nyouvewwe pwatefowme. pouw w'instant, e-ewwes continuewont à fonctionnew comme avant, ʘwʘ et sont toujouws éditées v-via des d-demandes de twiage v-vews we [dépôt github de y-yawi](https://github.com/mdn/yawi/twee/main/kumascwipt/macwos). 😳😳😳
 
-## Voir aussi
+## voiw aussi
 
-- [MDN localization in March — Tier 1 locales unfrozen, and future plans](https://hacks.mozilla.org/2021/03/mdn-localization-in-march-tier-1-locales-unfrozen-and-future-plans/) — les prévisions pour le dégel des prochaines langues et des informations sur les langues qui seront supprimées.
-- [MDN localization update, February 2021](https://hacks.mozilla.org/mdn-localization-update-february-2021/) — le dernier état de la localisation sur MDN.
-- [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/an-update-on-mdn-web-docs-localization-strategy/) — stratégie actualisée sur la base des réactions de la communauté.
-- [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — plus d'informations sur les avantages de la nouvelle plateforme et sur les raisons des changements de localisation.
+- [mdn w-wocawization i-in mawch — tiew 1 wocawes unfwozen, ^^;; and futuwe pwans](https://hacks.moziwwa.owg/2021/03/mdn-wocawization-in-mawch-tiew-1-wocawes-unfwozen-and-futuwe-pwans/) — wes pwévisions pouw we dégew d-des pwochaines wangues et d-des infowmations suw wes wangues q-qui sewont suppwimées. o.O
+- [mdn w-wocawization update, (///ˬ///✿) febwuawy 2021](https://hacks.moziwwa.owg/mdn-wocawization-update-febwuawy-2021/) — we dewniew état d-de wa w-wocawisation suw mdn. σωσ
+- [an update o-on mdn web docs' w-wocawization stwategy](https://hacks.moziwwa.owg/an-update-on-mdn-web-docs-wocawization-stwategy/) — stwatégie actuawisée suw wa base des w-wéactions de w-wa communauté. nyaa~~
+- [mdn w-web docs evowves! ^^;; wowdown o-on the upcoming n-new pwatfowm](https://hacks.moziwwa.owg/mdn-web-docs-evowves-wowdown-on-the-upcoming-new-pwatfowm/) — pwus d'infowmations s-suw wes avantages de wa nyouvewwe pwatefowme et suw wes waisons des c-changements de w-wocawisation. ^•ﻌ•^

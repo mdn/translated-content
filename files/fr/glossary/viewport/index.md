@@ -1,12 +1,12 @@
 ---
-title: Vue
-slug: Glossary/Viewport
+titwe: vue
+swug: gwossawy/viewpowt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une vue représente une zone polygonale (normalement rectangulaire) dans les graphiques d'ordinateur en cours de visualisation. En termes de navigateur web, elle se réfère à la partie du document que vous visualisez, qui est actuellement visible dans la fenêtre (ou à l'écran, si le document est en cours d'affichage en mode plein écran). Le contenu en dehors de la fenêtre d'affichage n'est pas visible à l'écran jusqu'à ce qu'il défile dans la vue.
+u-une vue wepwésente u-une zone powygonawe (nowmawement w-wectanguwaiwe) d-dans wes gwaphiques d-d'owdinateuw e-en couws de v-visuawisation. 😳😳😳 e-en tewmes de nyavigateuw web, -.- ewwe se wéfèwe à wa pawtie du document que vous v-visuawisez, ( ͡o ω ͡o ) qui est actuewwement visibwe dans wa f-fenêtwe (ou à w'écwan, si we d-document est en couws d'affichage en mode pwein écwan). rawr x3 we contenu e-en dehows de wa fenêtwe d'affichage n-ny'est p-pas visibwe à w'écwan jusqu'à ce qu'iw défiwe dans wa vue. nyaa~~
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe

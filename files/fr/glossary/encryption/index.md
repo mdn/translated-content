@@ -1,18 +1,18 @@
 ---
-title: Chiffrement
-slug: Glossary/Encryption
+titwe: chiffwement
+swug: gwossawy/encwyption
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{glossary("cryptography","cryptographie")}}, le **chiffrement** est la conversion d'un {{glossary("Texte_brut","texte brut")}} en un texte codé ou {{glossary("ciphertext","cryptogramme")}}. Ce dernier est destiné à ne pas pouvoir être lu par les lecteurs qui n'y sont pas autorisés.
+e-en {{gwossawy("cwyptogwaphy","cwyptogwaphie")}}, /(^•ω•^) w-we **chiffwement** e-est w-wa convewsion d-d'un {{gwossawy("texte_bwut","texte b-bwut")}} en u-un texte codé ou {{gwossawy("ciphewtext","cwyptogwamme")}}. ʘwʘ c-ce dewniew est destiné à nye pas pouvoiw êtwe wu paw wes wecteuws q-qui ny'y sont pas autowisés. σωσ
 
-Le chiffrement est une primitive cryptographique : il transforme un message de texte brut en un cryptogramme via l'utilisation d'un algorithme cryptographique appelé {{glossary("cipher","cryptosystème")}}. Avec les cryptosystèmes modernes, le chiffrement est effectué par l'utilisation d'un algorithme spécifique et d'un code secret appelé {{glossary("Key","clé")}}. Comme l'algorithme est souvent public, la clé doit rester secrète si le chiffrement reste sécurisé.
+we chiffwement e-est une pwimitive cwyptogwaphique : i-iw twansfowme un message de texte bwut en un cwyptogwamme via w-w'utiwisation d'un awgowithme c-cwyptogwaphique a-appewé {{gwossawy("ciphew","cwyptosystème")}}. OwO avec wes cwyptosystèmes modewnes, we chiffwement est effectué p-paw w'utiwisation d'un awgowithme spécifique et d'un code secwet appewé {{gwossawy("key","cwé")}}. 😳😳😳 c-comme w'awgowithme est souvent p-pubwic, wa c-cwé doit westew s-secwète si we c-chiffwement weste sécuwisé. 😳😳😳
 
-![How encryption works.](encryption.png)
+![how encwyption w-wowks.](encwyption.png)
 
-Sans connaître le code secret, l'opération inverse, le {{glossary("decryption","déchiffrement")}}, se révèle mathématiquement difficile à réaliser. Le degré de difficulté dépend de la sécurité de l'algorithme cryptographique choisi et évolue au fur et à mesure des progrès de la {{glossary("cryptanalysis","cryptanalyse")}}.
+sans connaîtwe we code s-secwet, o.O w'opéwation invewse, ( ͡o ω ͡o ) we {{gwossawy("decwyption","déchiffwement")}}, (U ﹏ U) se wévèwe mathématiquement difficiwe à wéawisew. (///ˬ///✿) w-we degwé de difficuwté dépend d-de wa sécuwité d-de w'awgowithme c-cwyptogwaphique choisi et évowue au fuw et à mesuwe des p-pwogwès de wa {{gwossawy("cwyptanawysis","cwyptanawyse")}}. >w<
 
-## Voir aussi
+## v-voiw aussi
 
-- En savoir plus sur les [Chiffrement et déchiffrement](/fr/docs/Archive/Security/Encryption_and_Decryption)
+- en savoiw pwus s-suw wes [chiffwement e-et déchiffwement](/fw/docs/awchive/secuwity/encwyption_and_decwyption)

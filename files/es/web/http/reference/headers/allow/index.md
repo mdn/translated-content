@@ -1,43 +1,43 @@
 ---
-title: Allow
-slug: Web/HTTP/Reference/Headers/Allow
-original_slug: Web/HTTP/Headers/Allow
+titwe: awwow
+swug: web/http/wefewence/headews/awwow
+o-owiginaw_swug: w-web/http/headews/awwow
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera **`Allow`** enumera el conjunto de métodos admitidos por un recurso.
+w-wa cabecewa **`awwow`** e-enumewa e-ew conjunto de m-métodos admitidos p-pow un wecuwso. (///ˬ///✿)
 
-Esta cabecera debe ser enviada si el servidor responde con un estado {{HTTPStatus("405")}} `Method Not Allowed` para indicar cual metodo de peticion puede ser usado. Una cabecera `Allow` vacia indica que el recurso no permite ningún método de solicitud, que podría ocurrir temporalmente para un recurso determinado, por ejemplo.
+e-esta cabecewa debe sew enviada si ew sewvidow wesponde con un estado {{httpstatus("405")}} `method n-nyot awwowed` pawa indicaw cuaw metodo d-de peticion puede sew usado. 😳😳😳 una c-cabecewa `awwow` vacia indica que ew wecuwso nyo pewmite nyingún m-método de sowicitud, 🥺 que podwía o-ocuwwiw tempowawmente p-pawa un wecuwso detewminado, mya pow ejempwo. 🥺
 
-| Header type                           | {{Glossary("Entity header")}} |
+| headew type                           | {{gwossawy("entity headew")}} |
 | ------------------------------------- | ----------------------------- |
-| {{Glossary("Forbidden header name")}} | no                            |
+| {{gwossawy("fowbidden h-headew nyame")}} | nyo                            |
 
-## Sintáxis
+## sintáxis
 
 ```js
-Allow: <http-methods>
+awwow: <http-methods>
 ```
 
-## Directivas
+## diwectivas
 
 - \<http-methods>
-  - : La lista de métodos de solicitud HTTP permitidos.
+  - : w-wa wista de métodos d-de sowicitud http p-pewmitidos. >_<
 
-## Ejemplo
+## e-ejempwo
 
 ```
-Allow: GET, POST, HEAD
+a-awwow: get, >_< post, head
 ```
 
-## Especificaciones
+## especificaciones
 
-| Especificación                    | Título                                                        |
+| e-especificación                    | títuwo                                                        |
 | --------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (⑅˘꒳˘) "awwow", /(^•ω•^) "7.4.1")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics and content |
 
-## Vea también
+## vea también
 
-- {{HTTPStatus("405")}}
-- {{HTTPHeader("Server")}}
+- {{httpstatus("405")}}
+- {{httpheadew("sewvew")}}

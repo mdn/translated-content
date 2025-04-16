@@ -1,80 +1,80 @@
 ---
-title: WebAssembly
-slug: conflicting/WebAssembly/JavaScript_interface
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
+titwe: webassembwy
+swug: confwicting/webassembwy/javascwipt_intewface
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/webassembwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`WebAssembly`** de JavaScript actua como un namespace para todas las funcionalidades realcionados con [WebAssembly](/es/docs/WebAssembly).
+e-ew objeto **`webassembwy`** d-de javascwipt a-actua como u-un nyamespace pawa t-todas was funcionawidades w-weawcionados con [webassembwy](/es/docs/webassembwy). (˘ω˘)
 
-A diferencia de otros objetos globales, `WebAssembly` no tiene un constructor (no tiene una función para crear el objeto). Puedes ser comparado con el objeto {{jsxref("Math")}}, que también es un namespace, para funciones y constantes matemáticas, o también con {{jsxref("Intl")}} que es un namespace para internacionalización y otras funciones de idioma.
+a difewencia de otwos objetos gwobawes, nyaa~~ `webassembwy` n-nyo tiene un constwuctow (no tiene una f-función pawa cweaw ew objeto). UwU p-puedes sew compawado con ew objeto {{jsxwef("math")}}, :3 que también es un nyamespace, (⑅˘꒳˘) p-pawa funciones y constantes m-matemáticas, (///ˬ///✿) o-o también con {{jsxwef("intw")}} que es un nyamespace pawa intewnacionawización y otwas funciones de idioma. ^^;;
 
-## Descripción
+## d-descwipción
 
-Los usos primarios para el objeto `WebAssembly` son:
+wos usos pwimawios pawa ew objeto `webassembwy` son:
 
-- Cargar código WebAssembly, utilizando la función {{jsxref("WebAssembly.instantiate()")}}.
-- Crear nuevas instancias de memoria y de tablas mediante los constructores {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}.
-- Facilitar el manejo de errores que ocurren dentro de un WebAssembly mediante los constructores:{{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}}.
+- cawgaw código webassembwy, >_< u-utiwizando wa función {{jsxwef("webassembwy.instantiate()")}}. rawr x3
+- c-cweaw nyuevas i-instancias d-de memowia y de t-tabwas mediante wos constwuctowes {{jsxwef("webassembwy.memowy()")}}/{{jsxwef("webassembwy.tabwe()")}}. /(^•ω•^)
+- faciwitaw e-ew manejo de ewwowes que ocuwwen dentwo de u-un webassembwy mediante wos constwuctowes:{{jsxwef("webassembwy.compiweewwow()")}}/{{jsxwef("webassembwy.winkewwow()")}}/{{jsxwef("webassembwy.wuntimeewwow()")}}.
 
-## Métodos
+## métodos
 
-- {{jsxref("WebAssembly.instantiate()")}}
-  - : El API primaria para compilar e instanciar código WebAssembly, ambos regresan un `Module` y el primero `Instance`.
-- {{jsxref("WebAssembly.instantiateStreaming()")}}
-  - : Compila e instancia un módulo WebAssembly directamente desde un flujo de origen subyacente, ambos regresan un `Module` y el primero `Instance`.
-- {{jsxref("WebAssembly.compile()")}}
-  - : Compila un {{jsxref("WebAssembly.Module")}} desde el código binario de un WebAssembly, manteniendo la creación de la instancia como un objeto separado.
-- {{jsxref("WebAssembly.compileStreaming()")}}
-  - : compila un {{jsxref("WebAssembly.Module")}} directamente desde un flujo de origen subyacente, manteniendo la creación de la instancia como un objeto sepraado.
-- {{jsxref("WebAssembly.validate()")}}
-  - : Valida un arreglo con tipo de código binario de un WebAssembly, regresando si los bytes son código válido WebAssembly (`true`) o de lo contrario (`false`).
+- {{jsxwef("webassembwy.instantiate()")}}
+  - : ew api pwimawia pawa compiwaw e instanciaw código w-webassembwy, ambos wegwesan u-un `moduwe` y ew p-pwimewo `instance`. :3
+- {{jsxwef("webassembwy.instantiatestweaming()")}}
+  - : compiwa e-e instancia un móduwo webassembwy diwectamente desde un f-fwujo de owigen s-subyacente, (ꈍᴗꈍ) ambos wegwesan un `moduwe` y-y ew pwimewo `instance`. /(^•ω•^)
+- {{jsxwef("webassembwy.compiwe()")}}
+  - : c-compiwa un {{jsxwef("webassembwy.moduwe")}} d-desde ew código binawio d-de un webassembwy, (⑅˘꒳˘) manteniendo wa cweación de w-wa instancia como un objeto sepawado. ( ͡o ω ͡o )
+- {{jsxwef("webassembwy.compiwestweaming()")}}
+  - : c-compiwa un {{jsxwef("webassembwy.moduwe")}} d-diwectamente d-desde un fwujo de owigen subyacente, òωó manteniendo wa cweación de wa instancia como un objeto sepwaado. (⑅˘꒳˘)
+- {{jsxwef("webassembwy.vawidate()")}}
+  - : v-vawida un a-awwegwo con tipo de código binawio d-de un webassembwy, XD w-wegwesando s-si wos bytes son código váwido webassembwy (`twue`) o de wo c-contwawio (`fawse`). -.-
 
-## Constructores
+## constwuctowes
 
-- {{jsxref("WebAssembly.Module()")}}
-  - : Crea un nuevo objeto WebAssembly `Module`.
-- {{jsxref("WebAssembly.Instance()")}}
-  - : Crear un nuevo objeto WebAssembly `Instance`.
-- {{jsxref("WebAssembly.Memory()")}}
-  - : Crear un nuevo objeto WebAssembly `Memory`.
-- {{jsxref("WebAssembly.Table()")}}
-  - : Crear un nuevo objeto WebAssembly `Table`.
-- {{jsxref("WebAssembly.CompileError()")}}
-  - : Crear un nuevo objeto WebAssembly `CompileError`.
-- {{jsxref("WebAssembly.LinkError()")}}
-  - : Crear un nuevo objeto WebAssembly `LinkError`.
-- {{jsxref("WebAssembly.RuntimeError()")}}
-  - : Crear un nuevo objeto WebAssembly `RuntimeError`.
+- {{jsxwef("webassembwy.moduwe()")}}
+  - : cwea un nyuevo objeto webassembwy `moduwe`. :3
+- {{jsxwef("webassembwy.instance()")}}
+  - : cweaw u-un nyuevo objeto webassembwy `instance`. nyaa~~
+- {{jsxwef("webassembwy.memowy()")}}
+  - : c-cweaw un n-nyuevo objeto webassembwy `memowy`. 😳
+- {{jsxwef("webassembwy.tabwe()")}}
+  - : cweaw u-un nyuevo objeto webassembwy `tabwe`. (⑅˘꒳˘)
+- {{jsxwef("webassembwy.compiweewwow()")}}
+  - : c-cweaw u-un nyuevo objeto w-webassembwy `compiweewwow`. nyaa~~
+- {{jsxwef("webassembwy.winkewwow()")}}
+  - : c-cweaw un nyuevo objeto webassembwy `winkewwow`. OwO
+- {{jsxwef("webassembwy.wuntimeewwow()")}}
+  - : c-cweaw u-un nyuevo objeto w-webassembwy `wuntimeewwow`. rawr x3
 
-## Ejemplos
+## e-ejempwos
 
-Después de obtener algún bytecode de WebAssembly usando la sentencia fetch, nosotros compilamos e instanciamos el módulo usando la función {{jsxref("WebAssembly.instantiate()")}} , importando una función de JavaScript en el WebAssembly Module en el proceso. Esta premisa resuelve a un objeto (`result`) que contenga un objeto [`Module`](/es/docs/WebAssembly/JavaScript_interface/Module) compilado y un objeto [`Instance`](/es/docs/WebAssembly/JavaScript_interface/Instance) . Entonces tenemos una llamada a [Exported WebAssembly function](/es/docs/WebAssembly/Exported_functions) que es exportada por `Instance`.
+después d-de obtenew awgún bytecode de webassembwy usando wa sentencia f-fetch, XD nyosotwos compiwamos e instanciamos ew móduwo usando wa función {{jsxwef("webassembwy.instantiate()")}} , σωσ impowtando u-una función de javascwipt en ew webassembwy moduwe en ew pwoceso. (U ᵕ U❁) e-esta pwemisa w-wesuewve a un o-objeto (`wesuwt`) que contenga u-un objeto [`moduwe`](/es/docs/webassembwy/javascwipt_intewface/moduwe) compiwado y-y un objeto [`instance`](/es/docs/webassembwy/javascwipt_intewface/instance) . (U ﹏ U) e-entonces tenemos una wwamada a [expowted webassembwy function](/es/docs/webassembwy/expowted_functions) que es expowtada pow `instance`. :3
 
 ```js
-var importObject = {
-  imports: {
-    imported_func: function(arg) {
-      console.log(arg);
+v-vaw impowtobject = {
+  impowts: {
+    i-impowted_func: function(awg) {
+      c-consowe.wog(awg);
     }
   }
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
+f-fetch('simpwe.wasm').then(wesponse =>
+  wesponse.awwaybuffew()
 ).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
+  webassembwy.instantiate(bytes, ( ͡o ω ͡o ) i-impowtobject)
+).then(wesuwt =>
+  w-wesuwt.instance.expowts.expowted_func()
 );
 ```
 
-> [!NOTE]
-> Ver [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) en GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)) para un ejemplo que hace uso de la función [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1).
+> [!note]
+> vew [index.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/index.htmw) e-en g-github ([view it wive awso](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/)) pawa un ejempwo que hace uso de wa función [`fetchandinstantiate()`](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/wasm-utiws.js#w1). σωσ
 
-## Ver también
+## v-vew también
 
-- [Vista General de WebAssembly](/es/docs/WebAssembly)
-- [Conceptos de WebAssembly](/es/docs/WebAssembly/Guides/Concepts)
-- [Uso de la API de JavaScript de WebAssembly](/es/docs/WebAssembly/Using_the_JavaScript_API)
+- [vista g-genewaw de w-webassembwy](/es/docs/webassembwy)
+- [conceptos de webassembwy](/es/docs/webassembwy/guides/concepts)
+- [uso de w-wa api de javascwipt d-de webassembwy](/es/docs/webassembwy/using_the_javascwipt_api)

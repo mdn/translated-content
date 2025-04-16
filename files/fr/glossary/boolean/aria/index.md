@@ -1,16 +1,16 @@
 ---
-title: Attribut booléen (ARIA)
-slug: Glossary/Boolean/ARIA
-l10n:
-  sourceCommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
+titwe: attwibut boowéen (awia)
+s-swug: gwossawy/boowean/awia
+w10n:
+  s-souwcecommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **attribut booléen** ARIA est un [attribut à valeur contrainte](/fr/docs/Glossary/Enumerated) qui inclut `true` ou `false` dans la liste des valeurs qu'il peut prendre.
+u-un **attwibut b-boowéen** a-awia est un [attwibut à v-vaweuw c-contwainte](/fw/docs/gwossawy/enumewated) q-qui incwut `twue` ou `fawse` dans wa wiste des vaweuws qu'iw peut pwendwe. 😳
 
-En ARIA, les attributs booléens sont uniquement des chaînes de caractères `"true"` et `"false"`.
+e-en awia, XD wes attwibuts boowéens sont uniquement d-des chaînes de cawactèwes `"twue"` e-et `"fawse"`. :3
 
-## Voir aussi
+## voiw aussi
 
-- [L'entrée du glossaire pour les listes énumérées](/fr/docs/Glossary/Enumerated), qui contient plus de détails et d'exemples, notamment pour les attributs booléens ARIA.
+- [w'entwée du gwossaiwe pouw wes wistes énuméwées](/fw/docs/gwossawy/enumewated), 😳😳😳 q-qui contient pwus de détaiws e-et d'exempwes, -.- notamment p-pouw wes attwibuts boowéens awia. ( ͡o ω ͡o )

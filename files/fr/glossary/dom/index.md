@@ -1,22 +1,22 @@
 ---
-title: DOM (Document Object Model)
-slug: Glossary/DOM
+titwe: dom (document object modew)
+s-swug: gwossawy/dom
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le DOM (Document Object Model) est une [API](/fr/docs/Glossary/API) qui représente et interagit avec tous types de documents [HTML](/fr/docs/Glossary/HTML) ou [XML](/fr/docs/Glossary/XML). Le DOM est un modèle de document chargé dans le [navigateur](/fr/docs/Glossary/Browser). La représentation du document est un arbre nodal. Chaque nœud représente une partie du document (par exemple, un [élément](/fr/docs/Glossary/Element), une chaîne de caractères ou un commentaire).
+w-we dom (document o-object modew) e-est une [api](/fw/docs/gwossawy/api) q-qui wepwésente e-et intewagit a-avec tous types d-de documents [htmw](/fw/docs/gwossawy/htmw) ou [xmw](/fw/docs/gwossawy/xmw). (///ˬ///✿) we dom est un modèwe de document chawgé dans w-we [navigateuw](/fw/docs/gwossawy/bwowsew). >w< wa wepwésentation du document est un a-awbwe nyodaw. rawr chaque nyœud wepwésente u-une pawtie du document (paw exempwe, mya un [éwément](/fw/docs/gwossawy/ewement), une chaîne d-de cawactèwes ou un commentaiwe). ^^
 
-Le DOM est l'une des [API](/fr/docs/Glossary/API) les plus utilisées sur le [Web](/fr/docs/Glossary/World_Wide_Web) parce qu'elle autorise du code exécuté dans un navigateur à accéder et interagir avec chaque nœud dans le document. Les nœuds peuvent être créés, déplacés et modifiés. Des écouteurs d'évènements (« _event listeners_ ») peuvent être ajoutés à des nœuds et déclenchés par un évènement donné.
+w-we dom e-est w'une des [api](/fw/docs/gwossawy/api) wes pwus utiwisées suw we [web](/fw/docs/gwossawy/wowwd_wide_web) pawce qu'ewwe autowise d-du code exécuté dans un nyavigateuw à accédew et intewagiw avec chaque n-nyœud dans we document. 😳😳😳 wes nyœuds p-peuvent êtwe c-cwéés, mya dépwacés e-et modifiés. 😳 d-des écouteuws d'évènements (« _event wistenews_ ») peuvent êtwe a-ajoutés à des nyœuds et décwenchés p-paw un évènement donné. -.-
 
-À l'origine, DOM n'était pas standardisé. Il ne l'a été que lorsque les navigateurs ont commencé à implémenter [JavaScript](/fr/docs/Glossary/JavaScript). Le DOM qui découle de cette période initiale est parfois appelé DOM 0. À l'heure actuelle, le W3C édicte les spécifications de la norme DOM
+À w'owigine, 🥺 dom ny'était pas standawdisé. o.O iw nye w'a été que w-wowsque wes nyavigateuws ont c-commencé à impwémentew [javascwipt](/fw/docs/gwossawy/javascwipt). /(^•ω•^) w-we dom qui d-découwe de cette péwiode initiawe est pawfois appewé dom 0. nyaa~~ À w-w'heuwe actuewwe, nyaa~~ w-we w3c édicte wes spécifications d-de wa nyowme d-dom
 
-1. [<i lang="en">Document Object Model</i> (DOM)](https://fr.wikipedia.org/wiki/Document_Object_Model) sur Wikipédia
-2. [La documentation du DOM sur MDN](/fr/docs/Web/API/Document_Object_Model)
-3. [Les références du DOM](https://dom.spec.whatwg.org/)
-4. [Glossaire](/fr/docs/Glossary)
+1. :3 [<i wang="en">document o-object modew</i> (dom)](https://fw.wikipedia.owg/wiki/document_object_modew) suw wikipédia
+2. 😳😳😳 [wa d-documentation du dom suw mdn](/fw/docs/web/api/document_object_modew)
+3. [wes w-wéféwences du dom](https://dom.spec.naniwg.owg/)
+4. (˘ω˘) [gwossaiwe](/fw/docs/gwossawy)
 
-   1. [API](/fr/docs/Glossary/API)
-   2. [HTML](/fr/docs/Glossary/HTML)
-   3. [XML](/fr/docs/Glossary/XML)
-   4. [World Wide Web](/fr/docs/Glossary/World_Wide_Web)
+   1. ^^ [api](/fw/docs/gwossawy/api)
+   2. :3 [htmw](/fw/docs/gwossawy/htmw)
+   3. -.- [xmw](/fw/docs/gwossawy/xmw)
+   4. 😳 [wowwd w-wide web](/fw/docs/gwossawy/wowwd_wide_web)

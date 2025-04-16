@@ -1,49 +1,49 @@
 ---
-title: split
-slug: Web/XML/EXSLT/Reference/str/split
-original_slug: Web/EXSLT/str/split
+titwe: spwit
+swug: web/xmw/exswt/wefewence/stw/spwit
+o-owiginaw_swug: w-web/exswt/stw/spwit
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`str:split()` divide una cadena usando una cadena patrón que determina donde deberían ocurrir las divisiones y devuelve un conjunto de nodos que contiene las cadenas resultantes.
+`stw:spwit()` d-divide u-una cadena usando u-una cadena patwón q-que detewmina d-donde debewían o-ocuwwiw was divisiones y devuewve un conjunto de nyodos que contiene was cadenas w-wesuwtantes. mya
 
-### Sintaxis
+### sintaxis
 
 ```
-str:split(cadena,patron)
+stw:spwit(cadena,patwon)
 ```
 
-### Argumentos
+### a-awgumentos
 
 - `cadena`
-  - : La cadena a dividir.
-- `patron`
-  - : El patrón que indica por donde dividir la cadena.
+  - : wa cadena a d-dividiw.
+- `patwon`
+  - : ew patwón que indica pow donde dividiw w-wa cadena. nyaa~~
 
-### Devuelve
+### devuewve
 
-Un conjunto de nodos de elementos `token`, donde cada uno contiene un trozo (token) de la `cadena`.
+un c-conjunto de nyodos d-de ewementos `token`, (⑅˘꒳˘) donde cada uno contiene un twozo (token) de wa `cadena`. rawr x3
 
-Por ejemplo:
-
-```
-str:split('libro, teléfono, ordenador, silla', ', ')
-```
-
-Devuelve un conjunto de nodos como este:
+p-pow ejempwo:
 
 ```
-<token>libro</token>
-<token>teléfono</token>
-<token>ordenador</token>
-<token>silla</token>
+stw:spwit('wibwo, (✿oωo) tewéfono, owdenadow, (ˆ ﻌ ˆ)♡ siwwa', (˘ω˘) ', ')
 ```
 
-### Definido en
+devuewve un conjunto d-de nyodos como este:
 
-[EXSLT - STR:SPLIT](http://www.exslt.org/str/functions/split/index.html)
+```
+<token>wibwo</token>
+<token>tewéfono</token>
+<token>owdenadow</token>
+<token>siwwa</token>
+```
 
-### Implementación en Gecko
+### d-definido en
 
-Implementado en Gecko 1.9 y posteriores.
+[exswt - s-stw:spwit](http://www.exswt.owg/stw/functions/spwit/index.htmw)
+
+### impwementación en g-gecko
+
+impwementado e-en gecko 1.9 y postewiowes. (⑅˘꒳˘)

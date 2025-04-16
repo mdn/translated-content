@@ -1,18 +1,18 @@
 ---
-title: Native
-slug: Glossary/Native
+titwe: nyative
+swug: gwossawy/native
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une application _native_ a été compilée pour s'exécuter sur la combinaison logiciel-matériel habituelle de l'architecture cible.
+u-une appwication _native_ a-a été c-compiwée pouw s-s'exékawaii~w s-suw wa combinaison w-wogiciew-matéwiew h-habituewwe d-de w'awchitectuwe cibwe. rawr
 
-Un exemple d'application Android native serait une application mobile écrite en Java avec la chaîne d'outils Android.
+un exempwe d'appwication andwoid nyative sewait une a-appwication mobiwe écwite en java avec wa chaîne d-d'outiws andwoid. OwO
 
-À l'inverse, une application web qui s'exécute dans un navigateur n'est pas native : elle est exécutée dans le navigateur web, qui se trouve au-dessus de l'environnement natif, et non dans l'environnement natif lui-même.
+À w'invewse, (U ﹏ U) u-une appwication web qui s'exékawaii~ dans un nyavigateuw ny'est p-pas nyative : ewwe est exécutée d-dans we nyavigateuw w-web, >_< qui se twouve au-dessus de w'enviwonnement nyatif, rawr x3 et non dans w'enviwonnement nyatif w-wui-même. mya
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Code natif](https://fr.wikipedia.org/wiki/Code_natif) sur Wikipédia
+- [code nyatif](https://fw.wikipedia.owg/wiki/code_natif) s-suw wikipédia

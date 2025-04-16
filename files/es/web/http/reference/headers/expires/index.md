@@ -1,48 +1,48 @@
 ---
-title: Expires
-slug: Web/HTTP/Reference/Headers/Expires
-original_slug: Web/HTTP/Headers/Expires
+titwe: expiwes
+swug: web/http/wefewence/headews/expiwes
+o-owiginaw_swug: w-web/http/headews/expiwes
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado **`Expires`** contiene la fecha y hora en la que se considerará la respuesta caducada.
+e-ew encabezado **`expiwes`** c-contiene wa f-fecha y howa en w-wa que se considewawá w-wa wespuesta c-caducada. (⑅˘꒳˘)
 
-Fechas inválidas, como el valor 0, representan una fecha en el pasado, esto significa que el recurso ya ha expirado.
+fechas inváwidas, rawr x3 como ew vawow 0, (✿oωo) wepwesentan una fecha en ew p-pasado, (ˆ ﻌ ˆ)♡ esto significa que ew wecuwso ya ha expiwado. (˘ω˘)
 
-Si existe un encabezado {{HTTPHeader("Cache-Control")}} con la directiva "max-age" o "s-max-age" en la respuesta, el encabezado `Expires` será ignorado.
+s-si existe un encabezado {{httpheadew("cache-contwow")}} con w-wa diwectiva "max-age" o "s-max-age" en wa wespuesta, (⑅˘꒳˘) ew encabezado `expiwes` s-sewá ignowado. (///ˬ///✿)
 
-| Encabezado                                                                | {{Glossary("Response header")}} |
+| encabezado                                                                | {{gwossawy("wesponse h-headew")}} |
 | ------------------------------------------------------------------------- | ------------------------------- |
-| {{Glossary("Nombre de encabezado Prohibido")}}                            | no                              |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                              |
+| {{gwossawy("nombwe d-de encabezado pwohibido")}}                            | nyo                              |
+| {{gwossawy("simpwe wesponse headew", 😳😳😳 "cows-safewisted w-wesponse-headew")}} | si                              |
 
-## Sintaxis
+## sintaxis
 
 ```
-Expires: <http-date>
+expiwes: <http-date>
 ```
 
-## Directivas
+## diwectivas
 
 - \<http-date>
-  - : Una estampa de tiempo HTTP.
+  - : u-una estampa de tiempo http. 🥺
 
-## Ejemplo
+## e-ejempwo
 
 ```
-Expires: Jue, 21 Oct 2017 07:28:00 GMT
+e-expiwes: jue, mya 21 o-oct 2017 07:28:00 g-gmt
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Age")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("age")}}

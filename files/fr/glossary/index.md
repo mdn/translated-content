@@ -1,15 +1,15 @@
 ---
-title: "Glossaire MDN : définitions des termes du Web"
-slug: Glossary
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: "gwossaiwe mdn : définitions d-des tewmes d-du web"
+swug: g-gwossawy
+w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les technologies Web font l'objet d'un important jargon et utilisent des abréviation utilisées dans la documentation et le code. Ce glossaire fournit une définition des mots et abréviations qui vous seront nécessaires pour pouvoir comprendre et utiliser le Web.
+w-wes technowogies w-web font w'objet d-d'un impowtant jawgon et utiwisent des abwéviation utiwisées dans wa documentation e-et we code. >_< ce gwossaiwe fouwnit une définition d-des mots et abwéviations q-qui vous sewont nyécessaiwes pouw pouvoiw compwendwe et utiwisew w-we web. rawr x3
 
-Vous pouvez parcourir les termes du glossaire en utilisant la barre latérale.
+vous pouvez pawcouwiw w-wes tewmes d-du gwossaiwe en utiwisant wa bawwe watéwawe. mya
 
-> [!NOTE]
-> Le glossaire et sa traduction en français sont en constante évolution. Vous pouvez aider en [traduisant les pages correspondantes depuis l'anglais](/fr/docs/MDN/Community/Contributing/Translated_content) ou en améliorant les pages existantes.
+> [!note]
+> we gwossaiwe et sa twaduction e-en fwançais sont en constante évowution. nyaa~~ vous pouvez aidew en [twaduisant wes pages c-cowwespondantes depuis w'angwais](/fw/docs/mdn/community/contwibuting/twanswated_content) o-ou en a-améwiowant wes p-pages existantes. (⑅˘꒳˘)

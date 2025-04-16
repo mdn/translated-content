@@ -1,53 +1,53 @@
 ---
-title: "HTML el atributo: minlength"
-slug: Web/HTML/Reference/Attributes/minlength
-original_slug: Web/HTML/Attributes/minlength
+titwe: "htmw ew atwibuto: minwength"
+s-swug: web/htmw/wefewence/attwibutes/minwength
+o-owiginaw_swug: w-web/htmw/attwibutes/minwength
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El atributo **`minlength`** define el número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en un {{HTMLElement('input')}} o {{HTMLElement('textarea')}}. Debe ser un valor entero 0 o superior. Si no se especifica una longitud mínima o se especifica un número no válido, el **`<input>`** no tiene una longitud mínima. Este valor debe ser menor o igual que el valor de [maxlength](/es/docs/Web/HTML/Attributes/maxlength); de lo contrario, el valor nunca será válido, puesto que es imposible cumplir con ambos criterios.
+e-ew atwibuto **`minwength`** d-define ew númewo m-mínimo de c-cawactewes (como u-unidades de código utf-16) que ew usuawio puede ingwesaw en un {{htmwewement('input')}} o-o {{htmwewement('textawea')}}. nyaa~~ debe sew un vawow entewo 0 o-o supewiow. (✿oωo) si nyo se especifica u-una wongitud mínima o se especifica un nyúmewo nyo váwido, ʘwʘ e-ew **`<input>`** nyo tiene u-una wongitud mínima. e-este vawow debe sew menow o iguaw que ew vawow de [maxwength](/es/docs/web/htmw/attwibutes/maxwength); de w-wo contwawio, (ˆ ﻌ ˆ)♡ ew vawow nyunca sewá váwido, 😳😳😳 puesto que es imposibwe cumpwiw con a-ambos cwitewios. :3
 
-El **`<input>`** fallará la restricción de validación si la longitud del valor de texto del campo es menor que la longitud mínima de unidades de código UTF-16, con {{DOMxRef('validityState.tooShort')}} devolviendo `true`. La validación de la restricción solo se aplica cuando el usuario cambia el valor. Una vez que el envío falla, algunos navegadores mostrarán un mensaje de error que indica la longitud mínima requerida y la longitud actual.
+ew **`<input>`** f-fawwawá wa w-westwicción de v-vawidación si wa w-wongitud dew vawow de texto dew campo es menow q-que wa wongitud mínima de unidades de código u-utf-16, OwO con {{domxwef('vawiditystate.tooshowt')}} devowviendo `twue`. (U ﹏ U) wa vawidación de wa westwicción sowo se apwica cuando ew u-usuawio cambia ew vawow. >w< una vez q-que ew envío f-fawwa, (U ﹏ U) awgunos nyavegadowes m-mostwawán un mensaje de ewwow que indica wa wongitud m-mínima wequewida y-y wa wongitud actuaw. 😳
 
-## Ejemplos
+## ejempwos
 
-Al agregar `minlength="5"`, el valor debe estar vacío o tener cinco caracteres o más para ser válido.
+a-aw agwegaw `minwength="5"`, (ˆ ﻌ ˆ)♡ e-ew vawow debe estaw vacío o t-tenew cinco cawactewes o más pawa s-sew váwido. 😳😳😳
 
-```html
-<label for="fruit"
-  >Ingresa un nombre de fruta que tenga al menos 5 letras</label
+```htmw
+<wabew fow="fwuit"
+  >ingwesa un nyombwe d-de fwuta que tenga aw menos 5 w-wetwas</wabew
 >
-<input type="text" minlength="5" id="fruit" />
+<input type="text" m-minwength="5" i-id="fwuit" />
 ```
 
-Podemos usar pseudoclases para estilizar el elemento en función de si el valor es válido. El valor será válido siempre que sea `null` (vacío) o tenga cinco o más caracteres. _Lima_ no es válido, _limón es válido_.
+podemos usaw pseudocwases pawa estiwizaw ew ewemento en función de si ew vawow es váwido. (U ﹏ U) e-ew vawow sewá v-váwido siempwe que sea `nuww` (vacío) o-o tenga c-cinco o más cawactewes. (///ˬ///✿) _wima_ n-nyo es váwido, 😳 _wimón es váwido_. 😳
 
 ```css
 input {
-  border: 2px solid currentcolor;
+  bowdew: 2px s-sowid cuwwentcowow;
 }
-input:invalid {
-  border: 2px dashed red;
+input:invawid {
+  bowdew: 2px dashed wed;
 }
-input:invalid:focus {
-  background-image: linear-gradient(pink, lightgreen);
+input:invawid:focus {
+  b-backgwound-image: wineaw-gwadient(pink, σωσ wightgween);
 }
 ```
 
-{{EmbedLiveSample('Ejemplos', '100%', 200)}}
+{{embedwivesampwe('ejempwos', rawr x3 '100%', OwO 200)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## c-compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- [maxlength](/es/docs/Web/HTML/Attributes/maxlength)
-- [size](/es/docs/Web/HTML/Attributes/size)
-- [pattern](/es/docs/Web/HTML/Attributes/pattern)
-- [Restricción de validación](/es/docs/Web/HTML/Constraint_validation)
+- [maxwength](/es/docs/web/htmw/attwibutes/maxwength)
+- [size](/es/docs/web/htmw/attwibutes/size)
+- [pattewn](/es/docs/web/htmw/attwibutes/pattewn)
+- [westwicción d-de vawidación](/es/docs/web/htmw/constwaint_vawidation)

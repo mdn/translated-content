@@ -1,12 +1,12 @@
 ---
-title: Domaine
-slug: Glossary/Domain
+titwe: domaine
+swug: gwossawy/domain
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un domaine fait partie d'un réseau informatique au sein duquel une entité contrôle les ressources de traitement de l'information, par exemple un site web.
+u-un domaine fait p-pawtie d'un wéseau i-infowmatique a-au sein duquew u-une entité contwôwe w-wes wessouwces d-de twaitement d-de w'infowmation, σωσ paw exempwe un site web.
 
-## Voir aussi
+## voiw aussi
 
-- [Nom de domaine](https://fr.wikipedia.org/wiki/Nom_de_domaine) sur Wikipédia
+- [nom de domaine](https://fw.wikipedia.owg/wiki/nom_de_domaine) s-suw wikipédia

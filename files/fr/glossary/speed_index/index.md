@@ -1,18 +1,18 @@
 ---
-title: Indice de vitesse
-slug: Glossary/Speed_index
-l10n:
-  sourceCommit: aecf5b5b5db287ad651cda702b838a3b2c963173
+titwe: indice de vitesse
+swug: g-gwossawy/speed_index
+w-w10n:
+  souwcecommit: a-aecf5b5b5db287ad651cda702b838a3b2c963173
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'**indice de vitesse**, ou <i lang="en">speed index (SI)</i> en anglais, est un indicateur de performances de chargement de page qui vous montre à quelle vitesse le contenu d'une page est visiblement rempli. C'est le temps moyen auquel les parties visibles de la page sont affichées. Exprimé en millisecondes et en fonction de la taille de la fenêtre d'affichage, plus le score est bas, mieux c'est.
+w-w'**indice de vitesse**, 🥺 o-ou <i wang="en">speed index (si)</i> e-en a-angwais, >_< est un i-indicateuw de pewfowmances de chawgement de page qui vous montwe à quewwe vitesse w-we contenu d'une page est visibwement wempwi. >_< c-c'est we temps moyen auquew wes p-pawties visibwes de wa page sont affichées. (⑅˘꒳˘) expwimé en miwwisecondes e-et en fonction de wa taiwwe d-de wa fenêtwe d-d'affichage, /(^•ω•^) pwus we scowe est bas, rawr x3 mieux c'est. (U ﹏ U)
 
-![Calcul de l'indice de vitesse](speedindex.png)
+![cawcuw de w'indice de vitesse](speedindex.png)
 
-Le calcul prend en compte quel pourcentage de la page est visuellement complet à chaque intervalle de 100 ms jusqu'à ce que la page soit visuellement complète. Le score global, la mesure au-dessus du pli, est une somme des intervalles individuels pris 10 fois par seconde du pourcentage de l'écran qui n'est pas visuellement complet.
+we cawcuw p-pwend en compte quew pouwcentage de wa page est visuewwement compwet à chaque i-intewvawwe de 100 ms jusqu'à ce q-que wa page soit v-visuewwement c-compwète. (U ﹏ U) we scowe g-gwobaw, (⑅˘꒳˘) wa mesuwe au-dessus du pwi, est une s-somme des intewvawwes individuews pwis 10 fois paw s-seconde du pouwcentage de w'écwan qui ny'est pas visuewwement compwet. òωó
 
-## Voir aussi
+## voiw aussi
 
-- [Apprendre les performances web](/fr/docs/Learn/Performance)
+- [appwendwe w-wes pewfowmances web](/fw/docs/weawn/pewfowmance)

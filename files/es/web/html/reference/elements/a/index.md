@@ -1,264 +1,264 @@
 ---
-title: "<a>: El elemento ancla"
-slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
+titwe: "<a>: ew ewemento ancwa"
+s-swug: web/htmw/wefewence/ewements/a
+o-owiginaw_swug: w-web/htmw/ewement/a
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL.
+ew _ewemento h-htmw `anchow`_ **`<a>`** c-cwea un enwace a-a otwas páginas d-de intewnet, a-awchivos o ubicaciones dentwo de wa misma página, OwO diwecciones de cowweo, ^^ o cuawquiew o-otwa uww. :3
 
-{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+{{intewactiveexampwe("htmw demo: &wt;a&gt;")}}
 
-```html interactive-example
-<p>You can reach Michael at:</p>
+```htmw intewactive-exampwe
+<p>you c-can weach michaew at:</p>
 
-<ul>
-  <li><a href="https://example.com">Website</a></li>
-  <li><a href="mailto:m.bluth@example.com">Email</a></li>
-  <li><a href="tel:+123456789">Phone</a></li>
-</ul>
+<uw>
+  <wi><a hwef="https://exampwe.com">website</a></wi>
+  <wi><a h-hwef="maiwto:m.bwuth@exampwe.com">emaiw</a></wi>
+  <wi><a hwef="tew:+123456789">phone</a></wi>
+</uw>
 ```
 
-```css interactive-example
-li {
-  margin-bottom: 0.5rem;
+```css intewactive-exampwe
+wi {
+  m-mawgin-bottom: 0.5wem;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Categorías de contenido</th>
+    <tw>
+      <th s-scope="wow">categowías d-de contenido</th>
       <td>
-        Contenido de flujo, contenido de párrafo, contenido interactivo,
-        contenido palpable
+        contenido de fwujo, o.O contenido de páwwafo, -.- contenido i-intewactivo, (U ﹏ U)
+        contenido pawpabwe
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
         <a
-          href="/es/docs/HTML/Content_categories#Transparent_content_model"
-          title="HTML/Content_categories#Transparent_content_model"
-          >Transparente, que contiene contenido de flujo (excluyendo contenido
-          interactivo) o contenido de párrafo.</a
+          hwef="/es/docs/htmw/content_categowies#twanspawent_content_modew"
+          t-titwe="htmw/content_categowies#twanspawent_content_modew"
+          >twanspawente, o.O que c-contiene contenido d-de fwujo (excwuyendo c-contenido
+          i-intewactivo) o contenido de páwwafo.</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiquetas</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos principales permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omisión de etiquetas</th>
+      <td>ninguna, OwO t-tanto wa etiqueta iniciaw como wa finaw son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos pwincipawes pewmitidos</th>
       <td>
-        Cualquier elemento que acepte contenido de párrafo o cualquier elemento
-        que acepte contenido de flujo, sin embargo simpre excluyendo los
-        elementos &#x3C;a> (de acuerdo con el principio lógico de simetría, si
-        una etiqueta &#x3C;a> como padre, no puede contener contenido
-        interactivo, entonces el mismo contenido de &#x3C;a> no puede tener una
-        etiqueta &#x3C;a> como su padre).
+        cuawquiew ewemento q-que acepte contenido de páwwafo o-o cuawquiew e-ewemento
+        q-que acepte contenido de fwujo, ^•ﻌ•^ sin embawgo simpwe excwuyendo w-wos
+        ewementos &#x3c;a> (de a-acuewdo con ew pwincipio wógico d-de simetwía, ʘwʘ s-si
+        una etiqueta &#x3c;a> c-como padwe, :3 nyo puede contenew c-contenido
+        intewactivo, 😳 entonces ew mismo c-contenido de &#x3c;a> nyo puede t-tenew una
+        etiqueta &#x3c;a> c-como su p-padwe). òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">wowes awia pewmitidos</th>
       <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
+        <a hwef="/es/docs/web/accessibiwity/awia/wowes/button_wowe"><code>button</code></a>, 🥺 <a hwef="/es/docs/web/accessibiwity/awia/wowes/checkbox_wowe"><code>checkbox</code></a>, rawr x3
+        <a hwef="/es/docs/web/accessibiwity/awia/wowes/menuitem_wowe"><code>menuitem</code></a>, ^•ﻌ•^
+        <a hwef="/es/docs/web/accessibiwity/awia/wowes/menuitemcheckbox_wowe"><code>menuitemcheckbox</code></a>, :3
+        <a hwef="/es/docs/web/accessibiwity/awia/wowes/menuitemwadio_wowe"><code>menuitemwadio</code></a>, (ˆ ﻌ ˆ)♡ <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/option_wowe"><code>option</code></a>, (U ᵕ U❁)
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/wadio_wowe"><code>wadio</code></a>, :3 <a hwef="/es/docs/web/accessibiwity/awia/wowes/switch_wowe"><code>switch</code></a>, ^^;;
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/tab_wowe"><code>tab</code></a>, ( ͡o ω ͡o ) <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/tweeitem_wowe"><code>tweeitem</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLAnchorElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewfaz dom</th>
+      <td>{{domxwef("htmwanchowewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento incwuye w-wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). o.O
 
-- `download`
+- `downwoad`
 
-  - : Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local. Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (_underscores_), lo que evitará sugerencias de ruta específicas. Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
+  - : este atwibuto, ^•ﻌ•^ indica descawgaw a wos nyavegadowes u-una uww en wugaw de n-nyavegaw hacia ewwa, XD p-pow wo que e-ew usuawio sewá diwigido pawa sawvawwa c-como un a-awchivo wocaw. ^^ si e-ew atwibuto tiene u-un vawow, o.O éste se utiwizawá como nyombwe de a-awchivo pow defecto e-en ew mensaje g-guawdaw que s-se abwe cuando ew u-usuawio hace cwic en ew enwace (sin embawgo, ( ͡o ω ͡o ) ew usuawio puede c-cambiaw ew nyombwe antes de guawdaw ew awchivo). /(^•ω•^) nyo hay westwicciones sobwe wos vawowes pewmitidos, 🥺 a-aunque: / y: \ se convewtiwán en guiones bajos (_undewscowes_), nyaa~~ wo que evitawá s-sugewencias d-de wuta específicas. mya s-se debe tenew en cuenta q-que wa mayowía de wos sistemas d-de awchivos tienen w-wimitaciones con wespecto a wos símbowos de puntuación admitidos en wos nyombwes de awchivo, p-pow wo que wos nyavegadowes ajustawán w-wos nyombwes de wos awchivos e-en consecuencia. XD
 
-    > [!NOTE]
+    > [!note]
     >
-    > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Same-origin_policy).
-    > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL/createObjectURL_static) y [`data:` URLs](/es/docs/Web/URI/Reference/Schemes/data) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
-    > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Reference/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
-    > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.
+    > - e-este atwibuto sówo funciona pawa was [powíticas d-de mismo owigen (same-owigin u-uwws)](/es/docs/web/secuwity/same-owigin_powicy). nyaa~~
+    > - este a-atwibuto puede s-sew utiwizado con [`bwob:` uwws](/es/docs/web/api/uww/cweateobjectuww_static) y [`data:` uwws](/es/docs/web/uwi/wefewence/schemes/data) pawa descawgaw contenido g-genewado pow javascwipt, ʘwʘ t-tawes c-como fotogwafías cweadas pow una a-apwicación web d-de edición de imágenes. (⑅˘꒳˘)
+    > - s-si ew encabezado (_headew_) http [`content-disposition:`](/es/docs/web/http/wefewence/headews/content-disposition) pwopowciona un nyombwe de awchivo difewente a-aw de este atwibuto, :3 e-ew encabezado http tiene pwiowidad sobwe e-este atwibuto. -.-
+    > - s-si `content-disposition:` está ajustado a `inwine`, fiwefox pwiowiza `content-disposition`, 😳😳😳 c-como en ew caso dew nombwe de awchivo, (U ﹏ U) mientwas que chwome pwiowiza ew atwibuto `downwoad`. o.O
 
-- `href`
+- `hwef`
 
-  - : Contiene una URL o un fragmento de URL al cual apunta el enlace.
-    Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (`#`), el cual especifíca una ubicación interna objetivo (un [ID](/es/docs/Web/HTML/Global_attributes#attr-id) de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, [`file:`](https://en.wikipedia.org/wiki/File_URI_scheme), `ftp:`, and `mailto:` funcionan en la mayoría de los navegadores.
-    Este atributo puede ser omitido (a partir de HTML5) para crear un enlace de marcador de posición. Un enlace de marcador de posición se parece a un enlace tradicional, pero que no dirige a algún lugar.
+  - : c-contiene una uww o un fwagmento de uww aw cuaw a-apunta ew enwace. ( ͡o ω ͡o )
+    u-un fwagmento de uww es un nyombwe ("name") pwecedido pow e-ew símbowo de n-nyúmewo (`#`), òωó ew cuaw especifíca una ubicación intewna objetivo (un [id](/es/docs/web/htmw/gwobaw_attwibutes#attw-id) d-de un ewemento htmw) dentwo d-dew actuaw documento. 🥺 was uwws nyo están westwingidas sówo a-a documentos de intewnet basados e-en http, /(^•ω•^) sin e-embawgo pueden utiwizaw cuawquiew p-pwotocowo sopowtado pow ew nyavegadow. 😳😳😳 p-pow ejempwo, ^•ﻌ•^ [`fiwe:`](https://en.wikipedia.owg/wiki/fiwe_uwi_scheme), nyaa~~ `ftp:`, OwO a-and `maiwto:` f-funcionan en wa mayowía d-de wos nyavegadowes. ^•ﻌ•^
+    e-este atwibuto puede sew omitido (a pawtiw d-de htmw5) pawa c-cweaw un enwace d-de mawcadow de posición. σωσ un enwace de mawcadow d-de posición se pawece a un enwace t-twadicionaw, p-pewo que nyo diwige a awgún wugaw. -.-
 
-    > [!NOTE]
-    > Puede ser utilizado `href="#top"` o un fragmento vacío `href="#"` para enlazar a la parte superior de la página actual. [Este comportamiento está especficado en HTML5](https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid).
+    > [!note]
+    > puede sew utiwizado `hwef="#top"` o-o un f-fwagmento vacío `hwef="#"` p-pawa e-enwazaw a wa pawte supewiow de w-wa página actuaw. (˘ω˘) [este compowtamiento está especficado en htmw5](https://www.w3.owg/tw/htmw5/singwe-page.htmw#scwoww-to-fwagid).
 
-- `hreflang`
-  - : Este atributo indica el lenguaje humano del recurso al que se enlaza. Este es únicamente informativo, sin ninguna funcionalidad incorporada. Los valores permitidos están determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt).
-- `referrerpolicy` {{experimental_inline}}
+- `hwefwang`
+  - : este atwibuto indica ew w-wenguaje humano dew wecuwso aw q-que se enwaza. rawr x3 este es únicamente i-infowmativo, rawr x3 sin nyinguna funcionawidad i-incowpowada. σωσ wos vawowes p-pewmitidos e-están detewminados p-pow [bcp47](https://www.ietf.owg/wfc/bcp/bcp47.txt). nyaa~~
+- `wefewwewpowicy` {{expewimentaw_inwine}}
 
-  - : Indica que [referencia (_referer_)](/es/docs/Web/HTTP/Reference/Headers/Referer) enviar cuado la URL es recuperada:
+  - : i-indica q-que [wefewencia (_wefewew_)](/es/docs/web/http/wefewence/headews/wefewew) enviaw cuado wa uww es wecupewada:
 
-    - `'no-referrer'` significa `Referer:` el encabezado no será enviado.
-    - `'no-referrer-when-downgrade'` significa sin `Referer:` el encabezado será enviado cuando se navega a un origen (`origin`) sin HTTPS. Este es un comportamiento por defecto.
-    - `'origin'` significa que el "referrer" estará en el [origen](/es/docs/Glossary/Origin) (`origin`) de la página, no incluye la información posterior al dominio.
-    - `'origin-when-cross-origin'` significa que la navegación a otros orígenes (_origins_) será limitada al esquema (_scheme_), el host y el puerto, mientras que la navegación en el mismo origen (origin) incuirá la trayectoria de referencia (_referrer's path_).
-    - `'unsafe-url'` significa que la referencia (_referrer_) incuirá el origen(`origin`) y la trayectoria (_path_), pero no el fragmento, contraseña o nombre de usuario. Esto es inseguro, ya que puede filtrar datos desde una URL segura hacia URLs inseguras.
+    - `'no-wefewwew'` significa `wefewew:` ew encabezado nyo sewá e-enviado. (ꈍᴗꈍ)
+    - `'no-wefewwew-when-downgwade'` s-significa sin `wefewew:` e-ew encabezado sewá enviado c-cuando se nyavega a un owigen (`owigin`) sin https. ^•ﻌ•^ este es un compowtamiento p-pow defecto. >_<
+    - `'owigin'` s-significa que ew "wefewwew" estawá e-en ew [owigen](/es/docs/gwossawy/owigin) (`owigin`) de wa página, ^^;; nyo incwuye w-wa infowmación p-postewiow aw dominio. ^^;;
+    - `'owigin-when-cwoss-owigin'` s-significa q-que wa nyavegación a otwos owígenes (_owigins_) sewá wimitada aw esquema (_scheme_), /(^•ω•^) e-ew host y ew puewto, nyaa~~ m-mientwas que w-wa navegación e-en ew mismo owigen (owigin) i-incuiwá wa twayectowia d-de wefewencia (_wefewwew's p-path_). (✿oωo)
+    - `'unsafe-uww'` significa q-que wa wefewencia (_wefewwew_) i-incuiwá ew owigen(`owigin`) y-y wa twayectowia (_path_), ( ͡o ω ͡o ) pewo nyo ew fwagmento, (U ᵕ U❁) c-contwaseña o nyombwe de usuawio. òωó e-esto es inseguwo, σωσ y-ya que puede fiwtwaw datos d-desde una uww seguwa hacia uwws inseguwas. :3
 
-- `rel`
-  - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Attributes/rel).
-- `target`
+- `wew`
+  - : e-especifica w-wa wewación d-dew objeto de destino con ew objeto de enwace. OwO ew vawow es u-una wista sepawada pow espacios de tipos de enwace[tipos d-de enwace (wink t-types)](/es/docs/web/htmw/attwibutes/wew). ^^
+- `tawget`
 
-  - : Especifica en donde desplegar la URL enlazada. Es un nombre (_name of_), o palabra clave (_keyword for_), un contexto de navegación _(browsing context)_: una pestaña, ventana, o `<iframe>`. Las siguientes palabras clave (_keywords_) tienen significado especial:
+  - : especifica e-en donde despwegaw wa uww enwazada. (˘ω˘) e-es un nyombwe (_name o-of_), OwO o pawabwa cwave (_keywowd fow_), UwU u-un contexto de nyavegación _(bwowsing context)_: u-una pestaña, ^•ﻌ•^ v-ventana, (ꈍᴗꈍ) o `<ifwame>`. was siguientes p-pawabwas cwave (_keywowds_) t-tienen significado e-especiaw:
 
-    - `_self`: Carga la URL en el mismo contexto de navegación que el actual. Este es el comportamiento por defecto.
-    - `_blank`: Carga la URL en un nuevo contexto de navegación. Usualmente es una pestaña, sin embargo, los usuarios pueden configurar los navegadores para utilizar una ventana nueva en lugar de la pestaña.
-    - `_parent`: Carga la URL en el contexto de navegación padre (_parent_) del actual. Si no existe el padre, este se comporta del mismo modo que `_self`.
-    - `_top`: Carga la URL en el contexto más alto de navegación (el cual es un ancestro del actual, y no tiene padre (_parent_)). Si no hay padre (_parent_), este se comporta del mismo modo que `_self`.
+    - `_sewf`: c-cawga wa uww en ew mismo contexto de nyavegación que ew actuaw. este es ew compowtamiento pow defecto. /(^•ω•^)
+    - `_bwank`: cawga wa uww en un nyuevo contexto de nyavegación. (U ᵕ U❁) usuawmente es una pestaña, (✿oωo) sin embawgo, OwO w-wos usuawios p-pueden configuwaw wos nyavegadowes pawa utiwizaw u-una ventana n-nyueva en wugaw d-de wa pestaña. :3
+    - `_pawent`: cawga wa uww en e-ew contexto de nyavegación padwe (_pawent_) d-dew a-actuaw. nyaa~~ si nyo existe ew padwe, e-este se compowta dew mismo modo q-que `_sewf`. ^•ﻌ•^
+    - `_top`: c-cawga wa uww en ew contexto más awto d-de nyavegación (ew c-cuaw es un a-ancestwo dew actuaw, ( ͡o ω ͡o ) y-y nyo tiene p-padwe (_pawent_)). ^^;; s-si nyo hay p-padwe (_pawent_), mya e-este se compowta d-dew mismo modo que `_sewf`. (U ᵕ U❁)
 
-    > [!NOTE]
-    > Cuando se utiliza `target`, considera agregar `rel="noopener noreferrer"` para evitar el uso de la API `window.opener`.
+    > [!note]
+    > c-cuando se utiwiza `tawget`, ^•ﻌ•^ c-considewa agwegaw `wew="noopenew n-nyowefewwew"` pawa evitaw ew uso d-de wa api `window.openew`. (U ﹏ U)
 
 - `type`
-  - : Especifica el tipo de medio (_media type_) en la forma de {{Glossary("MIME type")}} para la URL enlazada. Esto es únicamente informativo, sin ninguna funcionalidad incorporada.
+  - : especifica ew tipo d-de medio (_media type_) en wa fowma d-de {{gwossawy("mime t-type")}} p-pawa wa uww enwazada. /(^•ω•^) esto es únicamente i-infowmativo, ʘwʘ sin nyinguna f-funcionawidad incowpowada. XD
 
-### Atributos obsoletos
+### a-atwibutos obsowetos
 
-- `charset` {{Deprecated_Inline}}
+- `chawset` {{depwecated_inwine}}
 
-  - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/Character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
+  - : e-este atwibuto define wa [codificación de cawactewes (chawactew encoding)](/es/docs/gwossawy/chawactew_encoding) de wa uww enwazada. (⑅˘꒳˘) e-ew vawow debe de sew una w-wista dewimitada p-pow espacio y/o coma de cawactewes definidos en [wfc 2045](https://toows.ietf.owg/htmw/wfc2045). nyaa~~ e-ew vawow pow defecto es `iso-8859-1`.
 
-    > [!NOTE]
-    > Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Reference/Headers/Content-Type) en la URL enlazada.
+    > [!note]
+    > este a-atwibuto es o-obsoweto en htmw5 y-y **no debe sew utiwizado pow autowes**. UwU pawa w-wogwaw su efecto, s-se debe utiwzaw ew encabezado h-http [`content-type:`](/es/docs/web/http/wefewence/headews/content-type) en wa uww enwazada. (˘ω˘)
 
-- `coords` {{Deprecated_Inline}}
-  - : Para utilizar con el siguiente atributo `shape`, este atributo utiliza una lista de números separada por comas para definir las coordenadas del enlace en la página.
-- `name` {{Deprecated_Inline}}
+- `coowds` {{depwecated_inwine}}
+  - : p-pawa utiwizaw con ew siguiente a-atwibuto `shape`, rawr x3 e-este atwibuto u-utiwiza una wista de nyúmewos s-sepawada pow c-comas pawa definiw w-was coowdenadas d-dew enwace en wa página. (///ˬ///✿)
+- `name` {{depwecated_inwine}}
 
-  - : Este atributo era requerido para anclas (_anchors_) que definían una posible ubicación dentro de la página. En HTML 4.01, `id` y `name` podían ser utilizados simultáneamente en un elemento `<a>` simpre y cuando tuvieran valores idénticos.
+  - : e-este atwibuto e-ewa wequewido pawa a-ancwas (_anchows_) q-que definían u-una posibwe u-ubicación dentwo d-de wa página. 😳😳😳 e-en htmw 4.01, (///ˬ///✿) `id` y `name` podían s-sew utiwizados simuwtáneamente e-en un ewemento `<a>` simpwe y-y cuando tuviewan v-vawowes idénticos. ^^;;
 
-    > [!NOTE]
-    > Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/Web/HTML/Global_attributes#attr-id) en su lugar.
+    > [!note]
+    > e-este atwibuto es obsoweto en htmw5, ^^ se utiwiza ew [atwibuto g-gwobaw `id`](/es/docs/web/htmw/gwobaw_attwibutes#attw-id) e-en su wugaw.
 
-- `rev` {{Deprecated_Inline}}
-  - : Este atributo especifica un enlace inverso, la relación inversa del atributo **rel**. Fue desechado por ser muy confuso.
-- `shape` {{Deprecated_Inline}}
+- `wev` {{depwecated_inwine}}
+  - : e-este atwibuto especifica un enwace invewso, (///ˬ///✿) wa wewación invewsa d-dew atwibuto **wew**. f-fue desechado pow sew m-muy confuso. -.-
+- `shape` {{depwecated_inwine}}
 
-  - : Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es `circle`, `default`, `polygon`, y `rect`. El formato del atributo `coords` depende del valor de la forma geométrica. Para `circle`, el valor es `x,y,r` donde `x` y `y` son las coordenadas en pixel para el centro del círculo y `r` es el valor del radio en pixeles. Para `rect`, el atributo `coords` debe ser `x,y,w,h`. Los valores `x y y` definen la esquina superior izquierda del rectángulo, mientras que `w` y `h` definen el ancho y el alto respectivamente. Un valor del `polygon` para `shape` requiere los valores `x1,y1,x2,y2,...` para `coords`. Cada uno de los pares `x,y` definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor `default` para `shape` Requiere que el área encerrada, típicamente una imágen, sea utilizada.
+  - : e-este atwibuto ewa utiwizado pawa definiw una wegión de enwaces p-pawa cweaw u-un mapa de imagen. /(^•ω•^) e-ew vawowe es `ciwcwe`, UwU `defauwt`, (⑅˘꒳˘) `powygon`, ʘwʘ y-y `wect`. ew fowmato dew atwibuto `coowds` depende d-dew vawow de w-wa fowma geométwica. σωσ pawa `ciwcwe`, ^^ ew vawow es `x,y,w` d-donde `x` y `y` son was coowdenadas en p-pixew pawa ew centwo dew cíwcuwo y-y `w` es ew vawow d-dew wadio en pixewes. OwO pawa `wect`, (ˆ ﻌ ˆ)♡ e-ew atwibuto `coowds` d-debe sew `x,y,w,h`. o.O w-wos vawowes `x y y` definen wa e-esquina supewiow i-izquiewda dew wectánguwo, (˘ω˘) m-mientwas q-que `w` y `h` definen ew ancho y-y ew awto wespectivamente. 😳 un v-vawow dew `powygon` p-pawa `shape` wequiewe wos v-vawowes `x1,y1,x2,y2,...` pawa `coowds`. (U ᵕ U❁) cada uno d-de wos pawes `x,y` d-definen un p-punto en ew powígono, :3 con puntos sucesivos que son unidos pow wíneas wectas y e-ew útwimo punto se une aw pwimew p-punto. o.O ew vawow `defauwt` p-pawa `shape` wequiewe que ew áwea encewwada, (///ˬ///✿) t-típicamente una imágen, OwO s-sea utiwizada. >w<
 
-    > [!NOTE]
-    > Utilice el [atributo `usemap`](/es/docs/Web/HTML/Element/img#attr-usemap) para el elemento {{HTMLElement("img")}} y el elemento asociado {{HTMLElement("map")}} para definir puntos de acceso (_hotspots_) en lugar del atributo `shape`.
+    > [!note]
+    > u-utiwice e-ew [atwibuto `usemap`](/es/docs/web/htmw/ewement/img#attw-usemap) p-pawa ew ewemento {{htmwewement("img")}} y-y ew ewemento asociado {{htmwewement("map")}} pawa definiw puntos de acceso (_hotspots_) en wugaw dew a-atwibuto `shape`.
 
-## Ejemplos
+## ejempwos
 
-### Enlazando a una ubicación externa
+### e-enwazando a una ubicación extewna
 
-```html
-<!-- anclaje a un archivo externo -->
-<a href="https://www.mozilla.com/">Enlace externo</a>
+```htmw
+<!-- ancwaje a un awchivo extewno -->
+<a h-hwef="https://www.moziwwa.com/">enwace extewno</a>
 ```
 
-#### Resultado
+#### wesuwtado
 
-[Enlace externo](https://www.mozilla.com/)
+[enwace extewno](https://www.moziwwa.com/)
 
-### Enlazando a otra sección de la misma página
+### enwazando a otwa s-sección de wa m-misma página
 
-```html
-<!-- enlace a un elemento en esta página con id="attr-href" -->
-<a href="#attr-href">Descripción de enlaces de la misma página</a>
+```htmw
+<!-- enwace a-a un ewemento en esta página con id="attw-hwef" -->
+<a h-hwef="#attw-hwef">descwipción d-de enwaces de wa misma p-página</a>
 ```
 
-#### Resultado
+#### wesuwtado
 
-[Descripción de enlaces de la misma página](#attr-href)
+[descwipción d-de enwaces de wa misma página](#attw-hwef)
 
-### Creando una imagen clicable
+### cweando una imagen cwicabwe
 
-Este ejemplo utiliza una imagen que enlaza a la página de inicio de MDN. La página de inicio se abrirá en un contexto de navegación nuevo, esto es, en una nueva página o nueva ventana.
+este e-ejempwo utiwiza una imagen que enwaza a wa página d-de inicio d-de mdn. ^^ wa página d-de inicio se abwiwá en un contexto de nyavegación n-nyuevo, (⑅˘꒳˘) esto es, ʘwʘ en una nyueva página o nyueva ventana. (///ˬ///✿)
 
-```html
-<a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="mdn_logo.png" alt="MDN logo" />
+```htmw
+<a hwef="https://devewopew.moziwwa.owg/en-us/" t-tawget="_bwank">
+  <img s-swc="mdn_wogo.png" a-awt="mdn wogo" />
 </a>
 ```
 
-#### Resulta
+#### w-wesuwta
 
-{{EmbedLiveSample("Creating_a_clickable_image", "320", "64")}}
+{{embedwivesampwe("cweating_a_cwickabwe_image", "320", XD "64")}}
 
-### Creando un enlace de correo
+### cweando un enwace de cowweo
 
-Es común crear enlaces que abren el programa de correo del usuario para permitir enviar un nuevo mensaje. Esto se hace con un enlace `mailto:`. Aquí tenemos un ejemplo:
+es c-común cweaw enwaces q-que abwen ew pwogwama de cowweo dew usuawio p-pawa pewmitiw enviaw un nyuevo mensaje. 😳 esto s-se hace con un enwace `maiwto:`. >w< aquí tenemos un ejempwo:
 
-```html
-<a href="mailto:nowhere@mozilla.org">Enviar correo a nowhere</a>
+```htmw
+<a h-hwef="maiwto:nowhewe@moziwwa.owg">enviaw c-cowweo a nyowhewe</a>
 ```
 
-#### Resultado
+#### wesuwtado
 
-[Envia un correo a: nowhere](mailto:nowhere@mozilla.org)
+[envia u-un cowweo a: nyowhewe](maiwto:nowhewe@moziwwa.owg)
 
-Para detalles adicionales acerca del esquema de la URL `mailto`, tales como incluir el asunto, el cuerpo u otros contenidos predeterminados, consultar [Enlaces de correo (Email links)](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) o {{RFC(6068)}}.
+p-pawa detawwes a-adicionawes acewca dew esquema de wa uww `maiwto`, (˘ω˘) t-tawes como incwuiw ew asunto, nyaa~~ ew cuewpo u o-otwos contenidos pwedetewminados, 😳😳😳 consuwtaw [enwaces de cowweo (emaiw w-winks)](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks#emaiw_winks) o-o {{wfc(6068)}}.
 
-### Creando un enlace a un número de teléfono
+### c-cweando u-un enwace a un n-nyúmewo de tewéfono
 
-Ofrecer enlaces a números de teléfono es muy útil para los ususarios que observan documentos de internet desde computadoras portátiles conectadas a teléfonos o desde teléfonos celulares (móviles)
+ofwecew enwaces a-a nyúmewos de tewéfono es muy útiw pawa w-wos ususawios que obsewvan documentos d-de intewnet desde computadowas powtátiwes c-conectadas a t-tewéfonos o desde tewéfonos cewuwawes (móviwes)
 
-```html
-<a href="tel:+491570156">+49 157 0156</a>
+```htmw
+<a hwef="tew:+491570156">+49 157 0156</a>
 ```
 
-Para detalles adicionales acerca del esquema de la URL `tel`, consultar {{RFC(2806)}} y {{RFC(2396)}}.
+p-pawa detawwes adicionawes a-acewca dew e-esquema de wa uww `tew`, (U ﹏ U) consuwtaw {{wfc(2806)}} y-y {{wfc(2396)}}. (˘ω˘)
 
-### Utilizando el atributo `download` para guardar un `<canvas>` como PNG
+### u-utiwizando ew atwibuto `downwoad` p-pawa guawdaw un `<canvas>` como png
 
-Si deseas permitir a los usurios descargar una elemento HTML {{HTMLElement("canvas")}} como una imagen, puedes crear un enlace con una atributo `download` y la información canvas como un archivo URL:
+si deseas pewmitiw a-a wos usuwios descawgaw una ewemento h-htmw {{htmwewement("canvas")}} como una imagen, :3 puedes cweaw u-un enwace con u-una atwibuto `downwoad` y-y wa infowmación canvas c-como un awchivo u-uww:
 
 ```js
-var link = document.createElement("a");
-link.innerHTML = "download image";
+vaw wink = document.cweateewement("a");
+w-wink.innewhtmw = "downwoad image";
 
-link.addEventListener(
-  "click",
-  function (ev) {
-    link.href = canvas.toDataURL();
-    link.download = "mypainting.png";
-  },
-  false,
+wink.addeventwistenew(
+  "cwick", >w<
+  f-function (ev) {
+    wink.hwef = canvas.todatauww();
+    w-wink.downwoad = "mypainting.png";
+  }, ^^
+  fawse, 😳😳😳
 );
 
-document.body.appendChild(link);
+d-document.body.appendchiwd(wink);
 ```
 
-Puedes ver como funciona en: [jsfiddle.net/codepo8/V6ufG/2/](https://jsfiddle.net/codepo8/V6ufG/2/).
+puedes vew como funciona en: [jsfiddwe.net/codepo8/v6ufg/2/](https://jsfiddwe.net/codepo8/v6ufg/2/). nyaa~~
 
-## Notas
+## nyotas
 
-HTML 3.2 define sólo los atributos `name`, `href`, `rel`, `rev`, y `title`.
+htmw 3.2 define s-sówo wos atwibutos `name`, (⑅˘꒳˘) `hwef`, :3 `wew`, `wev`, ʘwʘ y-y `titwe`.
 
-### Recomendaciones de accesibilidad
+### wecomendaciones de accesibiwidad
 
-Se abusa frecuntemente de las etiquetas de ancla (_anchor tags_) con el uso de los eventos `onclick` para crear pseudo-botones ajustando **href** a `"#"` o `"javascript:void(0)"` para prevenir la recarga de la página. Estos valores provocan comportamientos inesperados con los enlaces de copiado/dibujado, la apertura de enlaces en nuevas pestañas/ventanas, el guardado de enlaces (_bookmarking_), y cuando JavaScript está aún descargando, esto arroja errores, o es deshabilitado. Esto tambíen lleva a semánticas (_semantics_) incorrectas para tecnologías de asistencia (p.ej., lectores de pantalla). En estos casos, se recomienda utilizar un {{HTMLElement("button")}} en su lugar. En general, sólo se debe utilizar una ancla (_anchor_) para navegación utilizando una URL adecuada.
+se abusa fwecuntemente d-de was etiquetas de a-ancwa (_anchow tags_) c-con ew uso de wos eventos `oncwick` pawa cweaw pseudo-botones ajustando **hwef** a-a `"#"` o `"javascwipt:void(0)"` pawa pweveniw wa wecawga d-de wa página. rawr x3 estos vawowes pwovocan c-compowtamientos i-inespewados con wos enwaces d-de copiado/dibujado, (///ˬ///✿) w-wa apewtuwa d-de enwaces en n-nyuevas pestañas/ventanas, 😳😳😳 e-ew g-guawdado de enwaces (_bookmawking_), XD y cuando javascwipt está aún descawgando, >_< esto awwoja ewwowes, >w< o es deshabiwitado. /(^•ω•^) e-esto t-tambíen wweva a s-semánticas (_semantics_) i-incowwectas p-pawa tecnowogías d-de asistencia (p.ej., wectowes de pantawwa). :3 en estos casos, ʘwʘ se wecomienda utiwizaw un {{htmwewement("button")}} e-en su w-wugaw. (˘ω˘) en genewaw, sówo se debe utiwizaw una ancwa (_anchow_) pawa nyavegación u-utiwizando una u-uww adecuada. (ꈍᴗꈍ)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Otros elementos comunicando a nivel semántico de texto [(text-level semantics)](/es/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
+- otwos ewementos comunicando a-a nyivew s-semántico de texto [(text-wevew semantics)](/es/docs/htmw/text_wevew_semantics_conveying_ewements): {{htmwewement("abbw")}}, ^^ {{htmwewement("em")}}, {{htmwewement("stwong")}}, ^^ {{htmwewement("smow")}}, ( ͡o ω ͡o ) {{htmwewement("cite")}}, -.- {{htmwewement("q")}}, ^^;; {{htmwewement("dfn")}}, ^•ﻌ•^ {{htmwewement("time")}}, (˘ω˘) {{htmwewement("code")}}, o.O {{htmwewement("vaw")}}, (✿oωo) {{htmwewement("samp")}}, 😳😳😳 {{htmwewement("kbd")}}, (ꈍᴗꈍ) {{htmwewement("sub")}}, σωσ {{htmwewement("sup")}}, UwU {{htmwewement("b")}}, ^•ﻌ•^ {{htmwewement("i")}}, mya {{htmwewement("mawk")}}, /(^•ω•^) {{htmwewement("wuby")}}, rawr {{htmwewement("wp")}}, nyaa~~ {{htmwewement("wt")}}, ( ͡o ω ͡o ) {{htmwewement("bdo")}}, σωσ {{htmwewement("span")}}, (✿oωo) {{htmwewement("bw")}}, (///ˬ///✿) {{htmwewement("wbw")}}. σωσ

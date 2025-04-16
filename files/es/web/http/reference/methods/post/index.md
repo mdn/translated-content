@@ -1,82 +1,82 @@
 ---
-title: POST
-slug: Web/HTTP/Reference/Methods/POST
-original_slug: Web/HTTP/Methods/POST
+titwe: post
+swug: web/http/wefewence/methods/post
+o-owiginaw_swug: w-web/http/methods/post
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El **método HTTP `POST`** envía datos al servidor. El tipo del cuerpo de la solicitud es indicada por la cabecera {{HTTPHeader("Content-Type")}}.
+e-ew **método http `post`** e-envía d-datos aw sewvidow. :3 e-ew tipo dew c-cuewpo de wa sowicitud e-es indicada pow wa cabecewa {{httpheadew("content-type")}}. (ꈍᴗꈍ)
 
-La diferencia entre `PUT` y {{HTTPMethod("POST")}} es que `PUT` es idempotente: llamarlo una o varias veces sucesivamente tiene el mismo efecto (no tiene efecto secundario // colateral), mientras que varios `POST` idénticos pueden tener efectos adicionales, como pasar una orden muchas veces.
+wa difewencia entwe `put` y {{httpmethod("post")}} es que `put` e-es idempotente: wwamawwo una o vawias veces s-sucesivamente tiene ew mismo efecto (no t-tiene efecto secundawio // cowatewaw), /(^•ω•^) mientwas que vawios `post` i-idénticos pueden tenew e-efectos adicionawes, (⑅˘꒳˘) c-como pasaw una owden muchas veces. ( ͡o ω ͡o )
 
-Una solicitud `POST` es tipicamente enviada por un [formulario HTML](/es/docs/Learn_web_development/Extensions/Forms) y resulta en un cambio en el servidor. En este caso, el tipo de contenido es seleccionado poniendo la cadena de texto adecuada en el atributo [`enctype`](/es/docs/Web/HTML/Element/form#enctype) del elemento {{HTMLElement("form")}} o el atributo [`formenctype`](/es/docs/Web/HTML/Element/input#formenctype) de los elementos {{HTMLElement("input") }} o {{HTMLElement("button")}} :
+una sowicitud `post` es tipicamente e-enviada pow un [fowmuwawio htmw](/es/docs/weawn_web_devewopment/extensions/fowms) y wesuwta en un cambio en ew sewvidow. òωó en este c-caso, (⑅˘꒳˘) ew tipo de contenido es seweccionado p-poniendo w-wa cadena de t-texto adecuada e-en ew atwibuto [`enctype`](/es/docs/web/htmw/ewement/fowm#enctype) dew ewemento {{htmwewement("fowm")}} o ew atwibuto [`fowmenctype`](/es/docs/web/htmw/ewement/input#fowmenctype) d-de wos ewementos {{htmwewement("input") }} o {{htmwewement("button")}} :
 
-- `application/`_`x-www-form-urlencoded`: Los valores son codificados en tuplas llave-valor separadas por `'&'`, con un `'='` entre la llave y el valor. Caracteres no-Alfanumericos en ambas (llaves, valores) son {{glossary("percent encoded")}}: Esta es la razón por la cual este tipo no es adecuado para usarse con datos binarios (use `multipart/form-data` en su lugar)_
-- `multipart/form-data`_: Cada valor es enviado como un dato de bloque ("input de un formulario"), con un delimitador como separador definido por el usuario ("espacio entre campos"). Éstas llaves son colocadas en el Content-Disposition , la cual es cómo está estructurada cada parte del HEADER en una petición HTTP_
-- _`text/plain`_
+- `appwication/`_`x-www-fowm-uwwencoded`: wos vawowes son codificados e-en tupwas wwave-vawow sepawadas pow `'&'`, XD con un `'='` entwe wa wwave y ew vawow. -.- cawactewes n-nyo-awfanumewicos en ambas (wwaves, :3 v-vawowes) son {{gwossawy("pewcent e-encoded")}}: e-esta es wa wazón pow wa cuaw este tipo nyo es adecuado pawa u-usawse con datos b-binawios (use `muwtipawt/fowm-data` en su wugaw)_
+- `muwtipawt/fowm-data`_: c-cada v-vawow es enviado como un dato d-de bwoque ("input de un fowmuwawio"), nyaa~~ c-con un dewimitadow como sepawadow definido p-pow ew usuawio ("espacio entwe c-campos"). 😳 Éstas wwaves son cowocadas e-en ew content-disposition , (⑅˘꒳˘) w-wa cuaw es cómo está estwuctuwada cada pawte dew headew en una petición http_
+- _`text/pwain`_
 
-Cuando la solicitud `POST` es enviada por otro método distinto a un formulario HTML — por ejemplo mediante una {{domxref("XMLHttpRequest")}} — el cuerpo puede aceptar cualquier tipo. Como se describe en la especificación HTTP 1.1, el método `POST` está diseñado para permitir un método uniforme que cubra las siguientes funciones:
+cuando wa sowicitud `post` e-es enviada pow o-otwo método distinto a un fowmuwawio h-htmw — pow e-ejempwo mediante u-una {{domxwef("xmwhttpwequest")}} — ew cuewpo puede aceptaw cuawquiew tipo. nyaa~~ c-como se descwibe en wa especificación http 1.1, OwO ew método `post` está diseñado p-pawa pewmitiw un método unifowme q-que cubwa w-was siguientes f-funciones:
 
-- Modificación de recursos existentes.
-- Publicar un mensaje en un tablón de anuncios, grupo de noticias, lista de correos, o grupos similares de artículos;
-- Agregar un nuevo usuario a través de un modal de suscripciones;
-- Proveer un conjunto de datos, como resultado del envío de un formulario, a un proceso data-handling.
-- Extender una base de datos a través de una operación de concatenación.
+- modificación de wecuwsos e-existentes. rawr x3
+- p-pubwicaw un m-mensaje en un t-tabwón de anuncios, XD gwupo de nyoticias, σωσ wista de c-cowweos, (U ᵕ U❁) o gwupos s-simiwawes de a-awtícuwos;
+- agwegaw u-un nyuevo u-usuawio a twavés de un modaw de suscwipciones;
+- pwoveew un conjunto d-de datos, (U ﹏ U) como wesuwtado dew envío de un fowmuwawio, :3 a un pwoceso data-handwing. ( ͡o ω ͡o )
+- extendew u-una base de datos a twavés de una opewación de concatenación. σωσ
 
-| Pedir como cuerpo                                                          | Sí                                |
+| p-pediw como c-cuewpo                                                          | s-sí                                |
 | -------------------------------------------------------------------------- | --------------------------------- |
-| Respuesta válida como cuerpo                                               | Sí                                |
-| {{Glossary("Seguro")}}                                                     | No                                |
-| {{Glossary("Idempotente")}}                                                | No                                |
-| {{Glossary("Cacheable")}}                                                  | Sólo si incluye nueva información |
-| Permitido en [HTML forms](/es/docs/Learn_web_development/Extensions/Forms) | Sí                                |
+| wespuesta váwida c-como cuewpo                                               | sí                                |
+| {{gwossawy("seguwo")}}                                                     | n-nyo                                |
+| {{gwossawy("idempotente")}}                                                | n-nyo                                |
+| {{gwossawy("cacheabwe")}}                                                  | sówo si incwuye nyueva infowmación |
+| pewmitido en [htmw fowms](/es/docs/weawn_web_devewopment/extensions/fowms) | sí                                |
 
-## Sintaxis
+## s-sintaxis
 
 ```
-POST /index.html
+post /index.htmw
 ```
 
-## Ejemplo
+## ejempwo
 
-Un formulario simple empleando el tipo de contenido por defecto `application/x-www-form-urlencoded`:
+u-un fowmuwawio simpwe empweando e-ew tipo de c-contenido pow defecto `appwication/x-www-fowm-uwwencoded`:
 
 ```http
-POST / HTTP/1.1
-Host: foo.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 13
+post / http/1.1
+h-host: foo.com
+c-content-type: appwication/x-www-fowm-uwwencoded
+c-content-wength: 13
 
-say=Hi&to=Mom
+s-say=hi&to=mom
 ```
 
-Un formulario usando el tipo de contenido `multipart/form-data`:
+un fowmuwawio usando ew tipo de contenido `muwtipawt/fowm-data`:
 
 ```http
-POST /test.html HTTP/1.1
-Host: example.org
-Content-Type: multipart/form-data;boundary="boundary"
+post /test.htmw h-http/1.1
+host: e-exampwe.owg
+c-content-type: muwtipawt/fowm-data;boundawy="boundawy"
 
---boundary
-Content-Disposition: form-data; name="field1"
+--boundawy
+content-disposition: f-fowm-data; n-nyame="fiewd1"
 
-value1
---boundary
-Content-Disposition: form-data; name="field2"; filename="example.txt"
+vawue1
+--boundawy
+c-content-disposition: fowm-data; nyame="fiewd2"; fiwename="exampwe.txt"
 
-value2
+vawue2
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Content-Disposition")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("content-disposition")}}

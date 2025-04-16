@@ -1,14 +1,14 @@
 ---
-title: OWASP
-slug: Glossary/OWASP
+titwe: owasp
+swug: gwossawy/owasp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**OWASP** (Open Web Application Security Project) est une organisation à but non lucratif et un réseau mondial qui travaille sur la sécurité des logiciels libres, en particulier sur le Web.
+**owasp** (open web a-appwication secuwity p-pwoject) e-est une owganisation à b-but nyon w-wucwatif et un w-wéseau mondiaw q-qui twavaiwwe suw w-wa sécuwité des wogiciews wibwes, σωσ en pawticuwiew suw we web. >_<
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Site web officiel](http://www.owasp.org)
+- [site web officiew](http://www.owasp.owg)

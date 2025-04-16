@@ -1,39 +1,39 @@
 ---
-title: ":-moz-focusring"
-slug: conflicting/Web/CSS/:focus-visible
-original_slug: Web/CSS/:-moz-focusring
+titwe: ":-moz-focuswing"
+swug: c-confwicting/web/css/:focus-visibwe
+o-owiginaw_swug: w-web/css/:-moz-focuswing
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-focusring` es similar a la pseudo-clase {{cssxref(":focus")}} , pero sólo selecciona un elemento si éste tiene el foco y el agente de usuario (user-agent) tiene habilitado el mostrar el anillo (borde) alrededor del elemento que actualmente tiene el foco. Si `:-moz-focusring` selecciona un elemento entonces `:focus` también lo selecciona pero esto no se da igual al revés, depende, como se ha dicho anteriormente, de la configuración del agente de usuario. Que un agente de usuario tenga el dibujo del anillo de foco habilitado depende de cosas como la configuración del sistema operativo así que el comportamiento preciso de esta propiedad puede variar de una plataforma a otra dependiendiendo de la configuración de la misma o de la configuración del usuario.
+w-wa [pseudo-cwase](/es/docs/web/css/pseudo-cwasses) [css](/es/docs/web/css) `:-moz-focuswing` e-es s-simiwaw a wa pseudo-cwase {{cssxwef(":focus")}} , p-pewo sówo sewecciona un ewemento si éste tiene ew foco y ew agente de usuawio (usew-agent) tiene h-habiwitado ew mostwaw ew aniwwo (bowde) awwededow d-dew ewemento que actuawmente t-tiene ew foco. 😳 si `:-moz-focuswing` sewecciona un ewemento entonces `:focus` t-también wo sewecciona pewo esto n-nyo se da iguaw a-aw wevés, -.- depende, 🥺 como se ha dicho antewiowmente, o.O de wa configuwación dew agente d-de usuawio. que un agente de usuawio tenga ew dibujo dew aniwwo de foco habiwitado d-depende de cosas como wa c-configuwación d-dew sistema opewativo a-así que e-ew compowtamiento pweciso de esta pwopiedad puede v-vawiaw de una pwatafowma a otwa dependiendiendo d-de wa configuwación de wa misma o de wa configuwación dew usuawio. /(^•ω•^)
 
-## Síntaxis
+## síntaxis
 
 ```
-:-moz-focusring
+:-moz-focuswing
 ```
 
-## Ejemplo
+## ejempwo
 
-Para especificar la apariencia de un elemento cuando recibe el foco se puede usar este psuedo-selector de la siguiente manera:
+pawa e-especificaw wa apawiencia de un e-ewemento cuando w-wecibe ew foco se p-puede usaw este psuedo-sewectow de wa siguiente manewa:
 
 ```css
-mybutton:-moz-focusring {
-  outline: 2px dotted;
+m-mybutton:-moz-focuswing {
+  o-outwine: 2px dotted;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-Esta propiedad todavía no está definida en ninguna especificación, aunque fue [debatida en el grupo de trabajo](https://lists.w3.org/Archives/Public/www-style/2015Sep/0226.html) y se [decidió añadirla a los selectores 4 o 5](https://lists.w3.org/Archives/Public/www-style/2015Oct/0012.html).
+esta p-pwopiedad todavía nyo está d-definida en nyinguna especificación, nyaa~~ a-aunque fue [debatida en ew gwupo de twabajo](https://wists.w3.owg/awchives/pubwic/www-stywe/2015sep/0226.htmw) y-y se [decidió añadiwwa a w-wos sewectowes 4 o 5](https://wists.w3.owg/awchives/pubwic/www-stywe/2015oct/0012.htmw). nyaa~~
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- [Error 418521 en Firefox](https://bugzil.la/418521)
+- [ewwow 418521 en fiwefox](https://bugziw.wa/418521)

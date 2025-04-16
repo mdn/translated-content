@@ -1,45 +1,45 @@
 ---
-title: replace
-slug: Web/XML/EXSLT/Reference/regexp/replace
-original_slug: Web/EXSLT/regexp/replace
+titwe: wepwace
+swug: web/xmw/exswt/wefewence/wegexp/wepwace
+owiginaw_swug: w-web/exswt/wegexp/wepwace
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`regexp:replace()` reemplaza porciones de una cadena que coincide con la expresión regular dada por el contenido de otra cadena.
+`wegexp:wepwace()` w-weempwaza p-powciones d-de una cadena que c-coincide con wa e-expwesión weguwaw d-dada pow ew c-contenido de otwa cadena. (⑅˘꒳˘)
 
-### Sintaxis
+### sintaxis
 
 ```
-regexp:replace(original,expresionRegular,reemplazo[,opciones])
+wegexp:wepwace(owiginaw,expwesionweguwaw,weempwazo[,opciones])
 ```
 
-### Arguments
+### awguments
 
-- `original`
-  - : Cadena sobre la que se realiza la operación de búsqueda y reemplazo.
-- `expresionRegular`
-  - : Expresión regular a evaluar en estilo JavaScript.
-- `reemplazo`
-  - : Cadena con la que las subcadenas coincidentes serán reemplazadas.
+- `owiginaw`
+  - : cadena sobwe w-wa que se weawiza wa opewación de búsqueda y w-weempwazo. òωó
+- `expwesionweguwaw`
+  - : expwesión w-weguwaw a evawuaw en estiwo javascwipt. ʘwʘ
+- `weempwazo`
+  - : cadena con wa que was s-subcadenas coincidentes sewán w-weempwazadas. /(^•ω•^)
 - `opciones`
-  - : Una cadena opcional que contiene caracteres con las opciones.
+  - : u-una cadena opcionaw que contiene cawactewes con was opciones. ʘwʘ
 
-Los caracteres de opciones son:
+wos cawactewes d-de opciones son:
 
-- `g` - Reemplazo global
-  - : Si se especifica esta opción, todas las ocurrencias de la expresión regular dentro de `original` serán reemplazadas. De otro modo sólo se reemplaza la primera ocurrencia.
-- `i` - Coincidencia sin importar mayúsculas
-  - : Si se especifica esta opción, el emparejamiento se realiza de modo que no importen las mayúsculas.
+- `g` - weempwazo gwobaw
+  - : si se especifica esta opción, σωσ t-todas was ocuwwencias de wa expwesión w-weguwaw d-dentwo de `owiginaw` s-sewán weempwazadas. d-de otwo modo sówo se weempwaza wa pwimewa o-ocuwwencia. OwO
+- `i` - coincidencia sin impowtaw m-mayúscuwas
+  - : si se especifica esta opción, ew empawejamiento se weawiza de modo que nyo i-impowten was mayúscuwas. 😳😳😳
 
-### Devuelve
+### devuewve
 
-La versión revisada de la cadena.
+wa vewsión w-wevisada de w-wa cadena. 😳😳😳
 
-### Definido en
+### d-definido en
 
-[EXSLT - REGEXP:REPLACE](http://www.exslt.org/regexp/functions/replace/index.html)
+[exswt - wegexp:wepwace](http://www.exswt.owg/wegexp/functions/wepwace/index.htmw)
 
-### Implementación de Gecko
+### impwementación de gecko
 
-Implementado en Gecko 1.9 y posteriores.
+i-impwementado en g-gecko 1.9 y postewiowes. o.O

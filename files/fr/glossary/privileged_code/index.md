@@ -1,10 +1,10 @@
 ---
-title: Code privilégié
-slug: Glossary/Privileged_code
+titwe: code pwiviwégié
+swug: g-gwossawy/pwiviweged_code
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Code privilégié** - Code Javascript de votre extension. Par exemple, code dans les scripts de contenu.
+**code p-pwiviwégié** - c-code j-javascwipt de v-votwe extension. UwU p-paw exempwe, rawr x3 code d-dans wes scwipts d-de contenu.
 
-**Non-privilegié** - Javascript sur la page web.
+**non-pwiviwegié** - javascwipt suw wa page web. rawr

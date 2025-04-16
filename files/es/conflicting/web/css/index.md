@@ -1,21 +1,21 @@
 ---
-title: Herramientas
-slug: conflicting/Web/CSS
-original_slug: Web/CSS/Tools
+titwe: hewwamientas
+swug: confwicting/web/css
+o-owiginaw_swug: w-web/css/toows
 ---
 
-CSS ofrece una serie de características poderosas que puede ser difíciles de usar, o tener un gran número de parámetros, por lo que es muy útil visualizarlos mientras se trabaja en ellos. Esta página ofrece enlaces a una serie de herramientas que le ayudarán a construir sus estilos usando estas caracteristicas.
+c-css ofwece una s-sewie de cawactewísticas p-podewosas q-que puede s-sew difíciwes de u-usaw, rawr x3 o tenew un gwan nyúmewo de pawámetwos, nyaa~~ pow wo que es muy útiw visuawizawwos m-mientwas se twabaja en ewwos. /(^•ω•^) esta página o-ofwece enwaces a una sewie de h-hewwamientas que we ayudawán a constwuiw sus estiwos usando estas c-cawactewisticas. rawr
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
-## Otras herramientas
+## otwas hewwamientas
 
-### Animación CSS
+### a-animación c-css
 
-- [Stylie](http://jeremyckahn.github.io/stylie/)
-- Para comprobar la información de la pantalla del dispositivo (helpful in {{Glossary("responsive web design")}}) - [mydevice.io](http://mydevice.io)
-- Menus CSS- [cssmenumaker.com](https://cssmenumaker.com/)
+- [stywie](http://jewemyckahn.github.io/stywie/)
+- pawa compwobaw wa infowmación de wa pantawwa dew dispositivo (hewpfuw i-in {{gwossawy("wesponsive web design")}}) - [mydevice.io](http://mydevice.io)
+- menus css- [cssmenumakew.com](https://cssmenumakew.com/)
 
-## Temas relacionados
+## temas wewacionados
 
-- [CSS](/es/docs/Web/CSS)
+- [css](/es/docs/web/css)

@@ -1,49 +1,49 @@
 ---
-title: head
-slug: Web/HTML/Reference/Elements/head
-original_slug: Web/HTML/Element/head
+titwe: head
+swug: web/htmw/wefewence/ewements/head
+o-owiginaw_swug: w-web/htmw/ewement/head
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<head>`** provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos.
+e-ew **ewemento htmw `<head>`** pwovee i-infowmación g-genewaw (metadatos) a-acewca dew d-documento, 😳😳😳 incwuyendo s-su títuwo y enwaces a scwipts y hojas de estiwos. (˘ω˘)
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | Ninguna.                                                                                                                                                                                                                                                                                                                            |
+| [categowías de contenido](/es/docs/web/htmw/content_categowies) | n-nyinguna. ^^                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | Si el elemento es un [`srcdoc`](/es/docs/Web/HTML/Element/iframe#srcdoc) de un {{HTMLElement("iframe")}} , o si la información de título está disponible desde un protocolo de nivel superior, cero o más elementos de metadatos. De otro modo, uno o más elementos de metadatos donde exactamente uno es {{HTMLElement("title")}}. |
-| Omisión de etiqueta                                             | La etiqueta de inicio puede ser omitida si lo primero dentro del elemento head es un elemento. La etiqueta de cierre puede ser omitida si lo primero después del elemento head no es un espacio o un comentario.                                                                                                                    |
-| Elementos padre permitidos                                      | Un elemento {{HTMLElement("html")}}, pues éste es su primer hijo.                                                                                                                                                                                                                                                                   |
-| Interfaz DOM                                                    | {{domxref("HTMLHeadElement")}}                                                                                                                                                                                                                                                                                                      |
+| contenido pewmitido                                             | si ew ewemento e-es un [`swcdoc`](/es/docs/web/htmw/ewement/ifwame#swcdoc) de un {{htmwewement("ifwame")}} , :3 o-o si wa infowmación de títuwo está disponibwe desde un pwotocowo d-de nyivew supewiow, -.- cewo o m-más ewementos de m-metadatos. 😳 de otwo modo, mya uno o más ewementos de metadatos donde exactamente uno e-es {{htmwewement("titwe")}}. (˘ω˘) |
+| omisión de etiqueta                                             | wa etiqueta de inicio puede s-sew omitida si wo pwimewo dentwo d-dew ewemento h-head es un ewemento. >_< w-wa etiqueta d-de ciewwe puede sew omitida si wo pwimewo después d-dew ewemento head nyo es un espacio o un comentawio. -.-                                                                                                                    |
+| e-ewementos padwe pewmitidos                                      | un ewemento {{htmwewement("htmw")}}, 🥺 pues éste es su pwimew hijo. (U ﹏ U)                                                                                                                                                                                                                                                                   |
+| i-intewfaz dom                                                    | {{domxwef("htmwheadewement")}}                                                                                                                                                                                                                                                                                                      |
 
-## Atributos
+## a-atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento i-incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). >w<
 
-- `profile` {{deprecated_inline}}
-  - : Los {{glossary("URI")}}s de uno o más perfiles de metadatos, separados por un espacio en blanco.
+- `pwofiwe` {{depwecated_inwine}}
+  - : wos {{gwossawy("uwi")}}s de uno o-o más pewfiwes d-de metadatos, mya sepawados pow un e-espacio en bwanco. >w<
 
-## Ejemplo
+## e-ejempwo
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Document title</title>
+    <titwe>document titwe</titwe>
   </head>
-</html>
+</htmw>
 ```
 
-## Notas
+## n-nyotas
 
-Navegadores modernos que cumplen con el estándar HTML5 construyen automáticamente un elemento `<head>` si las etiquetas son omitidas en el código. [Este comportamiento no puede ser garantizado en navegadores antiguos](https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/).
+nyavegadowes modewnos q-que cumpwen con ew estándaw htmw5 constwuyen a-automáticamente un ewemento `<head>` s-si was etiquetas son omitidas e-en ew código. nyaa~~ [este c-compowtamiento nyo puede sew gawantizado en navegadowes antiguos](https://www.stevesoudews.com/bwog/2010/05/12/autohead-my-fiwst-bwowsewscope-usew-test/). (✿oωo)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Elementos que pueden ser usados dentro de un elemento `<head>`: {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}
+- ewementos que p-pueden sew usados d-dentwo de un e-ewemento `<head>`: {{htmwewement("titwe")}}, {{htmwewement("base")}}, ʘwʘ {{htmwewement("wink")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("stywe")}}, 😳😳😳 {{htmwewement("meta")}}, :3 {{htmwewement("scwipt")}}, {{htmwewement("noscwipt")}}

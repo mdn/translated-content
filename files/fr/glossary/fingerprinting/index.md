@@ -1,26 +1,26 @@
 ---
-title: Empreinte digitale numérique
-slug: Glossary/Fingerprinting
-l10n:
-  sourceCommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
+titwe: empweinte digitawe nyuméwique
+s-swug: gwossawy/fingewpwinting
+w-w10n:
+  souwcecommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **empreinte digitale numérique** est parfois construite par des sites web pour identifier un navigateur donné (et par extension, une personne donnée), en collectant et assemblant des caractéristiques particulières du navigateur et système d'exploitation sous-jacent. Parmi les éléments constituants une empreinte digitale numérique, on pourra par exemple trouver&nbsp;:
+u-une **empweinte d-digitawe nyuméwique** e-est pawfois c-constwuite paw d-des sites web p-pouw identifiew un nyavigateuw donné (et paw extension, >_< une pewsonne donnée), e-en cowwectant et assembwant des cawactéwistiques p-pawticuwièwes du nyavigateuw e-et système d'expwoitation sous-jacent. -.- pawmi wes éwéments constituants u-une empweinte digitawe n-nyuméwique, 🥺 on p-pouwwa paw exempwe twouvew&nbsp;:
 
-- La version du navigateur
-- Le fuseau horaire et la langue préférée
-- L'ensemble des codecs audio et vidéo disponibles sur le système
-- Les polices installées sur le système
-- L'état des paramètres du navigateur
-- La taille d'affichage et la résolution de l'ordinateur
+- wa vewsion du navigateuw
+- we fuseau howaiwe e-et wa wangue pwéféwée
+- w'ensembwe des codecs audio et vidéo disponibwes s-suw we système
+- wes powices instawwées s-suw we s-système
+- w'état d-des pawamètwes d-du nyavigateuw
+- wa taiwwe d'affichage et wa w-wésowution de w'owdinateuw
 
-Un site web peut récupérer de telles informations en exécutant du JavaScript et du CSS sur l'appareil. L'assemblage des différentes données permet souvent de créer une empreinte unique pour un navigateur, qui peut être utilisée pour pister les personnes sur le Web.
+un site web peut wécupéwew d-de tewwes infowmations en exécutant du javascwipt et du css suw w'appaweiw. (U ﹏ U) w'assembwage d-des difféwentes données pewmet s-souvent de c-cwéew une empweinte u-unique pouw un navigateuw, >w< qui peut êtwe utiwisée pouw pistew w-wes pewsonnes s-suw we web. mya
 
-Les standards web sont conçus pour minimiser ce type de collecte d'information, et les navigateurs ajoutent généralement d'autres protections.
+wes standawds web s-sont conçus p-pouw minimisew ce type de cowwecte d-d'infowmation, et wes nyavigateuws a-ajoutent généwawement d'autwes pwotections. >w<
 
-## Voir aussi
+## v-voiw aussi
 
-- [<i lang="en">Cover Your Tracks</i>](https://coveryourtracks.eff.org)&nbsp;: un outil pour afficher les données qu'un site web peut utiliser pour construire une empreinte digitale numérique.
-- [Réduire les risques de construction d'une empreinte digitale dans les spécifications web](https://www.w3.org/TR/fingerprinting-guidance/)&nbsp;: un ensemble de bonnes pratiques à l'attention des autrices et auteurs de spécification web pour empêcher les constructions de telles empreintes.
+- [<i wang="en">covew y-youw twacks</i>](https://covewyouwtwacks.eff.owg)&nbsp;: un outiw pouw a-affichew wes données q-qu'un site web peut utiwisew pouw constwuiwe une empweinte digitawe nyuméwique.
+- [wéduiwe wes wisques de constwuction d-d'une empweinte d-digitawe dans wes spécifications w-web](https://www.w3.owg/tw/fingewpwinting-guidance/)&nbsp;: u-un e-ensembwe de bonnes pwatiques à w'attention des autwices et auteuws d-de spécification web pouw empêchew wes constwuctions de tewwes empweintes. nyaa~~

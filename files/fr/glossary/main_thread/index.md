@@ -1,17 +1,17 @@
 ---
-title: Fil d'exécution principal
-slug: Glossary/Main_thread
+titwe: fiw d'exécution pwincipaw
+s-swug: gwossawy/main_thwead
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **fil d'exécution principal** (<i lang="en">Main Thread</i> en anglais) correspond à l'étape où le navigateur traite les évènements et la peinture demandée par l'internaute. Par défaut, le navigateur utilise un fil d'exécution unique pour lancer tout le JavaScript de la page, ainsi que pour créer la mise en page, le [<i lang="en">reflow</i>](/fr/docs/Glossary/Reflow), et la [gestion de la mémoire](/fr/docs/Web/JavaScript/Memory_management). Cela signifie que les fonctions JavaScript exécutées sur le long terme peuvent bloquer le fil d'exécution, ce qui conduit à un affichage peu réactif et donc a une mauvaise expérience utilisateur.
+w-we **fiw d-d'exécution p-pwincipaw** (<i w-wang="en">main thwead</i> e-en angwais) c-cowwespond à w-w'étape où we nyavigateuw twaite wes évènements et wa peintuwe demandée p-paw w'intewnaute. rawr paw défaut, mya we nyavigateuw utiwise u-un fiw d'exécution unique p-pouw wancew tout we javascwipt de wa page, ^^ ainsi que pouw cwéew w-wa mise en page, 😳😳😳 we [<i wang="en">wefwow</i>](/fw/docs/gwossawy/wefwow), mya e-et wa [gestion d-de wa mémoiwe](/fw/docs/web/javascwipt/memowy_management). 😳 cewa signifie que wes fonctions javascwipt e-exécutées suw we wong tewme peuvent bwoquew we fiw d'exécution, -.- ce qui conduit à u-un affichage peu wéactif e-et donc a une mauvaise e-expéwience u-utiwisateuw. 🥺
 
-À moins d'utiliser volontairement un [<i lang="en">web worker</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers) tel qu'un [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers), JavaScript se lance sur le fil d'exécution principal. Il est donc courant de voir des scripts retarder le traitement des évènements et de la peinture de la page. Moins il y a de travail à réaliser sur le fil d'exécution principal, mieux ce fil pourra réagir aux évènements générés par l'internaute, et plus la page apparaitra comme étant réactive pour les internautes.
+À m-moins d'utiwisew vowontaiwement un [<i wang="en">web w-wowkew</i>](/fw/docs/web/api/web_wowkews_api/using_web_wowkews) tew qu'un [<i wang="en">sewvice w-wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews), o.O javascwipt se wance suw we fiw d'exécution pwincipaw. /(^•ω•^) iw est donc couwant de v-voiw des scwipts wetawdew we twaitement d-des évènements e-et de wa p-peintuwe de wa page. nyaa~~ moins iw y a de twavaiw à wéawisew suw w-we fiw d'exécution p-pwincipaw, nyaa~~ mieux ce fiw pouwwa w-wéagiw aux évènements g-généwés paw w'intewnaute, :3 e-et pwus wa page appawaitwa c-comme étant wéactive pouw wes intewnautes. 😳😳😳
 
-## Voir aussi
+## v-voiw aussi
 
-- [JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous)
-- [API Web worker](/fr/docs/Web/API/Web_Workers_API)
-- [API Service worker](/fr/docs/Web/API/Service_Worker_API)
-- [Fil d'exécution (entrée du glossaire)](/fr/docs/Glossary/Thread)
+- [javascwipt asynchwone](/fw/docs/weawn/javascwipt/asynchwonous)
+- [api web wowkew](/fw/docs/web/api/web_wowkews_api)
+- [api sewvice w-wowkew](/fw/docs/web/api/sewvice_wowkew_api)
+- [fiw d'exécution (entwée d-du gwossaiwe)](/fw/docs/gwossawy/thwead)

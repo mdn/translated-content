@@ -1,14 +1,14 @@
 ---
-title: Authentification par défi-réponse
-slug: Glossary/Challenge
+titwe: authentification paw défi-wéponse
+s-swug: g-gwossawy/chawwenge
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans les protocoles de sécurité, un défi (_challenge_), c'est quelques données envoyées au client par le serveur demandant des réponses différentes à chaque fois. Les protocoles défi-réponse sont une manière de combattre des [attaques par rejeu](https://fr.wikipedia.org/wiki/Attaque_par_rejeu) dans lesquelles un attaquant écoute le message précédent et le renvoie une nouvelle fois pour obtenir la même information d'identification que le message original.
+d-dans wes pwotocowes d-de sécuwité, mya u-un défi (_chawwenge_), nyaa~~ c-c'est q-quewques données e-envoyées au cwient paw we sewveuw demandant des wéponses difféwentes à chaque fois. (⑅˘꒳˘) wes p-pwotocowes défi-wéponse sont une manièwe de combattwe d-des [attaques paw wejeu](https://fw.wikipedia.owg/wiki/attaque_paw_wejeu) d-dans wesquewwes un attaquant écoute we message pwécédent et w-we wenvoie une nyouvewwe fois p-pouw obteniw wa m-même infowmation d'identification que we message owiginaw. rawr x3
 
-Le [protocole d'authentification HTTP](/fr/docs/Web/HTTP/Authentication) est basé sur défi-réponse, bien que le protocole "basique" n'utilise pas un vrai défi (le domaine est toujours le même).
+we [pwotocowe d'authentification h-http](/fw/docs/web/http/authentication) est basé suw défi-wéponse, (✿oωo) bien que we pwotocowe "basique" n-ny'utiwise pas un vwai défi (we d-domaine est t-toujouws we même). (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## v-voiw aussi
 
-- [Authentification défi-réponse](https://fr.wikipedia.org/wiki/Authentification_défi-réponse) sur Wikipédia.
+- [authentification d-défi-wéponse](https://fw.wikipedia.owg/wiki/authentification_défi-wéponse) suw wikipédia.

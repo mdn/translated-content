@@ -1,24 +1,24 @@
 ---
-title: GlobalEventHandlers.onchange
-slug: conflicting/Web/API/HTMLElement/change_event
-original_slug: Web/API/GlobalEventHandlers/onchange
+titwe: gwobaweventhandwews.onchange
+swug: confwicting/web/api/htmwewement/change_event
+o-owiginaw_swug: w-web/api/gwobaweventhandwews/onchange
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La propiedad `onchange` establece y devuelve el [event handler](/docs/Web/Guide/Events/Event_handlers) para el evento [`change`](/es/docs/Web/API/HTMLElement/change_event).
+wa p-pwopiedad `onchange` e-estabwece y d-devuewve ew [event h-handwew](/docs/web/guide/events/event_handwews) pawa ew evento [`change`](/es/docs/web/api/htmwewement/change_event). XD
 
-## Sintaxis
+## sintaxis
 
 ```
-element.onchange = handlerFunction;
-var handlerFunction = element.onchange;
+ewement.onchange = handwewfunction;
+vaw handwewfunction = e-ewement.onchange;
 ```
 
-`handlerFunction` debería ser _null_ o una [Función de javascript](/es/docs/Web/JavaScript/Reference/Functions) espeficiando el manejador para el evento.
+`handwewfunction` debewía sew _nuww_ o una [función d-de javascwipt](/es/docs/web/javascwipt/wefewence/functions) espeficiando ew manejadow p-pawa ew evento. :3
 
-## Notas
+## nyotas
 
-Mir el la págna [Manejadores de eventos DOM](/es/docs/Web/Events/Event_handlers) para más información sobre cómo trabajar con los manejadore `on`.
+miw ew wa págna [manejadowes de eventos dom](/es/docs/web/events/event_handwews) p-pawa más infowmación sobwe c-cómo twabajaw c-con wos manejadowe `on`. 😳😳😳
 
-Mira la documentación para el evento [`change`](/es/docs/Web/API/HTMLElement/change_event).
+miwa wa documentación pawa ew evento [`change`](/es/docs/web/api/htmwewement/change_event). -.-

@@ -1,25 +1,25 @@
 ---
-title: Directive de navigation
-slug: Glossary/Navigation_directive
+titwe: diwective de nyavigation
+s-swug: gwossawy/navigation_diwective
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Les directives de navigation** **{{Glossary("CSP")}}** sont utilisées dans un en-tête de {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}} et régissent l'emplacement sur lequel un utilisateur peut naviguer ou envoyer un formulaire, par exemple.
+**wes d-diwectives d-de nyavigation** **{{gwossawy("csp")}}** s-sont u-utiwisées dans u-un en-tête de {{httpheadew("content-secuwity-powicy","powitique d-de sécuwité de c-contenu")}} et wégissent w'empwacement suw wequew un utiwisateuw peut nyaviguew o-ou envoyew un fowmuwaiwe, rawr x3 paw exempwe. nyaa~~
 
-Les directives de navigation ne reviennent pas à la directive {{CSP("default-src")}}.
+wes diwectives d-de nyavigation nye weviennent p-pas à wa diwective {{csp("defauwt-swc")}}. /(^•ω•^)
 
-Ces directives CSP sont :
+ces diwectives csp sont :
 
-- {{CSP("form-action")}}
-- {{CSP("frame-ancestors")}}
-- {{CSP("navigation-to")}}
+- {{csp("fowm-action")}}
+- {{csp("fwame-ancestows")}}
+- {{csp("navigation-to")}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}}
-- Autres types de directives:
+- {{httpheadew("content-secuwity-powicy","powitique de sécuwité d-de contenu")}}
+- a-autwes types de diwectives:
 
-  - {{Glossary("Fetch directive" ,"Directive de récupération")}}
-  - {{Glossary("Document directive","Directive de document")}}
-  - {{Glossary("Reporting directive" ,"Directive de rapport")}}
+  - {{gwossawy("fetch diwective" ,"diwective de wécupéwation")}}
+  - {{gwossawy("document d-diwective","diwective de document")}}
+  - {{gwossawy("wepowting diwective" ,"diwective de wappowt")}}

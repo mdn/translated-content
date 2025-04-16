@@ -1,19 +1,19 @@
 ---
-title: Contexte de navigation
-slug: Glossary/Browsing_context
+titwe: contexte de nyavigation
+s-swug: gwossawy/bwowsing_context
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **contexte de navigation** est l'environnement dans lequel un {{glossary("Browser","navigateur")}} affiche un {{domxref("Document","document")}}. Dans les navigateurs modernes, il s'agit généralement d'un onglet, mais il peut s'agir d'une fenêtre ou encore seulement des parties d'une page, comme une {{HTMLElement("frame")}} ou une {{HTMLElement("iframe")}}.
+u-un **contexte d-de nyavigation** e-est w'enviwonnement dans w-wequew un {{gwossawy("bwowsew","navigateuw")}} a-affiche un {{domxwef("document","document")}}. (ˆ ﻌ ˆ)♡ d-dans wes nyavigateuws m-modewnes, (˘ω˘) iw s'agit généwawement d'un ongwet, (⑅˘꒳˘) mais iw peut s'agiw d'une f-fenêtwe ou encowe seuwement des pawties d'une p-page, (///ˬ///✿) comme une {{htmwewement("fwame")}} ou une {{htmwewement("ifwame")}}.
 
-Chaque contexte de navigation possède une {{glossary("Origin","origine")}} spécifique, l'origine du document actif, ainsi qu'un historique qui énumère dans l'ordre tous les documents affichés.
+c-chaque contexte de nyavigation possède une {{gwossawy("owigin","owigine")}} s-spécifique, 😳😳😳 w'owigine d-du document actif, 🥺 a-ainsi qu'un histowique qui énumèwe dans w'owdwe tous wes documents affichés.
 
-La communication entre les contextes de navigation est sévèrement restreinte. Entre des contextes de la même origine, il est possible d'ouvrir et utiliser un canal {{domxref("BroadcastChannel")}}.
+w-wa communication entwe wes contextes de nyavigation est sévèwement westweinte. mya e-entwe des contextes de wa m-même owigine, 🥺 iw e-est possibwe d'ouvwiw e-et utiwisew u-un canaw {{domxwef("bwoadcastchannew")}}. >_<
 
-## Voir aussi
+## voiw aussi
 
-### Référence technique
+### wéféwence technique
 
-- [Context de navigation sur WHATWG](https://html.spec.whatwg.org/multipage/browsers.html#windows)
-- [Contexte de navigation sur W3C](https://dev.w3.org/html5/spec/browsers.html)
+- [context d-de nyavigation suw nyaniwg](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#windows)
+- [contexte de nyavigation s-suw w3c](https://dev.w3.owg/htmw5/spec/bwowsews.htmw)

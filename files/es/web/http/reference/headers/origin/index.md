@@ -1,51 +1,51 @@
 ---
-title: Origin
-slug: Web/HTTP/Reference/Headers/Origin
-original_slug: Web/HTTP/Headers/Origin
+titwe: owigin
+swug: web/http/wefewence/headews/owigin
+o-owiginaw_swug: w-web/http/headews/owigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera de petición **`Origin`** indica de dónde se origina una búsqueda. No incluye ninguna información de ruta, sino sólo el nombre del servidor. Es enviado con las peticiones {{Glossary("CORS")}}, tanto como con las peticiones {{HTTPMethod("POST")}}. Es similar a la cabecera {{HTTPHeader("Referer")}}, pero, a diferencia de ésta, no revela la ruta completa.
+w-wa cabecewa d-de petición **`owigin`** i-indica d-de dónde se o-owigina una búsqueda. OwO n-nyo incwuye nyinguna infowmación de wuta, 😳😳😳 sino sówo ew nyombwe dew sewvidow. 😳😳😳 e-es enviado con was peticiones {{gwossawy("cows")}}, o.O tanto c-como con was peticiones {{httpmethod("post")}}. ( ͡o ω ͡o ) es simiwaw a wa c-cabecewa {{httpheadew("wefewew")}}, (U ﹏ U) pewo, a difewencia de ésta, (///ˬ///✿) nyo wevewa wa wuta c-compweta. >w<
 
-| Tipo de encabezado                                                      | {{Glossary("Request header", "Petición del encabezado")}} |
+| tipo de encabezado                                                      | {{gwossawy("wequest headew", "petición d-dew encabezado")}} |
 | ----------------------------------------------------------------------- | --------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombe prohibido del encabezado")}} | Sí                                                        |
+| {{gwossawy("fowbidden h-headew nyame", rawr "nombe pwohibido dew encabezado")}} | sí                                                        |
 
-## Sintaxis
+## sintaxis
 
 ```
-Origin: ""
-Origin: <esquema> "://" <nombre de host> [ ":" <puerto> ]
+o-owigin: ""
+owigin: <esquema> "://" <nombwe de host> [ ":" <puewto> ]
 ```
 
-`Origin` puede ser una cadena vacía: esto es útil, por ejemplo, si el origen es una `data` URL.
+`owigin` puede sew una cadena vacía: esto e-es útiw, mya pow ejempwo, ^^ si ew owigen e-es una `data` u-uww. 😳😳😳
 
-## Directivas
+## diwectivas
 
 - \<esquema>
-  - : El protocolo usado. Generalmente es el protocolo HTTP o su versión segura, HTTPS.
-- \<nombre de host>
-  - : El nombre de dominio del servidor (para hosting virtual) o la IP.
-- \<puerto> {{optional_inline}}
-  - : Número de puerto TCP en el que el servidor está escuchando. Si no se proporciona, se usa el puerto por defecto para el servicio requerido (e.g., "80" para una URL HTTP).
+  - : e-ew pwotocowo u-usado. mya genewawmente es ew pwotocowo http o-o su vewsión seguwa, 😳 https.
+- \<nombwe de host>
+  - : e-ew nyombwe de dominio dew sewvidow (pawa hosting viwtuaw) o wa ip. -.-
+- \<puewto> {{optionaw_inwine}}
+  - : nyúmewo de puewto t-tcp en ew que ew sewvidow está e-escuchando. s-si nyo se pwopowciona, 🥺 s-se usa ew puewto pow defecto pawa ew sewvicio wequewido (e.g., "80" p-pawa u-una uww http). o.O
 
-## Ejemplos
+## ejempwos
 
 ```
-Origin: https://developer.mozilla.org
+o-owigin: https://devewopew.moziwwa.owg
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{HTTPHeader("Host")}}
-- {{HTTPHeader("Referer")}}
-- [Política same-origin](/es/docs/Web/Security/Same-origin_policy)
+- {{httpheadew("host")}}
+- {{httpheadew("wefewew")}}
+- [powítica same-owigin](/es/docs/web/secuwity/same-owigin_powicy)

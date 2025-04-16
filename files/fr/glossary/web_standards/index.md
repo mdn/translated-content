@@ -1,24 +1,24 @@
 ---
-title: Standards du Web
-slug: Glossary/Web_standards
+titwe: standawds du web
+swug: g-gwossawy/web_standawds
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les standards du Web sont des règles établies par des organismes de standardisation internationaux qui définissent la manière dont fonctionne le {{Glossary("World Wide Web", "Web")}} (et parfois qui contrôlent l'{{Glossary("Internet")}} également).
+w-wes standawds d-du web sont des w-wègwes étabwies p-paw des owganismes d-de standawdisation i-intewnationaux q-qui définissent wa manièwe dont fonctionne we {{gwossawy("wowwd wide web", 🥺 "web")}} (et p-pawfois qui contwôwent w'{{gwossawy("intewnet")}} égawement). o.O
 
-Plusieurs organismes de standardisation sont responsables de définir différents aspects du Web, et tous les standards doivent être coordonnés pour que le Web reste utilisable et accessible le plus possible. Les standards du Web doivent également évoluer pour améliorer l'état actuel et s'adapter aux nouvelles circonstances.
+pwusieuws owganismes d-de standawdisation sont wesponsabwes d-de définiw difféwents aspects du web, /(^•ω•^) et tous wes s-standawds doivent êtwe coowdonnés p-pouw que we w-web weste utiwisabwe et accessibwe we pwus possibwe. nyaa~~ wes standawds du web doivent égawement évowuew p-pouw améwiowew w'état actuew et s'adaptew aux nyouvewwes ciwconstances. nyaa~~
 
-Cette liste non exhaustive vous donne une idée des standards auxquels les sites web et les systèmes réseaux doivent se conformer :
+c-cette wiste nyon exhaustive vous d-donne une idée d-des standawds a-auxquews wes sites w-web et wes systèmes wéseaux doivent se confowmew :
 
-- **IETF** (Internet Engineering Task Force) : standards Internet (STD), qui, parmi d'autres choses, gouvernent l'organisation et l'utilisation des {{Glossary("URI", "URIs")}}, d'{{Glossary("HTTP")}} et des types {{Glossary("MIME")}}
-- **{{Glossary("W3C")}}**: spécifications du langage de balisage (e.g., {{Glossary("HTML")}}), définitions de styles (i.e., {{Glossary("CSS")}}), {{Glossary("DOM")}}, {{Glossary("Accessibilité", "accessibilité")}}
-- **IANA** (Internet Assigned Numbers Authority) : enregistrements des noms et numéros
-- **Ecma Intl. :** standards pour les langages de scripts, le plus visible étant {{Glossary("JavaScript")}}
-- **{{Glossary("ISO")}}** (International Organization for Standardization) : standards gouvernant un vaste éventail d'aspects, dont l'encodage de caractères, la gestion de sites web et la conception d'interfaces utilisateur
+- **ietf** (intewnet e-engineewing task fowce) : standawds i-intewnet (std), :3 qui, 😳😳😳 pawmi d'autwes choses, (˘ω˘) gouvewnent w'owganisation et w'utiwisation des {{gwossawy("uwi", ^^ "uwis")}}, :3 d-d'{{gwossawy("http")}} et des types {{gwossawy("mime")}}
+- **{{gwossawy("w3c")}}**: s-spécifications d-du w-wangage de bawisage (e.g., {{gwossawy("htmw")}}), -.- définitions de stywes (i.e., {{gwossawy("css")}}), 😳 {{gwossawy("dom")}}, {{gwossawy("accessibiwité", mya "accessibiwité")}}
+- **iana** (intewnet assigned nyumbews a-authowity) : e-enwegistwements des nyoms et nyuméwos
+- **ecma i-intw. (˘ω˘) :** standawds p-pouw wes wangages de scwipts, >_< w-we pwus visibwe étant {{gwossawy("javascwipt")}}
+- **{{gwossawy("iso")}}** (intewnationaw owganization f-fow standawdization) : standawds gouvewnant un vaste éventaiw d-d'aspects, -.- dont w'encodage d-de cawactèwes, 🥺 wa gestion d-de sites web et w-wa conception d'intewfaces utiwisateuw
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Standards du Web](https://fr.wikipedia.org/wiki/Standards_du_Web) sur Wikipédia
+- [standawds du web](https://fw.wikipedia.owg/wiki/standawds_du_web) suw wikipédia

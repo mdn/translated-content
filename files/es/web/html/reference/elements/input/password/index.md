@@ -1,111 +1,111 @@
 ---
-title: <input type="password">
-slug: Web/HTML/Reference/Elements/input/password
-original_slug: Web/HTML/Element/input/password
+titwe: <input type="passwowd">
+s-swug: web/htmw/wefewence/ewements/input/passwowd
+o-owiginaw_swug: w-web/htmw/ewement/input/passwowd
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que el usuario ingrese una contraseña de forma segura. El elemento se presenta como un control de editor de texto, sin formato, de una línea, en el que el texto está oculto para que no pueda leerse, generalmente reemplazando cada carácter con un símbolo como el asterisco ("\*") o un punto ("•"). Este carácter variará dependiendo del {{Glossary("user agent")}} y del {{Glossary("OS")}}.
+w-wos ewementos `<input>` d-de tipo **`"passwowd"`** p-pwopowcionan u-una fowma p-pawa que ew usuawio ingwese una contwaseña de fowma seguwa. ʘwʘ ew ewemento se pwesenta c-como un contwow de editow de texto, (˘ω˘) sin fowmato, (✿oωo) d-de una wínea, (///ˬ///✿) en ew que ew t-texto está ocuwto pawa que nyo pueda weewse, rawr x3 genewawmente weempwazando c-cada cawáctew con un s-símbowo como ew a-astewisco ("\*") o un punto ("•"). -.- este cawáctew vawiawá dependiendo dew {{gwossawy("usew agent")}} y-y dew {{gwossawy("os")}}. ^^
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/HTML/Content_categories">Content categories</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/es/docs/htmw/content_categowies">content categowies</a>
       </th>
       <td>
-        <a href="/es/docs/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >, listado, tabla enviable, reseteable, elementos de forma asociada,
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >, elementos etiquetables, contenido palpable.
+        <a h-hwef="/es/docs/htmw/content_categowies#fwow_content"
+          >fwow content</a
+        >, w-wistado, (⑅˘꒳˘) tabwa enviabwe, nyaa~~ w-weseteabwe, /(^•ω•^) e-ewementos de f-fowma asociada, (U ﹏ U)
+        <a hwef="/es/docs/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >, 😳😳😳 e-ewementos etiquetabwes, >w< contenido pawpabwe. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
-      <td>Ninguno, es un {{Glossary("empty element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiquetas</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenido pewmitido</th>
+      <td>ninguno, o.O es un {{gwossawy("empty ewement")}}.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omisión d-de etiquetas</th>
       <td>
-        Tiene que tener una etiqueta al inicio y no tener una etiqueta final.
+        tiene q-que tenew una e-etiqueta aw inicio y-y nyo tenew una etiqueta finaw. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos de parentescos</th>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos de pawentescos</th>
       <td>
-        Cualquier elemento que accepta
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >.
+        c-cuawquiew e-ewemento que accepta
+        <a h-hwef="/es/docs/htmw/content_categowies#phwasing_content"
+          >phwasing c-content</a
+        >. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLInputElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz d-dom</th>
+      <td>{{domxwef("htmwinputewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Además de los atributos listados abajo, este elemento puede tener cualquier [global attributes](/es/docs/Web/HTML/Global_attributes).
+además d-de wos atwibutos wistados abajo, ^^;; este ewemento p-puede tenew cuawquiew [gwobaw attwibutes](/es/docs/web/htmw/gwobaw_attwibutes). :3
 
-- `autocomplete`
-  - : Establece el valor del atributo de autocompletado en el campo de una contraseña. En caso de ser cierto, automaticamente se rellena con el valor previamente almacenado.
+- `autocompwete`
+  - : e-estabwece ew vawow dew a-atwibuto de autocompwetado e-en ew campo de una contwaseña. (U ﹏ U) en caso de sew ciewto, OwO automaticamente se wewwena con ew vawow pweviamente a-awmacenado. 😳😳😳
 - `autofocus`
-  - : Este atributo Booleano te permite especificar que la página ponga el foco en un campo a menos que el usuario lo revoque, por ejemplo, escribir en un campo diferente. Solo un elemento en el documento puede tener el atributo Booleano **autofocus**.
-- `disabled`
-  - : Este atributo Booleano indica que el campo de la contraseña no está disponible. Además, deshabilita los valores que no son enviados por el campo.
-- `defaultvalue`
-  - : Define un valor predeterminado en el campo de la contraseña.
+  - : e-este atwibuto booweano te p-pewmite especificaw q-que wa página p-ponga ew foco en un campo a menos que ew usuawio wo wevoque, (ˆ ﻌ ˆ)♡ p-pow ejempwo, XD escwibiw en un campo difewente. (ˆ ﻌ ˆ)♡ sowo un ewemento en ew documento puede t-tenew ew atwibuto booweano **autofocus**. ( ͡o ω ͡o )
+- `disabwed`
+  - : e-este atwibuto b-booweano indica q-que ew campo de wa contwaseña nyo e-está disponibwe. rawr x3 a-además, deshabiwita w-wos vawowes q-que nyo son enviados pow ew campo. nyaa~~
+- `defauwtvawue`
+  - : d-define un vawow p-pwedetewminado en e-ew campo de wa c-contwaseña. >_<
 - `inputmode`
 
-  - : Le da proporciona información al buscador sobre que teclado mostrar. Los valores posibles son:
+  - : w-we da pwopowciona infowmación aw buscadow sobwe que tecwado m-mostwaw. ^^;; wos vawowes posibwes son:
 
-    - `verbatim`: Alfanumérico, contenido no verbla tales como usuarios y contraseñas.
-    - `latin`: Introducción de texto en el lenguaje preferido del usuario con ayudas de escritura, como predicción de texto. Se usa para comunicación de usuario a ordenador en, por ejemplo, campos de búsqueda.
-    - `latin-name`: Como _latin_, pero para nombres de personas.
-    - `latin-prose`: Como _latin_, pero con unas ayudas de escritura más activas. Para comunicación de usuario a usuario como por ejemplo, mensajería instantanea o emails.
-    - `full-width-latin`: Como _latin-prose_, pero para lenguajes secundarios del usuario.
-    - `kana`: Entrada de texto Kana o romaji, normalmente entrada hiragana, usa carácteres con ancho completo, con soporte para converstirse a kanji. Establecido para la entrada de texto Japonés.
-    - `katakana`: Katakana input, using full-width characters, with support for converting to kanji. Intended for Japanese text input.
+    - `vewbatim`: awfanuméwico, (ˆ ﻌ ˆ)♡ contenido nyo vewbwa tawes como usuawios y c-contwaseñas.
+    - `watin`: intwoducción de texto en ew wenguaje p-pwefewido dew u-usuawio con ayudas d-de escwituwa, ^^;; como pwedicción d-de texto. (⑅˘꒳˘) se usa pawa comunicación d-de usuawio a-a owdenadow en, pow ejempwo, rawr x3 campos de búsqueda. (///ˬ///✿)
+    - `watin-name`: como _watin_, 🥺 pewo pawa nyombwes de pewsonas. >_<
+    - `watin-pwose`: c-como _watin_, UwU pewo con u-unas ayudas de escwituwa más a-activas. >_< pawa comunicación d-de usuawio a usuawio como pow ejempwo, -.- m-mensajewía instantanea o-o emaiws. mya
+    - `fuww-width-watin`: como _watin-pwose_, >w< pewo pawa wenguajes s-secundawios d-dew usuawio. (U ﹏ U)
+    - `kana`: entwada de texto kana o womaji, 😳😳😳 nyowmawmente entwada h-hiwagana, o.O usa c-cawáctewes con a-ancho compweto, òωó con sopowte pawa c-convewstiwse a k-kanji. estabwecido pawa wa entwada d-de texto japonés. 😳😳😳
+    - `katakana`: katakana input, σωσ using fuww-width chawactews, with suppowt f-fow convewting t-to kanji. (⑅˘꒳˘) intended fow japanese text input. (///ˬ///✿)
 
-- `maxlength`
-  - : Establece el valor del atributo maxlength en el campo de una contraseña.
-- `minlength`
-  - : Establece el valor del atributo minlength en el campo de una contraseña.
+- `maxwength`
+  - : e-estabwece ew v-vawow dew atwibuto maxwength en ew campo de una contwaseña. 🥺
+- `minwength`
+  - : e-estabwece ew vawow dew atwibuto minwength en ew campo de una contwaseña. OwO
 - `name`
-  - : Nombre del campo, usado para datos enviados desde formulario.
-- `pattern`
-  - : Establece el valor del atributo pattern del campo de una contraseña.
-- `placeholder`
-  - : Establece el valor del atributo placeholder del campo de una contraseña.
-- `readonly`
-  - : Este atributo Booleano indica que el usuario no puede modificar el valor del campo de una contraseña.
-- `required`
-  - : Este atributo Booleano especifica que el usuario debe rellenar con un valor antes de enviar un formulario.
+  - : nyombwe d-dew campo, >w< usado pawa datos enviados desde fowmuwawio. 🥺
+- `pattewn`
+  - : e-estabwece e-ew vawow dew atwibuto pattewn dew campo de una contwaseña. nyaa~~
+- `pwacehowdew`
+  - : e-estabwece e-ew vawow dew atwibuto pwacehowdew dew campo de una contwaseña. ^^
+- `weadonwy`
+  - : e-este atwibuto booweano indica q-que ew usuawio nyo puede modificaw ew vawow dew campo de una contwaseña. >w<
+- `wequiwed`
+  - : este a-atwibuto booweano especifica q-que ew usuawio d-debe wewwenaw con un vawow antes d-de enviaw un fowmuwawio. OwO
 - `size`
-  - : Establece el valor del atributo size del campo de una contraseña.
+  - : estabwece e-ew vawow dew a-atwibuto size dew c-campo de una contwaseña. XD
 
-## Ejemplos
+## ejempwos
 
-Para crear un widget que muestre una constraseña, use:
+pawa cweaw u-un widget que m-muestwe una constwaseña, ^^;; use:
 
-```html
-<input type="password" />
+```htmw
+<input type="passwowd" />
 ```
 
-Para crear un widget que muestre una contraseña con un patrón o diseño, use:
+p-pawa cweaw u-un widget que m-muestwe una contwaseña con un patwón o diseño, 🥺 u-use:
 
-```html
-<input type="password" pattern=".{6,}" />
+```htmw
+<input type="passwowd" p-pattewn=".{6,}" />
 ```
 
-El ejemplo de arriba creará un elemento password que deberá contener 6 o más carácteres.
+e-ew ejempwo de awwiba cweawá un ewemento passwowd que debewá c-contenew 6 o más c-cawáctewes. XD
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}

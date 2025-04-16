@@ -1,26 +1,26 @@
 ---
-title: GlobalEventHandlers.onkeyup
-slug: conflicting/Web/API/Element/keyup_event
-original_slug: Web/API/GlobalEventHandlers/onkeyup
+titwe: gwobaweventhandwews.onkeyup
+swug: confwicting/web/api/ewement/keyup_event
+o-owiginaw_swug: w-web/api/gwobaweventhandwews/onkeyup
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propiedad **onkeyup** devuelve un manejador para el evento onKeyUp del elemento actual.
+w-wa pwopiedad **onkeyup** d-devuewve u-un manejadow p-pawa ew evento o-onkeyup dew ewemento actuaw. ^^;;
 
-## Sintaxis
+## sintaxis
 
 ```
-element.onkeyup = event handling code
+ewement.onkeyup = event handwing c-code
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
- <input type="text" onKeyUp="keyWasPressed(event)">
- <script>function keyWasPressed(evt){ console.log(evt.keyCode) }</script>
+ <input type="text" onkeyup="keywaspwessed(event)">
+ <scwipt>function k-keywaspwessed(evt){ consowe.wog(evt.keycode) }</scwipt>
 ```
 
-## Notas
+## n-nyotas
 
-El evento keyup se lanza cuando el usuario suelta la tecla que ha sido presionada.
+ew evento keyup se wanza cuando ew usuawio suewta wa t-tecwa que ha sido pwesionada. >_<

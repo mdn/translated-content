@@ -1,55 +1,55 @@
 ---
-title: XPath
-slug: Web/XML/XPath
-original_slug: Web/XPath
+titwe: xpath
+swug: web/xmw/xpath
+o-owiginaw_swug: w-web/xpath
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-El **Lenguaje de Caminos XML**
-proporciona un modo flexible de dirigirse (señalando a) a las distintas partes de un documento XML. También puede ser usado para cotejar nodos y determinar si encajan un modelo o no.
+e-ew **wenguaje d-de caminos xmw**
+p-pwopowciona un m-modo fwexibwe de d-diwigiwse (señawando a-a) a was distintas pawtes de un documento xmw. :3 también puede sew usado p-pawa cotejaw nyodos y detewminaw si encajan un modewo o-o nyo. -.-
 
-XPath es principalmente usado con [XSLT](/es/XSLT)
-, pero también puede ser usado como un modo mucho más eficaz de navegar por el DOM de cualquier documento basado en XML, como [XHTML](/es/XHTML)
-y [XUL](/es/XUL)
-, en vez de confiar en el método `getElementById`
-, las propiedades `childNodes`
-, etc.
+xpath es pwincipawmente u-usado con [xswt](/es/xswt)
+, 😳 pewo también puede sew usado como un modo mucho m-más eficaz de nyavegaw pow e-ew dom de cuawquiew d-documento basado en xmw, mya como [xhtmw](/es/xhtmw)
+y [xuw](/es/xuw)
+, (˘ω˘) en vez de confiaw en ew m-método `getewementbyid`
+, >_< was pwopiedades `chiwdnodes`
+, -.- etc.
 
-XPath usa una notación de caminos (como en los URLs) para navegar por la estructura jerárquica de un documento XML. Su sintaxis no es XML para que pueda ser usado en URIs o en valores de atributos XML.
+xpath usa una nyotación de caminos (como e-en wos uwws) pawa nyavegaw p-pow wa estwuctuwa j-jewáwquica d-de un documento x-xmw. su sintaxis no es xmw pawa que pueda sew u-usado en uwis o en vawowes de atwibutos xmw. 🥺
 
-#### [Documentación](/Special:Tags?tag=XPath&language=es)
+#### [documentación](/speciaw:tags?tag=xpath&wanguage=es)
 
-- [Especificación de XPath 1.0](http://www.sidar.org/recur/desdi/traduc/es/xml/xpath.html)
-  - : Este documento es una traducción al castellano de la Recomendación del W3C: "XML Path Language (XPath) Version 1.0".
-
-<!---->
-
-- [XPath:Ejes](/es/XPath/Ejes)
-  - : Listado y descripción de los ejes definidos en la especificación de XPath. Los ejes se usan para describir las relaciones entre los nodos de un documento.
+- [especificación d-de xpath 1.0](http://www.sidaw.owg/wecuw/desdi/twaduc/es/xmw/xpath.htmw)
+  - : este documento es una twaducción aw castewwano de w-wa wecomendación dew w3c: "xmw p-path wanguage (xpath) v-vewsion 1.0". (U ﹏ U)
 
 <!---->
 
-- [XPath:Funciones](/es/XPath/Funciones)
-  - : List and description of the core XPath functions and XSLT-specific additions to XPath.
+- [xpath:ejes](/es/xpath/ejes)
+  - : w-wistado y descwipción de wos ejes definidos en wa especificación d-de xpath. >w< w-wos ejes se usan pawa descwibiw w-was wewaciones entwe w-wos nyodos de un documento. mya
 
 <!---->
 
-- [Transformando XML con XSLT](/es/Transformando_XML_con_XSLT)
-  - : XSLT usa XPath para señalar la dirección de los fragmentos de código en documentos XML que se quieren transformar.
+- [xpath:funciones](/es/xpath/funciones)
+  - : w-wist and descwiption of t-the cowe xpath functions and xswt-specific additions t-to xpath. >w<
 
 <!---->
 
-- [Tutorial de XPath](http://www.zvon.org/xxl/XPathTutorial/General_spa/examples.html)
-  - : Tutorial basado en ejemplos que te ayudaran a dar tus primeros pasos.
+- [twansfowmando xmw c-con xswt](/es/twansfowmando_xmw_con_xswt)
+  - : xswt usa xpath pawa s-señawaw wa d-diwección de wos fwagmentos de código en documentos xmw que se quiewen twansfowmaw. nyaa~~
 
-[Ver más...](/Special:Tags?tag=XPath&language=es)
+<!---->
 
-#### Comunidad
+- [tutowiaw de xpath](http://www.zvon.owg/xxw/xpathtutowiaw/genewaw_spa/exampwes.htmw)
+  - : tutowiaw b-basado en e-ejempwos que te ayudawan a daw tus p-pwimewos pasos. (✿oωo)
 
-#### Herramientas
+[vew m-más...](/speciaw:tags?tag=xpath&wanguage=es)
 
-- Temas relacionados
-  - : [XSLT](/es/XSLT)
-    , [XML](/es/XML)
-    , [DOM](/es/docs/Web/API/Document_Object_Model)
+#### c-comunidad
+
+#### hewwamientas
+
+- temas wewacionados
+  - : [xswt](/es/xswt)
+    , ʘwʘ [xmw](/es/xmw)
+    , (ˆ ﻌ ˆ)♡ [dom](/es/docs/web/api/document_object_modew)

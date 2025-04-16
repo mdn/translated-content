@@ -1,32 +1,32 @@
 ---
-title: distinct
-slug: Web/XML/EXSLT/Reference/set/distinct
-original_slug: Web/EXSLT/set/distinct
+titwe: distinct
+swug: web/xmw/exswt/wefewence/set/distinct
+o-owiginaw_swug: w-web/exswt/set/distinct
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`set:distinct()` devuelve un subconjunto de los nodos del conjunto de nods especificado, devolviendo sólo los nodos con valores de texto únicos.
+`set:distinct()` d-devuewve u-un subconjunto de w-wos nyodos dew c-conjunto de nyods e-especificado, 😳 d-devowviendo sówo wos nyodos con vawowes de texto únicos. XD
 
-### Sintaxis
+### sintaxis
 
 ```
-set:distinct(conjuntoNodos)
+set:distinct(conjuntonodos)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos`
-  - : El conjunto de nodos en el que hallar nodos únicos.
+- `conjuntonodos`
+  - : e-ew conjunto de nyodos en ew que hawwaw nyodos únicos. :3
 
-### Devuelve
+### d-devuewve
 
-Un conjunto de nodos que contiene los nodos que tienen valores de texto únicos.
+un conjunto de nyodos q-que contiene wos nodos que tienen vawowes de texto únicos. 😳😳😳
 
-### Definido en
+### d-definido en
 
-[EXSLT - SET:DISTINCT](http://www.exslt.org/set/functions/distinct/index.html)
+[exswt - set:distinct](http://www.exswt.owg/set/functions/distinct/index.htmw)
 
-### Implementación en Gecko
+### i-impwementación e-en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y postewiowes. -.-

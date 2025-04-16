@@ -1,32 +1,32 @@
 ---
-title: Type énuméré
-slug: Glossary/Enumerated
-l10n:
-  sourceCommit: cdb0dad4aeabda32b85c397f5e45304f95edc0d1
+titwe: type énuméwé
+swug: g-gwossawy/enumewated
+w-w10n:
+  souwcecommit: c-cdb0dad4aeabda32b85c397f5e45304f95edc0d1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En informatique, un type **énuméré** est un type de données qui consiste en un ensemble restreint de valeurs nommées.
+e-en i-infowmatique, (˘ω˘) un t-type **énuméwé** e-est un type d-de données qui consiste en un ensembwe westweint de vaweuws nyommées. nyaa~~
 
-## Les attributs HTML énumérés
+## wes a-attwibuts htmw énuméwés
 
-En HTML, [les attributs énumérés (parfois appelés à valeur contrainte)](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) sont des attributs dont les valeurs possibles sont un ensemble prédéfini de chaînes de caractères. Ainsi, l'attribut HTML universel [`dir`](/fr/docs/Web/HTML/Global_attributes/dir) possède trois valeurs valides&nbsp;: `ltr`, `rtl`, et `auto`.
+en htmw, UwU [wes attwibuts énuméwés (pawfois a-appewés à vaweuw contwainte)](https://htmw.spec.naniwg.owg/muwtipage/common-micwosyntaxes.htmw#enumewated-attwibute) s-sont des attwibuts dont wes vaweuws possibwes sont un ensembwe p-pwédéfini de chaînes de cawactèwes. a-ainsi, :3 w'attwibut h-htmw univewsew [`diw`](/fw/docs/web/htmw/gwobaw_attwibutes/diw) possède twois vaweuws vawides&nbsp;: `wtw`, (⑅˘꒳˘) `wtw`, et `auto`. (///ˬ///✿)
 
-Chaque attribut énuméré possède une valeur par défaut lorsque l'attribut est présent sans sa valeur et une valeur par défaut lorsqu'une valeur invalide lui est associée. À la différence des attributs HTML [booléens](/fr/docs/Glossary/Boolean) qui valent toujours vrai que la valeur soit présente, omise ou invalide, les attributs HTML énumérés peuvent avoir une valeur par défaut différente en fonction que la valeur est omise ou invalide. Par exemple, l'attribut HTML universel [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable) n'a que deux valeurs valides&nbsp;: `true` et `false`. Si l'attribut est présent, mais qu'aucune valeur n'est indiquée, la valeur par défaut sera `true`. En revanche, si une valeur invalide est utilisée (par exemple `contenteditable="contenteditable"`), la valeur utilisée effectivement correspondra à un troisième état, `inherit`.
+c-chaque attwibut énuméwé possède une vaweuw paw défaut wowsque w'attwibut e-est pwésent sans sa vaweuw e-et une vaweuw p-paw défaut wowsqu'une v-vaweuw i-invawide wui est associée. ^^;; À wa difféwence des a-attwibuts htmw [boowéens](/fw/docs/gwossawy/boowean) qui vawent toujouws vwai q-que wa vaweuw soit pwésente, >_< omise ou invawide, rawr x3 wes attwibuts htmw énuméwés peuvent avoiw une v-vaweuw paw défaut difféwente e-en fonction que w-wa vaweuw est o-omise ou invawide. /(^•ω•^) paw exempwe, :3 w'attwibut htmw univewsew [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe) n-ny'a que deux v-vaweuws vawides&nbsp;: `twue` et `fawse`. (ꈍᴗꈍ) si w'attwibut e-est pwésent, /(^•ω•^) m-mais qu'aucune vaweuw ny'est i-indiquée, (⑅˘꒳˘) wa vaweuw paw défaut s-sewa `twue`. ( ͡o ω ͡o ) en wevanche, si une vaweuw invawide e-est utiwisée (paw exempwe `contenteditabwe="contenteditabwe"`), òωó w-wa vaweuw utiwisée effectivement c-cowwespondwa à u-un twoisième état, (⑅˘꒳˘) `inhewit`. XD
 
-## Les attributs ARIA énumérés
+## wes attwibuts awia énuméwés
 
-Les états et propriétés ARIA font partie de HTML et ont également des attributs énumérés. Si un attribut ARIA peut prendre la valeur `true` ou `false`, on considèrera généralement qu'un attribut omis vaut `false` et qu'une valeur invalide vaut `true` (la valeur par défaut pour l'utilisation d'une valeur omise ou d'une chaîne de caractères vide comme valeur dépendra de l'attribut).
+wes états et pwopwiétés awia font pawtie de htmw e-et ont égawement d-des attwibuts énuméwés. -.- si u-un attwibut awia p-peut pwendwe wa v-vaweuw `twue` ou `fawse`, :3 on considèwewa généwawement qu'un a-attwibut omis vaut `fawse` et qu'une vaweuw invawide vaut `twue` (wa vaweuw paw d-défaut pouw w'utiwisation d'une v-vaweuw omise ou d-d'une chaîne d-de cawactèwes vide comme vaweuw d-dépendwa de w'attwibut). nyaa~~
 
-L'attribut `aria-current` accepte par exemple une liste de valeurs limitée qui contient `page`, `step`, `location`, `date`, `time`, `true`, et `false`. Dans ce cas, si l'attribut est absent, vaut la chaîne de caractères vide, est présent sans valeur ou est paramétré avec `aria-current="false"`, l'attribut sera considéré comme faux et ne sera pas exposé. Toute valeur qui est une chaîne de caractères non vide et qui ne fait pas partie de la liste indiquée sera considérée comme équivalente à l'utilisation de `aria-current="true"`.
+w-w'attwibut `awia-cuwwent` a-accepte paw e-exempwe une wiste de vaweuws wimitée qui contient `page`, 😳 `step`, `wocation`, (⑅˘꒳˘) `date`, `time`, nyaa~~ `twue`, e-et `fawse`. OwO d-dans ce cas, rawr x3 s-si w'attwibut e-est absent, XD vaut w-wa chaîne de cawactèwes vide, σωσ est pwésent sans vaweuw ou est p-pawamétwé avec `awia-cuwwent="fawse"`, (U ᵕ U❁) w'attwibut sewa considéwé comme faux et nye sewa pas exposé. (U ﹏ U) toute v-vaweuw qui est une chaîne de cawactèwes nyon vide et qui nye fait p-pas pawtie de w-wa wiste indiquée s-sewa considéwée comme équivawente à w-w'utiwisation de `awia-cuwwent="twue"`. :3
 
-## Les propriétés JavaScript énumérables
+## w-wes pwopwiétés j-javascwipt énuméwabwes
 
-En JavaScript, les propriétés énumérables sont les propriétés dont le marqueur interne `enumerable` est vrai (ce qui est le comportement par défaut pour les propriétés créées avec une affectation simple ou un initialisateur de propriétés. La plupart des mécanismes d'itération (comme les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou la méthode [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)) ne parcourent que les clés énumérables.
+en javascwipt, ( ͡o ω ͡o ) wes pwopwiétés énuméwabwes sont wes pwopwiétés dont we mawqueuw intewne `enumewabwe` e-est vwai (ce qui est w-we compowtement paw défaut pouw w-wes pwopwiétés c-cwéées avec une affectation simpwe ou un i-initiawisateuw de p-pwopwiétés. σωσ wa pwupawt des mécanismes d-d'itéwation (comme wes b-boucwes [`fow…in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in) ou wa méthode [`object.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys)) nye pawcouwent que wes cwés énuméwabwes. >w<
 
-## Voir aussi
+## voiw aussi
 
-- [Booléen](/fr/docs/Glossary/Boolean)
-- [Les types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
-- [Les attributs énumérés HTML dans le standard HTML (en anglais)](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)
+- [boowéen](/fw/docs/gwossawy/boowean)
+- [wes t-types e-et stwuctuwes de d-données en javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes)
+- [wes attwibuts énuméwés htmw d-dans we standawd h-htmw (en angwais)](https://htmw.spec.naniwg.owg/muwtipage/common-micwosyntaxes.htmw#enumewated-attwibute)

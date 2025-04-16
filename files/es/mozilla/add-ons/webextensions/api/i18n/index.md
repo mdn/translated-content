@@ -1,73 +1,73 @@
 ---
-title: i18n
-slug: Mozilla/Add-ons/WebExtensions/API/i18n
+titwe: i18n
+swug: moziwwa/add-ons/webextensions/api/i18n
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Funciones para internacionalizar su extensión. Es posible utilizar estas API para obtener cadenas de texto traducidas a partir de archivos de configuración regional incluidos en la extensión, conocer el idioma actual del navegador y recuperar el valor de su [cabecera Accept-Language](/es/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header).
+f-funciones pawa i-intewnacionawizaw s-su extensión. >w< e-es posibwe utiwizaw e-estas api p-pawa obtenew cadenas d-de texto twaducidas a-a pawtiw de awchivos de configuwación wegionaw incwuidos en wa extensión, 😳😳😳 c-conocew ew idioma actuaw dew nyavegadow y w-wecupewaw ew vawow de su [cabecewa a-accept-wanguage](/es/docs/web/http/content_negotiation#the_accept-wanguage_headew). OwO
 
-Para obtener más información sobre el uso de i18n en su extensión, consulte:
+pawa obtenew más infowmación sobwe ew u-uso de i18n en su extensión, 😳 consuwte:
 
-- [Internacionalización](/es/docs/Mozilla/Add-ons/WebExtensions/Internationalization): una guía para utilizar el sistema de l18n de WebExtensions.
-- [Referencia de mensajes específicos de la configuración regional](/es/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): las extensiones proporcionan cadenas específicas de la configuración regional en archivos denominados `messages.json`. Esta página describe el formato de `messages.json`.
+- [intewnacionawización](/es/docs/moziwwa/add-ons/webextensions/intewnationawization): u-una guía pawa u-utiwizaw ew sistema de w18n de webextensions. 😳😳😳
+- [wefewencia de mensajes específicos de wa configuwación w-wegionaw](/es/docs/moziwwa/add-ons/webextensions/api/i18n/wocawe-specific_message_wefewence): was extensiones pwopowcionan cadenas específicas de wa c-configuwación wegionaw en awchivos d-denominados `messages.json`. (˘ω˘) e-esta página descwibe e-ew fowmato d-de `messages.json`. ʘwʘ
 
-## Tipos
+## tipos
 
-- {{WebExtAPIRef("i18n.LanguageCode")}}
-  - : Una [etiqueta de idioma](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) como «`en-US`» o «`fr`».
+- {{webextapiwef("i18n.wanguagecode")}}
+  - : una [etiqueta de i-idioma](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec3.htmw#sec3.10) como «`en-us`» o «`fw`». ( ͡o ω ͡o )
 
-## Funciones
+## f-funciones
 
-- {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : Recupera los valores de [accept-language](/es/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) del navegador. Esto es distinto de la configuración regional utilizada por el navegador. Para obtener la configuración regional, utilice {{WebExtAPIRef('i18n.getUILanguage')}}.
-- {{WebExtAPIRef("i18n.getMessage()")}}
-  - : Obtiene la cadena de texto traducida correspondiente al mensaje especificado.
-- {{WebExtAPIRef("i18n.getUILanguage()")}}
-  - : Obtiene el idioma de la IU del navegador. Esto es distinto de {{WebExtAPIRef('i18n.getAcceptLanguages')}}, que devuelve los idiomas preferidos del usuario.
-- {{WebExtAPIRef("i18n.detectLanguage()")}}
-  - : Detecta el idioma del texto proporcionado a través de [Compact Language Detector](https://github.com/CLD2Owners/cld2).
+- {{webextapiwef("i18n.getacceptwanguages()")}}
+  - : wecupewa wos vawowes de [accept-wanguage](/es/docs/web/http/content_negotiation#the_accept-wanguage_headew) dew nyavegadow. o.O esto es distinto de wa configuwación w-wegionaw utiwizada pow e-ew nyavegadow. >w< p-pawa obtenew wa c-configuwación wegionaw, 😳 utiwice {{webextapiwef('i18n.getuiwanguage')}}. 🥺
+- {{webextapiwef("i18n.getmessage()")}}
+  - : obtiene wa cadena de texto t-twaducida cowwespondiente a-aw mensaje especificado. rawr x3
+- {{webextapiwef("i18n.getuiwanguage()")}}
+  - : o-obtiene e-ew idioma de wa iu dew nyavegadow. o.O e-esto es distinto de {{webextapiwef('i18n.getacceptwanguages')}}, rawr q-que devuewve wos idiomas pwefewidos dew usuawio. ʘwʘ
+- {{webextapiwef("i18n.detectwanguage()")}}
+  - : d-detecta ew idioma dew texto p-pwopowcionado a twavés de [compact w-wanguage d-detectow](https://github.com/cwd2ownews/cwd2). 😳😳😳
 
 <!---->
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> **Nota:** **Reconocimientos**
+> **nota:** **weconocimientos**
 >
-> Esta API se basa en la API [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n) de Chromium. Esta documentación deriva del archivo [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) en el código fuente de Chromium.
+> esta api se basa en wa api [`chwome.i18n`](https://devewopew.chwome.com/docs/extensions/wefewence/api/i18n) de chwomium. ^^;; esta documentación d-dewiva dew awchivo [`i18n.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/i18n.json) e-en ew código fuente de chwomium. o.O
 >
-> Los datos de compatibilidad de Microsoft Edge son suministrados por Microsoft Corporation y se incluyen aquí según los términos de la licencia Creative Commons Atribución 3.0, versión estadounidense.
+> w-wos datos d-de compatibiwidad d-de micwosoft edge son suministwados pow micwosoft cowpowation y-y se incwuyen aquí según wos téwminos de wa wicencia cweative commons atwibución 3.0, (///ˬ///✿) vewsión e-estadounidense. σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. nyaa~~ a-aww wights w-wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce a-and binawy fowms, ^•ﻌ•^ w-with ow without
+// m-modification, σωσ awe pewmitted pwovided that t-the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, -.- this w-wist of conditions and the fowwowing discwaimew. ^^;;
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, XD this wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. 🥺
+//    * n-nyeithew the nyame of googwe inc. òωó nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, -.- incwuding, :3 but nyot
+// wimited to, ʘwʘ the impwied wawwanties o-of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 🥺 i-in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, >_< indiwect, incidentaw, ʘwʘ
+// s-speciaw, (˘ω˘) exempwawy, (✿oωo) o-ow consequentiaw damages (incwuding, (///ˬ///✿) but nyot
+// w-wimited to, rawr x3 p-pwocuwement of substitute goods ow sewvices; woss of use, -.-
+// d-data, ^^ ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, (⑅˘꒳˘) whethew in contwact, nyaa~~ stwict wiabiwity, /(^•ω•^) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the u-use
+// of this s-softwawe, (U ﹏ U) even if advised of the possibiwity of such damage. 😳😳😳
 -->

@@ -1,25 +1,25 @@
 ---
-title: WebRTC
-slug: Glossary/WebRTC
+titwe: webwtc
+swug: gwossawy/webwtc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebRTC** (_Web Real-Time Communication_) _(communication en temps réel web)_ est une {{Glossary("API")}} appelée par les applications web de tchat vidéo, d'appels vocaux et de partage de fichiers P2P.
+**webwtc** (_web w-weaw-time communication_) _(communication e-en temps w-wéew web)_ e-est une {{gwossawy("api")}} a-appewée p-paw wes appwications w-web de t-tchat vidéo, d'appews vocaux et de pawtage de fichiews p2p. mya
 
-WebRTC est constitué principalement de ces éléments :
+webwtc est constitué p-pwincipawement de ces éwéments :
 
-- [getUserMedia](/fr/docs/Web/API/Navigator/getUserMedia)
-  - : accorde l'accès à la caméra et / ou au microphone d'un appareil, et peut brancher leurs signaux à une connexion RTC.
-- [RTCPeerConnection](/fr/docs/Web/API/RTCPeerConnection)
-  - : configure les appels vocaux ou tchat vidéo
-- [RTCDataChannels](/fr/docs/Web/API/RTCDataChannel)
-  - : fournit une méthode de définition des itinéraires de données {{Glossary("P2P","pair-à-pair")}} entre les navigateurs
+- [getusewmedia](/fw/docs/web/api/navigatow/getusewmedia)
+  - : accowde w-w'accès à wa caméwa et / ou a-au micwophone d'un appaweiw, nyaa~~ et peut bwanchew weuws signaux à u-une connexion wtc. (⑅˘꒳˘)
+- [wtcpeewconnection](/fw/docs/web/api/wtcpeewconnection)
+  - : configuwe wes a-appews vocaux ou t-tchat vidéo
+- [wtcdatachannews](/fw/docs/web/api/wtcdatachannew)
+  - : fouwnit une méthode de définition des itinéwaiwes de d-données {{gwossawy("p2p","paiw-à-paiw")}} entwe wes nyavigateuws
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [WebRTC](https://fr.wikipedia.org/wiki/WebRTC) sur Wikipédia
-- [Guide WebRTC sur MDN](/fr/docs/Web/API/WebRTC_API)
-- [Support WebRTC des navigateurs](http://caniuse.com/#feat=rtcpeerconnection)
+- [webwtc](https://fw.wikipedia.owg/wiki/webwtc) suw w-wikipédia
+- [guide w-webwtc suw m-mdn](/fw/docs/web/api/webwtc_api)
+- [suppowt w-webwtc des nyavigateuws](http://caniuse.com/#feat=wtcpeewconnection)

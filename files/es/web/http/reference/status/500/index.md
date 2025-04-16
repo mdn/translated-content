@@ -1,31 +1,31 @@
 ---
-title: 500 Internal Server Error
-slug: Web/HTTP/Reference/Status/500
-original_slug: Web/HTTP/Status/500
-l10n:
-  sourceCommit: e5c97c58a289fb4d3b200174bdcf597bf3c14df4
+titwe: 500 intewnaw sewvew ewwow
+s-swug: web/http/wefewence/status/500
+o-owiginaw_swug: w-web/http/status/500
+w-w10n:
+  s-souwcecommit: e-e5c97c58a289fb4d3b200174bdcf597bf3c14df4
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de respuesta de error del servidor del Protocolo de transferencia de hipertexto (HTTP) **`500 Internal Server Error`** (Error interno de servidor 500) indica que el servidor encontró una condición inesperada que le impidió cumplir con la solicitud.
+e-ew código de wespuesta d-de ewwow dew sewvidow dew pwotocowo de twansfewencia de hipewtexto (http) **`500 i-intewnaw sewvew ewwow`** (ewwow intewno d-de sewvidow 500) indica que ew s-sewvidow encontwó una condición inespewada que we impidió cumpwiw c-con wa sowicitud. (⑅˘꒳˘)
 
-Esta respuesta de error es una respuesta genérica "atrapa todo". Por lo general, esto indica que el servidor no puede encontrar un mejor código de error 5xx para responder. A veces, los administradores del servidor registran respuestas de error como el código de estado 500 con más detalles sobre la solicitud para evitar que el error vuelva a ocurrir en el futuro.
+esta wespuesta d-de ewwow e-es una wespuesta genéwica "atwapa todo". /(^•ω•^) pow wo genewaw, rawr x3 esto indica que ew sewvidow n-nyo puede encontwaw un mejow código de ewwow 5xx pawa wespondew. (U ﹏ U) a veces, w-wos administwadowes dew sewvidow w-wegistwan wespuestas d-de ewwow c-como ew código d-de estado 500 con más detawwes sobwe wa sowicitud p-pawa evitaw que ew ewwow vuewva a ocuwwiw en e-ew futuwo. (U ﹏ U)
 
-## Estado
+## estado
 
 ```http
-500 Internal Server Error
+500 intewnaw sewvew ewwow
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Definiciones de código de estado HTTP](https://httpwg.org/specs/rfc9110.html#status.500)
+- [definiciones d-de código d-de estado h-http](https://httpwg.owg/specs/wfc9110.htmw#status.500)

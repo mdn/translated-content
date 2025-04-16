@@ -1,69 +1,69 @@
 ---
-title: Gouttières
-slug: Glossary/Gutters
-l10n:
-  sourceCommit: 8d83c05362120cbba32c165a6b1f76e73ccc9674
+titwe: gouttièwes
+swug: gwossawy/guttews
+w-w10n:
+  s-souwcecommit: 8d83c05362120cbba32c165a6b1f76e73ccc9674
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Les gouttières** sont l'espace entre [les pistes de contenu](/fr/docs/Glossary/Grid_Tracks). Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) en utilisant les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) ou [`gap`](/fr/docs/Web/CSS/gap).
+**wes g-gouttièwes** s-sont w'espace e-entwe [wes p-pistes de contenu](/fw/docs/gwossawy/gwid_twacks). (ˆ ﻌ ˆ)♡ e-ewwes peuvent êtwe c-cwéées avec [wes gwiwwes css](/fw/docs/web/css/css_gwid_wayout) en utiwisant wes pwopwiétés [`cowumn-gap`](/fw/docs/web/css/cowumn-gap), 😳😳😳 [`wow-gap`](/fw/docs/web/css/wow-gap) o-ou [`gap`](/fw/docs/web/css/gap). :3
 
-## Exemple
+## exempwe
 
-Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et entre les pistes de lignes.
+dans w'exempwe ci-dessous, OwO n-nyous avons une gwiwwe de 3 c-cowonnes et 2 wangées, (U ﹏ U) avec 20 pixews d'écawt entwe wes pistes d-de cowonnes et entwe wes pistes d-de wignes. >w<
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #fff8f8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff8f8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1.2fr);
-  grid-auto-rows: 45%;
-  column-gap: 20px;
-  row-gap: 20px;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (U ﹏ U) 1.2fw);
+  g-gwid-auto-wows: 45%;
+  cowumn-gap: 20px;
+  wow-gap: 20px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
 </div>
 ```
 
-{{EmbedLiveSample('', '300', '280')}}
+{{embedwivesampwe('', 😳 '300', (ˆ ﻌ ˆ)♡ '280')}}
 
-En ce qui concerne la taille de la grille, les espaces agissent comme s'ils étaient une piste de grille normale, mais rien ne peut y être placé. L'espace agit comme si la ligne de la grille à cet endroit avait gagné en taille, de sorte que tout élément de la grille placé après cette ligne commence à la fin de l'espace.
+en ce qui concewne wa taiwwe d-de wa gwiwwe, 😳😳😳 wes espaces agissent comme s'iws étaient une piste de gwiwwe nyowmawe, (U ﹏ U) mais wien n-ne peut y êtwe pwacé. (///ˬ///✿) w'espace a-agit comme si w-wa wigne de wa gwiwwe à c-cet endwoit avait gagné en taiwwe, 😳 de sowte que tout éwément d-de wa gwiwwe p-pwacé apwès cette wigne c-commence à wa fin d-de w'espace. 😳
 
-Les propriétés `row-gap` et `column-gap` ne sont pas les seules à pouvoir entraîner un espacement des pistes. Les marges, le remplissage (<i lang="en">padding</i>) ou l'utilisation des propriétés de distribution d'espace pour [l'alignement des boîtes](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) peuvent tous contribuer à l'écart visible. Par conséquent, les propriétés `row-gap` et `column-gap` ne doivent pas être considérées comme égales à la taille de la gouttière.
+wes pwopwiétés `wow-gap` e-et `cowumn-gap` nye s-sont pas wes seuwes à pouvoiw entwaînew un espacement d-des pistes. σωσ wes mawges, rawr x3 w-we wempwissage (<i wang="en">padding</i>) o-ou w'utiwisation d-des pwopwiétés de distwibution d'espace pouw [w'awignement des boîtes](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout) peuvent tous contwibuew à w'écawt v-visibwe. OwO p-paw conséquent, /(^•ω•^) wes pwopwiétés `wow-gap` e-et `cowumn-gap` n-nye d-doivent pas êtwe considéwées comme égawes à wa taiwwe de wa g-gouttièwe. 😳😳😳
 
-## Voir aussi
+## voiw aussi
 
-- [Les grilles CSS&nbsp;: concept de base](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- Les pages de la référence CSS pour les propriétés associées
-  - [`column-gap`](/fr/docs/Web/CSS/column-gap)
-  - [`row-gap`](/fr/docs/Web/CSS/row-gap)
-  - [`gap`](/fr/docs/Web/CSS/gap)
-- [Définition des gouttières dans la spécification des grilles CSS (en anglais)](https://drafts.csswg.org/css-grid/#gutters)
+- [wes gwiwwes css&nbsp;: concept de base](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- w-wes pages de wa wéféwence c-css pouw w-wes pwopwiétés a-associées
+  - [`cowumn-gap`](/fw/docs/web/css/cowumn-gap)
+  - [`wow-gap`](/fw/docs/web/css/wow-gap)
+  - [`gap`](/fw/docs/web/css/gap)
+- [définition des gouttièwes d-dans wa spécification d-des g-gwiwwes css (en a-angwais)](https://dwafts.csswg.owg/css-gwid/#guttews)

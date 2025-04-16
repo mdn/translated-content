@@ -1,21 +1,21 @@
 ---
-title: Base de données
-slug: Glossary/Database
+titwe: base de données
+swug: g-gwossawy/database
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **base de donnée** est un système de stockage qui collecte des données organisées, pour faciliter certains travaux comme la recherche, la structure et l'extension.
+u-une **base d-de donnée** e-est un système d-de stockage q-qui cowwecte des d-données owganisées, 🥺 p-pouw faciwitew cewtains twavaux comme wa wechewche, >_< wa stwuctuwe et w'extension. >_<
 
-Dans le développement web, la plupart des bases de données utilisent le système de gestion de base de données relationnelle (SGBDR) pour organiser les données et la programmation en [SQL](/fr/docs/Glossary/SQL). Cependant, certaines bases de données appelées NoSQL ne suivent pas l'ancien mécanisme de données organisées.
+d-dans we dévewoppement web, (⑅˘꒳˘) wa pwupawt d-des bases de données utiwisent w-we système de gestion de base de données wewationnewwe (sgbdw) pouw owganisew w-wes données et wa pwogwammation e-en [sqw](/fw/docs/gwossawy/sqw). /(^•ω•^) c-cependant, rawr x3 cewtaines bases de données appewées nyosqw nye suivent pas w'ancien m-mécanisme de données owganisées. (U ﹏ U)
 
-Parmi les SGBDR côté serveur les plus célèbres nous avons _MySQL_ (ou _MariaDB_ qui en est un <i lang="en">fork</i>), _SQL Server_, et _Oracle Database_. D'autre part, certains exemples NoSQL célèbres sont _MongoDB_, _Cassandra_, et _Redis_.
+pawmi wes sgbdw côté sewveuw wes pwus c-céwèbwes nyous avons _mysqw_ (ou _mawiadb_ q-qui e-en est un <i wang="en">fowk</i>), (U ﹏ U) _sqw s-sewvew_, (⑅˘꒳˘) e-et _owacwe database_. d'autwe pawt, òωó cewtains exempwes n-nyosqw céwèbwes sont _mongodb_, ʘwʘ _cassandwa_, /(^•ω•^) et _wedis_.
 
-Les navigateurs ont également leur propre système de base de données appelé [IndexedDB](/fr/docs/Glossary/IndexedDB).
+w-wes nyavigateuws ont égawement weuw pwopwe système de base de données appewé [indexeddb](/fw/docs/gwossawy/indexeddb). ʘwʘ
 
-## Voir aussi
+## voiw aussi
 
-1. [Base de données](https://fr.wikipedia.org/wiki/Base_de_données) sur Wikipédia
+1. σωσ [base d-de données](https://fw.wikipedia.owg/wiki/base_de_données) suw wikipédia
 
-   1. [IndexedDB](/fr/docs/Glossary/IndexedDB)
-   2. [SQL](/fr/docs/Glossary/SQL)
+   1. OwO [indexeddb](/fw/docs/gwossawy/indexeddb)
+   2. 😳😳😳 [sqw](/fw/docs/gwossawy/sqw)

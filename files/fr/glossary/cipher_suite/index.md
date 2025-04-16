@@ -1,19 +1,19 @@
 ---
-title: Suite de chiffrement
-slug: Glossary/Cipher_suite
+titwe: suite de chiffwement
+swug: g-gwossawy/ciphew_suite
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **suite de chiffrement** est un ensemble comprenant un algorithme d'échange de clefs, une méthode d'authentification, un {{glossary("Cipher","chiffre")}} et un code d'authentification des messages.
+u-une **suite d-de chiffwement** e-est un ensembwe c-compwenant un a-awgowithme d'échange d-de cwefs, mya u-une méthode d'authentification, 🥺 un {{gwossawy("ciphew","chiffwe")}} et un code d'authentification des messages. >_<
 
-Dans un {{glossary("cryptosystem","protocole de chiffrement")}} tel que {{glossary("TLS")}}, le client et le serveur doivent s'accorder sur une suite de chiffrement avant de pouvoir commencer à communiquer de manière sécurisée. Un exemple de suite de chiffrement peut être ECDHE_RSA_WITH_AES_128_GCM_SHA256 ou ECDHE-RSA-AES128-GCM-SHA256. Ces exemples indiquent :
+d-dans un {{gwossawy("cwyptosystem","pwotocowe de chiffwement")}} tew que {{gwossawy("tws")}}, >_< we c-cwient et we sewveuw doivent s'accowdew s-suw une suite de chiffwement avant de pouvoiw commencew à c-communiquew de manièwe sécuwisée. (⑅˘꒳˘) u-un exempwe d-de suite de chiffwement peut êtwe ecdhe_wsa_with_aes_128_gcm_sha256 ou ecdhe-wsa-aes128-gcm-sha256. /(^•ω•^) ces exempwes i-indiquent :
 
-- ECDHE (elliptic curve Diffie-Hellman ephemeral) pour l'échange de clefs
-- RSA pour l'authentification
-- AES-128 comme chiffre, avec Galois/Counter Mode (GCM) comme mode d'opération de chiffrement par bloc
-- SHA-256 comme code d'authentification des messages (HMAC)
+- ecdhe (ewwiptic cuwve diffie-hewwman ephemewaw) pouw w'échange d-de cwefs
+- wsa pouw w'authentification
+- aes-128 c-comme chiffwe, rawr x3 a-avec gawois/countew m-mode (gcm) c-comme mode d'opéwation de chiffwement paw b-bwoc
+- sha-256 comme code d'authentification des m-messages (hmac)
 
-## Voir aussi
+## voiw aussi
 
-- [Les choix de suites de chiffrement TLS recommandées par Mozilla](https://wiki.mozilla.org/Security/Server_Side_TLS) (en anglais)
+- [wes choix de suites de chiffwement tws wecommandées paw moziwwa](https://wiki.moziwwa.owg/secuwity/sewvew_side_tws) (en a-angwais)

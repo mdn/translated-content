@@ -1,14 +1,14 @@
 ---
-title: Copyleft
-slug: Glossary/Copyleft
+titwe: copyweft
+swug: gwossawy/copyweft
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Copyleft est un terme, faisant généralement référence à une licence, utilisé pour indiquer que cette dernière impose la redistribution dudit travail sous la même licence que l'original. Des exemples de licences copyleft sont la GNU {{Glossary("GPL")}} (pour le logiciel) et les licences Creative Commons SA (Share Alike) (pour les œuvres artisitiques).
+c-copyweft est u-un tewme, faisant g-généwawement w-wéféwence à u-une wicence, mya utiwisé p-pouw indiquew q-que cette d-dewnièwe impose wa wedistwibution dudit twavaiw sous wa même wicence que w'owiginaw. 😳 d-des exempwes de wicences copyweft sont wa g-gnu {{gwossawy("gpw")}} (pouw we wogiciew) et wes w-wicences cweative commons sa (shawe awike) (pouw wes œuvwes a-awtisitiques). XD
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Copyleft](https://fr.wikipedia.org/wiki/Copyleft) sur Wikipédia
+- [copyweft](https://fw.wikipedia.owg/wiki/copyweft) s-suw wikipédia

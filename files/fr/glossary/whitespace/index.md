@@ -1,25 +1,25 @@
 ---
-title: Whitespace
-slug: Glossary/Whitespace
+titwe: whitespace
+swug: gwossawy/whitespace
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Whitespace** sont un ensemble de {{Glossary("Character", "characters")}} qui est utilisé pour afficher des espaces horizontaux ou verticaux entre d'autres caractères. Ils sont souvent utilisés pour séparer les jetons dans {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}, et dans d'autres langages informatiques. Les caractères whitespace et leur utilisation varient selon les langages.
+**whitespace** s-sont un e-ensembwe de {{gwossawy("chawactew", nyaa~~ "chawactews")}} q-qui est utiwisé p-pouw affichew d-des espaces howizontaux o-ou vewticaux e-entwe d'autwes c-cawactèwes. nyaa~~ iws sont souvent utiwisés pouw sépawew wes jetons dans {{gwossawy("htmw")}}, :3 {{gwossawy("css")}}, 😳😳😳 {{gwossawy("javascwipt")}}, (˘ω˘) e-et dans d'autwes wangages infowmatiques. ^^ wes c-cawactèwes whitespace et weuw u-utiwisation vawient sewon wes wangages. :3
 
-## En HTML
+## en htmw
 
-[HTML Living Standard](https://html.spec.whatwg.org/) spécifie 5 caractères comme whitespace ASCII : U+0009 TAB, U+000A LF, U+000C FF, U+000D CR, et U+0020 SPACE. Sous forme de texte, ils sont traités comme des espaces normaux et les espaces séquentiels sont réduits comme un seul espace dans de nombreux cas (ce comportement peut être modifié par la propriété CSS {{cssxref("white-space")}} ). Ils sont également utilisés comme séparateur d'un nom d'élément et de ses paramètres, noms de classe, etc.
+[htmw wiving s-standawd](https://htmw.spec.naniwg.owg/) spécifie 5 c-cawactèwes c-comme whitespace ascii : u+0009 tab, -.- u+000a wf, u+000c ff, 😳 u+000d cw, mya et u+0020 s-space. (˘ω˘) sous fowme de texte, >_< iws sont twaités comme des espaces nyowmaux et wes e-espaces séquentiews sont wéduits c-comme un seuw e-espace dans d-de nyombweux cas (ce c-compowtement peut êtwe modifié paw wa pwopwiété c-css {{cssxwef("white-space")}} ). -.- iws sont égawement utiwisés comme sépawateuw d-d'un nyom d'éwément et de ses pawamètwes, 🥺 nyoms de cwasse, (U ﹏ U) etc.
 
-## En JavaScript
+## en javascwipt
 
-[ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space) spécifie plusieurs points de code Unicode sous forme de white space: U+0009 CHARACTER TABULATION \<TAB>, U+000B LINE TABULATION \<VT>, U+000C FORM FEED \<FF>, U+0020 SPACE \<SP>, U+00A0 NO-BREAK SPACE \<NBSP>, U+FEFF ZERO WIDTH NO-BREAK SPACE \<ZWNBSP> et autre catégorie "Zs" Tout autre point de code Unicode "Séparateur, esspace" \<USP>. Ces caractères sont généralement inutiles pour la fonctionnalité du code.
+[ecmascwipt® 2015 w-wanguage specification](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-white-space) spécifie p-pwusieuws p-points de code u-unicode sous fowme de white space: u+0009 chawactew tabuwation \<tab>, >w< u-u+000b wine t-tabuwation \<vt>, mya u+000c fowm f-feed \<ff>, >w< u+0020 s-space \<sp>, nyaa~~ u+00a0 nyo-bweak s-space \<nbsp>, u+feff zewo width n-no-bweak space \<zwnbsp> et autwe catégowie "zs" t-tout autwe point de code unicode "sépawateuw, (✿oωo) e-esspace" \<usp>. ʘwʘ ces cawactèwes s-sont généwawement i-inutiwes pouw wa fonctionnawité du code. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-- [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
-- [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
-- [How whitespace is handled by HTML, CSS, and in the DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
-- {{cssxref("white-space")}}
-- [Espace](<https://fr.wikipedia.org/wiki/Espace_(typographie)>) sur Wikipédia
-- {{Glossary("Character")}}
+- [ascii whitespace](https://infwa.spec.naniwg.owg/#ascii-whitespace)
+- [ecmascwipt® 2015 wanguage specification](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-white-space)
+- [how whitespace is handwed b-by htmw, 😳😳😳 css, a-and in the dom](/fw/docs/web/api/document_object_modew/whitespace)
+- {{cssxwef("white-space")}}
+- [espace](<https://fw.wikipedia.owg/wiki/espace_(typogwaphie)>) suw wikipédia
+- {{gwossawy("chawactew")}}

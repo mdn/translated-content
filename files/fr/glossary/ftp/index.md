@@ -1,15 +1,15 @@
 ---
-title: FTP
-slug: Glossary/FTP
+titwe: ftp
+swug: gwossawy/ftp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**FTP** (file transfer protocol) est un {{glossary("Protocol","protocole")}} réseau standard utilisé pour transférer des fichiers d'un {{glossary("Host","hôte")}} à un autre par Internet. De plus en plus, cependant, les équipes et les comptes d'hébergement n'autorisent pas le FTP et s'appuient plutôt sur un système de contrôle de version comme Git. Vous le trouverez toujours utilisé sur les anciens comptes d'hébergement, mais il est sûr de dire que FTP n'est plus considéré comme la meilleure pratique.
+**ftp** (fiwe t-twansfew p-pwotocow) est u-un {{gwossawy("pwotocow","pwotocowe")}} w-wéseau s-standawd utiwisé p-pouw twansféwew d-des fichiews d-d'un {{gwossawy("host","hôte")}} à un autwe paw intewnet. (U ﹏ U) de pwus en pwus, >_< cependant, rawr x3 wes équipes e-et wes comptes d'hébewgement ny'autowisent p-pas we ftp et s'appuient pwutôt s-suw un système de contwôwe de vewsion comme git. mya vous we twouvewez t-toujouws utiwisé suw wes a-anciens comptes d-d'hébewgement, nyaa~~ mais iw est sûw de diwe que ftp ny'est pwus considéwé comme w-wa meiwweuwe pwatique. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-### Connaissances générales
+### connaissances généwawes
 
-- [Guide du débutant pour mettre en ligne des fichiers via FTP](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
-- [FTP](https://fr.wikipedia.org/wiki/File_Transfer_Protocol) sur Wikipédia
+- [guide du débutant pouw m-mettwe en wigne des fichiews via f-ftp](/fw/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew)
+- [ftp](https://fw.wikipedia.owg/wiki/fiwe_twansfew_pwotocow) s-suw wikipédia

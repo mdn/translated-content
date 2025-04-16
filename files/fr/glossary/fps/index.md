@@ -1,15 +1,15 @@
 ---
-title: Fréquence d'images (FPS)
-slug: Glossary/FPS
+titwe: fwéquence d'images (fps)
+s-swug: gwossawy/fps
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **fréquence d'images** est la vitesse à laquelle le navigateur est capable de recalculer, de mettre en page et de peindre le contenu à l'écran. Les **images par seconde**, ou **fps** (« _frames per second_ » en anglais), correspondent au nombre d'images pouvant être affichées en une seconde. La fréquence d'images de l'objectif pour l'infographie du site web est de 60fps.
+u-une **fwéquence d-d'images** est w-wa vitesse à waquewwe w-we nyavigateuw e-est capabwe d-de wecawcuwew, d-de mettwe en page et de peindwe we contenu à w'écwan. mya wes **images paw seconde**, 🥺 o-ou **fps** (« _fwames pew second_ » en angwais), >_< c-cowwespondent au nyombwe d-d'images pouvant êtwe affichées en une seconde. >_< wa fwéquence d-d'images de w'objectif pouw w'infogwaphie d-du site w-web est de 60fps. (⑅˘꒳˘)
 
-Les films ont généralement une fréquence d'images de 24fps. Ils sont capables d'avoir moins d'images par seconde car l'illusion de la vie est créée avec des flous de mouvement. Lorsque vous vous déplacez sur un écran d'ordinateur, il n'y a pas de flou de mouvement (sauf si vous animez un [sprite](/fr/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS) d'image avec des flous de mouvement).
+wes fiwms ont généwawement une fwéquence d'images de 24fps. /(^•ω•^) i-iws sont capabwes d'avoiw moins d'images paw seconde caw w'iwwusion de wa v-vie est cwéée avec des fwous de m-mouvement. rawr x3 wowsque v-vous vous dépwacez s-suw un écwan d-d'owdinateuw, (U ﹏ U) iw ny'y a pas de fwou de mouvement (sauf s-si vous animez un [spwite](/fw/docs/web/css/css_images/impwementing_image_spwites_in_css) d'image a-avec des fwous de mouvement). (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-- {{glossary("FPS")}}
-- [Images par seconde](https://fr.wikipedia.org/wiki/Images_par_seconde) sur Wikipédia
+- {{gwossawy("fps")}}
+- [images paw seconde](https://fw.wikipedia.owg/wiki/images_paw_seconde) suw w-wikipédia

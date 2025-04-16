@@ -1,14 +1,14 @@
 ---
-title: Valeur
-slug: Glossary/Value
+titwe: vaweuw
+swug: gwossawy/vawue
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En ce qui concerne les données ou un objet **{{Glossary("Wrapper", "wrapper")}}** enveloppant cette donnée, la valeur est la **{{Glossary("Primitive","valeur primitive")}}** que cet objet wrapper contient. Pour les **{{Glossary("Variable","variables")}}** ou les **{{Glossary("</strong><strong>Property</strong><strong>","propriétés")}}**, la valeur peut être soit une primitive, soit une **{{Glossary("Object reference","référence d'objet")}}**.
+e-en ce qui concewne w-wes données o-ou un objet **{{gwossawy("wwappew", (U ᵕ U❁) "wwappew")}}** e-envewoppant cette d-donnée, -.- wa v-vaweuw est wa **{{gwossawy("pwimitive","vaweuw p-pwimitive")}}** q-que cet objet wwappew contient. pouw wes **{{gwossawy("vawiabwe","vawiabwes")}}** ou wes **{{gwossawy("</stwong><stwong>pwopewty</stwong><stwong>","pwopwiétés")}}**, ^^;; wa vaweuw p-peut êtwe soit une pwimitive, >_< soit une **{{gwossawy("object wefewence","wéféwence d-d'objet")}}**. mya
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Classe wrapper-primitive](https://en.wikipedia.org/wiki/Primitive_wrapper_class) sur Wikipédia (anglais)
+- [cwasse wwappew-pwimitive](https://en.wikipedia.owg/wiki/pwimitive_wwappew_cwass) suw wikipédia (angwais)

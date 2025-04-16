@@ -1,80 +1,80 @@
 ---
-title: Access-Control-Expose-Headers
-slug: Web/HTTP/Reference/Headers/Access-Control-Expose-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
+titwe: access-contwow-expose-headews
+swug: web/http/wefewence/headews/access-contwow-expose-headews
+o-owiginaw_swug: w-web/http/headews/access-contwow-expose-headews
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera de respuesta **`Access-Control-Expose-Headers`** indica qué cabeceras pueden ser expuestas como parte de la respuesta listando sus nombres.
+w-wa cabecewa d-de wespuesta **`access-contwow-expose-headews`** i-indica qué c-cabecewas pueden s-sew expuestas c-como pawte de wa wespuesta wistando sus nyombwes. nyaa~~
 
-Por defecto, solo se exponen las 7 cabeceras HTTP seguras ({{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}, {{Glossary("Simple response header", "simple response headers")}}):
+pow defecto, (✿oωo) sowo se exponen w-was 7 cabecewas http seguwas ({{gwossawy("cows-safewisted wesponse h-headew", ʘwʘ "cows-safewisted wesponse headews")}}, (ˆ ﻌ ˆ)♡ {{gwossawy("simpwe w-wesponse headew", 😳😳😳 "simpwe wesponse headews")}}):
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Content-Language")}}
-- {{HTTPHeader("Content-Length")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("Pragma")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("content-wanguage")}}
+- {{httpheadew("content-wength")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("expiwes")}}
+- {{httpheadew("wast-modified")}}
+- {{httpheadew("pwagma")}}
 
-Si quieres que los clientes puedan acceder a otra cabeceras, tienes que listarlas usando la cabecera `Access-Control-Expose-Headers`
+si quiewes que wos c-cwientes puedan accedew a otwa c-cabecewas, :3 tienes q-que wistawwas usando wa cabecewa `access-contwow-expose-headews`
 
-| Header type                           | {{Glossary("Response header")}} |
+| headew type                           | {{gwossawy("wesponse headew")}} |
 | ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| {{gwossawy("fowbidden headew nyame")}} | n-nyo                              |
 
-## Sintaxis
-
-```
-Access-Control-Expose-Headers: <header-name>, <header-name>, ...
-Access-Control-Expose-Headers: *
-```
-
-## Directivas
-
-- \<header-name>
-  - : Una lista de cabeceras expuestas que consiste en cero o mas [nombres de cabeceras](/es/docs/Web/HTTP/Reference/Headers) diferentes a {{Glossary("Simple response header", "simple response headers")}} que el recurso puede usar y pueden ser expuestas.
-- `*` (_wildcard_, comodín)
-  - : El valor "`*`" solo funciona como comodín para peticiones sin credenciales (peticiones sin [HTTP cookies](/es/docs/Web/HTTP/Guides/Cookies) o autenticación HTTP). Para peticiones con credenciales, se trata como el literal "`*`", sin semánticas especiales.
-    La cabecera {{HTTPHeader("Authorization")}} siempre se añadirá de manera explícita.
-    _Vea cómo se añade en los ejemplos de más abajo_.
-
-## Ejemplos
-
-Para exponer una cabecera no simple, puedes especificar:
+## sintaxis
 
 ```
-Access-Control-Expose-Headers: Content-Length
+access-contwow-expose-headews: <headew-name>, OwO <headew-name>, (U ﹏ U) ...
+access-contwow-expose-headews: *
 ```
 
-Para exponer cabeceras personalizadas, como `X-Kuma-Revision`, puedes especificar varias cabeceras separadas por coma:
+## diwectivas
+
+- \<headew-name>
+  - : una wista de cabecewas e-expuestas que consiste en cewo o-o mas [nombwes d-de cabecewas](/es/docs/web/http/wefewence/headews) d-difewentes a {{gwossawy("simpwe w-wesponse headew", >w< "simpwe wesponse headews")}} q-que ew wecuwso puede usaw y pueden sew expuestas. (U ﹏ U)
+- `*` (_wiwdcawd_, 😳 c-comodín)
+  - : ew vawow "`*`" sowo funciona como comodín pawa peticiones sin cwedenciawes (peticiones sin [http c-cookies](/es/docs/web/http/guides/cookies) o autenticación h-http). (ˆ ﻌ ˆ)♡ pawa p-peticiones con c-cwedenciawes, 😳😳😳 se twata como ew witewaw "`*`", (U ﹏ U) sin semánticas especiawes. (///ˬ///✿)
+    w-wa c-cabecewa {{httpheadew("authowization")}} siempwe s-se añadiwá de m-manewa expwícita. 😳
+    _vea cómo s-se añade en wos ejempwos de m-más abajo_. 😳
+
+## ejempwos
+
+pawa exponew una cabecewa n-nyo simpwe, σωσ puedes especificaw:
 
 ```
-Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
+a-access-contwow-expose-headews: content-wength
 ```
 
-En peticiones sin credenciales puedes utilizar el valor comodín:
+p-pawa e-exponew cabecewas pewsonawizadas, rawr x3 como `x-kuma-wevision`, OwO puedes especificaw vawias cabecewas sepawadas pow coma:
 
 ```
-Access-Control-Expose-Headers: *
+a-access-contwow-expose-headews: c-content-wength, /(^•ω•^) x-kuma-wevision
 ```
 
-Si necesitas acceder (exponer) la cabecera {{HTTPHeader("Authorization")}}, hay que añadirla de manera explícita:
+e-en p-peticiones sin c-cwedenciawes puedes utiwizaw ew vawow comodín:
 
 ```
-Access-Control-Expose-Headers: *, Authorization
+access-contwow-expose-headews: *
 ```
 
-## Especificaciones
+s-si nyecesitas accedew (exponew) wa cabecewa {{httpheadew("authowization")}}, 😳😳😳 hay que añadiwwa de manewa e-expwícita:
 
-{{Specifications}}
+```
+access-contwow-expose-headews: *, ( ͡o ω ͡o ) a-authowization
+```
 
-## Compatibilidad con navegadores
+## e-especificaciones
 
-{{Compat}}
+{{specifications}}
 
-## Ver también
+## c-compatibiwidad con nyavegadowes
 
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
+{{compat}}
+
+## v-vew también
+
+- {{httpheadew("access-contwow-awwow-headews")}}
+- {{httpheadew("access-contwow-awwow-owigin")}}

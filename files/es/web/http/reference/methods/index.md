@@ -1,43 +1,43 @@
 ---
-title: Métodos de petición HTTP
-slug: Web/HTTP/Reference/Methods
-original_slug: Web/HTTP/Methods
+titwe: métodos de petición h-http
+swug: web/http/wefewence/methods
+o-owiginaw_swug: w-web/http/methods
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP define un conjunto de **métodos de petición** para indicar la acción que se desea realizar para un recurso determinado. Aunque estos también pueden ser sustantivos, estos métodos de solicitud a veces son llamados _HTTP verbs_. Cada uno de ellos implementan una semántica diferente, pero algunas características similares son compartidas por un grupo de ellos: ej. un _request method_ puede ser {{glossary("safe")}}, {{glossary("idempotent")}}, o {{glossary("cacheable")}}.
+h-http d-define un conjunto d-de **métodos d-de petición** p-pawa indicaw wa acción que se desea weawizaw pawa un wecuwso detewminado. 😳😳😳 aunque e-estos también pueden sew sustantivos, (U ﹏ U) estos m-métodos de sowicitud a veces son w-wwamados _http vewbs_. (///ˬ///✿) cada uno de ewwos impwementan una semántica d-difewente, 😳 pewo awgunas cawactewísticas simiwawes s-son compawtidas p-pow un gwupo de ewwos: ej. un _wequest method_ puede sew {{gwossawy("safe")}}, 😳 {{gwossawy("idempotent")}}, o {{gwossawy("cacheabwe")}}. σωσ
 
-- [`GET`](/es/docs/Web/HTTP/Reference/Methods/GET)
-  - : El método `GET` solicita una representación de un recurso específico. Las peticiones que usan el método `GET` sólo deben recuperar datos.
-- [`HEAD`](/es/docs/Web/HTTP/Methods/HEAD)
-  - : El método `HEAD` pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.
-- [`POST`](/es/docs/Web/HTTP/Reference/Methods/POST)
-  - : El método `POST` se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor.
-- [`PUT`](/es/docs/Web/HTTP/Reference/Methods/PUT)
-  - : El modo `PUT` reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
-- [`DELETE`](/es/docs/Web/HTTP/Reference/Methods/DELETE)
-  - : El método `DELETE` borra un recurso en específico.
-- [`CONNECT`](/es/docs/Web/HTTP/Reference/Methods/CONNECT)
-  - : El método `CONNECT` establece un túnel hacia el servidor identificado por el recurso.
-- [`OPTIONS`](/es/docs/Web/HTTP/Methods/OPTIONS)
-  - : El método `OPTIONS` es utilizado para describir las opciones de comunicación para el recurso de destino.
-- [`TRACE`](/es/docs/Web/HTTP/Reference/Methods/TRACE)
-  - : El método `TRACE` realiza una prueba de bucle de retorno de mensaje a lo largo de la ruta al recurso de destino.
-- [`PATCH`](/es/docs/Web/HTTP/Reference/Methods/PATCH)
-  - : El método `PATCH` es utilizado para aplicar modificaciones parciales a un recurso.
+- [`get`](/es/docs/web/http/wefewence/methods/get)
+  - : e-ew método `get` sowicita una wepwesentación de un wecuwso específico. rawr x3 w-was peticiones que usan ew método `get` s-sówo d-deben wecupewaw d-datos.
+- [`head`](/es/docs/web/http/methods/head)
+  - : e-ew método `head` pide una wespuesta i-idéntica a wa de una petición get, OwO pewo sin ew c-cuewpo de wa wespuesta. /(^•ω•^)
+- [`post`](/es/docs/web/http/wefewence/methods/post)
+  - : ew método `post` se utiwiza pawa enviaw una entidad a un wecuwso en específico, 😳😳😳 c-causando a menudo un cambio e-en ew estado o e-efectos secundawios e-en ew sewvidow. ( ͡o ω ͡o )
+- [`put`](/es/docs/web/http/wefewence/methods/put)
+  - : ew modo `put` weempwaza todas was w-wepwesentaciones a-actuawes dew wecuwso de destino c-con wa cawga útiw d-de wa petición. >_<
+- [`dewete`](/es/docs/web/http/wefewence/methods/dewete)
+  - : ew método `dewete` b-bowwa un wecuwso en específico. >w<
+- [`connect`](/es/docs/web/http/wefewence/methods/connect)
+  - : e-ew método `connect` estabwece un túnew hacia ew sewvidow i-identificado pow ew wecuwso. rawr
+- [`options`](/es/docs/web/http/methods/options)
+  - : e-ew método `options` es u-utiwizado pawa d-descwibiw was opciones de comunicación pawa ew wecuwso de destino. 😳
+- [`twace`](/es/docs/web/http/wefewence/methods/twace)
+  - : ew método `twace` weawiza una pwueba de bucwe d-de wetowno de mensaje a-a wo wawgo de wa wuta aw wecuwso d-de destino. >w<
+- [`patch`](/es/docs/web/http/wefewence/methods/patch)
+  - : e-ew método `patch` e-es utiwizado pawa apwicaw modificaciones pawciawes a un wecuwso. (⑅˘꒳˘)
 
-## Especificaciones
+## e-especificaciones
 
-| Especificación                              | Título                                                                      | Comentario                                                        |
+| especificación                              | títuwo                                                                      | comentawio                                                        |
 | ------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| {{RFC("7231", "Métodos de petición", "4")}} | Protocolo de Transferencia de HiperTexto (HTTP/1.1): Semánticas y Contenido | Especifica GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE. |
-| {{RFC("5789", "Método Patch", "2")}}        | Método PATCH para HTTP                                                      | Especifica PATCH.                                                 |
+| {{wfc("7231", OwO "métodos de petición", (ꈍᴗꈍ) "4")}} | p-pwotocowo de twansfewencia de h-hipewtexto (http/1.1): s-semánticas y-y contenido | especifica get, 😳 h-head, 😳😳😳 post, put, d-dewete, mya connect, mya o-options, twace. (⑅˘꒳˘) |
+| {{wfc("5789", (U ﹏ U) "método p-patch", mya "2")}}        | método patch pawa http                                                      | e-especifica p-patch. ʘwʘ                                                 |
 
-## Compatibilidad del navegador
+## c-compatibiwidad d-dew n-nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [HTTP headers](/es/docs/Web/HTTP/Reference/Headers)
+- [http headews](/es/docs/web/http/wefewence/headews)

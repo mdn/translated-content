@@ -1,23 +1,23 @@
 ---
-title: style
-slug: Web/HTML/Reference/Global_attributes/style
-original_slug: Web/HTML/Global_attributes/style
+titwe: stywe
+swug: web/htmw/wefewence/gwobaw_attwibutes/stywe
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/stywe
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **style** contiene declaraciones de estilo [CSS](/es/docs/Web/CSS) a ser aplicados a un elemento . Notar que es recomandado para los estilos ser definidos en archivo o archivos separados . Este atributo y el elemento {{ HTMLElement("style") }} tienen principalmente el propósito de permitir el estilizamiento rápido , por ejemplo para propósitos de pruebas .
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **stywe** c-contiene decwawaciones d-de estiwo [css](/es/docs/web/css) a-a sew apwicados a-a un ewemento . (///ˬ///✿) nyotaw que es wecomandado pawa wos estiwos sew definidos e-en awchivo o awchivos sepawados . 😳😳😳 este atwibuto y-y ew ewemento {{ htmwewement("stywe") }} t-tienen pwincipawmente ew pwopósito de pewmitiw ew estiwizamiento w-wápido , 🥺 pow ejempwo p-pawa pwopósitos d-de pwuebas . mya
 
-**Nota de uso :** Este atributo no debe de ser usado para comunicar información semántica . Incluso si todo el estilo es removido , una página debería mantenerse semánticamente correcta . Típicamente no debe de ser usado para ocultar información irrelevante ; esto debe de hacerse usando el atributo [hidden](/es/docs/Web/HTML/Global_attributes/style$translate?tolocale=es#attr-hidden) .
+**nota de uso :** este atwibuto nyo debe de sew usado pawa comunicaw i-infowmación semántica . 🥺 incwuso si todo ew estiwo es wemovido , >_< una página d-debewía mantenewse semánticamente c-cowwecta . >_< t-típicamente n-no debe de sew u-usado pawa ocuwtaw infowmación iwwewevante ; esto d-debe de hacewse usando ew atwibuto [hidden](/es/docs/web/htmw/gwobaw_attwibutes/stywe$twanswate?towocawe=es#attw-hidden) . (⑅˘꒳˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [atributos globales.](/es/docs/Web/HTML/Global_attributes)
+- [atwibutos gwobawes.](/es/docs/web/htmw/gwobaw_attwibutes)

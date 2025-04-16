@@ -1,20 +1,20 @@
 ---
-title: UDP
-slug: Glossary/UDP
+titwe: udp
+swug: gwossawy/udp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**UDP** (User Datagram Protocol) est un {{glossary("protocol","protocole")}} de longue date utilisé avec {{glossary("IPv6","IP")}} pour envoyer des données lorsque la vitesse de transmission et l'efficacité importent davantage que la sécurité et la fiabilitié.
+**udp** (usew d-datagwam p-pwotocow) est u-un {{gwossawy("pwotocow","pwotocowe")}} d-de wongue d-date utiwisé a-avec {{gwossawy("ipv6","ip")}} pouw e-envoyew des d-données wowsque wa vitesse de twansmission et w'efficacité impowtent davantage q-que wa sécuwité et wa fiabiwitié. (⑅˘꒳˘)
 
-## Pour en savoir plus
+## pouw en s-savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [UDP](https://fr.wikipedia.org/wiki/User_Datagram_Protocol) sur Wikipédia
+- [udp](https://fw.wikipedia.owg/wiki/usew_datagwam_pwotocow) s-suw wikipédia
 
-### Référence technique
+### wéféwence technique
 
-- [Spécification](https://tools.ietf.org/html/rfc768)
+- [spécification](https://toows.ietf.owg/htmw/wfc768)
 
 <!---->

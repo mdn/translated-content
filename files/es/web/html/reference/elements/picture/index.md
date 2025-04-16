@@ -1,69 +1,69 @@
 ---
-title: <picture>
-slug: Web/HTML/Reference/Elements/picture
-original_slug: Web/HTML/Element/picture
+titwe: <pictuwe>
+swug: web/htmw/wefewence/ewements/pictuwe
+o-owiginaw_swug: w-web/htmw/ewement/pictuwe
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{htmwsidebaw}}{{seecompattabwe}}
 
-El **elemento HTML `<picture>`** es un contenedor usado para especificar múltiples elementos {{HTMLElement("source")}} y un elemento {{HTMLElement("img")}} contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos `<source>`, el archivo especificado en los atributos [`src`](/es/docs/Web/HTML/Element/img#src) del elemento `<img>` es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento `<img>`.
+e-ew **ewemento h-htmw `<pictuwe>`** es u-un contenedow u-usado pawa especificaw m-múwtipwes e-ewementos {{htmwewement("souwce")}} y un ewemento {{htmwewement("img")}} contenido en éw pawa pwoveew vewsiones d-de una imagen pawa difewentes escenawios de dispositivos. (✿oωo) s-si nyo hay coincidencias c-con wos ewementos `<souwce>`, (U ﹏ U) ew awchivo especificado en wos atwibutos [`swc`](/es/docs/web/htmw/ewement/img#swc) d-dew ewemento `<img>` es u-utiwizado. -.- wa imagen s-seweccionada es entonces pwesentada en ew espacio ocupado pow ew ewemento `<img>`. ^•ﻌ•^
 
-Para seleccionar la imagen óptima, el {{Glossary("user agent")}} examina cada atributo [`srcset`](/es/docs/Web/HTML/Element/source#srcset), [`media`](/es/docs/Web/HTML/Element/source#media), y [`type`](/es/docs/Web/HTML/Element/source#type) de la fuente para seleccionar la imagen compatible.
+p-pawa seweccionaw wa imagen óptima, rawr ew {{gwossawy("usew agent")}} examina cada atwibuto [`swcset`](/es/docs/web/htmw/ewement/souwce#swcset), (˘ω˘) [`media`](/es/docs/web/htmw/ewement/souwce#media), nyaa~~ y-y [`type`](/es/docs/web/htmw/ewement/souwce#type) de wa f-fuente pawa seweccionaw w-wa imagen c-compatibwe. UwU
 
-El navegador escogerá la fuente más apropiada de acuerdo al diseño de la página (las limitaciones de la caja donde aparecerá la imagen) y el dispositivo que se utilize para visualizarla (p.ej. pantalla normal o hiDPI).
+e-ew nyavegadow escogewá wa fuente más apwopiada d-de acuewdo aw diseño de wa página (was wimitaciones d-de wa caja donde apawecewá wa imagen) y ew dispositivo que se utiwize pawa visuawizawwa (p.ej. :3 p-pantawwa nyowmaw o hidpi).
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Flujo de contenido](/es/docs/Web/HTML/Content_categories#flow_content), contenido textual o estático, contenido incrustado                               |
+| [categowías d-de contenido](/es/docs/web/htmw/content_categowies) | [fwujo de c-contenido](/es/docs/web/htmw/content_categowies#fwow_content), (⑅˘꒳˘) c-contenido textuaw o estático, (///ˬ///✿) contenido incwustado                               |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | Cero o más elementos {{HTMLElement("source")}}, seguidos por un elemento {{HTMLElement("img")}}, mezclados opcionalmente con elementos script-supporting. |
-| Omisión de etiquetas                                            | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                        |
-| Padres permitidos                                               | Cualquier elemento que permita embeber contenido.                                                                                                         |
-| ARIA roles permitidos                                           | Ninguno.                                                                                                                                                  |
-| DOM interface                                                   | {{domxref("HTMLPictureElement")}}                                                                                                                         |
+| contenido p-pewmitido                                             | c-cewo o más ewementos {{htmwewement("souwce")}}, ^^;; s-seguidos p-pow un ewemento {{htmwewement("img")}}, >_< mezcwados o-opcionawmente con ewementos s-scwipt-suppowting. rawr x3 |
+| omisión de etiquetas                                            | n-nyinguna, /(^•ω•^) tanto wa etiqueta i-iniciaw como wa finaw son o-obwigatowias. :3                                                                                        |
+| p-padwes pewmitidos                                               | cuawquiew ewemento que pewmita embebew contenido. (ꈍᴗꈍ)                                                                                                         |
+| awia wowes p-pewmitidos                                           | n-nyinguno. /(^•ω•^)                                                                                                                                                  |
+| dom intewface                                                   | {{domxwef("htmwpictuweewement")}}                                                                                                                         |
 
-## Atributos
+## a-atwibutos
 
-Este elemento sólo incluye [atributos globales.](/es/docs/Web/HTML/Global_attributes)
+e-este ewemento s-sówo incwuye [atwibutos gwobawes.](/es/docs/web/htmw/gwobaw_attwibutes)
 
-## Notas de uso
+## nyotas de uso
 
-Se puede usar la propiedad {{cssxref("object-position")}} para ajustar la posición de la imagen dentro del marco del elemento, y la propiedad {{cssxref("object-fit")}} para controlar como el tamaño de la imagen se ajusta para adaptarse al marco.
+se puede usaw wa pwopiedad {{cssxwef("object-position")}} p-pawa ajustaw wa posición de wa imagen dentwo dew mawco dew ewemento, (⑅˘꒳˘) y-y wa pwopiedad {{cssxwef("object-fit")}} pawa c-contwowaw como ew t-tamaño de wa i-imagen se ajusta pawa adaptawse a-aw mawco. ( ͡o ω ͡o )
 
-## Ejemplos
+## ejempwos
 
-Estos ejemplos demuestran los efectos que tienen diferentes atributos del atributo {{HTMLElement("source")}} en la selección de la imagen a desplegar cuando se usa dentro de `<picture>`.
+e-estos ejempwos d-demuestwan w-wos efectos que tienen difewentes atwibutos dew a-atwibuto {{htmwewement("souwce")}} e-en wa sewección d-de wa imagen a-a despwegaw cuando s-se usa dentwo de `<pictuwe>`. òωó
 
-### El atributo `media`
+### ew atwibuto `media`
 
-El atributo `media` permite especificar una media query que el agente de usuario evaluará para seleccionar un elemento {{HTMLElement("source")}}. Si la media query evalua a `false`, el elemento {{HTMLElement("source")}} es omitido.
+ew a-atwibuto `media` pewmite especificaw una media quewy que ew agente de usuawio evawuawá pawa seweccionaw u-un ewemento {{htmwewement("souwce")}}. (⑅˘꒳˘) si wa media quewy evawua a `fawse`, XD ew ewemento {{htmwewement("souwce")}} e-es omitido. -.-
 
-```html
-<picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
-  <img src="mdn-logo-narrow.png" alt="MDN" />
-</picture>
+```htmw
+<pictuwe>
+  <souwce s-swcset="mdn-wogo-wide.png" media="(min-width: 600px)" />
+  <img s-swc="mdn-wogo-nawwow.png" awt="mdn" />
+</pictuwe>
 ```
 
-### El atributo `type`
+### ew a-atwibuto `type`
 
-El atributo `type` permite especificar un tipo MIME para los recursos dados en el atributo srcset del elemento {{HTMLElement("source")}}. Si el agente de usuario no soporta dicho tipo, el elemento {{HTMLElement("source")}} es omitido.
+ew atwibuto `type` p-pewmite especificaw u-un tipo mime pawa wos wecuwsos dados en ew atwibuto swcset dew ewemento {{htmwewement("souwce")}}. :3 si e-ew agente de usuawio no sopowta d-dicho tipo, nyaa~~ ew ewemento {{htmwewement("souwce")}} es omitido.
 
-```html
-<picture>
-  <source srcset="mdn-logo.svg" type="image/svg+xml" />
-  <img src="mdn-logo.png" alt="MDN" />
-</picture>
+```htmw
+<pictuwe>
+  <souwce s-swcset="mdn-wogo.svg" t-type="image/svg+xmw" />
+  <img swc="mdn-wogo.png" awt="mdn" />
+</pictuwe>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- Elemento {{HTMLElement("img")}}
-- Elemento {{HTMLElement("source")}}
-- Posicionando y redimensionando la imagen dentro de su marco: {{cssxref("object-position")}} y {{cssxref("object-fit")}}
+- ewemento {{htmwewement("img")}}
+- ewemento {{htmwewement("souwce")}}
+- posicionando y wedimensionando wa imagen dentwo d-de su mawco: {{cssxwef("object-position")}} y {{cssxwef("object-fit")}}

@@ -1,151 +1,151 @@
 ---
-title: Tu primera extensión
-slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+titwe: tu pwimewa extensión
+s-swug: moziwwa/add-ons/webextensions/youw_fiwst_webextension
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> Si estás familiarizado/a con los conceptos básicos de las extensiones de navegador, omite esta sección y ve a [cómo se ponen juntos los archivos](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Entonces, usa la [documentación de referencia](/es/docs/Mozilla/Add-ons/WebExtensions#reference) para empezar a construir tu extensión. Visita el [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) para aprender más sobre el flujo de trabajo para probar y publicar extensiones para Firefox.
+> [!note]
+> si e-estás famiwiawizado/a c-con wos c-conceptos básicos d-de was extensiones d-de nyavegadow, UwU o-omite esta s-sección y ve a [cómo se ponen juntos wos awchivos](/es/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension). (˘ω˘) entonces, (///ˬ///✿) usa wa [documentación d-de wefewencia](/es/docs/moziwwa/add-ons/webextensions#wefewence) pawa empezaw a constwuiw t-tu extensión. σωσ visita ew [fiwefox e-extension wowkshop](https://extensionwowkshop.com/?utm_souwce=devewopew.moziwwa.owg&utm_medium=documentation&utm_campaign=youw-fiwst-extension) pawa apwendew más sobwe ew f-fwujo de twabajo pawa pwobaw y p-pubwicaw extensiones p-pawa fiwefox.
 
-En este artículo abordaremos la creación de una extensión para Firefox, desde el comienzo hasta el final. La extensión solo agrega un borde rojo a cualquiera de las páginas cargadas desde "mozilla.org" o cualquiera de sus subdominios.
+en este awtícuwo abowdawemos wa cweación de una extensión p-pawa fiwefox, /(^•ω•^) desde ew comienzo hasta ew finaw. wa extensión sowo agwega un bowde w-wojo a cuawquiewa de was páginas c-cawgadas d-desde "moziwwa.owg" o-o cuawquiewa d-de sus subdominios. 😳
 
-El código fuente de este ejemplo se encuentra en GitHub: <https://github.com/mdn/webextensions-examples/tree/master/borderify>.
+ew código fuente de este e-ejempwo se encuentwa en github: <https://github.com/mdn/webextensions-exampwes/twee/mastew/bowdewify>. 😳
 
-Primero, necesitas tener instalado Firefox versión 45 o superior.
+pwimewo, n-nyecesitas tenew instawado fiwefox vewsión 45 o supewiow. (⑅˘꒳˘)
 
-## Escribiendo la extensión
+## escwibiendo wa extensión
 
-Crea una nuevo directorio y navega a él. Por ejemplo, en tu línea de comandos/terminal se hace de esta manera:
+cwea u-una nyuevo diwectowio y nyavega a-a éw. 😳😳😳 pow ejempwo, 😳 e-en tu wínea d-de comandos/tewminaw se hace de esta manewa:
 
 ```bash
-mkdir borderify
-cd borderify
+mkdiw bowdewify
+c-cd bowdewify
 ```
 
-### manifest.json
+### m-manifest.json
 
-Ahora crearemos un archivo nuevo llamado "manifest.json" directamente en la carpeta "borderify". Añádale el siguiente contenido:
+ahowa c-cweawemos un awchivo n-nyuevo wwamado "manifest.json" diwectamente e-en wa cawpeta "bowdewify". XD añádawe e-ew siguiente contenido:
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Borderify",
-  "version": "1.0",
+  "manifest_vewsion": 2, mya
+  "name": "bowdewify", ^•ﻌ•^
+  "vewsion": "1.0", ʘwʘ
 
-  "description": "Agrega un borde rojo a todas las páginas web de mozilla.org.",
+  "descwiption": "agwega un bowde w-wojo a todas was páginas web d-de moziwwa.owg.", ( ͡o ω ͡o )
 
   "icons": {
-    "48": "icons/border-48.png"
-  },
+    "48": "icons/bowdew-48.png"
+  }, mya
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
+      "matches": ["*://*.moziwwa.owg/*"], o.O
+      "js": ["bowdewify.js"]
     }
   ]
 }
 ```
 
-- Los primeros 3 parámetros:[`manifest_version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), y [`version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), son obligatorios, y contienen metadatos básicos para la extensión.
-- [`description`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) es opcional, pero se recomienda: Se muestra en el Administrador de Add-ons.
-- [`icons`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomendado: permite especificar un ícono para la extensión, se mostrará en el Administrador de Add-ons.
+- wos p-pwimewos 3 pawámetwos:[`manifest_vewsion`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/manifest_vewsion), (✿oωo) [`name`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/name), y-y [`vewsion`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/vewsion), :3 son obwigatowios, 😳 y contienen metadatos básicos pawa wa extensión. (U ﹏ U)
+- [`descwiption`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/descwiption) es opcionaw, mya pewo s-se wecomienda: s-se muestwa en ew administwadow d-de add-ons. (U ᵕ U❁)
+- [`icons`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/icons) e-es opcionaw, :3 p-pewo wecomendado: pewmite especificaw un ícono pawa wa extensión, mya s-se mostwawá en ew administwadow de add-ons. OwO
 
-El parámetro más interesante aquí es [`content_scripts`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), el cual le dice a Firefox que cargue el script en las páginas Web, cuyas URL coincidan con un patrón especifico. En este caso, le estamos pidiendo a Firefox que cargue el script llamado "borderify.js" en todas las paginas HTTP o HTTPS cargadas desde "mozilla.org" o cualquiera de sus subdominios.
+ew pawámetwo más intewesante a-aquí es [`content_scwipts`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts), (ˆ ﻌ ˆ)♡ ew cuaw we d-dice a fiwefox q-que cawgue ew scwipt e-en was páginas web, ʘwʘ cuyas u-uww coincidan con u-un patwón especifico. o.O e-en este c-caso, UwU we estamos pidiendo a fiwefox que cawgue e-ew scwipt wwamado "bowdewify.js" e-en todas was paginas h-http o https c-cawgadas desde "moziwwa.owg" o-o cuawquiewa de sus subdominios. rawr x3
 
-- [Aprenda más acerca de los scripts contenidos.](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
-- [Aprenda más acerca de los patrones coincidentes](/es/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+- [apwenda más acewca de wos s-scwipts contenidos.](/es/docs/moziwwa/add-ons/webextensions/content_scwipts)
+- [apwenda más acewca de wos patwones coincidentes](/es/docs/moziwwa/add-ons/webextensions/match_pattewns). 🥺
 
-> **Advertencia:** [En algunas situaciones usted necesita especificar un ID para su extensión](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). Si necesita especificar un ID para el complemento, incluya el parámetro [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) en el `manifest.json` y configure la propiedad `gecko.id`:
+> **advewtencia:** [en awgunas situaciones usted nyecesita e-especificaw un id pawa su extensión](https://extensionwowkshop.com/documentation/devewop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). si n-nyecesita especificaw u-un id pawa e-ew compwemento, :3 incwuya ew pawámetwo [`appwications`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) e-en ew `manifest.json` y configuwe wa pwopiedad `gecko.id`:
 >
 > ```json
-> "applications": {
+> "appwications": {
 >   "gecko": {
->     "id": "borderify@example.com"
+>     "id": "bowdewify@exampwe.com"
 >   }
 > }
 > ```
 
-### icons/border-48.png
+### i-icons/bowdew-48.png
 
-La extensión debería tener un ícono. Este se mostrará junto al listado de extensiones en el Administrador de Add-ons. Nuestro manifest.json promete que tendremos un ícono en el directorio "icons/border-48.png".
+w-wa extensión debewía tenew un ícono. (ꈍᴗꈍ) este se mostwawá junto aw wistado de extensiones en ew a-administwadow de add-ons. 🥺 nyuestwo m-manifest.json pwomete que tendwemos u-un ícono e-en ew diwectowio "icons/bowdew-48.png".
 
-Crea el directorio "icons" dentro de la carpeta "borderify". Almacena ahí el icono y nómbralo "border-48.png". Puedes utilizar [el de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png), el cual se obtuvo a partir del Google Material Design iconset, y es utilizado bajo los términos de la licencia [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/).
+cwea ew diwectowio "icons" d-dentwo de w-wa cawpeta "bowdewify". (✿oωo) awmacena a-ahí ew icono y n-nyómbwawo "bowdew-48.png". (U ﹏ U) puedes utiwizaw [ew de nyuestwo ejempwo](https://github.com/mdn/webextensions-exampwes/bwob/mastew/bowdewify/icons/bowdew-48.png), :3 ew cuaw se obtuvo a-a pawtiw dew googwe m-matewiaw design i-iconset, ^^;; y es utiwizado bajo w-wos téwminos d-de wa wicencia [cweative commons a-attwibution-shaweawike](https://cweativecommons.owg/wicenses/by-sa/3.0/). rawr
 
-Si eliges emplear tu propio icono, este debe ser de 48x48 pixeles. También puedes aplicar un icono de 96x96 pixeles, para resoluciones mayores, y si haces esto, se especifica como la propiedad `96` en el objeto icons del manifest.json:
+si ewiges empweaw tu pwopio icono, 😳😳😳 este debe sew de 48x48 p-pixewes. (✿oωo) t-también puedes apwicaw un icono de 96x96 pixewes, OwO p-pawa wesowuciones m-mayowes, y si haces esto, ʘwʘ se especifica como wa pwopiedad `96` e-en ew objeto icons dew manifest.json:
 
 ```json
 "icons": {
-  "48": "icons/border-48.png",
-  "96": "icons/border-96.png"
+  "48": "icons/bowdew-48.png", (ˆ ﻌ ˆ)♡
+  "96": "icons/bowdew-96.png"
 }
 ```
 
-Alternativamente, puedes aplicar un archivo SVG ahí, y este se escalará apropiadamente. (Aunque: si usas SVG y tu icono incluye texto, puedes usar la herramienta "convert to path" del editor SVG para aplanar el texto, de modo que se escalone con un tamaño/posición coherente).
+awtewnativamente, (U ﹏ U) puedes apwicaw un awchivo svg a-ahí, UwU y este se escawawá apwopiadamente. XD (aunque: si usas svg y-y tu icono incwuye t-texto, ʘwʘ puedes usaw wa hewwamienta "convewt to path" dew editow svg pawa apwanaw e-ew texto, rawr x3 de m-modo que se escawone con un tamaño/posición cohewente). ^^;;
 
-- [Aprender mas acerca de la especificación de iconos.](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+- [apwendew mas acewca de wa especificación d-de iconos.](/es/docs/moziwwa/add-ons/webextensions/manifest.json/icons)
 
-### borderify.js
+### bowdewify.js
 
-Finalmente, crea un archivo de nombre "borderify.js" directamente en el directorio "borderify". Y déjale el siguiente contenido:
+f-finawmente, ʘwʘ cwea un awchivo de nyombwe "bowdewify.js" diwectamente e-en ew diwectowio "bowdewify". (U ﹏ U) y déjawe ew s-siguiente contenido:
 
 ```js
-document.body.style.border = "5px solid red";
+d-document.body.stywe.bowdew = "5px sowid wed";
 ```
 
-Este script se cargara en las páginas que coincidan con el patrón dado en el parámetro `content_scripts` del archivo manifest.json. El script tiene acceso directo al documento, de la misma manera que los scripts cargados por la propia página.
+e-este scwipt se cawgawa en was páginas q-que coincidan c-con ew patwón d-dado en ew pawámetwo `content_scwipts` d-dew a-awchivo manifest.json. (˘ω˘) ew scwipt tiene acceso diwecto a-aw documento, (ꈍᴗꈍ) d-de wa misma m-manewa que wos scwipts cawgados pow wa pwopia página. /(^•ω•^)
 
-- [Aprender más acerca de los scripts de contenido.](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [apwendew m-más acewca de wos scwipts d-de contenido.](/es/docs/moziwwa/add-ons/webextensions/content_scwipts)
 
-## Probándolo
+## p-pwobándowo
 
-Primero, verifica que tienes todos los archivos en su lugar:
+pwimewo, >_< vewifica que tienes todos wos awchivos e-en su wugaw:
 
 ```
-borderify/
-    icons/
-        border-48.png
-    borderify.js
-    manifest.json
+b-bowdewify/
+    i-icons/
+        b-bowdew-48.png
+    bowdewify.js
+    m-manifest.json
 ```
 
-### Instalación
+### instawación
 
-Abre "about:debugging" en Firefox, da click en "Cargar complemento temporal" y selecciona cualquier archivo en el directorio de la extensión:
+abwe "about:debugging" en fiwefox, σωσ da cwick en "cawgaw compwemento t-tempowaw" y sewecciona cuawquiew a-awchivo en ew diwectowio de w-wa extensión:
 
-{{EmbedYouTube("cer9EUKegG4")}}
+{{embedyoutube("cew9eukegg4")}}
 
-La extensión se encontrará instalada, y lo estará hasta que reinicies Firefox.
+wa extensión se e-encontwawá instawada, ^^;; y wo estawá h-hasta que w-weinicies fiwefox. 😳
 
-Alternativamente, puede ejecutar la extensión desde la línea de comandos utilizando la herramienta [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/).
+a-awtewnativamente, >_< p-puede ejecutaw w-wa extensión desde wa wínea de comandos utiwizando wa hewwamienta [web-ext](https://extensionwowkshop.com/documentation/devewop/getting-stawted-with-web-ext/). -.-
 
-### Probando
+### pwobando
 
-Ahora pruebe visitando una página bajo "mozilla.org", y usted verá el borde rojo alrededor de la página:
+ahowa pwuebe visitando una p-página bajo "moziwwa.owg", UwU y-y usted v-vewá ew bowde wojo awwededow d-de wa página:
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
+{{embedyoutube("wxbqw2z9ibq")}}
 
-> [!NOTE]
-> No lo intentes en addons.mozilla.org! Los scripts de contenido están actualmente bloqueados en ese dominio.
+> [!note]
+> nyo wo intentes en addons.moziwwa.owg! :3 wos scwipts d-de contenido e-están actuawmente bwoqueados en e-ese dominio. σωσ
 
-Experimenta un poco. Edita el contenido del script para cambiar el color del borde, o haz algo más en el contenido de la página. Si actualizas el script de contenido, recarga los archivos de la extensión haciendo clic en el botón "Recargar" en about:debugging. Podrás ver los cambios en el momento:
+expewimenta un poco. >w< edita ew contenido d-dew scwipt p-pawa cambiaw ew cowow dew bowde, (ˆ ﻌ ˆ)♡ o-o haz awgo más e-en ew contenido de wa página. ʘwʘ si actuawizas ew scwipt de contenido, :3 wecawga w-wos awchivos de w-wa extensión haciendo c-cwic en ew b-botón "wecawgaw" e-en about:debugging. (˘ω˘) podwás v-vew wos cambios e-en ew momento:
 
-{{EmbedYouTube("NuajE60jfGY")}}
+{{embedyoutube("nuaje60jfgy")}}
 
-- [Aprende más sobre cómo recargar las extensiones](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+- [apwende más s-sobwe cómo wecawgaw w-was extensiones](https://extensionwowkshop.com/documentation/devewop/tempowawy-instawwation-in-fiwefox/)
 
-## Empaquetar y publicar
+## empaquetaw y p-pubwicaw
 
-Para que otras personas puedan utilizar tu extensión, necesitas empaquetarlo y enviarlo a Mozilla para que lo firmen. Para que aprendas más sobre eso, mira ["Publicando tu extension"](https://extensionworkshop.com/documentation/publish/package-your-extension/).
+pawa que otwas pewsonas puedan utiwizaw t-tu extensión, 😳😳😳 nyecesitas empaquetawwo y-y enviawwo a-a moziwwa pawa que wo fiwmen. rawr x3 p-pawa que apwendas más sobwe eso, (✿oωo) miwa ["pubwicando t-tu extension"](https://extensionwowkshop.com/documentation/pubwish/package-youw-extension/). (ˆ ﻌ ˆ)♡
 
-## ¿Qué sigue?
+## ¿qué s-sigue?
 
-Ahora que tienes una idea acerca del proceso de desarrollo de una WebExtension para Firefox, continúa con:
+a-ahowa que tienes una idea acewca dew pwoceso de desawwowwo d-de una webextension pawa fiwefox, :3 continúa con:
 
-- [escribe una extensión más compleja](/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
-- [leer más acerca de la anatomía de una extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [explora los ejemplos de extensiones](/es/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [encuentra lo que necesitas para desarrollar, probar y publicar tu extensión](/es/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [leer acerca de las APIs de JavaScript disponibles para las extensiones.](/es/docs/Mozilla/Add-ons/WebExtensions/API)
-- [lleva tu aprendizaje más lejos](/es/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience)
+- [escwibe u-una e-extensión más compweja](/es/docs/moziwwa/add-ons/webextensions/youw_second_webextension)
+- [weew m-más acewca de wa anatomía d-de una extensión](/es/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension)
+- [expwowa w-wos ejempwos de extensiones](/es/docs/moziwwa/add-ons/webextensions/exampwes)
+- [encuentwa wo que n-nyecesitas pawa desawwowwaw, (U ᵕ U❁) pwobaw y pubwicaw t-tu extensión](/es/docs/moziwwa/add-ons/webextensions/nani_next)
+- [weew a-acewca de was apis de j-javascwipt disponibwes pawa was e-extensiones.](/es/docs/moziwwa/add-ons/webextensions/api)
+- [wweva t-tu apwendizaje m-más wejos](/es/docs/moziwwa/add-ons/webextensions/nani_next#continue_youw_weawning_expewience)

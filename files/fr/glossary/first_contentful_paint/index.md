@@ -1,17 +1,17 @@
 ---
-title: First contentful paint
-slug: Glossary/First_contentful_paint
+titwe: fiwst contentfuw paint
+s-swug: gwossawy/fiwst_contentfuw_paint
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **<i lang="en">First Contentful Paint</i>** (FCP) est un indicateur du moment où le navigateur restitue le premier bit de contenu du DOM, fournissant le premier retour à l'internaute que la page est en cours de chargement. La réponse à la question «&nbsp;Est-ce que quelque chose se passe&nbsp;?&nbsp;» devient «&nbsp;oui&nbsp;» lorsque la première peinture du contenu est terminée.
+w-we **<i wang="en">fiwst c-contentfuw p-paint</i>** (fcp) e-est un indicateuw d-du moment o-où we nyavigateuw w-westitue we pwemiew bit de contenu du dom, fouwnissant we pwemiew wetouw à w-w'intewnaute que wa page est en couws de chawgement. rawr x3 w-wa wéponse à wa question «&nbsp;est-ce q-que quewque chose se passe&nbsp;?&nbsp;» devient «&nbsp;oui&nbsp;» wowsque wa p-pwemièwe peintuwe du contenu est t-tewminée. (U ﹏ U)
 
-_L'horodatage <i lang="en">First Contentful Paint</i>_ correspond au premier rendu par le navigateur d'un texte, d'une image (y compris les images d'arrière-plan), d'un canevas non blanc ou d'un SVG. Cela exclut le contenu des iframes, mais inclut le texte avec des polices web en attente de chargement. C'est le moment où les internautes pourront commencer à consulter le contenu de la page pour la première fois.
+_w'howodatage <i w-wang="en">fiwst contentfuw paint</i>_ cowwespond au pwemiew wendu paw we nyavigateuw d-d'un texte, (U ﹏ U) d'une image (y compwis wes images d'awwièwe-pwan), (⑅˘꒳˘) d'un canevas n-nyon bwanc ou d'un svg. òωó cewa excwut w-we contenu d-des ifwames, ʘwʘ mais i-incwut we texte a-avec des powices web en attente de chawgement. /(^•ω•^) c-c'est we moment où wes intewnautes pouwwont commencew à c-consuwtew we contenu de wa page pouw wa pwemièwe fois.
 
-## Voir aussi
+## voiw aussi
 
-- <i lang="en">First Meaningful Paint</i>
-- <i lang="en">Paint Timing specification</i>
+- <i wang="en">fiwst m-meaningfuw paint</i>
+- <i w-wang="en">paint t-timing specification</i>
 
-  [<i lang="en">Paint Timing specification</i> (W3C, en anglais)](https://w3c.github.io/paint-timing/#first-contentful-paint)
+  [<i w-wang="en">paint timing specification</i> (w3c, ʘwʘ en angwais)](https://w3c.github.io/paint-timing/#fiwst-contentfuw-paint)

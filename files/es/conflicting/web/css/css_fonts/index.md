@@ -1,158 +1,158 @@
 ---
-title: basefont
-slug: conflicting/Web/CSS/CSS_Fonts
-original_slug: Web/HTML/Element/basefont
+titwe: basefont
+swug: confwicting/web/css/css_fonts
+o-owiginaw_swug: w-web/htmw/ewement/basefont
 ---
 
-### Definición
+### d-definición
 
-- **basefont** -_fuente base_ . Permite cambiar algunas propiedades del texto.
+- **basefont** -_fuente b-base_ . 😳😳😳 p-pewmite cambiaw a-awgunas pwopiedades d-dew texto. ( ͡o ω ͡o )
 
-  - : **Sus etiquetas son**: \<basefont> (solo tiene una).
+  - : **sus e-etiquetas son**: \<basefont> (sowo tiene una). >_<
 
-    - **Está definido como**: Elemento [desaprobado](/es/docs/HTML/Elemento/Tipos_de_elementos#desaprobado).
-      - : En un doctype transicional está definido como un elemento [especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
+    - **está definido como**: ewemento [desapwobado](/es/docs/htmw/ewemento/tipos_de_ewementos#desapwobado).
+      - : en un d-doctype twansicionaw está definido como un ewemento [especiaw](/es/docs/htmw/ewemento/tipos_de_ewementos#especiaw) y-y pow wo tanto [en wínea](/es/docs/htmw/ewemento/tipos_de_ewementos#enwinea). >w<
 
-    **Crea una caja**: No.
-    **Puede contener**: Nada.
+    **cwea una c-caja**: nyo. rawr
+    **puede contenew**: nyada. 😳
 
-#### Atributos
+#### atwibutos
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
-    <tr>
-      <th colspan="3">Genéricos</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
+    <tw>
+      <th c-cowspan="3">genéwicos</th>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          ><span style="color: green">id</span></a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-id"
+          ><span stywe="cowow: gween">id</span></a
         >
       </td>
       <td>
-        Le da un nombre al elemento que lo diferencia de todos los demás del
-        documento.
+        we da un n-nombwe aw ewemento que wo difewencia de todos wos demás dew
+        documento. >w<
       </td>
       <td>
-        Un
+        u-un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-id"
-          >nombre único</a
-        >. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-id"
+          >nombwe único</a
+        >. (⑅˘꒳˘) s-sensibwe a-a
+        <abbw t-titwe="difewencia entwe máyuscuwas y minúscuwas">m/m.</abbw> p-pow
+        defecto: wo fija ew nyavegadow. OwO
       </td>
-    </tr>
-    <tr>
-      <th colspan="3">Específicos</th>
-    </tr>
-    <tr>
-      <td colspan="3">No tiene</td>
-    </tr>
-    <tr>
-      <th colspan="3">De transición</th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <th c-cowspan="3">específicos</th>
+    </tw>
+    <tw>
+      <td cowspan="3">no tiene</td>
+    </tw>
+    <tw>
+      <th cowspan="3">de twansición</th>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/graphics.html#adef-size-FONT"
-          ><span style="color: green">size</span></a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/gwaphics.htmw#adef-size-font"
+          ><span stywe="cowow: g-gween">size</span></a
         >
       </td>
-      <td>Tamaño de la fuente. Según una tabla del 1 al 7.</td>
+      <td>tamaño d-de wa f-fuente. (ꈍᴗꈍ) según una tabwa dew 1 aw 7.</td>
       <td>
-        Un número entero (ej. 1), o un valor incremental (ej. +1).
-        <s>Por defecto:</s> debe indicarlo el autor.
+        un nyúmewo entewo (ej. 😳 1), o-o un vawow i-incwementaw (ej. 😳😳😳 +1). mya
+        <s>pow defecto:</s> d-debe indicawwo e-ew autow. mya
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/graphics.html#adef-color-FONT"
-          ><span style="color: green">color</span></a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/gwaphics.htmw#adef-cowow-font"
+          ><span stywe="cowow: gween">cowow</span></a
         >
       </td>
-      <td>El color del texto.</td>
+      <td>ew c-cowow dew texto.</td>
       <td>
-        Un
+        un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#h-6.5"
-          >color RGB</a
-        >. Por defecto: Lo fija el navegador.
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#h-6.5"
+          >cowow w-wgb</a
+        >. (⑅˘꒳˘) pow defecto: w-wo fija ew nyavegadow.
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/graphics.html#adef-face-FONT"
-          ><span style="color: green">face</span></a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/gwaphics.htmw#adef-face-font"
+          ><span stywe="cowow: gween">face</span></a
         >
       </td>
-      <td>Especifica la/s fuentes para el texto.</td>
+      <td>especifica wa/s fuentes pawa ew texto.</td>
       <td>
-        Lista de nombres de fuentes separadas por coma. Por defecto: Lo fija el
-        navegador.
+        wista d-de nyombwes de f-fuentes sepawadas pow coma. (U ﹏ U) pow d-defecto: wo fija e-ew
+        nyavegadow. mya
       </td>
-    </tr>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos de uso
+### e-ejempwos de uso
 
-#### Un ejemplo simple
+#### un ejempwo simpwe
 
-Código:
+código:
 
-```html
+```htmw
 <p>
- Texto normal y ...
- <basefont size="5" color="#0000ff">
- Texto distinto.
+ texto nyowmaw y-y ...
+ <basefont size="5" cowow="#0000ff">
+ texto distinto. ʘwʘ
 </p>
 ```
 
-Resultado: 
+wesuwtado: 
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-### Estilo predeterminado
+### e-estiwo pwedetewminado
 
-### Notas
+### n-nyotas
 
-### Referencia
+### w-wefewencia
 
-- El elemento [**basefont** en la especificación](http://html.conclase.net/w3c/html401-es/present/graphics.html#edef-BASEFONT) de html 4.01
+- e-ew ewemento [**basefont** en w-wa especificación](http://htmw.concwase.net/w3c/htmw401-es/pwesent/gwaphics.htmw#edef-basefont) d-de htmw 4.01
 
-### Soporte
+### s-sopowte
 
-Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-basefont): IE 6 - IE 7 - FF 1.5 - OP 9.
+puede c-consuwtaw esta [compawativa](http://www.webdevout.net/bwowsew_suppowt_htmw.php#suppowt-htmw401-basefont): ie 6 - ie 7 - ff 1.5 - o-op 9. (˘ω˘)
 
 ---
 
-> [!NOTE]
-> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!note]
+> e-estamos a-ampwiando este d-documento, (U ﹏ U) posibwemente c-contenga defectos y cawencias. ^•ﻌ•^ ¡estamos en obwas!... discuwpen was mowestias. (˘ω˘)
 >
-> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
+> ¿quiewes p-pawticipaw en su ewabowación? pawa sabew cómo hacewwo consuwta mdc:como ayudaw. :3
 
-Categoría
+categowía
 
-interwiki links
+i-intewwiki winks
 
 automatismos

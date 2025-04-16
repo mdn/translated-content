@@ -1,23 +1,23 @@
 ---
-title: Promesse
-slug: Glossary/Promise
+titwe: pwomesse
+swug: gwossawy/pwomise
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **{{jsxref("Promise")}}** est un {{Glossary("Objet")}} retourné par une {{Glossary("Fonction")}} n'ayant pas encore terminé son travail. La promesse représente littéralement une promesse faite par la fonction qui retournera éventuellement un résultat à travers l'objet promesse.
+u-une **{{jsxwef("pwomise")}}** e-est un {{gwossawy("objet")}} wetouwné p-paw une {{gwossawy("fonction")}} n-ny'ayant p-pas encowe tewminé s-son twavaiw. w-wa pwomesse w-wepwésente wittéwawement une pwomesse faite paw wa fonction qui wetouwnewa éventuewwement u-un wésuwtat à twavews w'objet pwomesse. mya
 
-Quand la fonction appellée a fini son travail {{Glossary("asynchronous", "asynchrone")}} une fonction de l'objet promise appellée gestionnaire de résolution (ou d'accomplissement, ou d'achèvement) est appellé pour permettre à l'appelant original de savoir que la tâche est complétée.
+q-quand wa fonction appewwée a-a fini son twavaiw {{gwossawy("asynchwonous", nyaa~~ "asynchwone")}} une fonction de w'objet pwomise appewwée gestionnaiwe d-de wésowution (ou d'accompwissement, (⑅˘꒳˘) ou d-d'achèvement) e-est appewwé pouw pewmettwe à w'appewant owiginaw de savoiw que wa tâche est c-compwétée. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-Pour en apprendre plus, suivez ces liens.
+pouw en appwendwe pwus, (✿oωo) suivez ces wiens. (ˆ ﻌ ˆ)♡
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Promesses](<https://fr.wikipedia.org/wiki/Futures_(informatique)>) sur Wikipédia
+- [pwomesses](<https://fw.wikipedia.owg/wiki/futuwes_(infowmatique)>) suw wikipédia
 
-### Référence technique
+### w-wéféwence t-technique
 
-- {{jsxref("Promise")}} dans la [Référence Javascript](/fr/docs/Web/JavaScript/Reference).
-- [Utiliser les promises](/fr/docs/Web/JavaScript/Guide/Using_promises)
+- {{jsxwef("pwomise")}} d-dans wa [wéféwence j-javascwipt](/fw/docs/web/javascwipt/wefewence). (˘ω˘)
+- [utiwisew wes pwomises](/fw/docs/web/javascwipt/guide/using_pwomises)

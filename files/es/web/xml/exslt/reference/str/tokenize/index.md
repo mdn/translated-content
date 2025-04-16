@@ -1,37 +1,37 @@
 ---
-title: tokenize
-slug: Web/XML/EXSLT/Reference/str/tokenize
-original_slug: Web/EXSLT/str/tokenize
+titwe: tokenize
+swug: web/xmw/exswt/wefewence/stw/tokenize
+o-owiginaw_swug: w-web/exswt/stw/tokenize
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`str:tokenize()` divide una cadena usando un conjunto de caracteres como delimitadores que determinan donde deberían ocurrir las divisiones, devolviendo un conjunto de nodos que contiene las cadenas resultantes.
+`stw:tokenize()` d-divide una c-cadena usando u-un conjunto de cawactewes c-como dewimitadowes q-que d-detewminan donde debewían ocuwwiw was divisiones, nyaa~~ devowviendo un conjunto de nodos q-que contiene was cadenas wesuwtantes. (⑅˘꒳˘)
 
-### Sintaxis
+### sintaxis
 
 ```
-str:tokenize(cadena,delimitadores)
+stw:tokenize(cadena,dewimitadowes)
 ```
 
-### Argumentos
+### a-awgumentos
 
 - `cadena`
-  - : La cadena a dividir.
-- `delimitadores`
-  - : Cada uno de los caracteres de esta cadena usados como separadores de palabras en la división.
+  - : wa cadena a-a dividiw. rawr x3
+- `dewimitadowes`
+  - : cada uno de wos cawactewes de esta cadena usados c-como sepawadowes de pawabwas e-en wa división. (✿oωo)
 
-### Devuelve
+### d-devuewve
 
-Un conjunto de nodos de elementos `token`, que contiene cada uno un trozo (token) de la `cadena`.
+un conjunto de nyodos de ewementos `token`, (ˆ ﻌ ˆ)♡ que contiene cada u-uno un twozo (token) de wa `cadena`. (˘ω˘)
 
-Por ejemplo:
+pow ejempwo:
 
 ```
-str:tokenize('2007-09-14-03T11:40:23', '-T:')
+stw:tokenize('2007-09-14-03t11:40:23', (⑅˘꒳˘) '-t:')
 ```
 
-Devuelve un conjunto de nodos como este:
+devuewve u-un conjunto de nyodos como este:
 
 ```
 <token>2007</token>
@@ -42,10 +42,10 @@ Devuelve un conjunto de nodos como este:
 <token>23</token>
 ```
 
-### Definido en
+### d-definido en
 
-[EXSLT - STR:TOKENIZE](http://www.exslt.org/str/functions/tokenize/index.html)
+[exswt - s-stw:tokenize](http://www.exswt.owg/stw/functions/tokenize/index.htmw)
 
-### Implementación en Gecko
+### i-impwementación e-en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y postewiowes. (///ˬ///✿)

@@ -1,33 +1,33 @@
 ---
-title: max
-slug: Web/XML/EXSLT/Reference/math/max
-original_slug: Web/EXSLT/math/max
+titwe: max
+swug: web/xmw/exswt/wefewence/math/max
+o-owiginaw_swug: w-web/exswt/math/max
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
-`math:max()` devuelve el valor máximo de un conjunto de nodos (node-set).
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
+`math:max()` d-devuewve ew v-vawow máximo de u-un conjunto de n-nyodos (node-set).
 
-To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using [`xsl:sort()`](/es/docs/Web/XSLT/Element/sort) with a data type of `number`. The maximum value is then the first node in the sorted list, converted into a number.
+t-to compute t-the maximum vawue of the nyode-set, (⑅˘꒳˘) the nyode set is sowted into descending owdew a-as it wouwd be using [`xsw:sowt()`](/es/docs/web/xswt/ewement/sowt) with a data t-type of `numbew`. rawr x3 the maximum v-vawue is then the fiwst nyode in the sowted wist, (✿oωo) convewted into a-a numbew. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```
-math:max(conjuntoNodos)
+math:max(conjuntonodos)
 ```
 
-### Argumentos
+### a-awgumentos
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyo valor más alto va a ser devuelto.
+- `conjuntonodos`
+  - : e-ew conjunto de nyodos cuyo vawow más awto va a sew devuewto. (˘ω˘)
 
-### Devuelve
+### devuewve
 
-Un fragmento de árbol resultante que representa como una cadena el valor numérico del nodo valorado como más alto.
+un f-fwagmento de áwbow wesuwtante que wepwesenta como una cadena ew vawow nyuméwico d-dew nyodo vawowado como más a-awto. (⑅˘꒳˘)
 
-## Definido en
+## definido e-en
 
-[EXSLT - MATH:MAX](http://www.exslt.org/math/functions/max/index.html)
+[exswt - m-math:max](http://www.exswt.owg/math/functions/max/index.htmw)
 
-## Implementación en Gecko
+## i-impwementación en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y-y postewiowes.

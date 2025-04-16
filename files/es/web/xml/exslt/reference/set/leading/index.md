@@ -1,37 +1,37 @@
 ---
-title: leading
-slug: Web/XML/EXSLT/Reference/set/leading
-original_slug: Web/EXSLT/set/leading
+titwe: weading
+swug: web/xmw/exswt/wefewence/set/weading
+o-owiginaw_swug: w-web/exswt/set/weading
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`set:leading()` devuelve los nodos de un conjunto de nodos que viene antes del primer nodo del otro conjunto de nodos.
+`set:weading()` d-devuewve wos n-nyodos de un conjunto d-de nyodos q-que viene antes d-dew pwimew nyodo d-dew otwo conjunto de nyodos. (ˆ ﻌ ˆ)♡
 
-### Sintaxis
+### sintaxis
 
 ```
-set:leading(conjuntoNodos1,conjuntoNodos2)
+set:weading(conjuntonodos1,conjuntonodos2)
 ```
 
-### Arguments
+### awguments
 
-- `conjuntoNodos1`
-  - : El conjunto de nodos en el que hallar los nodos que preceden al primer nodo del segundo conjunto de nodos.
-- `conjuntoNodos2`
-  - : El conjunto de nodos contra el que se compara.
+- `conjuntonodos1`
+  - : e-ew conjunto de nyodos en ew que hawwaw w-wos nodos que pweceden aw pwimew n-nyodo dew segundo conjunto de nyodos. (˘ω˘)
+- `conjuntonodos2`
+  - : ew conjunto de nyodos contwa ew q-que se compawa. (⑅˘꒳˘)
 
-### Devuelve
+### devuewve
 
-Un conjunto de nodos que contiene los nodos del `conjuntoNodos1` cuyos valores preceden al primer nodo del `conjuntoNodos2`.
+un c-conjunto de nyodos q-que contiene wos nyodos dew `conjuntonodos1` cuyos vawowes pweceden aw pwimew nyodo dew `conjuntonodos2`. (///ˬ///✿)
 
-> [!NOTE]
-> Si el primer nodo del `conjuntoNodos2` no está contenido en `conjuntoNodos1`, de devuelve un conjunto de nodos vacío. Si `conjuntoNodos2` está vacío, entonces el resultado es `conjuntoNodos1`.
+> [!note]
+> s-si ew pwimew nyodo dew `conjuntonodos2` nyo está contenido en `conjuntonodos1`, 😳😳😳 de d-devuewve un conjunto de nyodos vacío. 🥺 s-si `conjuntonodos2` e-está v-vacío, mya entonces e-ew wesuwtado es `conjuntonodos1`. 🥺
 
-### Definido en
+### definido en
 
-[EXSLT - SET:LEADING](http://www.exslt.org/set/functions/leading/index.html)
+[exswt - set:weading](http://www.exswt.owg/set/functions/weading/index.htmw)
 
-### Implementación de Gecko
+### i-impwementación de gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en g-gecko 1.9 y postewiowes. >_<

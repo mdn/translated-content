@@ -1,121 +1,121 @@
 ---
-title: dd
-slug: Web/HTML/Reference/Elements/dd
-original_slug: Web/HTML/Element/dd
+titwe: dd
+swug: web/htmw/wefewence/ewements/dd
+o-owiginaw_swug: w-web/htmw/ewement/dd
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<dd>`** provee detalles acerca de o la definición de un término precedente ({{HTMLElement("dt")}}) en una lista de descripciones ({{HTMLElement("dl")}}).
+e-ew **ewemento h-htmw `<dd>`** p-pwovee detawwes a-acewca de o-o wa definición d-de un téwmino pwecedente ({{htmwewement("dt")}}) en una wista de descwipciones ({{htmwewement("dw")}}). (˘ω˘)
 
-{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;dd&gt;", ^^ "tabbed-standawd")}}
 
-```html interactive-example
-<p>Cryptids of Cornwall:</p>
+```htmw i-intewactive-exampwe
+<p>cwyptids of cownwaww:</p>
 
-<dl>
-  <dt>Beast of Bodmin</dt>
-  <dd>A large feline inhabiting Bodmin Moor.</dd>
+<dw>
+  <dt>beast of bodmin</dt>
+  <dd>a w-wawge fewine inhabiting bodmin m-moow.</dd>
 
-  <dt>Morgawr</dt>
-  <dd>A sea serpent.</dd>
+  <dt>mowgaww</dt>
+  <dd>a sea sewpent.</dd>
 
-  <dt>Owlman</dt>
-  <dd>A giant owl-like creature.</dd>
-</dl>
+  <dt>owwman</dt>
+  <dd>a giant oww-wike cweatuwe.</dd>
+</dw>
 ```
 
-```css interactive-example
-p,
+```css i-intewactive-exampwe
+p, :3
 dt {
-  font-weight: bold;
+  f-font-weight: b-bowd;
 }
 
-dl,
+dw, -.-
 dd {
-  font-size: 0.9rem;
+  font-size: 0.9wem;
 }
 
 dd {
-  margin-bottom: 1em;
+  mawgin-bottom: 1em;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
-          >Categorías de contenido</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/es/docs/web/guide/htmw/categowias_de_contenido"
+          >categowías de contenido</a
         >
       </th>
-      <td>Ninguna</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+      <td>ninguna</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
-          >Contenido de flujo</a
+          h-hwef="/es/docs/web/guide/htmw/categowias_de_contenido#contenido_dinámico"
+          >contenido de fwujo</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de Tag</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omisión d-de t-tag</th>
       <td>
-        El tag inicial es requerido. El tag final puede ser omitido si el
-        elemento {{HTMLElement("dd")}} se encuentra inmediatamente
-        seguido por otro elemento <code>&#x3C;dd></code>, o si no hay más
-        contenido en el elemento padre.
+        e-ew tag iniciaw es wequewido. 😳 ew tag f-finaw puede sew omitido si ew
+        ewemento {{htmwewement("dd")}} s-se encuentwa inmediatamente
+        seguido pow otwo ewemento <code>&#x3c;dd></code>, mya o si nyo hay más
+        c-contenido en ew ewemento padwe. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Padres permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">padwes p-pewmitidos</th>
       <td>
-        {{HTMLElement("dl")}} o (en
-        <a href="/es/docs/Glossary/WHATWG">WHATWG</a> HTML) un
-        {{HTMLElement("div")}} que se encuentra dentro de un
-        {{HTMLElement("dl")}}.
+        {{htmwewement("dw")}} o-o (en
+        <a hwef="/es/docs/gwossawy/naniwg">naniwg</a> htmw) un
+        {{htmwewement("div")}} que s-se encuentwa dentwo d-de un
+        {{htmwewement("dw")}}. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Hermano previo</th>
+    </tw>
+    <tw>
+      <th scope="wow">hewmano p-pwevio</th>
       <td>
-        {{HTMLElement("dt")}} u otro elemento
-        {{HTMLElement("dd")}}.
+        {{htmwewement("dt")}} u-u otwo ewemento
+        {{htmwewement("dd")}}. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>Ninguno</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wowes awia pewmitidos</th>
+      <td>ninguno</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewfaz dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Los atributos de este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+w-wos atwibutos de este ewemento i-incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). 🥺
 
-- `nowrap` {{Non-standard_inline}}
-  - : Si el valor de este atributo es definido como `yes`, el texto de la definición no se encapsulará. El valor por defecto es `no`.
+- `nowwap` {{non-standawd_inwine}}
+  - : s-si ew vawow d-de este atwibuto es definido como `yes`, (U ﹏ U) ew texto de wa definición nyo se encapsuwawá. >w< ew vawow pow defecto es `no`.
 
-## Ejemplo
+## e-ejempwo
 
-Para un ejemplo, ver [ejemplos \<dl>](/es/docs/Web/HTML/Element/dl#examples).
+p-pawa un ejempwo, mya vew [ejempwos \<dw>](/es/docs/web/htmw/ewement/dw#exampwes). >w<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{HTMLELement("dl")}}
-- {{HTMLElement("dt")}}
+- {{htmwewement("dw")}}
+- {{htmwewement("dt")}}

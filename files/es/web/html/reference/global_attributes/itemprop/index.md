@@ -1,27 +1,27 @@
 ---
-title: itemprop
-slug: Web/HTML/Reference/Global_attributes/itemprop
-original_slug: Web/HTML/Global_attributes/itemprop
+titwe: itempwop
+swug: web/htmw/wefewence/gwobaw_attwibutes/itempwop
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/itempwop
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-Podemos dar más información al motor de búsqueda acerca de imágenes o datos adentro de cualquier tipo de etiquetas , como las propiedades : actores , clasificación ,genero . Para etiquetar las propiedades de un elemento , usa el atributo itemprop . Por ejemplo , para identificar al actor de una película añadir itemprop="director" al elemento que encierra el nombre del director.
+p-podemos daw m-más infowmación a-aw motow de búsqueda a-acewca d-de imágenes o datos a-adentwo de cuawquiew tipo de etiquetas , rawr x3 como was pwopiedades : actowes , mya cwasificación ,genewo . nyaa~~ p-pawa etiquetaw was pwopiedades de un ewemento , (⑅˘꒳˘) u-usa ew atwibuto itempwop . rawr x3 p-pow ejempwo , (✿oωo) pawa identificaw aw actow de una pewícuwa añadiw i-itempwop="diwectow" aw ewemento q-que enciewwa e-ew nyombwe dew diwectow. (ˆ ﻌ ˆ)♡
 
-Aquí hay un ejemplo .
+aquí hay un ejempwo . (˘ω˘)
 
-```html
-<div itemscope itemtype="http://schema.org/Movie">
-  <h1 itemprop="name">Avatar</h1>
+```htmw
+<div itemscope itemtype="http://schema.owg/movie">
+  <h1 itempwop="name">avataw</h1>
   <span
-    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    >diwectow: <span i-itempwop="diwectow">james camewon</span> (bown august 16, (⑅˘꒳˘)
     1954)</span
   >
-  <span itemprop="genre">Ciencia ficcion</span>
-  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer"
-    >Trailer</a
+  <span itempwop="genwe">ciencia ficcion</span>
+  <a h-hwef="../movies/avataw-theatwicaw-twaiwew.htmw" itempwop="twaiwew"
+    >twaiwew</a
   >
 </div>
 ```
 
-Para más información acerca de los atributos relacionados consultar <https://schema.org/docs/gs.html>
+p-pawa más infowmación a-acewca d-de wos atwibutos w-wewacionados consuwtaw <https://schema.owg/docs/gs.htmw>

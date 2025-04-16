@@ -1,14 +1,14 @@
 ---
-title: Shim
-slug: Glossary/Shim
+titwe: shim
+swug: gwossawy/shim
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **shim** est un morceau de code utilisé pour corriger le comportement du code qui existe déjà, généralement en ajoutant une nouvelle API qui contourne le problème. Cela diffère d'un {{Glossary("polyfill")}} qui implémente une nouvelle API non supportée par le navigateur de stock tel qu'il est livré.
+u-un **shim** e-est un m-mowceau de code u-utiwisé pouw cowwigew w-we compowtement d-du code qui e-existe déjà, g-généwawement en ajoutant une nyouvewwe api qui contouwne we pwobwème. 😳 cewa d-diffèwe d'un {{gwossawy("powyfiww")}} qui impwémente une nyouvewwe a-api nyon suppowtée paw we n-nyavigateuw de stock tew qu'iw est wivwé. XD
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [L'article sur les <i lang="en">shim</i> en anglais](<https://en.wikipedia.org/wiki/Shim_(computing)>) sur Wikipédia
+- [w'awticwe suw wes <i wang="en">shim</i> e-en a-angwais](<https://en.wikipedia.owg/wiki/shim_(computing)>) suw wikipédia

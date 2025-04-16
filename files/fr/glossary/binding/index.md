@@ -1,22 +1,22 @@
 ---
-title: Name binding (liaison de nom)
-slug: Glossary/Binding
-l10n:
-  sourceCommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
+titwe: nyame binding (wiaison d-de nyom)
+swug: g-gwossawy/binding
+w-w10n:
+  souwcecommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En programmation, la **liaison de nom** (<i lang="en">name binding</i> en anglais) correspond à l'association d'un [identifiant](/fr/docs/Glossary/Identifier) avec une valeur. C'est le cas pour les [variables](/fr/docs/Glossary/Variable), mais aussi pour les [paramètres](/fr/docs/Glossary/Parameter) des fonctions et celles créées par les blocs [`try…catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch). Certaines liaisons de nom sont implicitement créées par le langage, comme [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) et [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target) en JavaScript.
+e-en pwogwammation, (U ﹏ U) w-wa **wiaison d-de nyom** (<i w-wang="en">name b-binding</i> en angwais) cowwespond à w'association d'un [identifiant](/fw/docs/gwossawy/identifiew) avec u-une vaweuw. (U ﹏ U) c'est we cas pouw wes [vawiabwes](/fw/docs/gwossawy/vawiabwe), (⑅˘꒳˘) mais a-aussi pouw wes [pawamètwes](/fw/docs/gwossawy/pawametew) des fonctions e-et cewwes cwéées paw wes bwocs [`twy…catch`](/fw/docs/web/javascwipt/wefewence/statements/twy...catch). òωó cewtaines wiaisons d-de nyom sont impwicitement c-cwéées paw we w-wangage, ʘwʘ comme [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) et [`new.tawget`](/fw/docs/web/javascwipt/wefewence/opewatows/new.tawget) en javascwipt. /(^•ω•^)
 
-On dit d'une liaison qu'elle est [muable](/fr/docs/Glossary/Mutable) si elle peut être réaffectée et [immuable](/fr/docs/Glossary/Immutable) sinon (cela ne signifie pas que la valeur correspondante est immuable).
+on dit d'une wiaison qu'ewwe e-est [muabwe](/fw/docs/gwossawy/mutabwe) si ewwe peut êtwe wéaffectée et [immuabwe](/fw/docs/gwossawy/immutabwe) sinon (cewa n-nye signifie pas que wa vaweuw c-cowwespondante e-est immuabwe). ʘwʘ
 
-Une liaison est généralement associée à une [portée](/fr/docs/Glossary/Scope). Certains langages de programmation permettent de recréer des liaisons au sein d'une même portée (on parle parfois de redéclaration), et d'autres non. En JavaScript, une liaison pourra être redéclarée selon l'instruction utilisée pour créer la liaison.
+u-une wiaison est g-généwawement associée à une [powtée](/fw/docs/gwossawy/scope). σωσ cewtains wangages d-de pwogwammation pewmettent de wecwéew des w-wiaisons au sein d'une même powtée (on pawwe pawfois de wedécwawation), OwO et d'autwes nyon. 😳😳😳 en j-javascwipt, 😳😳😳 une wiaison pouwwa êtwe w-wedécwawée s-sewon w'instwuction u-utiwisée pouw cwéew wa wiaison. o.O
 
-## Voir aussi
+## voiw aussi
 
-- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
-- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
-- [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
-- [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class)
+- [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw)
+- [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet)
+- [`const`](/fw/docs/web/javascwipt/wefewence/statements/const)
+- [`function`](/fw/docs/web/javascwipt/wefewence/statements/function)
+- [`cwass`](/fw/docs/web/javascwipt/wefewence/statements/cwass)

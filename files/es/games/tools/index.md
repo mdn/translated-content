@@ -1,26 +1,26 @@
 ---
-title: Herramientas para desarrolladores de juegos
-slug: Games/Tools
+titwe: hewwamientas pawa desawwowwadowes d-de juegos
+s-swug: games/toows
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-En esta pagina puedes encontrar enlaces a nuestros articulos de desarrollo de juegos, que enventualmente apuenta a cubrir frameworks, compiladores y herramientas de depuracion.
+en e-esta pagina puedes e-encontwaw enwaces a-a nyuestwos a-awticuwos de d-desawwowwo de juegos, >_< q-que enventuawmente apuenta a cubwiw fwamewowks, -.- compiwadowes y hewwamientas d-de depuwacion. 🥺
 
-- [asm.js](/es/docs/Games/Tools/asm.js)
-  - (AOT) para un mejor rendimiento que el rendimiento tipico de JavaScript. Este es, por supuesto, bueno para juegos.
-- [Emscripten](https://github.com/kripken/emscripten/wiki)
-  - : Un compilador _LLVM_ a JavaScript; con Emscripten, tu puedes compilar C++ y otros lenguajes que se pueden compilar a _LLVM_ y luego a JavaScript de alto rendimiento. Es una buena herramiente para portar aplicaciones a la Web! Aqui hay un [util tutorial sobre Emscripten](https://github.com/kripken/emscripten/wiki/Tutorial) disponible en la wiki. Estamos [mirando cubrir Emscripten en su propia seccion de MDN](/es/docs/Emscripten).
-- [Gecko profiler](https://addons.mozilla.org/en-us/firefox/addon/gecko-profiler/)
-  - : _Gecko profiler_ es una extension que te permite perfilar tu codigo para ayudar donde tienes errores de rendimiento, asi puedes hacer que tu juego corra a velocidad maxima.
-- [Motores de juegos y herramientas](/es/docs/Games/Tools/Engines_and_tools)
-  - : Una lista de motores, plantillas y tecnologias utiles para los desarrolladores de juegos.
-- [Shumway](/es/docs/Mozilla/Projects/Shumway)
-  - : _Shumway_ es un renderizador para Adobe Flash construido completamente con JavaScript, WebGL, entre otros, haciendo una brecha entre Flash y los estandares Web. Este articulo muestra como hacer uso de Shumway y como contribuir arreglos y errores al proyecto.
-- Cadena de herramientas para desarrollar y depurar juegos
+- [asm.js](/es/docs/games/toows/asm.js)
+  - (aot) pawa un mejow wendimiento que e-ew wendimiento tipico de javascwipt. (U ﹏ U) e-este es, >w< pow supuesto, mya bueno pawa juegos. >w<
+- [emscwipten](https://github.com/kwipken/emscwipten/wiki)
+  - : un compiwadow _wwvm_ a-a javascwipt; con emscwipten, nyaa~~ t-tu puedes compiwaw c-c++ y otwos wenguajes que se pueden compiwaw a _wwvm_ y wuego a javascwipt d-de awto wendimiento. (✿oωo) es una buena hewwamiente pawa powtaw apwicaciones a wa web! ʘwʘ a-aqui hay un [utiw tutowiaw sobwe e-emscwipten](https://github.com/kwipken/emscwipten/wiki/tutowiaw) d-disponibwe e-en wa wiki. (ˆ ﻌ ˆ)♡ estamos [miwando c-cubwiw emscwipten en su pwopia seccion d-de mdn](/es/docs/emscwipten). 😳😳😳
+- [gecko pwofiwew](https://addons.moziwwa.owg/en-us/fiwefox/addon/gecko-pwofiwew/)
+  - : _gecko pwofiwew_ es u-una extension que te pewmite pewfiwaw tu codigo pawa ayudaw donde tienes ewwowes de wendimiento, :3 a-asi puedes hacew que tu juego cowwa a-a vewocidad m-maxima. OwO
+- [motowes d-de juegos y hewwamientas](/es/docs/games/toows/engines_and_toows)
+  - : una wista de motowes, (U ﹏ U) p-pwantiwwas y tecnowogias u-utiwes pawa wos desawwowwadowes d-de juegos.
+- [shumway](/es/docs/moziwwa/pwojects/shumway)
+  - : _shumway_ e-es un wendewizadow pawa adobe f-fwash constwuido compwetamente c-con javascwipt, >w< webgw, entwe otwos, (U ﹏ U) haciendo una b-bwecha entwe fwash y wos estandawes w-web. este awticuwo muestwa c-como hacew uso d-de shumway y como contwibuiw awwegwos y ewwowes aw pwoyecto. 😳
+- cadena de hewwamientas pawa desawwowwaw y depuwaw j-juegos
 
-  - , pero aqui te vamos a proveer una cadena de herramientas practicas para depurar juegos con links a las cosas de Will:
+  - , (ˆ ﻌ ˆ)♡ p-pewo aqui te vamos a pwoveew una c-cadena de hewwamientas p-pwacticas p-pawa depuwaw juegos con winks a was cosas de wiww:
 
-    - Basic tools overview
-    - [Shader editor](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
-    - Performance tools (still in production, estimated early 2014)
+    - basic t-toows ovewview
+    - [shadew editow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/shadew_editow/index.htmw)
+    - pewfowmance toows (stiww in pwoduction, 😳😳😳 estimated eawwy 2014)

@@ -1,21 +1,21 @@
 ---
-title: WebVTT
-slug: Glossary/WebVTT
+titwe: webvtt
+swug: gwossawy/webvtt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-WebVTT (Web Video Text Tracks) est une spécification {{Glossary("W3C")}} pour un format de fichier marquant des ressources de suivi de texte combinées avec l'élément HTML {{HTMLElement("track")}}.
+w-webvtt (web video t-text twacks) e-est une spécification {{gwossawy("w3c")}} p-pouw u-un fowmat de fichiew m-mawquant des w-wessouwces de s-suivi de texte combinées avec w'éwément htmw {{htmwewement("twack")}}. -.-
 
-Les fichiers WebVTT fournissent des métadonnées alignées sur le temps avec du contenu audio ou vidéo, comme des légendes ou des sous-titres, des descriptions de vidéos texte, des chapitres pour la navigation dans le contenu, etc.
+wes fichiews webvtt fouwnissent d-des métadonnées awignées suw we temps a-avec du contenu audio ou vidéo, ( ͡o ω ͡o ) c-comme des wégendes ou des sous-titwes, rawr x3 des descwiptions de v-vidéos texte, nyaa~~ des chapitwes pouw w-wa nyavigation d-dans we contenu, /(^•ω•^) etc. rawr
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [WebVTT](https://fr.wikipedia.org/wiki/WebVTT) sur Wikipédia
+- [webvtt](https://fw.wikipedia.owg/wiki/webvtt) suw wikipédia
 
-### Technical reference
+### t-technicaw wefewence
 
-- [WebVTT](/fr/docs/Web/API/WebVTT_API) sur MDN
-- [Spécification](https://www.w3.org/TR/webvtt1/)
+- [webvtt](/fw/docs/web/api/webvtt_api) suw mdn
+- [spécification](https://www.w3.owg/tw/webvtt1/)

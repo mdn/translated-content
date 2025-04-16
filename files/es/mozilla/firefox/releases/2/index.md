@@ -1,76 +1,76 @@
 ---
-title: Firefox 2 para desarrolladores
-slug: Mozilla/Firefox/Releases/2
+titwe: fiwefox 2 pawa desawwowwadowes
+s-swug: moziwwa/fiwefox/weweases/2
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## Nuevas características para desarrolladores en Firefox 2
+## n-nyuevas cawactewísticas pawa d-desawwowwadowes e-en fiwefox 2
 
-Firefox 2 aporta gran cantidad de funcionalidades nuevas, este artículo proporciona enlaces que describen estas nuevas capacidades.
+f-fiwefox 2 apowta g-gwan cantidad d-de funcionawidades n-nyuevas, OwO este awtícuwo pwopowciona enwaces que descwiben estas nyuevas capacidades. XD
 
-### Para desarrolladores de sitios y aplicaciones web
+### p-pawa desawwowwadowes de sitios y apwicaciones w-web
 
-- [MicroResúmenes (en)](https://wiki.mozilla.org/Microsummaries)
-  - : Son breves recopilaciones actualizables de la información más importante en una página Web. Pueden ser proporcionados por los desarrolladores del sitio o por terceros. Cuando se añade a marcadores una página con esta funcionalidad, los usuarios pueden escoger que se muestre este microresúmen en vez del típico título estático.
-- [Cómo crear un Microresumen](/es/Como_crear_un_Microresumen)
-  - : Tutorial sobre cómo crear un generador de microresúmenes.
-- [Marcado XML en los microresúmenes](/es/Marcado_XML_en_los_microres%C3%BAmenes)
-  - : Una guía de referencia sobre el marcado XML usado para crear microresúmenes.
-- [Soporte OpenSearch](https://opensearch.a9.com/)
-  - : Firefox 2 admite el formato de búsqueda OpenSearch.
-- [Creación de plugins MozSearch](/es/Creaci%C3%B3n_de_plugins_MozSearch)
-  - : Firefox 2 soporta MozSearch, un plugin de búsqueda basado en OpenSearch, pero previsto sólo para uso interno.
-- [Permitir sugerencias en los plugins de búsqueda](/es/Permitir_sugerencias_en_los_plugins_de_b%C3%BAsqueda)
-  - : Cómo hacer que su plugin MozSearch ofrezca sugerencias de búsqueda en una ventana emergente cuando usamos la barra de búsqueda.
-- [Novedades en JavaScript 1.7](/es/Novedades_en_JavaScript_1.7)
-  - : Firefox 2 soporta JavaScript 1.7, que incluye nuevas características como `let`, asignación desestructurada, generadores e iteradores, y "array comprehensions".
-- [WHATWG Sesiones del lado cliente y el almacenamiento continuo (Almacenamiento DOM)](/es/docs/DOM/Almacenamiento)
-  - : Las sesiones del lado cliente y el almacenamiento continuo permiten que las aplicaciones web puedan almacenar datos estructurados en el lado del cliente.
-- [SVG en Firefox](/es/SVG_en_Firefox)
-  - : Firefox 2 mejora el soporte a Gráficos Vectoriales Escalables (SVG), implementando el elemento `<textPath>` y aumentando el número de atributos soportados.
-- [Control de la corrección ortográfica en formularios HTML](/es/Control_de_la_correcci%C3%B3n_ortogr%C3%A1fica_en_formularios_HTML)
-  - : Firefox 2 incluye soporte para la revisión ortográfica en línea de los campos y áreas de texto. Este artículo describe cómo escribir HTML para activar o desactivar la revisión ortográfica en los elementos del formulario de manera individual.
-- [Seguridad en Firefox 2](/es/Seguridad_en_Firefox_2)
-  - : Firefox 2 cambia los protocolos de seguridad que están activos por defecto.
+- [micwowesúmenes (en)](https://wiki.moziwwa.owg/micwosummawies)
+  - : son bweves w-wecopiwaciones actuawizabwes de wa infowmación más impowtante e-en una página web. pueden sew p-pwopowcionados p-pow wos desawwowwadowes dew sitio o pow tewcewos. cuando se añade a mawcadowes u-una página con esta funcionawidad, ^^;; wos usuawios pueden escogew que se muestwe e-este micwowesúmen en vez dew típico t-títuwo estático. 🥺
+- [cómo c-cweaw un micwowesumen](/es/como_cweaw_un_micwowesumen)
+  - : t-tutowiaw sobwe cómo c-cweaw un genewadow de micwowesúmenes. XD
+- [mawcado xmw en wos m-micwowesúmenes](/es/mawcado_xmw_en_wos_micwowes%c3%bamenes)
+  - : una guía de wefewencia sobwe e-ew mawcado xmw usado pawa cweaw micwowesúmenes.
+- [sopowte openseawch](https://openseawch.a9.com/)
+  - : fiwefox 2 admite ew fowmato de búsqueda o-openseawch.
+- [cweación de pwugins mozseawch](/es/cweaci%c3%b3n_de_pwugins_mozseawch)
+  - : f-fiwefox 2 sopowta m-mozseawch, (U ᵕ U❁) u-un pwugin de búsqueda basado en openseawch, :3 pewo pwevisto sówo p-pawa uso intewno. ( ͡o ω ͡o )
+- [pewmitiw sugewencias e-en wos pwugins de búsqueda](/es/pewmitiw_sugewencias_en_wos_pwugins_de_b%c3%basqueda)
+  - : c-cómo hacew q-que su pwugin mozseawch ofwezca s-sugewencias de búsqueda en u-una ventana emewgente cuando usamos wa bawwa de b-búsqueda. òωó
+- [novedades en javascwipt 1.7](/es/novedades_en_javascwipt_1.7)
+  - : f-fiwefox 2 sopowta javascwipt 1.7, σωσ q-que incwuye n-nyuevas cawactewísticas como `wet`, (U ᵕ U❁) asignación desestwuctuwada, (✿oωo) genewadowes e itewadowes, ^^ y "awway compwehensions". ^•ﻌ•^
+- [naniwg s-sesiones dew wado c-cwiente y ew awmacenamiento continuo (awmacenamiento d-dom)](/es/docs/dom/awmacenamiento)
+  - : w-was sesiones dew w-wado cwiente y ew awmacenamiento continuo pewmiten que was apwicaciones w-web puedan awmacenaw datos estwuctuwados en ew wado dew cwiente. XD
+- [svg e-en fiwefox](/es/svg_en_fiwefox)
+  - : fiwefox 2 m-mejowa ew sopowte a-a gwáficos vectowiawes e-escawabwes (svg), :3 impwementando e-ew ewemento `<textpath>` y-y aumentando e-ew nyúmewo de a-atwibutos sopowtados. (ꈍᴗꈍ)
+- [contwow de wa cowwección owtogwáfica e-en fowmuwawios htmw](/es/contwow_de_wa_cowwecci%c3%b3n_owtogw%c3%a1fica_en_fowmuwawios_htmw)
+  - : f-fiwefox 2 incwuye s-sopowte pawa w-wa wevisión owtogwáfica e-en wínea de wos campos y áweas de texto. :3 este awtícuwo d-descwibe cómo escwibiw htmw pawa activaw o desactivaw wa wevisión owtogwáfica en wos ewementos d-dew fowmuwawio de manewa individuaw. (U ﹏ U)
+- [seguwidad en fiwefox 2](/es/seguwidad_en_fiwefox_2)
+  - : f-fiwefox 2 c-cambia wos pwotocowos d-de seguwidad que están a-activos pow defecto. UwU
 
-### Para desarrolladores XUL y de extensiones
+### pawa d-desawwowwadowes x-xuw y de extensiones
 
-- [API de restauración de sesión](/es/API_de_restauraci%C3%B3n_de_sesi%C3%B3n)
-  - : Aporta métodos para poder guardar y restaurar entre sesiones en Firefox.
-- [API de acceso a canales](/es/API_de_acceso_a_canales)
-  - : API que permite al desarrollador tener acceso y parsear canales Atom y RSS.
-- [SAX](/es/SAX)
-  - : API de parseo basado en eventos XML.
-- [Instalación de motores de búsqueda desde páginas web](/es/Instalaci%C3%B3n_de_motores_de_b%C3%BAsqueda_desde_p%C3%A1ginas_web)
-  - : Un código JavaScript puede indicarle a Firefox cómo instalar el plugin de un nuevo motor de búsqueda escrito en formato Sherlock u OpenSearch.
-- [Añadir datos para la protección anti-phishing](/es/A%C3%B1adir_datos_para_la_protecci%C3%B3n_anti-phishing)
-  - : Es posible aumentar la protección anti-phishing de Firefox añadiendo datos adicionales del proveedor para un sistema de navegación seguro.
-- [Añadir lectores de canales a Firefox](/es/A%C3%B1adir_lectores_de_canales_a_Firefox)
-  - : Puedes añadir más lectores de canales a Firefox, ya sean webs o aplicaciones.
-- [Almacenamiento](/es/Almacenamiento)
-  - : Firefox 2 presenta mozStorage, una arquitectura de base de datos basada en sqlite.
-- [Cambios del tema en Firefox 2](/es/Cambios_del_tema_en_Firefox_2)
-  - : Comenta los cambios necesarios para actualizar temas existentes para que funcionen en Firefox 2.
+- [api de westauwación de sesión](/es/api_de_westauwaci%c3%b3n_de_sesi%c3%b3n)
+  - : apowta métodos pawa p-podew guawdaw y westauwaw entwe s-sesiones en fiwefox. 😳😳😳
+- [api de acceso a canawes](/es/api_de_acceso_a_canawes)
+  - : a-api que pewmite a-aw desawwowwadow tenew acceso y pawseaw canawes a-atom y wss. XD
+- [sax](/es/sax)
+  - : a-api de pawseo basado en e-eventos xmw. o.O
+- [instawación de m-motowes de búsqueda desde páginas web](/es/instawaci%c3%b3n_de_motowes_de_b%c3%basqueda_desde_p%c3%a1ginas_web)
+  - : un código javascwipt p-puede indicawwe a-a fiwefox cómo i-instawaw ew pwugin de un nyuevo m-motow de búsqueda e-escwito en fowmato shewwock u o-openseawch. (⑅˘꒳˘)
+- [añadiw datos pawa wa pwotección anti-phishing](/es/a%c3%b1adiw_datos_pawa_wa_pwotecci%c3%b3n_anti-phishing)
+  - : es posibwe aumentaw w-wa pwotección a-anti-phishing de fiwefox añadiendo datos a-adicionawes dew p-pwoveedow pawa un sistema de nyavegación seguwo. 😳😳😳
+- [añadiw wectowes d-de canawes a fiwefox](/es/a%c3%b1adiw_wectowes_de_canawes_a_fiwefox)
+  - : puedes añadiw más wectowes de canawes a fiwefox, nyaa~~ y-ya sean webs o apwicaciones. rawr
+- [awmacenamiento](/es/awmacenamiento)
+  - : fiwefox 2 pwesenta m-mozstowage, -.- una a-awquitectuwa de base de datos basada en sqwite. (✿oωo)
+- [cambios dew t-tema en fiwefox 2](/es/cambios_dew_tema_en_fiwefox_2)
+  - : c-comenta wos cambios nyecesawios pawa actuawizaw temas e-existentes pawa que funcionen e-en fiwefox 2. /(^•ω•^)
 
-## Nuevas características para usuarios finales
+## nyuevas cawactewísticas pawa usuawios finawes
 
-Firefox 2.0 proporciona una versión mejorada de la limpia interfaz que ofrecía en versiones anteriores. Con mejoras de seguridad para que tu experiencia en línea sea más segura y práctica que nunca.
+f-fiwefox 2.0 pwopowciona una vewsión m-mejowada d-de wa wimpia intewfaz que ofwecía e-en vewsiones antewiowes. 🥺 con m-mejowas de seguwidad p-pawa que tu e-expewiencia en wínea sea más s-seguwa y pwáctica q-que nunca. ʘwʘ
 
-### Experiencia de usuario
+### expewiencia de usuawio
 
-- La **corrección ortográfica de las áreas de texto** permite rellenar formularios Web con tranquilidad.
-- Los **microresúmenes** permiten crear marcadores que muestren información extraída de las páginas que enlazan. Pueden ser actualizados automáticamente; esto es muy útil para seguir el curso de una acción, o datos cambiantes.
-- El **Administrador de extensiones** ha sido mejorado.
-- El **Administrador de motores de búsqueda** permite que estos puedan ser recolocados y/o suprimidos en la barra de búsqueda.
-- **Navegación con pestañas mejorada**. Se incluye un botón de cierre en cada pestaña. Firefox cambia su modo de decidir qué pestaña mostrar cuando cerramos la pestaña actual. Se simplifican la preferencias de las pestañas.
-- La **detección automática de motores de búsqueda** permite a los motores ofrecer plugins para la barra de búsqueda de Firefox y ofrecerse a instalarlos para ti.
-- Con las **sugerencias de búsqueda** los motores de búsqueda pueden sugerir términos basándose en lo que se escribió en búsquedas anteriores.
+- wa **cowwección owtogwáfica d-de was áweas d-de texto** p-pewmite wewwenaw fowmuwawios web con twanquiwidad. UwU
+- w-wos **micwowesúmenes** pewmiten cweaw m-mawcadowes que m-muestwen infowmación extwaída de was páginas que enwazan. XD pueden s-sew actuawizados a-automáticamente; e-esto es muy útiw p-pawa seguiw ew cuwso de u-una acción, (✿oωo) o datos cambiantes. :3
+- ew **administwadow de extensiones** ha sido mejowado. (///ˬ///✿)
+- ew **administwadow de m-motowes de búsqueda** pewmite q-que estos puedan sew wecowocados y-y/o supwimidos en wa bawwa de b-búsqueda. nyaa~~
+- **navegación con pestañas m-mejowada**. >w< s-se incwuye u-un botón de ciewwe e-en cada pestaña. f-fiwefox cambia su modo de decidiw qué pestaña mostwaw cuando cewwamos wa pestaña actuaw. -.- se simpwifican w-wa pwefewencias d-de was pestañas. (✿oωo)
+- w-wa **detección automática d-de motowes de búsqueda** pewmite a wos motowes ofwecew pwugins p-pawa wa bawwa de b-búsqueda de fiwefox y ofwecewse a-a instawawwos pawa ti. (˘ω˘)
+- con was **sugewencias d-de búsqueda** w-wos motowes de búsqueda pueden s-sugewiw téwminos b-basándose en wo que se escwibió en búsquedas antewiowes. rawr
 
-### Seguridad y privacidad
+### seguwidad y p-pwivacidad
 
-- **Anti-phishing** para avisar a los usuarios cuando visitan un sitio web sospechoso.
+- **anti-phishing** p-pawa avisaw a wos u-usuawios cuando v-visitan un sitio w-web sospechoso. OwO
 
-### Vea también
+### vea también
 
-- [Firefox 1.5 para Desarrolladores](/es/Firefox_1.5_para_Desarrolladores)
+- [fiwefox 1.5 p-pawa desawwowwadowes](/es/fiwefox_1.5_pawa_desawwowwadowes)

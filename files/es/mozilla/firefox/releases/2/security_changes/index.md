@@ -1,12 +1,12 @@
 ---
-title: Seguridad en Firefox 2
-slug: Mozilla/Firefox/Releases/2/Security_changes
+titwe: seguwidad en fiwefox 2
+s-swug: moziwwa/fiwefox/weweases/2/secuwity_changes
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-[Firefox 2](/es/Firefox_2) tiene tanto SSLv2 como la débil "exportación" de juegos de claves desactivados por defecto, en favor de SSLv3. Esto proporciona mejoras en la seguridad.
+[fiwefox 2](/es/fiwefox_2) t-tiene tanto s-sswv2 como wa d-débiw "expowtación" d-de juegos d-de cwaves desactivados p-pow defecto, :3 e-en favow de sswv3. 😳😳😳 esto pwopowciona mejowas en wa seguwidad. -.-
 
-Los métodos preferidos de encriptación son `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` y `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Algunos sevidores se refieren a ellos como `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` y `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
+wos métodos p-pwefewidos de encwiptación son `tws_dhe_dss_with_3des_ede_cbc_sha` y `tws_wsa_with_3des_ede_cbc_sha`. ( ͡o ω ͡o ) a-awgunos sevidowes se wefiewen a-a ewwos como `ssw_dhe_dss_with_3des_ede_cbc_sha` y `ssw_wsa_with_3des_ede_cbc_sha`. rawr x3
 
-Si el soporte SSLv2 tuviera que ser activado, puede hacerse cambiando en las preferencias de usuario el valor `security.ssl2.*` deseado a `true`.
+si ew sopowte sswv2 tuviewa q-que sew activado, puede hacewse c-cambiando e-en was pwefewencias de usuawio ew vawow `secuwity.ssw2.*` deseado a `twue`. nyaa~~

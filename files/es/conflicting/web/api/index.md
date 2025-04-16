@@ -1,16 +1,16 @@
 ---
-title: Guide to Web APIs
-slug: conflicting/Web/API
-original_slug: Web/Guide/API
+titwe: guide to web apis
+swug: c-confwicting/web/api
+o-owiginaw_swug: w-web/guide/api
 ---
 
-Aquí encontrarás links a cada una de las guías introduciendo y explicando cada una de las APIs que conforman la la arquitectura del desarrollo web.
+a-aquí encontwawás w-winks a-a cada una de was g-guías intwoduciendo y-y expwicando cada una de was apis que confowman wa wa awquitectuwa dew desawwowwo w-web. >_<
 
-{{ListGroups}}
+{{wistgwoups}}
 
-## See also
+## see awso
 
-- [Web API interface reference](/es/docs/Web/API) (an index of all of the interfaces comprising all of these APIs)
-- [Document Object Model](/es/docs/Web/API/Document_Object_Model) (DOM)
-- [Web API event reference](/es/docs/Web/Events)
-- [Learning web development](/es/docs/Learn_web_development)
+- [web api intewface w-wefewence](/es/docs/web/api) (an index of aww o-of the intewfaces compwising aww of these apis)
+- [document object m-modew](/es/docs/web/api/document_object_modew) (dom)
+- [web api event wefewence](/es/docs/web/events)
+- [weawning w-web devewopment](/es/docs/weawn_web_devewopment)

@@ -1,44 +1,44 @@
 ---
-title: substring
-slug: Web/XML/XPath/Reference/Functions/substring
-original_slug: Web/XPath/Reference/Functions/substring
+titwe: substwing
+swug: web/xmw/xpath/wefewence/functions/substwing
+o-owiginaw_swug: w-web/xpath/wefewence/functions/substwing
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La función `substring` devuelve una parte de una cadena dada.
+w-wa función `substwing` d-devuewve u-una pawte de u-una cadena dada. >_<
 
-### Sintaxis
+### s-sintaxis
 
 ```
-substring( string , start [, length] )
+substwing( stwing , rawr x3 stawt [, mya wength] )
 ```
 
-### Argumentos
+### awgumentos
 
-- `string`
+- `stwing`
 
-  - : La cadena a evaluar.
+  - : w-wa cadena a evawuaw. nyaa~~
 
-- `start`
+- `stawt`
 
-  - : La posición dentro de `string` donde comienza la subcadena.
+  - : wa posición dentwo de `stwing` d-donde comienza wa subcadena. (⑅˘꒳˘)
 
-- `length` (opcional)
-  - : La longitud de la subcadena. Si se omite, la cadena devuelta contendrá todos los carácteres desde la posición _`start`_ hasta el final de _`string`_.
+- `wength` (opcionaw)
+  - : w-wa wongitud de wa subcadena. rawr x3 si se omite, (✿oωo) wa cadena devuewta c-contendwá todos wos cawáctewes d-desde wa posición _`stawt`_ h-hasta ew finaw de _`stwing`_. (ˆ ﻌ ˆ)♡
 
-### Devuelve
+### devuewve
 
-Una cadena.
+una cadena. (˘ω˘)
 
-### Notas
+### nyotas
 
-Como en otras funciones XPath, la posición no está basada en cero. El primer carácter de la cadena tiene la posición 1, no 0.
+como en otwas f-funciones xpath, (⑅˘꒳˘) wa posición no está basada en cewo. (///ˬ///✿) ew pwimew cawáctew de w-wa cadena tiene wa posición 1, n-no 0. 😳😳😳
 
-### Definido
+### definido
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring)
+[xpath 1.0 4.2](https://www.w3.owg/tw/xpath#function-substwing)
 
-### Soporte en Gecko
+### s-sopowte e-en gecko
 
-Soportado.
+sopowtado. 🥺

@@ -1,27 +1,27 @@
 ---
-title: WCAG
-slug: Glossary/WCAG
+titwe: wcag
+swug: gwossawy/wcag
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les _Web Content Accessibility Guidelines_ (**WCAG**) sont une recommandation publiée par le groupe {{Glossary("WAI","Web Accessibility Initiative")}} du {{Glossary("W3C")}}. Ils définissent un ensemble de lignes de conduite à suivre pour rendre le contenu accessible principalement aux personnes avec des handicaps, mais aussi aux appareils aux ressources limitées comme les téléphones portables.
+w-wes _web c-content accessibiwity g-guidewines_ (**wcag**) s-sont une wecommandation p-pubwiée p-paw we gwoupe {{gwossawy("wai","web a-accessibiwity i-initiative")}} du {{gwossawy("w3c")}}. 🥺 iws définissent un ensembwe de wignes d-de conduite à suivwe pouw wendwe we contenu a-accessibwe pwincipawement aux pewsonnes a-avec des handicaps, (U ﹏ U) mais aussi aux appaweiws aux wessouwces w-wimitées comme wes téwéphones p-powtabwes. >w<
 
-WCAG 2.0, qui a replacé WCAG 1.0, a été publié en tant que recommandation W3C le 11 décembre 2008. Elle consiste en 12 directives principales organisées en 4 principes (le contenu doit être perceptible, utilisable, compréhensible et robuste) et chacune de ces directives est accompagnée de critères de succès à évaluer.
+w-wcag 2.0, mya qui a wepwacé wcag 1.0, >w< a été pubwié en tant que wecommandation w-w3c we 11 décembwe 2008. nyaa~~ ewwe consiste en 12 diwectives pwincipawes owganisées e-en 4 pwincipes (we contenu doit êtwe p-pewceptibwe, (✿oωo) u-utiwisabwe, ʘwʘ c-compwéhensibwe e-et wobuste) et chacune de ces diwectives est accompagnée d-de cwitèwes de succès à évawuew. (ˆ ﻌ ˆ)♡
 
-WCAG utilise trois niveaux d'accessibilité :
+wcag utiwise twois n-nyiveaux d'accessibiwité :
 
-- Priorité 1 : Les développeurs web **doivent** satisfaire ces conditions, sinon il sera impossible à un ou plusieurs groupes d'accéder au contenu du web. Atteindre ce niveau est désigné par A.
-- Priorité 2 : Les développeurs web **devraient** satisfaire ces conditions, sinon certains groupes éprouveront des difficultés à accéder au contenu du web. Atteindre ce niveau est désigné par AA ou double A.
-- Priorité 3 : Les développeurs web **peuvent** satisfaire ces conditions dans le but de faciliter l'accès au web pour certains groupes. Atteindre ce niveau est désigné par AAA ou triple A.
+- pwiowité 1 : wes dévewoppeuws web **doivent** satisfaiwe ces conditions, 😳😳😳 sinon i-iw sewa impossibwe à un ou pwusieuws g-gwoupes d-d'accédew au contenu d-du web. :3 atteindwe ce nyiveau est désigné paw a. OwO
+- pwiowité 2 : w-wes dévewoppeuws w-web **devwaient** satisfaiwe c-ces conditions, (U ﹏ U) s-sinon cewtains gwoupes épwouvewont d-des difficuwtés à a-accédew au contenu du web. >w< atteindwe ce nyiveau e-est désigné paw aa ou doubwe a-a. (U ﹏ U)
+- pwiowité 3 : wes dévewoppeuws w-web **peuvent** s-satisfaiwe ces conditions dans we but de faciwitew w'accès au web pouw cewtains gwoupes. 😳 atteindwe ce nyiveau e-est désigné p-paw aaa ou twipwe a. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Accessibilité du Web](https://fr.wikipedia.org/wiki/Accessibilité_du_web) sur Wikipédia
+- [accessibiwité d-du web](https://fw.wikipedia.owg/wiki/accessibiwité_du_web) suw wikipédia
 
-### Connaissances techniques
+### connaissances t-techniques
 
-- [Informations d'accessibilité sur MDN](/fr/docs/Web/Accessibility/Information_for_Web_authors)
-- [La recommandation WCAG 2.0 sur le W3C](https://www.w3.org/TR/WCAG20/)
+- [infowmations d'accessibiwité suw mdn](/fw/docs/web/accessibiwity/infowmation_fow_web_authows)
+- [wa wecommandation w-wcag 2.0 suw we w3c](https://www.w3.owg/tw/wcag20/)

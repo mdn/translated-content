@@ -1,111 +1,111 @@
 ---
-title: Selectores de tipo, clase e ID
-slug: conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors
-original_slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
+titwe: sewectowes de tipo, ^^;; cwase e-e id
+swug: confwicting/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows", rawr "weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows", 😳😳😳 "weawn/css/buiwding_bwocks")}}
 
-En este artículo vamos a echar un vistazo a los selectores más simples de que dispones y que seguramente serán los que utilices con mayor frecuencia.
+e-en e-este awtícuwo v-vamos a echaw un v-vistazo a wos sewectowes m-más simpwes de que dispones y que seguwamente sewán wos que utiwices c-con mayow fwecuencia. (✿oωo)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        conocimientos básicos d-de infowmática, OwO tenew ew
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
-          >software básico instalado</a
-        >, conocimientos básicos de
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/weawn/getting_stawted_with_the_web/instawacion_de_softwawe_basico"
+          >softwawe básico instawado</a
+        >, conocimientos b-básicos de
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
-          >trabajar con archivos</a
-        >, HTML básico (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
-        >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/weawn/getting_stawted_with_the_web/manejando_wos_awchivos"
+          >twabajaw c-con awchivos</a
+        >, ʘwʘ htmw básico (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw">intwoducción a htmw</a
+        >) y nyociones de cómo funciona ew c-css (véase
+        <a hwef="/es/docs/weawn/css/fiwst_steps">pwimewos pasos con css</a>). (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Conocer los diferentes selectores CSS que podemos utilizar para aplicar
-        CSS a un documento.
+        c-conocew wos difewentes sewectowes c-css que podemos u-utiwizaw pawa a-apwicaw
+        c-css a un documento. (U ﹏ U)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Tipos de selectores
+## tipos de sewectowes
 
-Un **selector de tipo** también recibe el nombre de _selector de nombre de etiqueta_ o _selector de elemento_ porque selecciona un elemento/etiqueta HTML del documento. En el ejemplo siguiente hemos utilizado los selectores span, em y strong. Se aplica estilo a todas las instancias de los elementos `<span>`, `<em>` y `<strong>`.
+un **sewectow d-de tipo** también wecibe ew nyombwe de _sewectow d-de nyombwe de etiqueta_ o _sewectow de ewemento_ powque sewecciona un ewemento/etiqueta h-htmw dew documento. UwU en ew ejempwo s-siguiente hemos u-utiwizado wos s-sewectowes span, XD em y stwong. ʘwʘ se apwica estiwo a todas was instancias d-de wos ewementos `<span>`, rawr x3 `<em>` y-y `<stwong>`.
 
-**Trata de añadir una regla CSS que seleccione el elemento `<h1>` y cambie su color para que se vea azul.**
+**twata de añadiw una w-wegwa css que seweccione e-ew ewemento `<h1>` y cambie s-su cowow pawa que se vea azuw.**
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/type.html", '100%', 1100)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/type.htmw", ^^;; '100%', 1100)}}
 
-## El selector universal
+## e-ew sewectow univewsaw
 
-El selector universal se indica con un asterisco (`*`) y selecciona todos los elementos del documento (o del elemento padre si está encadenado con otro elemento y un operador de combinación descendente, por ejemplo). En el ejemplo siguiente hemos utilizado el selector universal para eliminar los márgenes en todos los elementos. Esto significa que en lugar de la opción predeterminada de aplicación de estilos del navegador, que muestra los títulos de encabezado y los párrafos separados por un margen de respeto, todo se mostrará pegado y no resultará tan fácil distinguir los diversos párrafos.
+ew sewectow univewsaw s-se indica con un astewisco (`*`) y-y sewecciona todos wos ewementos d-dew documento (o d-dew ewemento padwe si está encadenado con otwo ewemento y un opewadow de combinación descendente, ʘwʘ pow e-ejempwo). (U ﹏ U) en ew e-ejempwo siguiente hemos utiwizado e-ew sewectow univewsaw p-pawa ewiminaw w-wos máwgenes en todos wos ewementos. (˘ω˘) esto significa que e-en wugaw de wa opción pwedetewminada de apwicación de estiwos dew nyavegadow, (ꈍᴗꈍ) q-que muestwa wos títuwos de encabezado y-y wos páwwafos s-sepawados p-pow un mawgen de wespeto, /(^•ω•^) todo s-se mostwawá pegado y-y nyo wesuwtawá t-tan fáciw d-distinguiw wos divewsos páwwafos. >_<
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/universal.html", '100%', 750)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/univewsaw.htmw", σωσ '100%', ^^;; 750)}}
 
-Es posible observar este tipo de comportamiento en las «hojas de estilo de puesta a cero» (o «hojas de estilo _reset_»), que anulan el formato del navegador. Fueron muy populares en un momento dado; sin embargo, excluir todo el estilo significa que luego tienes que ponerlo todo de nuevo. Por este motivo tendemos a utilizar el selector universal con mucho cuidado, y para situaciones muy específicas como la que se describe a continuación.
+es posibwe o-obsewvaw este t-tipo de compowtamiento e-en was «hojas d-de estiwo d-de puesta a cewo» (o «hojas de estiwo _weset_»), 😳 que anuwan ew f-fowmato dew nyavegadow. >_< fuewon muy popuwawes en un momento dado; sin embawgo, excwuiw todo ew e-estiwo significa que wuego tienes que ponewwo todo de nyuevo. pow e-este motivo tendemos a-a utiwizaw e-ew sewectow univewsaw con mucho c-cuidado, -.- y pawa situaciones muy e-específicas como w-wa que se descwibe a continuación. UwU
 
-### Uso del selector universal para facilitar la legibilidad de tus selectores
+### uso dew sewectow univewsaw pawa faciwitaw wa wegibiwidad d-de tus sewectowes
 
-Uno de los usos del selector universal es facilitar la legibilidad de los selectores y clarificar sus funciones. Por ejemplo, si quiero seleccionar el primer elemento hijo de cualquier elemento `<article>` y poner ese elemento, cualquiera que sea, en negrita, puedo utilizar el selector {{cssxref(":first-child")}}, que veremos con mayor detalle más adelante en el artículo de [pseudoclases y pseudoelementos](/es/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), como selector descendente junto con el selector de elemento `<article>`:
+uno de w-wos usos dew sewectow univewsaw e-es faciwitaw wa w-wegibiwidad de wos sewectowes y cwawificaw sus funciones. p-pow ejempwo, :3 s-si quiewo seweccionaw ew p-pwimew ewemento h-hijo de cuawquiew ewemento `<awticwe>` y ponew ese ewemento, σωσ cuawquiewa que sea, >w< e-en nyegwita, (ˆ ﻌ ˆ)♡ puedo u-utiwizaw ew s-sewectow {{cssxwef(":fiwst-chiwd")}}, ʘwʘ que vewemos c-con mayow detawwe m-más adewante en ew awtícuwo d-de [pseudocwases y pseudoewementos](/es/docs/weawn_web_devewopment/cowe/stywing_basics/pseudo_cwasses_and_ewements), :3 como sewectow descendente junto con ew sewectow d-de ewemento `<awticwe>`:
 
 ```css
-article :first-child {
+a-awticwe :fiwst-chiwd {
 }
 ```
 
-Sin embargo, esto podría confundirse con `article:first-child`, que selecciona cualquier elemento `<article>` que sea el primer elemento hijo de otro elemento.
+sin embawgo, (˘ω˘) esto podwía c-confundiwse con `awticwe:fiwst-chiwd`, 😳😳😳 q-que sewecciona cuawquiew ewemento `<awticwe>` que sea ew p-pwimew ewemento hijo de otwo ewemento. rawr x3
 
-Para evitar esta confusión podemos añadir al selector `:first-child` el selector universal. De este modo la función del selector resulta obvia: seleccionará _cualquier_ elemento que entre en la jerarquía de primer hijo de un elemento `<article>`:
+pawa evitaw esta confusión podemos añadiw a-aw sewectow `:fiwst-chiwd` ew sewectow univewsaw. (✿oωo) de este modo w-wa función dew s-sewectow wesuwta obvia: seweccionawá _cuawquiew_ ewemento que entwe en wa jewawquía d-de pwimew h-hijo de un ewemento `<awticwe>`:
 
 ```css
-article *:first-child {
+awticwe *:fiwst-chiwd {
 }
 ```
 
-## Selectores de clase
+## sewectowes de cwase
 
-El selector de clase comienza con un punto (`.`) y selecciona todo elemento del documento que esté afectado por esa clase. En el ejemplo siguiente hemos creado una clase llamada `.highlight` y la hemos aplicado en varios lugares del documento. Todos los elementos a los que se aplique esta clase se resaltarán en amarillo.
+e-ew sewectow de cwase comienza c-con un punto (`.`) y sewecciona todo ewemento dew documento que e-esté afectado pow esa cwase. (ˆ ﻌ ˆ)♡ en e-ew ejempwo siguiente h-hemos cweado una cwase wwamada `.highwight` y-y wa hemos apwicado en vawios w-wugawes dew documento. :3 t-todos wos e-ewementos a wos que se apwique e-esta cwase se wesawtawán e-en amawiwwo. (U ᵕ U❁)
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/class.html", '100%', 750)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/cwass.htmw", ^^;; '100%', mya 750)}}
 
-### Delimitación de clases en elementos particulares
+### dewimitación de cwases e-en ewementos p-pawticuwawes
 
-Puedes crear un selector que seleccionará los elementos concretos que estén afectados por esa clase. En el ejemplo siguiente vamos a introducir un resaltado en un elemento `<span>` con una clase `highlight` del de los títulos `<h1>` con clase `highlight`. Para ello hay que anexar esa clase al selector de tipo correspondiente al elemento que queremos delimitar, sin dejar entre ellos ningún espacio.
+puedes c-cweaw un sewectow que seweccionawá wos ewementos c-concwetos que estén afectados p-pow esa cwase. 😳😳😳 e-en ew ejempwo siguiente vamos a intwoduciw un wesawtado en u-un ewemento `<span>` c-con una cwase `highwight` d-dew de wos títuwos `<h1>` c-con cwase `highwight`. OwO pawa ewwo hay q-que anexaw esa cwase aw sewectow de tipo cowwespondiente aw ewemento que quewemos dewimitaw, rawr sin d-dejaw entwe ewwos nyingún espacio. XD
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/class-type.html", '100%', 750)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/cwass-type.htmw", (U ﹏ U) '100%', 750)}}
 
-Este enfoque hace el elemento CSS menos reutilizable porque la clase solo se aplicará a ese elemento en particular y tendrás que agregar otro selector en caso que quieras que las normas también se apliquen a otros elementos.
+e-este enfoque hace ew ewemento c-css menos weutiwizabwe powque w-wa cwase sowo se apwicawá a-a ese ewemento e-en pawticuwaw y t-tendwás que agwegaw o-otwo sewectow e-en caso que quiewas que was nyowmas también se apwiquen a otwos ewementos. (˘ω˘)
 
-### Delimitar un elemento afectado por más de una clase
+### dewimitaw un ewemento afectado p-pow más de una c-cwase
 
-Puedes aplicar más de una clase a un elemento y delimitarlos de forma individual o seleccionar el elemento cuando todas las clases están presentes en el selector. Puede ser útil cuando se trabaja con componentes que se pueden combinar de maneras diferentes en tu página web.
+puedes a-apwicaw más de una cwase a un e-ewemento y dewimitawwos de fowma individuaw o seweccionaw ew ewemento c-cuando todas w-was cwases están pwesentes en e-ew sewectow. UwU puede sew útiw cuando se twabaja c-con componentes q-que se pueden combinaw de manewas d-difewentes en t-tu página web. >_<
 
-En el ejemplo siguiente hay un elemento `<div>` que contiene una nota. El borde gris se aplica cuando la caja tiene una clase `notebox`. Si además tiene una clase `warning` o `danger`, la propiedad {{cssxref("border-color")}} cambia.
+en ew ejempwo siguiente hay un ewemento `<div>` que contiene una n-nyota. σωσ ew bowde g-gwis se apwica c-cuando wa caja t-tiene una cwase `notebox`. 🥺 s-si además tiene una c-cwase `wawning` o-o `dangew`, 🥺 wa pwopiedad {{cssxwef("bowdew-cowow")}} c-cambia.
 
-Para decirle al navegador que solo queremos seleccionar el elemento si incluye todas estas clases, las encadenamos juntas sin ningún espacio entre ellas.
+pawa d-deciwwe aw nyavegadow que sowo q-quewemos seweccionaw ew ewemento si incwuye todas e-estas cwases, ʘwʘ was encadenamos j-juntas sin nyingún e-espacio entwe ewwas. :3
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/class-many.html", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/cwass-many.htmw", (U ﹏ U) '100%', (U ﹏ U) 900)}}
 
-## Selectores de ID
+## s-sewectowes de id
 
-Un selector de ID comienza con un carácter `#` en lugar de un punto, pero se utiliza básicamente de la misma manera que un selector de clase. Sin embargo, un ID se puede utilizar una sola vez en cada documento, y a cada elemento solo se le puede aplicar un único `id`. Puede seleccionar un elemento que tenga propiedad `id` y ese ID puede ir precedido de un selector de tipo que seleccionará el elemento solo si el elemento y el ID coinciden. En el ejemplo siguiente puedes ver todos estos usos:
+un sewectow de id comienza c-con un cawáctew `#` e-en wugaw de u-un punto, pewo se utiwiza básicamente de wa misma manewa que u-un sewectow de cwase. ʘwʘ sin embawgo, >w< un id se puede u-utiwizaw una sowa v-vez en cada documento, rawr x3 y a cada e-ewemento sowo se we puede apwicaw u-un único `id`. OwO p-puede seweccionaw un ewemento que tenga pwopiedad `id` y-y ese id puede iw pwecedido de un sewectow d-de tipo q-que seweccionawá ew ewemento sowo s-si ew ewemento y ew id coinciden. ^•ﻌ•^ e-en ew ejempwo s-siguiente puedes v-vew todos estos usos:
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/id.htmw", >_< '100%', 750)}}
 
-> [!NOTE]
-> Como aprendimos en el artículo sobre la especificidad, un ID tiene una especificidad muy alta y anula la mayoría de los otros selectores. Esto puede dificultar su uso. En la mayoría de los casos es preferible añadir una clase al elemento en lugar de utilizar un ID. Sin embargo, si el ID es la única manera de seleccionar el elemento (tal vez porque no tengas acceso al marcado y, por lo tanto, no lo puedes editar) no hay ningún problema en utilizarlo.
+> [!note]
+> como apwendimos en ew awtícuwo sobwe wa especificidad, OwO un id tiene una especificidad muy awta y anuwa wa mayowía de wos otwos sewectowes. >_< esto puede dificuwtaw su uso. (ꈍᴗꈍ) en w-wa mayowía de wos c-casos es pwefewibwe añadiw una cwase aw ewemento e-en wugaw de u-utiwizaw un id. >w< s-sin embawgo, (U ﹏ U) si ew id es wa única m-manewa de seweccionaw ew ewemento (taw v-vez powque n-nyo tengas acceso aw mawcado y-y, ^^ pow wo tanto, (U ﹏ U) nyo wo puedes e-editaw) nyo hay n-nyingún pwobwema en utiwizawwo. :3
 
-## En el próximo artículo
+## en ew pwóximo a-awtícuwo
 
-Seguiremos con la descripción de los selectores examinando los [selectores de atributo](/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors).
+s-seguiwemos con w-wa descwipción d-de wos sewectowes e-examinando wos [sewectowes d-de a-atwibuto](/es/docs/weawn_web_devewopment/cowe/stywing_basics/attwibute_sewectows). (✿oωo)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows", "weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows", XD "weawn/css/buiwding_bwocks")}}

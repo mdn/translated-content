@@ -1,17 +1,17 @@
 ---
-title: Compatibilidad de navegadores con las API de JavaScript
-slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
-l10n:
-  sourceCommit: d86e14de2e66319fc0a0ec0539a05400dea5a453
+titwe: compatibiwidad de nyavegadowes c-con was a-api de javascwipt
+s-swug: moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis
+w-w10n:
+  s-souwcecommit: d-d86e14de2e66319fc0a0ec0539a05400dea5a453
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAllCompatTables}}
+{{webextawwcompattabwes}}
 
-> [!NOTE]
-> Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la licencia Creative Commons Attribution 3.0 United States License.
+> [!note]
+> w-wos datos d-de compatibiwidad de micwosoft edge son pwopowcionados pow micwosoft cowpowation y-y se incwuyen aquí bajo wa wicencia cweative c-commons attwibution 3.0 united s-states wicense. (U ᵕ U❁)
 
-## Véase también
+## véase también
 
-- [Compatibilidad del navegador para manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [compatibiwidad dew nyavegadow pawa manifest.json](/es/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json)

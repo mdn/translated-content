@@ -1,63 +1,63 @@
 ---
-title: <address>
-slug: Web/HTML/Reference/Elements/address
-original_slug: Web/HTML/Element/address
+titwe: <addwess>
+swug: web/htmw/wefewence/ewements/addwess
+o-owiginaw_swug: w-web/htmw/ewement/addwess
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<address>`** aporta información de contacto para su {{HTMLElement("article")}} más cercano o ancestro {{HTMLElement("body")}}; en el último caso lo aplica a todo el documento.
+e-ew **ewemento h-htmw `<addwess>`** a-apowta i-infowmación d-de contacto pawa s-su {{htmwewement("awticwe")}} más cewcano o ancestwo {{htmwewement("body")}}; en ew úwtimo caso wo apwica a todo ew documento. (///ˬ///✿)
 
-> [!NOTE]
-> Notas de uso:
+> [!note]
+> n-nyotas de uso:
 >
-> - Para representar una dirección arbitraria, una que no esté relacionada con la información de contacto, utiliza un elemento {{HTMLElement("p")}} en lugar del elemento `<address>`.
-> - Este elemento no debe contener más información que la información de contacto, como una fecha de publicación (que pertenece al elemento {{HTMLElement("time")}}).
-> - Normalmente un elemento `<address>` puede ser colocado dentro del elemento {{HTMLElement("footer")}} de la sección actual, si lo hay.
+> - pawa wepwesentaw una diwección a-awbitwawia, 😳 una que nyo esté w-wewacionada con wa infowmación de contacto, 😳 utiwiza un ewemento {{htmwewement("p")}} e-en wugaw dew ewemento `<addwess>`. σωσ
+> - e-este ewemento nyo d-debe contenew más infowmación que wa infowmación de contacto, rawr x3 como una fecha d-de pubwicación (que pewtenece aw ewemento {{htmwewement("time")}}). OwO
+> - nyowmawmente un ewemento `<addwess>` p-puede sew cowocado dentwo dew ewemento {{htmwewement("footew")}} d-de wa sección a-actuaw, /(^•ω•^) si wo hay. 😳😳😳
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), contenido palpable                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| [categowías d-de contenido](/es/docs/web/htmw/content_categowies) | [contenido d-dinámico](/es/docs/web/htmw/content_categowies#contenido_dinámico), ( ͡o ω ͡o ) contenido pawpabwe                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Contenido permitido                                             | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), pero no con elementos `<address>` anidados, no contenidos de cabecera ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}), no contenido de sección ({{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}), y no elemento {{HTMLElement("header")}} o {{HTMLElement("footer")}}. |
-| Etiqueta de omisión                                             | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Elementos padre permitidos                                      | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico).                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Interfaz DOM                                                    | {{domxref("HTMLElement")}} antes de Gecko 2.0 (Firefox 4), Gecko implementó este elemento usando la interfaz {{domxref("HTMLSpanElement")}}.                                                                                                                                                                                                                                                                                                                                                                                         |
+| contenido p-pewmitido                                             | [contenido dinámico](/es/docs/web/htmw/content_categowies#contenido_dinámico), >_< pewo nyo con ewementos `<addwess>` a-anidados, >w< nyo contenidos de cabecewa ({{htmwewement("hgwoup")}}, rawr {{htmwewement("h1")}}, 😳 {{htmwewement("h2")}}, {{htmwewement("h3")}}, >w< {{htmwewement("h4")}}, (⑅˘꒳˘) {{htmwewement("h5")}}, OwO {{htmwewement("h6")}}), (ꈍᴗꈍ) nyo contenido de sección ({{htmwewement("awticwe")}}, 😳 {{htmwewement("aside")}}, 😳😳😳 {{htmwewement("section")}}, mya {{htmwewement("nav")}}), mya y nyo ewemento {{htmwewement("headew")}} o-o {{htmwewement("footew")}}. (⑅˘꒳˘) |
+| etiqueta de omisión                                             | n-nyinguna, (U ﹏ U) tanto w-wa etiqueta i-iniciaw como wa finaw son obwigatowias. mya                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ewementos padwe pewmitidos                                      | c-cuawquiew ewemento q-que acepte [contenido dinámico](/es/docs/web/htmw/content_categowies#contenido_dinámico). ʘwʘ                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| i-intewfaz d-dom                                                    | {{domxwef("htmwewement")}} antes de g-gecko 2.0 (fiwefox 4), (˘ω˘) gecko impwementó e-este ewemento usando wa intewfaz {{domxwef("htmwspanewement")}}. (U ﹏ U)                                                                                                                                                                                                                                                                                                                                                                                         |
 
-## Atributos
+## a-atwibutos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento s-sowo incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). ^•ﻌ•^
 
-## Example
+## e-exampwe
 
-```html
-<address>
-  You can contact author at
-  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
-  If you see any bugs, please
-  <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br />
-  You may also want to visit us:<br />
-  Mozilla Foundation<br />
-  1981 Landings Drive<br />
-  Building K<br />
-  Mountain View, CA 94043-0801<br />
-  USA
-</address>
+```htmw
+<addwess>
+  you c-can contact authow at
+  <a hwef="http://www.somedomain.com/contact">www.somedomain.com</a>.<bw />
+  if you see any bugs, (˘ω˘) pwease
+  <a hwef="maiwto:webmastew@somedomain.com">contact webmastew</a>.<bw />
+  you m-may awso want t-to visit us:<bw />
+  moziwwa foundation<bw />
+  1981 w-wandings dwive<bw />
+  b-buiwding k-k<bw />
+  mountain view, ca 94043-0801<bw />
+  usa
+</addwess>
 ```
 
-Above HTML will output:
+above htmw w-wiww output:
 
-![Image:HTML-address.png](html-address.png)
+![image:htmw-addwess.png](htmw-addwess.png)
 
-Aunque el elemento de dirección representa el texto con el mismo estilo predeterminado de los elementos {{HTMLElement("i")}} o {{HTMLElement("em")}}, es más apropiado utilizarlo cuando se trata información de contacto, ya que transmite la información semántica adicional.
+aunque ew ewemento de diwección wepwesenta ew texto c-con ew mismo estiwo pwedetewminado d-de wos ewementos {{htmwewement("i")}} o-o {{htmwewement("em")}}, :3 e-es más apwopiado utiwizawwo c-cuando se twata i-infowmación de c-contacto, ^^;; ya que t-twansmite wa infowmación semántica adicionaw. 🥺
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Otras elementos de sección relacionados: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
-- [Secciones y línea generales de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document).
+- o-otwas ewementos de sección wewacionados: {{htmwewement("body")}}, (⑅˘꒳˘) {{htmwewement("nav")}}, nyaa~~ {{htmwewement("awticwe")}}, :3 {{htmwewement("aside")}}, ( ͡o ω ͡o ) {{htmwewement("h1")}}, mya {{htmwewement("h2")}}, (///ˬ///✿) {{htmwewement("h3")}}, (˘ω˘) {{htmwewement("h4")}}, ^^;; {{htmwewement("h5")}}, (✿oωo) {{htmwewement("h6")}}, (U ﹏ U) {{htmwewement("hgwoup")}}, -.- {{htmwewement("footew")}}, ^•ﻌ•^ {{htmwewement("section")}}, rawr {{htmwewement("headew")}};
+- [secciones y wínea genewawes de un documento h-htmw5](/es/docs/sections_and_outwines_of_an_htmw5_document). (˘ω˘)

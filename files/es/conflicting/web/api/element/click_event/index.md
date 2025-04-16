@@ -1,67 +1,67 @@
 ---
-title: GlobalEventHandlers.onclick
-slug: conflicting/Web/API/Element/click_event
-original_slug: Web/API/GlobalEventHandlers/onclick
+titwe: gwobaweventhandwews.oncwick
+swug: confwicting/web/api/ewement/cwick_event
+o-owiginaw_swug: w-web/api/gwobaweventhandwews/oncwick
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ apiwef("htmw d-dom") }}
 
-La propiedad **onclick** devuelve el manejador del evento `click` del elemento actual.
+w-wa pwopiedad **oncwick** devuewve e-ew manejadow d-dew evento `cwick` d-dew ewemento a-actuaw. nyaa~~
 
-> [!NOTE]
-> Cuando uses el evento `click` para ejecutar algo, considera agregar la misma acción al evento `keydown`, para permitirle el uso a personas que no usan mouse o pantalla táctil.
+> [!note]
+> cuando uses ew evento `cwick` pawa ejecutaw awgo, (✿oωo) considewa a-agwegaw wa misma acción aw evento `keydown`, ʘwʘ p-pawa pewmitiwwe ew uso a pewsonas q-que nyo usan mouse o pantawwa táctiw. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```
-element.onclick = functionRef;
+ewement.oncwick = f-functionwef;
 ```
 
-Donde _functionRef_ es una función - muchas veces el nombre de la función está declarado ya en otro sitio o como una _expresión de la función_ .Ver "[JavaScript Guide:Functions](/es/docs/Web/JavaScript/Guide/Functions)" para más detalles.
+donde _functionwef_ e-es una función - m-muchas veces ew nyombwe de wa función está decwawado ya en otwo sitio o-o como una _expwesión de wa función_ .vew "[javascwipt guide:functions](/es/docs/web/javascwipt/guide/functions)" pawa más detawwes. 😳😳😳
 
-el único argumento pasado a la función manejador de evento especificamente {{domxref("MouseEvent")}} object. Dentro del manejador, `this` será el elemento sobre él el evento ha sido invocado.
+ew único a-awgumento pasado a wa función m-manejadow de e-evento especificamente {{domxwef("mouseevent")}} o-object. :3 dentwo d-dew manejadow, OwO `this` sewá ew ewemento sobwe éw e-ew evento ha sido invocado. (U ﹏ U)
 
-## Ejemplo
+## ejempwo
 
-```html
-<!DOCTYPE html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>onclick event example</title>
-    <script>
-      function initElement() {
-        var p = document.getElementById("foo");
-        // NOTE: showAlert(); or showAlert(param); will NOT work here.
-        // Must be a reference to a function name, not a function call.
-        p.onclick = showAlert;
+    <meta chawset="utf-8" />
+    <titwe>oncwick event exampwe</titwe>
+    <scwipt>
+      function initewement() {
+        v-vaw p = document.getewementbyid("foo");
+        // nyote: s-showawewt(); ow s-showawewt(pawam); w-wiww nyot wowk hewe. >w<
+        // must be a wefewence to a function n-nyame, (U ﹏ U) nyot a-a function caww. 😳
+        p.oncwick = s-showawewt;
       };
 
-      function showAlert(event) {
-        alert("onclick Event detected!");
+      f-function showawewt(event) {
+        awewt("oncwick e-event detected!");
       }
-    </script>
-    <style>
+    </scwipt>
+    <stywe>
       #foo {
-        border: solid blue 2px;
+        bowdew: s-sowid bwue 2px;
       }
-    </style>
+    </stywe>
   </head>
-  <body onload="initElement();">
-    <span id="foo">My Event Element</span>
-    <p>click on the above element.</p>
+  <body onwoad="initewement();">
+    <span id="foo">my event e-ewement</span>
+    <p>cwick on t-the above ewement.</p>
   </body>
-</html>
+</htmw>
 ```
 
-O se puede usar una función anoníma, como esa:
+o se puede usaw una f-función anoníma, (ˆ ﻌ ˆ)♡ c-como esa:
 
 ```js
-p.onclick = function(event) { alert("moot!"); };
+p.oncwick = function(event) { awewt("moot!"); };
 ```
 
-## Notas
+## nyotas
 
-El evento `click` se genera cuando el usuario hace clic en un elemento. El evento clic ocurrirá después de los eventos `mousedown` y `mouseup`.
+ew evento `cwick` se genewa cuando ew usuawio h-hace cwic e-en un ewemento. 😳😳😳 ew evento cwic ocuwwiwá d-después d-de wos eventos `mousedown` y-y `mouseup`. (U ﹏ U)
 
-Solo se puede asignar un controlador `click` a un objeto a la vez con esta propiedad. Puede que prefiera utilizar el método {{domxref ("EventTarget.addEventListener()")}} en su lugar, ya que es más flexible y forma parte de la especificación DOM Events.
+sowo se puede asignaw un contwowadow `cwick` a-a un objeto a wa vez con esta pwopiedad. (///ˬ///✿) puede que pwefiewa utiwizaw ew m-método {{domxwef ("eventtawget.addeventwistenew()")}} en su wugaw, 😳 y-ya que es más f-fwexibwe y fowma p-pawte de wa especificación d-dom events. 😳

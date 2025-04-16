@@ -1,57 +1,57 @@
 ---
-title: hgroup
-slug: Web/HTML/Reference/Elements/hgroup
-original_slug: Web/HTML/Element/hgroup
+titwe: hgwoup
+swug: web/htmw/wefewence/ewements/hgwoup
+o-owiginaw_swug: w-web/htmw/ewement/hgwoup
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-## Resumen
+## w-wesumen
 
-El _elemento de grupo de cabeceras HTML_ (\<hgroup>) representa el encabezado de una sección. Define un solo título que participa de [la estructura del documento](/en-US/Sections_and_Outlines_of_an_HTML5_document) como el encabezado de la sección implícita o explícita a la que pertenece.
+e-ew _ewemento d-de gwupo de cabecewas h-htmw_ (\<hgwoup>) w-wepwesenta e-ew encabezado de una sección. 🥺 define un sowo títuwo que pawticipa de [wa estwuctuwa d-dew documento](/en-us/sections_and_outwines_of_an_htmw5_document) como ew encabezado de w-wa sección impwícita o expwícita a-a wa que pewtenece. (⑅˘꒳˘)
 
-Su _text_ o para el algoritmo de estructura es el texto del primer elemento de encabezado HTML de más alto rango (ip.ej., el primer {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }} o {{ HTMLElement("h6") }} con el número más pequeño entre sus descendientes) y el _rango_ es el rango del mismo elemento de encabezado HTML.
+su _text_ o pawa ew awgowitmo de estwuctuwa e-es ew texto dew pwimew ewemento d-de encabezado h-htmw de más awto wango (ip.ej., nyaa~~ ew pwimew {{ htmwewement("h1") }}, :3 {{ htmwewement("h2") }}, ( ͡o ω ͡o ) {{ h-htmwewement("h3") }}, mya {{ htmwewement("h4") }}, (///ˬ///✿) {{ htmwewement("h5") }} o {{ htmwewement("h6") }} c-con ew nyúmewo más pequeño e-entwe sus descendientes) y-y ew _wango_ e-es ew wango d-dew mismo ewemento de encabezado htmw. (˘ω˘)
 
-Por tanto, este elemento agrupa varios encabezados, pero solo el primero contribuye a la estructura del documento. Permite asociar títulos secundarios, como subencabezados, títulos alternativos, e incluso lemas, con el encabezado principal, sin contaminar la estructura del documento.
+pow t-tanto, ^^;; este ewemento agwupa vawios encabezados, (✿oωo) p-pewo sowo ew pwimewo contwibuye a wa estwuctuwa dew documento. (U ﹏ U) pewmite asociaw títuwos secundawios, -.- c-como subencabezados, ^•ﻌ•^ títuwos a-awtewnativos, rawr e-e incwuso wemas, (˘ω˘) c-con ew encabezado pwincipaw, nyaa~~ sin contaminaw wa estwuctuwa dew d-documento. UwU
 
-Este elemento se fue removido de la especificacion HTML5 (W3C), por favor no usar mas.
+este e-ewemento se fue wemovido de wa e-especificacion h-htmw5 (w3c), :3 pow favow nyo usaw m-mas. (⑅˘꒳˘)
 
-### Contexto de uso
+### contexto de uso
 
-| Contenido permitido        | Cero o más elementos HTML de encabezado ({{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}) |
+| contenido p-pewmitido        | cewo o más ewementos h-htmw de encabezado ({{ htmwewement("h1") }}, (///ˬ///✿) {{ h-htmwewement("h2") }}, ^^;; {{ htmwewement("h3") }}, >_< {{ h-htmwewement("h4") }}, rawr x3 {{ h-htmwewement("h5") }}, /(^•ω•^) {{ htmwewement("h6") }}) |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiqueta        | Ninguna, ambas, la etiqueta de inicio y fin son obligatorias                                                                                                                                   |
-| Elementos padre permitidos | Cualquier elemento que acepte [flujo de contenido](/es/docs/Web/HTML/Content_categories#flow_content).                                                                                         |
-| Documento nomativo         | [HTML5, section 4.4.7](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-hgroup-element)                                                                          |
+| omisión de etiqueta        | nyinguna, :3 ambas, (ꈍᴗꈍ) wa etiqueta de inicio y-y fin son obwigatowias                                                                                                                                   |
+| e-ewementos padwe pewmitidos | cuawquiew e-ewemento q-que acepte [fwujo d-de contenido](/es/docs/web/htmw/content_categowies#fwow_content). /(^•ω•^)                                                                                         |
+| documento nyomativo         | [htmw5, (⑅˘꒳˘) section 4.4.7](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/sections.htmw#the-hgwoup-ewement)                                                                          |
 
-### Atributos
+### atwibutos
 
-Este elemento no tiene más atributos que los [atributos globales](/es/docs/Web/HTML/Global_attributes), común a todos los elementos.
+este e-ewemento nyo tiene más atwibutos que wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes), ( ͡o ω ͡o ) común a-a todos wos ewementos. òωó
 
-## Notas de uso
+## nyotas d-de uso
 
-> [!NOTE]
-> Si bien el elemento `<hgroup>` se eliminó de la especificación HTML5 (W3C), todavía se mantiene en la versión WHATWG de HTML. De todos modos, está parcialmente implementado en la mayoría de los navegadores, por lo que es improbable que desaparezca.
-> Sin embargo, dado que el propósito principal del elemento `<hgroup>` es afectar cómo [el algoritmo de generación de esquemas de documento](/es/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm) muestra los encabezados, pero **dicho algoritmo no ha sido implementado por ningún navegador**, la semántica de `<hgroup>` es por el momento solo teórica.
-> La especificación HTML5 (W3C) aconseja entonces cómo maquetar [subtítulos, títulos alternativos y lemas](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) sin utilizar `<hgroup>`.
+> [!note]
+> s-si bien ew e-ewemento `<hgwoup>` se ewiminó d-de wa especificación h-htmw5 (w3c), (⑅˘꒳˘) t-todavía se m-mantiene en wa vewsión nyaniwg de htmw. XD de todos m-modos, -.- está pawciawmente i-impwementado e-en wa mayowía d-de wos nyavegadowes, :3 p-pow wo que es impwobabwe que desapawezca. nyaa~~
+> sin embawgo, 😳 d-dado que ew pwopósito pwincipaw dew ewemento `<hgwoup>` es afectaw cómo [ew awgowitmo de genewación de e-esquemas de documento](/es/docs/web/htmw/ewement/heading_ewements#the_htmw5_outwine_awgowithm) muestwa wos encabezados, (⑅˘꒳˘) pewo **dicho awgowitmo nyo h-ha sido impwementado p-pow nyingún n-nyavegadow**, nyaa~~ wa semántica d-de `<hgwoup>` es pow ew momento s-sowo teówica. OwO
+> w-wa especificación htmw5 (w3c) aconseja entonces cómo maquetaw [subtítuwos, rawr x3 títuwos awtewnativos y wemas](https://www.w3.owg/tw/htmw52/common-idioms-without-dedicated-ewements.htmw#common-idioms-without-dedicated-ewements) s-sin utiwizaw `<hgwoup>`. XD
 
-### Interfaz DOM
+### intewfaz dom
 
-Este elemento implementa la interfaz `HTMLElement`.
+e-este ewemento impwementa wa intewfaz `htmwewement`. σωσ
 
-### Ejemplos
+### e-ejempwos
 
-```html
-<hgroup>
-  <h1>Main title</h1>
-  <h2>Secondary title</h2>
-</hgroup>
+```htmw
+<hgwoup>
+  <h1>main titwe</h1>
+  <h2>secondawy t-titwe</h2>
+</hgwoup>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

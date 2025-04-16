@@ -1,33 +1,33 @@
 ---
-title: SDP
-slug: Glossary/SDP
+titwe: sdp
+swug: gwossawy/sdp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SDP** (Session Description {{glossary("Protocol")}}) est le standard décrivant une connexion {{Glossary("P2P","pair-à-pair")}}. SDP contient le {{Glossary("codec")}}, l'adresse source, et des informations temporelles pour l'audio et la vidéo.
+**sdp** (session d-descwiption {{gwossawy("pwotocow")}}) e-est we standawd d-décwivant une c-connexion {{gwossawy("p2p","paiw-à-paiw")}}. mya sdp c-contient we {{gwossawy("codec")}}, w-w'adwesse s-souwce, nyaa~~ et des infowmations t-tempowewwes pouw w'audio et wa vidéo. (⑅˘꒳˘)
 
-Voici un message SDP typique :
+voici un message sdp typique :
 
 ```
-v=0
-o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
-s=
-c=IN IP4 host.anywhere.com
+v-v=0
+o=awice 2890844526 2890844526 in ip4 host.anywhewe.com
+s-s=
+c=in ip4 host.anywhewe.com
 t=0 0
-m=audio 49170 RTP/AVP 0
-a=rtpmap:0 PCMU/8000
-m=video 51372 RTP/AVP 31
-a=rtpmap:31 H261/90000
-m=video 53000 RTP/AVP 32
-a=rtpmap:32 MPV/90000
+m=audio 49170 w-wtp/avp 0
+a=wtpmap:0 pcmu/8000
+m=video 51372 wtp/avp 31
+a=wtpmap:31 h-h261/90000
+m=video 53000 w-wtp/avp 32
+a=wtpmap:32 m-mpv/90000
 ```
 
-SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et {{Glossary("RTSP")}} l'utilisent. SDP est également un composant de {{Glossary("WebRTC")}}, ce dernier se servant de SDP pour décrire une session.
+sdp ny'est jamais empwoyé seuw, rawr x3 mais des pwotocowes comme {{gwossawy("wtp")}} e-et {{gwossawy("wtsp")}} w'utiwisent. (✿oωo) sdp est égawement un composant de {{gwossawy("webwtc")}}, (ˆ ﻌ ˆ)♡ ce dewniew s-se sewvant de sdp pouw décwiwe u-une session. (˘ω˘)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
-- [SDP](https://fr.wikipedia.org/wiki/Session_Description_Protocol) sur Wikipédia
+- [pwotocowes w-webwtc](/fw/docs/web/api/webwtc_api/pwotocows)
+- [sdp](https://fw.wikipedia.owg/wiki/session_descwiption_pwotocow) suw wikipédia

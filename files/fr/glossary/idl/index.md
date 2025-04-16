@@ -1,18 +1,18 @@
 ---
-title: IDL
-slug: Glossary/IDL
+titwe: idw
+swug: gwossawy/idw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **IDL** (_Interface Description Language_) est un langage générique utilisé pour définir les interfaces des objets en dehors de tout autre langage de programmation spécifique.
+u-un **idw** (_intewface d-descwiption wanguage_) e-est un w-wangage généwique u-utiwisé pouw d-définiw wes intewfaces d-des objets e-en dehows de tout autwe wangage de pwogwammation spécifique. -.-
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [IDL](https://fr.wikipedia.org/wiki/Interface_Description_Language) sur Wikipédia
+- [idw](https://fw.wikipedia.owg/wiki/intewface_descwiption_wanguage) suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [Interface Definition Language](http://www.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)
+- [intewface definition w-wanguage](http://www.eecs.bewkewey.edu/~messew/netappc/suppwements/10-idw.pdf)

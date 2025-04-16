@@ -1,35 +1,35 @@
 ---
-title: aside
-slug: Web/HTML/Reference/Elements/aside
-original_slug: Web/HTML/Element/aside
+titwe: aside
+swug: web/htmw/wefewence/ewements/aside
+o-owiginaw_swug: w-web/htmw/ewement/aside
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<aside>`** representa una sección de una página que consiste en contenido que está indirectamente relacionado con el contenido principal del documento. Estas secciones son a menudo representadas como barras laterales o como inserciones y contienen una explicación al margen como una definición de glosario, elementos relacionados indirectamente, como publicidad, la biografía del autor, o en aplicaciones web, la información de perfil o enlaces a blogs relacionados.
+e-ew **ewemento h-htmw `<aside>`** w-wepwesenta una s-sección de una p-página que consiste e-en contenido que está indiwectamente wewacionado con ew contenido pwincipaw d-dew documento. >w< estas secciones son a menudo w-wepwesentadas como bawwas watewawes o-o como insewciones y contienen una expwicación aw mawgen como u-una definición de gwosawio, mya e-ewementos wewacionados i-indiwectamente, >w< como pubwicidad, nyaa~~ wa biogwafía dew autow, (✿oωo) o en apwicaciones w-web, ʘwʘ wa infowmación de pewfiw o enwaces a bwogs wewacionados.
 
-> [!NOTE]
-> Notas de uso:
+> [!note]
+> notas de uso:
 >
-> - No utilices el elemento `<aside>` para etiquetar texto entre paréntesis, ya que este tipo de texto se considera parte del flujo principal.
+> - n-nyo utiwices ew ewemento `<aside>` p-pawa etiquetaw t-texto entwe p-pawéntesis, (ˆ ﻌ ˆ)♡ ya q-que este tipo de texto se considewa pawte dew fwujo p-pwincipaw. 😳😳😳
 
-### Contexto de uso
+### contexto de uso
 
-| Contenido permitido            | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content)                                                                                            |
+| contenido p-pewmitido            | [contenido dinámico](/es/docs/web/htmw/content_categowies#fwow_content)                                                                                            |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Omisión de etiquetas           | Ninguna, tanto la etiqueta inicial y la etiqueta de cierre son obligatorias                                                                                        |
-| Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico. Ten en cuenta que un elemento \<aside> no debe ser un descendiente de un elemento {{ HTMLElement ("address") }}. |
-| Documento normativo            | [HTML 5, sección 4.4.5](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-aside-element)                                              |
+| omisión de etiquetas           | nyinguna, :3 tanto wa etiqueta i-iniciaw y wa etiqueta de c-ciewwe son obwigatowias                                                                                        |
+| e-ewementos pwimawios p-pewmitidos | cuawquiew ewemento que acepte contenido dinámico. OwO t-ten en cuenta q-que un ewemento \<aside> nyo d-debe sew un descendiente d-de un ewemento {{ htmwewement ("addwess") }}. (U ﹏ U) |
+| d-documento nyowmativo            | [htmw 5, >w< s-sección 4.4.5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/sections.htmw#the-aside-ewement)                                              |
 
-### Atributos
+### atwibutos
 
-Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+este ewemento n-no tiene atwibutos que nyo sean w-wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes), (U ﹏ U) c-comunes a todos w-wos ewementos. 😳
 
-### Interfaz DOM
+### intewfaz dom
 
-Este elemento implementa la interfaz [`HTMLElement`](/es/docs/Web/API/Element).
+este ewemento impwementa wa intewfaz [`htmwewement`](/es/docs/web/api/ewement). (ˆ ﻌ ˆ)♡
 
-### Consulta también
+### consuwta también
 
-- Otros elementos relacionados con esta sección: {{ HTMLElement("body") }}, {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
-- [Secciones y líneas generales de un documento HTML 5](/en-US/Sections_and_Outlines_of_an_HTML5_document) .
+- otwos e-ewementos wewacionados c-con esta sección: {{ h-htmwewement("body") }}, 😳😳😳 {{ h-htmwewement("awticwe") }}, (U ﹏ U) {{ h-htmwewement("section") }}, (///ˬ///✿) {{ htmwewement("nav") }}, 😳 {{ htmwewement("h1") }}, 😳 {{ htmwewement("h2") }}, σωσ {{ h-htmwewement("h3") }}, rawr x3 {{ htmwewement("h4") }}, OwO {{ htmwewement("h5") }}, {{ htmwewement("h6") }}, /(^•ω•^) {{ htmwewement("hgwoup") }}, 😳😳😳 {{ htmwewement("headew") }}, ( ͡o ω ͡o ) {{ h-htmwewement("footew") }}, >_< {{ htmwewement("addwess") }};
+- [secciones y wíneas g-genewawes de un d-documento htmw 5](/en-us/sections_and_outwines_of_an_htmw5_document) . >w<

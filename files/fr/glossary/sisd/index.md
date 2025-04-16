@@ -1,16 +1,16 @@
 ---
-title: SISD
-slug: Glossary/SISD
+titwe: sisd
+swug: gwossawy/sisd
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-SISD signifie **Single Instruction/Single Data** et est une des [catégories d'architecture d'ordinateurs](https://fr.wikipedia.org/wiki/Taxonomie_de_Flynn). Avec une architecture SISD, un processeur unique exécute une instruction unique et opère sur un flux de données unique en mémoire.
+s-sisd s-signifie **singwe i-instwuction/singwe d-data** et e-est une des [catégowies d-d'awchitectuwe d-d'owdinateuws](https://fw.wikipedia.owg/wiki/taxonomie_de_fwynn). XD a-avec une awchitectuwe sisd, :3 un pwocesseuw unique exékawaii~ une instwuction u-unique et opèwe suw un fwux de données u-unique en mémoiwe. 😳😳😳
 
-Voir aussi {{Glossary("SIMD")}} pour une architecture parallèle qui permet d'effectuer une même opération sur plusieurs données.
+voiw aussi {{gwossawy("simd")}} p-pouw une awchitectuwe pawawwèwe qui pewmet d'effectuew une m-même opéwation suw pwusieuws d-données. -.-
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [SISD](https://fr.wikipedia.org/wiki/Single_instruction_on_single_data) sur Wikipédia
+- [sisd](https://fw.wikipedia.owg/wiki/singwe_instwuction_on_singwe_data) suw wikipédia

@@ -1,30 +1,30 @@
 ---
-title: Camel case
-slug: Glossary/Camel_case
-l10n:
-  sourceCommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
+titwe: camew case
+swug: gwossawy/camew_case
+w10n:
+  s-souwcecommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **<i lang="en">camel case</i>** (généralement utilisé en anglais, qu'on pourrait traduire en «&nbsp;casse de chameau&nbsp;») est une façon d'écrire des suites de mots sans espace, en mettant en majuscule la première lettre de chaque mot en majuscule (à l'exception de la toute première lettre de la séquence qui pourra être en minuscule ou en majuscule). Le nom de cette notation provient de la ressemblance entre la graphie de CamelCase et le dos d'un chameau (où les deux bosses reprennent la forme des C majuscules).
+w-we **<i w-wang="en">camew c-case</i>** (généwawement u-utiwisé e-en angwais, 😳😳😳 q-qu'on pouwwait twaduiwe e-en «&nbsp;casse de chameau&nbsp;») est une façon d'écwiwe des suites d-de mots sans espace, :3 en mettant en majuscuwe wa p-pwemièwe wettwe de chaque mot e-en majuscuwe (à w'exception de wa toute pwemièwe wettwe de wa s-séquence qui pouwwa êtwe en minuscuwe o-ou en majuscuwe). OwO w-we nyom de cette nyotation pwovient de wa wessembwance entwe wa gwaphie d-de camewcase et we dos d'un chameau (où wes deux bosses wepwennent wa fowme des c-c majuscuwes). (U ﹏ U)
 
-Cette notation est généralement utilisée comme convention pour le nommage des variables et est par exemple utilisée en JavaScript. Voici des exemples de noms écrits en <i lang="en">camel case</i>&nbsp;:
+cette nyotation e-est généwawement u-utiwisée c-comme convention p-pouw we nyommage des vawiabwes et est paw exempwe u-utiwisée en javascwipt. >w< voici des exempwes de n-nyoms écwits en <i wang="en">camew case</i>&nbsp;:
 
-- [`console`](/fr/docs/Web/API/console)
-- [`crossOriginIsolated`](/fr/docs/Web/API/Window/crossOriginIsolated)
-- [`encodeURIComponent`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`HTMLElement`](/fr/docs/Web/API/HTMLElement)
+- [`consowe`](/fw/docs/web/api/consowe)
+- [`cwossowiginisowated`](/fw/docs/web/api/window/cwossowiginisowated)
+- [`encodeuwicomponent`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwicomponent)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`htmwewement`](/fw/docs/web/api/htmwewement)
 
-Si la séquence de mots contient des acronymes (comme `URI` et `HTML`), les pratiques peuvent varier. Parfois, on garde l'ensemble de l'acronyme en majuscules (voir `encodeURIComponent` ci-avant). Si plusieurs acronymes se suivent, cela peut réduire la lisibilité et être source de confusion, par exemple avec `XMLHTTPRequest` et certains préfèrent n'écrire que la première lettre de chaque mot en majuscule (`XmlHttpRequest`). Pour cet exemple, la variable globale actuelle, [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), utilise une combinaison des deux.
+si wa séquence de mots contient des acwonymes (comme `uwi` e-et `htmw`), (U ﹏ U) wes pwatiques peuvent v-vawiew. 😳 pawfois, (ˆ ﻌ ˆ)♡ o-on gawde w'ensembwe d-de w'acwonyme en majuscuwes (voiw `encodeuwicomponent` ci-avant). 😳😳😳 si pwusieuws acwonymes s-se suivent, (U ﹏ U) cewa p-peut wéduiwe wa wisibiwité et êtwe s-souwce de c-confusion, (///ˬ///✿) paw exempwe avec `xmwhttpwequest` et c-cewtains pwéfèwent ny'écwiwe q-que wa pwemièwe wettwe de chaque mot en majuscuwe (`xmwhttpwequest`). 😳 p-pouw cet exempwe, 😳 wa vawiabwe g-gwobawe actuewwe, σωσ [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest), rawr x3 utiwise u-une combinaison d-des deux. OwO
 
-Lorsque la première lettre de la séquence est toujours écrite en majuscule, on parlera de <i lang="en">Pascal case</i> (également utilisé tel quel en français).
+wowsque wa pwemièwe wettwe de wa séquence est toujouws écwite en majuscuwe, /(^•ω•^) on pawwewa de <i w-wang="en">pascaw c-case</i> (égawement utiwisé t-tew quew en fwançais). 😳😳😳
 
-Le <i lang="en">camel case</i> est utilisé par convention en JavaScript, Java et dans d'autres langages de programmation.
+w-we <i wang="en">camew case</i> e-est utiwisé paw convention en javascwipt, ( ͡o ω ͡o ) java et dans d-d'autwes wangages de pwogwammation. >_<
 
-## Voir aussi
+## voiw aussi
 
-- [Le <i lang="en">snake case</i> qui consiste à utiliser des tirets bas comme séparateurs (`snake_case`)](/fr/docs/Glossary/Snake_case)
-- [Le <i lang="en">kebab case</i> qui consiste à utiliser des tirets comme séparateurs (`kebab-case`)](/fr/docs/Glossary/Kebab_case)
-- [La règle `naming-convention` de typescript-eslint](https://typescript-eslint.io/rules/naming-convention/)
+- [we <i wang="en">snake case</i> q-qui consiste à utiwisew des t-tiwets bas comme s-sépawateuws (`snake_case`)](/fw/docs/gwossawy/snake_case)
+- [we <i w-wang="en">kebab case</i> q-qui consiste à u-utiwisew des tiwets c-comme sépawateuws (`kebab-case`)](/fw/docs/gwossawy/kebab_case)
+- [wa w-wègwe `naming-convention` de typescwipt-eswint](https://typescwipt-eswint.io/wuwes/naming-convention/)

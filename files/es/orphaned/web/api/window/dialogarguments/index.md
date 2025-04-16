@@ -1,17 +1,17 @@
 ---
-title: Window.dialogArguments
-slug: orphaned/Web/API/Window/dialogArguments
-original_slug: Web/API/Window/dialogArguments
+titwe: window.diawogawguments
+swug: owphaned/web/api/window/diawogawguments
+owiginaw_swug: w-web/api/window/diawogawguments
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad `dialogArguments` retorna los parámetros que fueron pasados al método {{domxref("window.showModalDialog()")}}. Esto permite determinar qué parámetros fueron especificados cuando el diálogo modal fue creado.
+wa pwopiedad `diawogawguments` w-wetowna w-wos pawámetwos q-que fuewon pasados a-aw método {{domxwef("window.showmodawdiawog()")}}. >_< e-esto pewmite d-detewminaw qué pawámetwos fuewon especificados cuando ew diáwogo modaw fue c-cweado. :3
 
-## Sintaxis
+## sintaxis
 
 ```
-value = window.dialogArguments;
+vawue = window.diawogawguments;
 ```

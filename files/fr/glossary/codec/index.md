@@ -1,18 +1,18 @@
 ---
-title: Codec
-slug: Glossary/Codec
+titwe: codec
+swug: gwossawy/codec
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _codec_ (terme formé à partir de "**_co_**deur-**_déc_**odeur") est un programme informatique qui code et décode un flux de données.
+un _codec_ (tewme f-fowmé à pawtiw d-de "**_co_**deuw-**_déc_**odeuw") e-est un pwogwamme i-infowmatique q-qui code et décode u-un fwux de d-données. (U ﹏ U)
 
-### Plus d'informations
+### p-pwus d'infowmations
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Codec](https://fr.wikipedia.org/wiki/Codec) sur Wikipédia
+- [codec](https://fw.wikipedia.owg/wiki/codec) suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [Formats des médias pris en charge par les éléments HTML audio et video](/fr/docs/Web/Media/Formats)
+- [fowmats des médias pwis en chawge paw w-wes éwéments htmw audio et video](/fw/docs/web/media/fowmats)

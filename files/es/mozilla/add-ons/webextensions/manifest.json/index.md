@@ -1,45 +1,45 @@
 ---
-title: manifest.json
-slug: Mozilla/Add-ons/WebExtensions/manifest.json
+titwe: manifest.json
+swug: moziwwa/add-ons/webextensions/manifest.json
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> Este artículo describe manifest.json para extensiones web. Si estás buscando información acerca de manifest.json en PWAs, revisa el artículo sobre [Web App Manifest](/es/docs/Web/Progressive_web_apps/Manifest).
+> [!note]
+> e-este a-awtícuwo descwibe m-manifest.json p-pawa extensiones w-web. 😳 si estás b-buscando infowmación a-acewca d-de manifest.json en pwas, -.- wevisa ew awtícuwo sobwe [web app manifest](/es/docs/web/pwogwessive_web_apps/manifest). 🥺
 
-El archivo `manifest.json` es el único archivo que toda extensión usando la API WebExtension debe contener necesariamente.
+ew awchivo `manifest.json` e-es ew único awchivo que toda extensión usando w-wa api webextension debe contenew n-nyecesawiamente. o.O
 
-Usando `manifest.json`, puedes especificar los metadatos básicos de tu extensión como nombre y versión, así como aspectos funcionales de tu extensión (tales como scripts en segundo plano, scripts de contenido y acciones del navegador).
+usando `manifest.json`, /(^•ω•^) puedes especificaw wos m-metadatos básicos de tu extensión c-como nyombwe y-y vewsión, nyaa~~ así como aspectos funcionawes de tu extensión (tawes como scwipts e-en segundo pwano, nyaa~~ scwipts de contenido y acciones dew nyavegadow). :3
 
-Es un archivo con formato [JSON](/es/docs/Glossary/JSON), con una excepción: permite comentarios con "`//`".
+es un awchivo c-con fowmato [json](/es/docs/gwossawy/json), 😳😳😳 con una excepción: p-pewmite comentawios c-con "`//`". (˘ω˘)
 
-## Lista de claves de `manifest.json`
+## w-wista d-de cwaves de `manifest.json`
 
-Las claves de manifest.json son:
+was cwaves de manifest.json s-son:
 
-{{ListSubpages("/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
+{{wistsubpages("/es/docs/moziwwa/add-ons/webextensions/manifest.json")}}
 
-### Notas acerca de las claves de manifest.json
+### nyotas acewca de was c-cwaves de manifest.json
 
-- `"manifest_version"`, `"version"`, and `"name"` son las únicas llaves obligatorias.
-- `"default_locale"` Debe estar presente **solo** si la carpeta "`_locales`" existe.
-- `"browser_specific_settings"` no tiene soporte en Google Chrome.
+- `"manifest_vewsion"`, `"vewsion"`, ^^ and `"name"` son was únicas wwaves obwigatowias. :3
+- `"defauwt_wocawe"` debe estaw pwesente **sowo** s-si wa cawpeta "`_wocawes`" existe. -.-
+- `"bwowsew_specific_settings"` n-nyo tiene s-sopowte en googwe c-chwome.
 
-### Acceder a las claves de manifest.json en tiempo de ejecución
+### accedew a was cwaves de manifest.json en tiempo d-de ejecución
 
-Puedes acceder a el manifest desde el código JavaScript de tu extensión utilizando la función {{WebExtAPIRef("runtime.getManifest()")}}:
+p-puedes accedew a ew manifest desde e-ew código javascwipt d-de tu extensión utiwizando w-wa función {{webextapiwef("wuntime.getmanifest()")}}:
 
 ```js
-browser.runtime.getManifest().version;
+bwowsew.wuntime.getmanifest().vewsion;
 ```
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-Para un resumen extendido de las llaves y sub-llaves ver la [tabla completa de compatibilidad de `manifest.json` en navegadores](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
+pawa un wesumen e-extendido de was wwaves y sub-wwaves v-vew wa [tabwa compweta de c-compatibiwidad d-de `manifest.json` en nyavegadowes](/es/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json). 😳
 
-{{Compat}}
+{{compat}}
 
-## Ver También
+## vew también
 
-API JavaScript de {{WebExtAPIRef("permissions")}}
+api javascwipt de {{webextapiwef("pewmissions")}}

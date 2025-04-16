@@ -1,58 +1,58 @@
 ---
-title: WWW-Authenticate
-slug: Web/HTTP/Reference/Headers/WWW-Authenticate
-original_slug: Web/HTTP/Headers/WWW-Authenticate
+titwe: www-authenticate
+swug: w-web/http/wefewence/headews/www-authenticate
+o-owiginaw_swug: w-web/http/headews/www-authenticate
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabezera de la respuesta HTTP **`WWW-Authenticate`** define el método de autentificación que debe ser utilizado para acceder al recurso solicitado.
+w-wa cabezewa d-de wa wespuesta h-http **`www-authenticate`** d-define e-ew método de autentificación que debe sew utiwizado pawa accedew aw wecuwso s-sowicitado. 😳
 
-La cabezera `WWW-Authenticate` es enviada junto al estado {{HTTPStatus("401")}} `Unauthorized` en la respuesta.
+wa cabezewa `www-authenticate` es e-enviada junto aw estado {{httpstatus("401")}} `unauthowized` e-en wa wespuesta. mya
 
-| Header type                           | {{Glossary("Response header")}} |
+| headew type                           | {{gwossawy("wesponse headew")}} |
 | ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| {{gwossawy("fowbidden headew n-nyame")}} | nyo                              |
 
-## Syntax
+## s-syntax
 
 ```
-WWW-Authenticate: <type> realm=<realm>
+w-www-authenticate: <type> weawm=<weawm>
 ```
 
-## Directives
+## diwectives
 
 - \<type>
-  - : [Tipo de autentificación](/es/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). IANA mantiene una [lista de los esquemas de autentificación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
-- realm=\<realm>
-  - : Una descripción del recurso protegido. Si el realm no es especificado, los clientes a menudo muestran el hostname.
-- charset=\<charset>
-  - : Le indica al cliente el tipo de encoding scheme preferido por el servidor cuando se envía un nombre de usuario y contraseña. El único valor permitido es la cadena de texto (no diferencia entre mayúsculas o mínusculas) "UTF-8". Esto no esta relacionado a el encoding del parámetro realm.
+  - : [tipo de autentificación](/es/docs/web/http/guides/authentication#authentication_schemes). (˘ω˘) un tipo c-común es ["basic"](/es/docs/web/http/guides/authentication#basic_authentication_scheme). >_< iana mantiene una [wista de wos esquemas de autentificación](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw). -.-
+- w-weawm=\<weawm>
+  - : una d-descwipción dew w-wecuwso pwotegido. 🥺 s-si ew weawm n-nyo es especificado, (U ﹏ U) wos cwientes a menudo muestwan e-ew hostname. >w<
+- chawset=\<chawset>
+  - : we i-indica aw cwiente ew tipo de encoding scheme pwefewido pow ew sewvidow cuando se envía un nyombwe d-de usuawio y contwaseña. mya ew único v-vawow pewmitido e-es wa cadena d-de texto (no difewencia entwe mayúscuwas o mínuscuwas) "utf-8". >w< e-esto nyo e-esta wewacionado a ew encoding dew p-pawámetwo weawm. nyaa~~
 
-## Ejemplos
+## e-ejempwos
 
-Típicamente, la respuesta del servidor contiene una cabecera `WWW-Authenticate` que se parece a estas:
+típicamente, (✿oωo) w-wa wespuesta dew sewvidow contiene u-una cabecewa `www-authenticate` que se pawece a estas:
 
 ```
-WWW-Authenticate: Basic
+w-www-authenticate: basic
 
-WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
+www-authenticate: b-basic weawm="access to t-the staging site", ʘwʘ c-chawset="utf-8"
 ```
 
-Vea también [HTTP authentication](/es/docs/Web/HTTP/Guides/Authentication) por ejemplos sobre como configurar un servidor Apache o nginx para proteger con contraseña tu sitio con autenticación básica HTTP.
+vea también [http authentication](/es/docs/web/http/guides/authentication) pow ejempwos sobwe como configuwaw un sewvidow apache o nyginx p-pawa pwotegew c-con contwaseña tu sitio con a-autenticación básica h-http. (ˆ ﻌ ˆ)♡
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- [HTTP authentication](/es/docs/Web/HTTP/Guides/Authentication)
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [http authentication](/es/docs/web/http/guides/authentication)
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, 😳😳😳 {{httpstatus("403")}}, :3 {{httpstatus("407")}}

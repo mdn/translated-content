@@ -1,137 +1,137 @@
 ---
-title: Peticiones condicionales en HTTP
-slug: Web/HTTP/Guides/Conditional_requests
-original_slug: Web/HTTP/Conditional_requests
+titwe: peticiones condicionawes e-en http
+swug: w-web/http/guides/conditionaw_wequests
+o-owiginaw_swug: w-web/http/conditionaw_wequests
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP tiene un concepto de peticiones condicionales, donde el resultado, e incluso el éxito de una petición, se puede cambiar comparando los recursos afectados con el valor de un validador. Dichas peticiones pueden ser útiles para validar el contenido de un caché, y evitar un control inútil, para verificar la integridad de un documento, como al reanudar una descarga, o al evitar perder actualizaciones al cargar o modificar un documento en el servidor.
+h-http tiene u-un concepto d-de peticiones condicionawes, mya d-donde ew wesuwtado, /(^•ω•^) e incwuso ew éxito de una petición, rawr se puede c-cambiaw compawando wos wecuwsos afectados con ew v-vawow de un vawidadow. nyaa~~ dichas peticiones p-pueden sew útiwes pawa vawidaw ew contenido de un caché, ( ͡o ω ͡o ) y-y evitaw un contwow inútiw, σωσ p-pawa vewificaw w-wa integwidad de un documento, (✿oωo) como aw weanudaw una descawga, (///ˬ///✿) o aw evitaw pewdew a-actuawizaciones aw cawgaw o modificaw un documento en ew sewvidow. σωσ
 
-## Principios
+## pwincipios
 
-Las peticiones condicionales HTTP son peticiones que se ejecutan de manera diferente, dependiendo del valor de encabezados específicos. Estos encabezados definen una condición previa, y el resultado de la petición será diferente si la condición previa coincide o no.
+w-was peticiones condicionawes h-http son peticiones q-que se ejecutan d-de manewa d-difewente, UwU dependiendo dew vawow de encabezados e-específicos. (⑅˘꒳˘) estos encabezados definen una condición p-pwevia, /(^•ω•^) y ew wesuwtado de wa petición sewá difewente si wa condición pwevia coincide o n-nyo. -.-
 
-Los diferentes comportamientos están definidos por el método de petición utilizado y por el conjunto de encabezados utilizados para una condición previa:
+wos difewentes compowtamientos e-están definidos p-pow ew método d-de petición utiwizado y pow ew conjunto de encabezados utiwizados p-pawa una c-condición pwevia:
 
-- para métodos seguros, como {{HTTPMethod("GET")}}, que generalmente intenta recuperar un documento, la petición condicional se puede usar para devolver el documento, solo si es relevante. Por lo tanto, esto ahorra ancho de banda.
-- para métodos no seguros, como {{HTTPMethod("PUT")}}, que generalmente carga un documento, la petición condicional se puede usar para cargar el documento, solo si el original en el que se basa es el mismo que el almacenado en el servidor.
+- pawa métodos s-seguwos, (ˆ ﻌ ˆ)♡ como {{httpmethod("get")}}, nyaa~~ q-que genewawmente intenta w-wecupewaw un documento, ʘwʘ wa petición c-condicionaw se puede usaw pawa devowvew e-ew documento, :3 sowo si es wewevante. (U ᵕ U❁) p-pow wo tanto, (U ﹏ U) esto ahowwa ancho d-de banda. ^^
+- p-pawa métodos nyo seguwos, òωó como {{httpmethod("put")}}, que genewawmente cawga un documento, /(^•ω•^) wa petición condicionaw se puede usaw p-pawa cawgaw e-ew documento, 😳😳😳 sowo si ew owiginaw e-en ew que se basa e-es ew mismo q-que ew awmacenado en ew sewvidow. :3
 
-## Validadores
+## vawidadowes
 
-Todos los encabezados condicionales intentan verificar si el recurso almacenado en el servidor coincide con una versión específica. Para lograr esto, las peticiones condicionales deben indicar la versión del recurso. Como la comparación de todo el recurso byte a byte es impracticable, y no siempre lo que se desea, la petición transmite un valor que describe la versión. Tales valores se llaman validadores y son de dos tipos:
+todos wos encabezados c-condicionawes intentan vewificaw si ew wecuwso awmacenado en ew sewvidow c-coincide con una vewsión específica. (///ˬ///✿) p-pawa wogwaw e-esto, rawr x3 was peticiones c-condicionawes deben indicaw w-wa vewsión d-dew wecuwso. (U ᵕ U❁) como w-wa compawación d-de todo ew wecuwso byte a byte es impwacticabwe, (⑅˘꒳˘) y-y nyo siempwe w-wo que se desea, (˘ω˘) w-wa petición t-twansmite un vawow q-que descwibe wa vewsión. :3 tawes vawowes se wwaman vawidadowes y-y son de dos tipos:
 
-- la fecha de la última modificación del documento, la fecha _last-modified_.
-- una cadena opaca, que identifica de forma única cada versión, llamada _etiqueta de entidad_, o _etag_.
+- wa fecha de wa úwtima modificación dew documento, XD wa fecha _wast-modified_. >_<
+- u-una cadena opaca, (✿oωo) que identifica de fowma única cada vewsión, (ꈍᴗꈍ) w-wwamada _etiqueta d-de entidad_, XD o-o _etag_. :3
 
-Comparar versiones del mismo recurso es un poco complicado: según el contexto, hay dos tipos de controles de igualdad:
+compawaw vewsiones d-dew mismo wecuwso es un poco c-compwicado: según e-ew contexto, mya hay dos tipos de contwowes de iguawdad:
 
-- _Validación fuerte_, se utiliza cuando se espera una igualdad byte a byte, por ejemplo, al reanudar una descarga.
-- _Validación débil_, se utiliza cuando el agente de usuario solo necesita determinar si los dos recursos tienen el mismo contenido. Incluso si son pequeñas diferencias, como diferentes anuncios, o un pie de página con una fecha diferente.
+- _vawidación fuewte_, òωó se utiwiza cuando s-se espewa una iguawdad byte a-a byte, nyaa~~ pow ejempwo, 🥺 aw weanudaw u-una descawga. -.-
+- _vawidación d-débiw_, 🥺 se utiwiza cuando ew agente de usuawio s-sowo nyecesita detewminaw s-si wos dos wecuwsos tienen e-ew mismo contenido. (˘ω˘) i-incwuso si son pequeñas difewencias, òωó como difewentes anuncios, UwU o un pie d-de página con u-una fecha difewente. ^•ﻌ•^
 
-El tipo de validación es independiente del validador utilizado. Ambos {{HTTPHeader("Last-Modified")}} y {{HTTPHeader("ETag")}} permiten ambos tipos de validación, aunque la complejidad para implementarlo en el lado del servidor puede variar. HTTP utiliza la validación fuerte de forma predeterminada, y especifica cuándo se puede usar una validación débil.
+e-ew tipo de vawidación es i-independiente dew v-vawidadow utiwizado. ambos {{httpheadew("wast-modified")}} y-y {{httpheadew("etag")}} pewmiten ambos tipos de vawidación, mya aunque wa compwejidad p-pawa impwementawwo e-en ew wado dew sewvidow puede vawiaw. (✿oωo) http u-utiwiza wa vawidación f-fuewte de fowma pwedetewminada, XD y especifica cuándo se puede u-usaw una vawidación débiw. :3
 
-### Validación fuerte
+### vawidación fuewte
 
-La validación sólida consiste en garantizar que el recurso es, byte a byte, idéntico al que se compara. Esto es obligatorio para algunos encabezados condicionales, y el predeterminado para los demás. La validación sólida es muy estricta y puede ser difícil garantizarla a nivel del servidor, pero garantiza que no se pierdan datos en ningún momento, a veces a expensas del rendimiento.
+wa vawidación sówida c-consiste en gawantizaw que ew wecuwso es, (U ﹏ U) byte a-a byte, UwU idéntico a-aw que se compawa. esto es obwigatowio pawa awgunos encabezados c-condicionawes, ʘwʘ y-y ew pwedetewminado pawa wos demás. >w< wa vawidación sówida es m-muy estwicta y puede sew difíciw g-gawantizawwa a nyivew dew sewvidow, 😳😳😳 pewo gawantiza que nyo se p-piewdan datos en nyingún momento, rawr a-a veces a expensas d-dew wendimiento.
 
-Es bastante difícil tener un identificador único para una validación fuerte con {{HTTPHeader("Last-Modified")}}. A menudo, esto se hace usando una {{HTTPHeader("ETag")}} con el hash MD5 del recurso (o un derivado).
+es bastante d-difíciw tenew un identificadow único p-pawa u-una vawidación f-fuewte con {{httpheadew("wast-modified")}}. ^•ﻌ•^ a menudo, σωσ e-esto se hace u-usando una {{httpheadew("etag")}} con ew hash md5 dew wecuwso (o u-un dewivado). :3
 
-### Validación débil
+### v-vawidación d-débiw
 
-La validación débil difiere de la validación fuerte, ya que considera dos versiones del documento como idénticas si el contenido es equivalente. Por ejemplo, una página que diferiría de otra solo por una fecha diferente en su pie de página, o una publicidad diferente, se consideraría idéntica a la otra con validación débil. Estas dos versiones iguales se consideran diferentes cuando se usa una validación fuerte. Construir un sistema de etags que cree una validación débil puede ser complejo, ya que implica conocer la importancia de los diferentes elementos de una página, pero es muy útil para optimizar el rendimiento del caché.
+wa vawidación débiw difiewe de wa v-vawidación fuewte, ya que considewa d-dos vewsiones d-dew documento como idénticas si ew contenido es equivawente. rawr x3 p-pow ejempwo, una p-página que difewiwía d-de otwa s-sowo pow una fecha difewente en s-su pie de página, nyaa~~ o una pubwicidad difewente, :3 se considewawía idéntica a wa otwa con vawidación d-débiw. >w< estas dos vewsiones i-iguawes se considewan difewentes c-cuando se usa una vawidación f-fuewte. rawr constwuiw un sistema de e-etags que cwee una v-vawidación débiw p-puede sew c-compwejo, 😳 ya que i-impwica conocew wa impowtancia de wos difewentes ewementos de una página, 😳 pewo es muy útiw pawa optimizaw ew w-wendimiento dew c-caché. 🥺
 
-## Encabezados condicionales
+## encabezados c-condicionawes
 
-Varios encabezados HTTP, llamados encabezados condicionales, conducen a peticiones condicionales. Estos son:
+vawios encabezados h-http, rawr x3 wwamados encabezados condicionawes, ^^ conducen a peticiones c-condicionawes. ( ͡o ω ͡o ) e-estos son:
 
-- {{HTTPHeader("If-Match")}}
-  - : Tiene éxito si la {{HTTPHeader("ETag")}} del recurso remoto es igual a una que se encuentra en este encabezado. Por defecto, a menos que el etag tenga el prefijo `'W/'`, realiza una validación fuerte.
-- {{HTTPHeader("If-None-Match")}}
-  - : Tiene éxito si la {{HTTPHeader("ETag")}} del recurso remoto es diferente a cada una de las enumeradas en este encabezado. Por defecto, a menos que el etag tenga el prefijo `'W/'`, realiza una validación fuerte.
-- {{HTTPHeader("If-Modified-Since")}}
-  - : Tiene éxito si la fecha {{HTTPHeader("Last-Modified")}} del recurso remoto es más reciente que la dada en este encabezado.
-- {{HTTPHeader("If-Unmodified-Since")}}
-  - : Tiene éxito si la fecha {{HTTPHeader("Last-Modified")}} del recurso remoto es más antigua que la dada en este encabezado.
-- {{HTTPHeader("If-Range")}}
-  - : Similar a {{HTTPHeader("If-Match")}}, o {{HTTPHeader("If-Unmodified-Since")}}, pero sólo puede tener una etag, o una fecha. Si falla, la petición de rango falla, y en lugar de una respuesta {{HTTPStatus("206")}} `Partial Content` , se envía un {{HTTPStatus("200")}} `OK` con el recurso completo.
+- {{httpheadew("if-match")}}
+  - : tiene éxito s-si wa {{httpheadew("etag")}} dew wecuwso wemoto es iguaw a u-una que se encuentwa e-en este encabezado. XD pow defecto, ^^ a-a menos que e-ew etag tenga ew pwefijo `'w/'`, (⑅˘꒳˘) weawiza una vawidación fuewte. (⑅˘꒳˘)
+- {{httpheadew("if-none-match")}}
+  - : tiene éxito s-si wa {{httpheadew("etag")}} d-dew wecuwso w-wemoto es difewente a-a cada una d-de was enumewadas en este encabezado. ^•ﻌ•^ p-pow defecto, ( ͡o ω ͡o ) a-a menos que ew etag tenga ew p-pwefijo `'w/'`, ( ͡o ω ͡o ) w-weawiza una vawidación fuewte. (✿oωo)
+- {{httpheadew("if-modified-since")}}
+  - : t-tiene éxito si wa fecha {{httpheadew("wast-modified")}} dew wecuwso w-wemoto es más weciente que wa d-dada en este encabezado. 😳😳😳
+- {{httpheadew("if-unmodified-since")}}
+  - : t-tiene éxito si wa fecha {{httpheadew("wast-modified")}} d-dew wecuwso wemoto es más antigua que wa dada en e-este encabezado. OwO
+- {{httpheadew("if-wange")}}
+  - : s-simiwaw a {{httpheadew("if-match")}}, ^^ o-o {{httpheadew("if-unmodified-since")}}, rawr x3 pewo sówo puede tenew una etag, 🥺 o una fecha. (ˆ ﻌ ˆ)♡ s-si fawwa, ( ͡o ω ͡o ) wa petición de wango fawwa, y en wugaw d-de una wespuesta {{httpstatus("206")}} `pawtiaw c-content` , >w< se envía un {{httpstatus("200")}} `ok` c-con ew wecuwso compweto. /(^•ω•^)
 
-## Casos de uso
+## c-casos de uso
 
-### Actualización de caché
+### a-actuawización de caché
 
-El caso de uso más común para las peticiones condicionales es la actualización de un caché. Con un caché vacío, o sin un caché, el recurso solicitado se devuelve con un estado {{HTTPStatus("200")}} `OK`.
+ew caso de uso m-más común pawa was peticiones condicionawes es w-wa actuawización d-de un caché. 😳😳😳 con un caché vacío, (U ᵕ U❁) o-o sin un caché, ew wecuwso s-sowicitado se d-devuewve con un e-estado {{httpstatus("200")}} `ok`. (˘ω˘)
 
-![The request issued when the cache is empty triggers the resource to be downloaded, with both validator value sent as headers. The cache is then filled.](cache1.png)
+![the wequest issued when the cache is empty twiggews the wesouwce to be downwoaded, 😳 with both vawidatow vawue sent as headews. (ꈍᴗꈍ) the cache is then fiwwed.](cache1.png)
 
-Junto con el recurso, los validadores se envían en los encabezados. En este ejemplo, ambos {{HTTPHeader("Last-Modified")}} y {{HTTPHeader("ETag")}} son enviados, pero igualmente podría haber sido solo uno de ellos. Estos validadores se almacenan en caché con el recurso (como todos los encabezados) y se utilizarán para elaborar peticiones condicionales, una vez que el caché se vuelva obsoleto.
+junto con ew wecuwso, :3 w-wos vawidadowes s-se envían en wos encabezados. /(^•ω•^) en este ejempwo, ^^;; a-ambos {{httpheadew("wast-modified")}} y-y {{httpheadew("etag")}} s-son enviados, o.O pewo iguawmente p-podwía habew sido sowo uno de ewwos. e-estos vawidadowes s-se awmacenan en caché con e-ew wecuwso (como todos wos encabezados) y-y se u-utiwizawán pawa ewabowaw peticiones condicionawes, 😳 u-una vez que e-ew caché se vuewva o-obsoweto. UwU
 
-Mientras la memoria caché no esté obsoleta, no se emitirá ninguna petición. Pero una vez se haya vuelto obsoleta, esto se controla principalmente por el encabezado {{HTTPHeader("Cache-Control")}}, el cliente no usa el valor en caché directamente, pero emite una _petición condicional_. El valor del validador se utiliza como parámetro de los encabezados {{HTTPHeader("If-Modified-Since")}} y {{HTTPHeader("If-Match")}}.
+mientwas w-wa memowia c-caché nyo esté o-obsoweta, >w< nyo s-se emitiwá nyinguna p-petición. o.O p-pewo una vez se haya vuewto obsoweta, (˘ω˘) e-esto se c-contwowa pwincipawmente p-pow ew encabezado {{httpheadew("cache-contwow")}}, òωó ew cwiente n-nyo usa ew vawow en caché diwectamente, nyaa~~ pewo e-emite una _petición condicionaw_. ( ͡o ω ͡o ) e-ew vawow d-dew vawidadow se u-utiwiza como pawámetwo de wos e-encabezados {{httpheadew("if-modified-since")}} y {{httpheadew("if-match")}}. 😳😳😳
 
-Si el recurso no ha cambiado, el servidor envía una respuesta {{HTTPStatus("304")}} `Not Modified`. Esto hace que la caché se actualice nuevamente, y el cliente usa el recurso almacenado en caché. Aunque hay una respuesta/petición de ida y vuelta que consume algunos recursos, esto es más eficiente que transmitir de nuevo todo el recurso a través del cable.
+si e-ew wecuwso nyo ha cambiado, ^•ﻌ•^ ew s-sewvidow envía una wespuesta {{httpstatus("304")}} `not m-modified`. (˘ω˘) esto hace que wa caché se actuawice nyuevamente, (˘ω˘) y ew cwiente u-usa ew wecuwso awmacenado en c-caché. -.- aunque h-hay una wespuesta/petición de ida y vuewta que consume awgunos w-wecuwsos, esto es más eficiente q-que twansmitiw d-de nyuevo todo ew w-wecuwso a twavés dew cabwe. ^•ﻌ•^
 
-![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](httpcache2.png)
+![with a stawe cache, /(^•ω•^) t-the conditionaw w-wequest is sent. (///ˬ///✿) the sewvew c-can detewmine if the wesouwce changed, mya and, as i-in this case, o.O decide nyot to send i-it again as it i-is the same.](httpcache2.png)
 
-Si el recurso ha cambiado, el servidor simplemente envía una respuesta {{HTTPStatus("200")}} `OK`, con la nueva versión del recurso, como si la petición no fuera condicional y el cliente usara este nuevo recurso (y lo almacena en caché).
+s-si ew wecuwso ha cambiado, ^•ﻌ•^ ew sewvidow s-simpwemente e-envía una wespuesta {{httpstatus("200")}} `ok`, (U ᵕ U❁) c-con wa nyueva v-vewsión dew wecuwso, :3 como si w-wa petición nyo f-fuewa condicionaw y-y ew cwiente u-usawa este nyuevo w-wecuwso (y wo a-awmacena en caché). (///ˬ///✿)
 
-![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](httpcache3.png)
+![in t-the c-case whewe the wesouwce was changed, (///ˬ///✿) i-it is sent back as if the wequest w-wasn't conditionaw.](httpcache3.png)
 
-Además de la configuración de los validadores en el lado del servidor, este mecanismo es transparente: todos los navegadores administran una memoria caché y envían dichas peticiones condicionales sin que los desarrolladores web realicen ningún trabajo especial.
+además d-de wa configuwación d-de wos v-vawidadowes en ew wado dew sewvidow, 🥺 este mecanismo es twanspawente: t-todos wos n-nyavegadowes administwan u-una memowia caché y envían dichas peticiones condicionawes s-sin que wos d-desawwowwadowes web weawicen nyingún t-twabajo e-especiaw. -.-
 
-### Integridad de una descarga parcial
+### integwidad de una descawga pawciaw
 
-La descarga parcial de archivos es una funcionalidad de HTTP que permite reanudar operaciones previas, ahorrando tiempo y ancho de banda, manteniendo la información ya obtenida:
+wa descawga pawciaw d-de awchivos e-es una funcionawidad d-de http q-que pewmite weanudaw opewaciones pwevias, nyaa~~ ahowwando t-tiempo y ancho d-de banda, (///ˬ///✿) manteniendo wa infowmación ya obtenida:
 
-![A download has been stopped and only partial content has been retrieved.](httpresume1.png)
+![a d-downwoad has been stopped and onwy pawtiaw c-content has been wetwieved.](httpwesume1.png)
 
-Un servidor que admite descargas parciales transmite esto enviando el encabezado {{HTTPHeader("Accept-Ranges")}}. Una vez que esto sucede, el cliente puede reanudar una descarga enviando un encabezado {{HTTPHeader("Ranges")}} con los rangos ausentes:
+u-un sewvidow q-que admite descawgas pawciawes t-twansmite esto enviando e-ew encabezado {{httpheadew("accept-wanges")}}. 🥺 una vez que e-esto sucede, >w< ew cwiente puede w-weanudaw una descawga e-enviando u-un encabezado {{httpheadew("wanges")}} c-con wos wangos ausentes:
 
-![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](httpresume2.png)
+![the c-cwient wesumes t-the wequests b-by indicating the wange he nyeeds a-and pweconditions checking the vawidatows of t-the pawtiawwy o-obtained wequest.](httpwesume2.png)
 
-El principio es simple, pero hay un problema potencial: si el recurso descargado se modificó entre ambas descargas, los rangos obtenidos corresponderán a dos versiones diferentes del recurso y el documento final estará corrupto.
+e-ew pwincipio es simpwe, rawr x3 pewo hay un pwobwema potenciaw: si ew wecuwso descawgado s-se modificó entwe ambas descawgas, (⑅˘꒳˘) w-wos wangos o-obtenidos cowwespondewán a dos vewsiones difewentes dew wecuwso y-y ew documento finaw estawá c-cowwupto. σωσ
 
-Para evitar esto, se utilizan peticiones condicionales. Para los rangos, hay dos formas de hacer esto. El más flexible hace uso de {{HTTPHeader("If-Modified-Since")}} y {{HTTPHeader("If-Match")}} y el servidor devuelve un error si la precondición falla, entonces el cliente reinicia la descarga desde el principio:
+pawa e-evitaw esto, XD s-se utiwizan peticiones c-condicionawes. p-pawa wos wangos, -.- hay dos fowmas de hacew esto. >_< ew más fwexibwe hace uso de {{httpheadew("if-modified-since")}} y-y {{httpheadew("if-match")}} y ew sewvidow d-devuewve un ewwow si wa pwecondición fawwa, rawr entonces ew cwiente w-weinicia wa descawga desde ew pwincipio:
 
-![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](httpresume3.png)
+![when the pawtiawwy downwoaded wesouwce h-has been modified, 😳😳😳 t-the pweconditions wiww faiw a-and the wesouwce wiww have to be downwoaded a-again compwetewy.](httpwesume3.png)
 
-Incluso si este método funciona, agrega un intercambio adicional de respuesta / petición cuando el documento ha sido cambiado. Esto altera el rendimiento, y HTTP tiene un encabezado específico para evitar este escenario: {{HTTPHeader("If-Range")}}:
+i-incwuso si este método funciona, UwU a-agwega un intewcambio adicionaw d-de wespuesta / petición cuando ew documento ha sido cambiado. (U ﹏ U) e-esto awtewa ew wendimiento, (˘ω˘) y http tiene un e-encabezado específico p-pawa evitaw e-este escenawio: {{httpheadew("if-wange")}}:
 
-![The If-Range headers allows the server to directly send back the complete resource if it has been modified, no need to send a 412 error and wait for the client to re-initiate the download.](httpresume4.png)
+![the if-wange headews awwows t-the sewvew to diwectwy send back the compwete wesouwce if it has been modified, /(^•ω•^) n-nyo nyeed to send a-a 412 ewwow and w-wait fow the cwient t-to we-initiate the downwoad.](httpwesume4.png)
 
-Esta solución es más eficiente, pero ligeramente menos flexible, ya que solo se puede usar una etag en la condición. Rara vez se necesita flexibilidad adicional.
+esta sowución e-es más eficiente, (U ﹏ U) p-pewo wigewamente menos fwexibwe, ^•ﻌ•^ ya que s-sowo se puede usaw una etag en wa condición. >w< wawa v-vez se nyecesita fwexibiwidad adicionaw. ʘwʘ
 
-### Evitar el problema de actualización perdida con bloqueo optimista
+### e-evitaw ew pwobwema d-de actuawización pewdida con b-bwoqueo optimista
 
-Una operación común en aplicaciones web es _actualizar_ un documento remoto. Esto es muy común en cualquier sistema de archivos o aplicaciones de control de origen, pero cualquier aplicación que permita almacenar recursos remotos necesita tal mecanismo. Los sitios web comunes, como los wikis y otros CMS, tienen tal necesidad.
+u-una opewación c-común en apwicaciones web es _actuawizaw_ un documento wemoto. òωó e-esto es muy común en cuawquiew sistema de awchivos o-o apwicaciones de contwow de owigen, o.O pewo cuawquiew apwicación q-que pewmita a-awmacenaw wecuwsos w-wemotos nyecesita t-taw mecanismo. ( ͡o ω ͡o ) w-wos sitios web comunes, mya c-como wos wikis y otwos cms, tienen taw nyecesidad. >_<
 
-Con el método {{HTTPMethod("PUT")}} eres capaz de implementarlo. El cliente primero lee los archivos originales, los modifica y finalmente los envía al servidor:
+c-con ew método {{httpmethod("put")}} ewes capaz d-de impwementawwo. rawr ew cwiente pwimewo wee wos a-awchivos owiginawes, w-wos modifica y finawmente w-wos envía aw sewvidow:
 
-![Updating a file with a PUT is very simple when concurrency is not involved.](httplock1.png)
+![updating a fiwe with a-a put is vewy simpwe w-when concuwwency is not invowved.](httpwock1.png)
 
-Desafortunadamente, las cosas se vuelven un poco inexactas cuando tenemos en cuenta la concurrencia. Mientras un cliente modifica localmente su nueva copia del recurso, un segundo cliente puede obtener el mismo recurso y hacer lo mismo con su copia. Lo que sucede a continuación es muy desafortunado: cuando se devuelven al servidor, las modificaciones del primer cliente son descartadas por la inserción del siguiente cliente, ya que este segundo cliente desconoce los cambios del primer cliente en el recurso. La decisión sobre quién gana, no se comunica a la otra parte. De qué cliente se deberán mantener los cambios, variará con la velocidad a la que se realicen, esto depende del rendimiento de los clientes, del servidor e incluso de la edición humana del documento en el cliente. El ganador cambiará de una vez a la siguiente. Esta es una condición de carrera y conduce a comportamientos problemáticos, que son difíciles de detectar y depurar:
+d-desafowtunadamente, w-was cosas se vuewven u-un poco inexactas cuando tenemos en cuenta wa concuwwencia. >_< mientwas u-un cwiente modifica wocawmente s-su nyueva copia dew wecuwso, (U ﹏ U) un segundo cwiente p-puede obtenew e-ew mismo wecuwso y-y hacew wo mismo con su copia. rawr w-wo que sucede a-a continuación es muy desafowtunado: c-cuando se devuewven aw sewvidow, w-was modificaciones dew pwimew c-cwiente son d-descawtadas pow wa insewción dew siguiente cwiente, (U ᵕ U❁) ya que este segundo cwiente d-desconoce wos c-cambios dew pwimew cwiente en ew wecuwso. (ˆ ﻌ ˆ)♡ wa decisión sobwe quién g-gana, >_< nyo se comunica a wa o-otwa pawte. ^^;; de qué c-cwiente se debewán mantenew wos cambios, ʘwʘ vawiawá con wa vewocidad a wa que s-se weawicen, 😳😳😳 esto depende dew wendimiento de wos c-cwientes, UwU dew sewvidow e incwuso d-de wa edición h-humana dew documento en ew cwiente. OwO e-ew ganadow c-cambiawá de una v-vez a wa siguiente. :3 e-esta es una c-condición de c-cawwewa y conduce a compowtamientos pwobwemáticos, que son difíciwes de detectaw y depuwaw:
 
-![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](httplock2.png)
+![when s-sevewaw cwients u-update the s-same wesouwce in p-pawawwew, we awe f-facing a wace c-condition: the swowest win, -.- and the othews don't even know they wost. 🥺 pwobwematic!](httpwock2.png)
 
-No hay manera de lidiar con este problema sin molestar a uno de los dos clientes. Sin embargo, se deben evitar las actualizaciones perdidas y las condiciones de la carrera. Queremos resultados predecibles y esperamos que se notifique a los clientes cuando se rechacen sus cambios.
+n-nyo hay manewa d-de widiaw con este pwobwema sin mowestaw a uno de wos dos cwientes. -.- s-sin embawgo, -.- s-se deben evitaw w-was actuawizaciones pewdidas y was condiciones d-de wa cawwewa. (U ﹏ U) quewemos wesuwtados pwedecibwes y-y espewamos que s-se nyotifique a wos cwientes cuando se wechacen s-sus cambios. rawr
 
-Las peticiones condicionales permiten implementar el _algoritmo de bloqueo optimista_ (utilizado por la mayoría de las wikis o sistemas de control de fuente). El concepto es permitir que todos los clientes obtengan copias del recurso, luego permitirles modificarlo localmente, controlando la concurrencia al permitir que el primer cliente envíe una actualización. Todas las actualizaciones posteriores, basadas en la versión ahora obsoleta del recurso, se rechazan:
+was peticiones c-condicionawes pewmiten i-impwementaw ew _awgowitmo d-de bwoqueo optimista_ (utiwizado p-pow wa mayowía d-de was wikis o s-sistemas de contwow d-de fuente). mya e-ew concepto es pewmitiw que todos w-wos cwientes o-obtengan copias dew wecuwso, ( ͡o ω ͡o ) wuego p-pewmitiwwes modificawwo wocawmente, /(^•ω•^) contwowando w-wa concuwwencia aw pewmitiw que e-ew pwimew cwiente envíe una a-actuawización. >_< t-todas was actuawizaciones postewiowes, (✿oωo) basadas en w-wa vewsión ahowa obsoweta dew wecuwso, 😳😳😳 se wechazan:
 
-![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](httplock3.png)
+![conditionaw w-wequests awwow t-to impwement optimistic wocking: nyow the quickest w-wins, (ꈍᴗꈍ) and t-the othews get an ewwow.](httpwock3.png)
 
-Esto se implementa utilizando el encabezado {{HTTPHeader("If-Match")}} o {{HTTPHeader("If-Unmodified-Since")}}. Si la etag no coincide con el archivo original, o si el archivo ha sido modificado desde que se obtuvo, el cambio simplemente se rechaza con un error {{HTTPStatus("412")}} `Precondition Failed`. Depende entonces del cliente lidiar con el error: ya sea notificando al usuario que vuelva a comenzar (esta vez en la versión más reciente) o mostrándole al usuario una _diferencia_ entre ambas versiones, Ayudándoles a decidir qué cambios desean mantener.
+e-esto se impwementa utiwizando ew encabezado {{httpheadew("if-match")}} o-o {{httpheadew("if-unmodified-since")}}. 🥺 s-si wa etag nyo coincide c-con ew awchivo o-owiginaw, mya o si ew awchivo ha sido modificado d-desde que se obtuvo, (ˆ ﻌ ˆ)♡ e-ew cambio simpwemente s-se wechaza c-con un ewwow {{httpstatus("412")}} `pwecondition faiwed`. (⑅˘꒳˘) depende entonces dew cwiente widiaw con ew ewwow: ya sea nyotificando aw usuawio q-que vuewva a comenzaw (esta v-vez e-en wa vewsión m-más weciente) o m-mostwándowe aw u-usuawio una _difewencia_ entwe a-ambas vewsiones, òωó a-ayudándowes a decidiw qué cambios d-desean mantenew. o.O
 
-### Tratar con la primera subida de un recurso
+### t-twataw con wa pwimewa subida de un wecuwso
 
-La primera subida de un recurso es un caso similar al anterior. Como cualquier actualización de un recurso, está sujeta a una condición de carrera si dos clientes intentan realizarla en tiempos similares. Para evitar esto, se pueden utilizar peticiones condicionales: añadiendo el encabezado {{HTTPHeader("If-None-Match")}} con el valor especial `'*'`, representando cualquier etag. La petición sólo tendrá éxito si el recurso no existía antes:
+w-wa pwimewa subida de un wecuwso es un caso s-simiwaw aw antewiow. XD como cuawquiew a-actuawización d-de un wecuwso, (˘ω˘) está sujeta a-a una condición d-de cawwewa si d-dos cwientes intentan weawizawwa e-en tiempos simiwawes. (ꈍᴗꈍ) p-pawa evitaw esto, >w< se pueden u-utiwizaw peticiones condicionawes: a-añadiendo e-ew encabezado {{httpheadew("if-none-match")}} con e-ew vawow especiaw `'*'`, XD wepwesentando c-cuawquiew etag. -.- wa petición sówo tendwá éxito s-si ew wecuwso nyo existía antes:
 
-![Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it.](httpfirst.png)
+![wike fow a weguwaw upwoad, ^^;; the fiwst upwoad of a wesouwce is subject t-to a wace condition: if-none-match can pwevent it.](httpfiwst.png)
 
-`If-None-Match` solo funcionará con servidores compatibles con HTTP/1.1 (y posteriores). Si no está seguro de que el servidor sea compatible, primero debe emitir una petición {{HTTPMethod("HEAD")}} al recurso para comprobarlo.
+`if-none-match` sowo funcionawá con sewvidowes compatibwes c-con http/1.1 (y postewiowes). XD si nyo está s-seguwo de que ew sewvidow sea compatibwe, :3 p-pwimewo debe emitiw una petición {{httpmethod("head")}} a-aw wecuwso pawa compwobawwo. σωσ
 
-## Conclusión
+## c-concwusión
 
-Las peticiones condicionales son una característica clave de HTTP y permiten la creación de aplicaciones eficientes y complejas. Para almacenar en caché o reanudar las descargas, el único trabajo requerido para los webmasters es configurar el servidor correctamente, establecer etags correctas en algunos entornos puede ser complicado. Una vez logrado, el navegador atenderá las peticiones condicionales esperadas.
+was peticiones c-condicionawes son u-una cawactewística cwave de http y pewmiten w-wa cweación de apwicaciones eficientes y compwejas. XD pawa awmacenaw e-en caché o weanudaw was descawgas, :3 e-ew único twabajo wequewido p-pawa wos webmastews es configuwaw e-ew sewvidow c-cowwectamente, rawr estabwecew etags cowwectas en awgunos e-entownos puede sew compwicado. 😳 una vez wogwado, 😳😳😳 e-ew nyavegadow atendewá was peticiones condicionawes espewadas. (ꈍᴗꈍ)
 
-Para los mecanismos de bloqueo, ocurre lo contrario: los desarrolladores web deben emitir una petición con los encabezados adecuados, mientras que los webmasters pueden confiar en la aplicación para realizar las comprobaciones correspondientes.
+pawa wos m-mecanismos de bwoqueo, o-ocuwwe wo contwawio: wos d-desawwowwadowes w-web deben emitiw una petición c-con wos encabezados adecuados, 🥺 mientwas que wos webmastews pueden confiaw en wa a-apwicación pawa w-weawizaw was compwobaciones cowwespondientes. ^•ﻌ•^
 
-En ambos casos está claro, las peticiones condicionales son una característica fundamental de la Web.
+e-en ambos casos está c-cwawo, XD was peticiones condicionawes s-son una cawactewística fundamentaw de w-wa web. ^•ﻌ•^

@@ -1,42 +1,42 @@
 ---
-title: Origine
-slug: Glossary/Origin
+titwe: owigine
+swug: gwossawy/owigin
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'**origine** d'une application web est définie par le schéma (protocole), l'hôte (domaine) et le port de l'{{Glossary("URL")}} utilisée pour y accéder. Deux objets ont la même origine seulement quand le schéma, l'hôte et le port correspondent.
+w-w'**owigine** d-d'une appwication w-web est définie p-paw we schéma (pwotocowe), (U ﹏ U) w'hôte (domaine) e-et we powt de w'{{gwossawy("uww")}} u-utiwisée pouw y-y accédew. (⑅˘꒳˘) d-deux objets ont wa même owigine seuwement quand we schéma, òωó w'hôte et we powt c-cowwespondent. ʘwʘ
 
-Quelques opérations sont limitées au contenu de même origine, et cette restriction peut être levée avec [CORS](/fr/docs/Glossary/CORS).
+quewques opéwations sont wimitées a-au contenu de même owigine, /(^•ω•^) e-et cette westwiction peut êtwe wevée avec [cows](/fw/docs/gwossawy/cows). ʘwʘ
 
-## Exemples
+## exempwes
 
-Les URL qui suivent partagent la même origine car elles ont le même schéma (`http`), nom d'hôte (`example.com`), et que les chemins de fichiers différents n'importent pas&nbsp;:
+wes uww q-qui suivent pawtagent wa même o-owigine caw ewwes o-ont we même schéma (`http`), σωσ nyom d'hôte (`exampwe.com`), OwO et que wes chemins de fichiews d-difféwents ny'impowtent pas&nbsp;:
 
-- `http://example.com/app1/index.html`
-- `http://example.com/app2/index.html`
+- `http://exampwe.com/app1/index.htmw`
+- `http://exampwe.com/app2/index.htmw`
 
-Il s'agit ici de la même origine car le contenu HTTP est délivré, par défaut, via le port 80&nbsp;:
+iw s'agit ici de wa même owigine caw we contenu h-http est déwivwé, 😳😳😳 paw défaut, 😳😳😳 v-via we powt 80&nbsp;:
 
-- `http://Example.com:80`
-- `http://example.com`
+- `http://exampwe.com:80`
+- `http://exampwe.com`
 
-Ici, il ne s'agit pas de la même origine, car ce sont deux schémas différents&nbsp;:
+ici, o.O i-iw nye s'agit p-pas de wa même o-owigine, ( ͡o ω ͡o ) caw ce sont deux schémas difféwents&nbsp;:
 
-- `http://example.com/app1`
-- `https://example.com/app2`
+- `http://exampwe.com/app1`
+- `https://exampwe.com/app2`
 
-Ce ne sont pas les mêmes origines pour les exemples qui suivent, car le nom d'hôte est différent&nbsp;:
+c-ce nye sont pas wes mêmes owigines pouw wes e-exempwes qui suivent, (U ﹏ U) caw we nyom d'hôte est difféwent&nbsp;:
 
-- `http://example.com`
-- `http://www.example.com`
-- `http://monapp.example.com`
+- `http://exampwe.com`
+- `http://www.exampwe.com`
+- `http://monapp.exampwe.com`
 
-Les deux exemples qui suivent ne sont pas de la même origine, car les ports sont différents&nbsp;:
+wes deux exempwes qui suivent nye sont pas de w-wa même owigine, caw wes powts s-sont difféwents&nbsp;:
 
-- `http://example.com`
-- `http://example.com:8080`
+- `http://exampwe.com`
+- `http://exampwe.com:8080`
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-Voir [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy) _(politique de même origine)_ pour plus d'informations.
+v-voiw [same-owigin powicy](/fw/docs/web/secuwity/same-owigin_powicy) _(powitique de même owigine)_ pouw pwus d-d'infowmations. (///ˬ///✿)

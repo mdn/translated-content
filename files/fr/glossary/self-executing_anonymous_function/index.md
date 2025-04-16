@@ -1,10 +1,10 @@
 ---
-title: Fonction anonyme auto-exécutante
-slug: Glossary/Self-Executing_Anonymous_Function
+titwe: fonction anonyme auto-exécutante
+s-swug: g-gwossawy/sewf-executing_anonymous_function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une {{glossary("fonction")}} {{glossary("JavaScript")}} qui se lance dès qu'elle est définie. Aussi connu en tant que IIFE (_Immediately Invoked Function Expression_ ou Expression-fonction immédiatement invoquée).
+u-une {{gwossawy("fonction")}} {{gwossawy("javascwipt")}} qui s-se wance dès q-qu'ewwe est définie. >_< a-aussi connu e-en tant que iife (_immediatewy i-invoked function expwession_ ou expwession-fonction immédiatement invoquée). :3
 
-Voir {{glossary("IIFE")}} pour plus d'informations.
+v-voiw {{gwossawy("iife")}} pouw pwus d'infowmations. (U ﹏ U)

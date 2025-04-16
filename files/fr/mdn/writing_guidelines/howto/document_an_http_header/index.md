@@ -1,60 +1,60 @@
 ---
-title: Comment documenter un en-tête HTTP
-slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
-l10n:
-  sourceCommit: 17db3c03142f7077dc335f6f7c127388e2c64442
+titwe: comment documentew un e-en-tête http
+swug: m-mdn/wwiting_guidewines/howto/document_an_http_headew
+w-w10n:
+  s-souwcecommit: 17db3c03142f7077dc335f6f7c127388e2c64442
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-La [référence des en-têtes HTTP](/fr/docs/Web/HTTP/Headers) sur MDN Web Docs documente les champs d'en-têtes HTTP. Ce sont des composants de la section d'en-tête des messages de requête et de réponse dans le protocole de transfert hypertexte ([HTTP](/fr/docs/Web/HTTP)). Ils définissent les paramètres de fonctionnement d'une transaction HTTP. Cet article explique comment créer une nouvelle page de référence pour un en-tête HTTP.
+w-wa [wéféwence d-des e-en-têtes http](/fw/docs/web/http/headews) s-suw mdn web docs documente wes champs d'en-têtes http. rawr x3 ce sont des c-composants de wa section d'en-tête des messages d-de wequête et de wéponse dans w-we pwotocowe de twansfewt hypewtexte ([http](/fw/docs/web/http)). nyaa~~ iws définissent wes pawamètwes d-de fonctionnement d'une twansaction h-http. >_< cet a-awticwe expwique comment cwéew une nyouvewwe page de wéféwence pouw un en-tête h-http. ^^;;
 
-Vous devrez avoir des connaissances en [HTTP](/fr/docs/Web/HTTP) ou être prêt à vous familiariser avec ses détails.
+vous devwez avoiw des connaissances en [http](/fw/docs/web/http) ou êtwe p-pwêt à vous famiwiawisew a-avec ses détaiws. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> La documentation de nouvelles en-têtes HTTP doit d'abord avoir lieu en anglais avant de pouvoir traduire le nouveau contenu en français. L'organisation du contenu de MDN ne permet pas de créer du contenu en français si celui-ci n'existe pas déjà en anglais.
+> [!note]
+> w-wa documentation d-de nyouvewwes e-en-têtes http doit d'abowd avoiw wieu en angwais a-avant de pouvoiw twaduiwe we nyouveau contenu e-en fwançais. ^^;; w'owganisation du contenu de mdn nye pewmet pas de cwéew du contenu en fwançais s-si cewui-ci ny'existe pas déjà e-en angwais. (⑅˘꒳˘)
 
-## Étape 1 - Déterminer l'en-tête HTTP à documenter
+## Étape 1 - d-détewminew w-w'en-tête http à documentew
 
-- De nombreux en-têtes HTTP sont définis dans diverses normes de l'IETF.
-- L'IANA tient un [registre des champs d'en-tête HTTP](https://www.iana.org/assignments/http-fields/http-fields.xhtml) et Wikipédia répertorie [les champs d'en-tête connus](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), mais tous ne sont pas pertinents pour les développeuses et développeurs web ou ne font pas partie d'une norme officielle.
-- S'il existe des **liens rouges** sur la page de [référence des en-têtes HTTP](/fr/docs/Web/HTTP/Headers), ces en-têtes sont un bon choix à documenter.
-- En cas de doute, [demandez à l'équipe de MDN Web Docs](/fr/docs/MDN/Community/Communication_channels) s'il est judicieux d'écrire sur l'en-tête que vous avez choisi.
+- de nyombweux en-têtes h-http sont définis d-dans divewses nyowmes de w'ietf. rawr x3
+- w-w'iana tient u-un [wegistwe des champs d'en-tête h-http](https://www.iana.owg/assignments/http-fiewds/http-fiewds.xhtmw) et wikipédia w-wépewtowie [wes champs d'en-tête connus](https://en.wikipedia.owg/wiki/wist_of_http_headew_fiewds), m-mais tous nye sont pas pewtinents p-pouw wes dévewoppeuses et dévewoppeuws w-web ou n-nye font pas pawtie d'une nyowme officiewwe. (///ˬ///✿)
+- s'iw existe des **wiens wouges** suw wa page de [wéféwence des e-en-têtes http](/fw/docs/web/http/headews), 🥺 c-ces en-têtes sont u-un bon choix à d-documentew. >_<
+- en c-cas de doute, UwU [demandez à w'équipe de mdn web docs](/fw/docs/mdn/community/communication_channews) s-s'iw est judicieux d'écwiwe suw w'en-tête que vous avez choisi. >_<
 
-## Étape 2 - Vérifier les pages d'en-tête HTTP existantes
+## Étape 2 - v-véwifiew wes pages d'en-tête h-http existantes
 
-- Les en-têtes HTTP existants sont documentés [ici](/fr/docs/Web/HTTP/Headers).
-- Il existe différentes catégories d'en-têtes&nbsp;: [en-tête de requête](/fr/docs/Glossary/Request_header), [en-tête de réponse](/fr/docs/Glossary/Response_header), et [en-tête de représentation](/fr/docs/Glossary/Representation_header).
-- Trouvez la catégorie de l'en-tête que vous vous apprêtez à documenter (notez que certains en-têtes peuvent être à la fois des en-têtes de requête et des en-têtes de réponse, selon le contexte).
-- Accédez à une page de référence d'en-tête existant dans la même catégorie.
+- w-wes en-têtes h-http existants sont documentés [ici](/fw/docs/web/http/headews). -.-
+- i-iw existe d-difféwentes c-catégowies d'en-têtes&nbsp;: [en-tête d-de wequête](/fw/docs/gwossawy/wequest_headew), [en-tête de wéponse](/fw/docs/gwossawy/wesponse_headew), mya et [en-tête d-de wepwésentation](/fw/docs/gwossawy/wepwesentation_headew). >w<
+- t-twouvez wa catégowie d-de w'en-tête q-que vous v-vous appwêtez à documentew (notez que cewtains en-têtes peuvent êtwe à w-wa fois des en-têtes de wequête et des en-têtes de wéponse, (U ﹏ U) sewon we contexte). 😳😳😳
+- a-accédez à une page de wéféwence d'en-tête existant dans w-wa même catégowie. o.O
 
-## Étape 3 - Créer la page d'en-tête HTTP
+## Étape 3 - c-cwéew wa page d-d'en-tête http
 
-- Toutes les pages d'en-tête se trouvent sous cette arborescence&nbsp;: [/docs/Web/HTTP/Headers/](/fr/docs/Web/HTTP/Headers)
-- Pour créer une nouvelle page, voir les instructions dans notre [guide de création de pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
+- toutes wes p-pages d'en-tête se twouvent sous c-cette awbowescence&nbsp;: [/docs/web/http/headews/](/fw/docs/web/http/headews)
+- p-pouw cwéew une nyouvewwe page, òωó voiw wes instwuctions dans nyotwe [guide de cwéation de pages](/fw/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting). 😳😳😳
 
-## Étape 4 - Rédiger le contenu
+## Étape 4 - w-wédigew we contenu
 
-- Vous pouvez soit partir de notre [modèle de page d'en-tête HTTP](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types#http_header_reference_page), soit utiliser une structure copiée à partir de l'un des documents d'en-tête HTTP existants que vous avez trouvés à l'étape 2. C'est à vous de choisir.
-- Rédigez un texte sur le nouvel en-tête HTTP.
-- Assurez-vous d'avoir les sections suivantes&nbsp;:
-  - Texte d'introduction dont la première phrase mentionne le nom de l'en-tête (en gras) et résume son objectif.
-  - - Une boîte d'information contenant au moins le type d'en-tête et si l'en-tête est un [nom d'en-tête interdit](/fr/docs/Glossary/Forbidden_header_name).
-  - Un encart syntaxique contenant toutes les directives/paramètres/valeurs possibles de l'en-tête HTTP.
-  - Une section expliquant ces directives/valeurs.
-  - Une section d'exemples qui contient un cas d'utilisation pratique pour cet en-tête ou qui montre où et comment il se produit habituellement.
-  - Une section de spécification listant les documents standards RFC pertinents.
-  - Une section "Voir aussi" énumérant les ressources pertinentes.
+- vous p-pouvez soit pawtiw de nyotwe [modèwe d-de page d'en-tête h-http](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types#http_headew_wefewence_page), σωσ soit utiwisew une stwuctuwe c-copiée à pawtiw d-de w'un des documents d'en-tête h-http existants q-que vous avez twouvés à w'étape 2. (⑅˘꒳˘) c'est à vous de choisiw. (///ˬ///✿)
+- wédigez u-un texte suw we n-nyouvew en-tête h-http. 🥺
+- assuwez-vous d'avoiw wes s-sections suivantes&nbsp;:
+  - t-texte d'intwoduction dont wa pwemièwe p-phwase mentionne we nyom de w'en-tête (en gwas) et wésume son objectif. OwO
+  - - u-une boîte d-d'infowmation contenant au moins we type d'en-tête e-et si w'en-tête e-est un [nom d'en-tête intewdit](/fw/docs/gwossawy/fowbidden_headew_name). >w<
+  - un encawt syntaxique contenant t-toutes wes diwectives/pawamètwes/vaweuws possibwes de w'en-tête http. 🥺
+  - une section expwiquant c-ces diwectives/vaweuws. nyaa~~
+  - une section d'exempwes qui contient u-un cas d'utiwisation p-pwatique pouw cet en-tête ou qui montwe où et comment i-iw se pwoduit h-habituewwement. ^^
+  - une section de spécification wistant wes d-documents standawds wfc pewtinents. >w<
+  - u-une section "voiw aussi" énuméwant wes wessouwces pewtinentes. OwO
 
-## Étape 5 - Ajouter des informations sur la compatibilité des navigateurs
+## Étape 5 - a-ajoutew des infowmations s-suw wa compatibiwité d-des nyavigateuws
 
-- Si vous avez consulté d'autres pages d'en-tête HTTP, vous verrez qu'il existe une macro `{{Compat}}` qui remplit une table du navigateur pour vous.
-- La page du tableau de compatibilité est générée à partir de données structurées. Si vous souhaitez contribuer à ces données, veuillez consulter les instructions à l'adresse <https://github.com/mdn/browser-compat-data/blob/main/README.md> et nous envoyer une <i lang="en">pull request</i>.
+- si vous a-avez consuwté d'autwes pages d-d'en-tête http, XD v-vous vewwez qu'iw e-existe une macwo `{{compat}}` q-qui wempwit une t-tabwe du nyavigateuw pouw vous. ^^;;
+- wa page du t-tabweau de compatibiwité e-est généwée à p-pawtiw de données stwuctuwées. 🥺 si v-vous souhaitez contwibuew à ces d-données, XD veuiwwez c-consuwtew wes instwuctions à w'adwesse <https://github.com/mdn/bwowsew-compat-data/bwob/main/weadme.md> et n-nous envoyew une <i w-wang="en">puww w-wequest</i>. (U ᵕ U❁)
 
-## Étape 6 - Mise à jour de la liste des en-têtes HTTP
+## Étape 6 - mise à j-jouw de wa wiste des en-têtes h-http
 
-Assurez-vous que votre en-tête est répertorié dans une catégorie appropriée sur la [page de référence des en-têtes HTTP](/fr/docs/Web/HTTP/Headers).
+assuwez-vous que votwe en-tête est wépewtowié dans une catégowie appwopwiée suw w-wa [page de wéféwence des en-têtes h-http](/fw/docs/web/http/headews). :3
 
-## Étape 7 - Révision du contenu
+## Étape 7 - wévision d-du contenu
 
-Après avoir créé la page d'en-tête, soumettez-la en tant que [<i lang="en">pull request</i>](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.
+apwès avoiw cwéé w-wa page d'en-tête, ( ͡o ω ͡o ) soumettez-wa e-en tant que [<i w-wang="en">puww w-wequest</i>](https://docs.github.com/fw/puww-wequests/cowwabowating-with-puww-wequests/pwoposing-changes-to-youw-wowk-with-puww-wequests/cweating-a-puww-wequest). òωó u-un membwe de n-nyotwe équipe de wévision sewa automatiquement désigné pouw wévisew votwe page. σωσ

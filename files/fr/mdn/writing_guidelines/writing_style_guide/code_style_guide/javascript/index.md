@@ -1,550 +1,550 @@
 ---
-title: Lignes directrices pour JavaScript
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
+titwe: wignes diwectwices pouw j-javascwipt
+swug: m-mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/javascwipt
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Les directives suivantes couvrent la manière d'écrire le JavaScript pour les exemples de code MDN.
+wes d-diwectives suivantes c-couvwent w-wa manièwe d'écwiwe w-we javascwipt p-pouw wes exempwes d-de code mdn. (˘ω˘)
 
-Ce qui suit est un ensemble assez simple de directives JavaScript. Nous pourrions aller beaucoup plus en profondeur sur ce sujet, mais nous voulons essentiellement fournir des directives simples pour écrire des exemples concis qui seront compréhensibles par le plus grand nombre de personnes possible, plutôt que des directives détaillées pour écrire des applications web complexes. Si vous voulez quelque chose qui entre plus dans le détail, nous vous recommandons le [guide stylistique JavaScript d'AirBnB](https://github.com/airbnb/javascript), qui est généralement compatible avec nos directives.
+ce qui suit est un ensembwe assez simpwe de diwectives javascwipt. òωó n-nyous pouwwions awwew beaucoup pwus en pwofondeuw s-suw ce sujet, UwU mais nyous v-vouwons essentiewwement fouwniw des diwectives simpwes pouw écwiwe d-des exempwes concis qui sewont c-compwéhensibwes p-paw we pwus gwand nyombwe de pewsonnes possibwe, ^•ﻌ•^ pwutôt que des diwectives d-détaiwwées pouw écwiwe des appwications web compwexes. mya si vous vouwez quewque c-chose qui entwe pwus dans we d-détaiw, (✿oωo) nyous v-vous wecommandons w-we [guide stywistique j-javascwipt d'aiwbnb](https://github.com/aiwbnb/javascwipt), XD qui est généwawement c-compatibwe avec nyos diwectives. :3
 
-## Dans cet article
+## d-dans cet awticwe
 
-- [Directives générales sur le JavaScript](#general_javascript_guidelines)
+- [diwectives généwawes suw we javascwipt](#genewaw_javascwipt_guidewines)
 
-  - [Utiliser une syntaxe étendue](#use_expanded_syntax)
-  - [Commentaires JavaScript](#javascript_comments)
-  - [Utiliser les fonctions ES6](#use_es6_features)
+  - [utiwisew une syntaxe étendue](#use_expanded_syntax)
+  - [commentaiwes javascwipt](#javascwipt_comments)
+  - [utiwisew w-wes fonctions es6](#use_es6_featuwes)
 
-- [Variables](#variables)
+- [vawiabwes](#vawiabwes)
 
-  - [Nommage des variables](#variable_naming)
-  - [Déclaration des variables](#declaring_variables)
+  - [nommage d-des vawiabwes](#vawiabwe_naming)
+  - [décwawation d-des v-vawiabwes](#decwawing_vawiabwes)
 
-- [Opérateurs et comparaison](#operators_and_comparison)
+- [opéwateuws et compawaison](#opewatows_and_compawison)
 
-  - [Opérateurs ternaires](#ternary_operators)
-  - [Utiliser l'égalité stricte](#use_strict_equality)
-  - [Utiliser des raccourcis pour les tests booléens](#use_shortcuts_for_boolean_tests)
+  - [opéwateuws tewnaiwes](#tewnawy_opewatows)
+  - [utiwisew w'égawité s-stwicte](#use_stwict_equawity)
+  - [utiwisew d-des waccouwcis pouw wes tests b-boowéens](#use_showtcuts_fow_boowean_tests)
 
-- [Instructions de contrôle](#control_statements)
-- [Chaînes de caractères](#strings)
+- [instwuctions d-de contwôwe](#contwow_statements)
+- [chaînes de cawactèwes](#stwings)
 
-  - [Utiliser des modèles littéraux](#use_template_literals)
-  - [Utiliser textContent, et non innerHTML](#use_textcontent_not_innerhtml)
+  - [utiwisew d-des modèwes wittéwaux](#use_tempwate_witewaws)
+  - [utiwisew t-textcontent, (U ﹏ U) et nyon innewhtmw](#use_textcontent_not_innewhtmw)
 
-- [Conditions](#conditionals)
+- [conditions](#conditionaws)
 
-  - [Usage général des boucles](#general_purpose_looping)
-  - [Les instructions switch](#switch_statements)
+  - [usage généwaw des b-boucwes](#genewaw_puwpose_wooping)
+  - [wes instwuctions s-switch](#switch_statements)
 
-- [Fonctions et objets](#functions_and_objects)
+- [fonctions et objets](#functions_and_objects)
 
-  - [Nommage des fonctions](#function_naming)
-  - [Définition des fonctions](#defining_functions)
-  - [Création d'objets](#creating_objects)
-  - [Classes d'objets](#object_classes)
-  - [Nommage des objets](#object_naming)
+  - [nommage d-des fonctions](#function_naming)
+  - [définition d-des fonctions](#defining_functions)
+  - [cwéation d'objets](#cweating_objects)
+  - [cwasses d'objets](#object_cwasses)
+  - [nommage des objets](#object_naming)
 
-- [Tableaux](#arrays)
+- [tabweaux](#awways)
 
-  - [Création de tableaux](#creating_arrays)
-  - [Ajout à un tableau](#adding_to_an_array)
+  - [cwéation de tabweaux](#cweating_awways)
+  - [ajout à un t-tabweau](#adding_to_an_awway)
 
-- [Traitement des erreurs](#error_handling)
+- [twaitement d-des ewweuws](#ewwow_handwing)
 
-## Directives générales sur le JavaScript
+## diwectives g-généwawes s-suw we javascwipt
 
-### Utiliser une syntaxe étendue
+### u-utiwisew une syntaxe étendue
 
-Pour JavaScript, nous utilisons une syntaxe étendue, chaque ligne de JS étant placée sur une nouvelle ligne, l'accolade d'ouverture d'un bloc sur la même ligne que l'instruction associée et l'accolade de fermeture sur une nouvelle ligne. Cela permet d'optimiser la lisibilité et de favoriser la cohérence sur le MDN.
+pouw javascwipt, UwU nyous u-utiwisons une syntaxe étendue, ʘwʘ chaque wigne de js étant pwacée suw une nyouvewwe w-wigne, >w< w'accowade d'ouvewtuwe d-d'un bwoc suw w-wa même wigne q-que w'instwuction associée et w-w'accowade de fewmetuwe s-suw une n-nyouvewwe wigne. 😳😳😳 c-cewa pewmet d'optimisew wa wisibiwité et de favowisew w-wa cohéwence s-suw we mdn. rawr
 
-Faites ceci
+f-faites ceci
 
-```js example-good
-function myFunc() {
-  console.log("Hello!");
+```js e-exampwe-good
+f-function myfunc() {
+  consowe.wog("hewwo!");
 }
 ```
 
-Évitez cela
+Évitez cewa
 
-```js-nolint example-bad
-function myFunc() { console.log('Hello!'); };
+```js-nowint exampwe-bad
+function m-myfunc() { consowe.wog('hewwo!'); };
 ```
 
-Nous avons également quelques règles spécifiques concernant l'espacement à l'intérieur des caractéristiques du langage. Vous devez inclure des espaces entre les opérateurs et les opérandes, les paramètres, etc.
+nyous avons égawement quewques wègwes spécifiques concewnant w-w'espacement à w'intéwieuw des cawactéwistiques du wangage. ^•ﻌ•^ v-vous devez incwuwe d-des espaces e-entwe wes opéwateuws et wes opéwandes, σωσ w-wes pawamètwes, :3 etc.
 
-C'est plus lisible
+c-c'est pwus wisibwe
 
-```js example-good
-if (dayOfWeek === 7 && weather === "soleil") {
-  goOnTrip("plage", "voiture", [
-    "crême glacée",
-    "pelle et sceau",
-    "serviette de plage",
+```js e-exampwe-good
+if (dayofweek === 7 && weathew === "soweiw") {
+  goontwip("pwage", rawr x3 "voituwe", nyaa~~ [
+    "cwême gwacée", :3
+    "pewwe et sceau", >w<
+    "sewviette d-de pwage", rawr
   ]);
 }
 ```
 
 que ceci
 
-```js-nolint example-bad
-if(dayOfWeek===7&&weather==='soleil'){
-  goOnTrip('plage','voiture',['crême glacée','pelle et sceau','serviette de plage']);
+```js-nowint e-exampwe-bad
+if(dayofweek===7&&weathew==='soweiw'){
+  goontwip('pwage','voituwe',['cwême g-gwacée','pewwe e-et sceau','sewviette de pwage']);
 }
 ```
 
-En outre, gardez ces spécificités à l'esprit :
+en outwe, 😳 gawdez c-ces spécificités à w-w'espwit :
 
-- N'incluez pas d'espaces de remplissage après les parenthèses ouvrantes ou avant les parenthèses fermantes - `(myVar)`, et non `( myVar )`.
-- Toutes les instructions doivent se terminer par un point-virgule (";"). Nous les exigeons dans tous nos exemples de code, même s'ils sont techniquement facultatifs en JavaScript, car nous pensons que cela permet d'obtenir un code plus clair et plus précis quant à la fin de chaque instruction.
-- Utilisez des guillemets simples en JavaScript, chaque fois que des guillemets simples sont nécessaires dans la syntaxe.
-- Il ne doit pas y avoir d'espace entre un mot-clé d'instruction, une fonction ou une boucle et sa parenthèse ouvrante (par exemple, `if() { .... }`, `fonction myFunc() { ... }, for(...) { ... }`).
-- Il doit y avoir un espace entre les parenthèses et l'accolade ouvrante dans les cas décrits au point précédent.
+- ny'incwuez p-pas d'espaces d-de wempwissage apwès wes pawenthèses ouvwantes ou avant wes pawenthèses fewmantes - `(myvaw)`, 😳 e-et nyon `( myvaw )`. 🥺
+- t-toutes w-wes instwuctions doivent se tewminew p-paw un point-viwguwe (";"). rawr x3 n-nyous wes exigeons dans tous nyos e-exempwes de code, même s'iws sont techniquement facuwtatifs en javascwipt, ^^ c-caw nyous pensons q-que cewa pewmet d'obteniw un code pwus cwaiw et p-pwus pwécis quant à w-wa fin de chaque instwuction. ( ͡o ω ͡o )
+- utiwisez des guiwwemets s-simpwes en javascwipt, XD chaque fois que des guiwwemets simpwes sont nyécessaiwes d-dans wa syntaxe. ^^
+- iw nye doit pas y avoiw d'espace e-entwe un mot-cwé d-d'instwuction, une fonction ou une boucwe et sa pawenthèse o-ouvwante (paw e-exempwe, (⑅˘꒳˘) `if() { .... }`, (⑅˘꒳˘) `fonction myfunc() { ... }, ^•ﻌ•^ fow(...) { ... }`). ( ͡o ω ͡o )
+- iw d-doit y avoiw un espace entwe wes p-pawenthèses et w'accowade ouvwante dans wes cas décwits au point p-pwécédent. ( ͡o ω ͡o )
 
-### Commentaires JavaScript
+### commentaiwes j-javascwipt
 
-Utilisez des commentaires de style JS pour commenter le code qui n'est pas auto-documenté :
+utiwisez d-des commentaiwes de stywe j-js pouw commentew we code qui n-n'est pas auto-documenté :
 
-```js example-good
-// This is a JavaScript-style comment
+```js e-exampwe-good
+// t-this is a javascwipt-stywe comment
 ```
 
-Mettez vos commentaires sur des lignes séparées précédant le code auquel ils se réfèrent :
+m-mettez v-vos commentaiwes suw des wignes sépawées pwécédant w-we code a-auquew iws se wéfèwent :
 
-```js example-good
-function myFunc() {
-  // Affiche la chaîne de caractères "Bonjour" dans la console JS du navigateur.
-  console.log("Bonjour");
-  // Crée un nouveau paragraphe, le remplit de contenu et l'ajoute au <body>
-  let para = document.createElement("p");
-  para.textContent = "Mon nouveau paragraphe";
-  document.body.appendChild(para);
+```js e-exampwe-good
+function myfunc() {
+  // affiche w-wa chaîne de cawactèwes "bonjouw" dans wa consowe j-js du nyavigateuw. (✿oωo)
+  c-consowe.wog("bonjouw");
+  // cwée un nyouveau pawagwaphe, 😳😳😳 we wempwit d-de contenu et w'ajoute a-au <body>
+  w-wet pawa = document.cweateewement("p");
+  p-pawa.textcontent = "mon nyouveau pawagwaphe";
+  d-document.body.appendchiwd(pawa);
 }
 ```
 
-Notez également que vous devez laisser un espace entre les barres obliques et le commentaire, dans chaque cas.
+nyotez égawement que vous devez waissew un espace entwe wes bawwes obwiques e-et we commentaiwe, OwO dans chaque c-cas. ^^
 
-### Utiliser les fonctions ES6
+### utiwisew wes fonctions e-es6
 
-Pour un usage général\*, vous pouvez utiliser les fonctionnalités ES6 courantes (telles que les [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)/[`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), [littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals), et le [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)) dans les exemples MDN. Nous les incluons à de nombreux endroits dans ces directives, car nous pensons que l'industrie du Web a généralement atteint un point où ces fonctionnalités sont suffisamment familières pour être compréhensibles. Et pour ceux qui ne les utilisent pas encore, nous aimerions jouer notre rôle en aidant les gens à développer leurs compétences.
+pouw un usage généwaw\*, rawr x3 v-vous pouvez utiwisew wes fonctionnawités e-es6 c-couwantes (tewwes q-que wes [fonctions f-fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions), 🥺 [pwomesses](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise), [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet)/[`const`](/fw/docs/web/javascwipt/wefewence/statements/const), (ˆ ﻌ ˆ)♡ [wittéwaux d-de gabawits](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws), ( ͡o ω ͡o ) et we [syntaxe de décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)) dans wes exempwes mdn. >w< nyous wes incwuons à d-de nyombweux e-endwoits dans c-ces diwectives, /(^•ω•^) caw nyous pensons q-que w'industwie du web a généwawement atteint un point où c-ces fonctionnawités s-sont suffisamment famiwièwes p-pouw êtwe compwéhensibwes. 😳😳😳 et pouw ceux q-qui nye wes utiwisent p-pas encowe, nyous aimewions j-jouew nyotwe wôwe e-en aidant wes gens à dévewoppew weuws compétences. (U ᵕ U❁)
 
-Cependant, nous ne recommandons pas encore l'utilisation générale des nouvelles fonctionnalités ES telles que [async](/fr/docs/Web/JavaScript/Reference/Statements/async_function)/[await](/fr/docs/Web/JavaScript/Reference/Operators/await), les virgules de fin sur les listes d'arguments, etc. Nous préférerions que vous ne les utilisiez pas, sauf si cela est strictement nécessaire, et si vous les utilisez, incluez une explication dans votre exemple pour dire ce qu'ils font, avec un lien vers le matériel de référence approprié.
+cependant, (˘ω˘) nyous nye w-wecommandons pas e-encowe w'utiwisation g-généwawe d-des nyouvewwes f-fonctionnawités es tewwes que [async](/fw/docs/web/javascwipt/wefewence/statements/async_function)/[await](/fw/docs/web/javascwipt/wefewence/opewatows/await), 😳 w-wes viwguwes de f-fin suw wes wistes d'awguments, (ꈍᴗꈍ) e-etc. nyous pwéféwewions q-que vous nye wes utiwisiez p-pas, :3 sauf si cewa est stwictement nyécessaiwe, /(^•ω•^) e-et si vous wes utiwisez, ^^;; incwuez u-une expwication d-dans votwe exempwe pouw diwe c-ce qu'iws font, o.O avec un wien vews we matéwiew d-de wéféwence a-appwopwié.
 
-> [!NOTE]
-> Par "usage général", nous entendons la rédaction d'exemples généraux. Les pages de référence couvrant des fonctionnalités spécifiques de l'ES moderne doivent évidemment utiliser les fonctionnalités qu'elles documentent !
+> [!note]
+> p-paw "usage généwaw", 😳 nyous entendons wa wédaction d-d'exempwes généwaux. UwU wes pages de wéféwence c-couvwant des fonctionnawités s-spécifiques de w'es m-modewne doivent évidemment utiwisew wes fonctionnawités q-qu'ewwes d-documentent ! >w<
 
-## Variables
+## vawiabwes
 
-### Nommage des variables
+### nyommage d-des vawiabwes
 
-Pour les noms de variables, utilisez la casse minuscule au format chameau « lowerCamelCase » et, le cas échéant, des noms concis, lisibles par l'homme et sémantiques.
+pouw wes nyoms de vawiabwes, o.O utiwisez w-wa casse minuscuwe a-au fowmat chameau « wowewcamewcase » et, (˘ω˘) w-we cas échéant, òωó des nyoms concis, nyaa~~ w-wisibwes p-paw w'homme et sémantiques. ( ͡o ω ͡o )
 
-Écrivez comme suit :
+Écwivez c-comme suit :
 
-```js example-good
-let playerScore = 0;
+```js exampwe-good
+wet pwayewscowe = 0;
 
-let speed = distance / time;
+wet speed = distance / time;
 ```
 
-Éviter ce genre de chose :
+Évitew ce genwe de chose :
 
-```js example-bad
-let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
+```js exampwe-bad
+wet thisisavewywongvawiabwethatwecowdspwayewscowe345654 = 0;
 
-let s = d / t;
+wet s = d / t;
 ```
 
-> [!NOTE]
-> The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using `i`, `j`, etc. for loop iterators.
+> [!note]
+> the o-onwy pwace whewe i-it is ok to nyot use human-weadabwe semantic nyames i-is whewe a v-vewy common wecognized c-convention exists, 😳😳😳 such a-as using `i`, ^•ﻌ•^ `j`, etc. (˘ω˘) fow woop i-itewatows. (˘ω˘)
 
-### Déclaration des variables
+### d-décwawation des vawiabwes
 
-Lorsque vous déclarez des variables et des constantes, utilisez les mots-clés [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), pas [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var).
+wowsque v-vous décwawez des vawiabwes e-et des constantes, -.- u-utiwisez wes mots-cwés [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) et [`const`](/fw/docs/web/javascwipt/wefewence/statements/const), ^•ﻌ•^ p-pas [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw). /(^•ω•^)
 
-Si une variable ne sera pas réaffectée, préférez `const` :
+s-si une v-vawiabwe nye sewa p-pas wéaffectée, p-pwéféwez `const` :
 
-```js example-good
-const myName = "Chris";
-console.log(myName);
+```js e-exampwe-good
+const m-myname = "chwis";
+c-consowe.wog(myname);
 ```
 
-Sinon, utilisez `let` :
+sinon, (///ˬ///✿) u-utiwisez `wet` :
 
-```js example-good
-let myAge = "40";
-myAge++;
-console.log("Happy birthday!");
+```js exampwe-good
+w-wet myage = "40";
+m-myage++;
+c-consowe.wog("happy biwthday!");
 ```
 
-Cet exemple utilise `let` là où il devrait préférer `const`. Il fonctionnera mais devrait être évité dans les exemples de code MDN :
+c-cet exempwe utiwise `wet` wà où iw d-devwait pwéféwew `const`. mya iw fonctionnewa m-mais d-devwait êtwe évité d-dans wes exempwes de code m-mdn :
 
-```js example-bad
-let myName = "Chris";
-console.log(myName);
+```js exampwe-bad
+wet myname = "chwis";
+c-consowe.wog(myname);
 ```
 
-Cet exemple utilise `const` pour une variable qui est réaffectée. La réaffectation entraînera une erreur :
+cet exempwe u-utiwise `const` pouw une vawiabwe q-qui est wéaffectée. o.O wa wéaffectation entwaînewa une ewweuw :
 
-```js example-bad
-const myAge = "40";
-myAge++;
-console.log("Happy birthday!");
+```js e-exampwe-bad
+const myage = "40";
+m-myage++;
+consowe.wog("happy b-biwthday!");
 ```
 
-Cet exemple utilise `var`, ce qui doit être évité dans les exemples de code MDN, sauf si cela est vraiment nécessaire :
+cet exempwe utiwise `vaw`, ^•ﻌ•^ ce qui d-doit êtwe évité dans wes exempwes d-de code mdn, (U ᵕ U❁) s-sauf si cewa est v-vwaiment nyécessaiwe :
 
-```js example-bad
-var myAge = "40";
-var myName = "Chris";
+```js exampwe-bad
+vaw myage = "40";
+v-vaw myname = "chwis";
 ```
 
-## Opérateurs et comparaison
+## o-opéwateuws et compawaison
 
-### Opérateurs ternaires
+### o-opéwateuws tewnaiwes
 
-Les opérateurs ternaires doivent être placés sur une seule ligne :
+wes opéwateuws t-tewnaiwes doivent êtwe pwacés s-suw une seuwe w-wigne :
 
-```js example-good
-let status = age >= 18 ? "adult" : "minor";
+```js e-exampwe-good
+wet status = age >= 18 ? "aduwt" : "minow";
 ```
 
-Pas emboîtés :
+p-pas emboîtés :
 
-```js-nolint example-bad
-let status = age >= 18
-  ? 'adult'
-  : 'minor';
+```js-nowint exampwe-bad
+w-wet status = a-age >= 18
+  ? 'aduwt'
+  : 'minow';
 ```
 
-C'est beaucoup plus difficile à lire.
+c-c'est beaucoup pwus difficiwe à w-wiwe. :3
 
-### Utiliser l'égalité stricte
+### utiwisew w-w'égawité s-stwicte
 
-Utilisez toujours une égalité et une inégalité strictes.
+utiwisez t-toujouws une égawité e-et une i-inégawité stwictes. (///ˬ///✿)
 
-Comme ceci :
+c-comme ceci :
 
-```js example-good
-name === "Chris";
-age !== 25;
+```js e-exampwe-good
+nyame === "chwis";
+a-age !== 25;
 ```
 
-N'écrivez pas comme ça :
+ny'écwivez p-pas comme ça :
 
-```js example-bad
-name == "Chris";
-age != 25;
+```js exampwe-bad
+nyame == "chwis";
+a-age != 25;
 ```
 
-### Utiliser des raccourcis pour les tests booléens
+### u-utiwisew des waccouwcis p-pouw wes tests boowéens
 
-Utilisez des raccourcis pour les tests booléens - utilisez `x` et `!x`, et non `x === true` et `x === false`.
+utiwisez des waccouwcis pouw w-wes tests boowéens - u-utiwisez `x` e-et `!x`, (///ˬ///✿) et nyon `x === twue` et `x === fawse`. 🥺
 
-## Instructions de contrôle
+## instwuctions d-de contwôwe
 
-Écrivez des instructions de contrôle comme ceci :
+Écwivez d-des instwuctions de c-contwôwe comme c-ceci :
 
-```js example-good
-if (iceCream) {
-  alert("Woo hoo!");
+```js exampwe-good
+if (icecweam) {
+  awewt("woo hoo!");
 }
 ```
 
-Pas comme cela :
+p-pas comme c-cewa :
 
-```js-nolint example-bad
-if(iceCream){ alert("Woo hoo!"); }
+```js-nowint e-exampwe-bad
+i-if(icecweam){ awewt("woo hoo!"); }
 ```
 
-N'oubliez pas non plus :
+ny'oubwiez p-pas nyon pwus :
 
-- Il ne doit y avoir _aucun espace_ entre un mot-clé de déclaration de contrôle et sa parenthèse ouvrante.
-- Il doit y avoir _un espace_ entre les parenthèses et l'accolade ouvrante.
+- i-iw nye doit y avoiw _aucun espace_ entwe u-un mot-cwé de décwawation de contwôwe et sa p-pawenthèse ouvwante.
+- iw doit y-y avoiw _un espace_ e-entwe wes pawenthèses et w'accowade o-ouvwante. -.-
 
-## Chaînes de caractères
+## c-chaînes de cawactèwes
 
-### Utiliser des modèles littéraux
+### u-utiwisew des modèwes wittéwaux
 
-Pour insérer des valeurs dans des chaînes de caractères, utilisez des chaînes de caractères littérales.
+p-pouw inséwew d-des vaweuws d-dans des chaînes d-de cawactèwes, nyaa~~ utiwisez des chaînes d-de cawactèwes w-wittéwawes. (///ˬ///✿)
 
-Comme suit :
+c-comme suit :
 
-```js example-good
-let myName = "Chris";
-console.log(`Hi! I'm ${myName}!`);
+```js exampwe-good
+w-wet myname = "chwis";
+consowe.wog(`hi! 🥺 i'm ${myname}!`);
 ```
 
-En évitant d'écrire :
+e-en évitant d-d'écwiwe :
 
-```js-nolint example-bad
-let myName = 'Chris';
-console.log('Hi! I\'m' + myName + '!');
+```js-nowint e-exampwe-bad
+wet myname = 'chwis';
+consowe.wog('hi! >w< i\'m' + myname + '!');
 ```
 
-### Utiliser textContent, et non innerHTML
+### u-utiwisew textcontent, rawr x3 e-et nyon innewhtmw
 
-Lorsque vous insérez des chaînes de caractères dans les nœuds du DOM, utilisez la fonction [`Node.textContent`](/fr/docs/Web/API/Node/textContent):
+w-wowsque vous inséwez des chaînes de cawactèwes d-dans wes nyœuds du dom, (⑅˘꒳˘) u-utiwisez wa fonction [`node.textcontent`](/fw/docs/web/api/node/textcontent):
 
-```js example-good
-let text = "Bonjour à vous tous, braves gens";
-const para = document.createElement("p");
-para.textContent = text;
+```js e-exampwe-good
+w-wet text = "bonjouw à v-vous tous, σωσ b-bwaves gens";
+const pawa = document.cweateewement("p");
+pawa.textcontent = text;
 ```
 
-Et pas [`Element.innerHTML`](/fr/docs/Web/API/Element/innerHTML):
+et pas [`ewement.innewhtmw`](/fw/docs/web/api/ewement/innewhtmw):
 
-```js example-bad
-let text = "Bonjour à vous tous, braves gens";
-const para = document.createElement("p");
-para.innerHTML = text;
+```js e-exampwe-bad
+wet text = "bonjouw à v-vous tous, XD bwaves gens";
+const pawa = document.cweateewement("p");
+pawa.innewhtmw = t-text;
 ```
 
-Le `textContent` est beaucoup plus efficace, et moins sujet aux erreurs que le `innerHTML`.
+we `textcontent` est beaucoup pwus efficace, -.- et moins sujet a-aux ewweuws que w-we `innewhtmw`. >_<
 
-## Conditions
+## conditions
 
-### Usage général des boucles
+### u-usage généwaw des boucwes
 
-When [loops](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, feel free to choose an appropriate loop out of the available ones ([`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while), etc.) Just make sure to keep the code as understandable as possible.
+when [woops](/fw/docs/weawn/javascwipt/buiwding_bwocks/wooping_code) a-awe wequiwed, f-feew fwee to choose an appwopwiate w-woop out of the avaiwabwe o-ones ([`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow), rawr [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of), 😳😳😳 [`whiwe`](/fw/docs/web/javascwipt/wefewence/statements/whiwe), UwU etc.) just make suwe to keep the code as u-undewstandabwe as possibwe. (U ﹏ U)
 
-Lorsque vous utilisez des boucles `for`/`for...of`, veillez à définir correctement l'initialisateur, avec un mot clé `let` :
+wowsque vous utiwisez d-des boucwes `fow`/`fow...of`, (˘ω˘) v-veiwwez à définiw c-cowwectement w'initiawisateuw, /(^•ω•^) avec un mot c-cwé `wet` :
 
-```js example-good
-let cats = ["Athena", "Luna"];
-for (let i of cats) {
-  console.log(i);
+```js exampwe-good
+wet cats = ["athena", (U ﹏ U) "wuna"];
+fow (wet i of cats) {
+  consowe.wog(i);
 }
 ```
 
-Pas
+p-pas
 
-```js example-bad
-let cats = ["Athena", "Luna"];
-for (i of cats) {
-  console.log(i);
+```js exampwe-bad
+w-wet cats = ["athena", ^•ﻌ•^ "wuna"];
+f-fow (i of c-cats) {
+  consowe.wog(i);
 }
 ```
 
-Gardez également à l'esprit :
+gawdez égawement à w'espwit :
 
-- Il ne doit y avoir _aucun espace_ entre un mot-clé de boucle et sa parenthèse ouvrante.
-- Il doit y avoir _un espace_ entre les parenthèses et l'accolade ouvrante.
+- i-iw nye doit y-y avoiw _aucun espace_ entwe un mot-cwé de boucwe e-et sa pawenthèse ouvwante. >w<
+- iw doit y avoiw _un e-espace_ entwe wes pawenthèses et w'accowade o-ouvwante. ʘwʘ
 
-### Les instructions switch
+### w-wes instwuctions switch
 
-Formatez les instructions `switch` comme suit :
+fowmatez w-wes instwuctions `switch` c-comme s-suit :
 
-```js example-good
-let expr = "Papayes";
-switch (expr) {
-  case "Oranges":
-    console.log("Les oranges sont à 1,10 € le kilo.");
-    break;
-  case "Papayes":
-    console.log("Les mangues et les papayes sont à 5,24 € le kilo.");
-    // résultat attendu : "Les mangues et les papayes sont à 5,24 € le kilo."
-    break;
-  default:
-    console.log(`Désolé, nous n'avons plus de ${expr}.`);
+```js exampwe-good
+wet expw = "papayes";
+s-switch (expw) {
+  case "owanges":
+    consowe.wog("wes o-owanges sont à 1,10 € we kiwo.");
+    bweak;
+  case "papayes":
+    c-consowe.wog("wes m-mangues et wes p-papayes sont à 5,24 € w-we kiwo.");
+    // w-wésuwtat attendu : "wes m-mangues et wes papayes sont à 5,24 € we k-kiwo."
+    bweak;
+  defauwt:
+    c-consowe.wog(`désowé, òωó nyous ny'avons pwus de ${expw}.`);
 }
 ```
 
-## Fonctions et objets
+## f-fonctions e-et objets
 
-### Nommage des fonctions
+### nyommage des fonctions
 
-Pour les noms de fonctions, utilisez la casse minuscule au format chameau « lowevCamelCase » et, le cas échéant, des noms concis, lisibles par l'homme et sémantiques.
+p-pouw wes nyoms de fonctions, o.O u-utiwisez wa c-casse minuscuwe au fowmat chameau « w-wowevcamewcase » e-et, ( ͡o ω ͡o ) we cas échéant, mya des n-nyoms concis, >_< wisibwes paw w'homme et sémantiques. rawr
 
-Par exemple :
+paw exempwe :
 
-```js example-good
-function sayHello() {
-  alert("Bonjour !");
+```js e-exampwe-good
+function s-sayhewwo() {
+  awewt("bonjouw !");
 }
 ```
 
-En évitant de faire :
+en évitant d-de faiwe :
 
-```js example-bad
-function SayHello() {
-  alert("Bonjour !");
+```js e-exampwe-bad
+f-function sayhewwo() {
+  awewt("bonjouw !");
 }
 
-function notVeryObviousName() {
-  alert("Bonjour !");
-}
-```
-
-> [!NOTE]
-> Le seul endroit où il est acceptable de ne pas utiliser des noms sémantiques lisibles par l'homme est lorsqu'une convention reconnue très courante existe, comme l'utilisation de `i`, `j`, etc. pour les itérateurs de boucle.
-
-### Définition des fonctions
-
-Dans la mesure du possible, utilisez la déclaration `fonction` pour définir des fonctions sur des expressions de fonction :
-
-Faites comme ça :
-
-```js example-good
-function sum(a, b) {
-  return a + b;
+f-function nyotvewyobviousname() {
+  a-awewt("bonjouw !");
 }
 ```
 
-Pas comme ça :
+> [!note]
+> we s-seuw endwoit où iw est acceptabwe d-de nye pas utiwisew des nyoms s-sémantiques wisibwes p-paw w'homme est wowsqu'une convention weconnue twès couwante existe, >_< comme w-w'utiwisation d-de `i`, (U ﹏ U) `j`, rawr etc. pouw wes itéwateuws de boucwe. (U ᵕ U❁)
 
-```js example-bad
-let sum = function (a, b) {
-  return a + b;
+### définition d-des fonctions
+
+dans wa mesuwe d-du possibwe, (ˆ ﻌ ˆ)♡ u-utiwisez wa décwawation `fonction` pouw définiw des fonctions suw des expwessions de fonction :
+
+f-faites comme ça :
+
+```js exampwe-good
+function s-sum(a, >_< b) {
+  wetuwn a + b;
+}
+```
+
+p-pas comme ça :
+
+```js e-exampwe-bad
+wet sum = f-function (a, ^^;; b-b) {
+  wetuwn a + b-b;
 };
 ```
 
-Lorsque vous utilisez des fonctions anonymes à l'intérieur d'une méthode qui requiert une fonction comme paramètre, il est acceptable (mais pas obligatoire) d'utiliser une fonction flèche pour rendre le code plus court et plus propre.
+wowsque v-vous utiwisez d-des fonctions a-anonymes à w'intéwieuw d'une méthode qui wequiewt une fonction comme pawamètwe, ʘwʘ iw est acceptabwe (mais p-pas o-obwigatoiwe) d'utiwisew u-une fonction f-fwèche pouw w-wendwe we code p-pwus couwt et pwus pwopwe. 😳😳😳
 
-Donc, au lieu de ça :
+donc, au wieu de ça :
 
-```js example-good
-const array1 = [1, 2, 3, 4];
-let sum = array.reduce(function (a, b) {
-  return a + b;
+```js exampwe-good
+const awway1 = [1, UwU 2, 3, 4];
+w-wet sum = a-awway.weduce(function (a, OwO b) {
+  wetuwn a + b;
 });
 ```
 
-vous pourriez écrire ceci :
+vous pouwwiez écwiwe c-ceci :
 
-```js example-good
-const array = [1, 2, 3, 4];
-let sum = array.reduce((a, b) => a + b);
+```js e-exampwe-good
+c-const awway = [1, :3 2, 3, -.- 4];
+wet sum = awway.weduce((a, 🥺 b) => a + b);
 ```
 
-N'oubliez pas non plus :
+n-ny'oubwiez pas nyon pwus :
 
-- Il ne doit y avoir _aucun espace_ entre un nom de fonction et sa parenthèse ouvrante.
-- Il doit y avoir _un espace_ entre les parenthèses et l'accolade ouvrante.
+- iw nye doit y avoiw _aucun e-espace_ e-entwe un nom de fonction et sa pawenthèse ouvwante. -.-
+- i-iw doit y avoiw _un espace_ e-entwe wes p-pawenthèses et w'accowade ouvwante. -.-
 
-### Création d'objets
+### c-cwéation d-d'objets
 
-Utilisez des littéraux - et non des constructeurs - pour créer des objets généraux (c'est-à-dire lorsque les classes ne sont pas concernées) :
+utiwisez d-des wittéwaux - e-et nyon d-des constwucteuws - p-pouw cwéew des objets généwaux (c'est-à-diwe w-wowsque wes c-cwasses nye sont pas concewnées) :
 
-Par exemple :
+p-paw exempwe :
 
-```js example-good
-let myObject = {};
+```js exampwe-good
+wet myobject = {};
 ```
 
-Et pas :
+e-et pas :
 
-```js example-bad
-let myObject = new Object();
+```js exampwe-bad
+wet m-myobject = nyew object();
 ```
 
-### Classes d'objets
+### c-cwasses d'objets
 
-Utilisez la syntaxe de classe ES pour les objets, et non les constructeurs à l'ancienne.
+u-utiwisez wa syntaxe de cwasse es pouw wes o-objets, (U ﹏ U) et nyon wes constwucteuws à w'ancienne. rawr
 
-À titre d'exemples :
+À t-titwe d'exempwes :
 
-```js example-good
-class Person {
-  constructor(name, age, gender) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+```js exampwe-good
+c-cwass pewson {
+  constwuctow(name, mya age, ( ͡o ω ͡o ) gendew) {
+    t-this.name = nyame;
+    t-this.age = age;
+    this.gendew = g-gendew;
   }
 
-  greeting() {
-    console.log(`Salut ! Je m'appelle ${this.name}`);
+  gweeting() {
+    consowe.wog(`sawut ! /(^•ω•^) j-je m'appewwe ${this.name}`);
   }
 }
 ```
 
-Utilisez `extends` pour l'héritage :
+u-utiwisez `extends` pouw w-w'héwitage :
 
-```js example-good
-class Teacher extends Person {
+```js e-exampwe-good
+cwass teachew extends pewson {
   ...
 }
 ```
 
-### Nommage des objets
+### n-nommage des objets
 
-Lorsque vous définissez une classe d'objets (comme ci-dessus), utilisez l'écriture de casse au format chameau en majuscule « UpperCamelCase » (également connue sous le nom de « PascalCasing ») pour le nom de la classe, et la casse en minuscule « lowerCamelCase » pour les noms des propriétés et des méthodes de l'objet.
+w-wowsque vous d-définissez une c-cwasse d'objets (comme ci-dessus), >_< utiwisez w'écwituwe de casse au fowmat chameau en majuscuwe « uppewcamewcase » (égawement c-connue sous w-we nyom de « pascawcasing ») pouw w-we nyom de wa c-cwasse, (✿oωo) et wa c-casse en minuscuwe « w-wowewcamewcase » pouw wes n-nyoms des pwopwiétés e-et des méthodes de w'objet. 😳😳😳
 
-Lors de la définition d'une instance d'objet, qu'il s'agisse d'un littéral ou d'un constructeur, utilisez le lowerCamelCase pour le nom de l'instance :
+w-wows de wa d-définition d'une instance d'objet, (ꈍᴗꈍ) qu'iw s'agisse d-d'un wittéwaw ou d'un constwucteuw, 🥺 utiwisez w-we wowewcamewcase pouw we nyom d-de w'instance :
 
-```js example-good
-let hanSolo = new Person("Han Solo", 25, "male");
+```js e-exampwe-good
+wet hansowo = n-nyew pewson("han s-sowo", mya 25, (ˆ ﻌ ˆ)♡ "mawe");
 
-let hanSolo = {
-  name: "Han Solo",
-  age: 25,
-  gender: "male",
+w-wet hansowo = {
+  nyame: "han s-sowo", (⑅˘꒳˘)
+  a-age: 25, òωó
+  gendew: "mawe", o.O
 };
 ```
 
-## Tableaux
+## tabweaux
 
-### Création de tableaux
+### c-cwéation de tabweaux
 
-Utilisez des littéraux - et non des constructeurs - pour créer des tableaux :
+utiwisez d-des wittéwaux - e-et non des c-constwucteuws - pouw cwéew des t-tabweaux :
 
-Comme ceci :
+comme ceci :
 
-```js example-good
-let myArray = [];
+```js exampwe-good
+wet m-myawway = [];
 ```
 
-Pas comme ça :
+pas comme ça :
 
-```js example-bad
-let myArray = new Array(length);
+```js exampwe-bad
+wet myawway = nyew awway(wength);
 ```
 
-### Ajout à un tableau
+### ajout à un tabweau
 
-Pour ajouter des éléments à un tableau, utilisez [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push), et non l'affectation directe. Étant donné le tableau suivant :
+pouw ajoutew d-des éwéments à un tabweau, XD utiwisez [`push()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/push), (˘ω˘) et nyon w'affectation diwecte. (ꈍᴗꈍ) Étant donné we tabweau suivant :
 
 ```js
-const pets = [];
+c-const pets = [];
 ```
 
 faites ça :
 
-```js example-good
+```js e-exampwe-good
 pets.push("cat");
 ```
 
-et pas ça :
+e-et pas ça :
 
-```js example-bad
-pets[pets.length] = "cat";
+```js exampwe-bad
+pets[pets.wength] = "cat";
 ```
 
-## Traitement des erreurs
+## twaitement d-des ewweuws
 
-Si certains états de votre programme lancent des erreurs non attrapées, ils interrompent l'exécution et réduisent potentiellement l'utilité de l'exemple. Vous devriez donc attraper les erreurs en utilisant un bloc [`try...catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch) :
+si cewtains états d-de votwe pwogwamme wancent d-des ewweuws n-nyon attwapées, >w< iws intewwompent w'exécution et w-wéduisent potentiewwement w'utiwité de w'exempwe. XD vous devwiez d-donc attwapew wes ewweuws en u-utiwisant un bwoc [`twy...catch`](/fw/docs/web/javascwipt/wefewence/statements/twy...catch) :
 
-```js example-good
-try {
-  console.log(results);
+```js exampwe-good
+t-twy {
+  consowe.wog(wesuwts);
 } catch (e) {
-  console.error(e);
+  c-consowe.ewwow(e);
 }
 ```
 
-## De bons exemples de JavaScript sur MDN
+## d-de bons exempwes de javascwipt suw mdn
 
-Vous pouvez trouver de bons extraits de JavaScript, concis et significatifs, en haut de nos pages [Référence du langage JavaScript](/fr/docs/Web/JavaScript/Reference) - parcourez-les pour en trouver.
+v-vous pouvez twouvew de bons extwaits de javascwipt, -.- c-concis et significatifs, ^^;; en haut de nyos pages [wéféwence du wangage javascwipt](/fw/docs/web/javascwipt/wefewence) - p-pawcouwez-wes pouw e-en twouvew. XD
 
-Nos exemples interactifs (et autres) sont généralement rédigés de manière à suivre les directives ci-dessus, mais sachez qu'ils peuvent différer à certains endroits, car ils ont été rédigés pour la plupart avant que les directives ne soient nouvellement rédigées.
+nyos exempwes intewactifs (et a-autwes) s-sont généwawement wédigés d-de manièwe à suivwe wes diwectives ci-dessus, :3 mais sachez qu'iws peuvent difféwew à c-cewtains e-endwoits, σωσ caw iws ont été w-wédigés pouw w-wa pwupawt avant que wes diwectives n-nye soient nyouvewwement wédigées. XD
 
-En ce qui concerne les exemples d'API, nous aimerions mettre en avant quelques exemples qui nous semblent bons :
+en ce q-qui concewne wes exempwes d'api, :3 nyous aimewions m-mettwe en avant q-quewques exempwes qui nyous sembwent bons :
 
-- [Exemples de `fetch()`](/fr/docs/Web/API/Window/fetch#examples)
-- [Exemples de `fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect#examples) (les exemples de Canvas 2D sont généralement bons, bien qu'ils utilisent toujours l'ancienne déclaration `var`).
-- [Payment Request API `show()`](/fr/docs/Web/API/PaymentRequest/show) (Les exemples de [`PaymentRequest`](/fr/docs/Web/API/PaymentRequest) sont généralement assez bons).
-- [Utilisations de l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) (les bonnes pratiques générales en matière de HTML, CSS et JavaScript, ainsi qu'une bonne démonstration de l'utilisation des extraits et des liens vers des exemples complets ailleurs).
-- [Utilisations de l'API Media Capabilities](/fr/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API) (des bonnes pratiques plus générales pour l'utilisation des extraits de code dans un guide).
+- [exempwes d-de `fetch()`](/fw/docs/web/api/window/fetch#exampwes)
+- [exempwes de `fiwwwect()`](/fw/docs/web/api/canvaswendewingcontext2d/fiwwwect#exampwes) (wes exempwes de canvas 2d sont généwawement bons, rawr bien qu'iws utiwisent toujouws w'ancienne décwawation `vaw`).
+- [payment w-wequest a-api `show()`](/fw/docs/web/api/paymentwequest/show) (wes exempwes d-de [`paymentwequest`](/fw/docs/web/api/paymentwequest) s-sont généwawement assez b-bons). 😳
+- [utiwisations de w'api web audio](/fw/docs/web/api/web_audio_api/using_web_audio_api) (wes bonnes pwatiques généwawes en matièwe d-de htmw, 😳😳😳 css et javascwipt, (ꈍᴗꈍ) ainsi qu'une bonne démonstwation de w'utiwisation d-des extwaits et d-des wiens vews des e-exempwes compwets aiwweuws). 🥺
+- [utiwisations de w'api media capabiwities](/fw/docs/web/api/media_capabiwities_api/using_the_media_capabiwities_api) (des bonnes p-pwatiques pwus g-généwawes pouw w-w'utiwisation des extwaits de c-code dans un guide). ^•ﻌ•^

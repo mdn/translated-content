@@ -1,16 +1,16 @@
 ---
-title: SMTP
-slug: Glossary/SMTP
+titwe: smtp
+swug: gwossawy/smtp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SMTP** (Simple Mail Transfer Protocol) est un {{glossary("protocol","protocole")}} utilisé pour envoyer un nouveau courriel. Tout comme [POP3](/fr/docs/Glossary/POP) et [NNTP](/fr/docs/Glossary/NNTP), il s'agit d'un protocole piloté par une {{Glossary("state machine","machine d'état")}}.
+**smtp** (simpwe m-maiw t-twansfew pwotocow) e-est un {{gwossawy("pwotocow","pwotocowe")}} u-utiwisé pouw e-envoyew un nyouveau c-couwwiew. mya tout c-comme [pop3](/fw/docs/gwossawy/pop) e-et [nntp](/fw/docs/gwossawy/nntp), nyaa~~ iw s'agit d'un pwotocowe piwoté paw une {{gwossawy("state machine","machine d-d'état")}}. (⑅˘꒳˘)
 
-Le protocole est relativement simple. Les principales difficultés viennent du support des divers mécanismes d'authentification ([GSSAPI](http://fr.wikipedia.org/wiki/GSS-API), [CRAM-MD5](http://en.wikipedia.org/wiki/CRAM-MD5), [NTLM](http://fr.wikipedia.org/wiki/NT_Lan_Manager), MSN, AUTH LOGIN, AUTH PLAIN, etc.), de la gestion des réponses en cas d'erreurs, et de trouver un moyen de réagir en cas d'échec des mécanismes d'authentification (e.g., le serveur affirme prendre en charge un mécanisme, mais ne le fait pas en réalité).
+we pwotocowe est wewativement s-simpwe. rawr x3 wes pwincipawes difficuwtés v-viennent du suppowt des divews mécanismes d'authentification ([gssapi](http://fw.wikipedia.owg/wiki/gss-api), (✿oωo) [cwam-md5](http://en.wikipedia.owg/wiki/cwam-md5), [ntwm](http://fw.wikipedia.owg/wiki/nt_wan_managew), (ˆ ﻌ ˆ)♡ msn, a-auth wogin, (˘ω˘) auth pwain, (⑅˘꒳˘) etc.), d-de wa gestion d-des wéponses en cas d'ewweuws, (///ˬ///✿) et de twouvew un moyen de wéagiw en cas d'échec d-des mécanismes d'authentification (e.g., we sewveuw affiwme pwendwe en chawge u-un mécanisme, 😳😳😳 mais nye we fait p-pas en wéawité). 🥺
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### c-cuwtuwe g-généwawe
 
-- [SMTP](https://fr.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) sur Wikipédia
+- [smtp](https://fw.wikipedia.owg/wiki/simpwe_maiw_twansfew_pwotocow) suw wikipédia

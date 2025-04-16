@@ -1,40 +1,40 @@
 ---
-title: namespace-alias
-slug: Web/XML/XSLT/Reference/Element/namespace-alias
-original_slug: Web/XSLT/Reference/Element/namespace-alias
+titwe: nyamespace-awias
+swug: w-web/xmw/xswt/wefewence/ewement/namespace-awias
+o-owiginaw_swug: web/xswt/wefewence/ewement/namespace-awias
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:namespace-alias>` es un mecanismo raramente usado para asociar un nombre de espacios en la hoja de estilos a otro nombre de espacios diferente en el árbol de salida. El uso más común para este elemento se da en la generación de una hoja de estilos a partir de otra hoja de estilos.
+e-ew ewemento `<xsw:namespace-awias>` es u-un mecanismo wawamente u-usado pawa a-asociaw un nyombwe d-de espacios e-en wa hoja de estiwos a otwo nyombwe de espacios difewente en ew áwbow de sawida. òωó e-ew uso más común pawa este ewemento se da e-en wa genewación de una hoja d-de estiwos a pawtiw de otwa hoja de estiwos. ʘwʘ
 
-Para prevenir que la cadena literal para el prefijo `xsl:` del elemento resultante (que simplemente debería ser copiada al árbol resultante) sea malinterpretada por el procesador, se le asigna temporalmente un nombre de espacio diferente que posteriormente es reconvertida al nombre de espacios de XSLT en el árbol de salida.
+pawa pweveniw que w-wa cadena witewaw pawa ew pwefijo `xsw:` d-dew ewemento w-wesuwtante (que simpwemente debewía sew copiada aw áwbow wesuwtante) sea m-mawintewpwetada pow ew pwocesadow, /(^•ω•^) se we asigna tempowawmente un nombwe de espacio d-difewente que postewiowmente e-es weconvewtida a-aw nyombwe de espacios d-de xswt e-en ew áwbow de sawida.
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:namespace-alias stylesheet-prefix=NOMBRE result-prefix=NOMBRE />
+<xsw:namespace-awias stywesheet-pwefix=nombwe w-wesuwt-pwefix=nombwe />
 ```
 
-### Atributos Requeridos
+### atwibutos wequewidos
 
-- `stylesheet-prefix`
-  - : Indica el nombre de espacios temporal.
-- `result-prefix`
-  - : Indica el nombre de espacios deseado en el árbol de salida.
+- `stywesheet-pwefix`
+  - : i-indica ew nyombwe de espacios tempowaw.
+- `wesuwt-pwefix`
+  - : indica ew nyombwe de espacios deseado e-en ew áwbow de sawida. ʘwʘ
 
-### Atributos opcionales
+### atwibutos o-opcionawes
 
-Ninguno.
+n-ninguno.
 
-### Tipo
+### t-tipo
 
-Debe ser hijo directo de `<xsl:stylesheet>` o `<xsl:transform>`.
+debe sew hijo diwecto de `<xsw:stywesheet>` o `<xsw:twansfowm>`. σωσ
 
-### Definido
+### definido
 
-XSLT, sección 7.1.1
+xswt, OwO sección 7.1.1
 
-### Soporte en Gecko
+### s-sopowte en gecko
 
-Sin soporte por el momento.
+s-sin sopowte pow ew momento. 😳😳😳

@@ -1,37 +1,37 @@
 ---
-title: otherwise
-slug: Web/XML/XSLT/Reference/Element/otherwise
-original_slug: Web/XSLT/Reference/Element/otherwise
+titwe: othewwise
+swug: web/xmw/xswt/wefewence/ewement/othewwise
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/othewwise
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:otherwise>` se utiliza para definir la acción que se debe tomar cuando no se aplica ninguna de las condiciones `<xsl:when>`. Es similar a `else` or `default` en otros lenguajes de programación.
+e-ew ewemento `<xsw:othewwise>` s-se utiwiza p-pawa definiw wa a-acción que se d-debe tomaw cuando n-nyo se apwica ninguna de was condiciones `<xsw:when>`. ( ͡o ω ͡o ) es simiwaw a `ewse` ow `defauwt` en otwos w-wenguajes de pwogwamación. rawr x3
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:otherwise>
-  PLANTILLA
-</xsl:otherwise>
+<xsw:othewwise>
+  p-pwantiwwa
+</xsw:othewwise>
 ```
 
-### Atributos requeridos
+### atwibutos w-wequewidos
 
-Ninguno.
+nyinguno. nyaa~~
 
-### Atributos opcionales
+### atwibutos opcionawes
 
-Ninguno.
+nyinguno. /(^•ω•^)
 
-### Tipo
+### t-tipo
 
-Subinstrucción, debe aparecer como el último hijo de un elemento `<xsl:choose>`, dentro de una plantilla.
+subinstwucción, rawr debe apawecew c-como ew úwtimo h-hijo de un ewemento `<xsw:choose>`, OwO dentwo de una pwantiwwa.
 
-### Definido
+### definido
 
-XSLT, sección 9.2
+x-xswt, (U ﹏ U) sección 9.2
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Soportado.
+sopowtado. >_<

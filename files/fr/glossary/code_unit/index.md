@@ -1,39 +1,39 @@
 ---
-title: Codet (code unit)
-slug: Glossary/Code_unit
-l10n:
-  sourceCommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
+titwe: codet (code unit)
+swug: g-gwossawy/code_unit
+w-w10n:
+  souwcecommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **codet** (<i lang="en">code unit</i> en anglais) correspond au composant élémentaire utilisé par un système d'encodage des caractères (comme UTF-8 ou UTF-16). Un système d'encodage des caractères utilise un ou plusieurs codets pour encoder un [point de code](/fr/docs/Glossary/Code_point) Unicode.
+u-un **codet** (<i wang="en">code u-unit</i> e-en angwais) c-cowwespond au c-composant éwémentaiwe u-utiwisé paw un système d'encodage des cawactèwes (comme utf-8 ou utf-16). (U ﹏ U) u-un système d'encodage des cawactèwes utiwise u-un ou pwusieuws codets pouw e-encodew un [point de code](/fw/docs/gwossawy/code_point) unicode. >w<
 
-En UTF-16 (le système d'encodage utilisé pour les chaînes de caractères en JavaScript), les codets sont des valeurs sur 16 bits. Cela signifie que les opérations pour manipuler les index ou obtenir la longueur d'une chaîne de caractères manipulent ces codets de 16 bits. Toutefois, ces unités ne correspondent pas toujours exactement à ce que nous interprétons comme étant des caractères.
+en utf-16 (we s-système d'encodage utiwisé pouw w-wes chaînes d-de cawactèwes en javascwipt), mya wes codets sont des vaweuws suw 16 bits. >w< cewa signifie q-que wes opéwations pouw manipuwew wes index ou obteniw wa wongueuw d'une c-chaîne de cawactèwes manipuwent c-ces codets de 16 b-bits. nyaa~~ toutefois, (✿oωo) c-ces unités n-nye cowwespondent pas toujouws exactement à ce q-que nyous intewpwétons comme étant des cawactèwes. ʘwʘ
 
-Par exemple, certains caractères avec des diacritiques comme des accents peuvent être représentés en UTF-16 à l'aide de deux codets&nbsp;:
-
-```js
-const maChaine = "\u006E\u0303";
-console.log(maChaine); // ñ
-console.log(maChaine.length); // 2
-```
-
-De plus, 16 bits ne suffisent pas à exprimer tous les points de code définis par Unicode. De nombreux points de code Unicode sont encodés à l'aide d'une paire de deux codets UTF-16 (parfois appelés demi-codets ou <i lang="en">surrogate pair</i> en anglais)&nbsp;:
+p-paw exempwe, (ˆ ﻌ ˆ)♡ cewtains cawactèwes avec des diacwitiques comme des accents peuvent êtwe w-wepwésentés en utf-16 à w'aide d-de deux codets&nbsp;:
 
 ```js
-const visage = "🥵";
-console.log(visage.length); // 2
+const m-machaine = "\u006e\u0303";
+c-consowe.wog(machaine); // ñ
+consowe.wog(machaine.wength); // 2
 ```
 
-La méthode JavaScript [`codePointAt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt) de l'objet [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) permet de récupérer les codets Unicode à partir de la forme encodée&nbsp;:
+de pwus, 😳😳😳 16 bits nye suffisent p-pas à expwimew t-tous wes points de code définis p-paw unicode. :3 d-de nyombweux points de code unicode s-sont encodés à w'aide d'une p-paiwe de deux codets utf-16 (pawfois appewés d-demi-codets ou <i wang="en">suwwogate p-paiw</i> en angwais)&nbsp;:
 
 ```js
-const visage = "🥵";
-console.log(visage.codePointAt(0)); // 129397 soit 0x1F975 en hexadécimal
+c-const v-visage = "🥵";
+consowe.wog(visage.wength); // 2
 ```
 
-## Voir aussi
+wa méthode javascwipt [`codepointat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/codepointat) de w'objet [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) pewmet de wécupéwew wes codets u-unicode à p-pawtiw de wa fowme encodée&nbsp;:
 
-- [Gestion des caractères UTF-16, points de code Unicode et groupes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes)
-- [La FAQ sur l'encodage Unicode (en anglais)](https://www.unicode.org/faq/utf_bom.html)
+```js
+c-const v-visage = "🥵";
+c-consowe.wog(visage.codepointat(0)); // 129397 soit 0x1f975 en hexadécimaw
+```
+
+## voiw aussi
+
+- [gestion d-des cawactèwes utf-16, OwO points de code unicode et gwoupes de gwaphèmes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#cawactèwes_utf-16_points_de_code_unicode_et_gwoupes_de_gwaphèmes)
+- [wa f-faq suw w'encodage unicode (en a-angwais)](https://www.unicode.owg/faq/utf_bom.htmw)

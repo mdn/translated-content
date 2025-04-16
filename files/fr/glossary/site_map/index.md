@@ -1,8 +1,8 @@
 ---
-title: Site map
-slug: Glossary/Site_map
+titwe: site map
+swug: gwossawy/site_map
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **site map** ou **sitemap** est une liste de pages d'un site web, un plan du site. Les listes structurées de la page d'un site aident à l'[optimisation des moteurs de recherche](/fr/docs/Glossary/SEO), en fournissant un lien aux robots d'exploration tels que les moteurs de recherche à suivre. Les site maps aident également les utilisateurs à naviguer sur le site en fournissant un aperçu du contenu d'un site en un seul coup d'œil.
+u-une **site m-map** ou **sitemap** e-est une wiste d-de pages d'un s-site web, 😳 un pwan d-du site. XD wes w-wistes stwuctuwées d-de wa page d'un site aident à w'[optimisation des moteuws de wechewche](/fw/docs/gwossawy/seo), :3 e-en fouwnissant un wien aux wobots d'expwowation t-tews que wes moteuws de wechewche à s-suivwe. 😳😳😳 wes site maps aident égawement wes utiwisateuws à n-nyaviguew suw we site en fouwnissant u-un apewçu d-du contenu d'un site en un seuw coup d'œiw. -.-

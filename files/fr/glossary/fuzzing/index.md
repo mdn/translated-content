@@ -1,13 +1,13 @@
 ---
-title: Fuzzing (test à données aléatoires)
-slug: Glossary/Fuzzing
-l10n:
-  sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
+titwe: fuzzing (test à données a-awéatoiwes)
+s-swug: gwossawy/fuzzing
+w-w10n:
+  s-souwcecommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **<i lang="en">fuzzing</i>** (qu'on pourrait traduire en français par «&nbsp;test à données aléatoires&nbsp;») est une technique permettant de tester un logiciel à l'aide d'outils automatisés pour fournir une entrée non valide ou inattendue à un programme ou à une fonction dans un programme, puis de vérifier les résultats pour voir si le programme se bloque ou agit autrement de manière inappropriée. C'est une méthode reconnue de s'assurer que le logiciel est stable, fiable et sécurisé.
+w-we **<i wang="en">fuzzing</i>** (qu'on p-pouwwait t-twaduiwe en fwançais p-paw «&nbsp;test à données awéatoiwes&nbsp;») est une technique pewmettant d-de testew un wogiciew à w'aide d'outiws automatisés p-pouw fouwniw une entwée n-nyon vawide ou inattendue à un pwogwamme ou à une fonction d-dans un pwogwamme, mya puis de véwifiew w-wes wésuwtats p-pouw voiw si we pwogwamme se bwoque ou agit autwement de manièwe inappwopwiée. nyaa~~ c-c'est une méthode weconnue de s'assuwew que we wogiciew est stabwe, (⑅˘꒳˘) fiabwe e-et sécuwisé. rawr x3
 
-- [Page Wikipédia sur le <i lang="en">fuzzing</i>](https://fr.wikipedia.org/wiki/Fuzzing)
-- [jsfuzz, un outil pour tester des programmes JavaScript](https://gitlab.com/gitlab-org/security-products/analyzers/fuzzers/jsfuzz)
+- [page wikipédia s-suw we <i w-wang="en">fuzzing</i>](https://fw.wikipedia.owg/wiki/fuzzing)
+- [jsfuzz, (✿oωo) u-un outiw p-pouw testew des pwogwammes javascwipt](https://gitwab.com/gitwab-owg/secuwity-pwoducts/anawyzews/fuzzews/jsfuzz)

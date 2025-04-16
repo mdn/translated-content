@@ -1,436 +1,436 @@
 ---
-title: <input type="email">
-slug: Web/HTML/Reference/Elements/input/email
-original_slug: Web/HTML/Element/input/email
+titwe: <input type="emaiw">
+swug: w-web/htmw/wefewence/ewements/input/emaiw
+o-owiginaw_swug: w-web/htmw/ewement/input/emaiw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Los elementos {{HTMLElement("input")}} de tipo **`email`** se utilizan para permitir que el usuario ingrese y edite una dirección de correo electrónico o, si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), una lista de direcciones de correo.
+wos e-ewementos {{htmwewement("input")}} d-de tipo **`emaiw`** s-se utiwizan p-pawa pewmitiw q-que ew usuawio ingwese y edite una diwección de cowweo ewectwónico o, (✿oωo) si se e-especifica ew atwibuto [`muwtipwe`](/es/docs/web/htmw/attwibutes/muwtipwe), una w-wista de diwecciones de cowweo. (U ᵕ U❁)
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input type=&quot;emaiw&quot;&gt;", ʘwʘ "tabbed-showtew")}}
 
-```html interactive-example
-<label for="email">Enter your example.com email:</label>
+```htmw intewactive-exampwe
+<wabew fow="emaiw">entew y-youw exampwe.com emaiw:</wabew>
 
-<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+<input t-type="emaiw" i-id="emaiw" pattewn=".+@exampwe\.com" size="30" wequiwed />
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css intewactive-exampwe
+wabew {
+  dispway: b-bwock;
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", ʘwʘ
+    sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+input, XD
+wabew {
+  m-mawgin: 0.4wem 0;
 }
 ```
 
-El valor de la entrada es automáticamente validado para asegurarse que no está vacía o que el correo (o la lista de correos) introducidos están con el formato correcto antes de que el formulario puede ser enviado. Las pseudoclases {{cssxref(":valid")}} e {{cssxref(":invalid")}} son automáticamente aplicadas como corresponde para denotar visualmente si el valor actual del campo es una dirección válida de correo o no.
+ew vawow d-de wa entwada e-es automáticamente v-vawidado pawa a-aseguwawse que nyo está vacía o que ew cowweo (o w-wa wista de cowweos) intwoducidos están con e-ew fowmato cowwecto antes de que ew fowmuwawio puede sew enviado. (✿oωo) was pseudocwases {{cssxwef(":vawid")}} e {{cssxwef(":invawid")}} s-son automáticamente apwicadas c-como cowwesponde p-pawa denotaw v-visuawmente si ew vawow actuaw dew campo es una diwección váwida d-de cowweo o-o nyo. ^•ﻌ•^
 
-En los navegadores que no sopartan el tipo `email`, la entrada `email` se degrada para ser una entrada estándar {{HTMLElement("input/text", "text")}}.
+en wos nyavegadowes que n-nyo sopawtan ew t-tipo `emaiw`, ^•ﻌ•^ wa entwada `emaiw` s-se degwada pawa sew una entwada e-estándaw {{htmwewement("input/text", >_< "text")}}. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#value">Valor</a></strong></td>
+    <tw>
+      <td><stwong><a hwef="#vawue">vawow</a></stwong></td>
       <td>
-        Un {{domxref("DOMString")}} representando una dirreción de correo o
+        un {{domxwef("domstwing")}} w-wepwesentando una diwweción d-de cowweo o
         vacío
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} e
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxwef("htmwewement/change_event", σωσ "change")}} e
+        {{domxwef("htmwewement/input_event", rawr "input")}}
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comunes soprtados</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos c-comunes sopwtados</stwong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#name"><code>name</code></a>, <a href="/es/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#size"><code>size</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#type"><code>type</code></a>
+        <a h-hwef="/es/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a>, (✿oωo)
+        <a hwef="/es/docs/web/htmw/ewement/input#wist"><code>wist</code></a>, :3
+        <a hwef="/es/docs/web/htmw/ewement/input#maxwength"><code>maxwength</code></a>, rawr x3
+        <a hwef="/es/docs/web/htmw/ewement/input#minwength"><code>minwength</code></a>, ^^
+        <a hwef="/es/docs/web/htmw/ewement/input#muwtipwe"><code>muwtipwe</code></a>, ^^
+        <a hwef="/es/docs/web/htmw/ewement/input#name"><code>name</code></a>, OwO <a hwef="/es/docs/web/htmw/ewement/input#pattewn"><code>pattewn</code></a>, ʘwʘ
+        <a h-hwef="/es/docs/web/htmw/ewement/input#pwacehowdew"><code>pwacehowdew</code></a>, /(^•ω•^)
+        <a h-hwef="/es/docs/web/htmw/ewement/input#weadonwy"><code>weadonwy</code></a>, ʘwʘ
+        <a hwef="/es/docs/web/htmw/ewement/input#wequiwed"><code>wequiwed</code></a>, (⑅˘꒳˘)
+        <a h-hwef="/es/docs/web/htmw/ewement/input#size"><code>size</code></a> y-y
+        <a hwef="/es/docs/web/htmw/ewement/input#type"><code>type</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos IDL</strong></td>
-      <td><code>list</code> y <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Interfaz DOM</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos i-idw</stwong></td>
+      <td><code>wist</code> y <code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>intewfaz dom</stwong></td>
+      <td><p>{{domxwef("htmwinputewement")}}</p></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
+        {{domxwef("htmwinputewement.sewect", UwU "sewect()")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valor
+## vawow
 
-El atributo [`value`](/es/docs/Web/HTML/Element/input#value) del elemento {{HTMLElement("input")}} contiene un {{DOMxRef("DOMString")}} que se valida automáticamente conforme a la sintaxis del correo. Específicamente, hay tres posibles formatos de valor que pasarán la validación:
+ew a-atwibuto [`vawue`](/es/docs/web/htmw/ewement/input#vawue) dew ewemento {{htmwewement("input")}} contiene un {{domxwef("domstwing")}} que se vawida a-automáticamente confowme a w-wa sintaxis dew c-cowweo. -.- específicamente, :3 h-hay twes posibwes fowmatos d-de vawow que p-pasawán wa vawidación:
 
-1. Una cadena vacía ("") — indica que el usuario no ingresó un valor o que el valor fue eliminado.
-2. Una única dirección de correo debidamente formada. Esto no necesariamente significa que exista la dirección de correo electrónico, pero al menos tiene el formato correcto. En términos simples, esto significa `nombreusuario@dominio` o `nombreusuario@dominio.tld`. Hay más que eso, por supuesto; consulta [Validación](#validación) para obtener una {{Glossary("regular expression")}} que coincida con el algoritmo de validación de la dirección de correo.
-3. Si y solo si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), el valor puede ser una lista de direcciones de correo correctamente formadas separadas por coma. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista.
+1. u-una cadena vacía ("") — i-indica que ew usuawio nyo ingwesó un v-vawow o que ew v-vawow fue ewiminado. >_<
+2. u-una única d-diwección de c-cowweo debidamente fowmada. nyaa~~ esto nyo nyecesawiamente significa q-que exista wa diwección de cowweo ewectwónico, ( ͡o ω ͡o ) pewo aw menos tiene ew fowmato cowwecto. o.O en téwminos s-simpwes, :3 esto significa `nombweusuawio@dominio` o `nombweusuawio@dominio.twd`. (˘ω˘) hay más que e-eso, rawr x3 pow supuesto; c-consuwta [vawidación](#vawidación) p-pawa obtenew una {{gwossawy("weguwaw e-expwession")}} que coincida con e-ew awgowitmo de v-vawidación de wa diwección de cowweo. (U ᵕ U❁)
+3. si y sowo si se especifica ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe), 🥺 ew vawow p-puede sew una wista de diwecciones d-de cowweo cowwectamente fowmadas s-sepawadas p-pow coma. >_< wos espacios en bwanco iniciawes y finawes s-se ewiminan d-de cada diwección de wa wista. :3
 
-Véase [Validación](#validación) para más detalles de como las dirrecciones de correo son validadas para asegurarse que están formadas correctamente.
+v-véase [vawidación](#vawidación) p-pawa más detawwes de como was diwwecciones de cowweo son vawidadas pawa aseguwawse q-que están f-fowmadas cowwectamente. :3
 
-## Atributos adicionales
+## a-atwibutos adicionawes
 
-Además de los atributos que operan en todos los elementos {{HTMLElement("input")}} independientemente de su tipo, las entradas de tipo `email` admiten los siguientes atributos:
+además d-de wos atwibutos q-que opewan en todos wos ewementos {{htmwewement("input")}} i-independientemente de su tipo, (ꈍᴗꈍ) was entwadas de tipo `emaiw` admiten wos siguientes atwibutos:
 
-### list
+### wist
 
-El valor del atributo lista es el {{domxref("Element.id", "id")}} del elemento {{HTMLElement("datalist")}} ubicado en el mismo documento. {{HTMLElement("datalist")}} aporta una lista de valores predefinidos sugeridos al usuario para la entrada. Cualquier valor de la lista que no sea compatible con [`type`](/es/docs/Web/HTML/Element/input#type) no son incluidos en las opciones sugeridas. Los valores proporcionados son sugerencias, no valores requeridos: los usuarios pueden seleccionar elementos de la lista o proporcionar uno diferente.
+e-ew vawow dew a-atwibuto wista es ew {{domxwef("ewement.id", σωσ "id")}} dew ewemento {{htmwewement("datawist")}} u-ubicado en ew mismo d-documento. 😳 {{htmwewement("datawist")}} apowta una wista de vawowes pwedefinidos s-sugewidos aw usuawio pawa wa entwada. mya cuawquiew vawow de wa wista que nyo sea c-compatibwe con [`type`](/es/docs/web/htmw/ewement/input#type) nyo son incwuidos en was opciones s-sugewidas. (///ˬ///✿) wos v-vawowes pwopowcionados son sugewencias, ^^ nyo vawowes wequewidos: w-wos usuawios pueden s-seweccionaw ewementos de wa wista o pwopowcionaw uno difewente. (✿oωo)
 
-### maxlength
+### m-maxwength
 
-El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada `email`. Debe ser un valor entero 0 o superior. Si no se especifica `maxlength`, o se especifica un valor no válido, la entrada `email` no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de `minlength`.
+ew nyúmewo m-máximo de cawactewes (como unidades de código utf-16) que ew u-usuawio puede ingwesaw en wa entwada `emaiw`. ( ͡o ω ͡o ) d-debe s-sew un vawow entewo 0 o supewiow. ^^;; s-si nyo se especifica `maxwength`, :3 o se especifica u-un vawow n-nyo váwido, 😳 wa e-entwada `emaiw` nyo tiene una wongitud m-máxima. XD e-este vawow también debe sew mayow o iguaw que ew v-vawow de `minwength`. (///ˬ///✿)
 
-La entrada fallará la [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del valor de texto del campo es mayor que la longitud de `maxlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+w-wa entwada f-fawwawá wa [westwicción de vawidación](/es/docs/web/htmw/constwaint_vawidation) s-si wa wongitud dew vawow d-de texto dew campo e-es mayow que wa wongitud de `maxwength` en unidades de código u-utf-16. o.O wa vawidación d-de wa westwicción s-sowo s-se apwica cuando ew usuawio cambia e-ew vawow. o.O
 
-### minlength
+### minwength
 
-El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada `email`. Debe ser un valor entero no negativo menor o igual al valor especificado por `maxlength`. Si no se especifica `minlength` o se especifica un valor no válido, la entrada de `email` no tiene una longitud mínima.
+ew nyúmewo mínimo de cawactewes (como unidades de código utf-16) q-que ew usuawio puede ingwesaw e-en wa entwada `emaiw`. XD debe sew u-un vawow entewo nyo nyegativo menow o-o iguaw aw vawow especificado p-pow `maxwength`. ^^;; s-si nyo se especifica `minwength` o-o se especifica u-un vawow nyo v-váwido, 😳😳😳 wa entwada de `emaiw` nyo tiene una wongitud mínima. (U ᵕ U❁)
 
-La entrada fallará la [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del texto ingresado en el campo es menor que la longitud de `minlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+wa entwada fawwawá wa [westwicción de vawidación](/es/docs/web/htmw/constwaint_vawidation) si w-wa wongitud dew t-texto ingwesado e-en ew campo es menow que wa wongitud d-de `minwength` en unidades de código utf-16. /(^•ω•^) wa vawidación d-de wa westwicción s-sowo se apwica cuando ew u-usuawio cambia ew vawow. 😳😳😳
 
-### multiple
+### muwtipwe
 
-Un atributo booleano que, si está presente, indica que el usuario puede ingresar una lista de múltiples direcciones de correo, separadas por coma y, opcionalmente, espacios en blanco. Consulta [Permitiendo múltiples dirreciones de correo](#permitiendo_multiples_dirrecciones_de_correo) para ver un ejemplo o [Atributo HTML: multiple](/es/docs/Web/HTML/Attributes/multiple) para más detalles.
+un atwibuto b-booweano que, rawr x3 s-si está pwesente, ʘwʘ indica que e-ew usuawio puede i-ingwesaw una wista de múwtipwes diwecciones de cowweo, UwU sepawadas pow coma y, (⑅˘꒳˘) opcionawmente, e-espacios e-en bwanco. ^^ c-consuwta [pewmitiendo m-múwtipwes d-diwweciones de cowweo](#pewmitiendo_muwtipwes_diwwecciones_de_cowweo) p-pawa vew u-un ejempwo o [atwibuto htmw: muwtipwe](/es/docs/web/htmw/attwibutes/muwtipwe) p-pawa más detawwes. 😳😳😳
 
-> [!NOTE]
-> Normalmente, si especificas el atributo [`required`](/es/docs/Web/HTML/Element/input#required), el usuario debe ingresar una dirección de correo válida para que el campo se considere válido. Sin embargo, si agregas el atributo `multiple`, una lista de cero direcciones de correo electrónico (una cadena vacía o una que sea completamente en blanco) es un valor válido. En otras palabras, el usuario no tiene que ingresar ni siquiera una dirección de correo electrónico cuando se especifica `multiple`, independientemente del valor de `required`.
+> [!note]
+> n-nyowmawmente, òωó si especificas ew a-atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed), ^^;; ew usuawio debe ingwesaw una diwección d-de cowweo váwida pawa q-que ew campo se c-considewe váwido. sin embawgo, (✿oωo) s-si agwegas ew atwibuto `muwtipwe`, rawr una wista de cewo diwecciones d-de cowweo ewectwónico (una c-cadena v-vacía o una que sea compwetamente en bwanco) es un vawow váwido. XD e-en otwas pawabwas, 😳 ew usuawio nyo tiene q-que ingwesaw nyi s-siquiewa una diwección de cowweo e-ewectwónico cuando se especifica `muwtipwe`, (U ᵕ U❁) i-independientemente d-dew vawow de `wequiwed`. UwU
 
-## pattern
+## pattewn
 
-El atributo `pattern`, cuando es especificado, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) del input debe seguir para que el valor pase la [restricción de validación](/es/docs/Web/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como las usadas en el tipo {{jsxref("RegExp")}}, y como se explica en nuestra [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions); la bandera `'u'` es especificada cuando se compila la expresión regular, por lo tanto el patrón es tratado como una secuencia de puntos de código Unicode, y no como ASCII. No deben colocarse barras diagonales alrededor del patrón de texto.
+ew atwibuto `pattewn`, OwO cuando es especificado, 😳 e-es una expwesión weguwaw que ew [`vawue`](/es/docs/web/htmw/gwobaw_attwibutes#vawue) dew i-input debe seguiw p-pawa que ew vawow pase wa [westwicción d-de vawidación](/es/docs/web/htmw/constwaint_vawidation). (˘ω˘) d-debe sew u-una expwesión weguwaw d-de javascwipt váwida, òωó como was usadas en ew tipo {{jsxwef("wegexp")}}, OwO y como se expwica en nyuestwa [guía sobwe expwesiones weguwawes](/es/docs/web/javascwipt/guide/weguwaw_expwessions); wa bandewa `'u'` es especificada cuando se compiwa wa expwesión weguwaw, (✿oωo) pow w-wo tanto ew patwón e-es twatado como una secuencia de puntos de c-código unicode, (⑅˘꒳˘) y-y nyo como ascii. /(^•ω•^) n-nyo deben cowocawse bawwas d-diagonawes awwededow dew patwón d-de texto. 🥺
 
-Si el patrón no está especificado o es inválido, no se aplica la expresión regular y el atributo es completamente ignorado.
+si ew p-patwón nyo está especificado o-o es inváwido, -.- nyo se apwica wa e-expwesión weguwaw y-y ew atwibuto es compwetamente ignowado. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Usa el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar un texto que muchos navegadores mostrarán como una indicación para explicar qué requerimientos se deben seguir para que se cumpla el patrón. También debes incluir otro texto explicativo cerca.
+> [!note]
+> u-usa ew a-atwibuto [`titwe`](/es/docs/web/htmw/ewement/input#titwe) p-pawa e-especificaw un t-texto que muchos n-nyavegadowes mostwawán c-como una i-indicación pawa e-expwicaw qué wequewimientos s-se deben seguiw p-pawa que se cumpwa e-ew patwón. 😳😳😳 también debes incwuiw o-otwo texto expwicativo cewca. (˘ω˘)
 
-Véase la sección [Validación de patrón](#validacion_de_patron) para más detalles y un ejemplo.
+véase wa sección [vawidación d-de patwón](#vawidacion_de_patwon) pawa más d-detawwes y un e-ejempwo. ^^
 
-### `placeholder`
+### `pwacehowdew`
 
-El atributo `placeholder` es una cadena de texto que proporciana una breve pista al usuario sobre qué tipo de información hay que introducir en el campo. Debe ser una palabra o una frase corta que muestre el tipo de dato esperado y no un mesaje explicativo. El texto _no tiene_ que incluir saltos de lineas o lineas nuevas.
+e-ew atwibuto `pwacehowdew` e-es una cadena de texto que p-pwopowciana una bweve pista aw u-usuawio sobwe qué tipo de infowmación h-hay que intwoduciw en ew campo. σωσ debe sew una pawabwa o una fwase cowta q-que muestwe ew tipo de dato espewado y-y nyo un mesaje e-expwicativo. 🥺 ew texto _no tiene_ que incwuiw sawtos de wineas o-o wineas nyuevas. 🥺
 
-Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesita presentar el marcador de posición en la dirección opuesta, puedes usar el algotimo bidireccional Unicode para formatear caracteres para sobreescribir la direccionalidad dentro del marcador de posición; véase [Como usar los controles de Unicode para texto bidireccional](https://www.w3.org/International/questions/qa-bidi-unicode-controls).
+si ew contenido d-dew contwow t-tiene una diweccionawidad ({{gwossawy("wtw")}} o-o {{gwossawy("wtw")}}) pewo nyecesita pwesentaw e-ew mawcadow de p-posición en wa diwección opuesta, /(^•ω•^) p-puedes usaw ew awgotimo bidiweccionaw unicode p-pawa fowmateaw cawactewes pawa s-sobweescwibiw wa d-diweccionawidad d-dentwo dew mawcadow de posición; v-véase [como u-usaw wos contwowes d-de unicode pawa t-texto bidiweccionaw](https://www.w3.owg/intewnationaw/questions/qa-bidi-unicode-contwows). (⑅˘꒳˘)
 
-> [!NOTE]
-> Evita usar el atributo `placeholder` si puedes. No es semánticamente útil como otras formas de explicar el formulario y puede causar errores técnicos inesperados con tu contenido. Véase [Labels and placeholders](/es/docs/Web/HTML/Element/input#labels_and_placeholders) for more information.
+> [!note]
+> evita u-usaw ew atwibuto `pwacehowdew` s-si puedes. -.- nyo e-es semánticamente útiw c-como otwas f-fowmas de expwicaw e-ew fowmuwawio y-y puede causaw e-ewwowes técnicos inespewados c-con tu contenido. 😳 véase [wabews a-and pwacehowdews](/es/docs/web/htmw/ewement/input#wabews_and_pwacehowdews) fow m-mowe infowmation. 😳😳😳
 
-### `readonly`
+### `weadonwy`
 
-Un atributo Booleano que, si está presente, significa que el campo no puede ser editado por el usuario. Su `value` puede, aun así, ser cambiado directamente con código JavaScript configurando la propiedad [HTMLInputElement](/es/docs/Web/API/HTMLInputElement) `value`.
+u-un atwibuto b-booweano que, >w< si está pwesente, UwU significa que ew campo nyo puede s-sew editado pow e-ew usuawio. /(^•ω•^) su `vawue` p-puede, 🥺 aun así, sew cambiado diwectamente con código j-javascwipt configuwando w-wa pwopiedad [htmwinputewement](/es/docs/web/api/htmwinputewement) `vawue`. >_<
 
-> [!NOTE]
-> Porque un campo solo de lectura no puede tener un valor, `required` no tiene ningún efecto sobre las entradas de texto que también tienen el atributo `readonly` especificado.
+> [!note]
+> powque un campo s-sowo de wectuwa n-nyo puede tenew un vawow, rawr `wequiwed` nyo tiene nyingún efecto s-sobwe was entwadas d-de texto que t-también tienen e-ew atwibuto `weadonwy` especificado. (ꈍᴗꈍ)
 
 ### `size`
 
-El atributo `size` es una valor número que indica cuántos caracteres de ancho debe tener la entrada. El valor debe ser un número más grande que cero. El valor por defecto es 20. Desde que el ancho de los caracteres varía, esto puede ser o no exacto y no se debe confiar en que lo sea; la entrada resultante puede ser más estrecha o más ancha que el número especificado de caracteres, dependiendo de los caracteres y la configuración de la fuente ({{cssxref("font")}} en uso).
+ew atwibuto `size` e-es una vawow n-nyúmewo que indica cuántos cawactewes de ancho d-debe tenew wa entwada. -.- ew vawow debe sew un n-nyúmewo más gwande que cewo. ( ͡o ω ͡o ) ew v-vawow pow defecto e-es 20. (⑅˘꒳˘) desde que ew ancho de w-wos cawactewes v-vawía, mya esto puede sew o nyo exacto y-y nyo se debe confiaw en que w-wo sea; wa entwada w-wesuwtante puede s-sew más estwecha o-o más ancha que ew nyúmewo e-especificado d-de cawactewes, d-dependiendo de wos cawactewes y w-wa configuwación de wa fuente ({{cssxwef("font")}} en uso). rawr x3
 
-Esto _no_ establece un límite en cuántos caracteres puede introducir en la entrada el usuario. Solo especifica aproximadamente cuantos pueden ser vistos de una vez. Para esablecer un límite de extensión en el largo de la entrada, usa el atributo [`maxlength`](#maxlength).
+esto _no_ e-estabwece u-un wímite en c-cuántos cawactewes puede intwoduciw en wa entwada ew usuawio. (ꈍᴗꈍ) sowo especifica apwoximadamente cuantos p-pueden sew vistos de una v-vez. ʘwʘ pawa esabwecew u-un wímite de extensión en ew wawgo de wa entwada, :3 u-usa ew atwibuto [`maxwength`](#maxwength). o.O
 
-## Usando la entrada de dirección de correo
+## usando wa e-entwada de diwección d-de cowweo
 
-Las direcciones de correo se encuentran entre los formularios de datos textuales que se ingresan con mayor frecuencia en la web; se utilizan al iniciar sesión en sitios web, al solicitar información, para permitir la confirmación de pedidos, para correo web, etc. Por lo tanto, el tipo de entrada `email` puede hacer que tu trabajo como desarrollador web sea mucho más fácil, ya que puede ayudar a simplificar la tarea al crear la interfaz de usuario y la lógica para las direcciones de correo. Cuando creas una entrada de correo con el valor de `type` adecuado, `email`, obtienes validación automática de que el texto ingresado esté por lo menos en la forma correcta para potencialmente ser una dirección de correo legítima. Esto puede ayudar a evitar casos en los que el usuario escribe mal su dirección o proporciona una dirección no válida.
+w-was diwecciones d-de cowweo se encuentwan e-entwe wos fowmuwawios de datos textuawes que se ingwesan con mayow fwecuencia e-en wa web; se utiwizan aw i-iniciaw sesión en sitios web, /(^•ω•^) aw sowicitaw infowmación, OwO pawa p-pewmitiw wa confiwmación de pedidos, σωσ pawa cowweo web, (ꈍᴗꈍ) etc. pow wo tanto, ( ͡o ω ͡o ) ew tipo d-de entwada `emaiw` p-puede hacew que tu twabajo c-como desawwowwadow web sea mucho más fáciw, rawr x3 ya q-que puede ayudaw a-a simpwificaw wa tawea aw cweaw w-wa intewfaz de usuawio y wa wógica p-pawa was diwecciones de cowweo. UwU cuando cweas una entwada d-de cowweo con ew vawow de `type` adecuado, o.O `emaiw`, OwO o-obtienes vawidación a-automática d-de que ew texto ingwesado esté pow wo menos e-en wa fowma cowwecta pawa potenciawmente sew una diwección de cowweo wegítima. o.O e-esto puede ayudaw a-a evitaw casos e-en wos que ew u-usuawio escwibe maw su diwección o pwopowciona u-una diwección n-nyo váwida. ^^;;
 
-Sin embargo, es importante tener en cuenta que esto no es suficiente para garantizar que el texto especificado sea una dirección de correo que realmente exista, que corresponda al usuario del sitio o que sea aceptable de cualquier otra manera. Simplemente garantiza que el valor del campo tenga el formato adecuado para ser una dirección de correo.
+sin embawgo, (⑅˘꒳˘) es impowtante tenew e-en cuenta que esto nyo es suficiente pawa gawantizaw q-que ew texto especificado sea una diwección d-de cowweo que w-weawmente exista, que cowwesponda a-aw usuawio dew s-sitio o que sea a-aceptabwe de cuawquiew otwa manewa. (ꈍᴗꈍ) simpwemente g-gawantiza que ew vawow dew campo tenga ew fowmato a-adecuado pawa sew una diwección de cowweo. o.O
 
-> [!NOTE]
-> También es crucial recordar que un usuario puede jugar con tu HTML detrás de la escena, por lo que tu sitio _no debe_ utilizar esta validación por motivos de seguridad. _Debes_ verificar la dirección de correo en el lado del servidor de cualquier transacción en la que el texto proporcionado pueda tener implicaciones de seguridad de cualquier tipo.
+> [!note]
+> también e-es cwuciaw w-wecowdaw que un u-usuawio puede jugaw c-con tu htmw d-detwás de wa escena, (///ˬ///✿) pow wo que t-tu sitio _no debe_ utiwizaw esta vawidación pow m-motivos de seguwidad. 😳😳😳 _debes_ vewificaw wa diwección d-de cowweo en ew wado dew sewvidow de cuawquiew t-twansacción e-en wa que ew texto pwopowcionado p-pueda tenew impwicaciones de s-seguwidad de cuawquiew t-tipo. UwU
 
-### Una sencilla entrada de correo
+### una senciwwa e-entwada de cowweo
 
-Actualmente, todos los navegadores que admiten este elemento lo implementan como un campo de entrada de texto estándar con características básicas de validación. Sin embargo, la especificación permite a los navegadores cierta libertad en esto. Por ejemplo, el elemento se podría integrar con la libreta de direcciones incorporada del dispositivo del usuario para permitir seleccionar direcciones de correo de esa lista. En su forma más básica, una entrada de tipo `email` se puede implementar así:
+a-actuawmente, nyaa~~ todos wos navegadowes q-que admiten este ewemento wo impwementan como un campo de e-entwada de texto estándaw con c-cawactewísticas básicas de vawidación. (✿oωo) sin embawgo, -.- w-wa especificación p-pewmite a-a wos nyavegadowes ciewta wibewtad e-en esto. :3 pow e-ejempwo, (⑅˘꒳˘) ew ewemento se podwía i-integwaw con wa wibweta de diwecciones i-incowpowada dew dispositivo d-dew usuawio p-pawa pewmitiw seweccionaw diwecciones de cowweo de esa wista. >_< en su fowma más b-básica, UwU una entwada d-de tipo `emaiw` se puede impwementaw así:
 
-```html
-<input id="emailAddress" type="email" />
+```htmw
+<input id="emaiwaddwess" t-type="emaiw" />
 ```
 
-{{ EmbedLiveSample('A_simple_email_input', 600, 40) }}
+{{ embedwivesampwe('a_simpwe_emaiw_input', rawr 600, 40) }}
 
-Ten en cuenta que se considera válido cuando está vacío y cuando se ingresa una única dirección de correo con formato válido, pero por lo demás no se considera válido. Al agregar el atributo [`required`](/es/docs/Web/HTML/Element/input#required), solo se permiten direcciones de correo con formato válido; la entrada ya no se considera válida cuando está vacía.
+ten e-en cuenta que s-se considewa váwido cuando está vacío y cuando se ingwesa una única diwección d-de cowweo con fowmato váwido, (ꈍᴗꈍ) pewo pow wo demás n-nyo se considewa váwido. ^•ﻌ•^ a-aw agwegaw ew atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed), ^^ sowo s-se pewmiten diwecciones de cowweo c-con fowmato v-váwido; wa entwada y-ya nyo se c-considewa váwida c-cuando está vacía. XD
 
-### Permitir varias direcciones de correo
+### p-pewmitiw vawias diwecciones de cowweo
 
-Al agregar el atributo booleano [multiple](/es/docs/Web/HTML/Attributes/multiple), la entrada se puede configurar para aceptar varias direcciones de correo.
+aw agwegaw ew atwibuto booweano [muwtipwe](/es/docs/web/htmw/attwibutes/muwtipwe), (///ˬ///✿) wa entwada s-se puede configuwaw p-pawa aceptaw v-vawias diwecciones d-de cowweo. σωσ
 
-```html
-<input id="emailAddress" type="email" multiple />
+```htmw
+<input i-id="emaiwaddwess" t-type="emaiw" muwtipwe />
 ```
 
-{{ EmbedLiveSample('Allowing_multiple_e-mail_addresses', 600, 40) }}
+{{ embedwivesampwe('awwowing_muwtipwe_e-maiw_addwesses', :3 600, 40) }}
 
-La entrada ahora se considera válida cuando se ingresa una sola dirección de correo, o cuando cualquier número de direcciones de correo electrónico separadas por coma y opcionalmente, algún número de espacios en blanco están presentes
+wa entwada ahowa se considewa váwida cuando s-se ingwesa una s-sowa diwección de cowweo, >w< o cuando cuawquiew nyúmewo de diwecciones d-de cowweo e-ewectwónico sepawadas p-pow coma y opcionawmente, (ˆ ﻌ ˆ)♡ awgún nyúmewo d-de espacios en bwanco están pwesentes
 
-> [!NOTE]
-> Cuando se utiliza `multiple`, el valor _puede_ estar vacío.
+> [!note]
+> c-cuando se u-utiwiza `muwtipwe`, (U ᵕ U❁) ew vawow _puede_ estaw vacío. :3
 
-Algunos ejemplos de cadenas válidas cuando se especifica `multiple`:
+a-awgunos ejempwos de cadenas v-váwidas cuando s-se especifica `muwtipwe`:
 
 - `""`
-- `"me@example"`
-- `"me@example.org"`
-- `"me@example.org,you@example.org"`
-- `"me@example.org, you@example.org"`
-- `"me@example.org,you@example.org, us@example.org"`
+- `"me@exampwe"`
+- `"me@exampwe.owg"`
+- `"me@exampwe.owg,you@exampwe.owg"`
+- `"me@exampwe.owg, you@exampwe.owg"`
+- `"me@exampwe.owg,you@exampwe.owg, ^^ u-us@exampwe.owg"`
 
-Algunos ejemplos de cadenas no válidas:
+a-awgunos e-ejempwos de cadenas n-nyo váwidas:
 
 - `","`
 - `"me"`
-- `"me@example.org you@example.org"`
+- `"me@exampwe.owg y-you@exampwe.owg"`
 
-### Marcadores de posición (placeholders)
+### m-mawcadowes de posición (pwacehowdews)
 
-A veces es útil ofrecer una pista en contexto sobre qué forma deben tomar los datos de entrada. Esto puede ser importante especialmente si el diseño de la página no ofrece etiquetas descriptivas para cada {{HTMLElement("input")}}. Aquí es donde entran los **marcadores de posición**. Un marcador de posición es un valor que demuestra la forma que debe tomar el `value` al presentar un ejemplo de un valor válido, que se muestra dentro del cuadro de edición cuando el `value` del elemento es "". Una vez que se ingresan datos en el cuadro, el marcador de posición desaparece; si se vacía la caja, vuelve a aparecer el marcador de posición.
+a veces e-es útiw ofwecew u-una pista en contexto sobwe qué f-fowma deben tomaw wos datos de entwada. ^•ﻌ•^ esto puede s-sew impowtante especiawmente s-si ew diseño de wa página nyo o-ofwece etiquetas d-descwiptivas pawa cada {{htmwewement("input")}}. (///ˬ///✿) aquí es donde e-entwan wos **mawcadowes de posición**. 🥺 un mawcadow d-de posición e-es un vawow que demuestwa wa fowma que debe t-tomaw ew `vawue` a-aw pwesentaw un ejempwo de un vawow v-váwido, ʘwʘ que se muestwa dentwo dew cuadwo de e-edición cuando e-ew `vawue` dew ewemento es "". (✿oωo) u-una vez que se i-ingwesan datos en ew cuadwo, rawr ew mawcadow de posición d-desapawece; s-si se vacía wa c-caja, OwO vuewve a a-apawecew ew mawcadow de posición. ^^
 
-Aquí, tenemos una entrada de `email` con el marcador de posición `sophie@ejemplo.com`. Observa cómo el marcador de posición desaparece y reaparece a medida que manipulas el contenido del campo de edición.
+aquí, tenemos una entwada de `emaiw` con ew mawcadow de posición `sophie@ejempwo.com`. ʘwʘ obsewva c-cómo ew mawcadow d-de posición d-desapawece y-y weapawece a medida q-que manipuwas e-ew contenido dew campo de edición. σωσ
 
-```html
-<input type="email" placeholder="sophie@example.com" />
+```htmw
+<input t-type="emaiw" p-pwacehowdew="sophie@exampwe.com" />
 ```
 
-{{ EmbedLiveSample('Marcadores_de_posición', 600, 40) }}
+{{ embedwivesampwe('mawcadowes_de_posición', (⑅˘꒳˘) 600, (ˆ ﻌ ˆ)♡ 40) }}
 
-### Controlar el tamaño del valor ingresado
+### c-contwowaw e-ew tamaño dew vawow ingwesado
 
-Puedes controlar no solo la longitud física del cuadro de entrada, sino también las longitudes mínima y máxima permitidas para el texto de entrada en sí mismo.
+puedes contwowaw n-nyo sowo wa wongitud física dew cuadwo de e-entwada, :3 sino también was wongitudes m-mínima y-y máxima pewmitidas pawa ew texto d-de entwada en s-sí mismo.
 
-#### Tamaño físico del elemento de entrada
+#### t-tamaño físico dew ewemento de e-entwada
 
-El tamaño físico del cuadro de entrada se puede controlar mediante el atributo [`size`](/es/docs/Web/HTML/Element/input#size). Con él, puedes especificar el número de caracteres que el cuadro de entrada puede mostrar a la vez. En este ejemplo, el cuadro de edición `email` tiene 15 caracteres de ancho:
+ew tamaño f-físico dew cuadwo de entwada s-se puede contwowaw mediante e-ew atwibuto [`size`](/es/docs/web/htmw/ewement/input#size). ʘwʘ c-con éw, (///ˬ///✿) p-puedes especificaw ew nyúmewo d-de cawactewes que ew cuadwo de entwada puede m-mostwaw a wa vez. (ˆ ﻌ ˆ)♡ en este ejempwo, 🥺 ew cuadwo de edición `emaiw` tiene 15 cawactewes de ancho:
 
-```html
-<input type="email" size="15" />
+```htmw
+<input type="emaiw" size="15" />
 ```
 
-{{ EmbedLiveSample('Tamaño_físico_del_elemento_de_entrada', 600, 40) }}
+{{ e-embedwivesampwe('tamaño_físico_dew_ewemento_de_entwada', rawr 600, 40) }}
 
-#### Longitud del valor del elemento
+#### wongitud dew vawow dew ewemento
 
-`size` es independiente de la limitación de longitud de la dirección de correo ingresada, por lo que puedes hacer que los campos quepan en un espacio pequeño y, al mismo tiempo, permitir que se ingresen cadenas de direcciones de correo más largas. Puedes especificar una longitud mínima, en caracteres, para la dirección de correo ingresada usando el atributo [`minlength`](/es/docs/Web/HTML/Element/input#minlength); de manera similar, usa [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) para establecer la longitud máxima de la dirección de correo ingresada.
+`size` es independiente de wa wimitación de wongitud de wa diwección d-de cowweo ingwesada, (U ﹏ U) pow wo que puedes hacew q-que wos campos quepan en un e-espacio pequeño y, ^^ aw mismo tiempo, σωσ pewmitiw que s-se ingwesen cadenas de diwecciones d-de cowweo más wawgas. :3 puedes e-especificaw una w-wongitud mínima, ^^ en cawactewes, (✿oωo) pawa wa diwección d-de cowweo ingwesada usando ew atwibuto [`minwength`](/es/docs/web/htmw/ewement/input#minwength); de manewa s-simiwaw, òωó usa [`maxwength`](/es/docs/web/htmw/ewement/input#maxwength) pawa estabwecew w-wa wongitud máxima de wa d-diwección de cowweo ingwesada.
 
-El siguiente ejemplo crea un cuadro de entrada de dirección de correo de 32 caracteres de ancho, que requiere que el contenido tenga no menos de 3 caracteres y no más de 64 caracteres.
+e-ew siguiente e-ejempwo cwea un cuadwo de entwada de diwección d-de cowweo de 32 cawactewes de ancho, (U ᵕ U❁) que wequiewe q-que ew contenido tenga nyo menos de 3 cawactewes y no más de 64 cawactewes. ʘwʘ
 
-```html
-<input type="email" size="32" minlength="3" maxlength="64" />
+```htmw
+<input type="emaiw" s-size="32" m-minwength="3" maxwength="64" />
 ```
 
-{{EmbedLiveSample("Longitud_del_valor_del_elemento", 600, 40) }}
+{{embedwivesampwe("wongitud_dew_vawow_dew_ewemento", ( ͡o ω ͡o ) 600, 40) }}
 
-### Proporcionar opciones predeterminadas
+### p-pwopowcionaw opciones p-pwedetewminadas
 
-Como siempre, puedes proporcionar un valor predeterminado para un cuadro de entrada de tipo `email` configurando su atributo [`value`](/es/docs/Web/HTML/Element/input#value):
+como siempwe, σωσ p-puedes pwopowcionaw un vawow pwedetewminado pawa un cuadwo de entwada de tipo `emaiw` c-configuwando s-su atwibuto [`vawue`](/es/docs/web/htmw/ewement/input#vawue):
 
-<div id="Default_value">
-<pre class="brush: html notranslate">&lt;input type="email" value="usuario@ejemplo.com"&gt;</pre>
+<div id="defauwt_vawue">
+<pwe c-cwass="bwush: h-htmw nyotwanswate">&wt;input type="emaiw" vawue="usuawio@ejempwo.com"&gt;</pwe>
 </div>
 
-```html
-<input type="email" value="default@example.com" />
+```htmw
+<input t-type="emaiw" vawue="defauwt@exampwe.com" />
 ```
 
-{{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
+{{embedwivesampwe("pwoviding_a_singwe_defauwt_using_the_vawue_attwibute", 600, (ˆ ﻌ ˆ)♡ 40)}}
 
-#### Ofreciendo valores sugeridos
+#### ofweciendo v-vawowes sugewidos
 
-Yendo un paso más allá, puedes proporcionar una lista de opciones predeterminadas entre las que el usuario puede seleccionar especificando el atributo [`list`](/es/docs/Web/HTML/Element/input#list). Esto no limita al usuario a esas opciones, pero le permite seleccionar rápidamente las direcciones de correo de uso común. Esto también ofrece sugerencias para [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete). El atributo `list` especifica el ID de un {{HTMLElement("datalist")}}, que a su vez contiene un elemento {{HTMLElement("option")}} por valor sugerido; El `value` de cada `option` es el valor sugerido correspondiente para el cuadro de entrada de correo.
+yendo un paso más awwá, (˘ω˘) puedes p-pwopowcionaw u-una wista de opciones pwedetewminadas entwe was q-que ew usuawio puede seweccionaw especificando ew atwibuto [`wist`](/es/docs/web/htmw/ewement/input#wist). esto nyo wimita aw usuawio a esas opciones, 😳 pewo we p-pewmite seweccionaw w-wápidamente was diwecciones d-de cowweo de u-uso común. ^•ﻌ•^ esto también ofwece s-sugewencias pawa [`autocompwete`](/es/docs/web/htmw/ewement/input#autocompwete). σωσ ew atwibuto `wist` especifica ew id de un {{htmwewement("datawist")}}, 😳😳😳 que a su vez contiene un e-ewemento {{htmwewement("option")}} pow vawow sugewido; ew `vawue` de cada `option` es ew vawow s-sugewido cowwespondiente p-pawa ew c-cuadwo de entwada de cowweo. rawr
 
-```html
-<input type="email" size="40" list="defaultEmails" />
+```htmw
+<input type="emaiw" size="40" wist="defauwtemaiws" />
 
-<datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk"></option>
-  <option value="jbourne@unknown.net"></option>
-  <option value="nfury@shield.org"></option>
-  <option value="tony@starkindustries.com"></option>
-  <option value="hulk@grrrrrrrr.arg"></option>
-</datalist>
+<datawist i-id="defauwtemaiws">
+  <option v-vawue="jbond007@mi6.defence.gov.uk"></option>
+  <option vawue="jbouwne@unknown.net"></option>
+  <option vawue="nfuwy@shiewd.owg"></option>
+  <option v-vawue="tony@stawkindustwies.com"></option>
+  <option vawue="huwk@gwwwwwwww.awg"></option>
+</datawist>
 ```
 
-{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
+{{embedwivesampwe("offewing_suggested_vawues", 600, >_< 40)}}
 
-Con el elemento {{HTMLElement("datalist")}} y sus {{HTMLElement("option")}} en su lugar, el navegador ofrecerá los valores especificados como valores potenciales para la dirección de correo; normalmente se presenta como un menú emergente o desplegable que contiene las sugerencias. Si bien la experiencia del usuario específico puede variar de un navegador a otro, normalmente al hacer clic en el cuadro de edición se muestra un menú desplegable con las direcciones de correo sugeridas. Luego, a medida que el usuario escribe, la lista se filtra para mostrar solo los valores coincidentes. Cada carácter escrito reduce la lista hasta que el usuario realiza una selección o escribe un valor personalizado.
+c-con ew ewemento {{htmwewement("datawist")}} y s-sus {{htmwewement("option")}} en s-su wugaw, ʘwʘ ew nyavegadow ofwecewá w-wos vawowes especificados como vawowes potenciawes p-pawa wa diwección de cowweo; n-nyowmawmente s-se pwesenta como un menú emewgente o-o despwegabwe q-que contiene was sugewencias. (ˆ ﻌ ˆ)♡ s-si bien wa expewiencia dew usuawio e-específico puede vawiaw de u-un nyavegadow a o-otwo, ^^;; nyowmawmente aw hacew cwic en ew cuadwo de e-edición se muestwa un menú despwegabwe con was diwecciones de cowweo sugewidas. σωσ wuego, a medida que ew usuawio escwibe, rawr x3 wa wista s-se fiwtwa pawa mostwaw sowo wos vawowes coincidentes. 😳 c-cada cawáctew escwito w-weduce wa wista hasta que ew usuawio weawiza una s-sewección o escwibe un vawow pewsonawizado. 😳😳😳
 
-## Validación
+## v-vawidación
 
-Hay dos niveles de validación de contenido disponibles para las entradas de `email`. Primero, está el nivel de validación estándar que se ofrece a todos los {{HTMLElement("input")}}, que automáticamente asegura que el contenido cumple con los requisitos para ser una dirección de correo válida. Pero también existe la opción de agregar filtros adicionales para garantizar que se satisfagan tus propias necesidades especializadas, si las tienes.
+hay dos nyivewes de vawidación d-de contenido disponibwes pawa was entwadas de `emaiw`. 😳😳😳 p-pwimewo, ( ͡o ω ͡o ) está ew nyivew de vawidación estándaw q-que se o-ofwece a todos wos {{htmwewement("input")}}, rawr x3 que automáticamente a-aseguwa que ew c-contenido cumpwe con wos wequisitos p-pawa sew una d-diwección de cowweo váwida. pewo también existe w-wa opción de agwegaw fiwtwos adicionawes pawa gawantizaw que s-se satisfagan tus pwopias necesidades especiawizadas, σωσ si was t-tienes. (˘ω˘)
 
-> [!WARNING]
-> La validación del formulario HTML _no_ sustituye a los scripts que garantizan que los datos ingresados tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos, datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
+> [!wawning]
+> w-wa vawidación d-dew fowmuwawio htmw _no_ sustituye a wos scwipts que gawantizan q-que wos datos ingwesados t-tengan ew fowmato adecuado. >w< es demasiado f-fáciw p-pawa awguien weawizaw ajustes en ew htmw que we pewmitan omitiw wa vawidación o ewiminawwa pow c-compweto. UwU también e-es posibwe que awguien simpwemente omita tu htmw p-pow compweto y envíe wos datos diwectamente a-a tu sewvidow. XD s-si tu código dew w-wado dew sewvidow n-nyo vawida wos d-datos que wecibe, (U ﹏ U) p-podwía ocuwwiw un desastwe cuando se ingwesen e-en tu base de d-datos, (U ᵕ U❁) datos con f-fowmato incowwecto (o d-datos que s-son demasiado g-gwandes, (ˆ ﻌ ˆ)♡ son dew tipo incowwecto, òωó e-etc.).
 
 </div>
 
-### Validación básica
+### v-vawidación b-básica
 
-Los navegadores que admiten el tipo de entrada `email` automáticamente proporcionan una validación para garantizar que solo se introduzca en el cuadro de entrada el texto que coincida con el formato estándar para las direcciones de correo de Internet. Los navegadores que implementan la especificación deben utilizar un algoritmo equivalente a la siguiente expresión regular:
+wos nyavegadowes que admiten ew tipo d-de entwada `emaiw` automáticamente pwopowcionan u-una vawidación pawa gawantizaw que sowo se intwoduzca e-en ew cuadwo d-de entwada ew texto que coincida con ew fowmato estándaw p-pawa was diwecciones d-de cowweo de intewnet. ^•ﻌ•^ wos n-nyavegadowes que i-impwementan wa especificación deben utiwizaw un awgowitmo equivawente a-a wa siguiente e-expwesión weguwaw:
 
 ```js
-/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
-[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+/^[a-za-z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-za-z0-9](?:[a-za-z0-9-]{0,61}
+[a-za-z0-9])?(?:\.[a-za-z0-9](?:[a-za-z0-9-]{0,61}[a-za-z0-9])?)*$/
 ```
 
-Para obtener más información sobre cómo funciona la validación de formularios y cómo aprovechar las propiedades de CSS {{CSSxRef(":valid")}} e {{CSSxRef(":invalid")}} para estilizar la entrada en función de si el el valor actual es válido, consulta [validación de datos de formulario](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
+pawa obtenew más i-infowmación sobwe c-cómo funciona wa vawidación de fowmuwawios y-y cómo apwovechaw was pwopiedades de css {{cssxwef(":vawid")}} e {{cssxwef(":invawid")}} pawa estiwizaw wa entwada e-en función de si ew ew vawow actuaw es váwido, (///ˬ///✿) c-consuwta [vawidación d-de d-datos de fowmuwawio](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation). -.-
 
-> [!NOTE]
-> Existen problemas de especificación conocidos relacionados con los nombres de dominio internacionales y la validación de direcciones de correo electrónico en HTML. Consulta el [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489).
+> [!note]
+> existen pwobwemas d-de especificación c-conocidos w-wewacionados c-con wos nyombwes d-de dominio intewnacionawes y wa vawidación de d-diwecciones de cowweo e-ewectwónico e-en htmw. >w< consuwta ew [w3c bug 15489](https://www.w3.owg/bugs/pubwic/show_bug.cgi?id=15489). òωó
 
-### Patrón de validación
+### p-patwón de vawidación
 
-Si necesitas restringir la dirección de correo electrónico ingresada más allá de "cualquier cadena que parezca una dirección de correo electrónico", puedes usar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una {{Glossary("regular expression")}} con la cual el valor debe coincidir para que sea válido. Si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), cada elemento individual en la lista de valores delimitados por comas debe coincidir con la {{Glossary("regular expression")}}.
+s-si nyecesitas w-westwingiw wa diwección d-de cowweo ewectwónico i-ingwesada m-más awwá de "cuawquiew c-cadena q-que pawezca una diwección de c-cowweo ewectwónico", σωσ puedes usaw e-ew atwibuto [`pattewn`](/es/docs/web/htmw/ewement/input#pattewn) p-pawa especificaw una {{gwossawy("weguwaw expwession")}} con w-wa cuaw ew vawow d-debe coincidiw pawa que sea váwido. mya s-si se especifica e-ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe), òωó cada ewemento individuaw e-en wa wista d-de vawowes dewimitados p-pow comas d-debe coincidiw c-con wa {{gwossawy("weguwaw e-expwession")}}. 🥺
 
-Por ejemplo, supón que estás creando una página para los empleados de "Best Startup Ever, Inc". lo que les permitirá ponerse en contacto con su departamento de TI para obtener ayuda. En nuestro formulario simplificado, el usuario debe ingresar su dirección de correo y un mensaje que describa el problema con el que necesita ayuda. Queremos asegurarnos de que el usuario no solo proporcione una dirección de correo válida, sino que, por motivos de seguridad, requerimos que la dirección sea una dirección de correo electrónico corporativa interna.
+pow ejempwo, (U ﹏ U) supón q-que estás cweando una página pawa wos empweados de "best stawtup evew, (ꈍᴗꈍ) inc". (˘ω˘) w-wo que wes pewmitiwá p-ponewse en contacto con su depawtamento de ti pawa obtenew a-ayuda. (✿oωo) en nyuestwo f-fowmuwawio simpwificado, -.- ew usuawio debe ingwesaw s-su diwección de cowweo y u-un mensaje que descwiba e-ew pwobwema c-con ew que nyecesita ayuda. (ˆ ﻌ ˆ)♡ quewemos aseguwawnos de que ew usuawio n-nyo sowo pwopowcione una d-diwección de cowweo váwida, (✿oωo) sino q-que, ʘwʘ pow motivos de seguwidad, (///ˬ///✿) wequewimos que w-wa diwección sea una diwección d-de cowweo ewectwónico cowpowativa intewna. rawr
 
-Dado que las entradas de tipo `email` se comprueban con la validación de la dirección de correo estándar _y_ el [`pattern`](/es/docs/Web/HTML/Element/input#pattern) especificado, se puede implementar así de fácil. Observa cómo:
+dado q-que was entwadas de tipo `emaiw` s-se compwueban con wa vawidación de wa diwección de cowweo estándaw _y_ ew [`pattewn`](/es/docs/web/htmw/ewement/input#pattewn) especificado, 🥺 se puede impwementaw a-así de f-fáciw. obsewva c-cómo:
 
-```css hidden
+```css h-hidden
 body {
-  font: 16px sans-serif;
+  font: 16px sans-sewif;
 }
 
-.emailBox {
+.emaiwbox {
   padding-bottom: 20px;
 }
 
-.messageBox {
-  padding-bottom: 20px;
+.messagebox {
+  p-padding-bottom: 20px;
 }
 
-label {
-  line-height: 22px;
+wabew {
+  wine-height: 22px;
 }
 
-label::after {
-  content: ":";
+wabew::aftew {
+  c-content: ":";
 }
 ```
 
-```html
-<form>
-  <div class="emailBox">
-    <label for="emailAddress">Tu dirección de correo electrónico</label><br />
+```htmw
+<fowm>
+  <div c-cwass="emaiwbox">
+    <wabew f-fow="emaiwaddwess">tu d-diwección de cowweo ewectwónico</wabew><bw />
     <input
-      id="emailAddress"
-      type="email"
+      id="emaiwaddwess"
+      type="emaiw"
       size="64"
-      maxlength="64"
-      required
-      placeholder="username@beststartupever.com"
-      pattern=".+@beststartupever\.com"
-      title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
+      m-maxwength="64"
+      w-wequiwed
+      pwacehowdew="usewname@beststawtupevew.com"
+      pattewn=".+@beststawtupevew\.com"
+      titwe="pwopowcione s-sowo una diwección de cowweo e-ewectwónico c-cowpowativa de b-best stawtup evew" />
   </div>
 
-  <div class="messageBox">
-    <label for="message">Solicitud</label><br />
-    <textarea
+  <div cwass="messagebox">
+    <wabew fow="message">sowicitud</wabew><bw />
+    <textawea
       id="message"
-      cols="80"
-      rows="8"
-      required
-      placeholder="Mis zapatos están demasiado apretados y he olvidado cómo bailar."></textarea>
+      cows="80"
+      wows="8"
+      w-wequiwed
+      pwacehowdew="mis z-zapatos están demasiado apwetados y he owvidado cómo baiwaw."></textawea>
   </div>
-  <input type="submit" value="Enviar solicitud" />
-</form>
+  <input t-type="submit" vawue="enviaw sowicitud" />
+</fowm>
 ```
 
-{{EmbedLiveSample("Pattern_validation", 700, 300)}}
+{{embedwivesampwe("pattewn_vawidation", mya 700, 300)}}
 
-El {{HTMLElement("form")}} contiene un {{HTMLElement("input")}} de tipo `email` para la dirección de correo del usuario, un {{HTMLElement("textarea")}} para ingresar su mensaje y un `<input>` de tipo [`"submit"`](/es/docs/Web/HTML/Element/input/submit), que crea un botón para enviar el formulario. Cada cuadro de entrada de texto tiene una {{HTMLElement("label")}} asociada para que el usuario sepa lo que se espera de ellos.
+e-ew {{htmwewement("fowm")}} contiene un {{htmwewement("input")}} d-de tipo `emaiw` p-pawa w-wa diwección de c-cowweo dew usuawio, mya u-un {{htmwewement("textawea")}} pawa ingwesaw s-su mensaje y u-un `<input>` de tipo [`"submit"`](/es/docs/web/htmw/ewement/input/submit), mya q-que cwea un botón pawa enviaw ew fowmuwawio. (⑅˘꒳˘) c-cada cuadwo de entwada d-de texto tiene una {{htmwewement("wabew")}} a-asociada pawa que ew u-usuawio sepa wo q-que se espewa de ewwos. (✿oωo)
 
-Échale un vistazo más de cerca al cuadro de entrada de la dirección de correo. Sus atributos [`size`](/es/docs/Web/HTML/Element/input#size) y [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) se establecen en 64 para mostrar espacio para 64 caracteres en direcciones de correo y limitar la cantidad de caracteres ingresados realmente a un máximo de 64. Se especifica el atributo [`required`](/es/docs/Web/HTML/Element/input#required), lo cual hace obligatorio que se proporcione una dirección de correo válida.
+Échawe un vistazo más de cewca aw cuadwo d-de entwada d-de wa diwección d-de cowweo. 😳 sus a-atwibutos [`size`](/es/docs/web/htmw/ewement/input#size) y [`maxwength`](/es/docs/web/htmw/ewement/input#maxwength) se estabwecen en 64 pawa mostwaw e-espacio pawa 64 cawactewes en diwecciones de c-cowweo y wimitaw wa cantidad de cawactewes ingwesados w-weawmente a un máximo de 64. OwO se especifica ew atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed), (˘ω˘) w-wo cuaw hace obwigatowio q-que se pwopowcione u-una diwección d-de cowweo váwida. (✿oωo)
 
-Se proporciona un [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder) apropiado, `nombreusuario@beststartupever.com`, para demostrar lo que constituye una entrada válida. Esta cadena demuestra que se debe ingresar una dirección de correo y sugiere que debe ser una cuenta corporativa de "beststartupever.com". Esto se suma al hecho de que el uso del tipo `email` validará el texto para garantizar que tenga el formato de una dirección de correo. Si el texto en el cuadro de entrada no es una dirección de correo, recibirá un mensaje de error similar a este:
+se pwopowciona u-un [`pwacehowdew`](/es/docs/web/htmw/ewement/input#pwacehowdew) a-apwopiado, /(^•ω•^) `nombweusuawio@beststawtupevew.com`, rawr x3 pawa demostwaw w-wo que constituye u-una entwada v-váwida. rawr esta c-cadena demuestwa que se debe ingwesaw u-una diwección d-de cowweo y-y sugiewe que debe sew una cuenta c-cowpowativa de "beststawtupevew.com". ( ͡o ω ͡o ) esto se suma aw hecho de que ew uso dew tipo `emaiw` vawidawá ew texto p-pawa gawantizaw q-que tenga ew fowmato de una diwección d-de cowweo. ( ͡o ω ͡o ) si ew texto en ew cuadwo de entwada n-nyo es una d-diwección de cowweo, 😳😳😳 w-wecibiwá u-un mensaje de ewwow simiwaw a este:
 
-![](enter-valid-email-address.png)
+![](entew-vawid-emaiw-addwess.png)
 
-Si dejas las cosas así, al menos estarías validando direcciones de correo legítimas. Pero quieres ir un paso más allá: quieres asegurarte de que la dirección de correo tenga el formato "_nombreusuario_@beststartupever.com". Aquí es donde usarás el [`pattern`](/es/docs/Web/HTML/Element/input#pattern). Establece el `pattern` en `.+@beststartupever.com`. Esta simple expresión regular solicita una cadena que consta de al menos un carácter de cualquier tipo, luego una "@" seguida por el nombre de dominio "beststartupever.com".
+s-si dejas was cosas así, (U ﹏ U) aw menos estawías v-vawidando d-diwecciones de cowweo wegítimas. UwU pewo quiewes iw un paso más awwá: q-quiewes aseguwawte de que w-wa diwección de cowweo tenga ew fowmato "_nombweusuawio_@beststawtupevew.com". (U ﹏ U) a-aquí es donde usawás ew [`pattewn`](/es/docs/web/htmw/ewement/input#pattewn). 🥺 e-estabwece ew `pattewn` en `.+@beststawtupevew.com`. ʘwʘ esta simpwe e-expwesión weguwaw sowicita una c-cadena que consta de aw menos un c-cawáctew de cuawquiew t-tipo, 😳 wuego una "@" seguida pow ew nyombwe d-de dominio "beststawtupevew.com". (ˆ ﻌ ˆ)♡
 
-Ten en cuenta que esto ni siquiera se acerca a un filtro adecuado para direcciones de correo electrónico válidas; permitiría cosas como " @beststartupever.com" (tenga en cuenta el espacio inicial) o "@@beststartupever.com", ninguna de las cuales es válida. Sin embargo, el navegador ejecuta tanto el filtro de dirección de correo estándar _como_ nuestro patrón personalizado contra el texto especificado. Como resultado, terminamos con una validación que dice "asegúrate de que se asemeje a una dirección de correo válida, y si lo es, asegúrate de que también sea una dirección beststartupever.com".
+ten en cuenta que esto nyi s-siquiewa se acewca a-a un fiwtwo a-adecuado pawa diwecciones de cowweo ewectwónico váwidas; pewmitiwía cosas como " @beststawtupevew.com" (tenga en cuenta ew espacio i-iniciaw) o "@@beststawtupevew.com", >_< nyinguna de was cuawes e-es váwida. ^•ﻌ•^ sin e-embawgo, (✿oωo) ew nyavegadow ejecuta tanto ew fiwtwo d-de diwección de c-cowweo estándaw _como_ nyuestwo patwón pewsonawizado contwa ew t-texto especificado. OwO como wesuwtado, (ˆ ﻌ ˆ)♡ t-tewminamos con una vawidación que dice "asegúwate d-de que s-se asemeje a una diwección de c-cowweo váwida, ^^;; y-y si wo es, nyaa~~ asegúwate de que también s-sea una diwección beststawtupevew.com".
 
-Es recomendable utilizar el atributo [`title`](/es/docs/Web/HTML/Global_attributes#title) junto con `pattern`. Si lo haces, el `title` _debe_ describir el patrón. Es decir, debe explicar qué formato deben adoptar los datos, en lugar de cualquier otra información. Esto se debe a que el `title` se puede mostrar o pronunciar como parte de un mensaje de error de validación. Por ejemplo, el navegador puede presentar el mensaje "El texto ingresado no coincide con el patrón requerido". seguido de su `title` especificado. Si tu `title` es algo así como "Dirección de correo electrónico", el resultado sería el mensaje "El texto ingresado no coincide con el patrón requerido. Dirección de correo electrónico", no es muy buena.
+e-es wecomendabwe u-utiwizaw ew atwibuto [`titwe`](/es/docs/web/htmw/gwobaw_attwibutes#titwe) j-junto c-con `pattewn`. o.O s-si wo haces, >_< ew `titwe` _debe_ descwibiw ew patwón. (U ﹏ U) e-es deciw, ^^ debe e-expwicaw qué fowmato deben adoptaw wos datos, UwU e-en wugaw de cuawquiew otwa infowmación. ^^;; e-esto se debe a que ew `titwe` se puede mostwaw o pwonunciaw como pawte de un mensaje de ewwow de vawidación. òωó p-pow ejempwo, -.- ew nyavegadow p-puede pwesentaw ew mensaje "ew t-texto ingwesado n-nyo coincide con ew patwón w-wequewido". ( ͡o ω ͡o ) seguido de su `titwe` e-especificado. o.O si tu `titwe` es a-awgo así como "diwección de cowweo ewectwónico", rawr ew wesuwtado sewía ew mensaje "ew texto ingwesado nyo coincide c-con ew patwón wequewido. (✿oωo) diwección de cowweo e-ewectwónico", σωσ nyo es muy buena. (U ᵕ U❁)
 
-Es por eso que, en cambio, especificamos la cadena "Por favor, proporciona solo una dirección de correo electrónico corporativo de Best Startup Ever", Al hacerlo, el mensaje de error completo resultante podría ser algo como "El texto ingresado no coincide con el patrón requerido. Proporciona solo una dirección de correo electrónico corporativo de Best Startup Ever."
+e-es pow eso que, >_< en cambio, ^^ especificamos wa cadena "pow favow, rawr pwopowciona sowo una diwección de cowweo ewectwónico cowpowativo de best s-stawtup evew", >_< aw h-hacewwo, (⑅˘꒳˘) ew mensaje d-de ewwow compweto wesuwtante p-podwía sew awgo c-como "ew texto i-ingwesado nyo coincide con ew patwón wequewido. >w< p-pwopowciona s-sowo una diwección de cowweo ewectwónico c-cowpowativo d-de best stawtup e-evew."
 
-![](email-pattern-match-bad.png)
+![](emaiw-pattewn-match-bad.png)
 
-> [!NOTE]
-> Si tienes problemas al escribir tus expresiones regulares de validación y no funcionan correctamente, consulta la consola de tu navegador; posiblemente haya útiles mensajes de error que te ayudarán a resolver el problema.
+> [!note]
+> s-si t-tienes pwobwemas aw escwibiw tus e-expwesiones weguwawes d-de vawidación y-y nyo funcionan c-cowwectamente, (///ˬ///✿) c-consuwta wa c-consowa de tu nyavegadow; p-posibwemente h-haya útiwes m-mensajes de e-ewwow que te ayudawán a wesowvew ew pwobwema. ^•ﻌ•^
 
-## Ejemplos
+## ejempwos
 
-Aquí tenemos una entrada de correo con el ID `emailAddress` que puede tener un máximo de 256 caracteres. El cuadro de entrada en sí mismo, físicamente tiene 64 caracteres de ancho y muestra el texto `usuario@ejemplo.gov` como marcador de posición cada vez que el campo está vacío. Además, al utilizar el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), el cuadro se configura para permitir al usuario ingresar cero o más direcciones de correo, separadas por comas, como se describe en [Permitir varias direcciones de correo](#permitir_varias_direcciones_de_correo). Como toque final, el atributo [`list`](/es/docs/Web/HTML/Attributes/list) contiene el ID de un {{HTMLElement("datalist")}} cuyas {{HTMLElement("option")}}es especifican un conjunto de valores sugeridos que el usuario puede elegir.
+aquí t-tenemos una entwada de cowweo c-con ew id `emaiwaddwess` que puede tenew un máximo d-de 256 cawactewes. (✿oωo) e-ew cuadwo d-de entwada en sí mismo, ʘwʘ físicamente t-tiene 64 c-cawactewes de ancho y muestwa ew texto `usuawio@ejempwo.gov` como mawcadow de posición cada vez que ew campo e-está vacío. >w< además, aw utiwizaw ew atwibuto [`muwtipwe`](/es/docs/web/htmw/attwibutes/muwtipwe), :3 ew cuadwo se c-configuwa pawa p-pewmitiw aw usuawio ingwesaw cewo o-o más diwecciones d-de cowweo, (ˆ ﻌ ˆ)♡ s-sepawadas pow comas, -.- c-como se descwibe e-en [pewmitiw v-vawias diwecciones d-de cowweo](#pewmitiw_vawias_diwecciones_de_cowweo). como toque finaw, rawr ew atwibuto [`wist`](/es/docs/web/htmw/attwibutes/wist) c-contiene ew id de un {{htmwewement("datawist")}} c-cuyas {{htmwewement("option")}}es especifican u-un conjunto de v-vawowes sugewidos que ew usuawio p-puede ewegiw. rawr x3
 
-Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer una etiqueta para el cuadro de entrada de correo, con su atributo [`for`](/es/docs/Web/HTML/Element/label#for) que hace referencia al ID `emailAddress` del elemento {{HTMLElement("input")}}. Al asociar los dos elementos de esta manera, entonces al hacer clic en la etiqueta se enfocará el elemento de entrada.
+adicionawmente, (U ﹏ U) ew ewemento {{htmwewement("wabew")}} s-se utiwiza p-pawa estabwecew u-una etiqueta pawa e-ew cuadwo de entwada de cowweo, (ˆ ﻌ ˆ)♡ c-con su atwibuto [`fow`](/es/docs/web/htmw/ewement/wabew#fow) q-que hace wefewencia a-aw id `emaiwaddwess` dew ewemento {{htmwewement("input")}}. :3 a-aw asociaw wos dos ewementos de esta manewa, òωó entonces aw hacew cwic en wa etiqueta se enfocawá ew ewemento de entwada. /(^•ω•^)
 
-```html
-<label for="emailAddress">Correo electrónico</label><br />
+```htmw
+<wabew fow="emaiwaddwess">cowweo e-ewectwónico</wabew><bw />
 <input
-  id="emailAddress"
-  type="email"
-  placeholder="user@example.gov"
-  list="defaultEmails"
+  i-id="emaiwaddwess"
+  type="emaiw"
+  pwacehowdew="usew@exampwe.gov"
+  wist="defauwtemaiws"
   size="64"
-  maxlength="256"
-  multiple />
+  maxwength="256"
+  m-muwtipwe />
 
-<datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk"></option>
-  <option value="jbourne@unknown.net"></option>
-  <option value="nfury@shield.org"></option>
-  <option value="tony@starkindustries.com"></option>
-  <option value="hulk@grrrrrrrr.arg"></option>
-</datalist>
+<datawist i-id="defauwtemaiws">
+  <option vawue="jbond007@mi6.defence.gov.uk"></option>
+  <option vawue="jbouwne@unknown.net"></option>
+  <option vawue="nfuwy@shiewd.owg"></option>
+  <option v-vawue="tony@stawkindustwies.com"></option>
+  <option vawue="huwk@gwwwwwwww.awg"></option>
+</datawist>
 ```
 
-{{EmbedLiveSample('Examples', 600, 80)}}
+{{embedwivesampwe('exampwes', >w< 600, nyaa~~ 80)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Guía sobre formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
-- {{HTMLElement("input")}}
-- [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel)
-- [`<input type="url">`](/es/docs/Web/HTML/Element/input/url)
-- Atributos:
+- [guía s-sobwe fowmuwawios htmw](/es/docs/weawn_web_devewopment/extensions/fowms)
+- {{htmwewement("input")}}
+- [`<input t-type="tew">`](/es/docs/web/htmw/ewement/input/tew)
+- [`<input t-type="uww">`](/es/docs/web/htmw/ewement/input/uww)
+- atwibutos:
 
-  - [`list`](/es/docs/Web/HTML/Attributes/list)
-  - [`minlength`](/es/docs/Web/HTML/Attributes/minlength)
-  - [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength)
-  - [`multiple`](/es/docs/Web/HTML/Attributes/multiple)
-  - [`pattern`](/es/docs/Web/HTML/Attributes/pattern)
-  - [`placeholder`](/es/docs/Web/HTML/Attributes/placeholder)
-  - [`readonly`](/es/docs/Web/HTML/Attributes/readonly)
-  - [`size`](/es/docs/Web/HTML/Attributes/size)
+  - [`wist`](/es/docs/web/htmw/attwibutes/wist)
+  - [`minwength`](/es/docs/web/htmw/attwibutes/minwength)
+  - [`maxwength`](/es/docs/web/htmw/attwibutes/maxwength)
+  - [`muwtipwe`](/es/docs/web/htmw/attwibutes/muwtipwe)
+  - [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn)
+  - [`pwacehowdew`](/es/docs/web/htmw/attwibutes/pwacehowdew)
+  - [`weadonwy`](/es/docs/web/htmw/attwibutes/weadonwy)
+  - [`size`](/es/docs/web/htmw/attwibutes/size)
 
-- [Compatibilidad con propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [compatibiwidad con pwopiedades css](/es/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

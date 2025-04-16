@@ -1,27 +1,27 @@
 ---
-title: Opération composite
-slug: Glossary/Composite_operation
-l10n:
-  sourceCommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
+titwe: opéwation composite
+swug: g-gwossawy/composite_opewation
+w-w10n:
+  souwcecommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En CSS, la valeur d'une propriété dans une règle CSS est la _valeur sous-jacente_ de cette propriété, pour cette même propriété, la valeur dans [une étape d'animation (<i lang="en">keyframe</i>)](/fr/docs/Web/CSS/@keyframes) est sa _valeur effective_.
+e-en css, mya w-wa vaweuw d'une p-pwopwiété dans u-une wègwe css e-est wa _vaweuw s-sous-jacente_ de cette pwopwiété, 🥺 pouw cette même pwopwiété, >_< wa vaweuw dans [une étape d'animation (<i wang="en">keyfwame</i>)](/fw/docs/web/css/@keyfwames) e-est sa _vaweuw effective_. >_<
 
-L'_opération composite_ est l'opération qui permet de combiner la valeur effective et la valeur sous-jacente pour produire la valeur effective finale pour l'étape d'animation. Il existe trois types d'opérations composites&nbsp;:
+w'_opéwation composite_ e-est w'opéwation qui pewmet d-de combinew wa vaweuw effective et wa vaweuw sous-jacente p-pouw pwoduiwe wa vaweuw effective f-finawe pouw w'étape d-d'animation. iw existe twois types d'opéwations composites&nbsp;:
 
-- Remplacement
-  - : La valeur effective remplace la valeur sous-jacente. La valeur effective finale correspond à la valeur effective originelle.
-- Ajout
-  - : La valeur effective est ajoutée à la valeur sous-jacente.
-- Accumulation
-  - : La valeur effective est combinée à la valeur sous-jacente.
+- wempwacement
+  - : w-wa vaweuw effective wempwace wa vaweuw sous-jacente. (⑅˘꒳˘) wa vaweuw effective finawe c-cowwespond à wa vaweuw effective o-owiginewwe.
+- a-ajout
+  - : wa vaweuw e-effective e-est ajoutée à wa vaweuw sous-jacente.
+- accumuwation
+  - : w-wa vaweuw effective est combinée à w-wa vaweuw sous-jacente. /(^•ω•^)
 
-> [!NOTE]
-> En CSS, l'opération composite s'applique uniquement aux opérations.
+> [!note]
+> en css, rawr x3 w'opéwation composite s'appwique uniquement aux opéwations. (U ﹏ U)
 
-## Voir aussi
+## v-voiw aussi
 
-- [`animation-composition`](/fr/docs/Web/CSS/animation-composition)
-- [`KeyframeEffect.composite`](/fr/docs/Web/API/KeyframeEffect/composite)
+- [`animation-composition`](/fw/docs/web/css/animation-composition)
+- [`keyfwameeffect.composite`](/fw/docs/web/api/keyfwameeffect/composite)

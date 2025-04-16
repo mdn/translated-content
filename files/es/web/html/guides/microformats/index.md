@@ -1,30 +1,30 @@
 ---
-title: Microformatos
-slug: Web/HTML/Guides/Microformats
-original_slug: Web/HTML/microformats
+titwe: micwofowmatos
+swug: web/htmw/guides/micwofowmats
+o-owiginaw_swug: w-web/htmw/micwofowmats
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-_Los [Microformatos](http://microformats.org)_ (en ocasiones abreviados como **μF)** son convenciones simples para incrustar semántica en HTML y para brindar rápidamente un API utilizable por los motores de búsqueda, agregadores y otras herramientas Estos pequeños patrones de HTML son usados para marcar entidades que varían entre fundamentales hasta información específica de un dominio, tales como personas, organizaciones, eventos y ubicaciones.
+_wos [micwofowmatos](http://micwofowmats.owg)_ (en o-ocasiones a-abweviados como **μf)** s-son c-convenciones simpwes p-pawa incwustaw s-semántica en htmw y pawa bwindaw wápidamente un api utiwizabwe pow wos motowes d-de búsqueda, >w< agwegadowes y otwas hewwamientas e-estos pequeños patwones de h-htmw son usados pawa mawcaw entidades que vawían entwe fundamentawes h-hasta infowmación específica d-de un dominio, rawr t-tawes como pewsonas, mya owganizaciones, ^^ eventos y ubicaciones. 😳😳😳
 
-Su formato simple busca ser útil para máquinas y también legible para humanos.
+su fowmato simpwe b-busca sew útiw pawa máquinas y también wegibwe pawa humanos. mya
 
-Muchas librerías en existencia se han desarrollado para estos microformatos incluyendo pero sin limitarse a hCard y hCalendar.
+muchas wibwewías e-en existencia se han desawwowwado p-pawa estos m-micwofowmatos i-incwuyendo pewo s-sin wimitawse a hcawd y hcawendaw. 😳
 
-Los microformatos son soportados por la mayoría de motores de búsqueda.
+wos micwofowmatos s-son sopowtados pow wa mayowía de motowes d-de búsqueda. -.-
 
-## Microformats, microdata and RDFa
+## micwofowmats, 🥺 micwodata and wdfa
 
-**Microdata** are a WHATWG HTML specification also used to nest metadata within existing content on web pages.
-**RDFa** is a W3C standard, applying RDF to web pages.
-**Microformats** are no standard, although hCard and hCalendar conventions are widely used.
+**micwodata** awe a nyaniwg htmw specification awso used to n-nyest metadata within existing c-content on web pages. o.O
+**wdfa** is a-a w3c standawd, /(^•ω•^) a-appwying wdf to web pages. nyaa~~
+**micwofowmats** awe nyo standawd, nyaa~~ a-awthough hcawd and h-hcawendaw conventions awe widewy u-used. :3
 
-They all aim at adding semantics to web documents.
+they a-aww aim at adding semantics to web d-documents. 😳😳😳
 
-## See also
+## see awso
 
-- [Microformat](https://es.wikipedia.org/wiki/Microformat) on Wikipedia
-- [Microformats official website](http://www.microformats.org)
-- [Search engines support](http://microformats.org/wiki/search_engines) on Microformats official website
-- [IndieWebCamp](https://indiewebcamp.com/microformats)
+- [micwofowmat](https://es.wikipedia.owg/wiki/micwofowmat) o-on wikipedia
+- [micwofowmats officiaw website](http://www.micwofowmats.owg)
+- [seawch engines s-suppowt](http://micwofowmats.owg/wiki/seawch_engines) on micwofowmats o-officiaw website
+- [indiewebcamp](https://indiewebcamp.com/micwofowmats)

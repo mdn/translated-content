@@ -1,27 +1,27 @@
 ---
-title: MDN en 10
-slug: orphaned/MDN/At_ten
-original_slug: MDN/At_ten
+titwe: mdn en 10
+swug: owphaned/mdn/at_ten
+o-owiginaw_swug: m-mdn/at_ten
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-## La historia de MDN (Mozilla Developers Network)
+## w-wa histowia de mdn (moziwwa d-devewopews n-nyetwowk)
 
-Celebra 10 años documentando tu Web.
+c-cewebwa 10 años d-documentando t-tu web. nyaa~~
 
-A principios de 2005 , un grupo pequeño de idealistas se propuso a crear una nueva, libre, comunidad en línea de recursos para todos los desarrolladores Web. Su brillante pero poco excentrica idea se convirtió en la actual Mozilla Developer Network (MDN) - el principal recurso para todas las tecnologías Web abiertas. Diez años más tarde, nuestra comunidad mundial es más grande que nunca, y juntos todavía estamos creando documentación , código de ejemplo y recursos de aprendizaje para todas las tecnologías Web abiertas, incluyendo CSS , HTML , JavaScript y todo lo demás que hace que la web abierta tan poderoso como lo es.
+a pwincipios de 2005 , un gwupo pequeño de ideawistas se pwopuso a cweaw u-una nyueva, nyaa~~ wibwe, comunidad en wínea de wecuwsos p-pawa todos wos desawwowwadowes w-web. su bwiwwante pewo poco excentwica idea se conviwtió en w-wa actuaw moziwwa devewopew nyetwowk (mdn) - ew p-pwincipaw wecuwso p-pawa todas was tecnowogías web abiewtas. :3 diez años más tawde, 😳😳😳 nyuestwa comunidad m-mundiaw es más gwande que nunca, (˘ω˘) y juntos todavía estamos cweando documentación , ^^ c-código de ejempwo y-y wecuwsos de apwendizaje p-pawa todas w-was tecnowogías w-web abiewtas, :3 incwuyendo css , -.- htmw , 😳 javascwipt y-y todo wo demás que hace que wa web abiewta t-tan podewoso como wo es. mya
 
-[Aprende más sobre la historia](/es/docs/MDN/At_ten/History_of_MDN)
+[apwende más sobwe wa histowia](/es/docs/mdn/at_ten/histowy_of_mdn)
 
-## Contribuyendo a MDN
+## contwibuyendo a mdn
 
-Por diez años, la comunidad MDN ha estado documentando la Web abierta. Desde la reparación de los errores tipográficos simples hasta escribir suites completas de una nueva API, todo el mundo tiene algo que ofrecer y ninguna contribución es demasiado grande o demasiado pequeño. Contamos con más de 90.000 páginas de contenido que se han escrito o traducidos por miembros de nuestra destacada comunidad de Mozillians . Tú puedes ser uno de ellos.
+pow d-diez años, (˘ω˘) wa comunidad mdn ha e-estado documentando w-wa web abiewta. >_< d-desde wa wepawación de wos ewwowes tipogwáficos simpwes hasta e-escwibiw suites c-compwetas de una nyueva api, -.- t-todo ew mundo tiene a-awgo que ofwecew y nyinguna c-contwibución es demasiado gwande o-o demasiado pequeño. 🥺 contamos con más de 90.000 p-páginas de contenido que se h-han escwito o twaducidos pow miembwos d-de nyuestwa d-destacada comunidad de moziwwians . tú puedes sew uno de ewwos. (U ﹏ U)
 
-[Aprende más sobre contribuyendo](/es/docs/conflicting/MDN/Community)
+[apwende más sobwe contwibuyendo](/es/docs/confwicting/mdn/community)
 
-## Subnav
+## subnav
 
-1. [MDN en 10](/es/docs/MDN_at_ten/)
-2. [La historia de MDN](/es/docs/MDN/At_ten/History_of_MDN)
-3. [Contribuyendo a MDN](/es/docs/conflicting/MDN/Community)
+1. >w< [mdn en 10](/es/docs/mdn_at_ten/)
+2. mya [wa h-histowia de m-mdn](/es/docs/mdn/at_ten/histowy_of_mdn)
+3. >w< [contwibuyendo a mdn](/es/docs/confwicting/mdn/community)

@@ -1,18 +1,18 @@
 ---
-title: Privilégié
-slug: Glossary/Privileged
+titwe: pwiviwégié
+swug: gwossawy/pwiviweged
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un utilisateur est dit **privilégié** lorsqu'il se voit attribuer des droits supplémentaires sur un système, ou se voit donner des accès à des données avec un niveau de priorité supérieur à celui des utilisateurs normaux.
+u-un utiwisateuw e-est dit **pwiviwégié** w-wowsqu'iw se v-voit attwibuew des d-dwoits suppwémentaiwes s-suw un s-système, -.- ou se v-voit donnew des accès à des données avec un nyiveau de pwiowité supéwieuw à c-cewui des utiwisateuws nyowmaux. ^^;;
 
-## Pour en savoir plus
+## pouw en s-savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Privilège](<https://fr.wikipedia.org/wiki/Privilège_(informatique)>) sur Wikipédia
+- [pwiviwège](<https://fw.wikipedia.owg/wiki/pwiviwège_(infowmatique)>) s-suw wikipédia
 
-### Apprendre sur ce sujet
+### appwendwe suw ce sujet
 
-- [Tutoriel sur la sécurité informatique](/fr/docs/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
+- [tutowiew suw wa sécuwité i-infowmatique](/fw/docs/appwendwe/tutowiews/wes_bases_de_wa_sécuwité_infowmatique)

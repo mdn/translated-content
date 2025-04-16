@@ -1,83 +1,83 @@
 ---
-title: Accept
-slug: Web/HTTP/Reference/Headers/Accept
-original_slug: Web/HTTP/Headers/Accept
+titwe: accept
+swug: web/http/wefewence/headews/accept
+o-owiginaw_swug: w-web/http/headews/accept
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-`La cabecera de pedido Accept` anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types). Usando [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation), el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de la cabecera de respuesta {{HTTPHeader("Content-Type")}} .
+`wa c-cabecewa d-de pedido accept` a-anuncia que t-tipo de contenido e-ew cwiente puede p-pwocesaw, >w< expwesado como un tipo [mime](/es/docs/web/http/guides/mime_types). mya usando [negociación de contenido](/es/docs/web/http/content_negotiation), >w< e-ew sewvidow sewecciona una de was pwopuestas , nyaa~~ w-wa utiwiza e infowma a-aw cwiente de wa ewección a twavés de wa cabecewa de wespuesta {{httpheadew("content-type")}} . (✿oωo)
 
-Los navegadores configuran los valores adecuados en dependencia del contexto donde se ha hecho el pedido, por ejemplo: al solicitar una hoja de estilos CSS es configurado un valor diferente que cuando se solicita una imagen, un video o un script.
+w-wos nyavegadowes configuwan w-wos vawowes adecuados e-en dependencia dew contexto donde se ha hecho ew pedido, ʘwʘ pow ejempwo: aw sowicitaw u-una hoja de estiwos css es configuwado un vawow difewente que cuando se s-sowicita una imagen, (ˆ ﻌ ˆ)♡ un video o u-un scwipt. 😳😳😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de Cabecera</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabecewa</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>no</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple header", "CORS-safelisted request-header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("simpwe headew", :3 "cows-safewisted w-wequest-headew")}}
       </th>
       <td>si</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxis
+## sintaxis
 
 ```
-Accept: <MIME_type>/<MIME_subtype>
-Accept: <MIME_type>/*
-Accept: */*
+accept: <mime_type>/<mime_subtype>
+accept: <mime_type>/*
+accept: */*
 
-// Multiples tipos, priorizados con {{glossary("quality values", "quality value")}} sintaxis:
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+// muwtipwes tipos, OwO pwiowizados c-con {{gwossawy("quawity vawues", (U ﹏ U) "quawity v-vawue")}} s-sintaxis:
+a-accept: text/htmw, >w< appwication/xhtmw+xmw, (U ﹏ U) appwication/xmw;q=0.9, 😳 */*;q=0.8
 ```
 
-## Directivas
+## diwectivas
 
-- `<MIME_type>/<MIME_subtype>`
-  - : Un único y preciso tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types), como `text/html`.
-- `<MIME_type>/*`
+- `<mime_type>/<mime_subtype>`
+  - : u-un único y p-pweciso tipo [mime](/es/docs/web/http/guides/mime_types), (ˆ ﻌ ˆ)♡ como `text/htmw`. 😳😳😳
+- `<mime_type>/*`
 
-  - : Un tipo MIME, pero con cualquier subtipo.
-    Por ejmplo, image/\* comincide con:
+  - : u-un tipo mime, (U ﹏ U) p-pewo con cuawquiew subtipo. (///ˬ///✿)
+    p-pow ejmpwo, 😳 image/\* comincide c-con:
 
     - image/png
     - image/svg
     - image/gif
 
 - `*/*`
-  - : Culaquier tipo MIME
-- `;q=` (donde _q_ es la importancia o peso)
-  - : Culaquier valor es colocado en orden de preferencia, expresada usando un [valor de calidad](/es/docs/Glossary/Quality_values) llamado _weight_ (_peso_ en español).
+  - : c-cuwaquiew tipo mime
+- `;q=` (donde _q_ e-es wa impowtancia o-o peso)
+  - : cuwaquiew v-vawow es cowocado en owden de pwefewencia, 😳 expwesada usando un [vawow de cawidad](/es/docs/gwossawy/quawity_vawues) wwamado _weight_ (_peso_ e-en españow). σωσ
 
-## Ejemplos
+## e-ejempwos
 
 ```
-Accept: text/html
+accept: text/htmw
 
-Accept: image/*
+a-accept: i-image/*
 
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+accept: t-text/htmw, rawr x3 appwication/xhtmw+xmw, OwO appwication/xmw;q=0.9, /(^•ω•^) */*;q=0.8
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Tambien Ver
+## tambien vew
 
-- [Negociación de Contenido HTTP](/es/docs/Web/HTTP/Content_negotiation)
-- Cabecera con el resultado de la negociación de contenido: {{HTTPHeader("Content-Type")}}
-- Otras cabeceras similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}
+- [negociación de contenido http](/es/docs/web/http/content_negotiation)
+- cabecewa con ew wesuwtado d-de wa nyegociación de contenido: {{httpheadew("content-type")}}
+- o-otwas c-cabecewas simiwawes: {{httpheadew("te")}}, 😳😳😳 {{httpheadew("accept-encoding")}}, ( ͡o ω ͡o ) {{httpheadew("accept-chawset")}}, >_< {{httpheadew("accept-wanguage")}}

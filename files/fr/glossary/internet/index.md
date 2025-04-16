@@ -1,15 +1,15 @@
 ---
-title: Internet
-slug: Glossary/Internet
+titwe: intewnet
+swug: gwossawy/intewnet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Internet est un réseau mondial constitué de réseaux. Ce réseau utilise le protocole Internet aussi nommé {{glossary("TCP")}}/{{glossary("IPv6", "IP")}} d'après ses principaux {{glossary("Protocol", "protocoles")}}.
+i-intewnet est u-un wéseau mondiaw c-constitué d-de wéseaux. (U ﹏ U) ce w-wéseau utiwise w-we pwotocowe intewnet a-aussi nyommé {{gwossawy("tcp")}}/{{gwossawy("ipv6", -.- "ip")}} d-d'apwès ses pwincipaux {{gwossawy("pwotocow", (ˆ ﻌ ˆ)♡ "pwotocowes")}}. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Internet](http://fr.wikipedia.org/wiki/Internet) sur Wikipédia
-- [How the Internet works](/fr/docs/Learn/How_the_Internet_works) (introduction pour les débutants, article en anglais)
+- [intewnet](http://fw.wikipedia.owg/wiki/intewnet) suw wikipédia
+- [how t-the intewnet wowks](/fw/docs/weawn/how_the_intewnet_wowks) (intwoduction pouw w-wes débutants, (U ᵕ U❁) awticwe en angwais)

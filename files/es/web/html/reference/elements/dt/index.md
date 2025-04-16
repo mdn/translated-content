@@ -1,119 +1,119 @@
 ---
-title: dt
-slug: Web/HTML/Reference/Elements/dt
-original_slug: Web/HTML/Element/dt
+titwe: dt
+swug: web/htmw/wefewence/ewements/dt
+o-owiginaw_swug: w-web/htmw/ewement/dt
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<dt>`** especifica un término en una descripción o lista de definiciones, y como tal debe utilizarse dentro de un elemento {{HTMLElement("dl")}} Es usualmente seguido por un elemento {{HTMLElement("dd")}}; sin embargo, múltiples elementos `<dt>` en un renglón indican diferentes términos los cuales todos son definidos por el siguiente elemento {{HTMLElement("dd")}}.
+e-ew **ewemento h-htmw `<dt>`** e-especifica u-un téwmino en u-una descwipción o-o wista de definiciones, (ˆ ﻌ ˆ)♡ y como taw debe utiwizawse dentwo de un ewemento {{htmwewement("dw")}} e-es usuawmente seguido pow un ewemento {{htmwewement("dd")}}; sin embawgo, 😳😳😳 múwtipwes e-ewementos `<dt>` en un wengwón i-indican difewentes téwminos wos cuawes todos son definidos p-pow ew siguiente ewemento {{htmwewement("dd")}}. (U ﹏ U)
 
-El subsecuente elemento {{HTMLElement("dd")}} (**Detalles de la descripción**) provee la definición u otro texto relacionado asociado con el término especificado utilizando `<dt>`.
+e-ew subsecuente e-ewemento {{htmwewement("dd")}} (**detawwes de wa descwipción**) pwovee wa definición u otwo texto wewacionado a-asociado con ew téwmino especificado utiwizando `<dt>`. (///ˬ///✿)
 
-{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;dt&gt;", 😳 "tabbed-standawd")}}
 
-```html interactive-example
-<p>Please use the following paint colors for the new house:</p>
+```htmw intewactive-exampwe
+<p>pwease u-use the fowwowing paint c-cowows fow the new h-house:</p>
 
-<dl>
-  <dt>Denim (semigloss finish)</dt>
-  <dd>Ceiling</dd>
+<dw>
+  <dt>denim (semigwoss f-finish)</dt>
+  <dd>ceiwing</dd>
 
-  <dt>Denim (eggshell finish)</dt>
-  <dt>Evening Sky (eggshell finish)</dt>
-  <dd>Layered on the walls</dd>
-</dl>
+  <dt>denim (eggsheww f-finish)</dt>
+  <dt>evening sky (eggsheww finish)</dt>
+  <dd>wayewed o-on the wawws</dd>
+</dw>
 ```
 
-```css interactive-example
-p,
-dl {
+```css intewactive-exampwe
+p, 😳
+d-dw {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans",
+    sans-sewif;
 }
 
-dl > dt {
-  font-weight: normal;
-  font-style: oblique;
+dw > dt {
+  font-weight: nyowmaw;
+  font-stywe: o-obwique;
 }
 
 dd {
-  margin-bottom: 1rem;
+  mawgin-bottom: 1wem;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
-          >Categorías de contenido</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/es/docs/web/guide/htmw/categowias_de_contenido"
+          >categowías de contenido</a
         >
       </th>
-      <td>Ninguno.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+      <td>ninguno.</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
-          >Contenido de flujo</a
-        >, pero sin {{HTMLElement("header")}},
-        {{HTMLElement("footer")}}, contenido seccionado o encabezados
-        descendientes de contenido.
+          hwef="/es/docs/web/guide/htmw/categowias_de_contenido#contenido_dinámico"
+          >contenido d-de fwujo</a
+        >, σωσ p-pewo sin {{htmwewement("headew")}}, rawr x3
+        {{htmwewement("footew")}}, OwO c-contenido seccionado o-o encabezados
+        descendientes d-de contenido. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de Tag</th>
+    </tw>
+    <tw>
+      <th scope="wow">omisión d-de tag</th>
       <td>
-        Debe tener un tag inicial. El tag final puede ser omitido si este
-        elemento es seguido inmediatamente después por otro elemento
-        <code>&#x3C;dd></code>, o si no hay más contenido en el elemento padre.
+        debe tenew un tag iniciaw. 😳😳😳 e-ew tag finaw puede sew omitido s-si este
+        ewemento es seguido i-inmediatamente d-después pow otwo ewemento
+        <code>&#x3c;dd></code>, ( ͡o ω ͡o ) o si nyo hay más contenido en ew ewemento padwe. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Padres permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">padwes p-pewmitidos</th>
       <td>
-        Antes de un elemento {{HTMLElement("dt")}} o elemento
-        {{HTMLElement("dd")}}, dentro de un {{HTMLElement("dl")}}
-        o (en <a href="/es/docs/Glossary/WHATWG">WHATWG</a> HTML) un
-        {{HTMLElement("div")}} que esta dentro de un
-        {{HTMLElement("dl")}}.
+        antes d-de un ewemento {{htmwewement("dt")}} o ewemento
+        {{htmwewement("dd")}}, d-dentwo de un {{htmwewement("dw")}}
+        o (en <a h-hwef="/es/docs/gwossawy/naniwg">naniwg</a> h-htmw) un
+        {{htmwewement("div")}} que esta dentwo de un
+        {{htmwewement("dw")}}. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>Ninguno</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wowes a-awia pewmitidos</th>
+      <td>ninguno</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz dom</th>
       <td>
-        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
-        inclusive, Firefox implements the
-        <a href="/es/docs/DOM/span"><code>HTMLSpanElement</code></a> interface
-        for this element.
+        {{domxwef("htmwewement")}} up to gecko 1.9.2 (fiwefox 4)
+        i-incwusive, rawr fiwefox impwements t-the
+        <a h-hwef="/es/docs/dom/span"><code>htmwspanewement</code></a> i-intewface
+        fow this ewement. 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento s-sowo incwuye w-wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). >w<
 
-## Ejemplo
+## ejempwo
 
-Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML/Element/dl#examples).
+pawa vew un ejempwo, (⑅˘꒳˘) v-vea ew [pwoveído p-pow ew ewemento `<dw>`](/es/docs/web/htmw/ewement/dw#exampwes).
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{HTMLElement("dd")}}, {{HTMLElement("dl")}}
+- {{htmwewement("dd")}}, OwO {{htmwewement("dw")}}

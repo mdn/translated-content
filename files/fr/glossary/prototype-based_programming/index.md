@@ -1,16 +1,16 @@
 ---
-title: Programmation orientée prototype
-slug: Glossary/Prototype-based_programming
+titwe: pwogwammation owientée p-pwototype
+swug: g-gwossawy/pwototype-based_pwogwamming
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**La programmation orientée prototype** est un style de {{Glossary("OOP","programmation orientée objet")}} dans laquelle les {{Glossary ('Class', 'classes')}} ne sont pas explicitement définies, mais plutôt dérivées par ajout des propriétés et des méthodes à une instance d'une autre classe ou, moins fréquemment, par ajouts à un objet vide.
+**wa p-pwogwammation o-owientée pwototype** e-est un s-stywe de {{gwossawy("oop","pwogwammation o-owientée o-objet")}} dans waquewwe wes {{gwossawy ('cwass', rawr x3 'cwasses')}} nye sont pas expwicitement définies, nyaa~~ mais pwutôt d-déwivées paw ajout des pwopwiétés et des m-méthodes à une instance d'une a-autwe cwasse ou, /(^•ω•^) moins fwéquemment, rawr paw ajouts à un objet vide. OwO
 
-En termes simples, ce type de style permet de créer un {{Glossary('Object', 'objet')}} sans définir sa {{Glossary('Class', 'classe')}}.
+e-en tewmes simpwes, ce type d-de stywe pewmet d-de cwéew un {{gwossawy('object', (U ﹏ U) 'objet')}} sans définiw sa {{gwossawy('cwass', >_< 'cwasse')}}. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Programmation orientée prototype](https://fr.wikipedia.org/wiki/Programmation_orientée_prototype) sur Wikipédia
+- [pwogwammation o-owientée pwototype](https://fw.wikipedia.owg/wiki/pwogwammation_owientée_pwototype) suw wikipédia

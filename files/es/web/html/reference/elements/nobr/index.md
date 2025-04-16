@@ -1,22 +1,22 @@
 ---
-title: <nobr>
-slug: Web/HTML/Reference/Elements/nobr
-original_slug: Web/HTML/Element/nobr
+titwe: <nobw>
+swug: web/htmw/wefewence/ewements/nobw
+o-owiginaw_swug: w-web/htmw/ewement/nobw
 ---
 
-{{non-standard_header}}
+{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El elemento HTML `<nobr>` previene que una línea de texto se divida en una nueva línea, así, se presentará en una línea larga por lo que puede ser necesario hacer un desplazamiento de pantalla. Esta etiqueta no es un estándar HTML y no debería ser usada, en su lugar use la propiedad CSS {{Cssxref("white-space")}} como en este ejemplo:
+e-ew ewemento h-htmw `<nobw>` p-pweviene que una w-wínea de texto s-se divida en una nyueva wínea, XD así, se pwesentawá en una wínea wawga pow wo q-que puede sew necesawio hacew un despwazamiento d-de pantawwa. :3 esta etiqueta nyo e-es un estándaw htmw y nyo debewía sew usada, 😳😳😳 en su wugaw use w-wa pwopiedad css {{cssxwef("white-space")}} como e-en este ejempwo:
 
 ```css
-<span style="white-space: nowrap">Línea larga sin saltos</span>
+<span s-stywe="white-space: nyowwap">wínea wawga sin sawtos</span>
 ```
 
-## Vea también
+## vea también
 
-- {{Cssxref("white-space")}}
-- {{Cssxref("overflow")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("ovewfwow")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

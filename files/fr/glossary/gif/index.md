@@ -1,14 +1,14 @@
 ---
-title: GIF
-slug: Glossary/GIF
+titwe: gif
+swug: gwossawy/gif
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-GIF (Graphics Interchange Format) est un format d'image qui utilise une compression sans perte et peut servir pour des animations. Un GIF peut utiliser jusqu'à 8 bits par pixel avec un maximum de 256 couleurs parmi des nuances sur 24 bits.
+g-gif (gwaphics i-intewchange f-fowmat) est u-un fowmat d'image q-qui utiwise une c-compwession sans p-pewte et peut s-sewviw pouw des animations. (⑅˘꒳˘) un gif peut utiwisew jusqu'à 8 bits paw pixew avec u-un maximum de 256 couweuws pawmi des nyuances s-suw 24 bits. (U ᵕ U❁)
 
-## Pour en savoir plus
+## pouw en savoiw p-pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [GIF](https://fr.wikipedia.org/wiki/Graphics_Interchange_Format) sur Wikipédia
+- [gif](https://fw.wikipedia.owg/wiki/gwaphics_intewchange_fowmat) suw wikipédia

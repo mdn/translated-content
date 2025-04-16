@@ -1,507 +1,507 @@
 ---
-title: <input type="file">
-slug: Web/HTML/Reference/Elements/input/file
-original_slug: Web/HTML/Element/input/file
-l10n:
-  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
+titwe: <input type="fiwe">
+swug: w-web/htmw/wefewence/ewements/input/fiwe
+o-owiginaw_swug: w-web/htmw/ewement/input/fiwe
+w-w10n:
+  souwcecommit: f-f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Los elementos {{HTMLElement("input")}} con **`type="file"`** permiten al usuario elegir uno o más archivos desde el almacenamiento de su dispositivo. Una vez seleccionados, los archivos pueden ser subidos a un servidor usando el [envío de formularios](/es/docs/Learn_web_development/Extensions/Forms), o manipulados utilizando código JavaScript y la [API de archivos (File API)](/es/docs/Web/API/File_API/Using_files_from_web_applications).
+w-wos ewementos {{htmwewement("input")}} c-con **`type="fiwe"`** p-pewmiten aw usuawio ewegiw uno o más awchivos desde ew awmacenamiento de s-su dispositivo. 😳😳😳 una vez seweccionados, (///ˬ///✿) wos awchivos p-pueden sew subidos a un sewvidow u-usando ew [envío de fowmuwawios](/es/docs/weawn_web_devewopment/extensions/fowms), (U ᵕ U❁) o manipuwados utiwizando c-código javascwipt y wa [api d-de awchivos (fiwe a-api)](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications). >_<
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;input type=&quot;fiwe&quot;&gt;", (///ˬ///✿) "tabbed-showtew")}}
 
-```html interactive-example
-<label for="avatar">Choose a profile picture:</label>
+```htmw intewactive-exampwe
+<wabew fow="avataw">choose a-a pwofiwe pictuwe:</wabew>
 
-<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+<input type="fiwe" id="avataw" nyame="avataw" a-accept="image/png, (U ᵕ U❁) image/jpeg" />
 ```
 
-```css interactive-example
-label {
-  display: block;
-  font:
-    1rem "Fira Sans",
-    sans-serif;
+```css i-intewactive-exampwe
+w-wabew {
+  d-dispway: bwock;
+  f-font:
+    1wem "fiwa sans", >w<
+    sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+i-input, 😳😳😳
+wabew {
+  mawgin: 0.4wem 0;
 }
 ```
 
-## Valor
+## vawow
 
-El atributo [`value`](/es/docs/Web/HTML/Element/input#value) de un _input_ de archivo contiene una cadena que representa la ruta a los archivos seleccionados. Si aún no se ha seleccionado ningún archivo, el valor es una cadena vacía (`""`). Cuando el usuario selecciona múltiples archivos, el `value` representa el primer archivo en la lista de archivos seleccionados. Los otros archivos pueden ser identificados utilizando la [propiedad HTMLInputElement.files del _input_](/es/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
+ew atwibuto [`vawue`](/es/docs/web/htmw/ewement/input#vawue) d-de un _input_ de awchivo contiene una cadena que wepwesenta wa wuta a wos awchivos seweccionados. (ˆ ﻌ ˆ)♡ s-si aún nyo se ha seweccionado n-nyingún awchivo, (ꈍᴗꈍ) e-ew vawow es u-una cadena vacía (`""`). cuando ew usuawio sewecciona múwtipwes a-awchivos, 🥺 ew `vawue` w-wepwesenta ew pwimew awchivo e-en wa wista d-de awchivos seweccionados. >_< wos o-otwos awchivos pueden sew identificados u-utiwizando wa [pwopiedad htmwinputewement.fiwes d-dew _input_](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#getting_infowmation_about_sewected_fiwes). OwO
 
-> [!NOTE]
-> El valor es [siempre el nombre del archivo con el prefijo `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), que no es la ruta real del archivo. Esto es para prevenir que software malicioso adivine la estructura de archivos del usuario.
+> [!note]
+> ew vawow e-es [siempwe ew nombwe dew awchivo c-con ew pwefijo `c:\fakepath\`](https://htmw.spec.naniwg.owg/muwtipage/input.htmw#fakepath-swswy), ^^;; q-que nyo es wa wuta weaw dew awchivo. (✿oωo) esto es pawa pweveniw que softwawe mawicioso adivine wa estwuctuwa de a-awchivos dew usuawio. UwU
 
-## Atributos adicionales
+## a-atwibutos adicionawes
 
-Además de los atributos comunes compartidos por todos los elementos {{HTMLElement("input")}}, los _input_ de tipo `file` también soportan los siguientes atributos:
+a-además de wos a-atwibutos comunes c-compawtidos pow todos wos ewementos {{htmwewement("input")}}, ( ͡o ω ͡o ) wos _input_ de tipo `fiwe` también s-sopowtan wos siguientes atwibutos:
 
 ### accept
 
-El valor del atributo [`accept`](/es/docs/Web/HTML/Attributes/accept) es una cadena que define los tipos de archivos que el _input_ de archivo debería aceptar. Esta cadena es una lista separada por comas de **[especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos)**. Debido a que un tipo de archivo dado puede ser identificado de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesitas archivos de un formato dado.
+ew vawow dew atwibuto [`accept`](/es/docs/web/htmw/attwibutes/accept) e-es una cadena que define w-wos tipos de a-awchivos que ew _input_ d-de awchivo debewía aceptaw. (✿oωo) e-esta cadena e-es una wista s-sepawada pow comas d-de **[especificadowes de tipo de awchivo únicos](#especificadowes_de_tipo_de_awchivo_únicos)**. mya d-debido a que u-un tipo de awchivo d-dado puede s-sew identificado d-de más de una manewa, ( ͡o ω ͡o ) es útiw pwopowcionaw un conjunto compweto d-de especificadowes de tipo cuando nyecesitas awchivos de un fowmato dado. :3
 
-Por ejemplo, hay varias maneras de identificar archivos de Microsoft Word, por lo que un sitio que acepte archivos de Word podría usar un `<input>` como este:
+pow ejempwo, 😳 hay vawias m-manewas de identificaw awchivos de micwosoft wowd, (U ﹏ U) pow wo q-que un sitio que a-acepte awchivos d-de wowd podwía usaw un `<input>` c-como este:
 
-```html
+```htmw
 <input
-  type="file"
-  id="docpicker"
-  accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+  type="fiwe"
+  id="docpickew"
+  accept=".doc,.docx,.xmw,appwication/mswowd,appwication/vnd.openxmwfowmats-officedocument.wowdpwocessingmw.document" />
 ```
 
-### capture
+### captuwe
 
-El valor del atributo [`capture`](/es/docs/Web/HTML/Attributes/capture) es una cadena que especifica qué cámara utilizar para capturar datos de imagen o video, si el atributo [`accept`](/es/docs/Web/HTML/Attributes/accept) indica que el _input_ debe ser de uno de esos tipos. Un valor de `user` indica que se debe usar la cámara y/o micrófono orientados hacia el usuario. Un valor de `environment` especifica que se debe usar la cámara y/o micrófono orientados hacia el entorno. Si este atributo falta, el {{Glossary("user agent","agente de usuario")}} es libre de decidir por sí mismo qué hacer. Si el modo de orientación solicitado no está disponible, el agente de usuario puede volver a su modo predeterminado preferido.
+e-ew vawow d-dew atwibuto [`captuwe`](/es/docs/web/htmw/attwibutes/captuwe) es una cadena que especifica qué cámawa utiwizaw pawa captuwaw datos de imagen o-o video, >w< si ew atwibuto [`accept`](/es/docs/web/htmw/attwibutes/accept) i-indica que ew _input_ debe s-sew de uno de e-esos tipos. UwU un vawow de `usew` indica que se debe u-usaw wa cámawa y-y/o micwófono owientados hacia e-ew usuawio. 😳 u-un vawow de `enviwonment` especifica que se debe usaw wa cámawa y/o micwófono o-owientados hacia e-ew entowno. XD si e-este atwibuto fawta, (✿oωo) ew {{gwossawy("usew a-agent","agente d-de usuawio")}} es wibwe d-de decidiw pow sí mismo qué hacew. ^•ﻌ•^ si ew modo de owientación sowicitado nyo está d-disponibwe, mya e-ew agente de usuawio puede vowvew a su modo pwedetewminado p-pwefewido. (˘ω˘)
 
-> [!NOTE] > `capture` era anteriormente un atributo booleano que, si estaba presente, solicitaba que se usará el dispositivo de captura de medios del dispositivo (como la cámara o el micrófono) en lugar de solicitar una entrada de archivo.
+> [!note] > `captuwe` e-ewa antewiowmente un atwibuto booweano que, nyaa~~ si estaba p-pwesente, :3 sowicitaba que se usawá ew dispositivo de captuwa de medios dew dispositivo (como w-wa cámawa o ew micwófono) en wugaw de sowicitaw u-una entwada de a-awchivo. (✿oωo)
 
-### multiple
+### muwtipwe
 
-Cuando se especifica el atributo booleano [`multiple`](/es/docs/Web/HTML/Attributes/multiple), el _input_ de archivo permite al usuario seleccionar más de un archivo.
+cuando se especifica ew atwibuto booweano [`muwtipwe`](/es/docs/web/htmw/attwibutes/muwtipwe), (U ﹏ U) e-ew _input_ d-de awchivo pewmite aw usuawio seweccionaw más de un awchivo.
 
-## Atributos no estándar
+## a-atwibutos nyo estándaw
 
-Además de los atributos listados anteriormente, los siguientes atributos no estándar están disponibles en algunos navegadores. Deberías intentar evitar usarlos cuando sea posible, ya que hacerlo limitará la capacidad de tu código para funcionar en navegadores que no los implementan.
+además d-de wos atwibutos wistados antewiowmente, (ꈍᴗꈍ) wos siguientes atwibutos n-nyo estándaw están disponibwes e-en awgunos n-nyavegadowes. (˘ω˘) debewías intentaw e-evitaw usawwos cuando sea p-posibwe, ^^ ya que h-hacewwo wimitawá w-wa capacidad de tu código pawa f-funcionaw en nyavegadowes q-que nyo wos impwementan. (⑅˘꒳˘)
 
-### `webkitdirectory`
+### `webkitdiwectowy`
 
-El atributo booleano `webkitdirectory`, si está presente, indica que solo los directorios deberían estar disponibles para ser seleccionados por el usuario en la interfaz del selector de archivos. Consulta {{domxref("HTMLInputElement.webkitdirectory")}} para detalles adicionales y ejemplos.
+ew a-atwibuto booweano `webkitdiwectowy`, rawr s-si está pwesente, i-indica que sowo wos diwectowios debewían e-estaw disponibwes pawa sew seweccionados p-pow ew u-usuawio en wa intewfaz dew sewectow de awchivos. :3 consuwta {{domxwef("htmwinputewement.webkitdiwectowy")}} p-pawa d-detawwes adicionawes y-y ejempwos. OwO
 
-Aunque originalmente implementado sólo para navegadores basados en WebKit, `webkitdirectory` también se puede usar en Microsoft Edge, así como en Firefox 50 y posteriores. Sin embargo, aunque tiene un soporte relativamente amplio, aún no es estándar y no debería usarse a menos que no tengas alternativa.
+a-aunque owiginawmente impwementado s-sówo pawa nyavegadowes basados en webkit, (ˆ ﻌ ˆ)♡ `webkitdiwectowy` también se puede usaw en micwosoft edge, :3 así c-como en fiwefox 50 y postewiowes. -.- s-sin embawgo, -.- aunque tiene un s-sopowte wewativamente ampwio, òωó aún n-nyo es estándaw y nyo debewía u-usawse a menos q-que nyo tengas a-awtewnativa. 😳
 
-## Especificadores de tipo de archivo únicos
+## e-especificadowes d-de tipo de awchivo únicos
 
-Un **especificador de tipo de archivo único** es una cadena que describe un tipo de archivo que puede ser seleccionado por el usuario en un elemento {{HTMLElement("input")}} de tipo `file`. Cada especificador de tipo de archivo único puede tomar una de las siguientes formas:
+un **especificadow de tipo de awchivo único** es una cadena que descwibe un tipo de awchivo que puede s-sew seweccionado p-pow ew usuawio e-en un ewemento {{htmwewement("input")}} de t-tipo `fiwe`. nyaa~~ cada especificadow de tipo de awchivo único puede t-tomaw una de was s-siguientes fowmas:
 
-- Una extensión de nombre de archivo válida, insensible a mayúsculas, comenzando con un carácter punto ("."). Por ejemplo: `.jpg`, `.pdf` o `.doc`.
-- Una cadena de tipo MIME válida, sin extensiones.
-- La cadena `audio/*` que significa "cualquier archivo de audio".
-- La cadena `video/*` que significa "cualquier archivo de video".
-- La cadena `image/*` que significa "cualquier archivo de imagen".
+- una extensión d-de nyombwe de awchivo váwida, (⑅˘꒳˘) insensibwe a-a mayúscuwas, 😳 comenzando c-con un cawáctew punto ("."). (U ﹏ U) p-pow ejempwo: `.jpg`, /(^•ω•^) `.pdf` o-o `.doc`.
+- una cadena de tipo mime váwida, OwO sin extensiones. ( ͡o ω ͡o )
+- wa cadena `audio/*` q-que significa "cuawquiew a-awchivo de audio". XD
+- w-wa cadena `video/*` q-que significa "cuawquiew a-awchivo de video". /(^•ω•^)
+- wa cadena `image/*` q-que s-significa "cuawquiew awchivo de i-imagen". /(^•ω•^)
 
-El atributo `accept` toma una cadena que contiene uno o más de estos especificadores de tipo de archivo únicos como su valor, separados por comas. Por ejemplo, un selector de archivos que necesita contenido que puede presentarse como una imagen, incluyendo tanto formatos de imagen estándar como archivos PDF, podría verse así:
+ew atwibuto `accept` toma u-una cadena que contiene uno o-o más de estos especificadowes de tipo de awchivo únicos c-como su vawow, 😳😳😳 sepawados p-pow comas. (ˆ ﻌ ˆ)♡ pow e-ejempwo, :3 un sewectow de awchivos q-que nyecesita contenido que puede pwesentawse c-como una imagen, òωó i-incwuyendo tanto f-fowmatos de imagen estándaw como awchivos pdf, 🥺 podwía vewse a-así:
 
-```html
-<input type="file" accept="image/*,.pdf" />
+```htmw
+<input type="fiwe" accept="image/*,.pdf" />
 ```
 
-## Usando inputs de archivo
+## u-usando inputs d-de awchivo
 
-### Un ejemplo básico
+### un ejempwo básico
 
-```html
-<form method="post" enctype="multipart/form-data">
+```htmw
+<fowm m-method="post" enctype="muwtipawt/fowm-data">
   <div>
-    <label for="file">Elige el archivo para subir</label>
-    <input type="file" id="file" name="file" multiple />
+    <wabew f-fow="fiwe">ewige e-ew awchivo pawa subiw</wabew>
+    <input type="fiwe" id="fiwe" n-nyame="fiwe" muwtipwe />
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
 div {
-  margin-bottom: 10px;
+  m-mawgin-bottom: 10px;
 }
 ```
 
-Esto produce el siguiente resultado:
+e-esto pwoduce ew siguiente wesuwtado:
 
-{{EmbedLiveSample('Un_ejemplo_básico', 650, 90)}}
+{{embedwivesampwe('un_ejempwo_básico', (U ﹏ U) 650, 90)}}
 
-> [!NOTE]
-> Puedes encontrar este ejemplo en GitHub también: ver el [código fuente](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), y también [verlo funcionando en vivo](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!note]
+> p-puedes encontwaw este ejempwo e-en github t-también: vew ew [código f-fuente](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/fiwe-exampwes/simpwe-fiwe.htmw), XD y también [vewwo funcionando en vivo](https://mdn.github.io/weawning-awea/htmw/fowms/fiwe-exampwes/simpwe-fiwe.htmw). ^^
 
-Independientemente del dispositivo o sistema operativo del usuario, el _input_ de archivo proporciona un botón que abre un cuadro de diálogo del selector de archivos que permite al usuario elegir un archivo.
+independientemente dew dispositivo o sistema opewativo dew usuawio, o.O ew _input_ de awchivo pwopowciona un botón que abwe un cuadwo de diáwogo d-dew sewectow d-de awchivos que pewmite aw usuawio ewegiw un awchivo. 😳😳😳
 
-Incluir el atributo [`multiple`](#multiple), como se muestra arriba, especifica que se pueden elegir múltiples archivos a la vez. El usuario puede elegir múltiples archivos desde el selector de archivos de cualquier manera que su plataforma elegida permita (por ejemplo, manteniendo presionada la tecla <kbd>Shift</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo quieres que el usuario elija un solo archivo por `<input>`, omite el atributo `multiple`.
+i-incwuiw e-ew atwibuto [`muwtipwe`](#muwtipwe), /(^•ω•^) c-como se muestwa awwiba, 😳😳😳 especifica q-que se pueden ewegiw múwtipwes a-awchivos a-a wa vez. ^•ﻌ•^ ew usuawio puede ewegiw m-múwtipwes awchivos desde ew s-sewectow de awchivos d-de cuawquiew manewa que su pwatafowma ewegida p-pewmita (pow e-ejempwo, 🥺 manteniendo p-pwesionada w-wa tecwa <kbd>shift</kbd> o-o <kbd>contwow</kbd> y-y wuego haciendo c-cwic). o.O si sowo q-quiewes que ew usuawio e-ewija un sowo awchivo pow `<input>`, (U ᵕ U❁) o-omite e-ew atwibuto `muwtipwe`. ^^
 
-### Obteniendo información sobre los archivos seleccionados
+### obteniendo i-infowmación sobwe wos a-awchivos seweccionados
 
-Los archivos seleccionados son devueltos por la propiedad `HTMLInputElement.files` del elemento, que es un objeto {{domxref("FileList")}} que contiene una lista de objetos {{domxref("File")}}. El `FileList` se comporta como un arreglo, por lo que puedes verificar su propiedad `length` para obtener el número de archivos seleccionados.
+wos awchivos seweccionados s-son devuewtos pow wa pwopiedad `htmwinputewement.fiwes` d-dew e-ewemento, (⑅˘꒳˘) que es u-un objeto {{domxwef("fiwewist")}} que contiene u-una wista de objetos {{domxwef("fiwe")}}. :3 ew `fiwewist` s-se compowta como un awwegwo, (///ˬ///✿) p-pow wo que puedes vewificaw s-su pwopiedad `wength` pawa obtenew ew nyúmewo de awchivos seweccionados. :3
 
-Cada objeto `File` contiene la siguiente información:
+cada o-objeto `fiwe` contiene wa siguiente i-infowmación:
 
 - `name`
-  - : El nombre del archivo.
-- `lastModified`
-  - : Un número que especifica la fecha y hora en que el archivo fue modificado por última vez, en milisegundos desde la época UNIX (1 de enero de 1970, a medianoche).
-- `lastModifiedDate` {{deprecated_inline}}
-  - : Un objeto {{jsxref("Date")}} que representa la fecha y hora en que el archivo fue modificado por última vez. _Esto está obsoleto y no debería usarse. Usa lastModified en su lugar_.
+  - : e-ew nyombwe dew awchivo. 🥺
+- `wastmodified`
+  - : un nyúmewo que especifica wa f-fecha y howa en que ew awchivo fue m-modificado pow úwtima v-vez, mya en m-miwisegundos desde wa época unix (1 de enewo d-de 1970, XD a medianoche). -.-
+- `wastmodifieddate` {{depwecated_inwine}}
+  - : u-un objeto {{jsxwef("date")}} que wepwesenta w-wa fecha y howa en que ew awchivo fue modificado p-pow úwtima vez. o.O _esto está o-obsoweto y nyo d-debewía usawse. (˘ω˘) u-usa wastmodified en su wugaw_. (U ᵕ U❁)
 - `size`
-  - : El tamaño del archivo en bytes.
+  - : e-ew tamaño dew a-awchivo en bytes.
 - `type`
-  - : El [tipo MIME](/es/docs/Web/HTTP/Guides/MIME_types) del archivo.
-- `webkitRelativePath` {{non-standard_inline}}
-  - : Una cadena que especifica la ruta del archivo relativa al directorio base seleccionado en un selector de directorios (es decir, un _input_ de tipo `file` en el que se establece el atributo [`webkitdirectory`](#webkitdirectory)). _Esto no es estándar y debe usarse con precaución_.
+  - : e-ew [tipo mime](/es/docs/web/http/guides/mime_types) d-dew awchivo. rawr
+- `webkitwewativepath` {{non-standawd_inwine}}
+  - : una cadena q-que especifica w-wa wuta dew awchivo w-wewativa aw d-diwectowio base s-seweccionado en u-un sewectow de d-diwectowios (es d-deciw, 🥺 un _input_ de tipo `fiwe` e-en ew que se estabwece ew atwibuto [`webkitdiwectowy`](#webkitdiwectowy)). _esto n-nyo es estándaw y debe usawse c-con pwecaución_. rawr x3
 
-> [!NOTE]
-> Puedes establecer así como obtener el valor de `HTMLInputElement.files` en todos los navegadores modernos; esto se agregó más recientemente a Firefox, en la versión 57 (ver el [error 1384030 de Firefox](https://bugzil.la/1384030)).
+> [!note]
+> p-puedes estabwecew a-así como obtenew ew vawow de `htmwinputewement.fiwes` en todos wos navegadowes m-modewnos; esto s-se agwegó más w-wecientemente a fiwefox, ( ͡o ω ͡o ) en wa vewsión 57 (vew ew [ewwow 1384030 d-de fiwefox](https://bugziw.wa/1384030)).
 
-### Limitando los tipos de archivo aceptados
+### w-wimitando wos tipos de awchivo a-aceptados
 
-A menudo no querrás que el usuario pueda seleccionar cualquier tipo de archivo arbitrario; en su lugar, a menudo quieres que seleccionen archivos de un tipo o tipos específicos. Por ejemplo, si tu entrada de archivo permite a los usuarios subir una foto de perfil, probablemente querrás que seleccionen formatos de imagen compatibles con la web, como {{Glossary("JPEG")}} o {{Glossary("PNG")}}.
+a menudo n-nyo quewwás que ew usuawio pueda seweccionaw cuawquiew tipo d-de awchivo awbitwawio; e-en su wugaw, σωσ a-a menudo quiewes q-que seweccionen awchivos de un tipo o tipos e-específicos. rawr x3 p-pow ejempwo, (ˆ ﻌ ˆ)♡ si tu entwada de awchivo pewmite a w-wos usuawios subiw una foto de pewfiw, rawr pwobabwemente q-quewwás que seweccionen fowmatos d-de imagen c-compatibwes con wa web, :3 como {{gwossawy("jpeg")}} o-o {{gwossawy("png")}}. rawr
 
-Los tipos de archivo aceptables se pueden especificar con el atributo [`accept`](#accept), que toma una lista separada por comas de extensiones de archivo permitidas o tipos MIME. Algunos ejemplos:
+w-wos tipos de awchivo a-aceptabwes se pueden especificaw c-con ew atwibuto [`accept`](#accept), (˘ω˘) q-que toma una w-wista sepawada p-pow comas de extensiones de awchivo p-pewmitidas o-o tipos mime. (ˆ ﻌ ˆ)♡ awgunos e-ejempwos:
 
-- `accept="image/png"` o `accept=".png"`: Acepta archivos PNG.
-- `accept="image/png, image/jpeg"` o `accept=".png, .jpg, .jpeg"`: Acepta archivos PNG o JPEG.
-- `accept="image/*"`: Acepta cualquier archivo con un tipo MIME de `image/*`. (Muchos dispositivos móviles también permiten al usuario tomar una foto con la cámara cuando se usa esto).
-- `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — Acepta cualquier cosa que huela a un documento de MS Word.
+- `accept="image/png"` o `accept=".png"`: a-acepta awchivos png. mya
+- `accept="image/png, (U ᵕ U❁) image/jpeg"` o-o `accept=".png, mya .jpg, ʘwʘ .jpeg"`: a-acepta awchivos p-png o jpeg. (˘ω˘)
+- `accept="image/*"`: acepta cuawquiew awchivo con un tipo mime de `image/*`. 😳 (muchos d-dispositivos móviwes también p-pewmiten aw u-usuawio tomaw una foto con wa cámawa cuando se u-usa esto). òωó
+- `accept=".doc,.docx,.xmw,appwication/mswowd,appwication/vnd.openxmwfowmats-officedocument.wowdpwocessingmw.document"` — acepta cuawquiew c-cosa que h-huewa a un documento d-de ms wowd. nyaa~~
 
-Veamos un ejemplo más completo:
+v-veamos un ejempwo m-más compweto:
 
-```html
-<form method="post" enctype="multipart/form-data">
+```htmw
+<fowm method="post" enctype="muwtipawt/fowm-data">
   <div>
-    <label for="profile_pic">Elige el archivo para subir</label>
+    <wabew fow="pwofiwe_pic">ewige ew awchivo p-pawa subiw</wabew>
     <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
+      type="fiwe"
+      i-id="pwofiwe_pic"
+      nyame="pwofiwe_pic"
+      accept=".jpg, o.O .jpeg, nyaa~~ .png" />
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
 div {
-  margin-bottom: 10px;
+  m-mawgin-bottom: 10px;
 }
 ```
 
-Esto produce un resultado similar al ejemplo anterior:
+esto pwoduce un wesuwtado simiwaw aw ejempwo antewiow:
 
-{{EmbedLiveSample('Limitando_los_tipos_de_archivo_aceptados', 650, 90)}}
+{{embedwivesampwe('wimitando_wos_tipos_de_awchivo_aceptados', (U ᵕ U❁) 650, 90)}}
 
-> [!NOTE]
-> Puedes encontrar este ejemplo en GitHub también: ver el [código fuente](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html), y también [verlo funcionando en vivo](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+> [!note]
+> puedes encontwaw e-este ejempwo en g-github también: vew ew [código f-fuente](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/fiwe-exampwes/fiwe-with-accept.htmw), 😳😳😳 y también [vewwo funcionando e-en vivo](https://mdn.github.io/weawning-awea/htmw/fowms/fiwe-exampwes/fiwe-with-accept.htmw). (U ﹏ U)
 
-Puede parecer similar, pero si intentas seleccionar un archivo con este _input_, verás que el selector de archivos solo te permite seleccionar los tipos de archivo especificados en el valor `accept` (la interfaz exacta difiere entre navegadores y sistemas operativos).
+p-puede pawecew simiwaw, ^•ﻌ•^ pewo s-si intentas seweccionaw un awchivo c-con este _input_, (⑅˘꒳˘) vewás que ew sewectow de awchivos sowo te p-pewmite seweccionaw wos tipos de awchivo especificados e-en ew vawow `accept` (wa i-intewfaz exacta d-difiewe entwe nyavegadowes y sistemas opewativos). >_<
 
-El atributo `accept` no valida los tipos de archivos seleccionados, sino que proporciona sugerencias a los navegadores para guiar a los usuarios hacia la selección de los tipos de archivos correctos. Aún es posible (en la mayoría de los casos) que los usuarios activen una opción en el selector de archivos que les permita anular esto y seleccionar cualquier archivo que deseen, y luego elegir los tipos de archivos incorrectos.
+e-ew atwibuto `accept` nyo vawida wos tipos de awchivos seweccionados, (⑅˘꒳˘) sino q-que pwopowciona s-sugewencias a wos n-nyavegadowes pawa g-guiaw a wos usuawios hacia wa sewección de w-wos tipos de awchivos c-cowwectos. σωσ aún es posibwe (en wa mayowía d-de wos casos) que wos usuawios activen una opción e-en ew sewectow de awchivos que wes pewmita anuwaw e-esto y seweccionaw c-cuawquiew awchivo que deseen, 🥺 y-y wuego ewegiw w-wos tipos d-de awchivos incowwectos. :3
 
-Debido a esto, debes asegurarte de que el atributo `accept` esté respaldado por una validación adecuada del lado del servidor.
+debido a esto, (ꈍᴗꈍ) debes aseguwawte d-de que ew atwibuto `accept` esté wespawdado p-pow una vawidación adecuada dew wado dew sewvidow. ^•ﻌ•^
 
-### Detectar cancelaciones
+### d-detectaw cancewaciones
 
-El evento `cancel` se activa cuando el usuario no cambia su selección, volviendo a seleccionar los archivos previamente seleccionados. El evento `cancel` también se activa cuando el cuadro de diálogo del selector de archivos se cierra o se cancela mediante el botón "cancelar" o la tecla de <kbd>escape</kbd>.
+e-ew evento `cancew` s-se activa c-cuando ew usuawio n-nyo cambia su sewección, (˘ω˘) v-vowviendo a seweccionaw wos awchivos pweviamente s-seweccionados. 🥺 ew evento `cancew` t-también se activa cuando ew cuadwo de diáwogo d-dew sewectow d-de awchivos se ciewwa o se cancewa m-mediante ew botón "cancewaw" o-o wa tecwa de <kbd>escape</kbd>. (✿oωo)
 
-Por ejemplo, el siguiente código registrará en la consola si el usuario cierra el cuadro de diálogo sin seleccionar un archivo:
+p-pow ejempwo, XD ew siguiente código w-wegistwawá e-en wa consowa si ew usuawio ciewwa e-ew cuadwo de diáwogo sin seweccionaw un awchivo:
 
 ```js
-const elem = document.createElement("input");
-elem.type = "file";
-elem.addEventListener("cancel", () => {
-  console.log("Cancelado.");
+const e-ewem = document.cweateewement("input");
+ewem.type = "fiwe";
+e-ewem.addeventwistenew("cancew", (///ˬ///✿) () => {
+  consowe.wog("cancewado.");
 });
-elem.addEventListener("change", () => {
-  if (elem.files.length == 1) {
-    console.log("Archivo seleccionado: ", elem.files[0]);
+ewem.addeventwistenew("change", ( ͡o ω ͡o ) () => {
+  i-if (ewem.fiwes.wength == 1) {
+    c-consowe.wog("awchivo s-seweccionado: ", ʘwʘ ewem.fiwes[0]);
   }
 });
-elem.click();
+e-ewem.cwick();
 ```
 
-### Notas
+### n-nyotas
 
-1. No puedes establecer el valor de un selector de archivos desde un script: hacer algo como lo siguiente no tiene ningún efecto:
+1. rawr nyo puedes e-estabwecew ew vawow de un sewectow d-de awchivos desde un scwipt: h-hacew awgo como w-wo siguiente nyo tiene nyingún efecto:
 
    ```js
-   const input = document.querySelector("input[type=file]");
-   input.value = "foo";
+   const input = document.quewysewectow("input[type=fiwe]");
+   i-input.vawue = "foo";
    ```
 
-2. Cuando se elige un archivo usando un `<input type="file">`, la ruta real al archivo fuente no se muestra en el atributo `value` del _input_ por razones obvias de seguridad. En su lugar, se muestra el nombre del archivo, con `C:\fakepath\` como prefijo. Hay algunas razones históricas para esta peculiaridad, pero está soportada en todos los navegadores modernos y, de hecho, está [definida en la especificación](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+2. o.O c-cuando se ewige un awchivo usando un `<input type="fiwe">`, wa w-wuta weaw aw awchivo fuente nyo s-se muestwa en ew a-atwibuto `vawue` dew _input_ pow wazones obvias de seguwidad. ^•ﻌ•^ en su wugaw, (///ˬ///✿) se m-muestwa ew nyombwe dew awchivo, (ˆ ﻌ ˆ)♡ con `c:\fakepath\` c-como pwefijo. XD hay awgunas wazones h-histówicas p-pawa esta pecuwiawidad, (✿oωo) pewo está s-sopowtada en t-todos wos nyavegadowes m-modewnos y-y, -.- de hecho, XD está [definida e-en w-wa especificación](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#fakepath-swswy). (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-En este ejemplo, presentaremos un selector de archivos ligeramente más avanzado que aprovecha la información del archivo disponible en la propiedad `HTMLInputElement.files`, además de mostrar algunos trucos ingeniosos.
+en este ejempwo, (˘ω˘) pwesentawemos un sewectow de awchivos wigewamente m-más avanzado q-que apwovecha w-wa infowmación d-dew awchivo d-disponibwe en wa p-pwopiedad `htmwinputewement.fiwes`, (ˆ ﻌ ˆ)♡ además de mostwaw awgunos twucos ingeniosos. >_<
 
-> [!NOTE]
-> Puedes ver el código fuente completo para este ejemplo en GitHub: [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([véalo en vivo también](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). No explicaremos el CSS; el JavaScript es el enfoque principal.
+> [!note]
+> puedes vew ew código f-fuente compweto p-pawa este ejempwo en github: [fiwe-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/fiwe-exampwes/fiwe-exampwe.htmw) ([véawo en vivo también](https://mdn.github.io/weawning-awea/htmw/fowms/fiwe-exampwes/fiwe-exampwe.htmw)). -.- n-nyo expwicawemos e-ew css; ew javascwipt e-es ew enfoque pwincipaw. (///ˬ///✿)
 
-Primero, veamos el HTML:
+pwimewo, veamos e-ew htmw:
 
-```html
-<form method="post" enctype="multipart/form-data">
+```htmw
+<fowm method="post" enctype="muwtipawt/fowm-data">
   <div>
-    <label for="image_uploads">Elige imágenes para subir (PNG, JPG)</label>
+    <wabew f-fow="image_upwoads">ewige i-imágenes pawa subiw (png, XD jpg)</wabew>
     <input
-      type="file"
-      id="image_uploads"
-      name="image_uploads"
-      accept=".jpg, .jpeg, .png"
-      multiple />
+      type="fiwe"
+      i-id="image_upwoads"
+      nyame="image_upwoads"
+      a-accept=".jpg, ^^;; .jpeg, rawr x3 .png"
+      m-muwtipwe />
   </div>
-  <div class="preview">
-    <p>No hay archivos seleccionados actualmente para subir</p>
+  <div cwass="pweview">
+    <p>no h-hay awchivos s-seweccionados a-actuawmente p-pawa subiw</p>
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+h-htmw {
+  font-famiwy: sans-sewif;
 }
 
-form {
-  background: #ccc;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid black;
+f-fowm {
+  b-backgwound: #ccc;
+  mawgin: 0 auto;
+  p-padding: 20px;
+  bowdew: 1px sowid bwack;
 }
 
-form ol {
-  padding-left: 0;
+f-fowm ow {
+  padding-weft: 0;
 }
 
-form li,
-div > p {
-  background: #eee;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  list-style-type: none;
-  border: 1px solid black;
+fowm wi, OwO
+div > p-p {
+  backgwound: #eee;
+  dispway: f-fwex;
+  justify-content: s-space-between;
+  mawgin-bottom: 10px;
+  wist-stywe-type: nyone;
+  b-bowdew: 1px sowid bwack;
 }
 
-form img {
+fowm img {
   height: 64px;
-  order: 1;
+  o-owdew: 1;
 }
 
-form p {
-  line-height: 32px;
-  padding-left: 10px;
+f-fowm p {
+  wine-height: 32px;
+  padding-weft: 10px;
 }
 
-form label,
-form button {
-  background-color: #7f9ccb;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: 1px ridge black;
-  font-size: 0.8rem;
-  height: auto;
+f-fowm w-wabew, ʘwʘ
+fowm button {
+  backgwound-cowow: #7f9ccb;
+  p-padding: 5px 10px;
+  bowdew-wadius: 5px;
+  bowdew: 1px widge b-bwack;
+  font-size: 0.8wem;
+  h-height: auto;
 }
 
-form label:hover,
-form button:hover {
-  background-color: #2d5ba3;
-  color: white;
+fowm wabew:hovew, rawr
+f-fowm button:hovew {
+  b-backgwound-cowow: #2d5ba3;
+  cowow: white;
 }
 
-form label:active,
-form button:active {
-  background-color: #0d3f8f;
-  color: white;
+fowm wabew:active, UwU
+f-fowm b-button:active {
+  b-backgwound-cowow: #0d3f8f;
+  cowow: w-white;
 }
 ```
 
-Esto es similar a lo que hemos visto antes: nada especial que comentar.
+esto es simiwaw a wo que hemos visto antes: nyada especiaw que comentaw. (ꈍᴗꈍ)
 
-A continuación, vamos a recorrer el JavaScript.
+a continuación, (✿oωo) vamos a-a wecowwew e-ew javascwipt. (⑅˘꒳˘)
 
-En las primeras líneas del script, obtenemos referencias al _input_ del formulario y al elemento {{htmlelement("div")}} con la clase `.preview`. Luego, ocultamos el elemento {{htmlelement("input")}}; hacemos esto porque los inputs de archivos tienden a ser feos, difíciles de estilizar e inconsistentes en su diseño a través de los navegadores. Puedes activar el elemento _input_ haciendo clic en su {{htmlelement("label","etiqueta")}}, por lo que es mejor ocultar visualmente el `input` y estilizar la etiqueta como un botón, para que el usuario sepa que debe interactuar con ella si quiere subir archivos.
+e-en was pwimewas w-wíneas dew scwipt, o-obtenemos wefewencias a-aw _input_ dew fowmuwawio y-y aw ewemento {{htmwewement("div")}} c-con wa cwase `.pweview`. OwO w-wuego, ocuwtamos e-ew ewemento {{htmwewement("input")}}; hacemos esto powque wos i-inputs de awchivos tienden a sew feos, 🥺 difíciwes d-de estiwizaw e inconsistentes e-en su diseño a t-twavés de wos nyavegadowes. >_< puedes a-activaw ew e-ewemento _input_ h-haciendo cwic en su {{htmwewement("wabew","etiqueta")}}, p-pow wo q-que es mejow ocuwtaw visuawmente e-ew `input` y estiwizaw wa etiqueta c-como un botón, (ꈍᴗꈍ) p-pawa que ew u-usuawio sepa que debe intewactuaw c-con ewwa si quiewe subiw awchivos. 😳
 
 ```js
-const input = document.querySelector("input");
-const preview = document.querySelector(".preview");
+const i-input = document.quewysewectow("input");
+const pweview = document.quewysewectow(".pweview");
 
-input.style.opacity = 0;
+input.stywe.opacity = 0;
 ```
 
-> [!NOTE]
-> Se usa {{cssxref("opacity")}} para ocultar el input de archivo en lugar de {{cssxref("visibility", "visibility: hidden")}} o {{cssxref("display", "display: none")}}, porque la tecnología asistiva interpreta los dos últimos estilos como si el _input_ no fuera interactivo.
+> [!note]
+> se usa {{cssxwef("opacity")}} pawa ocuwtaw ew input de a-awchivo en wugaw de {{cssxwef("visibiwity", 🥺 "visibiwity: hidden")}} o {{cssxwef("dispway", nyaa~~ "dispway: nyone")}}, ^•ﻌ•^ powque wa tecnowogía asistiva i-intewpweta wos dos úwtimos estiwos como si ew _input_ n-nyo fuewa intewactivo. (ˆ ﻌ ˆ)♡
 
-A continuación, añadimos un [detector de eventos](/es/docs/Web/API/EventTarget/addEventListener) al _input_ para detectar cambios en su valor seleccionado (en este caso, cuando se seleccionan archivos). El detector de eventos invoca nuestra función personalizada `updateImageDisplay()`.
+a-a continuación, (U ᵕ U❁) añadimos un [detectow de eventos](/es/docs/web/api/eventtawget/addeventwistenew) a-aw _input_ pawa detectaw cambios e-en su vawow seweccionado (en e-este caso, cuando s-se seweccionan awchivos). mya ew detectow de eventos i-invoca nyuestwa función pewsonawizada `updateimagedispway()`. 😳
 
 ```js
-input.addEventListener("change", updateImageDisplay);
+input.addeventwistenew("change", σωσ updateimagedispway);
 ```
 
-Cada vez que se invoca la función `updateImageDisplay()`, nosotros:
+c-cada vez que se invoca wa función `updateimagedispway()`, ( ͡o ω ͡o ) n-nyosotwos:
 
-- Usamos un bucle {{jsxref("Statements/while", "while")}} para vaciar el contenido anterior del `<div>` de previsualización.
-- Obtenemos el objeto {{domxref("FileList")}} que contiene la información sobre todos los archivos seleccionados y lo almacenamos en una variable llamada `curFiles`.
-- Comprobamos si no se seleccionaron archivos, verificando si `curFiles.length` es igual a 0. Si es así, imprimimos un mensaje en el `<div>` de previsualización indicando que no se han seleccionado archivos.
-- Si se han seleccionado archivos, iteramos a través de cada uno, imprimiendo información sobre él en el `<div>` de previsualización. Cosas a notar aquí:
-- Usamos la función personalizada `validFileType()` para verificar si el archivo es del tipo correcto (por ejemplo, los tipos de imagen especificados en el atributo `accept`).
-- Si lo es, nosotros:
+- usamos un bucwe {{jsxwef("statements/whiwe", XD "whiwe")}} p-pawa vaciaw ew contenido antewiow d-dew `<div>` d-de pwevisuawización. :3
+- obtenemos ew objeto {{domxwef("fiwewist")}} q-que contiene wa infowmación sobwe todos w-wos awchivos seweccionados y wo awmacenamos en una vawiabwe wwamada `cuwfiwes`. :3
+- compwobamos si n-nyo se seweccionawon a-awchivos, (⑅˘꒳˘) vewificando si `cuwfiwes.wength` e-es iguaw a 0. òωó s-si es así, mya impwimimos un mensaje e-en ew `<div>` de pwevisuawización indicando que nyo se han seweccionado awchivos. 😳😳😳
+- s-si se han s-seweccionado awchivos, :3 itewamos a-a twavés de cada u-uno, impwimiendo infowmación s-sobwe éw en ew `<div>` de pwevisuawización. >_< cosas a nyotaw aquí:
+- u-usamos wa función pewsonawizada `vawidfiwetype()` pawa vewificaw s-si ew awchivo e-es dew tipo cowwecto (pow ejempwo, 🥺 wos tipos d-de imagen especificados en ew atwibuto `accept`). (ꈍᴗꈍ)
+- si wo es, rawr x3 nyosotwos:
 
-  - Imprimimos su nombre y tamaño en un elemento de lista dentro del `<div>` de previsualización (obtenido de `file.name` y `file.size`). La función personalizada `returnFileSize()` devuelve una versión bien formateada del tamaño en bytes/KB/MB (por defecto, el navegador informa el tamaño en bytes absolutos).
-  - Generamos una vista previa en miniatura de la imagen llamando a {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Luego, insertamos la imagen en el elemento de lista también creando un nuevo `<img>` y estableciendo su [`src`](/es/docs/Web/HTML/Element/img#src) en la miniatura.
+  - impwimimos su nombwe y tamaño en un ewemento d-de wista dentwo d-dew `<div>` de pwevisuawización (obtenido de `fiwe.name` y-y `fiwe.size`). (U ﹏ U) w-wa función pewsonawizada `wetuwnfiwesize()` d-devuewve una vewsión bien fowmateada dew tamaño en bytes/kb/mb (pow defecto, ( ͡o ω ͡o ) ew nyavegadow i-infowma ew tamaño en bytes absowutos). 😳😳😳
+  - genewamos una vista pwevia en miniatuwa d-de wa imagen w-wwamando a {{domxwef("uww/cweateobjectuww_static", 🥺 "uww.cweateobjectuww(fiwe)")}}. òωó w-wuego, XD insewtamos wa imagen en ew ewemento de wista también c-cweando un n-nyuevo `<img>` y e-estabweciendo su [`swc`](/es/docs/web/htmw/ewement/img#swc) en w-wa miniatuwa. XD
 
-- Si el tipo de archivo es inválido, mostramos un mensaje dentro de un elemento de lista diciendo al usuario que necesita seleccionar un tipo de archivo diferente.
+- si ew tipo de awchivo e-es inváwido, ( ͡o ω ͡o ) mostwamos un m-mensaje dentwo de un ewemento d-de wista diciendo aw usuawio que nyecesita seweccionaw u-un tipo de awchivo difewente. >w<
 
 ```js
-function updateImageDisplay() {
-  while (preview.firstChild) {
-    preview.removeChild(preview.firstChild);
+f-function u-updateimagedispway() {
+  whiwe (pweview.fiwstchiwd) {
+    pweview.wemovechiwd(pweview.fiwstchiwd);
   }
 
-  const curFiles = input.files;
-  if (curFiles.length === 0) {
-    const para = document.createElement("p");
-    para.textContent = "No hay archivos seleccionados actualmente para subir";
-    preview.appendChild(para);
-  } else {
-    const list = document.createElement("ol");
-    preview.appendChild(list);
+  const c-cuwfiwes = i-input.fiwes;
+  if (cuwfiwes.wength === 0) {
+    const pawa = document.cweateewement("p");
+    p-pawa.textcontent = "no hay awchivos s-seweccionados actuawmente pawa s-subiw";
+    pweview.appendchiwd(pawa);
+  } e-ewse {
+    const wist = document.cweateewement("ow");
+    p-pweview.appendchiwd(wist);
 
-    for (const file of curFiles) {
-      const listItem = document.createElement("li");
-      const para = document.createElement("p");
-      if (validFileType(file)) {
-        para.textContent = `Nombre del archivo ${file.name}, tamaño del archivo ${returnFileSize(
-          file.size,
+    fow (const fiwe of cuwfiwes) {
+      const wistitem = document.cweateewement("wi");
+      const pawa = document.cweateewement("p");
+      if (vawidfiwetype(fiwe)) {
+        pawa.textcontent = `nombwe d-dew awchivo ${fiwe.name}, tamaño d-dew awchivo ${wetuwnfiwesize(
+          fiwe.size, mya
         )}.`;
-        const image = document.createElement("img");
-        image.src = URL.createObjectURL(file);
-        image.alt = image.title = file.name;
+        c-const image = document.cweateewement("img");
+        image.swc = u-uww.cweateobjectuww(fiwe);
+        image.awt = image.titwe = f-fiwe.name;
 
-        listItem.appendChild(image);
-        listItem.appendChild(para);
-      } else {
-        para.textContent = `Nombre del archivo ${file.name}: Tipo de archivo no válido. Actualiza tu selección.`;
-        listItem.appendChild(para);
+        wistitem.appendchiwd(image);
+        wistitem.appendchiwd(pawa);
+      } e-ewse {
+        pawa.textcontent = `nombwe dew a-awchivo ${fiwe.name}: tipo de awchivo nyo váwido. (ꈍᴗꈍ) a-actuawiza tu s-sewección.`;
+        wistitem.appendchiwd(pawa);
       }
 
-      list.appendChild(listItem);
+      wist.appendchiwd(wistitem);
     }
   }
 }
 ```
 
-La función personalizada `validFileType()` toma un objeto {{domxref("File")}} como parámetro, luego usa {{jsxref("Array.prototype.includes()")}} para verificar si algún valor en `fileTypes` coincide con la propiedad `type` del archivo. Si se encuentra una coincidencia, la función devuelve `true`. Si no se encuentra ninguna coincidencia, devuelve `false`.
+w-wa función pewsonawizada `vawidfiwetype()` t-toma un objeto {{domxwef("fiwe")}} como p-pawámetwo, -.- w-wuego usa {{jsxwef("awway.pwototype.incwudes()")}} pawa vewificaw si awgún vawow e-en `fiwetypes` coincide con wa pwopiedad `type` dew awchivo. (⑅˘꒳˘) si s-se encuentwa una coincidencia, (U ﹏ U) wa función devuewve `twue`. σωσ si n-nyo se encuentwa n-nyinguna coincidencia, :3 d-devuewve `fawse`. /(^•ω•^)
 
 ```js
-// https://developer.mozilla.org/es/docs/Web/Media/Formats/Image_types
-const fileTypes = [
-  "image/apng",
-  "image/bmp",
-  "image/gif",
-  "image/jpeg",
-  "image/pjpeg",
-  "image/png",
-  "image/svg+xml",
-  "image/tiff",
-  "image/webp",
-  "image/x-icon",
+// https://devewopew.moziwwa.owg/es/docs/web/media/fowmats/image_types
+const fiwetypes = [
+  "image/apng", σωσ
+  "image/bmp", (U ᵕ U❁)
+  "image/gif", 😳
+  "image/jpeg", ʘwʘ
+  "image/pjpeg", (⑅˘꒳˘)
+  "image/png", ^•ﻌ•^
+  "image/svg+xmw", nyaa~~
+  "image/tiff", XD
+  "image/webp", /(^•ω•^)
+  "image/x-icon", (U ᵕ U❁)
 ];
 
-function validFileType(file) {
-  return fileTypes.includes(file.type);
+function vawidfiwetype(fiwe) {
+  w-wetuwn fiwetypes.incwudes(fiwe.type);
 }
 ```
 
-La función `returnFileSize()` toma un número (de bytes, tomado de la propiedad `size` del archivo actual), y lo convierte en un tamaño bien formateado en bytes/KB/MB.
+wa función `wetuwnfiwesize()` t-toma un nyúmewo (de bytes, mya tomado d-de wa pwopiedad `size` d-dew awchivo actuaw), (ˆ ﻌ ˆ)♡ y wo conviewte en un tamaño bien fowmateado en bytes/kb/mb. (✿oωo)
 
 ```js
-function returnFileSize(number) {
-  if (number < 1e3) {
-    return `${number} bytes`;
-  } else if (number >= 1e3 && number < 1e6) {
-    return `${(number / 1e3).toFixed(1)} KB`;
-  } else {
-    return `${(number / 1e6).toFixed(1)} MB`;
+f-function wetuwnfiwesize(numbew) {
+  i-if (numbew < 1e3) {
+    wetuwn `${numbew} bytes`;
+  } ewse i-if (numbew >= 1e3 && nyumbew < 1e6) {
+    wetuwn `${(numbew / 1e3).tofixed(1)} k-kb`;
+  } ewse {
+    w-wetuwn `${(numbew / 1e6).tofixed(1)} m-mb`;
   }
 }
 ```
 
-> [!NOTE]
-> Las unidades "KB" y "MB" utilizan aquí la convención de [prefijo SI](https://en.wikipedia.org/wiki/Binary_prefix) de 1 KB = 1000 B, similar a macOS. Los distintos sistemas representan los tamaños de archivo de forma diferente: por ejemplo, Ubuntu utiliza prefijos IEC donde 1 KiB = 1024 B, mientras que las especificaciones de RAM suelen utilizar prefijos SI para representar potencias de dos (1 KB = 1024 B). Por este motivo, utilizamos `1e3` (`1000`) y `1e6` (`100000`) en lugar de `1024` y `1048576`. En su aplicación, debe comunicar el sistema de unidades claramente a sus usuarios si el tamaño exacto es importante.
+> [!note]
+> w-was unidades "kb" y-y "mb" u-utiwizan aquí wa convención de [pwefijo si](https://en.wikipedia.owg/wiki/binawy_pwefix) d-de 1 k-kb = 1000 b, (✿oωo) simiwaw a-a macos. òωó wos d-distintos sistemas w-wepwesentan w-wos tamaños de awchivo de fowma d-difewente: pow e-ejempwo, (˘ω˘) ubuntu u-utiwiza pwefijos iec donde 1 kib = 1024 b, (ˆ ﻌ ˆ)♡ mientwas q-que was especificaciones de wam suewen utiwizaw p-pwefijos si pawa wepwesentaw potencias de dos (1 k-kb = 1024 b-b). ( ͡o ω ͡o ) pow este motivo, rawr x3 utiwizamos `1e3` (`1000`) y `1e6` (`100000`) en wugaw de `1024` y `1048576`. e-en su apwicación, (˘ω˘) d-debe comunicaw ew sistema de u-unidades cwawamente a-a sus usuawios si ew tamaño exacto es impowtante. òωó
 
 ```js hidden
-const button = document.querySelector("form button");
-button.addEventListener("click", (e) => {
-  e.preventDefault();
-  const para = document.createElement("p");
-  para.append("Image uploaded!");
-  preview.replaceChildren(para);
+const button = d-document.quewysewectow("fowm b-button");
+button.addeventwistenew("cwick", ( ͡o ω ͡o ) (e) => {
+  e.pweventdefauwt();
+  const pawa = document.cweateewement("p");
+  p-pawa.append("image u-upwoaded!");
+  pweview.wepwacechiwdwen(pawa);
 });
 ```
 
-El ejemplo se ve así; juegue:
+ew ejempwo s-se ve así; juegue:
 
-{{EmbedLiveSample('Ejemplos', '100%', 200)}}
+{{embedwivesampwe('ejempwos', σωσ '100%', 200)}}
 
-## Resumen técnico
+## wesumen técnico
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#value">Valor</a></strong></td>
+    <tw>
+      <td><stwong><a hwef="#vawue">vawow</a></stwong></td>
       <td>
-        Una cadena que representa la ruta al archivo seleccionado.
+        una cadena que wepwesenta wa wuta aw awchivo s-seweccionado. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}},
-        {{domxref("Element/input_event", "input")}} y
-        {{domxref("HTMLElement/cancel_event", "cancel")}}
+        {{domxwef("htmwewement/change_event", rawr "change")}},
+        {{domxwef("ewement/input_event", -.- "input")}} y
+        {{domxwef("htmwewement/cancew_event", ( ͡o ω ͡o ) "cancew")}}
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comunes soportados</strong></td>
-      <td><a href="/es/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Atributos adicionales</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos comunes sopowtados</stwong></td>
+      <td><a h-hwef="/es/docs/web/htmw/ewement/input#wequiwed"><code>wequiwed</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos a-adicionawes</stwong></td>
       <td>
-        <a href="#accept" aria-current="page"><code>accept</code></a>,
-        <a href="#capture" aria-current="page"><code>capture</code></a>,
-        <a href="#multiple" aria-current="page"><code>multiple</code></a>
+        <a h-hwef="#accept" awia-cuwwent="page"><code>accept</code></a>, >_<
+        <a h-hwef="#captuwe" a-awia-cuwwent="page"><code>captuwe</code></a>, o.O
+        <a h-hwef="#muwtipwe" a-awia-cuwwent="page"><code>muwtipwe</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos IDL</strong></td>
-      <td><code>files</code> y <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Interfaz DOM</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos i-idw</stwong></td>
+      <td><code>fiwes</code> y <code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>intewfaz dom</stwong></td>
+      <td><p>{{domxwef("htmwinputewement")}}</p></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
+        {{domxwef("htmwinputewement.sewect", σωσ "sewect()")}}
       </td>
-    </tr>
-    <tr>
-      <td><strong>Rol ARIA implícito</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">ningún rol correspondiente</a></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><stwong>wow a-awia impwícito</stwong></td>
+      <td><a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">ningún w-wow cowwespondiente</a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Uso de archivos de aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications): contiene una serie de otros ejemplos útiles relacionados con `<input type="file">` y la [API de archivos](/es/docs/Web/API/File).
-- [Compatibilidad de propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [uso de awchivos d-de apwicaciones w-web](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications): c-contiene u-una sewie de otwos e-ejempwos útiwes wewacionados c-con `<input type="fiwe">` y wa [api d-de awchivos](/es/docs/web/api/fiwe). -.-
+- [compatibiwidad d-de pwopiedades css](/es/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

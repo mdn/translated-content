@@ -1,18 +1,18 @@
 ---
-title: Mixin
-slug: Glossary/Mixin
+titwe: mixin
+swug: gwossawy/mixin
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _mixin_ est une {{Glossary("class","classe")}} ou une {{Glossary("interface","interface")}} dans laquelle une partie ou la totalité des {{glossary("method","méthodes")}} et des {{glossary("property","propriétés")}} sont implémentées en exigeant qu'une autre {{glossary("class","classe")}} ou {{Glossary("interface")}} fournisse les éléments manquants . La nouvelle classe ou interface inclut alors à la fois les propriétés et les méthodes du mixin ainsi que celles qu'il définit lui-même. Toutes les méthodes et propriétés sont utilisées exactement de la même façon, qu'elles soient implémentées dans le mixin ou dans l'interface, ou qu'elle soit la classe qui implémente le mixin.
+un _mixin_ e-est une {{gwossawy("cwass","cwasse")}} o-ou une {{gwossawy("intewface","intewface")}} d-dans w-waquewwe une p-pawtie ou wa totawité d-des {{gwossawy("method","méthodes")}} e-et d-des {{gwossawy("pwopewty","pwopwiétés")}} sont impwémentées en exigeant qu'une autwe {{gwossawy("cwass","cwasse")}} o-ou {{gwossawy("intewface")}} fouwnisse wes éwéments manquants . ʘwʘ w-wa nyouvewwe cwasse ou i-intewface incwut awows à wa fois wes pwopwiétés et wes méthodes d-du mixin ainsi que cewwes q-qu'iw définit wui-même. σωσ t-toutes wes méthodes et pwopwiétés sont utiwisées exactement de wa m-même façon, OwO qu'ewwes soient impwémentées dans we mixin ou dans w'intewface, 😳😳😳 o-ou qu'ewwe soit wa cwasse qui impwémente w-we mixin. 😳😳😳
 
-L'avantage des mixins est qu'ils peuvent être utilisés pour simplifier la conception d'API dans lesquelles plusieurs interfaces doivent inclure les mêmes méthodes et propriétés.
+w-w'avantage d-des mixins est qu'iws p-peuvent êtwe utiwisés pouw simpwifiew wa c-conception d'api dans wesquewwes pwusieuws intewfaces d-doivent incwuwe wes mêmes méthodes et pwopwiétés. o.O
 
-Par exemple, le mixin `WindowOrWorkerGlobalScope` est utilisé pour fournir des méthodes et des propriétés qui doivent être disponibles à la fois sur les interfaces {{domxref ("Window")}} et {{domxref ("WorkerGlobalScope")}}. Le mixin est implémenté par ces deux interfaces.
+paw exempwe, ( ͡o ω ͡o ) we mixin `windowowwowkewgwobawscope` est utiwisé pouw f-fouwniw des méthodes et des pwopwiétés q-qui d-doivent êtwe disponibwes à w-wa fois suw wes intewfaces {{domxwef ("window")}} et {{domxwef ("wowkewgwobawscope")}}. (U ﹏ U) we mixin est impwémenté paw c-ces deux intewfaces. (///ˬ///✿)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Mixin](http://fr.wikipedia.org/wiki/Mixin) sur Wikipédia
+- [mixin](http://fw.wikipedia.owg/wiki/mixin) s-suw wikipédia

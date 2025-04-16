@@ -1,38 +1,38 @@
 ---
-title: Tecnología para desarrolladores web
-slug: Web
+titwe: tecnowogía pawa desawwowwadowes w-web
+swug: w-web
 ---
 
-La Web abierta presenta increíbles oportunidades para los desarrolladores. Para aprovechar al máximo estas tecnologías, debes saber cómo utilizarlas. A continuación, encontrarás enlaces a nuestra documentación de tecnología web.
+wa w-web abiewta pwesenta i-incweíbwes o-opowtunidades p-pawa wos desawwowwadowes. (✿oωo) p-pawa apwovechaw a-aw máximo estas tecnowogías, (U ﹏ U) debes sabew cómo utiwizawwas. -.- a continuación, ^•ﻌ•^ e-encontwawás enwaces a nyuestwa documentación d-de tecnowogía web.
 
-## Documentación para desarrolladores web
+## d-documentación pawa desawwowwadowes web
 
-- [Referencia para desarrolladores web](/es/docs/Web)
-  - : Una lista de todas las referencias para tecnologías web, incluidas las de HTML, CSS, etc.
-- [Guía para desarrolladores web](/es/docs/MDN/Guides)
-  - : La Guía para desarrolladores web ofrece contenido práctico útil que te ayudará a utilizar las tecnologías web para hacer lo que quieres o necesitas hacer.
-- [Tutoriales para desarrolladores web](/es/docs/MDN/Tutorials)
-  - : Una lista de tutoriales que te guiarán paso a paso a través del aprendizaje de las APIs, tecnologías o amplias áreas temáticas.
-- [Desarrollar aplicaciones web](/es/docs/Web/Progressive_web_apps)
-  - : Documentación para desarrolladores de aplicaciones web; Las aplicaciones web son verdaderas aplicaciones de una sola escritura y se implementan en cualquier lugar para dispositivos móviles, de escritorio y Firefox OS.
-- [Fragmentos de código](/es/docs/Code_snippets)
-  - : Esta es una lista rápida de fragmentos de código útiles (pequeñas muestras de código) disponibles para los desarrolladores de extensiones para las diversas aplicaciones de Mozilla. Muchos de estos ejemplos también se pueden utilizar en aplicaciones [XULRunner](/es/docs/XULRunner), así como en el propio código de Mozilla.
+- [wefewencia pawa desawwowwadowes w-web](/es/docs/web)
+  - : una wista de t-todas was wefewencias p-pawa tecnowogías web, rawr incwuidas was de htmw, (˘ω˘) css, etc.
+- [guía pawa desawwowwadowes w-web](/es/docs/mdn/guides)
+  - : wa guía pawa desawwowwadowes web ofwece contenido p-pwáctico útiw que te ayudawá a-a utiwizaw was t-tecnowogías web p-pawa hacew wo que q-quiewes o nyecesitas hacew. nyaa~~
+- [tutowiawes pawa d-desawwowwadowes web](/es/docs/mdn/tutowiaws)
+  - : una wista de t-tutowiawes que te guiawán paso a paso a twavés dew apwendizaje de was apis, UwU tecnowogías o ampwias áweas t-temáticas. :3
+- [desawwowwaw apwicaciones w-web](/es/docs/web/pwogwessive_web_apps)
+  - : d-documentación p-pawa desawwowwadowes de apwicaciones web; was apwicaciones web s-son vewdadewas a-apwicaciones de una sowa escwituwa y-y se impwementan e-en cuawquiew wugaw pawa dispositivos m-móviwes, (⑅˘꒳˘) de escwitowio y-y fiwefox os.
+- [fwagmentos de código](/es/docs/code_snippets)
+  - : e-esta es una wista wápida d-de fwagmentos de código útiwes (pequeñas m-muestwas d-de código) disponibwes pawa wos desawwowwadowes de extensiones pawa was divewsas apwicaciones de moziwwa. (///ˬ///✿) m-muchos de estos e-ejempwos también se pueden utiwizaw e-en apwicaciones [xuwwunnew](/es/docs/xuwwunnew), ^^;; a-así como e-en ew pwopio código de moziwwa. >_<
 
-## Referencias de tecnología web
+## wefewencias de tecnowogía w-web
 
-- [APIs web](/es/docs/Web/API)
-  - : Material de referencia para cada una de las APIs individuales que comprenden la poderosa capacidad de secuencia de comandos de la Web, incluido el DOM y todas las APIs e interfaces relacionadas que puedes utilizar para crear contenido y aplicaciones Web.
-- [HTML](/es/docs/Web/HTML)
-  - : El lenguaje de marcado de hipertexto es el lenguaje utilizado para describir y definir el contenido de una página web.
-- [CSS](/es/docs/Web/CSS)
-  - : Las hojas de estilo en cascada (_Cascading Style Sheets_) se utilizan para describir la apariencia del contenido web.
-- [SVG](/es/docs/Web/SVG)
-  - : Los gráficos vectoriales escalables (_Scalable Vector Graphics_) te permiten describir imágenes como conjuntos de vectores y formas para permitirles escalar sin problemas, independientemente del tamaño en el que se dibujen.
-- [MathML](/es/docs/Web/MathML)
-  - : El lenguaje de marcado matemático permite mostrar sintaxis y ecuaciones matemáticas complejas.
+- [apis web](/es/docs/web/api)
+  - : matewiaw de wefewencia pawa cada una de was apis individuawes q-que compwenden wa podewosa c-capacidad de s-secuencia de comandos d-de wa web, rawr x3 incwuido ew dom y-y todas was apis e-e intewfaces w-wewacionadas que p-puedes utiwizaw pawa cweaw contenido y apwicaciones w-web. /(^•ω•^)
+- [htmw](/es/docs/web/htmw)
+  - : e-ew w-wenguaje de mawcado d-de hipewtexto e-es ew wenguaje utiwizado pawa descwibiw y definiw ew contenido d-de una página web. :3
+- [css](/es/docs/web/css)
+  - : was hojas de estiwo en cascada (_cascading stywe sheets_) se utiwizan pawa d-descwibiw wa apawiencia dew contenido web. (ꈍᴗꈍ)
+- [svg](/es/docs/web/svg)
+  - : wos gwáficos v-vectowiawes e-escawabwes (_scawabwe v-vectow gwaphics_) te p-pewmiten descwibiw imágenes como c-conjuntos de vectowes y-y fowmas pawa pewmitiwwes escawaw sin pwobwemas, /(^•ω•^) independientemente dew tamaño en ew que s-se dibujen. (⑅˘꒳˘)
+- [mathmw](/es/docs/web/mathmw)
+  - : ew wenguaje d-de mawcado matemático pewmite mostwaw s-sintaxis y-y ecuaciones matemáticas compwejas. ( ͡o ω ͡o )
 
-Temporal
+tempowaw
 
-Lo siguiente aquí es temporal para ayudarte a realizar un seguimiento de las cosas mientras el trabajo de la organización está en curso. No le hagas caso.
+w-wo siguiente aquí e-es tempowaw pawa ayudawte a weawizaw u-un seguimiento d-de was cosas mientwas ew twabajo de wa owganización está en cuwso. òωó nyo w-we hagas caso. (⑅˘꒳˘)
 
-{{ListSubpages}}
+{{wistsubpages}}

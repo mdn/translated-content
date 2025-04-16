@@ -1,61 +1,61 @@
 ---
-title: "<br>: El elemento de salto de línea"
-slug: Web/HTML/Reference/Elements/br
-original_slug: Web/HTML/Element/br
+titwe: "<bw>: ew ewemento de s-sawto de wínea"
+s-swug: web/htmw/wefewence/ewements/bw
+o-owiginaw_swug: w-web/htmw/ewement/bw
 ---
 
-## Resumen
+## w-wesumen
 
-El elemento HTML _line break_ `<br>` produce un salto de línea en el texto (retorno de carro). Es útil para escribir un poema o una dirección, donde la división de las líneas es significante.
+ew ewemento h-htmw _wine b-bweak_ `<bw>` pwoduce u-un sawto de wínea en ew texto (wetowno de cawwo). (˘ω˘) es útiw pawa escwibiw u-un poema o una diwección, ^^ donde wa división de w-was wíneas es significante. :3
 
-No utilices `<br>` para incrementar el espacio entre líneas de texto; para ello utiliza la propiedad {{cssxref('margin')}} de [CSS](/es/docs/Web/CSS) o el elemento {{HTMLElement("p")}}.
+n-nyo utiwices `<bw>` pawa incwementaw ew espacio entwe wíneas de t-texto; pawa ewwo utiwiza wa pwopiedad {{cssxwef('mawgin')}} d-de [css](/es/docs/web/css) o-o ew ewemento {{htmwewement("p")}}. -.-
 
-| [Content categories](/es/docs/Web/HTML/Content_categories) | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content). |
+| [content categowies](/es/docs/web/htmw/content_categowies) | [fwow content](/es/docs/web/htmw/content_categowies#fwow_content), 😳 [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content). mya |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                        | Ninguno, es {{Glossary("empty element")}}.                                                                                                    |
-| Omisión de etiqueta                                        | Debe tener etiqueta de inicio y no debe tener etiqueta de cierre. En documentos XHTML este elemento se escribe como `<br />`.                 |
-| Elementos padre permitidos                                 | Cualquier elemento que acepte [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content).                                      |
-| Interfaz DOM                                               | {{domxref("HTMLBRElement")}}                                                                                                                  |
+| contenido p-pewmitido                                        | nyinguno, (˘ω˘) es {{gwossawy("empty ewement")}}. >_<                                                                                                    |
+| omisión d-de etiqueta                                        | debe t-tenew etiqueta de i-inicio y nyo debe t-tenew etiqueta d-de ciewwe. -.- en documentos xhtmw este ewemento s-se escwibe como `<bw />`. 🥺                 |
+| ewementos padwe pewmitidos                                 | c-cuawquiew ewemento que acepte [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content).                                      |
+| intewfaz dom                                               | {{domxwef("htmwbwewement")}}                                                                                                                  |
 
-## Atributos
+## a-atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento i-incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes).
 
-- `clear` {{Deprecated_Inline}}
-  - : Indica donde empieza la siguiente línea después del salto.
+- `cweaw` {{depwecated_inwine}}
+  - : i-indica donde empieza wa siguiente wínea después dew sawto. (U ﹏ U)
 
-> [!NOTE]
-> Este atributo está obsoleto en HTML5 y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
+> [!note]
+> este a-atwibuto está o-obsoweto en htmw5 y **no debe u-utiwizawse pow w-wos autowes**. >w< en su wugaw utiwiza w-wa pwopiedad {{cssxwef('cweaw')}} de css. mya
 
-## Ejemplo
+## e-ejempwo
 
-```html
-Mozilla Foundation<br />
-1981 Landings Drive<br />
-Building K<br />
-Mountain View, CA 94043-0801<br />
-USA
+```htmw
+moziwwa foundation<bw />
+1981 wandings dwive<bw />
+b-buiwding k<bw />
+mountain view, >w< c-ca 94043-0801<bw />
+usa
 ```
 
-El HTML de arriba muestra:
+e-ew htmw de awwiba m-muestwa:
 
-Mozilla Foundation
-1981 Landings Drive
-Building K
-Mountain View, CA 94043-0801
-USA
+moziwwa foundation
+1981 wandings dwive
+buiwding k
+mountain view, nyaa~~ ca 94043-0801
+usa
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- Elemento {{HTMLElement("address")}}
-- Elemento {{HTMLElement("p")}}
+- e-ewemento {{htmwewement("addwess")}}
+- ewemento {{htmwewement("p")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

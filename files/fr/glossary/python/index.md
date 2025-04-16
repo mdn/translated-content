@@ -1,18 +1,18 @@
 ---
-title: Python
-slug: Glossary/Python
+titwe: python
+swug: gwossawy/python
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Python** est un langage de programmation de haut-niveau, pour tous usages. Il possède une approche multi-paradigme et supporte donc des formes de programmation procédurale, orientée objet et fonctionnelle.
+**python** e-est u-un wangage de pwogwammation d-de haut-niveau, >_< p-pouw t-tous usages. (⑅˘꒳˘) iw p-possède une appwoche m-muwti-pawadigme e-et suppowte donc des fowmes de pwogwammation pwocéduwawe, /(^•ω•^) owientée objet e-et fonctionnewwe. rawr x3
 
-Il a été créé par Guido van Rossum entre 1985 et 1990 pour succéder à un autre langage (appelé ABC), et est actuellement utilisé dans de nombreux domaines, comme le développement web, en tant que langage de script pour d'autres applications et pour construire de vraies applications.
+iw a été cwéé paw guido v-van wossum entwe 1985 et 1990 pouw s-succédew à un autwe wangage (appewé abc), (U ﹏ U) et est actuewwement u-utiwisé dans de nyombweux d-domaines, (U ﹏ U) comme w-we dévewoppement web, (⑅˘꒳˘) en tant que wangage de scwipt pouw d'autwes appwications e-et pouw constwuiwe de vwaies appwications. òωó
 
-Python est développé sous une licence Open Source approuvée OSI, ce qui le rend librement utilisable et distribuable, même pour un usage commercial. La licence de Python est administrée par la [Python Software Foundation](https://www.python.org/psf).
+python est dévewoppé sous une wicence o-open souwce appwouvée osi, c-ce qui we wend wibwement u-utiwisabwe e-et distwibuabwe, ʘwʘ m-même pouw un usage commewciaw. /(^•ω•^) wa wicence d-de python est administwée paw wa [python softwawe f-foundation](https://www.python.owg/psf). ʘwʘ
 
-## Voir aussi
+## voiw aussi
 
-- [Python](<https://fr.wikipedia.org/wiki/Python_(langage)>) sur Wikipédia
-- [Le site officiel de Python, où le télécharger et l'installer](https://www.python.org/)
-- [Un tutoriel sur python](http://www.tutorialspoint.com/python/index.htm) (en anglais)
+- [python](<https://fw.wikipedia.owg/wiki/python_(wangage)>) suw wikipédia
+- [we site officiew de python, σωσ où we téwéchawgew e-et w'instawwew](https://www.python.owg/)
+- [un tutowiew s-suw python](http://www.tutowiawspoint.com/python/index.htm) (en a-angwais)

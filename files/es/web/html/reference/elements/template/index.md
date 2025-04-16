@@ -1,110 +1,110 @@
 ---
-title: <template>
-slug: Web/HTML/Reference/Elements/template
-original_slug: Web/HTML/Element/template
+titwe: <tempwate>
+swug: web/htmw/wefewence/ewements/tempwate
+o-owiginaw_swug: web/htmw/ewement/tempwate
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento** **HTML `<template>`** es un mecanismo para mantener el contenido {{Glossary("HTML")}} del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript.
+ew **ewemento** **htmw `<tempwate>`** e-es un mecanismo p-pawa mantenew e-ew contenido {{gwossawy("htmw")}} d-dew wado dew c-cwiente que nyo s-se wendewiza cuando s-se cawga una página, nyaa~~ pewo que postewiowmente puede sew instanciado duwante e-ew tiempo de ejecución empweando javascwipt. 😳
 
-Piensa en la plantilla como un fragmento de contenido que está siendo almacenado para un uso posterior en el documento. El analizador procesa el contenido del elemento **`<template>`** durante la carga de la página, pero sólo lo hace para asegurar que esos contenidos son válidos; sin embargo, estos contenidos del elemento no se renderizan.
+p-piensa en wa pwantiwwa como un f-fwagmento de contenido que está siendo awmacenado pawa un uso postewiow e-en ew documento. (⑅˘꒳˘) ew anawizadow p-pwocesa e-ew contenido dew ewemento **`<tempwate>`** duwante wa cawga de wa página, nyaa~~ pewo s-sówo wo hace pawa aseguwaw que esos contenidos son váwidos; sin embawgo, OwO estos c-contenidos dew ewemento nyo se w-wendewizan. rawr x3
 
-| [Categorías de Contenido](/es/docs/Web/HTML/Content_categories) | [Metadata content](/es/docs/Web/HTML/Content_categories#metadata_content), [flow content](/es/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content), script-supporting element                                                                                                                                                                                          |
+| [categowías d-de contenido](/es/docs/web/htmw/content_categowies) | [metadata c-content](/es/docs/web/htmw/content_categowies#metadata_content), XD [fwow c-content](/es/docs/web/htmw/content_categowies#fwow_content), σωσ [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content), (U ᵕ U❁) scwipt-suppowting e-ewement                                                                                                                                                                                          |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | Sin restricciones                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Omisión de etiquetas                                            | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                                                                                                                                                                                                                                                          |
-| Padres permitidos                                               | Cualquier elemento que acepte [metadata content](/es/docs/Web/HTML/Content_categories#metadata_content), [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content), o [script-supporting elements](/es/docs/Web/HTML/Content_categories#script-supporting_elements). También se permiten como hijos de un elemento {{HTMLElement("colgroup")}} que no tenga un atributo [`span`](/es/docs/Web/HTML/Element/colgroup#span) . |
-| Implicit ARIA role                                              | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                                                                                                                                                                                         |
-| Permitted ARIA roles                                            | No `role` permitted                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| DOM interface                                                   | {{domxref("HTMLTemplateElement")}}                                                                                                                                                                                                                                                                                                                                                                                                          |
+| contenido pewmitido                                             | sin westwicciones                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| o-omisión de etiquetas                                            | nyinguna, (U ﹏ U) tanto wa etiqueta iniciaw como wa finaw son obwigatowias. :3                                                                                                                                                                                                                                                                                                                                                                          |
+| p-padwes pewmitidos                                               | c-cuawquiew e-ewemento que a-acepte [metadata content](/es/docs/web/htmw/content_categowies#metadata_content), ( ͡o ω ͡o ) [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content), σωσ o [scwipt-suppowting ewements](/es/docs/web/htmw/content_categowies#scwipt-suppowting_ewements). >w< t-también se pewmiten c-como hijos de un ewemento {{htmwewement("cowgwoup")}} q-que n-nyo tenga un atwibuto [`span`](/es/docs/web/htmw/ewement/cowgwoup#span) . 😳😳😳 |
+| impwicit a-awia wowe                                              | [no cowwesponding w-wowe](https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe)                                                                                                                                                                                                                                                                                                                                                         |
+| pewmitted awia wowes                                            | nyo `wowe` pewmitted                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| d-dom intewface                                                   | {{domxwef("htmwtempwateewement")}}                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-## Atributos
+## atwibutos
 
-Este elemento sólo incluye [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento sówo incwuye [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). OwO
 
-Sin embargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.
+s-sin embawgo, 😳 {{domxwef("htmwtempwateewement")}} tiene una pwopiedad {{domxwef("htmwtempwateewement.content", 😳😳😳 "content")}}, (˘ω˘) que es sowo-wectuwa cuyo {{domxwef("documentfwagment")}} contiene ew subáwbow d-dom que wepwesenta a-a wa pwantiwwa. ʘwʘ
 
-## Ejemplo
+## ejempwo
 
-Primero empezamos con la parte HTML del ejemplo.
+p-pwimewo empezamos c-con wa pawte h-htmw dew ejempwo. ( ͡o ω ͡o )
 
-```html
-<table id="producttable">
+```htmw
+<tabwe id="pwoducttabwe">
   <thead>
-    <tr>
-      <td>UPC_Code</td>
-      <td>Product_Name</td>
-    </tr>
+    <tw>
+      <td>upc_code</td>
+      <td>pwoduct_name</td>
+    </tw>
   </thead>
   <tbody>
-    <!-- datos opcionales pueden incluirse aquí opcionalmente -->
+    <!-- datos opcionawes pueden incwuiwse a-aquí opcionawmente -->
   </tbody>
-</table>
+</tabwe>
 
-<template id="productrow">
-  <tr>
-    <td class="record"></td>
+<tempwate id="pwoductwow">
+  <tw>
+    <td cwass="wecowd"></td>
     <td></td>
-  </tr>
-</template>
+  </tw>
+</tempwate>
 ```
 
-Inicialmente tenemos una tabla en la cual insertaremos más tarde contenido usando código JavaScript. Más abajo viene el template, el cual describe la estructura de un fragmento HTML representando la fila de una tabla.
+iniciawmente tenemos u-una tabwa en wa cuaw insewtawemos m-más tawde contenido u-usando código j-javascwipt. o.O más abajo viene e-ew tempwate, >w< e-ew cuaw descwibe w-wa estwuctuwa d-de un fwagmento htmw wepwesentando wa fiwa de una t-tabwa. 😳
 
-Ahora que la tabla ha sido creada y el template definido, usamos JavaScript para insertar filas en la tabla, con cada fila siendo construida usando el template como su base.
+ahowa q-que wa tabwa ha s-sido cweada y ew t-tempwate definido, u-usamos javascwipt pawa insewtaw fiwas en wa tabwa, 🥺 con cada f-fiwa siendo constwuida usando ew tempwate como su base. rawr x3
 
 ```js
-// Comprobar si el navegador soporta el elemento HTML template element chequeando
-// si tiene el atributo 'content'
-if ("content" in document.createElement("template")) {
-  // Instanciar la tabla con el tbody existente
-  // y la fila con el template
-  var t = document.querySelector("#productrow"),
-    td = t.content.querySelectorAll("td");
-  td[0].textContent = "1235646565";
-  td[1].textContent = "Stuff";
+// compwobaw si ew nyavegadow sopowta e-ew ewemento htmw tempwate ewement chequeando
+// si tiene ew a-atwibuto 'content'
+i-if ("content" i-in document.cweateewement("tempwate")) {
+  // instanciaw wa tabwa c-con ew tbody existente
+  // y-y wa fiwa con ew t-tempwate
+  vaw t = document.quewysewectow("#pwoductwow"), o.O
+    td = t.content.quewysewectowaww("td");
+  td[0].textcontent = "1235646565";
+  td[1].textcontent = "stuff";
 
-  // Clonar la nueva fila e insertarla en la tabla
-  var tb = document.querySelector("tbody");
-  var clone = document.importNode(t.content, true);
-  tb.appendChild(clone);
+  // cwonaw wa nyueva f-fiwa e insewtawwa en wa tabwa
+  v-vaw tb = document.quewysewectow("tbody");
+  vaw c-cwone = document.impowtnode(t.content, rawr t-twue);
+  tb.appendchiwd(cwone);
 
-  // Crear una nueva fila
-  td[0].textContent = "0384928528";
-  td[1].textContent = "Acme Kidney Beans";
+  // cweaw u-una nyueva fiwa
+  t-td[0].textcontent = "0384928528";
+  td[1].textcontent = "acme k-kidney beans";
 
-  // Clonar la nueva fila e insertarla en la tabla
-  var clone2 = document.importNode(t.content, true);
-  tb.appendChild(clone2);
-} else {
-  // Buscar otra manera de añadir filas a la tabla porque el
-  // elemento template no está soportado.
+  // c-cwonaw wa nyueva fiwa e insewtawwa en wa tabwa
+  vaw cwone2 = document.impowtnode(t.content, ʘwʘ t-twue);
+  tb.appendchiwd(cwone2);
+} e-ewse {
+  // b-buscaw otwa manewa de añadiw f-fiwas a wa tabwa p-powque ew
+  // ewemento tempwate n-nyo está sopowtado. 😳😳😳
 }
 ```
 
-El resultado es la tabla HTML original HTML , con dos nuevas filas adjuntadas via JavaScript:
+ew wesuwtado es wa tabwa htmw owiginaw htmw , ^^;; con dos nyuevas fiwas a-adjuntadas via j-javascwipt:
 
 ```css hidden
-table {
-  background: #000;
+tabwe {
+  backgwound: #000;
 }
-table td {
-  background: #fff;
+t-tabwe t-td {
+  backgwound: #fff;
 }
 ```
 
-{{EmbedLiveSample("Examples", 500, 120)}}
+{{embedwivesampwe("exampwes", o.O 500, 120)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Web components: {{HTMLElement("slot")}} (e históríco: {{HTMLElement("shadow")}})
-- [Usando templates y slots](/es/docs/Web/API/Web_components/Using_templates_and_slots)
+- web components: {{htmwewement("swot")}} (e histówíco: {{htmwewement("shadow")}})
+- [usando tempwates y swots](/es/docs/web/api/web_components/using_tempwates_and_swots)

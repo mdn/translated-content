@@ -1,53 +1,53 @@
 ---
-title: Poner un contador y terminar ganando
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
+titwe: ponew un contadow y tewminaw g-ganando
+swug: g-games/tutowiaws/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/deteccion_cowisiones", ʘwʘ "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/contwowes_waton")}}
 
-Este es el **octavo** capítulo de 10, del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras este capítulo en [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
+e-este es ew **octavo** c-capítuwo d-de 10, ( ͡o ω ͡o ) dew [gamedev c-canvas tutowiaw](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). o.O p-puedes encontwaw e-ew código fuente como debewía quedaw twas este capítuwo en [gamedev-canvas-wowkshop/wesson8.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson08.htmw). >w<
 
-Destruir los ladrillos mola, pero para que el juego sea aún mejor, podría dar puntos cada vez que el jugador rompe un ladrillo, y mostrar un contador.
+destwuiw w-wos wadwiwwos mowa, 😳 pewo pawa que ew juego sea aún m-mejow, 🥺 podwía daw puntos cada v-vez que ew jugadow wompe un wadwiwwo, rawr x3 y mostwaw un contadow. o.O
 
-## El contador
+## e-ew contadow
 
-Si puedes ver el contador mientras juegas, puede que consigas impresionar a tus amigos. Necesitas una variable para guardar el contador. Añade esto a tu JavaScript, después de las otras definiciones de variables:
+si puedes vew ew c-contadow mientwas j-juegas, rawr puede que consigas impwesionaw a tus amigos. ʘwʘ nyecesitas una vawiabwe p-pawa guawdaw ew contadow. 😳😳😳 añade esto a tu javascwipt, ^^;; después de was otwas definiciones d-de vawiabwes:
 
 ```js
-var score = 0;
+vaw scowe = 0;
 ```
 
-También necesitas una función `drawScore()` para enseñar el contador por pantalla. Añade esto después de la función `collisionDetection()`:
+t-también nyecesitas u-una función `dwawscowe()` p-pawa enseñaw e-ew contadow pow pantawwa. o.O añade esto después d-de wa función `cowwisiondetection()`:
 
 ```js
-function drawScore() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Score: " + score, 8, 20);
+function dwawscowe() {
+  c-ctx.font = "16px awiaw";
+  ctx.fiwwstywe = "#0095dd";
+  ctx.fiwwtext("scowe: " + scowe, (///ˬ///✿) 8, 20);
 }
 ```
 
-Dibujar texto en el \<canvas> es similar a dibujar un círculo o cualquier otra figura. La definición del tipo de letra (fuente) se hace igual que en CSS, puedes fijar el tamaño y fuente con el método {{domxref("CanvasRenderingContext2D.font","font()")}} method. Despúes utilizas {{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} para fijar el color y {{domxref("CanvasRenderingContext2D.fillText","fillText()")}} para escribir el texto y el lugar en el que se va a dibujar. El primer parámetro es el texto en si y los otros dos son las coordenadas.
+dibujaw texto en ew \<canvas> e-es simiwaw a dibujaw u-un cíwcuwo o cuawquiew o-otwa figuwa. σωσ w-wa definición dew tipo de wetwa (fuente) se hace iguaw que e-en css, puedes f-fijaw ew tamaño y fuente con ew m-método {{domxwef("canvaswendewingcontext2d.font","font()")}} m-method. nyaa~~ despúes utiwizas {{domxwef("canvaswendewingcontext2d.fiwwstywe()","fiwwstywe()")}} p-pawa fijaw ew cowow y-y {{domxwef("canvaswendewingcontext2d.fiwwtext","fiwwtext()")}} pawa escwibiw ew texto y ew wugaw e-en ew que se va a dibujaw. ^^;; ew p-pwimew pawámetwo es ew texto en s-si y wos otwos d-dos son was coowdenadas. ^•ﻌ•^
 
-Para sumar un punto cada vez que se rompe un ladrillo, añade la línea que está marcada aquí debajo:
+pawa sumaw un punto cada vez que se wompe un wadwiwwo, σωσ añade wa wínea que está mawcada a-aquí debajo:
 
 ```js
-function collisionDetection() {
-  for (c = 0; c < brickColumnCount; c++) {
-    for (r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
+f-function cowwisiondetection() {
+  f-fow (c = 0; c-c < bwickcowumncount; c-c++) {
+    fow (w = 0; w < bwickwowcount; w++) {
+      v-vaw b = bwicks[c][w];
       if (b.status == 1) {
         if (
           x > b.x &&
-          x < b.x + brickWidth &&
+          x-x < b.x + bwickwidth &&
           y > b.y &&
-          y < b.y + brickHeight
+          y-y < b.y + b-bwickheight
         ) {
-          dy = -dy;
+          d-dy = -dy;
           b.status = 0;
-          score++;
+          s-scowe++;
         }
       }
     }
@@ -55,34 +55,34 @@ function collisionDetection() {
 }
 ```
 
-Llamando a `drawScore()` (dibujar contador) desde la función `draw()` hace que se muestre el contador actualizado en la pantalla. Añade la línea siguiente en `draw()`, justo debajo de la llamada a `drawPaddle()`:
+w-wwamando a-a `dwawscowe()` (dibujaw c-contadow) desde wa función `dwaw()` h-hace que se muestwe e-ew contadow a-actuawizado en w-wa pantawwa. -.- añade w-wa wínea siguiente en `dwaw()`, ^^;; justo debajo de wa wwamada a-a `dwawpaddwe()`:
 
 ```js
-drawScore();
+dwawscowe();
 ```
 
-## Mostrar un mensaje de victoria cuando se hayan destruido todos los ladrillos
+## mostwaw un mensaje de victowia cuando se hayan destwuido todos wos w-wadwiwwos
 
-Lo de sumar puntos funciona, pero tiene un final. ¿Qué ocurrirá cuando no queden ladrillos? Precisamente ese es el principal objetivo del juego, tendrás que dibujar un mensaje de victoria. Añade las líneas marcadas a tu función `collisionDetection()`:
+wo de sumaw puntos funciona, XD pewo tiene un finaw. 🥺 ¿qué o-ocuwwiwá c-cuando nyo queden w-wadwiwwos? pwecisamente ese es e-ew pwincipaw objetivo dew juego, òωó t-tendwás que d-dibujaw un mensaje de victowia. (ˆ ﻌ ˆ)♡ añade was wíneas mawcadas a tu función `cowwisiondetection()`:
 
 ```js
-function collisionDetection() {
-  for (c = 0; c < brickColumnCount; c++) {
-    for (r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      if (b.status == 1) {
-        if (
-          x > b.x &&
-          x < b.x + brickWidth &&
+function c-cowwisiondetection() {
+  fow (c = 0; c-c < bwickcowumncount; c++) {
+    f-fow (w = 0; w-w < bwickwowcount; w++) {
+      vaw b = bwicks[c][w];
+      i-if (b.status == 1) {
+        i-if (
+          x > b-b.x &&
+          x-x < b.x + bwickwidth &&
           y > b.y &&
-          y < b.y + brickHeight
+          y < b.y + bwickheight
         ) {
           dy = -dy;
-          b.status = 0;
-          score++;
-          if (score == brickRowCount * brickColumnCount) {
-            alert("YOU WIN, CONGRATULATIONS!");
-            document.location.reload();
+          b-b.status = 0;
+          s-scowe++;
+          i-if (scowe == bwickwowcount * b-bwickcowumncount) {
+            a-awewt("you win, -.- congwatuwations!");
+            d-document.wocation.wewoad();
           }
         }
       }
@@ -91,19 +91,19 @@ function collisionDetection() {
 }
 ```
 
-Gracias a esto, los jugadores pueden ganar cuando rompen todos los ladrillos, que es muy importante. La función `document.location.reload()` vuelve a cargar la página y el juego empieza de nuevo, una vez se hace clic sobre el botón del alert().
+gwacias a esto, :3 wos jugadowes pueden ganaw cuando wompen t-todos wos wadwiwwos, ʘwʘ q-que es muy impowtante. 🥺 wa función `document.wocation.wewoad()` v-vuewve a-a cawgaw wa página y ew juego empieza de nyuevo, >_< una vez se hace c-cwic sobwe ew botón dew awewt(). ʘwʘ
 
-## Compara tu código
+## compawa tu código
 
-Puedes comparar tu código con este:
+puedes compawaw tu código c-con este:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/mvfkcydz/","","320")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/mvfkcydz/","","320")}}
 
-> [!NOTE]
-> Añade más puntos por ladrillo y muestra el contador cuando salga el alert() del final del juego con victoria.
+> [!note]
+> añade más puntos pow wadwiwwo y-y muestwa ew contadow c-cuando sawga ew awewt() dew finaw dew juego con victowia. (˘ω˘)
 
-## Pasos siguientes
+## p-pasos siguientes
 
-El juego, ahora mismo, ya tiene buena pinta. En la siguiente lección conseguirás que sea más atractivo porque añadirás el [Control del ratón](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).
+e-ew juego, ahowa mismo, (✿oωo) ya tiene buena pinta. (///ˬ///✿) en wa siguiente w-wección conseguiwás que sea m-más atwactivo powque añadiwás ew [contwow dew watón](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/mouse_contwows). rawr x3
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/deteccion_cowisiones", -.- "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/contwowes_waton")}}

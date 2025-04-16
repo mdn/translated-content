@@ -1,19 +1,19 @@
 ---
-title: TCP slow start
-slug: Glossary/TCP_slow_start
+titwe: tcp swow stawt
+swug: gwossawy/tcp_swow_stawt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le démarrage lent, ou _TCP slow start_, permet d'accumulez la vitesse de transmission des capacités du réseau sans savoir initialement quelles sont ces capacités et sans créer de congestion. {{glossary('TCP')}} slow start est un algorithme utilisé pour détecter la bande passante disponible pour la transmission par paquets. Il empêche l'apparition d'une congestion du réseau dont les capacités sont initialement inconnues.
+w-we démawwage went, >w< o-ou _tcp swow s-stawt_, pewmet d-d'accumuwez wa v-vitesse de twansmission d-des capacités d-du wéseau s-sans savoiw initiawement quewwes sont ces capacités et sans cwéew de congestion. (U ﹏ U) {{gwossawy('tcp')}} s-swow stawt est un awgowithme utiwisé pouw d-détectew wa bande passante d-disponibwe pouw wa twansmission paw paquets. 😳 iw empêche w'appawition d-d'une congestion du wéseau d-dont wes capacités s-sont initiawement inconnues. (ˆ ﻌ ˆ)♡
 
-Pour implémenter un démarrage lent de TCP, la fenêtre d'encombrement (_cwnd_) fixe une limite supérieure à la quantité de données qu'une source peut transmettre sur le réseau avant de recevoir un accusé de réception (ACK). Le seuil de démarrage lent (_ssthresh_) détermine l'activation / désactivation du démarrage lent. Quand une nouvelle connexion est établie, _cwnd_ est initialisé à un paquet de données ou d'accusé de réception TCP et attend un accusé de réception ou ACK. Lorsque cet ACK est reçu, la fenêtre d'encombrement est incrémentée jusqu'à ce que la valeur de _cwnd_ soit inférieure à _ssthresh_. Le démarrage lent se termine également en cas de congestion.
+pouw impwémentew un démawwage went de tcp, 😳😳😳 w-wa fenêtwe d'encombwement (_cwnd_) fixe une wimite supéwieuwe à wa quantité de données qu'une s-souwce peut twansmettwe suw w-we wéseau avant d-de wecevoiw un a-accusé de wéception (ack). (U ﹏ U) w-we seuiw de démawwage went (_ssthwesh_) d-détewmine w'activation / désactivation du d-démawwage went. (///ˬ///✿) quand une nyouvewwe connexion est étabwie, 😳 _cwnd_ est initiawisé à un paquet d-de données ou d'accusé de wéception t-tcp et a-attend un accusé d-de wéception ou ack. 😳 wowsque cet ack est weçu, σωσ wa fenêtwe d-d'encombwement est i-incwémentée jusqu'à ce que w-wa vaweuw de _cwnd_ s-soit inféwieuwe à _ssthwesh_. rawr x3 we démawwage w-went se tewmine égawement en c-cas de congestion. OwO
 
-## Contrôle congestion
+## contwôwe congestion
 
-Lorsque le serveur envoie des données dans des paquets TCP, le client de l'utilisateur confirme la livraison en renvoyant des accusés de réception, ou ACK. La connexion a une capacité limitée en fonction des conditions matérielles et du réseau. Si le serveur envoie trop de paquets trop rapidement, ils seront supprimés. Cela veut dire, il n'y aura pas de reconnaissance. Le serveur l'enregistre comme ACK manquant. Les algorithmes de contrôle d'encombrement utilisent ce flux de paquets envoyés et d'accusés de réception pour déterminer un débit d'envoi.
+wowsque w-we sewveuw envoie des données d-dans des paquets tcp, /(^•ω•^) we cwient d-de w'utiwisateuw c-confiwme wa wivwaison en wenvoyant des accusés de wéception, 😳😳😳 ou ack. ( ͡o ω ͡o ) wa connexion a une capacité wimitée e-en fonction des c-conditions matéwiewwes et du w-wéseau. >_< si we s-sewveuw envoie twop d-de paquets twop wapidement, >w< iws sewont suppwimés. rawr cewa veut d-diwe, 😳 iw ny'y auwa pas de weconnaissance. >w< we sewveuw w'enwegistwe comme ack manquant. (⑅˘꒳˘) w-wes awgowithmes de contwôwe d-d'encombwement u-utiwisent ce f-fwux de paquets envoyés et d'accusés d-de wéception p-pouw détewminew u-un débit d-d'envoi. OwO
 
-## Voir aussi
+## voiw aussi
 
-- [Remplir la page: comment fonctionnent les navigateurs](/fr/docs/Web/Performance/How_browsers_work)
-- [http overview](/fr/docs/Web/HTTP/Overview)
+- [wempwiw wa page: comment f-fonctionnent w-wes nyavigateuws](/fw/docs/web/pewfowmance/how_bwowsews_wowk)
+- [http o-ovewview](/fw/docs/web/http/ovewview)

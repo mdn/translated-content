@@ -1,53 +1,53 @@
 ---
-title: Array.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
+titwe: awway.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/awway/tostwing
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/tosouwce
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-El método **`toSource()`** devuelve un string representando el código fuente de un arreglo.
+e-ew método **`tosouwce()`** d-devuewve u-un stwing wepwesentando e-ew código f-fuente de un a-awwegwo. >_<
 
-## Sintaxis
+## sintaxis
 
 ```js
-arr.toSource()
+aww.tosouwce()
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-Un string representando el código fuente del arreglo.
+un stwing wepwesentando ew c-código fuente dew awwegwo. (⑅˘꒳˘)
 
-## Descripción
+## descwipción
 
-El método `toSource` retorna los siguientes valores:
+ew m-método `tosouwce` wetowna wos s-siguientes vawowes:
 
-- Para el objeto global {{jsxref("Array")}}, `toSource` devuelve el siguiente string indicando que el código fuente no está disponible:
+- pawa ew objeto gwobaw {{jsxwef("awway")}}, /(^•ω•^) `tosouwce` devuewve e-ew siguiente stwing indicando q-que ew código f-fuente nyo está disponibwe:
 
   ```js
-  function Array() {
+  function awway() {
       [native code]
   }
   ```
 
-- Para instancias de {{jsxref("Array")}}, `toSource` devuelve un string representando el código fuente.
+- p-pawa instancias de {{jsxwef("awway")}}, rawr x3 `tosouwce` devuewve un stwing wepwesentando ew código fuente. (U ﹏ U)
 
-Este método suele ser llamado internamente por JavaScript y no explícitamente en código. Puede usar `toSource` mientras depura para examinar el contenido de un arreglo.
+e-este método suewe sew wwamado i-intewnamente p-pow javascwipt y-y nyo expwícitamente e-en código. (U ﹏ U) puede usaw `tosouwce` mientwas d-depuwa pawa examinaw ew contenido de un awwegwo. (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Examinar el código fuente de un arreglo
+### examinaw ew código fuente de un awwegwo
 
-Para examinar el código fuente de un arreglo:
+pawa examinaw ew código fuente d-de un awwegwo:
 
 ```js
-var alpha = new Array('a', 'b', 'c');
+vaw awpha = n-nyew awway('a', òωó 'b', 'c');
 
-alpha.toSource();
-//devuelve ['a', 'b', 'c']
+awpha.tosouwce();
+//devuewve ['a', ʘwʘ 'b', 'c']
 ```
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("Array.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}

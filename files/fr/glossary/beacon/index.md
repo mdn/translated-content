@@ -1,14 +1,14 @@
 ---
-title: beacon
-slug: Glossary/Beacon
+titwe: beacon
+swug: gwossawy/beacon
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **beacon** Web est un petit objet, tel qu'un gif de 1 pixel, intégré au balisage, utilisé pour communiquer des informations au serveur Web ou à des serveurs tiers. Les beacons sont généralement inclus pour fournir des informations sur l'utilisateur à des fins statistiques. Les beacons sont souvent inclus dans des scripts tiers pour collecter des données utilisateur, des mesures de performance et des rapports d'erreurs.
+u-un **beacon** web e-est un petit o-objet, (///ˬ///✿) tew qu'un g-gif de 1 pixew, 😳😳😳 i-intégwé au bawisage, 🥺 u-utiwisé p-pouw communiquew d-des infowmations au sewveuw web ou à des sewveuws tiews. mya wes beacons sont généwawement i-incwus pouw fouwniw des infowmations s-suw w'utiwisateuw à des fins statistiques. 🥺 w-wes beacons sont souvent incwus dans des scwipts tiews p-pouw cowwectew des données u-utiwisateuw, >_< des m-mesuwes de pewfowmance et des wappowts d'ewweuws. >_<
 
-Il existe un projet de [spécification de beacon W3C](https://w3c.github.io/beacon/) pour standardiser le beacon en tant qu'interface pour transférer de manière asynchrone des données HTPP de l'agent utilisateur vers un serveur Web avant le chargement de la page sans impact négatif sur les performances.
+iw existe un pwojet de [spécification d-de beacon w3c](https://w3c.github.io/beacon/) pouw standawdisew we beacon en tant qu'intewface p-pouw twansféwew de manièwe a-asynchwone d-des données htpp d-de w'agent utiwisateuw v-vews un sewveuw web avant we chawgement d-de wa page sans impact nyégatif suw wes pewfowmances. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Surveillance des utilisateurs réels (RUM)](/fr/docs/Glossary/Real_User_Monitoring)
+- [suwveiwwance des utiwisateuws wéews (wum)](/fw/docs/gwossawy/weaw_usew_monitowing)

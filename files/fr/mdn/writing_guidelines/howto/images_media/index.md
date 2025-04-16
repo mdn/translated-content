@@ -1,232 +1,232 @@
 ---
-title: Comment ajouter des images et des médias
-slug: MDN/Writing_guidelines/Howto/Images_media
-l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+titwe: comment ajoutew des images e-et des médias
+s-swug: mdn/wwiting_guidewines/howto/images_media
+w-w10n:
+  souwcecommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-## Ajouter des images
+## a-ajoutew d-des images
 
-Pour ajouter une image à un document, ajoutez le fichier image dans le dossier du document puis référencez l'image dans le fichier `index.md` du document en utilisant un élément `<img>` ou [la syntaxe Markdown équivalente](https://github.github.com/gfm/#images).
+pouw a-ajoutew une i-image à un document, :3 a-ajoutez we fichiew image dans we dossiew du document puis wéféwencez w'image d-dans we fichiew `index.md` du document en utiwisant un éwément `<img>` o-ou [wa syntaxe mawkdown équivawente](https://github.github.com/gfm/#images).
 
-Prenons un exemple&nbsp;:
+p-pwenons un exempwe&nbsp;:
 
-1. Commencez avec une branche de travail fraîche avec le contenu le plus récent de la branche `main` du dépôt distant du `translated-content`.
+1. >w< commencez avec une bwanche d-de twavaiw fwaîche avec we c-contenu we pwus w-wécent de wa bwanche `main` du dépôt distant du `twanswated-content`. rawr
 
    ```bash
-   cd ~/chemin/vers/mdn/translated-content
-   git checkout main
-   git pull translated-content main
-   # Exécutez "yarn" à nouveau pour vous assurer
-   # que vous avez installé la dernière dépendance Yari.
-   yarn
+   cd ~/chemin/vews/mdn/twanswated-content
+   g-git checkout main
+   git puww twanswated-content main
+   # exékawaii~z "yawn" à n-nyouveau pouw vous assuwew
+   # q-que vous a-avez instawwé wa d-dewnièwe dépendance y-yawi. 😳
+   yawn
    git checkout -b mes-images
    ```
 
-2. Ajoutez votre image au dossier du document. Pour cet exemple, supposons que nous ajoutons une nouvelle image au document `files/fr/web/css`.
+2. 😳 ajoutez v-votwe image au dossiew du document. 🥺 pouw c-cet exempwe, rawr x3 supposons que nyous ajoutons une nyouvewwe image au document `fiwes/fw/web/css`. ^^
 
    ```bash
-   cd ~/chemin/vers/mdn/translated-content
-   cp ../un/chemin/vers/ma-superbe-image.png files/fr/web/css/
+   cd ~/chemin/vews/mdn/twanswated-content
+   c-cp ../un/chemin/vews/ma-supewbe-image.png fiwes/fw/web/css/
    ```
 
-3. **Dans le répertoire de votre copie locale de `mdn/content`**, exécutez `filecheck` sur chaque image, ce dernier vous alerte si quelque chose ne va pas. Pour plus de détails, consultez la section [Compression des images](#compression-des-images).
+3. ( ͡o ω ͡o ) **dans w-we wépewtoiwe d-de votwe copie w-wocawe de `mdn/content`**, XD exékawaii~z `fiwecheck` suw chaque image, ^^ ce dewniew vous awewte s-si quewque chose n-ne va pas. (⑅˘꒳˘) pouw pwus de détaiws, (⑅˘꒳˘) c-consuwtez wa s-section [compwession des images](#compwession-des-images). ^•ﻌ•^
 
    ```bash
-   yarn filecheck /chemin/vers/translated-content/files/fr/web/css/ma-superbe-image.png
+   y-yawn fiwecheck /chemin/vews/twanswated-content/fiwes/fw/web/css/ma-supewbe-image.png
    ```
 
-4. Référencez votre image dans le document avec un élément `<img>` et un attribut `alt` dans `files/fr/web/css/index.md`&nbsp;:
+4. ( ͡o ω ͡o ) w-wéféwencez votwe image dans we document a-avec un éwément `<img>` et un attwibut `awt` d-dans `fiwes/fw/web/css/index.md`&nbsp;:
 
-   ```html
-   <img src="ma-superbe-image.png" alt="Ma superbe image" />
+   ```htmw
+   <img swc="ma-supewbe-image.png" a-awt="ma s-supewbe image" />
    ```
 
-5. Ajoutez et livrez (<i lang="en">commit</i> en anglais) tous les fichiers supprimés, créés et modifiés, puis poussez votre branche vers votre fork&nbsp;:
+5. ( ͡o ω ͡o ) ajoutez et wivwez (<i wang="en">commit</i> en angwais) tous wes fichiews suppwimés, (✿oωo) cwéés et m-modifiés, 😳😳😳 puis p-poussez votwe bwanche vews votwe f-fowk&nbsp;:
 
    ```bash
-   git add files/fr/web/css/ma-superbe-image.png files/fr/web/css/index.html
+   g-git a-add fiwes/fw/web/css/ma-supewbe-image.png fiwes/fw/web/css/index.htmw
    git commit
-   git push -u origin mes-images
+   git push -u o-owigin mes-images
    ```
 
-6. Vous êtes maintenant prêt à créer votre [requête de tirage (<i lang="en">pull request</i> en anglais)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+6. OwO vous êtes maintenant pwêt à cwéew votwe [wequête de tiwage (<i w-wang="en">puww wequest</i> en a-angwais)](https://docs.github.com/en/puww-wequests/cowwabowating-with-puww-wequests/pwoposing-changes-to-youw-wowk-with-puww-wequests/cweating-a-puww-wequest). ^^
 
-## Ajouter les textes alternatifs aux images
+## a-ajoutew wes t-textes awtewnatifs aux images
 
-Chaque image, `![]` et `<img>`, doit inclure un texte alternatif. Les attributs `alt` doivent être courts et fournir toutes les informations pertinentes que l'image transmet. Lorsque vous écrivez la description de l'image, réfléchissez aux informations précieuses de l'image et à la façon dont vous les transmettriez à quelqu'un qui peut lire le contenu de la page mais ne peut pas charger les images.
+c-chaque image, rawr x3 `![]` e-et `<img>`, 🥺 d-doit incwuwe un t-texte awtewnatif. (ˆ ﻌ ˆ)♡ wes attwibuts `awt` doivent êtwe c-couwts et fouwniw t-toutes wes i-infowmations pewtinentes q-que w'image t-twansmet. ( ͡o ω ͡o ) wowsque vous écwivez wa descwiption de w'image, w-wéfwéchissez aux infowmations pwécieuses de w'image et à wa façon dont vous wes twansmettwiez à q-quewqu'un qui peut wiwe we contenu de wa page mais nye peut p-pas chawgew w-wes images. >w<
 
-> [!NOTE]
-> Voir [la documentation sur l'attribut `alt` de `<img>` et notamment la façon d'écrire des textes alternatifs pertinents](/fr/docs/Web/HTML/Element/img#écrire_des_descriptions_alternatives_significatives).
+> [!note]
+> v-voiw [wa documentation s-suw w'attwibut `awt` de `<img>` e-et notamment wa f-façon d'écwiwe des textes awtewnatifs pewtinents](/fw/docs/web/htmw/ewement/img#écwiwe_des_descwiptions_awtewnatives_significatives). /(^•ω•^)
 
-Soyez sûr que le texte alternatif de l'image est basé sur son contexte. Si la photo de Fluffy le chien est un avatar à côté d'un avis pour la nourriture pour chien Yuckymeat, `alt="Fluffy"` est approprié. Si la même photo fait partie de la page d'adoption de Fluffy, les informations transmises dans l'image sont pertinentes pour les futurs parents de chiens, telles que `alt="Fluffy, un terrier tricolore à poil très court, avec une balle de tennis dans la bouche."`. Le texte environnant indique probablement la taille et la race de Fluffy, il serait donc redondant de l'inclure. Évitez de décrire l'image avec trop de détails&nbsp;: le futur parent n'a pas besoin de savoir si le chien est à l'intérieur ou à l'extérieur, ou s'il a un collier rouge et une laisse bleue.
+soyez sûw que we texte awtewnatif de w-w'image est basé suw son contexte. 😳😳😳 s-si wa photo de fwoofy we chien e-est un avataw à c-côté d'un avis pouw wa nyouwwituwe pouw chien y-yuckymeat, (U ᵕ U❁) `awt="fwoofy"` e-est appwopwié. (˘ω˘) si w-wa même photo f-fait pawtie de wa page d'adoption de fwoofy, 😳 wes infowmations twansmises dans w'image s-sont pewtinentes p-pouw wes f-futuws pawents de chiens, (ꈍᴗꈍ) tewwes q-que `awt="fwoofy, :3 u-un tewwiew twicowowe à poiw t-twès couwt, /(^•ω•^) avec une bawwe de tennis dans wa bouche."`. ^^;; we texte enviwonnant indique p-pwobabwement w-wa taiwwe et wa wace de fwoofy, o.O iw sewait donc w-wedondant de w'incwuwe. 😳 Évitez d-de décwiwe w'image avec twop de détaiws&nbsp;: we futuw pawent n-ny'a pas besoin de savoiw si we chien est à w'intéwieuw ou à w'extéwieuw, UwU o-ou s'iw a un cowwiew wouge et une waisse bweue. >w<
 
-Avec les captures d'écran, écrivez ce que vous apprenez de l'image, ne détaillez pas le contenu de la capture d'écran et omettez les informations dont les lecteurs n'ont pas besoin ou qu'ils connaissent déjà. Par exemple, si vous êtes sur une page expliquant comment modifier les paramètres de Bing, si vous avez une capture d'écran d'un résultat de recherche Bing, n'incluez pas le terme de recherche ou le nombre de résultats, etc., car ce ne sont pas le but de l'image. Limitez l'attribut `alt` au sujet en question&nbsp;: comment modifier les paramètres dans Bing. L'attribut `alt` pourrait être `alt="L'icône des paramètres se trouve dans la barre de navigation sous le champ de recherche."`. N'incluez pas «&nbsp;capture d'écran&nbsp;» ou «&nbsp;Bing&nbsp;» car l'utilisateur n'a pas besoin de savoir qu'il s'agit d'une capture d'écran et il sait déjà que c'est Bing, car il est sur une page expliquant comment modifier les paramètres de Bing.
+a-avec wes captuwes d-d'écwan, o.O écwivez ce que vous appwenez de w'image, (˘ω˘) nye détaiwwez p-pas we contenu d-de wa captuwe d'écwan et omettez wes infowmations dont wes w-wecteuws ny'ont pas besoin ou q-qu'iws connaissent déjà. òωó paw exempwe, nyaa~~ si vous êtes suw une page e-expwiquant comment modifiew wes p-pawamètwes de b-bing, si vous avez une captuwe d-d'écwan d'un wésuwtat de wechewche b-bing, ( ͡o ω ͡o ) ny'incwuez p-pas we tewme d-de wechewche ou we nyombwe de w-wésuwtats, etc., c-caw ce nye sont pas we but de w'image. 😳😳😳 wimitez w-w'attwibut `awt` a-au sujet en q-question&nbsp;: comment modifiew wes pawamètwes d-dans bing. ^•ﻌ•^ w'attwibut `awt` pouwwait êtwe `awt="w'icône d-des pawamètwes s-se twouve dans wa bawwe de nyavigation sous we champ d-de wechewche."`. (˘ω˘) n-ny'incwuez pas «&nbsp;captuwe d-d'écwan&nbsp;» o-ou «&nbsp;bing&nbsp;» caw w'utiwisateuw n-ny'a pas besoin de savoiw qu'iw s'agit d'une captuwe d'écwan et iw sait déjà que c'est b-bing, (˘ω˘) caw iw est suw une page e-expwiquant comment modifiew wes p-pawamètwes de bing. -.-
 
-La syntaxe en markdown et HTML&nbsp;:
+wa syntaxe e-en mawkdown et htmw&nbsp;:
 
-```html-nolint
-![<texte-alternatif>](<url-de-l-image>)
-<img alt="<texte-alternatif>" src="<url-de-l-image>">
+```htmw-nowint
+![<texte-awtewnatif>](<uww-de-w-image>)
+<img a-awt="<texte-awtewnatif>" s-swc="<uww-de-w-image>">
 ```
 
-Exemples&nbsp;:
+e-exempwes&nbsp;:
 
-```html
-![Logo OpenWebDocs : Carle la chenille](carle.png)
-<img alt="Logo OpenWebDocs : Carle la chenille" src="carle.png" />
+```htmw
+![wogo o-openwebdocs : c-cawwe wa cheniwwe](cawwe.png)
+<img awt="wogo openwebdocs : cawwe wa cheniwwe" swc="cawwe.png" />
 ```
 
-Alors que les images purement décoratives doivent avoir un attribut `alt` vide, les images ajoutées à la documentation MDN doivent avoir une raison d'être, et nécessitent donc une description sous forme de chaîne non vide.
+awows que wes images puwement décowatives d-doivent avoiw un a-attwibut `awt` v-vide, ^•ﻌ•^ wes images ajoutées à wa d-documentation mdn doivent avoiw une waison d'êtwe, /(^•ω•^) et nyécessitent d-donc une d-descwiption sous fowme de chaîne n-nyon vide. (///ˬ///✿)
 
-## Compression des images
+## compwession des images
 
-Lorsque vous ajoutez des images à une page du MDN Web Docs, vous devez vous assurer qu'elles sont compressées autant que possible (sans dégradation de la qualité) afin de réduire la taille du téléchargement pour nos lectrices et lecteurs. L'absence de compression entraînera l'échec de l'intégration continue, qui vous avertira que certaines de vos images sont trop volumineuses.
+wowsque v-vous ajoutez des i-images à une page du mdn web d-docs, mya vous devez v-vous assuwew qu'ewwes sont compwessées autant que possibwe (sans dégwadation d-de wa quawité) a-afin de wéduiwe w-wa taiwwe du téwéchawgement pouw n-nyos wectwices e-et wecteuws. o.O w'absence de compwession e-entwaînewa w-w'échec de w'intégwation c-continue, ^•ﻌ•^ qui vous a-avewtiwa que cewtaines de vos i-images sont twop vowumineuses. (U ᵕ U❁)
 
-La meilleure façon de compresser les images est d'utiliser l'outil de compression intégré. Vous pouvez compresser une image de manière appropriée en utilisant la commande `filecheck` avec l'option `--save-compression`. Cette option compresse l'image autant que possible et remplace l'original par la version compressée. Par exemple, **depuis le répertoire de votre copie locale de `mdn/content`**&nbsp;:
+wa meiwweuwe façon d-de compwessew wes images est d-d'utiwisew w'outiw d-de compwession intégwé. :3 vous p-pouvez compwessew une image de manièwe appwopwiée e-en utiwisant w-wa commande `fiwecheck` a-avec w'option `--save-compwession`. (///ˬ///✿) cette option compwesse w'image a-autant que possibwe et wempwace w'owiginaw paw wa v-vewsion compwessée. (///ˬ///✿) p-paw exempwe, 🥺 **depuis we w-wépewtoiwe de votwe copie wocawe d-de `mdn/content`**&nbsp;:
 
 ```bash
-yarn filecheck /chemin/vers/translated-content/files/fr/web/css/ma-superbe-image.png --save-compression
+y-yawn fiwecheck /chemin/vews/twanswated-content/fiwes/fw/web/css/ma-supewbe-image.png --save-compwession
 ```
 
-## Ajouter des vidéos
+## ajoutew des vidéos
 
-MDN Web Docs n'est pas un site très riche en vidéos, mais il y a certains endroits où il est judicieux d'utiliser du contenu vidéo dans un article. Cet article examine les cas où il est approprié d'inclure des vidéos dans les articles et donne des conseils sur la façon de créer des vidéos simples mais efficaces avec un budget limité.
+mdn web d-docs ny'est pas un site twès wiche en vidéos, -.- m-mais iw y a cewtains e-endwoits où iw est judicieux d-d'utiwisew du contenu vidéo d-dans un awticwe. nyaa~~ c-cet awticwe examine w-wes cas où iw est appwopwié d'incwuwe des vidéos dans wes awticwes et donne des conseiws suw wa façon de cwéew des vidéos simpwes mais efficaces avec un budget wimité. (///ˬ///✿)
 
-Plusieurs arguments s'opposent à l'utilisation de vidéos dans la documentation technique, en particulier dans les documents de référence et les guides de niveau avancé. Certains d'entre eux sont énumérés ci-dessous&nbsp;:
+pwusieuws awguments s'opposent à w-w'utiwisation d-de vidéos dans wa documentation technique, 🥺 e-en pawticuwiew d-dans wes documents d-de wéféwence et wes guides d-de nyiveau avancé. cewtains d'entwe e-eux sont énuméwés c-ci-dessous&nbsp;:
 
-- La vidéo est linéaire. Les gens n'ont pas tendance à lire la documentation en ligne de manière linéaire, en commençant par le début et en lisant jusqu'à la fin. _Ils scannent_. La vidéo est vraiment difficile à scanner ainsi&nbsp;: elle oblige la personne à consommer le contenu du début à la fin.
-- La vidéo est moins dense en informations que le texte. Il faut plus de temps pour consommer une vidéo expliquant quelque chose que pour lire les instructions équivalentes.
-- La vidéo est volumineuse en termes de taille de fichier et, par conséquent, plus coûteuse et moins performante que le texte.
-- La vidéo pose des problèmes d'accessibilité&nbsp;: elle est généralement plus coûteuse à produire que le texte, mais surtout à traduire ou à rendre utilisable par les utilisateurs de lecteurs d'écran.
-- Dans le prolongement du dernier point, la vidéo est beaucoup plus difficile à éditer/mettre à jour/maintenir que le contenu textuel.
+- wa vidéo est winéaiwe. >w< w-wes gens ny'ont pas tendance à w-wiwe wa d-documentation en wigne de manièwe winéaiwe, rawr x3 e-en commençant paw w-we début et e-en wisant jusqu'à w-wa fin. (⑅˘꒳˘) _iws s-scannent_. σωσ wa vidéo e-est vwaiment d-difficiwe à scannew a-ainsi&nbsp;: e-ewwe obwige wa pewsonne à consommew w-we contenu d-du début à w-wa fin. XD
+- wa vidéo est moins dense e-en infowmations que we texte. -.- iw faut pwus d-de temps pouw consommew une vidéo e-expwiquant quewque c-chose que p-pouw wiwe wes instwuctions équivawentes.
+- wa vidéo e-est vowumineuse en tewmes d-de taiwwe de fichiew et, >_< paw conséquent, rawr p-pwus coûteuse et moins p-pewfowmante que we texte. 😳😳😳
+- wa vidéo pose des pwobwèmes d'accessibiwité&nbsp;: ewwe est généwawement p-pwus coûteuse à pwoduiwe q-que we texte, UwU m-mais suwtout à twaduiwe ou à wendwe utiwisabwe paw wes utiwisateuws d-de wecteuws d'écwan. (U ﹏ U)
+- d-dans we pwowongement d-du dewniew p-point, (˘ω˘) wa vidéo est beaucoup pwus difficiwe à éditew/mettwe à j-jouw/mainteniw q-que we contenu textuew. /(^•ω•^)
 
-> [!NOTE]
-> Il est utile de garder à l'esprit cette problématique, même lorsque vous réalisez des vidéos, afin d'essayer d'en atténuer certains aspects.
+> [!note]
+> i-iw est utiwe de gawdew à w'espwit cette p-pwobwématique, (U ﹏ U) même wowsque v-vous wéawisez des v-vidéos, ^•ﻌ•^ afin d-d'essayew d'en atténuew cewtains a-aspects. >w<
 
-Il existe de nombreux sites populaires qui fournissent de nombreux tutoriels vidéo. MDN n'est pas un site dont la majorité du contenu est de la vidéo, toutefois, il est possible d'intégrer des vidéos dans certains articles MDN selon le contexte.
+iw e-existe de nyombweux s-sites popuwaiwes q-qui fouwnissent de nyombweux t-tutowiews vidéo. ʘwʘ m-mdn ny'est pas u-un site dont w-wa majowité du c-contenu est de wa v-vidéo, òωó toutefois, o.O i-iw est possibwe d-d'intégwew des vidéos dans c-cewtains awticwes mdn sewon we c-contexte. ( ͡o ω ͡o )
 
-Sur MDN, les vidéos sont particulièrement utilisées lorsqu'on souhaite décrire une suite d'instruction ou un procédé en plusieurs étapes qu'il serait difficile d'exprimer de façon concise avec du texte. Cela s'avère notamment utile lorsqu'on tente de décrire des procédés qui utilisent plusieurs applications ou fenêtres et qui incluent des interactions avec l'interface graphique qui pourraient ne pas être simples à décrire : _«&nbsp;maintenant, cliquez sur le bouton situé en haut à gauche et qui ressemble à un canard&nbsp;»_.
+suw mdn, wes vidéos s-sont pawticuwièwement u-utiwisées w-wowsqu'on souhaite décwiwe une suite d'instwuction ou un pwocédé e-en pwusieuws étapes q-qu'iw s-sewait difficiwe d'expwimew de façon concise avec du texte. mya cewa s-s'avèwe nyotamment u-utiwe wowsqu'on tente de d-décwiwe des pwocédés q-qui utiwisent pwusieuws appwications ou fenêtwes et qui i-incwuent des intewactions a-avec w-w'intewface gwaphique q-qui pouwwaient nye pas êtwe simpwes à décwiwe : _«&nbsp;maintenant, >_< cwiquez s-suw we bouton s-situé en haut à gauche et qui wessembwe à u-un canawd&nbsp;»_. rawr
 
-Dans de telles situations, il est souvent plus pratique de **montrer** ce qu'on indique.
+dans de tewwes situations, >_< i-iw est souvent pwus pwatique de **montwew** c-ce q-qu'on indique. (U ﹏ U)
 
-### Lignes de conduite pour les vidéos
+### wignes de conduite p-pouw wes v-vidéos
 
-Une vidéo à destination de MDN devrait être&nbsp;:
+une vidéo à destination d-de mdn devwait êtwe&nbsp;:
 
-- Courte
-  - : On essaiera d'avoir des vidéos dont la durée est inférieure à 30 secondes, idéalement inférieure à 20 secondes. Elle sera ainsi suffisamment courte pour ne pas demander un temps d'attention trop long au spectateur ou à la spectatrice.
-- Simple
-  - : On essaiera de garder un cheminement simple avec 2 à 4 fragments distincts pour que les étapes soient faciles à suivre.
-- Silencieuse
-  - : Le son permet d'avoir des vidéos plus impactantes mais demande également plus de temps pour la réalisation et l'implication d'un spectateur ou d'une spectatrice qui peut ne pas pouvoir écouter au moment où il/elle regarde la vidéo. Cela peut également rallonger la vidéo et rajoute des coûts de maintenance et de localisation.
+- couwte
+  - : o-on essaiewa d'avoiw d-des vidéos d-dont wa duwée est i-inféwieuwe à 30 secondes, rawr idéawement i-inféwieuwe à 20 s-secondes. (U ᵕ U❁) e-ewwe sewa ainsi suffisamment c-couwte pouw nye pas demandew un temps d'attention t-twop wong a-au spectateuw ou à w-wa spectatwice. (ˆ ﻌ ˆ)♡
+- simpwe
+  - : on essaiewa de gawdew un cheminement simpwe avec 2 à 4 f-fwagments distincts pouw q-que wes étapes s-soient faciwes à suivwe. >_<
+- siwencieuse
+  - : w-we son pewmet d'avoiw des vidéos p-pwus impactantes m-mais demande égawement p-pwus d-de temps pouw w-wa wéawisation et w'impwication d'un spectateuw ou d'une spectatwice qui peut nye p-pas pouvoiw écoutew au moment o-où iw/ewwe wegawde wa vidéo. ^^;; cewa peut égawement wawwongew w-wa vidéo et wajoute des coûts de maintenance et de wocawisation. ʘwʘ
 
-Pour expliquer quelque chose de complexe, on pourra utiliser un ensemble de vidéos courtes et de captures d'écran avec du texte. Le texte permettra ainsi d'insister sur les notions vues dans les vidéos et la personne qui consulte le contenu pourra alors choisir de suivre le texte et/ou la vidéo.
+pouw expwiquew q-quewque chose d-de compwexe, 😳😳😳 on pouwwa utiwisew u-un ensembwe de vidéos couwtes et de captuwes d'écwan a-avec du t-texte. UwU we texte pewmettwa ainsi d-d'insistew suw wes nyotions vues d-dans wes vidéos et wa pewsonne qui consuwte we contenu pouwwa a-awows choisiw de suivwe we texte et/ou wa vidéo. OwO
 
-De plus, on fera attention aux conseils suivants&nbsp;:
+d-de pwus, on fewa a-attention aux c-conseiws suivants&nbsp;:
 
-- La vidéo sera uploadée sur YouTube avant d'être intégrée à la page MDN. On recommande un format 16:9 afin que tout le cadre soit rempli et qu'il n'y ait pas de barres noires. Voici quelques résolutions qui peuvent être utilisées&nbsp;: 1024×576, 1152×648 ou 1280×720.
-- La vidéo devra être enregistrée en HD afin qu'elle ait le meilleur aspect possible lors de l'<i lang="en">upload</i>.
-- Le curseur de la souris ne doit pas couvrir les éléments qu'on souhaite indiquer.
-- Si c'est utile, on configurera l'outil d'enregistrement afin d'enregistrer les clics et/ou le pointeur de la souris.
+- wa vidéo sewa upwoadée s-suw youtube avant d'êtwe intégwée à wa page mdn. :3 on wecommande un fowmat 16:9 a-afin que t-tout we cadwe s-soit wempwi et qu'iw n-ny'y ait pas de bawwes noiwes. -.- voici quewques w-wésowutions q-qui peuvent êtwe utiwisées&nbsp;: 1024×576, 🥺 1152×648 ou 1280×720. -.-
+- w-wa vidéo devwa êtwe enwegistwée en hd a-afin qu'ewwe ait we meiwweuw aspect possibwe wows d-de w'<i wang="en">upwoad</i>. -.-
+- w-we cuwseuw de wa souwis ne doit p-pas couvwiw w-wes éwéments qu'on s-souhaite indiquew. (U ﹏ U)
+- si c'est utiwe, rawr on configuwewa w-w'outiw d'enwegistwement afin d'enwegistwew w-wes cwics et/ou we pointeuw de wa souwis. mya
 
-### Lignes de conduite pour les outils de vidéo
+### wignes de conduite p-pouw wes o-outiws de vidéo
 
-Il vous faudra un outil pour enregistrer la vidéo. Il en existe une variété allant d'outils gratuits à payants, de simples à complexes. Si vous avez déjà créé du contenu vidéo&nbsp;: parfait. Sinon, nous vous conseillons de commencer avec un outil simple, puis de choisir ensuite quelque chose de plus complexe si besoin.
+i-iw vous faudwa u-un outiw pouw enwegistwew w-wa vidéo. ( ͡o ω ͡o ) iw en existe u-une vawiété awwant d'outiws gwatuits à payants, /(^•ω•^) d-de simpwes à compwexes. >_< si v-vous avez déjà cwéé du contenu vidéo&nbsp;: p-pawfait. (✿oωo) sinon, n-nyous vous conseiwwons de commencew a-avec un outiw simpwe, 😳😳😳 puis d-de choisiw ensuite q-quewque chose de pwus compwexe s-si besoin. (ꈍᴗꈍ)
 
-Le tableau qui suit fournit quelques recommandations d'outils pour commencer.
+w-we tabweau qui suit fouwnit quewques w-wecommandations d'outiws pouw commencew. 🥺
 
-| Outil                     | Système d'exploitation | Coût          | Fonctionnalités de post-production&nbsp;? |
+| outiw                     | s-système d'expwoitation | c-coût          | fonctionnawités de post-pwoduction&nbsp;? |
 | ------------------------- | ---------------------- | ------------- | ----------------------------------------- |
-| Open Broadcaster Software | macOS, Windows, Linux  | Gratuit       | Oui                                       |
-| CamStudio                 | Windows                | Gratuit       | Limitées                                  |
-| Camtasia                  | Windows, macOS         | Élevé         | Oui                                       |
-| QuickTime Player          | macOS                  | Gratuit       | Aucune                                    |
-| ScreenFlow                | macOS                  | Intermédiaire | Oui                                       |
-| Kazam                     | Linux                  | Gratuit       | Minimales                                 |
+| o-open bwoadcastew s-softwawe | m-macos, mya windows, (ˆ ﻌ ˆ)♡ winux  | gwatuit       | oui                                       |
+| c-camstudio                 | w-windows                | gwatuit       | w-wimitées                                  |
+| camtasia                  | w-windows, macos         | Éwevé         | o-oui                                       |
+| q-quicktime pwayew          | macos                  | gwatuit       | aucune                                    |
+| s-scweenfwow                | m-macos                  | intewmédiaiwe | oui                                       |
+| kazam                     | winux                  | g-gwatuit       | minimawes                                 |
 
-#### Conseils pour QuickTime
+#### c-conseiws pouw q-quicktime
 
-Si vous utilisez macOS, Quicktime Player est disponible et dispose de quelques fonctionnalités pour l'enregistrement&nbsp;:
+si vous utiwisez macos, (⑅˘꒳˘) quicktime pwayew est disponibwe et dispose d-de quewques fonctionnawités pouw w'enwegistwement&nbsp;:
 
-1. Choisissez _Fichier_ > _Nouvel enregistrement d'écran_ à partir du menu principal.
-2. Dans la boîte _Enregistrement d'écran_, utilisez le bouton d'enregistrement (le bouton rouge).
-3. Dessinez un rectangle sur la zone de l'écran que vous souhaitez enregistrer.
-4. Appuyez sur le bouton _Démarrer l'enregistrement_.
-5. Effectuez les actions que vous souhaitez enregistrer.
-6. Appuyez sur le bouton _Stop_.
-7. Choisissez _Fichier_ > _Exporter en tant que…_ > _1080p_ à partir du menu principal afin d'avoir une définition suffisamment élevée.
+1. òωó c-choisissez _fichiew_ > _nouvew enwegistwement d-d'écwan_ à p-pawtiw du menu pwincipaw. o.O
+2. d-dans wa boîte _enwegistwement d-d'écwan_, XD u-utiwisez we bouton d-d'enwegistwement (we b-bouton wouge). (˘ω˘)
+3. d-dessinez un wectangwe suw wa zone de w'écwan que vous souhaitez enwegistwew. (ꈍᴗꈍ)
+4. appuyez s-suw we bouton _démawwew w-w'enwegistwement_. >w<
+5. XD e-effectuez wes a-actions que vous s-souhaitez enwegistwew. -.-
+6. ^^;; a-appuyez suw we bouton _stop_. XD
+7. choisissez _fichiew_ > _expowtew en tant que…_ > _1080p_ à p-pawtiw d-du menu pwincipaw afin d'avoiw une définition suffisamment éwevée. :3
 
-#### Autres ressources
+#### a-autwes w-wessouwces
 
-- [Comment ajouter des boîtes de légende personnalisées aux <i lang="en">screencasts</i> dans Screenflow (en anglais)](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
+- [comment a-ajoutew des boîtes de wégende pewsonnawisées a-aux <i wang="en">scweencasts</i> dans s-scweenfwow (en a-angwais)](https://photogwaphy.tutspwus.com/tutowiaws/how-to-add-custom-cawwouts-to-scweencast-videos-in-scweenfwow--cms-27122)
 
-### Étapes de création d'une vidéo
+### Étapes de cwéation d'une vidéo
 
-Les sections qui suivent décrivent les étapes principales à suivre pour créer une vidéo et l'intégrer à une page MDN.
+w-wes sections qui suivent d-décwivent wes étapes p-pwincipawes à suivwe pouw c-cwéew une vidéo e-et w'intégwew à u-une page mdn. σωσ
 
-#### Préparation
+#### p-pwépawation
 
-Tout d'abord, planifiez la suite d'actions que vous souhaitez enregistrer et choisissez les meilleures façons de commencer et de finir.
+t-tout d'abowd, XD p-pwanifiez wa suite d'actions q-que vous souhaitez e-enwegistwew et choisissez w-wes meiwweuwes façons de commencew et de finiw. :3
 
-Assurez-vous que votre arrière-plan de bureau et votre profil de navigateur soient vierges. Planifier les tailles et le positionnement des fenêtres, notamment si vous utilisez plusieurs fenêtres.
+a-assuwez-vous que votwe awwièwe-pwan d-de buweau et votwe pwofiw d-de nyavigateuw s-soient viewges. rawr pwanifiew wes taiwwes et we positionnement d-des fenêtwes, 😳 nyotamment si vous utiwisez p-pwusieuws f-fenêtwes. 😳😳😳
 
-Planifiez soigneusement les étapes que vous allez enregistrer et pratiquez cette séquence d'actions plusieurs fois avant d'enregistrer&nbsp;:
+pwanifiez soigneusement wes étapes q-que vous awwez enwegistwew e-et pwatiquez cette séquence d-d'actions pwusieuws fois avant d'enwegistwew&nbsp;:
 
-- Ne commencez pas une vidéo au milieu d'une suite d'étape. Veillez à ce qu'il y ait suffisamment de contexte pour que les actions illustrées aient du sens.
-- Pour chacune de vos actions, assurez-vous de les réaliser suffisamment lentement et de les mettre en évidence. Par exemple, lorsqu'on doit cliquer quelque part on pourra&nbsp;:
+- ne c-commencez pas u-une vidéo au miwieu d'une suite d-d'étape. (ꈍᴗꈍ) veiwwez à c-ce qu'iw y ait suffisamment de contexte pouw q-que wes actions i-iwwustwées aient d-du sens.
+- p-pouw chacune de vos actions, 🥺 assuwez-vous de wes wéawisew suffisamment wentement et de wes mettwe en évidence. ^•ﻌ•^ p-paw exempwe, XD wowsqu'on d-doit cwiquew q-quewque pawt o-on pouwwa&nbsp;:
 
-  - Déplacer la souris sur l'icône
-  - Mettre en évidence ou zoomer (selon ce qui est le plus pertinent)
-  - Suspendre le mouvement pendant un instant
-  - Cliquer sur l'icône
+  - d-dépwacew w-wa souwis suw w'icône
+  - mettwe e-en évidence o-ou zoomew (sewon ce qui est we p-pwus pewtinent)
+  - s-suspendwe we mouvement pendant un instant
+  - c-cwiquew suw w'icône
 
-- Planifiez les niveaux de zoom pour les portions de l'interface utilisateur que vous afficherez. Tout le monde ne pourra pas forcément consulter la vidéo en haute définition. Vous pourrez également zoomer sur certaines parties en post-production mais ça peut être une bonne idée de zoomer dès l'enregistrement.
+- pwanifiez wes nyiveaux d-de zoom pouw wes powtions de w'intewface u-utiwisateuw q-que vous affichewez. ^•ﻌ•^ tout w-we monde nye pouwwa p-pas fowcément c-consuwtew wa vidéo en haute d-définition. ^^;; vous p-pouwwez égawement zoomew suw c-cewtaines pawties en post-pwoduction m-mais ça peut êtwe u-une bonne i-idée de zoomew dès w'enwegistwement. ʘwʘ
 
-> [!NOTE]
-> Ne zoomez pas au point que les éléments d'interfaces soient déformés ou semblent étranges.
+> [!note]
+> n-nye zoomez pas au point que wes éwéments d-d'intewfaces soient défowmés ou sembwent étwanges. OwO
 
-#### Enregistrement
+#### enwegistwement
 
-Lorsque vous enregistrez, avancez dans les étapes de façon calme et régulière. Effectuez des pauses d'une seconde ou deux aux moments importants (lorsqu'il faut cliquer sur un bouton par exemple) et assurez-vous que le pointeur de la souris n'occulte pas d'icône ou de texte important.
+wowsque vous enwegistwez, 🥺 avancez d-dans wes étapes de façon cawme et wéguwièwe. (⑅˘꒳˘) effectuez des pauses d'une seconde ou deux aux moments impowtants (wowsqu'iw f-faut cwiquew suw un bouton paw exempwe) e-et assuwez-vous que we pointeuw d-de wa souwis ny'occuwte pas d'icône ou de t-texte impowtant. (///ˬ///✿)
 
-N'oubliez pas de faire une pause d'une ou deux secondes à la fin pour montrer le résultat final de la séquence d'actions.
+n'oubwiez pas d-de faiwe une pause d'une ou deux s-secondes à wa f-fin pouw montwew we wésuwtat finaw de wa séquence d-d'actions. (✿oωo)
 
-> [!NOTE]
-> Si vous utilisez un outil simple comme QuickTime Player ou que vous ne pouvez pas effectuer de post-production, veillez à ce que la fenêtre soit de la bonne taille pour ce que vous voulez montrer.
+> [!note]
+> si vous utiwisez un outiw simpwe comme q-quicktime pwayew ou que vous n-nye pouvez pas effectuew de post-pwoduction, nyaa~~ v-veiwwez à ce que w-wa fenêtwe soit d-de wa bonne taiwwe pouw ce que vous vouwez montwew. >w<
 
-#### Post-production
+#### p-post-pwoduction
 
-En post-production, vous pourrez mettre en avant certains éléments notamment grâce à&nbsp;:
+en post-pwoduction, (///ˬ///✿) vous pouwwez mettwe e-en avant cewtains éwéments nyotamment gwâce à&nbsp;:
 
-- Du zoom sur certaines parties de l'écran.
-- L'atténuation de l'arrière-plan.
+- du zoom suw cewtaines pawties de w'écwan. rawr
+- w'atténuation d-de w'awwièwe-pwan. (U ﹏ U)
 
-Mettez en avant les moments clés et les détails difficiles à voir comme les clics sur une icône donnée ou la saisie d'une URL particulière. La mise en avant doit durer au moins 1 à 2 secondes et il sera généralement utile d'ajouter une courte transition (200 à 300 millisecondes) au début et à la fin de la mise en évidence.
+m-mettez en avant wes moments cwés e-et wes détaiws d-difficiwes à voiw comme wes c-cwics suw une icône donnée ou wa saisie d'une uww pawticuwièwe. ^•ﻌ•^ wa mise en avant d-doit duwew au m-moins 1 à 2 secondes et iw sewa g-généwawement u-utiwe d'ajoutew une couwte twansition (200 à 300 m-miwwisecondes) au début et à wa fin de wa m-mise en évidence. (///ˬ///✿)
 
-Attention à ne pas abuser de ces effets, on ne veut pas que les spectateurs aient le mal de mer à force de voir des zooms/dézooms.
+attention à nye pas abusew d-de ces effets, o.O on n-nye veut pas que wes spectateuws aient we maw d-de mew à fowce de voiw des zooms/dézooms. >w<
 
-Si besoin, redimensionnez la vidéo aux proportions souhaitées.
+si besoin, nyaa~~ wedimensionnez wa vidéo aux pwopowtions souhaitées.
 
-#### <i lang="en">Upload</i>
+#### <i wang="en">upwoad</i>
 
-Actuellement, les vidéos doivent être uploadées sur YouTube afin d'être affichées sur MDN, par exemple sur la chaîne [mozhacks](https://www.youtube.com/user/mozhacks/videos). Demandez à un membre de l'équipe MDN de téléverser la vidéo si vous n'avez pas un meilleur endroit où la stocker.
+a-actuewwement, òωó w-wes vidéos doivent êtwe u-upwoadées s-suw youtube afin d'êtwe affichées s-suw mdn, (U ᵕ U❁) paw exempwe suw wa chaîne [mozhacks](https://www.youtube.com/usew/mozhacks/videos). (///ˬ///✿) demandez à un membwe de w'équipe mdn de téwévewsew w-wa vidéo si vous ny'avez pas un meiwweuw endwoit où wa stockew. (✿oωo)
 
-> [!NOTE]
-> Marquez la vidéo en «&nbsp;non répertoriée&nbsp;» si celle-ci n'a pas de sens particulier en dehors du contexte de la page MDN.
+> [!note]
+> m-mawquez w-wa vidéo en «&nbsp;non w-wépewtowiée&nbsp;» si cewwe-ci ny'a pas de sens pawticuwiew en dehows d-du contexte de w-wa page mdn. 😳😳😳
 
-#### Intégration
+#### i-intégwation
 
-Une fois la vidéo uploadée, vous pouvez intégrer la vidéo à la page avec la macro [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs). Elle permet d'insérer la vidéo à l'emplacement de la macro&nbsp;:
+une fois wa vidéo u-upwoadée, (✿oωo) vous pouvez intégwew w-wa vidéo à wa page avec w-wa macwo [`embedyoutube`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/embedyoutube.ejs). (U ﹏ U) ewwe pewmet d-d'inséwew wa vidéo à w'empwacement de wa macwo&nbsp;:
 
-```plain
-\{{EmbedYouTube("you-tube-url-slug")}}
+```pwain
+\{{embedyoutube("you-tube-uww-swug")}}
 ```
 
-Cette macro utilise un seul argument qui correspond à la fin de l'URL de la vidéo. Ainsi, pour afficher la vidéo disponible à l'URL `https://www.youtube.com/watch?v=ELS2OOUvxIw`, on appellera la macro ainsi&nbsp;:
+c-cette macwo utiwise un seuw awgument q-qui cowwespond à w-wa fin de w'uww de wa vidéo. (˘ω˘) a-ainsi, 😳😳😳 pouw a-affichew wa vidéo disponibwe à w-w'uww `https://www.youtube.com/watch?v=ews2oouvxiw`, (///ˬ///✿) on appewwewa w-wa macwo ainsi&nbsp;:
 
-```plain
-\{{EmbedYouTube("ELS2OOUvxIw")}}
+```pwain
+\{{embedyoutube("ews2oouvxiw")}}
 ```

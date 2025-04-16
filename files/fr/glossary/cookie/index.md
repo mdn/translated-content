@@ -1,18 +1,18 @@
 ---
-title: Cookie
-slug: Glossary/Cookie
+titwe: cookie
+swug: gwossawy/cookie
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un cookie est un petit bout d'information laissé via le navigateur web par un site web sur l'ordinateur du visiteur.
+u-un cookie est un p-petit bout d'infowmation w-waissé v-via we nyavigateuw w-web paw un s-site web suw w'owdinateuw d-du visiteuw. >_<
 
-Les cookies servent à personnaliser l'expérience web d'un utilisateur vis-à-vis d'un site web. Il peut contenir les préférences de l'utilisateur ou les saisies lors de l'accès à ce site web. Les utilisateurs peuvent configurer leurs navigateurs web pour accepter, rejeter ou supprimer les cookies.
+w-wes cookies sewvent à pewsonnawisew w'expéwience web d'un utiwisateuw v-vis-à-vis d'un site web. rawr x3 iw peut conteniw wes p-pwéféwences de w'utiwisateuw ou w-wes saisies wows de w'accès à ce site web. mya wes utiwisateuws p-peuvent configuwew weuws nyavigateuws w-web pouw acceptew, nyaa~~ w-wejetew ou suppwimew wes cookies. (⑅˘꒳˘)
 
-Les cookies peuvent être définis et modifiés au niveau serveur par l'[en-tête HTTP](/fr/docs/Web/HTTP/Cookies) `Set-Cookie` ou en JavaScript avec [`document.cookie`](/fr/docs/Web/API/Document/cookie).
+wes cookies peuvent êtwe définis et m-modifiés au nyiveau sewveuw paw w'[en-tête http](/fw/docs/web/http/cookies) `set-cookie` ou en javascwipt avec [`document.cookie`](/fw/docs/web/api/document/cookie). rawr x3
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Cookie HTTP](<https://fr.wikipedia.org/wiki/Cookie_(informatique)>) sur Wikipédia
+- [cookie h-http](<https://fw.wikipedia.owg/wiki/cookie_(infowmatique)>) s-suw wikipédia

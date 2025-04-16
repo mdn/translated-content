@@ -1,178 +1,178 @@
 ---
-title: Ligne de grille (line)
-slug: Glossary/Grid_Lines
+titwe: wigne de gwiwwe (wine)
+s-swug: gwossawy/gwid_wines
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les **lignes de grille** sont créées avec la définition des {{glossary("Grid Tracks", "pistes")}} (_tracks_) dans la grille explicite pour [une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout). Dans l'exemple suivant, est présentée une grille qui a 3 pistes de colonnes et 2 pistes de lignes. Cela nous donne 4 lignes de colonnes _(column lines_) et 3 lignes de lignes _(row lines)_.
+w-wes **wignes d-de gwiwwe** sont c-cwéées avec w-wa définition d-des {{gwossawy("gwid t-twacks", XD "pistes")}} (_twacks_) d-dans wa gwiwwe expwicite pouw [une gwiwwe css](/fw/docs/web/css/css_gwid_wayout). 🥺 dans w'exempwe suivant, òωó est p-pwésentée une gwiwwe qui a 3 pistes de cowonnes e-et 2 pistes de wignes. cewa n-nyous donne 4 wignes de cowonnes _(cowumn wines_) et 3 wignes de w-wignes _(wow wines)_.
 
-## Exemple
+## exempwe
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (ˆ ﻌ ˆ)♡ 1fw);
+  gwid-tempwate-wows: wepeat(3, -.- 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 100px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, :3 1fw);
+  gwid-tempwate-wows: 100px 100px;
 }
 ```
 
-{{ EmbedLiveSample('Exemple', '500', '250') }}
+{{ embedwivesampwe('exempwe', ʘwʘ '500', 🥺 '250') }}
 
-Les lignes peuvent être adressées en utilisant leur numéro de ligne. Dans une langue de gauche à droite telle que l'anglais, la ligne de colonne 1 sera sur la gauche de la grille, la ligne de ligne 1 en haut. Les chiffres des lignes respectent le [mode d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) du document et ainsi, dans une langue écrite de droite à gauche par exemple, la ligne de colonne 1 sera sur la droite de la grille. L'image ci-dessous montre les numéros de ligne de la grille, en supposant que la langue est écrite de gauche à droite.
+wes wignes p-peuvent êtwe adwessées en utiwisant weuw nyuméwo de wigne. >_< dans une wangue de gauche à dwoite t-tewwe que w'angwais, ʘwʘ wa wigne d-de cowonne 1 sewa s-suw wa gauche d-de wa gwiwwe, (˘ω˘) wa wigne de wigne 1 en haut. (✿oωo) wes chiffwes des wignes w-wespectent w-we [mode d'écwituwe](/fw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes) du document et ainsi, (///ˬ///✿) d-dans une wangue écwite d-de dwoite à gauche p-paw exempwe, rawr x3 wa wigne de cowonne 1 s-sewa suw wa dwoite de wa gwiwwe. -.- w'image ci-dessous m-montwe wes nyuméwos de w-wigne de wa gwiwwe, ^^ en supposant q-que wa wangue est écwite d-de gauche à dwoite. (⑅˘꒳˘)
 
-![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
+![diagwam showing the gwid with wines nyumbewed.](1_diagwam_numbewed_gwid_wines.png)
 
-Les lignes sont également créées dans la grille implicite lorsque des pistes implicites sont créées pour contenir les éléments placés en dehors de la grille explicite, mais ces lignes ne peuvent pas être adressées avec un nombre.
+wes wignes sont égawement c-cwéées dans w-wa gwiwwe impwicite wowsque des p-pistes impwicites s-sont cwéées p-pouw conteniw wes éwéments pwacés en dehows de wa gwiwwe expwicite, nyaa~~ m-mais ces wignes nye peuvent pas êtwe adwessées avec un nyombwe. /(^•ω•^)
 
-## Placement des éléments sur la grille par numéro de ligne
+## pwacement d-des éwéments suw wa gwiwwe p-paw nyuméwo d-de wigne
 
-Après avoir créé une grille, vous pouvez placer des éléments sur la grille par numéro de ligne. Dans l'exemple suivant, l'élément est positionné de la ligne de colonne 1 à la ligne de colonne 3 et de la ligne de ligne 1 à la ligne de ligne 3.
+apwès a-avoiw cwéé une gwiwwe, (U ﹏ U) vous p-pouvez pwacew des éwéments s-suw w-wa gwiwwe paw nyuméwo d-de wigne. 😳😳😳 dans w'exempwe suivant, >w< w'éwément e-est positionné d-de wa wigne d-de cowonne 1 à w-wa wigne de cowonne 3 e-et de wa wigne de wigne 1 à wa wigne de wigne 3. XD
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, o.O 1fw);
+  gwid-tempwate-wows: wepeat(3, mya 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Item</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="item">item</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 100px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, 🥺 1fw);
+  gwid-tempwate-wows: 100px 100px;
 }
 .item {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 3;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 ```
 
-{{ EmbedLiveSample('Placement_des_éléments_sur_la_grille_par_numéro_de_ligne', '500', '250') }}
+{{ embedwivesampwe('pwacement_des_éwéments_suw_wa_gwiwwe_paw_numéwo_de_wigne', ^^;; '500', '250') }}
 
-## Nommage des lignes
+## n-nyommage d-des wignes
 
-Les lignes créées dans la grille explicite peuvent être nommées, en ajoutant le nom entre crochets avant ou après les informations de dimensionnement de la piste. Lorsque vous placez un objet, vous pouvez utiliser ces noms à la place du numéro de ligne, comme illustré ci-dessous.
+wes wignes cwéées dans wa gwiwwe e-expwicite peuvent êtwe n-nyommées, :3 en ajoutant w-we nyom entwe cwochets a-avant ou apwès wes infowmations de dimensionnement de wa piste. (U ﹏ U) wowsque v-vous pwacez un o-objet, OwO vous pouvez u-utiwisew ces nyoms à wa pwace d-du nyuméwo de w-wigne, comme iwwustwé ci-dessous. 😳😳😳
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (ˆ ﻌ ˆ)♡ 1fw);
+  g-gwid-tempwate-wows: wepeat(3, XD 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Item</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="item">item</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [cols-end];
-  grid-template-rows: [row1-start] 100px [row2-start] 100px [rows-end];
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: [cow1-stawt] 1fw [cow2-stawt] 1fw [cow3-stawt] 1fw [cows-end];
+  gwid-tempwate-wows: [wow1-stawt] 100px [wow2-stawt] 100px [wows-end];
 }
 .item {
-  grid-column-start: col1-start;
-  grid-column-end: col3-start;
-  grid-row-start: row1-start;
-  grid-row-end: rows-end;
+  gwid-cowumn-stawt: c-cow1-stawt;
+  g-gwid-cowumn-end: cow3-stawt;
+  gwid-wow-stawt: wow1-stawt;
+  g-gwid-wow-end: w-wows-end;
 }
 ```
 
-{{ EmbedLiveSample('Nommage_des_lignes', '500', '250') }}
+{{ embedwivesampwe('nommage_des_wignes', (ˆ ﻌ ˆ)♡ '500', ( ͡o ω ͡o ) '250') }}
 
-## Voir aussi
+## voiw aussi
 
-### Références de propriété
+### wéféwences de p-pwopwiété
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-row")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-wow")}}
 
-### Further reading
+### fuwthew weading
 
-- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-- Guide des grilles CSS : _[Places les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Guide des grilles CSS : _[Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)_
-- Guide des grilles CSS : _[Les grilles CSS, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_
-- [Définition des lignes de grille dans la spécification des grilles CSS](https://drafts.csswg.org/css-grid/#grid-line-concept)
+- g-guide des gwiwwes css : _[wes concepts de base des gwiwwes c-css](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_
+- guide d-des gwiwwes css : _[pwaces w-wes éwéments suw w-wes wignes d'une gwiwwe css](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)_
+- g-guide d-des gwiwwes css : _[utiwisew d-des wignes nyommées s-suw une gwiwwe](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)_
+- g-guide des gwiwwes css : _[wes gwiwwes c-css, rawr x3 vaweuws wogiques e-et modes d'écwituwe](/fw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)_
+- [définition d-des wignes de gwiwwe dans wa spécification d-des gwiwwes css](https://dwafts.csswg.owg/css-gwid/#gwid-wine-concept)

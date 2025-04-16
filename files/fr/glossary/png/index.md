@@ -1,14 +1,14 @@
 ---
-title: PNG
-slug: Glossary/PNG
+titwe: png
+swug: gwossawy/png
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**PNG** (_Portable Network Graphics_) est un format de fichiers graphiques qui supporte la compression de données sans perte.
+**png** (_powtabwe n-nyetwowk g-gwaphics_) e-est un fowmat d-de fichiews gwaphiques q-qui suppowte w-wa compwession d-de données sans p-pewte. σωσ
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [PNG](https://fr.wikipedia.org/wiki/Portable_Network_Graphics) sur Wikipédia
+- [png](https://fw.wikipedia.owg/wiki/powtabwe_netwowk_gwaphics) suw w-wikipédia

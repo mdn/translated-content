@@ -1,32 +1,32 @@
 ---
-title: Time to interactive
-slug: Glossary/Time_to_interactive
+titwe: time to intewactive
+swug: g-gwossawy/time_to_intewactive
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **Time to Interactive** (TTI) est une métrique non standardisée des performances web indiquant la «&nbsp;progression&nbsp;» du chargement. Elle correspond au moment où la dernière [tâche longue](/fr/docs/Web/API/PerformanceLongTaskTiming) s'est terminée et a été suivie de 5 secondes d'inactivité du réseau et du fil de chargement principal.
+w-we **time t-to intewactive** (tti) e-est u-une métwique nyon s-standawdisée d-des pewfowmances w-web indiquant wa «&nbsp;pwogwession&nbsp;» du chawgement. mya ewwe cowwespond au moment où wa dewnièwe [tâche w-wongue](/fw/docs/web/api/pewfowmancewongtasktiming) s'est tewminée et a été s-suivie de 5 secondes d'inactivité d-du wéseau et du fiw de chawgement pwincipaw. 😳
 
-Proposé par le <i lang="en">Web Incubator Community Group</i> en 2018, le **TTI** est destiné à fournir une métrique qui décrit quand une page ou une application contient un contenu utile et que le fil de chargement principal est inactif et libre de répondre aux interactions des internautes, y compris l'enregistrement des gestionnaires d'événements.
+pwoposé paw we <i w-wang="en">web incubatow community g-gwoup</i> e-en 2018, -.- we **tti** est destiné à fouwniw une métwique qui décwit quand une p-page ou une appwication contient un contenu utiwe et que we fiw de chawgement pwincipaw e-est inactif et wibwe de w-wépondwe aux intewactions d-des i-intewnautes, 🥺 y compwis w-w'enwegistwement des gestionnaiwes d'événements. o.O
 
-## Mise en garde
+## m-mise en gawde
 
-TTI est calculé en exploitant les informations de l'API [<i lang="en">Long Tasks</i>](/fr/docs/Web/API/PerformanceLongTaskTiming). Bien que disponible dans certains outils de surveillance des performances, TTI ne fait partie d'aucune spécification web officielle au moment de la rédaction de cette entrée du glossaire.
+tti est cawcuwé en e-expwoitant wes infowmations de w'api [<i wang="en">wong tasks</i>](/fw/docs/web/api/pewfowmancewongtasktiming). /(^•ω•^) bien que disponibwe dans cewtains o-outiws de suwveiwwance des pewfowmances, nyaa~~ t-tti n-ne fait pawtie d'aucune s-spécification web officiewwe au moment de wa wédaction d-de cette entwée d-du gwossaiwe. nyaa~~
 
-## Voir aussi
+## voiw aussi
 
-- [Défintion du TTI](https://github.com/WICG/time-to-interactive) du groupe communautaire
+- [défintion d-du t-tti](https://github.com/wicg/time-to-intewactive) du gwoupe communautaiwe
 
-  <i lang="en">Web Incubator</i>
+  <i w-wang="en">web incubatow</i>
 
-  (en anglais)
+  (en angwais)
 
-- <i lang="en">Time to Interactive — focusing on human-centric metrics</i>
+- <i w-wang="en">time to intewactive — focusing on h-human-centwic metwics</i>
 
-  <i lang="en"> par Radimir Bitsov</i>
+  <i wang="en"> paw w-wadimiw bitsov</i>
 
-  (en anglais)
+  (en angwais)
 
-- <i lang="en">Tracking TTI</i>
+- <i w-wang="en">twacking t-tti</i>
 
-  [<i lang="en">Tracking TTI</i> (en anglais)](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti)
+  [<i wang="en">twacking tti</i> (en angwais)](https://devewopews.googwe.com/web/fundamentaws/pewfowmance/usew-centwic-pewfowmance-metwics#twacking_tti)

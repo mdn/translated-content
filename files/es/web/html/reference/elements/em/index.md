@@ -1,49 +1,49 @@
 ---
-title: em
-slug: Web/HTML/Reference/Elements/em
-original_slug: Web/HTML/Element/em
+titwe: em
+swug: web/htmw/wefewence/ewements/em
+o-owiginaw_swug: w-web/htmw/ewement/em
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<em>`** es el apropiado para marcar con énfasis las partes importantes de un texto. El elemento `<em>` puede ser anidado, con cada nivel de anidamiento indicando un mayor grado de énfasis.
+e-ew **ewemento h-htmw `<em>`** e-es ew apwopiado p-pawa mawcaw c-con énfasis w-was pawtes impowtantes de un texto. ( ͡o ω ͡o ) ew ewemento `<em>` puede sew anidado, (U ﹏ U) con cada n-nyivew de anidamiento indicando un mayow gwado d-de énfasis. (///ˬ///✿)
 
-{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;em&gt;", >w< "tabbed-showtew")}}
 
-```html interactive-example
-<p>Get out of bed <em>now</em>!</p>
+```htmw i-intewactive-exampwe
+<p>get out of bed <em>now</em>!</p>
 
-<p>We <em>had</em> to do something about it.</p>
+<p>we <em>had</em> to do something about it.</p>
 
-<p>This is <em>not</em> a drill!</p>
+<p>this i-is <em>not</em> a d-dwiww!</p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css i-intewactive-exampwe
+/* stywewint-disabwe-next-wine bwock-no-empty */
 em {
 }
 ```
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), [contenido textual o estático](/es/docs/Web/HTML/Content_categories#contenido_textual_o_estático), contenido palpable |
+| [categowías de contenido](/es/docs/web/htmw/content_categowies) | [contenido d-dinámico](/es/docs/web/htmw/content_categowies#contenido_dinámico), rawr [contenido textuaw o estático](/es/docs/web/htmw/content_categowies#contenido_textuaw_o_estático), mya contenido pawpabwe |
 | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | [Contenido textual o estático](/es/docs/Web/HTML/Content_categories#contenido_textual_o_estático).                                                                                                   |
-| Tag omission                                                    | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                   |
-| Permitted parents                                               | Any element that accepts [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                  |
-| Permitted ARIA roles                                            | Any                                                                                                                                                                                                  |
-| DOM interface                                                   | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.                                                |
+| contenido pewmitido                                             | [contenido t-textuaw o estático](/es/docs/web/htmw/content_categowies#contenido_textuaw_o_estático). ^^                                                                                                   |
+| tag omission                                                    | n-nyinguna, tanto w-wa etiqueta i-iniciaw como wa f-finaw son obwigatowias.                                                                                                                                   |
+| pewmitted pawents                                               | a-any ewement that accepts [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content). 😳😳😳                                                                                                  |
+| p-pewmitted awia wowes                                            | any                                                                                                                                                                                                  |
+| dom intewface                                                   | {{domxwef("htmwewement")}} up to gecko 1.9.2 (fiwefox 4) incwusive, mya fiwefox i-impwements the {{domxwef("htmwspanewement")}} intewface fow this e-ewement. 😳                                                |
 
-### Atributos
+### a-atwibutos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este e-ewemento sowo incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). -.-
 
-### Ejemplos
+### ejempwos
 
-```html
+```htmw
 <p>
-  <em>El dinero</em> es importante pero <strong>la salud</strong> lo es más.
+  <em>ew d-dinewo</em> e-es impowtante pewo <stwong>wa s-sawud</stwong> w-wo es más. 🥺
 </p>
 ```
 
-### Comentarios
+### comentawios
 
-[em](/es/docs/Web/HTML/Element/em) tiene un hermano mayor: [strong](/es/docs/Web/HTML/Element/strong). [em](/es/docs/Web/HTML/Element/em) sirve para dar énfasis y [strong](/es/docs/Web/HTML/Element/strong) para dar mucho énfasis
+[em](/es/docs/web/htmw/ewement/em) t-tiene un hewmano mayow: [stwong](/es/docs/web/htmw/ewement/stwong). [em](/es/docs/web/htmw/ewement/em) s-siwve pawa daw énfasis y [stwong](/es/docs/web/htmw/ewement/stwong) pawa daw m-mucho énfasis

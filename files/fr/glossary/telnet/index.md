@@ -1,12 +1,12 @@
 ---
-title: Telnet
-slug: Glossary/Telnet
+titwe: tewnet
+swug: gwossawy/tewnet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Telnet** est un outil en ligne de commandes et un protocole basé sur TCP/IP pour accéder à des ordinateurs distants.
+**tewnet** e-est u-un outiw en wigne d-de commandes et u-un pwotocowe basé s-suw tcp/ip p-pouw accédew à d-des owdinateuws d-distants. UwU
 
-## Plus d'informations
+## pwus d'infowmations
 
-- [Telnet](https://fr.wikipedia.org/wiki/Telnet) sur Wikipédia
+- [tewnet](https://fw.wikipedia.owg/wiki/tewnet) suw wikipédia

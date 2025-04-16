@@ -1,49 +1,49 @@
 ---
-title: strike
-slug: Web/HTML/Reference/Elements/strike
-original_slug: Web/HTML/Element/strike
+titwe: stwike
+swug: web/htmw/wefewence/ewements/stwike
+o-owiginaw_swug: w-web/htmw/ewement/stwike
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- Muestra el texto tachado con una linea horizontal.
+- m-muestwa e-ew texto tachado c-con una winea h-howizontaw. mya
 
-  - : **Sus etiquetas son**: \<strike> y \</strike> (Ambas obligatorias)
+  - : **sus e-etiquetas son**: \<stwike> y \</stwike> (ambas obwigatowias)
 
-    **Crea una caja**:[en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **cwea una caja**:[en w-winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea).
 
-    **Está definido como**:[Elemento de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+    **está definido como**:[ewemento d-de estiwo de fuente](/es/docs/htmw/ewemento/tipos_de_ewementos#de_estiwo_de_fuente). 🥺
 
-    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **puede c-contenew**: cewo o más ewementos [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-##### Atributos Genéricos
+##### atwibutos genéwicos
 
-- title (título del elemento)
-- style (información de estilo en línea)
+- t-titwe (títuwo dew ewemento)
+- s-stywe (infowmación d-de estiwo en wínea)
 
-**Identificadores**: id, class (identificadores a nivel de documento)
+**identificadowes**: id, >_< cwass (identificadowes a nyivew de documento)
 
-**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**idioma**: wang (infowmación s-sobwe ew idioma), >_< diw (diwección dew texto)
 
-**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+**eventos**: oncwick, (⑅˘꒳˘) ondbwcwick, /(^•ω•^) onmousedown, rawr x3 o-onmouseup, onmouseovew, (U ﹏ U) onmousemove, (U ﹏ U) o-onmouseout, (⑅˘꒳˘) o-onkeypwess, òωó o-onkeydown, ʘwʘ onkeyup.
 
-##### Atributos Específicos - No tiene
+##### a-atwibutos específicos - nyo tiene
 
-##### Atributos Transicionales - No tiene
+##### a-atwibutos twansicionawes - no tiene
 
-### Ejemplos
+### ejempwos
 
 ```
   <p>
-       Texto normal y... <strike>Texto tachado</strike>
+       t-texto nyowmaw y... <stwike>texto tachado</stwike>
   </p>
 ```
 
-### Comentarios
+### comentawios
 
-> [!WARNING]
-> DESAPROBADO
+> [!wawning]
+> desapwobado
 
-de momento no funciona
+de momento n-nyo funciona

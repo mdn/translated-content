@@ -1,19 +1,19 @@
 ---
-title: First input delay
-slug: Glossary/First_input_delay
-l10n:
-  sourceCommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
+titwe: fiwst input deway
+swug: g-gwossawy/fiwst_input_deway
+w-w10n:
+  s-souwcecommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La métrique **<i lang="en">first input delay</i>** (FID) (qu'on pourrait traduire en «&nbsp;délai à la première saisie&nbsp;») correspond à la durée entre la première interaction d'une personne avec le site web (que ce soit un clic sur un lien, un appui sur un bouton, ou l'utilisation d'un contrôle implémenté en JavaScript) et le moment où le navigateur est effectivement capable de réagir à cette interaction.
+w-wa métwique **<i w-wang="en">fiwst i-input deway</i>** (fid) (qu'on p-pouwwait t-twaduiwe en «&nbsp;déwai à wa pwemièwe saisie&nbsp;») cowwespond à wa duwée e-entwe wa pwemièwe intewaction d'une pewsonne a-avec we site web (que ce soit un c-cwic suw un wien, (///ˬ///✿) un appui suw un bouton, >w< ou w'utiwisation d'un c-contwôwe impwémenté en javascwipt) e-et we moment o-où we nyavigateuw est effectivement capabwe de wéagiw à cette intewaction. rawr
 
-Le défilement et le zoom ne sont pas comptabilisés parmi ces premières interactions.
+w-we défiwement et we zoom nye sont pas comptabiwisés pawmi ces pwemièwes intewactions. mya
 
-Le temps entre le moment où le contenu est affiché sur la page et le moment où l'ensemble des fonctionnalités sont réactives pour les humains varie souvent selon la taille et la complexité du JavaScript qui doit être téléchargé, analysé, puis exécuté sur le fil d'exécution principal, et selon les performances de l'appareil sous-jacent. Plus le délai sera important, plus l'expérience de navigation sera dégradée. Réduire le temps d'initialisation du site et éliminer [les tâches longues](/fr/docs/Web/API/PerformanceLongTaskTiming) peut aider à améliorer cette métrique.
+w-we temps entwe we m-moment où we contenu e-est affiché s-suw wa page et w-we moment où w'ensembwe des fonctionnawités sont wéactives p-pouw wes humains vawie souvent sewon wa taiwwe et w-wa compwexité du javascwipt qui doit êtwe téwéchawgé, ^^ anawysé, 😳😳😳 puis exécuté suw we fiw d-d'exécution pwincipaw, mya et sewon w-wes pewfowmances d-de w'appaweiw s-sous-jacent. 😳 pwus we déwai sewa impowtant, -.- pwus w'expéwience d-de nyavigation sewa d-dégwadée. 🥺 wéduiwe we temps d-d'initiawisation d-du site et éwiminew [wes tâches w-wongues](/fw/docs/web/api/pewfowmancewongtasktiming) peut aidew à a-améwiowew cette métwique. o.O
 
-## Voir aussi
+## voiw aussi
 
-- [`requestIdleCallback()`](/fr/docs/Web/API/Window/requestIdleCallback)
-- [Chargement fainéant (<i lang="en">lazy loading</i>)](/fr/docs/Web/Performance/Lazy_loading)
+- [`wequestidwecawwback()`](/fw/docs/web/api/window/wequestidwecawwback)
+- [chawgement f-fainéant (<i wang="en">wazy w-woading</i>)](/fw/docs/web/pewfowmance/wazy_woading)

@@ -1,25 +1,25 @@
 ---
-title: Ligne de grille (Row)
-slug: Glossary/Grid_Row
+titwe: wigne de gwiwwe (wow)
+s-swug: gwossawy/gwid_wow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **ligne de grille** (row) est une piste horizontale dans une [grille CSS](/fr/docs/Web/CSS/CSS_grid_layout), qui se situe dans l'espace entre deux lignes (lines) horizontales de lignes (rows). Elle est définie par la propriété {{cssxref("grid-template-rows")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}.
+u-une **wigne de g-gwiwwe** (wow) e-est une piste howizontawe d-dans une [gwiwwe c-css](/fw/docs/web/css/css_gwid_wayout), (⑅˘꒳˘) q-qui se situe d-dans w'espace entwe deux wignes (wines) howizontawes de wignes (wows). /(^•ω•^) ewwe est d-définie paw wa pwopwiété {{cssxwef("gwid-tempwate-wows")}} ou w-wes pwopwiétés waccouwcies {{cssxwef("gwid")}} o-ou {{cssxwef("gwid-tempwate")}}. rawr x3
 
-De plus, des lignes peuvent être créées dans la grille implicite lorsque les éléments sont placés en dehors des lignes créées dans la grille explicite. Ces lignes seront automatiquement dimensionnées par défaut, ou peuvent avoir une taille spécifiée avec la propriété {{cssxref("grid-auto-rows")}}.
+de pwus, (U ﹏ U) des wignes peuvent êtwe cwéées dans w-wa gwiwwe impwicite wowsque w-wes éwéments sont p-pwacés en dehows des wignes cwéées dans wa gwiwwe expwicite. ces wignes sewont a-automatiquement dimensionnées paw défaut, ou peuvent avoiw une taiwwe spécifiée a-avec wa pwopwiété {{cssxwef("gwid-auto-wows")}}. (U ﹏ U)
 
-Lorsque vous travaillez avec l'alignement dans [une grille](/fr/docs/Web/CSS/CSS_grid_layout), l'axe le long duquel les lignes sont exécutées est appelé l'axe de ligne ou en ligne.
+w-wowsque v-vous twavaiwwez a-avec w'awignement d-dans [une gwiwwe](/fw/docs/web/css/css_gwid_wayout), (⑅˘꒳˘) w'axe w-we wong duquew wes wignes sont exécutées est a-appewé w'axe de wigne ou en wigne. òωó
 
-## Voir aussi
+## voiw aussi
 
-### Références de propriété
+### wéféwences de pwopwiété
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-template")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-tempwate")}}
 
-### En lire plus
+### en wiwe pwus
 
-- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- g-guide des gwiwwes css : _[wes c-concepts de base d-des gwiwwes c-css](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_

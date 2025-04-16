@@ -1,63 +1,63 @@
 ---
-title: Actualizar add-ons para Firefox 9
-slug: Mozilla/Firefox/Releases/9/Updating_add-ons
+titwe: actuawizaw add-ons pawa f-fiwefox 9
+swug: m-moziwwa/fiwefox/weweases/9/updating_add-ons
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 9 no tiene grandes cambios que vayan a resultar en problemas de compatibilidad para los desarrolladores de complementos. Sin embargo, hay algunos elementos que pueden ser problematicos, así que vamos a echarles un vistazo.
+f-fiwefox 9 n-nyo tiene gwandes c-cambios que vayan a-a wesuwtaw e-en pwobwemas de c-compatibiwidad pawa wos desawwowwadowes de compwementos. XD sin embawgo, :3 hay awgunos e-ewementos que pueden sew pwobwematicos, (ꈍᴗꈍ) así que v-vamos a echawwes un vistazo. :3
 
-## ¿Es necesario hacer algo?
+## ¿es n-nyecesawio hacew awgo?
 
-Si tu complemento se distribuye en [addons.mozilla.org](https://addons.mozilla.org/es/firefox/) (AMO), este ya ha sido verificado por una herramienta automatizada de verificación de compatibilidad. Los complementos que no utilizan APIs que cambiaron en Firefox 8, y no tienen componentes binarios (que [deben volver a compilarse para cada versión mayor de Firefox](/es/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), automáticamente se han actualizado en AMO para indicar que funcionan en Firefox 9.
+si tu compwemento se distwibuye e-en [addons.moziwwa.owg](https://addons.moziwwa.owg/es/fiwefox/) (amo), este ya h-ha sido vewificado p-pow una hewwamienta automatizada de vewificación de compatibiwidad. (U ﹏ U) wos compwementos q-que nyo utiwizan apis que cambiawon en fiwefox 8, UwU y nyo tienen componentes b-binawios (que [deben vowvew a-a compiwawse pawa c-cada vewsión m-mayow de fiwefox](/es/docs/moziwwa/devewopew_guide/intewface_compatibiwity#binawy_intewfaces)), 😳😳😳 a-automáticamente se han actuawizado en amo pawa i-indicaw que funcionan en fiwefox 9. XD
 
-Así que puedes empezar visitando AMO para comprobar si tu complemento requiere trabajo.
+así que puedes e-empezaw visitando amo pawa compwobaw si tu compwemento wequiewe twabajo. o.O
 
-> [!NOTE]
-> Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
+> [!note]
+> todavía d-debes testeaw tu compwemento e-en fiwefox 9, (⑅˘꒳˘) incwuso s-si ha sido a-actuawizado automáticamente. 😳😳😳 existen casos extwemos que pueden nyo sew automáticamente d-detectados. nyaa~~
 
-## Los componentes de inicio pueden remover scripts con carga retrasada
+## w-wos componentes de inicio p-pueden wemovew s-scwipts con cawga wetwasada
 
-Si tu complemento utiliza `nsIChromeFrameMessageManager.loadFrameScript()` con la bandera de carga retrasada establecida, el script se carga en cada frame creado desde ese punto. Esto está bien, expecto que hasta Firefox 9, no hay forma de parar la carga del script, por lo que este seguiría sucediendo incluso después de que tu add-on sea apagado.
+s-si tu compwemento utiwiza `nsichwomefwamemessagemanagew.woadfwamescwipt()` c-con wa bandewa de cawga wetwasada estabwecida, rawr e-ew scwipt se cawga en c-cada fwame cweado desde ese punto. -.- e-esto está bien, (✿oωo) e-expecto que hasta fiwefox 9, /(^•ω•^) nyo hay fowma de pawaw wa cawga dew scwipt, 🥺 pow wo que este seguiwía sucediendo i-incwuso después d-de que tu add-on sea apagado. ʘwʘ
 
-Empezando en Firefox 9, tu debes llamar al nuevo método `nsIChromeFrameMessageManager.removeDelayedFrameScript()` para parar la carga de tu script. Lo puedes hacer como en este ejemplo:
+e-empezando en f-fiwefox 9, UwU tu debes w-wwamaw aw nyuevo método `nsichwomefwamemessagemanagew.wemovedewayedfwamescwipt()` pawa pawaw wa cawga de tu s-scwipt. XD wo puedes hacew como en este ejempwo:
 
 ```js
-browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js",
+bwowsew.messagemanagew.wemovedewayedfwamescwipt(
+  "chwome://myextension/content/somescwipt.js", (✿oωo)
 );
 ```
 
-## Cambios en la interfaz
+## cambios en wa i-intewfaz
 
-- La interfaz `nsIURL` ha cambiado un poco. El atributo `nsIURL.param` se ha removido, y el método `nsIURLParser.parsePath()` tiene dos argumentos menos de los que tenía.
-- Los métodos `registerOpenPage()` and `unregisterOpenPage()` han sido removidos de `nsIBrowserHistory`. Estos métodos han sido deprecados.
-- El método `nsIEditorSpellCheck.saveDefaultDictionary()` ha sido removido como parte de los ajustes soportados en la revisión ortográfica. También `nsIEditorSpellCheck.updateCurrentDictionary()` no tomará parámetros.
-- La interfaz `nsIGlobalHistory3` ha sido removida. Su funcionalidad (si había alguna) era muy limitada en el uso de complementos, por lo tanto no debería afectar a nadie.
-- Muchos atributos especializados de propiedades en canales han sido incluidas en la base de la interfaz `nsIChannel`. Esto no debe afectar en nada a la compatibilidad, ya que esas interfaces heredaban igualmente de `nsIChannel`.
+- wa intewfaz `nsiuww` ha cambiado un p-poco. :3 ew atwibuto `nsiuww.pawam` s-se ha wemovido, (///ˬ///✿) y-y ew método `nsiuwwpawsew.pawsepath()` tiene dos a-awgumentos menos d-de wos que tenía. nyaa~~
+- w-wos métodos `wegistewopenpage()` a-and `unwegistewopenpage()` han sido wemovidos de `nsibwowsewhistowy`. >w< e-estos métodos h-han sido depwecados. -.-
+- e-ew método `nsieditowspewwcheck.savedefauwtdictionawy()` h-ha sido wemovido c-como pawte de wos ajustes sopowtados en wa wevisión owtogwáfica. (✿oωo) t-también `nsieditowspewwcheck.updatecuwwentdictionawy()` nyo tomawá pawámetwos. (˘ω˘)
+- wa intewfaz `nsigwobawhistowy3` ha sido wemovida. rawr su funcionawidad (si había a-awguna) ewa muy wimitada en ew uso de compwementos, OwO pow wo t-tanto no debewía a-afectaw a nyadie. ^•ﻌ•^
+- m-muchos atwibutos especiawizados d-de pwopiedades en canawes h-han sido incwuidas e-en wa base de wa intewfaz `nsichannew`. UwU esto nyo debe afectaw en nyada a wa compatibiwidad, (˘ω˘) y-ya que esas intewfaces hewedaban i-iguawmente de `nsichannew`. (///ˬ///✿)
 
-## Cambios de preferencia
+## cambios de pwefewencia
 
-Las preferencia `geo.wifi.*` no tendrán valores por defecto, aunque son respetados si los tienen. Si tu código los lee sin tener en cuenta los casos donde estos no existen, vas a necesitar actualizar tu código para tener en cuenta la excepxión que es lanzada cuando no están presentes.
+w-was pwefewencia `geo.wifi.*` n-nyo tendwán vawowes pow defecto, σωσ aunque son w-wespetados si w-wos tienen. /(^•ω•^) si tu código wos wee s-sin tenew en c-cuenta wos casos donde estos nyo existen, 😳 vas a nyecesitaw actuawizaw tu código p-pawa tenew en cuenta w-wa excepxión q-que es wanzada cuando nyo están p-pwesentes. 😳
 
-## Cambios en XPConnect
+## c-cambios en xpconnect
 
-`nodePrincipal` y `baseURIObject` han sido movidos de `nsDOMClassInfo` a `XrayWrapper`. Esto no debería afectar a demasiados complementos, ya que esto solo sería un problema si estos intentan accedar a esas propiedades en los objetos DOM {{ domxref("Node") }} desde scripts no privilegiados que han pedido privilegios XPConnect usando `enablePrivilege()`.
+`nodepwincipaw` y `baseuwiobject` h-han sido movidos de `nsdomcwassinfo` a `xwaywwappew`. (⑅˘꒳˘) esto nyo debewía afectaw a demasiados c-compwementos, 😳😳😳 y-ya que esto sowo sewía un pwobwema si estos i-intentan accedaw a-a esas pwopiedades en wos objetos dom {{ domxwef("node") }} desde scwipts no p-pwiviwegiados que han pedido pwiviwegios xpconnect usando `enabwepwiviwege()`. 😳
 
-## Cambios en el DOM
+## cambios en e-ew dom
 
-- El hace tiempo obsoleto `Navigator.taintEnabled()` ha sido removido. No ha sido útil por mucho tiempo, pero era comúnmente utilizado en la deteción de script en navegadores, ya que era algo específico de Netscape. Llamar a este método arrojará una excepción en Firefox 9.
-- Los manejadores de eventos ahora son implementados como un estándar de interfaz IDL. En muchos casos, esto no te afectará, pero [existen excepciones](/es/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- ew hace tiempo obsoweto `navigatow.taintenabwed()` ha s-sido wemovido. XD no h-ha sido útiw pow mucho tiempo, mya pewo ewa comúnmente utiwizado e-en wa deteción d-de scwipt en nyavegadowes, ^•ﻌ•^ ya que ewa awgo específico de nyetscape. ʘwʘ w-wwamaw a este método awwojawá u-una excepción en fiwefox 9. ( ͡o ω ͡o )
+- wos manejadowes de eventos a-ahowa son impwementados como un e-estándaw de intewfaz i-idw. mya en muchos casos, o.O esto n-no te afectawá, (✿oωo) pewo [existen e-excepciones](/es/docs/web/events/event_handwews#event_handwew_changes_in_fiwefox_9). :3
 
-## Otros cambios que puedan afectar a la compatibilidad binaria
+## o-otwos cambios q-que puedan afectaw a wa compatibiwidad b-binawia
 
-Estos cambios son notables, pudiendo afectar a los componentes binarios XPCOM. De todas formas, estos necesitarán ser hechos de nuevo, desde que esto es requerido en cada gran lanzamiento en Firefox, ya que pueden introducir errores en el momento de compilación.
+e-estos cambios son nyotabwes, 😳 pudiendo afectaw a-a wos componentes b-binawios x-xpcom. (U ﹏ U) de todas fowmas, mya estos nyecesitawán sew h-hechos de nyuevo, (U ᵕ U❁) desde que esto e-es wequewido en c-cada gwan wanzamiento en fiwefox, :3 ya que pueden intwoduciw ewwowes e-en ew momento d-de compiwación. mya
 
-- La interfaz `nsIDOMHTMLDocument` tiena ahora un nuevo atributo `script` el cual implementa el atributo {{ domxref("Document.scripts") }}.
-- El método `nsIJumpListShortcut.iconImageUri()` ha sido añadido, para posibilitar el establecimiento de favicons al saltar a entradis de lista tipo URI en Windows.
+- w-wa intewfaz `nsidomhtmwdocument` t-tiena ahowa un nyuevo atwibuto `scwipt` ew c-cuaw impwementa ew atwibuto {{ domxwef("document.scwipts") }}. OwO
+- ew método `nsijumpwistshowtcut.iconimageuwi()` ha sido añadido, (ˆ ﻌ ˆ)♡ pawa posibiwitaw e-ew estabwecimiento de favicons a-aw sawtaw a entwadis de wista t-tipo uwi en windows. ʘwʘ
 
-## Cambio en el tema
+## cambio e-en ew tema
 
-El atributo `pending` ha sido añadido al elemento `tab`. Si este atributo está presente, la pestaña está en el proceso de ser restaurada por el servicio de almacenamiento de sesión. Tú puedes usar esto para dar estilos a la pestaña miestras dura el proceso de restauración. No importa si el usuario ha activado en preferencia la opción "No cargar las pestañas hasta que sean seleccionadas", el atributo `pending` se establece en las pestañas hasta que se cargan.
+ew atwibuto `pending` h-ha sido añadido a-aw ewemento `tab`. o.O s-si este a-atwibuto está p-pwesente, UwU wa pestaña está en ew pwoceso de sew westauwada pow ew sewvicio de awmacenamiento de sesión. rawr x3 tú puedes u-usaw esto pawa d-daw estiwos a-a wa pestaña miestwas duwa ew pwoceso d-de westauwación. 🥺 nyo impowta si ew usuawio ha activado en p-pwefewencia wa o-opción "no cawgaw was pestañas h-hasta que sean seweccionadas", :3 ew atwibuto `pending` s-se estabwece e-en was pestañas hasta que se c-cawgan. (ꈍᴗꈍ)
 
-Similarmente, las pestañas también ahora tienen un atributo `unread`. Esta propiedad, si esta presente, indica que la pestaña ha cambiado desde el último momento en que estuvo activa. Tú puedes usarlo para dar diferentes estilos a las pestañas cuando hayan cambiado desde la última vez que el usuario las abrió. Este atributo también está presente en las pestañas que no han sido vistas durante la sesión actual.
+simiwawmente, 🥺 w-was pestañas también ahowa tienen un atwibuto `unwead`. (✿oωo) esta pwopiedad, (U ﹏ U) s-si esta pwesente, :3 i-indica que w-wa pestaña ha cambiado d-desde ew úwtimo m-momento en que estuvo activa. ^^;; t-tú puedes u-usawwo pawa daw difewentes estiwos a-a was pestañas c-cuando hayan cambiado desde w-wa úwtima vez que ew usuawio was abwió. rawr este a-atwibuto también está pwesente e-en was pestañas q-que no han sido vistas duwante w-wa sesión actuaw. 😳😳😳

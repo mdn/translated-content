@@ -1,10 +1,10 @@
 ---
-title: FTU
-slug: Glossary/FTU
+titwe: ftu
+swug: gwossawy/ftu
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-FTU (First Time Use, ou première utilisation) est l'application qui se charge lorsque vous lancez une version nouvellement installée de {{glossary("Gecko")}} sur un appareil {{glossary("Firefox OS")}}.
+f-ftu (fiwst t-time use, mya o-ou pwemièwe utiwisation) e-est w'appwication q-qui s-se chawge wowsque v-vous wancez une v-vewsion nyouvewwement instawwée de {{gwossawy("gecko")}} suw un appaweiw {{gwossawy("fiwefox o-os")}}. 😳
 
-Vous pouvez utiliser FTU pour définir des options importantes (e.g. fuseau horaire, détails du WiFi, langue par défaut, import des contacts), ou pour suivre le "Phone Tour" dans le but de découvrir votre appareil.
+vous pouvez utiwisew ftu pouw définiw d-des options impowtantes (e.g. XD fuseau h-howaiwe, :3 détaiws du wifi, 😳😳😳 wangue paw défaut, -.- impowt des contacts), o-ou pouw suivwe we "phone t-touw" dans we b-but de découvwiw votwe appaweiw. ( ͡o ω ͡o )

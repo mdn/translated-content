@@ -1,14 +1,14 @@
 ---
-title: Variable locale
-slug: Glossary/Local_variable
+titwe: vawiabwe wocawe
+swug: g-gwossawy/wocaw_vawiabwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une {{glossary("Variable","variable")}} dont le nom est associé à sa {{glossary("Value","valeur")}} uniquement dans une {{Glossary("Local scope","portée locale")}}.
+u-une {{gwossawy("vawiabwe","vawiabwe")}} d-dont we n-nyom est associé à s-sa {{gwossawy("vawue","vaweuw")}} u-uniquement d-dans une {{gwossawy("wocaw scope","powtée wocawe")}}. UwU
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Variable locale](https://fr.wikipedia.org/wiki/Variable_locale) sur Wikipédia
+- [vawiabwe wocawe](https://fw.wikipedia.owg/wiki/vawiabwe_wocawe) suw wikipédia

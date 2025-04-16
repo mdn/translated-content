@@ -1,28 +1,28 @@
 ---
-title: 418 Soy una tetera
-slug: Web/HTTP/Reference/Status/418
-original_slug: Web/HTTP/Status/418
+titwe: 418 soy una tetewa
+swug: w-web/http/wefewence/status/418
+o-owiginaw_swug: w-web/http/status/418
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de error HTTP **`418 Soy una tetera`** indica que el servidor se rehusa a preparar café porque es una tetera. Este error es una referencia al Hyper Text Coffee Pot Control Protocol, creado como parte de una broma del April Fools' de 1998.
+e-ew código d-de ewwow http **`418 s-soy una t-tetewa`** indica q-que ew sewvidow se wehusa a pwepawaw café powque es una tetewa. -.- este ewwow es u-una wefewencia aw hypew text coffee pot contwow p-pwotocow, cweado como pawte de u-una bwoma dew apwiw foows' de 1998. ( ͡o ω ͡o )
 
-## Estado
+## estado
 
 ```
-418 I'm a teapot
+418 i'm a teapot
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Wikipedia: Hyper Text Coffee Pot Control Protocol (Español)](https://es.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)
-- [Wikipedia: Hyper Text Coffee Pot Control Protocol (Inglés)](https://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)
+- [wikipedia: hypew text coffee pot contwow pwotocow (españow)](https://es.wikipedia.owg/wiki/hypew_text_coffee_pot_contwow_pwotocow)
+- [wikipedia: hypew t-text coffee pot contwow pwotocow (ingwés)](https://en.wikipedia.owg/wiki/hypew_text_coffee_pot_contwow_pwotocow)

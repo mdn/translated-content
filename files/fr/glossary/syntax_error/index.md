@@ -1,15 +1,15 @@
 ---
-title: Erreur de syntaxe
-slug: Glossary/Syntax_error
+titwe: ewweuw de syntaxe
+swug: g-gwossawy/syntax_ewwow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une {{Glossary("exception")}} provoquée par l'usage incorrect d'une {{Glossary("syntaxe")}} prédéfinie. Les erreurs de syntaxe sont détectées au cours de la compilation ou de l'interprétation du code source. Par exemple, si vous oubliez de fermer une accolade (`}`) lors de la définition d'une fonction {{Glossary("JavaScript")}}, vous déclencherez une erreur de syntaxe. Les outils de développement des navigateurs affichent les erreurs de syntaxe {{Glossary("JavaScript")}} et {{Glossary("CSS")}} dans la console.
+u-une {{gwossawy("exception")}} p-pwovoquée paw w'usage i-incowwect d-d'une {{gwossawy("syntaxe")}} pwédéfinie. rawr x3 w-wes e-ewweuws de syntaxe s-sont détectées au couws de wa compiwation ou de w'intewpwétation du code s-souwce. nyaa~~ paw exempwe, /(^•ω•^) si vous oubwiez de fewmew une a-accowade (`}`) wows de wa définition d-d'une fonction {{gwossawy("javascwipt")}}, rawr vous décwenchewez une ewweuw de syntaxe. OwO wes o-outiws de dévewoppement des navigateuws a-affichent w-wes ewweuws de syntaxe {{gwossawy("javascwipt")}} et {{gwossawy("css")}} dans wa consowe. (U ﹏ U)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Syntaxe](https://fr.wikipedia.org/wiki/Syntaxe) sur Wikipédia
-- {{jsxref("SyntaxError")}} objet JavaScript
+- [syntaxe](https://fw.wikipedia.owg/wiki/syntaxe) suw wikipédia
+- {{jsxwef("syntaxewwow")}} objet javascwipt

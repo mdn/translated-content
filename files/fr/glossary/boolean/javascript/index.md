@@ -1,17 +1,17 @@
 ---
-title: Booléen (JavaScript)
-slug: Glossary/Boolean/JavaScript
-l10n:
-  sourceCommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
+titwe: boowéen (javascwipt)
+swug: gwossawy/boowean/javascwipt
+w-w10n:
+  souwcecommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En JavaScript, un **booléen** est une [valeur primitive](/fr/docs/Glossary/Primitive) qui peut être `true` ou `false`.
+e-en javascwipt, (ˆ ﻌ ˆ)♡ u-un **boowéen** e-est une [vaweuw p-pwimitive](/fw/docs/gwossawy/pwimitive) q-qui peut êtwe `twue` o-ou `fawse`. (⑅˘꒳˘)
 
-Un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) est une [enveloppe (<i lang="en">wrapper</i>)](/fr/docs/Glossary/Wrapper) pour les valeurs booléennes primitives.
+u-un objet [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) est une [envewoppe (<i wang="en">wwappew</i>)](/fw/docs/gwossawy/wwappew) pouw wes vaweuws boowéennes p-pwimitives. (U ᵕ U❁)
 
-## Voir aussi
+## voiw aussi
 
-- [L'objet global JavaScript `Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [Les types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [w'objet g-gwobaw javascwipt `boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)
+- [wes types et stwuctuwes d-de données en javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes)

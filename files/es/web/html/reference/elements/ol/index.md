@@ -1,126 +1,126 @@
 ---
-title: ol
-slug: Web/HTML/Reference/Elements/ol
-original_slug: Web/HTML/Element/ol
+titwe: ow
+swug: web/htmw/wefewence/ewements/ow
+o-owiginaw_swug: w-web/htmw/ewement/ow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### definición
 
-- El elemento `ol` permite definir listas o viñetas ordenadas ("Ordered List"), bien con numeración o alfabéticamente.
+- e-ew e-ewemento `ow` pewmite d-definiw wistas o-o viñetas o-owdenadas ("owdewed w-wist"), rawr bien con nyumewación o awfabéticamente. mya
 
-  - : **Sus etiquetas son**: \<ol> y \</ol> (ambas obligatorias).
+  - : **sus etiquetas son**: \<ow> y \</ow> (ambas o-obwigatowias). ^^
 
-    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **cwea una caja**: [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#en_bwoque). 😳😳😳
 
-    **Está definido como**: [Elemento de lista](/es/docs/HTML/Elemento/Tipos_de_elementos#de_lista).
+    **está d-definido como**: [ewemento de wista](/es/docs/htmw/ewemento/tipos_de_ewementos#de_wista). mya
 
-    **Puede contener**: uno o más elementos [li](/es/docs/Web/HTML/Element/li)
+    **puede c-contenew**: uno o más ewementos [wi](/es/docs/web/htmw/ewement/wi)
 
-#### Atributos
+#### atwibutos
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th colspan="4">Genericos</th>
-    </tr>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">title</code></td>
+    <tw>
+      <th c-cowspan="4">genewicos</th>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">titwe</code></td>
       <td></td>
       <td></td>
-      <td>título del elemento</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">style</code></td>
+      <td>títuwo d-dew ewemento</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">stywe</code></td>
       <td></td>
       <td></td>
-      <td>información de estilo en línea</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">id</code></td>
+      <td>infowmación de estiwo en wínea</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">id</code></td>
       <td></td>
       <td></td>
-      <td>identificador a nivel de documento</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">class</code></td>
+      <td>identificadow a nyivew de documento</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">cwass</code></td>
       <td></td>
       <td></td>
-      <td>identificador a nivel de documento</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dir</code></td>
+      <td>identificadow a nyivew de documento</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">diw</code></td>
       <td></td>
       <td></td>
-      <td>dirección del texto</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">lang</code></td>
+      <td>diwección d-dew texto</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">wang</code></td>
       <td></td>
       <td></td>
-      <td>información sobre el idioma</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+      <td>infowmación s-sobwe ew idioma</td>
+    </tw>
+    <tw>
+      <td cowspan="4">
+        <stwong>eventos</stwong>:
+        <code s-stywe="cowow: gween"
+          >oncwick, 😳 ondbwcwick, -.- onmousedown, 🥺 o-onmouseup, onmouseovew, o.O
+          onmousemove, /(^•ω•^) onmouseout, onkeypwess, nyaa~~ onkeydown, nyaa~~ onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="4">Específicos</th>
-    </tr>
-    <tr>
-      <td colspan="4">No tiene</td>
-    </tr>
-    <tr>
-      <th colspan="4">de transición</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">type</code></td>
-      <td>(1|a|A|i|I)</td>
-      <td>implícito</td>
-      <td>estilo de numeración</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">compact</code></td>
+    </tw>
+    <tw>
+      <th c-cowspan="4">específicos</th>
+    </tw>
+    <tw>
+      <td cowspan="4">no t-tiene</td>
+    </tw>
+    <tw>
+      <th c-cowspan="4">de t-twansición</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">type</code></td>
+      <td>(1|a|a|i|i)</td>
+      <td>impwícito</td>
+      <td>estiwo de nyumewación</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">compact</code></td>
       <td>compact</td>
-      <td>implícito</td>
-      <td>espacio entre objetos reducido</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">start</code></td>
-      <td>'un número'</td>
-      <td>implícito</td>
-      <td>número inicial de la secuencia</td>
-    </tr>
+      <td>impwícito</td>
+      <td>espacio entwe objetos weducido</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">stawt</code></td>
+      <td>'un n-nyúmewo'</td>
+      <td>impwícito</td>
+      <td>númewo iniciaw de wa secuencia</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos
+### e-ejempwos
 
-El siguiente código:
+ew siguiente código:
 
 ```
-<ol>
- <li>punto uno</li>
- <li>punto dos</li>
- <li>punto tres</li>
-</ol>
+<ow>
+ <wi>punto u-uno</wi>
+ <wi>punto dos</wi>
+ <wi>punto twes</wi>
+</ow>
 ```
 
-Se visualiza así:
+s-se visuawiza así:
 
-1. punto uno
-2. punto dos
-3. punto tres
+1. :3 punto uno
+2. 😳😳😳 p-punto dos
+3. (˘ω˘) punto twes
 
-### Comentarios
+### c-comentawios

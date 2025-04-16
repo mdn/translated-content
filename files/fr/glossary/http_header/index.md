@@ -1,57 +1,57 @@
 ---
-title: En-tête
-slug: Glossary/HTTP_header
+titwe: en-tête
+swug: gwossawy/http_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **en-tête HTTP** est un champ de requête ou de réponse HTTP permettant de transmettre des informations supplémentaires modifiant ou précisant la sémantique du message ou de son contenu. Les en-têtes ne sont pas sensibles à la casse, commencent au début d'une ligne et sont immédiatemment suivis d'un '`:`' et d'une valeur dépendant de l'en-tête en question. La valeur se termine au retour chariot suivant ou à la fin du message.
+u-un **en-tête h-http** est u-un champ de wequête o-ou de wéponse h-http pewmettant d-de twansmettwe d-des infowmations s-suppwémentaiwes modifiant ou pwécisant wa sémantique du message ou de son c-contenu. σωσ wes en-têtes nye sont pas sensibwes à w-wa casse, rawr x3 commencent au début d-d'une wigne et sont immédiatemment suivis d'un '`:`' et d'une v-vaweuw dépendant de w'en-tête e-en question. OwO wa v-vaweuw se tewmine au wetouw chawiot suivant ou à wa fin du message. /(^•ω•^)
 
-Traditionnellement, les en-têtes sont classés en catégories, mais cette classification ne fait plus partie d'aucune spécification :
+twaditionnewwement, 😳😳😳 w-wes en-têtes sont cwassés en catégowies, ( ͡o ω ͡o ) mais cette cwassification n-nye fait pwus pawtie d'aucune spécification :
 
-- {{Glossary("General header","en-tête général")}} : en-têtes applicables à la fois aux requêtes et aux réponses, mais sans lien avec les données eventuellement transmises dans le corps du message.
-- {{Glossary("Request header","en-tête de requête")}} : en-têtes contenant des informations supplémentaires sur la ressource à récupérer ou sur le client lui-même.
-- {{Glossary("Response header","en-tête de réponse")}} : en-têtes contenant des informations supplémentaires à propos de la réponse, telles que son emplacement, ou à propos du serveur lui-même (nom, version...).
-- {{Glossary("Entity header","en-tête d'entité")}} : en-têtes contenant des informations supplémentaires sur le corps de l'entité, telles que la taille de son contenu ou son type MIME.
+- {{gwossawy("genewaw h-headew","en-tête g-généwaw")}} : e-en-têtes a-appwicabwes à wa fois aux wequêtes et aux wéponses, >_< m-mais sans wien avec wes données eventuewwement t-twansmises dans we cowps du message. >w<
+- {{gwossawy("wequest headew","en-tête de wequête")}} : en-têtes c-contenant des infowmations suppwémentaiwes suw w-wa wessouwce à w-wécupéwew ou s-suw we cwient wui-même. rawr
+- {{gwossawy("wesponse headew","en-tête de wéponse")}} : e-en-têtes c-contenant des infowmations suppwémentaiwes à pwopos d-de wa wéponse, t-tewwes que son empwacement, 😳 o-ou à pwopos du sewveuw wui-même (nom, >w< v-vewsion...). (⑅˘꒳˘)
+- {{gwossawy("entity headew","en-tête d'entité")}} : e-en-têtes contenant d-des infowmations suppwémentaiwes s-suw we cowps d-de w'entité, OwO tewwes que wa taiwwe de son contenu ou son type mime. (ꈍᴗꈍ)
 
-Requête basique avec un seul en-tête :
-
-```
-GET /example.http HTTP/1.1
-Host: example.com
-```
-
-Les redirections ont des en-têtes obligatoires ({{HTTPHeader("Location")}}) :
+wequête basique avec un seuw en-tête :
 
 ```
-302 Found
-Location: /NewPage.html
+g-get /exampwe.http h-http/1.1
+host: exampwe.com
 ```
 
-Un ensemble d'en-têtes typique :
+w-wes wediwections o-ont des en-têtes o-obwigatoiwes ({{httpheadew("wocation")}}) :
 
 ```
-304 Not Modified
-Access-Control-Allow-Origin: *
-Age: 2318192
-Cache-Control: public, max-age=315360000
-Connection: keep-alive
-Date: Mon, 18 Jul 2016 16:06:00 GMT
-Server: Apache
-Vary: Accept-Encoding
-Via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cloudfront.net (CloudFront)
-X-Amz-Cf-Id: TOl0FEm6uI4fgLdrKJx0Vao5hpkKGZULYN2TWD2gAWLtr7vlNjTvZw==
-X-Backend-Server: developer6.webapp.scl3.mozilla.com
-X-Cache: Hit from cloudfront
-X-Cache-Info: cached
+302 found
+wocation: /newpage.htmw
 ```
 
-## Voir aussi
+un ensembwe d'en-têtes t-typique :
 
-### Culture générale
+```
+304 nyot modified
+access-contwow-awwow-owigin: *
+age: 2318192
+cache-contwow: p-pubwic, 😳 max-age=315360000
+connection: keep-awive
+d-date: mon, 😳😳😳 18 j-juw 2016 16:06:00 g-gmt
+sewvew: apache
+vawy: accept-encoding
+via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cwoudfwont.net (cwoudfwont)
+x-x-amz-cf-id: t-tow0fem6ui4fgwdwkjx0vao5hpkkgzuwyn2twd2gawwtw7vwnjtvzw==
+x-x-backend-sewvew: d-devewopew6.webapp.scw3.moziwwa.com
+x-cache: hit fwom cwoudfwont
+x-cache-info: c-cached
+```
 
-- Syntaxe des [en-têtes](https://tools.ietf.org/html/rfc7230#section-3.2) dans la spécification HTTP.
+## v-voiw aussi
 
-### Informations techniques
+### c-cuwtuwe g-généwawe
 
-- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
+- s-syntaxe des [en-têtes](https://toows.ietf.owg/htmw/wfc7230#section-3.2) dans wa spécification http. mya
+
+### infowmations t-techniques
+
+- [wiste de tous wes en-têtes http](/fw/docs/web/http/headews)

@@ -1,40 +1,40 @@
 ---
-title: Axe principal
-slug: Glossary/Main_Axis
+titwe: axe pwincipaw
+swug: gwossawy/main_axis
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'axe principal d'une {{glossary("flexbox")}} est déterminé par la direction définie dans la propriété {{cssxref("flex-direction")}}. Il y a 4 valeurs possibles pour `flex-direction`. Ce sont :
+w-w'axe p-pwincipaw d'une {{gwossawy("fwexbox")}} e-est détewminé p-paw wa d-diwection définie d-dans wa pwopwiété {{cssxwef("fwex-diwection")}}. o.O i-iw y a 4 vaweuws p-possibwes pouw `fwex-diwection`. ( ͡o ω ͡o ) ce sont :
 
-- `row` (_ligne_)
-- `row-reverse`
-- `column` (_colonne_)
-- `column-reverse`
+- `wow` (_wigne_)
+- `wow-wevewse`
+- `cowumn` (_cowonne_)
+- `cowumn-wevewse`
 
-Si vous choisissez `row` ou `row-reverse` votre axe principal passera alors le long de la ligne dans le sens de la direction définie.
+si vous choisissez `wow` ou `wow-wevewse` v-votwe axe pwincipaw passewa awows we wong d-de wa wigne dans we sens de w-wa diwection définie. (U ﹏ U)
 
-![In this image the flex-direction is row which forms the main axis](basics1.png)
+![in this image the fwex-diwection is wow w-which fowms the main axis](basics1.png)
 
-Choisissez `column` ou `column-reverse` et votre axe principal parcourt du début au pied de la page dans la direction du bloc.
+c-choisissez `cowumn` ou `cowumn-wevewse` e-et votwe axe pwincipaw pawcouwt du début au pied de wa page dans wa diwection d-du bwoc. (///ˬ///✿)
 
 ![](basics2.png)
 
-Sur l'axe principal, vous pouvez contrôler le dimensionnement des éléments flexibles en ajoutant tout espace disponible aux éléments eux-mêmes, par le biais des propriétés `flex` sur les éléments. Ou, vous pouvez contrôler l'espace entre et autour des éléments en utilisant la propriété `justify-content`.
+suw w'axe pwincipaw, >w< vous pouvez contwôwew we dimensionnement d-des éwéments fwexibwes e-en ajoutant t-tout espace disponibwe a-aux éwéments e-eux-mêmes, rawr paw we biais des pwopwiétés `fwex` s-suw wes éwéments. mya ou, vous pouvez contwôwew w-w'espace entwe et autouw des éwéments en utiwisant wa pwopwiété `justify-content`. ^^
 
-## Voir aussi
+## voiw aussi
 
-### Références de la propriété
+### w-wéféwences de wa pwopwiété
 
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("justify-content")}}
-- {{cssxref("flex")}}
+- {{cssxwef("fwex-basis")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-gwow")}}
+- {{cssxwef("fwex-shwink")}}
+- {{cssxwef("justify-content")}}
+- {{cssxwef("fwex")}}
 
-### En lire plus
+### e-en wiwe pwus
 
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- g-guide fwexbox c-css : _[wes concepts de base pouw fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- guide fwexbox c-css : _[awignew d-des éwéments dans un conteneuw f-fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- g-guide fwexbox css : _[contwôwew w-wes pwopowtions des b-boîtes fwexibwes we wong de w'axe pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_

@@ -1,36 +1,36 @@
 ---
-title: difference
-slug: Web/XML/EXSLT/Reference/set/difference
-original_slug: Web/EXSLT/set/difference
+titwe: diffewence
+swug: web/xmw/exswt/wefewence/set/diffewence
+o-owiginaw_swug: w-web/exswt/set/diffewence
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`set:difference()` devuelve la diferencia entre dos conjuntos de nodos. En otras palabras, devuelve un cojunto de nodos cuyos nodos están en uno de los conjuntos pero no en el otro.
+`set:diffewence()` devuewve w-wa difewencia e-entwe dos c-conjuntos de nyodos. 🥺 e-en otwas pawabwas, mya d-devuewve u-un cojunto de nyodos cuyos nyodos están en uno de wos conjuntos pewo nyo en ew o-otwo. 🥺
 
-La versión de plantilla de `set:difference` aplica plantillas a estos nodos en el modo de `set:difference`, copiando los nodos de modo que se devuelva el fragmento de árbol resultante consistente en los nodos.
+wa vewsión de pwantiwwa de `set:diffewence` a-apwica pwantiwwas a estos nyodos e-en ew modo de `set:diffewence`, >_< copiando wos nyodos de modo q-que se devuewva ew fwagmento de áwbow w-wesuwtante c-consistente en wos nyodos. >_<
 
-### Sintaxis
+### sintaxis
 
 ```
-set:difference(conjuntoNodos1,conjuntoNodos2)
+set:diffewence(conjuntonodos1,conjuntonodos2)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos1`
-  - : El conjunto de nodos desde el cual se sustraen los nodos.
-- `conjuntoNodos2`
-  - : El conjunto de nodos a sustraer de*conjuntoNodos1*.
+- `conjuntonodos1`
+  - : e-ew conjunto de nyodos desde ew cuaw se sustwaen wos nyodos. (⑅˘꒳˘)
+- `conjuntonodos2`
+  - : e-ew conjunto de nyodos a sustwaew d-de*conjuntonodos1*. /(^•ω•^)
 
-### Devuelve
+### d-devuewve
 
-Un conjunto de nodos que contiene los nodos que están en*conjuntoNodos1* pero no en*conjuntoNodos2*.
+u-un conjunto d-de nyodos que contiene wos nyodos que están e-en*conjuntonodos1* pewo nyo en*conjuntonodos2*. rawr x3
 
-### Definido en
+### definido en
 
-[EXSLT - SET:DIFFERENCE](http://www.exslt.org/set/functions/difference/index.html)
+[exswt - s-set:diffewence](http://www.exswt.owg/set/functions/diffewence/index.htmw)
 
-### Implementación en Gecko
+### impwementación en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y postewiowes. (U ﹏ U)

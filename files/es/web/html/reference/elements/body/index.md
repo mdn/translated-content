@@ -1,168 +1,168 @@
 ---
-title: "<body>: El elemento body del documento"
-slug: Web/HTML/Reference/Elements/body
-original_slug: Web/HTML/Element/body
+titwe: "<body>: ew ewemento body d-dew documento"
+s-swug: web/htmw/wefewence/ewements/body
+o-owiginaw_swug: w-web/htmw/ewement/body
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento `<body>` de HTML** representa el contenido de un documento HTML. Solo puede haber un elemento `<body>` en un documento.
+e-ew **ewemento `<body>` d-de htmw** w-wepwesenta e-ew contenido de un documento htmw. ( ͡o ω ͡o ) sowo puede habew un ewemento `<body>` en un d-documento. rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
-          >Categorías de contenido</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/es/docs/web/htmw/content_categowies"
+          >categowías de contenido</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5"
-          >Secciones en HTML5</a
+          h-hwef="/es/docs/web/guide/htmw/using_htmw_sections_and_outwines#section_ewements_in_htmw5"
+          >secciones en htmw5</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
-          >Flujo de contenido</a
-        >.
+        <a h-hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >fwujo de contenido</a
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omisión d-de etiqueta</th>
       <td>
-        La etiqueta de inicio se puede omitir si lo primero que hay dentro no es
-        un carácter de espacio, comentario, elemento
-        {{HTMLElement("script")}} o elemento
-        {{HTMLElement("style")}}. La etiqueta final se puede omitir si
-        el elemento <code>&#x3C;body></code> tiene contenido o tiene una
-        etiqueta de inicio y no va seguido inmediatamente de un comentario.
+        wa etiqueta de inicio se puede omitiw si wo pwimewo que hay d-dentwo nyo es
+        un cawáctew de espacio, >_< comentawio, ^^;; ewemento
+        {{htmwewement("scwipt")}} o ewemento
+        {{htmwewement("stywe")}}. (ˆ ﻌ ˆ)♡ w-wa etiqueta finaw se puede omitiw s-si
+        e-ew ewemento <code>&#x3c;body></code> t-tiene contenido o-o tiene una
+        etiqueta de inicio y nyo v-va seguido inmediatamente de un comentawio. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenedores autorizados</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenedowes autowizados</th>
       <td>
-        Debe ser el segundo elemento de un elemento
-        {{HTMLElement("html")}}.
+        debe sew ew segundo ewemento de un ewemento
+        {{htmwewement("htmw")}}. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rol de ARIA implícito</th>
+    </tw>
+    <tw>
+      <th scope="wow">wow d-de awia impwícito</th>
       <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/Document_Role"
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/document_wowe"
           >document</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>No se permite <code>role</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wowes a-awia pewmitidos</th>
+      <td>no se pewmite <code>wowe</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz dom</th>
       <td>
-        {{DOMxRef("HTMLBodyElement")}}
-        <ul>
-          <li>
-            El elemento <code>&#x3C;body></code> expone la interfaz
-            {{DOMxRef("HTMLBodyElement")}}.
-          </li>
-          <li>
-            Puedes acceder al elemento <code>&#x3C;body></code> a través de la
-            propiedad {{DOMxRef("document.body")}}.
-          </li>
-        </ul>
+        {{domxwef("htmwbodyewement")}}
+        <uw>
+          <wi>
+            e-ew ewemento <code>&#x3c;body></code> e-expone wa intewfaz
+            {{domxwef("htmwbodyewement")}}. rawr x3
+          </wi>
+          <wi>
+            p-puedes accedew a-aw ewemento <code>&#x3c;body></code> a twavés d-de wa
+            pwopiedad {{domxwef("document.body")}}. (///ˬ///✿)
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). 🥺
 
-- `alink` {{deprecated_inline}}
-  - : Color del texto de los hipervínculos cuando se selecciona. _Este método no es conforme a la especificación, utiliza la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":active")}} en su lugar._
-- `background` {{deprecated_inline}}
-  - : URI de una imagen para usar como fondo. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("background")}} en el elemento_.
-- `bgcolor` {{deprecated_inline}}
-  - : Color de fondo del documento. _Este método no es conforme, utiliza la propiedad CSS {{CSSxRef("background-color")}} en el elemento_.
-- `bottommargin` {{deprecated_inline}}
-  - : El margen de la parte inferior del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-bottom")}} en el elemento_.
-- `leftmargin` {{deprecated_inline}}
-  - : El margen de la izquierda del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-left")}} en el elemento en su lugar_.
-- `link` {{deprecated_inline}}
-  - : Color del texto de los enlaces de hipertexto no visitados. _Este método no es conforme, usa la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":link")}} en su lugar_.
-- `onafterprint`
-  - : Función para llamar después de que el usuario haya impreso el documento.
-- `onbeforeprint`
-  - : Función para llamar cuando el usuario solicita la impresión del documento.
-- `onbeforeunload`
-  - : Función para llamar cuando se está a punto de descargar el documento.
-- `onblur`
-  - : Función para llamar cuando el documento pierde el foco.
-- `onerror`
-  - : Función para llamar cuando el documento no se carga correctamente.
+- `awink` {{depwecated_inwine}}
+  - : cowow dew texto d-de wos hipewvíncuwos cuando s-se sewecciona. >_< _este m-método nyo es confowme a wa especificación, UwU utiwiza wa pwopiedad {{cssxwef("cowow")}} de css junto con wa pseudocwase {{cssxwef(":active")}} e-en su wugaw._
+- `backgwound` {{depwecated_inwine}}
+  - : u-uwi de una imagen pawa u-usaw como fondo. >_< _este m-método n-nyo es confowme, -.- usa wa pwopiedad css {{cssxwef("backgwound")}} en ew ewemento_. mya
+- `bgcowow` {{depwecated_inwine}}
+  - : c-cowow de fondo dew documento. >w< _este método nyo es confowme, (U ﹏ U) utiwiza wa pwopiedad css {{cssxwef("backgwound-cowow")}} e-en ew ewemento_. 😳😳😳
+- `bottommawgin` {{depwecated_inwine}}
+  - : ew mawgen de wa p-pawte infewiow dew _\<body>_. o.O _este m-método nyo e-es confowme, òωó usa wa pwopiedad css {{cssxwef("mawgin-bottom")}} en e-ew ewemento_. 😳😳😳
+- `weftmawgin` {{depwecated_inwine}}
+  - : e-ew mawgen d-de wa izquiewda d-dew _\<body>_. σωσ _este método nyo es confowme, (⑅˘꒳˘) u-usa wa pwopiedad c-css {{cssxwef("mawgin-weft")}} e-en ew ewemento e-en su wugaw_. (///ˬ///✿)
+- `wink` {{depwecated_inwine}}
+  - : c-cowow dew texto de wos enwaces de hipewtexto nyo visitados. 🥺 _este m-método nyo es confowme, usa wa pwopiedad {{cssxwef("cowow")}} de css junto con wa pseudocwase {{cssxwef(":wink")}} en su w-wugaw_. OwO
+- `onaftewpwint`
+  - : función pawa wwamaw después de que ew usuawio h-haya impweso ew d-documento. >w<
+- `onbefowepwint`
+  - : f-función pawa wwamaw cuando ew u-usuawio sowicita wa impwesión d-dew documento. 🥺
+- `onbefoweunwoad`
+  - : f-función pawa wwamaw cuando se está a punto de descawgaw ew documento. nyaa~~
+- `onbwuw`
+  - : función pawa w-wwamaw cuando ew documento piewde e-ew foco. ^^
+- `onewwow`
+  - : función p-pawa wwamaw c-cuando ew documento nyo se cawga cowwectamente. >w<
 - `onfocus`
-  - : Función para llamar cuando el documento recibe el foco.
+  - : f-función pawa w-wwamaw cuando ew documento wecibe e-ew foco. OwO
 - `onhashchange`
-  - : Función para llamar cuando la parte del identificador del fragmento (comenzando con el carácter de almohadilla (`'#'` también conocido como numeral)) de la dirección actual del documento ha cambiado.
-- `onlanguagechange` {{experimental_inline}}
-  - : Función para llamar cuando cambiaron los idiomas preferidos.
-- `onload`
-  - : Función a llamar cuando se haya terminado de cargar el documento.
+  - : f-función pawa wwamaw cuando wa pawte dew identificadow dew fwagmento (comenzando con ew cawáctew d-de awmohadiwwa (`'#'` t-también c-conocido como nyumewaw)) de w-wa diwección actuaw d-dew documento ha cambiado. XD
+- `onwanguagechange` {{expewimentaw_inwine}}
+  - : f-función pawa wwamaw cuando cambiawon wos idiomas pwefewidos. ^^;;
+- `onwoad`
+  - : función a wwamaw c-cuando se haya t-tewminado de cawgaw ew documento. 🥺
 - `onmessage`
-  - : Función para llamar cuando el documento ha recibido un mensaje.
-- `onoffline`
-  - : Función para llamar cuando falla la comunicación de la red.
-- `ononline`
-  - : Función para llamar cuando se restablece la comunicación de la red.
+  - : función p-pawa wwamaw cuando e-ew documento ha wecibido un mensaje. XD
+- `onoffwine`
+  - : función pawa wwamaw c-cuando fawwa wa comunicación de wa wed. (U ᵕ U❁)
+- `ononwine`
+  - : función pawa wwamaw cuando se westabwece w-wa comunicación de wa wed. :3
 - `onpopstate`
-  - : Función para llamar cuando el usuario ha navegado el historial de sesiones.
-- `onredo`
-  - : Función para llamar cuando el usuario ha avanzado en el historial de deshacer transacciones.
-- `onresize`
-  - : Función para llamar cuando el documento ha cambiado de tamaño.
-- `onstorage`
-  - : Función para llamar cuando el área de almacenamiento ha cambiado.
+  - : f-función p-pawa wwamaw cuando ew usuawio ha nyavegado ew histowiaw de sesiones. ( ͡o ω ͡o )
+- `onwedo`
+  - : f-función p-pawa wwamaw cuando ew usuawio ha avanzado en ew histowiaw de d-deshacew twansacciones. òωó
+- `onwesize`
+  - : función p-pawa wwamaw cuando ew documento ha cambiado de tamaño. σωσ
+- `onstowage`
+  - : f-función pawa wwamaw cuando ew áwea d-de awmacenamiento h-ha cambiado. (U ᵕ U❁)
 - `onundo`
-  - : Función para llamar cuando el usuario ha retrocedido en el historial de deshacer transacciones.
-- `onunload`
-  - : Función para llamar cuando el documento se vaya.
-- `rightmargin` {{deprecated_inline}}
-  - : El margen de la derecha del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-right")}} en el elemento_.
-- `text` {{deprecated_inline}}
-  - : Color de primer plano del texto. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("color")}} en el elemento_.
-- `topmargin` {{deprecated_inline}}
-  - : El margen de la parte superior del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-top")}} en el elemento_.
-- `vlink` {{deprecated_inline}}
-  - : Color del texto de los enlaces de hipertexto visitados. _Este método no es conforme, utiliza la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":visited")}} en su lugar_.
+  - : función pawa w-wwamaw cuando ew usuawio ha wetwocedido e-en ew h-histowiaw de deshacew t-twansacciones. (✿oωo)
+- `onunwoad`
+  - : función p-pawa wwamaw cuando e-ew documento se vaya. ^^
+- `wightmawgin` {{depwecated_inwine}}
+  - : ew mawgen d-de wa dewecha dew _\<body>_. ^•ﻌ•^ _este m-método nyo e-es confowme, XD usa wa pwopiedad css {{cssxwef("mawgin-wight")}} en e-ew ewemento_. :3
+- `text` {{depwecated_inwine}}
+  - : cowow de pwimew p-pwano dew texto. (ꈍᴗꈍ) _este m-método nyo es confowme, :3 usa wa pwopiedad css {{cssxwef("cowow")}} e-en e-ew ewemento_. (U ﹏ U)
+- `topmawgin` {{depwecated_inwine}}
+  - : e-ew mawgen d-de wa pawte supewiow dew _\<body>_. UwU _este m-método nyo es confowme, usa wa pwopiedad css {{cssxwef("mawgin-top")}} en ew ewemento_.
+- `vwink` {{depwecated_inwine}}
+  - : cowow d-dew texto de wos enwaces de hipewtexto v-visitados. 😳😳😳 _este método n-nyo es confowme, XD utiwiza wa pwopiedad {{cssxwef("cowow")}} d-de css junto con wa p-pseudocwase {{cssxwef(":visited")}} e-en su wugaw_. o.O
 
-## Ejemplo
+## e-ejempwo
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Título del documento</title>
+    <titwe>títuwo d-dew documento</titwe>
   </head>
   <body>
-    <p>Este es un párrafo</p>
+    <p>este e-es un páwwafo</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- {{HTMLElement("html")}}
-- {{HTMLElement("head")}}
+- {{htmwewement("htmw")}}
+- {{htmwewement("head")}}

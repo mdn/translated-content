@@ -1,16 +1,16 @@
 ---
-title: Block (CSS)
-slug: Glossary/Block/CSS
+titwe: bwock (css)
+swug: gwossawy/bwock/css
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Sur une page web, un **block** est un {{glossary("Element","élément")}} {{glossary("HTML")}} qui apparaît sous l'élément précédent et au-dessus du suivant (communément connu comme un _block-level element_ ). Par exemple, {{htmlelement("p")}} est par défaut un élément de type block, alors que {{htmlelement("a")}} est un _inline element -_ vous pouvez placer plusieurs liens les uns à côté des autres dans votre source HTML et ils seront placés sur la même ligne dans la sortie rendue.
+s-suw une p-page web, (///ˬ///✿) un **bwock** e-est un {{gwossawy("ewement","éwément")}} {{gwossawy("htmw")}} q-qui appawaît s-sous w'éwément p-pwécédent e-et au-dessus d-du suivant (communément connu comme un _bwock-wevew ewement_ ). 😳😳😳 paw exempwe, {{htmwewement("p")}} e-est paw défaut un éwément de type bwock, 🥺 awows q-que {{htmwewement("a")}} est u-un _inwine ewement -_ vous pouvez pwacew pwusieuws wiens wes uns à c-côté des autwes dans votwe s-souwce htmw et i-iws sewont pwacés suw wa même wigne dans wa sowtie wendue. mya
 
-En utilisant la propriété CSS {{cssxref("display")}}, il est possible de définir si un objet doit être affiché en bloc ou en ligne (block ou inline) ; les blocs sont également soumis aux effets des schémas de positionnement et de l'utilisation de la propriété {{cssxref("Position","position")}} .
+en utiwisant wa p-pwopwiété css {{cssxwef("dispway")}}, 🥺 iw est possibwe de définiw si un objet doit êtwe affiché e-en bwoc ou en wigne (bwock ou i-inwine) ; wes b-bwocs sont égawement s-soumis aux e-effets des schémas de positionnement et de w'utiwisation d-de wa pwopwiété {{cssxwef("position","position")}} . >_<
 
-## Pour en savoir plus
+## pouw en savoiw p-pwus
 
-### Connaissances générales
+### connaissances généwawes
 
-- [Modèle de mise en forme visuelle](/fr/docs/Web/CSS/Visual_formatting_model)
+- [modèwe de mise en fowme visuewwe](/fw/docs/web/css/visuaw_fowmatting_modew)

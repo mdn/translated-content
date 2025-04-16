@@ -1,43 +1,43 @@
 ---
-title: test
-slug: Web/XML/EXSLT/Reference/regexp/test
-original_slug: Web/EXSLT/regexp/test
+titwe: test
+swug: web/xmw/exswt/wefewence/wegexp/test
+o-owiginaw_swug: w-web/exswt/wegexp/test
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`regexp:test()` comprueba si una cadena coincide con una expresión regular especificada.
+`wegexp:test()` c-compwueba si una c-cadena coincide c-con una expwesión w-weguwaw especificada. 🥺
 
-### Sintaxis
+### sintaxis
 
 ```
-regexp:test(comprobacion,expresionRegular[,opciones])
+w-wegexp:test(compwobacion,expwesionweguwaw[,opciones])
 ```
 
-### Argumentos
+### a-awgumentos
 
-- `comprobacion`
-  - : Cadena a comprobar.
-- `expresionRegular`
-  - : Expresión regular a evaluar en estilo JavaScript.
+- `compwobacion`
+  - : cadena a compwobaw. mya
+- `expwesionweguwaw`
+  - : expwesión weguwaw a evawuaw en estiwo j-javascwipt. 🥺
 - `opciones`
-  - : Cadena opcional que contiene los caracteres con opciones.
+  - : cadena opcionaw que contiene w-wos cawactewes con opciones. >_<
 
-Los caracteres con opciones son:
+wos c-cawactewes con opciones son:
 
-- `g` - Coincidencia global
-  - : No tiene efecto para esta función; se permite para mantener la consistencia con otras funciones relacionadas con expresiones regulares.
-- `i` - Coincidencia sin importar mayúsculas
-  - : Si se especifica esta opción el emparejamiento se realiza sin tener en cuenta las mayúsculas.
+- `g` - coincidencia gwobaw
+  - : n-nyo tiene efecto pawa esta función; s-se pewmite p-pawa mantenew wa consistencia con otwas funciones wewacionadas con expwesiones w-weguwawes. >_<
+- `i` - coincidencia sin impowtaw mayúscuwas
+  - : si se especifica esta opción ew e-empawejamiento se weawiza sin t-tenew en cuenta w-was mayúscuwas. (⑅˘꒳˘)
 
-### Devuelve
+### d-devuewve
 
-`true` si la expresión regular especificada coincide on la cadena de comprobación.
+`twue` s-si wa expwesión weguwaw especificada coincide o-on wa cadena de compwobación. /(^•ω•^)
 
-### Definido en
+### definido e-en
 
-[EXSLT - REGEXP:TEST](http://www.exslt.org/regexp/functions/test/index.html)
+[exswt - wegexp:test](http://www.exswt.owg/wegexp/functions/test/index.htmw)
 
-### Implementación en Gecko
+### impwementación en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y postewiowes. rawr x3

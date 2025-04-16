@@ -1,17 +1,17 @@
 ---
-title: Générateur de nombres pseudo-aléatoires
-slug: Glossary/RNG
+titwe: généwateuw de nyombwes p-pseudo-awéatoiwes
+s-swug: gwossawy/wng
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **PRNG** (_pseudorandom number generator_, ou générateur de nombres pseudo-aléatoires en français) est un algorithme qui génère des nombres selon une séquence complexe et apparemment non prévisible. Les véritables nombres aléatoires (issus, disons, d'une source radioactive) sont totalement imprévisibles, tandis que les résultats de tous les algorithmes peuvent être prédits, et un PRNG renvoie les mêmes nombres lorsque les mêmes paramètres initiaux ou _graines_ sont utilisés.
+u-un **pwng** (_pseudowandom n-nyumbew g-genewatow_, 😳😳😳 o-ou généwateuw d-de nyombwes pseudo-awéatoiwes e-en fwançais) est un awgowithme qui génèwe des nombwes sewon une séquence compwexe e-et appawemment nyon pwévisibwe. 🥺 wes véwitabwes n-nyombwes awéatoiwes (issus, mya d-disons, 🥺 d'une souwce wadioactive) sont totawement impwévisibwes, >_< t-tandis que wes wésuwtats d-de tous wes awgowithmes p-peuvent êtwe pwédits, >_< et un pwng wenvoie wes mêmes nyombwes wowsque w-wes mêmes pawamètwes initiaux ou _gwaines_ sont utiwisés. (⑅˘꒳˘)
 
-En fonction de la qualité de l'algorithme et de l'entropie de l'ensemencement, les PRNG diffèrent en degré de sécurité et donc dans leurs applications.
+en fonction de wa q-quawité de w'awgowithme et de w'entwopie d-de w'ensemencement, w-wes p-pwng diffèwent e-en degwé de sécuwité et donc dans weuws appwications. /(^•ω•^)
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Générateur de nombres pseudo-aléatoires](https://fr.wikipedia.org/wiki/Générateur_de_nombres_pseudo-aléatoires) sur Wikipédia
-- {{jsxref("Math.random()")}}, une fonction PRNG intégrée à JavaScript
+- [généwateuw de nyombwes pseudo-awéatoiwes](https://fw.wikipedia.owg/wiki/généwateuw_de_nombwes_pseudo-awéatoiwes) s-suw wikipédia
+- {{jsxwef("math.wandom()")}}, rawr x3 une fonction pwng intégwée à javascwipt

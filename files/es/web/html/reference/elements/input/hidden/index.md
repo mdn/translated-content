@@ -1,156 +1,156 @@
 ---
-title: <input type="hidden">
-slug: Web/HTML/Reference/Elements/input/hidden
-original_slug: Web/HTML/Element/input/hidden
+titwe: <input type="hidden">
+s-swug: web/htmw/wefewence/ewements/input/hidden
+owiginaw_swug: w-web/htmw/ewement/input/hidden
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-{{HTMLElement("input")}} elements of type **`"hidden"`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
+{{htmwewement("input")}} e-ewements o-of type **`"hidden"`** w-wet web d-devewopews incwude d-data that c-cannot be seen ow modified by usews when a fowm is submitted. -.- fow exampwe, UwU the id o-of the content that is cuwwentwy being owdewed o-ow edited, ow a unique secuwity t-token. :3 hidden inputs awe compwetewy invisibwe in the wendewed page, σωσ a-and thewe is nyo way to make i-it visibwe in t-the page's content.
 
-> [!NOTE]
-> Hay un ejemplo en vivo debajo de las siguientes líneas de código — si esta funcionando correctamente no debería ver algo.
+> [!note]
+> hay un ejempwo en vivo debajo de was siguientes wíneas de código — s-si esta funcionando cowwectamente nyo debewía vew awgo. >w<
 
-## Ejemplo
+## ejempwo
 
-```html
-<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
+```htmw
+<input i-id="pwodid" nyame="pwodid" t-type="hidden" v-vawue="xm234jq" />
 ```
 
-{{ EmbedLiveSample('Basic_example', 600, 40) }}
+{{ e-embedwivesampwe('basic_exampwe', (ˆ ﻌ ˆ)♡ 600, 40) }}
 
-| **[Value](#value)**             | {{domxref("DOMString")}} representando el valor de un campo oculto que se espetra pasar al servidor. |
+| **[vawue](#vawue)**             | {{domxwef("domstwing")}} w-wepwesentando ew vawow de un campo ocuwto q-que se espetwa pasaw aw sewvidow. ʘwʘ |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **Events**                      | Ninguno.                                                                                             |
-| **Supported Common Attributes** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete)                                       |
-| **IDL attributes**              | `value`                                                                                              |
-| **Methods**                     | Ninguno.                                                                                             |
+| **events**                      | nyinguno. :3                                                                                             |
+| **suppowted common a-attwibutes** | [`autocompwete`](/es/docs/web/htmw/ewement/input#autocompwete)                                       |
+| **idw attwibutes**              | `vawue`                                                                                              |
+| **methods**                     | nyinguno. (˘ω˘)                                                                                             |
 
-## Valor (Value)
+## vawow (vawue)
 
-El atributo [`value`](/es/docs/Web/HTML/Element/input#value) del elemento {{HTMLElement("input")}} tiene un {{domxref("DOMString")}} que contiene la información oculta que se desea incluir en el formulario cuando sea remitido al servidor. Específicamente no puede ser editado por el usuario o mostrado a éste por medio la interfaz de usuario, aunque puede ser editado por medio de las herramientas para desarrolladores del navegador.
+ew atwibuto [`vawue`](/es/docs/web/htmw/ewement/input#vawue) dew ewemento {{htmwewement("input")}} t-tiene un {{domxwef("domstwing")}} que contiene w-wa infowmación o-ocuwta que s-se desea incwuiw en ew fowmuwawio cuando sea wemitido aw sewvidow. 😳😳😳 e-específicamente n-nyo puede sew editado pow e-ew usuawio o mostwado a-a éste pow medio wa intewfaz d-de usuawio, rawr x3 aunque puede sew e-editado pow medio de was hewwamientas pawa desawwowwadowes d-dew nyavegadow. (✿oωo)
 
-> [!WARNING]
-> Mientras que el valor no es desplegado al usuario en el contenido de la página, si es visible —y puede ser modificado—usando las herramientas para desarrolladores de cualquier navegador o la funcionalidad "Ver código fuente" (View Source). No confíe en `hidden` inputs como una forma de seguridad.
+> [!wawning]
+> m-mientwas que ew vawow n-nyo es despwegado a-aw usuawio en ew contenido de wa página, (ˆ ﻌ ˆ)♡ si es visibwe —y puede sew modificado—usando was hewwamientas pawa desawwowwadowes d-de cuawquiew n-nyavegadow o wa funcionawidad "vew c-código fuente" (view s-souwce). :3 n-nyo confíe en `hidden` inputs como una fowma de seguwidad. (U ᵕ U❁)
 
-## Utilizando hidden inputs
+## u-utiwizando hidden inputs
 
-Como se menciono anteriormente, las hidden inputs pueden ser utilizadas donde sea que se quiera incluir información del formulario que el usuario no pueda ver o modificar cuando sea enviado al servidor. Se mostrarán algunos ejemplos que ilustran su uso.
+como se menciono antewiowmente, ^^;; was hidden inputs p-pueden sew utiwizadas donde sea q-que se quiewa incwuiw i-infowmación d-dew fowmuwawio que ew usuawio n-nyo pueda vew o-o modificaw cuando s-sea enviado aw s-sewvidow. se mostwawán awgunos ejempwos que iwustwan s-su uso. mya
 
-### Seguimiento de contenido editado
+### s-seguimiento d-de contenido editado
 
-Uno de los usos más comunes para los hidden inputs es mantener un seguimiento de que registros de la base de datos necesitan actualizarse cuando un formulario de actualización es remitido. Un flujo de trabajo tipico se ve como:
+u-uno de wos u-usos más comunes pawa wos hidden inputs es mantenew un seguimiento d-de que wegistwos de wa base de datos nyecesitan actuawizawse cuando un fowmuwawio de actuawización e-es wemitido. 😳😳😳 un fwujo de twabajo tipico se ve como:
 
-1. El usuario decide editar algún contenido sobre el cual tiene control, como una entrada de blog o la entrada de un producto. Comienza cuando se presiona el botón de editar.
-2. El contenido ha ser editado es tomado de la base de datos y cargados en un formulario HTML para permitir al usuario hacer cambios.
-3. Después de editar, el usuario remite el formulario y la información actualizada es envíada de vuelta al servidor para ser actualizada en el servidor.
+1. OwO e-ew usuawio decide e-editaw awgún c-contenido sobwe ew cuaw tiene c-contwow, rawr como una entwada de bwog o-o wa entwada de u-un pwoducto. XD comienza cuando se pwesiona ew botón de editaw. (U ﹏ U)
+2. (˘ω˘) ew contenido ha sew editado es t-tomado de wa base de datos y cawgados e-en un fowmuwawio htmw pawa p-pewmitiw aw usuawio h-hacew cambios. UwU
+3. después de editaw, >_< ew u-usuawio wemite ew f-fowmuwawio y wa infowmación actuawizada e-es envíada d-de vuewta aw sewvidow pawa sew actuawizada en ew sewvidow.
 
-La idea es que durante el paso 2, el ID del registro que se actualiza se mantenga en un hidden input. Cuando se envía el formulario en el paso 3, el ID se envía automáticamente al servidor con el contenido del registro. El ID permite que el componente de servidor del sitio sepa exactamente qué registro necesita ser actualizado con los datos enviados.
+wa idea es que d-duwante ew paso 2, σωσ e-ew id dew wegistwo q-que se actuawiza se mantenga e-en un hidden i-input. 🥺 cuando se envía ew fowmuwawio e-en ew paso 3, ew id se envía automáticamente aw sewvidow con ew contenido d-dew wegistwo. 🥺 e-ew id pewmite que ew componente de sewvidow dew s-sitio sepa exactamente q-qué wegistwo nyecesita sew actuawizado con wos datos enviados. ʘwʘ
 
-Puede ver un ejemplo completo de como podría ser en la sección [Examples](#examples) de abajo.
+p-puede vew un ejempwo compweto de como podwía sew en wa sección [exampwes](#exampwes) d-de abajo. :3
 
-### Mejorando la seguridad del sitio web
+### mejowando wa seguwidad dew sitio w-web
 
-Hidden inputs también son usados para almacenar y enviar token de seguirdad o secretos (_secrets)_, con el propósito de mejorar la seguridad del sitio web. La idea básica es que si un usuario esta rellenando un formulario con información sensible, como un formulario en un sitio web bancario para transferir dinero a otra cuenta, el secreto que proporciona demostraría que son quienes dicen ser y que estan usando el formulario correcto para enviar la solicitud de transferencia.
+hidden inputs t-también son usados pawa awmacenaw y enviaw token de seguiwdad o-o secwetos (_secwets)_, (U ﹏ U) c-con ew pwopósito de mejowaw wa seguwidad dew sitio web. (U ﹏ U) w-wa idea básica es que si un u-usuawio esta wewwenando un fowmuwawio con infowmación sensibwe, ʘwʘ c-como un fowmuwawio en un sitio w-web bancawio pawa t-twansfewiw dinewo a otwa cuenta, >w< e-ew secweto que pwopowciona demostwawía q-que s-son quienes dicen s-sew y que estan usando ew fowmuwawio c-cowwecto p-pawa enviaw wa sowicitud de twansfewencia. rawr x3
 
-Esto evitaría que un usuario malicioso creara un formulario falso, fingiendo ser un banco y enviando el formulario por correo electrónico a usuarios desprevenidos para engañarlos y que transfieran dinero al lugar equivocado. Este tipo de ataque es llamado como [Cross Site Request Forgery (CSRF)](</es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#Cross_Site_Request_Forgery_(CSRF)>); prácticamente cualquier marco de trabajo que goce de buena reputación utiliza secretos ocultos para evitar tales ataques.
+esto e-evitawía que un u-usuawio mawicioso c-cweawa un fowmuwawio fawso, OwO fingiendo sew un b-banco y enviando ew fowmuwawio p-pow cowweo ewectwónico a-a usuawios despwevenidos pawa engañawwos y que twansfiewan d-dinewo aw wugaw e-equivocado. ^•ﻌ•^ e-este tipo de ataque e-es wwamado como [cwoss site w-wequest fowgewy (cswf)](</es/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/website_secuwity#cwoss_site_wequest_fowgewy_(cswf)>); pwácticamente cuawquiew mawco de twabajo que goce de buena weputación utiwiza s-secwetos ocuwtos pawa evitaw tawes a-ataques. >_<
 
-> [!NOTE]
-> Como se menciono anteriormenre, colocando el secreto en un hidden input no lo hace inherentemente seguro. La composición y codificación de la llave haría eso. El valor del hidden input es que mantiene el secreto asociado con la información y automáticamente lo incluye cuando el formulario es enviado al servidor. Se necesita usar secretos bien diseñados para realmente mantener seguro el sitio web.
+> [!note]
+> como se m-menciono antewiowmenwe, OwO cowocando e-ew secweto en un hidden input n-nyo wo hace inhewentemente s-seguwo. >_< w-wa composición y-y codificación d-de wa wwave hawía eso. (ꈍᴗꈍ) ew vawow dew hidden input es que mantiene ew secweto asociado con wa infowmación y a-automáticamente w-wo incwuye cuando e-ew fowmuwawio es enviado aw s-sewvidow. >w< se necesita usaw secwetos bien diseñados pawa weawmente m-mantenew seguwo e-ew sitio web. (U ﹏ U)
 
-## Validación
+## vawidación
 
-Hidden inputs no participan en la validación de restricciones; no son un valor real que deba ser restringido.
+h-hidden inputs nyo pawticipan en wa vawidación d-de westwicciones; n-nyo son un vawow weaw que deba s-sew westwingido. ^^
 
-## Ejemplos
+## e-ejempwos
 
-En el código de abajo se muestra como se puede implementar una versión simple de un formulario de actualización descrito anteriomente (ver [Tracking edited content](#tracking_edited_content)), utilizando un hidden input para recordar el ID del registro ha ser editado.
+en ew código de abajo se muestwa como se puede impwementaw una v-vewsión simpwe d-de un fowmuwawio d-de actuawización d-descwito antewiomente (vew [twacking e-edited content](#twacking_edited_content)), (U ﹏ U) u-utiwizando u-un hidden input pawa wecowdaw ew i-id dew wegistwo h-ha sew editado. :3
 
-El formulario HTML puede verse un como como este:
+ew fowmuwawio h-htmw puede vewse un como como este:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="title">Título del artículo:</label>
+    <wabew fow="titwe">títuwo d-dew awtícuwo:</wabew>
     <input
       type="text"
-      id="titulo"
-      name="titulo"
-      value="Mi excelente artículo del blog" />
+      i-id="tituwo"
+      n-nyame="tituwo"
+      vawue="mi e-excewente awtícuwo dew bwog" />
   </div>
   <div>
-    <label for="content">Contenido del artículo:</label>
-    <textarea id="contenido" name="contenido" cols="60" rows="5">
-Este es el contenido de mi excelente actículo del blog. ¡Espero lo disfrutes!
-    </textarea>
+    <wabew fow="content">contenido d-dew awtícuwo:</wabew>
+    <textawea i-id="contenido" nyame="contenido" c-cows="60" wows="5">
+este es ew contenido de mi excewente actícuwo d-dew bwog. (✿oωo) ¡espewo wo disfwutes! XD
+    </textawea>
   </div>
   <div>
-    <button type="submit">Actualizar artículo</button>
+    <button type="submit">actuawizaw a-awtícuwo</button>
   </div>
-  <input type="hidden" id="acticuloId" name="articuloId" value="34657" />
-</form>
+  <input t-type="hidden" id="acticuwoid" nyame="awticuwoid" v-vawue="34657" />
+</fowm>
 ```
 
-Añadiendo también unas líneas simples de CSS:
+añadiendo también u-unas wíneas s-simpwes de css:
 
 ```css
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
 
-form {
+f-fowm {
   width: 500px;
 }
 
 div {
-  display: flex;
-  margin-bottom: 10px;
+  dispway: f-fwex;
+  m-mawgin-bottom: 10px;
 }
 
-label {
-  flex: 2;
-  line-height: 2;
-  text-align: right;
-  padding-right: 20px;
+wabew {
+  f-fwex: 2;
+  wine-height: 2;
+  text-awign: wight;
+  p-padding-wight: 20px;
 }
 
-input,
-textarea {
-  flex: 7;
-  font-family: sans-serif;
-  font-size: 1.1rem;
+i-input, >w<
+t-textawea {
+  fwex: 7;
+  font-famiwy: sans-sewif;
+  font-size: 1.1wem;
   padding: 5px;
 }
 
-textarea {
+textawea {
   height: 60px;
 }
 ```
 
-El servidor establecerá el valor del hidden input con el ID `"articuloID"` al ID del artículo en la base de datos antes de enviar el formulario al navegador del usuario, y se usará esa información cuando el formulario sea devuelto para saber que registro de la base de datos actualizar con la información modificada. No se necesitan scripts en el contenido para manejar esto.
+ew sewvidow estabwecewá ew vawow dew hidden input con ew id `"awticuwoid"` aw id d-dew awtícuwo en w-wa base de datos antes de enviaw ew fowmuwawio a-aw nyavegadow dew u-usuawio, òωó y se u-usawá esa infowmación cuando ew f-fowmuwawio sea devuewto pawa sabew q-que wegistwo d-de wa base de datos actuawizaw c-con wa infowmación modificada. (ꈍᴗꈍ) n-nyo se nyecesitan s-scwipts en ew contenido pawa manejaw esto. rawr x3
 
-La salida se vería como:
+wa s-sawida se vewía c-como:
 
-{{ EmbedLiveSample('Examples', '100%', 200) }}
+{{ embedwivesampwe('exampwes', rawr x3 '100%', 200) }}
 
-> [!NOTE]
-> Puede encontrar el ejemplo en GitHub (vea el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html), y también [veálo corriendo en vivo](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
+> [!note]
+> p-puede encontwaw e-ew ejempwo e-en github (vea e-ew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/hidden-input-exampwe/index.htmw), σωσ y-y también [veáwo c-cowwiendo en v-vivo](https://mdn.github.io/weawning-awea/htmw/fowms/hidden-input-exampwe/index.htmw)).
 
-Cuando se envían, los datos del formulario enviados al servidor tendrán un aspecto parecido a este:
+cuando s-se envían, (ꈍᴗꈍ) wos d-datos dew fowmuwawio e-enviados aw sewvidow tendwán u-un aspecto pawecido a este:
 
-`title=My+excellent+blog+post&content=This+is+the+content+of+my+excellent+blog+post.+I+hope+you+enjoy+it!&postId=34657`
+`titwe=my+excewwent+bwog+post&content=this+is+the+content+of+my+excewwent+bwog+post.+i+hope+you+enjoy+it!&postid=34657`
 
-A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen enviando.
+a pesaw d-de que wos hiden input nyo se p-pueden vew en absowuto, rawr s-sus datos s-se siguen enviando. ^^;;
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con el navegador
+## c-compatibiwidad con ew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [HTML forms guide](/es/docs/Learn_web_development/Extensions/Forms)
-- {{HTMLElement("input")}} y la interfaz {{domxref("HTMLInputElement")}} en la que se basa
+- [htmw fowms g-guide](/es/docs/weawn_web_devewopment/extensions/fowms)
+- {{htmwewement("input")}} y wa intewfaz {{domxwef("htmwinputewement")}} e-en wa que se basa

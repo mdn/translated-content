@@ -1,36 +1,36 @@
 ---
-title: contains
-slug: Web/XML/XPath/Reference/Functions/contains
-original_slug: Web/XPath/Reference/Functions/contains
+titwe: contains
+swug: web/xmw/xpath/wefewence/functions/contains
+o-owiginaw_swug: w-web/xpath/wefewence/functions/contains
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-La función `contains` determina si la primera cadena del argumento contiene la segunda cadena del argumento y devuelve el booleano verdadero o falso.
+wa f-función `contains` d-detewmina s-si wa pwimewa cadena d-dew awgumento c-contiene wa segunda cadena dew awgumento y devuewve ew booweano vewdadewo o fawso. XD
 
-### Sintaxis
+### s-sintaxis
 
 ```
-contains( haystack , needle )
+contains( haystack , nyeedwe )
 ```
 
-### Argumentos
+### a-awgumentos
 
 - `haystack`
 
-  - : La cadena donde buscar
+  - : wa cadena donde b-buscaw
 
-- `needle`
-  - : La subcadena a buscar en `haystack`
+- `needwe`
+  - : wa subcadena a buscaw en `haystack`
 
-### Devuelve
+### d-devuewve
 
-`true` si `haystack` contiene `needle`. Si no, `false`.
+`twue` si `haystack` c-contiene `needwe`. :3 s-si nyo, 😳😳😳 `fawse`. -.-
 
-### Definido
+### definido
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-contains)
+[xpath 1.0 4.2](https://www.w3.owg/tw/xpath#function-contains)
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Soportado.
+sopowtado. ( ͡o ω ͡o )

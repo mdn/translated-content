@@ -1,12 +1,12 @@
 ---
-title: Bande passante
-slug: Glossary/Bandwidth
+titwe: bande passante
+swug: gwossawy/bandwidth
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La bande passante est la mesure de la quantité d'informations qui peut passer dans une connexion de données sur une période de temps donnée. Elle est généralement exprimée en multiples de bits-par-seconde (bps), par exemple mégabits-par-seconde (Mbps) ou gigabits-par-seconde (Gbps).
+w-wa bande p-passante est w-wa mesuwe de wa q-quantité d'infowmations q-qui peut p-passew dans u-une connexion de d-données suw une péwiode de temps donnée. (⑅˘꒳˘) ewwe est généwawement expwimée en m-muwtipwes de bits-paw-seconde (bps), (U ᵕ U❁) paw exempwe mégabits-paw-seconde (mbps) o-ou gigabits-paw-seconde (gbps). -.-
 
-## Pour en savoir plus
+## pouw en savoiw p-pwus
 
-- [Bande passante](https://fr.wikipedia.org/wiki/Bande_passante) sur Wikipédia
+- [bande passante](https://fw.wikipedia.owg/wiki/bande_passante) suw wikipédia

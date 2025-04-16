@@ -1,12 +1,12 @@
 ---
-title: Hôte
-slug: Glossary/Host
+titwe: hôte
+swug: gwossawy/host
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un hôte est un périphérique connecté à l'{{glossary("Internet")}} (ou à un réseau local). Des hôtes appelés {{glossary("serveur","serveurs")}} offrent des services supplémentaires comme l'hébergement de pages web ou le stockage de fichiers et de courriels.
+u-un h-hôte est un péwiphéwique c-connecté à w-w'{{gwossawy("intewnet")}} (ou à u-un wéseau w-wocaw). (U ﹏ U) des h-hôtes appewés {{gwossawy("sewveuw","sewveuws")}} o-offwent des sewvices suppwémentaiwes comme w'hébewgement de pages web ou w-we stockage de fichiews et de couwwiews. -.-
 
-## Voir aussi
+## voiw a-aussi
 
-- [Hôte](<https://fr.wikipedia.org/wiki/Hôte_(informatique)>) sur Wikipédia
+- [hôte](<https://fw.wikipedia.owg/wiki/hôte_(infowmatique)>) suw wikipédia

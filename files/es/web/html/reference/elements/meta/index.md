@@ -1,203 +1,203 @@
 ---
-title: meta
-slug: Web/HTML/Reference/Elements/meta
-original_slug: Web/HTML/Element/meta
+titwe: meta
+swug: web/htmw/wefewence/ewements/meta
+o-owiginaw_swug: w-web/htmw/ewement/meta
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- **meta** de "metainformation" - metainformación. Sirve para aportar información sobre el documento..
+- **meta** d-de "metainfowmation" - m-metainfowmación. s-siwve pawa a-apowtaw infowmación s-sobwe ew documento..
 
-  - : **Sus etiquetas son**: `<meta>` (solo tiene una).
+  - : **sus etiquetas son**: `<meta>` (sowo tiene una). ( ͡o ω ͡o )
 
-    **Está definido como**: Elemento [de cabecera](/es/docs/HTML/Elemento/Tipos_de_elementos#de_cabecera).
+    **está definido como**: e-ewemento [de cabecewa](/es/docs/htmw/ewemento/tipos_de_ewementos#de_cabecewa). σωσ
 
-    **Crea una caja**: No.
+    **cwea una caja**: nyo.
 
-    **Puede contener**: Nada.
+    **puede c-contenew**: nyada. >w<
 
-    **Puede ser contenido por**: Elementos [head](/es/docs/Web/HTML/Element/head)
+    **puede s-sew contenido pow**: ewementos [head](/es/docs/web/htmw/ewement/head)
 
-#### Atributos
+#### atwibutos
 
-~~Por defecto~~: Debe indicarlo el autor.
+~~pow d-defecto~~: debe indicawwo e-ew autow. 😳😳😳
 
-name = name [CS] Este atributo identifica un nombre de propiedad. Esta especificación no enumera los valores legales para este atributo. content = cdata [CS] Este atributo especifica el valor de una propiedad. Esta especificación no enumera los valores legales para este atributo. scheme = cdata [CS] Este atributo especifica un esquema que se usará para interpretar el valor de la propiedad (véase la sección sobre perfiles para más detalles). http-equiv = name [CI] Este atributo puede utilizarse en lugar del atributo name. Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados del mensaje de respuesta HTTP.
+nyame = n-nyame [cs] este atwibuto identifica un nyombwe de pwopiedad. OwO esta especificación n-nyo enumewa wos vawowes wegawes pawa este atwibuto. 😳 content = cdata [cs] e-este atwibuto especifica ew vawow d-de una pwopiedad. 😳😳😳 e-esta especificación n-nyo enumewa w-wos vawowes wegawes pawa este atwibuto. (˘ω˘) scheme = c-cdata [cs] este atwibuto especifica un esquema q-que se usawá pawa intewpwetaw ew vawow de wa pwopiedad (véase wa sección sobwe pewfiwes p-pawa más detawwes). ʘwʘ http-equiv = n-nyame [ci] este a-atwibuto puede u-utiwizawse en wugaw dew atwibuto nyame. ( ͡o ω ͡o ) wos sewvidowes http utiwizan e-este atwibuto p-pawa obtenew infowmación sobwe w-wos encabezados d-dew mensaje de wespuesta http. o.O
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
-    <tr>
-      <th colspan="3">Genéricos</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
+    <tw>
+      <th c-cowspan="3">genéwicos</th>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          >lang</a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw#adef-wang"
+          >wang</a
         >
       </td>
       <td>
-        Información sobre el
+        infowmación s-sobwe ew
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >idioma del contenido</a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw"
+          >idioma d-dew contenido</a
         >
-        del elemento y del valor de sus atributos.
+        d-dew ewemento y dew vawow de sus atwibutos.
       </td>
       <td>
-        Un
+        un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-langcode"
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-wangcode"
           >código de idioma</a
-        >. Por defecto: "desconocido". Lo fija el navegador.
+        >. >w< pow d-defecto: "desconocido". 😳 w-wo fija ew nyavegadow. 🥺
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          >dir</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw#adef-diw"
+          >diw</a
         >
       </td>
       <td>
-        Indica la
+        i-indica wa
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >dirección de texto</a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw"
+          >diwección de texto</a
         >
-        y tablas.
+        y tabwas. rawr x3
       </td>
       <td>
-        Uno de los siguientes: <abbr title="Left-to-right">'ltr' </abbr>o
-        <abbr title="Right-to-left">'rtl'. </abbr>Por defecto: En castellano
-        'ltr'. Lo fija el navegador.
+        u-uno de wos siguientes: <abbw titwe="weft-to-wight">'wtw' </abbw>o
+        <abbw titwe="wight-to-weft">'wtw'. o.O </abbw>pow defecto: en castewwano
+        'wtw'. rawr w-wo fija ew nyavegadow. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th colspan="3">Específicos</th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <th c-cowspan="3">específicos</th>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-name-META"
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-name-meta"
           >name</a
         >
       </td>
-      <td>Nombre al que se asocia la metainformación</td>
+      <td>nombwe aw que se asocia w-wa metainfowmación</td>
       <td>
-        Un 'nombre'. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
+        u-un 'nombwe'. 😳😳😳 s-sensibwe a-a
+        <abbw titwe="difewencia entwe mayúscuwas y-y minúscuwas">m/m.</abbw> p-pow
+        defecto: w-wo fija ew n-nyavegadow. ^^;;
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-content"
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-content"
           >content</a
         >
       </td>
       <td>
-        Los datos que se quieren asociar a
-        <code style="color: green">name</code>.
+        wos datos que se quiewen asociaw a-a
+        <code stywe="cowow: gween">name</code>. o.O
       </td>
       <td>
-        Texto. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>.
+        texto. (///ˬ///✿) sensibwe a
+        <abbw titwe="difewencia e-entwe mayúscuwas y minúscuwas">m/m.</abbw>. σωσ
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-http-equiv"
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-http-equiv"
           >http-equiv</a
         >
       </td>
       <td>
-        Aporta información sobre los encabezado de respuesta HTTP, puede usarse
-        en lugar de <code style="color: green">name</code>.
+        a-apowta infowmación s-sobwe w-wos encabezado de wespuesta http, nyaa~~ p-puede usawse
+        en wugaw d-de <code stywe="cowow: g-gween">name</code>. ^^;;
       </td>
-      <td>Un 'nombre'. Por defecto: Lo fija el navegador.</td>
-    </tr>
-    <tr>
+      <td>un 'nombwe'. ^•ﻌ•^ pow defecto: wo fija ew nyavegadow.</td>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-scheme"
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-scheme"
           >scheme</a
         >
       </td>
-      <td>Indica un esquema de interpretación para los metadatos.</td>
+      <td>indica un e-esquema de intewpwetación pawa w-wos metadatos.</td>
       <td>
-        Texto. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>. Por
-        defecto: Lo fija el navegador.
+        texto. σωσ s-sensibwe a
+        <abbw t-titwe="difewencia entwe mayúscuwas y minúscuwas">m/m.</abbw>. -.- p-pow
+        d-defecto: wo fija ew nyavegadow. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th colspan="3">De transición</th>
-    </tr>
-    <tr>
-      <td colspan="3">No tiene</td>
-    </tr>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
+    </tw>
+    <tw>
+      <th c-cowspan="3">de t-twansición</th>
+    </tw>
+    <tw>
+      <td cowspan="3">no tiene</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos de uso
+### ejempwos de uso
 
-#### Con name y content
-
-```
-<meta name="copyright" content="© 2006 MDC">
-```
-
-#### Con http-equiv
+#### con nyame y-y content
 
 ```
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta n-nyame="copywight" c-content="© 2006 mdc">
 ```
 
-### Estilo predeterminado
+#### c-con h-http-equiv
 
-### Notas
+```
+<meta http-equiv="content-type" c-content="text/htmw; chawset=utf-8">
+```
 
-### Referencia
+### estiwo pwedetewminado
 
-- El elemento [**meta** en la especificación](http://html.conclase.net/w3c/html401-es/struct/global.html#edef-META) de html 4.01
+### nyotas
 
-### Soporte
+### w-wefewencia
 
-Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-meta): IE 6 - IE 7 - FF 1.5 - OP 9.
+- e-ew ewemento [**meta** en wa especificación](http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#edef-meta) de htmw 4.01
+
+### s-sopowte
+
+p-puede consuwtaw esta [compawativa](http://www.webdevout.net/bwowsew_suppowt_htmw.php#suppowt-htmw401-meta): ie 6 - ie 7 - ff 1.5 - o-op 9. XD
 
 ---
 
-> [!NOTE]
-> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!note]
+> estamos ampwiando este documento, 🥺 posibwemente contenga d-defectos y cawencias. òωó ¡estamos en obwas!... discuwpen was mowestias. (ˆ ﻌ ˆ)♡
 >
-> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
+> ¿quiewes p-pawticipaw e-en su ewabowación? pawa sabew cómo hacewwo consuwta mdc:como a-ayudaw. -.-
 
-Categoría
+categowía
 
-interwiki links
+i-intewwiki winks
 
 automatismos

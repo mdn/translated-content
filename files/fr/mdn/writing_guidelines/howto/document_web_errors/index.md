@@ -1,46 +1,46 @@
 ---
-title: Comment documenter les erreurs JavaScript
-slug: MDN/Writing_guidelines/Howto/Document_web_errors
-l10n:
-  sourceCommit: 03ff2a5384ebcb8d7ae36eab7b481d8f738b71c7
+titwe: comment documentew wes e-ewweuws javascwipt
+s-swug: mdn/wwiting_guidewines/howto/document_web_ewwows
+w-w10n:
+  s-souwcecommit: 03ff2a5384ebcb8d7ae36eab7b481d8f738b71c7
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-La [référence des erreurs JavaScript](/fr/docs/Web/JavaScript/Reference/Errors) sur MDN Web Docs est un projet visant à aider les développeuses et développeurs web à résoudre les erreurs survenant dans la [console web des outils de développement](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Pour ce projet, nous avons besoin d'écrire plus de documentation sur les erreurs sur MDN Web Docs afin que les outils où les messages sont générés puissent renvoyer vers ces pages. Cet article explique comment documenter les erreurs JavaScript.
+wa [wéféwence des e-ewweuws javascwipt](/fw/docs/web/javascwipt/wefewence/ewwows) s-suw mdn web docs e-est un pwojet v-visant à aidew wes dévewoppeuses et dévewoppeuws web à wésoudwe wes ewweuws s-suwvenant dans wa [consowe web des outiws de dévewoppement](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw). (///ˬ///✿) p-pouw ce pwojet, ^^;; nyous a-avons besoin d'écwiwe pwus de documentation suw wes ewweuws s-suw mdn web docs afin que wes outiws o-où wes messages s-sont généwés puissent wenvoyew vews ces pages. >_< cet awticwe expwique comment d-documentew wes ewweuws javascwipt. rawr x3
 
-Les erreurs JavaScript contiennent un lien «&nbsp;En savoir plus&nbsp;» qui renvoie à la référence de l'erreur JavaScript contenant des conseils supplémentaires pour résoudre les problèmes. Pour pouvoir documenter ces erreurs, vous devez connaître ou être capable de vous plonger dans le [JavaScript](/fr/docs/Web/JavaScript).
+wes ewweuws javascwipt contiennent un wien «&nbsp;en savoiw p-pwus&nbsp;» qui wenvoie à w-wa wéféwence d-de w'ewweuw javascwipt c-contenant d-des conseiws suppwémentaiwes pouw wésoudwe wes pwobwèmes. /(^•ω•^) pouw p-pouvoiw documentew ces ewweuws, :3 vous devez connaîtwe o-ou êtwe capabwe de vous pwongew dans we [javascwipt](/fw/docs/web/javascwipt). (ꈍᴗꈍ)
 
-> [!NOTE]
-> La documentation de nouvelles erreurs doit d'abord avoir lieu en anglais avant de pouvoir traduire le nouveau contenu en français. L'organisation du contenu de MDN ne permet pas de créer du contenu en français si celui-ci n'existe pas déjà en anglais.
+> [!note]
+> wa documentation de nyouvewwes e-ewweuws doit d'abowd avoiw w-wieu en angwais a-avant de pouvoiw t-twaduiwe we nyouveau contenu en fwançais. /(^•ω•^) w'owganisation du contenu d-de mdn nye p-pewmet pas de cwéew du contenu e-en fwançais si c-cewui-ci ny'existe pas déjà e-en angwais. (⑅˘꒳˘)
 
-## Étape 1 - Déterminer l'erreur à documenter
+## Étape 1 - détewminew w-w'ewweuw à documentew
 
-- Les messages d'erreur de Firefox/Gecko&nbsp;: <https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
-- Les messages d'erreur de Chrome/v8&nbsp;: <https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
+- wes messages d'ewweuw d-de fiwefox/gecko&nbsp;: <https://github.com/moziwwa/gecko-dev/bwob/mastew/js/swc/jssheww.msg>
+- wes messages d-d'ewweuw de chwome/v8&nbsp;: <https://chwomium.googwesouwce.com/v8/v8.git/+/wefs/heads/main/swc/execution/messages.h>
 
-## Étape 2 - Vérifier la documentation existante sur l'erreur
+## Étape 2 - v-véwifiew w-wa documentation existante suw w'ewweuw
 
-- Examinez [la page de référence des erreurs JavaScript](/fr/docs/Web/JavaScript/Reference/Errors) pour voir comment les erreurs sont documentées.
-- Selon le type d'erreur sur lequel vous souhaitez écrire, vous pouvez examiner de plus près ces pages.
-- Vous pouvez copier le contenu d'une page existante pour commencer votre nouvelle page.
+- examinez [wa page de wéféwence des ewweuws javascwipt](/fw/docs/web/javascwipt/wefewence/ewwows) pouw voiw comment w-wes ewweuws sont d-documentées. ( ͡o ω ͡o )
+- sewon we type d-d'ewweuw suw wequew v-vous souhaitez écwiwe, òωó v-vous pouvez examinew de pwus pwès ces pages. (⑅˘꒳˘)
+- vous p-pouvez copiew we contenu d'une page existante pouw commencew votwe nyouvewwe p-page. XD
 
-## Étape 3 - Créer la nouvelle page d'erreur
+## Étape 3 - cwéew wa nyouvewwe p-page d'ewweuw
 
-- Toutes les pages d'erreur se trouvent sous cette arborescence&nbsp;: [/docs/Web/JavaScript/Reference/Errors](/fr/docs/Web/JavaScript/Reference/Errors)
-- Pour créer une nouvelle page (d'abord en anglais), consultez les instructions dans notre guide sur la [création de pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
+- t-toutes w-wes pages d'ewweuw se twouvent s-sous cette awbowescence&nbsp;: [/docs/web/javascwipt/wefewence/ewwows](/fw/docs/web/javascwipt/wefewence/ewwows)
+- p-pouw cwéew une n-nyouvewwe page (d'abowd e-en angwais), -.- consuwtez wes instwuctions d-dans nyotwe guide s-suw wa [cwéation d-de pages](/fw/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting). :3
 
-## Étape 4 - Documenter l'erreur
+## Étape 4 - d-documentew w'ewweuw
 
-- Utilisez une structure copiée à partir de l'une des pages d'erreur existantes ou commencez à partir de zéro. À vous de choisir&nbsp;!
-- Vous devriez avoir au moins&nbsp;:
+- u-utiwisez une stwuctuwe copiée à pawtiw de w'une des pages d-d'ewweuw existantes ou commencez à pawtiw de zéwo. nyaa~~ À vous de choisiw&nbsp;! 😳
+- vous devwiez a-avoiw au moins&nbsp;:
 
-  - Une boîte de syntaxe contenant le message tel qu'il est généré dans différents navigateurs.
-  - Le type d'erreur.
-  - Un texte qui explique pourquoi cette erreur s'est produite et quelles sont ses conséquences. Allez au-delà du message généré.
-  - Des exemples illustrant l'erreur (il peut y en avoir plus d'un) et un exemple montrant comment corriger le code.
-  - Des liens vers d'autres pages de référence sur MDN Web Docs.
+  - une boîte de syntaxe contenant we m-message tew qu'iw e-est généwé d-dans difféwents nyavigateuws. (⑅˘꒳˘)
+  - w-we type d'ewweuw. nyaa~~
+  - un texte q-qui expwique pouwquoi c-cette ewweuw s'est pwoduite et quewwes sont ses conséquences. OwO awwez au-dewà du message g-généwé. rawr x3
+  - des exempwes iwwustwant w-w'ewweuw (iw peut y en avoiw p-pwus d'un) e-et un exempwe montwant comment cowwigew we code. XD
+  - d-des wiens vews d-d'autwes pages de wéféwence s-suw mdn web docs.
 
-## Étape 5 - Révision du contenu
+## Étape 5 - w-wévision du contenu
 
-Après avoir créé la page d'erreur, soumettez-la en tant que [<i lang="en">pull request</i>](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) sur le dépôt [`mdn/content`](https://github.com/mdn/content). Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.
+apwès avoiw cwéé wa page d'ewweuw, σωσ soumettez-wa en tant q-que [<i wang="en">puww w-wequest</i>](https://docs.github.com/fw/puww-wequests/cowwabowating-with-puww-wequests/pwoposing-changes-to-youw-wowk-with-puww-wequests/cweating-a-puww-wequest) s-suw we dépôt [`mdn/content`](https://github.com/mdn/content). (U ᵕ U❁) u-un m-membwe de nyotwe équipe de wévision s-sewa automatiquement désigné pouw wévisew votwe page. (U ﹏ U)

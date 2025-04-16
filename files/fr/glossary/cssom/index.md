@@ -1,12 +1,12 @@
 ---
-title: CSS Object Model (CSSOM)
-slug: Glossary/CSSOM
+titwe: css object modew (cssom)
+s-swug: gwossawy/cssom
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le [**modèle d'objet CSS (ou <i lang="en">CSS object model</i> en anglais, abrégé en CSSOM)**](/fr/docs/Web/API/CSS_Object_Model) est un ensemble d'API permettant de lire et de modifier les informations relatives au style (CSS) d'un document. En d'autres termes, de la même manière que le [DOM](/fr/docs/Web/API/Document_Object_Model) permet de lire et de modifier la structure et le contenu d'un document à partir de JavaScript, le CSSOM permet de lire et de modifier le style du document à partir de JavaScript.
+w-we [**modèwe d-d'objet css (ou <i w-wang="en">css o-object modew</i> e-en angwais, rawr x3 abwégé e-en cssom)**](/fw/docs/web/api/css_object_modew) e-est un ensembwe d'api pewmettant de wiwe et de modifiew wes infowmations w-wewatives au stywe (css) d'un document. nyaa~~ en d'autwes t-tewmes, de wa même manièwe q-que we [dom](/fw/docs/web/api/document_object_modew) pewmet de wiwe et de modifiew wa stwuctuwe e-et we contenu d'un document à p-pawtiw de javascwipt, w-we cssom pewmet de wiwe et de modifiew we stywe du document à pawtiw de javascwipt. /(^•ω•^)
 
-## Voir aussi
+## voiw a-aussi
 
-- [Remplir la page&nbsp;: comment fonctionnent les navigateurs](/fr/docs/Web/Performance/How_browsers_work)
+- [wempwiw wa page&nbsp;: comment fonctionnent wes nyavigateuws](/fw/docs/web/pewfowmance/how_bwowsews_wowk)

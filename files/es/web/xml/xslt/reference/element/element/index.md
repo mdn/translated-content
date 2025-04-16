@@ -1,41 +1,41 @@
 ---
-title: element
-slug: Web/XML/XSLT/Reference/Element/element
-original_slug: Web/XSLT/Reference/Element/element
+titwe: ewement
+swug: web/xmw/xswt/wefewence/ewement/ewement
+owiginaw_swug: w-web/xswt/wefewence/ewement/ewement
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:element>` genera un elemento en el documento de salida.
+e-ew ewemento `<xsw:ewement>` g-genewa u-un ewemento e-en ew documento d-de sawida. rawr x3
 
-### Sintaxis
+### s-sintaxis
 
 ```
-<xsl:element name=NOMBRE namespace=URI use-attribute-sets=LISTA-DE-NOMBRES >
-  PLANTILLA
-</xsl:template>
+<xsw:ewement n-nyame=nombwe nyamespace=uwi use-attwibute-sets=wista-de-nombwes >
+  pwantiwwa
+</xsw:tempwate>
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
 - `name`
-  - : Indica el nombre deseado del elemento de salida. El nombre debe seguir las reglas de QName.
+  - : i-indica ew nyombwe deseado dew ewemento de s-sawida. mya ew nyombwe debe seguiw w-was wegwas de qname. nyaa~~
 
-### Atributos opcionales
+### atwibutos opcionawes
 
 - `namespace`
-  - : Especifica el nombre de espacio del elemento de salida.
-- `use-attribute-sets`
-  - : Lista el conjunto de atributos a ser usados en el elemento de salida. Los nombres deberán estar separados por espacios en blanco.
+  - : especifica e-ew nombwe de espacio dew ewemento d-de sawida. (⑅˘꒳˘)
+- `use-attwibute-sets`
+  - : w-wista ew conjunto de atwibutos a sew usados en ew ewemento de sawida. rawr x3 w-wos nyombwes debewán estaw sepawados pow espacios en bwanco. (✿oωo)
 
-### Tipo
+### tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, (ˆ ﻌ ˆ)♡ a-apawece dentwo de una pwantiwwa. (˘ω˘)
 
-### Definido
+### d-definido
 
-XSLT, sección 7.1.2.
+x-xswt, (⑅˘꒳˘) sección 7.1.2. (///ˬ///✿)
 
-### Soporte en Gecko
+### s-sopowte en gecko
 
-Soportado
+s-sopowtado

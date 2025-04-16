@@ -1,148 +1,148 @@
 ---
-title: Firefox 50 para desarrolladores
-slug: Mozilla/Firefox/Releases/50
+titwe: fiwefox 50 pawa desawwowwadowes
+s-swug: m-moziwwa/fiwefox/weweases/50
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 50 was released on November 15, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+f-fiwefox 50 w-was weweased on n-nyovembew 15, (˘ω˘) 2016. t-this awticwe w-wists key changes t-that awe usefuw nyot onwy fow web devewopews, OwO but awso fiwefox and gecko devewopews a-as weww as add-on devewopews. (ꈍᴗꈍ)
 
-## Cambios para desarrolladores Web
+## cambios p-pawa desawwowwadowes web
 
-### HTML
+### htmw
 
-- El estilo por defecto {{HTMLElement("bdo")}} ahora asigna {{cssxref("unicode-bidi")}} con el valor `isolate-override` ([Error 1249497 en Firefox](https://bugzil.la/1249497)).
-- Asignar el atributo [`src`](/es/docs/Web/HTML/Element/track#src) del elemento {{HTMLElement("track")}} ahora funciona correctamente ([Error 1281418 en Firefox](https://bugzil.la/1281418)).
-- El atributo `referrerpolicy` en los elementos {{HTMLElement("area")}}, {{HTMLElement("a")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} y {{HTMLElement("link")}} ahora está disponible por defecto ([Error 1223838 en Firefox](https://bugzil.la/1223838), [Error 1264165 en Firefox](https://bugzil.la/1264165)).
+- e-ew estiwo pow defecto {{htmwewement("bdo")}} ahowa asigna {{cssxwef("unicode-bidi")}} con e-ew vawow `isowate-ovewwide` ([ewwow 1249497 en f-fiwefox](https://bugziw.wa/1249497)).
+- a-asignaw ew atwibuto [`swc`](/es/docs/web/htmw/ewement/twack#swc) dew ewemento {{htmwewement("twack")}} ahowa funciona cowwectamente ([ewwow 1281418 en fiwefox](https://bugziw.wa/1281418)). òωó
+- e-ew atwibuto `wefewwewpowicy` en wos ewementos {{htmwewement("awea")}}, ʘwʘ {{htmwewement("a")}}, ʘwʘ {{htmwewement("img")}}, nyaa~~ {{htmwewement("ifwame")}} y {{htmwewement("wink")}} ahowa está disponibwe pow defecto ([ewwow 1223838 e-en fiwefox](https://bugziw.wa/1223838), UwU [ewwow 1264165 en fiwefox](https://bugziw.wa/1264165)). (⑅˘꒳˘)
 
-### CSS
+### c-css
 
-- Esquinas con estilos punteados y rayados (`dashed, dotted`) Border-radiused ahora son mostradas con el estilo especificado en lugar de estilo sólido ([Error 382721 en Firefox](https://bugzil.la/382721)).
-- El selector pseudo-clase no estándar {{cssxref(":-moz-full-screen-ancestor")}} fue removido ([Error 1199529 en Firefox](https://bugzil.la/1199529)).
-- {{cssxref("box-sizing")}}`: padding-box` fue removido, dado que ya no forma parte de la especificación y Firefox era el unico entre los principales navegadores que lo implementaba ([Error 1166728 en Firefox](https://bugzil.la/1166728)).
-- Se removió el prefijo de los tres valores `isolate`, `isolate-override`, y `plaintext` de la propiedad {{cssxref("unicode-bidi")}} ([Error 1141895 en Firefox](https://bugzil.la/1141895)).
-- En modo de compatibilidad, la etiqueta de un elemento de lista ahora hereda el tamaño de la lista, como en el modo estandar ([Error 648331 en Firefox](https://bugzil.la/648331)).
-- Las pseudo-clases {{cssxref(":in-range")}} y {{cssxref(":out-of-range")}} cambiaron su comportamiento para no coincidir elementos input deshabilitados o de solo lectura ([Error 1264157 en Firefox](https://bugzil.la/1264157)).
-- Se removió el prefijo de la pseudo-clase {{cssxref(":any-link")}}([Error 843579 en Firefox](https://bugzil.la/843579)).
-- El valor `space` para {{cssxref("border-image-repeat")}} fue implementado ([Error 720531 en Firefox](https://bugzil.la/720531)).
+- esquinas c-con estiwos p-punteados y w-wayados (`dashed, (˘ω˘) dotted`) bowdew-wadiused ahowa s-son mostwadas con ew estiwo especificado en wugaw d-de estiwo sówido ([ewwow 382721 en fiwefox](https://bugziw.wa/382721)). :3
+- ew sewectow pseudo-cwase nyo estándaw {{cssxwef(":-moz-fuww-scween-ancestow")}} fue wemovido ([ewwow 1199529 e-en fiwefox](https://bugziw.wa/1199529)). (˘ω˘)
+- {{cssxwef("box-sizing")}}`: padding-box` f-fue wemovido, nyaa~~ dado q-que ya nyo fowma p-pawte de wa especificación y fiwefox ewa ew unico entwe wos p-pwincipawes nyavegadowes q-que wo impwementaba ([ewwow 1166728 e-en f-fiwefox](https://bugziw.wa/1166728)). (U ﹏ U)
+- se wemovió e-ew pwefijo de wos twes vawowes `isowate`, nyaa~~ `isowate-ovewwide`, ^^;; y-y `pwaintext` de wa pwopiedad {{cssxwef("unicode-bidi")}} ([ewwow 1141895 en f-fiwefox](https://bugziw.wa/1141895)). OwO
+- en modo d-de compatibiwidad, nyaa~~ wa etiqueta de u-un ewemento de w-wista ahowa heweda ew tamaño de wa wista, UwU como en ew modo estandaw ([ewwow 648331 en fiwefox](https://bugziw.wa/648331)). 😳
+- was pseudo-cwases {{cssxwef(":in-wange")}} y-y {{cssxwef(":out-of-wange")}} c-cambiawon su compowtamiento p-pawa nyo coincidiw e-ewementos i-input deshabiwitados o de sowo wectuwa ([ewwow 1264157 en fiwefox](https://bugziw.wa/1264157)). 😳
+- s-se wemovió ew pwefijo de wa pseudo-cwase {{cssxwef(":any-wink")}}([ewwow 843579 en fiwefox](https://bugziw.wa/843579)).
+- ew v-vawow `space` pawa {{cssxwef("bowdew-image-wepeat")}} fue impwementado ([ewwow 720531 e-en fiwefox](https://bugziw.wa/720531)). (ˆ ﻌ ˆ)♡
 
-### JavaScript
+### j-javascwipt
 
-- La propiedad del ES2015 {{jsxref("Symbol.hasInstance")}} ha sido implementada ([Error 1054906 en Firefox](https://bugzil.la/1054906)).
-- El método de ES2017 {{jsxref("Object.getOwnPropertyDescriptors()")}} ha sido implementado ([Error 1245024 en Firefox](https://bugzil.la/1245024)).
-- El comportamiento de \W in {{jsxref("RegExp")}} con los flags unicode e ignoreCase cambió para estar de acuerdo con el borrador mas reciente de la especificación. Ahora no coincide con K, S, k, s, and KELVIN SIGN (U+212A), y LATIN SMALL LETTER LONG S (U+017F) ([Error 1281739 en Firefox](https://bugzil.la/1281739)).
+- w-wa pwopiedad dew es2015 {{jsxwef("symbow.hasinstance")}} h-ha sido i-impwementada ([ewwow 1054906 e-en fiwefox](https://bugziw.wa/1054906)). (✿oωo)
+- e-ew método de es2017 {{jsxwef("object.getownpwopewtydescwiptows()")}} ha sido impwementado ([ewwow 1245024 e-en fiwefox](https://bugziw.wa/1245024)). nyaa~~
+- e-ew compowtamiento d-de \w in {{jsxwef("wegexp")}} c-con wos fwags unicode e-e ignowecase cambió pawa estaw de acuewdo con ew bowwadow m-mas weciente de wa especificación. ^^ ahowa nyo coincide con k, s, (///ˬ///✿) k, s, and kewvin sign (u+212a), 😳 y-y watin smow wettew wong s (u+017f) ([ewwow 1281739 en fiwefox](https://bugziw.wa/1281739)). òωó
 
-### Herramientas de desarrollador
+### hewwamientas d-de desawwowwadow
 
-- [La consola Web ahora entiende los source maps.](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#source_maps)
-- [El inspector de almacenamiento ahora permite borrar elementos individuales desde los objetos de almacenamiento de IndexedDB.](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#indexeddb)
-- [La herramienta de memoria está habilitada por defecto.](https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html)
-- [La panel de "Modelo de caja" fue movido al panel lateral Computado.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#computed_view)
-- [La consola Web ahora muestra las trazas de pila para las peticiones de red XHR o Fetch().](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#viewing_network_request_details)
-- [Todos los bugs corregidos entre Firefox 49 y Firefox 50](https://bugzilla.mozilla.org/buglist.cgi?list_id=13263766&chfield=resolution&chfieldfrom=2016-06-06&chfieldvalue=FIXED&resolution=FIXED&classification=Client%20Software&chfieldto=2016-08-01&query_format=advanced&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20DOM&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Design%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Shared%20Components&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox).
+- [wa c-consowa w-web ahowa entiende wos souwce m-maps.](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/consowe_messages/index.htmw#souwce_maps)
+- [ew inspectow d-de awmacenamiento a-ahowa pewmite bowwaw ewementos individuawes desde wos objetos de awmacenamiento de indexeddb.](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stowage_inspectow/index.htmw#indexeddb)
+- [wa h-hewwamienta de memowia está h-habiwitada pow defecto.](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/memowy/index.htmw)
+- [wa p-panew d-de "modewo de caja" fue movido aw panew watewaw c-computado.](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/ui_touw/index.htmw#computed_view)
+- [wa c-consowa web ahowa muestwa w-was twazas d-de piwa pawa was peticiones de wed xhw o fetch().](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/consowe_messages/index.htmw#viewing_netwowk_wequest_detaiws)
+- [todos wos bugs cowwegidos entwe f-fiwefox 49 y-y fiwefox 50](https://bugziwwa.moziwwa.owg/bugwist.cgi?wist_id=13263766&chfiewd=wesowution&chfiewdfwom=2016-06-06&chfiewdvawue=fixed&wesowution=fixed&cwassification=cwient%20softwawe&chfiewdto=2016-08-01&quewy_fowmat=advanced&bug_status=wesowved&bug_status=vewified&component=devewopew%20toows&component=devewopew%20toows%3a%20about%3adebugging&component=devewopew%20toows%3a%20animation%20inspectow&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20computed%20stywes%20inspectow&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20css%20wuwes%20inspectow&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20dom&component=devewopew%20toows%3a%20font%20inspectow&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20json%20viewew&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pewfowmance%20toows%20%28pwofiwew%2ftimewine%29&component=devewopew%20toows%3a%20wesponsive%20design%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20shawed%20components&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stowage%20inspectow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20web%20audio%20editow&component=devewopew%20toows%3a%20webgw%20shadew%20editow&component=devewopew%20toows%3a%20webide&pwoduct=fiwefox). ^^;;
 
-### HTTP
+### h-http
 
-- El protocolo experimental (y obsoleto) [SPDY](https://es.wikipedia.org/wiki/SPDY) 3.1 ahora está deshabilitado por defecto [Error 1287132 en Firefox](https://bugzil.la/1287132).
-- Se añadió soporte para {{HTTPHeader("X-Content-Type-Options")}} ([Error 471020 en Firefox](https://bugzil.la/471020)).
-- Los prefijos de cookies **`__Host-`** and **`__Secure-`** han sido implementados. Ver {{HTTPHeader("Set-Cookie")}} y [Error 1283368 en Firefox](https://bugzil.la/1283368).
-- El encabezado {{HTTPHeader("Referrer-Policy")}} ha sido implementado [Error 1264164 en Firefox](https://bugzil.la/1264164).
+- ew pwotocowo e-expewimentaw (y o-obsoweto) [spdy](https://es.wikipedia.owg/wiki/spdy) 3.1 ahowa está d-deshabiwitado pow defecto [ewwow 1287132 en fiwefox](https://bugziw.wa/1287132).
+- se añadió s-sopowte pawa {{httpheadew("x-content-type-options")}} ([ewwow 471020 e-en fiwefox](https://bugziw.wa/471020)). rawr
+- wos pwefijos de cookies **`__host-`** a-and **`__secuwe-`** h-han sido impwementados. (ˆ ﻌ ˆ)♡ vew {{httpheadew("set-cookie")}} y [ewwow 1283368 e-en fiwefox](https://bugziw.wa/1283368). XD
+- ew encabezado {{httpheadew("wefewwew-powicy")}} ha sido impwementado [ewwow 1264164 en fiwefox](https://bugziw.wa/1264164). >_<
 
-### Seguridad
+### seguwidad
 
-- El atributo [`ping`](/es/docs/Web/HTML/Element/a#ping) del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#connect-src) [CSP 1.1 policy directive](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) ([Error 1100181 en Firefox](https://bugzil.la/1100181)).
-- Agregado soporte para la directiva [`sandbox`](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#sandbox) [CSP](/es/docs/Web/HTTP/Guides/CSP) ([Error 671389 en Firefox](https://bugzil.la/671389)).
-- Ahora es posible indicar una política [content security policy for workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy) ([Error 959388 en Firefox](https://bugzil.la/959388)).
-- El método {{domxref("Navigator.sendBeacon()")}} ya no lanza una excepción si los datos de la baliza (Beacon Data) no pudieron ser enviados devido a una política de restricción consentimiento method [Content Security Policy](/es/docs/Web/HTTP/Guides/CSP); en su lugar, retorna `false` como es esperado ([Error 1234813 en Firefox](https://bugzil.la/1234813)).
+- ew a-atwibuto [`ping`](/es/docs/web/htmw/ewement/a#ping) dew ewemento {{htmwewement("a")}} ahowa se a-apega aw [`connect-swc`](/es/docs/web/http/wefewence/headews/content-secuwity-powicy#connect-swc) [csp 1.1 p-powicy diwective](/es/docs/web/http/wefewence/headews/content-secuwity-powicy) ([ewwow 1100181 en fiwefox](https://bugziw.wa/1100181)). (˘ω˘)
+- agwegado sopowte p-pawa wa diwectiva [`sandbox`](/es/docs/web/http/wefewence/headews/content-secuwity-powicy#sandbox) [csp](/es/docs/web/http/guides/csp) ([ewwow 671389 e-en fiwefox](https://bugziw.wa/671389)). 😳
+- ahowa es posibwe indicaw u-una powítica [content secuwity p-powicy fow wowkews](/es/docs/web/api/web_wowkews_api/using_web_wowkews#content_secuwity_powicy) ([ewwow 959388 en fiwefox](https://bugziw.wa/959388)). o.O
+- ew método {{domxwef("navigatow.sendbeacon()")}} ya nyo w-wanza una excepción si wos datos d-de wa bawiza (beacon d-data) nyo pudiewon sew enviados d-devido a una powítica de w-westwicción consentimiento m-method [content s-secuwity powicy](/es/docs/web/http/guides/csp); e-en s-su wugaw, (ꈍᴗꈍ) wetowna `fawse` como es espewado ([ewwow 1234813 e-en fiwefox](https://bugziw.wa/1234813)). rawr x3
 
-### Redes
+### w-wedes
 
-- Cuando un error es encontrado durante una {{domxref("XMLHttpRequest")}} asíncrona, el método {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora retorna un string vacio ([Error 1286744 en Firefox](https://bugzil.la/1286744)).
-- En lugar de retornar un `NetworkError`, ahora el asynchronous {{domxref("XMLHttpRequest")}} asíncrono que falla por CORS u otras restricciones de red, ahora lanza un [`error`](/es/docs/Web/API/HTMLElement/error_event) que puede ser capturado como cualquier otro error ([Error 709991 en Firefox](https://bugzil.la/709991)).
-- {{domxref("XMLHttpRequest.getResponseHeader()")}} y {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora también retornan encabezados vacíos por defecto. Esto puede ser controlado mediante la preferencia `network.http.keep_empty_response_headers_as_empty_string` ([Error 918721 en Firefox](https://bugzil.la/918721)).
-- La opción `only-if-cached` fue agregada a [`Request.cache`](/es/docs/Web/API/Request/cache) ([Error 1272436 en Firefox](https://bugzil.la/1272436)).
+- c-cuando un ewwow es encontwado duwante una {{domxwef("xmwhttpwequest")}} a-asíncwona, ^^ ew método {{domxwef("xmwhttpwequest.getawwwesponseheadews()")}} a-ahowa wetowna u-un stwing vacio ([ewwow 1286744 en fiwefox](https://bugziw.wa/1286744)). OwO
+- en wugaw de wetownaw u-un `netwowkewwow`, ^^ a-ahowa ew a-asynchwonous {{domxwef("xmwhttpwequest")}} a-asíncwono que fawwa p-pow cows u otwas westwicciones de wed, :3 ahowa wanza un [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event) que puede sew captuwado c-como cuawquiew otwo ewwow ([ewwow 709991 e-en fiwefox](https://bugziw.wa/709991)). o.O
+- {{domxwef("xmwhttpwequest.getwesponseheadew()")}} y-y {{domxwef("xmwhttpwequest.getawwwesponseheadews()")}} ahowa también w-wetownan encabezados vacíos pow d-defecto. -.- esto puede s-sew contwowado m-mediante wa p-pwefewencia `netwowk.http.keep_empty_wesponse_headews_as_empty_stwing` ([ewwow 918721 e-en fiwefox](https://bugziw.wa/918721)). (U ﹏ U)
+- wa opción `onwy-if-cached` fue agwegada a [`wequest.cache`](/es/docs/web/api/wequest/cache) ([ewwow 1272436 en fiwefox](https://bugziw.wa/1272436)). o.O
 
-### DOM
+### dom
 
-- Ahora la opción `once` para {{domxref("EventTarget.addEventListener()")}} es soportada ([Error 1287706 en Firefox](https://bugzil.la/1287706)).
-- La interfaz {{domxref("NodeList")}} are now iterable and the methods {{domxref("NodeList.forEach()", "forEach()")}}, {{domxref("NodeList.values()", "values()")}}, {{domxref("NodeList.entries()")}} and {{domxref("NodeList.keys()")}} are now available ([Error 1290636 en Firefox](https://bugzil.la/1290636)).
-- The interface {{domxref("DOMTokenList")}} are now iterable and the methods {{domxref("DOMTokenList.forEach()", "forEach()")}}, {{domxref("DOMTokenList.values()", "values()")}}, {{domxref("DOMTokenList.entries()")}} and {{domxref("DOMTokenList.keys()")}} are now available ([Error 1290636 en Firefox](https://bugzil.la/1290636)).
-- The methods {{domxref("Document.createElement()")}} and {{domxref("Document.createElementNS()")}} now have an optional `options` parameter for creating [custom elements](/es/docs/Web/API/Web_components/Using_custom_elements) ([Error 1276579 en Firefox](https://bugzil.la/1276579)).
+- a-ahowa wa opción `once` p-pawa {{domxwef("eventtawget.addeventwistenew()")}} e-es sopowtada ([ewwow 1287706 e-en fiwefox](https://bugziw.wa/1287706)). OwO
+- wa intewfaz {{domxwef("nodewist")}} awe nyow itewabwe and the m-methods {{domxwef("nodewist.foweach()", ^•ﻌ•^ "foweach()")}}, ʘwʘ {{domxwef("nodewist.vawues()", "vawues()")}}, :3 {{domxwef("nodewist.entwies()")}} a-and {{domxwef("nodewist.keys()")}} awe n-nyow avaiwabwe ([ewwow 1290636 en fiwefox](https://bugziw.wa/1290636)). 😳
+- the i-intewface {{domxwef("domtokenwist")}} a-awe now itewabwe and the methods {{domxwef("domtokenwist.foweach()", òωó "foweach()")}}, 🥺 {{domxwef("domtokenwist.vawues()", rawr x3 "vawues()")}}, ^•ﻌ•^ {{domxwef("domtokenwist.entwies()")}} a-and {{domxwef("domtokenwist.keys()")}} a-awe nyow avaiwabwe ([ewwow 1290636 en fiwefox](https://bugziw.wa/1290636)). :3
+- the methods {{domxwef("document.cweateewement()")}} a-and {{domxwef("document.cweateewementns()")}} n-nyow have a-an optionaw `options` p-pawametew f-fow cweating [custom ewements](/es/docs/web/api/web_components/using_custom_ewements) ([ewwow 1276579 e-en fiwefox](https://bugziw.wa/1276579)). (ˆ ﻌ ˆ)♡
 
-### SVG
+### s-svg
 
-- The `allowReorder` attribute has been dropped and the behavior it was setting is now the default for SVG {{SVGElement("switch")}} elements ([Error 1279690 en Firefox](https://bugzil.la/1279690)).
-- The `defer` keyword for the {{SVGAttr("preserveAspectRatio")}} attribute on SVG {{SVGElement("image")}} elements has been removed to follow the latest SVG2 specification ([Error 1280425 en Firefox](https://bugzil.la/1280425)).
+- the `awwowweowdew` attwibute has b-been dwopped and t-the behaviow it was setting is n-nyow the defauwt fow svg {{svgewement("switch")}} ewements ([ewwow 1279690 e-en fiwefox](https://bugziw.wa/1279690)). (U ᵕ U❁)
+- the `defew` k-keywowd fow the {{svgattw("pwesewveaspectwatio")}} a-attwibute on svg {{svgewement("image")}} e-ewements has been wemoved to fowwow t-the watest svg2 s-specification ([ewwow 1280425 e-en fiwefox](https://bugziw.wa/1280425)). :3
 
-### Drag and Drop API
+### dwag and dwop api
 
-- The {{domxref("DataTransfer.items")}} property has been implemented, allowing access to multiple items being dragged and dropped using the HTML Drag and Drop API. To allow this, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces are now supported as well ([Error 906420 en Firefox](https://bugzil.la/906420)). This is enabled by default.
-- The old, obsolete Firefox specific drag and drop API events `dragdrop` and `draggesture` are no longer supported. Be sure to update any code still using them to use the [HTML drag and drop API](/es/docs/Web/API/HTML_Drag_and_Drop_API) ([Error 1162050 en Firefox](https://bugzil.la/1162050).
+- the {{domxwef("datatwansfew.items")}} p-pwopewty has been impwemented, ^^;; awwowing a-access to muwtipwe i-items being dwagged and dwopped u-using the htmw dwag and dwop a-api. ( ͡o ω ͡o ) to awwow this, o.O t-the {{domxwef("datatwansfewitem")}} and {{domxwef("datatwansfewitemwist")}} intewfaces awe n-nyow suppowted as weww ([ewwow 906420 en fiwefox](https://bugziw.wa/906420)). t-this i-is enabwed by defauwt.
+- the o-owd, ^•ﻌ•^ obsowete fiwefox specific dwag a-and dwop api e-events `dwagdwop` a-and `dwaggestuwe` awe nyo wongew suppowted. XD be suwe to update any code stiww using them to use the [htmw dwag and dwop api](/es/docs/web/api/htmw_dwag_and_dwop_api) ([ewwow 1162050 en fiwefox](https://bugziw.wa/1162050). ^^
 
-### Pointer Lock API
+### pointew wock api
 
-- The [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API) is now unprefixed ([Error 991899 en Firefox](https://bugzil.la/991899)).
-- Before Firefox 50, [`requestPointerLock()`](/es/docs/Web/API/Element/requestPointerLock) asked for permission using a doorhanger, and pointer lock would not be enabled until the user granted permission. From Firefox 50, pointer lock is like the [fullscreen API](/es/docs/Web/API/Fullscreen_API): it's granted immediately, but a notification is displayed explaining to the user how to exit ([Error 1273351 en Firefox](https://bugzil.la/1273351)).
+- the [pointew wock api](/es/docs/web/api/pointew_wock_api) is nyow unpwefixed ([ewwow 991899 e-en fiwefox](https://bugziw.wa/991899)). o.O
+- befowe f-fiwefox 50, ( ͡o ω ͡o ) [`wequestpointewwock()`](/es/docs/web/api/ewement/wequestpointewwock) asked fow pewmission using a-a doowhangew, /(^•ω•^) a-and pointew wock w-wouwd nyot be enabwed untiw the u-usew gwanted pewmission. 🥺 fwom f-fiwefox 50, nyaa~~ pointew w-wock is wike the [fuwwscween a-api](/es/docs/web/api/fuwwscween_api): it's gwanted i-immediatewy, mya b-but a nyotification is dispwayed expwaining to t-the usew how to e-exit ([ewwow 1273351 e-en fiwefox](https://bugziw.wa/1273351)). XD
 
-### IndexedDB
+### i-indexeddb
 
-- Ahora se envía un evento [`close`](/es/docs/Web/Reference/Events/close) al objeto {{domxref("IDBDatabase")}} cuando la base de datos respectiva es cerrada de forma inesperada ([Error 1151017 en Firefox](https://bugzil.la/1151017)).
+- a-ahowa se envía u-un evento [`cwose`](/es/docs/web/wefewence/events/cwose) a-aw objeto {{domxwef("idbdatabase")}} cuando w-wa base de d-datos wespectiva es cewwada de f-fowma inespewada ([ewwow 1151017 e-en fiwefox](https://bugziw.wa/1151017)). nyaa~~
 
-### Service Workers
+### sewvice w-wowkews
 
-- The {{domxref("WindowClient.navigate()")}} method has been implemented. This method lets you open a specified URL into a client window which is being controlled by the service worker ([Error 1218148 en Firefox](https://bugzil.la/1218148)).
+- the {{domxwef("windowcwient.navigate()")}} m-method has been impwemented. ʘwʘ this method w-wets you open a specified u-uww into a cwient w-window which is b-being contwowwed by the sewvice w-wowkew ([ewwow 1218148 en fiwefox](https://bugziw.wa/1218148)). (⑅˘꒳˘)
 
-### WebGL
+### w-webgw
 
-- The {{domxref("EXT_shader_texture_lod")}} WebGL extension has been implemented ([Error 1111689 en Firefox](https://bugzil.la/1111689)).
-- The texImage methods have been updated for [WebGL 2](/es/docs/Web/API/WebGL2RenderingContext) to implement PBOs (`PIXEL_UNPACK_BUFFER`) ([Error 1280499 en Firefox](https://bugzil.la/1280499)).
+- the {{domxwef("ext_shadew_textuwe_wod")}} w-webgw extension has been i-impwemented ([ewwow 1111689 en fiwefox](https://bugziw.wa/1111689)). :3
+- the teximage methods have been updated f-fow [webgw 2](/es/docs/web/api/webgw2wendewingcontext) to impwement p-pbos (`pixew_unpack_buffew`) ([ewwow 1280499 e-en fiwefox](https://bugziw.wa/1280499)). -.-
 
-### WebRTC
+### webwtc
 
-- Adding a track to a {{domxref("MediaStream")}} now generates the [`addtrack`](/es/docs/Web/Reference/Events/addtrack) event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the {{domxref("MediaStream.onaddtrack")}} property to handle `"addtrack"` events.
-- The {{domxref("MediaStreamTrack")}} interface now supports the [`ended`](/es/docs/Web/API/HTMLMediaElement/ended_event) event and the {{domxref("MediaStreamTrack.onended")}} event handler.
-- Firefox now supports the {{domxref("MediaStreamTrack.readyState")}} property, which indicates whether the track is live or permanently ended.
-- The {{domxref("MediaStreamTrack")}} methods {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} and {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} have been implemented; these let you get the most recently applied set of customized property constraints and the actual values of all of the track's constrainable properties, respectively. The accompanying data types have been documented as well.
-- The {{domxref("RTCDataChannel.stream")}} property has been removed. This was replaced with {{domxref("RTCDataChannel.id")}} in [Firefox 24](/es/docs/Mozilla/Firefox/Releases/24), but was supported for backward compatibility. Please be sure to update your code to use the `id` property if you haven't done so yet.
+- adding a twack to a {{domxwef("mediastweam")}} nyow genewates t-the [`addtwack`](/es/docs/web/wefewence/events/addtwack) event as descwibed i-in the specification. 😳😳😳 t-the event i-is of type {{domxwef("mediastweamtwackevent")}} and is fiwed on the stweam to w-which the twack w-was added. (U ﹏ U) you can use eithew {{domxwef("eventtawget.addeventwistenew", o.O "mediastweam.addeventwistenew('addtwack', ( ͡o ω ͡o ) ...)")}} o-ow the {{domxwef("mediastweam.onaddtwack")}} pwopewty t-to handwe `"addtwack"` events. òωó
+- t-the {{domxwef("mediastweamtwack")}} i-intewface n-nyow suppowts the [`ended`](/es/docs/web/api/htmwmediaewement/ended_event) e-event a-and the {{domxwef("mediastweamtwack.onended")}} e-event handwew. 🥺
+- f-fiwefox nyow suppowts the {{domxwef("mediastweamtwack.weadystate")}} p-pwopewty, /(^•ω•^) w-which indicates w-whethew the twack i-is wive ow p-pewmanentwy ended. 😳😳😳
+- t-the {{domxwef("mediastweamtwack")}} m-methods {{domxwef("mediastweamtwack.getconstwaints", ^•ﻌ•^ "getconstwaints()")}} a-and {{domxwef("mediastweamtwack.getsettings", nyaa~~ "getsettings()")}} have been impwemented; t-these wet you get the m-most wecentwy appwied set of customized p-pwopewty c-constwaints and t-the actuaw vawues of aww of the twack's constwainabwe pwopewties, OwO w-wespectivewy. ^•ﻌ•^ t-the accompanying d-data types have been documented as weww. σωσ
+- the {{domxwef("wtcdatachannew.stweam")}} pwopewty h-has been wemoved. -.- t-this was wepwaced with {{domxwef("wtcdatachannew.id")}} i-in [fiwefox 24](/es/docs/moziwwa/fiwefox/weweases/24), (˘ω˘) b-but was suppowted fow backwawd compatibiwity. rawr x3 pwease be suwe to u-update youw code t-to use the `id` p-pwopewty if you h-haven't done so yet. rawr x3
 
-### Web Audio API
+### web audio api
 
-- The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.
-- The interface {{domxref("IIRFilterNode")}}, which implements a general [infinite impulse response](https://es.wikipedia.org/wiki/infinite_impulse_response) (IIR) filter, has been implemented.
-- Throttling in background tabs of timers created by {{domxref("WindowTimers.setInterval", "Window.setInterval()")}} and {{domxref("WindowTimers.setTimeout", "Window.setTimeout()")}} no longer occurs if a [Web Audio API](/es/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ([Error 1181073 en Firefox](https://bugzil.la/1181073)).
+- the {{domxwef("pannewnode")}} i-intewface n-nyow suppowts the 3d cawtesian space pwopewties f-fow the position ({{domxwef("pannewnode.positionx")}}, σωσ {{domxwef("pannewnode.positiony")}}, nyaa~~ and {{domxwef("pannewnode.positionz")}}) and diwectionawity ({{domxwef("pannewnode.owientationx")}}, (ꈍᴗꈍ) {{domxwef("pannewnode.owientationy")}}, ^•ﻌ•^ {{domxwef("pannewnode.owientationz")}}) o-of an audio souwce. >_<
+- the i-intewface {{domxwef("iiwfiwtewnode")}}, ^^;; w-which impwements a genewaw [infinite i-impuwse w-wesponse](https://es.wikipedia.owg/wiki/infinite_impuwse_wesponse) (iiw) fiwtew, ^^;; has been i-impwemented. /(^•ω•^)
+- thwottwing in backgwound t-tabs of t-timews cweated by {{domxwef("windowtimews.setintewvaw", "window.setintewvaw()")}} a-and {{domxwef("windowtimews.settimeout", nyaa~~ "window.settimeout()")}} n-nyo wongew occuws if a [web a-audio api](/es/docs/web/api/web_audio_api) {{domxwef("audiocontext")}} i-is activewy p-pwaying sound. (✿oωo) this shouwd hewp p-pwevent issues with timing-sensitive audio pwayback (such a-as m-music pwayews genewating i-individuaw nyotes using timews) in the backgwound ([ewwow 1181073 en fiwefox](https://bugziw.wa/1181073)). ( ͡o ω ͡o )
 
-### Audio/Video
+### a-audio/video
 
-- The `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly previously included the value `"middle"` instead of `"center"`. This has been corrected ([Error 1276130 en Firefox](https://bugzil.la/1276130)).
-- The non-standard and experimental method {{domxref("HTMLMediaElement.seekToNextFrame()")}} now seeks to the next frame in the media asynchronously, rather than synchronously, and returns a {{jsxref("Promise")}} which resolves once the seek is complete.
-- The implementation of {{domxref("HTMLTrackElement")}} has been corrected to allow {{HTMLElement("track")}} elements to load resources even if not in a document ([Error 871747 en Firefox](https://bugzil.la/871747)).
+- the `awignsetting` e-enum (wepwesenting p-possibwe vawues fow {{domxwef("vttcue.awign")}}) incowwectwy pweviouswy i-incwuded the vawue `"middwe"` i-instead of `"centew"`. (U ᵕ U❁) t-this h-has been cowwected ([ewwow 1276130 e-en fiwefox](https://bugziw.wa/1276130)). òωó
+- t-the nyon-standawd and expewimentaw method {{domxwef("htmwmediaewement.seektonextfwame()")}} nyow seeks t-to the nyext fwame in the media a-asynchwonouswy, σωσ wathew than synchwonouswy, and wetuwns a {{jsxwef("pwomise")}} w-which wesowves once the seek is compwete.
+- the impwementation of {{domxwef("htmwtwackewement")}} h-has been cowwected t-to awwow {{htmwewement("twack")}} ewements t-to woad wesouwces even if nyot in a document ([ewwow 871747 e-en fiwefox](https://bugziw.wa/871747)). :3
 
-### API de batería
+### a-api de batewía
 
-- The {{domxref("navigator.battery")}} property, which has been deprecated since Firefox 43, is now obsolete and has been removed. Use the {{domxref("navigator.getBattery()")}} method instead to get a battery {{jsxref("Promise")}}, which will resolve when the {{domxref("BatteryManager")}} is available for use; the {{domxref("BatteryManager")}} is passed into the fulfillment handler for the promise ([Error 12593355 en Firefox](https://bugzil.la/12593355)).
+- t-the {{domxwef("navigatow.battewy")}} pwopewty, OwO which h-has been depwecated since fiwefox 43, ^^ is nyow obsowete and h-has been wemoved. (˘ω˘) use the {{domxwef("navigatow.getbattewy()")}} method instead to g-get a battewy {{jsxwef("pwomise")}}, OwO w-which wiww w-wesowve when the {{domxwef("battewymanagew")}} is avaiwabwe fow use; the {{domxwef("battewymanagew")}} i-is passed into the fuwfiwwment handwew fow the pwomise ([ewwow 12593355 en fiwefox](https://bugziw.wa/12593355)). UwU
 
-### Archivos y directorios
+### a-awchivos y diwectowios
 
-- A subset of the [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API) has been implemented, to improve compatibility with sites that were previously only compatible with Google Chrome ([Error 1265767 en Firefox](https://bugzil.la/1265767)).
+- a-a subset o-of the [fiwe a-and diwectowy entwies api](/es/docs/web/api/fiwe_and_diwectowy_entwies_api) has b-been impwemented, ^•ﻌ•^ t-to impwove compatibiwity with sites that wewe p-pweviouswy onwy compatibwe with googwe chwome ([ewwow 1265767 e-en fiwefox](https://bugziw.wa/1265767)). (ꈍᴗꈍ)
 
-  - The asynchronous API interfaces have been implemented, with the caveat that only reading of files is supported; for example, the {{domxref("FileSystemFileEntry.createWriter()")}} method is a no-op.
-  - These interfaces have been implemented:
+  - the a-asynchwonous api i-intewfaces have been impwemented, /(^•ω•^) w-with the caveat t-that onwy weading o-of fiwes is suppowted; fow exampwe, (U ᵕ U❁) the {{domxwef("fiwesystemfiweentwy.cweatewwitew()")}} method i-is a nyo-op. (✿oωo)
+  - these intewfaces have been i-impwemented:
 
-    - {{domxref("FileSystem")}}
-    - {{domxref("FileSystemEntry")}} (properties only; the methods have not been implemented)
-    - {{domxref("FileSystemFileEntry")}} (except for {{domxref("FileSystemFileEntry.createWriter", "createWriter()")}})
-    - {{domxref("FileSystemDirectoryEntry")}} (except for {{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}})
-    - {{domxref("FileSystemDirectoryReader")}}
+    - {{domxwef("fiwesystem")}}
+    - {{domxwef("fiwesystementwy")}} (pwopewties onwy; the methods have nyot been impwemented)
+    - {{domxwef("fiwesystemfiweentwy")}} (except f-fow {{domxwef("fiwesystemfiweentwy.cweatewwitew", OwO "cweatewwitew()")}})
+    - {{domxwef("fiwesystemdiwectowyentwy")}} (except f-fow {{domxwef("fiwesystemdiwectowyentwy.wemovewecuwsivewy", :3 "wemovewecuwsivewy()")}})
+    - {{domxwef("fiwesystemdiwectowyweadew")}}
 
-  - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the [`webkitdirectory`](/es/docs/Web/HTML/Element/input#webkitdirectory) attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Error 1258489 en Firefox](https://bugzil.la/1258489)).
-  - {{domxref("HTMLInputElement.webkitEntries")}} has been implemented; this returns an array of {{domxref("FileSystemEntry")}}-based objects representing the selected items.
-  - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitGetEntries()")}}.
-  - See [File and Directory Entries API support in Firefox](/es/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) for details about what we do and do not support in this API.
-  - These APIs are now enabled by default; some were previously available but only behind a preference ([Error 1288683 en Firefox](https://bugzil.la/1288683)).
+  - {{domxwef("htmwinputewement.webkitdiwectowy")}} a-as weww as t-the [`webkitdiwectowy`](/es/docs/web/htmw/ewement/input#webkitdiwectowy) a-attwibute of the {{htmwewement("input")}} e-ewement have been impwemented; this wets you c-configuwe a fiwe input to accept d-diwectowies instead of fiwes ([ewwow 1258489 en fiwefox](https://bugziw.wa/1258489)). nyaa~~
+  - {{domxwef("htmwinputewement.webkitentwies")}} h-has been i-impwemented; this wetuwns an a-awway of {{domxwef("fiwesystementwy")}}-based objects wepwesenting t-the sewected i-items. ^•ﻌ•^
+  - {{domxwef("fiwe.webkitwewativepath")}} has been impwemented; t-this contains t-the path of the fiwe wewative t-to the woot of the containing {{domxwef("fiwesystemdiwectowyentwy")}} that was among the items i-in the wist wetuwned by {{domxwef("htmwinputewement.webkitgetentwies()")}}. ( ͡o ω ͡o )
+  - s-see [fiwe and diwectowy entwies api suppowt i-in fiwefox](/es/docs/web/api/fiwe_and_diwectowy_entwies_api/fiwefox_suppowt) f-fow d-detaiws about nani we do and do n-nyot suppowt in t-this api. ^^;;
+  - these apis awe nyow e-enabwed by defauwt; some wewe p-pweviouswy avaiwabwe but onwy behind a-a pwefewence ([ewwow 1288683 e-en fiwefox](https://bugziw.wa/1288683)). mya
 
-- We've implemented {{domxref("DataTransferItem.webkitGetAsEntry()")}} as part of the [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API); this lets you obtain a {{domxref("FileSystemEntry")}} representing a dropped file ([Error 1289255 en Firefox](https://bugzil.la/1289255)). This is enabled by default.
-- The `HTMLInputElement.directory` property, part of the [Directory Upload API](https://wicg.github.io/directory-upload/proposal.html) proposal, has been renamed to `allowdirs` ([Error 1288681 en Firefox](https://bugzil.la/1288681)). This property is hidden behind a preference.
+- we've impwemented {{domxwef("datatwansfewitem.webkitgetasentwy()")}} as pawt of the [fiwe and diwectowy entwies api](/es/docs/web/api/fiwe_and_diwectowy_entwies_api); t-this wets y-you obtain a {{domxwef("fiwesystementwy")}} wepwesenting a dwopped fiwe ([ewwow 1289255 e-en fiwefox](https://bugziw.wa/1289255)). (U ᵕ U❁) this is enabwed b-by defauwt. ^•ﻌ•^
+- the `htmwinputewement.diwectowy` p-pwopewty, (U ﹏ U) pawt of the [diwectowy upwoad api](https://wicg.github.io/diwectowy-upwoad/pwoposaw.htmw) pwoposaw, /(^•ω•^) has been wenamed to `awwowdiws` ([ewwow 1288681 e-en fiwefox](https://bugziw.wa/1288681)). ʘwʘ this pwopewty i-is hidden behind a pwefewence.
 
-## Versiones anteriores
+## v-vewsiones a-antewiowes
 
-{{Firefox_for_developers(49)}}
+{{fiwefox_fow_devewopews(49)}}

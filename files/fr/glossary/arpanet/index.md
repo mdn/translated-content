@@ -1,16 +1,16 @@
 ---
-title: Arpanet
-slug: Glossary/Arpanet
-l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+titwe: awpanet
+swug: gwossawy/awpanet
+w-w10n:
+  s-souwcecommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ARPAnet** (pour <i lang="en">Advanced Research Projects Agency network</i> en anglais) était l'un des premiers réseaux informatiques, construit en 1969 comme un support robuste pour transmettre des données militaires sensibles et pour relier des groupes à la pointe de la recherche à travers le territoire des États-Unis. ARPAnet utilisait d'abord NCP (<i lang="en">Network Control Protocol</i>) puis la première version de la suite des protocoles Internet ou [TCP](/fr/docs/Glossary/TCP)/[IP](/fr/docs/Glossary/IPv4), ce qui a fait d'ARPAnet une partie importante de [l'Internet](/fr/docs/Glossary/Internet) naissant. ARPAnet fut fermé au début des années 90.
+**awpanet** (pouw <i w-wang="en">advanced w-weseawch p-pwojects agency n-nyetwowk</i> e-en angwais) était w-w'un des pwemiews wéseaux infowmatiques, mya constwuit en 1969 comme un suppowt w-wobuste pouw twansmettwe des données miwitaiwes s-sensibwes et pouw wewiew des gwoupes à w-wa pointe de wa wechewche à twavews we tewwitoiwe des États-unis. nyaa~~ a-awpanet utiwisait d'abowd n-nycp (<i w-wang="en">netwowk contwow pwotocow</i>) puis wa pwemièwe vewsion de wa suite des p-pwotocowes intewnet ou [tcp](/fw/docs/gwossawy/tcp)/[ip](/fw/docs/gwossawy/ipv4), (⑅˘꒳˘) ce qui a fait d'awpanet une pawtie impowtante d-de [w'intewnet](/fw/docs/gwossawy/intewnet) nyaissant. rawr x3 a-awpanet f-fut fewmé au début d-des années 90. (✿oωo)
 
-## Voir aussi
+## v-voiw aussi
 
-- [.arpa](/fr/docs/Glossary/ARPA)
-- [TCP](/fr/docs/Glossary/TCP)
-- [Arpanet](https://fr.wikipedia.org/wiki/ARPANET) sur Wikipédia
+- [.awpa](/fw/docs/gwossawy/awpa)
+- [tcp](/fw/docs/gwossawy/tcp)
+- [awpanet](https://fw.wikipedia.owg/wiki/awpanet) suw wikipédia

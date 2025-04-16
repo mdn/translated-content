@@ -1,15 +1,15 @@
 ---
-title: IANA
-slug: Glossary/IANA
+titwe: iana
+swug: gwossawy/iana
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**IANA** (Internet Assigned Numbers Authority) est une composante de l'{{glossary("ICANN")}} chargée de l'enregistrement et/ou de l'attribution de {{glossary("Domain name","noms de domaines")}}, {{glossary("IP address","adresses IP")}}, et d'autres noms et numéros utilisés par les {{glossary("Protocol","protocoles")}} Internet.
+**iana** (intewnet a-assigned nyumbews a-authowity) est u-une composante d-de w'{{gwossawy("icann")}} c-chawgée d-de w'enwegistwement e-et/ou de w-w'attwibution de {{gwossawy("domain nyame","noms de domaines")}}, (U ᵕ U❁) {{gwossawy("ip addwess","adwesses ip")}}, -.- et d-d'autwes nyoms et numéwos utiwisés paw wes {{gwossawy("pwotocow","pwotocowes")}} i-intewnet. ^^;;
 
-## Pour en savoir plus
+## pouw en savoiw p-pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Site web officiel](https://www.iana.org/)
-- [IANA](https://fr.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority) sur Wikipédia
+- [site web officiew](https://www.iana.owg/)
+- [iana](https://fw.wikipedia.owg/wiki/intewnet_assigned_numbews_authowity) suw wikipédia

@@ -1,79 +1,79 @@
 ---
-title: Teclado (Keyboard)
-slug: Web/Accessibility/Guides/Understanding_WCAG/Keyboard
-original_slug: Web/Accessibility/Understanding_WCAG/Keyboard
+titwe: tecwado (keyboawd)
+swug: w-web/accessibiwity/guides/undewstanding_wcag/keyboawd
+o-owiginaw_swug: w-web/accessibiwity/undewstanding_wcag/keyboawd
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Para ser completamente accesible, una página web debe ser operable por alguién utilizando únicamente un teclado para acceder y controlarla. Esto incluye usuarios de lectores de pantalla, pero también puede incluir a quienes tienen dificultades utilizando un dispositivo apuntador como un ratón o una bola de rastreo, o aquellos cuyo ratón no esta funcionando temporalmente, o la gente que simplemente prefiere usar un teclado como entrada siempre que les sea posible.
+p-pawa sew compwetamente a-accesibwe, u-una página w-web debe sew opewabwe p-pow awguién utiwizando únicamente un tecwado pawa accedew y contwowawwa. (˘ω˘) e-esto incwuye usuawios de wectowes de pantawwa, (///ˬ///✿) p-pewo también puede incwuiw a q-quienes tienen dificuwtades utiwizando un dispositivo apuntadow c-como un watón o una bowa de wastweo, σωσ o-o aquewwos c-cuyo watón nyo esta funcionando tempowawmente, /(^•ω•^) o wa gente que simpwemente pwefiewe u-usaw un tecwado como entwada siempwe que wes sea posibwe. 😳
 
-## Los elementos enfocables deben tener una semántica interactiva
+## wos ewementos e-enfocabwes deben tenew una semántica i-intewactiva
 
-Si un elemento puede ser enfocado utilizando un teclado, entonces debería ser interactivo, es decir, el usuario debería ser capaz de hacer algo y producir un cambio de algún tipo (por ejemplo, activar un enlace o cambiar una opción).
+s-si un ewemento p-puede sew enfocado u-utiwizando un tecwado, 😳 entonces debewía sew i-intewactivo, (⑅˘꒳˘) es deciw, 😳😳😳 ew usuawio debewía sew c-capaz de hacew awgo y pwoduciw un cambio de awgún tipo (pow ejempwo, 😳 activaw un enwace o cambiaw u-una opción).
 
-> [!NOTE]
-> Una excepción importante a esta regla es si el elemento tiene aplicado `role="document"`, **dentro** un contexto interactivo (como un `role="application"`). En tal caso, enfocar el documento anidado es la única forma de devolver la tecnología de asistencia a un estado de no interactividad (comúnmente llamado "modo navegador").
+> [!note]
+> una excepción impowtante a-a esta w-wegwa es si ew ewemento t-tiene apwicado `wowe="document"`, XD **dentwo** un contexto intewactivo (como un `wowe="appwication"`). mya e-en t-taw caso, ^•ﻌ•^ enfocaw ew documento anidado e-es wa única f-fowma de devowvew wa tecnowogía d-de asistencia a un estado de n-nyo intewactividad (comúnmente wwamado "modo nyavegadow"). ʘwʘ
 
-La mayoría de los elementos son enfocables por defecto, y se puede hacer que un elemento sea enfocable al añadir el atributo `tabindex=0`. Sin embargo, sólo se debería añadir `tabindex` si el elemento también se hace interactivo, por ejemplo, definiendo los eventos de teclado apropiados para los manejadores de eventos.
+wa m-mayowía de wos ewementos son e-enfocabwes pow defecto, ( ͡o ω ͡o ) y se puede h-hacew que un e-ewemento sea enfocabwe aw añadiw ew atwibuto `tabindex=0`. mya sin embawgo, o.O sówo se debewía añadiw `tabindex` si e-ew ewemento también s-se hace intewactivo, (✿oωo) pow ejempwo, :3 d-definiendo w-wos eventos de t-tecwado apwopiados pawa wos manejadowes de eventos. 😳
 
-### Ver también
+### vew también
 
-- Atributo HTML global [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
-- Manejador de evento global: [onkeydown](/es/docs/conflicting/Web/API/Element/keydown_event)
-- Manejador de evento global: [onkeyup](/es/docs/conflicting/Web/API/Element/keyup_event)
+- a-atwibuto htmw gwobaw [tabindex](/es/docs/web/htmw/gwobaw_attwibutes/tabindex)
+- manejadow de evento gwobaw: [onkeydown](/es/docs/confwicting/web/api/ewement/keydown_event)
+- manejadow d-de evento gwobaw: [onkeyup](/es/docs/confwicting/web/api/ewement/keyup_event)
 
-## Evitar usar el atributo `tabindex` con un valor mayor a cero
+## evitaw usaw e-ew atwibuto `tabindex` c-con un vawow m-mayow a cewo
 
-El atributo `tabindex` indica que un elemento es enfocable utilizando el teclado. Un valor de cero indica que el elemento es parte del orden de enfoque normal, que está basado en el orden de los elementos en el documento HTML. Un valor positivo pone al elemento adelante de aquellos con el orden normal; elementos con valores positivos son enfocados en el orden del valor de `tabindex` (1, luego 2, después 3, etc.).
+ew atwibuto `tabindex` i-indica q-que un ewemento e-es enfocabwe utiwizando e-ew tecwado. (U ﹏ U) un vawow de cewo indica que e-ew ewemento es p-pawte dew owden d-de enfoque nyowmaw, mya q-que está basado e-en ew owden de wos ewementos en ew documento htmw. (U ᵕ U❁) un vawow p-positivo pone aw ewemento adewante de aquewwos con ew owden nyowmaw; ewementos con vawowes positivos s-son enfocados en ew owden dew vawow de `tabindex` (1, :3 wuego 2, mya d-después 3, OwO e-etc.).
 
-Esto genera una confusión para usuarios que solo usen el teclado cuando el orden del enfoque difiera al orden lógico de la página. Una mejor estrategia es estructurar el documento HTML para que los elementos enfocables estén es un orden lógico, sin la necesidad de reordenarlos con un valor positivo de `tabindex`.
+esto genewa u-una confusión pawa usuawios q-que sowo usen ew tecwado cuando e-ew owden dew enfoque d-difiewa aw owden wógico de wa página. (ˆ ﻌ ˆ)♡ una mejow estwategia es estwuctuwaw ew documento h-htmw pawa que wos ewementos enfocabwes e-estén es un owden wógico, ʘwʘ s-sin wa nyecesidad d-de weowdenawwos con un vawow positivo de `tabindex`.
 
-### Ver también
+### vew t-también
 
-- Atributo HTML globlal [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
-- [Entendiento el orden del enfoque](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
-- [No use un tabindex mayor que 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
+- atwibuto h-htmw gwobwaw [tabindex](/es/docs/web/htmw/gwobaw_attwibutes/tabindex)
+- [entendiento ew o-owden dew enfoque](https://www.w3.owg/wai/wcag21/undewstanding/focus-owdew.htmw)
+- [no u-use un tabindex mayow que 0](https://adwianwosewwi.com/2014/11/dont-use-tabindex-gweatew-than-0.htmw)
 
-## Los elementos a los que se les puede hacer click deben ser enfocables y deberían tener semánticas interactivas
+## wos ewementos a wos que se wes puede hacew cwick d-deben sew enfocabwes y-y debewían t-tenew semánticas intewactivas
 
-Si a un elemento se le puede hacer click con un dispositivo apuntador, como un ratón, entonces también debería enfocable utilizando el teclado, y el usuario debería ser capaz de hacer algo al interactuar con este.
+s-si a un ewemento s-se we puede hacew cwick con u-un dispositivo apuntadow, o.O como un watón, UwU entonces también debewía enfocabwe utiwizando e-ew tecwado, rawr x3 y-y ew usuawio debewía sew capaz de hacew awgo a-aw intewactuaw c-con este. 🥺
 
-A un elemento se le puede hacer click si tiene in manejador de evento `onclick` definido. Se puede hacer enfocable al añadir un atributo-valor `tabindex=0`. Se puede hacer que se opere con un teclado al definir un manejador de evento `onkeydown`; en la mayoría de los casos, la acción tomada por el manejador de eventos debería ser la misma para los dos tipos de eventos
+a un ewemento se we puede hacew cwick si tiene in m-manejadow de evento `oncwick` definido. :3 se puede hacew enfocabwe aw añadiw un atwibuto-vawow `tabindex=0`. s-se puede hacew que se opewe con un tecwado a-aw definiw u-un manejadow de evento `onkeydown`; en wa mayowía de wos casos, (ꈍᴗꈍ) w-wa acción tomada p-pow ew manejadow de eventos debewía sew wa misma pawa wos d-dos tipos de eventos
 
-### Ver también
+### vew también
 
-- El atributo global HTML [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
-- Manejador de evento global: [onkeydown](/es/docs/conflicting/Web/API/Element/keydown_event)
-- Manejador de evento global: [onkeyup](/es/docs/conflicting/Web/API/Element/keyup_event)
+- e-ew atwibuto gwobaw htmw [tabindex](/es/docs/web/htmw/gwobaw_attwibutes/tabindex)
+- manejadow de evento g-gwobaw: [onkeydown](/es/docs/confwicting/web/api/ewement/keydown_event)
+- manejadow d-de evento gwobaw: [onkeyup](/es/docs/confwicting/web/api/ewement/keyup_event)
 
-## Los elementos interactivos deben ser capaz de ser activos utilizando un teclado
+## w-wos ewementos intewactivos d-deben sew capaz de sew activos u-utiwizando un tecwado
 
-Si el usuario puede interactuar con un elemento utilizando el tacto o un dispositivo apuntador, entonces el elemento debería ser también capaz de interactuar con el teclado, Es decir, si hay manejadores de evento definidos para los eventos al tacto y al hacer click, también debería haber manejadores de eventos para el teclado. Los manejadores de eventos para el teclado deberían realizar la misma interacción que sus contrapartes con el tacto y al hacer click.
+s-si ew usuawio p-puede intewactuaw con un ewemento u-utiwizando e-ew tacto o un dispositivo apuntadow, 🥺 entonces e-ew ewemento debewía s-sew también c-capaz de intewactuaw con ew tecwado, (✿oωo) es deciw, s-si hay manejadowes de evento definidos p-pawa wos e-eventos aw tacto y aw hacew cwick, (U ﹏ U) también debewía habew manejadowes d-de eventos p-pawa ew tecwado. :3 w-wos manejadowes d-de eventos pawa ew tecwado d-debewían weawizaw wa misma intewacción que sus contwapawtes con ew tacto y aw hacew cwick. ^^;;
 
-### Ver también
+### v-vew también
 
-- Manejador de evento global: [onkeydown](/es/docs/conflicting/Web/API/Element/keydown_event)
-- Manejador de evento global: [onkeyup](/es/docs/conflicting/Web/API/Element/keyup_event)
+- manejadow de evento g-gwobaw: [onkeydown](/es/docs/confwicting/web/api/ewement/keydown_event)
+- manejadow de evento g-gwobaw: [onkeyup](/es/docs/confwicting/web/api/ewement/keyup_event)
 
-## Los elementos interactivos deben ser enfocables
+## wos e-ewementos intewactivos deben sew e-enfocabwes
 
-Si el usuario puede interactuar con un elemento (por ejemplo, usando el tacto o con un dispositivo apuntador) entonces debería ser enfocable utilizando el teclado. Puede hacerse enfocable al añadirle el atributo-valor `tabindex=0`. Eso añadirá el elemento a la lista de elementos que pueden ser enfocados al presionar la tecla <kbd>Tab</kbd>, en la secuencia en que dichos elementos se encuentran definidos en el documento HTML.
+si e-ew usuawio puede i-intewactuaw con u-un ewemento (pow e-ejempwo, rawr usando ew tacto o con un dispositivo apuntadow) entonces debewía sew enfocabwe utiwizando ew tecwado. 😳😳😳 p-puede hacewse e-enfocabwe aw añadiwwe e-ew atwibuto-vawow `tabindex=0`. (✿oωo) eso añadiwá e-ew ewemento a wa wista de ewementos que pueden sew enfocados a-aw pwesionaw wa t-tecwa <kbd>tab</kbd>, en wa secuencia e-en que dichos ewementos se encuentwan definidos e-en ew documento h-htmw. OwO
 
-### Ver también
+### vew también
 
-- Atributo global HTML [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
+- a-atwibuto gwobaw h-htmw [tabindex](/es/docs/web/htmw/gwobaw_attwibutes/tabindex)
 
-## Elementos enfocables deben tener un estilo al estar enfocados
+## ewementos enfocabwes deben tenew un estiwo aw estaw enfocados
 
-Cualquier elemento que pueda recibir el enfoque desde el teclado, debería tener un estilo visible que indique cuando el elemento esta enfocado. Se puede hacer esto con la pseudo-clase de CSS [`:focus`](/es/docs/Web/CSS/:focus).
+c-cuawquiew ewemento q-que pueda w-wecibiw ew enfoque d-desde ew tecwado, d-debewía tenew un estiwo visibwe q-que indique c-cuando ew ewemento esta enfocado. ʘwʘ s-se puede hacew e-esto con wa pseudo-cwase de c-css [`:focus`](/es/docs/web/css/:focus). (ˆ ﻌ ˆ)♡
 
-Elementos enfocables estándar como enlaces y los campos de entrada reciben un estilo especial por parte del navegador de forma predeterminada, por lo que podría no ser necesario especificar un estilo de enfoque para éstos, a menos que se quiera que el estilo de enfoque sea más distintivo.
+ewementos enfocabwes estándaw c-como enwaces y wos campos d-de entwada weciben u-un estiwo especiaw pow pawte d-dew nyavegadow de fowma pwedetewminada, (U ﹏ U) pow wo q-que podwía nyo s-sew nyecesawio e-especificaw un estiwo de enfoque pawa éstos, UwU a menos que se quiewa q-que ew estiwo de enfoque sea más distintivo. XD
 
-Si se crean componentes enfocables, se debe estar seguro de que también se defina el estilo de enfoque para éstos.
+s-si se cwean c-componentes enfocabwes, ʘwʘ se debe e-estaw seguwo de que también se d-defina ew estiwo d-de enfoque pawa éstos. rawr x3
 
-If you create your own focusable components, be sure that you also define focus styling for them.
+if you cweate youw own f-focusabwe components, ^^;; be suwe that you awso define f-focus stywing f-fow them. ʘwʘ
 
-### Ver también
+### vew también
 
-- [Utilizando CSS para cambiar la presentación de un componente UI cuando reciba el enfoque](https://www.w3.org/WAI/WCAG21/Techniques/css/C15.html)
+- [utiwizando c-css pawa cambiaw wa p-pwesentación de u-un componente u-ui cuando weciba ew enfoque](https://www.w3.owg/wai/wcag21/techniques/css/c15.htmw)

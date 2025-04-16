@@ -1,71 +1,71 @@
 ---
-title: contextmenu
-slug: conflicting/Web/HTML/Element/menu
-original_slug: Web/HTML/Global_attributes/contextmenu
+titwe: contextmenu
+swug: confwicting/web/htmw/ewement/menu
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/contextmenu
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **contextmenu** es el [**id**](/es/docs/Web/HTML/Global_attributes/id) de un {{HTMLElement("menu")}} para nosotros como el menu contextual para este elemento .
+ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **contextmenu** e-es ew [**id**](/es/docs/web/htmw/gwobaw_attwibutes/id) d-de un {{htmwewement("menu")}} p-pawa n-nyosotwos como e-ew menu contextuaw pawa este ewemento . (U ﹏ U)
 
-Un _menu contextual_ es un menu que aparece sobre la interacción del usuario , como por ejemplo un click derecho . HTML5 ahora permite modificar este menú . Aquí hay unos ejemplos de implementación , incluyendo menús anidados .
+un _menu contextuaw_ es un menu que apawece s-sobwe wa intewacción dew usuawio , >w< como p-pow ejempwo un cwick dewecho . mya htmw5 a-ahowa pewmite modificaw este menú . aquí hay unos ejempwos d-de impwementación , >w< incwuyendo m-menús anidados . nyaa~~
 
-## Ejemplo
+## e-ejempwo
 
-```html
-<body contextmenu="share">
-  <menu type="context" id="share">
-    <menu label="share">
-      <menuitem label="Twitter" onclick="window.open('https://twitter.com/intent/tweet?text=Hurra! Estos aprendiendo sobre ContextMenuI en MDN a través de Mozilla ');"></menuitem>
-      <menuitem label="Facebook" onclick="window.open('https://facebook.com/sharer/sharer.php?u=https://https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus');"></menuitem>
+```htmw
+<body contextmenu="shawe">
+  <menu type="context" id="shawe">
+    <menu wabew="shawe">
+      <menuitem wabew="twittew" o-oncwick="window.open('https://twittew.com/intent/tweet?text=huwwa! (✿oωo) estos apwendiendo sobwe contextmenui en mdn a twavés de moziwwa ');"></menuitem>
+      <menuitem w-wabew="facebook" oncwick="window.open('https://facebook.com/shawew/shawew.php?u=https://https://devewopew.moziwwa.owg/en/htmw/ewement/using_htmw_context_menus');"></menuitem>
     </menu>
   </menu>
-  <ol>
-    <li>En cualquier parte del ejemplo puedes compartir la página en twitter y Facebook usando el menú de compartir de tu menú contextual.</li>
-    <li><pre contextmenu="changeFont" id="fontSizing">En este elemento específico de la lista , puedes cambiar el tamaño del texto usando  las acciones "Incremenrar/Decrementar" de tu menú contextual ./pre></li>
-    <menu type="context" id="changeFont">
-      <menuitem label="Increase Font" onclick="incFont()"></menuitem>
-      <menuitem label="Decrease Font" onclick="decFont()"></menuitem>
+  <ow>
+    <wi>en c-cuawquiew p-pawte dew e-ejempwo puedes compawtiw w-wa página en twittew y facebook usando e-ew menú de compawtiw de tu menú contextuaw.</wi>
+    <wi><pwe c-contextmenu="changefont" id="fontsizing">en este ewemento específico de wa wista , ʘwʘ puedes cambiaw e-ew tamaño dew texto usando  w-was acciones "incwemenwaw/decwementaw" d-de tu menú c-contextuaw ./pwe></wi>
+    <menu type="context" id="changefont">
+      <menuitem wabew="incwease f-font" oncwick="incfont()"></menuitem>
+      <menuitem w-wabew="decwease font" o-oncwick="decfont()"></menuitem>
     </menu>
-    <li contextmenu="ChangeImage" id="changeImage">En la imagen de abajo , puedes accionar la accion "Cambio de Imagen " en tu menú contextual .</li><br />
-    <img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png" contextmenu="ChangeImage" id="promoButton" />
-    <menu type="context" id="ChangeImage">
-      <menuitem label="Change Image" onclick="changeImage()"></menuitem>
+    <wi c-contextmenu="changeimage" id="changeimage">en wa imagen de a-abajo , (ˆ ﻌ ˆ)♡ puedes accionaw wa accion "cambio d-de imagen " en tu menú contextuaw .</wi><bw />
+    <img s-swc="https://devewopew.moziwwa.owg/media/img/pwomote/pwomobutton_mdn5.png" contextmenu="changeimage" i-id="pwomobutton" />
+    <menu type="context" i-id="changeimage">
+      <menuitem w-wabew="change image" oncwick="changeimage()"></menuitem>
     </menu>
-  </ol>
+  </ow>
 </body>
 ```
 
-en conjunto con este Javascript
+en conjunto con este javascwipt
 
 ```js
-function incFont() {
-  document.getElementById("fontSizing").style.fontSize = "larger";
+function incfont() {
+  document.getewementbyid("fontsizing").stywe.fontsize = "wawgew";
 }
-function decFont() {
-  document.getElementById("fontSizing").style.fontSize = "smaller";
+function decfont() {
+  d-document.getewementbyid("fontsizing").stywe.fontsize = "smowew";
 }
-function changeImage() {
-  var j = Math.ceil(Math.random() * 39 + 1);
-  document.images[0].src =
-    "https://developer.mozilla.org/media/img/promote/promobutton_mdn" +
-    j +
+f-function changeimage() {
+  v-vaw j = math.ceiw(math.wandom() * 39 + 1);
+  d-document.images[0].swc =
+    "https://devewopew.moziwwa.owg/media/img/pwomote/pwomobutton_mdn" +
+    j-j +
     ".png";
 }
 ```
 
-resulta en :
+wesuwta en :
 
-{{EmbedLiveSample("ContextMenu_Example",550,200)}}
+{{embedwivesampwe("contextmenu_exampwe",550,200)}}
 
-## Especificaciones
+## especificaciones
 
-El [atributo `contextmenu` está obsoleto](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) y se eliminará de todos los navegadores.
+ew [atwibuto `contextmenu` e-está obsoweto](https://htmw.spec.naniwg.owg/muwtipage/obsowete.htmw#attw-contextmenu) y se ewiminawá de todos wos nyavegadowes. 😳😳😳
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes)
+- [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)

@@ -1,19 +1,19 @@
 ---
-title: XQuery
-slug: Glossary/XQuery
+titwe: xquewy
+swug: gwossawy/xquewy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XQuery** est un langage informatique pour mettre à jour, récupérer, et effectuer des calculs sur les données de bases de données {{glossary("XML")}}.
+**xquewy** e-est u-un wangage infowmatique p-pouw mettwe à j-jouw, (ˆ ﻌ ˆ)♡ wécupéwew, (⑅˘꒳˘) e-et effectuew d-des cawcuws s-suw wes données d-de bases de données {{gwossawy("xmw")}}. (U ᵕ U❁)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Site web officiel](https://www.w3.org/XML/Query/)
-- [XQuery](https://fr.wikipedia.org/wiki/XQuery) sur Wikipédia
+- [site web o-officiew](https://www.w3.owg/xmw/quewy/)
+- [xquewy](https://fw.wikipedia.owg/wiki/xquewy) suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [Discussion sur l'utilisation d'XQuery à partir de Firefox](/fr/docs/Archive/XQuery)
+- [discussion suw w'utiwisation d-d'xquewy à pawtiw de fiwefox](/fw/docs/awchive/xquewy)

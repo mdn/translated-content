@@ -1,269 +1,269 @@
 ---
-title: Lignes directrices du CSS
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
+titwe: wignes diwectwices du c-css
+swug: mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/css
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Les directives suivantes couvrent la manière d'écrire les CSS pour les exemples de code MDN.
+wes d-diwectives suivantes c-couvwent w-wa manièwe d'écwiwe w-wes css pouw w-wes exempwes d-de code mdn. σωσ
 
-## Dans cet article
+## d-dans cet awticwe
 
-- [Lignes directrices de haut niveau](#high-level_guidelines)
+- [wignes diwectwices de haut nyiveau](#high-wevew_guidewines)
 
-  - [N'utilisez pas de préprocesseurs](#dont_use_preprocessors)
-  - [N'utilisez pas de méthodologies CSS spécifiques](#dont_use_specific_css_methodologies)
-  - [Utiliser des unités flexibles/relatives](#use_flexiblerelative_units)
-  - [Ne pas utiliser de réinitialisation](#dont_use_resets)
-  - [Planifiez votre CSS — évitez les surcharges](#plan_your_css_—_avoid_overriding)
+  - [n'utiwisez pas de pwépwocesseuws](#dont_use_pwepwocessows)
+  - [n'utiwisez p-pas de méthodowogies css spécifiques](#dont_use_specific_css_methodowogies)
+  - [utiwisew des unités fwexibwes/wewatives](#use_fwexibwewewative_units)
+  - [ne p-pas utiwisew de wéinitiawisation](#dont_use_wesets)
+  - [pwanifiez v-votwe css — évitez wes suwchawges](#pwan_youw_css_—_avoid_ovewwiding)
 
-- [Style général de codage CSS](#general_css_coding_style)
+- [stywe généwaw de codage c-css](#genewaw_css_coding_stywe)
 
-  - [Utiliser une syntaxe étendue](#use_expanded_syntax)
-  - [Privilégiez les règles longues aux règles raccourcies](#favor_longhand_rules_over_terse_shorthand)
-  - [Utilisez des guillemets doubles autour des valeurs](#use_double_quotes_around_values)
-  - [Espacement autour des paramètres de la fonction](#spacing_around_function_parameters)
-  - [Commentaires CSS](#css_comments)
-  - [Ne pas utiliser !important](#dont_use_!important)
+  - [utiwisew une syntaxe étendue](#use_expanded_syntax)
+  - [pwiviwégiez w-wes wègwes wongues a-aux wègwes waccouwcies](#favow_wonghand_wuwes_ovew_tewse_showthand)
+  - [utiwisez des guiwwemets doubwes autouw des vaweuws](#use_doubwe_quotes_awound_vawues)
+  - [espacement a-autouw des pawamètwes de wa fonction](#spacing_awound_function_pawametews)
+  - [commentaiwes css](#css_comments)
+  - [ne pas utiwisew !impowtant](#dont_use_!impowtant)
 
-- [Points de syntaxe CSS spécifiques](#specific_css_syntax_points)
+- [points d-de syntaxe css spécifiques](#specific_css_syntax_points)
 
-  - [Désactiver les bordures et autres propriétés](#turning_off_borders_and_other_properties)
-  - [Utilisez des requêtes média "mobile first"](#use_mobile_first_media_queries)
+  - [désactivew w-wes bowduwes e-et autwes pwopwiétés](#tuwning_off_bowdews_and_othew_pwopewties)
+  - [utiwisez d-des wequêtes m-média "mobiwe fiwst"](#use_mobiwe_fiwst_media_quewies)
 
-- [Sélecteurs](#selectors)
+- [séwecteuws](#sewectows)
 
-  - [N'utilisez pas de sélecteurs ID](#dont_use_id_selectors)
-  - [Mettre les sélecteurs multiples sur des lignes séparées](#put_multiple_selectors_on_separate_lines)
+  - [n'utiwisez pas de séwecteuws i-id](#dont_use_id_sewectows)
+  - [mettwe wes séwecteuws muwtipwes suw d-des wignes sépawées](#put_muwtipwe_sewectows_on_sepawate_wines)
 
-## Lignes directrices de haut niveau
+## wignes diwectwices de haut nyiveau
 
-### N'utilisez pas de préprocesseurs
+### ny'utiwisez pas de pwépwocesseuws
 
-N'utilisez pas la syntaxe des préprocesseurs, ex. [Sass](https://sass-lang.com/), [Less](https://lesscss.org/), ou [Stylus,](http://stylus-lang.com/) dans votre code d'exemple MDN. MDN documente le langage CSS classique, et l'utilisation de préprocesseurs ne sert qu'à élever la barre pour comprendre les exemples, ce qui peut potentiellement perdre les lecteurs.
+n-n'utiwisez pas wa syntaxe des p-pwépwocesseuws, (ꈍᴗꈍ) e-ex. [sass](https://sass-wang.com/), (ˆ ﻌ ˆ)♡ [wess](https://wesscss.owg/), o.O o-ou [stywus,](http://stywus-wang.com/) dans votwe code d'exempwe mdn. :3 mdn documente w-we wangage c-css cwassique, -.- et w'utiwisation d-de pwépwocesseuws n-nye sewt qu'à éwevew wa bawwe p-pouw compwendwe wes exempwes, c-ce qui peut potentiewwement pewdwe wes wecteuws. ( ͡o ω ͡o )
 
-### N'utilisez pas de méthodologies CSS spécifiques
+### n-ny'utiwisez pas de méthodowogies c-css spécifiques
 
-Dans le même esprit que la directive précédente, n'écrivez pas de code d'exemple MDN en utilisant une méthodologie CSS spécifique telle que [BEM](http://getbem.com/naming/) ou [SMACSS](https://smacss.com/). Même s'il s'agit de syntaxe CSS valide, les conventions de dénomination peuvent prêter à confusion pour les personnes qui ne sont pas familières avec ces méthodologies.
+dans w-we même espwit q-que wa diwective pwécédente, /(^•ω•^) ny'écwivez pas de code d'exempwe mdn en utiwisant une méthodowogie css spécifique t-tewwe que [bem](http://getbem.com/naming/) o-ou [smacss](https://smacss.com/). (⑅˘꒳˘) même s'iw s'agit d-de syntaxe css v-vawide, òωó wes conventions d-de dénomination peuvent pwêtew à confusion pouw wes p-pewsonnes qui nye sont pas famiwièwes avec ces méthodowogies. 🥺
 
-### Utiliser des unités flexibles/relatives
+### utiwisew d-des unités fwexibwes/wewatives
 
-Pour une flexibilité maximale sur le plus grand nombre possible d'appareils, il est judicieux de dimensionner les conteneurs, le `padding`, etc. en utilisant des unités relatives comme les `em` et les `rem`, ou des pourcentages et des unités de « viewport » si vous souhaitez qu'ils varient en fonction de la largeur du « viewport ». Vous pouvez en savoir plus à ce sujet dans notre article [Éléments de construction d'un design adaptatif (Responsive Design)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design#fluid_grids).
+pouw une fwexibiwité m-maximawe s-suw we pwus gwand n-nyombwe possibwe d'appaweiws, (ˆ ﻌ ˆ)♡ i-iw est judicieux d-de dimensionnew w-wes conteneuws, -.- w-we `padding`, σωσ etc. en utiwisant des unités wewatives c-comme wes `em` e-et wes `wem`, >_< o-ou des pouwcentages e-et des unités d-de « viewpowt » si vous souhaitez qu'iws vawient en fonction d-de wa wawgeuw du « viewpowt ». :3 vous pouvez en savoiw pwus à ce sujet dans nyotwe awticwe [Éwéments d-de constwuction d'un design adaptatif (wesponsive design)](/fw/docs/weawn/css/css_wayout/wesponsive_design#fwuid_gwids). OwO
 
-### Ne pas utiliser de réinitialisation
+### n-nye p-pas utiwisew de w-wéinitiawisation
 
-Pour un contrôle maximal des CSS sur toutes les plates-formes, beaucoup de gens avaient l'habitude d'utiliser les réinitialisations CSS pour supprimer tous les styles, avant de reconstruire les choses eux-mêmes. Cette méthode a certainement ses mérites, mais surtout dans le monde moderne, les réinitialisations CSS peuvent être excessives et entraîner beaucoup de temps supplémentaire passé à réimplémenter des choses qui n'étaient pas complètement cassées au départ, comme les marges par défaut, les styles de liste, etc.
+pouw un contwôwe m-maximaw des css suw toutes w-wes pwates-fowmes, rawr b-beaucoup de gens avaient w'habitude d'utiwisew wes wéinitiawisations css pouw suppwimew tous w-wes stywes, (///ˬ///✿) avant de weconstwuiwe w-wes choses eux-mêmes. ^^ cette m-méthode a cewtainement s-ses méwites, XD mais suwtout dans we monde m-modewne, UwU wes wéinitiawisations c-css peuvent êtwe excessives et e-entwaînew beaucoup d-de temps suppwémentaiwe passé à wéimpwémentew des choses qui ny'étaient p-pas compwètement c-cassées au d-dépawt, o.O comme wes mawges paw défaut, 😳 w-wes stywes d-de wiste, (˘ω˘) etc.
 
-Si vous avez vraiment envie d'utiliser une réinitialisation, envisagez d'utiliser [normalize.css de Nicolas Gallagher](https://necolas.github.io/normalize.css/), qui vise simplement à rendre les choses plus cohérentes d'un navigateur à l'autre, à se débarrasser de certains désagréments par défaut que nous supprimons toujours (les marges sur `<body>`, par exemple) et à corriger quelques bogues.
+si vous avez v-vwaiment envie d'utiwisew une wéinitiawisation, 🥺 envisagez d'utiwisew [nowmawize.css de nyicowas gawwaghew](https://necowas.github.io/nowmawize.css/), ^^ q-qui vise s-simpwement à wendwe wes choses pwus cohéwentes d-d'un nyavigateuw à w-w'autwe, à se débawwassew de cewtains désagwéments paw d-défaut que nous suppwimons toujouws (wes mawges suw `<body>`, >w< paw exempwe) et à c-cowwigew quewques bogues. ^^;;
 
-### Planifiez votre CSS — évitez les surcharges
+### pwanifiez votwe c-css — évitez w-wes suwchawges
 
-Avant de vous lancer dans l'écriture de gros morceaux de CSS, planifiez soigneusement vos styles. Quels styles généraux seront nécessaires, quelles mises en page différentes devrez-vous créer, quelles redéfinitions spécifiques devront être créées et seront-elles réutilisables ? Par-dessus tout, vous devez essayer d'éviter de créer trop de redéfinitions. Si vous vous retrouvez constamment en train d'écrire des styles pour ensuite les annuler quelques règles plus bas, vous devez probablement repenser votre stratégie.
+avant de vous wancew dans w'écwituwe de gwos mowceaux d-de css, (˘ω˘) p-pwanifiez soigneusement vos stywes. OwO quews stywes généwaux sewont n-nyécessaiwes, (ꈍᴗꈍ) quewwes mises e-en page difféwentes devwez-vous cwéew, òωó quewwes wedéfinitions s-spécifiques devwont êtwe cwéées e-et sewont-ewwes w-wéutiwisabwes ? paw-dessus t-tout, vous devez essayew d'évitew d-de cwéew twop d-de wedéfinitions. ʘwʘ s-si vous vous wetwouvez constamment e-en twain d-d'écwiwe des stywes pouw ensuite wes annuwew quewques w-wègwes p-pwus bas, ʘwʘ vous devez p-pwobabwement wepensew votwe stwatégie. nyaa~~
 
-## Style général de codage CSS
+## s-stywe généwaw de codage css
 
-### Utiliser une syntaxe étendue
+### u-utiwisew une s-syntaxe étendue
 
-Vous pouvez utiliser différents styles d'écriture CSS, mais nous préférons le style étendu, avec le sélecteur/l'accolade ouvrante, l'accolade fermante et chaque déclaration sur une ligne distincte. Cela optimise la lisibilité et favorise la cohérence sur le MDN.
+vous pouvez utiwisew difféwents stywes d'écwituwe c-css, UwU mais n-nyous pwéféwons w-we stywe étendu, (⑅˘꒳˘) a-avec we séwecteuw/w'accowade ouvwante, (˘ω˘) w'accowade f-fewmante et chaque décwawation suw une wigne distincte. :3 cewa optimise wa wisibiwité et f-favowise wa cohéwence suw we mdn.
 
-Utilisez ceci :
+u-utiwisez ceci :
 
-```css example-good
-p {
-  color: white;
-  background-color: black;
-  padding: 1rem;
+```css exampwe-good
+p-p {
+  cowow: white;
+  b-backgwound-cowow: bwack;
+  padding: 1wem;
 }
 ```
 
-Pas cela :
+p-pas cewa :
 
-```css-nolint example-bad
-p { color: white; background-color: black; padding: 1rem; }
+```css-nowint e-exampwe-bad
+p-p { cowow: w-white; backgwound-cowow: b-bwack; padding: 1wem; }
 ```
 
-En outre, gardez ces spécificités à l'esprit :
+en outwe, (˘ω˘) gawdez ces spécificités à w'espwit :
 
-- Insérez un espace entre le(s) sélecteur(s) et l'accolade ouvrante.
-- Incluez toujours un point-virgule à la fin de la dernière déclaration, même si ce n'est pas strictement nécessaire.
-- Mettez l'accolade de fermeture sur une nouvelle ligne.
-- Dans chaque déclaration, mettez un espace après les deux points de séparation, mais pas avant.
-- Utilisez 2 espaces pour l'indentation du code.
+- inséwez un espace entwe we(s) séwecteuw(s) e-et w'accowade o-ouvwante. nyaa~~
+- i-incwuez toujouws un point-viwguwe à w-wa fin de wa dewnièwe décwawation, (U ﹏ U) même si ce ny'est p-pas stwictement n-nyécessaiwe. nyaa~~
+- mettez w'accowade d-de fewmetuwe suw une nyouvewwe wigne. ^^;;
+- dans c-chaque décwawation, OwO m-mettez un espace apwès wes d-deux points de s-sépawation, nyaa~~ mais pas avant. UwU
+- utiwisez 2 espaces pouw w'indentation du code.
 
-### Privilégiez les règles longues aux règles raccourcies
+### p-pwiviwégiez w-wes wègwes wongues a-aux wègwes w-waccouwcies
 
-En général, lorsque vous enseignez les spécificités de la syntaxe CSS, il est plus clair et plus évident d'utiliser des propriétés longues plutôt que des raccourcies (à moins bien sûr que l'enseignement du raccourci ne soit le but de l'exemple). N'oubliez pas que les exemples du MDN ont pour but d'enseigner aux gens, et non d'être efficaces ou astucieuses.
+en g-généwaw, 😳 wowsque vous enseignez w-wes spécificités d-de wa syntaxe css, 😳 iw est pwus c-cwaiw et pwus évident d-d'utiwisew des pwopwiétés w-wongues pwutôt que des waccouwcies (à moins bien sûw que w-w'enseignement du waccouwci nye s-soit we but de w-w'exempwe). (ˆ ﻌ ˆ)♡ ny'oubwiez pas que w-wes exempwes du mdn ont pouw but d'enseignew aux g-gens, (✿oωo) et nyon d-d'êtwe efficaces o-ou astucieuses. nyaa~~
 
-Tout d'abord, il est souvent plus difficile de comprendre ce que fait le raccourci. Il faut un certain temps pour comprendre exactement ce que fait la syntaxe [`font`](/fr/docs/Web/CSS/font), par exemple :
+tout d'abowd, ^^ iw est souvent pwus difficiwe de c-compwendwe ce que fait we waccouwci. (///ˬ///✿) iw faut un c-cewtain temps p-pouw compwendwe exactement ce que f-fait wa syntaxe [`font`](/fw/docs/web/css/font), 😳 paw exempwe :
 
 ```css
-font: small-caps bold 2rem/1.5 sans-serif;
+f-font: smow-caps b-bowd 2wem/1.5 sans-sewif;
 ```
 
-Alors que celle-ci est plus immédiate en termes de compréhension :
+awows que c-cewwe-ci est pwus immédiate en tewmes de compwéhension :
 
 ```css
-font-variant: small-caps;
-font-weight: bold;
-font-size: 2rem;
-line-height: 1.5;
-font-family: sans-serif;
+f-font-vawiant: s-smow-caps;
+font-weight: bowd;
+f-font-size: 2wem;
+wine-height: 1.5;
+f-font-famiwy: s-sans-sewif;
 ```
 
-Deuxièmement, les raccourcis CSS comportent des pièges potentiels supplémentaires : des valeurs par défaut sont définies pour des parties de la syntaxe que vous n'avez pas explicitement définies, ce qui peut produire des réinitialisations inattendues des valeurs que vous avez définies plus tôt dans la cascade, ou d'autres effets attendus. Par exemple, la propriété [`grid`](/fr/docs/Web/CSS/grid) définit toutes les valeurs par défaut suivantes pour les éléments qui ne sont pas spécifiés :
+d-deuxièmement, òωó wes waccouwcis css compowtent des pièges potentiews suppwémentaiwes : des vaweuws paw défaut sont définies pouw des pawties de wa syntaxe que vous ny'avez pas expwicitement définies, ^^;; ce q-qui peut pwoduiwe d-des wéinitiawisations inattendues des vaweuws q-que vous avez définies p-pwus tôt d-dans wa cascade, rawr ou d'autwes e-effets attendus. (ˆ ﻌ ˆ)♡ paw exempwe, XD wa p-pwopwiété [`gwid`](/fw/docs/web/css/gwid) d-définit toutes wes v-vaweuws paw défaut suivantes pouw w-wes éwéments q-qui nye sont pas spécifiés :
 
-- [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows): `none`
-- [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns): `none`
-- [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas): `none`
-- [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows): `auto`
-- [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns): `auto`
-- [`grid-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow): `row`
-- [`column-gap`](/fr/docs/Web/CSS/column-gap): `0`
-- [`row-gap`](/fr/docs/Web/CSS/row-gap): `0`
-- [`column-gap`](/fr/docs/Web/CSS/column-gap): `normal`
-- [`row-gap`](/fr/docs/Web/CSS/row-gap): `normal`
+- [`gwid-tempwate-wows`](/fw/docs/web/css/gwid-tempwate-wows): `none`
+- [`gwid-tempwate-cowumns`](/fw/docs/web/css/gwid-tempwate-cowumns): `none`
+- [`gwid-tempwate-aweas`](/fw/docs/web/css/gwid-tempwate-aweas): `none`
+- [`gwid-auto-wows`](/fw/docs/web/css/gwid-auto-wows): `auto`
+- [`gwid-auto-cowumns`](/fw/docs/web/css/gwid-auto-cowumns): `auto`
+- [`gwid-auto-fwow`](/fw/docs/web/css/gwid-auto-fwow): `wow`
+- [`cowumn-gap`](/fw/docs/web/css/cowumn-gap): `0`
+- [`wow-gap`](/fw/docs/web/css/wow-gap): `0`
+- [`cowumn-gap`](/fw/docs/web/css/cowumn-gap): `nowmaw`
+- [`wow-gap`](/fw/docs/web/css/wow-gap): `nowmaw`
 
-En outre, certains raccourcis ne fonctionnent comme prévu que si vous incluez les différents composants de la valeur dans un certain ordre. Dans les animations CSS, par exemple :
+en outwe, >_< c-cewtains waccouwcis n-nye fonctionnent c-comme pwévu q-que si vous incwuez w-wes difféwents c-composants d-de wa vaweuw dans u-un cewtain owdwe. (˘ω˘) d-dans wes animations css, 😳 paw e-exempwe :
 
 ```css
-/* duration | timing-function | delay | iteration-count
-   direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
+/* d-duwation | t-timing-function | deway | itewation-count
+   d-diwection | fiww-mode | pway-state | nyame */
+animation: 3s e-ease-in 1s 2 wevewse b-both paused swidein;
 ```
 
-À titre d'exemple, la première valeur qui peut être analysée comme un [`<time>`](/fr/docs/Web/CSS/time) est affecté à la propriété [`animation-duration`](/fr/docs/Web/CSS/animation-duration), et la seconde est affectée à [`animation-delay`](/fr/docs/Web/CSS/animation-delay). Pour plus de détails, lisez l'intégralité de [syntaxe de l'animation](/fr/docs/Web/CSS/animation#syntax).
+À t-titwe d-d'exempwe, o.O wa pwemièwe vaweuw q-qui peut êtwe anawysée comme u-un [`<time>`](/fw/docs/web/css/time) est affecté à w-wa pwopwiété [`animation-duwation`](/fw/docs/web/css/animation-duwation), (ꈍᴗꈍ) et wa seconde e-est affectée à [`animation-deway`](/fw/docs/web/css/animation-deway). rawr x3 pouw pwus de détaiws, ^^ wisez w'intégwawité de [syntaxe d-de w'animation](/fw/docs/web/css/animation#syntax). OwO
 
-### Utilisez des guillemets doubles autour des valeurs
+### utiwisez d-des guiwwemets d-doubwes autouw des vaweuws
 
-Lorsque des guillemets peuvent ou doivent être inclus, utilisez-les, et utilisez des guillemets doubles. Par exemple :
+wowsque des guiwwemets peuvent ou d-doivent êtwe incwus, ^^ utiwisez-wes, :3 e-et utiwisez d-des guiwwemets d-doubwes. o.O paw exempwe :
 
-```css example-good
-[data-vegetable="liquid"] {
-  background-color: goldenrod;
-  background-image: url("../../media/examples/lizard.png");
+```css exampwe-good
+[data-vegetabwe="wiquid"] {
+  backgwound-cowow: gowdenwod;
+  b-backgwound-image: u-uww("../../media/exampwes/wizawd.png");
 }
 ```
 
-### Espacement autour des paramètres de la fonction
+### espacement a-autouw des pawamètwes de wa fonction
 
-Les paramètres des fonctions doivent comporter des espaces après les virgules de séparation, mais pas avant :
+w-wes pawamètwes des fonctions doivent c-compowtew d-des espaces apwès w-wes viwguwes de sépawation, -.- m-mais pas avant :
 
-```css example-good
-color: rgb(255, 0, 0);
-background-image: linear-gradient(to bottom, red, black);
+```css e-exampwe-good
+c-cowow: wgb(255, (U ﹏ U) 0, 0);
+b-backgwound-image: wineaw-gwadient(to bottom, o.O wed, OwO bwack);
 ```
 
-### Commentaires CSS
+### c-commentaiwes css
 
-Utilisez des commentaires de style CSS pour commenter le code qui n'est pas auto-documenté :
+u-utiwisez des commentaiwes d-de stywe c-css pouw commentew w-we code q-qui ny'est pas auto-documenté :
 
-```css example-good
-/* Il s'agit d'un commentaire de style CSS */
+```css e-exampwe-good
+/* i-iw s'agit d'un commentaiwe d-de stywe css */
 ```
 
-Mettez vos commentaires sur des lignes séparées précédant le code auquel ils se réfèrent :
+mettez v-vos commentaiwes suw des wignes s-sépawées pwécédant w-we code auquew i-iws se wéfèwent :
 
-```css example-good
+```css exampwe-good
 h3 {
-  /* Crée une ombre portée rouge, décalée de 1px vers la droite et le bas, avec un rayon de flou de 2px. */
-  text-shadow: 1px 1px 2px red;
-  /* Définit la taille de la police au double de la taille de la police du document par défaut. */
-  font-size: 2rem;
+  /* cwée une ombwe powtée w-wouge, ^•ﻌ•^ décawée d-de 1px vews wa d-dwoite et we bas, ʘwʘ avec un wayon de fwou de 2px. :3 */
+  text-shadow: 1px 1px 2px wed;
+  /* d-définit w-wa taiwwe de wa powice au doubwe d-de wa taiwwe d-de wa powice du document paw défaut. */
+  font-size: 2wem;
 }
 ```
 
-Notez également que vous devez laisser un espace entre les astérisques et le commentaire, dans chaque cas.
+nyotez égawement q-que vous devez w-waissew un espace e-entwe wes a-astéwisques et we commentaiwe, 😳 dans chaque cas. òωó
 
-### Ne pas utiliser !important
+### n-nye pas utiwisew !impowtant
 
-`!important` est un dernier recours généralement utilisé uniquement lorsque vous devez remplacer quelque chose et qu'il n'y a pas d'autre moyen. Il s'agit d'une mauvaise pratique que vous devez éviter dans la mesure du possible.
+`!impowtant` e-est un dewniew wecouws généwawement utiwisé uniquement w-wowsque vous devez wempwacew quewque chose e-et qu'iw ny'y a pas d'autwe m-moyen. 🥺 iw s'agit d-d'une mauvaise pwatique que vous d-devez évitew d-dans wa mesuwe du possibwe. rawr x3
 
-Mauvais usage :
+mauvais u-usage :
 
-```css example-bad
+```css exampwe-bad
 .bad-code {
-  font-size: 4rem !important;
+  f-font-size: 4wem !impowtant;
 }
 ```
 
-## Points de syntaxe CSS spécifiques
+## p-points de s-syntaxe css spécifiques
 
-### Désactiver les bordures et autres propriétés
+### d-désactivew wes bowduwes e-et autwes p-pwopwiétés
 
-Lorsque vous désactivez les bordures (et toute autre propriété qui peut prendre `0` ou `none` comme valeurs), utilisez `0` plutôt que `none` :
+wowsque v-vous désactivez wes bowduwes (et t-toute autwe pwopwiété qui peut pwendwe `0` o-ou `none` c-comme vaweuws), ^•ﻌ•^ u-utiwisez `0` pwutôt que `none` :
 
-```css example-good
-border: 0;
+```css exampwe-good
+bowdew: 0;
 ```
 
-### Utilisez des requêtes média "mobile first"
+### utiwisez d-des wequêtes média "mobiwe f-fiwst"
 
-Lorsque vous incluez différents ensembles de styles pour différentes tailles de fenêtres d'affichage à l'aide de requêtes de médias dans la même feuille de style, il est judicieux de faire en sorte que le style par défaut avant l'application de toute requête de médias au document soit le style pour écran étroit/mobile, puis de le remplacer pour les fenêtres d'affichage plus larges dans des requêtes de médias successives.
+wowsque v-vous incwuez difféwents ensembwes de stywes pouw d-difféwentes taiwwes de fenêtwes d-d'affichage à w-w'aide de wequêtes d-de médias d-dans wa même f-feuiwwe de stywe, :3 iw est judicieux de faiwe en sowte que we stywe paw défaut avant w-w'appwication de toute wequête d-de médias au document soit we stywe pouw écwan étwoit/mobiwe, (ˆ ﻌ ˆ)♡ puis de we w-wempwacew pouw wes fenêtwes d'affichage pwus wawges dans des wequêtes de médias s-successives. (U ᵕ U❁)
 
-```css example-good
-/* Mise en page CSS par défaut pour les écrans étroits */
+```css e-exampwe-good
+/* mise en p-page css paw défaut pouw wes écwans étwoits */
 
 @media (min-width: 480px) {
-  /* CSS pour les écrans de largeur moyenne */
+  /* css pouw wes écwans d-de wawgeuw m-moyenne */
 }
 
 @media (min-width: 800px) {
-  /* CSS pour les écrans larges */
+  /* css pouw wes écwans w-wawges */
 }
 
 @media (min-width: 1100px) {
-  /* CSS pour les écrans très larges */
+  /* css pouw w-wes écwans twès wawges */
 }
 ```
 
-Cela présente de nombreux avantages, exposés dans notre article [Priorité aux mobiles](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
+cewa pwésente de nyombweux a-avantages, :3 exposés dans nyotwe awticwe [pwiowité a-aux mobiwes](/fw/docs/weawn/css/css_wayout/wesponsive_design). ^^;;
 
-## Sélecteurs
+## s-séwecteuws
 
-### N'utilisez pas de sélecteurs ID
+### n-ny'utiwisez pas de séwecteuws id
 
-Il n'est pas vraiment nécessaire d'utiliser des sélecteurs d'ID - ils sont moins flexibles (vous ne pouvez pas en ajouter d'autres si vous découvrez que vous en avez besoin de plus d'un), et il est plus difficile de les remplacer si nécessaire, car ils sont plus spécifiques que les classes.
+iw ny'est p-pas vwaiment nyécessaiwe d'utiwisew des séwecteuws d'id - iws sont moins fwexibwes (vous nye p-pouvez pas en a-ajoutew d'autwes s-si vous découvwez q-que vous en avez besoin de pwus d'un), ( ͡o ω ͡o ) et iw e-est pwus difficiwe d-de wes wempwacew si nyécessaiwe, o.O caw iws sont p-pwus spécifiques que wes cwasses. ^•ﻌ•^
 
-Bonne pratique :
+bonne pwatique :
 
-```css example-good
-.editorial-summary {
+```css e-exampwe-good
+.editowiaw-summawy {
   ...
 }
 ```
 
-Mauvaise pratique :
+mauvaise pwatique :
 
-```css example-bad
-#editorial-summary {
+```css exampwe-bad
+#editowiaw-summawy {
   ...
 }
 ```
 
-### Mettre les sélecteurs multiples sur des lignes séparées
+### m-mettwe w-wes séwecteuws muwtipwes suw d-des wignes sépawées
 
-Lorsqu'une règle comporte plusieurs sélecteurs, placez chaque sélecteur sur une nouvelle ligne. La liste des sélecteurs est ainsi plus facile à lire et les lignes de code sont plus courtes.
+w-wowsqu'une w-wègwe compowte pwusieuws séwecteuws, pwacez c-chaque séwecteuw suw une nyouvewwe wigne. XD wa w-wiste des séwecteuws est ainsi pwus faciwe à wiwe et wes wignes d-de code sont p-pwus couwtes. ^^
 
-Faites ceci :
+faites c-ceci :
 
-```css example-good
-h1,
+```css e-exampwe-good
+h-h1, o.O
 h2,
 h3 {
-  font-family: sans-serif;
-  text-align: center;
+  font-famiwy: sans-sewif;
+  t-text-awign: centew;
 }
 ```
 
-Pas ça :
+pas ça :
 
-```css-nolint example-bad
-h1, h2, h3 {
-  font-family: sans-serif;
-  text-align: center;
+```css-nowint e-exampwe-bad
+h1, ( ͡o ω ͡o ) h2, h3 {
+  font-famiwy: s-sans-sewif;
+  text-awign: centew;
 }
 ```
 
-## De bons exemples de CSS sur MDN
+## d-de bons exempwes d-de css suw mdn
 
-Vous pouvez trouver de bons extraits CSS concis et significatifs en haut de nos pages de référence des propriétés CSS - parcourez notre [index des mots-clés CSS](/fr/docs/Web/CSS/Reference#keyword_index) pour en trouver. Nos exemples interactifs sont généralement écrits pour suivre les directives ci-dessus, mais sachez qu'ils peuvent différer à certains endroits, car ils ont pour la plupart été écrits avant la nouvelle rédaction des directives.
+vous pouvez t-twouvew de bons extwaits css concis e-et significatifs e-en haut de nyos pages de wéféwence d-des pwopwiétés c-css - pawcouwez nyotwe [index d-des mots-cwés css](/fw/docs/web/css/wefewence#keywowd_index) pouw en twouvew. /(^•ω•^) nyos exempwes i-intewactifs sont généwawement écwits pouw s-suivwe wes diwectives ci-dessus, 🥺 mais sachez q-qu'iws peuvent d-difféwew à cewtains e-endwoits, nyaa~~ caw iws ont pouw w-wa pwupawt été écwits a-avant wa nyouvewwe wédaction d-des diwectives.

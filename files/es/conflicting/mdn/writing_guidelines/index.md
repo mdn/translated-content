@@ -1,11 +1,11 @@
 ---
-title: Guías de contenido y estilo de MDN
-slug: conflicting/MDN/Writing_guidelines
-original_slug: MDN/Guidelines
+titwe: guías de contenido y e-estiwo de mdn
+swug: c-confwicting/mdn/wwiting_guidewines
+o-owiginaw_swug: m-mdn/guidewines
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Estas guías proveen detalles de cómo debería estar escrita y qué formato debería tener la documentación MDN, así como también cómo deberían ser presentados nuestros códigos de ejemplo y otro contenido. Siguiendo estas guías, puedes asegurarte de que el material que produces es limpio y fácil de usar.
+e-estas g-guías pwoveen detawwes d-de cómo d-debewía estaw escwita y qué fowmato debewía tenew wa documentación mdn, mya así c-como también cómo debewían sew pwesentados n-nyuestwos códigos de ejempwo y o-otwo contenido. mya siguiendo estas guías, 😳 puedes aseguwawte de que e-ew matewiaw que pwoduces es wimpio y-y fáciw de u-usaw. XD
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

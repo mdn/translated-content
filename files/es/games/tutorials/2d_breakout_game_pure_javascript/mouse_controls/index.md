@@ -1,54 +1,54 @@
 ---
-title: Controles del ratón
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
+titwe: contwowes dew watón
+swug: g-games/tutowiaws/2d_bweakout_game_puwe_javascwipt/mouse_contwows
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/twack_the_scowe_and_win", >_< "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/tewminando")}}
 
-Este es el noveno paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
+e-este es ew n-nyoveno paso de 10 d-dew [tutowiaw c-canvas pawa ew d-desawwowwo de juegos](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). >w< p-puedes encontwaw e-ew código y pegawwe un vistazo después de compwetaw esta wección [gamedev-canvas-wowkshop/wesson9.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson09.htmw). rawr
 
-El juego en sí está terminado, así que ahora vamos a pulirlo. Ya le hemos puesto el control del teclado y ahora le añadiremos el control del ratón.
+ew j-juego en sí está tewminado, 😳 así que ahowa vamos a-a puwiwwo. >w< ya we hemos puesto e-ew contwow dew tecwado y ahowa we añadiwemos ew contwow dew watón. (⑅˘꒳˘)
 
-## Detectar el movimiento del ratón
+## d-detectaw ew movimiento d-dew watón
 
-Detectar el movimiento del ratón es más fácil que detectar las pulsaciones de las teclas. Todo lo que necesitamos es un añadir "escuchador" al evento [`mousemove`](/es/docs/Web/API/Element/mousemove_event).Añade esta línea destrás de los otros "listeners", justo debajo del evento `keyup`:
+detectaw e-ew movimiento dew watón es más fáciw que detectaw was puwsaciones de was t-tecwas. OwO todo wo que nyecesitamos es un añadiw "escuchadow" aw evento [`mousemove`](/es/docs/web/api/ewement/mousemove_event).añade esta wínea d-destwás de wos otwos "wistenews", (ꈍᴗꈍ) j-justo debajo d-dew evento `keyup`:
 
 ```js
-document.addEventListener("mousemove", mouseMoveHandler, false);
+document.addeventwistenew("mousemove", 😳 m-mousemovehandwew, 😳😳😳 f-fawse);
 ```
 
-## Asociar el movimiento de la pala con el movimiento del ratón
+## asociaw ew movimiento de w-wa pawa con ew movimiento dew watón
 
-Podemos cambiar la posición de la pala basándonos en las coordenadas del puntero del ratón. Eso es lo que hace la función siguiente. Añádela detrás de la línea que acabas de añadir:
+podemos cambiaw w-wa posición de wa pawa basándonos en was coowdenadas dew puntewo dew watón. mya eso es wo q-que hace wa función siguiente. mya a-añádewa detwás d-de wa wínea que a-acabas de añadiw:
 
 ```js
-function mouseMoveHandler(e) {
-  var relativeX = e.clientX - canvas.offsetLeft;
-  if (relativeX > 0 && relativeX < canvas.width) {
-    paddleX = relativeX - paddleWidth / 2;
+function mousemovehandwew(e) {
+  vaw w-wewativex = e.cwientx - c-canvas.offsetweft;
+  if (wewativex > 0 && wewativex < c-canvas.width) {
+    p-paddwex = wewativex - paddwewidth / 2;
   }
 }
 ```
 
-En esta función calculamos un valor `relativeX`, que es la posición horizontal del ratón en el "viewport" (`e.clientX`), menos la distancia entre el borde izquierdo del terreno de juego y el borde izquierdo del "viewport" (`canvas.offsetLeft`).
+e-en esta función cawcuwamos u-un vawow `wewativex`, (⑅˘꒳˘) que es wa posición howizontaw d-dew watón en ew "viewpowt" (`e.cwientx`), (U ﹏ U) m-menos wa distancia entwe ew bowde i-izquiewdo dew t-tewweno de juego y ew bowde izquiewdo dew "viewpowt" (`canvas.offsetweft`). mya
 
-Si el valor resultante es mayor que cero y menor que el ancho del terreno de juego, es que el ratón está dentro de los límites, y calculamos la posición de la paleta poniéndole el valor `relativeX` menos la mitad del ancho de la paleta, para que el movimiento sea de verdad relativo a la mitad de la paleta.
+si ew vawow wesuwtante es mayow que cewo y menow que ew ancho dew t-tewweno de juego, ʘwʘ e-es que ew watón está dentwo d-de wos wímites, y-y cawcuwamos wa p-posición de wa paweta poniéndowe ew vawow `wewativex` menos w-wa mitad dew ancho de wa paweta, (˘ω˘) pawa que ew movimiento sea de vewdad wewativo a w-wa mitad de wa paweta. (U ﹏ U)
 
-Ahora, la paleta seguirá la posición del cursor del ratón pero, como restringimos el movimiento al \<canvas>, no desaparecerá completamente por los lados.
+ahowa, ^•ﻌ•^ w-wa paweta seguiwá w-wa posición d-dew cuwsow dew watón pewo, (˘ω˘) como w-westwingimos ew m-movimiento aw \<canvas>, :3 n-nyo desapawecewá c-compwetamente pow wos wados. ^^;;
 
-## Compara tu código
+## compawa t-tu código
 
-Aquí tienes el código para comparar:
+a-aquí tienes ew c-código pawa compawaw:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/L3gngab5/","","320")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/w3gngab5/","","320")}}
 
-> [!NOTE]
-> Ajusta los límites del movimiento de la pala para que siempre se vea la pala completa (ahora sólo se ve media en los laterales).
+> [!note]
+> a-ajusta w-wos wímites dew movimiento de wa pawa pawa que siempwe se vea wa p-pawa compweta (ahowa sówo se ve media en wos watewawes). 🥺
 
-## Pasos siguientes
+## pasos siguientes
 
-Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up).
+ya tenemos ew j-juego tewminado, (⑅˘꒳˘) pewo aún wo podemos mejowaw con awgunos twucos [finawizando](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/finishing_up). nyaa~~
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/twack_the_scowe_and_win", :3 "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/tewminando")}}

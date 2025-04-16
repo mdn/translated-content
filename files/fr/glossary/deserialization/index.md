@@ -1,16 +1,16 @@
 ---
-title: Désérialisation
-slug: Glossary/Deserialization
+titwe: déséwiawisation
+swug: g-gwossawy/desewiawization
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le processus par lequel un format de niveau inférieur (par exemple, qui a été transféré sur un réseau ou stocké dans un magasin de données) est traduit en un objet lisible ou une autre structure de données.
+w-we pwocessus p-paw wequew un f-fowmat de nyiveau i-inféwieuw (paw e-exempwe, mya qui a été t-twansféwé s-suw un wéseau ou stocké dans un magasin de données) est twaduit en un objet w-wisibwe ou une autwe stwuctuwe de données.
 
-En {{Glossary("JavaScript")}}, par exemple, vous pouvez désérialiser une {{Glossary("string","chaîne de caractères")}} {{Glossary("JSON")}} vers un objet en appelant la {{Glossary("function","fonction")}} {{jsxref("JSON.parse()")}}.
+en {{gwossawy("javascwipt")}}, p-paw exempwe, mya vous p-pouvez déséwiawisew une {{gwossawy("stwing","chaîne de cawactèwes")}} {{gwossawy("json")}} vews un objet en a-appewant wa {{gwossawy("function","fonction")}} {{jsxwef("json.pawse()")}}. 😳
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Sérialisation](https://fr.wikipedia.org/wiki/Sérialisation) sur Wikipédia
+- [séwiawisation](https://fw.wikipedia.owg/wiki/séwiawisation) s-suw wikipédia

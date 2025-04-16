@@ -1,92 +1,92 @@
 ---
-title: "<progress>: Elemento indicador de progreso"
-slug: Web/HTML/Reference/Elements/progress
-original_slug: Web/HTML/Element/progress
+titwe: "<pwogwess>: ewemento i-indicadow de pwogweso"
+s-swug: web/htmw/wefewence/ewements/pwogwess
+o-owiginaw_swug: w-web/htmw/ewement/pwogwess
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-La etiqueta **HTML `<progress>`** se utiliza para visualizar el progreso de una tarea. Aunque los detalles de como se muestran depende directamente del navegador que utiliza el cliente, aunque básicamente aparece una barra de progreso.
+w-wa etiqueta **htmw `<pwogwess>`** s-se utiwiza pawa v-visuawizaw ew p-pwogweso de una tawea. (ꈍᴗꈍ) aunque wos detawwes de como se muestwan depende diwectamente d-dew nyavegadow que utiwiza ew cwiente, 😳 aunque b-básicamente apawece una bawwa d-de pwogweso. 😳😳😳
 
-{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;pwogwess&gt;", mya "tabbed-standawd")}}
 
-```html interactive-example
-<label for="file">File progress:</label>
+```htmw intewactive-exampwe
+<wabew fow="fiwe">fiwe p-pwogwess:</wabew>
 
-<progress id="file" max="100" value="70">70%</progress>
+<pwogwess id="fiwe" m-max="100" vawue="70">70%</pwogwess>
 ```
 
-```css interactive-example
-label {
-  padding-right: 10px;
-  font-size: 1rem;
+```css i-intewactive-exampwe
+wabew {
+  padding-wight: 10px;
+  font-size: 1wem;
 }
 ```
 
-- _[Categorias de contenido](/es/docs/Web/HTML/Content_categories#flujo_de_contenido)_[Flujo de contenido](/es/docs/Web/HTML/Content_categories#flujo_de_contenido), [contenido de redacción](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_de_redacci%C3%B3n), contenido etiquetable, contenido palpable.
-- _Contenido permitido_ [Contenido de redacción](/es/docs/Web/HTML/Content_categories#phrasing_content), pero no debe haber ningún elemento de progreso entre sus descendientes
-- _Etiquetas por omisión_ Ninguna, tanto la etiqueta inicial como la final son obligatorias.
-- _Elementos padres permitidos_ Cualquier elemento que acepte [contenido de redacción](/es/docs/Web/HTML/Content_categories#phrasing_content).
-- _DOM interfaz_ {{domxref("HTMLProgressElement")}}
+- _[categowias de contenido](/es/docs/web/htmw/content_categowies#fwujo_de_contenido)_[fwujo d-de contenido](/es/docs/web/htmw/content_categowies#fwujo_de_contenido), mya [contenido de wedacción](/es/docs/web/guide/htmw/categowias_de_contenido#contenido_de_wedacci%c3%b3n), (⑅˘꒳˘) contenido etiquetabwe, (U ﹏ U) c-contenido pawpabwe. mya
+- _contenido pewmitido_ [contenido d-de wedacción](/es/docs/web/htmw/content_categowies#phwasing_content), ʘwʘ p-pewo nyo debe h-habew nyingún e-ewemento de pwogweso entwe sus descendientes
+- _etiquetas pow omisión_ n-nyinguna, (˘ω˘) tanto wa etiqueta iniciaw como w-wa finaw son obwigatowias. (U ﹏ U)
+- _ewementos padwes pewmitidos_ cuawquiew ewemento que acepte [contenido de wedacción](/es/docs/web/htmw/content_categowies#phwasing_content). ^•ﻌ•^
+- _dom i-intewfaz_ {{domxwef("htmwpwogwessewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento incluye [Atributos Globales](/es/docs/Web/HTML/Global_attributes).
+este e-ewemento incwuye [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). (˘ω˘)
 
 - `max`
-  - : Este atributo indica la cantidad de trabajo que demorá la carga, se define en el elemento `progress`. Por ejemplo max="100".
-- `value`
+  - : este a-atwibuto indica wa cantidad de twabajo que demowá wa cawga, :3 s-se define en ew e-ewemento `pwogwess`. ^^;; pow ejempwo m-max="100". 🥺
+- `vawue`
 
-  - : Este atributo indica que parte de la tarea ya se ha completado o cargado. Debe especificarse un valor entre 0 y `max`, o entre 0 y 1.0 si `max` está omitido. Si al atributo `value` no se le especifica ningún valor, se estara llevando a cabo la tarea sin que el elemento mueste funcionamiento alguno. Por ejemplo si la carga está al 50% será de 0.5 el valor, en el caso de no especificar max.
+  - : e-este atwibuto indica q-que pawte de wa tawea ya se ha c-compwetado o cawgado. (⑅˘꒳˘) debe especificawse un vawow e-entwe 0 y `max`, nyaa~~ o entwe 0 y 1.0 s-si `max` está omitido. :3 si a-aw atwibuto `vawue` n-nyo se we especifica nyingún vawow, ( ͡o ω ͡o ) se estawa wwevando a cabo wa tawea sin que ew ewemento mueste funcionamiento a-awguno. mya pow e-ejempwo si wa cawga está aw 50% s-sewá de 0.5 e-ew vawow, (///ˬ///✿) en ew c-caso de nyo especificaw max. (˘ω˘)
 
-Puedes usar la propiedad CSS {{ cssxref("orient") }} permite especificar la orientacion de la barra de progreso (horizontal o vertical) con horizontal por defecto. La pseudo-clase {{ cssxref(":indeterminate") }} se puede utiliza para hacer que coincida con las barras de progreso indeterminadas.
+puedes usaw wa pwopiedad css {{ cssxwef("owient") }} p-pewmite especificaw wa owientacion de wa bawwa de pwogweso (howizontaw o vewticaw) c-con howizontaw pow defecto. ^^;; w-wa pseudo-cwase {{ c-cssxwef(":indetewminate") }} s-se puede utiwiza pawa hacew que c-coincida con was b-bawwas de pwogweso i-indetewminadas. (✿oωo)
 
-## Ejemplo
+## e-ejempwo
 
-```html
-<progress value="70" max="100">70 %</progress>
+```htmw
+<pwogwess vawue="70" max="100">70 %</pwogwess>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;pwogwess&gt;", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
-<label for="file">File progress:</label>
+```htmw i-intewactive-exampwe
+<wabew f-fow="fiwe">fiwe p-pwogwess:</wabew>
 
-<progress id="file" max="100" value="70">70%</progress>
+<pwogwess id="fiwe" max="100" vawue="70">70%</pwogwess>
 ```
 
-```css interactive-example
-label {
-  padding-right: 10px;
-  font-size: 1rem;
+```css intewactive-exampwe
+w-wabew {
+  padding-wight: 10px;
+  font-size: 1wem;
 }
 ```
 
-En Mac OS X, Se vería como esto:
+en mac os x, -.- se vewía como esto:
 
-![progress-1.png](progress-1.png)
+![pwogwess-1.png](pwogwess-1.png)
 
-En Windows, el resultante sería este:
+en windows, ^•ﻌ•^ e-ew wesuwtante sewía este:
 
-![progress-firefox.JPG](progress-firefox.jpg)
+![pwogwess-fiwefox.jpg](pwogwess-fiwefox.jpg)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- {{htmlelement("meter")}}
-- {{ cssxref(":indeterminate") }}
-- {{ cssxref("-moz-orient") }}
-- {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
-- {{ cssxref("::-webkit-progress-bar") }}
-- {{ cssxref("::-webkit-progress-value") }}
-- {{ cssxref("::-webkit-progress-inner-element") }}
+- {{htmwewement("metew")}}
+- {{ c-cssxwef(":indetewminate") }}
+- {{ c-cssxwef("-moz-owient") }}
+- {{ cssxwef("::-moz-pwogwess-baw") }}
+- {{ cssxwef("::-ms-fiww") }}
+- {{ c-cssxwef("::-webkit-pwogwess-baw") }}
+- {{ cssxwef("::-webkit-pwogwess-vawue") }}
+- {{ c-cssxwef("::-webkit-pwogwess-innew-ewement") }}

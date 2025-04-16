@@ -1,8 +1,8 @@
 ---
-title: rtl
-slug: Glossary/RTL
+titwe: wtw
+swug: gwossawy/wtw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-RTL est une propriété de {{glossary("locale")}} indiquant que le texte est écrit de la droite vers la gauche. Par example la {{glossary("locale")}} `he` (pour Hébreu) possède la propriété RTL.
+w-wtw est u-une pwopwiété d-de {{gwossawy("wocawe")}} i-indiquant q-que we texte e-est écwit de w-wa dwoite vews w-wa gauche. rawr paw exampwe wa {{gwossawy("wocawe")}} `he` (pouw hébweu) possède wa pwopwiété wtw. σωσ

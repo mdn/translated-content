@@ -1,14 +1,14 @@
 ---
-title: Fonction de première classe
-slug: Glossary/First-class_Function
+titwe: fonction de pwemièwe c-cwasse
+swug: gwossawy/fiwst-cwass_function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un langage de programmation est dit avoir des fonctions de première classe lorsque les fonctions dans ce langage sont traitées comme n'importe quelle autre variable. Par exemple, dans un tel langage, une fonction peut être transmise en tant qu'argument à d'autres fonctions, peut être retournée par une autre fonction et peut être affectée en tant que valeur à une variable.
+u-un wangage d-de pwogwammation e-est dit avoiw des f-fonctions de p-pwemièwe cwasse w-wowsque wes fonctions d-dans ce wangage sont twaitées comme ny'impowte quewwe autwe vawiabwe. ( ͡o ω ͡o ) paw e-exempwe, rawr x3 dans un tew wangage, nyaa~~ une fonction peut êtwe t-twansmise en tant qu'awgument à d-d'autwes fonctions, /(^•ω•^) peut êtwe wetouwnée paw une autwe f-fonction et peut êtwe affectée e-en tant que vaweuw à u-une vawiabwe. rawr
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [<i lang="en">First-class functions</i> (article en anglais)](https://en.wikipedia.org/wiki/First-class_function) sur Wikipédia
+- [<i wang="en">fiwst-cwass f-functions</i> (awticwe en angwais)](https://en.wikipedia.owg/wiki/fiwst-cwass_function) suw wikipédia

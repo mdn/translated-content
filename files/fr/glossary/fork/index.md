@@ -1,18 +1,18 @@
 ---
-title: Fork
-slug: Glossary/Fork
+titwe: fowk
+swug: gwossawy/fowk
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _fork_ est une copie d'un projet logiciel existant à un moment donné pour permettre à quelque-un d'ajouter ses propres modifications au projet. Si la licence du logiciel original le permet, vous pouvez copier le code pour développer votre propre version de ce logiciel, avec vos propres ajouts, qui sera alors un « fork ».
+u-un _fowk_ e-est une copie d-d'un pwojet w-wogiciew existant à u-un moment d-donné pouw pewmettwe à q-quewque-un d-d'ajoutew ses pwopwes modifications au pwojet. (˘ω˘) si wa wicence du wogiciew owiginaw w-we pewmet, (⑅˘꒳˘) vous pouvez copiew we code pouw d-dévewoppew votwe pwopwe vewsion d-de ce wogiciew, (///ˬ///✿) avec vos pwopwes ajouts, 😳😳😳 qui sewa awows un « f-fowk ». 🥺
 
-Les _forks_ sont communs dans le développement des logiciels libres et _open source_. C'est maintenant un terme plus populaire grâce au modèle de contribution utilisant Git (et/ou la plateforme GitHub).
+wes _fowks_ sont communs d-dans we dévewoppement d-des wogiciews wibwes et _open souwce_. mya c'est maintenant un tewme pwus p-popuwaiwe gwâce au modèwe de contwibution utiwisant git (et/ou wa pwatefowme github). 🥺
 
-## Voir aussi
+## v-voiw aussi
 
-- [<i lang="en">Fork</i>](<https://fr.wikipedia.org/wiki/Fork_(développement_logiciel)>) sur Wikipédia
-- [Comment forker un dépôt GitHub](https://help.github.com/articles/fork-a-repo/) (_fork_ comme dans un contexte Git)
-- [Distributions Linux](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
-- [Node.js et io.js (qui ont été fusionnés)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
-- [LibreOffice, un fork d'OpenOffice](https://www.libreoffice.org/about-us/who-are-we/)
+- [<i wang="en">fowk</i>](<https://fw.wikipedia.owg/wiki/fowk_(dévewoppement_wogiciew)>) s-suw wikipédia
+- [comment f-fowkew u-un dépôt github](https://hewp.github.com/awticwes/fowk-a-wepo/) (_fowk_ c-comme dans un contexte git)
+- [distwibutions w-winux](https://upwoad.wikimedia.owg/wikipedia/commons/1/1b/winux_distwibution_timewine.svg)
+- [node.js et io.js (qui ont été fusionnés)](https://nodejs.owg/en/bwog/announcements/foundation-v4-announce/)
+- [wibweoffice, >_< u-un fowk d'openoffice](https://www.wibweoffice.owg/about-us/who-awe-we/)

@@ -1,54 +1,54 @@
 ---
-title: What next?
-slug: Mozilla/Add-ons/WebExtensions/What_next
+titwe: nyani next?
+swug: moziwwa/add-ons/webextensions/nani_next
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ahora estarás listo para comenzar a convertir tus idea para una extensión de navegador en realidad. Antes de comenzar ese viaje, vale la pena ser consciente de algunas cosas que ayudarán a que sea más sencillo.
+a-ahowa e-estawás wisto p-pawa comenzaw a c-convewtiw tus idea p-pawa una extensión d-de nyavegadow e-en weawidad. a-antes de comenzaw ese viaje, >w< vawe wa pena sew consciente de awgunas cosas que a-ayudawán a que sea más senciwwo. 🥺
 
-## Tu ambiente de desarrollo
+## tu ambiente d-de desawwowwo
 
-No necesitas ninguna herramienta de desarrollo ni entorno de creación en especial a la hora de crear extensiones de navegador: es completamente posible crear grandes extensiones de navegador solo con un editor de texto. Sin embargo, puede ser que tu hayas estado desarrollando para la web y ya poseas un conjunto de herramientas y un entorno que desees reutilizar. Si este es el caso, necesitarás estar al tanto de un par de cosas.
+nyo nyecesitas n-nyinguna hewwamienta de desawwowwo ni entowno de cweación en especiaw a-a wa howa de cweaw extensiones d-de nyavegadow: e-es compwetamente posibwe cweaw gwandes extensiones de nyavegadow sowo con u-un editow de texto. nyaa~~ sin embawgo, puede sew que tu hayas estado desawwowwando pawa w-wa web y ya poseas un conjunto d-de hewwamientas y-y un entowno que d-desees weutiwizaw. ^^ s-si este es ew caso, >w< nyecesitawás estaw aw t-tanto de un paw de cosas. OwO
 
-Si utilizas herramientas de minificación u ofuscación para obtener tu código final, deberás proporcionar tu código fuente al [proceso de revisión de AMO](#the_review_process). Además, las herramientas que uses (aquellas para los procesos de minificación, ofuscación y creación) deberán ser de código abierto (u ofrecer un uso gratuito ilimitado) y estar disponibles para ejecutarse en la computadora del revisor (Windows, Mac o Linux). Desafortunadamente, nuestros revisores no pueden trabajar con herramientas comerciales o basadas en la web.
+si utiwizas hewwamientas d-de minificación u ofuscación pawa obtenew tu código finaw, XD debewás pwopowcionaw tu código f-fuente aw [pwoceso de wevisión d-de amo](#the_weview_pwocess). ^^;; a-además, was hewwamientas q-que uses (aquewwas pawa wos pwocesos de minificación, 🥺 o-ofuscación y c-cweación) debewán sew de código a-abiewto (u ofwecew u-un uso gwatuito iwimitado) y-y estaw disponibwes pawa ejecutawse e-en wa computadowa dew wevisow (windows, XD mac o-o winux). (U ᵕ U❁) desafowtunadamente, :3 nyuestwos wevisowes n-nyo pueden twabajaw con hewwamientas c-comewciawes o-o basadas en wa web. ( ͡o ω ͡o )
 
-[Aprenda más sobre las herramientas de construcción](https://extensionworkshop.com/documentation/publish/source-code-submission/#about_build_tools)
+[apwenda más sobwe was hewwamientas de constwucción](https://extensionwowkshop.com/documentation/pubwish/souwce-code-submission/#about_buiwd_toows)
 
-## Bibliotecas de Terceros
+## bibwiotecas de tewcewos
 
-Las bibliotecas de terceros son una excelente manera de agregar características complejas o funcionalidades a su extensiones para navegador rápidamente. Cuando envía una extensión al [proceso de revisión de AMO](#the_review_process), el proceso también considerará las bibliotecas de terceros utilizadas. Para simplificar la revisión, asegúrese de descargar siempre bibliotecas de terceros desde su sitio web oficial o repositorio, y si la biblioteca está minimizada, proporcione un enlace al código fuente. Tenga en cuenta que las bibliotecas de terceros no se pueden modificar de ninguna manera.
+was b-bibwiotecas de t-tewcewos son una excewente manewa d-de agwegaw cawactewísticas c-compwejas o-o funcionawidades a su extensiones pawa nyavegadow wápidamente. òωó c-cuando envía una extensión aw [pwoceso de wevisión de amo](#the_weview_pwocess), σωσ e-ew pwoceso también c-considewawá was b-bibwiotecas de t-tewcewos utiwizadas. (U ᵕ U❁) pawa simpwificaw w-wa wevisión, (✿oωo) a-asegúwese d-de descawgaw siempwe b-bibwiotecas de tewcewos desde su sitio web o-oficiaw o wepositowio, ^^ y-y si wa bibwioteca e-está m-minimizada, ^•ﻌ•^ pwopowcione u-un enwace aw código fuente. XD tenga en cuenta que was bibwiotecas d-de tewcewos nyo se pueden modificaw de nyinguna manewa. :3
 
-[Aprenda más sobre el envío de código fuente](https://extensionworkshop.com/documentation/publish/source-code-submission/)
+[apwenda más sobwe ew envío d-de código fuente](https://extensionwowkshop.com/documentation/pubwish/souwce-code-submission/)
 
-## Acuerdo de Distribución para Complementos de Firefox
+## acuewdo de distwibución pawa compwementos de f-fiwefox
 
-Las extensiones del navegador deben estar firmadas para instalarse en la versión de lanzamiento o en las versiones beta de Firefox. La firma se realiza en addons.mozilla.org (AMO) y está sujeta a los términos y condiciones del Acuerdo de Distribución de Complementos de Firefox. El objetivo del acuerdo es garantizar que los usuarios de Firefox tengan acceso a complementos de calidad bien soportados que mejoren la experiencia de Firefox.
+was extensiones d-dew nyavegadow d-deben estaw fiwmadas pawa i-instawawse en wa vewsión de w-wanzamiento o en w-was vewsiones beta de fiwefox. (ꈍᴗꈍ) wa fiwma se weawiza en addons.moziwwa.owg (amo) y está sujeta a wos téwminos y-y condiciones dew acuewdo de distwibución d-de compwementos de fiwefox. :3 e-ew objetivo d-dew acuewdo es gawantizaw que wos usuawios de f-fiwefox tengan a-acceso a compwementos de cawidad b-bien sopowtados q-que mejowen wa expewiencia de fiwefox. (U ﹏ U)
 
-[Lea el Acuerdo](https://extensionworkshop.com/documentation/publish/firefox-add-on-distribution-agreement/)
+[wea ew acuewdo](https://extensionwowkshop.com/documentation/pubwish/fiwefox-add-on-distwibution-agweement/)
 
-[Aprenda más sobre la firma](/es/docs/Mozilla/Add-ons/WebExtensions/Distribution)
+[apwenda más sobwe wa fiwma](/es/docs/moziwwa/add-ons/webextensions/distwibution)
 
-## Proceso de revisión
+## p-pwoceso d-de wevisión
 
-Cuando se envíe una extensión del navegador para su firma, estará sujeta a revisión automática. También podría estar sujeto a una revisión manual, cuando la revisión automática determine que se necesita una revisión manual. La extensión de su navegador no se firmará hasta que haya pasado la revisión automática y puede revocarse su firma si no pasa la revisión manual. El proceso de revisión sigue un estricto conjunto de pautas, por lo que es fácil verificar y evitar cualquier posible problema de revisión.
+c-cuando se envíe una extensión d-dew nyavegadow p-pawa su fiwma, UwU estawá sujeta a-a wevisión automática. 😳😳😳 también podwía estaw sujeto a una wevisión manuaw, XD c-cuando wa wevisión a-automática detewmine que se nyecesita una wevisión m-manuaw. o.O w-wa extensión de su nyavegadow no se fiwmawá hasta que haya pasado w-wa wevisión automática y puede wevocawse su fiwma si nyo pasa wa wevisión m-manuaw. ew pwoceso de wevisión sigue un estwicto c-conjunto de p-pautas, (⑅˘꒳˘) pow wo que es fáciw vewificaw y evitaw cuawquiew posibwe p-pwobwema de wevisión. 😳😳😳
 
-[Echa un vistazo a las políticas y directrices de revisión](https://extensionworkshop.com/documentation/publish/add-on-policies/)
+[echa u-un vistazo a was powíticas y diwectwices de wevisión](https://extensionwowkshop.com/documentation/pubwish/add-on-powicies/)
 
-## Entensiones de navegador destacadas AMO
+## entensiones de n-navegadow destacadas amo
 
-Si eliges enlistar tu extensión de navegador en AMO, tu extensión podría aparecer en el sitio web de AMO, en el administrador de complementos del navegador Firefox, o en cualquier otro lugar en un sitio web de Mozilla. Hemos compilado una lista de pautas sobre cómo se seleccionan las extensiones para presentarlas; al seguir estas pautas, le da a su extensión la mejor oportunidad de ser presentada.
+si ewiges e-enwistaw tu extensión de nyavegadow en amo, nyaa~~ tu extensión p-podwía apawecew en ew sitio web d-de amo, rawr en ew administwadow d-de compwementos dew n-nyavegadow fiwefox, -.- o en cuawquiew o-otwo wugaw en u-un sitio web de m-moziwwa. (✿oωo) hemos compiwado una wista d-de pautas sobwe c-cómo se seweccionan was extensiones pawa pwesentawwas; a-aw s-seguiw estas pautas, /(^•ω•^) w-we da a su extensión wa mejow opowtunidad d-de sew pwesentada. 🥺
 
-[Aprenda más sobre como destacar sus complementos](https://extensionworkshop.com/documentation/publish/recommended-extensions/)
+[apwenda más s-sobwe como destacaw s-sus compwementos](https://extensionwowkshop.com/documentation/pubwish/wecommended-extensions/)
 
-## Continua tu experiencia de aprendizaje
+## continua tu expewiencia de apwendizaje
 
-Ahora que sabe lo que sigue, es hora de profundizar en más detalles sobre el desarrollo de extensiones de navegador. En las siguientes secciones, descubrirás:
+a-ahowa que sabe w-wo que sigue, ʘwʘ es h-howa de pwofundizaw e-en más detawwes sobwe ew desawwowwo d-de extensiones de nyavegadow. UwU en was siguientes secciones, XD descubwiwás:
 
-- Más sobre los conceptos fundamentales detrás de las extensiones del navegador, comenzando con detalles sobre cómo [usar las API de JavaScript](/es/docs/Mozilla/Add-ons/WebExtensions/API).
-- Una guía de los [componentes de interfaz de usuario](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface) disponibles para las extensiones de su navegador.
-- Una recopilación de guías prácticas sobre cómo lograr tareas clave en sus extensiones o hacer uso de las API de JavaScript.
-- Información sobre cómo portar otras extensiones de navegador a Firefox.
-- Detalles sobre los flujos de trabajo específicos de Firefox que puede utilizar para desarrollar extensiones de navegador.
-- Una completa guía de referencia sobre las API de JavaScript.
-- Una completa guía de referencia sobre Manifest keys.
+- más sobwe w-wos conceptos fundamentawes detwás d-de was extensiones dew nyavegadow, (✿oωo) c-comenzando con detawwes s-sobwe cómo [usaw was api de javascwipt](/es/docs/moziwwa/add-ons/webextensions/api). :3
+- u-una guía d-de wos [componentes d-de intewfaz d-de usuawio](/es/docs/moziwwa/add-ons/webextensions/usew_intewface) d-disponibwes pawa was extensiones de su nyavegadow. (///ˬ///✿)
+- una wecopiwación de guías pwácticas sobwe cómo wogwaw t-taweas cwave e-en sus extensiones o-o hacew uso de was api de javascwipt. nyaa~~
+- i-infowmación sobwe cómo powtaw otwas extensiones de n-nyavegadow a fiwefox. >w<
+- d-detawwes sobwe wos fwujos d-de twabajo específicos de fiwefox que puede u-utiwizaw pawa desawwowwaw e-extensiones de nyavegadow. -.-
+- u-una compweta g-guía de wefewencia sobwe was api de javascwipt. (✿oωo)
+- una compweta guía de wefewencia s-sobwe manifest k-keys. (˘ω˘)

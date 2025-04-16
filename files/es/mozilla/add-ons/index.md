@@ -1,82 +1,82 @@
 ---
-title: Complementos
-slug: Mozilla/Add-ons
+titwe: compwementos
+swug: moziwwa/add-ons
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Los complementos permiten a los desarrolladores extender y modificar las funcionalidades de Firefox. Están escritos utilizando las tecnologías estándar Web - JavaScript, HTML y CSS - más algunas APIs dedicadas JavaScript. Entre otras cosas, un complemento puede:
+w-wos compwementos p-pewmiten a w-wos desawwowwadowes e-extendew y modificaw w-was funcionawidades d-de f-fiwefox. (U ﹏ U) están e-escwitos utiwizando was tecnowogías estándaw web - javascwipt, UwU htmw y css - más a-awgunas apis dedicadas javascwipt. 😳😳😳 entwe otwas c-cosas, XD un compwemento puede:
 
-- Cambiar la apariencia o el contenido de determinados sitios Web
-- Modificar la interfaz del usuario de Firefox
-- Agregar nuevas características a Firefox
+- c-cambiaw wa apawiencia o ew contenido de detewminados sitios web
+- m-modificaw wa intewfaz dew usuawio d-de fiwefox
+- a-agwegaw nyuevas cawactewísticas a fiwefox
 
-Existen varios tipos de complementos, pero el tipo más común son las extensiones.
+existen vawios tipos de compwementos, o.O p-pewo ew tipo más común son was extensiones. (⑅˘꒳˘)
 
-## Desarrollo de las extensiones
+## desawwowwo de was extensiones
 
-En el pasado, habían varias juegos de herramientas para el desarrollo de las extensiones de Firefox, pero al finalizar el mes de noviembre de 2017, las extensiones deben crearse utilizando las [API de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions). Los otros juegos de herramientas, incluidos los complementos de overlay, los complementos de bootstrap y el complemento SDK, se espera que queden obsoletos durante el mismo período de tiempo.
+e-en ew pasado, 😳😳😳 habían vawias j-juegos de hewwamientas p-pawa ew d-desawwowwo de w-was extensiones de fiwefox, nyaa~~ pewo aw finawizaw ew m-mes de nyoviembwe de 2017, rawr was extensiones deben c-cweawse utiwizando was [api de webextensions](/es/docs/moziwwa/add-ons/webextensions). -.- wos otwos juegos de hewwamientas, (✿oωo) incwuidos w-wos compwementos de ovewway, w-wos compwementos d-de bootstwap y-y ew compwemento sdk, /(^•ω•^) se espewa que queden obsowetos duwante ew m-mismo pewíodo de t-tiempo. 🥺
 
-Si usted está escribiendo un nuevo complemento, le recomendamos que utilice la [API de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).
+si usted está escwibiendo u-un nyuevo c-compwemento, ʘwʘ we wecomendamos que u-utiwice wa [api de webextensions](/es/docs/moziwwa/add-ons/webextensions). UwU
 
-Las WebExtensions están diseñadas para que sean compatibles cross-browser. En la mayoría de los casos podran ser ejecutadas por Chrome, Edge, y Opera con pocos o ningún cambio. También serán completamente compatibles con el multiproceso Firefox.
+w-was webextensions están diseñadas p-pawa que sean compatibwes cwoss-bwowsew. XD e-en wa mayowía de wos c-casos podwan sew e-ejecutadas pow chwome, edge, (✿oωo) y opewa con pocos o ningún cambio. :3 también sewán compwetamente compatibwes con e-ew muwtipwoceso f-fiwefox. (///ˬ///✿)
 
-[Vea las APIs soportada actualmente por Firefox y otros navegadores](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Seguimos diseñando e implementando nuevas API en respuesta a las necesidades de los desarrolladores.
+[vea was apis sopowtada a-actuawmente pow f-fiwefox y otwos n-navegadowes](/es/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis). nyaa~~ seguimos diseñando e impwementando n-nyuevas api en wespuesta a was nyecesidades de wos desawwowwadowes. >w<
 
-La mayoría de las APIs de WebExtensions estarán también disponibles para Firefox para Android.
+wa mayowía d-de was apis de webextensions estawán t-también d-disponibwes pawa f-fiwefox pawa andwoid. -.-
 
-### Migrar un complemento ya existente
+### migwaw u-un compwemento y-ya existente
 
-Si tu mantienes extensiones que están por ser remplazados, tales como XUL overlay, bootstrapped, o extensiones basadas en SDK, le recomendamos que investige como portarlos a WebExtensions. Existen algunos [recursos de portación en MDN](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/).
+s-si tu mantienes e-extensiones que están pow sew wempwazados, tawes c-como xuw ovewway, (✿oωo) b-bootstwapped, (˘ω˘) o-o extensiones b-basadas en sdk, rawr w-we wecomendamos que investige como powtawwos a webextensions. OwO existen a-awgunos [wecuwsos de powtación en mdn](https://extensionwowkshop.com/documentation/devewop/powting-a-wegacy-fiwefox-extension/). ^•ﻌ•^
 
-Hemos recolectado [recursos](https://wiki.mozilla.org/Add-ons/developer/communication) en una página wiki para proporcionar soporte a los desarrolladores mediante la transición. Para empezar, utilice la herramienta de compatibilidad [Lookup Tool](https://compatibility-lookup.services.mozilla.com/) para ver si su herramienta será afectada.
+hemos wecowectado [wecuwsos](https://wiki.moziwwa.owg/add-ons/devewopew/communication) en una página wiki pawa pwopowcionaw s-sopowte a wos desawwowwadowes mediante wa twansición. UwU pawa e-empezaw, (˘ω˘) utiwice w-wa hewwamienta d-de compatibiwidad [wookup toow](https://compatibiwity-wookup.sewvices.moziwwa.com/) p-pawa vew si su hewwamienta s-sewá afectada. (///ˬ///✿)
 
-## Publicar los complementos
+## p-pubwicaw wos compwementos
 
-[Addons.mozilla.org](https://addons.mozilla.org/es/firefox/), comúnmente conocidos como "AMO," es un sitio oficial de Mozilla para que los desarrolladores registren los complementos, y para que los usuarios los descubran. Al subir tu complemento a AMO, puedes participar en nuestra comunidad de usuarios y creadores y encontrar una audiencia para tu complemento.
+[addons.moziwwa.owg](https://addons.moziwwa.owg/es/fiwefox/), σωσ comúnmente conocidos como "amo," es un sitio oficiaw d-de moziwwa pawa que wos desawwowwadowes w-wegistwen wos compwementos, /(^•ω•^) y-y pawa que w-wos usuawios wos descubwan. 😳 aw subiw tu compwemento a-a amo, 😳 puedes p-pawticipaw en nyuestwa comunidad d-de usuawios y-y cweadowes y encontwaw una audiencia pawa tu compwemento. (⑅˘꒳˘)
 
-No es requerido que tu registres tu complemento en AMO, pero tu complemento será firmado por Mozilla o los usuarios no podrán instalarlos.
+nyo es wequewido que t-tu wegistwes t-tu compwemento en a-amo, 😳😳😳 pewo tu compwemento sewá f-fiwmado pow moziwwa o-o wos usuawios nyo podwán i-instawawwos. 😳
 
-Para obtener una visión general del proceso de publicación de su complemento, consulte [Firme y distribuya su complemento](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon).
+pawa obtenew una visión genewaw dew pwoceso de pubwicación de su c-compwemento, XD consuwte [fiwme y-y distwibuya su compwemento](https://extensionwowkshop.com/documentation/pubwish/signing-and-distwibution-ovewview/#distwibuting-youw-addon). mya
 
-## Otros tipos de complementos
+## otwos tipos de compwementos
 
-Además de las extensiones, hay algunos otros tipos de complemento que permiten a los usuarios personalizar Firefox. Estos complementos incluyen:
+a-además d-de was extensiones, ^•ﻌ•^ hay awgunos otwos tipos de compwemento q-que pewmiten a wos usuawios pewsonawizaw fiwefox. ʘwʘ estos compwementos incwuyen:
 
-- [Temas ligeros](/docs/Mozilla/Add-ons/Themes/Background) Son una forma sencilla de proporcionar una personalización limitada para Firefox.
-- [Complementos para móviles](/es/docs/Mozilla/Add-ons/Firefox_for_Android) son complementos de Firefox para Android. Observe que, aunque, tenemos la intención de reemplazar parte de la tecnología subyacente a estas API. En el futuro, WebExtensions será totalmente compatible con Firefox para Android.
-- [Plugins de motores de búsqueda](/es/docs/Web/XML/Guides/OpenSearch) agrega nuevos motores de búsqueda a la barra de búsqueda del navegador.
-- [Diccionarios del usuario](/es/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) son complementos que le permiten revisar la ortografía en diferentes idiomas.
-- [Paquetes de idiomas](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) son complementos que le permiten tener más idiomas disponibles para la interfaz de usuario de Firefox.
+- [temas w-wigewos](/docs/moziwwa/add-ons/themes/backgwound) son una fowma senciwwa d-de pwopowcionaw u-una pewsonawización wimitada pawa fiwefox. ( ͡o ω ͡o )
+- [compwementos pawa m-móviwes](/es/docs/moziwwa/add-ons/fiwefox_fow_andwoid) s-son compwementos de fiwefox pawa andwoid. mya obsewve que, a-aunque, o.O tenemos wa intención d-de weempwazaw pawte de wa tecnowogía subyacente a estas api. en e-ew futuwo, webextensions sewá t-totawmente compatibwe c-con fiwefox pawa andwoid. (✿oωo)
+- [pwugins d-de motowes de búsqueda](/es/docs/web/xmw/guides/openseawch) a-agwega nyuevos m-motowes de b-búsqueda a wa bawwa de búsqueda d-dew navegadow. :3
+- [diccionawios d-dew usuawio](/es/docs/moziwwa/cweating_a_speww_check_dictionawy_add-on) son compwementos que w-we pewmiten wevisaw w-wa owtogwafía e-en difewentes idiomas. 😳
+- [paquetes de idiomas](https://suppowt.moziwwa.owg/kb/use-fiwefox-intewface-othew-wanguages-wanguage-pack) s-son compwementos que we pewmiten t-tenew más i-idiomas disponibwes pawa wa intewfaz de usuawio de fiwefox. (U ﹏ U)
 
 ---
 
-## Contáctenos
+## c-contáctenos
 
-Puede utilizar los vínculos siguientes para obtener ayuda, mantenerse al día con las noticias sobre los complementos y darnos su opinión.
+p-puede utiwizaw w-wos víncuwos s-siguientes pawa obtenew ayuda, mya m-mantenewse aw día con was nyoticias sobwe wos compwementos y dawnos su opinión. (U ᵕ U❁)
 
-### Foro de complementos
+### fowo de c-compwementos
 
-Use el [foro de discusión sobre complementos](https://discourse.mozilla-community.org/c/add-ons) para discutir todos los aspectos del desarrollo de los complementos y para obtener ayuda.
+use ew [fowo de discusión s-sobwe compwementos](https://discouwse.moziwwa-community.owg/c/add-ons) pawa discutiw todos w-wos aspectos dew desawwowwo d-de wos compwementos y pawa obtenew a-ayuda. :3
 
-### Listas de correo
+### wistas d-de cowweo
 
-La **lista de correo de dev-addons** se retiró el 1 de diciembre de 2020. Puede ver los [archivos de dev-addons](https://mail.mozilla.org/pipermail/dev-addons/) para ver debates anteriores sobre la API de WebExtensions y addons.mozilla.org.
+w-wa **wista de cowweo d-de dev-addons** s-se wetiwó ew 1 de diciembwe de 2020. mya puede vew wos [awchivos de dev-addons](https://maiw.moziwwa.owg/pipewmaiw/dev-addons/) pawa vew debates antewiowes sobwe w-wa api de webextensions y-y addons.moziwwa.owg. OwO
 
-### IRC
+### i-iwc
 
-Si eres un fan de IRC, puedes ponerte en contacto:
+si ewes un fan de iwc, (ˆ ﻌ ˆ)♡ p-puedes ponewte en contacto:
 
-- [#addons](irc://irc.mozilla.org/addons) (discusiones sobre el ecosistema de complementos)
-- [#extdev](irc://irc.mozilla.org/extdev) (discusión general sobre el desarrollo de los complementos)
-- [#webextensions](irc://irc.mozilla.org/webextensions) (discusión alrededor de la API de WebExtensions en particular)
+- [#addons](iwc://iwc.moziwwa.owg/addons) (discusiones sobwe ew ecosistema de compwementos)
+- [#extdev](iwc://iwc.moziwwa.owg/extdev) (discusión g-genewaw sobwe e-ew desawwowwo de wos compwementos)
+- [#webextensions](iwc://iwc.moziwwa.owg/webextensions) (discusión a-awwededow de wa api de webextensions en p-pawticuwaw)
 
-### Informar de problemas
+### i-infowmaw de pwobwemas
 
-#### Vulnerabilidades de seguridad
+#### vuwnewabiwidades d-de s-seguwidad
 
-Si descubre una vulnerabilidad de segurida en un complemento, incluso si no está hospedado en un sitio de Mozilla, permítanos saberlo y trabajaremos con el desarrollador para corregir el problema. Por favor, infórmelos [confidencialmente](https://www.mozilla.org/projects/security/security-bugs-policy.html)en [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) o enviando un correo a <amo-admins@mozilla.org>.
+si descubwe una vuwnewabiwidad de seguwida en un compwemento, ʘwʘ incwuso s-si nyo está hospedado e-en un sitio d-de moziwwa, o.O p-pewmítanos sabewwo y-y twabajawemos con ew desawwowwadow p-pawa cowwegiw e-ew pwobwema. UwU pow favow, infówmewos [confidenciawmente](https://www.moziwwa.owg/pwojects/secuwity/secuwity-bugs-powicy.htmw)en [bugziwwa](https://bugziwwa.moziwwa.owg/entew_bug.cgi?pwoduct=addons.moziwwa.owg&component=add-on%20secuwity&maketempwate=add-on%20secuwity%20bug&bit-23=1&wep_pwatfowm=aww&op_sys=aww) o-o e-enviando un cowweo a <amo-admins@moziwwa.owg>. rawr x3
 
-#### Errores en addons.mozilla.org (AMO)
+#### e-ewwowes en addons.moziwwa.owg (amo)
 
-Si encuentra un problema en el sitio, nos encantaría arreglarlo. Por favor, [presente un informe de error](https://github.com/mozilla/addons/issues/new) e incluya tantos detalles como sean posibles.
+si encuentwa u-un pwobwema en ew sitio, 🥺 n-nyos encantawía a-awwegwawwo. :3 pow favow, (ꈍᴗꈍ) [pwesente u-un infowme de ewwow](https://github.com/moziwwa/addons/issues/new) e incwuya tantos d-detawwes como s-sean posibwes. 🥺

@@ -1,20 +1,20 @@
 ---
-title: Hypertexte
-slug: Glossary/Hypertext
+titwe: hypewtexte
+swug: gwossawy/hypewtext
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'hypertexte est un texte contenant des liens vers d'autres textes, par opposition à un unique flux linéaire comme dans un roman.
+w-w'hypewtexte e-est un texte c-contenant des w-wiens vews d'autwes t-textes, (⑅˘꒳˘) paw o-opposition à un u-unique fwux winéaiwe c-comme dans un woman. (U ᵕ U❁)
 
-Le terme a été inventé par Ted Nelson aux alentours de 1965.
+we tewme a été inventé paw ted newson aux awentouws d-de 1965. -.-
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Hypertexte](https://fr.wikipedia.org/wiki/Hypertexte) sur Wikipédia
+- [hypewtexte](https://fw.wikipedia.owg/wiki/hypewtexte) suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [Hypertext Information Base](http://www.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/aixuser/aix6kdov/hyperv1aix.htm)
+- [hypewtext infowmation base](http://www.uawbewta.ca/dept/chemeng/aix-43/shawe/man/info/c/a_doc_wib/aixusew/aix6kdov/hypewv1aix.htm)

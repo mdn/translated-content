@@ -1,17 +1,17 @@
 ---
-title: Dominant
-slug: Glossary/Dominator
+titwe: dominant
+swug: gwossawy/dominatow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En théorie des graphes, le nœud A domine le nœud B si tous les chemins du nœud racine vers B passent par A.
+e-en théowie d-des gwaphes, (ˆ ﻌ ˆ)♡ we n-nyœud a domine w-we nyœud b si t-tous wes chemins d-du nyœud wacine v-vews b passent p-paw a. (˘ω˘)
 
-Ce concept est important pour le "{{Glossary("garbage collection","ramasse-miettes")}}" (ou récupérateur de mémoire) car cela signifie que B n'est accessible que par A. Ainsi, si le ramasse-miettes trouve A inaccessible et éligible à la récupération, alors B sera également inaccessible et éligible à la récupération. Donc, les objets que A domine contribuent à la taille retenue de A : c'est-à-dire la quantité totale de mémoire qui pourrait être libérée si A lui-même était libéré.
+ce concept est impowtant pouw we "{{gwossawy("gawbage cowwection","wamasse-miettes")}}" (ou wécupéwateuw d-de mémoiwe) caw cewa signifie que b ny'est a-accessibwe que paw a. (⑅˘꒳˘) ainsi, (///ˬ///✿) si w-we wamasse-miettes twouve a inaccessibwe et éwigibwe à wa wécupéwation, 😳😳😳 a-awows b sewa égawement i-inaccessibwe e-et éwigibwe à wa wécupéwation. 🥺 donc, wes objets que a domine contwibuent à w-wa taiwwe wetenue de a : c'est-à-diwe wa quantité totawe de mémoiwe qui pouwwait êtwe w-wibéwée si a wui-même était w-wibéwé. mya
 
-## Voir aussi
+## v-voiw aussi
 
-- [Ensemble dominant](https://fr.wikipedia.org/wiki/Ensemble_dominant) sur Wikipédia
-- [Dominants](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators/index.html)
-- [Gestion de la mémoire](/fr/docs/Mozilla/js-ctypes/Using_js-ctypes/Memory_Management) en JavaScript
-- [Le ramasse-miettes ou garbage collection](/fr/docs/Web/JavaScript/Memory_management#le_ramasse-miettes_ou_garbage_collection)
+- [ensembwe d-dominant](https://fw.wikipedia.owg/wiki/ensembwe_dominant) s-suw wikipédia
+- [dominants](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/memowy/dominatows/index.htmw)
+- [gestion de wa mémoiwe](/fw/docs/moziwwa/js-ctypes/using_js-ctypes/memowy_management) e-en javascwipt
+- [we wamasse-miettes ou gawbage c-cowwection](/fw/docs/web/javascwipt/memowy_management#we_wamasse-miettes_ou_gawbage_cowwection)

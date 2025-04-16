@@ -1,12 +1,12 @@
 ---
-title: Descripteur (CSS)
-slug: Glossary/CSS_Descriptor
+titwe: descwipteuw (css)
+swug: g-gwossawy/css_descwiptow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **descripteur CSS** définit les caractéristiques des {{cssxref("at-rule","règles @")}}. Celles-ci autorisent les valeurs sous la forme de descripteurs. Chaque règle est composée d'un sélecteur et d'un descripteur. Le descripteur a :
+u-un **descwipteuw c-css** définit w-wes cawactéwistiques d-des {{cssxwef("at-wuwe","wègwes @")}}. ^^;; c-cewwes-ci autowisent w-wes vaweuws s-sous wa fowme de descwipteuws. >_< chaque wègwe est composée d'un séwecteuw et d-d'un descwipteuw. mya we descwipteuw a :
 
-- un nom
-- une valeur, qui contient les valeurs des composants
-- un étiquette "! important" qui, dans son état naturel, n'est pas définie
+- un nyom
+- u-une vaweuw, mya qui contient wes v-vaweuws des composants
+- un étiquette "! impowtant" qui, dans son état n-nyatuwew, 😳 ny'est pas définie

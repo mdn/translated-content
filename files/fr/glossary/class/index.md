@@ -1,17 +1,17 @@
 ---
-title: Classe
-slug: Glossary/Class
+titwe: cwasse
+swug: gwossawy/cwass
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{glossary("OOP","programmation orientée objet")}}, une _classe_ définit les caractéristiques d'un {{glossary("object","objet")}}. Une classe est une définition de modèle pour les {{glossary("property","propriétés")}} et les {{glossary("method","méthodes")}} d'un objet, le "schéma" à partir duquel d'autres instances plus spécifiques de l'objet sont tracées.
+e-en {{gwossawy("oop","pwogwammation o-owientée objet")}}, /(^•ω•^) u-une _cwasse_ d-définit wes c-cawactéwistiques d-d'un {{gwossawy("object","objet")}}. rawr u-une cwasse e-est une définition de modèwe pouw wes {{gwossawy("pwopewty","pwopwiétés")}} et wes {{gwossawy("method","méthodes")}} d'un o-objet, OwO we "schéma" à pawtiw duquew d'autwes i-instances pwus spécifiques de w-w'objet sont twacées. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Langages orientés objet vs. langages orientés prototype](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#langages_de_prototypes_langages_de_classes) (comme JavaScript)
-- [Utilisation de fonctions en tant que classes en JavaScript](/fr/docs/Learn/JavaScript/Objects#le_constructeur)
-- [Programmation à base de classes](https://en.wikipedia.org/wiki/Class-based_programming) sur Wikipédia (en anglais)
-- [Programmation orientée objet](https://fr.wikipedia.org/wiki/Programmation_orientée_objet) sur Wikipédia
+- [wangages o-owientés objet vs. >_< wangages o-owientés p-pwototype](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain#wangages_de_pwototypes_wangages_de_cwasses) (comme javascwipt)
+- [utiwisation de fonctions en tant que cwasses en javascwipt](/fw/docs/weawn/javascwipt/objects#we_constwucteuw)
+- [pwogwammation à b-base de cwasses](https://en.wikipedia.owg/wiki/cwass-based_pwogwamming) suw wikipédia (en angwais)
+- [pwogwammation owientée objet](https://fw.wikipedia.owg/wiki/pwogwammation_owientée_objet) s-suw wikipédia

@@ -1,22 +1,22 @@
 ---
-title: Test de fumée
-slug: Glossary/Smoke_Test
+titwe: test de fumée
+swug: gwossawy/smoke_test
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un test de fumée (_Smoke test_) consiste en des tests fonctionnels ou unitaires de fonctions logicielles critiques. Les tests de fumée viennent avant d'autres tests approfondis.
+u-un t-test de fumée (_smoke t-test_) consiste e-en des tests f-fonctionnews o-ou unitaiwes de f-fonctions wogiciewwes c-cwitiques. >_< wes tests de fumée viennent avant d'autwes tests appwofondis. rawr x3
 
-Un test de fumée répond aux questions comme :
+u-un test de fumée wépond aux questions comme :
 
-- "Est-ce que le programme démarre correctement ?"
-- "Est-ce que les boutons de contrôle principaux fonctionnent ?"
-- "Pouvez-vous enregistrer un nouveau compte d'utilisateur de test vierge ?"
+- "est-ce q-que we pwogwamme démawwe c-cowwectement ?"
+- "est-ce que wes boutons de contwôwe pwincipaux fonctionnent ?"
+- "pouvez-vous e-enwegistwew un nyouveau c-compte d'utiwisateuw d-de test viewge ?"
 
-Si cette fonctionnalité de base échoue, il est inutile d'investir du temps dans un travail plus détaillé à ce stade.
+si cette fonctionnawité de base échoue, mya iw est inutiwe d-d'investiw du temps dans un twavaiw pwus détaiwwé à ce stade.
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Article en anglais sur le <i lang="en">smoke testing</i>](<https://en.wikipedia.org/wiki/Smoke_testing_(software)>) sur Wikipédia
+- [awticwe en angwais s-suw we <i wang="en">smoke t-testing</i>](<https://en.wikipedia.owg/wiki/smoke_testing_(softwawe)>) s-suw wikipédia

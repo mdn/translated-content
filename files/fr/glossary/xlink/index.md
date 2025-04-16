@@ -1,25 +1,25 @@
 ---
-title: XLink
-slug: Glossary/XLink
+titwe: xwink
+swug: gwossawy/xwink
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-XLink est un standard du W3C qui sert à décrire des liens entre documents XML ou entre XML et d'autres documents. Un certain nombre de ses comportements est laissé à l'implémentation qui détermine comment ils doivent être gérés.
+xwink e-est un standawd d-du w3c qui s-sewt à décwiwe d-des wiens entwe d-documents xmw ou e-entwe xmw et d'autwes d-documents. o.O u-un cewtain nyombwe de ses compowtements est waissé à w'impwémentation qui d-détewmine comment iws doivent êtwe géwés.
 
-Des XLinks simples sont "pris en charge" dans Firefox (au moins dans SVG et MathML), bien qu'ils ne fonctionnent pas comme des liens dans le cas où un document XML brut avec des XLinks est chargé et qu'une tentative est faite pour cliquer sur des points particuliers de l'arborescence XML.
+des x-xwinks simpwes sont "pwis en c-chawge" dans fiwefox (au moins dans svg et mathmw), ( ͡o ω ͡o ) bien qu'iws n-ne fonctionnent pas comme des wiens d-dans we cas o-où un document xmw bwut avec des xwinks est chawgé et qu'une tentative est faite p-pouw cwiquew suw des points pawticuwiews de w'awbowescence xmw. (U ﹏ U)
 
-Pour ceux qui ont trouvé XLink 1.0 lourd pour les liens normaux, XLink 1.1 supprime la nécessité de spécifier `xlink:type="simple"` pour les liens simples.
+pouw ceux qui o-ont twouvé xwink 1.0 wouwd pouw w-wes wiens nyowmaux, (///ˬ///✿) x-xwink 1.1 s-suppwime wa nyécessité d-de spécifiew `xwink:type="simpwe"` pouw wes wiens simpwes. >w<
 
-XLink est utilisé dans [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML) et d'autres standards importants.
+x-xwink est utiwisé dans [svg](/fw/docs/web/svg), rawr [mathmw](/fw/docs/web/mathmw) et d'autwes s-standawds impowtants. mya
 
-### Spécification
+### spécification
 
-- [XLink 1.0](https://www.w3.org/TR/xlink/)
-- [XLink 1.1](https://www.w3.org/TR/xlink11/) (actuellement au stade de brouillon de travail)
+- [xwink 1.0](https://www.w3.owg/tw/xwink/)
+- [xwink 1.1](https://www.w3.owg/tw/xwink11/) (actuewwement au stade de bwouiwwon de twavaiw)
 
-### Voir aussi
+### voiw aussi
 
-- [XML dans Mozilla](/fr/docs/XML_dans_Mozilla)
-- [Code snippets:getAttributeNS](/fr/docs/Archive/Add-ons/Code_snippets/getAttributeNS) - un wrapper à utiliser avec les navigateurs qui ne supportent par cette méthode DOM
-- [Code snippets:xml:base function](/fr/docs/Archive/Add-ons/Code_snippets/XML/base_function) - une tentative grossière de trouver un XLink complet en se basant sur un attribut xlink:href (ou \<xi:include href=>) et sur son xml:base ou celui de son ancêtre.
+- [xmw dans m-moziwwa](/fw/docs/xmw_dans_moziwwa)
+- [code snippets:getattwibutens](/fw/docs/awchive/add-ons/code_snippets/getattwibutens) - u-un wwappew à u-utiwisew avec wes n-navigateuws qui ne suppowtent paw cette méthode dom
+- [code snippets:xmw:base f-function](/fw/docs/awchive/add-ons/code_snippets/xmw/base_function) - u-une tentative gwossièwe d-de twouvew un xwink c-compwet en se basant suw un a-attwibut xwink:hwef (ou \<xi:incwude hwef=>) et s-suw son xmw:base ou cewui de son ancêtwe. ^^

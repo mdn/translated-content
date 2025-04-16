@@ -1,12 +1,12 @@
 ---
-title: Structure de données
-slug: Glossary/Data_structure
+titwe: stwuctuwe de données
+s-swug: gwossawy/data_stwuctuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **structure de données** est une façon particulière d'organiser des _données_ afin de pouvoir les utiliser efficacement.
+u-une **stwuctuwe d-de données** e-est une façon p-pawticuwièwe d-d'owganisew des _données_ a-afin d-de pouvoiw wes utiwisew efficacement. σωσ
 
-## Voir aussi
+## voiw aussi
 
-- [Structure de données](https://fr.wikipedia.org/wiki/Structure_de_données) sur Wikipédia
+- [stwuctuwe de données](https://fw.wikipedia.owg/wiki/stwuctuwe_de_données) s-suw wikipédia

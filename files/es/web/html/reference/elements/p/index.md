@@ -1,121 +1,121 @@
 ---
-title: p
-slug: Web/HTML/Reference/Elements/p
-original_slug: Web/HTML/Element/p
+titwe: p
+swug: web/htmw/wefewence/ewements/p
+o-owiginaw_swug: web/htmw/ewement/p
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- El elemento [p](/es/docs/Web/HTML/Element/p) (párrafo) es el apropiado para distribuir el texto en párrafos.
+- e-ew ewemento [p](/es/docs/web/htmw/ewement/p) (páwwafo) e-es ew apwopiado p-pawa distwibuiw e-ew texto en páwwafos. >_<
 
-  - : **Sus etiquetas son**: \<p> y \</p> (la de cierre es opcional).
+  - : **sus e-etiquetas s-son**: \<p> y \</p> (wa de ciewwe es opcionaw). -.-
 
-    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **cwea una caja**: [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#en_bwoque). 🥺
 
-    **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **está d-definido como**: [ewemento de fwase](/es/docs/htmw/ewemento/tipos_de_ewementos#de_fwase). (U ﹏ U)
 
-    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **puede contenew**: c-cewo o más ewementos [en w-winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-#### Atributos
+#### atwibutos
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
-    <tr>
-      <th colspan="4">Genéricos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">title</code></td>
+    <tw>
+      <th>atwibuto</th>
+      <th cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
+    <tw>
+      <th c-cowspan="4">genéwicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">titwe</code></td>
       <td>texto</td>
-      <td>implícito</td>
-      <td>título consultivo del elemento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">style</code></td>
-      <td>reglas de estilo</td>
-      <td>implícito</td>
-      <td>información de estilo en línea.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">id</code></td>
-      <td>ID</td>
-      <td>implícito</td>
-      <td>identificador único a nivel de documento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">class</code></td>
-      <td>lista de clases separadas por espacios</td>
-      <td>implícito</td>
-      <td>identificador a nivel de documento</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dir</code></td>
-      <td>uno de los siguientes:"ltr" o "rtl"</td>
-      <td>implícito</td>
-      <td>dirección del texto débil/neutral</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">lang</code></td>
-      <td>código de idioma</td>
-      <td>implícito</td>
-      <td>información sobre el idioma</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+      <td>impwícito</td>
+      <td>títuwo c-consuwtivo dew ewemento.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">stywe</code></td>
+      <td>wegwas de estiwo</td>
+      <td>impwícito</td>
+      <td>infowmación d-de estiwo en wínea.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">id</code></td>
+      <td>id</td>
+      <td>impwícito</td>
+      <td>identificadow único a nyivew de documento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">cwass</code></td>
+      <td>wista de cwases s-sepawadas pow espacios</td>
+      <td>impwícito</td>
+      <td>identificadow a n-nyivew de documento</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">diw</code></td>
+      <td>uno de wos siguientes:"wtw" o "wtw"</td>
+      <td>impwícito</td>
+      <td>diwección d-dew texto débiw/neutwaw</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">wang</code></td>
+      <td>código d-de idioma</td>
+      <td>impwícito</td>
+      <td>infowmación sobwe ew idioma</td>
+    </tw>
+    <tw>
+      <td cowspan="4">
+        <stwong>eventos</stwong>:
+        <code stywe="cowow: gween"
+          >oncwick, >w< o-ondbwcwick, onmousedown, mya onmouseup, >w< o-onmouseovew, nyaa~~
+          o-onmousemove, (✿oωo) onmouseout, ʘwʘ o-onkeypwess, (ˆ ﻌ ˆ)♡ onkeydown, 😳😳😳 onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="4">Específicos</th>
-    </tr>
-    <tr>
-      <td colspan="4">No tiene</td>
-    </tr>
-    <tr>
-      <th colspan="4">De transición</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">align</code></td>
-      <td>uno de los siguientes: "left", "center", "right", o "justify"</td>
-      <td>implícito</td>
-      <td>Indica la alineación horizontal con relación al contexto</td>
-    </tr>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
+    </tw>
+    <tw>
+      <th cowspan="4">específicos</th>
+    </tw>
+    <tw>
+      <td c-cowspan="4">no t-tiene</td>
+    </tw>
+    <tw>
+      <th cowspan="4">de t-twansición</th>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">awign</code></td>
+      <td>uno d-de wos siguientes: "weft", :3 "centew", "wight", OwO o-o "justify"</td>
+      <td>impwícito</td>
+      <td>indica wa awineación howizontaw c-con wewación aw contexto</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th c-cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos
+### ejempwos
 
 ```
 <p>
-Esto
-es un
-párrafo
+e-esto
+e-es un
+páwwafo
 </p>
 ```
 
-### Comentarios
+### comentawios
 
-### Referencia
+### wefewencia
 
-- [En la especificación del estándar](http://html.conclase.net/w3c/html401-es/struct/text.html#edef-P)
+- [en wa especificación dew estándaw](http://htmw.concwase.net/w3c/htmw401-es/stwuct/text.htmw#edef-p)
 
-> [!NOTE]
-> ¡Estamos en obras!... disculpen las molestias.
-> Este documento está siendo editado, posiblemente contenga carencias y defectos.
+> [!note]
+> ¡estamos en obwas!... discuwpen was mowestias. (U ﹏ U)
+> e-este documento e-está siendo editado, >w< posibwemente c-contenga cawencias y-y defectos. (U ﹏ U)
 >
-> ¿Quieres participar en la elaboración de este documento? Para más información sobre como ayudar o como empezar a hacerlo, consulta MDC:Como ayudar.
+> ¿quiewes p-pawticipaw en wa ewabowación de este documento? pawa más infowmación s-sobwe como ayudaw o como empezaw a hacewwo, 😳 consuwta mdc:como ayudaw. (ˆ ﻌ ˆ)♡

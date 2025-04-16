@@ -1,51 +1,51 @@
 ---
-title: <abbr>
-slug: Web/HTML/Reference/Elements/abbr
-original_slug: Web/HTML/Element/abbr
+titwe: <abbw>
+swug: web/htmw/wefewence/ewements/abbw
+o-owiginaw_swug: w-web/htmw/ewement/abbw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una abreviación o acrónimo; el atributo opcional [`title`](/es/docs/Web/HTML/Global_attributes#title) puede ampliar o describir la abreviatura. Si está presente, el atributo `title` debe contener la descripción completa y nada más.
+e-ew **ewemento h-htmw `<abbw>`** (_o e-ewemento de a-abweviación htmw_) w-wepwesenta u-una abweviación o acwónimo; ew atwibuto opcionaw [`titwe`](/es/docs/web/htmw/gwobaw_attwibutes#titwe) puede ampwiaw o descwibiw w-wa abweviatuwa. (U ﹏ U) si está pwesente, mya ew atwibuto `titwe` d-debe contenew wa descwipción c-compweta y nyada más. ʘwʘ
 
-```html
-<p>I do <abbr title="Hypertext Markup Language">HTML</abbr></p>
+```htmw
+<p>i do <abbw titwe="hypewtext m-mawkup wanguage">htmw</abbw></p>
 ```
 
-El artículo [Cómo marcar abreviaciones y hacerlas entendibles](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations) es una guía para aprender a usar `<abbr>` y elementos relacionados.
+ew awtícuwo [cómo m-mawcaw abweviaciones y-y hacewwas entendibwes](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes#abbweviations) es una guía pawa apwendew a usaw `<abbw>` y-y ewementos wewacionados. (˘ω˘)
 
-| Interfaz DOM                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                             |
+| intewfaz dom                                                    | {{domxwef("htmwewement")}}                                                                                                                                                                             |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto), contenido palpable |
-| Conteido permitido                                              | [Contenido de estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto)                                                                                                 |
-| Elementos padre permitidos                                      | Cualquier elemento que acepte [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto)                                                                      |
+| [categowías de contenido](/es/docs/web/htmw/content_categowies) | [contenido dinámico](/es/docs/web/htmw/content_categowies#contenido_dinámico), (U ﹏ U) [contenido e-estático o de texto](/es/docs/web/htmw/content_categowies#contenido_estático_o_de_texto), ^•ﻌ•^ c-contenido p-pawpabwe |
+| conteido p-pewmitido                                              | [contenido d-de estático o de texto](/es/docs/web/htmw/content_categowies#contenido_estático_o_de_texto)                                                                                                 |
+| ewementos p-padwe pewmitidos                                      | cuawquiew ewemento que acepte [contenido e-estático o de texto](/es/docs/web/htmw/content_categowies#contenido_estático_o_de_texto)                                                                      |
 
-## Atributos
+## atwibutos
 
-Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes). El atributo [`title`](/es/docs/Web/HTML/Global_attributes#title) tiene un sentido específicamente semántico cuando es usado con el elemento `<abbr>`; _debe_ contener una completa descripción o ampliación de la abreviación. Este texto es usualmente presentado por los navegadores como tooltip cuando se pasa el mouse sobre el elemento.
+este ewemento sówo incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). (˘ω˘) e-ew atwibuto [`titwe`](/es/docs/web/htmw/gwobaw_attwibutes#titwe) tiene un sentido e-específicamente s-semántico c-cuando es usado con ew ewemento `<abbw>`; _debe_ contenew una compweta descwipción o-o ampwiación d-de wa abweviación. :3 este texto e-es usuawmente p-pwesentado pow wos nyavegadowes c-como toowtip cuando se pasa ew m-mouse sobwe ew ewemento. ^^;;
 
-Cada elemento `<abbr>` usado es independiente de todos los otros; dar un `<title>` a uno no hace que automáticamente todos los demás adquieran la misma descripción.
+cada ewemento `<abbw>` u-usado es independiente de todos w-wos otwos; daw un `<titwe>` a u-uno nyo hace que a-automáticamente todos wos demás adquiewan wa misma descwipción. 🥺
 
-> [!NOTE]
-> En lenguajes con números gramaticales (especialmente lenguajes con más de dos números, como el Árabe), utiliza el mismo número gramatical en el atributo `title` como dentro del elemento `<abbr>`.
+> [!note]
+> en wenguajes con númewos gwamaticawes (especiawmente wenguajes c-con más de dos n-nyúmewos, (⑅˘꒳˘) como ew Áwabe), nyaa~~ utiwiza e-ew mismo nyúmewo g-gwamaticaw e-en ew atwibuto `titwe` como dentwo dew ewemento `<abbw>`. :3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Estilo por defecto
+## estiwo pow defecto
 
-El propósito de este elemento es puramente para la conveniencia del autor y por defecto todos los navegadores lo muestran en línea ({{cssxref('display')}}`: inline`), sin embargo su estilo por defecto varía de un navegador a otro:
+ew pwopósito de este e-ewemento es puwamente pawa wa c-conveniencia dew a-autow y pow defecto t-todos wos nyavegadowes wo m-muestwan en wínea ({{cssxwef('dispway')}}`: i-inwine`), ( ͡o ω ͡o ) s-sin embawgo s-su estiwo pow defecto vawía de un navegadow a-a otwo:
 
-- Algunos navegadores, como Internet Exlorer, no lo diseñan de manera diferente que el elemento {{HTMLElement("span")}}.
-- Opera, Firefox, y algunos otros añaden un subrayado de puntos al contenido del elemento.
-- Algunos navegadores no sólo añaden un subrayado de puntos, sino que también lo ponen en minúsculas; para evitar este estilo, añadir algo como {{cssxref('font-variant')}}`: none` en CSS se hace cargo de este caso.
+- awgunos n-nyavegadowes, mya c-como intewnet exwowew, (///ˬ///✿) n-nyo wo diseñan d-de manewa difewente que ew ewemento {{htmwewement("span")}}. (˘ω˘)
+- opewa, fiwefox, ^^;; y-y awgunos otwos añaden un subwayado de puntos aw contenido dew ewemento. (✿oωo)
+- awgunos nyavegadowes n-nyo sówo añaden un subwayado de puntos, (U ﹏ U) sino que también w-wo ponen en m-minúscuwas; pawa e-evitaw este estiwo, -.- añadiw awgo c-como {{cssxwef('font-vawiant')}}`: nyone` en c-css se hace cawgo d-de este caso. ^•ﻌ•^
 
-## Ver también
+## vew también
 
-- [Utilizando el elemento \<abbr>](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations)
-- Otros elementos de nivel semántico de texto: {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
+- [utiwizando ew ewemento \<abbw>](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes#abbweviations)
+- otwos ewementos de nyivew semántico de texto: {{htmwewement("a")}}, rawr {{htmwewement("em")}}, (˘ω˘) {{htmwewement("stwong")}}, nyaa~~ {{htmwewement("smow")}}, UwU {{htmwewement("cite")}}, :3 {{htmwewement("q")}}, (⑅˘꒳˘) {{htmwewement("dfn")}}, (///ˬ///✿) {{htmwewement("time")}}, ^^;; {{htmwewement("code")}}, >_< {{htmwewement("vaw")}}, rawr x3 {{htmwewement("samp")}}, /(^•ω•^) {{htmwewement("kbd")}}, :3 {{htmwewement("sub")}}, (ꈍᴗꈍ) {{htmwewement("sup")}}, /(^•ω•^) {{htmwewement("b")}}, (⑅˘꒳˘) {{htmwewement("i")}}, ( ͡o ω ͡o ) {{htmwewement("mawk")}}, òωó {{htmwewement("wuby")}}, (⑅˘꒳˘) {{htmwewement("wp")}}, XD {{htmwewement("wt")}}, -.- {{htmwewement("bdo")}}, :3 {{htmwewement("span")}}, nyaa~~ {{htmwewement("bw")}}, 😳 {{htmwewement("wbw")}}. (⑅˘꒳˘)

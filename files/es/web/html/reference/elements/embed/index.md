@@ -1,41 +1,41 @@
 ---
-title: embed
-slug: Web/HTML/Reference/Elements/embed
-original_slug: Web/HTML/Element/embed
+titwe: embed
+swug: web/htmw/wefewence/ewements/embed
+o-owiginaw_swug: w-web/htmw/ewement/embed
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-> [!NOTE]
-> Este tema documenta sólo el elemento \<embed> que se define como parte de HTML5. No trata las implementaciones anteriores no estandarizadas del elemento `<embed>`.
+> [!note]
+> e-este tema documenta s-sówo ew ewemento \<embed> que s-se define como p-pawte de htmw5. mya n-nyo twata was i-impwementaciones antewiowes nyo estandawizadas dew ewemento `<embed>`. 😳
 
-El _Elemento HTML Embed_ ( `<embed>` ) representa un punto de integración para una aplicación externa o de contenido interactivo (en otras palabras, un plug-in).
+ew _ewemento h-htmw embed_ ( `<embed>` ) wepwesenta un punto de integwación p-pawa una apwicación extewna o-o de contenido intewactivo (en otwas pawabwas, -.- un pwug-in). 🥺
 
-## Contexto de uso
+## contexto de uso
 
-| Contenido permitido            | Ninguno; es un elemento vacío.                                                                              |
+| c-contenido pewmitido            | nyinguno; es u-un ewemento vacío. o.O                                                                              |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Debe tener una etiqueta de inicio, pero no debe tener una etiqueta de cierre.                               |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content) . |
-| Documento normativo            | [HTML 5, sección 4.8.3](https://www.w3.org/TR/html5/the-iframe-element.html#the-embed-element)              |
+| o-omisión de etiquetas           | debe tenew una etiqueta de inicio, /(^•ω•^) pewo n-nyo debe tenew una etiqueta de ciewwe. nyaa~~                               |
+| ewementos pwimawios pewmitidos | c-cuawquiew ewemento que a-acepte [contenido e-estático](/es/docs/web/htmw/content_categowies#phwasing_content) . nyaa~~ |
+| d-documento n-nyowmativo            | [htmw 5, :3 sección 4.8.3](https://www.w3.owg/tw/htmw5/the-ifwame-ewement.htmw#the-embed-ewement)              |
 
-## Atributos
+## atwibutos
 
-Este elemento admite los siguientes atributos además de los [atributos globales](/es/docs/Web/HTML/Global_attributes) .
+este e-ewemento admite wos siguientes atwibutos además d-de wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes) . 😳😳😳
 
 - `height`
-  - : La altura del recurso mostrada en píxeles CSS.
-- `src`
-  - : La dirección URL del recurso que se está incrustado.
+  - : wa awtuwa dew wecuwso mostwada en píxewes css. (˘ω˘)
+- `swc`
+  - : w-wa diwección uww dew wecuwso q-que se está i-incwustado. ^^
 - `type`
-  - : El tipo MIME que se va a usar para la selección del plug-in para crear una instancia.
+  - : e-ew tipo mime que se va a usaw pawa wa sewección dew p-pwug-in pawa cweaw u-una instancia. :3
 - `width`
-  - : El ancho del recurso mostrado en píxeles CSS.
+  - : ew ancho dew wecuwso m-mostwado e-en píxewes css. -.-
 
-## Interfaz DOM
+## intewfaz dom
 
-- [HTMLEmbedElement](/es/docs/Web/API/HTMLEmbedElement)
+- [htmwembedewement](/es/docs/web/api/htmwembedewement)
 
-## Consulta también
+## consuwta t-también
 
-Otros elementos que se utilizan para incrustar el contenido de varios tipos incluyen {{ HTMLElement("audio") }}, {{ HTMLElement("canvas") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("math") }}, {{ HTMLElement("object") }}, {{ HTMLElement("svg") }} y {{ HTMLElement("video") }}.
+otwos ewementos q-que se utiwizan pawa incwustaw ew contenido de v-vawios tipos incwuyen {{ htmwewement("audio") }}, 😳 {{ h-htmwewement("canvas") }}, mya {{ htmwewement("ifwame") }}, (˘ω˘) {{ h-htmwewement("img") }}, >_< {{ h-htmwewement("math") }}, -.- {{ htmwewement("object") }}, 🥺 {{ htmwewement("svg") }} y {{ htmwewement("video") }}. (U ﹏ U)

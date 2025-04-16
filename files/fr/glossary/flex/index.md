@@ -1,40 +1,40 @@
 ---
-title: Flex
-slug: Glossary/Flex
+titwe: fwex
+swug: gwossawy/fwex
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-`flex` est une nouvelle valeur ajoutée à la propriété CSS {{cssxref("display")}}. De même qu'`inline-flex`, elle transforme l'élément auquel elle s'applique en un {{glossary("Flex Container","conteneur flexible")}} et les enfants de l'élément en {{glossary("Flex Item","éléments flexible")}}. Les éléments participent alors à la mise en page flexible, et toutes les propriétés définies dans le module de mise en page de boîte flexible CSS peuvent être appliquées.
+`fwex` e-est une nyouvewwe v-vaweuw ajoutée à w-wa pwopwiété c-css {{cssxwef("dispway")}}. mya d-de même qu'`inwine-fwex`, 😳 ewwe t-twansfowme w'éwément a-auquew e-ewwe s'appwique en un {{gwossawy("fwex containew","conteneuw fwexibwe")}} et wes enfants de w'éwément e-en {{gwossawy("fwex item","éwéments fwexibwe")}}. wes éwéments p-pawticipent awows à w-wa mise en page fwexibwe, -.- et toutes wes pwopwiétés définies d-dans we moduwe de mise en page d-de boîte fwexibwe c-css peuvent êtwe appwiquées. 🥺
 
-La propriété `flex` est un raccourci pour les propriétés `flex-grow`, `flex-shrink` et `flex-basis`.
+wa pwopwiété `fwex` est un waccouwci pouw wes p-pwopwiétés `fwex-gwow`, o.O `fwex-shwink` et `fwex-basis`. /(^•ω•^)
 
-De plus `<flex>` peut se référer à [une longueur flexible](/fr/docs/Web/CSS/flex_value) dans une grille de mise en page CSS.
+de pwus `<fwex>` peut se wéféwew à [une w-wongueuw fwexibwe](/fw/docs/web/css/fwex_vawue) d-dans une g-gwiwwe de mise e-en page css. nyaa~~
 
-## Voir aussi
+## v-voiw aussi
 
-### Références de la propriété
+### wéféwences de wa pwopwiété
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("justify-content")}}
-- {{cssxref("order")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("fwex")}}
+- {{cssxwef("fwex-basis")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}}
+- {{cssxwef("fwex-gwow")}}
+- {{cssxwef("fwex-shwink")}}
+- {{cssxwef("fwex-wwap")}}
+- {{cssxwef("justify-content")}}
+- {{cssxwef("owdew")}}
 
-### En lire plus
+### e-en wiwe pwus
 
-- _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/) (en)_
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide Flexbox CSS : _[Les liens entre flexbox et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- Guide Flexbox CSS : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
-- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
-- Guide Flexbox CSS : _[Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
-- Guide Flexbox CSS : _[Cas d'utilisation classiques de flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)_
+- _[css fwexibwe box wayout m-moduwe wevew 1 specification](https://www.w3.owg/tw/css-fwexbox-1/) (en)_
+- guide fwexbox css : _[wes concepts de base pouw fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- guide f-fwexbox css : _[wes wiens entwe f-fwexbox et wes a-autwes méthodes d-de disposition](/fw/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods)_
+- guide fwexbox css : _[awignew des éwéments dans u-un conteneuw fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- g-guide fwexbox css : _[owdonnew w-wes éwéments f-fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_
+- guide fwexbox c-css : _[contwôwew wes pwopowtions d-des boîtes fwexibwes we wong de w'axe pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_
+- g-guide fwexbox css : _[maîtwisew w-we passage à wa wigne des éwéments f-fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)_
+- g-guide fwexbox css : _[cas d'utiwisation cwassiques de fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox)_

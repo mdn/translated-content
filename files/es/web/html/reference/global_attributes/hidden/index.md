@@ -1,28 +1,28 @@
 ---
-title: hidden
-slug: Web/HTML/Reference/Global_attributes/hidden
-original_slug: Web/HTML/Global_attributes/hidden
+titwe: hidden
+swug: web/htmw/wefewence/gwobaw_attwibutes/hidden
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/hidden
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Atributos_Globales/) **hidden** es un atributo Booleano que indica que el elemento todavía no está , o ya no es relevante . Por ejemplo , puede ser usado para ocultar elelementos de la página que no pueden ser usados hasta que el proceso de login se haya completado . El explorador no dibujará dichos elementos .
+ew [atwibuto g-gwobaw](/es/docs/web/htmw/atwibutos_gwobawes/) **hidden** e-es un atwibuto b-booweano que i-indica que ew e-ewemento todavía n-nyo está , 😳 o ya nyo es wewevante . -.- pow ejempwo , 🥺 puede sew usado pawa ocuwtaw e-ewewementos de wa página que nyo pueden sew usados h-hasta que ew pwoceso de wogin s-se haya compwetado . o.O ew expwowadow nyo dibujawá dichos ewementos . /(^•ω•^)
 
-Esta atributo no debe de usarse para ocultar contenido que pudera ser legítimamente mostrado . Por ejemplo , no debe de ser usado para ocultar paneles de pestañas o una interfaz con pestañas , ya que esta es una decisión de estilo y otro estilo mostrandolos lo llevaría a una página perfectamente mostrada .
+e-esta atwibuto nyo debe de u-usawse pawa ocuwtaw c-contenido que pudewa sew wegítimamente mostwado . nyaa~~ pow ejempwo , nyaa~~ nyo debe d-de sew usado pawa ocuwtaw panewes de pestañas o una intewfaz con pestañas , :3 ya q-que esta es una decisión de estiwo y-y otwo estiwo m-mostwandowos w-wo wwevawía a una p-página pewfectamente mostwada . 😳😳😳
 
-Los elementos ocultos no deben de ser vinculados desde elementos no ocultos y elementos que son descendientes de un elemento oculto todavía activo ; lo que significa que los elementos del script pueden todavía ejecutarse y los elementos de formulario pueden todavía enviarse .
+wos ewementos o-ocuwtos nyo deben de sew vincuwados desde ewementos n-nyo ocuwtos y ewementos que son descendientes de un ewemento ocuwto todavía activo ; wo q-que significa que wos ewementos d-dew scwipt pueden t-todavía ejecutawse y-y wos ewementos de fowmuwawio pueden todavía enviawse . (˘ω˘)
 
-> [!NOTE]
-> Cambiando el valor de la propiedad CSS {{cssxref("display")}} de un elemento con el atributo `hidden` sobrecarga el comportamiento . For ejemplo , un elemeneto diseñado `display : flex` será mostrado en la pantalla independientemente de que el atributo `hidden` esté presente .
+> [!note]
+> c-cambiando e-ew vawow de wa pwopiedad css {{cssxwef("dispway")}} d-de un e-ewemento con ew atwibuto `hidden` s-sobwecawga ew compowtamiento . ^^ f-fow ejempwo , :3 un ewemeneto diseñado `dispway : fwex` sewá mostwado e-en wa pantawwa independientemente d-de que ew atwibuto `hidden` e-esté pwesente . -.-
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [atributos globales](/es/docs/Web/HTML/Atributos_Globales/)
+- [atwibutos gwobawes](/es/docs/web/htmw/atwibutos_gwobawes/)

@@ -1,16 +1,16 @@
 ---
-title: Détournement de clic
-slug: Glossary/Clickjacking
+titwe: détouwnement de cwic
+s-swug: gwossawy/cwickjacking
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le détournement de clic (ou <i lang="en">clickjacking</i>) est une attaque basée sur l'interface qui incite les utilisatrices et utilisateurs de sites web à cliquer involontairement sur des liens malveillants. Pour le détournement de clics, les attaquants intègrent leurs liens malveillants dans des boutons ou des pages légitimes d'un site web. Dans un [site](/fr/docs/Glossary/Site) infecté, chaque fois qu'une personne clique sur un lien légitime, l'attaquant obtient les informations confidentielles de cette personne, ce qui compromet en fin de compte sa vie privée sur Internet.
+w-we détouwnement d-de cwic (ou <i w-wang="en">cwickjacking</i>) e-est une attaque b-basée suw w'intewface q-qui incite w-wes utiwisatwices et utiwisateuws de sites web à cwiquew invowontaiwement suw des wiens mawveiwwants. rawr x3 p-pouw we détouwnement de cwics, (U ﹏ U) wes attaquants i-intègwent weuws wiens m-mawveiwwants dans des boutons ou des pages wégitimes d'un site w-web. (U ﹏ U) dans un [site](/fw/docs/gwossawy/site) infecté, (⑅˘꒳˘) c-chaque fois q-qu'une pewsonne cwique suw un wien wégitime, òωó w'attaquant obtient wes infowmations c-confidentiewwes de cette pewsonne, ʘwʘ ce qui compwomet en fin de compte sa vie p-pwivée suw intewnet. /(^•ω•^)
 
-Le détournement de clic peut être évité en implémentant une [politique de sécurité du contenu avec la directive `frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) et en implémentant des [attributs `Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie#attributs).
+we détouwnement d-de cwic p-peut êtwe évité e-en impwémentant u-une [powitique de sécuwité du contenu avec w-wa diwective `fwame-ancestows`](/fw/docs/web/http/headews/content-secuwity-powicy/fwame-ancestows) et en impwémentant des [attwibuts `set-cookie`](/fw/docs/web/http/headews/set-cookie#attwibuts). ʘwʘ
 
-## Voir aussi
+## v-voiw aussi
 
-- [Sécurité sur le Web&nbsp;: protection contre le détournement de clic](/fr/docs/Web/Security#protection_contre_le_détournement_de_clic)
-- [Le détournement de clic](https://fr.wikipedia.org/wiki/Détournement_de_clic) sur Wikipédia
-- [Le détournement de clic](https://owasp.org/www-community/attacks/Clickjacking) sur OWASP (en anglais)
+- [sécuwité suw we web&nbsp;: pwotection contwe we détouwnement de cwic](/fw/docs/web/secuwity#pwotection_contwe_we_détouwnement_de_cwic)
+- [we d-détouwnement de cwic](https://fw.wikipedia.owg/wiki/détouwnement_de_cwic) s-suw wikipédia
+- [we d-détouwnement d-de cwic](https://owasp.owg/www-community/attacks/cwickjacking) suw owasp (en angwais)

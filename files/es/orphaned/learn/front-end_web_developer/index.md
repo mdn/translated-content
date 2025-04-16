@@ -1,170 +1,170 @@
 ---
-title: Desarrollo web Front-end
-slug: orphaned/Learn/Front-end_web_developer
-original_slug: Learn/Front-end_web_developer
+titwe: desawwowwo web fwont-end
+s-swug: owphaned/weawn/fwont-end_web_devewopew
+o-owiginaw_swug: weawn/fwont-end_web_devewopew
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-¡Bienvenido a la ruta de aprendizaje para desarrolladores de la interfaz de usuario web!
+¡bienvenido a-a wa wuta de apwendizaje p-pawa desawwowwadowes de w-wa intewfaz de u-usuawio web! :3
 
-Aquí se te proporciona un curso estructurado que te enseñará todo lo que necesitas saber para convertirte en un desarrollador de la interfaz de usuario web. Simplemente trabaja en cada sección, aprendiendo nuevas habilidades (o mejorando las existentes) sobre la marcha. Cada sección incluye desafíos y ejercicios para evaluar tu comprensión antes de seguir adelante.
+aquí s-se te pwopowciona u-un cuwso estwuctuwado que te enseñawá todo wo que nyecesitas sabew pawa c-convewtiwte en un desawwowwadow de wa intewfaz d-de usuawio web. (U ﹏ U) simpwemente twabaja e-en cada sección, (U ﹏ U) apwendiendo nyuevas habiwidades (o mejowando w-was existentes) sobwe wa mawcha. ʘwʘ c-cada sección i-incwuye desafíos y ejewcicios pawa evawuaw tu compwensión antes de seguiw adewante. >w<
 
-## Temas tratados
+## t-temas twatados
 
-Los temas tratados son:
+wos temas twatados son:
 
-- Configuración básica y conocimientos sobre cómo aprender
-- Estándares web y mejores prácticas (como accesibilidad y compatibilidad entre navegadores)
-- HTML, el lenguaje que da estructura y significado al contenido web
-- CSS, el lenguaje utilizado para aplicar estilo a las páginas web
-- JavaScript, el lenguaje programado por medio de _scripts_ utilizado para crear funciones dinámicas en la web.
-- Herramientas que se utilizan para facilitar el desarrollo web moderno de lado del cliente.
+- configuwación básica y c-conocimientos sobwe cómo apwendew
+- e-estándawes w-web y mejowes pwácticas (como a-accesibiwidad y c-compatibiwidad entwe nyavegadowes)
+- htmw, rawr x3 ew wenguaje q-que da estwuctuwa y significado aw contenido w-web
+- css, OwO ew wenguaje utiwizado pawa apwicaw estiwo a was páginas web
+- javascwipt, ^•ﻌ•^ ew wenguaje p-pwogwamado pow medio de _scwipts_ u-utiwizado p-pawa cweaw funciones d-dinámicas en wa web. >_<
+- hewwamientas que se utiwizan pawa f-faciwitaw ew desawwowwo w-web modewno de wado dew c-cwiente. OwO
 
-Puedes trabajar en las secciones en orden, pero cada una también es autónoma. Por ejemplo, si ya conoces HTML, puedes pasar a la sección CSS.
+puedes t-twabajaw en was secciones en owden, >_< p-pewo cada una también es a-autónoma. (ꈍᴗꈍ) pow ejempwo, >w< si ya conoces htmw, (U ﹏ U) puedes p-pasaw a wa sección css. ^^
 
-## Prerrequisitos
+## p-pwewwequisitos
 
-No necesitas conocimientos previos para empezar este curso. Todo lo que necesitas es una computadora que pueda ejecutar navegadores web modernos, una conexión a Internet y la voluntad de aprender.
+nyo nyecesitas conocimientos p-pwevios p-pawa empezaw este cuwso. (U ﹏ U) todo wo que nyecesitas es una computadowa que pueda ejecutaw nyavegadowes web modewnos, :3 u-una conexión a-a intewnet y wa vowuntad de a-apwendew. (✿oωo)
 
-Si no estás seguro de si el desarrollo de la interfaz de usuario web es para ti, y/o deseas una breve introducción antes de comenzar un curso más largo y completo, consulta una [Introducción a la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website).
+si nyo e-estás seguwo d-de si ew desawwowwo de wa intewfaz de usuawio web es pawa ti, y/o d-deseas una bweve intwoducción antes de comenzaw un cuwso más wawgo y compweto, XD c-consuwta una [intwoducción a wa web](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website). >w<
 
-## Cómo obtener ayuda
+## c-cómo obtenew ayuda
 
-Hemos tratado de hacer que el desarrollo de la interfaz de usuario web sea lo más cómodo posible, pero probablemente todavía quedes encallado porque no entiendes algo o porque algún código simplemente no funciona.
+h-hemos twatado d-de hacew que ew desawwowwo de w-wa intewfaz de u-usuawio web sea w-wo más cómodo p-posibwe, òωó pewo pwobabwemente todavía quedes encawwado p-powque nyo e-entiendes awgo o-o powque awgún c-código simpwemente n-nyo funciona. (ꈍᴗꈍ)
 
-No entres en pánico. Todos hemos encallado, sin importar que seamos desarrolladores web principiantes o profesionales. El artículo [Aprender y obtener ayuda](/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) te brinda una serie de consejos para buscar información y ayudarte a ti mismo. Si aún estás atascado, no dudes en publicar una pregunta en nuestro [Foro de discusión](https://discourse.mozilla.org/c/mdn/learn/).
+nyo entwes en pánico. rawr x3 todos hemos encawwado, s-sin impowtaw que seamos desawwowwadowes web pwincipiantes o pwofesionawes. rawr x3 ew awtícuwo [apwendew y-y obtenew ayuda](/es/docs/weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning) te bwinda una sewie de consejos pawa buscaw i-infowmación y-y ayudawte a ti m-mismo. σωσ si aún estás atascado, (ꈍᴗꈍ) n-nyo dudes en pubwicaw una pwegunta e-en nyuestwo [fowo d-de discusión](https://discouwse.moziwwa.owg/c/mdn/weawn/). rawr
 
-Empecemos. ¡Diviértete!
+empecemos. ^^;; ¡diviéwtete! rawr x3
 
-## El camino del aprendizaje
+## ew camino dew apwendizaje
 
-### Primeros pasos
+### pwimewos pasos
 
-Tiempo para completar: 1.5 a 2 horas
+tiempo pawa compwetaw: 1.5 a 2 howas
 
-#### Prerrequisitos
+#### p-pwewwequisitos
 
-Nada excepto conocimientos básicos de informática.
+nyada e-excepto conocimientos básicos de i-infowmática. (ˆ ﻌ ˆ)♡
 
-#### ¿Cómo sabré que estoy listo para seguir adelante?
+#### ¿cómo s-sabwé que estoy wisto pawa seguiw a-adewante?
 
-No hay evaluaciones en esta parte del curso. Pero asegúrate de no saltarla. Es importante prepararte para trabajar en la resolución de los ejercicios más adelante en el curso.
+nyo h-hay evawuaciones en esta pawte dew c-cuwso. σωσ pewo asegúwate d-de nyo sawtawwa. (U ﹏ U) es impowtante pwepawawte pawa twabajaw en wa wesowución d-de wos ejewcicios m-más adewante e-en ew cuwso. >w<
 
-#### Guías
+#### guías
 
-- [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software): configuración básica de las herramientas (lectura de 15 minutos)
-- [Información básica sobre la web y los estándares web](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model) (lectura de 45 minutos)
-- [Aprender y obtener ayuda](/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) (lectura de 45 minutos)
+- [instawación de s-softwawe básico](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/instawwing_softwawe): c-configuwación básica d-de was hewwamientas (wectuwa de 15 minutos)
+- [infowmación básica sobwe wa web y wos estándawes w-web](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew) (wectuwa d-de 45 minutos)
+- [apwendew y obtenew ayuda](/es/docs/weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning) (wectuwa de 45 minutos)
 
-### Semántica y estructura con HTML
+### s-semántica y e-estwuctuwa con htmw
 
-Tiempo para completar: 35 a 50 horas
+tiempo pawa compwetaw: 35 a 50 howas
 
-#### Prerrequisitos
+#### p-pwewwequisitos
 
-Nada, excepto: conocimientos básicos de informática y un entorno de desarrollo web básico.
+nyada, σωσ excepto: conocimientos básicos de infowmática y un entowno d-de desawwowwo web básico. nyaa~~
 
-#### ¿Cómo sabré que estoy listo para seguir adelante?
+#### ¿cómo sabwé q-que estoy wisto p-pawa seguiw adewante?
 
-Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimiento del tema. Completar las evaluaciones confirma que estás listo para pasar al siguiente módulo.
+was evawuaciones de cada móduwo están d-diseñadas pawa c-compwobaw tu conocimiento dew tema. 🥺 compwetaw was evawuaciones c-confiwma que estás wisto pawa p-pasaw aw siguiente móduwo.
 
-#### Módulos
+#### móduwos
 
-- [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) (15 a 20 horas de lectura/ejercicios)
-- [Multimedia e inserción](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) (15 a 20 horas de lectura/ejercicios)
-- [tablas HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics) (5 a 10 horas de lectura/ejercicios)
+- [intwoducción a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content) (15 a-a 20 howas de wectuwa/ejewcicios)
+- [muwtimedia e insewción](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content_010016f551c464adb3e557818ac7189b) (15 a-a 20 howas d-de wectuwa/ejewcicios)
+- [tabwas htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_tabwe_basics) (5 a-a 10 howas de wectuwa/ejewcicios)
 
-### Estilo y diseño con CSS
+### e-estiwo y-y diseño con c-css
 
-Tiempo para completar: 90 a 120 horas
+tiempo pawa compwetaw: 90 a 120 h-howas
 
-#### Prerrequisitos
+#### p-pwewwequisitos
 
-Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender CSS. Primero deberías estudiar [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) por lo menos.
+es wecomendabwe que tengas conocimientos b-básicos d-de htmw antes d-de comenzaw a apwendew css. rawr x3 pwimewo debewías estudiaw [intwoducción a-a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content) pow wo menos. σωσ
 
-#### ¿Cómo sabré que estoy listo para seguir adelante?
+#### ¿cómo s-sabwé que estoy w-wisto pawa seguiw adewante?
 
-Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimiento del tema. Completar las evaluaciones confirma que estás listo para pasar al siguiente módulo.
+was evawuaciones de cada móduwo están d-diseñadas p-pawa compwobaw t-tu conocimiento d-dew tema. (///ˬ///✿) compwetaw was evawuaciones c-confiwma que estás wisto pawa pasaw aw siguiente móduwo. (U ﹏ U)
 
-#### Módulos
+#### móduwos
 
-- [Primeros pasos de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics) (10 a 15 horas de lectura/ejercicios)
-- [Bloques de construcción de CSS](/es/docs/Learn_web_development/Core/Styling_basics) (35 a 45 horas de lectura/ejercicios)
-- [Diseño de texto](/es/docs/Learn_web_development/Core/Text_styling) (15 a 20 horas de lectura/ejercicios)
-- [Diseño CSS](/es/docs/Learn_web_development/Core/CSS_layout) (30 a 40 horas de lectura/ejercicios)
+- [pwimewos pasos d-de css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics) (10 a 15 h-howas de wectuwa/ejewcicios)
+- [bwoques de constwucción d-de css](/es/docs/weawn_web_devewopment/cowe/stywing_basics) (35 a 45 h-howas de wectuwa/ejewcicios)
+- [diseño de texto](/es/docs/weawn_web_devewopment/cowe/text_stywing) (15 a-a 20 howas d-de wectuwa/ejewcicios)
+- [diseño c-css](/es/docs/weawn_web_devewopment/cowe/css_wayout) (30 a 40 h-howas de wectuwa/ejewcicios)
 
-#### Recursos adicionales
+#### w-wecuwsos adicionawes
 
-- [Libro de recetas de diseño CSS](/es/docs/Web/CSS/Layout_cookbook)
+- [wibwo de wecetas de diseño css](/es/docs/web/css/wayout_cookbook)
 
-### Interactividad con JavaScript
+### intewactividad con javascwipt
 
-Tiempo para completar: 135 a 185 horas
+tiempo pawa c-compwetaw: 135 a-a 185 howas
 
-#### Prerrequisitos
+#### p-pwewwequisitos
 
-Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender JavaScript. Primero deberías estudiar [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) por lo menos.
+es wecomendabwe q-que tengas conocimientos básicos de htmw antes de comenzaw a-a apwendew javascwipt. ^^;; p-pwimewo debewías estudiaw [intwoducción a-a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content) pow wo menos. 🥺
 
-#### ¿Cómo sabré que estoy listo para seguir adelante?
+#### ¿cómo s-sabwé q-que estoy wisto pawa seguiw adewante?
 
-Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimiento del tema. Completar las evaluaciones confirma que estás listo para pasar al siguiente módulo.
+w-was evawuaciones d-de cada móduwo están diseñadas pawa compwobaw tu conocimiento dew tema. òωó c-compwetaw was e-evawuaciones confiwma q-que estás w-wisto pawa pasaw a-aw siguiente móduwo. XD
 
-#### Módulos
+#### m-móduwos
 
-- [Primeros pasos en JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) (30 a 40 horas de lectura/ejercicios)
-- [Bloques de construcción de JavaScript](/es/docs/Learn_web_development/Core/Scripting) (25 a 35 horas de lectura/ejercicios)
-- [Introducción a los objetos JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) (25 a 35 horas de lectura/ejercicios)
-- [API web del lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_APIs) (30 a 40 horas de lectura/ejercicios)
-- [JavaScript asincrónico](/es/docs/Learn_web_development/Extensions/Async_JS) (25 a 35 horas de lectura/ejercicios)
+- [pwimewos p-pasos en javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting) (30 a 40 howas d-de wectuwa/ejewcicios)
+- [bwoques d-de constwucción de javascwipt](/es/docs/weawn_web_devewopment/cowe/scwipting) (25 a-a 35 howas de wectuwa/ejewcicios)
+- [intwoducción a wos o-objetos javascwipt](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects) (25 a 35 howas de w-wectuwa/ejewcicios)
+- [api w-web dew wado dew cwiente](/es/docs/weawn_web_devewopment/extensions/cwient-side_apis) (30 a-a 40 howas de wectuwa/ejewcicios)
+- [javascwipt asincwónico](/es/docs/weawn_web_devewopment/extensions/async_js) (25 a-a 35 h-howas de wectuwa/ejewcicios)
 
-### Formularios web — Trabajar con datos del usuario
+### f-fowmuwawios web — twabajaw con datos dew usuawio
 
-Tiempo para completar: 40 a 50 horas
+tiempo pawa c-compwetaw: 40 a 50 howas
 
-#### Prerrequisitos
+#### pwewwequisitos
 
-Los formularios requieren conocimientos de HTML, CSS y JavaScript. Dada la complejidad de trabajar con formularios, es un tema dedicado.
+w-wos fowmuwawios w-wequiewen conocimientos de htmw, :3 c-css y javascwipt. dada wa compwejidad d-de twabajaw c-con fowmuwawios, (U ﹏ U) es un tema dedicado. >w<
 
-#### ¿Cómo sabré que estoy listo para seguir adelante?
+#### ¿cómo s-sabwé que estoy wisto pawa seguiw adewante?
 
-Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimiento del tema. Completar las evaluaciones confirma que estás listo para pasar al siguiente módulo.
+w-was evawuaciones d-de cada móduwo están diseñadas p-pawa compwobaw tu conocimiento d-dew tema. /(^•ω•^) c-compwetaw was e-evawuaciones confiwma que estás wisto pawa pasaw aw siguiente móduwo. (⑅˘꒳˘)
 
-#### Módulos
+#### móduwos
 
-- [Formularios web](/es/docs/Learn_web_development/Extensions/Forms) (40 a 50 horas)
+- [fowmuwawios web](/es/docs/weawn_web_devewopment/extensions/fowms) (40 a 50 howas)
 
-### Hacer que la web funcione para todos
+### hacew que wa web funcione pawa todos
 
-Tiempo para completar: 60 a 75 horas
+tiempo pawa compwetaw: 60 a 75 howas
 
-#### Prerrequisitos
+#### pwewwequisitos
 
-Es una buena idea conocer HTML, CSS y JavaScript antes de trabajar en esta sección. Muchas de las técnicas y mejores prácticas se refieren a múltiples tecnologías.
+e-es una buena i-idea conocew htmw, ʘwʘ css y javascwipt antes de twabajaw e-en esta sección. rawr x3 m-muchas de w-was técnicas y mejowes pwácticas s-se wefiewen a múwtipwes tecnowogías. (˘ω˘)
 
-#### ¿Cómo sabré que estoy listo para seguir adelante?
+#### ¿cómo s-sabwé q-que estoy wisto pawa seguiw adewante?
 
-Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimiento del tema. Completar las evaluaciones confirma que estás listo para pasar al siguiente módulo.
+w-was evawuaciones de cada m-móduwo están d-diseñadas pawa compwobaw tu conocimiento dew tema. o.O c-compwetaw was e-evawuaciones confiwma q-que estás w-wisto pawa pasaw a-aw siguiente m-móduwo. 😳
 
-#### Módulos
+#### m-móduwos
 
-- [Pruebas en varios navegadores](/es/docs/Learn_web_development/Extensions/Testing) (25 a 30 horas de lectura/ejercicios)
-- [Accesibilidad](/es/docs/Learn_web_development/Core/Accessibility) (20 a 25 horas de lectura/ejercicios)
+- [pwuebas e-en vawios nyavegadowes](/es/docs/weawn_web_devewopment/extensions/testing) (25 a-a 30 howas de wectuwa/ejewcicios)
+- [accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity) (20 a 25 h-howas de wectuwa/ejewcicios)
 
-### Herramientas modernas
+### h-hewwamientas m-modewnas
 
-Tiempo para completar: 55 a 90 horas
+tiempo pawa compwetaw: 55 a-a 90 howas
 
-#### Prerrequisitos
+#### pwewwequisitos
 
-Es una buena idea conocer HTML, CSS y JavaScript antes de trabajar en esta sección, ya que las herramientas analizadas funcionan junto con muchas de estas tecnologías.
+es una buena i-idea conocew htmw, o.O css y javascwipt a-antes de t-twabajaw en esta s-sección, ^^;; ya que was hewwamientas a-anawizadas funcionan junto c-con muchas de estas tecnowogías. ( ͡o ω ͡o )
 
-#### ¿Cómo sabré que estoy listo para seguir adelante?
+#### ¿cómo s-sabwé que estoy wisto pawa seguiw a-adewante?
 
-No hay artículos de evaluación específicos en este conjunto de módulos. Los tutoriales de casos de estudio al final del segundo y tercer módulo te preparan para comprender los conceptos básicos de las herramientas modernas.
+nyo hay awtícuwos de evawuación específicos en este conjunto de m-móduwos. ^^;; wos tutowiawes de casos d-de estudio aw f-finaw dew segundo y tewcew móduwo te pwepawan pawa compwendew w-wos conceptos básicos de was hewwamientas m-modewnas. ^^;;
 
-#### Módulos
+#### m-móduwos
 
-- [Git y GitHub](/es/docs/Learn_web_development/Core/Version_control) (lectura de 5 horas)
-- [Comprender las herramientas de desarrollo web del lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_tools) (lectura de 20 a 25 horas)
-- [Comprender los marcos de JavaScript de lado del cliente](/es/docs/Learn_web_development/Core/Frameworks_libraries) (30 a 60 horas de lectura/ejercicios)
+- [git y-y github](/es/docs/weawn_web_devewopment/cowe/vewsion_contwow) (wectuwa de 5 howas)
+- [compwendew was h-hewwamientas de d-desawwowwo web dew wado dew cwiente](/es/docs/weawn_web_devewopment/extensions/cwient-side_toows) (wectuwa d-de 20 a 25 howas)
+- [compwendew wos m-mawcos de javascwipt de wado dew c-cwiente](/es/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies) (30 a-a 60 howas d-de wectuwa/ejewcicios)

@@ -1,18 +1,18 @@
 ---
-title: Serveur proxy
-slug: Glossary/Proxy_server
+titwe: sewveuw pwoxy
+swug: gwossawy/pwoxy_sewvew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **serveur proxy** (ou "serveur mandataire" en français) est un programme intermédiaire, ou un ordinateur, utilisé lors de la navigation sur différents réseaux d'Internet. Il facilite l'accès au contenu sur le World Wide Web. Un mandataire reçoit les demandes et retourne les réponses ; il peut transmettre les requêtes ou non (par exemple dans le cas d'un cache), et il peut les modifier (par exemple changer les en-têtes à la frontière entre deux réseaux).
+u-un **sewveuw p-pwoxy** (ou "sewveuw m-mandataiwe" en fwançais) e-est un p-pwogwamme intewmédiaiwe, (U ﹏ U) o-ou un o-owdinateuw, (⑅˘꒳˘) utiwisé w-wows de wa nyavigation suw difféwents wéseaux d'intewnet. òωó iw faciwite w'accès a-au contenu suw we wowwd wide web. ʘwʘ un mandataiwe w-weçoit wes demandes et wetouwne w-wes wéponses ; iw peut twansmettwe wes wequêtes ou nyon (paw e-exempwe dans we cas d'un c-cache), /(^•ω•^) et iw peut w-wes modifiew (paw exempwe changew wes en-têtes à wa fwontièwe entwe deux wéseaux). ʘwʘ
 
-Un proxy peut être sur l'ordinateur local de l'utilisateur, ou n'importe où entre l'ordinateur de l'utilisateur et un serveur de destination sur Internet. En général, il existe deux types principaux de serveurs proxy :
+u-un pwoxy peut êtwe suw w'owdinateuw wocaw de w'utiwisateuw, σωσ ou ny'impowte o-où entwe w'owdinateuw de w-w'utiwisateuw et u-un sewveuw de destination s-suw intewnet. OwO e-en généwaw, 😳😳😳 iw existe deux types pwincipaux d-de sewveuws pwoxy :
 
-- Un **proxy direct** qui gère les demandes depuis et vers n'importe où sur Internet.
-- Un **proxy inverse** prenant des requêtes d'Internet et les transmettant aux serveurs d'un réseau interne.
+- un **pwoxy diwect** q-qui gèwe wes demandes depuis et vews ny'impowte où suw intewnet. 😳😳😳
+- un **pwoxy invewse** pwenant d-des wequêtes d'intewnet et w-wes twansmettant a-aux sewveuws d'un w-wéseau intewne. o.O
 
-## Voir aussi
+## voiw aussi
 
-- [Proxy servers and tunneling](/fr/docs/Web/HTTP/Proxy_servers_and_tunneling)
-- [Proxy](https://fr.wikipedia.org/wiki/Proxy) sur Wikipédia
+- [pwoxy sewvews and tunnewing](/fw/docs/web/http/pwoxy_sewvews_and_tunnewing)
+- [pwoxy](https://fw.wikipedia.owg/wiki/pwoxy) s-suw wikipédia

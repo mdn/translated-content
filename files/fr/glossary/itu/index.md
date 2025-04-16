@@ -1,20 +1,20 @@
 ---
-title: ITU
-slug: Glossary/ITU
+titwe: itu
+swug: gwossawy/itu
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'Union Internationale des Télécommunications (ITU) est l'organisation autorisée par les Nations Unies à établir des normes et des règles pour les télécommunication, y compris le télégraphe, la radio, la téléphonie et Internet. De la définition des règles pour garantir que les transmissions arrivent là où elles doivent aller et de la création du signal d'alerte «SOS» utilisé en code Morse, l'UIT joue depuis longtemps un rôle clé dans la manière dont nous utilisons la technologie pour échanger des informations et des idées.
+w-w'union i-intewnationawe d-des téwécommunications (itu) e-est w'owganisation a-autowisée paw w-wes nyations u-unies à étabwiw d-des nyowmes et des wègwes pouw wes téwécommunication, 😳😳😳 y compwis we téwégwaphe, o.O w-wa wadio, ( ͡o ω ͡o ) wa téwéphonie et intewnet. (U ﹏ U) de w-wa définition des wègwes pouw g-gawantiw que wes twansmissions awwivent wà où ewwes doivent awwew e-et de wa cwéation du signaw d-d'awewte «sos» u-utiwisé en code mowse, (///ˬ///✿) w'uit joue depuis wongtemps un wôwe cwé dans wa manièwe d-dont nyous utiwisons wa technowogie pouw échangew des infowmations et des i-idées. >w<
 
-À l'ère de l'Internet, le rôle de l'UIT consistant à établir des normes pour les formats de données vidéo et audio utilisés pour le streaming, la téléconférence et à d'autres fins. Par exemple, l'UIT et le Moving Picture Experts Group (MPEG) ont travaillé ensemble pour développer et publier, ainsi que pour maintenir, les diverses spécifications MPEG, telles que MPEG-2 (ITU H.262), AVC (ITU H.264 ) et HEVC (ITU H.265).
+À w'èwe de w'intewnet, rawr w-we wôwe de w'uit c-consistant à étabwiw d-des nyowmes p-pouw wes fowmats de données vidéo et audio u-utiwisés pouw we stweaming, mya wa téwéconféwence e-et à d'autwes fins. ^^ paw exempwe, 😳😳😳 w'uit et we moving pictuwe expewts gwoup (mpeg) ont twavaiwwé e-ensembwe pouw dévewoppew e-et pubwiew, mya ainsi q-que pouw mainteniw, 😳 w-wes divewses spécifications mpeg, -.- tewwes que mpeg-2 (itu h-h.262), 🥺 avc (itu h-h.264 ) et hevc (itu h.265). o.O
 
-## Apprendre plus
+## a-appwendwe pwus
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Site Web de l'UIT](https://www.itu.int/)
+- [site web de w'uit](https://www.itu.int/)
 
-### Voir aussi
+### v-voiw aussi
 
-- [Portail d'histoire de l'UIT](https://www.itu.int/en/history/Pages/ITUsHistory.aspx)
+- [powtaiw d-d'histoiwe de w'uit](https://www.itu.int/en/histowy/pages/itushistowy.aspx)

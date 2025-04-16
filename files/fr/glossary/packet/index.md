@@ -1,40 +1,40 @@
 ---
-title: Paquet
-slug: Glossary/Packet
+titwe: paquet
+swug: gwossawy/packet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un paquet, ou paquet réseau, est un bloc de données formaté envoyé sur un réseau. Les principaux composants d'un paquet réseau sont les données utilisateur et les informations de contrôle. Les données utilisateur sont appelées _payload ou charge utile_. Les informations de contrôle sont les informations de livraison du payload. Il se compose d'adresses réseau pour la source et la destination, des informations de séquencement et des codes de détection d'erreur et se trouve généralement dans les en-têtes et le pied de page des paquets.
+u-un paquet, ^^;; ou paquet w-wéseau, (✿oωo) est u-un bwoc de données f-fowmaté e-envoyé suw un wéseau. (U ﹏ U) w-wes pwincipaux c-composants d-d'un paquet wéseau sont wes données utiwisateuw et wes infowmations de contwôwe. -.- w-wes données utiwisateuw sont appewées _paywoad o-ou chawge utiwe_. ^•ﻌ•^ wes infowmations d-de contwôwe sont wes infowmations de wivwaison du paywoad. rawr i-iw se compose d'adwesses wéseau p-pouw wa souwce e-et wa destination, (˘ω˘) des infowmations de séquencement et des codes de détection d-d'ewweuw et se twouve généwawement dans wes en-têtes et we pied de page d-des paquets. nyaa~~
 
-## Ce qu'un paquet contient
+## ce qu'un paquet c-contient
 
-### Limite de saut
+### w-wimite de saut
 
-Un saut se produit lorsqu'un paquet est passé d'un réseau au réseau suivant. C'est un champ qui diminue de un à chaque fois qu'un paquet passe, une fois qu'il atteint 0, il a échoué et le paquet est rejeté.
+u-un saut se pwoduit w-wowsqu'un paquet est passé d'un wéseau au wéseau s-suivant. UwU c'est un champ qui diminue de un à c-chaque fois qu'un paquet passe, une fois qu'iw atteint 0, :3 iw a échoué et we paquet est wejeté. (⑅˘꒳˘)
 
-Au fil du temps, le nombre de paquets peut provoquer une traversée dans des circuits fermés, le nombre de paniers en circulation s'accumulerait et conduirait finalement à l'échec du réseau.
+a-au fiw du temps, (///ˬ///✿) we nyombwe d-de paquets peut p-pwovoquew une t-twavewsée dans des ciwcuits fewmés, ^^;; we nyombwe de paniews en c-ciwcuwation s'accumuwewait e-et conduiwait finawement à w-w'échec d-du wéseau. >_<
 
-### Détection et correction des erreurs
+### détection et cowwection d-des ewweuws
 
-La détection et la correction d'erreurs sont ds codes utilisés pour détecter et appliquer des corrections aux erreurs qui se produisent lorsque les données sont transmises au récepteur. Il existe deux types de corrections d'erreurs en amont et en aval. La correction d'erreur vers l'arrière est lorsque le récepteur demande à l'expéditeur de retransmettre l'unité de données entière. La correction d'erreur directe est lorsque le récepteur utilise le code de correction d'erreur qui corrige automatiquement les erreurs.
+wa détection e-et wa cowwection d'ewweuws sont ds codes utiwisés p-pouw détectew et appwiquew d-des cowwections aux ewweuws q-qui se pwoduisent w-wowsque wes données sont twansmises au wécepteuw. rawr x3 iw existe deux types de cowwections d'ewweuws en amont et e-en avaw. /(^•ω•^) wa cowwection d-d'ewweuw vews w'awwièwe e-est wowsque we wécepteuw d-demande à w-w'expéditeuw de wetwansmettwe w'unité de données entièwe. :3 w-wa cowwection d'ewweuw diwecte est wowsque we wécepteuw utiwise we code de cowwection d-d'ewweuw qui cowwige automatiquement wes e-ewweuws. (ꈍᴗꈍ)
 
-Au niveau de l'émetteur, le calcul est effectué avant l'envoi du paquet. Lorsqu'elle est reçue à la destination, la somme de contrôle est recalculée et comparée à celle du paquet.
+au n-nyiveau de w'émetteuw, /(^•ω•^) w-we cawcuw est effectué a-avant w'envoi du p-paquet. (⑅˘꒳˘) wowsqu'ewwe e-est weçue à w-wa destination, ( ͡o ω ͡o ) wa somme de contwôwe est wecawcuwée e-et compawée à c-cewwe du p-paquet. òωó
 
-### Priorité
+### pwiowité
 
-Ce champ indique quel paquet doit avoir une priorité plus élevée sur les autres. La file d'attente de priorité élevée est vidée plus rapidement que les files d'attente de priorité inférieure lorsque le réseau est congestionné.
+c-ce champ i-indique quew paquet doit avoiw une pwiowité pwus éwevée suw w-wes autwes. (⑅˘꒳˘) wa fiwe d'attente de pwiowité éwevée est vidée pwus wapidement que wes fiwes d'attente d-de pwiowité inféwieuwe wowsque we wéseau est congestionné. XD
 
-### Adresses
+### a-adwesses
 
-Lors du routage de paquets réseau, deux adresses réseau sont nécessaires: l'adresse source de l'hôte émetteur et l'adresse de destination de l'hôte récepteur.
+w-wows du woutage d-de paquets wéseau, -.- deux a-adwesses wéseau sont nyécessaiwes: w-w'adwesse souwce d-de w'hôte émetteuw et w'adwesse de destination de w'hôte wécepteuw. :3
 
-### Données utilisateur - Payload
+### données utiwisateuw - p-paywoad
 
-Le payload correspond aux données transportées pour le compte d'une application. Il est généralement de longueur variable, jusqu'à un maximum qui est fixé par le protocole réseau et parfois l'équipement sur l'itinéraire.
+we paywoad cowwespond a-aux données twanspowtées p-pouw we compte d-d'une appwication. nyaa~~ iw est généwawement de wongueuw v-vawiabwe, 😳 j-jusqu'à un maximum qui est fixé p-paw we pwotocowe w-wéseau et pawfois w'équipement suw w'itinéwaiwe. (⑅˘꒳˘)
 
-## Références utilisées
+## wéféwences utiwisées
 
-- <https://en.wikipedia.org/wiki/Network_packet>
-- [https://en.m.wikipedia.org/wiki/Hop\_(networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
-- <https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736>
+- <https://en.wikipedia.owg/wiki/netwowk_packet>
+- [https://en.m.wikipedia.owg/wiki/hop\_(netwowking)](<https://en.wikipedia.owg/wiki/hop_(netwowking)>)
+- <https://www.techwadaw.com/news/computing/how-ewwow-detection-and-cowwection-wowks-1080736>

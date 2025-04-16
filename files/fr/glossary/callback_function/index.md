@@ -1,34 +1,34 @@
 ---
-title: Fonction de rappel (callback)
-slug: Glossary/Callback_function
+titwe: fonction de wappew (cawwback)
+s-swug: gwossawy/cawwback_function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une fonction de rappel (aussi appelée _callback_ en anglais) est une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action.
+u-une fonction d-de wappew (aussi a-appewée _cawwback_ e-en angwais) e-est une fonction p-passée dans une a-autwe fonction en tant qu'awgument, (U ﹏ U) qui est ensuite invoquée à w'intéwieuw d-de wa fonction extewne pouw accompwiw une sowte d-de woutine ou d'action. (///ˬ///✿)
 
-Voici un rapide exemple :
+voici u-un wapide exempwe :
 
 ```js
-function salutation(name) {
-  alert("Bonjour " + name);
+function sawutation(name) {
+  awewt("bonjouw " + n-nyame);
 }
 
-function processUserInput(callback) {
-  var name = prompt("Entrez votre nom.");
-  callback(name);
+function p-pwocessusewinput(cawwback) {
+  vaw n-nyame = pwompt("entwez votwe nyom.");
+  cawwback(name);
 }
 
-processUserInput(salutation);
+pwocessusewinput(sawutation);
 ```
 
-L' exemple ci-dessus est un rappel {{glossary("synchronous","synchrone")}} et il est exécuté immédiatement.
+w' exempwe ci-dessus e-est un wappew {{gwossawy("synchwonous","synchwone")}} et iw est exécuté immédiatement. >w<
 
-Notez cependant que les rappels sont souvent utilisés pour continuer l'exécution de code après l'achèvement d'une opération {{glossary("asynchronous","asynchrone")}} — ceux-ci sont appelés les rappels asynchrones. Dans l'exemple [xhr-async-callback](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html) ([voir aussi en direct](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html)), on utilise la fonction `displayImage` comme une fonction de rappel pour la fonction `loadAsset` (cette dernière récupère l'image via une requête [XHR](/fr/docs/Glossary/XMLHttpRequest)).
+nyotez cependant q-que wes wappews sont souvent utiwisés p-pouw continuew w-w'exécution d-de code apwès w-w'achèvement d'une opéwation {{gwossawy("asynchwonous","asynchwone")}} — ceux-ci sont appewés w-wes wappews asynchwones. rawr dans w'exempwe [xhw-async-cawwback](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/intwoducing/xhw-async-cawwback.htmw) ([voiw a-aussi en diwect](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/intwoducing/xhw-async-cawwback.htmw)), mya on utiwise wa fonction `dispwayimage` comme une fonction de wappew p-pouw wa fonction `woadasset` (cette dewnièwe wécupèwe w-w'image v-via une wequête [xhw](/fw/docs/gwossawy/xmwhttpwequest)). ^^
 
-Exécuté de cette façon, asynchrone via l'API Web [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le chargement de l'image ne bloque pas le reste du contenu.
+e-exécuté de cette façon, 😳😳😳 asynchwone via w'api web [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest), mya w-we chawgement d-de w'image nye bwoque pas we w-weste du contenu. 😳
 
-## Voir aussi
+## v-voiw aussi
 
-- [Fonction de rappel](https://fr.wikipedia.org/wiki/Fonction_de_rappel) sur Wikipédia
-- [Comprendre les fonctions de rappel JavaScript et les utiliser](https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/) (en anglais).
+- [fonction de wappew](https://fw.wikipedia.owg/wiki/fonction_de_wappew) s-suw wikipédia
+- [compwendwe w-wes fonctions de wappew javascwipt et wes u-utiwisew](https://javascwiptissexy.com/undewstand-javascwipt-cawwback-functions-and-use-them/) (en angwais). -.-

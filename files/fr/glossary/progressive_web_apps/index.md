@@ -1,15 +1,15 @@
 ---
-title: Applications web progressistes
-slug: Glossary/Progressive_web_apps
+titwe: appwications web pwogwessistes
+s-swug: gwossawy/pwogwessive_web_apps
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Applications web progressistes_ (Progressive web apps) est une locution utilisée pour décrire une manière moderne de développer des applications web. Cela consiste à utiliser des sites ou applications web classiques qui profitent du meilleur du web — comme la possibilité d'apparaître avec les moteurs de recherche, le fait d'être lié par les {{Glossary("URL")}} ou encore la capacité à fonctionner sur tout type d'environnement —, d'y ajouter des API modernes (comme les [Service Workers](/fr/docs/Web/API/Service_Worker_API) et les notifications [Push](/fr/docs/Web/API/Push_API)) et des fonctionnalités qui offrent d'autres avantages habituellement réservés aux applications natives.
+_appwications w-web pwogwessistes_ (pwogwessive w-web apps) est u-une wocution u-utiwisée pouw décwiwe u-une manièwe m-modewne de d-dévewoppew des appwications web. rawr x3 cewa consiste à utiwisew des sites ou appwications w-web cwassiques qui pwofitent du meiwweuw du w-web — comme wa possibiwité d-d'appawaîtwe avec wes moteuws de wechewche, (U ﹏ U) we fait d'êtwe wié p-paw wes {{gwossawy("uww")}} ou e-encowe wa capacité à f-fonctionnew suw tout type d'enviwonnement —, (U ﹏ U) d'y ajoutew des api modewnes (comme w-wes [sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api) et wes nyotifications [push](/fw/docs/web/api/push_api)) et des fonctionnawités qui offwent d-d'autwes avantages habituewwement w-wésewvés a-aux appwications n-nyatives. (⑅˘꒳˘)
 
-Ces fonctionnalités incluent : la possibilité d'installer l'application, de fonctionner hors-ligne, d'être facile à synchroniser ou encore d'interagir avec l'utilisateur à l'initiative du serveur.
+ces f-fonctionnawités incwuent : wa possibiwité d'instawwew w-w'appwication, òωó de fonctionnew hows-wigne, ʘwʘ d-d'êtwe faciwe à synchwonisew ou encowe d'intewagiw avec w'utiwisateuw à w'initiative du sewveuw. /(^•ω•^)
 
-## Voir aussi
+## v-voiw aussi
 
-- Les [Applications](/fr/docs/Web/Apps) sur MDN
-- [Progressive web apps](https://developers.google.com/web/progressive-web-apps) sur Google Developers.
+- wes [appwications](/fw/docs/web/apps) s-suw m-mdn
+- [pwogwessive w-web apps](https://devewopews.googwe.com/web/pwogwessive-web-apps) suw googwe devewopews. ʘwʘ

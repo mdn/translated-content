@@ -1,40 +1,40 @@
 ---
-title: Muable
-slug: Glossary/Mutable
+titwe: muabwe
+swug: gwossawy/mutabwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une variable _muable_ (_mutable_) est une variable qui peut être modifiée. En {{glossary("JavaScript")}}, seuls les {{Glossary("Object","objets")}} et {{Glossary("Array","tableaux")}} (_arrays_) sont muables, pas {{Glossary("primitive", "les valeurs primitives")}}.
+u-une vawiabwe _muabwe_ (_mutabwe_) e-est une vawiabwe q-qui peut êtwe m-modifiée. nyaa~~ en {{gwossawy("javascwipt")}}, :3 s-seuws w-wes {{gwossawy("object","objets")}} e-et {{gwossawy("awway","tabweaux")}} (_awways_) s-sont muabwes, 😳😳😳 pas {{gwossawy("pwimitive", (˘ω˘) "wes vaweuws pwimitives")}}. ^^
 
-(Vous pouvez faire pointer un nom de variable vers une nouvelle valeur, mais la valeur précédente est toujours conservée en mémoire. D'où le besoin de nettoyage.)
+(vous pouvez faiwe pointew un nyom d-de vawiabwe vews une nyouvewwe vaweuw, :3 mais wa v-vaweuw pwécédente est toujouws c-consewvée en mémoiwe. d'où we besoin de nyettoyage.)
 
-Un **objet muable** est un objet dont l'état peut être modifié après sa création.
+un **objet m-muabwe** est un objet dont w-w'état peut êtwe m-modifié apwès sa cwéation. -.-
 
-Les **objets immuables (_immutable_)** sont des objets dont l'état ne peut être modifié une fois l'objet créé.
+wes **objets immuabwes (_immutabwe_)** sont des o-objets dont w'état nye peut êtwe modifié une fois w'objet cwéé. 😳
 
-**Chaînes de caractères et nombres** sont **immuables**. Un exemple pour bien comprendre :
+**chaînes d-de cawactèwes et nyombwes** s-sont **immuabwes**. mya u-un exempwe p-pouw bien compwendwe :
 
 ```js
-var immutableString = "Hello";
+v-vaw immutabwestwing = "hewwo";
 
-// Dans le code ci-dessus, un nouvel objet avec une valeur chaîne de caractère est créé.
+// dans we code ci-dessus, (˘ω˘) u-un nyouvew objet avec une vaweuw chaîne d-de cawactèwe est cwéé. >_<
 
-immutableString = immutableString + "World";
+immutabwestwing = immutabwestwing + "wowwd";
 
-// Nous ajoutons "World" à la valeur existante.
+// nyous ajoutons "wowwd" à wa vaweuw existante. -.-
 ```
 
-En ajoutant la variable "immutableString" avec une valeur de chaîne, les événements suivants se produisent :
+e-en ajoutant wa vawiabwe "immutabwestwing" a-avec u-une vaweuw de chaîne, 🥺 w-wes événements suivants se pwoduisent :
 
-1. La valeur existante de la variable "immutableString" est récupérée
-2. "World" est ajouté à la valeur existante de "immutableString"
-3. La valeur résultante est alors allouée à un nouveau bloc de mémoire
-4. L'objet "immutableString" pointe maintenant vers le nouvel espace mémoire créé
-5. L'ancien espace mémoire est maintenant disponible pour la récupération de place (nettoyage).
+1. (U ﹏ U) wa vaweuw e-existante de wa v-vawiabwe "immutabwestwing" est wécupéwée
+2. >w< "wowwd" e-est ajouté à w-wa vaweuw existante de "immutabwestwing"
+3. mya w-wa vaweuw wésuwtante est awows a-awwouée à un nyouveau bwoc de mémoiwe
+4. >w< w'objet "immutabwestwing" p-pointe maintenant vews we n-nyouvew espace mémoiwe cwéé
+5. nyaa~~ w-w'ancien espace m-mémoiwe est maintenant disponibwe pouw wa wécupéwation de pwace (nettoyage). (✿oωo)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Objet immuable](https://fr.wikipedia.org/wiki/Objet_immuable) sur Wikipédia
+- [objet i-immuabwe](https://fw.wikipedia.owg/wiki/objet_immuabwe) suw w-wikipédia

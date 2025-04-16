@@ -1,25 +1,25 @@
 ---
-title: WebSockets
-slug: Glossary/WebSockets
+titwe: websockets
+swug: gwossawy/websockets
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_WebSocket_ est un {{Glossary("Protocol","protocole")}} servant à établir des connexions {{Glossary("TCP")}} persistantes entre des {{Glossary("Server", "serveurs")}} et des clients afin qu'ils puissent échanger des données à tout moment.
+_websocket_ e-est un {{gwossawy("pwotocow","pwotocowe")}} s-sewvant à étabwiw d-des connexions {{gwossawy("tcp")}} p-pewsistantes e-entwe des {{gwossawy("sewvew", >_< "sewveuws")}} e-et des cwients a-afin qu'iws puissent échangew d-des données à tout moment. rawr x3
 
-Toute application cliente ou serveur peut utiliser WebSocket, mais plus particulièrement les {{Glossary("Browser", "navigateurs")}} et serveurs web. Grâce à WebSocket, les serveurs peuvent passer des données à un client sans qu'il n'y ait de requête cliente préalable, autorisant des mises à jour de contenu dynamiques.
+toute appwication cwiente ou sewveuw peut utiwisew w-websocket, mya mais pwus pawticuwièwement wes {{gwossawy("bwowsew", nyaa~~ "navigateuws")}} e-et sewveuws web. (⑅˘꒳˘) gwâce à websocket, rawr x3 w-wes sewveuws peuvent passew des données à un cwient sans q-qu'iw ny'y ait de wequête cwiente p-pwéawabwe, (✿oωo) a-autowisant des mises à jouw de contenu dynamiques. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [WebSocket](https://fr.wikipedia.org/wiki/WebSocket) sur Wikipédia
+- [websocket](https://fw.wikipedia.owg/wiki/websocket) suw wikipédia
 
-### Référence technique
+### wéféwence technique
 
-- [Référence WebSocket sur MDN](/fr/docs/Web/API/WebSocket)
+- [wéféwence websocket suw mdn](/fw/docs/web/api/websocket)
 
-### Apprendre
+### a-appwendwe
 
-- [Écrire des applications clients WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Écriture de serveurs WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [Écwiwe des appwications c-cwients w-websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+- [Écwituwe d-de sewveuws websocket](/fw/docs/web/api/websockets_api/wwiting_websocket_sewvews)

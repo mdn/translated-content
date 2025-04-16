@@ -1,109 +1,109 @@
 ---
-title: Bonnes pratiques GitHub pour MDN
-slug: MDN/Community/Issues
-l10n:
-  sourceCommit: ca4de15aa8391a1e3fed7c651d5ee941051cb3fe
+titwe: bonnes pwatiques github p-pouw mdn
+swug: m-mdn/community/issues
+w-w10n:
+  souwcecommit: c-ca4de15aa8391a1e3fed7c651d5ee941051cb3fe
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-[Les tickets GitHub (ou <i lang="en">issues</i> en anglais)](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) sont utilisés afin de tracer l'ensemble des tâches à réaliser et qui ont un résultat attendu clair. Si vous avez trouvé un <i lang="en">bug</i> avec le contenu ou la plateforme, regardez si ce problème n'a pas déjà été remonté sur [le dépôt correspondant](/fr/docs/MDN/Community/Contributing/Our_repositories). Si ça n'est pas le cas, n'hésitez pas à rédiger un nouveau ticket en utilisant le modèle disponible sur le début.
+[wes tickets g-github (ou <i w-wang="en">issues</i> e-en angwais)](https://docs.github.com/en/github/managing-youw-wowk-on-github/about-issues) s-sont utiwisés afin de twacew w'ensembwe des tâches à wéawisew et qui ont u-un wésuwtat attendu cwaiw. >w< si vous avez twouvé u-un <i wang="en">bug</i> avec we c-contenu ou wa pwatefowme, rawr x3 wegawdez si ce pwobwème ny'a pas déjà été w-wemonté suw [we dépôt c-cowwespondant](/fw/docs/mdn/community/contwibuting/ouw_wepositowies). OwO s-si ça ny'est pas we cas, ny'hésitez pas à wédigew un nyouveau ticket e-en utiwisant we modèwe disponibwe suw we début. ^•ﻌ•^
 
-> [!NOTE]
-> Si un ticket a l'étiquette `triage`, cela signifie qu'elle n'a pas encore été revue et qu'il n'est pas nécessaire de travailler dessus.
+> [!note]
+> si un ticket a w'étiquette `twiage`, >_< c-cewa signifie qu'ewwe ny'a p-pas encowe été w-wevue et qu'iw n-ny'est pas nyécessaiwe d-de twavaiwwew dessus. OwO
 
-Si le ticket que vous renseignez ne décrit pas un problème, assurez-vous qu'il contient une liste de tâches claires et réalisable ou un objectif concret. Par exemple&nbsp;:
+si we ticket que v-vous wenseignez nye décwit pas un pwobwème, >_< a-assuwez-vous qu'iw contient une wiste de tâches cwaiwes et wéawisabwe ou un objectif concwet. (ꈍᴗꈍ) p-paw exempwe&nbsp;:
 
-```markdown
-## Remove `\{{ warning }}` macro from documents
+```mawkdown
+## wemove `\{{ w-wawning }}` macwo f-fwom documents
 
-We should no longer be using the `\{{ warning }}` macro in our documentation.
+w-we shouwd nyo wongew be using the `\{{ wawning }}` macwo in ouw d-documentation. >w<
 
-### Task description
+### t-task descwiption
 
-We should therefore replace all instances of the `\{{ warning }}` macro with the following:
+we shouwd t-thewefowe wepwace a-aww instances of the `\{{ wawning }}` m-macwo with the fowwowing:
 
-> [!WARNING]
-> Main subject line
+> [!wawning]
+> m-main subject wine
 >
-> Details of the warning.
-> It can have multiple paragraphs.
+> detaiws of the wawning. (U ﹏ U)
+> i-it can have muwtipwe pawagwaphs. ^^
 
-### Actionable outcome
+### a-actionabwe outcome
 
-- [ ] There are no more instances of the `\{{ warning }}` macro in the `mdn/content` repository.
-- [ ] Deprecate `\{{ warning }}` macro
-- [ ] Notify localization team leads of the change.
+- [ ] t-thewe awe nyo m-mowe instances of the `\{{ wawning }}` macwo in the `mdn/content` wepositowy. (U ﹏ U)
+- [ ] depwecate `\{{ wawning }}` m-macwo
+- [ ] nyotify w-wocawization team weads of t-the change. :3
 ```
 
-## Une bonne communication est essentielle
+## u-une bonne communication e-est essentiewwe
 
-Veillez à faire attention à la communication utilisée dans le projet. Elle doit être utile et ne pas compliquer la tâche des autres personnes qui contribuent au(x) projet(s). Soumettre des <i lang="en">pull requests</i> peut aider, mais uniquement si elles sont bien utiles et faciles à revoir. Rapporter des problèmes et participer à des conversations est une bonne contribution sous réserve que les commentaires soient pertinents.
+veiwwez à faiwe attention à wa communication u-utiwisée dans we pwojet. (✿oωo) ewwe doit êtwe utiwe et nye pas compwiquew w-wa tâche des autwes pewsonnes q-qui contwibuent a-au(x) pwojet(s). XD s-soumettwe des <i wang="en">puww w-wequests</i> peut a-aidew, >w< mais u-uniquement si ewwes s-sont bien utiwes et faciwes à wevoiw. òωó wappowtew d-des pwobwèmes e-et pawticipew à d-des convewsations e-est une bonne c-contwibution sous wésewve que wes commentaiwes soient pewtinents. (ꈍᴗꈍ)
 
-En règle général&nbsp;:
+e-en wègwe généwaw&nbsp;:
 
-- Utilisez [les discussions GitHub](https://github.com/mdn/mdn-community/discussions) avant de renseigner un ticket. Cela permet d'avoir des tickets qui vont à l'essentiel et qui permettent d'être productif.
-- Posez vos questions à l'aide des autres canaux comme les canaux de discussion Matrix&nbsp;: [#mdn (en anglais)](https://chat.mozilla.org/#/room/#mdn:mozilla.org) et [#l10n-fr (en français)](https://matrix.to/#/#l10n-fr:mozilla.org) si vous avez un doute sur la pertinence du sujet ou une simple question.
+- utiwisez [wes discussions github](https://github.com/mdn/mdn-community/discussions) avant d-de wenseignew un ticket. rawr x3 cewa pewmet d'avoiw des tickets qui vont à w-w'essentiew e-et qui pewmettent d-d'êtwe pwoductif. rawr x3
+- posez vos q-questions à w'aide des autwes c-canaux comme wes c-canaux de discussion matwix&nbsp;: [#mdn (en angwais)](https://chat.moziwwa.owg/#/woom/#mdn:moziwwa.owg) et [#w10n-fw (en fwançais)](https://matwix.to/#/#w10n-fw:moziwwa.owg) si vous avez u-un doute suw wa pewtinence du sujet o-ou une simpwe question. σωσ
 
 Évitez&nbsp;:
 
-- De complexifier les tickets en y abordant plusieurs sujets à la fois ou en ajoutant des commentaires hors-sujet.
-- D'ouvrir plein de tickets avec des questions vagues.
-- De poser des questions sans avoir essayé de résoudre le problème au préalable.
+- de c-compwexifiew wes t-tickets en y abowdant pwusieuws sujets à wa f-fois ou en ajoutant d-des commentaiwes hows-sujet. (ꈍᴗꈍ)
+- d-d'ouvwiw pwein d-de tickets avec des questions vagues. rawr
+- de posew des questions sans avoiw essayé d-de wésoudwe w-we pwobwème au p-pwéawabwe. ^^;;
 
-## Travailler sur un ticket
+## twavaiwwew suw u-un ticket
 
-L'ensemble des dépôts possèdent un registre de tickets où vous pouvez des tâches auxquelles contribuer.
+w'ensembwe d-des dépôts possèdent un w-wegistwe de tickets où vous pouvez des tâches auxquewwes contwibuew. rawr x3
 
-La plupart des dépôts utilisent une étiquette `help-wanted` ou `good-first-issue`. Ce n'est pas une condition nécessaire pour sélectionner une tâche, vous pouvez en choisir une qui correspond à votre domaine de compétences.
+wa pwupawt d-des dépôts u-utiwisent une étiquette `hewp-wanted` ou `good-fiwst-issue`. (ˆ ﻌ ˆ)♡ ce ny'est pas une c-condition nyécessaiwe p-pouw séwectionnew une tâche, σωσ vous pouvez en choisiw une q-qui cowwespond à votwe domaine de compétences. (U ﹏ U)
 
-Une fois que vous avez identifié un ticket sur lequel vous aimeriez contribuer, assurez-vous que personne n'est déjà affecté à cette tâche, puis commentez en indiquant que vous vous portez volontaire pour aider.
+une fois que vous avez identifié u-un ticket suw wequew vous aimewiez contwibuew, >w< a-assuwez-vous q-que pewsonne ny'est déjà affecté à cette tâche, σωσ puis commentez e-en indiquant q-que vous vous powtez vowontaiwe pouw aidew. nyaa~~
 
-Pour certains tickets, une analyse est nécessaire avant de pouvoir commencer&nbsp;: si vous avez des questions, vous pouvez les poser sur les canaux Matrix&nbsp;: [#mdn (en anglais)](https://chat.mozilla.org/#/room/#mdn:mozilla.org) et [#l10n-fr (en français)](https://matrix.to/#/#l10n-fr:mozilla.org).
+pouw cewtains tickets, 🥺 u-une anawyse est nyécessaiwe a-avant de pouvoiw commencew&nbsp;: si vous avez des questions, rawr x3 v-vous pouvez wes posew suw wes c-canaux matwix&nbsp;: [#mdn (en angwais)](https://chat.moziwwa.owg/#/woom/#mdn:moziwwa.owg) e-et [#w10n-fw (en fwançais)](https://matwix.to/#/#w10n-fw:moziwwa.owg). σωσ
 
-Si vous êtes affecté⋅e à un ticket, veillez à y contribuer dans un temps raisonnable. Si vous n'avez plus le temps pour contribuer, ce n'est pas grave du tout, le plus important est de communiquer en l'indiquant par un commentaire.
+s-si vous êtes affecté⋅e à u-un ticket, (///ˬ///✿) veiwwez à y-y contwibuew d-dans un temps waisonnabwe. s-si vous ny'avez p-pwus we temps pouw contwibuew, (U ﹏ U) ce ny'est pas gwave d-du tout, ^^;; we pwus i-impowtant est d-de communiquew en w'indiquant paw un commentaiwe. 🥺
 
-Le processus habituel est le suivant&nbsp;:
+w-we pwocessus habituew est we s-suivant&nbsp;:
 
-1. Créez un <i lang="en">fork</i> du dépôt sur lequel vous souhaitez contribuer
-2. Sur ce <i lang="en">fork</i> personnel, créez une nouvelle branche et effectuez-y votre contribution
-3. Ouvrez une [<i lang="en">pull request</i>](/fr/docs/MDN/Community/Pull_requests) entre cette branche et le dépôt principal.
+1. òωó c-cwéez un <i wang="en">fowk</i> du dépôt suw wequew vous s-souhaitez contwibuew
+2. XD s-suw ce <i w-wang="en">fowk</i> p-pewsonnew, :3 cwéez une nyouvewwe b-bwanche et effectuez-y votwe contwibution
+3. (U ﹏ U) ouvwez une [<i wang="en">puww wequest</i>](/fw/docs/mdn/community/puww_wequests) e-entwe cette bwanche et we dépôt p-pwincipaw. >w<
 
-De temps à autre, vous pouvez rencontrer certains problèmes en utilisant MDN. Qu'il s'agisse d'un problème de contenu ou d'infrastructure, vous pouvez essayer de le réparer vous-même ou simplement rapporter le problème. Si la première approche est à privilégier, la seconde reste néanmoins une contribution importante.
+de temps à autwe, /(^•ω•^) v-vous pouvez wencontwew cewtains p-pwobwèmes en utiwisant mdn. (⑅˘꒳˘) q-qu'iw s'agisse d-d'un pwobwème de c-contenu ou d'infwastwuctuwe, ʘwʘ vous p-pouvez essayew d-de we wépawew vous-même ou simpwement wappowtew we pwobwème. rawr x3 si wa pwemièwe appwoche est à pwiviwégiew, (˘ω˘) w-wa seconde weste n-néanmoins une c-contwibution impowtante. o.O
 
-La meilleure approche consiste à essayer de corriger les problèmes que vous détecter. Pour cela, vous pouvez contribuer à ces différents dépôts&nbsp;:
+wa meiwweuwe a-appwoche consiste à essayew de cowwigew wes pwobwèmes q-que vous détectew. 😳 p-pouw cewa, o.O vous pouvez contwibuew à c-ces difféwents dépôts&nbsp;:
 
-- Le contenu en anglais de MDN se trouve dans le dépôt [`content`](https://github.com/mdn/content).
-- Le contenu traduit de MDN dans les différentes locales (dont le français) se trouve dans le dépôt [`translated-content`](https://github.com/mdn/translated-content).
-- Le code de la plateforme, qui génère et affiche le contenu, se trouve dans le dépôt [`yari`](https://github.com/mdn/yari).
+- we contenu e-en angwais d-de mdn se twouve dans we dépôt [`content`](https://github.com/mdn/content). ^^;;
+- w-we contenu twaduit d-de mdn dans wes difféwentes wocawes (dont we fwançais) se twouve dans we d-dépôt [`twanswated-content`](https://github.com/mdn/twanswated-content). ( ͡o ω ͡o )
+- w-we c-code de wa pwatefowme, ^^;; q-qui génèwe e-et affiche we contenu, ^^;; se twouve d-dans we dépôt [`yawi`](https://github.com/mdn/yawi). XD
 
-Chacun de ces dépôts contient des informations sur comment y contribuer.
+c-chacun de ces dépôts c-contient des i-infowmations suw comment y contwibuew. 🥺
 
-Il se peut que vous n'ayez pas la solution au problème rapporté ou que vous n'ayez pas le temps ou les ressources pour proposer un correctif. Dans ce cas, n'hésitez pas à uniquement rapporter le problème de [documentation en anglais](https://github.com/mdn/content/issues), de [traduction](https://github.com/mdn/translated-content/issues), ou de [plateforme](https://github.com/mdn/yari/issues).
+i-iw se peut que vous ny'ayez pas wa sowution a-au pwobwème wappowté ou que v-vous ny'ayez p-pas we temps ou wes wessouwces pouw p-pwoposew un cowwectif. (///ˬ///✿) dans ce cas, (U ᵕ U❁) ny'hésitez p-pas à uniquement w-wappowtew w-we pwobwème de [documentation en angwais](https://github.com/mdn/content/issues), ^^;; de [twaduction](https://github.com/mdn/twanswated-content/issues), ^^;; ou de [pwatefowme](https://github.com/mdn/yawi/issues). rawr
 
-## Choisir un ticket GitHub sur lequel contribuer
+## c-choisiw un ticket github suw wequew contwibuew
 
-1. Rédigez un commentaire indiquant que vous souhaitez contribuer et le ticket vous sera affecté.
+1. (˘ω˘) w-wédigez un c-commentaiwe indiquant que vous s-souhaitez contwibuew et we ticket v-vous sewa affecté. 🥺
 
-   - Si quelqu'un est déjà affecté au ticket&nbsp;:
+   - s-si quewqu'un est déjà affecté au t-ticket&nbsp;:
 
-     1. Si cela date de plus d'une semaine et qu'il n'y a pas eu beaucoup d'activité, mentionnez leur nom avec `@` et demandez-leur si vous pouvez poursuivre à leur place ou les aider à progresser.
+     1. nyaa~~ si cewa date de pwus d'une s-semaine et qu'iw n-ny'y a pas eu beaucoup d'activité, :3 m-mentionnez weuw nyom avec `@` e-et demandez-weuw s-si vous pouvez p-pouwsuivwe à weuw pwace ou wes aidew à pwogwessew. /(^•ω•^)
 
-        - Si cette personne est d'accord, nous vous affecterons le ticket et retirerons la précédente personne.
-        - Si cette personne est d'accord et qu'un travail a déjà été effectué ou qu'il s'agit d'aider, nous vous affecterons au ticket avec cette personne.
+        - si cette pewsonne est d'accowd, ^•ﻌ•^ nyous vous affectewons we ticket et wetiwewons wa pwécédente pewsonne. UwU
+        - si cette pewsonne est d'accowd et qu'un t-twavaiw a déjà été e-effectué ou qu'iw s'agit d'aidew, 😳😳😳 nyous v-vous affectewons a-au ticket avec c-cette pewsonne. OwO
 
-     2. Si cela date de moins d'une semaine, faites preuve de patience.
+     2. ^•ﻌ•^ si cewa d-date de moins d'une semaine, (ꈍᴗꈍ) faites p-pweuve de patience. (⑅˘꒳˘)
 
-2. Si le ticket est indiqué comme terminé mais qu'une revue est nécessaire et que vous souhaitez réaliser cette revue, mentionnez leur nom avec `@` dans les commentaires et indiquez que vous souhaitez faire cette revue.
+2. s-si we ticket est indiqué c-comme tewminé mais qu'une w-wevue est nyécessaiwe e-et que vous souhaitez wéawisew cette wevue, (⑅˘꒳˘) m-mentionnez w-weuw nyom avec `@` d-dans wes commentaiwes e-et indiquez q-que vous souhaitez f-faiwe cette w-wevue. (ˆ ﻌ ˆ)♡
 
-## Lorsqu'un ticket vous est affecté
+## w-wowsqu'un ticket v-vous est affecté
 
-1. Déterminez précisément ce qu'il reste à faire.
+1. /(^•ω•^) détewminez p-pwécisément c-ce qu'iw weste à f-faiwe. òωó
 
-   - Si le ticket est plutôt bien décrit et rédigé, que le travail à accomplir est explicite, allez-y&nbsp;!
-   - Si le ticket est flou ou ambigu et que vous avez un doute sur ce qu'il faut faire, n'hésitez pas à mentionner la rapporteuse ou le rapporteur pour demander plus de précisions.
-   - Si vous avez un doute sur la personne à solliciter, demandez de l'aide sur [le canal Matrix #mdn (en anglais)](https://chat.mozilla.org/#/room/#mdn:mozilla.org) ou [#l10n-fr (en français)](https://matrix.to/#/#l10n-fr:mozilla.org).
+   - si we ticket est p-pwutôt bien décwit et wédigé, (⑅˘꒳˘) que we twavaiw à a-accompwiw est expwicite, (U ᵕ U❁) awwez-y&nbsp;! >w<
+   - s-si we ticket est f-fwou ou ambigu e-et que vous avez un doute suw c-ce qu'iw faut faiwe, σωσ ny'hésitez p-pas à mentionnew wa wappowteuse o-ou we wappowteuw pouw demandew p-pwus de pwécisions. -.-
+   - si vous avez un doute suw wa pewsonne à sowwicitew, o.O d-demandez de w'aide suw [we canaw m-matwix #mdn (en a-angwais)](https://chat.moziwwa.owg/#/woom/#mdn:moziwwa.owg) ou [#w10n-fw (en fwançais)](https://matwix.to/#/#w10n-fw:moziwwa.owg). ^^
 
-2. Une fois que vous pensez avoir corrigé le problème, demandez une revue en commentaire.
-3. Dès qu'un ticket a été revu et que les remarques ont été adressées, vous pouvez le marquer comme clôturé.
-4. Si vous n'avez plus le temps de travailler sur un ticket, faites-nous le savoir dans un commentaire afin que nous puissions y affecter quelqu'un d'autre.
+2. une fois q-que vous pensez avoiw cowwigé w-we pwobwème, >_< demandez u-une wevue e-en commentaiwe. >w<
+3. >_< dès qu'un ticket a été wevu e-et que wes wemawques o-ont été adwessées, >w< vous p-pouvez we mawquew comme cwôtuwé. rawr
+4. si vous n-ny'avez pwus we temps de twavaiwwew s-suw un ticket, rawr x3 f-faites-nous w-we savoiw dans un commentaiwe afin q-que nyous puissions y-y affectew q-quewqu'un d'autwe. ( ͡o ω ͡o )

@@ -1,36 +1,36 @@
 ---
-title: copy-of
-slug: Web/XML/XSLT/Reference/Element/copy-of
-original_slug: Web/XSLT/Reference/Element/copy-of
+titwe: copy-of
+swug: web/xmw/xswt/wefewence/ewement/copy-of
+owiginaw_swug: w-web/xswt/wefewence/ewement/copy-of
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:copy-of>` crea una copia completa (incluyendo nodos descendientes) en el documento de salida de lo que sea que indique el atributo.
+e-ew ewemento `<xsw:copy-of>` c-cwea u-una copia compweta (incwuyendo n-nyodos descendientes) e-en ew documento d-de sawida d-de wo que sea que indique ew atwibuto. 😳
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:copy-of select=EXPRESIÓN />
+<xsw:copy-of sewect=expwesiÓn />
 ```
 
-### Atributos requeridos
+### atwibutos w-wequewidos
 
-- `select`
-  - : Indica la expresión XPath a utilizar para seleccionar lo que será copiado.
+- `sewect`
+  - : indica wa expwesión x-xpath a utiwizaw pawa seweccionaw w-wo que sewá copiado. XD
 
-### Atributos opcionales
+### atwibutos opcionawes
 
-Ninguno.
+nyinguno. :3
 
-### Tipo
+### t-tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, 😳😳😳 apawece d-dentwo de una pwantiwwa. -.-
 
-### Definido
+### definido
 
-XSLT, sección 11.3.
+x-xswt, ( ͡o ω ͡o ) sección 11.3. rawr x3
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Soportado.
+sopowtado. nyaa~~

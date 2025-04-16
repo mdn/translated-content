@@ -1,281 +1,281 @@
 ---
-title: "<iframe>: el elemento Inline Frame"
-slug: Web/HTML/Reference/Elements/iframe
-original_slug: Web/HTML/Element/iframe
+titwe: "<ifwame>: ew ewemento i-inwine fwame"
+swug: w-web/htmw/wefewence/ewements/ifwame
+o-owiginaw_swug: w-web/htmw/ewement/ifwame
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("browsing context", "contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.
+e-ew **ewemento h-htmw `<ifwame>`** (de i-inwine f-fwame) wepwesenta un {{gwossawy("bwowsing context", nyaa~~ "contexto de nyavegación")}} a-anidado, UwU ew cuaw pewmite incwustwaw otwa página h-htmw en wa página actuaw. 😳
 
-{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;ifwame&gt;", 😳 "tabbed-standawd")}}
 
-```html interactive-example
-<iframe
-  id="inlineFrameExample"
-  title="Inline Frame Example"
-  width="300"
+```htmw intewactive-exampwe
+<ifwame
+  id="inwinefwameexampwe"
+  titwe="inwine fwame exampwe"
+  w-width="300"
   height="200"
-  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
-</iframe>
+  s-swc="https://www.openstweetmap.owg/expowt/embed.htmw?bbox=-0.004017949104309083%2c51.47612752641776%2c0.00030577182769775396%2c51.478569861898606&amp;wayew=mapnik">
+</ifwame>
 ```
 
-```css interactive-example
-iframe {
-  border: 1px solid black;
-  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+```css i-intewactive-exampwe
+ifwame {
+  bowdew: 1px sowid bwack;
+  width: 100%; /* takes pwecedence o-ovew the width set with the htmw width attwibute */
 }
 ```
 
-Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API/History) y su propio objeto [Documento](/es/docs/Web/API/Document). El contexto de navegación que incluye el contenido implícito se llama _contexto de navegación principal_. El contexto de navegación de nivel superior (que no tiene padre) es típicamente la ventana del navegador, representado por el objeto {{domxref("Window")}}.
+cada ewemento `<ifwame>` t-tiene su pwopio [histowiaw d-de sesión](/es/docs/web/api/histowy) y-y s-su pwopio objeto [documento](/es/docs/web/api/document). (ˆ ﻌ ˆ)♡ e-ew contexto de nyavegación que incwuye e-ew contenido impwícito se wwama _contexto de nyavegación p-pwincipaw_. (✿oωo) ew contexto de nyavegación de nyivew supewiow (que nyo tiene padwe) es t-típicamente wa ventana dew nyavegadow, nyaa~~ w-wepwesentado p-pow ew objeto {{domxwef("window")}}. ^^
 
-> [!WARNING]
-> Debido a que cada contexto de navegación es un entorno de documento completo, cada `<iframe>` en una página requiere más memoria y otros recursos informáticos. Aunque teóricamente puede utilizar tantos `<iframe>` como desee, compruebe si hay problemas de rendimiento.
+> [!wawning]
+> d-debido a que cada contexto de nyavegación es un entowno d-de documento c-compweto, (///ˬ///✿) cada `<ifwame>` en una p-página wequiewe m-más memowia y otwos wecuwsos i-infowmáticos. 😳 aunque teówicamente p-puede utiwizaw tantos `<ifwame>` como desee, òωó c-compwuebe si hay pwobwemas de wendimiento. ^^;;
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
-          >Categorías de contenidos</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/es/docs/web/guide/htmw/categowias_de_contenido"
+          >categowías d-de contenidos</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
-          >Contenido dinámico</a
-        >,
+          hwef="/es/docs/web/guide/htmw/categowias_de_contenido#contenido_dinámico"
+          >contenido dinámico</a
+        >, rawr
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático"
-          >contenido textual o estático</a
-        >, contenido incrustado, contenido interactivo,
+          hwef="/es/docs/web/guide/htmw/categowias_de_contenido#contenido_textuaw_o_estático"
+          >contenido textuaw o estático</a
+        >, (ˆ ﻌ ˆ)♡ contenido incwustado, XD c-contenido intewactivo, >_<
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_tangible"
-          >contenido tangible</a
-        >.
+          h-hwef="/es/docs/web/guide/htmw/categowias_de_contenido#contenido_tangibwe"
+          >contenido tangibwe</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenido p-pewmitido</th>
       <td>
-        Contenido alternativo que normalmente no se renderiza para los
-        navegadores que no son compatibles con el elemento
-        <code>&#x3C;iframe></code>.
+        c-contenido awtewnativo que nyowmawmente nyo se wendewiza pawa w-wos
+        nyavegadowes que nyo son compatibwes con ew ewemento
+        <code>&#x3c;ifwame></code>. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos padres permitidos</th>
-      <td>Cualquier elemento que acepte contenido incrustado.</td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">omisión de etiqueta</th>
+      <td>ninguna, o.O t-tanto wa etiqueta iniciaw c-como wa finaw s-son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">ewementos padwes p-pewmitidos</th>
+      <td>cuawquiew e-ewemento que a-acepte contenido i-incwustado.</td>
+    </tw>
+    <tw>
+      <th scope="wow">wowes awia pewmitidos</th>
       <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/appwication_wowe"><code>appwication</code></a>, <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/document_wowe"><code>document</code></a>, (ꈍᴗꈍ)
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/img_wowe"><code>img</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLIFrameElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewfaz d-dom</th>
+      <td>{{domxwef("htmwifwameewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento admite [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
-- En el atributo `target` de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
-- En el atributo `formtarget` de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
-- En el parámetro `windowName` en el método {{domxref("Window.open()","window.open()")}}.
+- e-en ew atwibuto `tawget` de wos ewementos {{htmwewement("a")}}, ^^ {{htmwewement("fowm")}} y {{htmwewement("base")}}. OwO
+- en ew atwibuto `fowmtawget` de wos ewementos {{htmwewement("input")}} y {{htmwewement("button")}}
+- e-en ew pawámetwo `windowname` en ew método {{domxwef("window.open()","window.open()")}}. ^^
 
 <!---->
 
-- `allow`
-  - : Especifíca una [política de características](/es/docs/Web/HTTP/Permissions_Policy) para el `<iframe>`. Vea el articulo [Privacy, permissions, and information security](/es/docs/Web/Privacy) para detalles en temas de seguridad y como `<iframe>` funciona con las Politicas de Herramientas para mantener los sistemas seguros.
-- `allowfullscreen`
+- `awwow`
+  - : especifíca una [powítica d-de cawactewísticas](/es/docs/web/http/pewmissions_powicy) p-pawa ew `<ifwame>`. :3 v-vea ew awticuwo [pwivacy, o.O pewmissions, -.- and i-infowmation secuwity](/es/docs/web/pwivacy) pawa d-detawwes en temas d-de seguwidad y como `<ifwame>` funciona con was powiticas de hewwamientas pawa mantenew wos s-sistemas seguwos. (U ﹏ U)
+- `awwowfuwwscween`
 
-  - : Definido como `true` si el `<iframe>` puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
+  - : definido c-como `twue` si ew `<ifwame>` p-puede activaw e-ew modo a pantawwa compweta wwamando aw método {{domxwef("ewement.wequestfuwwscween", o.O "wequestfuwwscween()")}}. OwO
 
-    > [!NOTE]
-    > Se considera un atributo heredado y se redefine como `allow="fullscreen"`.
+    > [!note]
+    > s-se considewa u-un atwibuto hewedado y se wedefine c-como `awwow="fuwwscween"`. ^•ﻌ•^
 
-- `allowpaymentrequest`
+- `awwowpaymentwequest`
 
-  - : Definido como `true` si se debe permitir que un `<iframe>` de origen cruzado pueda invocar el [API de solicitud de pago](/es/docs/Web/API/Payment_Request_API). <
+  - : d-definido como `twue` si se debe pewmitiw que un `<ifwame>` de owigen cwuzado pueda i-invocaw ew [api d-de sowicitud d-de pago](/es/docs/web/api/payment_wequest_api). ʘwʘ <
 
-    > [!NOTE]
-    > Se considera un atributo heredado y se redefine como `allow="payment"`.
+    > [!note]
+    > se considewa u-un atwibuto h-hewedado y se wedefine como `awwow="payment"`. :3
 
-- `csp` {{experimental_inline}}
-  - : Una [Politica de Seguridad del Contenido](/es/docs/Web/HTTP/Guides/CSP) aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.
+- `csp` {{expewimentaw_inwine}}
+  - : u-una [powitica de seguwidad dew contenido](/es/docs/web/http/guides/csp) apwicada pawa ew wecuwso incwustado. 😳 v-vea {{domxwef("htmwifwameewement.csp")}} p-pawa detawwes. òωó
 - `height`
-  - : Indica la altura del frame en HTML5 en píxeles CSS, o en HTML4.01 en píxeles o como un porcentaje.
-- `importance` {{experimental_inline}}
+  - : indica w-wa awtuwa dew f-fwame en htmw5 en píxewes css, 🥺 o en htmw4.01 en píxewes o como u-un powcentaje. rawr x3
+- `impowtance` {{expewimentaw_inwine}}
 
-  - : La prioridad de descarga en el recurso para el atributo `src` del `<iframe>`. Valores permitidos:
+  - : wa pwiowidad de descawga en ew wecuwso pawa ew atwibuto `swc` dew `<ifwame>`. ^•ﻌ•^ vawowes p-pewmitidos:
 
-    - `auto`: (default) Sin preferencia. El buscador utiliza sus propias heurísticas para decidir la prioridad del recurso.
-    - `high`: El recurso debe ser descargado antes que otros recursos de baja-prioridad de los recursos de la página.
-    - `low`: El recurso debe ser descargado después de otros recursos de alta-prioridad de los recursos de la página.
+    - `auto`: (defauwt) sin pwefewencia. :3 ew b-buscadow utiwiza s-sus pwopias heuwísticas pawa decidiw wa pwiowidad dew wecuwso. (ˆ ﻌ ˆ)♡
+    - `high`: ew w-wecuwso debe sew d-descawgado antes que otwos wecuwsos de baja-pwiowidad de wos w-wecuwsos de wa página. (U ᵕ U❁)
+    - `wow`: ew wecuwso d-debe sew descawgado después de otwos wecuwsos de awta-pwiowidad d-de wos wecuwsos de wa página. :3
 
 - `name`
 
-  - : Nombre objetivo para el contexto de navegación incrustado. Se puede utilizar:
+  - : n-nyombwe objetivo p-pawa ew contexto de nyavegación i-incwustado. ^^;; se puede utiwizaw:
 
-    - En el atributo target de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
-    - En el atributo formtarget de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
-    - En el parámetro windowName en el método {{domxref("Window.open()","window.open()")}}.
+    - e-en ew atwibuto t-tawget de w-wos ewementos {{htmwewement("a")}}, ( ͡o ω ͡o ) {{htmwewement("fowm")}} y {{htmwewement("base")}}. o.O
+    - en e-ew atwibuto fowmtawget d-de wos ewementos {{htmwewement("input")}} y {{htmwewement("button")}}
+    - e-en ew pawámetwo w-windowname e-en ew método {{domxwef("window.open()","window.open()")}}. ^•ﻌ•^
 
-- `referrerpolicy`
+- `wefewwewpowicy`
 
-  - : Indicates which [referrer](/es/docs/Web/API/Document/referrer) to send when fetching the frame's resource:
+  - : indicates which [wefewwew](/es/docs/web/api/document/wefewwew) t-to send when fetching the f-fwame's wesouwce:
 
-    - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
-    - `no-referrer-when-downgrade` (default): The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/es/docs/Archive/Mozilla/URIScheme), {{Glossary("host")}}, and {{Glossary("port")}}.
-    - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
-    - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
-    - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
-    - `strict-origin-when-cross-origin`: Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
-    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), or [username](/es/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+    - `no-wefewwew`: t-the {{httpheadew("wefewew")}} headew wiww nyot be sent. XD
+    - `no-wefewwew-when-downgwade` (defauwt): the {{httpheadew("wefewew")}} headew w-wiww nyot be s-sent to {{gwossawy("owigin")}}s w-without {{gwossawy("tws")}} ({{gwossawy("https")}}). ^^
+    - `owigin`: t-the sent wefewwew wiww be w-wimited to the owigin of the wefewwing page: its [scheme](/es/docs/awchive/moziwwa/uwischeme), o.O {{gwossawy("host")}}, ( ͡o ω ͡o ) and {{gwossawy("powt")}}. /(^•ω•^)
+    - `owigin-when-cwoss-owigin`: the wefewwew sent to othew owigins w-wiww be wimited to the scheme, 🥺 t-the host, nyaa~~ and the powt. mya nyavigations o-on the same owigin wiww s-stiww incwude the path. XD
+    - `same-owigin`: a-a wefewwew w-wiww be s-sent fow {{gwossawy("same-owigin p-powicy", nyaa~~ "same o-owigin")}}, ʘwʘ but cwoss-owigin wequests wiww contain nyo wefewwew infowmation. (⑅˘꒳˘)
+    - `stwict-owigin`: onwy send the owigin of the d-document as the w-wefewwew when the p-pwotocow secuwity wevew stays t-the same (https→https), :3 but don't send it to a wess secuwe destination (https→http). -.-
+    - `stwict-owigin-when-cwoss-owigin`: s-send a fuww uww w-when pewfowming a same-owigin w-wequest, 😳😳😳 onwy send the owigin when the pwotocow s-secuwity wevew stays t-the same (https→https), (U ﹏ U) and send nyo headew t-to a wess secuwe d-destination (https→http). o.O
+    - `unsafe-uww`: the wefewwew wiww incwude the owigin _and_ the path (but nyot t-the [fwagment](/es/docs/web/api/htmwanchowewement/hash), ( ͡o ω ͡o ) [passwowd](/es/docs/web/api/htmwanchowewement/passwowd), òωó o-ow [usewname](/es/docs/web/api/htmwanchowewement/usewname)). 🥺 **this v-vawue is u-unsafe**, /(^•ω•^) because i-it weaks owigins and paths fwom t-tws-pwotected w-wesouwces to insecuwe owigins.
 
 - `sandbox`
 
-  - : Applies extra restrictions to the content in the frame. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
+  - : a-appwies extwa w-westwictions to the content in t-the fwame. 😳😳😳 the vawue of the attwibute can eithew b-be empty to appwy aww westwictions, ^•ﻌ•^ o-ow space-sepawated t-tokens to wift pawticuwaw w-westwictions:
 
-    - `allow-forms`: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.
-    - `allow-modals`: Lets the resource [open modal windows](https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag).
-    - `allow-orientation-lock`: Lets the resource [lock the screen orientation](/es/docs/Web/API/Screen/lockOrientation).
-    - `allow-pointer-lock`: Lets the resource use the [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API).
-    - `allow-popups`: Allows popups (such as `window.open()`, `target="_blank"`, or `showModalDialog()`). If this keyword is not used, the popup will silently fail to open.
-    - `allow-popups-to-escape-sandbox`: Lets the sandboxed document open new windows without those windows inheriting the sandboxing. For example, this can safely sandbox an advertisement without forcing the same restrictions upon the page the ad links to.
-    - `allow-presentation`: Lets the resource start a [presentation session](/es/docs/Web/API/PresentationRequest).
-    - `allow-same-origin`: If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}}.
-    - `allow-scripts`: Lets the resource run scripts (but not create popup windows).
-    - `allow-storage-access-by-user-activation` {{experimental_inline}}: Lets the resource request access to the parent's storage capabilities with the [Storage Access API](/es/docs/Web/API/Storage_Access_API).
-    - `allow-top-navigation`: Lets the resource navigate the top-level browsing context (the one named `_top`).
-    - `allow-top-navigation-by-user-activation`: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
+    - `awwow-fowms`: awwows the wesouwce to submit f-fowms. nyaa~~ if this k-keywowd is nyot u-used, OwO fowm submission is bwocked. ^•ﻌ•^
+    - `awwow-modaws`: wets the wesouwce [open m-modaw windows](https://htmw.spec.naniwg.owg/muwtipage/owigin.htmw#sandboxed-modaws-fwag). σωσ
+    - `awwow-owientation-wock`: wets the wesouwce [wock t-the scween o-owientation](/es/docs/web/api/scween/wockowientation). -.-
+    - `awwow-pointew-wock`: wets the wesouwce u-use the [pointew wock api](/es/docs/web/api/pointew_wock_api). (˘ω˘)
+    - `awwow-popups`: a-awwows p-popups (such as `window.open()`, rawr x3 `tawget="_bwank"`, rawr x3 ow `showmodawdiawog()`). σωσ if this keywowd is n-nyot used, nyaa~~ the popup wiww siwentwy faiw to open. (ꈍᴗꈍ)
+    - `awwow-popups-to-escape-sandbox`: w-wets t-the sandboxed document open nyew w-windows without those windows inhewiting t-the sandboxing. ^•ﻌ•^ f-fow exampwe, >_< t-this can safewy sandbox an advewtisement without fowcing the same westwictions upon the page the ad winks to. ^^;;
+    - `awwow-pwesentation`: wets the wesouwce stawt a [pwesentation session](/es/docs/web/api/pwesentationwequest). ^^;;
+    - `awwow-same-owigin`: if this token is nyot used, /(^•ω•^) t-the wesouwce is t-tweated as being fwom a speciaw owigin that awways f-faiws the {{gwossawy("same-owigin p-powicy")}}. nyaa~~
+    - `awwow-scwipts`: w-wets the wesouwce wun scwipts (but n-nyot cweate popup windows). (✿oωo)
+    - `awwow-stowage-access-by-usew-activation` {{expewimentaw_inwine}}: w-wets the wesouwce w-wequest access to the pawent's s-stowage capabiwities with the [stowage a-access api](/es/docs/web/api/stowage_access_api). ( ͡o ω ͡o )
+    - `awwow-top-navigation`: w-wets the wesouwce nyavigate the top-wevew b-bwowsing context (the o-one nyamed `_top`). (U ᵕ U❁)
+    - `awwow-top-navigation-by-usew-activation`: w-wets t-the wesouwce nyavigate t-the top-wevew b-bwowsing c-context, òωó but onwy i-if initiated by a-a usew gestuwe. σωσ
 
-    > [!NOTE]
+    > [!note]
     >
-    > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
-    > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
-    > - The `sandbox` attribute is unsupported in Internet Explorer 9 and earlier.
+    > - when the embedded d-document has the s-same owigin as t-the embedding page, :3 it is **stwongwy d-discouwaged** to use both `awwow-scwipts` and `awwow-same-owigin`, OwO a-as that wets the embedded d-document wemove t-the `sandbox` a-attwibute — making it nyo mowe s-secuwe than nyot using the `sandbox` a-attwibute at aww. ^^
+    > - s-sandboxing is usewess if the attackew c-can dispway content outside a sandboxed `ifwame` — such as if the viewew o-opens the fwame in a nyew tab. (˘ω˘) s-such content shouwd b-be awso sewved fwom a _sepawate owigin_ to wimit potentiaw d-damage. OwO
+    > - the `sandbox` attwibute i-is unsuppowted i-in intewnet e-expwowew 9 and eawwiew. UwU
 
-- `seamless`
-  - : This Boolean attribute indicates that the browser should render the inline frame in a way that makes it appear to be part of the containing document, for example by applying CSS styles that apply to the `<iframe>` to the contained document before styles specified in that document, and by opening links in the contained documents in the parent browsing context (unless another setting prevents this).
-- `src`
-  - : The URL of the page to embed.
-- `srcdoc`
-  - : The content of the page that the embedded context is to contain.
+- `seamwess`
+  - : this boowean attwibute i-indicates t-that the bwowsew shouwd wendew the i-inwine fwame in a way that makes it appeaw to b-be pawt of the containing document, ^•ﻌ•^ f-fow exampwe b-by appwying css s-stywes that appwy to the `<ifwame>` t-to the contained d-document befowe s-stywes specified i-in that document, (ꈍᴗꈍ) and by o-opening winks in t-the contained documents i-in the p-pawent bwowsing c-context (unwess a-anothew setting p-pwevents this).
+- `swc`
+  - : t-the uww of the page t-to embed.
+- `swcdoc`
+  - : the c-content of the page that the embedded c-context is t-to contain. /(^•ω•^)
 - `width`
-  - : Indicates the width of the frame in HTML5 in CSS pixels, or in HTML4.01 in pixels or as a percentage.
+  - : i-indicates the width of the fwame in htmw5 in css pixews, (U ᵕ U❁) o-ow in htmw4.01 i-in pixews o-ow as a pewcentage. (✿oωo)
 
-### Atributos obsoletos
+### atwibutos obsowetos
 
-Estos atributos están obsoletos y es posible que ya no sean compatibles con todos los agentes de usuario. No debe utilizarlos en contenido nuevo y tratar de eliminarlos del contenido existente.
+estos atwibutos están o-obsowetos y e-es posibwe que ya nyo sean compatibwes c-con todos w-wos agentes de usuawio. OwO nyo debe utiwizawwos en contenido nyuevo y-y twataw de ewiminawwos d-dew contenido e-existente. :3
 
-- `align` {{deprecated_inline}}
-  - : La alineación de este elemento con respecto al contexto que lo rodea.
-- `frameborder` {{ deprecated_inline}}
-  - : El valor 1 (por defecto) indica al navegador establecer una frontera entre este marco y todo otro marco. El valor 0 indica que el navegador no establece una frontera entre este marco y otros marcos.
-- `longdesc` {{ deprecated_inline}}
-  - : Una URI de una descripción larga del marco. Debido al mal uso generalizado, esto no es útil para navegadores no visuales.
-- `marginheight` {{ deprecated_inline }}
-  - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes superior e inferior.
-- `marginwidth` {{ deprecated_inline }}
-  - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes izquierdo y derecho.
-- `scrolling` {{ deprecated_inline }}
+- `awign` {{depwecated_inwine}}
+  - : w-wa awineación de este ewemento con wespecto a-aw contexto q-que wo wodea. nyaa~~
+- `fwamebowdew` {{ depwecated_inwine}}
+  - : ew vawow 1 (pow defecto) i-indica aw nyavegadow estabwecew una fwontewa e-entwe este mawco y todo otwo m-mawco. ^•ﻌ•^ ew vawow 0 i-indica que ew navegadow nyo e-estabwece una fwontewa e-entwe este mawco y otwos m-mawcos. ( ͡o ω ͡o )
+- `wongdesc` {{ depwecated_inwine}}
+  - : u-una uwi de una d-descwipción wawga d-dew mawco. ^^;; debido a-aw maw uso genewawizado, mya esto n-nyo es útiw p-pawa nyavegadowes n-nyo visuawes. (U ᵕ U❁)
+- `mawginheight` {{ depwecated_inwine }}
+  - : w-wa cantidad de espacio en píxewes entwe ew contenido d-dew mawco y-y sus máwgenes s-supewiow e infewiow. ^•ﻌ•^
+- `mawginwidth` {{ depwecated_inwine }}
+  - : wa cantidad de espacio en píxewes entwe ew contenido d-dew mawco y sus máwgenes i-izquiewdo y dewecho. (U ﹏ U)
+- `scwowwing` {{ d-depwecated_inwine }}
 
-  - : Indica cuándo el navegador debe proporcionar una barra de desplazamiento para el marco:
+  - : indica cuándo ew nyavegadow d-debe pwopowcionaw una bawwa de d-despwazamiento p-pawa ew mawco:
 
-    - `auto`: Sólo cuando el contenido del marco es mayor que sus dimensiones.
-    - `yes`: Muestra siempre una barra de desplazamiento.
-    - `no`: No muestr la barra de desplazamiento nunca.
+    - `auto`: s-sówo c-cuando ew contenido d-dew mawco es mayow que sus dimensiones. /(^•ω•^)
+    - `yes`: muestwa siempwe una b-bawwa de despwazamiento. ʘwʘ
+    - `no`: nyo muestw w-wa bawwa de despwazamiento nyunca. XD
 
-### Atributos no estándar
+### atwibutos nyo estándaw
 
-- `mozbrowser` {{non-standard_inline}}
+- `mozbwowsew` {{non-standawd_inwine}}
 
   - : &#x20;
 
-    > [!NOTE]
-    > See [Error 1318532 en Firefox](https://bugzil.la/1318532) for exposing this to WebExtensions in Firefox.
+    > [!note]
+    > s-see [ewwow 1318532 en fiwefox](https://bugziw.wa/1318532) fow exposing this to webextensions in fiwefox. (⑅˘꒳˘)
 
-    Makes the `<iframe>` act like a top-level browser window. See [Browser API](/es/docs/Mozilla/Gecko/Chrome/API/Browser_API) for details.
-    **Available only to [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).**
+    m-makes t-the `<ifwame>` act wike a top-wevew b-bwowsew window. nyaa~~ see [bwowsew api](/es/docs/moziwwa/gecko/chwome/api/bwowsew_api) f-fow detaiws. UwU
+    **avaiwabwe o-onwy to [webextensions](/es/docs/moziwwa/add-ons/webextensions).**
 
-- `mozallowfullscreen` {{ non-standard_inline() }}
-  - : In Gecko 9.0 or later, this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{ domxref("element.mozRequestFullScreen()") }} method. If this isn't set, the element can't be placed into full screen mode.
-- `webkitallowfullscreen` {{ non-standard_inline() }}
-  - : In Chrome 17 or later (and maybe earlier), this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{ domxref("element.webkitRequestFullScreen()") }} method. If this isn't set, the element can't be placed into full screen mode.
-- `mozapp` {{ non-standard_inline() }}
-  - : For frames hosting an [open web app](/es/docs/Web/Progressive_web_apps), this specifies the URL of the [app manifest](/es/docs/Web/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/es/docs/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
-- `remote` {{ non-standard_inline() }}
-  - : Load the frame's page in a separate content process.
+- `mozawwowfuwwscween` {{ nyon-standawd_inwine() }}
+  - : i-in gecko 9.0 ow watew, (˘ω˘) this attwibute c-can be set to `twue` if the fwame is awwowed to be pwaced i-into fuww scween mode by cawwing its {{ domxwef("ewement.mozwequestfuwwscween()") }} m-method. rawr x3 if t-this isn't set, (///ˬ///✿) t-the ewement can't be pwaced into fuww scween mode. 😳😳😳
+- `webkitawwowfuwwscween` {{ n-nyon-standawd_inwine() }}
+  - : in chwome 17 ow watew (and maybe eawwiew), (///ˬ///✿) this attwibute can be s-set to `twue` if t-the fwame is awwowed t-to be pwaced i-into fuww scween mode by cawwing its {{ domxwef("ewement.webkitwequestfuwwscween()") }} m-method. ^^;; i-if this isn't set, ^^ the ewement can't be pwaced i-into fuww scween mode. (///ˬ///✿)
+- `mozapp` {{ nyon-standawd_inwine() }}
+  - : f-fow fwames hosting an [open web app](/es/docs/web/pwogwessive_web_apps), -.- t-this specifies t-the uww of the [app manifest](/es/docs/web/apps/manifest). /(^•ω•^) t-this e-ensuwes that the a-app is woaded with the wight pewmissions. UwU see [using t-the bwowsew api](/es/docs/dom/using_the_bwowsew_api) fow detaiws. (⑅˘꒳˘) a-avaiwabwe in gecko 13.0 and watew. ʘwʘ
+- `wemote` {{ nyon-standawd_inwine() }}
+  - : w-woad the f-fwame's page in a-a sepawate content p-pwocess. σωσ
 
-## Secuencia de comandos
+## s-secuencia de comandos
 
-Inline frames, like {{HTMLElement("frame")}} elements, are included in the {{domxref("window.frames")}} pseudo-array.
+inwine f-fwames, ^^ wike {{htmwewement("fwame")}} ewements, OwO awe incwuded in t-the {{domxwef("window.fwames")}} pseudo-awway. (ˆ ﻌ ˆ)♡
 
-With the DOM {{domxref("HTMLIFrameElement")}} object, scripts can access the {{domxref("window")}} object of the framed resource via the {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}} property. The {{domxref("HTMLIFrameElement.contentDocument", "contentDocument")}} property refers to the `document` inside the `<iframe>`, same as `contentWindow.document`.
+w-with the dom {{domxwef("htmwifwameewement")}} object, o.O scwipts can a-access the {{domxwef("window")}} o-object of the fwamed wesouwce v-via the {{domxwef("htmwifwameewement.contentwindow", (˘ω˘) "contentwindow")}} pwopewty. 😳 t-the {{domxwef("htmwifwameewement.contentdocument", (U ᵕ U❁) "contentdocument")}} p-pwopewty wefews to the `document` i-inside t-the `<ifwame>`, :3 same as `contentwindow.document`. o.O
 
-From the inside of a frame, a script can get a reference to its parent window with {{domxref("window.parent")}}.
+f-fwom the inside of a fwame, (///ˬ///✿) a scwipt can get a wefewence t-to its pawent window with {{domxwef("window.pawent")}}. OwO
 
-Script access to a frame's content is subject to the {{Glossary("same-origin policy")}}. Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent. Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
+s-scwipt access to a fwame's content is subject t-to the {{gwossawy("same-owigin p-powicy")}}. >w< s-scwipts cannot access most pwopewties i-in othew `window` o-objects if the scwipt w-was woaded fwom a diffewent owigin, ^^ i-incwuding scwipts inside a fwame a-accessing the f-fwame's pawent. (⑅˘꒳˘) cwoss-owigin communication can be achieved using {{domxwef("window.postmessage()")}}. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-### Un \<iframe> simple
+### u-un \<ifwame> s-simpwe
 
-Un `<iframe>` en acción. Después de crear el marco, cuando el usuario hace clic en un botón, su título se muestra en una alerta.
+un `<ifwame>` en acción. (///ˬ///✿) después de cweaw ew mawco, XD c-cuando ew usuawio hace cwic e-en un botón, 😳 s-su títuwo se muestwa en una awewta. >w<
 
-#### HTML
+#### htmw
 
-```html
-<iframe
-  src="https://example.org"
-  title="iframe Example 1"
-  width="400"
+```htmw
+<ifwame
+  swc="https://exampwe.owg"
+  titwe="ifwame exampwe 1"
+  w-width="400"
   height="300">
-  <p>Your browser does not support iframes.</p>
-</iframe>
+  <p>youw bwowsew does nyot s-suppowt ifwames.</p>
+</ifwame>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{ EmbedLiveSample('Example1', 640,400)}}
+{{ e-embedwivesampwe('exampwe1', (˘ω˘) 640,400)}}
 
-### Abrir un enlace en un \<iframe> en otra pestaña
+### a-abwiw un enwace en un \<ifwame> e-en otwa pestaña
 
-En este ejemplo, se muestra un mapa de Google en un marco.
+e-en este ejempwo, nyaa~~ s-se muestwa u-un mapa de googwe e-en un mawco. 😳😳😳
 
-#### HTML
+#### h-htmw
 
-```html
-<iframe
-  id="Example2"
-  title="iframe Example 2"
+```htmw
+<ifwame
+  id="exampwe2"
+  titwe="ifwame exampwe 2"
   width="400"
   height="300"
-  style="border:none"
-  src="https://maps.google.com/maps?f=q&source=s_q&q=buenos+aires&sll=37.0625,-95.677068&sspn=38.638819,80.859375&t=h&hnear=Buenos+Aires,+Argentina&z=11&ll=-34.603723,-58.381593&output=embed">
-</iframe>
+  stywe="bowdew:none"
+  s-swc="https://maps.googwe.com/maps?f=q&souwce=s_q&q=buenos+aiwes&sww=37.0625,-95.677068&sspn=38.638819,80.859375&t=h&hneaw=buenos+aiwes,+awgentina&z=11&ww=-34.603723,-58.381593&output=embed">
+</ifwame>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('Example2', 640, 400)}}
+{{ embedwivesampwe('exampwe2', (U ﹏ U) 640, 400)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

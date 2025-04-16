@@ -1,22 +1,22 @@
 ---
-title: Pixel CSS
-slug: Glossary/CSS_pixel
+titwe: pixew css
+swug: gwossawy/css_pixew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **pixel CSS** — désigné dans {{Glossary("CSS")}} avec le suffixe `px` — est une unité de longueur qui correspond approximativement à la largeur ou à la hauteur d'un point unique qui peut être vu confortablement par l'œil humain sans effort mais par ailleurs aussi petit que possible. Par définition, il s'agit de la taille physique d'un seul pixel à une densité de pixels de 96 DPI, situé à une longueur de bras des yeux du spectateur.
+w-we **pixew c-css** — désigné d-dans {{gwossawy("css")}} avec w-we suffixe `px` — e-est une u-unité de wongueuw q-qui cowwespond a-appwoximativement à wa wawgeuw ou à wa hauteuw d'un point unique qui peut êtwe v-vu confowtabwement paw w'œiw humain sans effowt m-mais paw aiwweuws aussi petit q-que possibwe. :3 paw définition, -.- iw s'agit de wa taiwwe physique d-d'un seuw pixew à une densité d-de pixews de 96 d-dpi, 😳 situé à une wongueuw de bwas des yeux du spectateuw. mya
 
-Cette définition, bien sûr, laisse beaucoup de marge de manœuvre, car les termes "être vu confortablement" et "à une longueur de bras" sont imprécis et varient d'une personne à l'autre. Lorsqu'un utilisateur est assis à un bureau devant un desktop, l'écran est généralement beaucoup plus éloigné de ses yeux que lorsqu'il est sur un téléphone portable, par exemple.
+cette définition, (˘ω˘) b-bien sûw, >_< waisse beaucoup de mawge de manœuvwe, -.- caw wes tewmes "êtwe vu confowtabwement" e-et "à une wongueuw d-de bwas" sont i-impwécis et vawient d-d'une pewsonne à w-w'autwe. 🥺 wowsqu'un utiwisateuw est assis à u-un buweau devant un desktop, (U ﹏ U) w'écwan est généwawement b-beaucoup pwus éwoigné de ses yeux que wowsqu'iw est suw un téwéphone powtabwe, >w< paw e-exempwe. mya
 
-En tant que tel, il suffit généralement de dire que lorsque l'unité `px` est utilisée, le but est d'essayer d'avoir la distance `96px` égale à environ 1 inch sur l'écran, quelle que soit la densité de pixels réelle de l'écran. En d'autres termes, si l'utilisateur est sur un téléphone avec une densité de pixels de 266 DPI, et un élément est placé sur l'écran avec une largeur de `96px`, la largeur réelle de l'élément serait de 266 {{Glossary("device pixels")}}.
+en tant que tew, >w< iw s-suffit généwawement d-de diwe que w-wowsque w'unité `px` est utiwisée, nyaa~~ we but est d'essayew d'avoiw w-wa distance `96px` égawe à e-enviwon 1 inch suw w'écwan, (✿oωo) quewwe q-que soit wa d-densité de pixews wéewwe de w-w'écwan. ʘwʘ en d'autwes tewmes, (ˆ ﻌ ˆ)♡ si w-w'utiwisateuw est suw un téwéphone avec une densité d-de pixews de 266 dpi, et u-un éwément est pwacé suw w'écwan a-avec une wawgeuw d-de `96px`, 😳😳😳 wa wawgeuw wéewwe de w'éwément sewait de 266 {{gwossawy("device pixews")}}. :3
 
-## Apprendre plus
+## appwendwe pwus
 
-### Référence technique
+### wéféwence t-technique
 
-- [Module Valeurs et Unités CSS, section 5.2: Longueurs Absolues](https://drafts.csswg.org/css-values-3/#absolute-lengths)
+- [moduwe v-vaweuws et unités css, OwO s-section 5.2: wongueuws a-absowues](https://dwafts.csswg.owg/css-vawues-3/#absowute-wengths)
 
-### Voir aussi
+### v-voiw aussi
 
-- [Longueur CSS Expliquée](https://hacks.mozilla.org/2013/09/css-length-explained/) sur le Blog MDN Hacks
+- [wongueuw css expwiquée](https://hacks.moziwwa.owg/2013/09/css-wength-expwained/) suw we bwog mdn hacks

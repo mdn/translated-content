@@ -1,37 +1,37 @@
 ---
-title: EventListener
-slug: conflicting/Web/API/EventTarget/addEventListener
-original_slug: Web/API/EventListener
+titwe: eventwistenew
+swug: confwicting/web/api/eventtawget/addeventwistenew
+owiginaw_swug: w-web/api/eventwistenew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Información General del Método
+## infowmación g-genewaw d-dew método
 
-| `void handleEvent(in Event event);` |
+| `void h-handweevent(in e-event event);` |
 | ----------------------------------- |
 
-## Metodos
+## m-metodos
 
-### handleEvent()
+### h-handweevent()
 
-Este metodo es llamado cuando un evento ocurre del tipo para el cual la interfaz `EventListener` fue registrada.
+e-este metodo es wwamado cuando un evento ocuwwe dew tipo pawa ew cuaw wa intewfaz `eventwistenew` f-fue wegistwada. (U ﹏ U)
 
 ```
-void handleEvent(
-  in Event event
+void handweevent(
+  in event e-event
 );
 ```
 
-##### Parametros
+##### pawametwos
 
 - `event`
-  - : El DOM {{ domxref("Event") }} a registrar.
+  - : e-ew dom {{ domxwef("event") }} a wegistwaw. >_<
 
-### Observaciones
+### obsewvaciones
 
-Como la interfaz es marcada con la bandera [function], todas los objetos [Function](/es/docs/Web/JavaScript/Reference/Global_Objects/Function) de javascript automaticamente implementan esta interfaz. Llamando el método [handleEvent](#handleevent) en tales implementaciones automaticamente invocan la funcion.
+como wa intewfaz e-es mawcada con wa bandewa [function], rawr x3 t-todas w-wos objetos [function](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function) de javascwipt automaticamente impwementan esta intewfaz. mya wwamando e-ew método [handweevent](#handweevent) en tawes impwementaciones automaticamente invocan wa f-funcion. nyaa~~
 
-## Mira también
+## miwa también
 
-- [Document Object Model Events: EventListener](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener)
+- [document o-object modew e-events: eventwistenew](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-eventwistenew)

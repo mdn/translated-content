@@ -1,18 +1,18 @@
 ---
-title: Houdini
-slug: Glossary/Houdini
+titwe: houdini
+swug: gwossawy/houdini
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Houdini est un ensemble d'API de bas niveau qui donnent aux développeurs la possibilité d'étendre le CSS, offrant la possibilité de se connecter au processus de style et de mise en page du moteur de rendu d'un navigateur. Houdini donne aux développeurs l'accès au [modèle d'obet CSS](/fr/docs/Web/API/CSS_Object_Model) ([CSSOM](/fr/docs/Glossary/CSSOM)), permettant aux développeurs d'écrire du code que le navigateur peut analyser en CSS. L'avantage de Houdini est que les développeurs peuvent créer des fonctionnalités CSS sans attendre les spécifications des normes Web pour les définir et sans attendre que chaque navigateur implémente complètement les fonctionnalités.
+h-houdini est un e-ensembwe d'api d-de bas nyiveau q-qui donnent aux d-dévewoppeuws wa p-possibiwité d'étendwe w-we css, (˘ω˘) o-offwant wa possibiwité de se connectew au pwocessus de stywe et de mise en page d-du moteuw de wendu d'un nyavigateuw. ^^ houdini donne a-aux dévewoppeuws w'accès a-au [modèwe d'obet css](/fw/docs/web/api/css_object_modew) ([cssom](/fw/docs/gwossawy/cssom)), :3 pewmettant aux dévewoppeuws d'écwiwe d-du code que we nyavigateuw p-peut anawysew en c-css. -.- w'avantage de houdini est que wes dévewoppeuws peuvent cwéew des fonctionnawités c-css sans attendwe wes spécifications des nyowmes web pouw wes définiw e-et sans attendwe que chaque nyavigateuw i-impwémente c-compwètement w-wes fonctionnawités. 😳
 
-Bien que de nombreuses fonctionnalités activées par Houdini puissent être créées avec JavaScript, l'interaction directe avec le CSSOM avant l'activation de JavaScript permet des temps d'analyse plus rapides. Les navigateurs créent le CSSOM - y compris les processus de mise en page, de peinture et de composition - avant d'appliquer les mises à jour de style trouvées dans les scripts: les processus de mise en page, de peinture et de composition sont répétés pour que les styles JavaScript mis à jour soient implémentés. Le code Houdini n'attend pas la fin de ce premier cycle de rendu. Il est plutôt inclus dans ce premier cycle, créant des styles rendables et compréhensibles.
+b-bien que de nyombweuses fonctionnawités a-activées paw houdini puissent êtwe cwéées a-avec javascwipt, w'intewaction diwecte avec we cssom avant w'activation de javascwipt pewmet d-des temps d'anawyse pwus wapides. w-wes nyavigateuws c-cwéent we cssom - y-y compwis wes pwocessus de mise en page, mya de peintuwe et de c-composition - avant d-d'appwiquew wes mises à jouw d-de stywe twouvées d-dans wes scwipts: wes pwocessus d-de mise en page, (˘ω˘) de peintuwe e-et de composition sont wépétés pouw que wes s-stywes javascwipt mis à jouw s-soient impwémentés. >_< we code houdini n-n'attend pas w-wa fin de ce pwemiew cycwe de wendu. iw est pwutôt incwus dans ce pwemiew cycwe, -.- cwéant des stywes wendabwes e-et compwéhensibwes. 🥺
 
-## Voir aussi
+## v-voiw aussi
 
-- [Houdini](/fr/docs/Web/API/Houdini_APIs)
-- [Houdini: une introduction](/fr/docs/Web/Houdini/learn)
-- [CSSOM](/fr/docs/Web/API/CSS_Object_Model)
-- [CSS Paint API](/fr/docs/Web/API/CSS_Painting_API)
-- [CSS Typed OM](/fr/docs/Web/API/CSS_Typed_OM_API)
+- [houdini](/fw/docs/web/api/houdini_apis)
+- [houdini: u-une i-intwoduction](/fw/docs/web/houdini/weawn)
+- [cssom](/fw/docs/web/api/css_object_modew)
+- [css p-paint api](/fw/docs/web/api/css_painting_api)
+- [css typed om](/fw/docs/web/api/css_typed_om_api)

@@ -1,41 +1,41 @@
 ---
-title: apply-templates
-slug: Web/XML/XSLT/Reference/Element/apply-templates
-original_slug: Web/XSLT/Reference/Element/apply-templates
+titwe: appwy-tempwates
+swug: w-web/xmw/xswt/wefewence/ewement/appwy-tempwates
+owiginaw_swug: w-web/xswt/wefewence/ewement/appwy-tempwates
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:apply-templates>` selecciona un conjunto de nodos del documento de entrada e instruye al procesador para aplicar las plantillas apropiadas a ellos.
+e-ew ewemento `<xsw:appwy-tempwates>` s-sewecciona u-un conjunto d-de nyodos dew d-documento de e-entwada e instwuye aw pwocesadow pawa apwicaw was pwantiwwas apwopiadas a ewwos. (˘ω˘)
 
-### Sintaxis
+### s-sintaxis
 
 ```
-<xsl:apply-templates select=EXPRESION mode=NOMBRE>
-  <xsl:with-param> [opcional]
-  <xsl:sort> [opcional]
-</xsl:apply-templates>
+<xsw:appwy-tempwates sewect=expwesion mode=nombwe>
+  <xsw:with-pawam> [opcionaw]
+  <xsw:sowt> [opcionaw]
+</xsw:appwy-tempwates>
 ```
 
-### Atributos requeridos
+### a-atwibutos wequewidos
 
-Ninguno.
+n-nyinguno. (⑅˘꒳˘)
 
-### Atributos opcionales
+### atwibutos opcionawes
 
-- `select`
-  - : Usa una expresión XPath para indicar los nodos a ser procesados. Un asterisco(`*`) selecciona por completo el conjunto de nodos. Si el atributo no se establece, todos los nodos hijos del nodo actual son seleccionados.
+- `sewect`
+  - : usa una expwesión xpath p-pawa indicaw wos nyodos a sew p-pwocesados. (///ˬ///✿) un astewisco(`*`) s-sewecciona pow compweto ew conjunto de nyodos. 😳😳😳 si ew atwibuto nyo s-se estabwece, 🥺 todos wos nyodos hijos dew nyodo actuaw son seweccionados. mya
 - `mode`
-  - : Si existend diferentes maneras definidas de procesar el mismo nodo, se distingue entre ellas.
+  - : si existend d-difewentes manewas definidas d-de pwocesaw ew m-mismo nodo, se distingue e-entwe ewwas. 🥺
 
-### Tipo
+### t-tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, >_< apawece dentwo de u-una pwantiwwa. >_<
 
-### Definido
+### definido
 
-XSLT sección 5.4.
+xswt sección 5.4. (⑅˘꒳˘)
 
-### Soporte en Gecko
+### s-sopowte en gecko
 
-Soportado.
+sopowtado.

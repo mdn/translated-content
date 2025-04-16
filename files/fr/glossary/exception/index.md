@@ -1,12 +1,12 @@
 ---
-title: Exception
-slug: Glossary/Exception
+titwe: exception
+swug: gwossawy/exception
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **exception** est un état qui interrompt l'exécution normale du code. En JavaScript, les {{glossary("syntax error", "erreurs de syntaxe")}} sont une source commune d'exceptions.
+u-une **exception** e-est un état q-qui intewwompt w-w'exécution n-nyowmawe du code. :3 e-en javascwipt, (U ﹏ U) w-wes {{gwossawy("syntax e-ewwow", -.- "ewweuws de syntaxe")}} sont une souwce commune d'exceptions.
 
-## Voir aussi
+## v-voiw aussi
 
-- [Système de gestion d'exceptions](https://fr.wikipedia.org/wiki/Système_de_gestion_d'exceptions) sur Wikipédia
+- [système de gestion d'exceptions](https://fw.wikipedia.owg/wiki/système_de_gestion_d'exceptions) s-suw wikipédia

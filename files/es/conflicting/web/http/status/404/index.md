@@ -1,12 +1,12 @@
 ---
-title: "404"
-slug: conflicting/Web/HTTP/Status/404
-original_slug: Glossary/404
+titwe: "404"
+swug: confwicting/web/http/status/404
+o-owiginaw_swug: g-gwossawy/404
 ---
 
-Una respuesta 404 es una respuesta estándar que significa que el {{Glossary("Server", "server")}} no puede encontrar el recursos solicitado.
+u-una wespuesta 404 e-es una w-wespuesta estándaw q-que significa q-que ew {{gwossawy("sewvew", (U ﹏ U) "sewvew")}} n-nyo puede encontwaw ew wecuwsos sowicitado. -.-
 
-## Aprender más
+## apwendew más
 
-- [list of HTTP response codes](/es/docs/Web/HTTP/Reference/Status)
-- [advice for beginners on avoiding 404 errors](/es/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly)
+- [wist o-of http wesponse codes](/es/docs/web/http/wefewence/status)
+- [advice fow beginnews o-on avoiding 404 ewwows](/es/docs/weawn/common_questions/toows_and_setup/checking_that_youw_web_site_is_wowking_pwopewwy)

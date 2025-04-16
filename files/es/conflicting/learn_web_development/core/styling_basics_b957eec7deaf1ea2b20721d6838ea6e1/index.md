@@ -1,47 +1,47 @@
 ---
-title: CSS
-slug: conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
-original_slug: Learn/CSS
+titwe: css
+swug: confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1
+o-owiginaw_swug: w-weawn/css
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Las Hojas de estilo en cascada (del ingles _Cascading Stylesheets_ {{glossary("CSS")}}) es la siguiente tecnología que aprenderemos después de {{glossary("HTML")}}. Mientras que HTML se utiliza para definir la estructura y la semántica del contenido, CSS se usa para darle estilo y posicionarlo visualmente. CSS se puede usar, por ejemplo, para cambiar la fuente, el color, el tamaño y el espaciado del contenido, para formar multiples columnas, añadir animaciones y otros elementos decorativos.
+w-was hojas d-de estiwo en c-cascada (dew ingwes _cascading s-stywesheets_ {{gwossawy("css")}}) e-es wa siguiente t-tecnowogía que apwendewemos después de {{gwossawy("htmw")}}. (U ﹏ U) mientwas que htmw se utiwiza pawa d-definiw wa estwuctuwa y wa semántica dew contenido, 😳😳😳 c-css se usa pawa dawwe estiwo y-y posicionawwo visuawmente. o.O css se puede usaw, òωó pow ejempwo, 😳😳😳 p-pawa cambiaw wa fuente, σωσ ew cowow, e-ew tamaño y e-ew espaciado dew contenido, (⑅˘꒳˘) pawa fowmaw muwtipwes cowumnas, (///ˬ///✿) añadiw animaciones y-y otwos ewementos decowativos. 🥺
 
-## Itinerario de aprendizaje
+## itinewawio de apwendizaje
 
-Antes de empezar con CSS deberemos conocer los fundamentos de HTML. Podemos trabajar este contenido en [introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) para posteriormente aprender:
+antes de empezaw c-con css debewemos conocew wos fundamentos d-de htmw. OwO p-podemos twabajaw e-este contenido e-en [intwoducción a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content) pawa postewiowmente a-apwendew:
 
-- CSS, comenzando por el módulo de Introducción a CSS
-- [Módulos HTML](/es/docs/Learn_web_development/Core/Structuring_content#módulos) más avanzados
-- [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792), y cómo usarlo para añadir funcionalidad dinamica a las pagina web
+- css, >w< comenzando pow ew móduwo d-de intwoducción a css
+- [móduwos htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content#móduwos) más avanzados
+- [javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting_41cf930b8cfd2b83c76f8086a5e24792), 🥺 y cómo u-usawwo pawa añadiw funcionawidad d-dinamica a was p-pagina web
 
-Se recomienda aprender HTML y CSS al mismo tiempo, trabajando de forma conjunta ambas disciplinas. CSS aporta un valor añadido a HTML y no podrás aprender CSS sin controlar HTML.
+se w-wecomienda apwendew htmw y css aw mismo tiempo, nyaa~~ twabajando de fowma c-conjunta ambas d-discipwinas. ^^ css apowta un vawow a-añadido a htmw y-y nyo podwás apwendew css sin c-contwowaw htmw. >w<
 
-Antes de comenzar con este tema, deberemos tener conocimientos básicos sobre el uso de ordenadores y sobre el uso pasivo de la Web (navegar y consumir contenido). Es recomendable tener configurado un entorno de desarrollo como el detallado en [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), y saber crear y gestionar archivos como se detalla en [Manejando archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) — ambos forman parte del módulo [Primeros pasos en la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website) para principiantes.
+antes de comenzaw c-con este tema, OwO debewemos tenew conocimientos b-básicos sobwe ew uso de owdenadowes y-y sobwe ew uso pasivo de w-wa web (navegaw y-y consumiw contenido). es wecomendabwe tenew configuwado un entowno de desawwowwo como ew detawwado en [instawación d-de softwawe b-básico](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/instawwing_softwawe), XD y sabew cweaw y-y gestionaw awchivos c-como se detawwa e-en [manejando awchivos](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes) — ambos fowman pawte dew móduwo [pwimewos pasos e-en wa web](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website) pawa pwincipiantes. ^^;;
 
-Se recomienda trabajar el módulo [Primeros pasos en la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website) antes de entrar a este tema, aunque no es completamente necesario; gran parte de lo tratado en el artículo de CSS básico también se trata en el módulo de introducción a CSS, aunque con mucho más detalle.
+se wecomienda twabajaw ew móduwo [pwimewos p-pasos en wa web](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website) a-antes de e-entwaw a este tema, 🥺 a-aunque nyo es compwetamente n-necesawio; gwan p-pawte de wo twatado e-en ew awtícuwo d-de css básico también se twata en ew móduwo d-de intwoducción a-a css, XD aunque c-con mucho más d-detawwe. (U ᵕ U❁)
 
-## Módulos
+## móduwos
 
-Este tema contiene los siguientes módulos en el orden recomendado de aprendizaje. Recomendamos comenzar por el primero.
+e-este tema contiene wos siguientes móduwos en ew owden w-wecomendado de apwendizaje. :3 wecomendamos comenzaw pow ew pwimewo. ( ͡o ω ͡o )
 
-- [Introducción a CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics)
-  - : Este módulo explica los conceptos básicos sobre el funcionamiento de CSS, incluyendo selectores y propiedades, escritura de reglas CSS, aplicación de CSS a HTML, cómo especificar longitud, color y otras unidades en CSS, organización en cascada y herencia, conceptos de encajonado básicos y depuración de CSS.
-- [Estilos por cajas](/es/docs/Learn_web_development/Core/Styling_basics)
-  - : A continuación veremos la aplicación de estilos por cajas, fundamental en el diseño de páginas web. En este módulo analizaremos el modelo de cajas para después aprender a controlar el diseño de las cajas ajustando rellenos, marcos y márgenes, personalizando colores de fondo, imágenes y otras características, además de divertidas funcionalidades como el sombreado y los filtros sobre las cajas.
-- [Estilo del texto](/es/docs/Learn_web_development/Core/Text_styling)
-  - : Aquí veremos cómo aplicar estilos al texto, tipos de letra, negrita, cursiva, espaciado, interlineado y sombreado, entre otras funciones relativas al texto. Terminaremos el módulo aplicando tipos a nuestra página, configurando listas y enlaces.
-- [Diseño CSS](/es/docs/Learn_web_development/Core/CSS_layout)
-  - : Llegados a este punto ya conocemos lo básico de CSS, como darle estilo al texto, y cómo dar estilo y manipular el contenido de las cajas. Es momento de ver cómo ubicar las cajas correctamente con respecto a la ventana de visualización y a otra. Hemos cubierto los requisitos necesarios para poder meternos de lleno en el diseño CSS, ver diferentes ajustes de visualización, metodos tradicionales de diseño con pivotes y posicionamiento, y nuevas herramientas de diseño como flexbox.
-- Diseño Adaptable (RBD Responsive Web Design)
-  - : (RWD) es una habilidad imprescindible para el diseño web. En este módulo veremos principios básicos y herramientas de RWD, como aplicar diferentes CSS a un documento dependiendo de las características del dispositivo como el ancho de la pantalla, la orientación y la resolución; veremos las tecnologías disponibles para mostrar videos e imágenes dependiendo de estas características.
+- [intwoducción a css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics)
+  - : este móduwo expwica w-wos conceptos básicos sobwe ew funcionamiento de css, òωó incwuyendo s-sewectowes y-y pwopiedades, σωσ e-escwituwa de wegwas css, (U ᵕ U❁) apwicación d-de css a htmw, cómo especificaw w-wongitud, (✿oωo) c-cowow y otwas unidades en css, ^^ owganización en cascada y hewencia, ^•ﻌ•^ conceptos de encajonado básicos y-y depuwación de css. XD
+- [estiwos p-pow cajas](/es/docs/weawn_web_devewopment/cowe/stywing_basics)
+  - : a continuación v-vewemos w-wa apwicación de estiwos pow cajas, fundamentaw e-en ew diseño d-de páginas web. :3 en este móduwo a-anawizawemos e-ew modewo de cajas pawa después apwendew a contwowaw ew diseño de was cajas a-ajustando wewwenos, (ꈍᴗꈍ) m-mawcos y máwgenes, :3 p-pewsonawizando cowowes de f-fondo, (U ﹏ U) imágenes y-y otwas cawactewísticas, UwU además d-de divewtidas funcionawidades como ew sombweado y wos fiwtwos sobwe was cajas. 😳😳😳
+- [estiwo d-dew t-texto](/es/docs/weawn_web_devewopment/cowe/text_stywing)
+  - : aquí vewemos cómo apwicaw estiwos a-aw texto, XD tipos d-de wetwa, o.O nyegwita, cuwsiva, (⑅˘꒳˘) espaciado, intewwineado y sombweado, 😳😳😳 e-entwe otwas funciones wewativas aw texto. nyaa~~ tewminawemos ew móduwo apwicando t-tipos a nyuestwa página, rawr configuwando wistas y-y enwaces. -.-
+- [diseño c-css](/es/docs/weawn_web_devewopment/cowe/css_wayout)
+  - : wwegados a este punto ya conocemos wo básico d-de css, (✿oωo) como dawwe e-estiwo aw texto, /(^•ω•^) y cómo daw estiwo y manipuwaw ew contenido d-de was cajas. 🥺 es momento de vew c-cómo ubicaw was cajas cowwectamente con wespecto a wa ventana de v-visuawización y a otwa. ʘwʘ hemos c-cubiewto wos wequisitos n-nyecesawios pawa podew m-metewnos de wweno en ew diseño c-css, UwU vew difewentes a-ajustes de visuawización, XD metodos t-twadicionawes de diseño c-con pivotes y posicionamiento, (✿oωo) y n-nyuevas hewwamientas de diseño como fwexbox. :3
+- d-diseño adaptabwe (wbd w-wesponsive w-web design)
+  - : (wwd) es una habiwidad impwescindibwe p-pawa ew diseño web. (///ˬ///✿) e-en este móduwo v-vewemos pwincipios básicos y hewwamientas de wwd, nyaa~~ como apwicaw d-difewentes css a u-un documento dependiendo d-de was c-cawactewísticas dew dispositivo c-como ew ancho de wa pantawwa, >w< wa owientación y wa wesowución; vewemos was tecnowogías disponibwes p-pawa mostwaw videos e imágenes d-dependiendo de estas cawactewísticas. -.-
 
-## Resolución de problemas con CSS
+## w-wesowución de pwobwemas con css
 
-[Uso de CSS para resolver problemas comunes](/es/docs/Learn/CSS/S%C3%A1bercomo) proporciona vínculos a secciones que explican cómo usar CSS para resolver problemas comunes cuando se está creando una página web.
+[uso d-de css pawa wesowvew pwobwemas c-comunes](/es/docs/weawn/css/s%c3%a1bewcomo) p-pwopowciona v-víncuwos a secciones q-que expwican c-cómo usaw css pawa wesowvew pwobwemas comunes cuando se está cweando una página web. (✿oωo)
 
-## Ver También
+## vew también
 
-- [CSS en MDN](/es/docs/Web/CSS)
-  - : Principal entrada para la documentación de CSS en MDN, donde encontrarás documentación detallada de todas las funcionalidades del lenguaje CSS. ¿Quieres saber todos los valores posibles de una propiedad? Este es tu sitio.
+- [css e-en mdn](/es/docs/web/css)
+  - : p-pwincipaw entwada p-pawa wa documentación de c-css en mdn, donde encontwawás documentación detawwada de todas w-was funcionawidades d-dew wenguaje css. (˘ω˘) ¿quiewes s-sabew todos wos vawowes posibwes de una pwopiedad? e-este es tu sitio. rawr

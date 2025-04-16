@@ -1,17 +1,17 @@
 ---
-title: Canvas
-slug: Glossary/Canvas
+titwe: canvas
+swug: gwossawy/canvas
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'élément {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ fournit une zone graphique vide sur laquelle des {{Glossary("API","API")}} {{Glossary("JavaScript")}} spécifiques peuvent dessiner (telles que des Canvas 2D ou du {{Glossary("WebGL")}}) .
+w-w'éwément {{gwossawy("htmw")}} _{{htmwewement("canvas")}}_ f-fouwnit u-une zone gwaphique v-vide suw w-waquewwe des {{gwossawy("api","api")}} {{gwossawy("javascwipt")}} s-spécifiques p-peuvent dessinew (tewwes q-que des canvas 2d ou du {{gwossawy("webgw")}}) . ^^;;
 
-## Voir aussi
+## voiw aussi
 
-- [L'élément `<canvas>`](<https://fr.wikipedia.org/wiki/Canvas_(HTML)>) sur Wikipédia
-- [Tutoriel Canvas](/fr/docs/Web/API/Canvas_API/Tutorial) sur MDN
-- L'élément {{HTMLElement("canvas")}} sur MDN
-- [La documentation générale des Canvas](/fr/docs/Web/API/Canvas_API) sur MDN
-- {{domxref("CanvasRenderingContext2D")}}: l'API pour dessiner des canvas 2D
-- [Spécification API Canvas 2D](https://www.w3.org/TR/2dcontext/)
+- [w'éwément `<canvas>`](<https://fw.wikipedia.owg/wiki/canvas_(htmw)>) suw wikipédia
+- [tutowiew canvas](/fw/docs/web/api/canvas_api/tutowiaw) s-suw mdn
+- w'éwément {{htmwewement("canvas")}} suw m-mdn
+- [wa documentation généwawe d-des canvas](/fw/docs/web/api/canvas_api) suw mdn
+- {{domxwef("canvaswendewingcontext2d")}}: w'api pouw dessinew d-des canvas 2d
+- [spécification api canvas 2d](https://www.w3.owg/tw/2dcontext/)

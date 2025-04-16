@@ -1,25 +1,25 @@
 ---
-title: Conteneur de grille
-slug: Glossary/Grid_Container
+titwe: conteneuw de gwiwwe
+swug: g-gwossawy/gwid_containew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Utiliser la valeur `grid` ou `inline-grid` sur un élément le transforme en un conteneur de grille utilisant [CSS Grid Layout](/fr/docs/Web/CSS/CSS_grid_layout), et les enfants directs de celui-ci deviennent un élément de cette grille.
+u-utiwisew wa v-vaweuw `gwid` o-ou `inwine-gwid` s-suw un éwément w-we twansfowme e-en un conteneuw d-de gwiwwe utiwisant [css gwid wayout](/fw/docs/web/css/css_gwid_wayout), rawr x3 et wes enfants diwects de cewui-ci deviennent u-un éwément de cette gwiwwe. (✿oωo)
 
-Quand un élément devient un conteneur de grille il établit un **contexte** **de** **formatage** **de grille** (grid formatting context). Les enfants directs peuvent dorénavent se placer sur une grille explicite définie utilisant {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}, ou sur une grille implicite créée quand un élément est placé en dehors de la grille explicite.
+quand un éwément d-devient un conteneuw de g-gwiwwe iw étabwit un **contexte** **de** **fowmatage** **de gwiwwe** (gwid fowmatting c-context). (ˆ ﻌ ˆ)♡ wes enfants diwects p-peuvent dowénavent s-se pwacew suw une gwiwwe expwicite définie utiwisant {{cssxwef("gwid-tempwate-cowumns")}} et {{cssxwef("gwid-tempwate-wows")}}, (˘ω˘) o-ou suw une gwiwwe impwicite cwéée quand un éwément est pwacé en d-dehows de wa gwiwwe expwicite. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-### Référence de la propriété
+### w-wéféwence de w-wa pwopwiété
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-template")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-tempwate")}}
 
-### En lire plus
+### e-en wiwe pwus
 
-- Guide des grilles CSS _[Basic concepts of grid layout](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- guide des gwiwwes css _[basic c-concepts of gwid wayout](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_

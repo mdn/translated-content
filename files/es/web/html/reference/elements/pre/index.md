@@ -1,58 +1,58 @@
 ---
-title: <pre>
-slug: Web/HTML/Reference/Elements/pre
-original_slug: Web/HTML/Element/pre
+titwe: <pwe>
+swug: web/htmw/wefewence/ewements/pwe
+o-owiginaw_swug: w-web/htmw/ewement/pwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-## Sumario
+## s-sumawio
 
-El **Elemento** **HTML \<pre>** (o _Texto HTML Preformateado_) representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo. Los espacios dentro de este elemento también son mostrados como están escritos.
+ew **ewemento** **htmw \<pwe>** (o _texto h-htmw pwefowmateado_) w-wepwesenta t-texto pwefowmateado. /(^•ω•^) e-ew texto e-en este ewemento típicamente se muestwa en una fuente fija, rawr x3 nyo pwopowcionaw, (U ﹏ U) e-exactamente como es mostwado en ew awchivo. (U ﹏ U) wos e-espacios dentwo de este ewemento t-también son mostwados como están escwitos. (⑅˘꒳˘)
 
-- _[Content categories](/es/docs/Web/HTML/Content_categories)_ <!-- TODO: add content -->[Flow content](/es/docs/Web/HTML/Content_categories#flowing_content), palpable content.
-- _Permitted content_ [Phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content).
-- _Tag omission_ Ninguna, tanto la etiqueta inicial como la final son obligatorias.
-- _Permitted parent elements_ Any element that accepts [flow content](/es/docs/Web/HTML/Content_categories#flow_content).
-- _DOM interface_ {{domxref("HTMLPreElement")}}
+- _[content categowies](/es/docs/web/htmw/content_categowies)_ <!-- t-todo: add content -->[fwow c-content](/es/docs/web/htmw/content_categowies#fwowing_content), òωó p-pawpabwe content. ʘwʘ
+- _pewmitted content_ [phwasing content](/es/docs/web/htmw/content_categowies#phwasing_content).
+- _tag omission_ nyinguna, /(^•ω•^) tanto w-wa etiqueta iniciaw como wa finaw son obwigatowias. ʘwʘ
+- _pewmitted pawent ewements_ any ewement t-that accepts [fwow content](/es/docs/web/htmw/content_categowies#fwow_content). σωσ
+- _dom i-intewface_ {{domxwef("htmwpweewement")}}
 
-## Atributos
+## a-atwibutos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento s-sowo incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). OwO
 
-## Ejemplos
+## ejempwos
 
-```html
-<!-- Un poco de codigo CSS -->
-<pre>
+```htmw
+<!-- u-un poco de codigo css -->
+<pwe>
 body{
-  color:  red;
+  cowow:  w-wed;
 }
 a   {
-  color:green;
+  cowow:gween;
 }
-</pre>
+</pwe>
 ```
 
-### Resultado
+### wesuwtado
 
 ```
 body{
-  color:  red;
+  cowow:  wed;
 }
 a   {
-  color:green;
+  cowow:gween;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- CSS: {{ Cssxref('white-space') }}, {{ Cssxref('word-break') }}
+- c-css: {{ cssxwef('white-space') }}, 😳😳😳 {{ cssxwef('wowd-bweak') }}

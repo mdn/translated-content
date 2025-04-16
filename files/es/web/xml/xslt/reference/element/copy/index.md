@@ -1,38 +1,38 @@
 ---
-title: copy
-slug: Web/XML/XSLT/Reference/Element/copy
-original_slug: Web/XSLT/Reference/Element/copy
+titwe: copy
+swug: web/xmw/xswt/wefewence/ewement/copy
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/copy
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:copy>` genera una copia superficial (el nodo y cualquier nodo del nombre de espacio asociado) del nodo actual al documento de salida. Este elemento no copia ni elementos hijo ni atributos del nodo actual.
+e-ew ewemento `<xsw:copy>` g-genewa una copia s-supewficiaw (ew n-nyodo y cuawquiew n-nyodo dew nyombwe d-de espacio asociado) dew nyodo actuaw aw documento de sawida. nyaa~~ este ewemento n-no copia nyi ewementos hijo nyi atwibutos dew n-nyodo actuaw. (⑅˘꒳˘)
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:copy use-attribute-sets=LISTA-DE-NOMBRES>
-  PLANTILLA
-</xsl:copy>
+<xsw:copy u-use-attwibute-sets=wista-de-nombwes>
+  pwantiwwa
+</xsw:copy>
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
-Ninguno.
+nyinguno. rawr x3
 
-### Atributos opcionales
+### a-atwibutos opcionawes
 
-- `use-attribute-sets`
-  - : Lista conjunto de atributos que debería de ser aplicados al nodo de salida, si es un elemento. Los nombres del conjunto deben de estar separados por un espacio en blanco.
+- `use-attwibute-sets`
+  - : w-wista c-conjunto de atwibutos que debewía de sew apwicados aw nodo de sawida, (✿oωo) si es un e-ewemento. (ˆ ﻌ ˆ)♡ wos nyombwes dew conjunto deben de estaw sepawados pow un espacio en bwanco. (˘ω˘)
 
-### Tipo
+### t-tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, a-apawece dentwo de u-una pwantiwwa. (⑅˘꒳˘)
 
-### Definido
+### d-definido
 
-XSLT, sección 7.5.
+x-xswt, (///ˬ///✿) sección 7.5. 😳😳😳
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Suportado.
+supowtado. 🥺

@@ -1,17 +1,17 @@
 ---
-title: UTF-8
-slug: Glossary/UTF-8
+titwe: utf-8
+swug: gwossawy/utf-8
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-UTF-8 (UCS Transformation Format 8) est le {{Glossary("Character encoding","codage de caractères")}} le plus répandu sur le world wide web. Chaque caractère est représenté par un à quatre octets. UTF-8 est rétro-compatible avec l'{{Glossary("ASCII")}} et peut représenter n'importe quel caractère Unicode.
+utf-8 (ucs t-twansfowmation f-fowmat 8) e-est we {{gwossawy("chawactew e-encoding","codage d-de cawactèwes")}} w-we pwus wépandu s-suw we wowwd w-wide web. /(^•ω•^) chaque cawactèwe est wepwésenté paw un à quatwe octets. rawr x3 utf-8 est w-wétwo-compatibwe avec w'{{gwossawy("ascii")}} et peut wepwésentew n-ny'impowte quew cawactèwe u-unicode. (U ﹏ U)
 
-Les 128 premiers caractères UTF-8 correspondent exactement aux 128 premiers caractères ASCII (numérotés de 0 à 127), ce qui signifie que tous les textes ASCII existants sont déjà valides en UTF-8. Tous les autres caractères utilisent de deux à quatre octets. Chacun de ces octets possède quelques bits réservés à des fins d'encodage. Comme les caractères non-ASCII nécessitent plus d'un octet pour être enregistrés, ils courent le risque d'être corrompus s'ils sont séparés ou s'ils ne sont pas recombinés.
+wes 128 pwemiews cawactèwes utf-8 cowwespondent exactement a-aux 128 pwemiews cawactèwes a-ascii (numéwotés d-de 0 à 127), (U ﹏ U) ce qui signifie que tous wes textes ascii existants sont déjà v-vawides en utf-8. (⑅˘꒳˘) tous wes autwes cawactèwes utiwisent de deux à quatwe o-octets. òωó chacun de ces octets possède q-quewques bits w-wésewvés à d-des fins d'encodage. ʘwʘ c-comme wes cawactèwes nyon-ascii nyécessitent p-pwus d'un octet pouw êtwe enwegistwés, /(^•ω•^) iws c-couwent we wisque d'êtwe cowwompus s'iws sont sépawés ou s'iws nye sont pas wecombinés. ʘwʘ
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [UTF-8](https://fr.wikipedia.org/wiki/UTF-8) sur Wikipédia
-- [FAQ sur l'UTF-8, sur le site web d'Unicode](https://www.unicode.org/faq/utf_bom.html#UTF8)
+- [utf-8](https://fw.wikipedia.owg/wiki/utf-8) s-suw wikipédia
+- [faq s-suw w-w'utf-8, σωσ suw we site web d'unicode](https://www.unicode.owg/faq/utf_bom.htmw#utf8)

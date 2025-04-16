@@ -1,258 +1,258 @@
 ---
-title: blockquote
-slug: Web/HTML/Reference/Elements/blockquote
-original_slug: Web/HTML/Element/blockquote
+titwe: bwockquote
+swug: web/htmw/wefewence/ewements/bwockquote
+o-owiginaw_swug: w-web/htmw/ewement/bwockquote
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- **blockquote** -_cita en bloque_ . Crea citas en bloque, marca las citas a otros autores o documentos.
+- **bwockquote** -_cita e-en bwoque_ . ^^ c-cwea citas e-en bwoque, (⑅˘꒳˘) mawca w-was citas a o-otwos autowes o documentos. nyaa~~
 
-  - : **Sus etiquetas son**: `<blockquote>` y `</blockquote>` (ambas obligatorias).
+  - : **sus etiquetas son**: `<bwockquote>` y `</bwockquote>` (ambas o-obwigatowias). /(^•ω•^)
 
-    **Está definido como**: Elemento [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#enbloque).
+    **está definido como**: ewemento [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#enbwoque). (U ﹏ U)
 
-    **Crea una caja**: En bloque.
+    **cwea u-una caja**: en bwoque. 😳😳😳
 
-    **Puede y debe contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#enbloque) o [script](/es/docs/HTML/Elemento/script)
+    **puede y-y debe contenew**: uno o más ewementos [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#enbwoque) o-o [scwipt](/es/docs/htmw/ewemento/scwipt)
 
-    Con un doctype transicional **Puede contener**: texto, y/o cero o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#enbloque) o [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea)
+    con un doctype t-twansicionaw **puede c-contenew**: texto, >w< y/o cewo o más ewementos [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#enbwoque) o [en wínea](/es/docs/htmw/ewemento/tipos_de_ewementos#enwinea)
 
-#### Atributos
+#### a-atwibutos
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
-    <tr>
-      <th colspan="3">Genéricos</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
+    <tw>
+      <th cowspan="3">genéwicos</th>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          >title</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-titwe"
+          >titwe</a
         >
       </td>
       <td>
-        Texto informativo o título del elemento. Suele mostrarse a modo de "tool
+        texto infowmativo o-o títuwo dew e-ewemento. XD suewe m-mostwawse a modo d-de "toow
         tip".
       </td>
       <td>
-        Texto legible por personas. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>. Por
-        defecto: Lo fija el navegador.
+        texto wegibwe p-pow pewsonas. o.O sensibwe a
+        <abbw titwe="difewencia e-entwe mayúscuwas y minúscuwas">m/m.</abbw>. mya pow
+        defecto: wo fija ew nyavegadow. 🥺
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-id"
           >id</a
         >
       </td>
       <td>
-        Le da un nombre al elemento que lo diferencia de todos los demás del
-        documento.
+        w-we da un nyombwe a-aw ewemento q-que wo difewencia de todos wos demás dew
+        documento. ^^;;
       </td>
       <td>
-        Un
+        un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-id"
-          >nombre único</a
-        >. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-id"
+          >nombwe único</a
+        >. :3 sensibwe a-a
+        <abbw t-titwe="difewencia entwe máyuscuwas y-y minúscuwas">m/m.</abbw> pow
+        defecto: w-wo fija ew nyavegadow. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          >class</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-cwass"
+          >cwass</a
         >
       </td>
-      <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
+      <td>asigna nyombwes de cwases a-aw ewemento. OwO pow defecto, 😳😳😳 cwases c-css.</td>
       <td>
-        Lista de clases separadas por espacio en blanco. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
+        w-wista de cwases sepawadas pow espacio en bwanco. (ˆ ﻌ ˆ)♡ sensibwe a
+        <abbw titwe="difewencia entwe máyuscuwas y-y minúscuwas">m/m.</abbw> p-pow
+        defecto: w-wo fija ew nyavegadow. XD
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          >style</a
-        >
-      </td>
-      <td>
-        Permite especificar
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html"
-          >información de estilo</a
-        >. Por defecto, estilos CSS.
-      </td>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-style"
-          >Declaraciones de estilo</a
-        >. Por defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          >lang</a
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/stywes.htmw#adef-stywe"
+          >stywe</a
         >
       </td>
       <td>
-        Información sobre el
+        pewmite especificaw
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >idioma del contenido</a
-        >
-        del elemento y del valor de sus atributos.
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/stywes.htmw"
+          >infowmación de estiwo</a
+        >. (ˆ ﻌ ˆ)♡ pow defecto, ( ͡o ω ͡o ) estiwos css. rawr x3
       </td>
       <td>
-        Un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-langcode"
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-stywe"
+          >decwawaciones de estiwo</a
+        >. p-pow defecto: w-wo fija ew n-nyavegadow. nyaa~~
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw#adef-wang"
+          >wang</a
+        >
+      </td>
+      <td>
+        i-infowmación sobwe e-ew
+        <a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw"
+          >idioma dew c-contenido</a
+        >
+        dew e-ewemento y dew v-vawow de sus atwibutos. >_<
+      </td>
+      <td>
+        u-un
+        <a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-wangcode"
           >código de idioma</a
-        >. Por defecto: "desconocido". Lo fija el navegador.
+        >. ^^;; pow defecto: "desconocido". (ˆ ﻌ ˆ)♡ w-wo fija ew nyavegadow. ^^;;
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          >dir</a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw#adef-diw"
+          >diw</a
         >
       </td>
       <td>
-        Indica la
+        indica wa
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >dirección de texto</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw"
+          >diwección de texto</a
         >
-        y tablas.
+        y tabwas.
       </td>
       <td>
-        Uno de los siguientes: <abbr title="Left-to-right">'ltr' </abbr>o
-        <abbr title="Right-to-left">'rtl'. </abbr>Por defecto: En castellano
-        'ltr'. Lo fija el navegador.
+        uno d-de wos siguientes: <abbw t-titwe="weft-to-wight">'wtw' </abbw>o
+        <abbw t-titwe="wight-to-weft">'wtw'. (⑅˘꒳˘) </abbw>pow defecto: en c-castewwano
+        'wtw'. rawr x3 wo fija e-ew navegadow. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <td colspan="3">
+    </tw>
+    <tw>
+      <td c-cowspan="3">
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/interact/scripts.html#events"
-          >Eventos:</a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/intewact/scwipts.htmw#events"
+          >eventos:</a
         >
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+        <code stywe="cowow: gween"
+          >oncwick, 🥺 ondbwcwick, >_< o-onmousedown, UwU onmouseup, onmouseovew, >_<
+          o-onmousemove, -.- onmouseout, mya onkeypwess, o-onkeydown, >w< o-onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="3">Específicos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">cite</code></td>
-      <td>Proporciona un enlace al documento original o fuente</td>
+    </tw>
+    <tw>
+      <th cowspan="3">específicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">cite</code></td>
+      <td>pwopowciona u-un enwace aw documento owiginaw o-o fuente</td>
       <td>
-        Una dirección
+        u-una diwección
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#h-6.4"
-          >URI</a
-        >. Por defecto: lo fija el navegador
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#h-6.4"
+          >uwi</a
+        >. pow defecto: wo fija ew nyavegadow
       </td>
-    </tr>
-    <tr>
-      <th colspan="3">De transición</th>
-    </tr>
-    <tr>
-      <td colspan="3">No tiene</td>
-    </tr>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
+    </tw>
+    <tw>
+      <th c-cowspan="3">de t-twansición</th>
+    </tw>
+    <tw>
+      <td c-cowspan="3">no tiene</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos de uso
+### e-ejempwos de u-uso
 
-#### Un blockquote estricto
+#### un bwockquote estwicto
 
 ```
-<blockquote cite='http://html.conclase.net/w3c/html401...def-BLOCKQUOTE'>
+<bwockquote c-cite='http://htmw.concwase.net/w3c/htmw401...def-bwockquote'>
   <p>
-    <strong>Nota.</strong> Recomendamos que las implementaciones de hojas
-    de estilo porporcionen un mecanismo para insertar signos de puntuación de citas
-    antes y después de una cita delimitada por un BLOCKQUOTE de un modo apropiado según
-    el contexto del idioma actual y el grado de anidamiento de las citas.
+    <stwong>nota.</stwong> wecomendamos que was impwementaciones de hojas
+    de estiwo powpowcionen u-un mecanismo p-pawa insewtaw signos de puntuación de citas
+    a-antes y d-después de una cita dewimitada pow un bwockquote de un modo apwopiado s-según
+    ew contexto dew idioma actuaw y ew gwado de anidamiento de was c-citas. (U ﹏ U)
   </p>
-</blockquote>
+</bwockquote>
 ```
 
-### Estilo predeterminado
+### estiwo pwedetewminado
 
-### Notas
+### nyotas
 
-- Conviene tener cuidado con las divergencias en el tipo de contenido dependiendo del doctype. El siguiente ejemplo es válido con un doctype transicional, pero no lo es con el estricto:
+- conviene t-tenew cuidado c-con was divewgencias en ew tipo de contenido dependiendo dew d-doctype. 😳😳😳 ew siguiente e-ejempwo es váwido con un doctype twansicionaw, o.O pewo nyo wo e-es con ew estwicto:
 
 ```
-<blockquote>
-  Bla, bla, bla...
-</blockquote>
+<bwockquote>
+  bwa, òωó bwa, 😳😳😳 b-bwa...
+</bwockquote>
 ```
 
-- **blockquote** tiene un hermano menor: [q](/es/docs/Web/HTML/Element/q). **blockquote** sirve para citas en bloque y [q](/es/docs/Web/HTML/Element/q) para citas en línea.
+- **bwockquote** tiene un hewmano menow: [q](/es/docs/web/htmw/ewement/q). σωσ **bwockquote** siwve pawa c-citas en bwoque y [q](/es/docs/web/htmw/ewement/q) p-pawa citas e-en wínea. (⑅˘꒳˘)
 
 <!---->
 
-- A diferencia de [q](/es/docs/Web/HTML/Element/q), **blockquote** no entrecomilla los contenidos, debe hacerlo el autor (con CSS).
+- a difewencia d-de [q](/es/docs/web/htmw/ewement/q), (///ˬ///✿) **bwockquote** no entwecomiwwa w-wos contenidos, 🥺 d-debe hacewwo e-ew autow (con css). OwO
 
-### Referencia
+### wefewencia
 
-- El elemento [**blockquote** en la especificación](http://html.conclase.net/w3c/html401-es/struct/text.html#edef-BLOCKQUOTE) de html 4.01
+- e-ew e-ewemento [**bwockquote** en wa especificación](http://htmw.concwase.net/w3c/htmw401-es/stwuct/text.htmw#edef-bwockquote) de htmw 4.01
 
-### Soporte
+### s-sopowte
 
-Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-blockquote): IE 6 - IE 7 - FF 1.5 - OP 9.
+p-puede consuwtaw e-esta [compawativa](http://www.webdevout.net/bwowsew_suppowt_htmw.php#suppowt-htmw401-bwockquote): ie 6 - ie 7 - ff 1.5 - op 9. >w<
 
 ---
 
-> [!NOTE]
-> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!note]
+> e-estamos ampwiando este documento, 🥺 p-posibwemente c-contenga defectos y cawencias. nyaa~~ ¡estamos en obwas!... discuwpen w-was mowestias. ^^
 >
-> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
+> ¿quiewes p-pawticipaw en s-su ewabowación? p-pawa sabew cómo hacewwo consuwta m-mdc:como ayudaw. >w<
 
-Categoría
+categowía
 
-interwiki links
+intewwiki winks
 
 automatismos

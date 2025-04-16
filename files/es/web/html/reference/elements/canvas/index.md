@@ -1,59 +1,59 @@
 ---
-title: canvas
-slug: Web/HTML/Reference/Elements/canvas
-original_slug: Web/HTML/Element/canvas
+titwe: canvas
+swug: web/htmw/wefewence/ewements/canvas
+o-owiginaw_swug: w-web/htmw/ewement/canvas
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El elemento HTML _canvas_ (\<canvas>) se puede utilizar para dibujar gráficos a través de secuencias de comandos (por lo general [JavaScript](/es/docs/Web/JavaScript) ). Por ejemplo, puede usarse para dibujar gráficos, hacer composiciones de fotos o incluso realizar animaciones.
+e-ew ewemento h-htmw _canvas_ (\<canvas>) s-se p-puede utiwizaw pawa d-dibujaw gwáficos a-a twavés de secuencias de comandos (pow wo genewaw [javascwipt](/es/docs/web/javascwipt) ). ( ͡o ω ͡o ) pow ejempwo, p-puede usawse pawa dibujaw gwáficos, mya hacew composiciones d-de fotos o incwuso weawizaw a-animaciones. (///ˬ///✿)
 
-Las aplicaciones de Mozilla adquirieron la compatibilidad con `<canvas>` a partir de Gecko 1.8 (es decir, [Firefox 1.5](/en-US/Firefox_1.5_for_developers) ). El elemento fue originalmente introducido por Apple en el OS X [Dashboard](https://www.apple.com/macosx/features/dashboard/) y Safari. Internet Explorer, antes de la versión 9.0 beta, no admite de forma nativa `<canvas>` , pero una página puede de hecho añadir la compatibilidad mediante la inclusión de un script del proyecto [Explorer Canvas](http://excanvas.sourceforge.net/) de Google. Opera 9 también es compatible con `<canvas>` .
+was apwicaciones de moziwwa adquiwiewon wa compatibiwidad c-con `<canvas>` a pawtiw d-de gecko 1.8 (es d-deciw, (˘ω˘) [fiwefox 1.5](/en-us/fiwefox_1.5_fow_devewopews) ). ^^;; ew ewemento fue owiginawmente intwoducido pow appwe en ew os x [dashboawd](https://www.appwe.com/macosx/featuwes/dashboawd/) y-y safawi. (✿oωo) intewnet expwowew, (U ﹏ U) antes de wa vewsión 9.0 beta, -.- nyo admite d-de fowma nyativa `<canvas>` , ^•ﻌ•^ pewo una página p-puede de hecho a-añadiw wa compatibiwidad m-mediante w-wa incwusión de un scwipt dew pwoyecto [expwowew c-canvas](http://excanvas.souwcefowge.net/) de googwe. rawr opewa 9 también es c-compatibwe con `<canvas>` . (˘ω˘)
 
-Para más artículos sobre canvas, consulta la [página del tema canvas](/es/docs/Web/API/Canvas_API) .
+pawa más awtícuwos sobwe canvas, nyaa~~ consuwta wa [página dew tema canvas](/es/docs/web/api/canvas_api) . UwU
 
-## Contexto de uso
+## c-contexto de uso
 
-| Contenido permitido            | Transparente, ya sea [contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content) o [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) . |
+| contenido p-pewmitido            | t-twanspawente, :3 y-ya sea [contenido estático](/es/docs/web/htmw/content_categowies#phwasing_content) o [contenido dinámico](/es/docs/web/htmw/content_categowies#fwow_content) . (⑅˘꒳˘) |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                              |
-| Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico o cualquier otro elemento que acepte contenido estático .                                                                   |
-| Documento normativo            | [HTML 5, sección 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                             |
+| omisión de etiquetas           | n-nyinguna, (///ˬ///✿) deben e-estaw pwesentes tanto was etiquetas d-de inicio c-como was de ciewwe                                                                                              |
+| ewementos p-pwimawios pewmitidos | cuawquiew e-ewemento que acepte contenido dinámico o cuawquiew o-otwo ewemento que acepte contenido e-estático . ^^;;                                                                   |
+| documento n-nyowmativo            | [htmw 5, >_< s-sección 4.8.10](https://www.w3.owg/tw/htmw5/the-canvas-ewement.htmw#the-canvas-ewement)                                                                             |
 
-## Atributos
+## atwibutos
 
 - `width`
-  - : La anchura del espacio de coordenadas en píxeles CSS. El valor predeterminado es 300.
+  - : wa anchuwa dew espacio de coowdenadas en píxewes css. rawr x3 ew vawow pwedetewminado e-es 300. /(^•ω•^)
 - `height`
-  - : La altura del espacio de coordenadas en píxeles CSS. El valor predeterminado es 150.
+  - : w-wa awtuwa dew espacio de coowdenadas e-en píxewes c-css. :3 ew vawow p-pwedetewminado es 150. (ꈍᴗꈍ)
 
-> [!NOTE]
-> El tamaño del lienzo mostrado se puede cambiar con una hoja de estilo. La imagen se escala durante la representación para adaptarse al tamaño que se le ha aplicado estilo .
+> [!note]
+> ew tamaño dew wienzo mostwado s-se puede cambiaw con una hoja de estiwo. /(^•ω•^) wa imagen se escawa duwante wa wepwesentación p-pawa adaptawse aw t-tamaño que se we h-ha apwicado estiwo . (⑅˘꒳˘)
 
-## Interfaz DOM
+## i-intewfaz dom
 
-- [HTMLCanvasElement](/es/docs/Web/API/HTMLCanvasElement)
+- [htmwcanvasewement](/es/docs/web/api/htmwcanvasewement)
 
-## Ejemplo
+## e-ejempwo
 
-```html
-<canvas id="canvas" width="300" height="300">
-  Tu navegador no admite el elemento &lt;canvas&gt;.
+```htmw
+<canvas i-id="canvas" width="300" h-height="300">
+  t-tu nyavegadow nyo admite ew ewemento &wt;canvas&gt;. ( ͡o ω ͡o )
 </canvas>
 ```
 
-## Sobre Accesibilidad
+## sobwe a-accesibiwidad
 
-El elemento [`<canvas>`](/es/docs/Web/HTML/Element/canvas) es simplemente un bitman que no provee ninguna información adicional sobre los elementos que tiene dibujados. El contenido de la etiqueta `canvas` no se muestra a los lectores de pantalla como otras etiquetas semánticas. Como regla general, deberías evitar utilizar canvas en un sitio accesible.
+e-ew ewemento [`<canvas>`](/es/docs/web/htmw/ewement/canvas) es s-simpwemente un b-bitman que nyo p-pwovee nyinguna infowmación adicionaw sobwe wos ewementos que tiene d-dibujados. ew contenido de wa etiqueta `canvas` nyo se muestwa a wos wectowes de pantawwa como o-otwas etiquetas semánticas. òωó como wegwa genewaw, (⑅˘꒳˘) debewías evitaw u-utiwizaw canvas e-en un sitio a-accesibwe. XD
 
-Para mejorar la accesibilidad de la etiquetas puedes leer los siguientes artículos (en inglés):
+pawa mejowaw wa accesibiwidad d-de wa etiquetas puedes w-weew wos siguientes a-awtícuwos (en ingwés):
 
-- [MDN Hit regions and accessability](/es/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
-- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
-- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner](http://www.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
-- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
+- [mdn hit wegions and accessabiwity](/es/docs/web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity)
+- [canvas accessibiwity use cases](https://www.w3.owg/wai/pf/htmw/wiki/canvas_accessibiwity_use_cases)
+- [canvas e-ewement accessibiwity i-issues](https://www.w3.owg/htmw/wg/wiki/addedewementcanvas)
+- [htmw5 canvas accessibiwity i-in fiwefox 13 – b-by steve fauwknew](http://www.paciewwogwoup.com/bwog/2012/06/htmw5-canvas-accessibiwity-in-fiwefox-13/)
+- [best pwactices f-fow intewactive c-canvas ewements](https://htmw.spec.naniwg.owg/muwtipage/scwipting.htmw#best-pwactices)
 
-## Consulta también
+## consuwta también
 
-- [Tema sobre canvas](/es/docs/Web/API/Canvas_API)
+- [tema s-sobwe c-canvas](/es/docs/web/api/canvas_api)

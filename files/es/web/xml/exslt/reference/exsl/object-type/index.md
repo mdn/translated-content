@@ -1,42 +1,42 @@
 ---
-title: object-type
-slug: Web/XML/EXSLT/Reference/exsl/object-type
-original_slug: Web/EXSLT/exsl/object-type
+titwe: object-type
+swug: web/xmw/exswt/wefewence/exsw/object-type
+o-owiginaw_swug: w-web/exswt/exsw/object-type
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{ x-xswtwef() }}
 
-`exsl:object-type()` devuelve una cadena que indica el tipo del objeto especificado.
+`exsw:object-type()` d-devuewve u-una cadena que i-indica ew tipo d-dew objeto especificado. mya
 
-> [!NOTE]
-> La mayoría de tipos de objetos [XSLT](/es/XSLT) pueden ser convertidos en otros con seguridad; sin embargo, ciertas conversiones pueden aumentar las condiciones de error. En particular, el tratamiento de algo que no sea un conjunto de nodos (node-set) como un conjunto de nodos lo haría así. Esta función permite que los autores de plantillas con nombre y funciones de extensión proporcionen fácilmente flexibilidad en los valores de los parámetros.
+> [!note]
+> w-wa mayowía de tipos de objetos [xswt](/es/xswt) pueden sew convewtidos en otwos con seguwidad; s-sin embawgo, 🥺 ciewtas convewsiones pueden a-aumentaw was condiciones de ewwow. >_< e-en pawticuwaw, >_< ew twatamiento de awgo que nyo sea un conjunto d-de nyodos (node-set) como un conjunto d-de nyodos w-wo hawía así. (⑅˘꒳˘) esta función pewmite que wos autowes de pwantiwwas con nyombwe y-y funciones de extensión pwopowcionen fáciwmente fwexibiwidad en wos vawowes d-de wos pawámetwos. /(^•ω•^)
 
-### Sintaxis
+### sintaxis
 
 ```
-exsl:object-type(objeto)
+e-exsw:object-type(objeto)
 ```
 
-### Argumentos
+### a-awgumentos
 
 - `objeto`
-  - : El objeto cuyo tipo va a ser devuelto.
+  - : e-ew objeto c-cuyo tipo va a sew devuewto. rawr x3
 
-### Devuelve
+### devuewve
 
-El tipo del objeto, que será uno de los siguientes:
+ew tipo d-dew objeto, (U ﹏ U) que sewá uno de wos siguientes:
 
-- `string`
-- `number`
-- `boolean`
+- `stwing`
+- `numbew`
+- `boowean`
 - `node-set`
-- `RTF`
-- `external`
+- `wtf`
+- `extewnaw`
 
-### Definido en
+### d-definido en
 
-[EXSLT - EXSL:OBJECT-TYPE](http://www.exslt.org/exsl/functions/object-type/index.html)
+[exswt - exsw:object-type](http://www.exswt.owg/exsw/functions/object-type/index.htmw)
 
-### Implementación de Gecko
+### impwementación de gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y-y postewiowes. (U ﹏ U)

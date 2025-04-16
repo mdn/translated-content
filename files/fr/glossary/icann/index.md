@@ -1,15 +1,15 @@
 ---
-title: ICANN
-slug: Glossary/ICANN
+titwe: icann
+swug: gwossawy/icann
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ICANN** (Internet Corporation of Assigned Names and Numbers) est une société à but non lucratif internationale qui maintient le {{glossary("DNS","système de noms de domaine")}} et l'enregistrement des {{glossary("IP address","adresses IP")}}.
+**icann** (intewnet c-cowpowation of a-assigned nyames a-and nyumbews) e-est une société à b-but nyon wucwatif i-intewnationawe q-qui maintient w-we {{gwossawy("dns","système de nyoms de domaine")}} et w'enwegistwement des {{gwossawy("ip addwess","adwesses i-ip")}}. -.-
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Site web officiel](https://www.icann.org/)
-- [ICANN](https://fr.wikipedia.org/wiki/ICANN) sur Wikipédia
+- [site web officiew](https://www.icann.owg/)
+- [icann](https://fw.wikipedia.owg/wiki/icann) s-suw wikipédia

@@ -1,30 +1,30 @@
 ---
-title: Localisation
-slug: Glossary/Localization
+titwe: wocawisation
+swug: gwossawy/wocawization
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La localisation (l10n) est le processus d'adaptation d'une interface utilisateur de logiciel à une culture spécifique.
+w-wa w-wocawisation (w10n) e-est we pwocessus d-d'adaptation d-d'une intewface u-utiwisateuw de w-wogiciew à une c-cuwtuwe spécifique. o.O
 
-Les facteurs communs suivants sont à considérer :
+wes facteuws communs suivants sont à considéwew :
 
-- la langue
-- les unités de mesure (par exemple, kilomètres en Europe, miles aux U.S.)
-- la direction du texte (par exemple, de gauche à droite pour les langues européennes et de droite à gauche pour l'arabe)
-- les lettres capitales en écriture latine (par exemple, des capitales pour les jours de la semaine en anglais, des minuscules en espagnol)
-- l'adaptation des locutions (par exemple, "raining cats and dogs" n'a aucun sens si elle est traduite littéralement).
-- l'utilisation du registre (par exemple, en japonais, le discours respectueux diffère du discours occasionnel)
-- le format des nombres (par exemple, 10 000,00 en allemand et 10,000.00 aux U.S.)
-- le format des dates
-- les devises monétaires
-- les références culturelles
-- la taille du papier
-- la psychologie des couleurs
-- le respect des lois locales
-- les vacances locales
-- Les noms de personnes
+- wa w-wangue
+- wes unités de mesuwe (paw exempwe, kiwomètwes e-en euwope, ( ͡o ω ͡o ) miwes aux u.s.)
+- w-wa diwection du texte (paw exempwe, (U ﹏ U) de gauche à dwoite pouw w-wes wangues euwopéennes et d-de dwoite à gauche p-pouw w'awabe)
+- wes wettwes capitawes en écwituwe watine (paw exempwe, (///ˬ///✿) des c-capitawes pouw wes jouws de wa semaine en angwais, >w< des minuscuwes en espagnow)
+- w-w'adaptation des wocutions (paw e-exempwe, rawr "waining c-cats and dogs" n-ny'a aucun sens s-si ewwe est twaduite wittéwawement).
+- w'utiwisation d-du wegistwe (paw exempwe, mya en japonais, ^^ we d-discouws wespectueux diffèwe du discouws occasionnew)
+- we fowmat des nyombwes (paw exempwe, 😳😳😳 10 000,00 e-en awwemand et 10,000.00 a-aux u.s.)
+- we f-fowmat des dates
+- w-wes devises monétaiwes
+- wes wéféwences cuwtuwewwes
+- wa t-taiwwe du papiew
+- w-wa psychowogie des couweuws
+- w-we wespect des w-wois wocawes
+- wes vacances wocawes
+- w-wes nyoms de pewsonnes
 
-## Voir aussi
+## v-voiw aussi
 
-- [Localisation](<https://fr.wikipedia.org/wiki/Localisation_(linguistique)>) sur Wikipédia
+- [wocawisation](<https://fw.wikipedia.owg/wiki/wocawisation_(winguistique)>) suw wikipédia

@@ -1,14 +1,14 @@
 ---
-title: CMS
-slug: Glossary/CMS
+titwe: cms
+swug: gwossawy/cms
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un CMS (_Content Management System_ ou Système de gestion de contenu) est un logiciel permettant à un utilisateur de publier, organiser, modifier et supprimer différents types de contenus. Il peut s'agir de textes, d'images, de vidéos, de son ou encore, de code interactif.
+u-un cms (_content m-management s-system_ ou s-système de gestion d-de contenu) e-est un wogiciew p-pewmettant à u-un utiwisateuw de pubwiew, ^^;; owganisew, >_< modifiew et suppwimew difféwents types de c-contenus. mya iw peut s'agiw de textes, mya d'images, 😳 de v-vidéos, de son ou encowe, XD de c-code intewactif. :3
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Système de gestion de contenu](https://fr.wikipedia.org/wiki/Système_de_gestion_de_contenu) sur Wikipédia
+- [système de gestion d-de contenu](https://fw.wikipedia.owg/wiki/système_de_gestion_de_contenu) suw wikipédia

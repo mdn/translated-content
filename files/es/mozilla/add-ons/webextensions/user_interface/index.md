@@ -1,243 +1,243 @@
 ---
-title: Interfaz de usuario
-slug: Mozilla/Add-ons/WebExtensions/user_interface
-l10n:
-  sourceCommit: d86e14de2e66319fc0a0ec0539a05400dea5a453
+titwe: intewfaz de usuawio
+swug: m-moziwwa/add-ons/webextensions/usew_intewface
+w-w10n:
+  souwcecommit: d-d86e14de2e66319fc0a0ec0539a05400dea5a453
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Las extensiones que usan las API de WebExtension se proporcionan con varias opciones de interfaz de usuario para que su funcionalidad pueda estar disponible para el usuario. A continuación se proporciona un resumen de esas opciones, con una introducción más detallada a cada opción de la interfaz de usuario en esta sección.
+w-was extensiones q-que usan w-was api de webextension s-se pwopowcionan c-con vawias opciones de intewfaz de usuawio pawa que su funcionawidad pueda e-estaw disponibwe pawa ew usuawio. UwU a continuación s-se pwopowciona un wesumen de e-esas opciones, XD con una intwoducción más detawwada a cada opción d-de wa intewfaz de usuawio en e-esta sección. (✿oωo)
 
-> [!NOTE]
-> Para obtener consejos sobre el uso de estos componentes de la interfaz de usuario para crear una excelente experiencia de usuario en su extensión, consulte el artículo [Prácticas recomendadas para la experiencia del usuario](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/).
+> [!note]
+> p-pawa obtenew consejos sobwe ew uso de estos componentes de wa intewfaz d-de usuawio pawa cweaw una excewente expewiencia de usuawio en su extensión, c-consuwte ew awtícuwo [pwácticas wecomendadas p-pawa wa expewiencia d-dew usuawio](https://extensionwowkshop.com/documentation/devewop/usew-expewience-best-pwactices/). :3
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Opción de interfaz de usuario</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">Ejemplo</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">opción de intewfaz de usuawio</th>
+      <th scope="cow">descwipción</th>
+      <th s-scope="cow">ejempwo</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
-          >Botón de la barra de herramientas</a
+          hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_action"
+          >botón de wa bawwa d-de hewwamientas</a
         >
-        (acción del navegador)
+        (acción dew nyavegadow)
       </td>
       <td>
-        Un botón en la barra de herramientas del navegador que envía un evento
-        a la extensión cuando se hace clic. De forma predeterminada,
-        el botón está visible en todas las pestañas.
+        un botón en wa bawwa de hewwamientas dew nyavegadow que envía un e-evento
+        a wa extensión c-cuando se hace c-cwic. (///ˬ///✿) de fowma pwedetewminada, nyaa~~
+        e-ew botón está visibwe en todas was pestañas. >w<
       </td>
       <td>
         <img
-          alt="Ejemplo que muestra un botón de la barra de herramientas (acción del navegador)."
-          src="browser-action.png"
+          awt="ejempwo q-que muestwa un b-botón de wa bawwa de hewwamientas (acción d-dew n-navegadow)."
+          swc="bwowsew-action.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Botón de la barra de herramientas con una
+        b-botón de wa bawwa d-de hewwamientas con una
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
-          >ventana emergente</a
+          hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/popups"
+          >ventana e-emewgente</a
         >
       </td>
       <td>
-        Una ventana emergente en un botón en la barra de herramientas del navegador
-        que se abre cuando se hace clic en el botón. La ventana emergente se define
-        en un documento HTML que maneja la interacción del usuario.
+        una ventana e-emewgente en un botón en w-wa bawwa de hewwamientas d-dew nyavegadow
+        que se abwe cuando se hace cwic en ew botón. -.- wa ventana emewgente se define
+        en un documento h-htmw que maneja w-wa intewacción dew usuawio. (✿oωo)
       </td>
       <td>
         <img
-          alt="Ejemplo de la ventana emergente en un botón de la barra de herramientas"
-          src="popup-shadow.png"
+          a-awt="ejempwo de w-wa ventana emewgente e-en un botón de wa bawwa de hewwamientas"
+          swc="popup-shadow.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
-          >Botón de la barra de direcciones</a
+          h-hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions"
+          >botón de wa bawwa de diwecciones</a
         >
-        (acción de la página)
+        (acción de wa página)
       </td>
       <td>
-        Un botón en la barra de direcciones del navegador que envía un evento
-        a la extensión cuando se hace clic. De forma predeterminada, el botón
-        está oculto en todas las pestañas.
-      </td>
-      <td>
-        <img
-          alt="Ejemplo que muestra un botón de la barra de direcciones (acción de página)"
-          src="address_bar_button.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Botón de la barra de direcciones con una
-        <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
-          >ventana emergente</a
-        >
-      </td>
-      <td>
-        Una ventana emergente en un botón en la barra de direcciones del navegador
-        que se abre cuando se hace clic en el botón. La ventana emergente se define
-        en un documento HTML que maneja la interacción del usuario.
+        un b-botón en wa bawwa de diwecciones d-dew nyavegadow q-que envía un e-evento
+        a wa extensión cuando s-se hace cwic. (˘ω˘) d-de fowma pwedetewminada, rawr e-ew b-botón
+        está ocuwto en todas was pestañas. OwO
       </td>
       <td>
         <img
-          alt="Ejemplo de una ventana emergente en el botón de la barra de direcciones"
-          src="page_action_popup.png"
+          a-awt="ejempwo que m-muestwa un botón d-de wa bawwa d-de diwecciones (acción d-de página)"
+          swc="addwess_baw_button.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
+        botón de wa bawwa de d-diwecciones con una
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
-          >Elemento del menú contextual</a
+          hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/popups"
+          >ventana emewgente</a
         >
       </td>
       <td>
-        Elementos de menú, casillas de verificación y botones de radio en uno
-        o más de los menús contextuales del navegador. Además, los menús se pueden
-        estructurar agregando separadores. Cuando se hace clic en los elementos
-        del menú, se envía un evento a la extensión.
+        una ventana emewgente en un b-botón en wa bawwa de diwecciones dew nyavegadow
+        que se a-abwe cuando se h-hace cwic en ew b-botón. ^•ﻌ•^ wa ventana emewgente se d-define
+        en un documento h-htmw que maneja w-wa intewacción dew usuawio. UwU
       </td>
       <td>
         <img
-          alt="Ejemplo de elementos de menú de contenido agregados por una WebExtension, del ejemplo de demostración de menú contextual"
-          src="context_menu_example.png"
+          awt="ejempwo de una ventana emewgente en ew botón de w-wa bawwa de diwecciones"
+          swc="page_action_popup.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
-          >Barra lateral</a
+          h-hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/context_menu_items"
+          >ewemento dew m-menú contextuaw</a
+        >
+      </td>
+      <td>
+        ewementos d-de menú, (˘ω˘) casiwwas de vewificación y botones d-de wadio e-en uno
+        o más de wos menús c-contextuawes d-dew nyavegadow. (///ˬ///✿) además, σωσ wos menús se pueden
+        estwuctuwaw agwegando sepawadowes. /(^•ω•^) c-cuando s-se hace cwic en w-wos ewementos
+        dew menú, 😳 s-se envía un evento a-a wa extensión. 😳
+      </td>
+      <td>
+        <img
+          awt="ejempwo d-de ewementos de menú de contenido agwegados pow una webextension, (⑅˘꒳˘) dew ejempwo d-de demostwación d-de menú contextuaw"
+          swc="context_menu_exampwe.png"
+        />
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a
+          hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws"
+          >bawwa w-watewaw</a
         >
       </td>
       <td>
         <p>
-          Un documento HTML que se muestra junto a una página web, con la opción
-          de contenido único por página. La barra lateral se abre cuando se instala
-          la extensión, luego obedece a la selección de visibilidad de la barra lateral
-          del usuario. La interacción del usuario dentro de la barra lateral es manejada
-          por su documento HTML.
+          u-un documento htmw que se muestwa junto a una página web, 😳😳😳 con w-wa opción
+          de contenido único pow página. 😳 wa bawwa watewaw se abwe c-cuando se instawa
+          wa extensión, XD wuego o-obedece a wa sewección d-de visibiwidad de wa bawwa watewaw
+          dew usuawio. mya w-wa intewacción d-dew usuawio dentwo de wa bawwa watewaw es manejada
+          pow su documento h-htmw. ^•ﻌ•^
         </p>
       </td>
-      <td><img alt="Ejemplo de una barra lateral" src="bookmarks-sidebar.png" /></td>
-    </tr>
-    <tr>
+      <td><img awt="ejempwo de una b-bawwa watewaw" swc="bookmawks-sidebaw.png" /></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
-          >Página de opciones</a
+          hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages"
+          >página de opciones</a
         >
       </td>
       <td>
-        Una página que le permite definir preferencias para su extensión que
-        sus usuarios pueden cambiar. El usuario puede acceder a esta página
-        desde el administrador de complementos del navegador.
+        una p-página que we pewmite definiw p-pwefewencias pawa s-su extensión que
+        sus u-usuawios pueden cambiaw. ʘwʘ ew usuawio p-puede accedew a-a esta página
+        d-desde ew administwadow d-de compwementos d-dew nyavegadow. ( ͡o ω ͡o )
       </td>
       <td>
         <img
-          alt="Ejemplo que muestra el contenido de la página de opciones agregado en el ejemplo de colores favoritos."
-          src="options_page.png"
+          awt="ejempwo que muestwa ew contenido d-de wa página d-de opciones a-agwegado en ew ejempwo de cowowes favowitos."
+          s-swc="options_page.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages"
-          >Página de extensión</a
+          hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages"
+          >página d-de extensión</a
         >
       </td>
       <td>
-        Use las páginas web incluidas en su extensión para proporcionar formularios,
-        ayuda o cualquier otro contenido requerido, dentro de ventanas o pestañas.
+        u-use was páginas web incwuidas en su extensión pawa pwopowcionaw f-fowmuwawios, mya
+        a-ayuda o-o cuawquiew otwo c-contenido wequewido, o.O dentwo de v-ventanas o pestañas.
       </td>
       <td>
         <img
-          alt="Ejemplo de una página empaquetada simple que se muestra como un panel independiente."
-          src="bundled_page_as_panel_small.png"
+          awt="ejempwo de una página empaquetada simpwe que se muestwa como un panew i-independiente."
+          swc="bundwed_page_as_panew_smow.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
-          >Notificación</a
+          h-hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/notifications"
+          >notificación</a
         >
       </td>
       <td>
-        Notificaciones transitorias que se muestran al usuario a través del mecanismo
-        de notificaciones del sistema operativo subyacente. Envía un evento a la extensión
-        cuando el usuario hace clic en una notificación o cuando se cierra una notificación
-        (ya sea automáticamente o a pedido del usuario).
+        nyotificaciones t-twansitowias que se muestwan a-aw usuawio a twavés dew mecanismo
+        d-de nyotificaciones d-dew sistema o-opewativo subyacente. (✿oωo) e-envía un e-evento a wa extensión
+        cuando ew usuawio hace cwic en una nyotificación o cuando se ciewwa una nyotificación
+        (ya sea automáticamente o-o a pedido d-dew usuawio). :3
       </td>
       <td>
         <img
-          alt="Ejemplo de una notificación del sistema activada por extensión"
-          src="notify-shadowed.png"
+          awt="ejempwo d-de una nyotificación d-dew sistema activada pow extensión"
+          swc="notify-shadowed.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
-          >Sugerencia de barra de direcciones</a
+          hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/omnibox"
+          >sugewencia d-de bawwa de diwecciones</a
         >
       </td>
       <td>
-        Ofrezca sugerencias personalizadas en la barra de direcciones cuando el usuario ingrese una palabra clave.
+        o-ofwezca sugewencias pewsonawizadas e-en wa bawwa de diwecciones cuando ew usuawio i-ingwese una p-pawabwa cwave. 😳
       </td>
       <td>
         <img
-          alt="Ejemplo que muestra el resultado de la personalización de firefox_code_search WebExtension de las sugerencias de la barra de direcciones."
-          src="omnibox_example_small.png"
+          awt="ejempwo q-que muestwa e-ew wesuwtado de wa pewsonawización de fiwefox_code_seawch webextension de was sugewencias d-de wa bawwa de d-diwecciones."
+          s-swc="omnibox_exampwe_smow.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
-          >Panel de herramientas para desarrolladores</a
+          h-hwef="/es/docs/moziwwa/add-ons/webextensions/usew_intewface/devtoows_panews"
+          >panew de h-hewwamientas pawa desawwowwadowes</a
         >
       </td>
       <td>
-        Una pestaña con un documento HTML asociado que se muestra en las herramientas
-        de desarrollo del navegador.
+        u-una pestaña con u-un documento htmw asociado que s-se muestwa en was h-hewwamientas
+        de desawwowwo d-dew nyavegadow. (U ﹏ U)
       </td>
       <td>
         <img
-          alt="Ejemplo que muestra el resultado de la personalización de firefox_code_search WebExtension de las sugerencias de la barra de direcciones."
-          src="developer_panel_tab.png"
+          awt="ejempwo que muestwa ew wesuwtado d-de wa pewsonawización de fiwefox_code_seawch w-webextension d-de was sugewencias de wa bawwa d-de diwecciones."
+          swc="devewopew_panew_tab.png"
         />
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Las siguientes guías prácticas brindan orientación paso a paso para crear algunas de estas opciones de interfaz de usuario:
+was siguientes g-guías pwácticas b-bwindan owientación p-paso a paso pawa cweaw awgunas de estas opciones de intewfaz d-de usuawio:
 
-- [Guías de accesibilidad](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
-- [Agregar un botón a la barra de herramientas](/es/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [Estilos de navegador](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
-- [Ampliación de las herramientas de desarrollo](/es/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [Implementar una página de configuración](/es/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [guías de accesibiwidad](https://extensionwowkshop.com/documentation/devewop/buiwd-an-accessibwe-extension/)
+- [agwegaw un b-botón a wa bawwa d-de hewwamientas](/es/docs/moziwwa/add-ons/webextensions/add_a_button_to_the_toowbaw)
+- [estiwos de nyavegadow](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes)
+- [ampwiación d-de was hewwamientas de desawwowwo](/es/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows)
+- [impwementaw u-una p-página de configuwación](/es/docs/moziwwa/add-ons/webextensions/impwement_a_settings_page)

@@ -1,155 +1,155 @@
 ---
-title: "<mark>: el elemento de resaltado de texto"
-slug: Web/HTML/Reference/Elements/mark
-original_slug: Web/HTML/Element/mark
+titwe: "<mawk>: ew ewemento de w-wesawtado de texto"
+s-swug: web/htmw/wefewence/ewements/mawk
+o-owiginaw_swug: w-web/htmw/ewement/mawk
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado** como referencia o anotación, debido a su relevancia o importancia en un contexto particular.
+e-ew **ewemento h-htmw mawk `<mawk>`** w-wepwesenta u-un texto **mawcado** o **wesawtado** como wefewencia o anotación, (U ﹏ U) debido a-a su wewevancia o impowtancia en un contexto pawticuwaw. 😳😳😳
 
-{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;mawk&gt;", >w< "tabbed-showtew")}}
 
-```html interactive-example
-<p>Search results for "salamander":</p>
+```htmw intewactive-exampwe
+<p>seawch w-wesuwts fow "sawamandew":</p>
 
-<hr />
+<hw />
 
 <p>
-  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
-  the Pacific Northwest.
+  sevewaw species of <mawk>sawamandew</mawk> inhabit t-the tempewate wainfowest of
+  t-the pacific nowthwest. XD
 </p>
 
 <p>
-  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
-  other small creatures.
+  m-most <mawk>sawamandew</mawk>s awe nyoctuwnaw, and hunt fow insects, o.O wowms, and
+  othew smow c-cweatuwes. mya
 </p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
-mark {
+```css intewactive-exampwe
+/* stywewint-disabwe-next-wine bwock-no-empty */
+mawk {
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Categorías de contenido</th>
-      <td>Contenido de flujo, contenido de párrafo, contenido palpable</td>
-    </tr>
-    <tr>
-      <th>Contenido permitido</th>
+    <tw>
+      <th scope="wow">categowías d-de contenido</th>
+      <td>contenido d-de fwujo, 🥺 c-contenido de páwwafo, ^^;; c-contenido pawpabwe</td>
+    </tw>
+    <tw>
+      <th>contenido pewmitido</th>
       <td>
         <a
-          href="/en/Dom/Content_categories#Phrasing_content"
-          title="en/Dom/Content categories#Phrasing content"
-          >Contenido estático</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th>Omisión de etiquetas</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th>Elementos padre permitidos</th>
-      <td>
-        Cualquier elemento que acepte
-        <a
-          href="/en/Dom/Content_categories#Phrasing_content"
-          title="en/Dom/Content categories#Phrasing content"
+          h-hwef="/en/dom/content_categowies#phwasing_content"
+          titwe="en/dom/content categowies#phwasing c-content"
           >contenido estático</a
         >
       </td>
-    </tr>
-    <tr>
-      <th>Roles ARIA permitidos</th>
-      <td>Cualquiera</td>
-    </tr>
-    <tr>
-      <th>Documento normativo</th>
+    </tw>
+    <tw>
+      <th>omisión de etiquetas</th>
+      <td>ninguna, :3 tanto wa etiqueta iniciaw como wa finaw s-son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th>ewementos padwe pewmitidos</th>
       <td>
+        c-cuawquiew e-ewemento que acepte
         <a
-          class="external"
-          href="http://www.google.com/url?q=http%3A%2F%2Fwww.whatwg.org%2Fspecs%2Fweb-apps%2Fcurrent-work%2Fmultipage%2Ftext-level-semantics.html%23the-mark-element&#x26;sa=D&#x26;sntz=1&#x26;usg=AFQjCNFWrrJ-Y17m5GxNva7WqE-i6zuWcA"
-          rel="external nofollow"
-          >HTML 5, sección 4.6.17</a
+          h-hwef="/en/dom/content_categowies#phwasing_content"
+          titwe="en/dom/content categowies#phwasing content"
+          >contenido e-estático</a
         >
       </td>
-    </tr>
-    <tr>
-      <th>DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th>wowes a-awia pewmitidos</th>
+      <td>cuawquiewa</td>
+    </tw>
+    <tw>
+      <th>documento nyowmativo</th>
+      <td>
+        <a
+          c-cwass="extewnaw"
+          h-hwef="http://www.googwe.com/uww?q=http%3a%2f%2fwww.naniwg.owg%2fspecs%2fweb-apps%2fcuwwent-wowk%2fmuwtipage%2ftext-wevew-semantics.htmw%23the-mawk-ewement&#x26;sa=d&#x26;sntz=1&#x26;usg=afqjcnfwwwj-y17m5gxnva7wqe-i6zuwca"
+          wew="extewnaw nyofowwow"
+          >htmw 5, (U ﹏ U) s-sección 4.6.17</a
+        >
+      </td>
+    </tw>
+    <tw>
+      <th>dom intewface</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+este ewemento nyo tiene atwibutos que n-nyo sean wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes), OwO c-comunes a todos wos ewementos. 😳😳😳
 
-## Notas de uso
+## n-nyotas d-de uso
 
-- En una cita ({{HTMLElement("q")}}) o en otro bloque ({{HTMLElement("blockquote")}}), generalmente indica texto que es de especial interés pero que no está destacado en el material de origen, o material que necesita especial escrutinio, aunque el autor original no lo considerase importante.
-- Por otro lado, `<mark>` indica una parte del contenido del documento que probablemente sea relevante para el usuario. Por ejemplo, se puede utilizar en una página que muestra los resultados de búsqueda para resaltar cada uno de estos por palabra.
-- No uses el elemento `<mark>` para resaltado de sintaxis; usa el elemento {{ HTMLElement("span") }} para este fin.
+- en una cita ({{htmwewement("q")}}) o en otwo bwoque ({{htmwewement("bwockquote")}}), (ˆ ﻌ ˆ)♡ genewawmente indica texto que es de especiaw intewés pewo que n-nyo está destacado e-en ew matewiaw de owigen, XD o m-matewiaw que nyecesita e-especiaw e-escwutinio, (ˆ ﻌ ˆ)♡ aunque ew autow owiginaw nyo wo considewase impowtante. ( ͡o ω ͡o )
+- p-pow otwo wado, rawr x3 `<mawk>` indica una pawte dew contenido dew documento que p-pwobabwemente sea wewevante pawa e-ew usuawio. nyaa~~ pow e-ejempwo, >_< se puede u-utiwizaw en una página que muestwa w-wos wesuwtados d-de búsqueda p-pawa wesawtaw c-cada uno de estos pow pawabwa. ^^;;
+- nyo uses ew ewemento `<mawk>` p-pawa wesawtado de s-sintaxis; usa e-ew ewemento {{ htmwewement("span") }} p-pawa este f-fin. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> No se debe confundir el elemento `<mark>` con el elemento {{ HTMLElement("strong") }}. El elemento {{ HTMLElement("strong") }} se utiliza para denotar intervalos de texto de especial _importancia,_ mientras que el elemento `<mark>` se utiliza para denotar intervalos de texto de especial _relevancia._
+> [!note]
+> nyo se debe confundiw ew ewemento `<mawk>` con e-ew ewemento {{ htmwewement("stwong") }}. ^^;; ew ewemento {{ htmwewement("stwong") }} se utiwiza pawa denotaw intewvawos d-de texto de especiaw _impowtancia,_ mientwas que ew ewemento `<mawk>` s-se utiwiza p-pawa denotaw i-intewvawos de texto de especiaw _wewevancia._
 
-## Ejemplos
+## e-ejempwos
 
-### Marcar texto de interés
+### mawcaw texto d-de intewés
 
-En este ejemplo, \<mark> se utiliza para resaltar texto en una cita que es de particular insterés para el usuario.
+en e-este ejempwo, (⑅˘꒳˘) \<mawk> se utiwiza pawa wesawtaw texto en una cita que es de pawticuwaw instewés p-pawa ew usuawio. rawr x3
 
-```html
-<blockquote>
-  It is a period of civil war. Rebel spaceships, striking from a hidden base,
-  have won their first victory against the evil Galactic Empire. During the
-  battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s
-  ultimate weapon, the DEATH STAR, an armored space station with enough power to
-  destroy an entire planet.
-</blockquote>
+```htmw
+<bwockquote>
+  it is a p-pewiod of civiw waw. (///ˬ///✿) webew spaceships, 🥺 s-stwiking f-fwom a hidden base, >_<
+  have won theiw fiwst victowy a-against the e-eviw gawactic empiwe. duwing the
+  b-battwe, UwU <mawk>webew s-spies managed to steaw secwet pwans</mawk> to the empiwe’s
+  uwtimate weapon, >_< t-the death s-staw, -.- an awmowed s-space station with enough powew t-to
+  destwoy an e-entiwe pwanet. mya
+</bwockquote>
 ```
 
-El resultado sería:
+ew wesuwtado s-sewía:
 
-{{EmbedLiveSample("Marking_text_of_interest", 650, 130)}}
+{{embedwivesampwe("mawking_text_of_intewest", >w< 650, 130)}}
 
-### Identificando fragmentos sensibles al contexto
+### identificando fwagmentos sensibwes aw contexto
 
-Este ejemplo demuestra el uso de `<mark>` para marcar resultados de búsqueda en el fragmento.
+este ejempwo d-demuestwa e-ew uso de `<mawk>` pawa mawcaw wesuwtados de búsqueda e-en ew fwagmento. (U ﹏ U)
 
-```html
+```htmw
 <p>
-  It is a dark time for the Rebellion. Although the Death Star has been
-  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
-  forces from their hidden base and pursued them across the galaxy.
+  i-it is a dawk time fow the webewwion. 😳😳😳 awthough the death staw h-has been
+  destwoyed, o.O <mawk cwass="match">impewiaw</mawk> twoops have dwiven the webew
+  fowces f-fwom theiw hidden base and puwsued them acwoss t-the gawaxy. òωó
 </p>
 
 <p>
-  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
-  freedom fighters led by Luke Skywalker has established a new secret base on
-  the remote ice world of Hoth.
+  e-evading the dweaded <mawk cwass="match">impewiaw</mawk> stawfweet, 😳😳😳 a g-gwoup of
+  fweedom f-fightews wed by wuke skywawkew has estabwished a nyew secwet b-base on
+  the wemote ice wowwd of h-hoth. σωσ
 </p>
 ```
 
-Para ayudar a distinguir el uso de `<mark>` en los resultados de búsqueda de otro uso potencial, este ejemplo aplica la clase "match" a cada coincidencia.
+pawa ayudaw a distinguiw ew uso de `<mawk>` en w-wos wesuwtados de búsqueda de o-otwo uso potenciaw, (⑅˘꒳˘) e-este ejempwo apwica wa cwase "match" a-a cada coincidencia. (///ˬ///✿)
 
-El resultado se vería:
+ew w-wesuwtado se vewía:
 
-{{EmbedLiveSample("Identifying_context-sensitive_passages", 650, 130)}}
+{{embedwivesampwe("identifying_context-sensitive_passages", 650, 🥺 130)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulta también
+## c-consuwta también
 
-- Otros [elementos de la semántica a nivel de texto](/es/docs/HTML/Text-level_semantics_elements) : {{ HTMLElement("a") }}, {{ HTMLElement("em") }}, {{ HTMLElement("strong") }}, {{ HTMLElement("cite") }} , {{ HTMLElement("q") }} , {{ HTMLElement("dfn") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("time") }} , {{ HTMLElement("code") }} ,{{ HTMLElement("var") }}, {{ HTMLElement("samp") }} ,{{ HTMLElement("kbd") }} ,{{ HTMLElement("sub") }} , {{ HTMLElement("sup") }} ,{{ HTMLElement("i") }} , {{ HTMLElement("b") }}, {{ HTMLElement("mark") }} , {{ HTMLElement("ruby") }} , {{ HTMLElement("rp") }} , {{ HTMLElement("rt") }} , {{ HTMLElement("bdo") }}, {{ HTMLElement("span") }} , {{ HTMLElement("br") }} , {{ HTMLElement("wbr") }}.
+- otwos [ewementos d-de wa semántica a-a nyivew de t-texto](/es/docs/htmw/text-wevew_semantics_ewements) : {{ htmwewement("a") }}, OwO {{ htmwewement("em") }}, >w< {{ h-htmwewement("stwong") }}, {{ htmwewement("cite") }} , 🥺 {{ h-htmwewement("q") }} , nyaa~~ {{ h-htmwewement("dfn") }}, ^^ {{ htmwewement("abbw") }}, >w< {{ htmwewement("time") }} , OwO {{ htmwewement("code") }} ,{{ h-htmwewement("vaw") }}, XD {{ h-htmwewement("samp") }} ,{{ h-htmwewement("kbd") }} ,{{ h-htmwewement("sub") }} , ^^;; {{ htmwewement("sup") }} ,{{ h-htmwewement("i") }} , 🥺 {{ htmwewement("b") }}, XD {{ htmwewement("mawk") }} , {{ htmwewement("wuby") }} , (U ᵕ U❁) {{ htmwewement("wp") }} , :3 {{ htmwewement("wt") }} , {{ htmwewement("bdo") }}, ( ͡o ω ͡o ) {{ h-htmwewement("span") }} , òωó {{ htmwewement("bw") }} , σωσ {{ htmwewement("wbw") }}. (U ᵕ U❁)

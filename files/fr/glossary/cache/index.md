@@ -1,14 +1,14 @@
 ---
-title: Cache
-slug: Glossary/Cache
+titwe: cache
+swug: gwossawy/cache
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **cache** (cache web ou cache HTTP) est un composant stockant temporairement les réponses HTTP dans le but de les réutiliser lors de requêtes HTTP ultérieures, tant qu'elles remplissent certaines conditions.
+un **cache** (cache w-web ou cache h-http) est un composant s-stockant t-tempowaiwement wes w-wéponses http d-dans we but de w-wes wéutiwisew w-wows de wequêtes http uwtéwieuwes, (U ﹏ U) tant qu'ewwes wempwissent cewtaines conditions. -.-
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Cache web](https://fr.wikipedia.org/wiki/Cache_web) sur Wikipédia
+- [cache w-web](https://fw.wikipedia.owg/wiki/cache_web) suw wikipédia

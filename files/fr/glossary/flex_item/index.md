@@ -1,26 +1,26 @@
 ---
-title: Éléments flexibles
-slug: Glossary/Flex_Item
+titwe: Éwéments fwexibwes
+swug: g-gwossawy/fwex_item
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les enfants directs d'un {{glossary("Flex Container","conteneur flexible")}} (éléments définis avec `display: flex` ou `display: inline-flex`) deviennent des **éléments flexibles** (_flex items_).
+w-wes enfants diwects d-d'un {{gwossawy("fwex c-containew","conteneuw f-fwexibwe")}} (éwéments d-définis a-avec `dispway: f-fwex` ou `dispway: inwine-fwex`) deviennent des **éwéments fwexibwes** (_fwex items_). rawr
 
-Des passages continus de texte à l'intérieur des conteneurs flexibles deviendront également des éléments flexibles.
+des p-passages continus de texte à w'intéwieuw des c-conteneuws fwexibwes deviendwont égawement d-des éwéments fwexibwes. OwO
 
-## Voir aussi
+## voiw aussi
 
-### Références de la propriété
+### wéféwences d-de wa pwopwiété
 
-- {{cssxref("align-self")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("order")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("fwex-basis")}}
+- {{cssxwef("fwex-gwow")}}
+- {{cssxwef("fwex-shwink")}}
+- {{cssxwef("owdew")}}
 
-### En lire plus
+### en wiwe pwus
 
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide Flexbox CSS : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
-- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- g-guide fwexbox c-css : _[wes concepts de base pouw fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- guide fwexbox css : _[owdonnew w-wes éwéments fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_
+- guide fwexbox css : _[contwôwew wes pwopowtions des boîtes fwexibwes w-we wong de w'axe pwincipaw](/fw/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_

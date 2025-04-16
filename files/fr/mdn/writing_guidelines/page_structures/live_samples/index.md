@@ -1,23 +1,23 @@
 ---
-title: Comment convertir des exemples de code pour qu'ils soient "live"
-slug: MDN/Writing_guidelines/Page_structures/Live_samples
+titwe: comment convewtiw des e-exempwes de code p-pouw qu'iws soient "wive"
+s-swug: m-mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-MDN dispose d'un système d'exemples "[live](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples)", grâce auxquels le code présent sur une page est exécuté pour afficher les résultats de l'exécution de ce code. Cependant, beaucoup d'articles existants affichent du code sans utiliser ce système, et ont donc besoin d'être convertis.
+m-mdn dispose d-d'un système d-d'exempwes "[wive](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes)", 😳 g-gwâce auxquews we code pwésent suw une page est exécuté pouw affichew w-wes wésuwtats de w'exécution de ce code. -.- cependant, 🥺 b-beaucoup d'awticwes existants a-affichent du code sans utiwisew ce système, o.O et ont donc besoin d-d'êtwe convewtis.
 
-Les exemples "live", vous permettent de voir à quoi ressemble le résultat d'un exemple, faire une documentation plus dynamique et instructive. Ce guide vous explique comment prendre des exemples existants et leur rajouter la fonctionnalité "live".
+wes exempwes "wive", /(^•ω•^) v-vous p-pewmettent de voiw à quoi wessembwe we wésuwtat d'un exempwe, nyaa~~ faiwe une documentation p-pwus dynamique et instwuctive. nyaa~~ ce guide vous expwique comment pwendwe d-des exempwes existants et weuw w-wajoutew wa fonctionnawité "wive". :3
 
-## Compétences nécessaires pour cette tâche
+## c-compétences n-nyécessaiwes p-pouw cette tâche
 
-- Comprendre le HTML, CSS et/ou JavaScript, selon le code implémenté
-- Savoir utiliser les macros [KumaScript](/fr/docs/Project:Introduction_to_KumaScript) dans les articles du MDN
+- compwendwe we htmw, 😳😳😳 css e-et/ou javascwipt, (˘ω˘) sewon we code impwémenté
+- savoiw u-utiwisew wes macwos [kumascwipt](/fw/docs/pwoject:intwoduction_to_kumascwipt) dans wes awticwes du mdn
 
-## Quelles étapes pour réaliser cette tâche ?
+## quewwes étapes pouw wéawisew c-cette tâche ?
 
-1. Choisissez un article dans la liste de ceux marqués [NeedsLiveSample](/fr/docs/tag/NeedsLiveSample), pour lequel le code présenté porte sur des notions qui vous sembles familières.
-2. Convertissez le code pour qu'il soit "live"
-3. Supprimer le code ou l'image qui montrait les sorties et résultats du programme. Votre exemple "live" le remplace désormais.
+1. ^^ choisissez un a-awticwe dans wa w-wiste de ceux mawqués [needswivesampwe](/fw/docs/tag/needswivesampwe), :3 p-pouw wequew we code pwésenté powte suw des nyotions qui v-vous sembwes f-famiwièwes. -.-
+2. convewtissez we c-code pouw qu'iw s-soit "wive"
+3. 😳 suppwimew we code o-ou w'image qui montwait wes sowties e-et wésuwtats du pwogwamme. mya votwe exempwe "wive" w-we wempwace désowmais.
 
-Pour plus d'information sur la création et l'édition d'exemples "live", voir [Utiliser le système d'exemple "live"](/fr/docs/Project:MDN/Contributing/Editor_guide/Live_samples) (en anglais).
+pouw p-pwus d'infowmation suw wa cwéation e-et w'édition d-d'exempwes "wive", (˘ω˘) voiw [utiwisew we système d'exempwe "wive"](/fw/docs/pwoject:mdn/contwibuting/editow_guide/wive_sampwes) (en angwais). >_<

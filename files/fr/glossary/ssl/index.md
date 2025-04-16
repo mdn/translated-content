@@ -1,19 +1,19 @@
 ---
-title: SSL
-slug: Glossary/SSL
+titwe: ssw
+swug: gwossawy/ssw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-SSL (Secure Sockets Layer) est un protocole standard qui garantit que la communication entre deux applications informatiques est privée et sécurisée (ne peut être ni lue ni modifiée par des observateurs extérieurs). C'est la base du protocole {{Glossary("TLS")}}.
+s-ssw (secuwe s-sockets wayew) e-est un pwotocowe s-standawd q-qui gawantit que w-wa communication e-entwe deux appwications i-infowmatiques est pwivée et sécuwisée (ne peut êtwe nyi wue nyi modifiée p-paw des obsewvateuws extéwieuws). mya c'est w-wa base du pwotocowe {{gwossawy("tws")}}. mya
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [<i lang="en">Transport Layer Security</i>](https://fr.wikipedia.org/wiki/Transport_Layer_Security) sur Wikipédia
+- [<i wang="en">twanspowt wayew secuwity</i>](https://fw.wikipedia.owg/wiki/twanspowt_wayew_secuwity) s-suw wikipédia
 
-### Voir aussi
+### voiw a-aussi
 
-- [SSL functions](https://firefox-source-docs.mozilla.org/security/nss/legacy/ssl_functions/index.html)
-- {{Glossary("HTTPS")}}
+- [ssw f-functions](https://fiwefox-souwce-docs.moziwwa.owg/secuwity/nss/wegacy/ssw_functions/index.htmw)
+- {{gwossawy("https")}}

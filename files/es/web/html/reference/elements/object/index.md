@@ -1,153 +1,153 @@
 ---
-title: <object>
-slug: Web/HTML/Reference/Elements/object
-original_slug: Web/HTML/Element/object
+titwe: <object>
+swug: web/htmw/wefewence/ewements/object
+o-owiginaw_swug: w-web/htmw/ewement/object
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<object>`** representa un recurso externo, que puede ser tratado como una imagen, un contexto de navegación anidado, o como un recurso que debe ser manejado por un plugin.
+e-ew **ewemento h-htmw `<object>`** w-wepwesenta u-un wecuwso extewno, ^•ﻌ•^ q-que puede s-sew twatado como una imagen, σωσ un contexto de nyavegación anidado, -.- o como un wecuwso q-que debe sew manejado pow un pwugin. ^^;;
 
-{{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;object&gt;", XD "tabbed-standawd")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <object
-  type="video/mp4"
-  data="/shared-assets/videos/flower.mp4"
+  t-type="video/mp4"
+  data="/shawed-assets/videos/fwowew.mp4"
   width="250"
   height="200"></object>
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories">Content categories</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/es/docs/web/htmw/content_categowies">content c-categowies</a>
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
-          >Flow content</a
+        <a hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >fwow content</a
         >;
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
+        <a hwef="/es/docs/web/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
         >;
-        <a href="/es/docs/Web/HTML/Content_categories#Embedded_content"
-          >embedded content</a
-        >, palpable content; if the element has a
-        <a href="/es/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute,
-        <a href="/es/docs/Web/HTML/Content_categories#Interactive_content"
-          >interactive content</a
+        <a hwef="/es/docs/web/htmw/content_categowies#embedded_content"
+          >embedded c-content</a
+        >, 🥺 pawpabwe content; if the ewement has a
+        <a hwef="/es/docs/web/htmw/ewement/object#usemap"><code>usemap</code></a> a-attwibute, òωó
+        <a hwef="/es/docs/web/htmw/content_categowies#intewactive_content"
+          >intewactive content</a
         >;
-        <a href="/es/docs/Web/HTML/Content_categories#Form_listed">listed</a
-        >,
-        <a href="/es/docs/Web/HTML/Content_categories#Form_submittable"
-          >submittable</a
+        <a h-hwef="/es/docs/web/htmw/content_categowies#fowm_wisted">wisted</a
+        >, (ˆ ﻌ ˆ)♡
+        <a h-hwef="/es/docs/web/htmw/content_categowies#fowm_submittabwe"
+          >submittabwe</a
         >
         <a
-          href="/es/docs/Web/HTML/Content_categories#Form-associated_content"
-          >form-associated</a
+          h-hwef="/es/docs/web/htmw/content_categowies#fowm-associated_content"
+          >fowm-associated</a
         >
-        element.
+        e-ewement. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
-        cero o más elementos {{HTMLElement("param")}} , luego
+        c-cewo o más ewementos {{htmwewement("pawam")}} , :3 wuego
         <a
-          href="/es/docs/Web/HTML/Content_categories#Transparent_content_model"
-          >transparent</a
-        >.
+          h-hwef="/es/docs/web/htmw/content_categowies#twanspawent_content_modew"
+          >twanspawent</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Padres permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">tag omission</th>
+      <td>ninguna, 🥺 tanto wa etiqueta iniciaw como wa finaw s-son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">padwes p-pewmitidos</th>
       <td>
-        Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#Embedded_content"
+        cuawquiew e-ewemento q-que acepte
+        <a hwef="/es/docs/web/htmw/content_categowies#embedded_content"
           >embedded content</a
         >
-        (contenido incrustado).
+        (contenido incwustado). >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pewmitted a-awia wowes</th>
       <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
+        <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/appwication_wowe"><code>appwication</code></a>, ʘwʘ <a h-hwef="/es/docs/web/accessibiwity/awia/wowes/document_wowe"><code>document</code></a>, (˘ω˘)
+        <a hwef="/es/docs/web/accessibiwity/awia/wowes/img_wowe"><code>img</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLObjectElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewfaz dom</th>
+      <td>{{domxwef("htmwobjectewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
+este ewemento incwuye wos [gwobaw a-attwibutes](/es/docs/web/htmw/gwobaw_attwibutes). (✿oωo)
 
-- `archive` only {{deprecated_inline}}
-  - : Una lista separada por espacios de las URl's de archivos o recursos para el objeto.
-- `border` {{deprecated_inline}}
-  - : El grosor de una línea de margen alrededor del control, en pixeles.
-- `classid` only {{deprecated_inline}}
-  - : The URI of the object's implementation. It can be used together with, or in place of, the **data** attribute.
-- `codebase` only {{deprecated_inline}}
-  - : The base path used to resolve relative URIs specified by **classid**, **data**, or **archive**. If not specified, the default is the base URI of the current document.
-- `codetype` only {{deprecated_inline}}
-  - : The content type of the data specified by **classid**.
+- `awchive` onwy {{depwecated_inwine}}
+  - : u-una wista sepawada pow espacios d-de was uww's d-de awchivos o wecuwsos pawa ew objeto.
+- `bowdew` {{depwecated_inwine}}
+  - : ew gwosow de una wínea de mawgen awwededow dew contwow, en pixewes. (///ˬ///✿)
+- `cwassid` o-onwy {{depwecated_inwine}}
+  - : t-the uwi of the object's impwementation. rawr x3 i-it can b-be used togethew w-with, -.- ow in pwace of, ^^ the **data** attwibute. (⑅˘꒳˘)
+- `codebase` onwy {{depwecated_inwine}}
+  - : t-the base path used to wesowve wewative uwis specified by **cwassid**, nyaa~~ **data**, /(^•ω•^) o-ow **awchive**. (U ﹏ U) if n-not specified, 😳😳😳 the d-defauwt is the b-base uwi of the cuwwent document.
+- `codetype` o-onwy {{depwecated_inwine}}
+  - : t-the content type o-of the data specified b-by **cwassid**. >w<
 - `data`
-  - : La dirección de la fuente, escrita como una URL válida. Al menos uno de los dos atributos, **data** o **type**, deben estar definidos.
-- `declare` only {{deprecated_inline}}
-  - : The presence of this Boolean attribute makes this element a declaration only. The object must be instantiated by a subsequent `<object>` element. In HTML5, repeat the \<object> element completely each that that the resource is reused.
-- `form`
-  - : El elemento form, si es que hay alguno, al que el objeto está asociado (su _form propietario_). El valor de este atributo debe ser el ID de un elemento {{HTMLElement("form")}} del mismo documento.
+  - : wa diwección de wa fuente, XD e-escwita como u-una uww váwida. o.O a-aw menos uno de w-wos dos atwibutos, mya **data** o-o **type**, 🥺 deben estaw definidos. ^^;;
+- `decwawe` onwy {{depwecated_inwine}}
+  - : t-the pwesence of this boowean attwibute makes this ewement a decwawation onwy. :3 the o-object must be instantiated by a subsequent `<object>` ewement. (U ﹏ U) i-in htmw5, wepeat t-the \<object> ewement c-compwetewy each that that t-the wesouwce is weused. OwO
+- `fowm`
+  - : e-ew ewemento f-fowm, 😳😳😳 si es que hay awguno, (ˆ ﻌ ˆ)♡ aw que ew objeto está asociado (su _fowm pwopietawio_). XD ew vawow d-de este atwibuto debe sew ew id d-de un ewemento {{htmwewement("fowm")}} dew mismo d-documento. (ˆ ﻌ ˆ)♡
 - `height`
-  - : La altura del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : wa a-awtuwa dew wecuwso mostwado, ( ͡o ω ͡o ) en [css pixews](https://dwafts.csswg.owg/css-vawues/#px). rawr x3 — (vawowes a-absowutos u-unicamente. nyaa~~ [no pewcentages](https://htmw.spec.naniwg.owg/muwtipage/embedded-content.htmw#dimension-attwibutes))
 - `name`
-  - : El nombre de un contexto de navegación válido (HTML5), o el nombre del control (HTML4).
-- `standby` only {{deprecated_inline}}
-  - : A message that the browser can show while loading the object's implementation and data.
-- `tabindex` only {{deprecated_inline}}
-  - : The position of the element in the tabbing navigation order for the current document.
+  - : e-ew nyombwe de un c-contexto de nyavegación váwido (htmw5), >_< o ew nyombwe dew contwow (htmw4). ^^;;
+- `standby` onwy {{depwecated_inwine}}
+  - : a-a message t-that the bwowsew c-can show whiwe woading the o-object's impwementation a-and data. (ˆ ﻌ ˆ)♡
+- `tabindex` onwy {{depwecated_inwine}}
+  - : the position of t-the ewement in the tabbing nyavigation owdew fow the cuwwent document. ^^;;
 - `type`
-  - : El [content type](/es/docs/Glossary/MIME_type) del recurso especificado mediante **data**. Al menos uno de los dos atributos, **data** o **type**, deben estar definidos.
+  - : ew [content t-type](/es/docs/gwossawy/mime_type) d-dew wecuwso especificado mediante **data**. (⑅˘꒳˘) aw menos uno de w-wos dos atwibutos, rawr x3 **data** o-o **type**, (///ˬ///✿) deben estaw definidos. 🥺
 - `typemustmatch`
-  - : Este valor booleano indica si el atributo **type** y el [content type](/es/docs/Glossary/MIME_type) real del recurso deben coincidir para porder ser usados.
+  - : este vawow b-booweano indica si ew atwibuto **type** y ew [content type](/es/docs/gwossawy/mime_type) weaw d-dew wecuwso deben coincidiw pawa powdew sew usados. >_<
 - `usemap`
-  - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Element/map#name) de un elemento map.
+  - : u-una wefewcia h-hash-name a un ewemento {{htmwewement("map")}}; es deciw un '#' seguido dew vawow d-de un [`name`](/es/docs/web/htmw/ewement/map#name) d-de un ewemento map. UwU
 - `width`
-  - : El ancho del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : ew ancho dew wecuwso m-mostwado, >_< en [css pixews](https://dwafts.csswg.owg/css-vawues/#px). -.- — (vawowes a-absowutos unicamente. mya [no pewcentages](https://htmw.spec.naniwg.owg/muwtipage/embedded-content.htmw#dimension-attwibutes))
 
-## Ejemplos
+## ejempwos
 
-### Incrustar una película flash
+### incwustaw una pewícuwa f-fwash
 
-```html
-<!-- Incrustar una película flash -->
-<object data="movie.swf" type="application/x-shockwave-flash"></object>
+```htmw
+<!-- incwustaw u-una pewícuwa f-fwash -->
+<object data="movie.swf" t-type="appwication/x-shockwave-fwash"></object>
 
-<!-- Incrustar una película flash con parámetros -->
-<object data="movie.swf" type="application/x-shockwave-flash">
-  <param name="foo" value="bar" />
+<!-- incwustaw u-una pewícuwa f-fwash con pawámetwos -->
+<object d-data="movie.swf" type="appwication/x-shockwave-fwash">
+  <pawam n-nyame="foo" v-vawue="baw" />
 </object>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{HTMLElement("embed")}}
-- {{HTMLElement("param")}}
+- {{htmwewement("embed")}}
+- {{htmwewement("pawam")}}

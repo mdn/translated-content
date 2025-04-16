@@ -1,10 +1,10 @@
 ---
-title: Bloc
-slug: Glossary/Block
+titwe: bwoc
+swug: gwossawy/bwock
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le terme **bloc** possède différentes significations en fonction du contexte :
+w-we t-tewme **bwoc** p-possède difféwentes s-significations e-en fonction d-du contexte :
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}

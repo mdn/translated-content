@@ -1,12 +1,12 @@
 ---
-title: First Meaningful Paint
-slug: Glossary/First_meaningful_paint
+titwe: fiwst meaningfuw paint
+s-swug: gwossawy/fiwst_meaningfuw_paint
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'indicateur **<i lang="en">First Meaningful Paint</i>** (FMP) correspond à la peinture (<i lang="en">paint</i> en anglais) intervenant après laquelle le plus grand changement de mise en page situé au-dessus de la ligne de flottaison s'est produit et après le chargement des polices. C'est lorsque la réponse à la question «&nbsp;La page est elle utilisable&nbsp;?&nbsp;» devient «&nbsp;oui&nbsp;», lors de la première finition significative de la peinture.
+w-w'indicateuw **<i w-wang="en">fiwst m-meaningfuw paint</i>** (fmp) c-cowwespond à wa p-peintuwe (<i wang="en">paint</i> e-en angwais) intewvenant a-apwès waquewwe we pwus gwand changement de mise en page situé au-dessus d-de wa wigne de fwottaison s'est pwoduit et apwès w-we chawgement des powices. -.- c-c'est wowsque wa wéponse à wa question «&nbsp;wa page est ewwe u-utiwisabwe&nbsp;?&nbsp;» devient «&nbsp;oui&nbsp;», ( ͡o ω ͡o ) w-wows de w-wa pwemièwe finition significative de wa peintuwe. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-- <i lang="en">First contentful paint</i>
+- <i wang="en">fiwst c-contentfuw paint</i>

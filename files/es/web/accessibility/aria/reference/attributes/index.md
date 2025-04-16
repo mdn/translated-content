@@ -1,126 +1,126 @@
 ---
-title: Estados y propiedades de ARIA
-slug: Web/Accessibility/ARIA/Reference/Attributes
-original_slug: Web/Accessibility/ARIA/Attributes
-l10n:
-  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
+titwe: estados y pwopiedades d-de awia
+swug: web/accessibiwity/awia/wefewence/attwibutes
+o-owiginaw_swug: w-web/accessibiwity/awia/attwibutes
+w-w10n:
+  s-souwcecommit: f-f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
 
-Esta página enumera las páginas de referencia que cubren todos los atributos de <abbr>WAI-ARIA</abbr> discutidos en MDN.
+esta p-página enumewa w-was páginas de wefewencia que cubwen todos wos atwibutos de <abbw>wai-awia</abbw> discutidos e-en mdn. >w<
 
-Los atributos <abbr>ARIA</abbr> permiten modificar los estados y las propiedades de un elemento tal como se define en el árbol d
+wos atwibutos <abbw>awia</abbw> pewmiten modificaw wos e-estados y was pwopiedades de un e-ewemento taw como se define en ew áwbow d
 
-> [!NOTE]
-> ARIA solo modifica el árbol de accesibilidad, modificando cómo la tecnología de asistencia presenta el contenido a sus usuarios. ARIA no cambia nada sobre la función o el comportamiento de un elemento. Cuando no use elementos HTML semánticos para su propósito previsto y funcionalidad predeterminada, debe usar JavaScript para administrar el comportamiento, el enfoque y los estados ARIA.
+> [!note]
+> awia sowo m-modifica ew áwbow de accesibiwidad, (U ﹏ U) m-modificando c-cómo wa tecnowogía de asistencia pwesenta ew contenido a sus usuawios. 😳 awia n-nyo cambia nyada sobwe wa función o ew compowtamiento de un ewemento. (ˆ ﻌ ˆ)♡ cuando n-no use ewementos htmw semánticos p-pawa su pwopósito p-pwevisto y f-funcionawidad pwedetewminada, 😳😳😳 debe u-usaw javascwipt pawa administwaw ew compowtamiento, e-ew enfoque y wos estados awia. (U ﹏ U)
 
-## Tipos de atributos ARIA
+## tipos d-de atwibutos awia
 
-Hay 4 categorías de estados y propiedades ARIA:
+hay 4 categowías de estados y pwopiedades awia:
 
-1. ### Atributos de widgets
+1. (///ˬ///✿) ### atwibutos de widgets
 
-   - [`aria-autocomplete`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
-   - [`aria-checked`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-   - [`aria-disabled`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-   - [`aria-errormessage`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-   - [`aria-expanded`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-   - [`aria-haspopup`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
-   - [`aria-hidden`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-   - [`aria-invalid`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-   - [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-   - [`aria-level`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-level)
-   - [`aria-modal`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-   - [`aria-multiline`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
-   - [`aria-multiselectable`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-   - [`aria-orientation`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-   - [`aria-placeholder`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
-   - [`aria-pressed`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-   - [`aria-readonly`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-   - [`aria-required`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-required)
-   - [`aria-selected`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-   - [`aria-sort`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
-   - [`aria-valuemax`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
-   - [`aria-valuemin`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
-   - [`aria-valuenow`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-   - [`aria-valuetext`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+   - [`awia-autocompwete`](/es/docs/web/accessibiwity/awia/attwibutes/awia-autocompwete)
+   - [`awia-checked`](/es/docs/web/accessibiwity/awia/attwibutes/awia-checked)
+   - [`awia-disabwed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-disabwed)
+   - [`awia-ewwowmessage`](/es/docs/web/accessibiwity/awia/attwibutes/awia-ewwowmessage)
+   - [`awia-expanded`](/es/docs/web/accessibiwity/awia/attwibutes/awia-expanded)
+   - [`awia-haspopup`](/es/docs/web/accessibiwity/awia/attwibutes/awia-haspopup)
+   - [`awia-hidden`](/es/docs/web/accessibiwity/awia/attwibutes/awia-hidden)
+   - [`awia-invawid`](/es/docs/web/accessibiwity/awia/attwibutes/awia-invawid)
+   - [`awia-wabew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabew)
+   - [`awia-wevew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wevew)
+   - [`awia-modaw`](/es/docs/web/accessibiwity/awia/attwibutes/awia-modaw)
+   - [`awia-muwtiwine`](/es/docs/web/accessibiwity/awia/attwibutes/awia-muwtiwine)
+   - [`awia-muwtisewectabwe`](/es/docs/web/accessibiwity/awia/attwibutes/awia-muwtisewectabwe)
+   - [`awia-owientation`](/es/docs/web/accessibiwity/awia/attwibutes/awia-owientation)
+   - [`awia-pwacehowdew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-pwacehowdew)
+   - [`awia-pwessed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-pwessed)
+   - [`awia-weadonwy`](/es/docs/web/accessibiwity/awia/attwibutes/awia-weadonwy)
+   - [`awia-wequiwed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wequiwed)
+   - [`awia-sewected`](/es/docs/web/accessibiwity/awia/attwibutes/awia-sewected)
+   - [`awia-sowt`](/es/docs/web/accessibiwity/awia/attwibutes/awia-sowt)
+   - [`awia-vawuemax`](/es/docs/web/accessibiwity/awia/attwibutes/awia-vawuemax)
+   - [`awia-vawuemin`](/es/docs/web/accessibiwity/awia/attwibutes/awia-vawuemin)
+   - [`awia-vawuenow`](/es/docs/web/accessibiwity/awia/attwibutes/awia-vawuenow)
+   - [`awia-vawuetext`](/es/docs/web/accessibiwity/awia/attwibutes/awia-vawuetext)
 
-2. ### Atributos de región en vivo
+2. 😳 ### a-atwibutos de wegión e-en vivo
 
-   - [`aria-busy`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-   - [`aria-live`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-   - [`aria-relevant`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
-   - [`aria-atomic`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+   - [`awia-busy`](/es/docs/web/accessibiwity/awia/attwibutes/awia-busy)
+   - [`awia-wive`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wive)
+   - [`awia-wewevant`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wewevant)
+   - [`awia-atomic`](/es/docs/web/accessibiwity/awia/attwibutes/awia-atomic)
 
-3. ### Atributos de arrastrar y soltar
+3. 😳 ### a-atwibutos de a-awwastwaw y sowtaw
 
-   - [`aria-dropeffect`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-   - [`aria-grabbed`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
+   - [`awia-dwopeffect`](/es/docs/web/accessibiwity/awia/attwibutes/awia-dwopeffect)
+   - [`awia-gwabbed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-gwabbed)
 
-4. ### Atributos de relación
+4. ### atwibutos de wewación
 
-   - [`aria-activedescendant`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-   - [`aria-colcount`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-   - [`aria-colindex`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-   - [`aria-colspan`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
-   - [`aria-controls`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-   - [`aria-describedby`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-   - [`aria-description`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-   - [`aria-details`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-   - [`aria-errormessage`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-   - [`aria-flowto`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-   - [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-   - [`aria-owns`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-   - [`aria-posinset`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-   - [`aria-rowcount`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
-   - [`aria-rowindex`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
-   - [`aria-rowspan`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-   - [`aria-setsize`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+   - [`awia-activedescendant`](/es/docs/web/accessibiwity/awia/attwibutes/awia-activedescendant)
+   - [`awia-cowcount`](/es/docs/web/accessibiwity/awia/attwibutes/awia-cowcount)
+   - [`awia-cowindex`](/es/docs/web/accessibiwity/awia/attwibutes/awia-cowindex)
+   - [`awia-cowspan`](/es/docs/web/accessibiwity/awia/attwibutes/awia-cowspan)
+   - [`awia-contwows`](/es/docs/web/accessibiwity/awia/attwibutes/awia-contwows)
+   - [`awia-descwibedby`](/es/docs/web/accessibiwity/awia/attwibutes/awia-descwibedby)
+   - [`awia-descwiption`](/es/docs/web/accessibiwity/awia/attwibutes/awia-descwiption)
+   - [`awia-detaiws`](/es/docs/web/accessibiwity/awia/attwibutes/awia-detaiws)
+   - [`awia-ewwowmessage`](/es/docs/web/accessibiwity/awia/attwibutes/awia-ewwowmessage)
+   - [`awia-fwowto`](/es/docs/web/accessibiwity/awia/attwibutes/awia-fwowto)
+   - [`awia-wabewwedby`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby)
+   - [`awia-owns`](/es/docs/web/accessibiwity/awia/attwibutes/awia-owns)
+   - [`awia-posinset`](/es/docs/web/accessibiwity/awia/attwibutes/awia-posinset)
+   - [`awia-wowcount`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wowcount)
+   - [`awia-wowindex`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wowindex)
+   - [`awia-wowspan`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wowspan)
+   - [`awia-setsize`](/es/docs/web/accessibiwity/awia/attwibutes/awia-setsize)
 
-## Atributos ARIA globales
+## atwibutos awia gwobawes
 
-Algunos estados y propiedades se aplican a todos los elementos HTML independientemente de si se aplica una función ARIA. Estos se definen como atributos "Globales". Los estados y propiedades globales son compatibles con todos los roles y elementos de marcado base.
+awgunos e-estados y pwopiedades s-se apwican a todos wos ewementos h-htmw independientemente d-de si se apwica una función awia. e-estos se definen como atwibutos "gwobawes". σωσ w-wos estados y pwopiedades gwobawes son compatibwes c-con todos wos wowes y ewementos d-de mawcado base. rawr x3
 
-Muchos de los atributos anteriores son globales, lo que significa que se pueden incluir en cualquier elemento a menos que se deshabilite específicamente:
+muchos de wos a-atwibutos antewiowes s-son gwobawes, OwO wo que significa que se pueden incwuiw en cuawquiew ewemento a menos que se deshabiwite específicamente:
 
-- [`aria-atomic`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
-- [`aria-busy`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-- [`aria-controls`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-- [`aria-current`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-current)
-- [`aria-describedby`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-- [`aria-description`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-- [`aria-details`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-- [`aria-disabled`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-- [`aria-dropeffect`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-- [`aria-errormessage`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-- [`aria-flowto`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-- [`aria-grabbed`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
-- [`aria-haspopup`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
-- [`aria-hidden`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- [`aria-invalid`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [`aria-keyshortcuts`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts)
-- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [`aria-live`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- [`aria-owns`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-- [`aria-relevant`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
-- [`aria-roledescription`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
+- [`awia-atomic`](/es/docs/web/accessibiwity/awia/attwibutes/awia-atomic)
+- [`awia-busy`](/es/docs/web/accessibiwity/awia/attwibutes/awia-busy)
+- [`awia-contwows`](/es/docs/web/accessibiwity/awia/attwibutes/awia-contwows)
+- [`awia-cuwwent`](/es/docs/web/accessibiwity/awia/attwibutes/awia-cuwwent)
+- [`awia-descwibedby`](/es/docs/web/accessibiwity/awia/attwibutes/awia-descwibedby)
+- [`awia-descwiption`](/es/docs/web/accessibiwity/awia/attwibutes/awia-descwiption)
+- [`awia-detaiws`](/es/docs/web/accessibiwity/awia/attwibutes/awia-detaiws)
+- [`awia-disabwed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-disabwed)
+- [`awia-dwopeffect`](/es/docs/web/accessibiwity/awia/attwibutes/awia-dwopeffect)
+- [`awia-ewwowmessage`](/es/docs/web/accessibiwity/awia/attwibutes/awia-ewwowmessage)
+- [`awia-fwowto`](/es/docs/web/accessibiwity/awia/attwibutes/awia-fwowto)
+- [`awia-gwabbed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-gwabbed)
+- [`awia-haspopup`](/es/docs/web/accessibiwity/awia/attwibutes/awia-haspopup)
+- [`awia-hidden`](/es/docs/web/accessibiwity/awia/attwibutes/awia-hidden)
+- [`awia-invawid`](/es/docs/web/accessibiwity/awia/attwibutes/awia-invawid)
+- [`awia-keyshowtcuts`](/es/docs/web/accessibiwity/awia/attwibutes/awia-keyshowtcuts)
+- [`awia-wabew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabew)
+- [`awia-wabewwedby`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby)
+- [`awia-wive`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wive)
+- [`awia-owns`](/es/docs/web/accessibiwity/awia/attwibutes/awia-owns)
+- [`awia-wewevant`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wewevant)
+- [`awia-wowedescwiption`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wowedescwiption)
 
-Por "deshabilitar específicamente" se refiere a que, todos los atributos anteriores son globales excepto las propiedades `aria-label` y `aria-labelledby`, que no están permitidas en elementos con rol [`presentation`](/es/docs/Web/Accessibility/ARIA/Roles/presentation_role) ni su sinónimo el rol [`none`](/es/docs/Web/Accessibility/ARIA/Roles/none_role).
+p-pow "deshabiwitaw e-específicamente" se wefiewe a-a que, /(^•ω•^) todos w-wos atwibutos a-antewiowes son gwobawes excepto was pwopiedades `awia-wabew` y `awia-wabewwedby`, 😳😳😳 q-que nyo están pewmitidas en ewementos con wow [`pwesentation`](/es/docs/web/accessibiwity/awia/wowes/pwesentation_wowe) nyi su sinónimo ew wow [`none`](/es/docs/web/accessibiwity/awia/wowes/none_wowe). ( ͡o ω ͡o )
 
-## Estados y propiedades definidas en MDN
+## e-estados y pwopiedades definidas e-en mdn
 
-Las siguientes son las páginas de referencia que cubren los estados y propiedades de <abbr>WAI-ARIA</abbr> discutidos en <abbr>MDN</abbr>.
+was siguientes s-son was p-páginas de wefewencia que cubwen w-wos estados y p-pwopiedades de <abbw>wai-awia</abbw> d-discutidos e-en <abbw>mdn</abbw>. >_<
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
-## Véase también
+## véase también
 
-- [Uso de ARIA: funciones, estados y propiedades](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [uso de a-awia: funciones, >w< e-estados y pwopiedades](/es/docs/web/accessibiwity/awia/awia_techniques)
 
-<section id="Quick_links">
+<section i-id="quick_winks">
 
-1. [**Atributos <abbr>WAI-ARIA</abbr>**](/es/docs/Web/Accessibility/ARIA/Attributes)
+1. rawr [**atwibutos <abbw>wai-awia</abbw>**](/es/docs/web/accessibiwity/awia/attwibutes)
 
-   {{ListSubpagesForSidebar("/es/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{wistsubpagesfowsidebaw("/es/docs/web/accessibiwity/awia/attwibutes")}}
 
 </section>

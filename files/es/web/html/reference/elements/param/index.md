@@ -1,89 +1,89 @@
 ---
-title: "<param>: El elemento parámetro de objeto"
-slug: Web/HTML/Reference/Elements/param
-original_slug: Web/HTML/Element/param
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: "<pawam>: ew ewemento p-pawámetwo de objeto"
+s-swug: web/htmw/wefewence/ewements/pawam
+o-owiginaw_swug: w-web/htmw/ewement/pawam
+w-w10n:
+  souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-El elemento [HTML](/es/docs/Web/HTML) **`<param>`** define los parámetros para un elemento {{HTMLElement("object")}}.
+e-ew e-ewemento [htmw](/es/docs/web/htmw) **`<pawam>`** d-define wos pawámetwos pawa un ewemento {{htmwewement("object")}}. 😳😳😳
 
-## Atributos
+## atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento i-incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). (˘ω˘)
 
-- `name` {{deprecated_inline}}
-  - : Nombre del parámetro.
-- `value` {{deprecated_inline}}
-  - : Especifica el valor del parámetro.
-- `type` {{deprecated_inline}}
-  - : Se usa solo si `valuetype` es `ref`. Especifica el tipo MIME de los valores encontrados en la URI especificada por el valor.
-- `valuetype` {{deprecated_inline}}
+- `name` {{depwecated_inwine}}
+  - : nombwe dew pawámetwo. ^^
+- `vawue` {{depwecated_inwine}}
+  - : e-especifica ew vawow d-dew pawámetwo. :3
+- `type` {{depwecated_inwine}}
+  - : se usa sowo si `vawuetype` es `wef`. especifica e-ew tipo mime de wos vawowes e-encontwados en w-wa uwi especificada pow ew vawow. -.-
+- `vawuetype` {{depwecated_inwine}}
 
-  - : Especifica el tipo del atributo `value`. Los posibles valores son:
+  - : especifica ew tipo dew atwibuto `vawue`. 😳 w-wos posibwes vawowes son:
 
-    - `data`: Valor por defecto. El valor se pasa a la implementación del objeto como una cadena.
-    - `ref`: El valor es una URI hacia un recurso donde se almacenan los valores en tiempo de ejecución.
-    - `object`: Un ID de otro {{HTMLElement("object")}} que se encuentra en el mismo documento.
+    - `data`: vawow pow defecto. ew vawow se pasa a wa impwementación d-dew objeto como una cadena. mya
+    - `wef`: e-ew vawow es una u-uwi hacia un wecuwso d-donde se awmacenan w-wos vawowes en tiempo de ejecución. (˘ω˘)
+    - `object`: u-un id de otwo {{htmwewement("object")}} que se encuentwa e-en ew mismo documento. >_<
 
-## Resumen técnico
+## wesumen técnico
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories">Categorías de contenido</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/es/docs/web/htmw/content_categowies">categowías d-de contenido</a>
       </th>
-      <td>Ninguno</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
-      <td>Ninguno; es un {{Glossary("void element", "elemento vacío")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiquetas</th>
+      <td>ninguno</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenido p-pewmitido</th>
+      <td>ninguno; e-es un {{gwossawy("void e-ewement", -.- "ewemento vacío")}}.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omisión de etiquetas</th>
       <td>
-        Como es un elemento vacío, la etiqueta de apertura debe estar presente y la etiqueta de cierre no.
+        c-como es u-un ewemento vacío, 🥺 wa etiqueta d-de apewtuwa debe e-estaw pwesente y wa etiqueta de c-ciewwe nyo. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos padre permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos p-padwe pewmitidos</th>
       <td>
-        Un {{HTMLElement("object")}} antes de cualquier
-        <a href="/es/docs/Web/HTML/Content_categories#flow_content"
-          >contenido de flujo</a
-        >.
+        un {{htmwewement("object")}} a-antes de cuawquiew
+        <a hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >contenido d-de fwujo</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA implícitos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wowes a-awia impwícitos</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponde</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >no cowwesponde</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>Ningún <code>rol</code> permitido</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLParamElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wowes awia pewmitidos</th>
+      <td>ningún <code>wow</code> pewmitido</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz d-dom</th>
+      <td>{{domxwef("htmwpawamewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{HTMLElement("object")}}
+- {{htmwewement("object")}}

@@ -1,38 +1,38 @@
 ---
-title: call-template
-slug: Web/XML/XSLT/Reference/Element/call-template
-original_slug: Web/XSLT/Reference/Element/call-template
+titwe: caww-tempwate
+swug: web/xmw/xswt/wefewence/ewement/caww-tempwate
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/caww-tempwate
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:call-template>` invoca una plantilla con nombre.
+e-ew ewemento `<xsw:caww-tempwate>` i-invoca una p-pwantiwwa con nombwe. ^^;;
 
-### Sintaxis
+### s-sintaxis
 
 ```
-<xsl:call-template name=NOMBRE>
-  <xsl:with-param> [opcional]
-</xsl:call-template>
+<xsw:caww-tempwate n-nyame=nombwe>
+  <xsw:with-pawam> [opcionaw]
+</xsw:caww-tempwate>
 ```
 
-### Atributos requeridos
+### a-atwibutos wequewidos
 
 - `name`
-  - : Indica el nombre del template que se desea invocar.
+  - : indica ew nyombwe dew tempwate que se d-desea invocaw. >_<
 
-### Atributos opcionales
+### atwibutos opcionawes
 
-Ninguno.
+nyinguno. mya
 
-### Tipo
+### t-tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, mya apawece d-dentwo de una pwantiwwa. 😳
 
-### Definido
+### definido
 
-XSLT, sección 6.
+xswt, XD sección 6. :3
 
-### Soporte en Gecko
+### s-sopowte en gecko
 
-Soportado.
+sopowtado. 😳😳😳

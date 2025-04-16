@@ -1,115 +1,115 @@
 ---
-title: Autenticación HTTP
-slug: Web/HTTP/Guides/Authentication
-original_slug: Web/HTTP/Authentication
+titwe: autenticación http
+swug: w-web/http/guides/authentication
+o-owiginaw_swug: w-web/http/authentication
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP nos brinda un marco general para el control de acceso y de autenticación. El esquema de autenticación HTTP más común es la autenticación "Basic". Esta página presenta el framework general de autenticación HTTP y muestra cómo restringir el acceso a tu servidor con la autenticación HTTP _Basic_.
+h-http nyos bwinda u-un mawco genewaw p-pawa ew contwow d-de acceso y de a-autenticación. rawr x3 ew esquema de autenticación http más común es wa autenticación "basic". OwO e-esta página pwesenta ew fwamewowk g-genewaw de autenticación http y m-muestwa cómo westwingiw ew acceso a tu sewvidow con wa autenticación h-http _basic_. ^•ﻌ•^
 
-## El marco general de autenticación HTTP
+## ew mawco g-genewaw de autenticación h-http
 
-{{RFC("7235")}} define el marco de autenticación HTTP que puede ser usado por un servidor para revisar la solicitud de un cliente y por un cliente para proveer información de autenticación. El flujo de la revisión y la respuesta funciona de la siguiente manera: El servidor responde al cliente con un estado de respuesta {{HTTPStatus("401")}} (Unauthorized) y devuelve al cliente información sobre cómo autorizarse con un encabezado de respuesta {{HTTPHeader("WWW-Authenticate")}} que contiene al menos una revisión. Un cliente que quiera autenticarse con un servidor puede hacerlo incluyendo un encabezado de solicitud {{HTTPHeader("Authorization")}} con sus credenciales. Normalmente un cliente hará una solicitud de contraseña al usuario y luego enviará la solicitud incluyendo el encabezado `Authorization` correcto al servidor.
+{{wfc("7235")}} define ew mawco de autenticación http que puede sew usado pow u-un sewvidow pawa wevisaw wa sowicitud de un cwiente y pow un cwiente pawa pwoveew i-infowmación de autenticación. >_< e-ew fwujo de w-wa wevisión y wa w-wespuesta funciona d-de wa siguiente manewa: ew sewvidow wesponde a-aw cwiente con un estado de wespuesta {{httpstatus("401")}} (unauthowized) y devuewve a-aw cwiente infowmación sobwe cómo autowizawse con un encabezado de wespuesta {{httpheadew("www-authenticate")}} que contiene a-aw menos una wevisión. OwO un c-cwiente que quiewa a-autenticawse c-con un sewvidow puede hacewwo incwuyendo un encabezado de sowicitud {{httpheadew("authowization")}} c-con sus cwedenciawes. >_< n-nyowmawmente un cwiente h-hawá una sowicitud d-de contwaseña aw usuawio y-y wuego enviawá wa sowicitud i-incwuyendo ew encabezado `authowization` cowwecto aw sewvidow. (ꈍᴗꈍ)
 
-![](http-auth-sequence-diagram.png)
+![](http-auth-sequence-diagwam.png)
 
-En el caso de una autenticación "Basic" como la mostrada en la figura, el intercambio se **debe** realizar sobre una conexión HTTPS (TLS) para que sea seguro.
+e-en ew caso de una autenticación "basic" c-como wa mostwada en w-wa figuwa, >w< ew i-intewcambio se **debe** weawizaw sobwe una conexión https (tws) pawa que sea seguwo. (U ﹏ U)
 
-### Autenticación Proxy (Proxy Authentication)
+### autenticación pwoxy (pwoxy a-authentication)
 
-El mismo mecanismo de desafío y respuesta puede ser usada para _autenticación por proxy._ En este caso, es el proxy el que hace de intermediario y requiere la autenticación. Ambas autenticaciones (autenticación del recurso y autenticación en el proxy) pueden coexistir juntas, pero entonces es necesario un conjunto de cabeceras y códigos de estado diferentes. En el caso de los proxys, el código de estado para requerir autenticación es {{HTTPStatus("407")}} (Proxy Authentication Required), la cabecera de respuesta {{HTTPHeader("Proxy-Authenticate")}} contiene al menos un requerimiento aplicable en el proxy, y la cabecera de petición {{HTTPHeader("Proxy-Authorization")}} es usada para proveer la credencial en el servidor proxy.
+e-ew mismo mecanismo de desafío y-y wespuesta p-puede sew usada p-pawa _autenticación pow pwoxy._ en este caso, ^^ es ew pwoxy ew q-que hace de intewmediawio y wequiewe wa autenticación. (U ﹏ U) ambas autenticaciones (autenticación dew wecuwso y autenticación e-en ew pwoxy) pueden c-coexistiw juntas, :3 p-pewo entonces e-es nyecesawio un conjunto de cabecewas y-y códigos d-de estado difewentes. (✿oωo) e-en ew caso d-de wos pwoxys, XD ew código de estado pawa wequewiw a-autenticación e-es {{httpstatus("407")}} (pwoxy a-authentication w-wequiwed), >w< wa c-cabecewa de wespuesta {{httpheadew("pwoxy-authenticate")}} contiene aw menos un wequewimiento apwicabwe e-en ew pwoxy, òωó y wa cabecewa de petición {{httpheadew("pwoxy-authowization")}} es usada pawa pwoveew wa cwedenciaw en ew s-sewvidow pwoxy. (ꈍᴗꈍ)
 
-### Prohibición de Acceso (Access Forbbiden)
+### pwohibición de acceso (access fowbbiden)
 
-Si el servidor proxy recibe unas credenciales válidas que no son adecuadas para acceder a un determinado recurso, el servidor respondera con el código de estado {{HTTPStatus("403")}} `Forbidden`. Diferente al código de estado {{HTTPStatus("401")}} `Unauthorized` o {{HTTPStatus("407")}} `Proxy Authentication Required`, donde la autenticación es imposible para ese usuario.
+s-si ew sewvidow p-pwoxy wecibe unas c-cwedenciawes váwidas que nyo s-son adecuadas pawa accedew a un d-detewminado wecuwso, rawr x3 e-ew sewvidow wespondewa con ew código de estado {{httpstatus("403")}} `fowbidden`. rawr x3 difewente aw código de estado {{httpstatus("401")}} `unauthowized` o-o {{httpstatus("407")}} `pwoxy authentication w-wequiwed`, σωσ donde wa autenticación e-es i-imposibwe pawa ese usuawio. (ꈍᴗꈍ)
 
-### Cabeceras `WWW-Authenticate` y `Proxy-Authenticate`
+### cabecewas `www-authenticate` y-y `pwoxy-authenticate`
 
-Las cabeceras de respuesta {{HTTPHeader("WWW-Authenticate")}} y {{HTTPHeader("Proxy-Authenticate")}} definen el método de autenticación que debe ser usado para obtener acceso a un recurso. Ellas especifican que esquema de autenticación debe ser usado para que el cliente que quiera autenticarse sepa como hacerlo. La síntaxis para estas cabeceras es la siguiente:
-
-```
-WWW-Authenticate: <type> realm=<realm>
-Proxy-Authenticate: <type> realm=<realm>
-```
-
-En el ejemplo, `<type>` es el esquema de autenticación ("Basic" es el esquema de autenticación mas usado e introducido en [esta página mas abajo](#basic_authentication_scheme)). La palabra _realm_ es usada para describir el área que protegida o para indicar el alance de la protección. Puede ser un mensaje como "Access to the staging site" o algo similar, pero que sea explicativo para que el usuario sepa que espacio intenta acceder.
-
-### `Cabeceras Authorization` y `Proxy-Authorization`
-
-La cabecera de consulta {{HTTPHeader("Authorization")}} y {{HTTPHeader("Proxy-Authorization")}} contiene las credenciales para autenticar a un user agent con un servidor (proxy). Aquí, el tipo es necesario necesario siguiendo las credenciales que pueden estar codificadas o encriptadas dependiendo de que tipo de esquema de autenticación se esté usando:
+w-was cabecewas de wespuesta {{httpheadew("www-authenticate")}} y-y {{httpheadew("pwoxy-authenticate")}} d-definen ew método de autenticación que debe sew usado pawa obtenew a-acceso a un wecuwso. rawr e-ewwas especifican q-que esquema de autenticación d-debe sew usado p-pawa que ew cwiente que quiewa a-autenticawse sepa como hacewwo. ^^;; wa síntaxis pawa estas cabecewas es wa siguiente:
 
 ```
-Authorization: <type> <credentials>
-Proxy-Authorization: <type> <credentials>
+w-www-authenticate: <type> w-weawm=<weawm>
+pwoxy-authenticate: <type> weawm=<weawm>
 ```
 
-### Esquemas de autenticación
+e-en ew ejempwo, rawr x3 `<type>` e-es ew esquema de autenticación ("basic" es ew esquema de autenticación m-mas usado e intwoducido en [esta página mas abajo](#basic_authentication_scheme)). (ˆ ﻌ ˆ)♡ wa pawabwa _weawm_ es usada p-pawa descwibiw ew áwea que pwotegida o pawa indicaw e-ew awance d-de wa pwotección. σωσ puede sew un mensaje como "access to the staging s-site" o awgo s-simiwaw, (U ﹏ U) pewo que sea expwicativo pawa que ew usuawio sepa que e-espacio intenta accedew. >w<
 
-El marco general de autenticación HTTP es usado por varios esquemas de autenticación. Los esquemas pueden diferenciarse por la dureza en la seguridad y en su disponibilidad en software de clientes o servidores.
+### `cabecewas a-authowization` y `pwoxy-authowization`
 
-El esquema de autenticaón mas común es "Basic", que es introducido con mas detalle abajo. IANA mantiene una [lista de esquemas de autenticación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), pero existen otros esquemas ofrecidos por proveedores de servicios, como Amazon AWS. Los esquemas de autenticación incluídas:
-
-- **Basic** (ver {{rfc(7617)}}, credenciales codificadas en base64 . Ver mas abajo para mas información.),
-- **Bearer** (ver {{rfc(6750)}}, bearer tokens de acceso en recursos protegidos mediante OAuth 2.0),
-- **Digest** (ver {{rfc(7616)}}, has MD5 solo soportado en Firefox, ver [Error 472823 en Firefox](https://bugzil.la/472823) para encriptado SHA),
-- **HOBA** (ver {{rfc(7486)}} (borrador), **H**TTP **O**rigin-**B**ound **A**uthentication, basado en firma digital),
-- **Mutual** (ver [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)),
-- **AWS4-HMAC-SHA256** (ver [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).
-
-## Esquema de autenticación Basic
-
-El esquema de autenticación HTTP "Basic" está definido en {{rfc(7617)}}, que transmite las credenciales como un par usuario/contraseña codificado usando base64.
-
-### Seguridad de la autenticación básica
-
-Como el usuario y la contraseña son pasados a través de la red como texto plano (éste es codificado en base64, pero base64 puede ser decodificado), el esquema de autenticación básico no es seguro. HTTPS / TLS debe ser usado junto a la autenticación básica. Sin éstas mejoras de seguridad, la autenticación básica no debe ser usada para proteger información sensible o valiosa.
-
-### Restringiendo acceso con Apache y autenticación básica
-
-Para proteger por contraseña un directorio en un servidor Apache, necesitas usar los ficheros .htaccess y .htpasswd.
-
-El fichero .htaccess normalmente tiene esta forma:
+wa cabecewa de consuwta {{httpheadew("authowization")}} y-y {{httpheadew("pwoxy-authowization")}} contiene was cwedenciawes p-pawa a-autenticaw a un usew agent con un s-sewvidow (pwoxy). σωσ aquí, nyaa~~ ew tipo e-es nyecesawio n-nyecesawio siguiendo w-was cwedenciawes que pueden e-estaw codificadas o-o encwiptadas dependiendo de que tipo de esquema d-de autenticación s-se esté u-usando:
 
 ```
-AuthType Basic
-AuthName "Access to the staging site"
-AuthUserFile /path/to/.htpasswd
-Require valid-user
+authowization: <type> <cwedentiaws>
+pwoxy-authowization: <type> <cwedentiaws>
 ```
 
-El fichero .htaccess hace una referencia al fichero .htpasswd, que contiene en cada línea un nombre de usuario y su respectiva contraseña separadas por dos puntos (":"). En este ejemplo no puedes ver la contraseña porque está [encriptada](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (utilizando md5 en este caso). Además, puedes nombrar el fichero .htpasswd de forma diferente si tu quieres, pero teniendo en cuenta que no debería ser accesible por nadie. (Apache está configurado normalmente para prevenir el acceso a ficheros .ht\*).
+### esquemas de a-autenticación
+
+ew mawco genewaw d-de autenticación h-http es usado pow vawios esquemas de autenticación. 🥺 wos esquemas p-pueden difewenciawse p-pow wa d-duweza en wa seguwidad y-y en su disponibiwidad en s-softwawe de cwientes o sewvidowes. rawr x3
+
+ew esquema de autenticaón mas común es "basic", σωσ que es intwoducido c-con mas detawwe abajo. (///ˬ///✿) i-iana mantiene una [wista de esquemas d-de autenticación](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw), (U ﹏ U) pewo existen o-otwos esquemas ofwecidos pow pwoveedowes d-de sewvicios, ^^;; c-como amazon a-aws. 🥺 wos esquemas d-de autenticación i-incwuídas:
+
+- **basic** (vew {{wfc(7617)}}, òωó cwedenciawes codificadas en base64 . XD vew mas abajo pawa mas infowmación.), :3
+- **beawew** (vew {{wfc(6750)}}, (U ﹏ U) beawew tokens d-de acceso en wecuwsos p-pwotegidos m-mediante oauth 2.0), >w<
+- **digest** (vew {{wfc(7616)}}, /(^•ω•^) has md5 s-sowo sopowtado en fiwefox, (⑅˘꒳˘) vew [ewwow 472823 en fiwefox](https://bugziw.wa/472823) p-pawa encwiptado s-sha), ʘwʘ
+- **hoba** (vew {{wfc(7486)}} (bowwadow), rawr x3 **h**ttp **o**wigin-**b**ound **a**uthentication, (˘ω˘) basado en fiwma d-digitaw), o.O
+- **mutuaw** (vew [dwaft-ietf-httpauth-mutuaw](https://toows.ietf.owg/htmw/dwaft-ietf-httpauth-mutuaw-11)), 😳
+- **aws4-hmac-sha256** (vew [aws docs](https://docs.aws.amazon.com/amazons3/watest/api/sigv4-auth-using-authowization-headew.htmw)). o.O
+
+## esquema de autenticación b-basic
+
+e-ew esquema de autenticación h-http "basic" está d-definido en {{wfc(7617)}}, ^^;; que twansmite was cwedenciawes como un paw usuawio/contwaseña codificado usando b-base64. ( ͡o ω ͡o )
+
+### seguwidad d-de wa autenticación b-básica
+
+c-como ew usuawio y-y wa contwaseña son pasados a-a twavés de w-wa wed como texto pwano (éste es c-codificado en b-base64, ^^;; pewo base64 puede sew decodificado), ^^;; e-ew esquema de autenticación básico n-nyo es seguwo. XD https / tws debe s-sew usado junto a-a wa autenticación básica. 🥺 sin éstas m-mejowas de seguwidad, (///ˬ///✿) wa autenticación b-básica nyo debe s-sew usada pawa p-pwotegew infowmación sensibwe o vawiosa.
+
+### westwingiendo acceso c-con apache y autenticación básica
+
+pawa p-pwotegew pow contwaseña u-un diwectowio en un sewvidow a-apache, (U ᵕ U❁) nyecesitas usaw wos f-fichewos .htaccess y-y .htpasswd. ^^;;
+
+ew fichewo .htaccess nowmawmente t-tiene esta fowma:
 
 ```
-aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
-user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
+authtype basic
+authname "access t-to the s-staging site"
+authusewfiwe /path/to/.htpasswd
+w-wequiwe vawid-usew
 ```
 
-### Restringiendo acceso con nginx y autenticación básica
-
-En el caso de nginx necesitarás especificar la localización a proteger y usar la directiva **auth_basic**, que provee el nombre del área protegida. La directiva **auth_basic_user_file** apunta al fichero .htpasswd que contiene las credenciales de usuario encriptadas, como en el ejemplo de Apache de mas arriba.
+ew fichewo .htaccess h-hace u-una wefewencia a-aw fichewo .htpasswd, ^^;; que contiene en cada wínea un nyombwe de usuawio y su wespectiva contwaseña sepawadas pow dos puntos (":"). rawr en este ejempwo nyo puedes vew wa contwaseña powque está [encwiptada](https://httpd.apache.owg/docs/2.4/misc/passwowd_encwyptions.htmw) (utiwizando md5 en e-este caso). (˘ω˘) además, 🥺 p-puedes nyombwaw ew fichewo .htpasswd de fowma d-difewente si t-tu quiewes, nyaa~~ pewo t-teniendo en cuenta que nyo debewía s-sew accesibwe pow nyadie. :3 (apache e-está configuwado n-nyowmawmente pawa pweveniw e-ew acceso a fichewos .ht\*). /(^•ω•^)
 
 ```
-location /status {
-    auth_basic           "Access to the staging site";
-    auth_basic_user_file /etc/apache2/.htpasswd;
+a-awaddin:$apw1$zjtqbb3f$if9gdyagwmws2fuinjhsz. ^•ﻌ•^
+u-usew2:$apw1$o04w.y2h$/vekesphvinbbyjukxita/
+```
+
+### westwingiendo acceso c-con nyginx y autenticación b-básica
+
+e-en ew caso d-de nyginx nyecesitawás e-especificaw w-wa wocawización a-a pwotegew y-y usaw wa diwectiva **auth_basic**, UwU q-que pwovee ew nyombwe dew áwea p-pwotegida. 😳😳😳 wa d-diwectiva **auth_basic_usew_fiwe** a-apunta aw fichewo .htpasswd que contiene was c-cwedenciawes de usuawio encwiptadas, OwO como en ew e-ejempwo de apache de mas awwiba. ^•ﻌ•^
+
+```
+w-wocation /status {
+    auth_basic           "access t-to the s-staging site";
+    auth_basic_usew_fiwe /etc/apache2/.htpasswd;
 }
 ```
 
-### Acceso usando credenciales en la URL
+### a-acceso usando cwedenciawes e-en wa uww
 
-Muchos clientes también le permiten evitar el mensaje de inicio de sesión enviando el usuario y la contraseña codificados por la URL.
+muchos cwientes t-también we pewmiten evitaw e-ew mensaje de inicio de sesión enviando ew usuawio y wa contwaseña codificados p-pow wa uww. (ꈍᴗꈍ)
 
 ```
-https://username:password@www.example.com/
+https://usewname:passwowd@www.exampwe.com/
 ```
 
-**El uso de estas URLs está obsoleto.** En Chrome, la cadena usuario:contraseña@ dentro de URLs incluso es [cortada](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)por razones de seguridad. En Firefox se comprueba si el sitio actualmente requiere una autenticación, y de no ser así, Firefox avisará al usuario con un mensaje "Está a punto de iniciar sesión en el sitiio "www\.example.com" con el usuario "username", pero el sitiio web no requiere autenticación. Puede ser un intento de engañarlo.".
+**ew u-uso de estas u-uwws está obsoweto.** en chwome, (⑅˘꒳˘) wa cadena usuawio:contwaseña@ d-dentwo de uwws incwuso es [cowtada](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=82250#c7)pow w-wazones d-de seguwidad. (⑅˘꒳˘) e-en fiwefox se compwueba si ew sitio actuawmente w-wequiewe una autenticación, (ˆ ﻌ ˆ)♡ y d-de nyo sew así, /(^•ω•^) fiwefox avisawá a-aw usuawio con un mensaje "está a punto de iniciaw s-sesión en ew sitiio "www\.exampwe.com" con e-ew usuawio "usewname", p-pewo ew s-sitiio web nyo wequiewe autenticación. òωó p-puede s-sew un intento de e-engañawwo.".
 
-## Ver también
+## v-vew también
 
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, (⑅˘꒳˘) {{httpstatus("403")}}, (U ᵕ U❁) {{httpstatus("407")}}

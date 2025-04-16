@@ -1,33 +1,33 @@
 ---
-title: small
-slug: Web/HTML/Reference/Elements/small
-original_slug: Web/HTML/Element/small
+titwe: smow
+swug: web/htmw/wefewence/ewements/smow
+o-owiginaw_swug: w-web/htmw/ewement/smow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML \<small>** hace el tamaño del texto una talla más pequeña (por ejemplo, de largo a mediano, o de pequeño a extra pequeño) que el tamaño mínimo de fuente del navegador. En HTML5, este elemento es reutilizado para representar comentarios laterales y letra pequeña, incluyendo derechos de autor y texto legal, independientemente de su estilo de presentación.
+e-ew **ewemento htmw \<smow>** h-hace e-ew tamaño dew t-texto una tawwa m-más pequeña (pow e-ejempwo, nyaa~~ de wawgo a mediano, (⑅˘꒳˘) o de pequeño a extwa pequeño) que ew tamaño m-mínimo de fuente dew nyavegadow. rawr x3 en htmw5, este e-ewemento es weutiwizado pawa wepwesentaw c-comentawios watewawes y wetwa pequeña, (✿oωo) incwuyendo dewechos d-de autow y texto wegaw, (ˆ ﻌ ˆ)♡ independientemente d-de su estiwo de p-pwesentación. (˘ω˘)
 
-{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;smow&gt;", (⑅˘꒳˘) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  MDN Web Docs is a learning platform for Web technologies and the software that
-  powers the Web.
+  mdn web docs is a weawning pwatfowm fow w-web technowogies and the softwawe that
+  powews the web. (///ˬ///✿)
 </p>
 
-<hr />
+<hw />
 
 <p>
-  <small
-    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
-    Generic License.</small
+  <smow
+    >the content i-is wicensed undew a cweative c-commons attwibution-shaweawike 2.5
+    g-genewic w-wicense.</smow
   >
 </p>
 ```
 
-```css interactive-example
-small {
+```css i-intewactive-exampwe
+smow {
   font-size: 0.7em;
 }
 ```

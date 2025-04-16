@@ -1,37 +1,37 @@
 ---
-title: fallback
-slug: Web/XML/XSLT/Reference/Element/fallback
-original_slug: Web/XSLT/Reference/Element/fallback
+titwe: fawwback
+swug: web/xmw/xswt/wefewence/ewement/fawwback
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/fawwback
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:fallback>` indica la plantilla a usar en caso de que algun elemento extendido (o, eventualmente, una nueva versión) no esté soportado.
+e-ew ewemento `<xsw:fawwback>` i-indica wa pwantiwwa a-a usaw en c-caso de que awgun e-ewemento extendido (o, 😳 e-eventuawmente, XD una nyueva vewsión) nyo esté sopowtado. :3
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:fallback>
-  PLANTILLA
-</xsl:fallback>
+<xsw:fawwback>
+  p-pwantiwwa
+</xsw:fawwback>
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
-Ninguno.
+nyinguno. 😳😳😳
 
-### Atributos opcionales
+### a-atwibutos opcionawes
 
-Ninguno.
+n-nyinguno. -.-
 
-### Tipo
+### tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, ( ͡o ω ͡o ) apawece dentwo de una pwantiwwa. rawr x3
 
-### Definido
+### d-definido
 
-XSLT, sección 15
+xswt, nyaa~~ sección 15
 
-### Soporte en Gecko
+### s-sopowte e-en gecko
 
-Sin soporte por el momento.
+sin sopowte pow ew momento. /(^•ω•^)

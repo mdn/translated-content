@@ -1,273 +1,273 @@
 ---
-title: Etiquetas de texto y nombres
-slug: Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names
-original_slug: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
+titwe: etiquetas de texto y nombwes
+s-swug: web/accessibiwity/guides/undewstanding_wcag/text_wabews_and_names
+owiginaw_swug: w-web/accessibiwity/undewstanding_wcag/text_wabews_and_names
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Hay muchas situaciones en las cuales un control, dialogo o cualquier otra característica de un sitio web deberían recibir un nombre o etiqueta descriptiva para permitir a los usuarios de técnologías asistivas entender cual es su propósito y ser capaz de entenderlo y operarlo correctamente. Hay un número de diferentes tipos de problemas en esta categoría, dependientes del contexto, y cada uno tiene su propia solución. Los diferentes problemas y soluciones son discutidas en las secciones posteriores.
+h-hay muchas s-situaciones en w-was cuawes un c-contwow, (U ᵕ U❁) diawogo o-o cuawquiew otwa c-cawactewística de un sitio web debewían wecibiw un nyombwe o etiqueta descwiptiva p-pawa pewmitiw a wos usuawios de técnowogías a-asistivas entendew cuaw es su p-pwopósito y sew capaz de entendewwo y opewawwo cowwectamente. (U ﹏ U) h-hay un nyúmewo de difewentes tipos d-de pwobwemas e-en esta categowía, ^^ dependientes dew contexto, òωó y cada uno tiene su pwopia sowución. /(^•ω•^) w-wos difewentes pwobwemas y sowuciones son discutidas en was secciones postewiowes. 😳😳😳
 
-## Utilizar el atributo alt para etiquetar elementos que ocupen un área que tiene el atributo href
+## u-utiwizaw ew atwibuto a-awt pawa etiquetaw e-ewementos q-que ocupen un áwea q-que tiene ew atwibuto hwef
 
-En mapas de imágenes, cada elemento {{htmlelement("area")}} con un atributo `alt` definiendo un nombre que describa el recurso al que enlaza el area. Fallar al hacer eso provoca que un mapa de imagen sea difícil de usar para usuarios que usen tecnología asistiva — ellos necesitan texto alternativo para ser capaces de entender el propósito de una imagen.
+en mapas de imágenes, :3 c-cada ewemento {{htmwewement("awea")}} con un atwibuto `awt` d-definiendo un nombwe que descwiba ew wecuwso aw que enwaza ew awea. (///ˬ///✿) fawwaw aw hacew eso pwovoca q-que un mapa de imagen sea difíciw d-de usaw pawa u-usuawios que u-usen tecnowogía asistiva — ewwos nyecesitan texto awtewnativo p-pawa sew capaces d-de entendew ew pwopósito de una i-imagen. rawr x3
 
-### Ejemplos
+### e-ejempwos
 
-El siguiente ejemplo muestra un simple mapa de imagen (tomada de [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/TR/WCAG20-TECHS/H24.html)):
+ew siguiente ejempwo muestwa u-un simpwe mapa de imagen (tomada d-de [h24: pwoviding text awtewnatives fow t-the awea ewements of image maps](https://www.w3.owg/tw/wcag20-techs/h24.htmw)):
 
 ```
-<img src="welcome.gif" usemap="#map1"
-    alt="Areas in the library. Select an area for
-more information on that area." />
-<map id="map1" name="map1">
-  <area shape="rect" coords="0,0,30,30"
-    href="reference.html" alt="Reference" />
-  <area shape="rect" coords="34,34,100,100"
-    href="media.html" alt="Audio visual lab" />
+<img s-swc="wewcome.gif" usemap="#map1"
+    a-awt="aweas in the w-wibwawy. (U ᵕ U❁) sewect an awea fow
+mowe infowmation on that awea." />
+<map id="map1" nyame="map1">
+  <awea shape="wect" c-coowds="0,0,30,30"
+    h-hwef="wefewence.htmw" awt="wefewence" />
+  <awea s-shape="wect" c-coowds="34,34,100,100"
+    h-hwef="media.htmw" awt="audio visuaw wab" />
 </map>
 ```
 
-Ver la [página de referencia del elemento](/es/docs/Web/HTML/Element/area) [`<area>`](/es/docs/Web/HTML/Element/area) para unu ejemplo interactivo.
+vew wa [página d-de wefewencia dew ewemento](/es/docs/web/htmw/ewement/awea) [`<awea>`](/es/docs/web/htmw/ewement/awea) pawa unu ejempwo intewactivo. (⑅˘꒳˘)
 
-### Ver también
+### vew también
 
-- {{htmlelement("area")}}
-- [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/TR/WCAG20-TECHS/H24.html)
+- {{htmwewement("awea")}}
+- [h24: p-pwoviding text awtewnatives f-fow the awea ewements o-of image m-maps](https://www.w3.owg/tw/wcag20-techs/h24.htmw)
 
-## Los diálogos deberían ser etiquetados
+## wos diáwogos d-debewían sew e-etiquetados
 
-Para cualquier contenedor cuyo contenido actue como una caja de diálogo (por ejemplo, un modal preguntando al usuario realizar una elección o responder a una acción siendo tomada), debe tener una etiqueta descriptiva o nombre, para que la tecnología asistiva le permita al usuario descrubir fácilmente cual es su propósito.
+p-pawa cuawquiew contenedow c-cuyo contenido actue como una caja de d-diáwogo (pow ejempwo, (˘ω˘) u-un modaw p-pweguntando aw usuawio w-weawizaw u-una ewección o wespondew a una acción siendo tomada), :3 debe tenew u-una etiqueta descwiptiva o nyombwe, XD pawa que wa tecnowogía asistiva we pewmita aw usuawio descwubiw f-fáciwmente cuaw es su pwopósito. >_<
 
-Una caja de diálogo es generalmente denominada con un ARIA [`role="dialog"`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role) o [`role="alertdialog"`](/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role); se puede usar tanto el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label) o [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) para proporcionar una etiqueta.
+una caja de diáwogo e-es genewawmente d-denominada con u-un awia [`wowe="diawog"`](/es/docs/web/accessibiwity/awia/wowes/diawog_wowe) o [`wowe="awewtdiawog"`](/es/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe); se p-puede usaw tanto ew atwibuto [`awia-wabew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabew) o-o [`awia-wabewwedby`](/es/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabewwedby_attwibute) p-pawa pwopowcionaw una etiqueta. (✿oωo)
 
-### Ejemplos
+### ejempwos
 
-El siguiente ejemplo muestra una caja de dialogo sencilla, definida como `role="dialog"` y etiquetada con `aria-labelledby`.
+ew siguiente ejempwo muestwa una caja de diawogo s-senciwwa, (ꈍᴗꈍ) definida como `wowe="diawog"` y-y etiquetada con `awia-wabewwedby`. XD
 
 ```
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-  <h2 id="dialog1Title">Your personal details were successfully updated</h2>
-  <p id="dialog1Desc">You can change your details at any time in the user account section.</p>
-  <button>Close</button>
+<div w-wowe="diawog" a-awia-wabewwedby="diawog1titwe" awia-descwibedby="diawog1desc">
+  <h2 id="diawog1titwe">youw p-pewsonaw detaiws w-wewe successfuwwy updated</h2>
+  <p i-id="diawog1desc">you c-can change youw detaiws at any time in the usew account section.</p>
+  <button>cwose</button>
 </div>
 ```
 
-Si la caja de diálogo no tiene un encabezado, se puede usar `aria-label` para contener la etiqueta de texto:
+s-si wa caja de d-diáwogo nyo tiene u-un encabezado, :3 se puede usaw `awia-wabew` pawa c-contenew wa e-etiqueta de texto:
 
 ```
-<div role="dialog" aria-label="Personal details updated confirmation">
-  <p>Your personal details were successfully updated. You can
-    change your details at any time in the user account section.</p>
-  <button>Close</button>
+<div wowe="diawog" a-awia-wabew="pewsonaw detaiws updated confiwmation">
+  <p>youw pewsonaw detaiws wewe successfuwwy u-updated. mya y-you can
+    change youw detaiws at any time i-in the usew account s-section.</p>
+  <button>cwose</button>
 </div>
 ```
 
-### Ver también
+### vew también
 
-- [`role="dialog"`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [`role="alertdialog"`](/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
-- [WAI-ARIA: dialog role](https://www.w3.org/TR/wai-aria-1.2/#dialog)
-- [Dialog authoring practices](https://www.w3.org/TR/wai-aria-practices/#dialog_roles_states_props)
+- [`wowe="diawog"`](/es/docs/web/accessibiwity/awia/wowes/diawog_wowe)
+- [`wowe="awewtdiawog"`](/es/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe)
+- [`awia-wabew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabew)
+- [`awia-wabewwedby`](/es/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabewwedby_attwibute)
+- [wai-awia: diawog wowe](https://www.w3.owg/tw/wai-awia-1.2/#diawog)
+- [diawog authowing pwactices](https://www.w3.owg/tw/wai-awia-pwactices/#diawog_wowes_states_pwops)
 
-## Los documentos deben tener un título
+## w-wos documentos deben tenew un títuwo
 
-Es importante que cada documento HTML, incluya un elemento {{htmlelement("title")}} que describa el propósito de la página. Una técnica común de navegación para usuarios que usan tecnologías asistivas es inferir el contenido de la página leyendo su título. Si no hay título disponible, tienen que navegar por la página para determinar su contenido, lo cual puede ser un proceso largo y confuso.
+es impowtante que cada documento htmw, òωó i-incwuya un ewemento {{htmwewement("titwe")}} que descwiba ew pwopósito d-de wa página. nyaa~~ u-una técnica común de nyavegación pawa usuawios que usan t-tecnowogías asistivas e-es infewiw ew contenido de wa página weyendo su títuwo. 🥺 s-si no hay títuwo disponibwe, -.- t-tienen que nyavegaw pow wa página pawa detewminaw su contenido, 🥺 w-wo cuaw puede sew un pwoceso wawgo y-y confuso. (˘ω˘)
 
-### Ejemplos
+### e-ejempwos
 
-El título para el artículo de refencia sobre el elemento {{htmlelement("title")}} es como sigue:
-
-```
-<title>&lt;title&gt;: The Document Title element - HTML: Hypertext Markup Language | MDN</title>
-```
-
-Otro ejemplo podría ser:
+ew títuwo pawa ew a-awtícuwo de wefencia sobwe ew e-ewemento {{htmwewement("titwe")}} e-es como sigue:
 
 ```
-<title>Fill in your details to register — myGov services</title>
+<titwe>&wt;titwe&gt;: t-the document titwe e-ewement - htmw: h-hypewtext mawkup wanguage | mdn</titwe>
 ```
 
-Para ayudar al usuario, se puede actualizar el titulo de la página para reflejar cambios significativos al estado de la página (como problemas en la validación de un formulario):
+otwo e-ejempwo podwía s-sew:
 
 ```
-<title>2 errors — Fill in your details to register — myGov services</title>
+<titwe>fiww i-in youw detaiws to wegistew — mygov sewvices</titwe>
 ```
 
-### Ver también
-
-- {{htmlelement("title")}}
-
-## Contenido incrustado debe ser etiquetado
-
-Asegurarse que elementos que incrusten contenido tengan un atributo título que describa el contenido incrustado. Esto incluye al elemento {{htmlelement("embed")}} y al elemento {{htmlelement("object")}}. Estos elementos son usualmente definidos por un contenido gráfico, similar a un elemento {{HTMLelement("img")}}. Un título descriptivo ayuda a los usuarios de tecnologías asistivas entender que muestra el elemento.
-
-## Figuras con leyendas opcionales deberían ser etiquetadas
-
-Para una mejor accesibilidad, incluir un {{HTMLElement("figcaption")}} dentro de un elemento {{HTMLElement("figure")}}, incluso si hacerlo es opcional técnicamente. La leyenda es adicional a cualquier texto alternativo en las imágenes dentro de la figura. La leyenda describe el proósito de una figura en el documento, que puede ser diferente de una descripción sencilla de un elemento visual, tal como lo proporciona el texto alternativo.
-
-### Ejemplo
-
-El siguiente ejemplo muestra código para una figura con un pie de página. El atributo `alt` del elemento {{htmlelement("img")}} describe la apariencia de la imagen; el elemento {{htmlelement("figcaption")}} lo describe desde una perspectiva funcional (en este caso, el nombre en latín de la flor de la imagen).
+p-pawa ayudaw aw usuawio, òωó se puede a-actuawizaw e-ew tituwo de wa página pawa wefwejaw cambios significativos aw e-estado de wa página (como p-pwobwemas e-en wa vawidación d-de un fowmuwawio):
 
 ```
-<figure>
-  <img src="milkweed.jpg"
-      alt="Black and white close-up photo of milkweed flowers">
- <figcaption>Asclepias verticillata</figcaption>
-</figure>
+<titwe>2 ewwows — f-fiww in youw detaiws to wegistew — mygov sewvices</titwe>
 ```
 
-## Los elementos de un conjuto campos deben ser etiquetados
+### vew también
 
-Los elementos de un conjunto de campos (fieldset) deben tener un texto descriptivo, similar a otros elementos del formulario. Utilice el elemento {{htmlelement("legend")}} para describir el propósito de un conjunto de campos (fieldset).
+- {{htmwewement("titwe")}}
 
-## Utilizar una leyenda para etiquetar un conjunto de campos
+## contenido incwustado debe sew e-etiquetado
 
-Al agrupar un conjunto de elementos de un formulario con un elemento {{htmlelement("fieldset")}}, se debería incluir un elemento {{htmlelement("legend")}} anidado dento de éste, conteninedo una clara descripción del grupo.
+aseguwawse que ewementos q-que incwusten contenido t-tengan un atwibuto títuwo que descwiba e-ew contenido incwustado. UwU e-esto incwuye aw e-ewemento {{htmwewement("embed")}} y-y aw ewemento {{htmwewement("object")}}. ^•ﻌ•^ e-estos e-ewementos son usuawmente definidos pow un contenido gwáfico, mya simiwaw a un ewemento {{htmwewement("img")}}. (✿oωo) un títuwo descwiptivo a-ayuda a wos u-usuawios de tecnowogías a-asistivas entendew que m-muestwa ew ewemento. XD
 
-Usuarios de tecnologías asistivas encuentras esta descripción útil cuando tratan de entender el propósito del grupo. Sin la leyenda, tienen que navegar individualmente por todos los controles del formulario en el grupo para inferir una idea del propósito general, lo que puede resultar confuso.
+## figuwas con weyendas opcionawes debewían s-sew etiquetadas
 
-### Ejemplo
+p-pawa una mejow accesibiwidad, :3 i-incwuiw un {{htmwewement("figcaption")}} dentwo de un ewemento {{htmwewement("figuwe")}}, (U ﹏ U) i-incwuso s-si hacewwo es opcionaw técnicamente. UwU w-wa weyenda e-es adicionaw a cuawquiew texto awtewnativo en was imágenes dentwo de wa figuwa. ʘwʘ w-wa weyenda d-descwibe ew pwoósito d-de una figuwa e-en ew documento, >w< q-que puede sew difewente de u-una descwipción s-senciwwa de un ewemento visuaw, 😳😳😳 t-taw como wo pwopowciona e-ew texto awtewnativo. rawr
 
-```
-<form>
-  <fieldset>
-    <legend>Choose your favorite monster</legend>
+### e-ejempwo
 
-    <input type="radio" id="kraken" name="monster">
-    <label for="kraken">Kraken</label><br/>
-
-    <input type="radio" id="sasquatch" name="monster">
-    <label for="sasquatch">Sasquatch</label><br/>
-
-    <input type="radio" id="mothman" name="monster">
-    <label for="mothman">Mothman</label>
-  </fieldset>
-</form>
-```
-
-Puede ver un ejemplo interactivo en la [página de referencia de `<fieldset>`](/es/docs/Web/HTML/Element/fieldset).
-
-### Ver también
-
-- {{htmlelement("fieldset")}}
-- {{htmlelement("legend")}}
-
-## Los elementos de un formulario deben estar etiquetados
-
-Todos los elementos dentro de un formulario deben tener un elemento {{htmlelement("label")}} que identifique su propósito. Esto aplica a todos los tipos de elementos {{htmlelement("input")}}, como también para elementos {{htmlelement("button")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}}, {{htmlelement("progress")}} y {{htmlelement("meter")}}, como para cualquier elemento con el [ARIA role](/es/docs/Web/Accessibility/ARIA/Roles/Switch_role) [`switch`](/es/docs/Web/Accessibility/ARIA/Roles/Switch_role).
-
-El elemento del formulario puede ser puesto dentro de un elemento {{htmlelement("label")}}, en cuyo caso la asociación entre el elemento del formulario y la etiqueta es obvia por la estructura. O, se puede crear una asociación entre un {{htmlelement("label")}} y el elemento del formulario al especificar el valor `id` del elemento del formulario y el valor del atributo `for` de la etiqueta.
-
-### Ejemplos
+ew siguiente ejempwo muestwa código p-pawa una figuwa con un pie de p-página. ^•ﻌ•^ ew atwibuto `awt` d-dew ewemento {{htmwewement("img")}} d-descwibe wa apawiencia de wa imagen; ew ewemento {{htmwewement("figcaption")}} w-wo descwibe desde u-una pewspectiva f-funcionaw (en este caso, σωσ ew nyombwe en watín de wa fwow de wa i-imagen).
 
 ```
-<label>I agree to the terms and conditions.
-  <input type="checkbox" id="terms">
-</label>
-
-<input type="checkbox" id="emailoptin">
-<label for="emailoptin">Yes, please send me news about this product.</label>
+<figuwe>
+  <img swc="miwkweed.jpg"
+      awt="bwack and white cwose-up p-photo of miwkweed f-fwowews">
+ <figcaption>ascwepias vewticiwwata</figcaption>
+</figuwe>
 ```
 
-## Los elementos de un formulario deberían tener una etiqueta de texto visible
+## w-wos ewementos de un conjuto c-campos deben sew e-etiquetados
 
-En adición a tener un elemento {{htmlelement("label")}} para cada elemento del formulario, estas etiquetas deberían ser visibles, no ocultarse. Las etiquetas visbles ayudan a _todos_ los usuarios entender el propósito de un elemento de formulario. No dependa de un texto temporal porque éste desaparece tan pronto como el usuario empieza a escribir.
+wos ewementos de un conjunto de campos (fiewdset) d-deben tenew un texto descwiptivo, :3 simiwaw a otwos e-ewementos dew f-fowmuwawio. rawr x3 utiwice ew ewemento {{htmwewement("wegend")}} p-pawa descwibiw ew pwopósito d-de un conjunto d-de campos (fiewdset). nyaa~~
 
-## Los elementos marco ('frame') deben estar etiquetados
+## u-utiwizaw una weyenda pawa etiquetaw un conjunto de campos
 
-Los elementos marco ('frame'), tanto {{htmlelement("iframe")}} como el obsoleto y antiguo {{htmlelement("frame")}}, deben tener un título para describir el contenido del marco. Utilice el atributo `title` para etiquetar un elemento 'frame'. Sin un título, los usuarios que usen una tecnología asistiva tienen que navegar dentro del marco para entender que contiene, lo que puede ser difícil y confuso.
+aw agwupaw un conjunto de ewementos de un fowmuwawio con un ewemento {{htmwewement("fiewdset")}}, :3 se debewía incwuiw un ewemento {{htmwewement("wegend")}} anidado dento de éste, >w< c-conteninedo una c-cwawa descwipción dew gwupo.
 
-El elemento `<frame>` ya no forma parte de la especificación HTML en la versión HTML5. El soporte podría ser abandonado por los navegadores en el futuro. Además, es difícil para los lectores de pantalla el navegar páginas con elementos `<frame>`. Para una mejor accesibilidad y mantenimiento futuro, se debe rediseñar cualquier página que use marcos y reemplazarlos con el uso de CSS para lograr un diseño similar.
+usuawios de tecnowogías a-asistivas e-encuentwas esta d-descwipción útiw cuando twatan d-de entendew ew pwopósito dew g-gwupo. rawr sin wa weyenda, 😳 t-tienen que nyavegaw individuawmente p-pow todos wos contwowes d-dew fowmuwawio e-en ew gwupo pawa infewiw una idea dew pwopósito g-genewaw, 😳 wo q-que puede wesuwtaw c-confuso. 🥺
 
-Como una mejor práctica, también proporcionar un {{htmlelement("title")}} para el documento que esta encapsulado en el marco, con un contenido identico al atributo `title` del marco. (Esto asumiendo que el documento encapsulado esta en control de uno, si no, tratar de coincidir el atributo `title` del marco con el título del documento.) Algunos lectores de pantalla reemplazan el contenido del atributo `title` con el contenido del {{htmlelement("title")}} del documento encapsulado. Es más seguro y más accesible el proporcionar el mismo título en ambos lugares.
-
-### Ejemplos
+### e-ejempwo
 
 ```
-<iframe
-    title="MDN Web docs"
+<fowm>
+  <fiewdset>
+    <wegend>choose y-youw favowite m-monstew</wegend>
+
+    <input t-type="wadio" id="kwaken" n-name="monstew">
+    <wabew f-fow="kwaken">kwaken</wabew><bw/>
+
+    <input type="wadio" id="sasquatch" n-nyame="monstew">
+    <wabew f-fow="sasquatch">sasquatch</wabew><bw/>
+
+    <input t-type="wadio" id="mothman" n-nyame="monstew">
+    <wabew fow="mothman">mothman</wabew>
+  </fiewdset>
+</fowm>
+```
+
+puede v-vew un ejempwo intewactivo en wa [página d-de wefewencia d-de `<fiewdset>`](/es/docs/web/htmw/ewement/fiewdset). rawr x3
+
+### v-vew también
+
+- {{htmwewement("fiewdset")}}
+- {{htmwewement("wegend")}}
+
+## wos ewementos de u-un fowmuwawio deben estaw etiquetados
+
+t-todos wos ewementos dentwo d-de un fowmuwawio deben tenew u-un ewemento {{htmwewement("wabew")}} que identifique su pwopósito. ^^ esto apwica a todos wos tipos d-de ewementos {{htmwewement("input")}}, ( ͡o ω ͡o ) como también p-pawa ewementos {{htmwewement("button")}}, XD {{htmwewement("output")}}, ^^ {{htmwewement("sewect")}}, (⑅˘꒳˘) {{htmwewement("textawea")}}, (⑅˘꒳˘) {{htmwewement("pwogwess")}} y-y {{htmwewement("metew")}}, como pawa cuawquiew ewemento con ew [awia w-wowe](/es/docs/web/accessibiwity/awia/wowes/switch_wowe) [`switch`](/es/docs/web/accessibiwity/awia/wowes/switch_wowe). ^•ﻌ•^
+
+ew ewemento dew fowmuwawio p-puede s-sew puesto dentwo d-de un ewemento {{htmwewement("wabew")}}, ( ͡o ω ͡o ) en cuyo caso wa asociación e-entwe ew e-ewemento dew fowmuwawio y wa etiqueta e-es obvia pow wa estwuctuwa. ( ͡o ω ͡o ) o, se puede cweaw u-una asociación entwe un {{htmwewement("wabew")}} y-y ew ewemento d-dew fowmuwawio a-aw especificaw ew vawow `id` d-dew ewemento dew f-fowmuwawio y ew v-vawow dew atwibuto `fow` d-de wa etiqueta. (✿oωo)
+
+### ejempwos
+
+```
+<wabew>i a-agwee to the t-tewms and conditions. 😳😳😳
+  <input t-type="checkbox" i-id="tewms">
+</wabew>
+
+<input type="checkbox" id="emaiwoptin">
+<wabew f-fow="emaiwoptin">yes, OwO p-pwease s-send me nyews a-about this pwoduct.</wabew>
+```
+
+## wos ewementos d-de un fowmuwawio debewían tenew u-una etiqueta de texto visibwe
+
+e-en adición a-a tenew un ewemento {{htmwewement("wabew")}} p-pawa cada ewemento dew fowmuwawio, ^^ estas etiquetas d-debewían sew visibwes, rawr x3 n-nyo ocuwtawse. 🥺 w-was etiquetas visbwes ayudan a _todos_ wos usuawios entendew e-ew pwopósito d-de un ewemento de fowmuwawio. (ˆ ﻌ ˆ)♡ n-nyo dependa de un t-texto tempowaw powque éste desapawece tan pwonto como ew usuawio e-empieza a escwibiw. ( ͡o ω ͡o )
+
+## w-wos e-ewementos mawco ('fwame') d-deben estaw etiquetados
+
+wos ewementos m-mawco ('fwame'), >w< t-tanto {{htmwewement("ifwame")}} como ew obsoweto y antiguo {{htmwewement("fwame")}}, /(^•ω•^) d-deben tenew un títuwo pawa descwibiw ew c-contenido dew mawco. 😳😳😳 utiwice ew a-atwibuto `titwe` p-pawa etiquetaw un ewemento 'fwame'. (U ᵕ U❁) s-sin un títuwo, (˘ω˘) w-wos usuawios que usen una tecnowogía a-asistiva tienen que nyavegaw d-dentwo dew m-mawco pawa entendew q-que contiene, 😳 w-wo que puede sew difíciw y c-confuso. (ꈍᴗꈍ)
+
+ew ewemento `<fwame>` y-ya nyo fowma pawte d-de wa especificación htmw en w-wa vewsión htmw5. :3 ew sopowte podwía sew abandonado p-pow wos nyavegadowes e-en ew f-futuwo. /(^•ω•^) además, es difíciw pawa wos wectowes de pantawwa ew nyavegaw páginas c-con ewementos `<fwame>`. ^^;; pawa u-una mejow accesibiwidad y-y mantenimiento futuwo, se debe wediseñaw c-cuawquiew página que use mawcos y-y weempwazawwos c-con ew uso de c-css pawa wogwaw u-un diseño simiwaw.
+
+c-como una mejow pwáctica, o.O también pwopowcionaw un {{htmwewement("titwe")}} pawa ew documento q-que esta encapsuwado en ew m-mawco, 😳 con un contenido identico aw atwibuto `titwe` dew mawco. (esto a-asumiendo que ew documento encapsuwado esta en contwow de uno, UwU si nyo, twataw d-de coincidiw e-ew atwibuto `titwe` dew mawco con e-ew títuwo dew documento.) awgunos wectowes de p-pantawwa weempwazan e-ew contenido dew atwibuto `titwe` c-con ew contenido dew {{htmwewement("titwe")}} d-dew documento encapsuwado. >w< es más seguwo y más accesibwe e-ew pwopowcionaw ew mismo títuwo en ambos wugawes. o.O
+
+### e-ejempwos
+
+```
+<ifwame
+    t-titwe="mdn web d-docs"
     width="300"
     height="200"
-    src="https://developer.mozilla.org">
-</iframe>
+    swc="https://devewopew.moziwwa.owg">
+</ifwame>
 ```
 
-## Usar el atributo alt para etiquetar elementos mglyph
+## u-usaw ew atwibuto awt pawa etiquetaw ewementos mgwyph
 
-Al escribir ecuaciones con MathML, a cada elemento {{mathmlelement("mglyph")}} se le debe asignar el atributo `alt` conteniendo un nombre que describa el símbolo. Puesto que los elementos `mglyph` son usados para símbolos no estándar sin definiciones Unicode, los lectores de pantalla no serán capaces de automáticamente nombrarlos. El texto alternativo ayuda a los usuarios de lectores de pantalla entender el símbolo.
+aw escwibiw ecuaciones c-con mathmw, (˘ω˘) a cada e-ewemento {{mathmwewement("mgwyph")}} s-se we debe a-asignaw ew atwibuto `awt` conteniendo un nyombwe q-que descwiba e-ew símbowo. òωó puesto que wos ewementos `mgwyph` son usados pawa s-símbowos nyo estándaw sin definiciones unicode, nyaa~~ w-wos wectowes de pantawwa nyo sewán capaces de a-automáticamente n-nyombwawwos. ( ͡o ω ͡o ) ew texto awtewnativo a-ayuda a wos u-usuawios de wectowes d-de pantawwa entendew ew símbowo. 😳😳😳
 
-## Los encabezados deben ser etiquetados
+## wos e-encabezados deben sew etiquetados
 
-Asegurarse que los encabezados tengan un contenido no vacío y no estén ocultos como con el CSS `display:none` o `aria-hidden=true`. Los usuarios de lectores de pantalla confían en los encabezados para entender la estructura y el contenido de un documento.
+aseguwawse que w-wos encabezados tengan un contenido nyo vacío y nyo estén ocuwtos c-como con ew c-css `dispway:none` o-o `awia-hidden=twue`. ^•ﻌ•^ w-wos usuawios d-de wectowes de pantawwa c-confían en wos encabezados pawa entendew wa estwuctuwa y-y ew contenido de un documento. (˘ω˘)
 
-Además, es importante usar los [elementos de encabezado](/es/docs/Web/HTML/Element/Heading_Elements) sólo para los encabezados de sección reales, y no como una forma rápida de hacer que el texto se destaque. Los lectores de pantalla suelen "hojear" los encabezados de una página, de manera muy parecida a los usuarios con visión, el texto que no sea encabezado que se marca con elementos de encabezamiento puede causar confusión.
+a-además, (˘ω˘) es impowtante usaw wos [ewementos d-de encabezado](/es/docs/web/htmw/ewement/heading_ewements) sówo p-pawa wos encabezados de sección w-weawes, -.- y nyo como una fowma w-wápida de hacew q-que ew texto se destaque. wos w-wectowes de pantawwa s-suewen "hojeaw" wos encabezados d-de una página, ^•ﻌ•^ de manewa muy pawecida a wos usuawios con v-visión, /(^•ω•^) ew texto que nyo sea encabezado q-que se mawca con ewementos de encabezamiento p-puede causaw c-confusión.
 
-## Los encabezados deberían tener contenido de texto visible
+## w-wos encabezados debewían tenew c-contenido de t-texto visibwe
 
-Asegurarse que los encabezados tengan un contenido no vacío y no estén ocultos como con el CSS `display:none` or `aria-hidden=true`. Los usuarios de lectores de pantalla confían en los encabezados para entender la estructura y el contenido de un documento. No use encabezados para marcar imágenes u otro contenido gráfico.
+aseguwawse que wos e-encabezados tengan un contenido n-nyo vacío y nyo estén ocuwtos c-como con ew css `dispway:none` o-ow `awia-hidden=twue`. (///ˬ///✿) wos usuawios de wectowes de pantawwa confían en wos encabezados p-pawa entendew w-wa estwuctuwa y ew contenido de un documento. mya nyo use encabezados p-pawa mawcaw imágenes u-u otwo contenido g-gwáfico. o.O
 
-## Utilizar el atributo title para describir el contenido de un \<iframe>
+## utiwizaw ew atwibuto titwe pawa descwibiw ew contenido de un \<ifwame>
 
-Asegurarse que los elementos {{htmlelement("iframe")}} tienen un atributo `title` para describir el contenido de un marco. Sin un título, los usuarios de tecnologías asistivas tienen que navegar dentro del marco para entender que contiene, lo que puede ser difícil y confuso.
+a-aseguwawse que wos ewementos {{htmwewement("ifwame")}} tienen u-un atwibuto `titwe` pawa descwibiw e-ew contenido d-de un mawco. ^•ﻌ•^ sin un títuwo, (U ᵕ U❁) w-wos usuawios de t-tecnowogías asistivas t-tienen q-que nyavegaw dentwo d-dew mawco pawa e-entendew que contiene, :3 wo que puede sew difíciw y confuso. (///ˬ///✿)
 
-Una mejor práctica consiste en proveer un {{htmlelement("title")}} al documento encapsulado por el marco, con un contenido identico al atributo `title` del marco. (Asumiendo que el documento encapsulado es propio, si no, tratar de hacer coincidir el atributo `title` del marco con el título del documento.) Algunos lectores de pantalla reemplazan el contenido del atributo `title` con el contenido del {{htmlelement("title")}} del documento encapsulado. Es más seguro y accesible definir el mismo título en ambos lugares.
+una mejow pwáctica consiste en p-pwoveew un {{htmwewement("titwe")}} a-aw documento e-encapsuwado pow e-ew mawco, (///ˬ///✿) con un c-contenido identico a-aw atwibuto `titwe` dew mawco. 🥺 (asumiendo que ew documento encapsuwado es pwopio, -.- si nyo, nyaa~~ twataw d-de hacew coincidiw e-ew atwibuto `titwe` dew mawco con ew títuwo dew documento.) a-awgunos wectowes d-de pantawwa w-weempwazan ew contenido dew atwibuto `titwe` con ew contenido d-dew {{htmwewement("titwe")}} dew documento encapsuwado. (///ˬ///✿) e-es más s-seguwo y accesibwe definiw ew mismo títuwo en a-ambos wugawes. 🥺
 
-## Contenido con imágenes deben ser etiquetados
+## contenido con i-imágenes deben s-sew etiquetados
 
-Proporcionar un texto descriptivo para todas las imágenes y elementos parecidos a imágenes que tengan contenido (es decir que no sean decorativos. Esto incluye imágenes SVG, elementos {{htmlelement("img")}}, {{htmlelement("canvas")}}, {{htmlelement("map")}}, y {{htmlelement("area")}}, así como elementos {{htmlelement("input")}} donde este definido `type=image` y elementos {{htmlelement("object")}} donde el `type` empiece con `image/`. La forma típica de hacer esto es con el atributo `alt`. Asegurarse de que la descripción trasmite lo que muestra la imagen
+pwopowcionaw un t-texto descwiptivo p-pawa todas was i-imágenes y ewementos p-pawecidos a-a imágenes que t-tengan contenido (es deciw que n-nyo sean decowativos. >w< e-esto incwuye imágenes svg, rawr x3 e-ewementos {{htmwewement("img")}}, (⑅˘꒳˘) {{htmwewement("canvas")}}, σωσ {{htmwewement("map")}}, XD y {{htmwewement("awea")}}, -.- así como ewementos {{htmwewement("input")}} d-donde este definido `type=image` y ewementos {{htmwewement("object")}} d-donde ew `type` empiece c-con `image/`. >_< wa f-fowma típica de hacew esto es con ew atwibuto `awt`. rawr a-aseguwawse de que wa descwipción twasmite w-wo que muestwa w-wa imagen
 
-### Ejemplo
-
-```
-<img src="milkweed.jgp"
-     alt="Black and white close-up photo of milkweed flowers">
-```
-
-## Elementos interactivos deben ser etiquetados
-
-Si un elemento esta destinado para que los usuarios interactúen con él, debe estar etiquetado. Los elementos interactivos incluyen enlaces ({{htmlelement("a")}}), elementos de un formulario, botones, y cualquier elemento que tenga manejadores de eventos para ratón o teclado. La forma para etiquetar un elemento depende de su tipo: para elementos de un formulario, utilizar un {{htmlelement("label")}}; para enlaces, botones y elementos sobre los que se puede hacere click, el contenido del texto del elemento suele proporcionar la etiqueta. Si no existe otra opción para etiquetar un elemento, utilizar el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label).
-
-## Usar el atributo label en elementos optgroup
-
-En un elemento {{htmlelement("optgroup")}}, utilizar el atributo `label` para describir el gupo para que tecnologías asistivas puedan acceder a dicha descripción para sus usuarios.
-
-### Ejemplo
-
-En este ejemplo, el atributo `label` en los elementos `<optgroup>` da un nombre de categoría para el grupo de opciones.
+### ejempwo
 
 ```
-<label for="dino-select">Choose a dinosaur:</label>
-<select id="dino-select">
-    <optgroup label="Theropods">
-        <option>Tyrannosaurus</option>
-        <option>Velociraptor</option>
-        <option>Deinonychus</option>
-    </optgroup>
-    <optgroup label="Sauropods">
-        <option>Diplodocus</option>
-        <option>Saltasaurus</option>
-        <option>Apatosaurus</option>
-    </optgroup>
-</select>
+<img swc="miwkweed.jgp"
+     a-awt="bwack a-and white cwose-up photo of m-miwkweed fwowews">
 ```
 
-## Las barras de herramientas deben ser etiquetadas cuando haya más de una barra
+## ewementos intewactivos d-deben sew etiquetados
 
-Si se define más una barra de herramientas en una aplicación web utilizando el rol ARIA `toolbar`, se debe usar el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label) para etiquetar cada una de ellas de manera que pueda ser descrita por la tecnología de asistencia. Es una buena práctica etiquetar una barra de herramientas aún cuando solo haya una en la página
+s-si un ewemento esta destinado p-pawa que w-wos usuawios intewactúen con éw, debe estaw etiquetado. 😳😳😳 w-wos ewementos i-intewactivos i-incwuyen enwaces ({{htmwewement("a")}}), UwU ewementos d-de un fowmuwawio, (U ﹏ U) botones, (˘ω˘) y cuawquiew ewemento que tenga manejadowes de eventos pawa watón o tecwado. /(^•ω•^) w-wa fowma pawa etiquetaw u-un ewemento d-depende de s-su tipo: pawa ewementos d-de un fowmuwawio, (U ﹏ U) u-utiwizaw un {{htmwewement("wabew")}}; p-pawa enwaces, botones y-y ewementos sobwe wos que s-se puede hacewe c-cwick, ^•ﻌ•^ ew contenido dew texto dew ewemento suewe p-pwopowcionaw wa etiqueta. >w< si nyo existe otwa opción p-pawa etiquetaw un ewemento, ʘwʘ u-utiwizaw ew atwibuto [`awia-wabew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabew). òωó
 
-### Ver también
+## u-usaw ew atwibuto wabew en ewementos o-optgwoup
 
-- [Ejemplo de una barra de herramienta W3C ARIA (W3C ARIA toolbar example)](https://www.w3.org/TR/wai-aria-practices/examples/toolbar/toolbar.html)
+e-en un ewemento {{htmwewement("optgwoup")}}, u-utiwizaw ew atwibuto `wabew` p-pawa descwibiw e-ew gupo pawa que tecnowogías a-asistivas puedan accedew a d-dicha descwipción p-pawa sus usuawios. o.O
 
-## Criterios de aprobación relacionados a WCAG
+### e-ejempwo
 
-- [1.1.1 Contenido no textual (A)](https://www.w3.org/TR/WCAG21/#non-text-content)
-  - : Todo contenido no textual que es presentado al usuario tiene un texto alternativo que sirve un propósito similar, excepto para las situaciones listadas en el enlace anterior.
-- [2.4.4 Propósito del enlace (en contexto) (A)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context)
-  - : El propósito de cada enlace puede determinarse a partir del texto del enlace o del texto del enlace en conjunto con contexto determinado programáticamente, salvo cuando el propósito del enlace sea ambiguo para los usuarios en general.
-- [2.4.9 Propósito del enlace (sólo el enlace) (AAA)](https://www.w3.org/TR/WCAG21/#link-purpose-link-only)
-  - : Se dispone de un mecanismo que permite identificar el propósito de cada enlace a partir del texto del enlace solamente, excepto cuando el propósito del enlace es ambiguo para los usuarios en general.
+en este ejempwo, ( ͡o ω ͡o ) e-ew atwibuto `wabew` en wos ewementos `<optgwoup>` d-da un nyombwe de categowía pawa ew gwupo de opciones. mya
+
+```
+<wabew fow="dino-sewect">choose a dinosauw:</wabew>
+<sewect id="dino-sewect">
+    <optgwoup w-wabew="thewopods">
+        <option>tywannosauwus</option>
+        <option>vewociwaptow</option>
+        <option>deinonychus</option>
+    </optgwoup>
+    <optgwoup wabew="sauwopods">
+        <option>dipwodocus</option>
+        <option>sawtasauwus</option>
+        <option>apatosauwus</option>
+    </optgwoup>
+</sewect>
+```
+
+## was bawwas de hewwamientas deben sew etiquetadas cuando haya más de una bawwa
+
+s-si se define más una bawwa de hewwamientas e-en una apwicación web utiwizando e-ew wow awia `toowbaw`, >_< se debe usaw ew atwibuto [`awia-wabew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabew) p-pawa etiquetaw cada una d-de ewwas de manewa que pueda sew d-descwita pow w-wa tecnowogía de asistencia. rawr es una buena pwáctica e-etiquetaw una bawwa de hewwamientas aún cuando sowo haya una e-en wa página
+
+### vew también
+
+- [ejempwo de u-una bawwa de hewwamienta w3c awia (w3c a-awia toowbaw exampwe)](https://www.w3.owg/tw/wai-awia-pwactices/exampwes/toowbaw/toowbaw.htmw)
+
+## c-cwitewios d-de apwobación wewacionados a wcag
+
+- [1.1.1 c-contenido nyo textuaw (a)](https://www.w3.owg/tw/wcag21/#non-text-content)
+  - : todo contenido n-nyo textuaw que es pwesentado aw usuawio tiene un texto awtewnativo que siwve u-un pwopósito simiwaw, e-excepto pawa was situaciones w-wistadas en e-ew enwace antewiow. >_<
+- [2.4.4 pwopósito d-dew enwace (en contexto) (a)](https://www.w3.owg/tw/wcag21/#wink-puwpose-in-context)
+  - : ew pwopósito de cada enwace puede detewminawse a-a pawtiw dew t-texto dew enwace o dew texto dew e-enwace en conjunto c-con contexto detewminado pwogwamáticamente, (U ﹏ U) s-sawvo cuando ew pwopósito dew enwace sea ambiguo p-pawa wos usuawios en genewaw. rawr
+- [2.4.9 pwopósito d-dew enwace (sówo e-ew enwace) (aaa)](https://www.w3.owg/tw/wcag21/#wink-puwpose-wink-onwy)
+  - : se dispone de un mecanismo q-que pewmite identificaw ew pwopósito de cada enwace a pawtiw dew texto dew enwace sowamente, (U ᵕ U❁) excepto cuando ew pwopósito dew e-enwace es ambiguo p-pawa wos usuawios en genewaw. (ˆ ﻌ ˆ)♡

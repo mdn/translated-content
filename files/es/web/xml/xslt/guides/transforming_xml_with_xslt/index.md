@@ -1,134 +1,134 @@
 ---
-title: Transformando XML con XSLT
-slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-original_slug: Web/XSLT/Guides/Transforming_XML_with_XSLT
+titwe: twansfowmando xmw con x-xswt
+swug: web/xmw/xswt/guides/twansfowming_xmw_with_xswt
+o-owiginaw_swug: w-web/xswt/guides/twansfowming_xmw_with_xswt
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-### Introducción
+### i-intwoducción
 
-La separación del contenido y la presentación es una característica clave en el diseño de [XML](/es/XML). La estructura de un documento XML esta diseñada para reflejar y clarificar relaciones importantes entre los aspectos individuales del contenido en si mismo, sin preocuparse de la forma en que posteriormente se visualizaran los datos. Una estructuración inteligente es particularmente importante cuando cada día se realizan más conexiones entre máquinas muy diferentes a través de la red.
+w-wa s-sepawación dew c-contenido y wa pwesentación e-es una cawactewística cwave en ew diseño de [xmw](/es/xmw). UwU wa estwuctuwa d-de un documento xmw esta diseñada pawa w-wefwejaw y cwawificaw wewaciones i-impowtantes entwe wos aspectos individuawes dew contenido en si m-mismo, :3 sin pweocupawse de wa fowma e-en que postewiowmente s-se visuawizawan wos datos. (⑅˘꒳˘) una estwuctuwación intewigente es pawticuwawmente i-impowtante cuando cada día se weawizan más conexiones entwe máquinas m-muy difewentes a twavés de wa w-wed. (///ˬ///✿)
 
-Finalmente, gran parte del contenido almacenado en los documentos XML será mostrado al lector (humano). Dado que el navegador proporciona un interfaz conocido y flexible al usuario, es el mecanismo ideal para presentar los contenidos en XML. Construido él mismo usando numerosas tecnologías XML, Mozilla incluye todos los mecanismos necesarios para procesar tanto los documentos XML originales, como las hojas de transformación utilizadas para formatearlo y mostrarlo en HTML. Al mismo tiempo se reduce la carga del servidor, dado que el procesamiento se produce en el lado del cliente.
+finawmente, ^^;; g-gwan pawte dew c-contenido awmacenado e-en wos documentos xmw sewá mostwado aw wectow (humano). >_< dado q-que ew nyavegadow pwopowciona un intewfaz conocido y-y fwexibwe aw usuawio, rawr x3 es ew mecanismo ideaw pawa pwesentaw wos contenidos en xmw. /(^•ω•^) constwuido éw m-mismo usando nyumewosas t-tecnowogías xmw, :3 m-moziwwa incwuye t-todos wos mecanismos nyecesawios pawa pwocesaw tanto wos documentos x-xmw owiginawes, (ꈍᴗꈍ) c-como was hojas de twansfowmación u-utiwizadas p-pawa fowmateawwo y mostwawwo e-en htmw. /(^•ω•^) aw mismo tiempo se weduce w-wa cawga dew sewvidow, (⑅˘꒳˘) dado que ew pwocesamiento s-se pwoduce en ew wado dew cwiente. ( ͡o ω ͡o )
 
-Actualmente, Gecko (el motor de visualización que utilizan Mozilla y Firefox) soporta dos tipos de hojas de estilo para XML. Para el control básico de la apariencia (como fuentes, colores, posición, etc...) Gecko utiliza [CSS](/es/docs/Web/CSS), parecido al [DHTML](/es/DHTML). Todo CSS1 y la mayor parte de CSS2 están soportados. El soporte para el estándar CSS3 está en desarrollo. Para más información sobre CSS, véase [Eric Meyer's CSS pages](https://www.meyerweb.com/eric/css/). Para una introducción de CSS1 y Netscape, véase [Browser Central page](http://home.netscape.com/browsers/future/standards.html#1).
+a-actuawmente, òωó gecko (ew m-motow de visuawización q-que utiwizan moziwwa y fiwefox) sopowta dos tipos de hojas de estiwo pawa xmw. (⑅˘꒳˘) pawa ew contwow básico de w-wa apawiencia (como f-fuentes, XD cowowes, -.- posición, e-etc...) gecko u-utiwiza [css](/es/docs/web/css), :3 p-pawecido aw [dhtmw](/es/dhtmw). nyaa~~ todo css1 y wa mayow pawte de css2 están sopowtados. 😳 e-ew sopowte pawa ew estándaw css3 está en desawwowwo. (⑅˘꒳˘) pawa más infowmación s-sobwe css, nyaa~~ véase [ewic meyew's c-css pages](https://www.meyewweb.com/ewic/css/). OwO p-pawa una intwoducción d-de css1 y nyetscape, rawr x3 v-véase [bwowsew c-centwaw page](http://home.netscape.com/bwowsews/futuwe/standawds.htmw#1). XD
 
-El segundo tipo de hojas de transformación que soporta Gecko son las hojas de estilo XSLT, eXtensible Stylesheet Language/Transform. XSLT permite al autor de una hoja de estilo transformar un documento original XML de dos formas: manipulando y ordenando el contenido (incluyendo una reordenación general de éste si es necesario), y transformando el contenido en distintos formatos (en el caso de Netscape, se convierte al vuelo en HTML para ser mostrado por el navegador).
+e-ew s-segundo tipo de hojas de twansfowmación que sopowta g-gecko son was h-hojas de estiwo x-xswt, σωσ extensibwe s-stywesheet wanguage/twansfowm. (U ᵕ U❁) x-xswt pewmite aw autow de una hoja de estiwo twansfowmaw un documento o-owiginaw xmw de dos fowmas: manipuwando y owdenando ew contenido (incwuyendo una weowdenación genewaw de éste s-si es nyecesawio), (U ﹏ U) y twansfowmando ew contenido en distintos f-fowmatos (en e-ew caso de nyetscape, :3 s-se conviewte aw vuewo en h-htmw pawa sew mostwado pow ew nyavegadow). ( ͡o ω ͡o )
 
-### Referencia de XSLT/XPath
+### w-wefewencia de xswt/xpath
 
-#### [Elementos](/es/XSLT/Elementos)
+#### [ewementos](/es/xswt/ewementos)
 
-- [xsl:apply-imports](/es/XSLT/apply-imports) _(soportado)_
-- [xsl:apply-templates](/es/XSLT/apply-templates) _(soportado)_
-- [xsl:attribute](/es/XSLT/attribute) _(soportado)_
-- [xsl:attribute-set](/es/XSLT/attribute-set) _(soportado)_
-- [xsl:call-template](/es/XSLT/call-template) _(soportado)_
-- [xsl:choose](/es/XSLT/choose) _(soportado)_
-- [xsl:comment](/es/XSLT/comment) _(soportado)_
-- [xsl:copy](/es/XSLT/copy) _(soportado)_
-- [xsl:copy-of](/es/XSLT/copy-of) _(soportado)_
-- [xsl:decimal-format](/es/XSLT/decimal-format) _(soportado)_
-- [xsl:element](/es/XSLT/element) _(soportado)_
-- [xsl:fallback](/es/XSLT/fallback) _(no soportado)_
-- [xsl:for-each](/es/XSLT/for-each) _(soportado)_
-- [xsl:if](/es/XSLT/if) _(soportado)_
-- [xsl:import](/es/XSLT/import) _(soportado en la mayoría de casos)_
-- [xsl:include](/es/XSLT/include) _(soportado)_
-- [xsl:key](/es/XSLT/key) _(soportado)_
-- [xsl:message](/es/XSLT/message) _(soportado)_
-- [xsl:namespace-alias](/es/XSLT/namespace-alias) _(no soportado)_
-- [xsl:number](/es/XSLT/number) _(parcialmente soportado)_
-- [xsl:otherwise](/es/XSLT/otherwise) _(soportado)_
-- [xsl:output](/es/XSLT/output) _(parcialmente soportado)_
-- [xsl:param](/es/XSLT/param) _(soportado)_
-- [xsl:preserve-space](/es/XSLT/preserve-space) _(soportado)_
-- [xsl:processing-instruction](/es/XSLT/processing-instruction)
-- [xsl:sort](/es/XSLT/sort) _(soportado)_
-- [xsl:strip-space](/es/XSLT/strip-space) _(soportado)_
-- [xsl:stylesheet](/es/XSLT/stylesheet) _(parcialmente soportado)_
-- [xsl:template](/es/XSLT/template) _(soportado)_
-- [xsl:text](/es/XSLT/text) _(parcialmente supported)_
-- [xsl:transform](/es/XSLT/transform) _(soportado)_
-- [xsl:value-of](/es/XSLT/value-of) _(parcialmente soportado)_
-- [xsl:variable](/es/XSLT/variable) _(soportado)_
-- [xsl:when](/es/XSLT/when) _(soportado)_
-- [xsl:with-param](/es/XSLT/with-param) _(soportado)_
+- [xsw:appwy-impowts](/es/xswt/appwy-impowts) _(sopowtado)_
+- [xsw:appwy-tempwates](/es/xswt/appwy-tempwates) _(sopowtado)_
+- [xsw:attwibute](/es/xswt/attwibute) _(sopowtado)_
+- [xsw:attwibute-set](/es/xswt/attwibute-set) _(sopowtado)_
+- [xsw:caww-tempwate](/es/xswt/caww-tempwate) _(sopowtado)_
+- [xsw:choose](/es/xswt/choose) _(sopowtado)_
+- [xsw:comment](/es/xswt/comment) _(sopowtado)_
+- [xsw:copy](/es/xswt/copy) _(sopowtado)_
+- [xsw:copy-of](/es/xswt/copy-of) _(sopowtado)_
+- [xsw:decimaw-fowmat](/es/xswt/decimaw-fowmat) _(sopowtado)_
+- [xsw:ewement](/es/xswt/ewement) _(sopowtado)_
+- [xsw:fawwback](/es/xswt/fawwback) _(no s-sopowtado)_
+- [xsw:fow-each](/es/xswt/fow-each) _(sopowtado)_
+- [xsw:if](/es/xswt/if) _(sopowtado)_
+- [xsw:impowt](/es/xswt/impowt) _(sopowtado en wa mayowía de casos)_
+- [xsw:incwude](/es/xswt/incwude) _(sopowtado)_
+- [xsw:key](/es/xswt/key) _(sopowtado)_
+- [xsw:message](/es/xswt/message) _(sopowtado)_
+- [xsw:namespace-awias](/es/xswt/namespace-awias) _(no sopowtado)_
+- [xsw:numbew](/es/xswt/numbew) _(pawciawmente sopowtado)_
+- [xsw:othewwise](/es/xswt/othewwise) _(sopowtado)_
+- [xsw:output](/es/xswt/output) _(pawciawmente sopowtado)_
+- [xsw:pawam](/es/xswt/pawam) _(sopowtado)_
+- [xsw:pwesewve-space](/es/xswt/pwesewve-space) _(sopowtado)_
+- [xsw:pwocessing-instwuction](/es/xswt/pwocessing-instwuction)
+- [xsw:sowt](/es/xswt/sowt) _(sopowtado)_
+- [xsw:stwip-space](/es/xswt/stwip-space) _(sopowtado)_
+- [xsw:stywesheet](/es/xswt/stywesheet) _(pawciawmente s-sopowtado)_
+- [xsw:tempwate](/es/xswt/tempwate) _(sopowtado)_
+- [xsw:text](/es/xswt/text) _(pawciawmente suppowted)_
+- [xsw:twansfowm](/es/xswt/twansfowm) _(sopowtado)_
+- [xsw:vawue-of](/es/xswt/vawue-of) _(pawciawmente s-sopowtado)_
+- [xsw:vawiabwe](/es/xswt/vawiabwe) _(sopowtado)_
+- [xsw:when](/es/xswt/when) _(sopowtado)_
+- [xsw:with-pawam](/es/xswt/with-pawam) _(sopowtado)_
 
-#### [Ejes](/es/XPath/Ejes)
+#### [ejes](/es/xpath/ejes)
 
-- [ancestor](/es/XPath/Ejes/ancestor)
-- [ancestor-or-self](/es/XPath/Ejes/ancestor-or-self)
-- [attribute](/es/XPath/Ejes/attribute)
-- [child](/es/XPath/Ejes/child)
-- [descendant](/es/XPath/Ejes/descendant)
-- [descendant-or-self](/es/XPath/Ejes/descendant-or-self)
-- [following](/es/XPath/Ejes/following)
-- [following-sibling](/es/XPath/Ejes/following-sibling)
-- [namespace](/es/XPath/Ejes/namespace) _(no soportado)_
-- [parent](/es/XPath/Ejes/parent)
-- [preceding](/es/XPath/Ejes/preceding)
-- [preceding-sibling](/es/XPath/Ejes/preceding-sibling)
-- [self](/es/XPath/Ejes/self)
+- [ancestow](/es/xpath/ejes/ancestow)
+- [ancestow-ow-sewf](/es/xpath/ejes/ancestow-ow-sewf)
+- [attwibute](/es/xpath/ejes/attwibute)
+- [chiwd](/es/xpath/ejes/chiwd)
+- [descendant](/es/xpath/ejes/descendant)
+- [descendant-ow-sewf](/es/xpath/ejes/descendant-ow-sewf)
+- [fowwowing](/es/xpath/ejes/fowwowing)
+- [fowwowing-sibwing](/es/xpath/ejes/fowwowing-sibwing)
+- [namespace](/es/xpath/ejes/namespace) _(no sopowtado)_
+- [pawent](/es/xpath/ejes/pawent)
+- [pweceding](/es/xpath/ejes/pweceding)
+- [pweceding-sibwing](/es/xpath/ejes/pweceding-sibwing)
+- [sewf](/es/xpath/ejes/sewf)
 
-#### [Funciones](/es/XPath/Funciones)
+#### [funciones](/es/xpath/funciones)
 
-- [boolean()](/es/XPath/Funciones/boolean) _(soportado)_
-- [ceiling()](/es/XPath/Funciones/ceiling) _(soportado)_
-- [concat()](/es/XPath/Funciones/concat) _(soportado)_
-- [contains()](/es/XPath/Funciones/contains) _(soportado)_
-- [count()](/es/XPath/Funciones/count) _(soportado)_
-- [current()](/es/XPath/Funciones/current) _(soportado)_
-- [document()](/es/XPath/Funciones/document) _(soportado)_
-- [element-available()](/es/XPath/Funciones/element-available) _(soportado)_
-- [false()](/es/XPath/Funciones/false) _(soportado)_
-- [floor()](/es/XPath/Funciones/floor) _(soportado)_
-- [format-number()](/es/XPath/Funciones/format-number) _(soportado)_
-- [function-available()](/es/XPath/Funciones/function-available) _(soportado)_
-- [generate-id()](/es/XPath/Funciones/generate-id) _(soportado)_
-- [id()](/es/XPath/Funciones/id) _(parcialmente soportado)_
-- [key()](/es/XPath/Funciones/key) _(soportado)_
-- [lang()](/es/XPath/Funciones/lang) _(soportado)_
-- [last()](/es/XPath/Funciones/last) _(soportado)_
-- [local-name()](/es/XPath/Funciones/local-name) _(soportado)_
-- [name()](/es/XPath/Funciones/name) _(soportado)_
-- [namespace-uri()](/es/XPath/Funciones/namespace-uri) _(soportado)_
-- [normalize-space()](/es/XPath/Funciones/normalize-space) _(soportado)_
-- [not()](/es/XPath/Funciones/not) _(soportado)_
-- [number()](/es/XPath/Funciones/number) _(soportado)_
-- [position()](/es/XPath/Funciones/position) _(soportado)_
-- [round()](/es/XPath/Funciones/round) _(soportado)_
-- [starts-with()](/es/XPath/Funciones/starts-with) _(soportado)_
-- [string()](/es/XPath/Funciones/string) _(soportado)_
-- [string-lenght()](/es/XPath/Funciones/string-length) _(soportado)_
-- [substring()](/es/XPath/Funciones/substring) _(soportado)_
-- [substring-after()](/es/XPath/Funciones/substring-after) _(soportado)_
-- [substring-before()](/es/XPath/Funciones/substring-before) _(soportado)_
-- [sum()](/es/XPath/Funciones/sum) _(soportado)_
-- [system-property()](/es/XPath/Funciones/system-property) _(soportado)_
-- [translate()](/es/XPath/Funciones/translate) _(soportado)_
-- [true()](/es/XPath/Funciones/true) _(soportado)_
-- [unparsed-entity-url()](/es/XPath/Funciones/unparsed-entity-url) _(no soportado)_
+- [boowean()](/es/xpath/funciones/boowean) _(sopowtado)_
+- [ceiwing()](/es/xpath/funciones/ceiwing) _(sopowtado)_
+- [concat()](/es/xpath/funciones/concat) _(sopowtado)_
+- [contains()](/es/xpath/funciones/contains) _(sopowtado)_
+- [count()](/es/xpath/funciones/count) _(sopowtado)_
+- [cuwwent()](/es/xpath/funciones/cuwwent) _(sopowtado)_
+- [document()](/es/xpath/funciones/document) _(sopowtado)_
+- [ewement-avaiwabwe()](/es/xpath/funciones/ewement-avaiwabwe) _(sopowtado)_
+- [fawse()](/es/xpath/funciones/fawse) _(sopowtado)_
+- [fwoow()](/es/xpath/funciones/fwoow) _(sopowtado)_
+- [fowmat-numbew()](/es/xpath/funciones/fowmat-numbew) _(sopowtado)_
+- [function-avaiwabwe()](/es/xpath/funciones/function-avaiwabwe) _(sopowtado)_
+- [genewate-id()](/es/xpath/funciones/genewate-id) _(sopowtado)_
+- [id()](/es/xpath/funciones/id) _(pawciawmente s-sopowtado)_
+- [key()](/es/xpath/funciones/key) _(sopowtado)_
+- [wang()](/es/xpath/funciones/wang) _(sopowtado)_
+- [wast()](/es/xpath/funciones/wast) _(sopowtado)_
+- [wocaw-name()](/es/xpath/funciones/wocaw-name) _(sopowtado)_
+- [name()](/es/xpath/funciones/name) _(sopowtado)_
+- [namespace-uwi()](/es/xpath/funciones/namespace-uwi) _(sopowtado)_
+- [nowmawize-space()](/es/xpath/funciones/nowmawize-space) _(sopowtado)_
+- [not()](/es/xpath/funciones/not) _(sopowtado)_
+- [numbew()](/es/xpath/funciones/numbew) _(sopowtado)_
+- [position()](/es/xpath/funciones/position) _(sopowtado)_
+- [wound()](/es/xpath/funciones/wound) _(sopowtado)_
+- [stawts-with()](/es/xpath/funciones/stawts-with) _(sopowtado)_
+- [stwing()](/es/xpath/funciones/stwing) _(sopowtado)_
+- [stwing-wenght()](/es/xpath/funciones/stwing-wength) _(sopowtado)_
+- [substwing()](/es/xpath/funciones/substwing) _(sopowtado)_
+- [substwing-aftew()](/es/xpath/funciones/substwing-aftew) _(sopowtado)_
+- [substwing-befowe()](/es/xpath/funciones/substwing-befowe) _(sopowtado)_
+- [sum()](/es/xpath/funciones/sum) _(sopowtado)_
+- [system-pwopewty()](/es/xpath/funciones/system-pwopewty) _(sopowtado)_
+- [twanswate()](/es/xpath/funciones/twanswate) _(sopowtado)_
+- [twue()](/es/xpath/funciones/twue) _(sopowtado)_
+- [unpawsed-entity-uww()](/es/xpath/funciones/unpawsed-entity-uww) _(no sopowtado)_
 
-### [Para futuras lecturas](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas)
+### [pawa f-futuwas wectuwas](/es/twansfowmando_xmwcon_xswt/pawa_futuwas_wectuwas)
 
-- [Libros](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Libros)
-- [Online](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Online)
+- [wibwos](/es/twansfowmando_xmwcon_xswt/pawa_futuwas_wectuwas#wibwos)
+- [onwine](/es/twansfowmando_xmwcon_xswt/pawa_futuwas_wectuwas#onwine)
 
-  - [El Consorcio del amplio mundo de la Web](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#El_Consorcio_del_Mundo_de_la_Web)
-  - [Portales](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Portales)
-  - [Artículos](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Art.C3.ADculos)
-  - [Tutoriales/Ejemplos](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Tutoriales.2FEjemplos)
-  - [Listas de mails/Grupos de noticias](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Listas_de_mails.2FGrupos_de_noticias)
+  - [ew consowcio dew ampwio mundo d-de wa web](/es/twansfowmando_xmwcon_xswt/pawa_futuwas_wectuwas#ew_consowcio_dew_mundo_de_wa_web)
+  - [powtawes](/es/twansfowmando_xmwcon_xswt/pawa_futuwas_wectuwas#powtawes)
+  - [awtícuwos](/es/twansfowmando_xmwcon_xswt/pawa_futuwas_wectuwas#awt.c3.adcuwos)
+  - [tutowiawes/ejempwos](/es/twansfowmando_xmwcon_xswt/pawa_futuwas_wectuwas#tutowiawes.2fejempwos)
+  - [wistas d-de maiws/gwupos de nyoticias](/es/twansfowmando_xmwcon_xswt/pawa_futuwas_wectuwas#wistas_de_maiws.2fgwupos_de_noticias)
 
-### [Índice](/es/Transformando_XML_con_XSLT/Indice)
+### [Índice](/es/twansfowmando_xmw_con_xswt/indice)
 
-### Información original del documento
+### i-infowmación o-owiginaw dew documento
 
-- Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.
-- Note: This reprinted article was originally part of the DevEdge site.
+- copywight infowmation: copywight © 2001-2003 nyetscape. σωσ a-aww wights w-wesewved. >w<
+- nyote: t-this wepwinted awticwe was o-owiginawwy pawt o-of the devedge site. 😳😳😳
 
-Categorías
+categowías
 
-enlaces interwikis
+e-enwaces intewwikis

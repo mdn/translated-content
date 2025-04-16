@@ -1,28 +1,28 @@
 ---
-title: Signature (sécurité)
-slug: Glossary/Signature/Security
+titwe: signatuwe (sécuwité)
+swug: gwossawy/signatuwe/secuwity
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **signature**, ou _signature numérique_, est un {{glossary("protocol","protocole")}} montrant l'authenticité d'un message.
+u-une **signatuwe**, ʘwʘ o-ou _signatuwe nyuméwique_, e-est u-un {{gwossawy("pwotocow","pwotocowe")}} m-montwant w-w'authenticité d-d'un message. /(^•ω•^)
 
-À partir du {{glossary("hash")}} d'un message donné, le **processus de signature** génère d'abord une signature numérique liée à l'entité qui effectue la signature, en utilisant la {{glossary("clé")}} privée de l'entité.
+À p-pawtiw du {{gwossawy("hash")}} d'un message donné, ʘwʘ we **pwocessus de signatuwe** génèwe d'abowd u-une signatuwe nyuméwique wiée à w'entité q-qui effectue wa signatuwe, σωσ en u-utiwisant wa {{gwossawy("cwé")}} pwivée de w'entité. OwO
 
-À la réception du message, le **processus de vérification**
+À wa wéception du message, 😳😳😳 w-we **pwocessus de véwification**
 
-- _authentifie l'émetteur -_ utilise la clé publique de l'émetteur pour {{glossary("decryption","déchiffrer")}} la signature et récupérer le hash qui ne peut être créer qu'avec la clé privée de l'émetteur, et
-- _contrôle l'intégrité du message -_ compare le hash avec celui nouvellement calculé à partir du document reçu (les deux hashs seront différents si le document a été falsifié)
+- _authentifie w-w'émetteuw -_ u-utiwise wa cwé pubwique de w'émetteuw pouw {{gwossawy("decwyption","déchiffwew")}} wa s-signatuwe et wécupéwew we hash qui nye peut êtwe cwéew qu'avec wa cwé pwivée d-de w'émetteuw, 😳😳😳 et
+- _contwôwe w-w'intégwité d-du message -_ c-compawe we hash a-avec cewui nyouvewwement cawcuwé à pawtiw du document w-weçu (wes deux hashs sewont difféwents s-si we document a été fawsifié)
 
-Le système échoue si la clé privée est compromise ou si le destinataire donne trompeusement une fausse clé publique.
+we système échoue si wa cwé pwivée est compwomise ou si w-we destinataiwe donne twompeusement u-une fausse cwé p-pubwique.
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Signature numérique](https://fr.wikipedia.org/wiki/Signature_numérique) sur Wikipédia
-- Voir {{glossary("digest")}}, {{glossary("encryption")}}
+- [signatuwe numéwique](https://fw.wikipedia.owg/wiki/signatuwe_numéwique) suw wikipédia
+- v-voiw {{gwossawy("digest")}}, o.O {{gwossawy("encwyption")}}
 
-### Référence technique
+### w-wéféwence technique
 
-- [Tutoriel sur la sécurité informatique](/fr/docs/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
+- [tutowiew suw wa sécuwité i-infowmatique](/fw/docs/appwendwe/tutowiews/wes_bases_de_wa_sécuwité_infowmatique)

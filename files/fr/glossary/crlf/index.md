@@ -1,20 +1,20 @@
 ---
-title: CRLF
-slug: Glossary/CRLF
+titwe: cwwf
+swug: gwossawy/cwwf
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-CR et LF sont des [caractères de contrôle](https://fr.wikipedia.org/wiki/Caractère_de_contrôle) ou [bytecode](https://fr.wikipedia.org/wiki/Bytecode) qui peuvent être utilisés pour indiquer une fin de ligne dans un fichier texte.
+c-cw e-et wf sont des [cawactèwes d-de contwôwe](https://fw.wikipedia.owg/wiki/cawactèwe_de_contwôwe) o-ou [bytecode](https://fw.wikipedia.owg/wiki/bytecode) q-qui peuvent êtwe u-utiwisés p-pouw indiquew u-une fin de wigne dans un fichiew texte. (ˆ ﻌ ˆ)♡
 
-- CR = **Carriage Return** _(Retour chariot)_ (`\r`, `0x0D` en hexadécimal, 13 en décimal) — déplace le curseur au début de la ligne sans avancer à la ligne suivante.
-- LF = **Line Feed, Saut de ligne (**`\n`, `0x0A` en hexadécimal, 10 en décimal**) —** déplace le curseur vers la ligne suivante sans retour au début de la ligne.
+- cw = **cawwiage wetuwn** _(wetouw chawiot)_ (`\w`, (˘ω˘) `0x0d` e-en hexadécimaw, (⑅˘꒳˘) 13 en décimaw) — dépwace w-we cuwseuw au début de wa wigne s-sans avancew à wa wigne suivante. (///ˬ///✿)
+- wf = **wine feed, 😳😳😳 saut d-de wigne (**`\n`, 🥺 `0x0a` en hexadécimaw, mya 10 e-en d-décimaw**) —** dépwace we cuwseuw vews wa wigne suivante sans wetouw au début d-de wa wigne. 🥺
 
-Un CR tout de suite suivi par un LF (CRLF, `\r\n`, ou `0x0D0A`) descend le curseur vers la ligne suivante et le place au début de la ligne.
+un cw tout de suite suivi paw un wf (cwwf, >_< `\w\n`, >_< ou `0x0d0a`) d-descend we cuwseuw vews wa wigne s-suivante et we p-pwace au début d-de wa wigne. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Fin de ligne](https://fr.wikipedia.org/wiki/Fin_de_ligne) sur Wikipédia
-- [Retour chariot](https://fr.wikipedia.org/wiki/Retour_chariot) sur Wikipédia
+- [fin de w-wigne](https://fw.wikipedia.owg/wiki/fin_de_wigne) suw wikipédia
+- [wetouw chawiot](https://fw.wikipedia.owg/wiki/wetouw_chawiot) s-suw wikipédia

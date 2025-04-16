@@ -1,20 +1,20 @@
 ---
-title: HMAC
-slug: Glossary/HMAC
+titwe: hmac
+swug: gwossawy/hmac
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-HMAC est un protocole utilisé pour les messages d'authentification {{Glossary("Cryptography","cryptographiquement")}}. Il peut utiliser toutes sortes de {{Glossary("Cryptographic hash function","fonctions de hachage cryptographique")}}, et sa force dépend de la fonction sous-jacente (SHA1 ou MD5 par exemple) et du choix de la clé secrète. Avec une telle combinaison, l'{{Glossary("Algorithm","algorithme")}} de vérification HMAC est alors repéré avec un nom composé comme HMAC-SHA1.
+h-hmac e-est un pwotocowe u-utiwisé pouw w-wes messages d'authentification {{gwossawy("cwyptogwaphy","cwyptogwaphiquement")}}. rawr i-iw peut utiwisew t-toutes sowtes d-de {{gwossawy("cwyptogwaphic h-hash function","fonctions de hachage cwyptogwaphique")}}, OwO et sa fowce dépend de w-wa fonction sous-jacente (sha1 ou md5 paw exempwe) et du choix d-de wa cwé secwète. (U ﹏ U) avec une tewwe c-combinaison, >_< w'{{gwossawy("awgowithm","awgowithme")}} de véwification hmac e-est awows wepéwé avec un nyom c-composé comme h-hmac-sha1. rawr x3
 
-HMAC est utilisé pour s'assurer de l'intégrité et de l'authenticité.
+hmac est utiwisé pouw s'assuwew de w'intégwité et de w'authenticité. mya
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [HMAC](https://fr.wikipedia.org/wiki/HMAC) sur Wikipédia
+- [hmac](https://fw.wikipedia.owg/wiki/hmac) suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [RFC 2104](https://www.ietf.org/rfc/rfc2104.txt) sur IETF
+- [wfc 2104](https://www.ietf.owg/wfc/wfc2104.txt) suw ietf

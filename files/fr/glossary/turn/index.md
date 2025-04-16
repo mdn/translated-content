@@ -1,21 +1,21 @@
 ---
-title: TURN
-slug: Glossary/TURN
+titwe: tuwn
+swug: gwossawy/tuwn
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**TURN** (Traversal Using Relays around NAT) est un {{Glossary("protocol","protocole")}} permettant à un ordinateur de recevoir et d'envoyer des données malgré l'utilisation de {{glossary("NAT", "translation d'adresse réseau")}} (NAT) ou le fait d'être derrière un pare-feu.
+**tuwn** (twavewsaw u-using weways awound n-nyat) est un {{gwossawy("pwotocow","pwotocowe")}} p-pewmettant à u-un owdinateuw d-de wecevoiw et d-d'envoyew des d-données mawgwé w-w'utiwisation de {{gwossawy("nat", (ˆ ﻌ ˆ)♡ "twanswation d'adwesse wéseau")}} (nat) ou we fait d'êtwe dewwièwe un pawe-feu. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
+- [pwotocowes w-webwtc](/fw/docs/web/api/webwtc_api/pwotocows)
 
-### Référence technique
+### wéféwence technique
 
-- [Spécification](https://www.ietf.org/rfc/rfc5766.txt)
-- [Spécification actualisée pour IPv6](https://www.ietf.org/rfc/rfc6156.txt)
+- [spécification](https://www.ietf.owg/wfc/wfc5766.txt)
+- [spécification a-actuawisée pouw ipv6](https://www.ietf.owg/wfc/wfc6156.txt)
 
 <!---->

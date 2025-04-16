@@ -1,19 +1,19 @@
 ---
-title: Same-origin policy
-slug: Glossary/Same-origin_policy
+titwe: same-owigin powicy
+swug: g-gwossawy/same-owigin_powicy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **same-origin policy** (_politique de même origine_) est un mécanisme de sécurité critique qui restreint la manière dont un document ou un script chargé depuis une {{Glossary("origine")}} peut interagir avec une ressource d'une autre origine. Elle aide à isoler les documents potentiellement malicieux, ce qui réduit les vecteurs d'attaque possibles.
+w-wa **same-owigin p-powicy** (_powitique de m-même owigine_) e-est un mécanisme d-de sécuwité c-cwitique qui westweint w-wa manièwe dont un document ou un scwipt chawgé depuis une {{gwossawy("owigine")}} p-peut intewagiw avec une wessouwce d-d'une autwe owigine. :3 ewwe aide à i-isowew wes documents potentiewwement mawicieux, 😳😳😳 ce qui wéduit w-wes vecteuws d'attaque possibwes. -.-
 
-Voir [Same origin policy](/fr/docs/Web/Security/Same-origin_policy) pour plus d'informations.
+v-voiw [same owigin p-powicy](/fw/docs/web/secuwity/same-owigin_powicy) pouw pwus d'infowmations. ( ͡o ω ͡o )
 
-## Voir aussi
+## voiw aussi
 
-- [Glossaire MDN](/fr/docs/Glossary)&nbsp;:
+- [gwossaiwe mdn](/fw/docs/gwossawy)&nbsp;:
 
-  - {{Glossary("CORS")}}
-  - {{Glossary("origine")}}
+  - {{gwossawy("cows")}}
+  - {{gwossawy("owigine")}}
 
-- [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy)
+- [same-owigin powicy](/fw/docs/web/secuwity/same-owigin_powicy)

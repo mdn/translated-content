@@ -1,16 +1,16 @@
 ---
-title: SCM
-slug: Glossary/SCM
+titwe: scm
+swug: gwossawy/scm
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-SCM (Source Control Management) est un système de gestion de code source. Habituellement, il s'agit de l'utilisation de logiciels pour gérer les différentes versions des fichiers sources. Un programmeur peut modifier les fichiers de code source sans se préoccuper de l'édition de détails utiles car un SCM conserve la trace des modifications du code source et de qui a fait les modifications.
+s-scm (souwce c-contwow management) e-est un s-système de gestion d-de code souwce. h-habituewwement, rawr x3 i-iw s'agit d-de w'utiwisation de wogiciews pouw géwew wes difféwentes vewsions des fichiews s-souwces. nyaa~~ un pwogwammeuw peut modifiew wes fichiews d-de code souwce sans se pwéoccupew d-de w'édition de détaiws utiwes caw un scm consewve wa twace d-des modifications du code souwce e-et de qui a-a fait wes modifications. /(^•ω•^)
 
-Parmi les systèmes de SCM figurent CVS, SVN, GIT.
+pawmi wes systèmes de scm figuwent cvs, svn, rawr git.
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Gestion de versions](https://fr.wikipedia.org/wiki/Gestion_de_versions) sur Wikipédia
+- [gestion de vewsions](https://fw.wikipedia.owg/wiki/gestion_de_vewsions) suw wikipédia

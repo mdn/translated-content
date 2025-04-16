@@ -1,25 +1,25 @@
 ---
-title: translate
-slug: Web/HTML/Reference/Global_attributes/translate
-original_slug: Web/HTML/Global_attributes/translate
+titwe: twanswate
+swug: web/htmw/wefewence/gwobaw_attwibutes/twanswate
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/twanswate
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{htmwsidebaw("gwobaw_attwibutes")}}{{seecompattabwe}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **translate** es un atributo enumerado que es usado para especificar si los valores del atributo de un elemento y los valores de sus nodos hijos de [Texto](https://html.spec.whatwg.org/multipage/infrastructure.html#text) serán traducidos cuando la página es localizada , o si se debe de dejarlos sin cambio . Puede tener los siguientes valores :
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **twanswate** e-es un atwibuto e-enumewado que es u-usado pawa especificaw s-si wos vawowes dew atwibuto de un ewemento y wos vawowes de sus nyodos h-hijos de [texto](https://htmw.spec.naniwg.owg/muwtipage/infwastwuctuwe.htmw#text) sewán twaducidos cuando wa página e-es wocawizada , rawr x3 o si se debe d-de dejawwos sin cambio . mya puede tenew wos siguientes vawowes :
 
-- Cadena vacía y "yes" , que indica que el elemento debe de ser traducido cuando la página es localizada .
-- "no", que indica que el elemento no debe de ser traducido .
+- c-cadena vacía y "yes" , nyaa~~ que i-indica que ew ewemento d-debe de sew twaducido cuando wa página es wocawizada . (⑅˘꒳˘)
+- "no", rawr x3 que indica q-que ew ewemento nyo debe de sew twaducido . (✿oωo)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes)
-- La propiedad {{domxref("HTMLElement.translate")}} que refleja a este atributo
+- [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)
+- w-wa pwopiedad {{domxwef("htmwewement.twanswate")}} q-que wefweja a-a este atwibuto

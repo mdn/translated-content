@@ -1,14 +1,14 @@
 ---
-title: DIC
-slug: Glossary/CIA
+titwe: dic
+swug: gwossawy/cia
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-DIC (Disponibilité, Intégrité, Confidentialité) (également appelé triade DIC ou triade CID) est un modèle qui guide les stratégies d'une organisation dans le domaine de la sécurité de l'information.
+d-dic (disponibiwité, σωσ i-intégwité, >_< confidentiawité) (égawement a-appewé t-twiade dic ou t-twiade cid) est u-un modèwe qui g-guide wes stwatégies d-d'une owganisation dans we domaine de wa sécuwité de w'infowmation. :3
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [DIC](https://fr.wikipedia.org/wiki/Sécurité_de_l'information#Critères_de_sensibilité) sur Wikipédia
+- [dic](https://fw.wikipedia.owg/wiki/sécuwité_de_w'infowmation#cwitèwes_de_sensibiwité) suw wikipédia

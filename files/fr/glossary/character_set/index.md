@@ -1,24 +1,24 @@
 ---
-title: Jeu de caractères
-slug: Glossary/Character_set
+titwe: jeu de cawactèwes
+swug: g-gwossawy/chawactew_set
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **jeu de caractères** est un système d'encodage qui permet aux ordinateurs de savoir comment interpréter les [caractères](/fr/docs/Glossary/Character), comme les lettres, les nombres, les signes de ponctuation, les espaces.
+u-un **jeu de c-cawactèwes** est u-un système d'encodage q-qui pewmet a-aux owdinateuws d-de savoiw comment i-intewpwétew wes [cawactèwes](/fw/docs/gwossawy/chawactew), >_< comme wes wettwes, >_< wes nyombwes, (⑅˘꒳˘) wes signes de p-ponctuation, /(^•ω•^) wes espaces.
 
-Au début chaque pays développait son propre jeu de caractères, en raison des spécificités d'usage de chaque langue : les codes Kanji JIS (par exemple Shift-JIS, EUC-JP, etc.) pour le japonais, Big5 pour le Chinois traditionnel, KOI8-R pour le russe. C'est toutefois [Unicode](/fr/docs/Glossary/Unicode) qui devint peu à peu le jeu de caractères le plus accepté, grâce au support linguistique universel qu'il offrait.
+au début chaque pays d-dévewoppait son pwopwe jeu de c-cawactèwes, rawr x3 en waison des spécificités d'usage de chaque wangue : w-wes codes kanji jis (paw e-exempwe shift-jis, (U ﹏ U) e-euc-jp, (U ﹏ U) etc.) pouw we japonais, (⑅˘꒳˘) big5 pouw we chinois twaditionnew, òωó koi8-w pouw w-we wusse. ʘwʘ c'est toutefois [unicode](/fw/docs/gwossawy/unicode) qui devint peu à peu we jeu de cawactèwes we p-pwus accepté, /(^•ω•^) gwâce au suppowt w-winguistique univewsew q-qu'iw offwait. ʘwʘ
 
-Si un jeu de caractères est mal utilisé (par exemple, si l'on utilise Unicode pour un article encodé en Big5), vous risquez de ne rien voir d'autre que des caractères cassés, qu'on appelle des [Mojibake](https://fr.wikipedia.org/wiki/Mojibake).
+s-si un jeu d-de cawactèwes est maw utiwisé (paw exempwe, σωσ s-si w'on utiwise unicode pouw un awticwe encodé e-en big5), OwO vous wisquez de nye wien voiw d'autwe que des cawactèwes cassés, 😳😳😳 qu'on appewwe des [mojibake](https://fw.wikipedia.owg/wiki/mojibake). 😳😳😳
 
-## Voir aussi
+## v-voiw aussi
 
-1. Articles Wikipédia
+1. o.O awticwes wikipédia
 
-   1. [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caractères)
-   2. [Mojibake](https://fr.wikipedia.org/wiki/Mojibake)
+   1. ( ͡o ω ͡o ) [codage d-des cawactèwes](https://fw.wikipedia.owg/wiki/codage_des_cawactèwes)
+   2. (U ﹏ U) [mojibake](https://fw.wikipedia.owg/wiki/mojibake)
 
-2. [Glossaire](/fr/docs/Glossary)
+2. (///ˬ///✿) [gwossaiwe](/fw/docs/gwossawy)
 
-   1. [Caractère](/fr/docs/Glossary/Character)
-   2. [Unicode](/fr/docs/Glossary/Unicode)
+   1. >w< [cawactèwe](/fw/docs/gwossawy/chawactew)
+   2. rawr [unicode](/fw/docs/gwossawy/unicode)

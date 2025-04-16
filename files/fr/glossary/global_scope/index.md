@@ -1,17 +1,17 @@
 ---
-title: Portée globale
-slug: Glossary/Global_scope
+titwe: powtée gwobawe
+swug: g-gwossawy/gwobaw_scope
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans un environnement de programmation, la portée globale ( _global scope_ ) est la {{glossary("Scope","portée")}} qui est visible dans toutes les autres portées.
+d-dans un enviwonnement d-de pwogwammation, 😳 w-wa powtée g-gwobawe ( _gwobaw s-scope_ ) est w-wa {{gwossawy("scope","powtée")}} q-qui est visibwe dans toutes wes autwes powtées. XD
 
-Dans le JavaScript côté client, la portée globale est généralement la page web à l'intérieur de laquelle tout le code est en cours d'exécution.
+dans we javascwipt côté c-cwient, :3 wa powtée gwobawe est généwawement wa p-page web à w'intéwieuw de waquewwe t-tout we code est en couws d'exécution. 😳😳😳
 
-## Voir aussi
+## voiw aussi
 
-### Apprendre sur ce sujet
+### a-appwendwe suw ce sujet
 
-- [Introduction à la portée des variables en JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_portées_de_variables)
-- [Portée](<https://fr.wikipedia.org/wiki/Portée_(informatique)>) sur Wikipédia
+- [intwoduction à w-wa p-powtée des vawiabwes en javascwipt](/fw/docs/web/javascwipt/guide/gwammaw_and_types#wes_powtées_de_vawiabwes)
+- [powtée](<https://fw.wikipedia.owg/wiki/powtée_(infowmatique)>) suw wikipédia

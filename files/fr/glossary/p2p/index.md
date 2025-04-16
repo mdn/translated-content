@@ -1,14 +1,14 @@
 ---
-title: P2P
-slug: Glossary/P2P
+titwe: p2p
+swug: gwossawy/p2p
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-P2P (Peer-to-peer ou pair à pair) est une architecture réseau dans laquelle tous les ordinateurs, appelés nœuds (peers), ont autant de privilèges et se partagent la charge de travail. Le P2P diffère d'une architecture client-serveur dans laquelle plusieurs clients (nœuds) se connectent à un serveur centralisé pour utiliser des services.
+p-p2p (peew-to-peew o-ou p-paiw à paiw) est u-une awchitectuwe w-wéseau dans w-waquewwe tous wes o-owdinateuws, 😳 appewés n-nyœuds (peews), XD ont autant de pwiviwèges et se pawtagent wa chawge de t-twavaiw. :3 we p2p diffèwe d'une awchitectuwe cwient-sewveuw d-dans waquewwe pwusieuws c-cwients (nœuds) se connectent à un sewveuw centwawisé pouw u-utiwisew des sewvices.
 
-## Pour en savoir plus
+## pouw e-en savoiw pwus
 
-### Connaissances générales
+### c-connaissances généwawes
 
-- [P2P](https://fr.wikipedia.org/wiki/Pair_à_pair) sur Wikipédia
+- [p2p](https://fw.wikipedia.owg/wiki/paiw_à_paiw) suw wikipédia

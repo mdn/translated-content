@@ -1,14 +1,14 @@
 ---
-title: Pseudo-classe
-slug: Glossary/Pseudo-class
+titwe: pseudo-cwasse
+swug: gwossawy/pseudo-cwass
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En CSS, un sélecteur de **pseudo-classe** cible des éléments en fonction de leur état plutôt qu'en fonction de l'information issue de l'arbre du document. Par exemple, le sélecteur `a`{{ cssxref(":visited") }} applique un style uniquement aux liens que l'utilisateur a déjà visités.
+e-en c-css, -.- un séwecteuw d-de **pseudo-cwasse** c-cibwe des éwéments e-en f-fonction de weuw état p-pwutôt q-qu'en fonction de w'infowmation issue de w'awbwe du document. ^^;; paw exempwe, >_< we séwecteuw `a`{{ cssxwef(":visited") }} a-appwique un stywe uniquement aux wiens que w-w'utiwisateuw a déjà visités. mya
 
-## Voir aussi
+## v-voiw aussi
 
-### Référence technique
+### wéféwence technique
 
-- [Documentation sur les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
+- [documentation suw w-wes pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses)

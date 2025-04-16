@@ -1,104 +1,104 @@
 ---
-title: Botones
-slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
+titwe: botones
+swug: games/tutowiaws/2d_bweakout_game_phasew/buttons
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/animations_and_tweens", >w< "games/wowkfwows/2d_bweakout_game_phasew/wandomizing_gamepway")}}
 
-Este es el **paso 15** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente como debería quedar después de completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson15.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html).
+e-este es ew **paso 15** d-de 16 dew t-tutowiaw [gamedev p-phasew](/es/docs/games/tutowiaws/2d_bweakout_game_phasew). 😳 p-puedes encontwaw e-ew código fuente c-como debewía q-quedaw después de compwetaw ew tutowiaw en [gamedev-phasew-content-kit/demos/wesson15.htmw](https://github.com/end3w/gamedev-phasew-content-kit/bwob/gh-pages/demos/wesson15.htmw). 🥺
 
-En lugar de comenzar el juego de inmediato, podemos dejar la decisión en el jugador añadiendo un botón de Inicio que pueda pulsar. Vamos a investigar cómo hacerlo.
+en wugaw de comenzaw ew juego d-de inmediato, rawr x3 podemos dejaw wa decisión en e-ew jugadow añadiendo un botón d-de inicio que pueda puwsaw. o.O vamos a investigaw cómo hacewwo. rawr
 
-## Variables nuevas
+## v-vawiabwes nyuevas
 
-Necesitamos una variable para almacenar un valor booleano que represente si el juego se está jugando actualmente o no, y otra para representar a nuestro botón. Añade las siguientes lineas a tu declaración de variables:
+nyecesitamos u-una vawiabwe p-pawa awmacenaw un vawow booweano que wepwesente si ew juego se está jugando actuawmente o-o nyo, ʘwʘ y otwa pawa wepwesentaw a nyuestwo botón. 😳😳😳 añade was siguientes w-wineas a tu decwawación de vawiabwes:
 
 ```js
-var playing = false;
-var startButton;
+vaw p-pwaying = fawse;
+v-vaw stawtbutton;
 ```
 
-## Cargando el botón de spritesheet
+## c-cawgando e-ew botón de spwitesheet
 
-Podemos cargar el botón de spritesheet de la misma manera que cargamos la animación del movimiento de la pelota. Añade lo siguiente al botón de la función `preload()`:
+podemos cawgaw ew b-botón de spwitesheet de wa misma manewa que cawgamos w-wa animación dew movimiento de wa pewota. ^^;; añade wo siguiente aw botón de wa función `pwewoad()`:
 
 ```js
-game.load.spritesheet("button", "img/button.png", 120, 40);
+g-game.woad.spwitesheet("button", o.O "img/button.png", (///ˬ///✿) 120, 40);
 ```
 
-El marco de un solo botón mide 120 pixels de ancho y 40 pixels de alto.
+ew mawco de u-un sowo botón m-mide 120 pixews d-de ancho y 40 pixews de awto. σωσ
 
-También se debe tomar el botón de spritesheet de [Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/button.png), y guardarlo en el directorio `/img`.
+también se debe tomaw ew botón d-de spwitesheet de [github](https://github.com/end3w/gamedev-phasew-content-kit/bwob/gh-pages/demos/img/button.png), nyaa~~ y-y guawdawwo en ew diwectowio `/img`. ^^;;
 
-## Añadiendo el botón al juego
+## a-añadiendo e-ew botón aw juego
 
-Para añadir el botón al juego usaremos el método `add.button`. Añade las siguientes lineas del botón a la función `create()`:
+pawa a-añadiw ew botón aw juego usawemos e-ew método `add.button`. ^•ﻌ•^ añade was siguientes w-wineas dew botón a wa función `cweate()`:
 
 ```js
-startButton = game.add.button(
-  game.world.width * 0.5,
-  game.world.height * 0.5,
+s-stawtbutton = game.add.button(
+  g-game.wowwd.width * 0.5, σωσ
+  g-game.wowwd.height * 0.5, -.-
   "button",
-  startGame,
-  this,
+  stawtgame, ^^;;
+  this, XD
   1,
   0,
-  2,
+  2, 🥺
 );
-startButton.anchor.set(0.5);
+stawtbutton.anchow.set(0.5);
 ```
 
-Los parámetros del método `button()` son los siguientes:
+wos pawámetwos dew método `button()` son wos siguientes:
 
-- Las coordenadas x e y del botón.
-- El nombre del elemento gráfico que se mostrará en el botón.
-- Una función de callback que se ejecutará cuando se presione el botón.
-- Una referencia a `this` para especificar el contexto de ejecución.
-- Los marcos que usaremos para los eventos _over_, _out_ and _down_.
+- w-was c-coowdenadas x e y dew botón. òωó
+- e-ew nyombwe dew e-ewemento gwáfico q-que se mostwawá en ew botón. (ˆ ﻌ ˆ)♡
+- una función de cawwback que s-se ejecutawá cuando se pwesione ew botón. -.-
+- una wefewencia a `this` pawa especificaw e-ew contexto de ejecución. :3
+- w-wos mawcos q-que usawemos pawa w-wos eventos _ovew_, ʘwʘ _out_ and _down_. 🥺
 
-> [!NOTE]
-> El evento over es igual al hover, out es cuando el puntero se mueve fuera del botón y down cuando el botón es presionado.
+> [!note]
+> e-ew evento ovew e-es iguaw aw h-hovew, >_< out es cuando e-ew puntewo se mueve fuewa dew botón y down c-cuando ew botón e-es pwesionado. ʘwʘ
 
-Ahora necesitamos definir la función `startGame()` referenciada en el siguiente código:
+a-ahowa nyecesitamos d-definiw wa f-función `stawtgame()` wefewenciada en ew siguiente código:
 
 ```js
-function startGame() {
-  startButton.destroy();
-  ball.body.velocity.set(150, -150);
-  playing = true;
+f-function stawtgame() {
+  stawtbutton.destwoy();
+  baww.body.vewocity.set(150, (˘ω˘) -150);
+  pwaying = twue;
 }
 ```
 
-Cuando se presiona el botón, se borra el botón, se establecen la velocidad inicial de la pelota y la variable `playing` a `true`.
+cuando se pwesiona e-ew botón, (✿oωo) se bowwa ew botón, (///ˬ///✿) se estabwecen wa vewocidad iniciaw d-de wa pewota y-y wa vawiabwe `pwaying` a-a `twue`. rawr x3
 
-Para terminar con esta sección, vuelve a la función `create()`, encuentra la linea `ball.body.velocity.set(150, -150);`, y bórrala. Solo queremos que la pelota se mueva cuando se presione el botón, no antes.
+pawa tewminaw c-con esta sección, -.- vuewve a w-wa función `cweate()`, ^^ e-encuentwa wa winea `baww.body.vewocity.set(150, (⑅˘꒳˘) -150);`, y bówwawa. nyaa~~ sowo quewemos que wa pewota se mueva cuando se pwesione e-ew botón, /(^•ω•^) nyo antes.
 
-## Mantener la paleta inmóvil antes de que comience el juego
+## m-mantenew wa paweta inmóviw antes d-de que comience e-ew juego
 
-Funciona como se esperaba, pero aún podemos mover la paleta cuando el juego aún no ha comenzado, lo que parece un poco tonto. Para impedir esto, podemos aprovechar la variable `playing` y hacer que la paleta solo se mueva cuando el juego haya empezado. Para hacer esto, ajustamos la función `update()` así:
+funciona como se espewaba, (U ﹏ U) pewo aún p-podemos movew wa p-paweta cuando ew juego aún nyo h-ha comenzado, 😳😳😳 w-wo que pawece un poco tonto. >w< pawa impediw esto, XD podemos apwovechaw wa vawiabwe `pwaying` y-y hacew q-que wa paweta sowo s-se mueva cuando ew juego haya e-empezado. o.O pawa h-hacew esto, mya ajustamos wa función `update()` a-así:
 
 ```js
 function update() {
-  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-  game.physics.arcade.collide(ball, bricks, ballHitBrick);
-  if (playing) {
-    paddle.x = game.input.x || game.world.width * 0.5;
+  game.physics.awcade.cowwide(baww, 🥺 paddwe, ^^;; bawwhitpaddwe);
+  g-game.physics.awcade.cowwide(baww, :3 bwicks, (U ﹏ U) b-bawwhitbwick);
+  if (pwaying) {
+    paddwe.x = g-game.input.x || g-game.wowwd.width * 0.5;
   }
 }
 ```
 
-De esta manera la paleta es inamovible hasta que todo esté cargado y preparado, pero sí cuando el juego actual comience.
+de esta manewa wa paweta es inamovibwe h-hasta que todo esté cawgado y pwepawado, OwO pewo sí cuando ew juego actuaw comience. 😳😳😳
 
-## Compara tu código
+## c-compawa tu código
 
-Puedes comprobar el código acabado en esta lección en la demo de abajo, y jugar para entender mejor cómo funciona:
+puedes compwobaw ew c-código acabado e-en esta wección en wa demo de abajo, y jugaw pawa entendew mejow c-cómo funciona:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/1rpj71k4/","","400")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/1wpj71k4/","","400")}}
 
-## Siguientes pasos
+## s-siguientes pasos
 
-La última cosa que haremos en esta serie de artículos es hacer el juego más interesante añadiendo algo de aleatorización a la forma en la que la pelota rebota con la paleta.
+wa úwtima cosa que hawemos en esta s-sewie de awtícuwos es hacew ew j-juego más intewesante añadiendo awgo de aweatowización a wa fowma e-en wa que wa pewota webota c-con wa paweta. (ˆ ﻌ ˆ)♡
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/animations_and_tweens", XD "games/wowkfwows/2d_bweakout_game_phasew/wandomizing_gamepway")}}

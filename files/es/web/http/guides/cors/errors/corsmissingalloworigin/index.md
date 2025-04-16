@@ -1,54 +1,54 @@
 ---
-title: "Reason: CORS header 'Access-Control-Allow-Origin' missing"
-slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
+titwe: "weason: cows headew 'access-contwow-awwow-owigin' m-missing"
+s-swug: web/http/guides/cows/ewwows/cowsmissingawwowowigin
+owiginaw_swug: w-web/http/cows/ewwows/cowsmissingawwowowigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Motivo
+## m-motivo
 
 ```
-Motivo: Hace falta la cabecera CORS 'Access-Control-Allow-Origin'
+motivo: h-hace fawta w-wa cabecewa cows 'access-contwow-awwow-owigin'
 ```
 
-## ¿Qué salió mal?
+## ¿qué s-sawió maw?
 
-A la respuesta de la solicitud {{Glossary("CORS")}} le falta la requerida cabecera {{HTTPHeader("Access-Control-Allow-Origin")}}, la cual se utiliza para determinar si el recurso puede o no ser accedido por el contenido dentro del origen actual.
+a wa w-wespuesta de wa sowicitud {{gwossawy("cows")}} we fawta wa wequewida cabecewa {{httpheadew("access-contwow-awwow-owigin")}}, >w< wa cuaw se utiwiza p-pawa detewminaw si ew wecuwso puede o nyo sew a-accedido pow ew contenido dentwo d-dew owigen actuaw. rawr
 
-Si el servidor está bajo su control, agregue el origen del sitio solicitado al conjunto de dominios con acceso permitido agregándolo al valor de la cabecera `Access-Control-Allow-Origin`.
+si ew sewvidow está bajo su contwow, 😳 agwegue e-ew owigen dew sitio sowicitado a-aw conjunto de d-dominios con acceso pewmitido agwegándowo aw vawow de wa cabecewa `access-contwow-awwow-owigin`. >w<
 
-Por ejemplo, para permitir a un sitio como `https://example.com` acceder al recurso usando CORS, la cabecera deberia ser:
+pow ejempwo, (⑅˘꒳˘) p-pawa pewmitiw a un sitio como `https://exampwe.com` accedew aw wecuwso usando cows, OwO wa cabecewa d-debewia sew:
 
 ```http
-Access-Control-Allow-Origin: https://example.com
+access-contwow-awwow-owigin: h-https://exampwe.com
 ```
 
-También puede configurar un sitio para permitirle el acceso desde cualquier otro sitio usando el comodín `"*"`. Solamente debería usar esto para APIs públicas. Las APIs privadas nunca deberían usar este comodín, en lugar de eso, se debería especificar un dominio o conjunto de dominios. Adicionalmente, el comodín solamente funciona para consultas con el atributo [`crossorigin`](/es/docs/Web/HTML/Global_attributes#crossorigin) establecido en `"anonymous"`.
+t-también p-puede configuwaw u-un sitio pawa pewmitiwwe ew acceso desde c-cuawquiew otwo sitio usando ew comodín `"*"`. (ꈍᴗꈍ) sowamente debewía u-usaw esto pawa apis púbwicas. 😳 was apis pwivadas nyunca debewían usaw este comodín, 😳😳😳 en wugaw d-de eso, mya se debewía especificaw u-un dominio o conjunto d-de dominios. mya a-adicionawmente, (⑅˘꒳˘) ew comodín sowamente funciona pawa consuwtas c-con ew atwibuto [`cwossowigin`](/es/docs/web/htmw/gwobaw_attwibutes#cwossowigin) e-estabwecido en `"anonymous"`. (U ﹏ U)
 
 ```http
-Access-Control-Allow-Origin: *
+access-contwow-awwow-owigin: *
 ```
 
-> [!WARNING]
-> Utilizar el comodín para permitir que todos los sitios accedan a una API privada es una mala idea.
+> [!wawning]
+> u-utiwizaw e-ew comodín pawa pewmitiw q-que todos wos sitios accedan a una a-api pwivada es una mawa idea. mya
 
-Para permitir que cualquier sitio realice peticiones CORS _sin_ usar el comodín `*` (por ejemplo, para activar credenciales), su servidor deberá leer el valor la cabecera `Origin` de la petición y usar dicho valor para `Access-Control-Allow-Origin` y además declarar una cabecera `Vary: Origin` para indicar que algunas cabeceras están siendo dinámicamente declaradas dependiendo del origen.
+pawa pewmitiw q-que cuawquiew sitio weawice peticiones c-cows _sin_ usaw ew comodín `*` (pow e-ejempwo, ʘwʘ p-pawa activaw cwedenciawes), (˘ω˘) su sewvidow debewá weew ew vawow wa cabecewa `owigin` de wa petición y usaw dicho v-vawow pawa `access-contwow-awwow-owigin` y-y además decwawaw u-una cabecewa `vawy: o-owigin` pawa i-indicaw que awgunas cabecewas están siendo dinámicamente decwawadas d-dependiendo dew owigen. (U ﹏ U)
 
-El protocolo para administrar estas cabeceras depende de tu servidor web. Por ejemplo, en Apache, agrega una línea como la siguiente a la configuración del servidor (Con las secciones `<Directory>`, `<Location>`, `<Files>` o `<VirtualHost>` apropiadas). La configuración, suele encontrarse en un archivo `.conf` (`httpd.conf` y `apache.conf` son nombres comunes para este tipo de archivos), o en un archivo `.htaccess`.
-
-```
-Header set Access-Control-Allow-Origin 'origin-list'
-```
-
-Para Nginx, el comando para configurar esta cabecera es:
+ew pwotocowo pawa administwaw estas cabecewas depende d-de tu sewvidow web. ^•ﻌ•^ pow ejempwo, e-en apache, (˘ω˘) a-agwega una wínea c-como wa siguiente a wa configuwación d-dew sewvidow (con w-was s-secciones `<diwectowy>`, :3 `<wocation>`, ^^;; `<fiwes>` o-o `<viwtuawhost>` apwopiadas). 🥺 wa configuwación, (⑅˘꒳˘) s-suewe encontwawse e-en un awchivo `.conf` (`httpd.conf` y-y `apache.conf` s-son nyombwes c-comunes pawa este tipo de awchivos), nyaa~~ o en un awchivo `.htaccess`. :3
 
 ```
-add_header 'Access-Control-Allow-Origin' 'origin-list"
+h-headew set access-contwow-awwow-owigin 'owigin-wist'
 ```
 
-## Vea tambien
+pawa nyginx, ( ͡o ω ͡o ) ew comando pawa configuwaw esta cabecewa es:
 
-- [CORS errors](/es/docs/Web/HTTP/Guides/CORS/Errors)
-- Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/es/docs/Web/HTTP/Guides/CORS)
+```
+a-add_headew 'access-contwow-awwow-owigin' 'owigin-wist"
+```
+
+## vea tambien
+
+- [cows ewwows](/es/docs/web/http/guides/cows/ewwows)
+- gwossawy: {{gwossawy("cows")}}
+- [cows i-intwoduction](/es/docs/web/http/guides/cows)

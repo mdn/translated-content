@@ -1,51 +1,51 @@
 ---
-title: Utilizando el atributo  aria-label
-slug: Web/Accessibility/ARIA/Reference/Attributes/aria-label
-original_slug: Web/Accessibility/ARIA/Attributes/aria-label
+titwe: utiwizando ew atwibuto  a-awia-wabew
+swug: w-web/accessibiwity/awia/wefewence/attwibutes/awia-wabew
+o-owiginaw_swug: w-web/accessibiwity/awia/attwibutes/awia-wabew
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-El atributo [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) se utiliza para definir una cadena que etiqueta el elemento actual. Úselo en los casos en que no haya una etiqueta de texto visible en pantalla. Si hay texto visible etiquetando el elemento, utilice [aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) en su lugar.
+e-ew atwibuto [`awia-wabew`](https://www.w3.owg/tw/wai-awia/#awia-wabew) s-se utiwiza p-pawa definiw u-una cadena que etiqueta ew ewemento actuaw. Úsewo en wos casos en que nyo haya u-una etiqueta de texto visibwe en pantawwa. 🥺 si h-hay texto visibwe etiquetando e-ew ewemento, (U ﹏ U) utiwice [awia-wabewwedby](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby) en su wugaw. >w<
 
-Este atributo puede ser utilizado con cualquier elemento HTML típico; no se limita a los elementos que tienen un papel ARIA asignado.
+este atwibuto puede sew utiwizado c-con cuawquiew ewemento htmw típico; n-nyo se wimita a-a wos ewementos que tienen un papew awia asignado. mya
 
-### Valor
+### vawow
 
-string
+stwing
 
-### Posibles efectos sobre los agentes de usuario y la tecnología de asistencia
+### p-posibwes efectos sobwe wos agentes de usuawio y wa tecnowogía de asistencia
 
-> [!NOTE]
-> Las opiniones pueden diferir en cómo la tecnología asistencial debe manejar esta técnica. La información proporcionada más arriba es una de esas opiniones y por lo tanto no normativa.
+> [!note]
+> w-was opiniones pueden d-difewiw en cómo w-wa tecnowogía a-asistenciaw debe m-manejaw esta técnica. wa infowmación pwopowcionada m-más awwiba es una de esas opiniones y pow w-wo tanto nyo nyowmativa. >w<
 
-## Ejemplos
+## ejempwos
 
-#### Ejemplo 1: Varias etiquetas
+#### ejempwo 1: vawias etiquetas
 
-En el siguiente ejemplo se aplica estilo a un botón para que parezca un típico botón "cerrar", con una X en medio. Al no haber nada que indique que el propósito del botón es cerrar el diálogo, se usa el atributo `aria-label` para proporcionar una etiqueta a cualquier tecnología de asistencia.
+en ew siguiente ejempwo s-se apwica estiwo a un botón pawa q-que pawezca u-un típico botón "cewwaw", nyaa~~ c-con una x en medio. (✿oωo) aw no habew nyada que indique que e-ew pwopósito d-dew botón es cewwaw ew diáwogo, ʘwʘ s-se usa ew atwibuto `awia-wabew` p-pawa pwopowcionaw una etiqueta a-a cuawquiew tecnowogía de asistencia. (ˆ ﻌ ˆ)♡
 
 ```
-<button aria-label="Close" onclick="myDialog.close()">X</button>
+<button a-awia-wabew="cwose" oncwick="mydiawog.cwose()">x</button>
 ```
 
-### Notas
+### nyotas
 
-- La API de accesibilidad más común para mapear una etiqueta es la propiedad accessible name.
-- Los atributos, incluyedo las declaraciones `aria-label`, son ignoradas por la mayoría de servicios de traducción
+- w-wa api de accesibiwidad más común p-pawa mapeaw una etiqueta es w-wa pwopiedad accessibwe n-nyame. 😳😳😳
+- wos atwibutos, :3 incwuyedo was decwawaciones `awia-wabew`, OwO son ignowadas pow wa mayowía de sewvicios de twaducción
 
-### Used by ARIA roles
+### u-used by a-awia wowes
 
-Todos los elementos del DOM
+todos wos ewementos d-dew dom
 
-### Técnicas ARIA relacionadas
+### técnicas a-awia wewacionadas
 
-- [Usando el atributo aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [usando e-ew atwibuto awia-wabewwedby](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby)
 
-### Compatibilidad
+### compatibiwidad
 
-Pendiente: añadir información de soporte para combinaciones de producto comunes a UA y AT.
+pendiente: añadiw i-infowmación de sopowte pawa combinaciones de pwoducto comunes a ua y at. (U ﹏ U)
 
-### Recursos adicionales
+### w-wecuwsos adicionawes
 
-- [Especificación WAI-ARIA para aria-label](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)
+- [especificación wai-awia pawa awia-wabew](https://www.w3.owg/tw/wcag20-techs/awia14.htmw)

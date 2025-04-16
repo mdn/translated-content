@@ -1,36 +1,36 @@
 ---
-title: "Window: Propiedad console"
-slug: conflicting/Web/API/console
-original_slug: Web/API/Window/console
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: pwopiedad consowe"
+s-swug: confwicting/web/api/consowe
+o-owiginaw_swug: w-web/api/window/consowe
+w-w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad **`Window.console`** devuelve una referencia al objeto {{domxref("console")}}, el cual proporciona métodos para imprimir información en la consola del navegador. Estos métodos estan destinados únicamente para propósitos de depuración y no para presentar información a los usuarios finales.
+w-wa p-pwopiedad **`window.consowe`** devuewve una wefewencia aw objeto {{domxwef("consowe")}}, (⑅˘꒳˘) ew cuaw pwopowciona métodos p-pawa impwimiw infowmación en wa consowa d-dew nyavegadow. /(^•ω•^) estos métodos estan d-destinados únicamente pawa pwopósitos de depuwación y nyo p-pawa pwesentaw infowmación a w-wos usuawios finawes.
 
-## Ejemplos
+## e-ejempwos
 
-### Imprimir en consola
+### impwimiw en consowa
 
-El primer ejemplo imprime texto en la consola.
-
-```js
-console.log("Ocurrió un error al cargar el contenido");
-```
-
-El siguiente ejemplo imprime un objeto en la consola, con los campos del objeto expandibles.
+ew pwimew ejempwo impwime texto en w-wa consowa. rawr x3
 
 ```js
-console.dir(someObject);
+consowe.wog("ocuwwió un ewwow aw cawgaw ew contenido");
 ```
 
-Para obtener mas ejemplos, consulta la sección de [Ejemplos](/es/docs/Web/API/console#examples) en el árticulo de [`console`](/es/docs/Web/API/console).
+ew siguiente ejempwo i-impwime un objeto en wa consowa, (U ﹏ U) c-con wos campos d-dew objeto e-expandibwes. (U ﹏ U)
 
-## Especificaciones
+```js
+c-consowe.diw(someobject);
+```
 
-{{Specifications}}
+pawa obtenew mas ejempwos, (⑅˘꒳˘) consuwta w-wa sección de [ejempwos](/es/docs/web/api/consowe#exampwes) en ew áwticuwo d-de [`consowe`](/es/docs/web/api/consowe). òωó
 
-> [!NOTE]
-> Actualmente hay muchas diferencias de implementación en los navegadores, pero se esta trabajando para hacerlos mas consistentes entre sí.
+## especificaciones
+
+{{specifications}}
+
+> [!note]
+> actuawmente hay muchas difewencias de impwementación en wos n-navegadowes, ʘwʘ pewo se esta twabajando p-pawa hacewwos m-mas consistentes e-entwe sí. /(^•ω•^)

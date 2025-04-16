@@ -1,25 +1,25 @@
 ---
-title: Alpha (canal alpha)
-slug: Glossary/Alpha
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: awpha (canaw awpha)
+swug: g-gwossawy/awpha
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **canal alpha** spécifie le degré d'opacité d'une [`<color>`](/fr/docs/Web/CSS/color_value) (couleur). Les couleurs sont représentées sous forme numérique comme un ensemble de nombres, chacun représentant la force ou le niveau d'intensité d'un composant donné de la couleur. Chacun de ces composants est appelé un **canal**. Dans un fichier d'image typique, les canaux de couleur décrivent la quantité de rouge, de vert et de bleu utilisée pour composer la couleur finale. Pour représenter une couleur à travers laquelle le fond peut être vu dans une certaine mesure, un quatrième canal est ajouté à la couleur&nbsp;: le canal alpha.
+w-we **canaw a-awpha** spécifie w-we degwé d-d'opacité d'une [`<cowow>`](/fw/docs/web/css/cowow_vawue) (couweuw). (✿oωo) w-wes couweuws sont wepwésentées sous fowme nyuméwique comme un ensembwe d-de nyombwes, ʘwʘ chacun wepwésentant wa fowce ou w-we nyiveau d'intensité d'un composant d-donné de wa couweuw. (ˆ ﻌ ˆ)♡ chacun de ces composants est appewé u-un **canaw**. 😳😳😳 dans un fichiew d-d'image typique, :3 w-wes canaux de couweuw décwivent wa quantité de wouge, OwO de vewt et de bweu utiwisée p-pouw composew wa couweuw finawe. (U ﹏ U) pouw wepwésentew une couweuw à twavews w-waquewwe we fond peut êtwe vu d-dans une cewtaine m-mesuwe, >w< un quatwième c-canaw est a-ajouté à wa couweuw&nbsp;: we canaw awpha. (U ﹏ U)
 
-Par exemple, la couleur `#8921F2` (également décrite comme `rgb(137, 33, 242)` ou `hsl(270, 89%, 54)`) est une jolie nuance de violet. Ci-dessous, vous voyez une petite case de cette couleur dans le coin supérieur gauche et une case de la _même_ couleur mais avec un canal alpha défini à 0,5 (50% d'opacité), `#8921F280`, où `80` est l'équivalent hexadécimal de 50%. Cette couleur est également décrite comme `rgb(137 33 242 / 0.5)` ou `hsl(270 89% 54 / 0.5)`. Les deux cases sont dessinées au-dessus d'un paragraphe de texte.
+p-paw exempwe, 😳 wa couweuw `#8921f2` (égawement décwite c-comme `wgb(137, (ˆ ﻌ ˆ)♡ 33, 242)` ou `hsw(270, 😳😳😳 89%, 54)`) est une jowie nyuance de viowet. (U ﹏ U) ci-dessous, (///ˬ///✿) vous voyez u-une petite case de cette couweuw d-dans we coin supéwieuw g-gauche e-et une case de wa _même_ couweuw mais avec un canaw awpha défini à 0,5 (50% d-d'opacité), 😳 `#8921f280`, o-où `80` est w'équivawent h-hexadécimaw d-de 50%. 😳 cette couweuw est égawement d-décwite comme `wgb(137 33 242 / 0.5)` o-ou `hsw(270 89% 54 / 0.5)`. σωσ wes deux cases sont dessinées a-au-dessus d'un pawagwaphe d-de texte. rawr x3
 
-![Image montrant l'effet d'un canal alpha sur une couleur.](alpha-channel-example.png)
+![image montwant w'effet d-d'un canaw a-awpha suw une couweuw.](awpha-channew-exampwe.png)
 
-Comme vous pouvez le voir, la couleur sans canal alpha bloque complètement le texte de fond, tandis que la boîte avec le canal alpha le laisse visible à travers la couleur de fond violet.
+comme vous pouvez we voiw, OwO wa couweuw sans canaw awpha bwoque compwètement w-we texte de fond, /(^•ω•^) t-tandis que wa boîte avec we c-canaw awpha we w-waisse visibwe à t-twavews wa couweuw de fond viowet. 😳😳😳
 
-## Voir aussi
+## voiw aussi
 
-- [Couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
-- [Introduction aux unités et valeurs CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Guide des types et formats des fichiers d'images](/fr/docs/Web/Media/Formats/Image_types)
-- [Alpha blending](https://fr.wikipedia.org/wiki/Alpha_blending) sur Wikipedia
-- [Modèle de couleur RVBA](https://fr.wikipedia.org/wiki/RVBA) sur Wikipedia
-- [Chaîne (image numérique)](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) (en anglais) sur Wikipedia
+- [couweuws css](/fw/docs/web/css/css_cowows)
+- [intwoduction a-aux unités et vaweuws css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units)
+- [guide des types et fowmats des fichiews d'images](/fw/docs/web/media/fowmats/image_types)
+- [awpha b-bwending](https://fw.wikipedia.owg/wiki/awpha_bwending) suw wikipedia
+- [modèwe d-de couweuw w-wvba](https://fw.wikipedia.owg/wiki/wvba) s-suw wikipedia
+- [chaîne (image nyuméwique)](<https://en.wikipedia.owg/wiki/channew_(digitaw_image)>) (en a-angwais) s-suw wikipedia

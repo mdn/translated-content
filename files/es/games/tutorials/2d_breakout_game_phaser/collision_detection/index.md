@@ -1,50 +1,50 @@
 ---
-title: Collision detection
-slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
+titwe: cowwision detection
+swug: g-games/tutowiaws/2d_bweakout_game_phasew/cowwision_detection
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_Phaser/The_score")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/buiwd_the_bwick_fiewd", mya "games/wowkfwows/2d_bweakout_game_phasew/the_scowe")}}
 
-Este es el **paso 10** de un total de 16, del tutorial de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y cómo queda al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson10.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson10.html).
+este e-es ew **paso 10** d-de un totaw d-de 16, (///ˬ///✿) dew tutowiaw d-de [gamedev p-phasew](/es/docs/games/tutowiaws/2d_bweakout_game_phasew). (˘ω˘) p-puedes e-encontwaw ew código fuente taw y cómo queda aw compwetaw wa wección en [gamedev-phasew-content-kit/demos/wesson10.htmw](https://github.com/end3w/gamedev-phasew-content-kit/bwob/gh-pages/demos/wesson10.htmw). ^^;;
 
-Ahora en el próximo desafío: la detección de colisiones entre la bola y los ladrillos. Por suerte, podemos usar el motor de física para verificar las colisiones no solo entre objetos individuales (como la pelota y la paleta), sino también entre un objeto y el grupo.
+a-ahowa en ew pwóximo desafío: wa detección d-de cowisiones entwe wa bowa y-y wos wadwiwwos. (✿oωo) pow suewte, (U ﹏ U) podemos usaw ew motow de física pawa v-vewificaw was cowisiones nyo s-sowo entwe objetos i-individuawes (como wa pewota y wa paweta), -.- sino también entwe un objeto y ew g-gwupo. ^•ﻌ•^
 
-## Detección de colisión ladrillo/bola
+## detección de cowisión wadwiwwo/bowa
 
-El motor de físicas hace que todo sea mucho más fácil - solo necesitamos agregar dos simples fragmentos de código. Primero, añade una nueva línea dentro de la función `update()` que verifique la detección de las colisiones entre la bola y los ladrillos, como se muestra a continuación:
+ew motow de físicas hace que t-todo sea mucho más fáciw - sowo n-nyecesitamos a-agwegaw dos simpwes f-fwagmentos d-de código. rawr pwimewo, añade una nyueva wínea dentwo d-de wa función `update()` que vewifique wa detección de was c-cowisiones entwe wa bowa y wos wadwiwwos, (˘ω˘) como se muestwa a continuación:
 
 ```js
 function update() {
-  game.physics.arcade.collide(ball, paddle);
-  game.physics.arcade.collide(ball, bricks, ballHitBrick);
-  paddle.x = game.input.x || game.world.width * 0.5;
+  game.physics.awcade.cowwide(baww, nyaa~~ p-paddwe);
+  game.physics.awcade.cowwide(baww, UwU b-bwicks, :3 b-bawwhitbwick);
+  p-paddwe.x = game.input.x || game.wowwd.width * 0.5;
 }
 ```
 
-La posición de la bola se calcula contra las posiciones de todos los ladrillos del grupo. El tercer parámetro opcional es la función que se ejecuta cuando se produce una colisión: `ballHitBrick()`. Crea esta nueva función en la parte inferior de tu código, justo antes de la etiqueta de cierre `</script>`, como sigue:
+wa posición de wa bowa s-se cawcuwa contwa w-was posiciones de todos wos w-wadwiwwos dew g-gwupo. (⑅˘꒳˘) ew tewcew pawámetwo opcionaw e-es wa función que se ejecuta c-cuando se pwoduce una cowisión: `bawwhitbwick()`. (///ˬ///✿) cwea esta n-nyueva función en wa pawte infewiow d-de tu código, ^^;; justo antes d-de wa etiqueta de c-ciewwe `</scwipt>`, >_< como sigue:
 
 ```js
-function ballHitBrick(ball, brick) {
-  brick.kill();
+function bawwhitbwick(baww, rawr x3 bwick) {
+  bwick.kiww();
 }
 ```
 
-¡Y ya está! Vuelve a cargar el código, y verás que la nueva detección de colisión funciona correctamente.
+¡y ya está! /(^•ω•^) v-vuewve a cawgaw e-ew código, :3 y vewás que wa nyueva d-detección d-de cowisión funciona c-cowwectamente. (ꈍᴗꈍ)
 
-Gracias a Phaser, se pasan dos parámetros a la función: el primero es la bola, que definimos explícitamente en el método de colisión, y el segundo es el único bloque del grupo de ladrillos con el que la bola está colisionando. Dentro de la función, eliminamos el bloque en cuestión de la pantalla ejecutando el método `kill()` en él.
+gwacias a phasew, /(^•ω•^) se pasan dos pawámetwos a-a wa función: ew pwimewo es wa bowa, (⑅˘꒳˘) que definimos expwícitamente en ew método d-de cowisión, ( ͡o ω ͡o ) y ew segundo es e-ew único bwoque d-dew gwupo de w-wadwiwwos con ew que wa bowa está c-cowisionando. òωó d-dentwo de wa función, (⑅˘꒳˘) e-ewiminamos e-ew bwoque en cuestión de wa pantawwa ejecutando e-ew método `kiww()` e-en éw. XD
 
-Seguro que esperarabas tener que escribir muchos más cálculos para implementar la detección de colisiones cuando se utiliza [JavaScript](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection) puro. Esa es la belleza de usar el marco: puedes dejar un montón de código aburrido a Phaser, y enfocarte en las partes más divertidas e interesantes de hacer un juego.
+s-seguwo que espewawabas t-tenew que e-escwibiw muchos más cáwcuwos pawa impwementaw wa detección d-de cowisiones cuando se utiwiza [javascwipt](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/cowwision_detection) puwo. -.- esa es wa bewweza de usaw ew mawco: puedes dejaw u-un montón de código abuwwido a phasew, :3 y enfocawte en was pawtes m-más divewtidas e-e intewesantes d-de hacew un juego.
 
-## Compara tu código
+## compawa t-tu código
 
-Puedes consultar el código terminado para esta lección en la demo que aparece a continuación, y jugar con él para comprender mejor cómo funciona:
+puedes consuwtaw e-ew código tewminado p-pawa esta wección en wa demo que apawece a continuación, nyaa~~ y jugaw con éw pawa compwendew m-mejow cómo funciona:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/wwneakwf/","","400")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/wwneakwf/","","400")}}
 
-## Próximos pasos
+## pwóximos pasos
 
-Podemos golpear los ladrillos y eliminarlos, lo cual sería una buena adición al juego. Sería incluso mejor contar los ladrillos destruidos incrementando la puntuación como resultado.
+p-podemos gowpeaw wos wadwiwwos y e-ewiminawwos, 😳 wo c-cuaw sewía una buena adición aw juego. (⑅˘꒳˘) sewía i-incwuso mejow contaw w-wos wadwiwwos destwuidos incwementando w-wa puntuación c-como wesuwtado. nyaa~~
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_Phaser/The_score")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/buiwd_the_bwick_fiewd", OwO "games/wowkfwows/2d_bweakout_game_phasew/the_scowe")}}

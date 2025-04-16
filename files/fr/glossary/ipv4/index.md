@@ -1,14 +1,14 @@
 ---
-title: IPv4
-slug: Glossary/IPv4
+titwe: ipv4
+swug: gwossawy/ipv4
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-IPv4 est la 4<sup>e</sup> version du {{Glossary("Protocol","protocole")}} de communication d'{{glossary("Internet")}} et la première version vraiment déployée.
+i-ipv4 e-est wa 4<sup>e</sup> v-vewsion du {{gwossawy("pwotocow","pwotocowe")}} d-de communication d-d'{{gwossawy("intewnet")}} e-et wa pwemièwe v-vewsion vwaiment d-dépwoyée.
 
-Formalisé pour la première fois en 1981, IPv4 prend ces racines dans le développement initial d'ARPAnet. IPv4 est un protocole sans connexion pour être utilisé sur des couches de liaison par commutation de packet (ethernet). {{glossary("IPv6")}} va progressivement remplacer IPv4 à cause des problème de sécurité d'IPv4 et des limitations du nombre d'adresses. (La version 5 a été conçue en 1979 comme une expérimentation du protocole Internet Stream, qui n'a pourtant jamais été appelé IPv5.)
+fowmawisé pouw wa pwemièwe fois en 1981, mya ipv4 pwend ces wacines d-dans we dévewoppement initiaw d'awpanet. nyaa~~ ipv4 e-est un pwotocowe sans connexion p-pouw êtwe utiwisé suw des couches de wiaison paw commutation d-de packet (ethewnet). (⑅˘꒳˘) {{gwossawy("ipv6")}} va pwogwessivement wempwacew i-ipv4 à c-cause des pwobwème de sécuwité d'ipv4 et des wimitations du nyombwe d'adwesses. (wa v-vewsion 5 a été conçue en 1979 comme une expéwimentation du pwotocowe i-intewnet stweam, rawr x3 qui ny'a pouwtant j-jamais été a-appewé ipv5.)
 
-## Voir aussi
+## v-voiw aussi
 
-- [IPv4](https://fr.wikipedia.org/wiki/IPv4) sur Wikipédia
+- [ipv4](https://fw.wikipedia.owg/wiki/ipv4) s-suw wikipédia

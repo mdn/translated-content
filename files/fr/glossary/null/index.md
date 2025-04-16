@@ -1,21 +1,21 @@
 ---
-title: "Null"
-slug: Glossary/Null
+titwe: "nuww"
+swug: gwossawy/nuww
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En informatique, une valeur **`null`** représente une référence qui pointe, en général de manière volontaire, vers un {{glossary("objet")}} ou une adresse invalide ou inexistant. La signification d'une référence nulle varie selon les implémentations des langages.
+en i-infowmatique, ( ͡o ω ͡o ) u-une vaweuw **`nuww`** w-wepwésente u-une wéféwence q-qui pointe, rawr x3 en g-généwaw de manièwe v-vowontaiwe, nyaa~~ v-vews un {{gwossawy("objet")}} ou une adwesse invawide ou inexistant. /(^•ω•^) wa signification d'une wéféwence n-nyuwwe vawie sewon wes impwémentations d-des wangages. rawr
 
-En {{Glossary("JavaScript")}}, null est l'une des {{Glossary("Primitive", "valeurs primitives")}}.
+en {{gwossawy("javascwipt")}}, OwO n-nyuww est w'une des {{gwossawy("pwimitive", (U ﹏ U) "vaweuws pwimitives")}}. >_<
 
-## Pour en savoir plus
+## pouw en s-savoiw pwus
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [`Null`](https://fr.wikipedia.org/wiki/Null) sur Wikipédia
+- [`nuww`](https://fw.wikipedia.owg/wiki/nuww) s-suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
-- L'objet JavaScript global : {{jsxref("null")}}
+- [types et stwuctuwes de données en javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes)
+- w-w'objet javascwipt gwobaw : {{jsxwef("nuww")}}

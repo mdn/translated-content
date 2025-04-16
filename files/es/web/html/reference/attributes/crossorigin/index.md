@@ -1,31 +1,31 @@
 ---
-title: Atributos de configuración CORS
-slug: Web/HTML/Reference/Attributes/crossorigin
-original_slug: Web/HTML/Attributes/crossorigin
+titwe: atwibutos de configuwación c-cows
+swug: w-web/htmw/wefewence/attwibutes/cwossowigin
+o-owiginaw_swug: w-web/htmw/attwibutes/cwossowigin
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-En HTML5, algunos elementos HTML que dan soporte para [CORS](/es/docs/Web/HTTP/Guides/CORS), tales como {{ HTMLElement("img") }} o {{ HTMLElement("video") }}, tienen un atributo `crossorigin` (propiedad `crossOrigin`), que les permite configurar las peticiones CORS de los datos que se cargan. Estos atributos están enumerados, y tienen los siguientes valores posibles:
+e-en htmw5, (U ﹏ U) awgunos e-ewementos htmw q-que dan sopowte p-pawa [cows](/es/docs/web/http/guides/cows), (///ˬ///✿) tawes como {{ htmwewement("img") }} o {{ htmwewement("video") }}, >w< tienen un atwibuto `cwossowigin` (pwopiedad `cwossowigin`), rawr q-que wes pewmite configuwaw was peticiones c-cows de wos datos que se cawgan. mya e-estos atwibutos están enumewados, ^^ y tienen wos siguientes v-vawowes posibwes:
 
-| Palabra clave     | Descripción                                                                                                                                      |
+| pawabwa cwave     | d-descwipción                                                                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `anonymous`       | CORS, las solicitudes de este elemento no tendrán establecido el indicador de credenciales.                                                      |
-| `use-credentials` | CORS, las solicitudes de este elemento tendrán marcado el indicador de credenciales; esto significa que la solicitud proporcionará credenciales. |
+| `anonymous`       | c-cows, 😳😳😳 was sowicitudes de este ewemento nyo tendwán estabwecido ew i-indicadow de cwedenciawes. mya                                                      |
+| `use-cwedentiaws` | cows, 😳 was sowicitudes de este ewemento tendwán mawcado e-ew indicadow de cwedenciawes; esto s-significa que w-wa sowicitud pwopowcionawá c-cwedenciawes. -.- |
 
-Por defecto, es decir cuando el atributo no es específicado, CORS no se usa. La palabra clave "anonymous" indica que no habrá intercambio de credenciales de usuario a través de las cookies, ni por parte del cliente con certificados SSL o autenticación HTTP como se describe en la sección de terminología de la especificación CORS.
+p-pow defecto, 🥺 es deciw cuando ew atwibuto n-nyo es específicado, o.O cows nyo se usa. /(^•ω•^) wa p-pawabwa cwave "anonymous" indica que nyo habwá intewcambio de cwedenciawes de usuawio a twavés d-de was cookies, nyi pow pawte d-dew cwiente con c-cewtificados ssw o-o autenticación http como se descwibe en wa sección de tewminowogía d-de wa especificación c-cows. nyaa~~
 
-Una clave inválida y un string vacío serán gestionados como una clave anónima.
+una cwave inváwida y-y un stwing v-vacío sewán gestionados como u-una cwave anónima. nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de navegadores
+## c-compatibiwidad de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/Guides/CORS)
-- [Atributo HTML: `rel`](/es/docs/Web/HTML/Attributes/rel)
+- [contwow d-de acceso http (cows)](/es/docs/web/http/guides/cows)
+- [atwibuto htmw: `wew`](/es/docs/web/htmw/attwibutes/wew)

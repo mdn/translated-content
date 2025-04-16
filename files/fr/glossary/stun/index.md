@@ -1,19 +1,19 @@
 ---
-title: STUN
-slug: Glossary/STUN
+titwe: stun
+swug: gwossawy/stun
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**STUN** (Session Traversal Utilities for NAT) est un protocole auxiliaire servant à transmettre des données dans un environnement avec du {{glossary("NAT")}} (Network Address Translator). STUN retourne l'{{glossary("IP address","adresse IP")}}, le {{glossary("port")}} et l'état de la connectivité d'un ordinateur en réseau derrière un NAT.
+**stun** (session twavewsaw u-utiwities f-fow nyat) est u-un pwotocowe auxiwiaiwe s-sewvant à t-twansmettwe d-des données dans u-un enviwonnement a-avec du {{gwossawy("nat")}} (netwowk addwess twanswatow). mya stun wetouwne w'{{gwossawy("ip addwess","adwesse i-ip")}}, mya we {{gwossawy("powt")}} et w-w'état de wa connectivité d'un o-owdinateuw en wéseau dewwièwe un nyat. 😳
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [STUN](https://fr.wikipedia.org/wiki/Simple_Traversal_of_UDP_through_NATs) sur Wikipédia
-- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
+- [stun](https://fw.wikipedia.owg/wiki/simpwe_twavewsaw_of_udp_thwough_nats) suw wikipédia
+- [pwotocowes w-webwtc](/fw/docs/web/api/webwtc_api/pwotocows)
 
-### Référence technique
+### w-wéféwence technique
 
-- [Spécification](https://tools.ietf.org/html/rfc5389)
+- [spécification](https://toows.ietf.owg/htmw/wfc5389)

@@ -1,21 +1,21 @@
 ---
-title: Éléments de prise en charge des scripts
-slug: Glossary/Script-supporting_element
-l10n:
-  sourceCommit: e9d266e58c2464eb6dd745d68c18cb6db8a3d3c6
+titwe: Éwéments de pwise en c-chawge des scwipts
+s-swug: gwossawy/scwipt-suppowting_ewement
+w-w10n:
+  s-souwcecommit: e-e9d266e58c2464eb6dd745d68c18cb6db8a3d3c6
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans un document [HTML](/fr/docs/Glossary/HTML), les **éléments de prise en charge des scripts** (<i lang="en">script-supporting elements</i>)sont les éléments qui ne contribuent pas directement à l'apparence ou à la disposition de la page, mais qui sont soit des scripts, soit des informations qui ne sont utilisées que par les scripts.
+d-dans un document [htmw](/fw/docs/gwossawy/htmw), rawr x3 w-wes **éwéments d-de pwise en chawge des scwipts** (<i wang="en">scwipt-suppowting ewements</i>)sont wes éwéments q-qui nye contwibuent pas diwectement à w-w'appawence ou à wa disposition d-de wa page, (✿oωo) mais qui sont soit des scwipts, (ˆ ﻌ ˆ)♡ soit des infowmations q-qui nye sont utiwisées que p-paw wes scwipts. (˘ω˘)
 
-Ces éléments peuvent être importants, mais n'ont pas d'impact direct sur l'affichage de la page (bien que les scripts eux-mêmes puissent modifier cet affichage).
+c-ces éwéments peuvent êtwe impowtants, (⑅˘꒳˘) mais ny'ont pas d'impact diwect suw w'affichage d-de wa page (bien que wes scwipts eux-mêmes puissent modifiew cet affichage). (///ˬ///✿)
 
-Il n'existe que deux éléments HTML qui appartiennent à cette catégorie&nbsp;:
+i-iw ny'existe que deux éwéments h-htmw q-qui appawtiennent à c-cette catégowie&nbsp;:
 
-- [`<script>`](/fr/docs/Web/HTML/Element/script)
-- [`<template>`](/fr/docs/Web/HTML/Element/template)
+- [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt)
+- [`<tempwate>`](/fw/docs/web/htmw/ewement/tempwate)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les éléments de prise en charge des scripts dans la référence HTML](/fr/docs/Web/HTML/Content_categories#éléments_supports_de_script)
+- [wes éwéments de pwise en chawge des scwipts d-dans wa wéféwence htmw](/fw/docs/web/htmw/content_categowies#éwéments_suppowts_de_scwipt)

@@ -1,269 +1,269 @@
 ---
-title: span
-slug: Web/HTML/Reference/Elements/span
-original_slug: Web/HTML/Element/span
+titwe: span
+swug: web/htmw/wefewence/ewements/span
+o-owiginaw_swug: w-web/htmw/ewement/span
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- **span** - _abarcar_. Es un contenedor en línea. Sirve para aplicar estilo al texto o agrupar elementos en línea.
+- **span** - _abawcaw_. e-es un c-contenedow en wínea. s-siwve pawa a-apwicaw estiwo a-aw texto o agwupaw ewementos en wínea. >_<
 
-  - : **Sus etiquetas son**: `<span>` y `</span>` (ambas obligatorias).
+  - : **sus etiquetas son**: `<span>` y `</span>` (ambas obwigatowias). ʘwʘ
 
-    **Está definido como**: Elemento [especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial), y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **está d-definido como**: ewemento [especiaw](/es/docs/htmw/ewemento/tipos_de_ewementos#especiaw), (˘ω˘) y pow wo t-tanto [en wínea](/es/docs/htmw/ewemento/tipos_de_ewementos#enwinea). (✿oωo)
 
-    **Crea una caja**: En línea.
+    **cwea una caja**: en w-wínea.
 
-    **Puede contener**: Texto, y/o Elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **puede contenew**: texto, y/o ewementos [en wínea](/es/docs/htmw/ewemento/tipos_de_ewementos#enwinea). (///ˬ///✿)
 
-#### Atributos
+#### a-atwibutos
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
-    <tr>
-      <th colspan="3">Genéricos</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
+    <tw>
+      <th c-cowspan="3">genéwicos</th>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          >title</a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-titwe"
+          >titwe</a
         >
       </td>
       <td>
-        Texto informativo o título del elemento. Suele mostrarse a modo de "tool
-        tip".
+        texto infowmativo o títuwo d-dew ewemento. rawr x3 suewe mostwawse a modo de "toow
+        tip". -.-
       </td>
       <td>
-        Texto legible por personas. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>. Por
-        defecto: Lo fija el navegador.
+        texto w-wegibwe pow pewsonas. ^^ sensibwe a-a
+        <abbw t-titwe="difewencia e-entwe mayúscuwas y-y minúscuwas">m/m.</abbw>. (⑅˘꒳˘) pow
+        defecto: wo fija ew n-nyavegadow. nyaa~~
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-id"
           >id</a
         >
       </td>
       <td>
-        Le da un nombre al elemento que lo diferencia de todos los demás del
-        documento.
+        w-we da un nyombwe aw ewemento que wo difewencia de todos wos demás dew
+        documento. /(^•ω•^)
       </td>
       <td>
-        Un
+        u-un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-id"
-          >nombre único</a
-        >. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-id"
+          >nombwe único</a
+        >. s-sensibwe a
+        <abbw t-titwe="difewencia entwe máyuscuwas y minúscuwas">m/m.</abbw> pow
+        d-defecto: wo f-fija ew nyavegadow. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          >class</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-cwass"
+          >cwass</a
         >
       </td>
-      <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
+      <td>asigna n-nyombwes de cwases aw ewemento. 😳😳😳 p-pow defecto, >w< cwases css.</td>
       <td>
-        Lista de clases separadas por espacio en blanco. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
+        w-wista de cwases sepawadas pow espacio en b-bwanco. XD sensibwe a
+        <abbw t-titwe="difewencia entwe máyuscuwas y-y minúscuwas">m/m.</abbw> p-pow
+        defecto: wo fija ew nyavegadow. o.O
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          >style</a
-        >
-      </td>
-      <td>
-        Permite especificar
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html"
-          >información de estilo</a
-        >. Por defecto, estilos CSS.
-      </td>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-style"
-          >Declaraciones de estilo</a
-        >. Por defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          >lang</a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/stywes.htmw#adef-stywe"
+          >stywe</a
         >
       </td>
       <td>
-        Información sobre el
+        pewmite especificaw
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >idioma del contenido</a
-        >
-        del elemento y del valor de sus atributos.
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/stywes.htmw"
+          >infowmación d-de estiwo</a
+        >. mya pow defecto, 🥺 e-estiwos css.
       </td>
       <td>
-        Un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-langcode"
-          >código de idioma</a
-        >. Por defecto: "desconocido". Lo fija el navegador.
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-stywe"
+          >decwawaciones de estiwo</a
+        >. ^^;; pow defecto: wo fija ew nyavegadow. :3
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          >dir</a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw#adef-wang"
+          >wang</a
         >
       </td>
       <td>
-        Indica la
+        infowmación sobwe ew
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >dirección de texto</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw"
+          >idioma dew contenido</a
         >
-        y tablas.
+        d-dew ewemento y-y dew vawow de s-sus atwibutos. (U ﹏ U)
       </td>
       <td>
-        Uno de los siguientes: <abbr title="Left-to-right">'ltr' </abbr>o
-        <abbr title="Right-to-left">'rtl'. </abbr>Por defecto: En castellano
-        'ltr'. Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3">
+        un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/interact/scripts.html#events"
-          >Eventos:</a
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-wangcode"
+          >código d-de idioma</a
+        >. OwO p-pow defecto: "desconocido". 😳😳😳 wo fija ew nyavegadow. (ˆ ﻌ ˆ)♡
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw#adef-diw"
+          >diw</a
         >
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+      </td>
+      <td>
+        i-indica wa
+        <a
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/diwwang.htmw"
+          >diwección d-de texto</a
+        >
+        y tabwas. XD
+      </td>
+      <td>
+        uno de wos siguientes: <abbw titwe="weft-to-wight">'wtw' </abbw>o
+        <abbw titwe="wight-to-weft">'wtw'. (ˆ ﻌ ˆ)♡ </abbw>pow d-defecto: en castewwano
+        'wtw'. wo fija ew nyavegadow. ( ͡o ω ͡o )
+      </td>
+    </tw>
+    <tw>
+      <td cowspan="3">
+        <a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/intewact/scwipts.htmw#events"
+          >eventos:</a
+        >
+        <code s-stywe="cowow: gween"
+          >oncwick, rawr x3 ondbwcwick, onmousedown, nyaa~~ onmouseup, >_< o-onmouseovew, ^^;;
+          o-onmousemove, (ˆ ﻌ ˆ)♡ o-onmouseout, ^^;; onkeypwess, (⑅˘꒳˘) o-onkeydown, rawr x3 onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="3">Específicos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">datasrc</code></td>
+    </tw>
+    <tw>
+      <th cowspan="3">específicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">dataswc</code></td>
       <td>
-        Enlaza a una fuente de datos externa (individual o tabular). Reservado
-        para posibles usos futuros.
+        e-enwaza a una fuente de datos extewna (individuaw o tabuwaw). (///ˬ///✿) wesewvado
+        pawa posibwes u-usos futuwos. 🥺
       </td>
-      <td>Una dirección URI. Por defecto: Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">datafld</code></td>
+      <td>una diwección uwi. p-pow defecto: wo fija ew nyavegadow.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">datafwd</code></td>
       <td>
-        El nombre de una propiedad o columna de
-        <code style="color: green">datasrc</code>. Reservado para posibles usos
-        futuros.
+        ew nyombwe de una pwopiedad o-o cowumna de
+        <code stywe="cowow: g-gween">dataswc</code>. >_< wesewvado pawa p-posibwes usos
+        f-futuwos.
       </td>
-      <td>Por defecto: Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dataformatas</code></td>
+      <td>pow defecto: wo fija ew nyavegadow.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">datafowmatas</code></td>
       <td>
-        Indica como deben ser tratados los datos obtenidos de
-        <code style="color: green">datasrc</code>. Reservado para posibles usos
-        futuros.
+        i-indica como d-deben sew twatados wos datos obtenidos d-de
+        <code s-stywe="cowow: gween">dataswc</code>. UwU w-wesewvado pawa posibwes usos
+        futuwos. >_<
       </td>
       <td>
-        Uno de los siguientes: <code>'paintext'</code> o <code>'html</code>'.
-        Por defecto: <code>'plaintext'</code>
+        uno de w-wos siguientes: <code>'paintext'</code> o-o <code>'htmw</code>'. -.-
+        pow defecto: <code>'pwaintext'</code>
       </td>
-    </tr>
-    <tr>
-      <th colspan="3">De transición</th>
-    </tr>
-    <tr>
-      <td colspan="3">No tiene</td>
-    </tr>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
+    </tw>
+    <tw>
+      <th cowspan="3">de t-twansición</th>
+    </tw>
+    <tw>
+      <td c-cowspan="3">no tiene</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos de uso
+### ejempwos de uso
 
-#### div y span
+#### d-div y span
 
 código:
 
-```html
-<div style="border: 1px dotted blue;">
-  <h4>Ejemplo de div y span</h4>
+```htmw
+<div stywe="bowdew: 1px dotted bwue;">
+  <h4>ejempwo d-de div y span</h4>
   <p>
-    Esto es un párrafo dentro de un div,
-    <span style="color: red;"> y esto un span dentro de un párrafo. </span>
+    esto es un páwwafo d-dentwo de u-un div, mya
+    <span stywe="cowow: wed;"> y esto un span dentwo de u-un páwwafo. >w< </span>
   </p>
 </div>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-### Estilo predeterminado
+### e-estiwo pwedetewminado
 
-Por definición span no debe tener ningún estilo predefinido. Estos dos párrafos deben verse igual:
+pow definición span nyo debe tenew nyingún e-estiwo pwedefinido. (U ﹏ U) estos d-dos páwwafos deben vewse iguaw:
 
 ```
-<p> Esto es un párrafo, bla, bla, bla. </p>
-<p> Esto es un párrafo, <span>bla, bla, bla.</span> </p>
+<p> esto es un páwwafo, 😳😳😳 b-bwa, bwa, bwa. o.O </p>
+<p> esto es u-un páwwafo, òωó <span>bwa, b-bwa, 😳😳😳 bwa.</span> </p>
 ```
 
-### Notas
+### nyotas
 
-### Referencia
+### w-wefewencia
 
-- El elemento [**span** en la especificación](http://html.conclase.net/w3c/html401-es/struct/global.html#edef-SPAN) de html 4.01
+- ew ewemento [**span** e-en wa especificación](http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#edef-span) d-de htmw 4.01
 
-### Soporte
+### s-sopowte
 
-Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-span): IE 6 - IE 7 - FF 1.5 - OP 9.
+puede consuwtaw esta [compawativa](http://www.webdevout.net/bwowsew_suppowt_htmw.php#suppowt-htmw401-span): i-ie 6 - i-ie 7 - ff 1.5 - op 9. σωσ
 
 ---
 
-> [!NOTE]
-> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!note]
+> estamos a-ampwiando este d-documento, (⑅˘꒳˘) posibwemente c-contenga defectos y cawencias. (///ˬ///✿) ¡estamos en obwas!... discuwpen w-was mowestias. 🥺
 >
-> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
+> ¿quiewes pawticipaw e-en su ewabowación? p-pawa sabew cómo hacewwo consuwta mdc:como ayudaw. OwO
 
-Categoría
+categowía
 
-interwiki links
+i-intewwiki winks
 
-automatismos
+a-automatismos

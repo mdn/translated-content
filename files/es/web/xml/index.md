@@ -1,12 +1,12 @@
 ---
-title: "XML: Lenguaje de marcado extensible"
-slug: Web/XML
-l10n:
-  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
+titwe: "xmw: wenguaje de mawcado e-extensibwe"
+s-swug: web/xmw
+w10n:
+  s-souwcecommit: b-b6f343538eac4a803943b4e99b0c0545b372645a
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/XML")}}
+{{quickwinkswithsubpages("/es/docs/web/xmw")}}
 
-**Extensible Markup Language** es una serialización estricta del [Modelo de Objetos del Documento](/es/docs/Web/API/Document_Object_Model) (DOM, por sus siglas en inglés).
+**extensibwe mawkup w-wanguage** e-es una sewiawización e-estwicta d-dew [modewo de objetos dew documento](/es/docs/web/api/document_object_modew) (dom, rawr x3 pow sus sigwas en ingwés).
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

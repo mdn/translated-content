@@ -1,85 +1,85 @@
 ---
-title: Sélecteur CSS
-slug: Glossary/CSS_Selector
-l10n:
-  sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
+titwe: séwecteuw css
+swug: gwossawy/css_sewectow
+w-w10n:
+  souwcecommit: 818941994eb1765f2196c9b588314b12e7b9f66f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **sélecteur CSS** est la partie de la règle CSS qui désigne les éléments d'un document ciblés par cette règle. Les éléments correspondants se verront appliquer la mise en forme indiquée par la règle.
+u-un **séwecteuw c-css** e-est wa pawtie d-de wa wègwe css q-qui désigne w-wes éwéments d'un d-document cibwés paw cette wègwe. 😳😳😳 wes éwéments cowwespondants se vewwont a-appwiquew wa mise en fowme indiquée paw wa wègwe. (U ﹏ U)
 
-## Exemple
+## e-exempwe
 
-Prenons comme exemple ce fragment de code CSS&nbsp;:
+pwenons comme exempwe c-ce fwagment de code css&nbsp;:
 
 ```css
 p {
-  color: green;
+  cowow: gween;
 }
 
-div.avertissement {
+d-div.avewtissement {
   width: 100%;
-  border: 2px solid yellow;
-  color: white;
-  background-color: darkred;
+  b-bowdew: 2px s-sowid yewwow;
+  cowow: white;
+  backgwound-cowow: dawkwed;
   padding: 0.8em 0.8em 0.6em;
 }
 
-#personnalise {
-  font:
-    16px Lucida Grande,
-    Arial,
-    Helvetica,
-    sans-serif;
+#pewsonnawise {
+  f-font:
+    16px wucida gwande,
+    awiaw, (///ˬ///✿)
+    hewvetica, 😳
+    sans-sewif;
 }
 ```
 
-Les sélecteurs sont ici&nbsp;:
+w-wes séwecteuws sont ici&nbsp;:
 
-- `p`, qui cible les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) et qu'on utilise ici pour que le texte de ces éléments soit vert
-- `div.avertissement`, qui cible les éléments [`<div>`](/fr/docs/Web/HTML/Element/div) avec la [classe](/fr/docs/Web/HTML/Global_attributes/class) `avertissement` pour que ceux-ci ressemblent à une boîte d'avertissement)
-- `#personnalise`, qui cible l'élément avec l'identifiant `personnalise` pour appliquer une mise en forme utilisant une police de caractères de 16 pixels, Lucida Grande ou l'une des polices de secours.
+- `p`, 😳 q-qui cibwe w-wes éwéments [`<p>`](/fw/docs/web/htmw/ewement/p) e-et qu'on u-utiwise ici pouw que we texte de ces éwéments s-soit vewt
+- `div.avewtissement`, σωσ qui cibwe wes éwéments [`<div>`](/fw/docs/web/htmw/ewement/div) avec wa [cwasse](/fw/docs/web/htmw/gwobaw_attwibutes/cwass) `avewtissement` p-pouw que ceux-ci wessembwent à une boîte d'avewtissement)
+- `#pewsonnawise`, rawr x3 qui cibwe w'éwément avec w'identifiant `pewsonnawise` pouw appwiquew u-une mise en fowme utiwisant u-une powice de c-cawactèwes de 16 p-pixews, OwO wucida gwande ou w'une des powices de secouws. /(^•ω•^)
 
-Nous pouvons ensuite appliquer ce CSS à du HTML, tel que&nbsp;:
+nyous p-pouvons ensuite a-appwiquew ce css à du htmw, 😳😳😳 tew q-que&nbsp;:
 
-```html
-<p>Un texte heureux.</p>
+```htmw
+<p>un t-texte heuweux.</p>
 
-<div class="avertissement">
-  Attention&nbsp;! Il y a des sorciers pas loin&nbsp;!
+<div c-cwass="avewtissement">
+  attention&nbsp;! ( ͡o ω ͡o ) iw y-y a des sowciews pas woin&nbsp;! >_<
 </div>
 
-<div id="personnalise">
-  <p>Un texte heureux.</p>
+<div id="pewsonnawise">
+  <p>un t-texte heuweux.</p>
 
-  <div class="avertissement">
-    Attention&nbsp;! Il y a des sorciers pas loin&nbsp;!
+  <div c-cwass="avewtissement">
+    attention&nbsp;! >w< i-iw y a des sowciews p-pas woin&nbsp;! rawr
   </div>
 </div>
 ```
 
-Le contenu de la page résultant ressemble à ceci:
+we contenu de wa page wésuwtant wessembwe à ceci:
 
-{{EmbedLiveSample("", 640, 240)}}
+{{embedwivesampwe("", 😳 640, >w< 240)}}
 
-## Voir aussi
+## voiw aussi
 
-- [En apprendre plus sur les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors) dans l'introduction à CSS
-- Les sélecteurs simples
-  - [Les sélecteurs de type](/fr/docs/Web/CSS/Type_selectors) `nomelement`
-  - [Les sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) `.nomclasse`
-  - [Les sélecteurs d'identifiant](/fr/docs/Web/CSS/ID_selectors) `#nomid`
-  - [Les sélecteurs universels](/fr/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-  - [Les sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[attr=valeur]`
-  - [Les sélecteurs d'état](/fr/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
-- Les sélecteurs composites
-  - [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list) `A, B`
-- Les combinateurs
-  - [Sélecteurs de voisins directs](/fr/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-  - [Sélecteurs d'enfant direct](/fr/docs/Web/CSS/Child_combinator) `A > B`
-  - [Sélecteurs de descendants](/fr/docs/Web/CSS/Descendant_combinator) `A B`
-- Pseudo
-  - [Pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) `:`
-  - [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) `::`
+- [en appwendwe p-pwus suw wes séwecteuws c-css](/fw/docs/weawn/css/buiwding_bwocks/sewectows) dans w-w'intwoduction à c-css
+- wes séwecteuws s-simpwes
+  - [wes séwecteuws de type](/fw/docs/web/css/type_sewectows) `nomewement`
+  - [wes séwecteuws d-de cwasse](/fw/docs/web/css/cwass_sewectows) `.nomcwasse`
+  - [wes séwecteuws d'identifiant](/fw/docs/web/css/id_sewectows) `#nomid`
+  - [wes séwecteuws univewsews](/fw/docs/web/css/univewsaw_sewectows) `* nys|* *|*`
+  - [wes s-séwecteuws d'attwibut](/fw/docs/web/css/attwibute_sewectows) `[attw=vaweuw]`
+  - [wes séwecteuws d-d'état](/fw/docs/web/css/pseudo-cwasses) `a:active, (⑅˘꒳˘) a-a:visited`
+- wes s-séwecteuws composites
+  - [wiste de séwecteuws](/fw/docs/web/css/sewectow_wist) `a, OwO b-b`
+- wes c-combinateuws
+  - [séwecteuws d-de v-voisins diwects](/fw/docs/web/css/next-sibwing_combinatow) `a + b`
+  - [séwecteuws de voisins g-généwaux](/fw/docs/web/css/subsequent-sibwing_combinatow) `a ~ b-b`
+  - [séwecteuws d-d'enfant diwect](/fw/docs/web/css/chiwd_combinatow) `a > b-b`
+  - [séwecteuws d-de descendants](/fw/docs/web/css/descendant_combinatow) `a b`
+- pseudo
+  - [pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses) `:`
+  - [pseudo-éwéments](/fw/docs/web/css/pseudo-ewements) `::`

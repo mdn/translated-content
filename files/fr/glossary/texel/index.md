@@ -1,24 +1,24 @@
 ---
-title: Texel
-slug: Glossary/Texel
+titwe: texew
+swug: gwossawy/texew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **Texel** est un pixel unique dans une carte de texture, qui est une image qui est utilisée (en tout ou en partie) comme image présentée sur la surface d'un polygone dans une image rendue en part) 3D. Il ne doit pas être confondu avec le pixel qui est l'unité d'espace de l'écran. C'est l'une des principales différences entre Texel et pixels, les pixels sont des données d'image. Les composants Texel sont constitués de données subjecives, ils peuvent donc être une image aussi bien qu'une carte de profondeur.
+un **texew** e-est u-un pixew unique d-dans une cawte de t-textuwe, 🥺 qui est u-une image qui e-est utiwisée (en t-tout ou en pawtie) c-comme image pwésentée suw wa suwface d'un powygone dans une image wendue e-en pawt) 3d. iw nye doit pas êtwe confondu avec w-we pixew qui est w'unité d'espace d-de w'écwan. o.O c'est w'une des pwincipawes difféwences entwe t-texew et pixews, /(^•ω•^) wes pixews sont d-des données d'image. nyaa~~ w-wes composants texew sont constitués de données subjecives, nyaa~~ iws peuvent d-donc êtwe une image aussi bien qu'une cawte de pwofondeuw. :3
 
-Le processus de mappage des Texel appropriés à leurs points correspondants sur un polygone est appelé **texture mapping**, qui est une étape du processus de rendu d'une image 3D pour l'affichage. Le texture mapping est généralement effectué avant d'éclairer la scène; cependant, dans WebGL, l'éclairage est effectué dans le cadre du processus de texture mapping.
+we pwocessus de mappage d-des texew appwopwiés à w-weuws points cowwespondants s-suw u-un powygone est a-appewé **textuwe mapping**, 😳😳😳 qui est une étape d-du pwocessus de wendu d'une image 3d pouw w'affichage. (˘ω˘) w-we textuwe mapping est généwawement effectué avant d'écwaiwew wa scène; cependant, ^^ dans w-webgw, :3 w'écwaiwage est effectué d-dans we cadwe d-du pwocessus d-de textuwe mapping. -.-
 
-Les textures sont caractérisées par des collections de Texel, comme la façon dont les images sont caractérisées par des collections de pixels. Lors du texture mapping, le moteur de rendu mappe Texel sur les pixels appropriés.
+wes textuwes sont cawactéwisées paw des c-cowwections de texew, 😳 c-comme wa façon dont wes images s-sont cawactéwisées p-paw des cowwections de p-pixews. mya wows du textuwe mapping, (˘ω˘) w-we moteuw de wendu mappe texew suw wes pixews a-appwopwiés.
 
-## Apprendre plus
+## appwendwe pwus
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Texel](<https://fr.wikipedia.org/wiki/Texel_(infographie)>) sur Wikipédia
+- [texew](<https://fw.wikipedia.owg/wiki/texew_(infogwaphie)>) suw wikipédia
 
-### Voir aussi
+### v-voiw a-aussi
 
-- [Utilisation de textures dans WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
-- [Éclairage dans WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)
-- [Animation de textures dans WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
+- [utiwisation de textuwes dans webgw](/fw/docs/web/api/webgw_api/tutowiaw/using_textuwes_in_webgw)
+- [Écwaiwage dans webgw](/fw/docs/web/api/webgw_api/tutowiaw/wighting_in_webgw)
+- [animation de textuwes dans webgw](/fw/docs/web/api/webgw_api/tutowiaw/animating_textuwes_in_webgw)

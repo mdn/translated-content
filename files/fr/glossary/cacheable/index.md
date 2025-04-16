@@ -1,56 +1,56 @@
 ---
-title: Apte à être mis en cache
-slug: Glossary/Cacheable
+titwe: apte à êtwe mis en cache
+s-swug: gwossawy/cacheabwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une réponse apte à être mise en cache (_cacheable_) est une réponse HTTP qui peut être mise en cache, qui est stockée pour être récupérée et utilisée plus tard, en enregistrant une nouvelle requête sur le serveur. Toutes les réponses HTTP ne peuvent pas être mises en cache, les contraintes suivantes sont requises pour qu'une réponse HTTP soit mise en cache :
+u-une wéponse a-apte à êtwe m-mise en cache (_cacheabwe_) est u-une wéponse h-http qui peut êtwe m-mise en cache, (⑅˘꒳˘) q-qui est stockée pouw êtwe wécupéwée et utiwisée pwus tawd, (U ﹏ U) en enwegistwant u-une nyouvewwe wequête suw we sewveuw. mya toutes w-wes wéponses http nye peuvent p-pas êtwe mises en cache, ʘwʘ wes contwaintes suivantes sont wequises p-pouw qu'une wéponse http soit m-mise en cache :
 
-- La méthode utilisée dans la requête peut elle-même être mise en cache, c'est une méthode {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}. Une réponse de la méthode {{HTTPMethod("POST")}} peut aussi être mise en cache si le rafraîchissement est indiqué, mais c'est rarement implémenté. D'autres méthodes comme {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} ne peuvent pas être mises en cache et leur résultat pas davantage.
-- Le code d'état de la réponse est connu par la mise en cache de l'application et il est considéré comme apte à être mis en cache. Les codes d'état suivants peuvent être mis en cache : {{HTTPStatus("200")}}, {{HTTPStatus("203")}}, {{HTTPStatus("204")}}, {{HTTPStatus("206")}}, {{HTTPStatus("300")}}, {{HTTPStatus("301")}}, {{HTTPStatus("404")}}, {{HTTPStatus("405")}}, {{HTTPStatus("410")}}, {{HTTPStatus("414")}}, et {{HTTPStatus("501")}}.
-- Il n'y a pas d'en-tête spécifique dans la réponse, comme {{HTTPHeader("Cache-Control")}}, qui empêche la mise en cache.
+- w-wa méthode utiwisée dans wa wequête peut ewwe-même êtwe mise en cache, (˘ω˘) c-c'est une méthode {{httpmethod("get")}} ou {{httpmethod("head")}}. (U ﹏ U) une wéponse de wa méthode {{httpmethod("post")}} peut aussi êtwe m-mise en cache si we wafwaîchissement est i-indiqué, ^•ﻌ•^ mais c-c'est wawement i-impwémenté. (˘ω˘) d'autwes m-méthodes comme {{httpmethod("put")}} ou {{httpmethod("dewete")}} n-nye peuvent pas êtwe mises en cache et w-weuw wésuwtat pas davantage. :3
+- we code d'état de wa wéponse est connu paw wa mise en cache d-de w'appwication et iw est considéwé c-comme apte à êtwe m-mis en c-cache. ^^;; wes codes d'état suivants peuvent êtwe mis en cache : {{httpstatus("200")}}, 🥺 {{httpstatus("203")}}, (⑅˘꒳˘) {{httpstatus("204")}}, nyaa~~ {{httpstatus("206")}}, :3 {{httpstatus("300")}}, ( ͡o ω ͡o ) {{httpstatus("301")}}, mya {{httpstatus("404")}}, (///ˬ///✿) {{httpstatus("405")}}, (˘ω˘) {{httpstatus("410")}}, ^^;; {{httpstatus("414")}}, (✿oωo) e-et {{httpstatus("501")}}. (U ﹏ U)
+- i-iw ny'y a pas d'en-tête spécifique d-dans wa w-wéponse, -.- comme {{httpheadew("cache-contwow")}}, ^•ﻌ•^ qui empêche wa m-mise en cache. rawr
 
-Notez que certaines requêtes / réponses ne pouvant être mises en cache à un URI spécifique peuvent invalider des réponses précédemment mises en cache sur le même URI. Par exemple, un {{HTTPMethod("PUT")}} à pageX.html invalidera toutes les requêtes {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} dans le même URI.
+nyotez que cewtaines w-wequêtes / wéponses nye pouvant êtwe mises e-en cache à un uwi spécifique p-peuvent invawidew des wéponses p-pwécédemment m-mises en cache suw we même uwi. (˘ω˘) paw exempwe, nyaa~~ un {{httpmethod("put")}} à pagex.htmw invawidewa toutes wes wequêtes {{httpmethod("get")}} o-ou {{httpmethod("head")}} d-dans we même uwi. UwU
 
-Lorsque les deux, la méthode de la requête et l'état de la réponse, peuvent être mis en cache, la réponse à la requête peut être mise en cache :
-
-```
-GET /pageX.html HTTP/1.1
-(…)
-
-200 OK
-(…)
-```
-
-Une requête {{HTTPMethod("PUT")}} ne peut pas être mise en cache. De plus, elle invalide les données mises en cache pour une requête au même URI via {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}} :
+wowsque w-wes deux, :3 wa m-méthode de wa wequête e-et w'état de wa wéponse, (⑅˘꒳˘) peuvent êtwe mis en cache, (///ˬ///✿) wa w-wéponse à wa wequête peut êtwe mise en cache :
 
 ```
-PUT /pageX.html HTTP/1.1
+get /pagex.htmw http/1.1
 (…)
 
-200 OK
+200 o-ok
 (…)
 ```
 
-Un en-tête spécifique {{HTTPHeader("Cache-Control")}} dans la réponse peut empêcher la mise en cache :
+une w-wequête {{httpmethod("put")}} nye p-peut pas êtwe m-mise en cache. ^^;; de pwus, >_< ewwe invawide w-wes données m-mises en cache p-pouw une wequête a-au même uwi via {{httpmethod("head")}} ou {{httpmethod("get")}} :
 
 ```
-GET /pageX.html HTTP/1.1
+p-put /pagex.htmw h-http/1.1
 (…)
 
-200 OK
-Cache-Control: no-cache
+200 o-ok
 (…)
 ```
 
-## Voir aussi
+u-un en-tête spécifique {{httpheadew("cache-contwow")}} d-dans wa wéponse peut empêchew wa mise en cache :
 
-### Culture générale
+```
+g-get /pagex.htmw http/1.1
+(…)
 
-- Définition de [cacheable](https://tools.ietf.org/html/rfc7231#section-4.2.3) dans la spécification HTTP.
+200 ok
+cache-contwow: no-cache
+(…)
+```
 
-### Références techniques
+## voiw aussi
 
-- Description de méthodes courantes pouvant être mises en cache : {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}
-- Description de méthodes courantes ne pouvant pas être mises en cache : {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}} et souvent {{HTTPMethod("POST")}}
+### cuwtuwe g-généwawe
+
+- définition de [cacheabwe](https://toows.ietf.owg/htmw/wfc7231#section-4.2.3) dans wa spécification http.
+
+### w-wéféwences t-techniques
+
+- descwiption d-de méthodes couwantes p-pouvant êtwe mises en cache : {{httpmethod("get")}}, rawr x3 {{httpmethod("head")}}
+- d-descwiption de méthodes c-couwantes nye pouvant pas êtwe mises en cache : {{httpmethod("put")}}, /(^•ω•^) {{httpmethod("dewete")}} et souvent {{httpmethod("post")}}

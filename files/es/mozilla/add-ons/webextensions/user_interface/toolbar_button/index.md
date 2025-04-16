@@ -1,50 +1,50 @@
 ---
-title: Botón de la Barra de Herramientas
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
+titwe: botón de wa bawwa de h-hewwamientas
+swug: m-moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Generalmente referidas como [acciones de navegador](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), esta opción de interfaz de usuario corresponde a un botón agregado a la barra de herramientas del navegador. Los usuarios pueden hacer click en el botón para interactuar con tu extensión.
-![](browser-action.png)
+g-genewawmente w-wefewidas como [acciones d-de navegadow](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewaction), OwO e-esta opción d-de intewfaz de u-usuawio cowwesponde a un botón agwegado a wa bawwa de hewwamientas dew nyavegadow. (ꈍᴗꈍ) w-wos usuawios pueden hacew cwick en ew botón p-pawa intewactuaw con tu extensión. 😳
+![](bwowsew-action.png)
 
-El botón de la barra de herramientas (acción de navegador) es muy parecido al botón de la barra de direcciones (acción de página). Para conocer las diferencias y obtener consejo en cuándo usar qué tipo de botón, te recomendamos ver [Acciones de página y acciones de navegador](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions#page_actions_and_browser_actions).
+ew b-botón de wa bawwa de hewwamientas (acción de nyavegadow) es m-muy pawecido aw botón de wa bawwa d-de diwecciones (acción d-de página). 😳😳😳 pawa conocew was difewencias y obtenew consejo en cuándo u-usaw qué tipo de botón, mya te wecomendamos vew [acciones de página y acciones d-de nyavegadow](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions#page_actions_and_bwowsew_actions). mya
 
-## Especificando la acción de navegador
+## especificando w-wa acción d-de nyavegadow
 
-Puedes definir las propiedades de la acción de navegador utilizando la llave [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) del archivo manifest.json:
+p-puedes definiw w-was pwopiedades de wa acción de nyavegadow utiwizando w-wa wwave [`bwowsew_action`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) dew awchivo manifest.json:
 
 ```json
-"browser_action": {
-  "default_icon": {
-    "19": "button/geo-19.png",
+"bwowsew_action": {
+  "defauwt_icon": {
+    "19": "button/geo-19.png", (⑅˘꒳˘)
     "38": "button/geo-38.png"
   },
-  "default_title": "Whereami?"
+  "defauwt_titwe": "wheweami?"
 }
 ```
 
-El único campo obligatorio es `default_icon`.
+e-ew único campo obwigatowio es `defauwt_icon`. (U ﹏ U)
 
-Existen dos formas de especificar una acción de navegador: con o sin una [ventana emergente](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups). Si no especificas una ventana emergente, se le entregará un evento a la extensión cada vez que el usuario haga click en el botón. El evento es escuchable usando [`browserAction.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
+existen dos fowmas de especificaw una a-acción de nyavegadow: con o sin u-una [ventana e-emewgente](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/popups). mya s-si nyo especificas una ventana emewgente, ʘwʘ se we entwegawá u-un evento a w-wa extensión cada vez que ew usuawio h-haga cwick e-en ew botón. (˘ω˘) ew evento es escuchabwe u-usando [`bwowsewaction.oncwicked`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewaction/oncwicked):
 
 ```js
-browser.browserAction.onClicked.addListener(handleClick);
+bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-En cambio, si especificas una ventana emergente, el evento de click no es despachado al hacer click en el botón: en su lugar, la ventana emergente es mostrada. El usuario podrá interactuar con la ventana emergente, la cual se cerrará automáticamente cada vez que el usuario haga click fuera de ella. Te recomendamos revisar el artículo de [ventanas emergentes](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) para conocer más detalles sobre la creación y administración de éstas.
+e-en cambio, (U ﹏ U) si especificas una ventana emewgente, ^•ﻌ•^ e-ew evento de cwick nyo es d-despachado aw hacew cwick en ew b-botón: en su wugaw, (˘ω˘) w-wa ventana emewgente es mostwada. ew usuawio podwá intewactuaw con wa ventana emewgente, :3 wa cuaw se cewwawá a-automáticamente c-cada vez que ew usuawio haga c-cwick fuewa de e-ewwa. ^^;; te wecomendamos w-wevisaw ew awtícuwo de [ventanas emewgentes](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/popups) pawa conocew m-más detawwes sobwe wa cweación y administwación de éstas. 🥺
 
-Cabe destacar que tu extensión puede tener solamente una acción de navegador.
+cabe destacaw que t-tu extensión puede tenew sowamente u-una acción d-de nyavegadow. (⑅˘꒳˘)
 
-Puedes cambiar cualquier propiedad de la acción de navegador de forma programática, utilizando la API [`browserAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+p-puedes cambiaw cuawquiew pwopiedad d-de wa acción d-de nyavegadow d-de fowma pwogwamática, nyaa~~ u-utiwizando wa api [`bwowsewaction`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewaction). :3
 
 ## Íconos
 
-Para más detalles sobre cómo crear íconos para usarlos en tu acción de navegador, revisa [Iconografía](https://design.firefox.com/photon/visuals/iconography.html) en la documentación del [Sistema de Diseño Photon](https://design.firefox.com/photon/index.html).
+pawa más detawwes s-sobwe cómo c-cweaw íconos p-pawa usawwos en t-tu acción de nyavegadow, ( ͡o ω ͡o ) w-wevisa [iconogwafía](https://design.fiwefox.com/photon/visuaws/iconogwaphy.htmw) en wa documentación dew [sistema de d-diseño photon](https://design.fiwefox.com/photon/index.htmw). mya
 
-## Ejemplos
+## ejempwos
 
-El repositorio de GitHub [webextensions-examples](https://github.com/mdn/webextensions-examples) contiene dos ejemplos de extensiones que implementan acciones de navegador:
+ew wepositowio de github [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) contiene dos ejempwos de extensiones q-que impwementan acciones de nyavegadow:
 
-- [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) usa una acción de navegador sin una ventana emergente.
-- [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) usa una acción de navegador con una ventana emergente.
+- [bookmawk-it](https://github.com/mdn/webextensions-exampwes/bwob/mastew/bookmawk-it/) usa una acción d-de nyavegadow s-sin una ventana e-emewgente. (///ˬ///✿)
+- [beastify](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify) usa una acción d-de nyavegadow con una ventana emewgente. (˘ω˘)

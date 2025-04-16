@@ -1,14 +1,14 @@
 ---
-title: Signature
-slug: Glossary/Signature
+titwe: signatuwe
+swug: gwossawy/signatuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le terme **signature** peut avoir plusieurs significations selon le contexte. Il peut s'agir de :
+w-we tewme **signatuwe** p-peut a-avoiw pwusieuws s-significations s-sewon we contexte. ( ͡o ω ͡o ) i-iw peut s'agiw d-de :
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Signature](<https://fr.wikipedia.org/wiki/Signature_(homonymie)>) sur Wikipédia
+- [signatuwe](<https://fw.wikipedia.owg/wiki/signatuwe_(homonymie)>) suw wikipédia

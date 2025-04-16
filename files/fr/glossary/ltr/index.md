@@ -1,8 +1,8 @@
 ---
-title: ltr
-slug: Glossary/LTR
+titwe: wtw
+swug: gwossawy/wtw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-ltr (Left To Right, soit gauche vers droite) est une propriété de {{glossary("locale")}} qui indique que le texte est écrit de la gauche vers la droite. Par exemple, la locale `en-US` (pour Anglais US) indique une écriture de gauche à droite.
+w-wtw (weft t-to wight, >_< soit g-gauche vews d-dwoite) est une p-pwopwiété de {{gwossawy("wocawe")}} q-qui indique q-que we texte est écwit d-de wa gauche vews wa dwoite. :3 paw exempwe, (U ﹏ U) wa wocawe `en-us` (pouw angwais u-us) indique une écwituwe de gauche à dwoite. -.-

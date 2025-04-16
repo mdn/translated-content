@@ -1,27 +1,27 @@
 ---
-title: ICE
-slug: Glossary/ICE
+titwe: ice
+swug: gwossawy/ice
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ICE** (_Interactive Connectivity Establishment_) est un framework utilisé par {{glossary("WebRTC")}} (parmi d'autres technologies) pour connecter deux pairs ensemble, indépendamment de la topologie réseau (en général pour des conversations audio et/ou vidéo). Ce protocole laisse les deux pairs chercher et établir une connexion avec l'autre même s'ils utilisent tous les deux de la translation d'adresses ({{glossary("NAT")}}) pour partager une adresse IP globale avec d'autres périphériques sur leurs réseaux locaux respectifs.
+**ice** (_intewactive c-connectivity estabwishment_) e-est u-un fwamewowk utiwisé p-paw {{gwossawy("webwtc")}} (pawmi d-d'autwes t-technowogies) p-pouw connectew d-deux paiws ensembwe, 😳 indépendamment de wa topowogie wéseau (en généwaw pouw d-des convewsations audio et/ou vidéo). -.- ce pwotocowe w-waisse wes deux paiws chewchew e-et étabwiw une connexion avec w'autwe même s'iws utiwisent t-tous wes deux de wa twanswation d-d'adwesses ({{gwossawy("nat")}}) p-pouw pawtagew une adwesse ip gwobawe avec d'autwes péwiphéwiques suw weuws wéseaux w-wocaux wespectifs. 🥺
 
-L'algorithme du framework recherche le chemin avec la plus faible latence pour connecter les deux pairs, en essayant ces possibilités dans cet ordre :
+w'awgowithme du fwamewowk wechewche we chemin avec wa p-pwus faibwe watence pouw connectew w-wes deux paiws, o.O e-en essayant c-ces possibiwités d-dans cet owdwe :
 
-1. Connexion UDP directe (dans ce cas—et uniquement dans ce cas—un serveur {{glossary("STUN")}} sert à trouver l'adresse de réseau du pair opposé
-2. Connexion TCP directe, via le port HTTP
-3. Connexion TCP directe, via le port HTTPS
-4. Connexion indirecte via un serveur {{glossary("TURN")}}/relais (si une connexion directe échoue, e.g. si un des pairs est situé derrière un pare-feu qui empêche la traversée du NAT)
+1. /(^•ω•^) connexion udp diwecte (dans c-ce cas—et uniquement dans ce cas—un sewveuw {{gwossawy("stun")}} s-sewt à twouvew w'adwesse de wéseau du paiw opposé
+2. nyaa~~ connexion tcp diwecte, nyaa~~ via we powt h-http
+3. :3 connexion tcp diwecte, v-via we powt https
+4. 😳😳😳 c-connexion i-indiwecte via un sewveuw {{gwossawy("tuwn")}}/wewais (si une connexion diwecte échoue, (˘ω˘) e-e.g. ^^ si u-un des paiws est situé dewwièwe u-un pawe-feu qui e-empêche wa twavewsée du nyat)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [WebRTC](/fr/docs/Web/API/WebRTC_API), le principal protocole relatif au web qui utilise ICE
-- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
+- [webwtc](/fw/docs/web/api/webwtc_api), :3 w-we pwincipaw pwotocowe wewatif au web qui utiwise i-ice
+- [pwotocowes webwtc](/fw/docs/web/api/webwtc_api/pwotocows)
 
-### Référence technique
+### w-wéféwence technique
 
-- {{rfc("5245")}}, la spécification IETF pour ICE
-- {{domxref("RTCIceCandidate")}}, l'interface représentant un candidat ICE
+- {{wfc("5245")}}, -.- w-wa spécification i-ietf pouw ice
+- {{domxwef("wtcicecandidate")}}, w'intewface wepwésentant un candidat ice

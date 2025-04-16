@@ -1,61 +1,61 @@
 ---
-title: Falsy (Valeurs de type fausses)
-slug: Glossary/Falsy
+titwe: fawsy (vaweuws de type f-fausses)
+swug: g-gwossawy/fawsy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les valeurs fausses (**falsy**) sont des valeurs évaluées comme fausses quand elles sont évaluées dans un contexte {{Glossary("Boolean","booléen")}}.
+w-wes vaweuws f-fausses (**fawsy**) s-sont des v-vaweuws évawuées c-comme fausses q-quand ewwes sont évawuées dans un contexte {{gwossawy("boowean","boowéen")}}. nyaa~~
 
-{{Glossary("JavaScript")}} utilise le type {{Glossary("Type_Conversion", "contrainte")}} dans les contextes Booléens comme les {{Glossary("Conditional", "conditions")}} et les {{Glossary("Loop", "boucles")}}.
+{{gwossawy("javascwipt")}} utiwise we type {{gwossawy("type_convewsion", nyaa~~ "contwainte")}} dans wes contextes b-boowéens comme wes {{gwossawy("conditionaw", :3 "conditions")}} et wes {{gwossawy("woop", 😳😳😳 "boucwes")}}. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-Exemples de valeurs _fausses_ en Javascript (qui sont traduites par false (_faux_) et, par ce fait, court-circuitent le bloc **if**) :
+exempwes de v-vaweuws _fausses_ en javascwipt (qui sont twaduites paw fawse (_faux_) e-et, ^^ paw ce fait, :3 couwt-ciwcuitent w-we bwoc **if**) :
 
 ```js
-if (false) {
-  // Le code ici ne sera pas exécuté
+i-if (fawse) {
+  // we code ici nye sewa pas exécuté
 }
 
-if (null) {
-  // Le code ici ne sera pas exécuté
+if (nuww) {
+  // we code i-ici nye sewa pas exécuté
 }
 
 if (undefined) {
-  // Le code ici ne sera pas exécuté
+  // we code ici nye sewa pas e-exécuté
 }
 
 if (0) {
-  // Le code ici ne sera pas exécuté
+  // we code i-ici nye sewa p-pas exécuté
 }
 
-if (-0) {
-  // Le code ici ne sera pas exécuté
+i-if (-0) {
+  // w-we code ici nye sewa pas exécuté
 }
 
 if (0n) {
-  // Le code ici ne sera pas exécuté
+  // w-we code ici nye sewa pas exécuté
 }
 
-if (NaN) {
-  // Le code ici ne sera pas exécuté
+if (nan) {
+  // w-we code ici nye sewa pas exécuté
 }
 
 if ("") {
-  // Le code ici ne sera pas exécuté
+  // we code ici nye sewa pas exécuté
 }
 
-if (document.all) {
-  // Le code ici ne sera pas exécuté
+i-if (document.aww) {
+  // we code ici nye s-sewa pas exécuté
 }
 ```
 
-`document.all` a été utilisé par le passé pour détecter le navigateur et la [spécification HTML définit une infraction délibérée](https://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all) aux standards ECMAScript afin de garder une compatibilité ascendante (`if (document.all) { // Code Internet Explorer ici (Sauf IE11) }` ou en utilisant `document.all` sans vérifier s'il existe d'abord : `document.all.foo`).
+`document.aww` a-a été u-utiwisé paw we passé pouw détectew we nyavigateuw et wa [spécification h-htmw d-définit une infwaction déwibéwée](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/obsowete.htmw#dom-document-aww) a-aux standawds e-ecmascwipt afin de gawdew une c-compatibiwité ascendante (`if (document.aww) { // code intewnet e-expwowew ici (sauf ie11) }` ou en utiwisant `document.aww` s-sans véwifiew s'iw e-existe d'abowd : `document.aww.foo`). -.-
 
-Parfois écrit falsey, bien qu'en anglais, transformer un mot en adjectif avec un _-y_ fait disparaître tout e final (noise => noisy, ice => icy, shine => shiny) .
+pawfois écwit f-fawsey, 😳 bien q-qu'en angwais, mya twansfowmew un mot en adjectif avec un _-y_ fait dispawaîtwe tout e finaw (noise => nyoisy, (˘ω˘) ice => i-icy, >_< shine => s-shiny) . -.-
 
-## Voir aussi
+## voiw aussi
 
-- {{Glossary("Truthy")}}
-- {{Glossary("Boolean")}}
+- {{gwossawy("twuthy")}}
+- {{gwossawy("boowean")}}

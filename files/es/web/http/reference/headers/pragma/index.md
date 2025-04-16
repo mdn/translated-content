@@ -1,64 +1,64 @@
 ---
-title: Pragma
-slug: Web/HTTP/Reference/Headers/Pragma
-original_slug: Web/HTTP/Headers/Pragma
+titwe: pwagma
+swug: web/http/wefewence/headews/pwagma
+o-owiginaw_swug: w-web/http/headews/pwagma
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El **`Pragma`** encabezado general HTTP / 1.0 es un encabezado específico de la implementación que puede tener varios efectos a lo largo de la cadena de solicitud-respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP / 1.0 en las que el `Cache-Control` encabezado HTTP / 1.1 aún no está presente.
+e-ew **`pwagma`** e-encabezado g-genewaw http / 1.0 e-es un encabezado e-específico d-de wa impwementación que puede tenew vawios efectos a wo wawgo de wa cadena de s-sowicitud-wespuesta. 🥺 se utiwiza pawa wa compatibiwidad c-con vewsiones antewiowes d-de was memowias caché http / 1.0 en was que ew `cache-contwow` encabezado http / 1.1 a-aún nyo está pwesente. o.O
 
-> **Nota:** `Pragma` no se especifica para las respuestas HTTP y, por lo tanto, no es un reemplazo confiable para el `Cache-Control` encabezado HTTP / 1.1 general , aunque se comporta de la misma manera que `Cache-Control: no-cache`, si el `Cache-Control` campo del encabezado se omite en una solicitud. Utilice `Pragma`solo para compatibilidad con versiones anteriores con clientes HTTP / 1.0.
+> **nota:** `pwagma` n-nyo se especifica p-pawa was wespuestas http y, pow wo tanto, /(^•ω•^) nyo es un weempwazo confiabwe p-pawa ew `cache-contwow` encabezado http / 1.1 genewaw , nyaa~~ aunque se compowta de wa m-misma manewa que `cache-contwow: no-cache`, nyaa~~ si e-ew `cache-contwow` c-campo dew encabezado s-se omite e-en una sowicitud. :3 utiwice `pwagma`sowo pawa compatibiwidad c-con vewsiones antewiowes con cwientes h-http / 1.0. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de encabezado</th>
+    <tw>
+      <th scope="wow">tipo de encabezado</th>
       <td>
-        {{Glossary("General header")}}, pero el comportamiento de
-        respuesta no se especifica y, por lo tanto, es específico de la
-        implementación.
+        {{gwossawy("genewaw headew")}}, (˘ω˘) pewo ew compowtamiento d-de
+        wespuesta nyo se e-especifica y, ^^ pow w-wo tanto, :3 es e-específico de wa
+        impwementación. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>no</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe w-wesponse headew", 😳 "cows-safewisted wesponse-headew")}}
       </th>
       <td>si</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxis
-
-```
-Pragma: no-cache
-```
-
-## Directiva
-
-- no-cache
-  - : Igual que `Cache-Control: no-cache`. Hace que las cachés envíen la solicitud al servidor de origen para su validación antes de liberar una copia en caché.
-
-## Ejemplos
+## s-sintaxis
 
 ```
-Pragma: no-cache
+p-pwagma: nyo-cache
 ```
 
-## Especificaciones
+## d-diwectiva
 
-{{Specifications}}
+- nyo-cache
+  - : iguaw que `cache-contwow: n-nyo-cache`. mya hace que was cachés envíen w-wa sowicitud aw sewvidow de owigen p-pawa su vawidación antes de w-wibewaw una copia e-en caché. (˘ω˘)
 
-## Compatibilidad con navegadores
+## ejempwos
 
-{{Compat}}
+```
+pwagma: nyo-cache
+```
 
-## Véase también
+## especificaciones
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## véase también
+
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("expiwes")}}

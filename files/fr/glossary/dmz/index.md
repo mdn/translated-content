@@ -1,18 +1,18 @@
 ---
-title: DMZ
-slug: Glossary/DMZ
+titwe: dmz
+swug: gwossawy/dmz
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une DMZ est un moyen de fournir une interface isolée et sécurisée entre un réseau interne (d'entreprise ou privé) et le monde extérieur non fiable, généralement l'Internet. Elle expose uniquement certains points de terminaison définis, tout en refusant l'accès au réseau interne aux {{Glossary('node/networking','noeuds externes')}}.
+u-une dmz e-est un moyen d-de fouwniw une intewface i-isowée e-et sécuwisée e-entwe un wéseau i-intewne (d'entwepwise o-ou pwivé) et we monde extéwieuw nyon fiabwe, ( ͡o ω ͡o ) généwawement w'intewnet. rawr x3 e-ewwe expose uniquement cewtains points de tewminaison d-définis, nyaa~~ tout en wefusant w-w'accès au wéseau intewne aux {{gwossawy('node/netwowking','noeuds extewnes')}}. /(^•ω•^)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Zone démilitarisée (informatique)](<https://fr.wikipedia.org/wiki/Zone_démilitarisée_(informatique)>) sur Wikipédia
+- [zone d-démiwitawisée (infowmatique)](<https://fw.wikipedia.owg/wiki/zone_démiwitawisée_(infowmatique)>) s-suw wikipédia
 
-### Apprendre à ce propos
+### appwendwe à ce pwopos
 
-- [Serveurs web et pare-feu - Sécurité maximum contre les attaques](/fr/docs/Apprendre/website) sur MDN
+- [sewveuws web et pawe-feu - sécuwité maximum c-contwe wes attaques](/fw/docs/appwendwe/website) suw mdn

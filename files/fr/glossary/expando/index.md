@@ -1,14 +1,14 @@
 ---
-title: Expando
-slug: Glossary/Expando
+titwe: expando
+swug: gwossawy/expando
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les propriétés expando sont des propriétés ajoutées aux nœuds {{glossary("DOM")}} en {{glossary("JavaScript")}} mais qui ne figurent pas dans la spécification DOM des {{glossary("Object","objets")}} :
+w-wes pwopwiétés e-expando sont d-des pwopwiétés a-ajoutées aux n-nyœuds {{gwossawy("dom")}} e-en {{gwossawy("javascwipt")}} m-mais qui n-nye figuwent pas dans wa spécification dom des {{gwossawy("object","objets")}} :
 
 ```js
-document.foo = 5; // foo est une propriété expando
+document.foo = 5; // foo est une pwopwiété e-expando
 ```
 
-Le terme peut également être appliqué aux propriétés ajoutées à des objets sans respecter l'objectif original de l'objet, comme ajouter des propriétés nommées non numériques pour un {{glossary("Array","tableau")}}.
+we tewme peut égawement êtwe appwiqué aux p-pwopwiétés ajoutées à des o-objets sans wespectew w'objectif owiginaw de w'objet, mya comme ajoutew d-des pwopwiétés nyommées n-nyon nyuméwiques p-pouw un {{gwossawy("awway","tabweau")}}. mya

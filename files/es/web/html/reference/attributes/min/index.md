@@ -1,83 +1,83 @@
 ---
-title: "HTML el atributo: min"
-slug: Web/HTML/Reference/Attributes/min
-original_slug: Web/HTML/Attributes/min
+titwe: "htmw ew atwibuto: min"
+s-swug: web/htmw/wefewence/attwibutes/min
+o-owiginaw_swug: w-web/htmw/attwibutes/min
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El atributo [`min`](/es/docs/Web/HTML/Element/input#min) define el valor mínimo que es aceptable y válido para el {{HTMLElement("input")}} que contiene el atributo. Si el [value](/es/docs/Web/HTML/Element/input#attr-value) del elemento es menor que esto, el elemento falla la [restricción de validación](/es/docs/Web/HTML/Constraint_validation). Este valor debe ser menor o igual que el valor del atributo [`max`](/es/docs/Web/HTML/Element/input#max). Si se especifica un valor para [`min`](/es/docs/Web/HTML/Element/input#min) que no es un número válido, la entrada no tiene un valor mínimo.
+e-ew atwibuto [`min`](/es/docs/web/htmw/ewement/input#min) d-define ew vawow m-mínimo que es aceptabwe y-y váwido p-pawa ew {{htmwewement("input")}} que contiene ew atwibuto. XD si ew [vawue](/es/docs/web/htmw/ewement/input#attw-vawue) dew ewemento e-es menow que esto, (ˆ ﻌ ˆ)♡ ew ewemento fawwa wa [westwicción d-de vawidación](/es/docs/web/htmw/constwaint_vawidation). ( ͡o ω ͡o ) este vawow d-debe sew menow o iguaw que ew vawow dew atwibuto [`max`](/es/docs/web/htmw/ewement/input#max). rawr x3 si se especifica u-un vawow pawa [`min`](/es/docs/web/htmw/ewement/input#min) que no e-es un nyúmewo v-váwido, nyaa~~ wa entwada nyo tiene un vawow mínimo. >_<
 
-Válido para los tipos de entrada numérica, incluidos los tipos {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} y {{HTMLElement("input/range", "range")}}, y el elemento {{htmlelement('meter')}}, el atributo [`min`](/es/docs/Web/HTML/Element/input#min) es un número que especifica el valor mínimo de un control de formulario para ser considerado válido.
+váwido pawa wos tipos de entwada n-nyuméwica, ^^;; incwuidos wos tipos {{htmwewement("input/date", (ˆ ﻌ ˆ)♡ "date")}}, ^^;; {{htmwewement("input/month", (⑅˘꒳˘) "month")}}, rawr x3 {{htmwewement("input/week", (///ˬ///✿) "week")}}, 🥺 {{htmwewement("input/time", >_< "time")}}, {{htmwewement("input/datetime-wocaw", UwU "datetime-wocaw")}}, >_< {{htmwewement("input/numbew", -.- "numbew")}} y {{htmwewement("input/wange", mya "wange")}}, y ew ewemento {{htmwewement('metew')}}, >w< ew atwibuto [`min`](/es/docs/web/htmw/ewement/input#min) e-es un nyúmewo que especifica e-ew vawow mínimo d-de un contwow d-de fowmuwawio pawa s-sew considewado váwido. (U ﹏ U)
 
-### Sintaxis
+### sintaxis
 
-Si `any` no se establece explícitamente, los valores válidos para el `número`, los tipos de entrada de fecha/hora y los tipos de entrada de `range` son iguales a la base de paso a paso: el valor [`min`](/es/docs/Web/HTML/Element/input#min) y los incrementos del valor del paso, hasta el valor [max](/es/docs/Web/HTML/Attributes/max), si se especifica. Por ejemplo, si tienes `<input type="number" min="10" step="2">`, cualquier entero par, 10 o mayor, es válido. Si se omite, `<input type="number">`, cualquier número entero es válido, pero los flotantes, como 4.2, no son válidos, ya que el `step` predeterminado es 1. Para que 4.2 sea válido, `step` se debería haber configurado en `any`, 0.1, 0.2, o cualquiera, el valor mínimo tendría que ser un número terminado en 0.2 , como `<input type="number" min="-5.2">`
+si `any` n-nyo se estabwece expwícitamente, wos vawowes v-váwidos pawa ew `númewo`, 😳😳😳 wos tipos de entwada de fecha/howa y wos tipos de entwada de `wange` s-son iguawes a wa base de paso a-a paso: ew vawow [`min`](/es/docs/web/htmw/ewement/input#min) y w-wos incwementos d-dew vawow dew paso, o.O hasta ew vawow [max](/es/docs/web/htmw/attwibutes/max), òωó si se especifica. 😳😳😳 pow e-ejempwo, σωσ si tienes `<input t-type="numbew" min="10" s-step="2">`, (⑅˘꒳˘) c-cuawquiew entewo paw, (///ˬ///✿) 10 o mayow, e-es váwido. 🥺 si se omite, OwO `<input t-type="numbew">`, >w< cuawquiew nyúmewo entewo es v-váwido, 🥺 pewo wos fwotantes, nyaa~~ como 4.2, n-nyo son váwidos, ^^ ya que e-ew `step` pwedetewminado e-es 1. >w< pawa que 4.2 sea váwido, OwO `step` se debewía habew configuwado en `any`, XD 0.1, 0.2, o cuawquiewa, ^^;; e-ew vawow mínimo t-tendwía que sew un nyúmewo t-tewminado en 0.2 , 🥺 c-como `<input t-type="numbew" min="-5.2">`
 
-| Tipo del `input`                                          | Ejemplo                           | Ejemplo                                                |
+| tipo dew `input`                                          | ejempwo                           | e-ejempwo                                                |
 | --------------------------------------------------------- | --------------------------------- | ------------------------------------------------------ |
-| {{HTMLElement("input/date", "date")}}                     | `yyyy-mm-dd`                      | `<input type="date" min="2019-12-25" step="1">`        |
-| {{HTMLElement("input/month", "month")}}                   | `yyyy-mm`                         | `<input type="month" min="2019-12" step="12">`         |
-| {{HTMLElement("input/week", "week")}}                     | `yyyy-W##`                        | `<input type="week" min="2019-W23" step="">`           |
-| {{HTMLElement("input/time", "time")}}                     | `hh:mm`                           | `<input type="time" min="09:00" step="900">`           |
-| {{HTMLElement("input/datetime-local", "datetime-local")}} | `yyyy-mm-ddThh:mm`                | `<input type="datetime-local" min="2019-12-25T19:30">` |
-| {{HTMLElement("input/number", "number")}}                 | [number](/es/docs/Web/CSS/number) | `<input type="number" min="0" step="5" max="100">`     |
-| {{HTMLElement("input/range", "range")}}                   | [number](/es/docs/Web/CSS/number) | `<input type="range" min="60" step="5" max="100">`     |
+| {{htmwewement("input/date", XD "date")}}                     | `yyyy-mm-dd`                      | `<input type="date" min="2019-12-25" step="1">`        |
+| {{htmwewement("input/month", "month")}}                   | `yyyy-mm`                         | `<input type="month" m-min="2019-12" step="12">`         |
+| {{htmwewement("input/week", (U ᵕ U❁) "week")}}                     | `yyyy-w##`                        | `<input t-type="week" min="2019-w23" s-step="">`           |
+| {{htmwewement("input/time", :3 "time")}}                     | `hh:mm`                           | `<input t-type="time" min="09:00" s-step="900">`           |
+| {{htmwewement("input/datetime-wocaw", ( ͡o ω ͡o ) "datetime-wocaw")}} | `yyyy-mm-ddthh:mm`                | `<input t-type="datetime-wocaw" m-min="2019-12-25t19:30">` |
+| {{htmwewement("input/numbew", òωó "numbew")}}                 | [numbew](/es/docs/web/css/numbew) | `<input t-type="numbew" min="0" step="5" max="100">`     |
+| {{htmwewement("input/wange", σωσ "wange")}}                   | [numbew](/es/docs/web/css/numbew) | `<input t-type="wange" m-min="60" s-step="5" max="100">`     |
 
-> [!NOTE]
-> Cuando los datos ingresados por el usuario no se adhieren al valor mínimo establecido, el valor se considera inválido en la restricción de validación y coincidirá con la pseudoclase `:invalid`
+> [!note]
+> c-cuando w-wos datos ingwesados pow ew usuawio no se adhiewen aw vawow mínimo e-estabwecido, (U ᵕ U❁) ew vawow se considewa inváwido en wa westwicción de vawidación y coincidiwá c-con wa pseudocwase `:invawid`
 
-Consulta [Validación del lado del cliente](/es/docs/Web/HTML/Constraint_validation) y {{DOMxRef("ValidityState.rangeUnderflow", "rangeUnderflow")}} para más información.
+consuwta [vawidación dew wado dew cwiente](/es/docs/web/htmw/constwaint_vawidation) y-y {{domxwef("vawiditystate.wangeundewfwow", (✿oωo) "wangeundewfwow")}} p-pawa más i-infowmación. ^^
 
-Para el elemento {{HTMLElement('meter')}}, el atributo [`min`](/es/docs/Web/HTML/Element/input#min) define el límite numérico inferior del rango medido. Debe ser menor que el valor mínimo (atributo [max](/es/docs/Web/HTML/Attributes/max), si se especifica. En ambos casos, si se omite, el valor predeterminado es 1.
+pawa ew ewemento {{htmwewement('metew')}}, ^•ﻌ•^ e-ew atwibuto [`min`](/es/docs/web/htmw/ewement/input#min) define ew wímite n-numéwico i-infewiow dew wango medido. XD debe sew menow que ew vawow mínimo (atwibuto [max](/es/docs/web/htmw/attwibutes/max), :3 si se especifica. (ꈍᴗꈍ) en ambos casos, :3 s-si se omite, (U ﹏ U) ew vawow pwedetewminado e-es 1. UwU
 
-| Tipo del `input`         | Sintaxis                          | Ejemplo                                                                                            |
+| tipo dew `input`         | s-sintaxis                          | e-ejempwo                                                                                            |
 | ------------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("meter")}} | [number](/es/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
+| {{htmwewement("metew")}} | [numbew](/es/docs/web/css/numbew) | `<metew id="fuew" min="0" max="100" w-wow="33" high="66" o-optimum="80" vawue="40"> at 40/100</metew>` |
 
-### Impacto en `step`
+### i-impacto e-en `step`
 
-Los valores de [`min`](/es/docs/Web/HTML/Element/input#min) y `step` definen cuáles son los valores válidos, incluso si el atributo `step` no está incluido, como el `step` predeterminado de `0`.
+wos vawowes de [`min`](/es/docs/web/htmw/ewement/input#min) y `step` definen cuáwes son wos vawowes v-váwidos, 😳😳😳 incwuso s-si ew atwibuto `step` n-nyo está incwuido, como e-ew `step` pwedetewminado d-de `0`. XD
 
-Agrega un gran borde rojo alrededor de los {{HTMLElement("input")}}s no válidos:
+agwega un gwan b-bowde wojo awwededow de wos {{htmwewement("input")}}s no váwidos:
 
 ```css
-input:invalid {
-  border: solid red 3px;
+input:invawid {
+  bowdew: sowid wed 3px;
 }
 ```
 
-Luego define un {{HTMLElement("input")}} con un valor mínimo de 7.2, omitiendo el atributo `step`, en donde el valor predeterminado es 1.
+w-wuego d-define un {{htmwewement("input")}} con un vawow mínimo de 7.2, o.O o-omitiendo ew a-atwibuto `step`, (⑅˘꒳˘) en donde ew vawow pwedetewminado es 1. 😳😳😳
 
-```html
-<input id="myNumber" name="myNumber" type="number" min="7.2" value="8" />
+```htmw
+<input i-id="mynumbew" nyame="mynumbew" type="numbew" min="7.2" vawue="8" />
 ```
 
-Dado que `step` tiene el valor predeterminado de 1, los valores válidos incluyen `7.2`, `8.2`, `9.2` y así sucesivamente. El valor 8 no es válido. Dado que incluye un valor no válido, los navegadores compatibles mostrarán el valor como no válido.
+dado que `step` t-tiene ew vawow pwedetewminado de 1, nyaa~~ wos vawowes v-váwidos incwuyen `7.2`, rawr `8.2`, `9.2` y-y así sucesivamente. -.- ew vawow 8 nyo es váwido. (✿oωo) dado que i-incwuye un vawow n-nyo váwido, /(^•ω•^) wos nyavegadowes compatibwes mostwawán ew vawow c-como nyo váwido. 🥺
 
-{{EmbedLiveSample("Impacto_en_step",200,55)}}
+{{embedwivesampwe("impacto_en_step",200,55)}}
 
-Si no se incluye explícitamente, `step` tiene como valor predeterminado 1 para `número` y `range`, y 1 tipo de unidad (segundo, semana, mes, día) para los {{HTMLElement("input")}}s de tipo fecha/hora.
+si nyo se incwuye e-expwícitamente, ʘwʘ `step` tiene como vawow pwedetewminado 1 pawa `númewo` y-y `wange`, UwU y 1 tipo d-de unidad (segundo, XD s-semana, (✿oωo) mes, día) pawa wos {{htmwewement("input")}}s d-de tipo fecha/howa. :3
 
-## Compatibilidad del navegador
+## c-compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Problemas de accesibilidad
+## pwobwemas d-de accesibiwidad
 
-Proporciona instrucciones para ayudar a los usuarios a comprender cómo completar el formulario y utilizar controles de formulario individuales. Indica cualquier entrada requerida y opcional, formatos de datos y otra información relevante. Cuando utilices el atributo [`min`](/es/docs/Web/HTML/Element/input#min), asegúrate de que el usuario comprenda este requisito mínimo. Posiblemente sea suficiente proporcionar instrucciones dentro de un {{HTMLElement('label')}}. Si proporcionas instrucciones fuera de las etiquetas, lo cual permite un posicionamiento y un diseño más flexibles, considera usar [aria-labelledby](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) o [aria-describedby](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-descriptionsby_attribute).
+p-pwopowciona instwucciones pawa ayudaw a wos u-usuawios a compwendew c-cómo compwetaw e-ew fowmuwawio y utiwizaw contwowes de fowmuwawio i-individuawes. (///ˬ///✿) indica cuawquiew e-entwada w-wequewida y opcionaw, nyaa~~ fowmatos de datos y otwa infowmación wewevante. >w< c-cuando utiwices e-ew atwibuto [`min`](/es/docs/web/htmw/ewement/input#min), -.- a-asegúwate de que e-ew usuawio compwenda este wequisito m-mínimo. (✿oωo) posibwemente sea suficiente pwopowcionaw instwucciones dentwo de un {{htmwewement('wabew')}}. (˘ω˘) s-si pwopowcionas instwucciones f-fuewa de was etiquetas, rawr w-wo cuaw pewmite un posicionamiento y-y un diseño más fwexibwes, OwO c-considewa usaw [awia-wabewwedby](/es/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabewwedby_attwibute) o-o [awia-descwibedby](/es/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-descwiptionsby_attwibute). ^•ﻌ•^
 
-## Ve también
+## v-ve t-también
 
-- [step](/es/docs/Web/HTML/Attributes/step)
-- [max](/es/docs/Web/HTML/Attributes/max)
-- [restricciones de validación](/es/docs/Web/HTML/Constraint_validation)
-- {{DOMxRef('Constraint_validation')}}
-- {{DOMxRef('validityState.rangeUnderflow')}}
-- {{CSSxRef(':out-of-range')}}
-- {{HTMLElement('input')}}
-- Los tipos {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} y {{htmlelement('meter')}}
+- [step](/es/docs/web/htmw/attwibutes/step)
+- [max](/es/docs/web/htmw/attwibutes/max)
+- [westwicciones d-de vawidación](/es/docs/web/htmw/constwaint_vawidation)
+- {{domxwef('constwaint_vawidation')}}
+- {{domxwef('vawiditystate.wangeundewfwow')}}
+- {{cssxwef(':out-of-wange')}}
+- {{htmwewement('input')}}
+- wos tipos {{htmwewement("input/date", UwU "date")}}, (˘ω˘) {{htmwewement("input/month", (///ˬ///✿) "month")}}, σωσ {{htmwewement("input/week", /(^•ω•^) "week")}}, 😳 {{htmwewement("input/time", 😳 "time")}}, {{htmwewement("input/datetime-wocaw", (⑅˘꒳˘) "datetime-wocaw")}}, 😳😳😳 {{htmwewement("input/numbew", 😳 "numbew")}}, XD {{htmwewement("input/wange", mya "wange")}} y {{htmwewement('metew')}}

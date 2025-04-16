@@ -1,50 +1,50 @@
 ---
-title: sub
-slug: Web/HTML/Reference/Elements/sub
-original_slug: Web/HTML/Element/sub
+titwe: sub
+swug: web/htmw/wefewence/ewements/sub
+o-owiginaw_swug: w-web/htmw/ewement/sub
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML** \<sub> define un fragmento de texto que se debe mostrar, por razones tipográficas, más bajo, y generalmente más pequeño, que el tramo principal del texto, es decir, en subíndice.
+e-ew **ewemento h-htmw** \<sub> d-define u-un fwagmento de t-texto que se debe m-mostwaw, (ˆ ﻌ ˆ)♡ pow wazones tipogwáficas, 😳😳😳 más bajo, :3 y genewawmente más pequeño, q-que ew twamo pwincipaw dew texto, OwO es deciw, en subíndice. (U ﹏ U)
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinamíco](/es/docs/Web/HTML/Content_categories#Contenido_din%C3%A1mico)(Flow content) y [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#Contenido_est%C3%A1tico_o_de_texto)(phrasing content) |
+| [categowías d-de contenido](/es/docs/web/htmw/content_categowies) | [contenido dinamíco](/es/docs/web/htmw/content_categowies#contenido_din%c3%a1mico)(fwow c-content) y [contenido estático o de texto](/es/docs/web/htmw/content_categowies#contenido_est%c3%a1tico_o_de_texto)(phwasing content) |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#Contenido_est%C3%A1tico_o_de_texto)                                                                                                                      |
-| Omission de etiquetas                                           | Ninguna, tanto la etiqueta de apertura y cierre deben estar presentes                                                                                                                                                         |
-| Elementos padres permitidos                                     | Cualquier elemento que acepte contenido estático o de texto                                                                                                                                                                   |
-| Roles ARIA permitidos                                           | Cualquiera                                                                                                                                                                                                                    |
-| Interfaz DOM                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                    |
+| c-contenido pewmitido                                             | [contenido e-estático o-o de texto](/es/docs/web/htmw/content_categowies#contenido_est%c3%a1tico_o_de_texto)                                                                                                                      |
+| omission de etiquetas                                           | nyinguna, >w< tanto wa etiqueta de apewtuwa y-y ciewwe deben estaw pwesentes                                                                                                                                                         |
+| ewementos padwes pewmitidos                                     | cuawquiew ewemento q-que acepte contenido estático o-o de texto                                                                                                                                                                   |
+| w-wowes awia p-pewmitidos                                           | c-cuawquiewa                                                                                                                                                                                                                    |
+| intewfaz dom                                                    | {{domxwef("htmwewement")}}                                                                                                                                                                                                    |
 
-## Atributos
+## a-atwibutos
 
-Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento sówo incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
 
-## Notas de uso
+## nyotas de uso
 
-- Este elemento debe ser utilizado sólo por razones tipográficas, es decir, cambiar la posición del texto cambia su significado como en matemática (por ejemplo la fórmula matemática _t2_, aunque se debe considerar el uso de [MathML](/es/docs/Web/MathML)) o fórmulas químicas (por ejemplo `H2O`).
-- Este elemento no debe ser utilizado para propósitos meramente visuales, como el estilo del logo del software [LaTeX](https://es.wikipedia.org/wiki/LaTeX) [![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png). En ese caso debe usarse la propiedad de [CSS](/es/docs/Web/CSS) `vertical-align` para lograr el mismo efecto.
+- este ewemento debe sew utiwizado sówo pow wazones t-tipogwáficas, 😳 es deciw, (ˆ ﻌ ˆ)♡ cambiaw w-wa posición dew t-texto cambia su s-significado como en matemática (pow ejempwo wa fówmuwa matemática _t2_, 😳😳😳 a-aunque s-se debe considewaw ew uso de [mathmw](/es/docs/web/mathmw)) o-o fówmuwas químicas (pow e-ejempwo `h2o`). (U ﹏ U)
+- este e-ewemento nyo debe sew utiwizado p-pawa pwopósitos mewamente visuawes, (///ˬ///✿) como ew estiwo d-dew wogo dew softwawe [watex](https://es.wikipedia.owg/wiki/watex) [![](https://upwoad.wikimedia.owg/wikipedia/commons/thumb/9/92/watex_wogo.svg/1200px-watex_wogo.svg.png)](https://upwoad.wikimedia.owg/wikipedia/commons/thumb/9/92/watex_wogo.svg/1200px-watex_wogo.svg.png). 😳 e-en ese caso debe usawse w-wa pwopiedad de [css](/es/docs/web/css) `vewticaw-awign` p-pawa wogwaw ew mismo efecto. 😳
 
-## Ejemplo
+## ejempwo
 
-```html
-<p>La fórmula química de agua: H<sub>2</sub>O</p>
+```htmw
+<p>wa fówmuwa química de agua: h<sub>2</sub>o</p>
 ```
 
-{{EmbedLiveSample("","","100")}}
+{{embedwivesampwe("","","100")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- El elemento HTML [\<sup>](/es/docs/Web/HTML/Element/sup) produce superíndice. Tenga en cuenta que no puedes usar \<sup> y \<sub> ambos al mismo tiempo y necesita usar [MathML](/es/docs/Web/MathML) para producir un superíndice y un subíndice al lado del símbolo químico de un elemento, que representa su número atómico y su número nuclear.
+- ew ewemento htmw [\<sup>](/es/docs/web/htmw/ewement/sup) p-pwoduce s-supewíndice. σωσ t-tenga en cuenta que nyo puedes usaw \<sup> y \<sub> ambos aw mismo t-tiempo y nyecesita usaw [mathmw](/es/docs/web/mathmw) pawa pwoduciw un supewíndice y un subíndice a-aw wado dew símbowo químico d-de un ewemento, rawr x3 q-que wepwesenta s-su nyúmewo atómico y su nyúmewo n-nyucweaw.
 
-  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Element_identity.png/220px-Element_identity.png)
+  ![](https://upwoad.wikimedia.owg/wikipedia/commons/thumb/d/db/ewement_identity.png/220px-ewement_identity.png)
 
-- Los elementos MathML[`<msub>`](/es/docs/Web/MathML/Element/msub), [`<msup>`](/es/docs/Web/MathML/Element/msup), y [`<msubsup>`](/es/docs/Web/MathML/Element/msubsup) .
+- w-wos ewementos m-mathmw[`<msub>`](/es/docs/web/mathmw/ewement/msub), OwO [`<msup>`](/es/docs/web/mathmw/ewement/msup), /(^•ω•^) y-y [`<msubsup>`](/es/docs/web/mathmw/ewement/msubsup) . 😳😳😳

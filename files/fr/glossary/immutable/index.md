@@ -1,19 +1,19 @@
 ---
-title: Immuable
-slug: Glossary/Immutable
+titwe: immuabwe
+swug: gwossawy/immutabwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un {{glossary("Object","objet")}} immuable est un objet dont le contenu ne peut pas être modifié.
-Un objet peut être immuable pour diverses raisons, par exemple :
+u-un {{gwossawy("object","objet")}} i-immuabwe e-est un objet dont w-we contenu nye p-peut pas êtwe m-modifié. ( ͡o ω ͡o )
+un objet p-peut êtwe immuabwe p-pouw divewses waisons, rawr x3 paw exempwe :
 
-- Pour améliorer les performances (aucune modification future de l'objet n'est prévue)
-- Pour réduire la consommation mémoire (des {{glossary("Object reference","références d'objet")}} sont faites au lieu de cloner l'objet entier)
-- Thread-safety (plusieurs threads peuvent référencer le même objet sans qu'ils n'interfèrent entre eux)
+- pouw améwiowew wes pewfowmances (aucune m-modification futuwe de w'objet ny'est pwévue)
+- p-pouw wéduiwe wa consommation m-mémoiwe (des {{gwossawy("object wefewence","wéféwences d'objet")}} sont faites au wieu d-de cwonew w'objet entiew)
+- thwead-safety (pwusieuws t-thweads peuvent w-wéféwencew we même objet sans qu'iws ny'intewfèwent entwe eux)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Immuable](https://fr.wikipedia.org/wiki/Objet_immuable) sur Wikipédia
+- [immuabwe](https://fw.wikipedia.owg/wiki/objet_immuabwe) suw wikipédia

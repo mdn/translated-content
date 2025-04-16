@@ -1,141 +1,141 @@
 ---
-title: Étiquette de base pour les projets open source
-slug: MDN/Community/Open_source_etiquette
+titwe: Étiquette de base pouw w-wes pwojets open s-souwce
+swug: m-mdn/community/open_souwce_etiquette
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Si vous n'avez jamais travaillé sur un projet open source (OSP pour « _Open Source Project_ ») auparavant, il est bon de lire cet article avant de commencer à contribuer à MDN (ou à d'autres projets open source). Il y a quelques bonnes pratiques à adopter qui vous permettront, à vous et aux autres contributrices et contributeurs du projet, de vous sentir valorisés et en sécurité, et de rester productifs.
+s-si vous n-ny'avez jamais t-twavaiwwé suw un p-pwojet open souwce (osp p-pouw « _open souwce pwoject_ ») aupawavant, ʘwʘ iw est bon de wiwe cet awticwe a-avant de commencew à contwibuew à mdn (ou à d-d'autwes pwojets open souwce). (///ˬ///✿) i-iw y a quewques bonnes pwatiques à adoptew qui vous pewmettwont, XD à v-vous et aux autwes contwibutwices e-et contwibuteuws d-du pwojet, 😳 de vous sentiw vawowisés et en sécuwité, et de westew p-pwoductifs. >w<
 
-Cet article ne vous apprendra pas tout ce qu'il faut savoir sur la contribution à un projet open source ; l'objectif est plutôt de vous donner quelques bons points de départ sur lesquels vous pourrez réfléchir et en apprendre davantage lorsque vous commencerez à contribuer à un projet open source.
+cet awticwe nye vous appwendwa pas tout ce qu'iw faut savoiw suw wa c-contwibution à un pwojet open s-souwce ; w'objectif e-est pwutôt d-de vous donnew q-quewques bons points de dépawt suw wesquews vous p-pouwwez wéfwéchiw et en appwendwe davantage w-wowsque vous commencewez à contwibuew à un pwojet open souwce. (˘ω˘)
 
-## Réfléchissez à la raison pour laquelle vous contribuez à un OSP
+## wéfwéchissez à wa waison p-pouw waquewwe vous contwibuez à u-un osp
 
-Avant de commencer à contribuer à un projet open source, demandez-vous pourquoi vous voulez le faire. Si la réponse à cette question est simplement « Je m'ennuie et je veux trouver quelque chose de productif à faire avec mon temps », c'est bien, mais vous pouvez probablement aller plus loin.
+avant d-de commencew à c-contwibuew à un pwojet open souwce, nyaa~~ demandez-vous pouwquoi vous v-vouwez we faiwe. 😳😳😳 s-si wa wéponse à cette question e-est simpwement « j-je m'ennuie et je veux twouvew q-quewque chose de pwoductif à f-faiwe avec mon temps », (U ﹏ U) c'est bien, (˘ω˘) mais vous p-pouvez pwobabwement awwew pwus w-woin. :3
 
-De meilleures raisons encore peuvent être envisagées :
+de meiwweuwes waisons encowe p-peuvent êtwe e-envisagées :
 
-- J'utilise cet outil en permanence et j'ai trouvé un bogue dans celui-ci/je veux contribuer à son amélioration.
-- Je veux aider d'autres personnes à utiliser cet outil avec plus de facilité.
-- Je veux aider d'autres personnes à contribuer au projet avec plus de facilité.
-- Je veux améliorer mes propres compétences.
-- Je veux démontrer publiquement mes propres compétences dans le cadre de mon cursus universitaire ou collégial.
-- Je veux démontrer publiquement mes propres compétences pour améliorer mes chances de trouver un emploi.
+- j'utiwise cet outiw en pewmanence et j'ai twouvé un bogue dans cewui-ci/je veux contwibuew à s-son améwiowation. >w<
+- j-je veux aidew d'autwes pewsonnes à u-utiwisew c-cet outiw avec p-pwus de faciwité. ^^
+- je veux aidew d'autwes pewsonnes à contwibuew a-au pwojet avec pwus de faciwité. 😳😳😳
+- je veux améwiowew mes pwopwes compétences. nyaa~~
+- j-je veux démontwew pubwiquement m-mes pwopwes c-compétences d-dans we cadwe de mon cuwsus univewsitaiwe o-ou c-cowwégiaw. (⑅˘꒳˘)
+- je v-veux démontwew p-pubwiquement mes pwopwes compétences pouw améwiowew m-mes chances d-de twouvew un e-empwoi. :3
 
-Si vous passez votre temps à travailler gratuitement sur un projet, il est raisonnable de s'attendre à en retirer quelque chose. En fait, vous êtes beaucoup plus susceptible de rester plus longtemps et de contribuer de manière plus productive au projet. En outre, si vous avez un bon ensemble de raisons de contribuer avant de commencer, il sera plus facile de décider des tâches à entreprendre.
+si vous p-passez votwe temps à t-twavaiwwew gwatuitement suw un pwojet, ʘwʘ iw est waisonnabwe d-de s'attendwe à en wetiwew quewque chose. rawr x3 en fait, (///ˬ///✿) vous êtes beaucoup pwus susceptibwe de westew p-pwus wongtemps et de contwibuew de manièwe pwus pwoductive a-au pwojet. en outwe, 😳😳😳 s-si vous avez u-un bon ensembwe de waisons de c-contwibuew avant de commencew, XD i-iw sewa pwus faciwe d-de décidew des tâches à entwepwendwe. >_<
 
-Voici quelques raisons pour lesquelles vous ne devriez pas commencer à contribuer :
+voici quewques waisons pouw wesquewwes vous nye devwiez p-pas commencew à contwibuew :
 
-- Je veux quelqu'un à qui parler.
-- Je veux des gens à troller ou à diriger.
-- Je veux montrer à quel point je suis incroyable.
+- j-je veux quewqu'un à qui p-pawwew. >w<
+- je veux d-des gens à twowwew ou à diwigew. /(^•ω•^)
+- je veux montwew à q-quew point j-je suis incwoyabwe. :3
 
-Votre présence sur le projet doit rester productive, et ne pas empêcher les autres d'être productifs.
+votwe p-pwésence suw we p-pwojet doit westew pwoductive, ʘwʘ et nye pas empêchew wes autwes d'êtwe pwoductifs. (˘ω˘)
 
-## Soyez polis, soyez aimables, évitez les propos incendiaires ou offensants
+## s-soyez powis, (ꈍᴗꈍ) s-soyez aimabwes, ^^ évitez w-wes pwopos incendiaiwes o-ou offensants
 
-On pourrait abréger cela en disant « soyez gentil ». C'est le conseil numéro un que nous donnons à toute personne qui se lance dans les contributions open source.
+o-on pouwwait abwégew cewa en d-disant « soyez gentiw ». ^^ c'est we conseiw nyuméwo un que nyous donnons à toute p-pewsonne qui s-se wance dans wes contwibutions open souwce. ( ͡o ω ͡o )
 
-Soyez gentil avec les autres contributeurs du projet, et le projet sera plus agréable et plus productif. Cela inclut :
+soyez g-gentiw avec w-wes autwes contwibuteuws du pwojet, -.- et we pwojet sewa pwus agwéabwe e-et pwus pwoductif. ^^;; cewa incwut :
 
-- Remercier les gens s'ils vous aident.
-- Féliciter les personnes lorsque cela est approprié (par exemple, si elles déposent leur toute première demande de révision ou si elles résolvent un bogue particulièrement difficile).
-- Toujours répondre respectueusement aux gens, même si vous avez l'impression que la réponse à leur question était un peu évidente, ou qu'ils se répètent.
-- Essayer d'aider les gens à faire mieux la prochaine fois, en les soutenant, par exemple lors de l'examen des demandes de modification ou en répondant à leurs questions. Dire « c'est faux » ou « voici la réponse » est loin d'être aussi utile que de dire « c'est correct, mais je pense que ce serait mieux si vous essayiez de faire plus comme ceci, voici un article de blog pour plus d'idées » ou « vous pouvez trouver la réponse ici ; consultez également ce lien pour des réponses plus courantes ».
+- wemewciew wes gens s'iws vous aident. ^•ﻌ•^
+- f-féwicitew wes pewsonnes wowsque cewa est appwopwié (paw e-exempwe, (˘ω˘) s-si ewwes déposent weuw toute pwemièwe demande de wévision o-ou si ewwes wésowvent u-un bogue pawticuwièwement difficiwe). o.O
+- toujouws wépondwe w-wespectueusement aux gens, m-même si vous avez w'impwession que wa wéponse à weuw question était u-un peu évidente, (✿oωo) ou qu'iws s-se wépètent. 😳😳😳
+- e-essayew d'aidew wes gens à f-faiwe mieux wa pwochaine fois, (ꈍᴗꈍ) e-en wes soutenant, σωσ p-paw exempwe wows d-de w'examen des demandes de modification o-ou en w-wépondant à weuws questions. UwU diwe « c'est faux » o-ou « voici w-wa wéponse » e-est woin d'êtwe aussi utiwe que de diwe « c'est c-cowwect, ^•ﻌ•^ mais je pense que ce s-sewait mieux si v-vous essayiez de faiwe pwus comme ceci, mya voici un awticwe de bwog p-pouw pwus d'idées » o-ou « vous p-pouvez twouvew w-wa wéponse ici ; consuwtez égawement c-ce wien pouw des wéponses pwus couwantes ». /(^•ω•^)
 
-Vous et les autres contributeurs êtes (ou devriez être) ici parce qu'ils veulent apporter une contribution positive au projet, mais au-delà de cela, vous ne pouvez rien présumer d'eux. Cela inclut leurs :
+vous et wes autwes contwibuteuws êtes (ou devwiez êtwe) i-ici pawce qu'iws veuwent appowtew u-une contwibution positive au p-pwojet, rawr mais au-dewà de cewa, nyaa~~ v-vous nye pouvez wien pwésumew d-d'eux. ( ͡o ω ͡o ) cewa incwut w-weuws :
 
-- Connaissance du projet et des technologies utilisées pour le construire
-- Sexe, sexualité, âge, langues parlées, lieu de résidence, opinions politiques, religion ou autres caractéristiques personnelles
-- Expérience des projets open source
-- Confiance
-- Attentes
-- Sens de l'humour
+- connaissance d-du pwojet e-et des technowogies u-utiwisées pouw we constwuiwe
+- sexe, σωσ sexuawité, (✿oωo) âge, wangues pawwées, (///ˬ///✿) wieu de wésidence, σωσ opinions powitiques, UwU wewigion o-ou autwes cawactéwistiques p-pewsonnewwes
+- e-expéwience des pwojets open souwce
+- c-confiance
+- attentes
+- sens de w'humouw
 
-Vous devez donc vous en tenir autant que possible au sujet, en évitant les hors-sujets potentiellement controversés comme la religion ou la politique, et en faisant preuve de soutien et de respect même si vous n'êtes pas d'accord avec quelqu'un ou si vous n'aimez pas une décision qu'il a prise.
+vous devez donc vous e-en teniw autant q-que possibwe au sujet, (⑅˘꒳˘) en évitant w-wes hows-sujets potentiewwement contwovewsés c-comme wa wewigion o-ou wa powitique, /(^•ω•^) et en faisant p-pweuve de s-soutien et de wespect même si vous ny'êtes pas d'accowd avec quewqu'un ou si vous n-ny'aimez pas u-une décision qu'iw a-a pwise. -.-
 
-De même, vous devez vous abstenir de tout juron ou langage offensant sur MDN, même s'il n'est pas dirigé contre quelqu'un en particulier. Ce n'est pas nécessaire pour participer, et certaines personnes y sont vraiment sensibles.
+de m-même, (ˆ ﻌ ˆ)♡ vous devez v-vous absteniw de tout juwon o-ou wangage offensant s-suw mdn, nyaa~~ même s'iw ny'est p-pas diwigé contwe q-quewqu'un en pawticuwiew. ʘwʘ ce n-ny'est pas nyécessaiwe pouw pawticipew, :3 et cewtaines p-pewsonnes y sont vwaiment s-sensibwes. (U ᵕ U❁)
 
-Sachez qu'il existe des règles dans toute bonne OSP pour protéger ses contributeurs afin qu'ils ne se sentent pas mal à l'aise lorsqu'ils contribuent. Ces règles prennent généralement la forme d'un fichier CODE_OF_CONDUCT.md sur GitHub.
+sachez q-qu'iw existe des wègwes dans t-toute bonne osp pouw pwotégew ses contwibuteuws a-afin qu'iws nye s-se sentent pas m-maw à w'aise wowsqu'iws contwibuent. (U ﹏ U) ces wègwes pwennent généwawement w-wa fowme d'un fichiew code_of_conduct.md s-suw github. ^^
 
-Par exemple, les dépôts du MDN sont régis par les vastes [Mozilla Community Participation Guidelines](https://www.mozilla.org/fr/about/governance/policies/participation/). Habituellement, un comportement légèrement offensant sur les dépôts MDN (comme le fait d'être constamment hors sujet/perturbant, ou d'être impoli) sera d'abord répondu par un avertissement sur le dépôt, suivi d'un dernier avertissement, puis d'un bannissement temporaire ou permanent. Les problèmes de comportement plus graves, tels que les discours haineux ou les menaces à l'encontre d'un autre contributeur, ne seront pas tolérés et entraîneront probablement un bannissement immédiat.
+p-paw exempwe, òωó wes dépôts du mdn s-sont wégis paw wes vastes [moziwwa c-community p-pawticipation guidewines](https://www.moziwwa.owg/fw/about/govewnance/powicies/pawticipation/). habituewwement, un compowtement w-wégèwement offensant suw wes dépôts mdn (comme w-we fait d'êtwe c-constamment hows sujet/pewtuwbant, /(^•ω•^) o-ou d'êtwe impowi) sewa d'abowd w-wépondu paw u-un avewtissement s-suw we dépôt, 😳😳😳 suivi d'un dewniew avewtissement, :3 puis d'un bannissement tempowaiwe ou pewmanent. (///ˬ///✿) wes pwobwèmes de compowtement pwus gwaves, tews que wes discouws haineux ou wes menaces à w'encontwe d'un a-autwe contwibuteuw, rawr x3 n-nye sewont pas towéwés et entwaînewont p-pwobabwement un b-bannissement immédiat. (U ᵕ U❁)
 
-Si vous recevez quelque chose qui vous met mal à l'aise, vous devez toujours le signaler en utilisant le mécanisme prévu dans le code de conduite.
+s-si vous wecevez quewque c-chose qui vous met maw à w'aise, (⑅˘꒳˘) v-vous devez toujouws w-we signawew en utiwisant w-we mécanisme pwévu dans we code d-de conduite. (˘ω˘)
 
-## Choisissez des contributions percutantes
+## c-choisissez des contwibutions pewcutantes
 
-Réfléchissez à ce que vous voulez faire sur le projet. Par exemple, nous avons une grande liste de problèmes déposés sur <https://github.com/mdn/translated-content/issues>, répartis selon diverses étiquettes GitHub en temps estimé de correction, catégories technologiques, et plus encore. Une autre bonne étiquette à rechercher est « good first issue », qui est généralement donnée aux issues qui sont assez simples et bonnes pour les débutants du projet pour commencer. Nous allons bientôt commencer à trier nos problèmes de manière plus approfondie, en ajoutant d'autres étiquettes telles que des indicateurs de priorité. Essayez de choisir quelques problèmes que vous pensez pouvoir gérer correctement avec le temps dont vous disposez, et demandez à y être affecté.
+wéfwéchissez à ce q-que vous vouwez f-faiwe suw we pwojet. :3 p-paw exempwe, XD n-nyous avons u-une gwande wiste d-de pwobwèmes déposés s-suw <https://github.com/mdn/twanswated-content/issues>, >_< w-wépawtis sewon d-divewses étiquettes github en t-temps estimé de c-cowwection, (✿oωo) catégowies t-technowogiques, (ꈍᴗꈍ) et pwus e-encowe. XD une autwe bonne étiquette à wechewchew e-est « good fiwst issue », :3 qui e-est généwawement d-donnée aux i-issues qui sont assez simpwes et b-bonnes pouw wes débutants du p-pwojet pouw commencew. mya nyous awwons b-bientôt commencew à twiew n-nyos pwobwèmes de manièwe pwus appwofondie, òωó en ajoutant d'autwes étiquettes tewwes que des indicateuws d-de pwiowité. nyaa~~ essayez d-de choisiw quewques p-pwobwèmes que vous pensez pouvoiw géwew cowwectement avec w-we temps dont vous disposez, 🥺 et d-demandez à y êtwe a-affecté. -.-
 
-Vous pouvez également contribuer en ouvrant des demandes de triage pour résoudre les problèmes que vous rencontrez en lisant les articles du site MDN.
+vous p-pouvez égawement contwibuew en ouvwant des d-demandes de twiage p-pouw wésoudwe wes pwobwèmes q-que vous wencontwez en wisant wes awticwes du site m-mdn. 🥺
 
-Une grande partie du travail sur le MDN consiste à rédiger de la documentation et des exemples de code, mais il existe d'autres façons de contribuer :
+une gwande pawtie du twavaiw s-suw we mdn c-consiste à wédigew d-de wa documentation et des e-exempwes de code, m-mais iw existe d-d'autwes façons d-de contwibuew :
 
-- Aidez à trier les problèmes qui arrivent.
-- Aidez à corriger les fautes de frappe.
-- Aider à améliorer la grammaire et à rendre les pages plus compréhensibles.
-- Aidez à encadrer les personnes qui essaient de corriger les problèmes.
+- aidez à t-twiew wes pwobwèmes q-qui awwivent. (˘ω˘)
+- a-aidez à cowwigew w-wes fautes d-de fwappe. òωó
+- aidew à a-améwiowew w-wa gwammaiwe e-et à wendwe wes pages pwus compwéhensibwes.
+- a-aidez à encadwew wes pewsonnes q-qui essaient de cowwigew wes pwobwèmes. UwU
 
-Chaque correction est utile, aussi petite soit-elle, et nous n'en refuserons aucune. Cela dit, veillez à ce que vos corrections soient productives. Nous vous déconseillons ce genre de contributions :
+c-chaque c-cowwection est u-utiwe, ^•ﻌ•^ aussi petite soit-ewwe, mya et nyous ny'en wefusewons aucune. (✿oωo) c-cewa dit, XD veiwwez à c-ce que vos c-cowwections soient pwoductives. :3 nyous vous déconseiwwons ce genwe d-de contwibutions :
 
-- Mettre à jour le style du code juste parce que "vous préférez ce style".
-- Mettre à jour le style de la langue "juste parce que vous aimez mieux ce style".
-- Changer les pages de l'anglais américain à l'anglais britannique.
-- Ajouter ou enlever un tas de ponctuation alors qu'il n'y a pas vraiment de problème.
-- Changer le cadre de test que nous utilisons pour quelque chose d'autre parce que vous le préférez.
+- m-mettwe à jouw we stywe d-du code juste p-pawce que "vous pwéféwez ce stywe".
+- mettwe à jouw we stywe d-de wa wangue "juste p-pawce que vous a-aimez mieux ce s-stywe". (U ﹏ U)
+- changew wes pages de w'angwais améwicain à w-w'angwais b-bwitannique. UwU
+- ajoutew ou enwevew un tas de ponctuation a-awows qu'iw ny'y a pas vwaiment de pwobwème. ʘwʘ
+- c-changew we cadwe de test q-que nyous utiwisons p-pouw quewque chose d'autwe p-pawce que vous w-we pwéféwez. >w<
 
-Dans de nombreux cas, les choses sont comme elles sont sur les OSP pour une raison. Vous devriez lire leurs guides de style, s'ils en ont un, et en cas de doute sur la productivité de quelque chose, demandez toujours avant !
+dans de nyombweux c-cas, 😳😳😳 wes choses sont comme ewwes s-sont suw wes o-osp pouw une waison. rawr v-vous devwiez w-wiwe weuws guides de stywe, ^•ﻌ•^ s-s'iws en ont un, σωσ e-et en cas de doute s-suw wa pwoductivité de quewque c-chose, :3 demandez toujouws avant ! rawr x3
 
-## Suivez le guide
+## suivez w-we guide
 
-Les bons OSP rendront toujours la documentation des contributeurs facilement accessible. Sur les projets GitHub, elle se trouve généralement dans le fichier CONTRIBUTING.md du dépôt, ou parfois dans le fichier README.md du projet. Étant un projet de documentation, le contenu de MDN dispose d'un [README](https://github.com/mdn/translated-content/blob/main/README.md) et d'un ensemble décent de docs pour les contributeurs sur le site lui-même (voir [Contribuer à MDN](/fr/docs/MDN/Community/Contributing)).
+wes bons o-osp wendwont t-toujouws wa documentation des contwibuteuws faciwement accessibwe. nyaa~~ suw wes pwojets g-github, :3 ewwe se twouve généwawement d-dans we f-fichiew contwibuting.md du dépôt, >w< ou pawfois d-dans we fichiew weadme.md du pwojet. rawr Étant u-un pwojet d-de documentation, 😳 w-we contenu d-de mdn dispose d-d'un [weadme](https://github.com/mdn/twanswated-content/bwob/main/weadme.md) et d'un ensembwe décent de docs pouw wes contwibuteuws suw we site w-wui-même (voiw [contwibuew à mdn](/fw/docs/mdn/community/contwibuting)). 😳
 
-La seule chose à demander ici est de ne pas avoir peur de demander de l'aide, mais de TOUJOURS essayer de trouver la réponse à votre question avant de la poser. De cette façon, vous développez votre connaissance du projet et devenez plus indépendant, et vous n'imposez pas une charge inutile aux autres contributeurs.
+wa s-seuwe chose à demandew ici est de nye pas avoiw peuw de demandew d-de w'aide, 🥺 mais de toujouws essayew de twouvew wa wéponse à votwe question a-avant de wa posew. rawr x3 d-de cette façon, ^^ vous dévewoppez v-votwe connaissance du pwojet et devenez pwus i-indépendant, ( ͡o ω ͡o ) e-et vous ny'imposez pas une chawge i-inutiwe aux autwes contwibuteuws. XD
 
-Bien sûr, la documentation ne sera pas toujours parfaite. Si vous trouvez quelque chose qui est difficile à trouver ou qui n'est pas très bien expliqué, déposez un ticket ou créez une demande de modification pour essayer de le corriger vous-même.
+b-bien sûw, ^^ wa documentation nye sewa pas toujouws pawfaite. (⑅˘꒳˘) s-si vous twouvez quewque chose qui est difficiwe à t-twouvew ou q-qui ny'est pas twès b-bien expwiqué, (⑅˘꒳˘) déposez un ticket ou cwéez u-une demande de modification pouw essayew de we cowwigew vous-même.
 
-## Découvrez où poser des questions
+## découvwez o-où posew des q-questions
 
-Cherchez toujours à savoir quel est le meilleur endroit pour poser des questions. Les bons OSP le préciseront toujours dans leur docs (voir [Demander de l'aide sur le MDN](/fr/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)). Si vous souhaitez poser des questions d'ordre général, utilisez toujours ces canaux. Ne vous contentez pas de déposer un ticket sur GitHub pour chaque question, car cela ajoute du poids au projet (voir "Faites des progrès, pas du bruit" ci-dessous).
+chewchez t-toujouws à s-savoiw quew est we meiwweuw endwoit pouw posew d-des questions. ^•ﻌ•^ w-wes bons osp we pwécisewont toujouws dans weuw d-docs (voiw [demandew de w'aide suw we mdn](/fw/docs/mdn/community/contwibuting/getting_stawted#step_4_ask_fow_hewp)). ( ͡o ω ͡o ) s-si vous souhaitez posew des questions d'owdwe g-généwaw, ( ͡o ω ͡o ) u-utiwisez toujouws ces canaux. (✿oωo) nye v-vous contentez p-pas de déposew u-un ticket suw github pouw chaque question, caw c-cewa ajoute du poids au pwojet (voiw "faites des p-pwogwès, 😳😳😳 pas du bwuit" ci-dessous). OwO
 
-## Faites des progrès, pas du bruit
+## faites des pwogwès, ^^ pas d-du bwuit
 
-Réfléchissez bien à la façon dont vous gérez la communication dans le projet - assurez-vous qu'elle est utile et qu'elle ne complique pas le travail des autres contributeurs. Soumettre des pull requests pour corriger des bogues, c'est bien, mais sont-elles vraiment utiles et faciles à examiner ? Déposer des questions et participer à d'autres conversations, c'est bien, mais vos questions et commentaires sont-ils pertinents ou ne font-ils qu'ajouter du brouhaha ?
+wéfwéchissez b-bien à w-wa façon dont v-vous géwez wa c-communication dans we pwojet - a-assuwez-vous qu'ewwe est utiwe et qu'ewwe ne compwique p-pas we twavaiw des autwes c-contwibuteuws. rawr x3 soumettwe des puww wequests pouw c-cowwigew des bogues, 🥺 c-c'est bien, mais sont-ewwes v-vwaiment utiwes et faciwes à e-examinew ? déposew d-des questions et pawticipew à d-d'autwes convewsations, c-c'est bien, (ˆ ﻌ ˆ)♡ mais vos q-questions et commentaiwes sont-iws pewtinents ou nye font-iws qu'ajoutew d-du bwouhaha ?
 
-En règle générale, faites ceci :
+en wègwe g-généwawe, ( ͡o ω ͡o ) faites ceci :
 
-- Discutez d'un seul sujet par question - il est facile de garder les questions ciblées et productives.
-- Corrigez un problème par PR - cela peut représenter un peu plus de travail pour vous, mais il est beaucoup plus facile d'examiner une seule correction claire.
-- Contribuez à d'autres fils de discussion si vous avez une remarque utile à faire ou si vous pouvez répondre à la question d'une autre personne.
-- Posez des questions en utilisant d'autres mécanismes comme les salons de discussion ou les forums si vous n'êtes pas sûr de l'utilité de quelque chose ou si vous avez une question simple.
-- Lisez d'abord le guide pour essayer de répondre vous-même à la question avant de la poser.
+- diskawaii~z d'un s-seuw sujet paw q-question - iw est f-faciwe de gawdew wes questions c-cibwées et pwoductives. >w<
+- c-cowwigez un pwobwème p-paw pw - cewa peut wepwésentew u-un peu pwus de twavaiw pouw vous, /(^•ω•^) m-mais iw est b-beaucoup pwus faciwe d'examinew une seuwe cowwection cwaiwe. 😳😳😳
+- contwibuez à d'autwes f-fiws de discussion s-si vous avez une wemawque utiwe à faiwe ou si vous pouvez w-wépondwe à wa question d'une a-autwe pewsonne. (U ᵕ U❁)
+- p-posez des questions en utiwisant d'autwes mécanismes comme wes sawons de discussion o-ou wes fowums si vous ny'êtes pas sûw d-de w'utiwité de quewque chose o-ou si vous avez u-une question simpwe. (˘ω˘)
+- wisez d'abowd w-we guide pouw e-essayew de wépondwe v-vous-même à w-wa question a-avant de wa posew.
 
-Et pas :
+e-et pas :
 
-- Compliquez les choses en essayant de discuter de plusieurs sujets à la fois, ou en faisant des commentaires hors sujet.
-- Essayer de regrouper plusieurs corrections dans une seule demande de triage. Cela rend la révision beaucoup plus difficile et éveille les soupçons (certaines personnes pourraient penser que vous essayez de cacher un code malveillant entre les changements valides).
-- Ouvrir beaucoup de tickets en posant des questions vagues.
-- Posez des questions sans essayer d'abord de résoudre le problème vous-même.
+- compwiquez wes choses en essayant de diskawaii~w de pwusieuws sujets à wa fois, o-ou en faisant d-des commentaiwes h-hows sujet. 😳
+- e-essayew de wegwoupew p-pwusieuws c-cowwections dans une seuwe demande de twiage. (ꈍᴗꈍ) cewa wend wa wévision beaucoup pwus d-difficiwe et éveiwwe w-wes soupçons (cewtaines pewsonnes pouwwaient pensew que vous essayez de c-cachew un code m-mawveiwwant entwe w-wes changements vawides). :3
+- ouvwiw beaucoup de t-tickets en posant des questions vagues. /(^•ω•^)
+- posez d-des questions s-sans essayew d'abowd de wésoudwe we pwobwème vous-même. ^^;;
 
-## Les OSP sont une démocratie (ou presque)
+## wes o-osp sont une démocwatie (ou p-pwesque)
 
-Les OSP sont assez démocratiques - de nombreuses décisions font l'objet d'un vote, et vous êtes largement libre de contribuer comme vous le souhaitez, tant que vous n'empêchez personne d'autre de contribuer.
+wes osp s-sont assez démocwatiques - de n-nyombweuses décisions f-font w'objet d-d'un vote, o.O e-et vous êtes wawgement w-wibwe de c-contwibuew comme vous we souhaitez, 😳 t-tant que vous n-ny'empêchez pewsonne d'autwe d-de contwibuew.
 
-Cependant, certaines choses seront largement décidées par un petit groupe de contributeurs principaux. Vous êtes libre de vous opposer à toute décision, mais il arrive qu'un modérateur prenne une décision qui va à l'encontre de votre opinion. Vous devez respecter et accepter ces décisions.
+cependant, UwU cewtaines choses sewont w-wawgement décidées paw un p-petit gwoupe de contwibuteuws pwincipaux. >w< v-vous êtes w-wibwe de vous opposew à toute décision, o.O mais i-iw awwive qu'un modéwateuw pwenne une décision q-qui va à w'encontwe d-de votwe opinion. (˘ω˘) vous devez wespectew e-et acceptew ces d-décisions. òωó
 
-Il est utile d'apprendre à connaître les modérateurs d'un projet, afin de savoir à qui demander de l'aide, par exemple dans les fils de discussion des demandes de triage ou des problèmes.
+iw est utiwe d'appwendwe à c-connaîtwe wes modéwateuws d'un pwojet, nyaa~~ a-afin de savoiw à q-qui demandew de w'aide, ( ͡o ω ͡o ) paw e-exempwe dans wes f-fiws de discussion des demandes de twiage ou des p-pwobwèmes. 😳😳😳
 
-## Soyez patient, soyez ponctuel
+## s-soyez patient, ^•ﻌ•^ s-soyez ponctuew
 
-Gardez à l'esprit que de nombreuses personnes travaillant sur des OSP le font sur leur temps libre, sans rémunération, et que toutes les personnes travaillant sur des OSP sont généralement très occupées. Si vous attendez quelque chose comme la révision d'une pull request ou une réponse à une question, soyez patient.
+g-gawdez à w'espwit que de nyombweuses pewsonnes twavaiwwant suw des osp we font suw weuw temps wibwe, (˘ω˘) sans wémunéwation, (˘ω˘) e-et q-que toutes wes pewsonnes t-twavaiwwant s-suw des osp s-sont généwawement t-twès occupées. -.- si vous attendez q-quewque chose c-comme wa wévision d'une puww w-wequest ou une w-wéponse à une question, ^•ﻌ•^ soyez patient. /(^•ω•^)
 
-Il est raisonnable d'attendre quelques jours, puis de demander poliment à quelqu'un s'il a eu le temps d'y jeter un coup d'œil, et éventuellement de relancer une semaine plus tard pour demander s'il est trop occupé pour le moment.
+iw est w-waisonnabwe d'attendwe quewques jouws, (///ˬ///✿) puis de d-demandew powiment à quewqu'un s-s'iw a eu we temps d-d'y jetew un coup d'œiw, mya et éventuewwement d-de wewancew une s-semaine pwus tawd p-pouw demandew s'iw est twop occupé p-pouw we moment. o.O
 
-Il n'est PAS raisonnable de commencer à exiger des choses, comme si on vous devait une réponse rapide. Ce n'est pas le cas.
+i-iw ny'est pas waisonnabwe d-de commencew à exigew des choses, ^•ﻌ•^ c-comme si on v-vous devait une w-wéponse wapide. (U ᵕ U❁) ce ny'est pas w-we cas. :3
 
-Si quelqu'un attend que vous fassiez quelque chose pour lui, vous devez faire preuve de la même courtoisie, mais en même temps, essayez de répondre aussi rapidement que possible. Si vous ne pouvez vraiment pas trouver le temps, faites-le savoir et demandez aux responsables de vous aider à trouver quelqu'un d'autre pour effectuer cette tâche.
+si quewqu'un attend que vous fassiez quewque c-chose pouw wui, (///ˬ///✿) vous devez faiwe pweuve de wa même couwtoisie, (///ˬ///✿) mais en même temps, 🥺 essayez de wépondwe a-aussi wapidement que possibwe. -.- si vous nye pouvez vwaiment pas twouvew we temps, nyaa~~ faites-we savoiw et demandez aux w-wesponsabwes de vous aidew à twouvew quewqu'un d-d'autwe pouw effectuew cette tâche. (///ˬ///✿)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Comment contribuer à l'Open Source](https://opensource.guide/how-to-contribute/)
-- [Liste plus générale de freeCodeCamp « Comment contribuer à l'open source ».](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
-- [Commencer à contribuer à l'open source](https://stackoverflow.blog/2020/08/03/getting-started-with-contributing-to-open-source/)
+- [comment contwibuew à w-w'open souwce](https://opensouwce.guide/how-to-contwibute/)
+- [wiste pwus généwawe d-de fweecodecamp « comment c-contwibuew à w'open s-souwce ».](https://github.com/fweecodecamp/how-to-contwibute-to-open-souwce)
+- [commencew à contwibuew à w'open souwce](https://stackovewfwow.bwog/2020/08/03/getting-stawted-with-contwibuting-to-open-souwce/)

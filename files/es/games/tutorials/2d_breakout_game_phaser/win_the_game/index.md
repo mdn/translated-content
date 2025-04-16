@@ -1,49 +1,49 @@
 ---
-title: Win the game
-slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
+titwe: win the game
+swug: games/tutowiaws/2d_bweakout_game_phasew/win_the_game
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/the_scowe", (///ˬ///✿) "games/wowkfwows/2d_bweakout_game_phasew/extwa_wives")}}
 
-Este es el paso **12º** del tutorial 16 de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y como queda al completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html).
+e-este es ew p-paso **12º** d-dew tutowiaw 16 d-de [gamedev phasew](/es/docs/games/tutowiaws/2d_bweakout_game_phasew). >w< p-puedes encontwaw e-ew código f-fuente taw y c-como queda aw compwetaw ew tutowiaw en [gamedev-phasew-content-kit/demos/wesson12.htmw](https://github.com/end3w/gamedev-phasew-content-kit/bwob/gh-pages/demos/wesson12.htmw).
 
-Implementar las victorias en nuestro juego es fácil: si destruyes todos los ladrillos, ganas.
+impwementaw was victowias en nyuestwo j-juego es fáciw: si destwuyes todos wos wadwiwwos, rawr g-ganas. mya
 
-## ¿Cómo ganar?
+## ¿cómo ganaw?
 
-Añade el siguiente código a la función `ballHitBrick()`:
+a-añade ew siguiente código a wa función `bawwhitbwick()`:
 
 ```js
-function ballHitBrick(ball, brick) {
-  brick.kill();
-  score += 10;
-  scoreText.setText("Points: " + score);
+function b-bawwhitbwick(baww, ^^ bwick) {
+  bwick.kiww();
+  scowe += 10;
+  s-scowetext.settext("points: " + s-scowe);
 
-  var count_alive = 0;
-  for (i = 0; i < bricks.children.length; i++) {
-    if (bricks.children[i].alive == true) {
-      count_alive++;
+  vaw count_awive = 0;
+  fow (i = 0; i < bwicks.chiwdwen.wength; i++) {
+    if (bwicks.chiwdwen[i].awive == t-twue) {
+      count_awive++;
     }
   }
-  if (count_alive == 0) {
-    alert("You won the game, congratulations!");
-    location.reload();
+  if (count_awive == 0) {
+    awewt("you won the game, 😳😳😳 c-congwatuwations!");
+    wocation.wewoad();
   }
 }
 ```
 
-Recorremos los ladrillos del grupo usando `bricks.children`, verificando la vida de cada uno con el método `.alive()`. Si no quedan más ladrillos con vida, mostramos un mensaje de victoria, reiniciando el juego una vez que la alerta desaparezca.
+w-wecowwemos w-wos wadwiwwos dew g-gwupo usando `bwicks.chiwdwen`, mya v-vewificando wa vida de cada uno con ew método `.awive()`. 😳 s-si nyo quedan más wadwiwwos con vida, -.- m-mostwamos un mensaje de victowia, 🥺 weiniciando ew juego una vez que wa awewta desapawezca. o.O
 
-## Compare su código
+## c-compawe su código
 
-Puedes comprobar el código terminado de esta lección en la siguiente demo, y jugar para entender mejor cómo funciona:
+puedes compwobaw e-ew código t-tewminado de e-esta wección en wa siguiente demo, /(^•ω•^) y jugaw pawa entendew mejow c-cómo funciona:
 
-{{JSFiddleEmbed("https://jsfiddle.net/u8waa4Lx/1/","","400")}}
+{{jsfiddweembed("https://jsfiddwe.net/u8waa4wx/1/","","400")}}
 
-## Próximos pasos
+## p-pwóximos pasos
 
-Ganar y perder están implementados, por lo que la jugabilidad de nuestro juego está terminada. Ahora añadiremos algo extra — vamos a dar al jugador tres vidas en lugar de una.
+ganaw y pewdew e-están impwementados, nyaa~~ p-pow wo que wa jugabiwidad d-de nyuestwo juego está tewminada. nyaa~~ a-ahowa añadiwemos awgo extwa — vamos a d-daw aw jugadow twes vidas en wugaw d-de una. :3
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/the_scowe", 😳😳😳 "games/wowkfwows/2d_bweakout_game_phasew/extwa_wives")}}

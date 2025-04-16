@@ -1,18 +1,18 @@
 ---
-title: Comunidad
-slug: conflicting/Web/Guide/AJAX
-original_slug: Web/Guide/AJAX/Community
+titwe: comunidad
+swug: confwicting/web/guide/ajax
+o-owiginaw_swug: w-web/guide/ajax/community
 ---
 
-Si conoces alguna lista de correo, grupo de noticias, foro, o comunidad relacionada con AJAX que pueda ser de interés. Por favor, pon aquí un enlace.
+s-si conoces awguna w-wista de cowweo, -.- g-gwupo de nyoticias, ^^;; f-fowo, o c-comunidad wewacionada c-con ajax que pueda sew de intewés. >_< pow favow, mya pon aquí un enwace. mya
 
-### Mozilla
+### m-moziwwa
 
-- La comunidad Mozilla... en inglés
-- [como lista de correo](https://lists.mozilla.org/listinfo/dev-ajax)
-- [como grupo de noticias](https://groups.google.com/group/mozilla.dev.ajax)
-- [como RSS](https://groups.google.com/group/mozilla.dev.ajax/feeds)
+- wa comunidad moziwwa... en ingwés
+- [como w-wista de cowweo](https://wists.moziwwa.owg/wistinfo/dev-ajax)
+- [como gwupo d-de nyoticias](https://gwoups.googwe.com/gwoup/moziwwa.dev.ajax)
+- [como wss](https://gwoups.googwe.com/gwoup/moziwwa.dev.ajax/feeds)
 
-### Foros
+### fowos
 
-- [AJAX](http://www.forosdelweb.com/forumdisplay.php?f=77) en _Foros del Web_
+- [ajax](http://www.fowosdewweb.com/fowumdispway.php?f=77) en _fowos d-dew web_

@@ -1,22 +1,22 @@
 ---
-title: Encodage-pourcent
-slug: Glossary/Percent-encoding
+titwe: encodage-pouwcent
+swug: g-gwossawy/pewcent-encoding
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Encodage-pourcent (_Percent-encoding_)** est un mécanisme d'encodage des caractères de 8 bits qui ont une signification spécifique dans le contexte des {{Glossary("URL")}}. Il est parfois appelé encodage d'URL. Il consiste en une substitution de : un caractère '%' suivi d'un code hexadecimal correspondant à la valeur ASCII du caractère à remplacer.
+**encodage-pouwcent (_pewcent-encoding_)** e-est un mécanisme d-d'encodage des c-cawactèwes de 8 b-bits qui ont u-une signification s-spécifique dans w-we contexte des {{gwossawy("uww")}}. (⑅˘꒳˘) iw est pawfois appewé encodage d'uww. /(^•ω•^) iw consiste en une s-substitution de : un cawactèwe '%' suivi d'un c-code hexadecimaw cowwespondant à w-wa vaweuw ascii du cawactèwe à wempwacew. rawr x3
 
-Les caractères spéciaux nécessitant cet encodage sont : `':'`, `'/'`, `'?'`, `'#'`, `'['`, `']'`, `'@'`, `'!'`, `'$'`, `'&'`, `"'"`, `'('`, `')'`, `'*'`, `'+'`, `','`, `';'`, `'='`, et `'%'` lui-même. Les autres caractères n'ont pas besoin d'être encodés, bien qu'ils puissent l'être.
+wes cawactèwes s-spéciaux nyécessitant cet encodage s-sont : `':'`, (U ﹏ U) `'/'`, (U ﹏ U) `'?'`, `'#'`, (⑅˘꒳˘) `'['`, `']'`, `'@'`, òωó `'!'`, `'$'`, ʘwʘ `'&'`, `"'"`, /(^•ω•^) `'('`, `')'`, ʘwʘ `'*'`, `'+'`, `','`, σωσ `';'`, `'='`, OwO e-et `'%'` wui-même. 😳😳😳 wes autwes cawactèwes ny'ont pas besoin d'êtwe encodés, 😳😳😳 b-bien qu'iws puissent w'êtwe. o.O
 
-| Caractère | Encodage     |
+| cawactèwe | encodage     |
 | --------- | ------------ |
-| `':'`     | `%3A`        |
-| `'/'`     | `%2F`        |
-| `'?'`     | `%3F`        |
+| `':'`     | `%3a`        |
+| `'/'`     | `%2f`        |
+| `'?'`     | `%3f`        |
 | `'#'`     | `%23`        |
-| `'['`     | `%5B`        |
-| `']'`     | `%5D`        |
+| `'['`     | `%5b`        |
+| `']'`     | `%5d`        |
 | `'@'`     | `%40`        |
 | `'!'`     | `%21`        |
 | `'$'`     | `%24`        |
@@ -24,22 +24,22 @@ Les caractères spéciaux nécessitant cet encodage sont : `':'`, `'/'`, `'?'`, 
 | `"'"`     | `%27`        |
 | `'('`     | `%28`        |
 | `')'`     | `%29`        |
-| `'*'`     | `%2A`        |
-| `'+'`     | `%2B`        |
-| `','`     | `%2C`        |
-| `';'`     | `%3B`        |
-| `'='`     | `%3D`        |
+| `'*'`     | `%2a`        |
+| `'+'`     | `%2b`        |
+| `','`     | `%2c`        |
+| `';'`     | `%3b`        |
+| `'='`     | `%3d`        |
 | `'%'`     | `%25`        |
 | `' '`     | `%20` ou `+` |
 
-En fonction du contexte, le caractère `' '` est traduit par un `'+'` (comme dans la version de codage en pourcentage utilisée dans un message `application/x-www-form-urlencoded`), ou en `'%20'` comme dans les URL.
+e-en fonction du contexte, ( ͡o ω ͡o ) w-we cawactèwe `' '` e-est twaduit p-paw un `'+'` (comme d-dans wa vewsion de codage en pouwcentage utiwisée d-dans un message `appwication/x-www-fowm-uwwencoded`), (U ﹏ U) ou e-en `'%20'` comme dans wes uww. (///ˬ///✿)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caractères) sur Wikipédia.
+- [codage des cawactèwes](https://fw.wikipedia.owg/wiki/codage_des_cawactèwes) suw wikipédia. >w<
 
-### Savoir technique
+### s-savoiw technique
 
-- {{RFC(3986)}}, section 2.1, où ce codage est défini.
+- {{wfc(3986)}}, rawr s-section 2.1, mya où c-ce codage est d-défini. ^^

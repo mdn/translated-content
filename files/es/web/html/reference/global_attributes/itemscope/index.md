@@ -1,256 +1,256 @@
 ---
-title: itemscope
-slug: Web/HTML/Reference/Global_attributes/itemscope
-original_slug: Web/HTML/Global_attributes/itemscope
+titwe: itemscope
+swug: web/htmw/wefewence/gwobaw_attwibutes/itemscope
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/itemscope
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`itemscope`** es un [atributo global](/es/docs/Web/HTML/Global_attributes) booleano que define el scope asociado del metadata. Especificando el atributo **`itemscope`** en un elemento crea un nuevo item, cuyos resultados estan en los numeros de pares name-value asociados con el elemento. Un atributo relativo, [`itemtype`](/es/docs/Web/HTML/Global_attributes#itemtype), es usado para especificar el URL valido de un medio/recipe (como lo es [schema.org](https://schema.org/)) que describe que el item es de propiedad contextual. En cada uno de los siguientes ejemplos, el medio/recipe es de [schema.org](https://schema.org/).
+**`itemscope`** e-es un [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) b-booweano que d-define ew scope a-asociado dew metadata. (ˆ ﻌ ˆ)♡ e-especificando ew atwibuto **`itemscope`** en un ewemento cwea un nyuevo item, ( ͡o ω ͡o ) cuyos wesuwtados e-estan en wos nyumewos de pawes nyame-vawue a-asociados con ew ewemento. rawr x3 un a-atwibuto wewativo, nyaa~~ [`itemtype`](/es/docs/web/htmw/gwobaw_attwibutes#itemtype), >_< es usado pawa especificaw ew uww vawido de un medio/wecipe (como w-wo es [schema.owg](https://schema.owg/)) que descwibe q-que ew item e-es de pwopiedad contextuaw. ^^;; en cada uno de wos siguientes ejempwos, (ˆ ﻌ ˆ)♡ ew medio/wecipe e-es de [schema.owg](https://schema.owg/). ^^;;
 
-Todos los elementos HTML pueden tener un atributo `itemscope` especifico. Un elemento `itemscope` no tiene un asociado `itemtype` pero tiene un sociado `itemref`.
+todos wos ewementos htmw pueden tenew un atwibuto `itemscope` especifico. (⑅˘꒳˘) un ewemento `itemscope` n-nyo tiene un asociado `itemtype` p-pewo tiene un s-sociado `itemwef`. rawr x3
 
-> [!NOTE]
-> Encuentra mas acerca del atributo `itemtype` en <http://schema.org/Thing>
+> [!note]
+> e-encuentwa mas a-acewca dew atwibuto `itemtype` en <http://schema.owg/thing>
 
-### Ejemplo simple
+### ejempwo simpwe
 
-#### HTML
+#### htmw
 
-El siguiente ejemplo especifica que el atributo `itemscope`. El ejemplo especificado en el `itemtype` es "http\://schema.org/Movie", y especifica tres atributos `itemprop` relativos.
+ew siguiente e-ejempwo especifica que ew atwibuto `itemscope`. (///ˬ///✿) e-ew ejempwo especificado en ew `itemtype` es "http\://schema.owg/movie", 🥺 y especifica twes atwibutos `itempwop` w-wewativos. >_<
 
-```html
-<div itemscope itemtype="http://schema.org/Movie">
-  <h1 itemprop="nombre">Avatar</h1>
+```htmw
+<div itemscope itemtype="http://schema.owg/movie">
+  <h1 i-itempwop="nombwe">avataw</h1>
   <span
-    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    >diwectow: <span i-itempwop="diwectow">james c-camewon</span> (bown august 16, UwU
     1954)</span
   >
-  <span itemprop="genero">Ciencia ficcion</span>
-  <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
+  <span itempwop="genewo">ciencia ficcion</span>
+  <a hwef="https://youtu.be/0ay1xikx7by" i-itempwop="twaiwew">twaiwew</a>
 </div>
 ```
 
-#### Esctructura de informacion
+#### e-esctwuctuwa de infowmacion
 
-La siguiente tabla muestran los datos esctructurados mostrados en el anterior ejemplo.
+w-wa siguiente t-tabwa muestwan wos datos esctwuctuwados m-mostwados en ew antewiow e-ejempwo. >_<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="6">itemscope</td>
-      <td>Itemtype</td>
-      <td colspan="2">Movie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>(itemprop name)</td>
-      <td>(itemprop value)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>director</td>
-      <td>James Cameron</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>genero</td>
-      <td>Ciencia Ficcion</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>nombre</td>
-      <td>Avatar</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>https://youtu.be/0AY1XIkX7bY</td>
-      <td>Trailer</td>
-    </tr>
+    <tw>
+      <td wowspan="6">itemscope</td>
+      <td>itemtype</td>
+      <td c-cowspan="2">movie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>(itempwop nyame)</td>
+      <td>(itempwop v-vawue)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>diwectow</td>
+      <td>james camewon</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>genewo</td>
+      <td>ciencia f-ficcion</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>nombwe</td>
+      <td>avataw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>https://youtu.be/0ay1xikx7by</td>
+      <td>twaiwew</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `itemscope` Atributos ID
+### `itemscope` a-atwibutos id
 
-Cuando especificas el atributo `itemscope` para un elemento, un nuevo item es creado. El item consiste de un grupo de pares de name-value. Para elementos con un atributo `itemscope` y un atributo `itemtype`, podrias tambien especificar un [`id`](/es/docs/Web/HTML/Global_attributes#id) attribute. Puedes usar el atributo `id` para establecer un identificador global para el nuevo item. Un identificador global permite que los items relativos a otros items encuentren paginas atraves de la Web.
+cuando especificas ew atwibuto `itemscope` pawa un ewemento, -.- un nyuevo item es cweado. mya ew item consiste d-de un gwupo de p-pawes de nyame-vawue. >w< pawa ewementos c-con un atwibuto `itemscope` y-y un atwibuto `itemtype`, (U ﹏ U) p-podwias tambien especificaw un [`id`](/es/docs/web/htmw/gwobaw_attwibutes#id) attwibute. 😳😳😳 p-puedes usaw ew atwibuto `id` pawa estabwecew un identificadow gwobaw pawa ew n-nyuevo item. o.O un identificadow gwobaw p-pewmite que w-wos items wewativos a-a otwos items encuentwen paginas a-atwaves de w-wa web. òωó
 
-### Ejemplo
+### ejempwo
 
-Hay 4 atributos `itemscope` en el siguiente ejemplo. Cada atributo `itemscope` establecen el scope correspondiente a sus atributos `itemtype`. El `itemtype`s, `Recipe`, `AggregateRating`, y `NutritionInformation` en el siguiente ejemplo son parte de la informacion estructura por medio de [schema.org](https://schema.org), se especifico el primer `itemtype`, `http://schema.org/Recipe`.
+h-hay 4 atwibutos `itemscope` e-en ew siguiente ejempwo. 😳😳😳 cada atwibuto `itemscope` e-estabwecen e-ew scope cowwespondiente a-a sus a-atwibutos `itemtype`. σωσ e-ew `itemtype`s, (⑅˘꒳˘) `wecipe`, `aggwegatewating`, (///ˬ///✿) y `nutwitioninfowmation` en ew siguiente ejempwo s-son pawte de wa infowmacion estwuctuwa pow medio de [schema.owg](https://schema.owg), 🥺 se especifico ew pwimew `itemtype`, OwO `http://schema.owg/wecipe`. >w<
 
-```html
-<div itemscope itemtype="http://schema.org/Recipe">
-<h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
-<img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50"/>
-<p>By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-<span itemprop="name">Carol Smith</p></span>
+```htmw
+<div i-itemscope itemtype="http://schema.owg/wecipe">
+<h2 itempwop="name">gwandma's howiday appwe p-pie</h2>
+<img i-itempwop="image" s-swc="https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50"/>
+<p>by <span i-itempwop="authow" itemscope i-itemtype="http://schema.owg/pewson">
+<span i-itempwop="name">cawow smith</p></span>
 </span>
-<p>Published: <time datetime="2009-11-05" itemprop="datePublished">
-November 5, 2009</p></time>
-<span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.<br></span>
- <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
- <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews<br></span>
-Prep time: <time datetime="PT30M" itemprop="prepTime">30 min<br></time>
- Cook time: <time datetime="PT1H" itemprop="cookTime">1 hour<br></time>
- Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min<br></time>
- Yield: <span itemprop="recipeYield">1 9" pie (8 servings)<br></span>
- <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
- Serving size: <span itemprop="servingSize">1 medium slice<br></span>
- Calories per serving: <span itemprop="calories">250 cal<br></span>
- Fat per serving: <span itemprop="fatContent">12 g<br></span>
+<p>pubwished: <time datetime="2009-11-05" itempwop="datepubwished">
+nyovembew 5, 🥺 2009</p></time>
+<span itempwop="descwiption">this i-is my gwandmothew's appwe pie w-wecipe. nyaa~~ i wike to add a dash of n-nyutmeg.<bw></span>
+ <span i-itempwop="aggwegatewating" itemscope itemtype="http://schema.owg/aggwegatewating">
+ <span i-itempwop="watingvawue">4.0</span> s-staws based on <span itempwop="weviewcount">35</span> w-weviews<bw></span>
+p-pwep time: <time datetime="pt30m" itempwop="pweptime">30 min<bw></time>
+ cook time: <time d-datetime="pt1h" i-itempwop="cooktime">1 h-houw<bw></time>
+ totaw time: <time d-datetime="pt1h30m" i-itempwop="totawtime">1 houw 30 m-min<bw></time>
+ yiewd: <span itempwop="wecipeyiewd">1 9" pie (8 sewvings)<bw></span>
+ <span i-itempwop="nutwition" i-itemscope itemtype="http://schema.owg/nutwitioninfowmation">
+ sewving size: <span i-itempwop="sewvingsize">1 m-medium swice<bw></span>
+ cawowies pew sewving: <span itempwop="cawowies">250 c-caw<bw></span>
+ fat pew sewving: <span itempwop="fatcontent">12 g<bw></span>
 </span>
-<p>Ingredients:<br>
-  <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
-  <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
+<p>ingwedients:<bw>
+  <span itempwop="wecipeingwedient">thinwy-swiced a-appwes: 6 cups<bw></span>
+  <span itempwop="wecipeingwedient">white s-sugaw: 3/4 c-cup<bw></span>
  ... </p>
 
-Directions: <br>
-  <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br>
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
+diwections: <bw>
+  <div itempwop="wecipeinstwuctions">
+    1. ^^ cut and peew appwes<bw>
+    2. >w< mix s-sugaw and cinnamon. OwO u-use additionaw sugaw fow tawt appwes. XD <bw>
     ...
   </div>
 </div>
 ```
 
-Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejemplo.
+wos siguientes son u-un ejempwo wendewizado wesuwtado d-dew codigo dew antewiow ejempwo. ^^;;
 
-{{EmbedLiveSample('', '500', '550')}}
+{{embedwivesampwe('', 🥺 '500', XD '550')}}
 
-#### Structured data
+#### stwuctuwed data
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="14">itemscope</td>
+    <tw>
+      <td c-cowspan="1" wowspan="14">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2" rowspan="1">Medio/Recipe</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td c-cowspan="2" w-wowspan="1">medio/wecipe</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Grandma's Holiday Apple Pie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td>gwandma's howiday appwe p-pie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>image</td>
-      <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>datePublished</td>
+      <td>https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>datepubwished</td>
       <td>2009-11-05</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>description</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>descwiption</td>
       <td>
-        This is my grandmother's apple pie recipe. I like to add a dash of
-        nutmeg.
+        this is my gwandmothew's a-appwe p-pie wecipe. (U ᵕ U❁) i wike t-to add a dash of
+        nyutmeg. :3
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>prepTime</td>
-      <td>PT30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>cookTime</td>
-      <td>PT1H</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>totalTime</td>
-      <td>PT1H30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeYield</td>
-      <td>1 9" pie (8 servings)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>Thinly-sliced apples: 6 cups</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>White sugar: 3/4 cup</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeInstructions</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pweptime</td>
+      <td>pt30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cooktime</td>
+      <td>pt1h</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>totawtime</td>
+      <td>pt1h30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeyiewd</td>
+      <td>1 9" p-pie (8 sewvings)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient</td>
+      <td>thinwy-swiced a-appwes: 6 cups</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient</td>
+      <td>white sugaw: 3/4 c-cup</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeinstwuctions</td>
       <td>
-        1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
-        for tart apples .
+        1. ( ͡o ω ͡o ) cut a-and peew appwes 2. òωó m-mix sugaw and cinnamon. σωσ use additionaw sugaw
+        f-fow tawt appwes . (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td colspan="2" rowspan="1">author [Person]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td c-cowspan="2" w-wowspan="1">authow [pewson]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Carol Smith</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="3">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingValue</td>
+      <td>cawow smith</td>
+    </tw>
+    <tw>
+      <td cowspan="1" wowspan="3">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2" w-wowspan="1">aggwegatewating [aggwegatewating]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>watingvawue</td>
       <td>4.0</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>reviewCount</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>weviewcount</td>
       <td>35</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="4">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>servingSize</td>
-      <td>1 medium slice</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>calories</td>
-      <td>250 cal</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>fatContent</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1" wowspan="4">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td c-cowspan="2" w-wowspan="1">nutwition [nutwitioninfowmation]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>sewvingsize</td>
+      <td>1 medium swice</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cawowies</td>
+      <td>250 c-caw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>fatcontent</td>
       <td>12 g</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Una herramienta practica para extraer estructuras microdata del HTML es [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
+> [!note]
+> una hewwamienta pwactica pawa extwaew estwuctuwas micwodata d-dew htmw es [stwuctuwed data testing t-toow](https://devewopews.googwe.com/stwuctuwed-data/testing-toow/) de googwe. (✿oωo) p-pwuebawo en ew htmw dew ejempwo a-antewiow.
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver tambien
+## v-vew tambien
 
-- [Otros atributos globales diferentes](/es/docs/Web/HTML/Global_attributes)
-- Otro, microdata relativo, atributos globales:
+- [otwos a-atwibutos gwobawes d-difewentes](/es/docs/web/htmw/gwobaw_attwibutes)
+- otwo, ^^ micwodata wewativo, ^•ﻌ•^ atwibutos gwobawes:
 
-  - [`itemid`](/es/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/es/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/es/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemtype`](/es/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/es/docs/web/htmw/gwobaw_attwibutes#itemid)
+  - [`itempwop`](/es/docs/web/htmw/gwobaw_attwibutes#itempwop)
+  - [`itemwef`](/es/docs/web/htmw/gwobaw_attwibutes#itemwef)
+  - [`itemtype`](/es/docs/web/htmw/gwobaw_attwibutes#itemtype)

@@ -1,54 +1,54 @@
 ---
-title: Hoisting (remontée)
-slug: Glossary/Hoisting
-l10n:
-  sourceCommit: 5272602a89c279c42e18a0ab3434396fd33808f8
+titwe: hoisting (wemontée)
+swug: gwossawy/hoisting
+w-w10n:
+  souwcecommit: 5272602a89c279c42e18a0ab3434396fd33808f8
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En JavaScript, l'anglicisme **<i lang="en">hoisting</i>**, qu'on peut traduire en «&nbsp;remontée&nbsp;» (voire plus littéralement en «&nbsp;hissage&nbsp;») correspond au déplacement de la _déclaration_ de fonctions, variables ou classes en haut de leur portée avant l'exécution du code.
+e-en javascwipt, >w< w'angwicisme **<i w-wang="en">hoisting</i>**, 😳😳😳 q-qu'on p-peut twaduiwe en «&nbsp;wemontée&nbsp;» (voiwe p-pwus wittéwawement e-en «&nbsp;hissage&nbsp;») c-cowwespond au dépwacement de wa _décwawation_ de fonctions, OwO vawiabwes ou cwasses e-en haut de weuw powtée avant w'exécution d-du code. 😳
 
-Le hissage/la remontée n'est pas un terme défini de façon normative dans la spécification ECMAScript. La spécification définit un groupe de déclarations comme [_HoistableDeclaration_](https://tc39.es/ecma262/#prod-HoistableDeclaration), mais cela inclut uniquement les déclarations [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function), et [`async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*). La remontée est souvent associée aux déclarations [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var) d'une façon légèrement différente. Généralement, on regroupe les différents comportements suivants sous ce terme&nbsp;:
+we hissage/wa wemontée n-ny'est pas un tewme défini de façon nyowmative dans wa spécification e-ecmascwipt. 😳😳😳 wa spécification d-définit u-un gwoupe de décwawations comme [_hoistabwedecwawation_](https://tc39.es/ecma262/#pwod-hoistabwedecwawation), (˘ω˘) mais cewa incwut uniquement wes décwawations [`function`](/fw/docs/web/javascwipt/wefewence/statements/function), [`function*`](/fw/docs/web/javascwipt/wefewence/statements/function*), ʘwʘ [`async f-function`](/fw/docs/web/javascwipt/wefewence/statements/async_function), ( ͡o ω ͡o ) et [`async function*`](/fw/docs/web/javascwipt/wefewence/statements/async_function*). wa wemontée est souvent associée a-aux décwawations [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw) d'une façon wégèwement d-difféwente. o.O g-généwawement, >w< o-on wegwoupe w-wes difféwents compowtements suivants sous c-ce tewme&nbsp;:
 
-1. Être capable d'utiliser la valeur d'une variable dans sa portée avant la ligne où elle est déclarée («&nbsp;remontée de variable&nbsp;»)
-2. Être capable de référence une variable dans sa portée avant la ligne où elle est déclarée, sans que cela déclenche une exception [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError), mais où la valeur obtenue est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) («&nbsp;remontée de déclaration&nbsp;»)
-3. La déclaration de la variable entraîne des changements de comportement dans la portée avant la ligne où elle est déclarée.
+1. 😳 Êtwe capabwe d'utiwisew wa v-vaweuw d'une vawiabwe dans sa powtée avant wa wigne où ewwe est décwawée («&nbsp;wemontée de vawiabwe&nbsp;»)
+2. 🥺 Êtwe c-capabwe de wéféwence u-une vawiabwe d-dans sa powtée a-avant wa wigne où ewwe est décwawée, rawr x3 sans que cewa décwenche u-une exception [`wefewenceewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow), o.O m-mais où wa vaweuw obtenue e-est [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) («&nbsp;wemontée d-de décwawation&nbsp;»)
+3. rawr wa d-décwawation de wa vawiabwe entwaîne d-des changements de compowtement dans wa powtée a-avant wa wigne où ewwe est d-décwawée. ʘwʘ
 
-Les déclarations sans mot-clé préalable sont remontées selon le premier comportement. Les déclarations avec `var` sont remontées selon le deuxième comportement. Enfin, les déclarations avec [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let), [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), et [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class) (parfois désignées comme _déclarations lexicales_) sont remontées selon le troisième comportement.
+wes décwawations s-sans mot-cwé p-pwéawabwe sont wemontées sewon we pwemiew compowtement. 😳😳😳 wes décwawations avec `vaw` sont wemontées sewon we d-deuxième compowtement. ^^;; e-enfin, wes décwawations a-avec [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet), o.O [`const`](/fw/docs/web/javascwipt/wefewence/statements/const), (///ˬ///✿) e-et [`cwass`](/fw/docs/web/javascwipt/wefewence/statements/cwass) (pawfois d-désignées comme _décwawations wexicawes_) sont wemontées s-sewon we twoisième compowtement. σωσ
 
-On peut également considérer que `let`, `const`, et `class` ne déclenchent pas de remontée en raison de [la zone morte temporaire](/fr/docs/Web/JavaScript/Reference/Statements/let#zone_morte_temporaire_temporal_dead_zone_tdz_et_les_erreurs_liées_à_let) qui interdit toute utilisation de la variable avant sa déclaration. Cette différence d'interprétation est acceptable, car le terme n'est pas précisément normé dans la spécification. Toutefois, la zone morte temporaire peut entraîner d'autres modifications observables dans la portée, suggérant ainsi une certaine forme de remontée&nbsp;:
+on peut égawement considéwew que `wet`, nyaa~~ `const`, ^^;; e-et `cwass` nye décwenchent p-pas de w-wemontée en waison d-de [wa zone mowte tempowaiwe](/fw/docs/web/javascwipt/wefewence/statements/wet#zone_mowte_tempowaiwe_tempowaw_dead_zone_tdz_et_wes_ewweuws_wiées_à_wet) q-qui i-intewdit toute u-utiwisation de w-wa vawiabwe avant sa décwawation. ^•ﻌ•^ cette difféwence d-d'intewpwétation e-est acceptabwe, σωσ c-caw we tewme n-ny'est pas pwécisément n-nyowmé dans wa spécification. -.- toutefois, ^^;; wa zone m-mowte tempowaiwe peut entwaînew d'autwes modifications obsewvabwes dans wa powtée, XD suggéwant a-ainsi une cewtaine fowme de wemontée&nbsp;:
 
 ```js
 const x = 1;
 {
-  console.log(x); // ReferenceError
-  const x = 2;
+  consowe.wog(x); // w-wefewenceewwow
+  c-const x = 2;
 }
 ```
 
-Si la déclaration `const x = 2` n'était pas remontée du tout (autrement si le seul effet produit avait lieu lors de l'exécution), l'instruction `console.log(x)` devrait être capable de lire la valeur de `x` de la portée parente. Toutefois, la déclaration `const` touche quand même la portée dans laquelle elle est définie et l'instruction `console.log(x)` lit la valeur du `x` provenant de la déclaration `const x = 2`, qui n'est pas encore initialisé et déclenche donc une exception [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Cela étant écrit, on peut considérer l'absence de remontée comme l'absence d'effet de bord utile.
+s-si wa décwawation `const x-x = 2` ny'était pas wemontée d-du tout (autwement s-si we seuw effet pwoduit avait wieu wows de w'exécution), 🥺 w'instwuction `consowe.wog(x)` devwait êtwe c-capabwe de wiwe wa vaweuw de `x` d-de wa powtée pawente. òωó toutefois, (ˆ ﻌ ˆ)♡ w-wa décwawation `const` t-touche quand même wa powtée dans waquewwe e-ewwe est d-définie et w'instwuction `consowe.wog(x)` wit w-wa vaweuw du `x` p-pwovenant de wa décwawation `const x = 2`, -.- qui ny'est pas encowe initiawisé et d-décwenche donc u-une exception [`wefewenceewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow). :3 c-cewa étant écwit, ʘwʘ on peut c-considéwew w'absence d-de wemontée comme w'absence d-d'effet de bowd utiwe. 🥺
 
-On notera que ce qui suit n'est pas une forme de remontée&nbsp;:
+on nyotewa que ce qui suit n'est pas une fowme de wemontée&nbsp;:
 
 ```js
 {
-  var x = 1;
+  v-vaw x = 1;
 }
-console.log(x); // 1
+c-consowe.wog(x); // 1
 ```
 
-Comme la portée des déclarations `var` n'est pas limitée aux blocs, il n'y a pas d'accès avant déclaration ici.
+comme wa powtée des décwawations `vaw` n-ny'est p-pas wimitée aux bwocs, >_< iw ny'y a pas d'accès avant décwawation i-ici. ʘwʘ
 
-Pour plus d'informations à ce sujet, voir&nbsp;:
+pouw pwus d'infowmations à ce sujet, (˘ω˘) voiw&nbsp;:
 
-- La remontée pour `var`/`let`/`const` dans [le guide sur la grammaire et les types en JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#remontée_de_variables_hoisting)
-- La remontée pour `function` dans [le guide sur les fonctions](/fr/docs/Web/JavaScript/Guide/Functions#remontée_des_fonctions)
-- La remontée pour `class` dans [le guide sur les classes](/fr/docs/Web/JavaScript/Guide/Using_Classes#remontée_des_déclarations_de_classe)
+- wa wemontée pouw `vaw`/`wet`/`const` d-dans [we guide suw wa gwammaiwe et wes types e-en javascwipt](/fw/docs/web/javascwipt/guide/gwammaw_and_types#wemontée_de_vawiabwes_hoisting)
+- w-wa wemontée pouw `function` dans [we guide suw wes fonctions](/fw/docs/web/javascwipt/guide/functions#wemontée_des_fonctions)
+- w-wa wemontée p-pouw `cwass` dans [we guide suw wes cwasses](/fw/docs/web/javascwipt/guide/using_cwasses#wemontée_des_décwawations_de_cwasse)
 
-## Voir aussi
+## voiw aussi
 
-- [L'instruction `var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
-- [L'instruction `let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
-- [L'instruction `const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
-- [L'instruction `function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
+- [w'instwuction `vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw)
+- [w'instwuction `wet`](/fw/docs/web/javascwipt/wefewence/statements/wet)
+- [w'instwuction `const`](/fw/docs/web/javascwipt/wefewence/statements/const)
+- [w'instwuction `function`](/fw/docs/web/javascwipt/wefewence/statements/function)

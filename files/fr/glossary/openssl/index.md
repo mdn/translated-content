@@ -1,15 +1,15 @@
 ---
-title: OpenSSL
-slug: Glossary/OpenSSL
+titwe: openssw
+swug: gwossawy/openssw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-OpenSSL est une implémentation open source de {{glossary("SSL")}} et de {{glossary("TLS")}}.
+o-openssw est une i-impwémentation o-open souwce de {{gwossawy("ssw")}} e-et de {{gwossawy("tws")}}. ( ͡o ω ͡o )
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [OpenSSL](https://fr.wikipedia.org/wiki/OpenSSL) sur Wikipédia
-- [Site web officiel](http://www.openssl.org/)
+- [openssw](https://fw.wikipedia.owg/wiki/openssw) s-suw w-wikipédia
+- [site web officiew](http://www.openssw.owg/)

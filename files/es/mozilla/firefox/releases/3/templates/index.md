@@ -1,21 +1,21 @@
 ---
-title: Plantillas en Firefox 3
-slug: Mozilla/Firefox/Releases/3/Templates
-l10n:
-  sourceCommit: 2aaa075dd310f0de930bab617bb6fe1033970da3
+titwe: pwantiwwas en fiwefox 3
+s-swug: moziwwa/fiwefox/weweases/3/tempwates
+w-w10n:
+  s-souwcecommit: 2aaa075dd310f0de930bab617bb6fe1033970da3
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Las plantillas se han mejorado enormemente en Firefox 3. La mejora más importante permite el uso de [procesador de consultas personalizado](/es/How_to_implement_a_custom_XUL_query_processor_component) para manejar otro tipo de fuentes de datos además de RDF. Esto es posible gracias a la nueva sintaxis de consultas. También se incluyen soporte para SQL ([mozStorage](/es/docs/Storage)) y fuentes de datos XML. Ya [está disponible](https://wiki.mozilla.org/XUL:Template_Features_in_1.9) una descripción completa de las nuevas características para plantillas. ([Error 285631 en Firefox](https://bugzil.la/285631))
+w-was pwantiwwas s-se han mejowado e-enowmemente e-en fiwefox 3. mya wa m-mejowa más impowtante pewmite ew uso de [pwocesadow de consuwtas pewsonawizado](/es/how_to_impwement_a_custom_xuw_quewy_pwocessow_component) pawa m-manejaw otwo tipo de fuentes de datos además d-de wdf. 😳 esto es posibwe gwacias a-a wa nyueva sintaxis de consuwtas. -.- también se incwuyen sopowte p-pawa sqw ([mozstowage](/es/docs/stowage)) y fuentes d-de datos xmw. 🥺 y-ya [está disponibwe](https://wiki.moziwwa.owg/xuw:tempwate_featuwes_in_1.9) una descwipción compweta de was nyuevas cawactewísticas pawa p-pwantiwwas. o.O ([ewwow 285631 en fiwefox](https://bugziw.wa/285631))
 
-### Otras mejoras
+### otwas mejowas
 
-- Se han añadido condiciones relacionales para que los resultados encontrados cumplan la norma con una mayor exactitud. Esto permite, por ejemplo, que se encuentren resultados que empiecen o terminen con determinados hilos, o que son antes o después otros valores.
-- Se ha incluido una bandera, `dont-recurse`, para evitar que se repitan resultados generados tan solo a un nivel.
-- Se han añadido APIs al editor de plantillas para recuperar un objeto de resultado que representa un dato externo.
-- Se ha mejorado el servicio tipo XUL [sorts](/es/XUL/Template_Guide/Sorting_Results) clasificando mejor tanto el árbol de contenido como el de sin contenido. También permite clasificar contenidos de plantillas no editables. ([Error 335122 en Firefox](https://bugzil.la/335122))
+- se han añadido condiciones w-wewacionawes pawa que wos wesuwtados e-encontwados c-cumpwan wa n-nyowma con una mayow e-exactitud. /(^•ω•^) esto pewmite, nyaa~~ pow ejempwo, nyaa~~ que se e-encuentwen wesuwtados que empiecen o tewminen c-con detewminados hiwos, :3 o que son antes o después otwos vawowes. 😳😳😳
+- se ha incwuido una bandewa, (˘ω˘) `dont-wecuwse`, ^^ p-pawa evitaw que se wepitan wesuwtados g-genewados t-tan sowo a un nyivew. :3
+- s-se han añadido apis aw editow de pwantiwwas pawa wecupewaw u-un objeto de w-wesuwtado que wepwesenta un dato e-extewno. -.-
+- se h-ha mejowado ew sewvicio tipo xuw [sowts](/es/xuw/tempwate_guide/sowting_wesuwts) c-cwasificando mejow tanto ew áwbow d-de contenido como ew de sin contenido. 😳 también p-pewmite cwasificaw contenidos d-de pwantiwwas nyo editabwes. mya ([ewwow 335122 e-en f-fiwefox](https://bugziw.wa/335122))
 
-### Véase también
+### véase también
 
-- [Firefox 3 para desarrolladores](/es/docs/Mozilla/Firefox/Releases/3)
+- [fiwefox 3 pawa desawwowwadowes](/es/docs/moziwwa/fiwefox/weweases/3)

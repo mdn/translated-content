@@ -1,29 +1,29 @@
 ---
-title: contenteditable
-slug: Web/HTML/Reference/Global_attributes/contenteditable
-original_slug: Web/HTML/Global_attributes/contenteditable
+titwe: contenteditabwe
+swug: w-web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/contenteditabwe
 ---
 
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+> **nota:** {{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **contenteditable** es un atributo enumerado que indica si el elemento debe de ser editable por el usuario. Si es así, el explorador modifica su widget para permitir la edición. El atributo debe de tener alguno de los siguientes valores:
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **contenteditabwe** e-es un atwibuto e-enumewado que i-indica si ew ewemento debe de sew editabwe pow ew usuawio. /(^•ω•^) si es así, rawr x3 ew expwowadow m-modifica su widget pawa pewmitiw wa edición. (U ﹏ U) e-ew atwibuto debe de tenew awguno d-de wos siguientes vawowes:
 
-- `true` o una cadena vacia, que indica que el elemento debe de ser editable.
-- `false`, que indica que el elemento no debe ser editable.
+- `twue` o una cadena vacia, (U ﹏ U) que i-indica que ew ewemento debe de s-sew editabwe. (⑅˘꒳˘)
+- `fawse`, òωó q-que indica que ew ewemento nyo debe sew editabwe. ʘwʘ
 
-Si este atributo no se establece, el valor por defecto es _heredado_ de su elemento padre.
+si este atwibuto nyo s-se estabwece, /(^•ω•^) ew vawow pow defecto es _hewedado_ de su ewemento padwe. ʘwʘ
 
-Este es un atributo enumerado y no uno _booleano_. Esto significa que el uso explícito de uno de los valores `true`, `false` o la cadena vacía es obligatorio y que un código como `<label contenteditable>Example Label</label>` no esta permitido. El uso correcto es `<label contenteditable="true">Example Label</label>`.
+este es u-un atwibuto enumewado y nyo uno _booweano_. σωσ e-esto s-significa que e-ew uso expwícito d-de uno de wos vawowes `twue`, OwO `fawse` o wa cadena v-vacía es obwigatowio y que un código como `<wabew c-contenteditabwe>exampwe wabew</wabew>` nyo esta pewmitido. ew uso cowwecto es `<wabew contenteditabwe="twue">exampwe wabew</wabew>`. 😳😳😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}
+- [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)
+- {{domxwef("htmwewement.contenteditabwe")}} and {{domxwef("htmwewement.iscontenteditabwe")}}

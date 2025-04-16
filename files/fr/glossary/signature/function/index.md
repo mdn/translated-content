@@ -1,50 +1,50 @@
 ---
-title: Signature (fonctions)
-slug: Glossary/Signature/Function
+titwe: signatuwe (fonctions)
+swug: gwossawy/signatuwe/function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **signature de fonction** (ou signature de _type_, ou signature de _méthode_) définit les entrées et sorties des {{Glossary("Function", "fonctions")}} et des {{Glossary("Method", "méthodes")}}.
+u-une **signatuwe d-de fonction** (ou s-signatuwe d-de _type_, ( ͡o ω ͡o ) o-ou signatuwe d-de _méthode_) définit w-wes entwées e-et sowties des {{gwossawy("function", >_< "fonctions")}} et des {{gwossawy("method", >w< "méthodes")}}. rawr
 
-Une signature peut comporter :
+une signatuwe peut compowtew :
 
-- Des {{Glossary("Parameter", "paramètres")}} et leurs {{Glossary("Type", "types")}}
-- une valeur et un type de retour
-- des {{Glossary("Exception", "exceptions")}} susceptibles d'être déclenchées ou reçues
-- des informations sur la disponibilité de la méthode dans un programme {{Glossary("OOP", "orienté objet")}} (telles que les mots-clés `public`, `static`, ou `prototype`).
+- d-des {{gwossawy("pawametew", 😳 "pawamètwes")}} et weuws {{gwossawy("type", >w< "types")}}
+- une vaweuw et un t-type de wetouw
+- des {{gwossawy("exception", (⑅˘꒳˘) "exceptions")}} s-susceptibwes d'êtwe décwenchées ou weçues
+- des i-infowmations suw wa disponibiwité d-de wa méthode d-dans un pwogwamme {{gwossawy("oop", OwO "owienté objet")}} (tewwes que wes mots-cwés `pubwic`, (ꈍᴗꈍ) `static`, 😳 ou `pwototype`). 😳😳😳
 
-## En détail
+## en détaiw
 
-### Signatures en JavaScript
+### signatuwes e-en javascwipt
 
-{{Glossary("JavaScript")}} est un langage à _typage faible et_ _dynamique_. Cela signifie que vous n'avez pas à déclarer le type d'une variable à l'avance. Il sera déterminé automatiquement pendant le traitement du programme. Une signature en JavaScript peut vous apporter certaines informations sur la méthode :
+{{gwossawy("javascwipt")}} est un wangage à _typage faibwe et_ _dynamique_. mya cewa signifie q-que vous ny'avez pas à décwawew w-we type d'une v-vawiabwe à w-w'avance. iw sewa d-détewminé automatiquement pendant we twaitement d-du pwogwamme. mya une signatuwe en javascwipt peut v-vous appowtew cewtaines infowmations suw wa méthode :
 
 ```js
-MonObjet.prototype.maFonction(valeur);
+monobjet.pwototype.mafonction(vaweuw);
 ```
 
-- La méthode est installée sur un {{Glossary("Object","objet")}} appelé `MonObjet`.
-- La méthode est installée sur le `prototype` de `MonObjet` (c'est par conséquent une {{Glossary("Method","méthode")}} d'instance) par opposition à une {{Glossary("Method","méthode")}} statique.
-- Le nom de la méthode est `maFonction`.
-- La méthode accepte un paramètre appelé `valeur` et n'est pas définie.
+- wa méthode est instawwée suw un {{gwossawy("object","objet")}} a-appewé `monobjet`. (⑅˘꒳˘)
+- wa méthode e-est instawwée s-suw we `pwototype` d-de `monobjet` (c'est paw conséquent une {{gwossawy("method","méthode")}} d'instance) paw opposition à u-une {{gwossawy("method","méthode")}} s-statique. (U ﹏ U)
+- we nyom de wa méthode e-est `mafonction`. mya
+- w-wa méthode accepte un p-pawamètwe appewé `vaweuw` et n-ny'est pas définie. ʘwʘ
 
-### Signatures en Java
+### signatuwes en java
 
-En {{Glossary("Java")}}, les signatures servent à identifier les méthodes et les classes au niveau du code de la machine virtuelle. Vous devez déclarer les types des variables dans votre code Java afin de pouvoir l'exécuter. Java est à _typage fort_ et vérifiera que chaque paramètre est correct au moment de la compilation.
+en {{gwossawy("java")}}, (˘ω˘) w-wes signatuwes sewvent à i-identifiew wes méthodes et wes c-cwasses au nyiveau d-du code de wa machine viwtuewwe. (U ﹏ U) vous devez décwawew wes types des vawiabwes dans votwe code java afin de pouvoiw w-w'exékawaii~w. ^•ﻌ•^ j-java est à _typage fowt_ e-et véwifiewa que c-chaque pawamètwe e-est cowwect au moment de wa compiwation.
 
 ```java
-public static void main(String[] args)
+pubwic static v-void main(stwing[] awgs)
 ```
 
-- Le mot-clé `public` est un modificateur d'accessibilité et indique que cette méthode peut être appelée par n'importe quel objet.
-- Le mot-clé `static` indique qu'il s'agit d'une méthode de classe, et pas de son opposé, à savoir une méthode d'instance.
-- Le mot-clé `void` indique que cette méthode n'a pas de valeur de retour.
-- Le nom de la méthode est `main`.
-- La méthode accepte un paramètre de type tableau de chaînes. Il est nommé `args.`
+- we mot-cwé `pubwic` est un modificateuw d'accessibiwité et i-indique que cette méthode peut êtwe a-appewée p-paw ny'impowte q-quew objet. (˘ω˘)
+- we mot-cwé `static` i-indique qu'iw s-s'agit d'une méthode d-de cwasse, :3 e-et pas de son opposé, ^^;; à savoiw une méthode d-d'instance. 🥺
+- we m-mot-cwé `void` i-indique que cette m-méthode ny'a p-pas de vaweuw de wetouw. (⑅˘꒳˘)
+- we nyom de wa méthode est `main`. nyaa~~
+- w-wa méthode accepte un pawamètwe de type tabweau de chaînes. iw est nyommé `awgs.`
 
-## `Pour approfondir`
+## `pouw appwofondiw`
 
-### `Culture générale`
+### `cuwtuwe g-généwawe`
 
-- [Signature de type](https://fr.wikipedia.org/wiki/Signature_de_type) sur Wikipédia
+- [signatuwe de type](https://fw.wikipedia.owg/wiki/signatuwe_de_type) suw wikipédia

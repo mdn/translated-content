@@ -1,18 +1,18 @@
 ---
-title: Polymorphisme
-slug: Glossary/Polymorphism
+titwe: powymowphisme
+swug: gwossawy/powymowphism
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le polymorphisme est la présentation d'une unique interface pour plusieurs types de données.
+w-we p-powymowphisme est w-wa pwésentation d-d'une unique i-intewface pouw p-pwusieuws types d-de données. nyaa~~
 
-Par exemple, les entiers, flottants et doubles sont implicitement polymorphiques : il est possible de les ajouter, soustraire, multiplier etc. sans se préoccuper de leurs différents types.
+paw e-exempwe, (⑅˘꒳˘) wes entiews, rawr x3 fwottants et doubwes sont impwicitement powymowphiques : i-iw est possibwe de wes ajoutew, (✿oωo) soustwaiwe, muwtipwiew e-etc. (ˆ ﻌ ˆ)♡ sans se pwéoccupew d-de weuws difféwents types. (˘ω˘)
 
-Dans le cas de la {{glossary("POO","programmation orientée objet")}}, en donnant à la {{glossary("Class","classe")}} la gestion aussi bien de son code que de ses propres données, le polymorphisme peut être mis en œuvre en faisant que chaque classe ait sa propre {{glossary("Function","fonction")}} qui (une fois appelée) agit en fonction d'un {{glossary("Object","objet")}} quel que soit son type.
+dans we cas de wa {{gwossawy("poo","pwogwammation owientée objet")}}, (⑅˘꒳˘) e-en donnant à wa {{gwossawy("cwass","cwasse")}} w-wa gestion a-aussi bien de son code que de ses pwopwes données, we powymowphisme peut êtwe m-mis en œuvwe en faisant que chaque cwasse ait sa pwopwe {{gwossawy("function","fonction")}} qui (une f-fois appewée) agit en fonction d-d'un {{gwossawy("object","objet")}} q-quew que s-soit son type. (///ˬ///✿)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Polymorphisme](<https://fr.wikipedia.org/wiki/Polymorphisme_(informatique)>) sur Wikipédia
+- [powymowphisme](<https://fw.wikipedia.owg/wiki/powymowphisme_(infowmatique)>) suw wikipédia

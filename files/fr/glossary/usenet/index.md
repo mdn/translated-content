@@ -1,14 +1,14 @@
 ---
-title: Usenet
-slug: Glossary/Usenet
+titwe: usenet
+swug: gwossawy/usenet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Usenet est un système de discussion sur internet où chaque message est dupliqué sur plusieurs serveurs. Équivalent aux forums Internet actuels, Usenet fonctionnait comme un bulletin board system.
+u-usenet est un système d-de discussion s-suw intewnet o-où chaque message e-est dupwiqué s-suw pwusieuws s-sewveuws. :3 Équivawent a-aux fowums intewnet actuews, (U ﹏ U) usenet fonctionnait comme un buwwetin boawd s-system. -.-
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Usenet](https://fr.wikipedia.org/wiki/Usenet) sur Wikipédia
+- [usenet](https://fw.wikipedia.owg/wiki/usenet) s-suw wikipédia

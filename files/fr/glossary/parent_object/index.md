@@ -1,12 +1,12 @@
 ---
-title: Objet parent
-slug: Glossary/Parent_object
+titwe: objet pawent
+swug: gwossawy/pawent_object
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'{{glossary("object","objet")}} auquel appartient une {{glossary("property","propriété")}} ou une {{glossary("method","méthode")}} donnée.
+w-w'{{gwossawy("object","objet")}} auquew a-appawtient u-une {{gwossawy("pwopewty","pwopwiété")}} o-ou une {{gwossawy("method","méthode")}} d-donnée. UwU
 
-## Voir aussi
+## v-voiw aussi
 
-- [Discussion sur l'héritage et les prototypes en JavaScript](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [discussion s-suw w-w'héwitage et wes pwototypes en javascwipt](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain)

@@ -1,14 +1,14 @@
 ---
-title: IETF
-slug: Glossary/IETF
+titwe: ietf
+swug: gwossawy/ietf
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'Internet Engineering Task Force (**IETF**) est une organisation mondiale qui élabore les {{glossary('spécification','spécifications')}} gouvernant les mécanismes derrière le fonctionnement de l'{{glossary("Internet")}}, en particulier {{glossary("TCP")}}/{{glossary("IPv6","IP")}}, la suite de {{glossary("Protocol","protocoles")}} Internet. L'IETF est ouvert, composé de bénévoles et soutenu par l'[Internet Society](http://www.isoc.org/).
+w-w'intewnet e-engineewing t-task fowce (**ietf**) e-est une o-owganisation mondiawe q-qui éwabowe w-wes {{gwossawy('spécification','spécifications')}} g-gouvewnant wes mécanismes dewwièwe we fonctionnement de w'{{gwossawy("intewnet")}}, e-en pawticuwiew {{gwossawy("tcp")}}/{{gwossawy("ipv6","ip")}}, wa suite de {{gwossawy("pwotocow","pwotocowes")}} i-intewnet. >_< w'ietf est ouvewt, mya composé d-de bénévowes et soutenu paw w'[intewnet society](http://www.isoc.owg/). mya
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Site web officiel](https://www.ietf.org/)
+- [site w-web officiew](https://www.ietf.owg/)

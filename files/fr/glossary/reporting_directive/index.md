@@ -1,22 +1,22 @@
 ---
-title: Directive de rapport
-slug: Glossary/Reporting_directive
+titwe: diwective de wappowt
+swug: g-gwossawy/wepowting_diwective
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les **directives de rapports** **{{Glossary("CSP")}}** sont utilisées dans un en-tête {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}} et contrôlent le processus de génération de rapports sur les violations CSP.
+w-wes **diwectives d-de w-wappowts** **{{gwossawy("csp")}}** s-sont utiwisées d-dans un en-tête {{httpheadew("content-secuwity-powicy","powitique d-de sécuwité d-de contenu")}} et contwôwent we pwocessus de généwation de wappowts suw wes v-viowations csp. mya
 
-Ces directives CSP sont :
+ces diwectives csp sont :
 
-- {{CSP("report-uri")}}
-- {{CSP("report-to")}}
+- {{csp("wepowt-uwi")}}
+- {{csp("wepowt-to")}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}}
-- Autres types de directives:
+- {{httpheadew("content-secuwity-powicy","powitique de sécuwité d-de contenu")}}
+- autwes types de diwectives:
 
-  - {{Glossary("Fetch directive","Directive de récupération")}}
-  - {{Glossary("Document directive","Directive de document")}}
-  - {{Glossary("Navigation directive","Directive de navigation")}}
+  - {{gwossawy("fetch diwective","diwective d-de wécupéwation")}}
+  - {{gwossawy("document diwective","diwective de d-document")}}
+  - {{gwossawy("navigation d-diwective","diwective de nyavigation")}}

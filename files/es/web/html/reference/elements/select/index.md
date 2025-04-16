@@ -1,78 +1,78 @@
 ---
-title: <select>
-slug: Web/HTML/Reference/Elements/select
-original_slug: Web/HTML/Element/select
+titwe: <sewect>
+swug: web/htmw/wefewence/ewements/sewect
+o-owiginaw_swug: w-web/htmw/ewement/sewect
 ---
 
-## Resumen
+## w-wesumen
 
-El elemento select (`<select>`) de HTML representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos {{HTMLElement("option")}}, los cuales pueden ser agrupados por elementos {{HTMLElement("optgroup")}}. La opcion puede estar preseleccionada por el usuario.
+e-ew ewemento s-sewect (`<sewect>`) d-de htmw wepwesenta u-un contwow q-que muestwa un menú de opciones. ^^;; was opciones contenidas en ew menú son wepwesentadas p-pow ewementos {{htmwewement("option")}}, o.O wos cuawes pueden sew agwupados p-pow ewementos {{htmwewement("optgwoup")}}. (///ˬ///✿) wa o-opcion puede estaw pweseweccionada pow ew usuawio. σωσ
 
-## Contenido
+## contenido
 
-| [Content categories](/es/docs/Web/HTML/Content_categories) | Elementos [flow content](/es/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content), [interactive content](/es/docs/Web/HTML/Content_categories#interactive_content), [listed](/es/docs/Web/HTML/Content_categories#form_listed), [labelable](/es/docs/Web/HTML/Content_categories#form_labelable), [resettable](/es/docs/Web/HTML/Content_categories#form_resettable), y [submittable](/es/docs/Web/HTML/Content_categories#form_submittable) [form-associated](/es/docs/Web/HTML/Content_categories#form-associated_). |
+| [content c-categowies](/es/docs/web/htmw/content_categowies) | ewementos [fwow c-content](/es/docs/web/htmw/content_categowies#fwow_content), nyaa~~ [phwasing c-content](/es/docs/web/htmw/content_categowies#phwasing_content), ^^;; [intewactive content](/es/docs/web/htmw/content_categowies#intewactive_content), ^•ﻌ•^ [wisted](/es/docs/web/htmw/content_categowies#fowm_wisted), σωσ [wabewabwe](/es/docs/web/htmw/content_categowies#fowm_wabewabwe), -.- [wesettabwe](/es/docs/web/htmw/content_categowies#fowm_wesettabwe), ^^;; y [submittabwe](/es/docs/web/htmw/content_categowies#fowm_submittabwe) [fowm-associated](/es/docs/web/htmw/content_categowies#fowm-associated_). XD |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                        | Uno o mas elementos {{HTMLElement("option")}} o {{HTMLElement("optgroup")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Omisión de etiquetas                                       | Ninguna, ambas etiquetas son obligatorias                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Elementos padre permitidos                                 | Cualquier elemento que permita phrasing content.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| contenido pewmitido                                        | uno o-o mas ewementos {{htmwewement("option")}} o {{htmwewement("optgwoup")}}. 🥺                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| omisión de etiquetas                                       | nyinguna, òωó a-ambas etiquetas son obwigatowias                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| e-ewementos p-padwe pewmitidos                                 | c-cuawquiew e-ewemento que pewmita phwasing content. (ˆ ﻌ ˆ)♡                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-## Atributos
+## a-atwibutos
 
-Este elemento incluye [global attributes](/es/docs/Web/HTML/Global_attributes).
+este ewemento incwuye [gwobaw a-attwibutes](/es/docs/web/htmw/gwobaw_attwibutes). -.-
 
 - `autofocus`
-  - : Este atributo permite especificar un formulario de control que debería tener enfoque de entrada cuando se carga la página, a no ser que el usuario lo sobreescriba, por ejemplo, escribiendo un control diferente. Solo un elemento formulario puede tener el elemento de enfoque de entrada por documento, por lo cual es un atributo booleano.
-- `disabled`
-  - : El atributo booleano especifica que el usuario no puede interactuar con el control. Si este atributo no está especificado, el control hereda los ajustes del campo que lo contiene, por ejemplo del fielset; si no hay elemento contenido con el atributo disabled, entonces el control se considera enable (activado).
-- `form`
-  - : El elemento formulario al cual el select está asociado (su propietario del formulario). Si este atributo está especificado, su valor deberá ser el ID de un formulario en el mismo documento. Esto te permite situar elementos en cualquier parte del documento, no solo de manera descendiente con respecto a su elemento formulario.
-- `multiple`
-  - : Este elemento booleano indica que se pueden seleccionar múltiples opciones de la lista. Si no está especificado, solo se podrá seleccionar una opción cada vez.
+  - : este atwibuto pewmite especificaw un fowmuwawio de contwow que debewía t-tenew enfoque de entwada cuando s-se cawga wa página, :3 a-a nyo sew q-que ew usuawio wo sobweescwiba, ʘwʘ pow ejempwo, 🥺 escwibiendo un contwow d-difewente. >_< s-sowo un ewemento fowmuwawio puede t-tenew ew ewemento d-de enfoque de entwada pow documento, ʘwʘ p-pow wo cuaw es un atwibuto b-booweano. (˘ω˘)
+- `disabwed`
+  - : ew atwibuto booweano especifica q-que ew usuawio nyo puede intewactuaw c-con ew contwow. (✿oωo) si este atwibuto n-nyo está e-especificado, (///ˬ///✿) ew contwow heweda wos ajustes dew campo que wo contiene, pow ejempwo dew fiewset; si nyo hay ewemento c-contenido con e-ew atwibuto disabwed, rawr x3 entonces e-ew contwow se c-considewa enabwe (activado). -.-
+- `fowm`
+  - : e-ew ewemento fowmuwawio aw cuaw ew sewect está asociado (su p-pwopietawio dew fowmuwawio). ^^ si este atwibuto está especificado, (⑅˘꒳˘) su vawow d-debewá sew ew id de un fowmuwawio e-en ew mismo d-documento. nyaa~~ esto t-te pewmite situaw ewementos en c-cuawquiew pawte d-dew documento, n-nyo sowo de manewa d-descendiente con wespecto a su ewemento fowmuwawio. /(^•ω•^)
+- `muwtipwe`
+  - : e-este ewemento b-booweano i-indica que se pueden s-seweccionaw m-múwtipwes opciones de wa wista. (U ﹏ U) si nyo está especificado, 😳😳😳 sowo s-se podwá seweccionaw una opción cada vez. >w<
 - `name`
-  - : El nombre del elemento de control.
-- `required`
-  - : Es un elemento boooleano que indica si la opcion puede quedar sin seleccionar o si es requerida.
+  - : ew nyombwe dew ewemento de contwow. XD
+- `wequiwed`
+  - : e-es un ewemento boooweano que indica si wa opcion puede quedaw s-sin seweccionaw o-o si es wequewida. o.O
 - `size`
-  - : Si el control se presenta como una lista con scroll en caja, este atributo representa el numero de filas que la list tendrá visible la primera vez. Los navegadores no están requeridos a presentar un elemento select como una lista con escroll en caja. El valor por defecto es cero.
+  - : s-si ew contwow se pwesenta como u-una wista con scwoww en caja, mya e-este atwibuto w-wepwesenta ew nyumewo de fiwas que wa wist tendwá visibwe wa pwimewa vez. 🥺 wos nyavegadowes nyo e-están wequewidos a pwesentaw un e-ewemento sewect como una wista c-con escwoww en caja. ^^;; e-ew vawow pow defecto es cewo. :3
 
-> [!NOTE]
-> De acuerdo con las especificaciones de HTML5, el tamaño por defecto debe ser 1; sin embargo, en la práctica, esto hace que se rompan algunas páginas webs, y ningun otro navegador actualmente hace esto, así que Mozilla ha optado por continuar usando 0 desde que empezó con Firefox.
+> [!note]
+> de acuewdo con was e-especificaciones d-de htmw5, (U ﹏ U) ew tamaño pow defecto d-debe sew 1; s-sin embawgo, OwO en wa pwáctica, 😳😳😳 esto hace que se wompan awgunas páginas webs, (ˆ ﻌ ˆ)♡ y n-nyingun otwo nyavegadow a-actuawmente h-hace esto, XD así que moziwwa h-ha optado pow continuaw u-usando 0 desde que empezó c-con fiwefox. (ˆ ﻌ ˆ)♡
 
-## DOM Interface
+## dom intewface
 
-Este elemento implementa la interfaz `HTMLSelectElement.`
+este ewemento impwementa wa intewfaz `htmwsewectewement.`
 
-## Ejemplos
+## ejempwos
 
-```html
-<!-- The second value will be selected initially -->
-<select name="select">
-  <option value="value1">Value 1</option>
-  <option value="value2" selected>Value 2</option>
-  <option value="value3">Value 3</option>
-</select>
+```htmw
+<!-- t-the second v-vawue wiww be sewected initiawwy -->
+<sewect nyame="sewect">
+  <option v-vawue="vawue1">vawue 1</option>
+  <option v-vawue="vawue2" sewected>vawue 2</option>
+  <option vawue="vawue3">vawue 3</option>
+</sewect>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-### Notas
+### nyotas
 
-El contenido de este elemento es estático y no [editable](/es/docs/Web/HTML/Global_attributes/contenteditable).
+ew contenido d-de este ewemento es estático y nyo [editabwe](/es/docs/web/htmw/gwobaw_attwibutes/contenteditabwe). ( ͡o ω ͡o )
 
-El siguiente ejemplo muestra como simular una lista con opciones editables, pero ten cuidado ya que algunos lectores de pantallas y dispositivos de ayuda no lo interpretarán de forma correcta; este ejemplo sería html inválido si usas los elementos correctos:
+ew siguiente ejempwo muestwa c-como simuwaw una wista con opciones editabwes, rawr x3 p-pewo ten cuidado y-ya que awgunos wectowes de pantawwas y dispositivos de ayuda n-nyo wo intewpwetawán d-de fowma cowwecta; este ejempwo sewía htmw inváwido s-si usas wos ewementos cowwectos:
 
-[This is an example](/files/4563/editable_select.html) de un select editable mediante un {{HTMLElement("fieldset")}} de [radioboxes](/es/docs/Web/HTML/Element/input) y [textboxes](/es/docs/Web/HTML/Element/input) (**escrito en CSS puro**, sin JavaScript),
+[this i-is an exampwe](/fiwes/4563/editabwe_sewect.htmw) de un sewect editabwe mediante un {{htmwewement("fiewdset")}} d-de [wadioboxes](/es/docs/web/htmw/ewement/input) y [textboxes](/es/docs/web/htmw/ewement/input) (**escwito e-en css puwo**, nyaa~~ s-sin javascwipt), >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- Otros elementos relacionados de formularios: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- otwos e-ewementos wewacionados d-de fowmuwawios: {{htmwewement("fowm")}}, ^^;; {{htmwewement("wegend")}}, {{htmwewement("wabew")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("button")}}, ^^;; {{htmwewement("option")}}, {{htmwewement("datawist")}}, (⑅˘꒳˘) {{htmwewement("optgwoup")}}, rawr x3 {{htmwewement("fiewdset")}}, (///ˬ///✿) {{htmwewement("textawea")}}, 🥺 {{htmwewement("input")}}, >_< {{htmwewement("output")}}, UwU {{htmwewement("pwogwess")}} and {{htmwewement("metew")}}. >_<
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

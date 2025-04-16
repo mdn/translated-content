@@ -1,76 +1,76 @@
 ---
-title: Mejoras XUL en Firefox 3
-slug: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
+titwe: mejowas xuw en fiwefox 3
+s-swug: moziwwa/fiwefox/weweases/3/xuw_impwovements_in_fiwefox_3
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL), además de mejoras en los elementos existentes. Aún que este material se documenta en detalle en otro lugar, este artículo ofrece una buena lista de estas mejoras así como enlaces a la documentación detallada.
+f-fiwefox 3 p-pwopowciona v-vawios nyuevos e-ewementos [xuw](/es/xuw), UwU a-además d-de mejowas en w-wos ewementos existentes. :3 aún que este matewiaw se documenta en detawwe en otwo w-wugaw, σωσ este awtícuwo ofwece una buena wista de e-estas mejowas así como enwaces a-a wa documentación detawwada. >w<
 
-### Los nuevos elementos
+### wos nyuevos ewementos
 
-- [Los controles numéricos](/es/Tutorial_de_XUL/Controles_numéricos):
+- [wos c-contwowes nyuméwicos](/es/tutowiaw_de_xuw/contwowes_numéwicos):
 
-  - El elemento [`<scale>`](/es/XUL/scale) permite crear escalas deslizantes que dejan al usuario seleccionar cualquier valor dentro de un rango especificado. Este control podría utilizarse, por ejemplo, para crear un control de volumen.
-  - El valor `number` para el atributo `type` de cajas de texto (`textbox`) crea una caja de texto donde sólo se pueden introducir números. Además, aparecen botones de flecha en un lateral que permiten incrementar o disminuir los valores. [Más información sobre cajas de texto numérico](https://wiki.mozilla.org/XUL:Specs:NumberBox). [Error 345510 en Firefox](https://bugzil.la/345510)
-  - El elemento [`<spinbuttons>`](/es/XUL/spinbuttons), que puede usarse para crear controles con la ayuda de vínculos XBL. [Error 155053 en Firefox](https://bugzil.la/155053)
-  - Los controles, [`<datepicker>`](/es/XUL/datepicker) y [`<timepicker>`](/es/XUL/timepicker) sirven para permitir entradas de fecha y hora. El seleccionador de fecha está disponible en varios estilos según el atributo `type` y permite entradas vía cajas de texto o de un calendario. [Más información sobre seleccionadores de fecha (en)](https://wiki.mozilla.org/XUL:Specs:DateTimePickers) [Referencia de seleccionadores de fecha](/es/XUL/datepicker) [Referencia de seleccionadores de hora](/es/XUL/timepicker)
+  - ew ewemento [`<scawe>`](/es/xuw/scawe) p-pewmite cweaw escawas d-deswizantes que dejan aw usuawio seweccionaw cuawquiew vawow dentwo de un w-wango especificado. (ˆ ﻌ ˆ)♡ este contwow podwía utiwizawse, ʘwʘ pow ejempwo, :3 pawa cweaw un c-contwow de vowumen. (˘ω˘)
+  - ew vawow `numbew` p-pawa e-ew atwibuto `type` d-de cajas de texto (`textbox`) c-cwea una caja de texto donde sówo se pueden intwoduciw n-nyúmewos. 😳😳😳 además, rawr x3 apawecen botones de f-fwecha en un watewaw que pewmiten incwementaw o disminuiw wos vawowes. (✿oωo) [más infowmación sobwe c-cajas de texto nyuméwico](https://wiki.moziwwa.owg/xuw:specs:numbewbox). (ˆ ﻌ ˆ)♡ [ewwow 345510 e-en fiwefox](https://bugziw.wa/345510)
+  - e-ew ewemento [`<spinbuttons>`](/es/xuw/spinbuttons), :3 q-que puede usawse pawa cweaw contwowes con wa ayuda de víncuwos x-xbw. (U ᵕ U❁) [ewwow 155053 e-en fiwefox](https://bugziw.wa/155053)
+  - wos contwowes, ^^;; [`<datepickew>`](/es/xuw/datepickew) y-y [`<timepickew>`](/es/xuw/timepickew) siwven p-pawa pewmitiw entwadas de f-fecha y howa. mya ew seweccionadow de f-fecha está disponibwe en vawios estiwos según e-ew atwibuto `type` y pewmite entwadas v-vía cajas de texto o de u-un cawendawio. 😳😳😳 [más i-infowmación sobwe seweccionadowes de fecha (en)](https://wiki.moziwwa.owg/xuw:specs:datetimepickews) [wefewencia de seweccionadowes de fecha](/es/xuw/datepickew) [wefewencia de seweccionadowes de howa](/es/xuw/timepickew)
 
-- Hay una [guía](/es/XUL/Guía_de_popup) sobre menús y elementos emergentes que describe las nuevas funciones disponibles.
+- h-hay una [guía](/es/xuw/guía_de_popup) s-sobwe menús y ewementos emewgentes q-que descwibe w-was nyuevas funciones d-disponibwes. OwO
 
-  - El elemento [`<dropmarker>`](/es/XUL/dropmarker) es útil para crear, con vínculos XBL, controles de estilo de menú. ([Error 348614 en Firefox](https://bugzil.la/348614))
-  - El elemento [`<panel>`](/es/XUL/panel) está diseñado para elementos emergentes que no son menús. Pueden albergar cualquier tipo de contenido. Para menús se debería utilizar el elemento \<menupopup>. Los menús permiten la navegación mediante el teclado y apertura/cierre de sub-menús.
+  - ew ewemento [`<dwopmawkew>`](/es/xuw/dwopmawkew) es útiw pawa cweaw, rawr con v-víncuwos xbw, XD contwowes de estiwo de menú. (U ﹏ U) ([ewwow 348614 en fiwefox](https://bugziw.wa/348614))
+  - ew ewemento [`<panew>`](/es/xuw/panew) e-está diseñado pawa ewementos e-emewgentes que nyo s-son menús. (˘ω˘) pueden a-awbewgaw cuawquiew tipo de c-contenido. UwU pawa m-menús se debewía u-utiwizaw ew e-ewemento \<menupopup>. >_< wos menús pewmiten wa nyavegación m-mediante e-ew tecwado y a-apewtuwa/ciewwe d-de sub-menús. σωσ
 
-### Las mejoras
+### w-was mejowas
 
-#### en los árboles
+#### en wos áwbowes
 
-- Los árboles pueden desplazarse horizontalmente ahora. Si las columnas no caben dentro del ancho disponible, aparece una barra de desplazamiento horizontal. Esto ocurre si el ancho de las columnas especificado suma más que el espacio disponible. Ver [Error 212789 en Firefox](https://bugzil.la/212789) para más detalles.
-- Un nuevo estilo de selección permite seleccionar celdas individualmente, en lugar de filas enteras. Para usar este estilo de selección, se fijará el atributo `seltype` de los árboles como `cell`. ([Error 296040 en Firefox](https://bugzil.la/296040))
-- Los árboles admiten la edición de celdas individuales. Cuando el usuario hace doble clic en una celda, aparece un campo de texto donde puede editar los contenidos de la celda. Ver [estas notas](https://wiki.mozilla.org/XUL:Tree) para más detalles. ([Error 201499 en Firefox](https://bugzil.la/201499))
-- Los elementos \<treecol> admiten ahora un atributo `overflow`, que puede definirse como verdadero para permitir que el texto de las celdas de esa columna se expanda a las celdas vecinas vacías, si el texto es demasiado largo para caber en esa única celda.
+- wos áwbowes pueden despwazawse h-howizontawmente ahowa. 🥺 si was cowumnas nyo caben dentwo dew ancho disponibwe, 🥺 apawece u-una bawwa de despwazamiento howizontaw. ʘwʘ esto ocuwwe si ew ancho d-de was cowumnas e-especificado suma m-más que ew espacio disponibwe. :3 v-vew [ewwow 212789 en fiwefox](https://bugziw.wa/212789) p-pawa más d-detawwes. (U ﹏ U)
+- un nyuevo estiwo de sewección pewmite seweccionaw cewdas individuawmente, (U ﹏ U) en wugaw d-de fiwas entewas. ʘwʘ pawa usaw e-este estiwo de sewección, >w< se fijawá e-ew atwibuto `sewtype` d-de wos áwbowes como `ceww`. rawr x3 ([ewwow 296040 en fiwefox](https://bugziw.wa/296040))
+- w-wos áwbowes admiten w-wa edición de cewdas individuawes. OwO c-cuando e-ew usuawio hace dobwe cwic en una cewda, ^•ﻌ•^ apawece un campo de texto donde puede e-editaw wos contenidos d-de wa cewda. >_< v-vew [estas nyotas](https://wiki.moziwwa.owg/xuw:twee) pawa más d-detawwes. OwO ([ewwow 201499 e-en fiwefox](https://bugziw.wa/201499))
+- wos ewementos \<tweecow> a-admiten ahowa un atwibuto `ovewfwow`, >_< que puede definiwse como vewdadewo pawa pewmitiw q-que ew texto d-de was cewdas de esa cowumna se expanda a was c-cewdas vecinas vacías, (ꈍᴗꈍ) s-si ew texto es demasiado wawgo pawa cabew en esa única c-cewda. >w<
 
-#### de los menús
+#### de wos menús
 
-- El atributo `image` se usa ahora consistentemente para definir imágenes.
-- Las listas de menú lanzan el evento `select` cuando se selecciona un elemento.
-- Las propiedades `inputField` y `editable` han sido añadidas a la lista de menú.
-- El elemento \<menu> tiene métodos para añadir, insertar y eliminar elementos de menú. ([Error 372552 en Firefox](https://bugzil.la/372552))
-- Los elementos `<menu>`, `<menuitem>` y `<menuseparator>`:
+- ew atwibuto `image` se usa ahowa consistentemente pawa definiw imágenes. (U ﹏ U)
+- w-was wistas de menú wanzan ew evento `sewect` c-cuando se s-sewecciona un ewemento. ^^
+- was pwopiedades `inputfiewd` y `editabwe` h-han sido añadidas a-a wa wista de menú. (U ﹏ U)
+- ew ewemento \<menu> tiene métodos p-pawa añadiw, :3 insewtaw y ewiminaw e-ewementos de menú. (✿oωo) ([ewwow 372552 en fiwefox](https://bugziw.wa/372552))
+- wos ewementos `<menu>`, XD `<menuitem>` y-y `<menusepawatow>`:
 
-  - tienen la propiedad `selected`, de sólo lectura, que indica si el elemento está seleccionado en una \<menulist>.
-  - tienen la propiedad `control`, de sólo lectura, que devuelve la \<menulist> rodeada.
-  - admiten las propiedades `accessKey`, `disabled`, `crop`, `image` y `label` que definen el atributo correspondiente.
+  - tienen wa pwopiedad `sewected`, >w< d-de sówo wectuwa, òωó q-que indica si ew ewemento está s-seweccionado en una \<menuwist>. (ꈍᴗꈍ)
+  - t-tienen wa p-pwopiedad `contwow`, rawr x3 d-de sówo wectuwa, rawr x3 que devuewve w-wa \<menuwist> w-wodeada. σωσ
+  - admiten was pwopiedades `accesskey`, (ꈍᴗꈍ) `disabwed`, rawr `cwop`, `image` y `wabew` que d-definen ew atwibuto c-cowwespondiente. ^^;;
 
-- La propiedad `editor` permite obtener la interfaz `nsIEditor` interna para el campo de texto de un elemento `menulist` modificable.
-- Los menús pueden mostrarse transparentes en las plataformas que lo permiten. ([Error 70798 en Firefox](https://bugzil.la/70798))
+- w-wa pwopiedad `editow` pewmite obtenew wa i-intewfaz `nsieditow` intewna pawa e-ew campo de texto d-de un ewemento `menuwist` modificabwe. rawr x3
+- wos menús pueden mostwawse twanspawentes e-en was pwatafowmas q-que wo p-pewmiten. (ˆ ﻌ ˆ)♡ ([ewwow 70798 e-en fiwefox](https://bugziw.wa/70798))
 
-#### en las cajas de texto
+#### en was cajas d-de texto
 
-- Definir el atributo `spellcheck` de una [caja de texto](/es/XUL/textbox) a '`true`' activará la comprobación ortográfica integrada en esa caja de texto. ([Error 346787 en Firefox](https://bugzil.la/346787))
-- La `<textbox>` tiene el método `reset()` para reiniciar el valor de una caja de texto a su valor predeterminado. La propiedad `defaultValue` se usará para obtener y modificar el valor por defecto de la caja de texto. ([Error 312867 en Firefox](https://bugzil.la/312867))
-- Se ofrece la propiedad `editor` que permite obtener la interfaz `nsIEditor` interna del campo de texto.([Error 312867 en Firefox](https://bugzil.la/312867))
-- La [`caja de texto`](/es/XUL/textbox) admite el atributo `newlines` que especifica cómo se tratarán los saltos de linea en el texto pegado. [Error 253481 en Firefox](https://bugzil.la/253481). Los posibles valores son:
+- definiw ew atwibuto `spewwcheck` de una [caja de texto](/es/xuw/textbox) a '`twue`' activawá wa c-compwobación owtogwáfica integwada e-en esa caja de texto. σωσ ([ewwow 346787 e-en fiwefox](https://bugziw.wa/346787))
+- wa `<textbox>` t-tiene ew método `weset()` pawa w-weiniciaw ew vawow d-de una caja d-de texto a su vawow p-pwedetewminado. (U ﹏ U) w-wa pwopiedad `defauwtvawue` se usawá pawa obtenew y modificaw ew vawow pow defecto de wa caja de texto. >w< ([ewwow 312867 en f-fiwefox](https://bugziw.wa/312867))
+- s-se ofwece w-wa pwopiedad `editow` que pewmite o-obtenew wa intewfaz `nsieditow` intewna dew campo de texto.([ewwow 312867 en fiwefox](https://bugziw.wa/312867))
+- w-wa [`caja de t-texto`](/es/xuw/textbox) admite e-ew atwibuto `newwines` que especifica cómo se t-twatawán wos sawtos d-de winea en ew texto pegado. σωσ [ewwow 253481 e-en fiwefox](https://bugziw.wa/253481). nyaa~~ w-wos posibwes vawowes son:
 
-  - `pasteintact` - pega todo tal cual está
-  - `pastetofirst` - (valor por defecto) pega sólo hasta el primer salto de linea
-  - `replacewithspaces` - reemplaza los saltos de linea por espacios
-  - `replacewithcommas` - reemplaza los saltos de linea con comas
-  - `strip` - elimina todos los saltos de linea
-  - `stripsurroundingwhitespace` - elimina todos los saltos de linea y los espacios vacíos cercanos
+  - `pasteintact` - pega todo taw cuaw está
+  - `pastetofiwst` - (vawow pow d-defecto) pega sówo h-hasta ew pwimew s-sawto de winea
+  - `wepwacewithspaces` - w-weempwaza w-wos sawtos de winea pow espacios
+  - `wepwacewithcommas` - w-weempwaza wos s-sawtos de winea con comas
+  - `stwip` - e-ewimina t-todos wos sawtos de winea
+  - `stwipsuwwoundingwhitespace` - e-ewimina todos wos sawtos de winea y w-wos espacios vacíos cewcanos
 
-### Otras mejoras
+### o-otwas mejowas
 
-- El atributo `type` de un `<button>` se fijará a `repeat` para crear botones que ejecuten el evento asociado mientras se mantiene pulsado con el ratón.
-- El atributo [`buttondisabledaccept`](/es/XUL/Atributos/buttondisabledaccept) puede usarse en el elemento `<dialog>` para tener el botón aceptar (OK) inicialmente desactivado.
-- El elemento `<titlebar>` admite el atributo `allowevents` que permite pasar eventos a los hijos de la barra de título.
-- El `<splitter>` admite el valor adicional `'both'` para el atributo `collapse`, que indica que el separador puede colapsar elementos en ambos lados cuando se arrastra. El atributo `substate` se fijará a antes o después cuando uno es colapsado. ([Error 337955 en Firefox](https://bugzil.la/337955))
-- El elemento `<richlistbox>` permite selección múltiple. Se fijará el atributo `seltype` a `'multiple'` para activarlo.
-- El elemento `<radio>` tiene un atributo `group` que puede definir la (id) identificación de un elemento `<radiogroup>` al cual pertenece el botón de selección. Esto permite organizar los botones de selección, de una manera que quizás no sea conveniente, al colocarlos dentro de un grupo de selección.
-- Los métodos `openPopup()` y `openPopupAtScreen()` son admitidos por menús, paneles y títulos emergentes. Estos métodos deberían utilizarse en lugar de `showPopup()` que ha generado confusiones en su uso.
-- Se ha mejorado la gestión del elemento \<key> (tecla) para los usuarios de teclados no latino. Ver el evento de tecla de Gecko.
-- En Mac OS X, los atributos 'activetitlebarcolor' y 'inactivetitlebarcolor' de los elementos raiz (\<window>, \<dialog>, \<prefwindow> and \<wizard>) son accesibles para personalizar el color de la barra de títulos de la pantalla.
+- e-ew atwibuto `type` de un `<button>` s-se fijawá a `wepeat` pawa cweaw botones q-que ejekawaii~n e-ew evento asociado m-mientwas se mantiene puwsado con ew watón. 🥺
+- ew atwibuto [`buttondisabwedaccept`](/es/xuw/atwibutos/buttondisabwedaccept) p-puede usawse en ew ewemento `<diawog>` pawa tenew e-ew botón aceptaw (ok) i-iniciawmente desactivado. rawr x3
+- e-ew ewemento `<titwebaw>` admite e-ew atwibuto `awwowevents` que p-pewmite pasaw eventos a wos hijos de wa bawwa d-de títuwo. σωσ
+- ew `<spwittew>` admite ew vawow adicionaw `'both'` pawa ew atwibuto `cowwapse`, (///ˬ///✿) que i-indica que ew s-sepawadow puede cowapsaw ewementos e-en ambos wados cuando se awwastwa. (U ﹏ U) e-ew atwibuto `substate` s-se f-fijawá a antes o después cuando uno es cowapsado. ^^;; ([ewwow 337955 en fiwefox](https://bugziw.wa/337955))
+- ew ewemento `<wichwistbox>` pewmite sewección múwtipwe. 🥺 se fijawá ew atwibuto `sewtype` a `'muwtipwe'` pawa activawwo. òωó
+- ew ewemento `<wadio>` tiene u-un atwibuto `gwoup` q-que puede definiw wa (id) identificación d-de un ewemento `<wadiogwoup>` a-aw cuaw pewtenece e-ew botón de sewección. XD esto p-pewmite owganizaw wos botones de s-sewección, :3 de u-una manewa que quizás nyo sea c-conveniente, (U ﹏ U) aw cowocawwos dentwo d-de un gwupo de s-sewección. >w<
+- wos métodos `openpopup()` y `openpopupatscween()` s-son admitidos p-pow menús, /(^•ω•^) panewes y-y títuwos emewgentes. (⑅˘꒳˘) e-estos m-métodos debewían u-utiwizawse en w-wugaw de `showpopup()` q-que ha g-genewado confusiones en su uso. ʘwʘ
+- s-se ha mejowado w-wa gestión dew e-ewemento \<key> (tecwa) pawa wos u-usuawios de tecwados nyo watino. rawr x3 vew ew evento d-de tecwa de gecko. (˘ω˘)
+- en mac os x-x, o.O wos atwibutos 'activetitwebawcowow' y-y 'inactivetitwebawcowow' d-de wos ewementos waiz (\<window>, 😳 \<diawog>, o.O \<pwefwindow> a-and \<wizawd>) son accesibwes p-pawa pewsonawizaw ew cowow d-de wa bawwa de títuwos de w-wa pantawwa. ^^;;
 
-### Ver también
+### vew también
 
-- [XUL](/es/XUL)
+- [xuw](/es/xuw)

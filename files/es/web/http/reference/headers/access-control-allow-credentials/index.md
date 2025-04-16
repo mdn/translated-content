@@ -1,70 +1,70 @@
 ---
-title: Access-Control-Allow-Credentials
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
+titwe: access-contwow-awwow-cwedentiaws
+swug: w-web/http/wefewence/headews/access-contwow-awwow-cwedentiaws
+o-owiginaw_swug: w-web/http/headews/access-contwow-awwow-cwedentiaws
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado de respuesta **`Access-Control-Allow-Credentials`** le dice al navegador si exponer la respuesta al código JavaScript (del frontend) cuando el modo credenciales en la petición es incluído.
+e-ew encabezado d-de wespuesta **`access-contwow-awwow-cwedentiaws`** w-we dice aw n-nyavegadow si exponew w-wa wespuesta aw código javascwipt (dew fwontend) cuando ew modo cwedenciawes en wa petición e-es incwuído. 😳😳😳
 
-Cuando las credenciales de una petición ({{domxref("Request.credentials")}}) es `include`, los navegadores sólo expondran la respuesta al código JavaScript del frontend si el valor de `Access-Control-Allow-Credentials` es `true`.
+cuando was cwedenciawes de una p-petición ({{domxwef("wequest.cwedentiaws")}}) es `incwude`, ( ͡o ω ͡o ) w-wos nyavegadowes sówo expondwan wa wespuesta aw código javascwipt d-dew fwontend si ew vawow de `access-contwow-awwow-cwedentiaws` e-es `twue`. >_<
 
-Las credenciales son cookies, encabezados de autorización o certíficados de cliente TLS.
+was c-cwedenciawes son cookies, >w< encabezados de autowización o cewtíficados de cwiente t-tws. rawr
 
-Cuando se usa como parte de una respueste a una petición previa, indica si la petición real puede ser hecha utilizando credenciales. Note que peticiones {{HTTPMethod("GET")}} sencillas no tienen una solicitud previa, y por lo tanto, una petición es hecha por un recurso con credenciales, si el encabezado no regresa con el recurso, la respuesta es ignorada por el navegador y no es devuelto como contenido web.
+cuando se usa como pawte de una wespueste a una petición pwevia, 😳 indica s-si wa petición weaw puede sew h-hecha utiwizando c-cwedenciawes. >w< n-nyote que peticiones {{httpmethod("get")}} s-senciwwas nyo tienen una sowicitud p-pwevia, (⑅˘꒳˘) y pow wo tanto, OwO una petición es hecha pow u-un wecuwso con cwedenciawes, (ꈍᴗꈍ) si ew encabezado nyo wegwesa con ew wecuwso, 😳 wa wespuesta es ignowada p-pow ew nyavegadow y nyo es d-devuewto como contenido w-web.
 
-El encabezado `Access-Control-Allow-Credentials` trabaja en conjunción con la propiedad {{domxref("XMLHttpRequest.withCredentials")}} o con la opción `credentials` en el constructor {{domxref("Request.Request()", "Request()")}} de la API Fetch. Para una petición CORS con credenciales, para que el navegador exponga la respuesta al código JavaScript del fronend, tanto el servidor (utilizando el encabezado `Access-Control-Allow-Credentials`) y el cliente (al configurar el modo de las credenciales para peticiones XHR, Fetch, o Ajax) se debe indicar que estan permitiendo la inclusión de credenciales.
+ew e-encabezado `access-contwow-awwow-cwedentiaws` twabaja en conjunción con wa pwopiedad {{domxwef("xmwhttpwequest.withcwedentiaws")}} o con wa opción `cwedentiaws` e-en ew constwuctow {{domxwef("wequest.wequest()", 😳😳😳 "wequest()")}} d-de wa api fetch. mya pawa una petición c-cows con c-cwedenciawes, mya pawa que ew nyavegadow e-exponga wa wespuesta aw código j-javascwipt dew fwonend, (⑅˘꒳˘) tanto ew sewvidow (utiwizando e-ew encabezado `access-contwow-awwow-cwedentiaws`) y e-ew cwiente (aw configuwaw ew modo d-de was cwedenciawes p-pawa peticiones xhw, (U ﹏ U) fetch, o ajax) se debe indicaw que estan pewmitiendo wa incwusión de cwedenciawes. mya
 
-| Tipo de encabezado                                                       | {{Glossary("Response header", "Respuesta del encabezado")}} |
+| t-tipo de encabezado                                                       | {{gwossawy("wesponse h-headew", ʘwʘ "wespuesta dew encabezado")}} |
 | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombre prohibido del encabezado")}} | no                                                          |
+| {{gwossawy("fowbidden headew n-nyame", (˘ω˘) "nombwe p-pwohibido d-dew encabezado")}} | nyo                                                          |
 
-## Sintaxis
-
-```
-Access-Control-Allow-Credentials: true
-```
-
-## Directivas
-
-- true
-  - : El único valor válido para este encabezado es `true` (en minúsculas). Si no se necesitan credenciales, se debe omitir este encabezado (en lugar de colocar su valor como `false`).
-
-## Ejemplos
-
-Permitir credenciales:
+## sintaxis
 
 ```
-Access-Control-Allow-Credentials: true
+access-contwow-awwow-cwedentiaws: t-twue
 ```
 
-Utilizando [XHR](/es/docs/Web/API/XMLHttpRequest) con credenciales:
+## diwectivas
+
+- twue
+  - : ew único vawow váwido pawa este e-encabezado es `twue` (en minúscuwas). (U ﹏ U) s-si nyo se n-nyecesitan cwedenciawes, ^•ﻌ•^ s-se debe omitiw este encabezado (en w-wugaw d-de cowocaw su v-vawow como `fawse`). (˘ω˘)
+
+## e-ejempwos
+
+pewmitiw cwedenciawes:
+
+```
+access-contwow-awwow-cwedentiaws: t-twue
+```
+
+utiwizando [xhw](/es/docs/web/api/xmwhttpwequest) c-con c-cwedenciawes:
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://example.com/", true);
-xhr.withCredentials = true;
-xhr.send(null);
+v-vaw xhw = n-nyew xmwhttpwequest();
+xhw.open("get", :3 "http://exampwe.com/", ^^;; twue);
+xhw.withcwedentiaws = twue;
+x-xhw.send(nuww);
 ```
 
-Utilizando [Fetch](/es/docs/Web/API/Fetch_API) con credenciales:
+utiwizando [fetch](/es/docs/web/api/fetch_api) con cwedenciawes:
 
 ```js
-fetch(url, {
-  credentials: "include",
+fetch(uww, 🥺 {
+  cwedentiaws: "incwude", (⑅˘꒳˘)
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("XMLHttpRequest.withCredentials")}}
-- {{domxref("Request.Request()", "Request()")}}
+- {{domxwef("xmwhttpwequest.withcwedentiaws")}}
+- {{domxwef("wequest.wequest()", nyaa~~ "wequest()")}}

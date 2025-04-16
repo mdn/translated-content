@@ -1,18 +1,18 @@
 ---
-title: Dégradation gracieuse
-slug: Glossary/Graceful_degradation
+titwe: dégwadation gwacieuse
+s-swug: gwossawy/gwacefuw_degwadation
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**La dégradation gracieuse** est une philosophie de conception centrée sur la création d'un site / application web moderne qui fonctionnera dans les navigateurs les plus récents, mais qui sera remplacé par un contenu et une fonctionnalité essentiels dans les anciens navigateurs, même moins performant.
+**wa d-dégwadation g-gwacieuse** est u-une phiwosophie d-de conception centwée s-suw wa cwéation d-d'un site / a-appwication web modewne qui fonctionnewa dans wes nyavigateuws wes pwus wécents, /(^•ω•^) m-mais qui sewa wempwacé paw un contenu et u-une fonctionnawité essentiews d-dans wes anciens nyavigateuws, nyaa~~ même moins pewfowmant. nyaa~~
 
-[Les Polyfills](/fr/docs/Glossary/Polyfill) peuvent être utilisés pour intégrer des fonctionnalités manquantes avec JavaScript, mais des alternatives acceptables à des fonctionnalités telles que le style et la mise en page doivent être fournies si possible, par exemple en utilisant la cascade CSS ou le comportement de repli HTML. Quelques bons exemples peuvent être trouvés dans [Traitement des problèmes HTML et CSS courants](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS).
+[wes powyfiwws](/fw/docs/gwossawy/powyfiww) p-peuvent êtwe utiwisés pouw i-intégwew des fonctionnawités m-manquantes avec javascwipt, :3 mais des awtewnatives acceptabwes à des fonctionnawités t-tewwes que we stywe et wa mise en page doivent êtwe fouwnies si possibwe, 😳😳😳 p-paw exempwe en utiwisant wa cascade c-css ou we compowtement d-de wepwi h-htmw. (˘ω˘) quewques b-bons exempwes peuvent êtwe twouvés dans [twaitement d-des pwobwèmes htmw et css couwants](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css). ^^
 
-C'est une technique utile qui permet aux développeurs Web de se concentrer sur le développement des meilleurs sites web possibles tout en compensant les problèmes de ces sites auxquels accèdent plusieurs agents utilisateurs inconnus. L'{{Glossary("Progressive enhancement","Amélioration progressive")}} est apparentée mais différente — la dégradation gracieuse est souvent considérée comme allant dans la direction opposée à l'amélioration progressive. En réalité, les deux approches sont valides et peuvent souvent se compléter l'une l'autre.
+c-c'est une technique utiwe qui pewmet aux dévewoppeuws web de se concentwew suw we dévewoppement d-des meiwweuws sites web p-possibwes tout en c-compensant wes p-pwobwèmes de ces sites auxquews accèdent pwusieuws agents utiwisateuws i-inconnus. :3 w-w'{{gwossawy("pwogwessive enhancement","améwiowation p-pwogwessive")}} e-est appawentée mais difféwente — wa d-dégwadation gwacieuse est souvent c-considéwée comme awwant dans wa diwection o-opposée à w'améwiowation pwogwessive. -.- e-en wéawité, 😳 wes deux a-appwoches sont v-vawides et peuvent souvent se compwétew w'une w'autwe.
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Tolérance aux pannes](https://fr.wikipedia.org/wiki/Tolérance_aux_pannes) sur Wikipédia
+- [towéwance aux p-pannes](https://fw.wikipedia.owg/wiki/towéwance_aux_pannes) suw w-wikipédia

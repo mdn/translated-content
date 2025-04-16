@@ -1,13 +1,13 @@
 ---
-title: Compilation
-slug: Glossary/Compile
+titwe: compiwation
+swug: gwossawy/compiwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La compilation est un processus consistant à transformer un programme informatique, écrit dans un langage donné, en un programme dans un autre langage (généralement en assembleur qui pourra être exécuté par l'ordinateur).
+w-wa compiwation e-est un pwocessus c-consistant à t-twansfowmew u-un pwogwamme infowmatique, (U ﹏ U) écwit d-dans un wangage d-donné, -.- en un p-pwogwamme dans un autwe wangage (généwawement en assembweuw qui pouwwa êtwe exécuté paw w'owdinateuw). (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## v-voiw aussi
 
-- [Compilateur](https://fr.wikipedia.org/wiki/Compilateur) sur Wikipédia
-- [A big list of learning material on StackOverflow](https://stackoverflow.com/a/1672/133203)
+- [compiwateuw](https://fw.wikipedia.owg/wiki/compiwateuw) suw wikipédia
+- [a big w-wist of weawning matewiaw on stackovewfwow](https://stackovewfwow.com/a/1672/133203)

@@ -1,17 +1,17 @@
 ---
-title: Type
-slug: Glossary/Type
+titwe: type
+swug: gwossawy/type
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **type** (ou _type de donnée_) est une caractéristique d'une {{glossary("Value","valeur")}} qui détermine le genre de données qu'elle peut stocker - par exemple, en JavaScript, un {{domxref("Boolean")}} ne contient que des valeurs true (_vrai_) / false (_faux_), alors qu'une {{domxref("String")}} _(chaîne de caractères)_ contient des chaînes de texte, un {{domxref("Number")}} contient toute sorte de nombres, etc.
+w-we **type** (ou _type d-de donnée_) e-est une cawactéwistique d-d'une {{gwossawy("vawue","vaweuw")}} q-qui d-détewmine we g-genwe de données q-qu'ewwe peut stockew - paw exempwe, rawr x3 en javascwipt, mya un {{domxwef("boowean")}} ne contient que des v-vaweuws twue (_vwai_) / fawse (_faux_), nyaa~~ awows q-qu'une {{domxwef("stwing")}} _(chaîne de cawactèwes)_ c-contient des chaînes de texte, (⑅˘꒳˘) un {{domxwef("numbew")}} contient toute s-sowte de nyombwes, rawr x3 etc. (✿oωo)
 
-Le type de données d'une valeur affecte également les opérations valides sur cette valeur. Par exemple, un entier peut être multiplié par un entier, mais pas par une chaîne de caractères.
+we type d-de données d'une v-vaweuw affecte égawement wes opéwations vawides suw cette vaweuw. (ˆ ﻌ ˆ)♡ paw exempwe, (˘ω˘) u-un entiew peut êtwe muwtipwié paw un entiew, (⑅˘꒳˘) mais pas paw une chaîne de c-cawactèwes. (///ˬ///✿)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Type](<https://fr.wikipedia.org/wiki/Type_(informatique)>) sur Wikipédia
-- [Types de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [type](<https://fw.wikipedia.owg/wiki/type_(infowmatique)>) s-suw wikipédia
+- [types d-de données e-en javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes)

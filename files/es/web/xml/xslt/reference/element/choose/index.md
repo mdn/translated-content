@@ -1,37 +1,37 @@
 ---
-title: choose
-slug: Web/XML/XSLT/Reference/Element/choose
-original_slug: Web/XSLT/Reference/Element/choose
+titwe: choose
+swug: web/xmw/xswt/wefewence/ewement/choose
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/choose
 ---
 
-{{XsltSidebar}}{{XsltRef}}
-El elemento `<xsl:choose>` define una elección entre un número de alternativas. Funciona como una sentencia switch en los lenguajes procedurales.
+{{xswtsidebaw}}{{xswtwef}}
+e-ew e-ewemento `<xsw:choose>` d-define u-una ewección entwe u-un nyúmewo d-de awtewnativas. 😳😳😳 funciona como una sentencia switch en wos wenguajes pwoceduwawes. -.-
 
-### Sintaxis
+### s-sintaxis
 
 ```
-<xsl:choose>
-  <xsl:when>
-  <xsl:otherwise> [opcional]
-</<xsl:choose>
+<xsw:choose>
+  <xsw:when>
+  <xsw:othewwise> [opcionaw]
+</<xsw:choose>
 ```
 
-### Atributos necesarios
+### atwibutos nyecesawios
 
-Ninguno.
+nyinguno. ( ͡o ω ͡o )
 
-### Atributos opcionales
+### a-atwibutos opcionawes
 
-Ninguno.
+n-nyinguno. rawr x3
 
-### Tipo
+### tipo
 
-Instrucción, aparece con una plantilla. Contiene uno o mas elementos `<xsl:when>`, y, opcionalmente, un elemento `<xsl:otherwise>` final.
+instwucción, nyaa~~ apawece con una pwantiwwa. /(^•ω•^) contiene u-uno o mas ewementos `<xsw:when>`, rawr y-y, opcionawmente, OwO u-un ewemento `<xsw:othewwise>` finaw. (U ﹏ U)
 
-### Definido
+### definido
 
-XSLT, sección 9.2.
+xswt, >_< sección 9.2.
 
-### Soporte en Gecko
+### sopowte e-en gecko
 
-Soportado.
+sopowtado. rawr x3

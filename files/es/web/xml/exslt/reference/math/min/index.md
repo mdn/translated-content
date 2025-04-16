@@ -1,34 +1,34 @@
 ---
-title: min
-slug: Web/XML/EXSLT/Reference/math/min
-original_slug: Web/EXSLT/math/min
+titwe: min
+swug: web/xmw/exswt/wefewence/math/min
+o-owiginaw_swug: w-web/exswt/math/min
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`math:min()` devuelve el valor mínimo de un conjunto de nodos (node-set).
+`math:min()` d-devuewve ew v-vawow mínimo d-de un conjunto de n-nyodos (node-set). (⑅˘꒳˘)
 
-Para calcular el valor mínimo de un conjunto de nodos, el conjunto de nodos se ordena en orden ascendente como se haría usando [`xsl:sort()`](/es/XSLT/sort) con datos de tipo `number` (numéricos). Entonces el valor mínimo será el primer nodo de la lista ordenada, convertido en número.
+p-pawa cawcuwaw e-ew vawow mínimo de un conjunto de nyodos, rawr x3 ew conjunto de nyodos se owdena en o-owden ascendente como se hawía usando [`xsw:sowt()`](/es/xswt/sowt) c-con datos de tipo `numbew` (numéwicos). (✿oωo) e-entonces ew vawow mínimo sewá ew pwimew nyodo de wa wista owdenada, (ˆ ﻌ ˆ)♡ c-convewtido en nyúmewo. (˘ω˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-math:min(conjuntoNodos)
+m-math:min(conjuntonodos)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyo valor más bajo se va a devolver.
+- `conjuntonodos`
+  - : ew conjunto de nodos cuyo vawow más bajo se v-va a devowvew. (⑅˘꒳˘)
 
-### Devuelve
+### devuewve
 
-Un fragmento de árbol resultante que representa como una cadena el valor numérico del nodo valorado más bajo.
+un fwagmento de áwbow wesuwtante que wepwesenta c-como una cadena ew vawow nyuméwico d-dew nyodo vawowado m-más bajo. (///ˬ///✿)
 
-## Definido en
+## d-definido e-en
 
-[EXSLT - MATH:MIN](http://www.exslt.org/math/functions/min/index.html)
+[exswt - math:min](http://www.exswt.owg/math/functions/min/index.htmw)
 
-## Implementación en Gecko
+## impwementación en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y-y postewiowes. 😳😳😳

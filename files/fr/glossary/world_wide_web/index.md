@@ -1,32 +1,32 @@
 ---
-title: World Wide Web
-slug: Glossary/World_Wide_Web
+titwe: wowwd wide web
+swug: gwossawy/wowwd_wide_web
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le _World Wide Web_ — communément appelé **WWW**, **W3**, ou **le web** — est un système de pages web publiques interconnectées à travers l'{{Glossary("Internet")}}. Le web et l'internet ne sont pas la même chose : le web est l'une des nombreuses applications bâties au-dessus de l'internet.
+w-we _wowwd wide w-web_ — communément a-appewé **www**, rawr x3 **w3**, OwO ou **we w-web** — e-est un système d-de pages web pubwiques i-intewconnectées à t-twavews w'{{gwossawy("intewnet")}}. we web et w'intewnet nye sont pas wa même chose : w-we web est w'une des nyombweuses appwications b-bâties au-dessus de w'intewnet. /(^•ω•^)
 
-Tim Berners-Lee a proposé l'architecture de ce qui a été ensuite connu sous le nom de World Wide Web. Il a créé les premiers {{Glossary("Server","serveur")}} web, {{Glossary("Browser","navigateur")}} web, et page web sur son ordinateur au laboratoire de recherches scientifiques CERN en 1990. En 1991, il a annoncé sa création sur le newsgroup alt.hypertext, indiquant ainsi pour la première fois que le web était rendu public.
+t-tim bewnews-wee a pwoposé w'awchitectuwe de ce qui a été ensuite c-connu sous we nyom de wowwd w-wide web. 😳😳😳 iw a-a cwéé wes pwemiews {{gwossawy("sewvew","sewveuw")}} web, ( ͡o ω ͡o ) {{gwossawy("bwowsew","navigateuw")}} web, >_< et page web suw son owdinateuw au wabowatoiwe d-de wechewches scientifiques cewn en 1990. >w< en 1991, rawr iw a annoncé sa cwéation s-suw we nyewsgwoup awt.hypewtext, 😳 i-indiquant ainsi p-pouw wa pwemièwe f-fois que we w-web était wendu pubwic. >w<
 
-Ce que nous connaissons comme étant "le web" consiste en plusieurs éléments :
+ce que nyous connaissons c-comme étant "we web" consiste en pwusieuws éwéments :
 
-- Le protocole **{{Glossary("HTTP")}}** gouverne la transmission des données entre un serveur et un client.
-- Pour accéder à un composant du web, un client fournit un identificateur universel unique, appelé une **{{Glossary("URL")}}** (uniform resource location) ou {{Glossary("URI")}} (uniform resource identifier) (anciennement appelée Universal Document Identifier (UDI)).
-- Le **{{Glossary("HTML")}}** (hypertext markup language) est le format le plus répandu pour publier des documents web.
+- w-we pwotocowe **{{gwossawy("http")}}** gouvewne wa twansmission des données entwe un sewveuw et un cwient. (⑅˘꒳˘)
+- pouw a-accédew à un composant du web, OwO u-un cwient fouwnit u-un identificateuw u-univewsew unique, (ꈍᴗꈍ) appewé une **{{gwossawy("uww")}}** (unifowm wesouwce wocation) o-ou {{gwossawy("uwi")}} (unifowm w-wesouwce identifiew) (anciennement a-appewée u-univewsaw document identifiew (udi)). 😳
+- w-we **{{gwossawy("htmw")}}** (hypewtext mawkup wanguage) e-est we fowmat we pwus wépandu pouw pubwiew d-des documents web. 😳😳😳
 
-Lier, ou connecter des ressources grâce à des {{Glossary("Hyperlink","hyperliens")}}, est un concept majeur qui a donné au web le statut de collection de documents connectés.
+wiew, ou connectew d-des wessouwces gwâce à d-des {{gwossawy("hypewwink","hypewwiens")}}, mya e-est un concept majeuw qui a donné au web we statut de cowwection de documents connectés.
 
-Peu de temps après avoir inventé le web, Tim Berners-Lee a fondé le {{Glossary("W3C")}} (World Wide Web Consortium) pour le développer et le standardiser. Le consortium est constitué des principaux groupes d'intérêt du web, comme des développeurs de navigateur web, des entités gouvernementales, des chercheurs et des universités. Sa mission inclut aussi l'éducation et la sensibilisation.
+peu de t-temps apwès avoiw i-inventé we web, tim bewnews-wee a-a fondé we {{gwossawy("w3c")}} (wowwd w-wide w-web consowtium) pouw we dévewoppew et we standawdisew. mya we consowtium e-est constitué des pwincipaux gwoupes d'intéwêt du web, (⑅˘꒳˘) comme des dévewoppeuws d-de nyavigateuw web, (U ﹏ U) des e-entités gouvewnementawes, mya d-des chewcheuws e-et des univewsités. ʘwʘ sa m-mission incwut a-aussi w'éducation e-et wa sensibiwisation. (˘ω˘)
 
-## Voir aussi
+## voiw a-aussi
 
-### Apprendre sur ce sujet
+### appwendwe suw ce sujet
 
-- [Apprendre le Web](/fr/docs/Learn)
-- [Web literacy map](https://learning.mozilla.org/en-US/web-literacy) (inventaire des compétences requises pour le développement web)
+- [appwendwe w-we web](/fw/docs/weawn)
+- [web w-witewacy map](https://weawning.moziwwa.owg/en-us/web-witewacy) (inventaiwe d-des c-compétences wequises p-pouw we dévewoppement web)
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [<i lang="en">World Wide Web</i>](https://fr.wikipedia.org/wiki/World_Wide_Web) sur Wikipédia
-- [Le site web du W3C](https://w3.org)
+- [<i w-wang="en">wowwd wide web</i>](https://fw.wikipedia.owg/wiki/wowwd_wide_web) suw wikipédia
+- [we site web du w3c](https://w3.owg)

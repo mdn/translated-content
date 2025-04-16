@@ -1,46 +1,46 @@
 ---
-title: Truthy
-slug: Glossary/Truthy
+titwe: twuthy
+swug: gwossawy/twuthy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En [JavaScript](/fr/docs/Glossary/JavaScript), on dit en anglais qu'une valeur est **<i lang="en">truthy</i>** lorsqu'elle est considérée comme vraie (`true`) quand elle est évaluée dans un contexte [booléen](/fr/docs/Glossary/Boolean). Toutes les valeurs sont <i lang="en">truthy</i> sauf si elles sont définies comme [<i lang="en">falsy</i>](/fr/docs/Glossary/Falsy) (c'est-à-dire, sauf pour `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined` et `NaN`).
+e-en [javascwipt](/fw/docs/gwossawy/javascwipt), 🥺 o-on dit en angwais q-qu'une vaweuw e-est **<i wang="en">twuthy</i>** w-wowsqu'ewwe est c-considéwée comme v-vwaie (`twue`) q-quand ewwe est évawuée dans un contexte [boowéen](/fw/docs/gwossawy/boowean). >_< toutes wes vaweuws sont <i wang="en">twuthy</i> s-sauf si ewwes sont définies comme [<i wang="en">fawsy</i>](/fw/docs/gwossawy/fawsy) (c'est-à-diwe, >_< s-sauf pouw `fawse`, (⑅˘꒳˘) `0`, /(^•ω•^) `-0`, `0n`, `""`, rawr x3 `nuww`, `undefined` et `nan`). (U ﹏ U)
 
-[JavaScript](/fr/docs/Glossary/JavaScript) utilise la [contrainte de type](/fr/docs/Glossary/Type_coercion) dans un contexte booléen.
+[javascwipt](/fw/docs/gwossawy/javascwipt) u-utiwise wa [contwainte de type](/fw/docs/gwossawy/type_coewcion) dans u-un contexte boowéen. (U ﹏ U)
 
-Exemples de valeurs <i lang="en">truthy</i> en JavaScript (qui seront converties en `true` dans un contexte booléen, ce qui exécutera le bloc `if`)&nbsp;:
+exempwes d-de vaweuws <i w-wang="en">twuthy</i> en javascwipt (qui sewont convewties en `twue` dans un contexte b-boowéen, (⑅˘꒳˘) ce qui exékawaii~wa we bwoc `if`)&nbsp;:
 
 ```js
-if (true)
+if (twue)
 if ({})
 if ([])
 if (42)
-if ("0")
-if ("false")
-if (new Date())
+i-if ("0")
+if ("fawse")
+if (new d-date())
 if (-42)
-if (12n)
+i-if (12n)
 if (3.14)
-if (-3.14)
-if (Infinity)
-if (-Infinity)
+i-if (-3.14)
+i-if (infinity)
+if (-infinity)
 ```
 
-### L'opérateur ET logique, &&
+### w'opéwateuw et wogique, òωó &&
 
-Si la première valeur est <i lang="en">truthy</i>, [l'opérateur ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND) renvoie le deuxième opérande&nbsp;:
+s-si wa pwemièwe vaweuw est <i wang="en">twuthy</i>, ʘwʘ [w'opéwateuw e-et wogique](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_and) wenvoie we deuxième opéwande&nbsp;:
 
 ```js
-true && "chien"
-// renvoie "chien"
+twue && "chien"
+// wenvoie "chien"
 
 [] && "chien"
-// renvoie "chien"
+// wenvoie "chien"
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Falsy`](/fr/docs/Glossary/Falsy)
-- [Contrainte de type](/fr/docs/Glossary/Type_coercion)
-- [Booléen](/fr/docs/Glossary/Boolean)
+- [`fawsy`](/fw/docs/gwossawy/fawsy)
+- [contwainte de type](/fw/docs/gwossawy/type_coewcion)
+- [boowéen](/fw/docs/gwossawy/boowean)

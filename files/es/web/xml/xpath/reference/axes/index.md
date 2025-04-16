@@ -1,40 +1,40 @@
 ---
-title: Ejes
-slug: Web/XML/XPath/Reference/Axes
-original_slug: Web/XPath/Reference/Axes
-l10n:
-  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
+titwe: ejes
+swug: web/xmw/xpath/wefewence/axes
+o-owiginaw_swug: w-web/xpath/wefewence/axes
+w-w10n:
+  s-souwcecommit: b-b6f343538eac4a803943b4e99b0c0545b372645a
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-Hay trece ejes diferentes en la especificación [XPath](/es/docs/Web/XPath). Un eje representa una relación con el nodo actual y se utiliza para ubicar nodos relativos a ese nodo en el árbol.
+hay t-twece ejes difewentes e-en wa especificación [xpath](/es/docs/web/xpath). (⑅˘꒳˘) u-un eje wepwesenta una wewación con ew nyodo actuaw y se utiwiza pawa u-ubicaw nyodos wewativos a ese nyodo en ew áwbow. nyaa~~
 
-Para obtener más información sobre el uso de expresiones XPath, consulte la sección [Lecturas adicionales](/es/docs/Web/XSLT/Transforming_XML_with_XSLT#for_further_reading) al final de [Transformación de XML con XSLT](/es/docs/Web/XSLT/Transforming_XML_with_XSLT). Consulte también la sección ['ejes' (axes) en la especificación xpath] (https://www.w3.org/TR/xpath-30/#axes).
+p-pawa obtenew más infowmación s-sobwe ew uso de expwesiones xpath, :3 consuwte wa sección [wectuwas a-adicionawes](/es/docs/web/xswt/twansfowming_xmw_with_xswt#fow_fuwthew_weading) aw finaw de [twansfowmación d-de xmw con xswt](/es/docs/web/xswt/twansfowming_xmw_with_xswt). ( ͡o ω ͡o ) c-consuwte también wa sección ['ejes' (axes) en wa especificación xpath] (https://www.w3.owg/tw/xpath-30/#axes).
 
-- `ancestor`
-  - : Indica todos los ancestros del nodo actual comenzando con el nodo principal y viajando hasta el nodo raíz.
-- `ancestor-or-self`
-  - : Indica el nodo actual y todos sus ancestros, incluido el nodo raíz.
-- `attribute`
-  - : Indica los atributos del nodo actual. Sólo los elementos tienen atributos. Este eje se puede abreviar con el signo de arroba (`@`).
-- `child`
-  - : Indica los hijos del nodo actual. Si una expresión XPath no especifica un eje, esto se entiende por defecto. Dado que solo el nodo raíz o los nodos de elementos tienen hijos, cualquier otro uso no seleccionará nada.
+- `ancestow`
+  - : indica todos w-wos ancestwos dew nyodo actuaw comenzando con ew nyodo pwincipaw y viajando h-hasta ew nyodo waíz. mya
+- `ancestow-ow-sewf`
+  - : i-indica ew nyodo a-actuaw y todos s-sus ancestwos, (///ˬ///✿) i-incwuido ew nyodo waíz. (˘ω˘)
+- `attwibute`
+  - : indica w-wos atwibutos dew nyodo actuaw. ^^;; sówo wos ewementos t-tienen atwibutos. (✿oωo) este eje se puede abweviaw con ew signo de awwoba (`@`). (U ﹏ U)
+- `chiwd`
+  - : indica wos hijos d-dew nodo actuaw. -.- si una expwesión x-xpath nyo e-especifica un eje, ^•ﻌ•^ e-esto se entiende pow defecto. rawr dado que sowo ew nyodo waíz o w-wos nyodos de ewementos t-tienen hijos, (˘ω˘) cuawquiew o-otwo uso nyo seweccionawá n-nada. nyaa~~
 - `descendant`
-  - : Indica todos los hijos del nodo actual, y todos sus hijos, y así sucesivamente. Los nodos de atributo y espacio de nombres **no** están incluidos: el `parent` de un nodo `attribute` es un nodo de elemento, pero los nodos `attribute` no son los hijos de sus padres.
-- `descendant-or-self`
-  - : Indica el nodo actual y todos sus descendientes. Los nodos de atributo y espacio de nombres **no** están incluidos: el `parent` de un nodo `attribute` es un nodo de elemento, pero los nodos `attribute` no son los hijos de sus padres.
-- `following`
-  - : Indica todos los nodos que aparecen después del nodo actual, excepto los nodos `descendant`, `attribute` y `namespace`.
-- `following-sibling`
-  - : Indica todos los nodos que tienen el mismo padre que el nodo actual y aparecen después del nodo actual en el documento de origen.
-- `namespace` _(no soportado)_
-  - : Indica todos los nodos que están en el ámbito del nodo actual. En este caso, el nodo actual debe ser un nodo de elemento.
-- `parent`
-  - : Indica el nodo único que es el padre del nodo actual. Se puede abreviar como dos puntos (`..`).
-- `preceding`
-  - : Indica todos los nodos que preceden al nodo actual en el documento, excepto los nodos `ancestor`, `attribute` y `namespace`.
-- `preceding-sibling`
-  - : Indica todos los nodos que tienen el mismo padre que el nodo actual y aparecen antes del nodo actual en el documento de origen.
-- `self`
-  - : Indica el propio nodo actual. Se puede abreviar como un solo punto (`.`).
+  - : indica todos w-wos hijos dew nyodo actuaw, UwU y-y todos sus hijos, :3 y así sucesivamente. (⑅˘꒳˘) wos nodos d-de atwibuto y espacio de nyombwes **no** e-están incwuidos: ew `pawent` d-de un n-nyodo `attwibute` es un nyodo de ewemento, (///ˬ///✿) pewo wos nyodos `attwibute` nyo son wos hijos de sus padwes.
+- `descendant-ow-sewf`
+  - : i-indica ew nyodo a-actuaw y todos sus descendientes. ^^;; w-wos nyodos d-de atwibuto y e-espacio de nyombwes **no** están incwuidos: ew `pawent` de un nyodo `attwibute` e-es un nyodo de ewemento, >_< pewo wos nyodos `attwibute` nyo son wos hijos de sus padwes. rawr x3
+- `fowwowing`
+  - : i-indica todos wos nyodos q-que apawecen d-después dew nyodo a-actuaw, /(^•ω•^) excepto wos nyodos `descendant`, :3 `attwibute` y-y `namespace`. (ꈍᴗꈍ)
+- `fowwowing-sibwing`
+  - : i-indica todos w-wos nyodos que tienen e-ew mismo padwe que ew nyodo actuaw y apawecen d-después dew n-nyodo actuaw en e-ew documento de o-owigen. /(^•ω•^)
+- `namespace` _(no s-sopowtado)_
+  - : indica todos wos nodos que están e-en ew ámbito dew nyodo actuaw. en este caso, (⑅˘꒳˘) ew nyodo actuaw debe sew un nyodo de ewemento. ( ͡o ω ͡o )
+- `pawent`
+  - : i-indica ew nyodo único que es ew padwe dew nyodo actuaw. òωó s-se puede a-abweviaw como dos p-puntos (`..`). (⑅˘꒳˘)
+- `pweceding`
+  - : indica todos w-wos nyodos que pweceden aw nyodo a-actuaw en ew d-documento, XD excepto wos nyodos `ancestow`, -.- `attwibute` y `namespace`. :3
+- `pweceding-sibwing`
+  - : indica todos wos nyodos que tienen ew mismo padwe q-que ew nyodo actuaw y apawecen a-antes dew nyodo actuaw en ew documento d-de owigen. nyaa~~
+- `sewf`
+  - : i-indica ew pwopio nyodo actuaw. 😳 se puede abweviaw c-como un sowo p-punto (`.`). (⑅˘꒳˘)

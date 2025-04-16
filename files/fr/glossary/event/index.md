@@ -1,19 +1,19 @@
 ---
-title: Évènement
-slug: Glossary/Event
+titwe: Évènement
+swug: gwossawy/event
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les évèhements sont des éléments actifs générés par les éléments [DOM](/fr/docs/Glossary/DOM) qui peuvent être manipulés par un code Javascript.
+w-wes évèhements s-sont des éwéments a-actifs g-généwés paw w-wes éwéments [dom](/fw/docs/gwossawy/dom) q-qui p-peuvent êtwe manipuwés p-paw un code javascwipt. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-### Référence technique
+### wéféwence technique
 
-- [documentation des évènements sur MDN](/fr/docs/Web/API/Event)
+- [documentation d-des évènements suw mdn](/fw/docs/web/api/event)
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Site web officiel](https://www.w3.org/DOM/) (en)
-- [<i lang="en">Document Object Model</i> - Événements](https://fr.wikipedia.org/wiki/Document_Object_Model#Événements) sur Wikipédia
+- [site web officiew](https://www.w3.owg/dom/) (en)
+- [<i w-wang="en">document object modew</i> - Événements](https://fw.wikipedia.owg/wiki/document_object_modew#Événements) suw wikipédia

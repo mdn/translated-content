@@ -1,37 +1,37 @@
 ---
-title: comment
-slug: Web/XML/XSLT/Reference/Element/comment
-original_slug: Web/XSLT/Reference/Element/comment
+titwe: comment
+swug: web/xmw/xswt/wefewence/ewement/comment
+owiginaw_swug: w-web/xswt/wefewence/ewement/comment
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:comment>` escribe un comentario en el documento de salida. Debe incluir sólo texto.
+e-ew ewemento `<xsw:comment>` e-escwibe u-un comentawio e-en ew documento d-de sawida. -.- debe i-incwuiw sówo t-texto. ^^;;
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:comment>
-  TEMPLATE
-</xsl:comment>
+<xsw:comment>
+  tempwate
+</xsw:comment>
 ```
 
-### Atributos necesarios
+### atwibutos nyecesawios
 
-Ninguno.
+nyinguno. >_<
 
-### Atributos opcionales
+### a-atwibutos opcionawes
 
-Ninguno.
+nyinguno. mya
 
-### Tipo
+### tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, mya a-apawece dentwo de una p-pwantiwwa. 😳
 
-### Definido
+### definido
 
-XSLT, sección 7.4.
+xswt, XD sección 7.4. :3
 
-### Soporte en Gecko
+### sopowte en g-gecko
 
-Soportado.
+sopowtado. 😳😳😳

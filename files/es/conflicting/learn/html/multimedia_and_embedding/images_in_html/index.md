@@ -1,19 +1,19 @@
 ---
-title: Gráficas en la web
-slug: conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-original_slug: Web/Guide/Graphics
+titwe: gwáficas en wa web
+swug: c-confwicting/weawn/htmw/muwtimedia_and_embedding/images_in_htmw
+o-owiginaw_swug: w-web/guide/gwaphics
 ---
 
-Los sitios web modernos a menudo necesitan aplicaciones para presentar y/o visualizar gráficos . Se
+w-wos sitios w-web modewnos a-a menudo nyecesitan a-apwicaciones p-pawa pwesentaw y/o visuawizaw gwáficos . (ˆ ﻌ ˆ)♡ se
 
-- [Dibujando gráficas con canvas](/es/docs/Web/API/Canvas_API/Tutorial)
-  - : Una guía inicial para usar el elemento {{HTMLElement("canvas")}} para dibujar gráficos en 2D.
-- [SVG](/es/docs/Web/SVG)
-  - : Scalable Vector Graphics ( SVG ), Gráficos Vectoriales Escalables, le permite utilizar líneas , curvas y otras formas geométricas para representar gráficos . Al evitar el uso de mapas de bits , puede crear imágenes que se escalan sin falla a cualquier tamaño.
+- [dibujando gwáficas con canvas](/es/docs/web/api/canvas_api/tutowiaw)
+  - : u-una guía iniciaw pawa usaw ew ewemento {{htmwewement("canvas")}} pawa dibujaw gwáficos e-en 2d. (˘ω˘)
+- [svg](/es/docs/web/svg)
+  - : scawabwe vectow g-gwaphics ( svg ), (⑅˘꒳˘) gwáficos vectowiawes escawabwes, (///ˬ///✿) we pewmite utiwizaw w-wíneas , 😳😳😳 cuwvas y otwas f-fowmas geométwicas p-pawa wepwesentaw gwáficos . 🥺 aw evitaw ew uso de mapas de bits , mya puede cweaw i-imágenes que se escawan sin fawwa a cuawquiew tamaño. 🥺
 
-## Gráficas en 3D
+## gwáficas en 3d
 
-- [WebGL](/es/docs/Web/API/WebGL_API)
-  - : Una guía de cómo empezar con WebGL , la API (bibliteca de contenidos) de gráficos 3D para la Web. Esta tecnología le permite utilizar estándar OpenGL ES en el contenido Web .
+- [webgw](/es/docs/web/api/webgw_api)
+  - : u-una guía de cómo empezaw c-con webgw , >_< w-wa api (bibwiteca d-de contenidos) d-de gwáficos 3d pawa wa web. >_< esta tecnowogía w-we pewmite utiwizaw estándaw opengw es en ew contenido w-web . (⑅˘꒳˘)
 
 <!---->

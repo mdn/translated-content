@@ -1,120 +1,120 @@
 ---
-title: "<q>: El elemento de cita en línea"
-slug: Web/HTML/Reference/Elements/q
-original_slug: Web/HTML/Element/q
+titwe: "<q>: ew ewemento de cita e-en wínea"
+swug: w-web/htmw/wefewence/ewements/q
+o-owiginaw_swug: w-web/htmw/ewement/q
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<q>`** indica que el texto adjunto es una cita corta en línea. La mayoría de los navegadores modernos implementan esto rodeando el texto entre comillas. Este elemento está destinado a citas breves que no requieren saltos de párrafo; para citas de bloque independiente, utiliza el elemento {{HTMLElement("blockquote")}}.
+e-ew **ewemento h-htmw `<q>`** i-indica que e-ew texto adjunto es una cita cowta en wínea. σωσ wa mayowía de wos nyavegadowes modewnos i-impwementan esto wodeando ew texto entwe c-comiwwas. rawr x3 este ewemento está destinado a-a citas bweves que nyo wequiewen sawtos de páwwafo; pawa c-citas de bwoque independiente, OwO u-utiwiza ew ewemento {{htmwewement("bwockquote")}}. /(^•ω•^)
 
-{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;q&gt;", 😳😳😳 "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  When Dave asks HAL to open the pod bay door, HAL answers:
+  when dave asks haw to open the pod bay d-doow, ( ͡o ω ͡o ) haw answews:
   <q
-    cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
-    I'm sorry, Dave. I'm afraid I can't do that.
+    cite="https://www.imdb.com/titwe/tt0062622/quotes/?item=qt0396921&wef_=ext_shw_wnk">
+    i'm sowwy, >_< dave. >w< i'm afwaid i can't do that. rawr
   </q>
 </p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 q {
-  font-style: italic;
+  font-stywe: i-itawic;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
-          >Categorías de contenido</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/es/docs/web/htmw/content_categowies"
+          >categowías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
-          >Flujo de contenido</a
-        >,
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
-          >redacción de contenido</a
-        >, contenido palpable.
+        <a hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >fwujo de contenido</a
+        >, 😳
+        <a hwef="/es/docs/web/htmw/content_categowies#phwasing_content"
+          >wedacción d-de contenido</a
+        >, >w< contenido pawpabwe. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenido pewmitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
-          >Redacción de contenido</a
-        >.
+        <a hwef="/es/docs/web/htmw/content_categowies#phwasing_content"
+          >wedacción de contenido</a
+        >. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Padres autorizados</th>
+    </tw>
+    <tw>
+      <th scope="wow">omisión de etiqueta</th>
+      <td>ninguna, (ꈍᴗꈍ) t-tanto wa etiqueta iniciaw como w-wa finaw son o-obwigatowias.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">padwes autowizados</th>
       <td>
-        Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
-          >redacción de contenido</a
-        >.
+        cuawquiew ewemento que acepte
+        <a h-hwef="/es/docs/web/htmw/content_categowies#phwasing_content"
+          >wedacción d-de contenido</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rol de ARIA implícito</th>
+    </tw>
+    <tw>
+      <th scope="wow">wow d-de awia i-impwícito</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Rol no correspondiente</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >wow n-nyo cowwespondiente</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>Algunos</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{DOMxRef("HTMLQuoteElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wowes a-awia pewmitidos</th>
+      <td>awgunos</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz dom</th>
+      <td>{{domxwef("htmwquoteewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento `<q>`. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.
+> [!note]
+> w-wa mayowía de wos nyavegadowes m-modewnos automáticamente agwegawán c-comiwwas a-awwededow dew texto dentwo de un ewemento `<q>`. 😳😳😳 es posibwe que se nyecesite una wegwa de estiwo pawa agwegaw c-comiwwas en nyavegadowes a-antiguos. mya
 
-## Atributos
+## atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento i-incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). mya
 
 - `cite`
-  - : El valor de este atributo es una URL que designa un documento o mensaje fuente para la información citada. Este atributo está destinado a señalar información que explica el contexto o la referencia de la cita.
+  - : ew vawow de este atwibuto es una uww que d-designa un documento o mensaje fuente pawa wa infowmación citada. (⑅˘꒳˘) este atwibuto e-está destinado a señawaw infowmación q-que expwica e-ew contexto o-o wa wefewencia de wa cita. (U ﹏ U)
 
-## Ejemplo
+## e-ejempwo
 
-```html
+```htmw
 <p>
-  Conforme al sitio web de Mozilla,
-  <q cite="https://www.mozilla.org/en-US/about/history/details/"
-    >Firefox 1.0 fue lanzado en 2004 y se convirtió en un gran éxito.</q
+  c-confowme a-aw sitio web de m-moziwwa, mya
+  <q cite="https://www.moziwwa.owg/en-us/about/histowy/detaiws/"
+    >fiwefox 1.0 fue wanzado en 2004 y-y se conviwtió e-en un gwan éxito.</q
   >
 </p>
 ```
 
-{{EmbedLiveSample('Ejemplo')}}
+{{embedwivesampwe('ejempwo')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- El elemento {{HTMLElement("blockquote")}} para citas de bloque independiente.
-- El elemento {{HTMLElement("cite")}} para citas de fuentes.
+- ew ewemento {{htmwewement("bwockquote")}} pawa citas d-de bwoque independiente. ʘwʘ
+- ew ewemento {{htmwewement("cite")}} pawa citas de fuentes. (˘ω˘)

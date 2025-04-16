@@ -1,131 +1,131 @@
 ---
-title: Préchargement
-slug: Glossary/Prefetch
+titwe: pwéchawgement
+swug: gwossawy/pwefetch
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-### Qu'est ce que le préchargement de liens&nbsp;?
+### qu'est c-ce que we p-pwéchawgement de w-wiens&nbsp;?
 
-Le préchargement de liens est un mécanisme du navigateur qui utilise le temps disponible du navigateur pour télécharger ou _précharger_ les documents que les utilisateurs pourraient visiter juste après. Une page web fournit un ensemble de cibles à précharger au navigateur. Une fois que le navigateur a fini de charger la page, il commence, de façon transparente, à précharger les documents spécifiés et les emmagasine dans son cache. Quand l'utilisateur visite un de ces documents préchargés, il peut être ressorti rapidement du cache du navigateur.
+w-we pwéchawgement d-de wiens est un m-mécanisme du n-nyavigateuw qui u-utiwise we temps disponibwe du nyavigateuw pouw téwéchawgew ou _pwéchawgew_ wes documents que w-wes utiwisateuws pouwwaient visitew juste apwès. (U ﹏ U) u-une page web fouwnit un ensembwe d-de cibwes à pwéchawgew au nyavigateuw. nyaa~~ une fois que we nyavigateuw a-a fini de chawgew wa page, ^^;; i-iw commence, OwO d-de façon twanspawente, nyaa~~ à pwéchawgew wes documents spécifiés et wes emmagasine d-dans son cache. UwU quand w'utiwisateuw visite un de ces documents pwéchawgés, 😳 i-iw peut êtwe wessowti wapidement d-du cache du nyavigateuw. 😳
 
-### Le préchargement fonctionne-t-il avec HTTPS ?
+### w-we pwéchawgement f-fonctionne-t-iw a-avec https ?
 
-À partir de Gecko 1.9.1 (Firefox 3.5), le contenu HTTPS peut être préchargé.
+À pawtiw de gecko 1.9.1 (fiwefox 3.5), (ˆ ﻌ ˆ)♡ we contenu h-https peut êtwe pwéchawgé. (✿oωo)
 
-### Quelles sont les cibles à précharger&nbsp;?
+### quewwes sont w-wes cibwes à pwéchawgew&nbsp;?
 
-Le navigateur cherche soit une balise HTML `link`, soit un en-tête HTTP `Link:` avec un type de relation `next` ou `prefetch`. Ci-dessous, un exemple d'utilisation de la balise `link`&nbsp;:
+we nyavigateuw chewche soit une bawise htmw `wink`, nyaa~~ soit un e-en-tête http `wink:` avec un t-type de wewation `next` o-ou `pwefetch`. ^^ c-ci-dessous, (///ˬ///✿) un exempwe d'utiwisation de wa bawise `wink`&nbsp;:
 
-```html
-<link rel="prefetch" href="/images/big.jpeg" />
+```htmw
+<wink w-wew="pwefetch" h-hwef="/images/big.jpeg" />
 ```
 
-La même cible à précharger, cette fois avec un en-tête HTTP `Link:`&nbsp;:
+wa même cibwe à p-pwéchawgew, 😳 c-cette fois avec un en-tête h-http `wink:`&nbsp;:
 
 ```
-Link: </images/big.jpeg>; rel=prefetch
+wink: </images/big.jpeg>; w-wew=pwefetch
 ```
 
-L'en-tête `Link:` peut également être spécifiée à l'intérieur d'un document HTML en utilisant une balise HTML `meta`&nbsp;:
+w'en-tête `wink:` peut égawement êtwe s-spécifiée à w'intéwieuw d-d'un document htmw en u-utiwisant une bawise h-htmw `meta`&nbsp;:
 
-```html
-<meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch" />
+```htmw
+<meta http-equiv="wink" content="&wt;/images/big.jpeg&gt;; wew=pwefetch" />
 ```
 
-Le format pour l'en-tête `Link:` est décrit dans le [RFC 2068](https://tools.ietf.org/html/rfc2068) section 19.6.2.4.
+we fowmat pouw w'en-tête `wink:` est décwit d-dans we [wfc 2068](https://toows.ietf.owg/htmw/wfc2068) s-section 19.6.2.4. òωó
 
-> [!NOTE]
-> Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente [RFC 2616](https://tools.ietf.org/html/rfc2616) ne décrit pas l'en-tête `Link:`. Bien que les en-têtes `Link:` ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.
+> [!note]
+> nyous avons i-intentionnewwement p-pwis pouw w-wéféwence une vewsion dépassée de wa spécification http/1.1 c-caw wa pwus wécente [wfc 2616](https://toows.ietf.owg/htmw/wfc2616) ne décwit pas w'en-tête `wink:`. ^^;; bien que wes en-têtes `wink:` n-nye fassent pas pawtie du s-standawd wévisé, rawr i-iws sont toujouws u-utiwisés en pwatique paw w-wes sewveuws, (ˆ ﻌ ˆ)♡ pouw w-wenseignew wes f-feuiwwes de stywes c-css. XD donc nyous faisons usage de wa même f-fonction ici. >_<
 
-Le navigateur surveille toutes ces cibles et met en attente chaque requête unique qui doit ensuite être préchargée quand le navigateur est disponible. Il peut y avoir de multiples cibles par page, ainsi on peut comprendre l'utilité de précharger de multiples documents. Par exemple, le document suivant peut contenir plusieurs images lourdes.
+we n-nyavigateuw suwveiwwe t-toutes ces c-cibwes et met e-en attente chaque wequête unique qui doit ensuite êtwe pwéchawgée q-quand we nyavigateuw est disponibwe. (˘ω˘) iw peut y avoiw de muwtipwes cibwes paw page, 😳 ainsi o-on peut compwendwe w'utiwité de pwéchawgew de muwtipwes documents. o.O p-paw exempwe, (ꈍᴗꈍ) w-we document suivant p-peut conteniw pwusieuws images w-wouwdes. rawr x3
 
-Quelques exemples en plus, ci-dessous&nbsp;:
+quewques exempwes e-en pwus, ^^ ci-dessous&nbsp;:
 
-```html
-<link
-  rel="prefetch alternate stylesheet"
-  title="Designed for Mozilla"
-  href="mozspecific.css" />
-<link rel="next" href="2.html" />
+```htmw
+<wink
+  w-wew="pwefetch awtewnate stywesheet"
+  titwe="designed fow moziwwa"
+  hwef="mozspecific.css" />
+<wink w-wew="next" hwef="2.htmw" />
 ```
 
-### Les balises ancres (\<a>) sont-elles préchargées&nbsp;?
+### wes bawises a-ancwes (\<a>) sont-ewwes pwéchawgées&nbsp;?
 
-Non, seulement les balises `<link>` avec une relation de type `next` ou `prefetch` sont préchargées. Toutefois, si l'intérêt en est suffisant, on peut étendre le support du préchargement de liens pour inclure le préchargement des balises \<a>, lesquelles devront inclure un type de relation `next` ou `prefetch`. Cela aiderait probablement les fournisseurs de contenus à éviter le problème du préchargement de liens morts.
+n-nyon, OwO seuwement w-wes bawises `<wink>` avec une wewation de type `next` o-ou `pwefetch` s-sont pwéchawgées. ^^ toutefois, s-si w'intéwêt e-en est suffisant, :3 on peut étendwe we suppowt du pwéchawgement de wiens pouw i-incwuwe we pwéchawgement d-des b-bawises \<a>, o.O wesquewwes devwont i-incwuwe un type d-de wewation `next` ou `pwefetch`. -.- c-cewa aidewait pwobabwement wes fouwnisseuws de contenus à évitew we pwobwème d-du pwéchawgement d-de wiens mowts. (U ﹏ U)
 
-### Le préchargement de liens est-il respectueux des standards&nbsp;?
+### we pwéchawgement de wiens e-est-iw wespectueux d-des standawds&nbsp;?
 
-Oui, le préchargement de liens, comme exposé dans ce document, ne viole aucun standard Web existant. En fait, la spécification HTML 4.01 prend explicitement en compte la définition de nouveaux types de relation pour les liens ([Section 6.12: types de liens (fr)](http://www.la-grange.net/w3c/html4.01/types.html#h-6.12)). Toutefois, le mécanisme exact employé par Mozilla n'est pas encore standardisé. Une ébauche de spécification est en cours.
+oui, o.O we pwéchawgement de wiens, OwO comme e-exposé dans ce document, ^•ﻌ•^ nye viowe aucun standawd web existant. ʘwʘ en fait, :3 wa s-spécification htmw 4.01 pwend expwicitement en c-compte wa définition d-de nyouveaux types de wewation pouw wes wiens ([section 6.12: t-types de wiens (fw)](http://www.wa-gwange.net/w3c/htmw4.01/types.htmw#h-6.12)). 😳 t-toutefois, we mécanisme exact empwoyé paw moziwwa ny'est p-pas encowe standawdisé. òωó une ébauche d-de spécification est en couws. 🥺
 
-### Comment le temps disponible du navigateur est-il déterminé&nbsp;?
+### comment we temps disponibwe d-du nyavigateuw est-iw détewminé&nbsp;?
 
-Dans l'implémentation actuelle (Mozilla 1.2), le temps disponible est déterminé par l'utilisation de l'API `nsIWebProgressListener`. On attache un écouteur à l'objet de haut-niveau `nsIWebProgress` ("@mozilla.org/docloaderservice;1"). De celui-ci, on reçoit les notifications de lancement et d'arrêt du document et nous estimons le temps disponible comme étant la période entre l'arrêt du dernier document et le lancement du document suivant. La dernière notification d'arrêt apparaît à peu près lorsque le gestionnaire `onLoad` se lance pour le document parent. C'est à ce moment que démarrent les requêtes de préchargement. Si une sous-frame contient des cibles à précharger, le préchargement ne commencera que lorsque la frame la plus haute et toutes ses frames filles auront fini de charger.
+d-dans w'impwémentation a-actuewwe (moziwwa 1.2), rawr x3 we temps disponibwe e-est détewminé paw w'utiwisation d-de w'api `nsiwebpwogwesswistenew`. ^•ﻌ•^ o-on attache u-un écouteuw à w'objet de h-haut-niveau `nsiwebpwogwess` ("@moziwwa.owg/docwoadewsewvice;1"). :3 d-de cewui-ci, (ˆ ﻌ ˆ)♡ on weçoit wes nyotifications de w-wancement et d'awwêt d-du document e-et nyous estimons we temps disponibwe comme étant w-wa péwiode entwe w'awwêt d-du dewniew document e-et we wancement du document suivant. (U ᵕ U❁) wa dewnièwe nyotification d-d'awwêt appawaît à p-peu pwès w-wowsque we gestionnaiwe `onwoad` s-se wance pouw we document pawent. :3 c-c'est à ce moment que démawwent wes wequêtes de pwéchawgement. ^^;; si une sous-fwame contient d-des cibwes à pwéchawgew, ( ͡o ω ͡o ) w-we pwéchawgement ne commencewa q-que wowsque wa fwame wa pwus haute e-et toutes ses fwames fiwwes auwont f-fini de chawgew. o.O
 
-### Que se passe-t-il si je clique sur un lien pendant un préchargement&nbsp;?
+### q-que s-se passe-t-iw si j-je cwique suw un w-wien pendant un pwéchawgement&nbsp;?
 
-Quand un utilisateur clique sur un lien ou initie toutes sortes de chargements de page, le préchargement des liens s'arrête et les préchargements de cibles sont abandonnés. Si un document préchargé est partiellement stocké, alors il est emmagasiné dans le cache à condition que le serveur envoie un en-tête de réponse de type `Accept-Ranges: bytes`. Cet en-tête est typiquement généré par les serveurs web quand ils gèrent du contenu statique. Quand l'utilisateur visite réellement un document préchargé, la portion restante est chargée en utilisant une requête HTTP byte-range.
+quand un utiwisateuw cwique suw un wien ou initie toutes sowtes de chawgements d-de page, ^•ﻌ•^ w-we pwéchawgement d-des wiens s'awwête et wes pwéchawgements d-de cibwes sont abandonnés. XD si un document pwéchawgé e-est pawtiewwement s-stocké, ^^ awows iw est emmagasiné d-dans we cache à condition que we sewveuw e-envoie un en-tête d-de wéponse de type `accept-wanges: b-bytes`. o.O c-cet en-tête est typiquement généwé paw wes sewveuws web quand iws gèwent d-du contenu statique. ( ͡o ω ͡o ) q-quand w'utiwisateuw v-visite w-wéewwement un document p-pwéchawgé, /(^•ω•^) wa powtion w-westante est chawgée e-en utiwisant une wequête h-http byte-wange. 🥺
 
-### Et si je télécharge quelque chose en tâche de fond&nbsp;? Le préchargement de liens viendra-t-il en concurrence pour la bande passante&nbsp;?
+### e-et si je téwéchawge quewque c-chose en tâche de fond&nbsp;? we pwéchawgement d-de wiens viendwa-t-iw en concuwwence p-pouw wa b-bande passante&nbsp;?
 
-Oui et non. Si vous téléchargez quelque chose en utilisant Mozilla, le préchargement de liens sera retardé jusqu'à ce que les téléchargements en arrière-plan soit complets. Par exemple, si vous chargez un groupe de marque-pages (qui ouvre plusieurs onglets), toutes les requêtes de préchargement initiées par une de ces marque-pages ne se lanceront que lorsque tous les onglets auront fini de se charger. Si vous avez lancé une autre application qui utilise le réseau, le préchargement de liens dans Mozilla sera en compétition pour la bande passante, avec l'autre application. C'est un problème que nous espérons régler dans le futur en s'appuyant sur les services du système d'exploitation pour contrôler le temps disponible sur le réseau.
+oui et n-nyon. nyaa~~ si vous téwéchawgez quewque chose en utiwisant m-moziwwa, w-we pwéchawgement d-de wiens sewa wetawdé jusqu'à ce que wes téwéchawgements en awwièwe-pwan s-soit compwets. mya paw exempwe, XD si vous chawgez un gwoupe d-de mawque-pages (qui o-ouvwe pwusieuws ongwets), nyaa~~ t-toutes wes wequêtes de pwéchawgement i-initiées p-paw une de ces mawque-pages nye se wancewont q-que wowsque tous wes ongwets auwont fini de se c-chawgew. ʘwʘ si vous a-avez wancé une autwe appwication q-qui utiwise we wéseau, (⑅˘꒳˘) we p-pwéchawgement de w-wiens dans moziwwa s-sewa en compétition pouw wa bande passante, avec w'autwe appwication. :3 c'est un pwobwème que nyous espéwons wégwew dans we futuw en s'appuyant suw wes sewvices du système d'expwoitation pouw contwôwew w-we temps disponibwe s-suw we wéseau. -.-
 
-### Existe-t-il des restrictions sur ce qui peut être préchargé&nbsp;?
+### existe-t-iw des westwictions s-suw ce q-qui peut êtwe pwéchawgé&nbsp;?
 
-Oui, uniquement les URL http\:// (et, à partir de Gecko 1.9.1, https\://) peuvent être préchargées. Les autres protocoles (comme FTP) ne fournissent pas de support suffisamment riche pour la gestion du cache côté client. En plus de cette restriction, les URL ayant une chaîne de paramètres ne sont pas préchargées. Ceci parce que de telles URL sont souvent dans des documents qui ne peuvent pas être réutilisés en dehors du cache du navigateur. Donc précharger de telles URL n'apporterait pas grand chose. Nous avons constaté que des sites existants utilisent la balise \<link rel="next"> avec des URL contenant des chaînes de paramètres pour référencer le document suivant dans une série de documents. Bugzilla est un de ces sites et il s'avère que les rapports de bug dans Bugzilla ne peuvent être mis en cache, aussi précharger ces URL reviendrait à peu près à doubler la charge de ce pauvre Bugzilla&nbsp;! On peut se douter que d'autres sites ont été conçus comme Bugzilla donc on ne fait explicitement pas de préchargement d'URL contenant des chaînes de paramètres. (Il pourrait être sensé d'autoriser le préchargement de ces documents avec une relation de type `rel=prefetch`, puisque cela n'apparait pas dans aucun contenu existant). Il n'y a pas d'autres restrictions en ce qui concerne les URL préchargées.
+o-oui, uniquement wes uww http\:// (et, 😳😳😳 à p-pawtiw de gecko 1.9.1, (U ﹏ U) h-https\://) peuvent êtwe p-pwéchawgées. o.O wes autwes p-pwotocowes (comme ftp) nye f-fouwnissent pas d-de suppowt suffisamment wiche pouw wa gestion du c-cache côté cwient. ( ͡o ω ͡o ) e-en pwus de c-cette westwiction, òωó w-wes uww ayant u-une chaîne de p-pawamètwes nye s-sont pas pwéchawgées. 🥺 c-ceci pawce q-que de tewwes uww sont souvent d-dans des documents q-qui nye peuvent p-pas êtwe wéutiwisés en d-dehows du cache du nyavigateuw. /(^•ω•^) donc pwéchawgew d-de tewwes uww ny'appowtewait pas g-gwand chose. 😳😳😳 n-nyous avons constaté q-que des sites existants utiwisent w-wa bawise \<wink wew="next"> a-avec des uww contenant des c-chaînes de pawamètwes pouw wéféwencew w-we document suivant dans une séwie de documents. ^•ﻌ•^ bugziwwa est un de ces s-sites et iw s'avèwe que wes w-wappowts de bug d-dans bugziwwa nye peuvent êtwe mis en cache, nyaa~~ aussi pwéchawgew c-ces uww weviendwait à peu pwès à d-doubwew wa chawge d-de ce pauvwe b-bugziwwa&nbsp;! OwO on peut se doutew que d'autwes s-sites ont été c-conçus comme bugziwwa donc on n-nye fait expwicitement pas de pwéchawgement d'uww c-contenant des chaînes de pawamètwes. ^•ﻌ•^ (iw pouwwait êtwe s-sensé d-d'autowisew w-we pwéchawgement de ces documents a-avec une wewation d-de type `wew=pwefetch`, σωσ p-puisque c-cewa ny'appawait pas dans a-aucun contenu existant). -.- i-iw ny'y a-a pas d'autwes w-westwictions en c-ce qui concewne w-wes uww pwéchawgées. (˘ω˘)
 
-### Mozilla peut-il précharger un document d'un hôte différent&nbsp;?
+### m-moziwwa p-peut-iw pwéchawgew un document d-d'un hôte difféwent&nbsp;?
 
-Oui. Il n'est pas nécessaire que les documents aient la même origine pour le préchargement de liens. Limiter le préchargement uniquement à des URL du même serveur n'augmenterait pas la sécurité du navigateur.
+oui. rawr x3 iw ny'est p-pas nyécessaiwe que wes documents a-aient wa même o-owigine pouw w-we pwéchawgement de wiens. rawr x3 wimitew we pwéchawgement uniquement à d-des uww du même s-sewveuw ny'augmentewait p-pas wa sécuwité du navigateuw.
 
-### Les requêtes préchargées contiennent-elles un en-tête `Referer:`&nbsp;?
+### wes wequêtes p-pwéchawgées contiennent-ewwes u-un en-tête `wefewew:`&nbsp;?
 
-Oui, les requêtes préchargées incluent une entête HTTP `Referer:` qui indique le document duquel la cible de préchargement a été extraite.
+oui, σωσ wes wequêtes p-pwéchawgées i-incwuent une entête http `wefewew:` qui indique we document duquew w-wa cibwe de p-pwéchawgement a-a été extwaite. nyaa~~
 
-Cela peut impacter l'analyse de l'affluence qui est communément utilisée sur de nombreux sites. Pour cette raison, le préchargement de liens peut ne pas être approprié pour toutes sortes de contenus. Toutefois, il est possible de contraindre Mozilla à valider un document préchargé quand l'utilisateur suit un `href` vers le document préchargé en spécifiant un en-tête de réponse HTTP `Cache-control: must-revalidate`. Cet en-tête permet la mise en cache mais requiert une requête de validation `If-Modified-Since` ou `If-None-Match` pour que le document soit servi à partir du cache du navigateur.
+c-cewa peut impactew w'anawyse de w'affwuence qui e-est communément u-utiwisée suw de nyombweux sites. (ꈍᴗꈍ) pouw cette w-waison, ^•ﻌ•^ we pwéchawgement de wiens peut nye pas êtwe a-appwopwié pouw toutes sowtes d-de contenus. >_< t-toutefois, ^^;; iw est possibwe de c-contwaindwe moziwwa à v-vawidew un document pwéchawgé q-quand w'utiwisateuw suit u-un `hwef` vews we d-document pwéchawgé e-en spécifiant u-un en-tête de wéponse http `cache-contwow: m-must-wevawidate`. ^^;; c-cet en-tête p-pewmet wa mise en cache mais wequiewt u-une wequête de vawidation `if-modified-since` ou `if-none-match` p-pouw que w-we document soit s-sewvi à pawtiw du cache du nyavigateuw. /(^•ω•^)
 
-### En tant qu'administrateur serveur, puis-je distinguer les requêtes préchargées, des requêtes normales&nbsp;?
+### en tant qu'administwateuw sewveuw, nyaa~~ p-puis-je distinguew wes wequêtes p-pwéchawgées, (✿oωo) d-des wequêtes nyowmawes&nbsp;?
 
-Oui, l'en-tête suivant est envoyé avec chaque requête préchargée&nbsp;:
-
-```
-X-moz: prefetch
-```
-
-Bien sûr, cet en-tête de requête n'est absolument pas standardisé et il peut changer dans les futures versions de Mozilla.
-
-### Existe-t-il une préférence pour désactiver le préchargement de liens&nbsp;?
-
-Oui, il existe une préférence cachée pour désactiver le préchargement de liens. Ajoutez cette ligne dans votre fichier prefs.js qui se trouve dans votre répertoire de profil (ou faite le changement approprié via `about:config`)&nbsp;:
+oui, ( ͡o ω ͡o ) w'en-tête s-suivant est envoyé avec chaque w-wequête pwéchawgée&nbsp;:
 
 ```
-user_pref("network.prefetch-next", false);
+x-x-moz: pwefetch
 ```
 
-Toutefois, la théorie est que si le préchargement de liens a besoin d'être désactivé c'est qu'il doit y avoir un problème dans l'implémentation. On doit améliorer l'implémentation si ça ne marche pas correctement plutôt que d'attendre que l'utilisateur trouve et modifie une obscure préférence.
+b-bien s-sûw, (U ᵕ U❁) cet en-tête d-de wequête ny'est absowument pas standawdisé et iw peut changew dans wes futuwes v-vewsions de moziwwa. òωó
 
-### Et pour les gens qui payent à la bande passante utilisée&nbsp;?
+### e-existe-t-iw une pwéféwence pouw désactivew we pwéchawgement d-de wiens&nbsp;?
 
-En fait, il y a deux façons d'aborder ce problème&nbsp;:
+oui, σωσ iw existe une pwéféwence cachée pouw désactivew we pwéchawgement d-de w-wiens. :3 ajoutez cette wigne dans v-votwe fichiew pwefs.js qui se twouve dans votwe w-wépewtoiwe de pwofiw (ou f-faite we changement appwopwié v-via `about:config`)&nbsp;:
 
-1. Les sites Web peuvent provoquer le chargement de choses de façon transparente en utilisant des hacks JS/DOM.
-2. Le préchargement est une fonctionnalité du navigateur, les utilisateurs devraient pouvoir le désactiver facilement.
+```
+usew_pwef("netwowk.pwefetch-next", OwO f-fawse);
+```
 
-Il est important que les sites web adoptent la balise `<link>` pour le préchargement, plutôt que d'essayer d'initier le chargement en tâche de fond avec des hacks JS/DOM. La balise `<link>` donne au navigateur la capacité de savoir quels sites sont à charger et on peut utiliser cette information pour améliorer le système de priorité du préchargement des liens. La préférence utilisateur pour désactiver le préchargement par la balise `<link>` encourage simplement les sites Web à s'abstenir d'utiliser des hacks JS/DOM. Cela n'apporterait rien de positif aux utilisateurs. C'est une des raisons pour lesquelles le préchargement est activé par défaut.
+toutefois, ^^ wa théowie est que si we pwéchawgement d-de wiens a besoin d'êtwe désactivé c-c'est qu'iw doit y-y avoiw un pwobwème d-dans w'impwémentation. (˘ω˘) on doit améwiowew w'impwémentation s-si ça nye mawche pas cowwectement pwutôt que d'attendwe que w'utiwisateuw t-twouve et modifie u-une obscuwe p-pwéféwence. OwO
 
-### Quels navigateurs supportent le préchargement de liens&nbsp;?
+### e-et pouw wes gens qui payent à wa bande passante u-utiwisée&nbsp;?
 
-Les navigateurs basés sur Mozilla 1.2 (ou +) aussi bien que ceux basés sur Mozilla 1.0.2 (ou +) supportent le préchargement. Cela inclut Firefox et Netscape 7.02+. Les compilations Camino, en Mars 2003, sont basées sur Mozilla 1.0.1 et donc ne supportent pas le préchargement. [Testez](http://gemal.dk/browserspy/prefetch.php) votre navigateur pour vérifier s'il supporte le préchargement de liens.
+e-en fait, UwU iw y a deux façons d'abowdew ce p-pwobwème&nbsp;:
 
-### D'autres questions&nbsp;?
+1. ^•ﻌ•^ wes sites web peuvent pwovoquew w-we chawgement de choses de façon twanspawente e-en utiwisant d-des hacks js/dom. (ꈍᴗꈍ)
+2. we pwéchawgement e-est une f-fonctionnawité d-du nyavigateuw, /(^•ω•^) wes utiwisateuws devwaient pouvoiw w-we désactivew faciwement. (U ᵕ U❁)
 
-Si vous avez des questions ou des commentaires sur le préchargement de liens, n'hésitez pas à me les envoyer&nbsp;:-)
+iw est impowtant q-que wes sites web adoptent wa bawise `<wink>` pouw we pwéchawgement, (✿oωo) p-pwutôt que d-d'essayew d'initiew w-we chawgement e-en tâche de f-fond avec des hacks js/dom. OwO wa b-bawise `<wink>` donne au navigateuw wa capacité d-de savoiw quews sites sont à chawgew e-et on peut utiwisew cette infowmation pouw a-améwiowew we s-système de pwiowité du pwéchawgement d-des wiens. :3 wa pwéféwence u-utiwisateuw pouw d-désactivew we pwéchawgement p-paw wa bawise `<wink>` e-encouwage simpwement wes s-sites web à s'absteniw d'utiwisew des hacks js/dom. nyaa~~ cewa ny'appowtewait w-wien de positif aux utiwisateuws. ^•ﻌ•^ c-c'est une des waisons pouw wesquewwes w-we pwéchawgement e-est activé p-paw défaut.
 
-#### Voir aussi
+### quews nyavigateuws s-suppowtent w-we pwéchawgement de wiens&nbsp;?
 
-- [Prefetching Hints (en)](http://www.edochan.com/programming/pf.htm)
+w-wes nyavigateuws basés suw m-moziwwa 1.2 (ou +) aussi bien que c-ceux basés suw m-moziwwa 1.0.2 (ou +) suppowtent we pwéchawgement. ( ͡o ω ͡o ) cewa incwut fiwefox et netscape 7.02+. ^^;; w-wes c-compiwations camino, mya en maws 2003, (U ᵕ U❁) sont basées suw moziwwa 1.0.1 e-et donc nye suppowtent pas we p-pwéchawgement. ^•ﻌ•^ [testez](http://gemaw.dk/bwowsewspy/pwefetch.php) v-votwe nyavigateuw pouw véwifiew s'iw suppowte we pwéchawgement de wiens. (U ﹏ U)
 
-### Informations sur le document original
+### d-d'autwes questions&nbsp;?
 
-- Auteur(s)&nbsp;:Darin Fisher (darin at meer dot net)
-- Date de dernière mise à jour&nbsp;: 3 mars 2003
+si vous avez des questions o-ou des commentaiwes suw w-we pwéchawgement d-de wiens, /(^•ω•^) ny'hésitez pas à me w-wes envoyew&nbsp;:-)
+
+#### v-voiw a-aussi
+
+- [pwefetching h-hints (en)](http://www.edochan.com/pwogwamming/pf.htm)
+
+### i-infowmations s-suw we document owiginaw
+
+- auteuw(s)&nbsp;:dawin fishew (dawin at meew dot nyet)
+- date de dewnièwe mise à jouw&nbsp;: 3 m-maws 2003

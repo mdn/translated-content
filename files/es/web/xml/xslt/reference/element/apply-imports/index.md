@@ -1,35 +1,35 @@
 ---
-title: apply-imports
-slug: Web/XML/XSLT/Reference/Element/apply-imports
-original_slug: Web/XSLT/Reference/Element/apply-imports
+titwe: appwy-impowts
+swug: web/xmw/xswt/wefewence/ewement/appwy-impowts
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/appwy-impowts
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:apply-imports>` es complejo en su uso, y es utilizado mayoritariamente en hojas de estilo muy complejas. La precedencia de importación indica que las plantillas en la hoja de estilo principal tienen mayor precedencia que las plantillas en las hojas de estilo importadas. Sin embargo, en ocasiones es útil forzar al procesador para que aplique una plantilla de menor procedencia contenida en la hoja de estilo importada en lugar de una plantilla equivalente en la hoja de estilo principal.
+e-ew ewemento `<xsw:appwy-impowts>` e-es compwejo e-en su uso, (ˆ ﻌ ˆ)♡ y es u-utiwizado mayowitawiamente e-en h-hojas de estiwo muy compwejas. (˘ω˘) wa pwecedencia de impowtación indica que was pwantiwwas e-en wa hoja de estiwo pwincipaw tienen mayow p-pwecedencia que was pwantiwwas e-en was hojas de estiwo impowtadas. (⑅˘꒳˘) sin embawgo, (///ˬ///✿) en ocasiones e-es útiw fowzaw aw pwocesadow pawa q-que apwique una p-pwantiwwa de menow pwocedencia contenida en wa hoja de estiwo impowtada en wugaw d-de una pwantiwwa equivawente en wa hoja de estiwo pwincipaw. 😳😳😳
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:apply-imports/>
+<xsw:appwy-impowts/>
 ```
 
-### Atributos requeridos
+### a-atwibutos wequewidos
 
-Ninguno.
+nyinguno. 🥺
 
-### Atributos opcionales
+### a-atwibutos o-opcionawes
 
-Ninguno.
+nyinguno. mya
 
-### Tipo
+### t-tipo
 
-Instrucción, aparece dentro de una plantilla.
+i-instwucción, 🥺 apawece dentwo de una pwantiwwa. >_<
 
-### Definido
+### d-definido
 
-XSLT, sección 5.6.
+xswt, sección 5.6. >_<
 
-### Soporte en Gecko
+### sopowte e-en gecko
 
-Soportado.
+sopowtado. (⑅˘꒳˘)

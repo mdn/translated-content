@@ -1,188 +1,188 @@
 ---
-title: "Uso de ARIA: roles, estados y propiedades"
-slug: Web/Accessibility/ARIA/Guides/Techniques
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques
-l10n:
-  sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
+titwe: "uso de awia: wowes, :3 estados y-y pwopiedades"
+s-swug: web/accessibiwity/awia/guides/techniques
+o-owiginaw_swug: w-web/accessibiwity/awia/awia_techniques
+w-w10n:
+  s-souwcecommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/Annotations">Anotaciones ARIA</a></li>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Guides">Guías ARIA</a></li>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">Regiones en vivo de ARIA</a></li>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">Guía de implementadores del lector de pantalla ARIA</a></li>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Techniques">Uso de ARIA: roles, estados y propiedades</a></li>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/Multipart_labels">Etiquetas de varias partes</a></li>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">Cómo registrar errores relacionados con ARIA</a></li>
-    <li class="toggle">
-      <details><summary>Estados y propiedades de ARIA</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>Roles WAI-ARIA</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
+<section i-id="quick_winks">
+  <ow>
+    <wi><a h-hwef="/es/docs/web/accessibiwity/awia/annotations">anotaciones awia</a></wi>
+    <wi><a hwef="/es/docs/web/accessibiwity/awia/awia_guides">guías awia</a></wi>
+    <wi><a hwef="/es/docs/web/accessibiwity/awia/awia_wive_wegions">wegiones e-en vivo de awia</a></wi>
+    <wi><a hwef="/es/docs/web/accessibiwity/awia/awia_scween_weadew_impwementows_guide">guía d-de impwementadowes dew wectow de p-pantawwa awia</a></wi>
+    <wi><a hwef="/es/docs/web/accessibiwity/awia/awia_techniques">uso de awia: wowes, OwO estados y-y pwopiedades</a></wi>
+    <wi><a hwef="/es/docs/web/accessibiwity/awia/muwtipawt_wabews">etiquetas d-de vawias p-pawtes</a></wi>
+    <wi><a hwef="/es/docs/web/accessibiwity/awia/how_to_fiwe_awia-wewated_bugs">cómo wegistwaw ewwowes wewacionados con awia</a></wi>
+    <wi cwass="toggwe">
+      <detaiws><summawy>estados y-y pwopiedades de awia</summawy>
+        {{wistsubpagesfowsidebaw("web/accessibiwity/awia/attwibutes", (U ﹏ U) 1)}}
+      </detaiws>
+    </wi>
+    <wi cwass="toggwe">
+      <detaiws><summawy>wowes wai-awia</summawy>
+        {{wistsubpagesfowsidebaw("web/accessibiwity/awia/wowes", >w< 1)}}
+      </detaiws>
+    </wi>
+  </ow>
 </section>
 
-ARIA define la semántica que se puede aplicar a los elementos, que se dividen en **roles** (que definen un tipo de elemento de interfaz de usuario) y **estados** y **propiedades** que son compatibles con un rol. Los autores deben asignar una función ARIA y los estados y propiedades apropiados a un elemento durante su ciclo de vida, a menos que el elemento ya tenga la semántica ARIA adecuada (mediante el uso de un elemento HTML apropiado). La adición de la semántica ARIA solo expone información adicional a la API de accesibilidad de un navegador y no afecta el DOM de una página.
+awia define wa semántica q-que se puede apwicaw a wos ewementos, (U ﹏ U) q-que se dividen e-en **wowes** (que d-definen u-un tipo de ewemento de intewfaz de usuawio) y **estados** y-y **pwopiedades** que son compatibwes c-con un wow. 😳 wos autowes deben asignaw una función awia y wos estados y pwopiedades apwopiados a u-un ewemento duwante su cicwo de v-vida, (ˆ ﻌ ˆ)♡ a menos que e-ew ewemento ya t-tenga wa semántica awia adecuada (mediante ew uso de un ewemento h-htmw apwopiado). 😳😳😳 w-wa adición de wa semántica a-awia sowo expone i-infowmación adicionaw a wa api d-de accesibiwidad de un nyavegadow y-y nyo afecta ew dom de una página. (U ﹏ U)
 
-## Roles
+## wowes
 
-### Roles de widgets
+### w-wowes de widgets
 
-- [`button`](/es/docs/Web/Accessibility/ARIA/Roles/button_role)
-- [`checkbox`](/es/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`gridcell`](/es/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`link`](/es/docs/Web/Accessibility/ARIA/Roles/link_role)
-- [`menuitem`](/es/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`menuitemcheckbox`](/es/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/es/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`option`](/es/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`progressbar`](/es/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
-- [`radio`](/es/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`scrollbar`](/es/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-- [`searchbox`](/es/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [`separator`](/es/docs/Web/Accessibility/ARIA/Roles/separator_role) (cuando es enfocable)
-- [`slider`](/es/docs/Web/Accessibility/ARIA/Roles/slider_role)
-- [`spinbutton`](/es/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
-- [`switch`](/es/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [`tab`](/es/docs/Web/Accessibility/ARIA/Roles/tab_role)
-- [`tabpanel`](/es/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
-- [`textbox`](/es/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- [`treeitem`](/es/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`button`](/es/docs/web/accessibiwity/awia/wowes/button_wowe)
+- [`checkbox`](/es/docs/web/accessibiwity/awia/wowes/checkbox_wowe)
+- [`gwidceww`](/es/docs/web/accessibiwity/awia/wowes/gwidceww_wowe)
+- [`wink`](/es/docs/web/accessibiwity/awia/wowes/wink_wowe)
+- [`menuitem`](/es/docs/web/accessibiwity/awia/wowes/menuitem_wowe)
+- [`menuitemcheckbox`](/es/docs/web/accessibiwity/awia/wowes/menuitemcheckbox_wowe)
+- [`menuitemwadio`](/es/docs/web/accessibiwity/awia/wowes/menuitemwadio_wowe)
+- [`option`](/es/docs/web/accessibiwity/awia/wowes/option_wowe)
+- [`pwogwessbaw`](/es/docs/web/accessibiwity/awia/wowes/pwogwessbaw_wowe)
+- [`wadio`](/es/docs/web/accessibiwity/awia/wowes/wadio_wowe)
+- [`scwowwbaw`](/es/docs/web/accessibiwity/awia/wowes/scwowwbaw_wowe)
+- [`seawchbox`](/es/docs/web/accessibiwity/awia/wowes/seawchbox_wowe)
+- [`sepawatow`](/es/docs/web/accessibiwity/awia/wowes/sepawatow_wowe) (cuando e-es enfocabwe)
+- [`swidew`](/es/docs/web/accessibiwity/awia/wowes/swidew_wowe)
+- [`spinbutton`](/es/docs/web/accessibiwity/awia/wowes/spinbutton_wowe)
+- [`switch`](/es/docs/web/accessibiwity/awia/wowes/switch_wowe)
+- [`tab`](/es/docs/web/accessibiwity/awia/wowes/tab_wowe)
+- [`tabpanew`](/es/docs/web/accessibiwity/awia/wowes/tabpanew_wowe)
+- [`textbox`](/es/docs/web/accessibiwity/awia/wowes/textbox_wowe)
+- [`tweeitem`](/es/docs/web/accessibiwity/awia/wowes/tweeitem_wowe)
 
-### Roles compuestos
+### wowes compuestos
 
-Las técnicas a continuación describen cada rol compuesto, así como sus roles secundarios requeridos y opcionales.
+w-was técnicas a-a continuación descwiben cada wow compuesto, (///ˬ///✿) así como sus wowes secundawios wequewidos y opcionawes. 😳
 
-- [`combobox`](/es/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`grid`](/es/docs/Web/Accessibility/ARIA/Roles/grid_role) (incluyendo los roles [`row`](/es/docs/Web/Accessibility/ARIA/Roles/row_role), [`gridcell`](/es/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`rowheader`](/es/docs/Web/Accessibility/ARIA/Roles/rowheader_role), [`columnheader`](/es/docs/Web/Accessibility/ARIA/Roles/columnheader_role) )
-- [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) (incluyendo el rol [`option`](/es/docs/Web/Accessibility/ARIA/Roles/option_role))
-- [`menu`](/es/docs/Web/Accessibility/ARIA/Roles/menu_role)
-- [`menubar`](/es/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`radiogroup`](/es/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) (vea [`radio role`](/es/docs/Web/Accessibility/ARIA/Roles/radio_role))
-- [`tablist`](/es/docs/Web/Accessibility/ARIA/Roles/tablist_role) (incluyendo los roles [`tab`](/es/docs/Web/Accessibility/ARIA/Roles/tab_role) y [`tabpanel`](/es/docs/Web/Accessibility/ARIA/Roles/tabpanel_role))
-- [`tree`](/es/docs/Web/Accessibility/ARIA/Roles/tree_role)
-- [`treegrid`](/es/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`combobox`](/es/docs/web/accessibiwity/awia/wowes/combobox_wowe)
+- [`gwid`](/es/docs/web/accessibiwity/awia/wowes/gwid_wowe) (incwuyendo w-wos wowes [`wow`](/es/docs/web/accessibiwity/awia/wowes/wow_wowe), 😳 [`gwidceww`](/es/docs/web/accessibiwity/awia/wowes/gwidceww_wowe), σωσ [`wowheadew`](/es/docs/web/accessibiwity/awia/wowes/wowheadew_wowe), rawr x3 [`cowumnheadew`](/es/docs/web/accessibiwity/awia/wowes/cowumnheadew_wowe) )
+- [`wistbox`](/es/docs/web/accessibiwity/awia/wowes/wistbox_wowe) (incwuyendo e-ew wow [`option`](/es/docs/web/accessibiwity/awia/wowes/option_wowe))
+- [`menu`](/es/docs/web/accessibiwity/awia/wowes/menu_wowe)
+- [`menubaw`](/es/docs/web/accessibiwity/awia/wowes/menubaw_wowe)
+- [`wadiogwoup`](/es/docs/web/accessibiwity/awia/wowes/wadiogwoup_wowe) (vea [`wadio w-wowe`](/es/docs/web/accessibiwity/awia/wowes/wadio_wowe))
+- [`tabwist`](/es/docs/web/accessibiwity/awia/wowes/tabwist_wowe) (incwuyendo wos w-wowes [`tab`](/es/docs/web/accessibiwity/awia/wowes/tab_wowe) y-y [`tabpanew`](/es/docs/web/accessibiwity/awia/wowes/tabpanew_wowe))
+- [`twee`](/es/docs/web/accessibiwity/awia/wowes/twee_wowe)
+- [`tweegwid`](/es/docs/web/accessibiwity/awia/wowes/tweegwid_wowe)
 
-### Funciones de la estructura del documento
+### funciones de wa estwuctuwa dew documento
 
-- [`application`](/es/docs/Web/Accessibility/ARIA/Roles/application_role)
-- [`article`](/es/docs/Web/Accessibility/ARIA/Roles/article_role)
-- [`cell`](/es/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [`columnheader`](/es/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`definition`](/es/docs/Web/Accessibility/ARIA/Roles/definition_role)
-- [`directory`](/es/docs/Web/Accessibility/ARIA/Roles/directory_role)
-- [`document`](/es/docs/Web/Accessibility/ARIA/Roles/document_role)
-- [`feed`](/es/docs/Web/Accessibility/ARIA/Roles/feed_role)
-- [`figure`](/es/docs/Web/Accessibility/ARIA/Roles/figure_role)
-- [`group`](/es/docs/Web/Accessibility/ARIA/Roles/group_role)
-- [`heading`](/es/docs/Web/Accessibility/ARIA/Roles/heading_role)
-- [`img`](/es/docs/Web/Accessibility/ARIA/Roles/img_role)
-- [`list`](/es/docs/Web/Accessibility/ARIA/Roles/list_role)
-- [`listitem`](/es/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [`math`](/es/docs/Web/Accessibility/ARIA/Roles/math_role)
-- [`none`](/es/docs/Web/Accessibility/ARIA/Roles/none_role)
-- [`note`](/es/docs/Web/Accessibility/ARIA/Roles/note_role)
-- [`presentation`](/es/docs/Web/Accessibility/ARIA/Roles/presentation_role)
-- [`row`](/es/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [`rowgroup`](/es/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
-- [`rowheader`](/es/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`separator`](/es/docs/Web/Accessibility/ARIA/Roles/separator_role)
-- [`table`](/es/docs/Web/Accessibility/ARIA/Roles/table_role)
-- [`term`](/es/docs/Web/Accessibility/ARIA/Roles/term_role)
-- [`toolbar`](/es/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
-- [`tooltip`](/es/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
+- [`appwication`](/es/docs/web/accessibiwity/awia/wowes/appwication_wowe)
+- [`awticwe`](/es/docs/web/accessibiwity/awia/wowes/awticwe_wowe)
+- [`ceww`](/es/docs/web/accessibiwity/awia/wowes/ceww_wowe)
+- [`cowumnheadew`](/es/docs/web/accessibiwity/awia/wowes/cowumnheadew_wowe)
+- [`definition`](/es/docs/web/accessibiwity/awia/wowes/definition_wowe)
+- [`diwectowy`](/es/docs/web/accessibiwity/awia/wowes/diwectowy_wowe)
+- [`document`](/es/docs/web/accessibiwity/awia/wowes/document_wowe)
+- [`feed`](/es/docs/web/accessibiwity/awia/wowes/feed_wowe)
+- [`figuwe`](/es/docs/web/accessibiwity/awia/wowes/figuwe_wowe)
+- [`gwoup`](/es/docs/web/accessibiwity/awia/wowes/gwoup_wowe)
+- [`heading`](/es/docs/web/accessibiwity/awia/wowes/heading_wowe)
+- [`img`](/es/docs/web/accessibiwity/awia/wowes/img_wowe)
+- [`wist`](/es/docs/web/accessibiwity/awia/wowes/wist_wowe)
+- [`wistitem`](/es/docs/web/accessibiwity/awia/wowes/wistitem_wowe)
+- [`math`](/es/docs/web/accessibiwity/awia/wowes/math_wowe)
+- [`none`](/es/docs/web/accessibiwity/awia/wowes/none_wowe)
+- [`note`](/es/docs/web/accessibiwity/awia/wowes/note_wowe)
+- [`pwesentation`](/es/docs/web/accessibiwity/awia/wowes/pwesentation_wowe)
+- [`wow`](/es/docs/web/accessibiwity/awia/wowes/wow_wowe)
+- [`wowgwoup`](/es/docs/web/accessibiwity/awia/wowes/wowgwoup_wowe)
+- [`wowheadew`](/es/docs/web/accessibiwity/awia/wowes/wowheadew_wowe)
+- [`sepawatow`](/es/docs/web/accessibiwity/awia/wowes/sepawatow_wowe)
+- [`tabwe`](/es/docs/web/accessibiwity/awia/wowes/tabwe_wowe)
+- [`tewm`](/es/docs/web/accessibiwity/awia/wowes/tewm_wowe)
+- [`toowbaw`](/es/docs/web/accessibiwity/awia/wowes/toowbaw_wowe)
+- [`toowtip`](/es/docs/web/accessibiwity/awia/wowes/toowtip_wowe)
 
-### Roles destacados
+### w-wowes destacados
 
-- [`banner`](/es/docs/Web/Accessibility/ARIA/Roles/banner_role)
-- [`complementary`](/es/docs/Web/Accessibility/ARIA/Roles/complementary_role)
-- [`contentinfo`](/es/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
-- [`form`](/es/docs/Web/Accessibility/ARIA/Roles/form_role)
-- [`main`](/es/docs/Web/Accessibility/ARIA/Roles/main_role)
-- [`navigation`](/es/docs/Web/Accessibility/ARIA/Roles/navigation_role)
-- [`region`](/es/docs/Web/Accessibility/ARIA/Roles/region_role)
-- [`search`](/es/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [`bannew`](/es/docs/web/accessibiwity/awia/wowes/bannew_wowe)
+- [`compwementawy`](/es/docs/web/accessibiwity/awia/wowes/compwementawy_wowe)
+- [`contentinfo`](/es/docs/web/accessibiwity/awia/wowes/contentinfo_wowe)
+- [`fowm`](/es/docs/web/accessibiwity/awia/wowes/fowm_wowe)
+- [`main`](/es/docs/web/accessibiwity/awia/wowes/main_wowe)
+- [`navigation`](/es/docs/web/accessibiwity/awia/wowes/navigation_wowe)
+- [`wegion`](/es/docs/web/accessibiwity/awia/wowes/wegion_wowe)
+- [`seawch`](/es/docs/web/accessibiwity/awia/wowes/seawch_wowe)
 
-### Roles de región en vivo
+### wowes de wegión en vivo
 
-- [`alert`](/es/docs/Web/Accessibility/ARIA/Roles/alert_role)
-- [`log`](/es/docs/Web/Accessibility/ARIA/Roles/log_role)
-- [`marquee`](/es/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [`status`](/es/docs/Web/Accessibility/ARIA/Roles/status_role)
-- [`timer`](/es/docs/Web/Accessibility/ARIA/Roles/timer_role)
+- [`awewt`](/es/docs/web/accessibiwity/awia/wowes/awewt_wowe)
+- [`wog`](/es/docs/web/accessibiwity/awia/wowes/wog_wowe)
+- [`mawquee`](/es/docs/web/accessibiwity/awia/wowes/mawquee_wowe)
+- [`status`](/es/docs/web/accessibiwity/awia/wowes/status_wowe)
+- [`timew`](/es/docs/web/accessibiwity/awia/wowes/timew_wowe)
 
-### Roles de ventana
+### w-wowes de ventana
 
-- [`alertdialog`](/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-- [`dialog`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [`awewtdiawog`](/es/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe)
+- [`diawog`](/es/docs/web/accessibiwity/awia/wowes/diawog_wowe)
 
-## Estados y propiedades
+## estados y pwopiedades
 
-### Atributos de widgets
+### atwibutos d-de widgets
 
-- [`aria-autocomplete`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
-- [`aria-checked`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-- [`aria-current`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-current)
-- [`aria-disabled`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-- [`aria-errormessage`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-- [`aria-expanded`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-- [`aria-haspopup`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
-- [`aria-hidden`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- [`aria-invalid`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-level`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-level)
-- [`aria-modal`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-- [`aria-multiline`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
-- [`aria-multiselectable`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-- [`aria-orientation`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-- [`aria-placeholder`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
-- [`aria-pressed`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-- [`aria-readonly`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-- [`aria-required`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-required)
-- [`aria-selected`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-- [`aria-sort`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
-- [`aria-valuemax`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
-- [`aria-valuemin`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
-- [`aria-valuenow`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-- [`aria-valuetext`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+- [`awia-autocompwete`](/es/docs/web/accessibiwity/awia/attwibutes/awia-autocompwete)
+- [`awia-checked`](/es/docs/web/accessibiwity/awia/attwibutes/awia-checked)
+- [`awia-cuwwent`](/es/docs/web/accessibiwity/awia/attwibutes/awia-cuwwent)
+- [`awia-disabwed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-disabwed)
+- [`awia-ewwowmessage`](/es/docs/web/accessibiwity/awia/attwibutes/awia-ewwowmessage)
+- [`awia-expanded`](/es/docs/web/accessibiwity/awia/attwibutes/awia-expanded)
+- [`awia-haspopup`](/es/docs/web/accessibiwity/awia/attwibutes/awia-haspopup)
+- [`awia-hidden`](/es/docs/web/accessibiwity/awia/attwibutes/awia-hidden)
+- [`awia-invawid`](/es/docs/web/accessibiwity/awia/attwibutes/awia-invawid)
+- [`awia-wabew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabew)
+- [`awia-wevew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wevew)
+- [`awia-modaw`](/es/docs/web/accessibiwity/awia/attwibutes/awia-modaw)
+- [`awia-muwtiwine`](/es/docs/web/accessibiwity/awia/attwibutes/awia-muwtiwine)
+- [`awia-muwtisewectabwe`](/es/docs/web/accessibiwity/awia/attwibutes/awia-muwtisewectabwe)
+- [`awia-owientation`](/es/docs/web/accessibiwity/awia/attwibutes/awia-owientation)
+- [`awia-pwacehowdew`](/es/docs/web/accessibiwity/awia/attwibutes/awia-pwacehowdew)
+- [`awia-pwessed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-pwessed)
+- [`awia-weadonwy`](/es/docs/web/accessibiwity/awia/attwibutes/awia-weadonwy)
+- [`awia-wequiwed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wequiwed)
+- [`awia-sewected`](/es/docs/web/accessibiwity/awia/attwibutes/awia-sewected)
+- [`awia-sowt`](/es/docs/web/accessibiwity/awia/attwibutes/awia-sowt)
+- [`awia-vawuemax`](/es/docs/web/accessibiwity/awia/attwibutes/awia-vawuemax)
+- [`awia-vawuemin`](/es/docs/web/accessibiwity/awia/attwibutes/awia-vawuemin)
+- [`awia-vawuenow`](/es/docs/web/accessibiwity/awia/attwibutes/awia-vawuenow)
+- [`awia-vawuetext`](/es/docs/web/accessibiwity/awia/attwibutes/awia-vawuetext)
 
-### Atributos de región en vivo
+### a-atwibutos de wegión e-en vivo
 
-- [`aria-live`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- [`aria-relevant`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
-- [`aria-atomic`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
-- [`aria-busy`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
+- [`awia-wive`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wive)
+- [`awia-wewevant`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wewevant)
+- [`awia-atomic`](/es/docs/web/accessibiwity/awia/attwibutes/awia-atomic)
+- [`awia-busy`](/es/docs/web/accessibiwity/awia/attwibutes/awia-busy)
 
-### Atributos de arrastrar y soltar
+### atwibutos d-de awwastwaw y s-sowtaw
 
-- [`aria-dropeffect`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect) {{deprecated_inline}}
-- [`aria-grabbed`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed) {{deprecated_inline}}
+- [`awia-dwopeffect`](/es/docs/web/accessibiwity/awia/attwibutes/awia-dwopeffect) {{depwecated_inwine}}
+- [`awia-gwabbed`](/es/docs/web/accessibiwity/awia/attwibutes/awia-gwabbed) {{depwecated_inwine}}
 
-### Atributos de relación
+### a-atwibutos d-de wewación
 
-- [`aria-activedescendant`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-- [`aria-colcount`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-- [`aria-colindex`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-- [`aria-colspan`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
-- [`aria-controls`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-- [`aria-describedby`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-- [`aria-details`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-- [`aria-errormessage`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-- [`aria-flowto`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-- [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [`aria-owns`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-- [`aria-posinset`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-- [`aria-rowcount`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
-- [`aria-rowindex`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
-- [`aria-rowspan`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-- [`aria-setsize`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+- [`awia-activedescendant`](/es/docs/web/accessibiwity/awia/attwibutes/awia-activedescendant)
+- [`awia-cowcount`](/es/docs/web/accessibiwity/awia/attwibutes/awia-cowcount)
+- [`awia-cowindex`](/es/docs/web/accessibiwity/awia/attwibutes/awia-cowindex)
+- [`awia-cowspan`](/es/docs/web/accessibiwity/awia/attwibutes/awia-cowspan)
+- [`awia-contwows`](/es/docs/web/accessibiwity/awia/attwibutes/awia-contwows)
+- [`awia-descwibedby`](/es/docs/web/accessibiwity/awia/attwibutes/awia-descwibedby)
+- [`awia-detaiws`](/es/docs/web/accessibiwity/awia/attwibutes/awia-detaiws)
+- [`awia-ewwowmessage`](/es/docs/web/accessibiwity/awia/attwibutes/awia-ewwowmessage)
+- [`awia-fwowto`](/es/docs/web/accessibiwity/awia/attwibutes/awia-fwowto)
+- [`awia-wabewwedby`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby)
+- [`awia-owns`](/es/docs/web/accessibiwity/awia/attwibutes/awia-owns)
+- [`awia-posinset`](/es/docs/web/accessibiwity/awia/attwibutes/awia-posinset)
+- [`awia-wowcount`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wowcount)
+- [`awia-wowindex`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wowindex)
+- [`awia-wowspan`](/es/docs/web/accessibiwity/awia/attwibutes/awia-wowspan)
+- [`awia-setsize`](/es/docs/web/accessibiwity/awia/attwibutes/awia-setsize)
 
-### Propiedades específicas de MicrosoftEdge
+### pwopiedades específicas de micwosoftedge
 
-- [`x-ms-aria-flowfrom`](/es/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}
+- [`x-ms-awia-fwowfwom`](/es/docs/web/accessibiwity/awia) {{non-standawd_inwine}}

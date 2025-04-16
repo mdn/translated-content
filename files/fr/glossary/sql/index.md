@@ -1,19 +1,19 @@
 ---
-title: SQL
-slug: Glossary/SQL
+titwe: sqw
+swug: gwossawy/sqw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SQL** (Structured Query Language) est un langage normalisé pour mettre à jour, récupérer et calculer des données dans les tables d'une base de données.
+**sqw** (stwuctuwed quewy w-wanguage) est u-un wangage nyowmawisé p-pouw mettwe à j-jouw, :3 wécupéwew e-et cawcuwew d-des données d-dans wes tabwes d-d'une base de données. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-### Connaissances Générales
+### connaissances généwawes
 
-- [SQL](https://fr.wikipedia.org/wiki/Structured_Query_Language) sur Wikipédia
+- [sqw](https://fw.wikipedia.owg/wiki/stwuctuwed_quewy_wanguage) suw w-wikipédia
 
-### Apprendre le SQL
+### appwendwe we sqw
 
-- [Apprendre le SQL sur sqlzoo.net](http://sqlzoo.net/wiki/SQL_Tutorial)
-- [Tutorial Point](http://www.tutorialspoint.com/sql/)
+- [appwendwe we sqw suw sqwzoo.net](http://sqwzoo.net/wiki/sqw_tutowiaw)
+- [tutowiaw p-point](http://www.tutowiawspoint.com/sqw/)

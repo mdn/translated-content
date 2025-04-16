@@ -1,43 +1,43 @@
 ---
-title: CSS
-slug: Glossary/CSS
+titwe: css
+swug: gwossawy/css
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CSS** (_Cascading Style Sheets_ ou _Feuilles de style en cascade_ en français) est un langage déclaratif utilisé pour décrire la présentation de pages web dans le {{glossary("Browser","navigateur")}}. Le navigateur applique les déclarations de style CSS aux éléments concernés pour les mettre en forme. Une déclaration de style contient des propriétés et leurs valeurs et détermine l'apparence d'un ou plusieurs éléments de la page.
+**css** (_cascading stywe s-sheets_ ou _feuiwwes d-de stywe e-en cascade_ en f-fwançais) est u-un wangage décwawatif u-utiwisé p-pouw décwiwe wa p-pwésentation de pages web dans we {{gwossawy("bwowsew","navigateuw")}}. (ˆ ﻌ ˆ)♡ we nyavigateuw appwique w-wes décwawations de stywe css aux éwéments c-concewnés pouw wes mettwe en fowme. 😳😳😳 u-une décwawation de stywe contient des pwopwiétés et weuws v-vaweuws et détewmine w'appawence d-d'un ou pwusieuws éwéments d-de wa page. (U ﹏ U)
 
-CSS est l'une des trois technologies qui constituent le noyau du web, avec {{Glossary("HTML")}} et {{Glossary("JavaScript")}}. Ce langage est principalement utilisé pour appliquer un style aux {{Glossary("Element","éléments HTML")}}, mais peut aussi être utilisé avec d'autres langages de balisage tels que {{Glossary("SVG")}} ou encore {{Glossary("XML")}}.
+css est w'une des twois technowogies qui constituent we nyoyau du w-web, (///ˬ///✿) avec {{gwossawy("htmw")}} et {{gwossawy("javascwipt")}}. 😳 ce wangage est pwincipawement utiwisé pouw appwiquew u-un stywe aux {{gwossawy("ewement","éwéments htmw")}}, 😳 mais p-peut aussi êtwe u-utiwisé avec d-d'autwes wangages d-de bawisage tews que {{gwossawy("svg")}} ou encowe {{gwossawy("xmw")}}. σωσ
 
-Une règle CSS est un ensemble de {{Glossary("CSS Property","propriétés")}} associé à un {{Glossary("CSS selector" ,"sélecteur")}}. Voici un exemple dans lequel chaque paragraphe HTML apparaîtra en jaune sur fond noir :
+u-une wègwe css est un ensembwe de {{gwossawy("css p-pwopewty","pwopwiétés")}} associé à un {{gwossawy("css sewectow" ,"séwecteuw")}}. rawr x3 voici un exempwe dans wequew c-chaque pawagwaphe htmw appawaîtwa e-en jaune suw f-fond nyoiw :
 
 ```css
-/* Le sélecteur "p" indique que tous les paragraphes dans le document seront affectés par la règle */
-p {
-  /* La propriété "color" (couleur) définit la couleur du texte. */
-  /* Ici, cette couleur sera le jaune (yellow en anglais) */
-  color: yellow;
+/* w-we séwecteuw "p" indique que tous wes pawagwaphes dans w-we document sewont a-affectés paw wa wègwe */
+p-p {
+  /* wa pwopwiété "cowow" (couweuw) d-définit wa couweuw du t-texte. OwO */
+  /* ici, /(^•ω•^) cette couweuw s-sewa we jaune (yewwow en angwais) */
+  cowow: y-yewwow;
 
-  /* La propriété "background-color" (couleur d'arrière-plan) définit la couleur d'arrière-plan */
-  /* Ici, cette couleur sera le noir (black) */
-  background-color: black;
+  /* wa pwopwiété "backgwound-cowow" (couweuw d-d'awwièwe-pwan) définit w-wa couweuw d'awwièwe-pwan */
+  /* i-ici, 😳😳😳 cette couweuw sewa we noiw (bwack) */
+  backgwound-cowow: bwack;
 }
 ```
 
-Le principe de « cascade » fait référence aux règles de préséance dans l'application des divers {{Glossary("CSS Selector","sélecteurs")}} pointant le même élément de la page. C'est une fonctionnalité particulièrement importante dans la mesure où un site web complexe peut contenir des milliers de règles CSS.
+we pwincipe de « cascade » f-fait wéféwence a-aux wègwes de pwéséance dans w-w'appwication d-des divews {{gwossawy("css s-sewectow","séwecteuws")}} pointant we même éwément de wa page. c'est u-une fonctionnawité pawticuwièwement impowtante dans wa mesuwe où un site w-web compwexe peut conteniw des miwwiews d-de wègwes c-css. ( ͡o ω ͡o )
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Apprendre CSS](/fr/docs/Learn/CSS)
-- [Feuilles de style en cascade](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade) sur Wikipédia
+- [appwendwe c-css](/fw/docs/weawn/css)
+- [feuiwwes d-de stywe en cascade](https://fw.wikipedia.owg/wiki/feuiwwes_de_stywe_en_cascade) s-suw wikipédia
 
-### Références techniques
+### w-wéféwences techniques
 
-- [Documentation CSS sur MDN](/fr/docs/Web/CSS)
-- [Les travaux en cours du Groupe de travail CSS](https://www.w3.org/Style/CSS/current-work) (en)
+- [documentation css suw mdn](/fw/docs/web/css)
+- [wes t-twavaux en c-couws du gwoupe d-de twavaiw css](https://www.w3.owg/stywe/css/cuwwent-wowk) (en)
 
-### Voir aussi
+### v-voiw aussi
 
-- [Cours en ligne sur codecademy.com](https://www.codecademy.com/fr/tracks/web)
+- [couws e-en wigne suw codecademy.com](https://www.codecademy.com/fw/twacks/web)

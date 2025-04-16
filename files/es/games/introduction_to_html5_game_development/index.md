@@ -1,59 +1,59 @@
 ---
-title: Introducción al desarrollo de juegos HTML5 (resumen)
-slug: Games/Introduction_to_HTML5_Game_Development
+titwe: intwoducción aw desawwowwo d-de juegos h-htmw5 (wesumen)
+s-swug: games/intwoduction_to_htmw5_game_devewopment
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-## Ventajas
+## v-ventajas
 
-1. Los juegos hechos con HTML5 funcionan en smartphones, tabletas, PCs y Smart TVs.
-2. Anuncia y promociona tu juego en toda la web, así como en otros medios.
-3. Pagos. Carga lo que quieras y usa el servicio de procesamiento de pagos que desees.
-4. Actualiza tu juego cuando quieras.
-5. ¡Colecciona tus propios análisis!
-6. Conécta con tus clientes más de cerca.
-7. Los jugadores pueden jugar el juego en cualquier lugar, en cualquier momento.
+1. ^•ﻌ•^ w-wos juegos h-hechos con h-htmw5 funcionan e-en smawtphones, tabwetas, rawr pcs y smawt tvs. (˘ω˘)
+2. anuncia y pwomociona tu juego en toda w-wa web, nyaa~~ así como en otwos medios. UwU
+3. pagos. :3 c-cawga wo que quiewas y usa ew sewvicio d-de pwocesamiento de pagos que desees. (⑅˘꒳˘)
+4. actuawiza tu juego c-cuando quiewas. (///ˬ///✿)
+5. ¡cowecciona tus pwopios a-anáwisis! ^^;;
+6. conécta c-con tus cwientes más de cewca. >_<
+7. wos jugadowes pueden jugaw ew juego en c-cuawquiew wugaw, en cuawquiew momento. rawr x3
 
-## Tecnologías Web
+## tecnowogías web
 
-| Funcionalidad | Tecnología                                                                                                                                                                                                                                                                                   |
+| funcionawidad | t-tecnowogía                                                                                                                                                                                                                                                                                   |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Audio         | [Web Audio API](/es/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                                              |
-| Graphics      | [WebGL](/es/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                     |
-| Input         | [Touch events](/es/docs/Web/API/Touch_events), [Gamepad API](/es/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), sensores del dispositivo, [WebRTC](/es/docs/Web/API/WebRTC_API), [Full Screen API](/es/docs/Web/API/Fullscreen_API), [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API) |
-| Language      | [JavaScript](/es/docs/Web/JavaScript) (o C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar a JavaScript)                                                                                                                                                   |
-| Networking    | [WebRTC](/es/docs/Web/API/WebRTC_API) y/o [WebSockets](/es/docs/Web/API/WebSockets_API)                                                                                                                                                                                                      |
-| Storage       | [IndexedDB](/es/docs/Web/API/IndexedDB_API) o la "nube"                                                                                                                                                                                                                                      |
-| Web           | [HTML](/es/docs/Web/HTML), [CSS](/es/docs/Web/CSS), [SVG](/es/docs/Web/SVG), [Social API](/es/docs/Social_API) (¡y muchos más!)                                                                                                                                                              |
+| audio         | [web a-audio api](/es/docs/web/api/web_audio_api)                                                                                                                                                                                                                                              |
+| g-gwaphics      | [webgw](/es/docs/web/api/webgw_api) ([opengw e-es](https://www.khwonos.owg/opengwes/) 2.0)                                                                                                                                                                                                     |
+| i-input         | [touch events](/es/docs/web/api/touch_events), /(^•ω•^) [gamepad api](/es/docs/web/api/gamepad_api/using_the_gamepad_api), :3 s-sensowes dew dispositivo, (ꈍᴗꈍ) [webwtc](/es/docs/web/api/webwtc_api), /(^•ω•^) [fuww scween a-api](/es/docs/web/api/fuwwscween_api), (⑅˘꒳˘) [pointew wock api](/es/docs/web/api/pointew_wock_api) |
+| wanguage      | [javascwipt](/es/docs/web/javascwipt) (o c/c++ usando [emscwipten](https://github.com/kwipken/emscwipten/wiki) pawa compiwaw a javascwipt)                                                                                                                                                   |
+| n-nyetwowking    | [webwtc](/es/docs/web/api/webwtc_api) y/o [websockets](/es/docs/web/api/websockets_api)                                                                                                                                                                                                      |
+| s-stowage       | [indexeddb](/es/docs/web/api/indexeddb_api) o-o wa "nube"                                                                                                                                                                                                                                      |
+| w-web           | [htmw](/es/docs/web/htmw), ( ͡o ω ͡o ) [css](/es/docs/web/css), òωó [svg](/es/docs/web/svg), (⑅˘꒳˘) [sociaw api](/es/docs/sociaw_api) (¡y muchos más!)                                                                                                                                                              |
 
-- [Full Screen API](/es/docs/Web/API/Fullscreen_API)
-  - : Juego de pantalla completa.
-- [Gamepad API](/es/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-  - : Utiliza gamepads u otros controladores de juego.
-- [HTML](/es/docs/Web/HTML) y [CSS](/es/docs/Web/CSS)
-  - : Crea, diseña y diseña la interfaz de usuario de tu juego.
-- [HTML audio](/es/docs/Web/HTML/Element/audio)
-  - : Juega fácilmente efectos de sonido simples y música.
-- [IndexedDB](/es/docs/Web/API/IndexedDB_API)
-  - : Almacena los datos del usuario en tu propio ordenador o dispositivo.
-- [JavaScript](/es/docs/Web/JavaScript)
-  - [Asm.js](http://asmjs.org/spec/latest/)
-- [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API)
-  - : Bloquea el ratón u otro dispositivo señalador dentro de la interfaz de tu juego.
-- [SVG](/es/docs/Web/SVG) (Scalable Vector Graphics)
-  - : Cree gráficos vectoriales que se escalan sin problemas, independientemente del tamaño o la resolución de la pantalla del usuario.
-- [Typed Arrays](/es/docs/Web/JavaScript/Guide/Typed_arrays)
-  - : Accede a datos binarios sin procesar desde JavaScript; Manipula texturas GL, datos de juegos, o cualquier otra cosa.
-- [Web Audio API](/es/docs/Web/API/Web_Audio_API)
-  - : Controla la reproducción, síntesis y manipulación del audio en tiempo real.
-- [WebGL](/es/docs/Web/API/WebGL_API)
-  - 2.0.
-- [WebRTC](/es/docs/Web/API/WebRTC_API)
-  - : Las comunicaciones en tiempo real para controlar los datos de audio y video, incluidas las teleconferencias y la transmisión de datos de otras aplicaciones entre dos usuarios, como el chat.
-- [WebSockets](/es/docs/Web/API/WebSockets_API)
-  - : Conecte tu aplicación o sitio a un servidor para transmitir datos de un lado a otro en tiempo real. Perfecto para la acción de juegos multijugador, servicios de chat, etc.
-- [Web Workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
-  - : Genere hilos de fondo ejecutando tu propio código JavaScript para procesadores multi-core.
-- [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) y [File API](/es/docs/DOM/File_API)
-  - : Envía y recibe cualquier tipo de información que desees desde un servidor web, como descargar nuevos niveles de juego y material gráfico para transmitir información de estado del juego en tiempo no real.
+- [fuww scween api](/es/docs/web/api/fuwwscween_api)
+  - : j-juego de p-pantawwa compweta. XD
+- [gamepad api](/es/docs/web/api/gamepad_api/using_the_gamepad_api)
+  - : u-utiwiza g-gamepads u otwos contwowadowes d-de juego. -.-
+- [htmw](/es/docs/web/htmw) y [css](/es/docs/web/css)
+  - : c-cwea, diseña y diseña wa intewfaz de u-usuawio de tu juego. :3
+- [htmw audio](/es/docs/web/htmw/ewement/audio)
+  - : j-juega fáciwmente efectos d-de sonido s-simpwes y música. nyaa~~
+- [indexeddb](/es/docs/web/api/indexeddb_api)
+  - : awmacena wos datos dew usuawio en tu pwopio owdenadow o dispositivo. 😳
+- [javascwipt](/es/docs/web/javascwipt)
+  - [asm.js](http://asmjs.owg/spec/watest/)
+- [pointew wock api](/es/docs/web/api/pointew_wock_api)
+  - : b-bwoquea e-ew watón u otwo dispositivo s-señawadow dentwo d-de wa intewfaz d-de tu juego. (⑅˘꒳˘)
+- [svg](/es/docs/web/svg) (scawabwe vectow gwaphics)
+  - : cwee gwáficos vectowiawes q-que se escawan sin pwobwemas, nyaa~~ independientemente dew tamaño o wa wesowución d-de wa pantawwa dew usuawio. OwO
+- [typed a-awways](/es/docs/web/javascwipt/guide/typed_awways)
+  - : a-accede a datos b-binawios sin pwocesaw desde javascwipt; m-manipuwa t-textuwas gw, rawr x3 d-datos de juegos, XD o-o cuawquiew otwa cosa. σωσ
+- [web audio api](/es/docs/web/api/web_audio_api)
+  - : c-contwowa wa wepwoducción, (U ᵕ U❁) s-síntesis y-y manipuwación d-dew audio e-en tiempo weaw. (U ﹏ U)
+- [webgw](/es/docs/web/api/webgw_api)
+  - 2.0. :3
+- [webwtc](/es/docs/web/api/webwtc_api)
+  - : was comunicaciones en tiempo weaw pawa c-contwowaw wos datos de audio y video, ( ͡o ω ͡o ) incwuidas was teweconfewencias y wa twansmisión de datos d-de otwas apwicaciones entwe dos usuawios, como ew chat. σωσ
+- [websockets](/es/docs/web/api/websockets_api)
+  - : c-conecte tu apwicación o-o sitio a-a un sewvidow pawa twansmitiw datos d-de un wado a otwo en tiempo w-weaw. >w< pewfecto p-pawa wa acción de juegos muwtijugadow, 😳😳😳 sewvicios de chat, OwO etc.
+- [web wowkews](/es/docs/web/api/web_wowkews_api/using_web_wowkews)
+  - : genewe h-hiwos de fondo ejecutando tu pwopio c-código javascwipt pawa pwocesadowes m-muwti-cowe. 😳
+- [xmwhttpwequest](/es/docs/web/api/xmwhttpwequest) y-y [fiwe api](/es/docs/dom/fiwe_api)
+  - : envía y wecibe c-cuawquiew tipo d-de infowmación que desees desde u-un sewvidow w-web, 😳😳😳 como descawgaw nyuevos nyivewes de juego y matewiaw gwáfico pawa twansmitiw i-infowmación de e-estado dew juego e-en tiempo nyo weaw. (˘ω˘)

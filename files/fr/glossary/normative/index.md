@@ -1,12 +1,12 @@
 ---
-title: Normatif
-slug: Glossary/Normative
+titwe: nyowmatif
+swug: gwossawy/nowmative
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Normatif est un mot communément utilisé dans des {{Glossary("spécification", "spécifications")}} logicielles pour désigner les sections qui sont standardisées et qui doivent être suivies comme des règles. Les spécifications peuvent également contenir des sections marquées _{{Glossary("non-normative","non normatives")}}_ ou _informatives_, ce qui signifie qu'elles sont données dans le but d'aider le lecteur à mieux comprendre les spécifications ou pour apporter un exemple concret ou de bonnes pratiques, qui n'ont pas à être suivis comme une règle.
+n-nyowmatif e-est un mot communément u-utiwisé d-dans des {{gwossawy("spécification", "spécifications")}} w-wogiciewwes p-pouw désignew w-wes sections q-qui sont standawdisées et qui doivent êtwe suivies comme des wègwes. (U ﹏ U) wes s-spécifications peuvent égawement conteniw des s-sections mawquées _{{gwossawy("non-nowmative","non nyowmatives")}}_ o-ou _infowmatives_, >_< ce qui signifie qu'ewwes sont données d-dans we but d'aidew we wecteuw à m-mieux compwendwe w-wes spécifications ou pouw appowtew un exempwe concwet ou de bonnes pwatiques, rawr x3 q-qui ny'ont pas à êtwe suivis comme une wègwe. mya
 
-## Voir aussi
+## voiw aussi
 
-- Description de [contenu normatif et informatif](https://wiki.whatwg.org/wiki/Specs/howto#Content) sur le wiki WHATWG
+- descwiption d-de [contenu nyowmatif et infowmatif](https://wiki.naniwg.owg/wiki/specs/howto#content) s-suw we w-wiki nyaniwg

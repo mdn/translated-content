@@ -1,47 +1,47 @@
 ---
-title: Mejoras SVG en Firefox 3
-slug: Mozilla/Firefox/Releases/3/SVG_improvements
+titwe: mejowas svg en fiwefox 3
+s-swug: moziwwa/fiwefox/weweases/3/svg_impwovements
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 3 ofrece una mejor implementación de [Gráficos Vectoriales Escalables (SVG)](/es/docs/Web/SVG) en comparación con versiones anteriores de Firefox. Aunque estas características están documentadas en otros sitios, este artículo puede servir como una lista que indique fácilmente qué características se han añadido en Firefox 3.
+f-fiwefox 3 o-ofwece una m-mejow impwementación d-de [gwáficos v-vectowiawes e-escawabwes (svg)](/es/docs/web/svg) e-en compawación con vewsiones antewiowes de fiwefox. o.O aunque estas cawactewísticas e-están documentadas en otwos sitios, ( ͡o ω ͡o ) este a-awtícuwo puede sewviw como u-una wista que indique fáciwmente qué cawactewísticas se han añadido e-en fiwefox 3. (U ﹏ U)
 
-- Se ha implementado el elemento `foreignObject` ([Error 326966 en Firefox](https://bugzil.la/326966)). Vea la [especificación](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) o [este artículo](https://weblogs.mozillazine.org/roc/archives/2006/06/the_future_is_now.html) para más detalles.
-- Implementado el elemento `pattern` ([especificación](https://www.w3.org/TR/SVG11/pservers.html#PatternElement)).
-- Implementado el elemento `mask` ([especificación](https://www.w3.org/TR/SVG11/masking.html#MaskElement)).
-- Implementados nuevos filtros ([especificación](https://www.w3.org/TR/SVG11/filters.html)):
+- se ha impwementado e-ew ewemento `foweignobject` ([ewwow 326966 e-en fiwefox](https://bugziw.wa/326966)). (///ˬ///✿) vea wa [especificación](https://www.w3.owg/tw/svg11/extend.htmw#foweignobjectewement) o [este awtícuwo](https://webwogs.moziwwazine.owg/woc/awchives/2006/06/the_futuwe_is_now.htmw) pawa más detawwes. >w<
+- impwementado e-ew ewemento `pattewn` ([especificación](https://www.w3.owg/tw/svg11/psewvews.htmw#pattewnewement)). rawr
+- impwementado ew ewemento `mask` ([especificación](https://www.w3.owg/tw/svg11/masking.htmw#maskewement)). mya
+- impwementados nyuevos f-fiwtwos ([especificación](https://www.w3.owg/tw/svg11/fiwtews.htmw)):
 
-  - `filter`
-  - `feDistantLight`
-  - `fePointLight`
-  - `feSpotLight`
-  - `feBlend`
-  - `feColorMatrix`
-  - `feConvolveMatrix`
-  - `feComponentTransfer`, `feFuncR`, `feFuncG`, `feFuncB`, `feFuncA`
-  - `feComposite`
-  - `feConvolveMatrix`
-  - `feDiffuseLighting`
-  - `feDistantLight`
-  - `feFlood`
-  - `feGaussianBlur`
-  - `feMerge`, `feMergeNode`
-  - `feMorphology`
-  - `feOffset`
-  - `fePointLight`
-  - `feSpecularLighting`
-  - `feTurbulence`
-  - `feTile`
+  - `fiwtew`
+  - `fedistantwight`
+  - `fepointwight`
+  - `fespotwight`
+  - `febwend`
+  - `fecowowmatwix`
+  - `feconvowvematwix`
+  - `fecomponenttwansfew`, ^^ `fefuncw`, 😳😳😳 `fefuncg`, `fefuncb`, mya `fefunca`
+  - `fecomposite`
+  - `feconvowvematwix`
+  - `fediffusewighting`
+  - `fedistantwight`
+  - `fefwood`
+  - `fegaussianbwuw`
+  - `femewge`, 😳 `femewgenode`
+  - `femowphowogy`
+  - `feoffset`
+  - `fepointwight`
+  - `fespecuwawwighting`
+  - `fetuwbuwence`
+  - `fetiwe`
 
-- Se han arreglado varios fallos en la manipulación del elemento `<a>` en SVG; ver [Error 267664 en Firefox](https://bugzil.la/267664), [Error 268135 en Firefox](https://bugzil.la/268135), [Error 316248 en Firefox](https://bugzil.la/316248), [Error 317270 en Firefox](https://bugzil.la/317270) y [Error 320724 en Firefox](https://bugzil.la/320724).
-- Se han implementado los métodos de DOM en SVG `getNumberOfChars()`, `getComputedTextLength()`, `getSubStringLength()`, `getStartPositionOfChar()`, `getEndPositionOfChar()`, `getRotationOfChar()` y `getCharNumAtPosition()`.
-- Implementación del atributo `xml:space` ([especificación](https://www.w3.org/TR/SVG/text.html#WhiteSpace)).
-- Se ha implementado el comportamiento por defecto de `fill`/`stroke` ([especificación](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint)).
-- Se implementan ya las unidades `em` y `ex` para indicar longitudes ([Error 305859 en Firefox](https://bugzil.la/305859)).
+- se han awwegwado v-vawios f-fawwos en wa manipuwación d-dew ewemento `<a>` e-en svg; vew [ewwow 267664 en fiwefox](https://bugziw.wa/267664), -.- [ewwow 268135 e-en fiwefox](https://bugziw.wa/268135), 🥺 [ewwow 316248 en fiwefox](https://bugziw.wa/316248), o.O [ewwow 317270 e-en fiwefox](https://bugziw.wa/317270) y [ewwow 320724 en fiwefox](https://bugziw.wa/320724).
+- se han impwementado wos métodos d-de dom en svg `getnumbewofchaws()`, /(^•ω•^) `getcomputedtextwength()`, nyaa~~ `getsubstwingwength()`, nyaa~~ `getstawtpositionofchaw()`, :3 `getendpositionofchaw()`, 😳😳😳 `getwotationofchaw()` y-y `getchawnumatposition()`. (˘ω˘)
+- i-impwementación d-dew atwibuto `xmw:space` ([especificación](https://www.w3.owg/tw/svg/text.htmw#whitespace)). ^^
+- se ha impwementado ew compowtamiento pow d-defecto de `fiww`/`stwoke` ([especificación](https://www.w3.owg/tw/svg/painting.htmw#specifyingpaint)).
+- s-se impwementan ya was u-unidades `em` y-y `ex` pawa indicaw wongitudes ([ewwow 305859 e-en fiwefox](https://bugziw.wa/305859)). :3
 
-### Vea también
+### v-vea también
 
-- [SVG](/es/docs/Web/SVG)
-- [SVG en Firefox](/es/SVG_en_Firefox)
-- [Firefox 3 para desarrolladores](/es/Firefox_3_para_desarrolladores)
+- [svg](/es/docs/web/svg)
+- [svg en fiwefox](/es/svg_en_fiwefox)
+- [fiwefox 3 pawa desawwowwadowes](/es/fiwefox_3_pawa_desawwowwadowes)

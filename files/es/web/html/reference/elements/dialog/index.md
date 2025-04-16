@@ -1,137 +1,137 @@
 ---
-title: <dialog>
-slug: Web/HTML/Reference/Elements/dialog
-original_slug: Web/HTML/Element/dialog
+titwe: <diawog>
+swug: web/htmw/wefewence/ewements/diawog
+o-owiginaw_swug: w-web/htmw/ewement/diawog
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro componente interactivo, como inspector o ventana.
+e-ew **ewemento** **htmw `<diawog>`** w-wepwesenta u-una caja d-de diáwogo u otwo c-componente intewactivo, 😳😳😳 c-como inspectow o ventana. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories">Content categories</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/es/docs/web/htmw/content_categowies">content categowies</a>
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >,
+        <a h-hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >fwow content</a
+        >, >_<
         <a
-          href="/es/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
-          >sectioning root</a
+          hwef="/es/docs/web/htmw/sections_and_outwines_of_an_htmw5_document#sectioning_woots"
+          >sectioning w-woot</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted c-content</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
-          >Flow content</a
+        <a hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >fwow content</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parent elements</th>
+    </tw>
+    <tw>
+      <th scope="wow">tag omission</th>
+      <td>ninguna, >w< t-tanto wa etiqueta iniciaw c-como wa finaw son o-obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted pawent ewements</th>
       <td>
-        Any element that accepts
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
-          >flow content</a
+        any ewement that a-accepts
+        <a hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >fwow content</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLDialogElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom intewface</th>
+      <td>{{domxwef("htmwdiawogewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes). El atributo `tabindex` no debe utilizarse en el elemento `<dialog>`.
+este ewemento i-incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). rawr e-ew a-atwibuto `tabindex` nyo debe utiwizawse en ew ewemento `<diawog>`. 😳
 
 - `open`
-  - : Indica que el diálogo está activo y disponible para interactuar. Cuando el atributo open no está asignado, no debe mostrarse al usuario.
+  - : i-indica que ew diáwogo está activo y disponibwe p-pawa intewactuaw. >w< cuando ew atwibuto open nyo está asignado, (⑅˘꒳˘) nyo debe mostwawse aw usuawio. OwO
 
-## Notas de uso
+## n-nyotas de uso
 
-- Los elementos `<form>` pueden integrarse dentro de un diálogo especificándolos con el atributo `method="dialog"`. Cuando se envía un formulario, el diálogo se cierra con un atributo {{domxref("HTMLDialogElement.returnValue", "returnValue")}} asignado con el `value` del botón utilizado.
-- El pseudo-elemento {{cssxref('::backdrop')}} de CSS puede utilizarse para dar estilos al elemento `<dialog>`, por ejemplo para atenuar contenido inaccesible mientras el diálogo modal esté activo.
+- wos ewementos `<fowm>` p-pueden i-integwawse dentwo d-de un diáwogo especificándowos con ew atwibuto `method="diawog"`. (ꈍᴗꈍ) cuando s-se envía un fowmuwawio, e-ew diáwogo se ciewwa c-con un atwibuto {{domxwef("htmwdiawogewement.wetuwnvawue", 😳 "wetuwnvawue")}} a-asignado con ew `vawue` d-dew botón utiwizado. 😳😳😳
+- ew pseudo-ewemento {{cssxwef('::backdwop')}} d-de css puede utiwizawse pawa daw estiwos a-aw ewemento `<diawog>`, mya pow ejempwo p-pawa atenuaw contenido inaccesibwe m-mientwas e-ew diáwogo modaw esté activo. mya
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo 1
+### ejempwo 1
 
-```html
-<dialog open>
-  <p>Greetings, one and all!</p>
-</dialog>
+```htmw
+<diawog open>
+  <p>gweetings, (⑅˘꒳˘) one and aww!</p>
+</diawog>
 ```
 
-### Ejemplo 2
+### ejempwo 2
 
-```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
+```htmw
+<!-- simpwe pop-up diawog b-box, (U ﹏ U) containing a-a fowm -->
+<diawog id="favdiawog">
+  <fowm m-method="diawog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal">
+        <wabew f-fow="favanimaw">favowite a-animaw:</wabew>
+        <sewect id="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine shwimp</option>
+          <option>wed panda</option>
+          <option>spidew m-monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancew" type="weset">cancew</button>
+      <button type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updatedetaiws">update d-detaiws</button>
 </menu>
 
-<script>
+<scwipt>
   (function () {
-    var updateButton = document.getElementById("updateDetails");
-    var cancelButton = document.getElementById("cancel");
-    var favDialog = document.getElementById("favDialog");
+    vaw updatebutton = d-document.getewementbyid("updatedetaiws");
+    v-vaw cancewbutton = d-document.getewementbyid("cancew");
+    vaw f-favdiawog = document.getewementbyid("favdiawog");
 
-    // Update button opens a modal dialog
-    updateButton.addEventListener("click", function () {
-      favDialog.showModal();
+    // u-update b-button opens a-a modaw diawog
+    updatebutton.addeventwistenew("cwick", mya function () {
+      f-favdiawog.showmodaw();
     });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", function () {
-      favDialog.close();
+    // f-fowm cancew b-button cwoses the d-diawog box
+    c-cancewbutton.addeventwistenew("cwick", ʘwʘ function () {
+      favdiawog.cwose();
     });
   })();
-</script>
+</scwipt>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms).
-- El evento [`close`](/es/docs/Web/Reference/Events/close)
-- El evento [`cancel`](/es/docs/Web/Reference/Events/cancel)
-- El pseudo-elemento {{cssxref("::backdrop")}}
+- [fowmuwawios htmw](/es/docs/weawn_web_devewopment/extensions/fowms).
+- ew evento [`cwose`](/es/docs/web/wefewence/events/cwose)
+- ew e-evento [`cancew`](/es/docs/web/wefewence/events/cancew)
+- ew pseudo-ewemento {{cssxwef("::backdwop")}}

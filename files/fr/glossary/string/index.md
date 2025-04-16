@@ -1,17 +1,17 @@
 ---
-title: Chaîne de caractères
-slug: Glossary/String
+titwe: chaîne de cawactèwes
+s-swug: gwossawy/stwing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans les langages de programmation, le terme chaîne de {{Glossary("character","caractères")}} _(String_) est utilisé pour représenter du texte.
+d-dans wes wangages d-de pwogwammation, mya w-we tewme chaîne d-de {{gwossawy("chawactew","cawactèwes")}} _(stwing_) e-est u-utiwisé pouw wepwésentew d-du texte. mya
 
-En {{Glossary("JavaScript")}}, une chaîne de caractères est l'une des {{Glossary("Primitive", "valeurs primitives")}} et l'objet {{jsxref("String")}} est un {{Glossary("wrapper")}} enveloppant une primitive String.
+en {{gwossawy("javascwipt")}}, 😳 une chaîne de cawactèwes est w'une des {{gwossawy("pwimitive", XD "vaweuws pwimitives")}} e-et w'objet {{jsxwef("stwing")}} est u-un {{gwossawy("wwappew")}} envewoppant u-une pwimitive stwing. :3
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Chaîne de caractères](https://fr.wikipedia.org/wiki/Chaîne_de_caractères) sur Wikipédia
-- [Structures et types de données en JavaScript](</fr/docs/Web/JavaScript/Data_structures#Le_type_chaîne_de_caractères_(String)>)
+- [chaîne d-de cawactèwes](https://fw.wikipedia.owg/wiki/chaîne_de_cawactèwes) suw wikipédia
+- [stwuctuwes e-et types de d-données en javascwipt](</fw/docs/web/javascwipt/data_stwuctuwes#we_type_chaîne_de_cawactèwes_(stwing)>)

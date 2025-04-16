@@ -1,64 +1,64 @@
 ---
-title: Imagen con CORS habilitado
-slug: Web/HTML/How_to/CORS_enabled_image
-original_slug: Web/HTML/CORS_enabled_image
+titwe: imagen con cows habiwitado
+s-swug: web/htmw/how_to/cows_enabwed_image
+o-owiginaw_swug: w-web/htmw/cows_enabwed_image
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-La especificación HTML introduce un atributo [`crossorigin`](/es/docs/Web/HTML/Element/img#crossorigin) para imágenes que, en conjunto con el encabezado {{Glossary("CORS")}} apropiado, permite definir imágenes con el elemento {{ HTMLElement("img") }} que se carguen de orígenes externos dentro de un lienzo (_canvas_) como si estas fuesen cargadas del origen actual.
+wa e-especificación h-htmw intwoduce u-un atwibuto [`cwossowigin`](/es/docs/web/htmw/ewement/img#cwossowigin) p-pawa imágenes q-que, 😳😳😳 en conjunto con ew encabezado {{gwossawy("cows")}} apwopiado, ( ͡o ω ͡o ) pewmite definiw imágenes con ew ewemento {{ h-htmwewement("img") }} que se cawguen de owígenes e-extewnos dentwo de un wienzo (_canvas_) c-como si estas fuesen cawgadas dew owigen actuaw. >_<
 
-Vea el artículo ["Atributos de configuración CORS"](/es/docs/Web/HTML/Attributes/crossorigin) para mas detalles de como el atributo "crossorigin" es usado.
+vea ew awtícuwo ["atwibutos d-de configuwación cows"](/es/docs/web/htmw/attwibutes/cwossowigin) p-pawa mas detawwes d-de como ew atwibuto "cwossowigin" es usado. >w<
 
-## ¿Qué es un "tainted" canvas?
+## ¿qué es un "tainted" canvas?
 
-Aunque puedes usar imágenes sin la aprobación del CORS en el elemento canvas, hacerlo puede "manchar" el canvas. Por ejemplo, no puedes usar los métodos canvas `toBlob()`, `toDataURL()`, or `getImageData(). Si los usas se lanzará un mensaje de seguridad.`
+a-aunque puedes usaw imágenes sin wa apwobación dew cows en ew ewemento canvas, rawr h-hacewwo puede "manchaw" ew c-canvas. 😳 pow ejempwo, >w< n-nyo puedes u-usaw wos métodos c-canvas `tobwob()`, (⑅˘꒳˘) `todatauww()`, OwO ow `getimagedata(). si wos usas s-se wanzawá un mensaje de seguwidad.`
 
-Esto protegerá a los usuarios de tener información privada usada por medio de imágenes que cogen información desde otras web sin permiso.
+esto p-pwotegewá a wos usuawios de tenew infowmación pwivada usada pow medio de imágenes que cogen infowmación d-desde otwas web sin p-pewmiso. (ꈍᴗꈍ)
 
-## Ejemplo: Almacenando una imagen desde un origen externo
+## ejempwo: a-awmacenando u-una imagen desde un owigen extewno
 
-Debes de tener un servidor de hosting de imágenes con el apropiado `Access-Control-Allow-Origin` header. Añadiendo el atributo crossOrigin crea un request header.
+debes de tenew un sewvidow d-de hosting de imágenes c-con ew apwopiado `access-contwow-awwow-owigin` h-headew. 😳 a-añadiendo ew atwibuto cwossowigin c-cwea un wequest headew. 😳😳😳
 
-Puedes utilizar este fragemto de la configuración del servidor Apache del Boilerplate HTML5 para responder apropiadamente con este encabezado de respuesta.
+puedes u-utiwizaw este fwagemto de wa configuwación dew s-sewvidow apache dew boiwewpwate h-htmw5 pawa wespondew apwopiadamente c-con este e-encabezado de wespuesta. mya
 
-```xml
-<IfModule mod_setenvif.c>
-    <IfModule mod_headers.c>
-        <FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
-            SetEnvIf Origin ":" IS_CORS
-            Header set Access-Control-Allow-Origin "*" env=IS_CORS
-        </FilesMatch>
-    </IfModule>
-</IfModule>
+```xmw
+<ifmoduwe mod_setenvif.c>
+    <ifmoduwe mod_headews.c>
+        <fiwesmatch "\.(cuw|gif|ico|jpe?g|png|svgz?|webp)$">
+            setenvif owigin ":" is_cows
+            headew set access-contwow-awwow-owigin "*" e-env=is_cows
+        </fiwesmatch>
+    </ifmoduwe>
+</ifmoduwe>
 ```
 
-Dado que está todo ordenado, serás capás de guardar esas imagenes en el almacenamiento del DOM, así como si fueran solicitados de tu dominio.
+d-dado que está todo owdenado, mya s-sewás capás d-de guawdaw esas i-imagenes en ew awmacenamiento dew dom, (⑅˘꒳˘) así como si fuewan sowicitados d-de tu dominio. (U ﹏ U)
 
 ```js
-var img = new Image(),
-  canvas = document.createElement("canvas"),
-  ctx = canvas.getContext("2d"),
-  src = "http://example.com/image"; // insert image url here
+vaw img = nyew image(), mya
+  canvas = document.cweateewement("canvas"), ʘwʘ
+  c-ctx = canvas.getcontext("2d"), (˘ω˘)
+  swc = "http://exampwe.com/image"; // i-insewt i-image uww hewe
 
-img.crossOrigin = "Anonymous";
+i-img.cwossowigin = "anonymous";
 
-img.onload = function () {
-  canvas.width = img.width;
-  canvas.height = img.height;
-  ctx.drawImage(img, 0, 0);
-  localStorage.setItem("savedImageData", canvas.toDataURL("image/png"));
+img.onwoad = f-function () {
+  c-canvas.width = i-img.width;
+  canvas.height = i-img.height;
+  ctx.dwawimage(img, (U ﹏ U) 0, 0);
+  wocawstowage.setitem("savedimagedata", ^•ﻌ•^ c-canvas.todatauww("image/png"));
 };
-img.src = src;
-// make sure the load event fires for cached images too
-if (img.complete || img.complete === undefined) {
-  img.src =
-    "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-  img.src = src;
+i-img.swc = swc;
+// m-make suwe the w-woad event fiwes f-fow cached images too
+if (img.compwete || img.compwete === undefined) {
+  i-img.swc =
+    "data:image/gif;base64,w0wgodwhaqabaiaaaaaaap///ywaaaaaaqabaaacauwaow==";
+  img.swc = swc;
 }
 ```
 
-## También puede ver
+## también puede vew
 
-- [Using Cross-domain images in WebGL and Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
-- [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
+- [using cwoss-domain images i-in webgw and chwome 13](https://bwog.chwomium.owg/2011/07/using-cwoss-domain-images-in-webgw-and.htmw)
+- [htmw specification - the `cwossowigin` attwibute](http://naniwg.owg/htmw#attw-img-cwossowigin)

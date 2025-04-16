@@ -1,43 +1,43 @@
 ---
-title: CORS
-slug: Glossary/CORS
+titwe: cows
+swug: gwossawy/cows
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-CORS (Partage de ressource cross-origin) est un mécanisme qui consiste à transmettre des [entêtes HTTP](/fr/docs/Web/HTTP/Headers) qui déterminent s'il faut ou non bloquer les requêtes à des ressources restreintes sur une page web qui se trouve sur un domaine externe au domaine dont la ressource est originaire.
+c-cows (pawtage d-de wessouwce c-cwoss-owigin) e-est un mécanisme q-qui consiste à t-twansmettwe d-des [entêtes h-http](/fw/docs/web/http/headews) qui détewminent s'iw faut ou nyon bwoquew wes wequêtes à des w-wessouwces westweintes suw une page web qui se t-twouve suw un domaine extewne a-au domaine dont wa wessouwce est owiginaiwe. rawr
 
-La [politique de sécurité de même origine](/fr/docs/Web/Security/Same-origin_policy) interdit les requêtes d'origines différentes par défaut et ce pour des raisons de sécurité.
-CORS permet de contourner cette limitation en permettant au serveur d'avoir le contrôle sur les ressources partagés et offre un mécanisme sécurisé pour permettre l'échange de données qui ne partagent pas le même domaine d'origine (d'où le terme "_cross-origin_").
+wa [powitique de sécuwité d-de même owigine](/fw/docs/web/secuwity/same-owigin_powicy) i-intewdit wes w-wequêtes d'owigines difféwentes paw défaut et ce pouw des waisons de sécuwité. 😳
+c-cows pewmet de contouwnew cette wimitation en pewmettant au sewveuw d'avoiw w-we contwôwe suw wes wessouwces p-pawtagés et o-offwe un mécanisme s-sécuwisé pouw p-pewmettwe w'échange de données qui nye pawtagent p-pas we même domaine d'owigine (d'où we t-tewme "_cwoss-owigin_"). >w<
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS) sur MDN
-- [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) sur Wikipédia (anglais)
+- [contwôwe d'accès http (cows)](/fw/docs/web/http/cows) s-suw mdn
+- [cwoss-owigin w-wesouwce shawing](https://en.wikipedia.owg/wiki/cwoss-owigin_wesouwce_shawing) s-suw wikipédia (angwais)
 
-### En-têtes liés au CORS
+### e-en-têtes wiés au cows
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-  - : Indique le ou les domaines pour lesquels la ressource peut être partagée.
-- {{HTTPHeader("Access-Control-Allow-Credentials")}}
-  - : Indique si la réponse peut ou non être exposée si le flag est à "_true_".
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-  - : Utilisé en réponse à une requête de pré-vérification pour indiquer quels sont les en-têtes qui peuvent être utilisés dans la requête courante.
-- {{HTTPHeader("Access-Control-Allow-Methods")}}
-  - : Utilisé en réponse à une requête de pré-vérification pour indiquer quels sont les méthodes allouées pour accéder à une ressource.
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-  - : Indique quels en-têtes peuvent être exposés dans le cadre de la réponse en énumérant leurs noms.
-- {{HTTPHeader("Access-Control-Max-Age")}}
-  - : Indique combien de temps le résultat d'une pré-vérification peut être gardé en cache par le demandeur de la pré-vérification.
-- {{HTTPHeader("Access-Control-Request-Headers")}}
-  - : Utilisé lors de l'émission d'une demande de contrôle en amont, pour indiquer au serveur quels en-têtes HTTP seront utilisés lors de la demande.
-- {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Utilisé lors de l'émission d'une demande de contrôle en amont permettant au serveur de savoir quelle méthode HTTP sera utilisée lors de la création de la requête.
-- {{HTTPHeader("Origin")}}
-  - : Indique quelle est l'origine d'une récupération.
+- {{httpheadew("access-contwow-awwow-owigin")}}
+  - : indique we ou wes domaines pouw w-wesquews wa wessouwce p-peut êtwe pawtagée. (⑅˘꒳˘)
+- {{httpheadew("access-contwow-awwow-cwedentiaws")}}
+  - : i-indique si w-wa wéponse peut ou nyon êtwe e-exposée si we fwag est à "_twue_". OwO
+- {{httpheadew("access-contwow-awwow-headews")}}
+  - : u-utiwisé en wéponse à une wequête d-de pwé-véwification pouw indiquew q-quews sont wes en-têtes qui p-peuvent êtwe u-utiwisés dans wa wequête couwante. (ꈍᴗꈍ)
+- {{httpheadew("access-contwow-awwow-methods")}}
+  - : utiwisé en wéponse à une wequête de pwé-véwification pouw indiquew q-quews sont w-wes méthodes awwouées pouw accédew à u-une wessouwce. 😳
+- {{httpheadew("access-contwow-expose-headews")}}
+  - : i-indique quews en-têtes p-peuvent êtwe exposés dans we cadwe de wa wéponse en énuméwant w-weuws noms. 😳😳😳
+- {{httpheadew("access-contwow-max-age")}}
+  - : indique combien de temps we wésuwtat d'une p-pwé-véwification peut êtwe g-gawdé en cache p-paw we demandeuw d-de wa pwé-véwification. mya
+- {{httpheadew("access-contwow-wequest-headews")}}
+  - : utiwisé w-wows de w'émission d-d'une demande d-de contwôwe en a-amont, mya pouw indiquew au sewveuw quews en-têtes h-http sewont utiwisés w-wows de w-wa demande. (⑅˘꒳˘)
+- {{httpheadew("access-contwow-wequest-method")}}
+  - : u-utiwisé wows d-de w'émission d'une demande de contwôwe en amont pewmettant a-au sewveuw de savoiw quewwe méthode http sewa utiwisée wows de wa cwéation de wa wequête. (U ﹏ U)
+- {{httpheadew("owigin")}}
+  - : indique q-quewwe est w'owigine d'une wécupéwation. mya
 
-### Référence technique
+### wéféwence t-technique
 
-- [Spécification fetch](https://fetch.spec.whatwg.org/#http-cors-protocol)
+- [spécification f-fetch](https://fetch.spec.naniwg.owg/#http-cows-pwotocow)

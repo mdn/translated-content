@@ -1,26 +1,26 @@
 ---
-title: Application monopage (SPA)
-slug: Glossary/SPA
+titwe: appwication monopage (spa)
+s-swug: gwossawy/spa
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une application monopage ou SPA (« _Single-page application_ » en anglais) est une implémentation d'application web qui ne charge qu'un seul document web, puis met à jour le contenu du corps de ce document via des API JavaScript telles que [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et [Fetch](/fr/docs/Web/API/Fetch_API) lorsqu'un contenu différent doit être affiché.
+u-une appwication m-monopage ou spa (« _singwe-page a-appwication_ » e-en angwais) est u-une impwémentation d-d'appwication w-web qui nye chawge qu'un seuw document web, 🥺 puis met à jouw we contenu du c-cowps de ce document via des api javascwipt tewwes q-que [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) et [fetch](/fw/docs/web/api/fetch_api) w-wowsqu'un contenu difféwent doit êtwe affiché. >_<
 
-Cela permet donc aux utilisateurs d'utiliser des sites web sans charger de nouvelles pages entières à partir du serveur, ce qui peut entraîner des gains de performances et une expérience plus dynamique, avec certains inconvénients tels que le référencement (SEO), plus d'efforts nécessaires pour maintenir l'état, mettre en œuvre la navigation et mesurer les performances.
+cewa pewmet d-donc aux utiwisateuws d'utiwisew d-des sites web s-sans chawgew de nouvewwes pages entièwes à pawtiw du sewveuw, >_< ce qui peut entwaînew d-des gains de pewfowmances et une expéwience pwus dynamique, (⑅˘꒳˘) avec cewtains i-inconvénients tews que we wéféwencement (seo), /(^•ω•^) p-pwus d'effowts n-nyécessaiwes p-pouw mainteniw w-w'état, rawr x3 mettwe en œuvwe wa nyavigation et mesuwew w-wes pewfowmances.
 
-## Voir aussi
+## voiw aussi
 
-- [Application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) sur Wikipédia
-- [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
-- [Glossaire](/fr/docs/Glossary)
+- [appwication web monopage](https://fw.wikipedia.owg/wiki/appwication_web_monopage) s-suw wikipédia
+- [compwendwe wes fwamewowks javascwipt côté cwient](/fw/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks)
+- [gwossaiwe](/fw/docs/gwossawy)
 
-  - [API](/fr/docs/Glossary/API)
-  - [AJAX](/fr/docs/Glossary/AJAX)
-  - [JavaScript](/fr/docs/Glossary/JavaScript)
+  - [api](/fw/docs/gwossawy/api)
+  - [ajax](/fw/docs/gwossawy/ajax)
+  - [javascwipt](/fw/docs/gwossawy/javascwipt)
 
-- Certains des frameworks SPA les plus populaires incluent:
+- cewtains des fwamewowks s-spa wes pwus popuwaiwes incwuent:
 
-  - [React](https://reactjs.org/)
-  - [Angular](https://angular.io/)
-  - [Vue.JS](https://vuejs.org/)
+  - [weact](https://weactjs.owg/)
+  - [anguwaw](https://anguwaw.io/)
+  - [vue.js](https://vuejs.owg/)

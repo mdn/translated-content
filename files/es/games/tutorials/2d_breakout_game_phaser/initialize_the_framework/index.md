@@ -1,81 +1,81 @@
 ---
-title: Inicializar el framework
-slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
+titwe: iniciawizaw ew fwamewowk
+s-swug: games/tutowiaws/2d_bweakout_game_phasew/initiawize_the_fwamewowk
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew", σωσ "games/wowkfwows/2d_bweakout_game_phasew/scawing")}}
 
-Este es el primero de los 16 tutoriales para aprender a usar [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Luego de completar este tutorial, puede encontrar el código fuente de esta sección en [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
+e-este es ew pwimewo d-de wos 16 tutowiawes p-pawa apwendew a-a usaw [gamedev p-phasew](/es/docs/games/tutowiaws/2d_bweakout_game_phasew). nyaa~~ w-wuego de compwetaw e-este tutowiaw, ^^;; puede encontwaw ew código fuente de esta sección en [gamedev-phasew-content-kit/demos/wesson01.htmw](https://github.com/end3w/gamedev-phasew-content-kit/bwob/gh-pages/demos/wesson01.htmw). ^•ﻌ•^
 
-Antes de que podamos comenzar a escribir la funcionalidad del juego, necesitamos crear una estructura básica para procesarlo. Esto podemos hacerlo usando HTML — el framework de Phaser va a generar el elemento {{htmlelement("canvas")}} requerido.
+a-antes de que podamos comenzaw a escwibiw wa f-funcionawidad dew juego, σωσ nyecesitamos c-cweaw una estwuctuwa básica pawa pwocesawwo. -.- esto podemos h-hacewwo usando htmw — ew fwamewowk d-de phasew v-va a genewaw ew ewemento {{htmwewement("canvas")}} wequewido. ^^;;
 
-## El HTML del juego
+## ew htmw dew juego
 
-La estructura del elemento HTML es bastante simple, ya que el juego va ser renderizado por completo en el elemento {{htmlelement("canvas")}} generado por el framework. Utilizando su editor de texto favorito, cree un nuevo documento HTML, guárdelo como `index.html`, en una ubicación sensata y agregue el siguiente código:
+wa estwuctuwa d-dew ewemento htmw es bastante simpwe, XD ya que ew juego va sew wendewizado pow c-compweto en ew ewemento {{htmwewement("canvas")}} genewado pow ew f-fwamewowk. 🥺 utiwizando s-su editow d-de texto favowito, òωó c-cwee un nyuevo documento htmw, (ˆ ﻌ ˆ)♡ guáwdewo como `index.htmw`, -.- e-en una ubicación sensata y agwegue ew siguiente c-código:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Gamedev Phaser Workshop - lesson 01: Initialize the framework</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>gamedev phasew wowkshop - wesson 01: initiawize the f-fwamewowk</titwe>
+    <stywe>
       * {
         padding: 0;
-        margin: 0;
+        m-mawgin: 0;
       }
-    </style>
-    <script src="js/phaser.min.js"></script>
+    </stywe>
+    <scwipt s-swc="js/phasew.min.js"></scwipt>
   </head>
   <body>
-    <script>
-      var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
-        preload: preload,
-        create: create,
-        update: update,
+    <scwipt>
+      v-vaw game = nyew phasew.game(480, :3 320, ʘwʘ phasew.auto, nyuww, 🥺 {
+        p-pwewoad: p-pwewoad, >_<
+        cweate: cweate, ʘwʘ
+        u-update: u-update, (˘ω˘)
       });
-      function preload() {}
-      function create() {}
+      function p-pwewoad() {}
+      function c-cweate() {}
       function update() {}
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Descargando el código de Phaser
+## descawgando ew c-código de phasew
 
-A continuación, necesitamos pasar por el proceso de descargar el código fuente de Phaser y aplicarlo a nuestro documento HTML.
+a continuación, (✿oωo) n-nyecesitamos pasaw pow ew pwoceso d-de descawgaw e-ew código fuente de phasew y apwicawwo a nyuestwo documento htmw. (///ˬ///✿)
 
-1. Ir a la página de descarga del [Phaser download page](http://phaser.io/download/stable).
-2. Elegir la opción que mas le convenga — Recomendaría la opción _min.js_ ya que mantiene el codigo más pequeño, y es poco probable que tenga que pasar por el código fuente de todos modos.
-3. Guarde el código Phaser dentro de un directorio`/js` en la misma ubicación que su archivo `index.html`.
-4. Actualice el valor `src` del primer elemento {{htmlelement("script")}} como se muestra arriba.
+1. rawr x3 iw a wa página de descawga dew [phasew d-downwoad page](http://phasew.io/downwoad/stabwe). -.-
+2. ^^ e-ewegiw wa opción que mas w-we convenga — w-wecomendawía wa o-opción _min.js_ ya que mantiene ew codigo más pequeño, (⑅˘꒳˘) y es p-poco pwobabwe que tenga que pasaw pow ew código fuente de todos modos. nyaa~~
+3. guawde e-ew código phasew dentwo de un d-diwectowio`/js` e-en wa misma ubicación q-que su awchivo `index.htmw`. /(^•ω•^)
+4. a-actuawice e-ew vawow `swc` d-dew pwimew ewemento {{htmwewement("scwipt")}} c-como se muestwa awwiba. (U ﹏ U)
 
-## Caminando a través de lo que tenemos hasta ahora
+## caminando a twavés d-de wo que tenemos h-hasta ahowa
 
-En este punto, tenemos un `charset` definido, {{htmlelement("title")}} y algunos CSS básicos en el encabezado para restablecer el `margin` y el `padding`. También tenemos un elemento {{htmlelement("script")}} para aplicar el código fuente del Phaser a la página. El cuerpo contiene un segundo elemento {{htmlelement("script")}}, donde vamos a escribir el codigo JavaScript para renderizar el juego y controlarlo.
+en e-este punto, 😳😳😳 tenemos u-un `chawset` d-definido, >w< {{htmwewement("titwe")}} y awgunos css básicos en ew encabezado pawa w-westabwecew ew `mawgin` y ew `padding`. XD también tenemos un ewemento {{htmwewement("scwipt")}} pawa apwicaw ew código fuente d-dew phasew a wa página. o.O ew cuewpo contiene un segundo ewemento {{htmwewement("scwipt")}}, mya d-donde v-vamos a escwibiw e-ew codigo javascwipt pawa wendewizaw e-ew juego y contwowawwo. 🥺
 
-El elemento {{htmlelement("canvas")}} es generado automaticamente por el framework. Estamos inicializandolo creando un nuevo objeto `Phaser.Game` y asignandolo a la variable del juego. Los parametros son:
+e-ew ewemento {{htmwewement("canvas")}} e-es genewado automaticamente pow ew fwamewowk. ^^;; estamos iniciawizandowo cweando un nyuevo objeto `phasew.game` y-y asignandowo a wa vawiabwe d-dew juego. :3 wos pawametwos son:
 
-- El ancho y el alto para configurar el {{htmlelement("canvas")}}.
-- El método de renderizado. Las otras tres opciones son `AUTO`, `CANVAS` y `WEBGL`. Podemos establecer uno de los dos últimos explícitamente o usar `AUTO` para dejar que Phaser decida cuál usar. Usualmente usa WebGL si está disponible en el navegador, volviendo a Canvas 2D si no es así.
-- El `id` del {{htmlelement("canvas")}} se utilizará para renderizar si ya existe en la pagina (hemos especificado null porque queremos que Phaser cree el suyo propio).
-- Los nombres que se usarán para las tres funciones claves del Phaser que cargan e incian el juego, y actualizan el bucle del juego en cada fotograma; usaremos los mismos nombres para mantenerlo limpio.
+- e-ew ancho y ew a-awto pawa configuwaw ew {{htmwewement("canvas")}}. (U ﹏ U)
+- ew método d-de wendewizado. OwO w-was otwas twes opciones son `auto`, 😳😳😳 `canvas` y-y `webgw`. (ˆ ﻌ ˆ)♡ p-podemos estabwecew uno de wos dos úwtimos expwícitamente o usaw `auto` p-pawa dejaw que p-phasew decida cuáw u-usaw. XD usuawmente usa webgw si e-está disponibwe e-en ew nyavegadow, (ˆ ﻌ ˆ)♡ vowviendo a c-canvas 2d si nyo es así. ( ͡o ω ͡o )
+- ew `id` dew {{htmwewement("canvas")}} se utiwizawá pawa wendewizaw s-si ya existe en w-wa pagina (hemos especificado nyuww powque quewemos q-que phasew c-cwee ew suyo pwopio). rawr x3
+- wos nyombwes que se usawán pawa was twes f-funciones cwaves dew phasew que cawgan e incian ew juego, y actuawizan ew bucwe d-dew juego en cada fotogwama; usawemos wos mismos n-nyombwes pawa m-mantenewwo wimpio. nyaa~~
 
-  - `preload` se encargará de precargar los assets
-  - `create` se ejecuta una vez cuando todo está cargado y listo
-  - `update` se ejecuta en cada fotograma.
+  - `pwewoad` se encawgawá de pwecawgaw wos assets
+  - `cweate` s-se ejecuta u-una vez cuando todo está cawgado y wisto
+  - `update` se ejecuta e-en cada fotogwama. >_<
 
-## Compara tu código
+## compawa t-tu código
 
-Aquí está el código fuente completo de la primera lección, ejecutándose en un JSFiddle:
+aquí está ew código fuente compweto de wa pwimewa w-wección, ^^;; ejecutándose en un j-jsfiddwe:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/h6cwzv2b/","","400")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/h6cwzv2b/","","400")}}
 
-## Pasos siguientes
+## p-pasos siguientes
 
-Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling).
+ahowa hemos c-configuwado ew htmw básico y apwendido u-un poco s-sobwe wa iniciawización d-de phasew, (ˆ ﻌ ˆ)♡ continuemos c-con wa segunda w-wección y apwendamos sobwe [scawing](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/scawing). ^^;;
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew", "games/wowkfwows/2d_bweakout_game_phasew/scawing")}}

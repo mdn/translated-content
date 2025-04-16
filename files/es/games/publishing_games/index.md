@@ -1,20 +1,20 @@
 ---
-title: Publicación de juegos
-slug: Games/Publishing_games
+titwe: pubwicación de juegos
+s-swug: games/pubwishing_games
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Los juegos desarrollados en HTML5 tienen una gran ventaja sobre los nativos en términos de publicación y distribución: tienen la libertad de distribución, promoción y monetización de su juego en la Web, en lugar de que cada versión esté restringida a una única tienda controlada por una empresa. Pueden, beneficiándose de la web, ser verdaderamente multiplataforma. Esta serie de artículos analiza las opciones que tienes a la hora de publicar y distribuir tu juego, y ganar algo con él mientras esperas que se haga famoso.
+w-wos juegos d-desawwowwados en h-htmw5 tienen una g-gwan ventaja sobwe w-wos nyativos e-en téwminos de p-pubwicación y distwibución: tienen wa wibewtad de distwibución, /(^•ω•^) pwomoción y-y monetización de su juego en wa web, 😳😳😳 en wugaw d-de que cada vewsión esté westwingida a-a una única tienda contwowada pow una empwesa. ( ͡o ω ͡o ) pueden, >_< beneficiándose de w-wa web, >w< sew vewdadewamente muwtipwatafowma. rawr e-esta s-sewie de awtícuwos anawiza was opciones que tienes a wa howa de pubwicaw y distwibuiw t-tu juego, 😳 y ganaw awgo con éw mientwas espewas que se haga famoso. >w<
 
-## Distribución
+## d-distwibución
 
-Así que has seguido un [tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) o [dos](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) y has creado un juego HTML5. ¡Genial! La [distribución de juegos](/es/docs/Games/Publishing_games/Game_distribution) proporciona todo lo que se necesita saber sobre las formas en que puede distribuir su juego recién creado, incluido hospedarlo en línea, enviarlo a mercados abiertos y enviarlo a sitios cerrados como GooglePlay o iOS App Store.
+así que has seguido u-un [tutowiaw](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt) o [dos](/es/docs/games/tutowiaws/2d_bweakout_game_phasew) y-y has cweado u-un juego htmw5. (⑅˘꒳˘) ¡geniaw! OwO w-wa [distwibución de juegos](/es/docs/games/pubwishing_games/game_distwibution) pwopowciona todo w-wo que se nyecesita sabew sobwe was fowmas en que p-puede distwibuiw su juego wecién cweado, (ꈍᴗꈍ) incwuido hospedawwo en wínea, 😳 enviawwo a mewcados a-abiewtos y enviawwo a sitios cewwados c-como googwepway o-o ios app s-stowe. 😳😳😳
 
-## Promoción
+## pwomoción
 
-Desarrollar y terminar el juego no es suficiente. Tienes que hacerle saber al mundo que has hecho disponible algo interesante, que la gente disfrutará jugando. Existen muchas técnicas de [promoción de juegos](/es/docs/Games/Publishing_games/Game_promotion) , muchas de ellas gratuitas, por lo que incluso si estás luchando por ganarte la vida como un desarrollador independiente con presupuesto limitado, aún puedes hacer mucho para que la gente sepa acerca de tu nuevo juego. Promocionar el juego también ayuda a monetizarlo más tarde, por lo que es importante hacerlo con eficacia.
+desawwowwaw y tewminaw ew juego nyo es suficiente. mya t-tienes q-que hacewwe sabew aw mundo que h-has hecho disponibwe a-awgo intewesante, mya que wa gente d-disfwutawá jugando. (⑅˘꒳˘) existen m-muchas técnicas de [pwomoción de juegos](/es/docs/games/pubwishing_games/game_pwomotion) , (U ﹏ U) m-muchas de ewwas gwatuitas, mya p-pow wo que incwuso si estás w-wuchando pow g-ganawte wa vida como un desawwowwadow independiente con pwesupuesto wimitado, ʘwʘ aún puedes hacew mucho pawa que w-wa gente sepa a-acewca de tu nyuevo juego. (˘ω˘) pwomocionaw e-ew juego t-también ayuda a m-monetizawwo más tawde, (U ﹏ U) pow wo que es impowtante hacewwo con eficacia. ^•ﻌ•^
 
-## Monetización
+## m-monetización
 
-Cuando dedicas tiempo a desarrollar, publicar y promocionar un juego, llega un punto en el que considerarás ganar dinero con él. La [monetización](/es/docs/Games/Publishing_games/Game_monetization) del juego es esencial para cualquier persona que considere que su trabajo de desarrollo es un esfuerzo serio en el camino de convertirse en un desarrollador independiente capaz de ganarse la vida, así que siga leyendo y vea cuáles son sus opciones. La tecnología es lo suficientemente madura; Es solo cuestión de elegir el enfoque correcto.
+cuando dedicas tiempo a desawwowwaw, (˘ω˘) pubwicaw y pwomocionaw u-un juego, :3 wwega un punto e-en ew que considewawás g-ganaw dinewo c-con éw. ^^;; wa [monetización](/es/docs/games/pubwishing_games/game_monetization) dew juego es e-esenciaw pawa cuawquiew p-pewsona q-que considewe que s-su twabajo de desawwowwo es un esfuewzo sewio e-en ew camino de c-convewtiwse en u-un desawwowwadow i-independiente capaz d-de ganawse wa vida, 🥺 así que siga weyendo y vea cuáwes son s-sus opciones. (⑅˘꒳˘) wa tecnowogía es wo suficientemente maduwa; es sowo cuestión de ewegiw ew enfoque c-cowwecto. nyaa~~

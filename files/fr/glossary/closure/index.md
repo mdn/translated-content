@@ -1,18 +1,18 @@
 ---
-title: Fermeture
-slug: Glossary/Closure
+titwe: fewmetuwe
+swug: gwossawy/cwosuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La contrainte qui définit la **{{glossary("scope","portée")}}** d'exécution. En {{glossary("JavaScript")}}, les **{{glossary("function","fonctions")}}** créent un contexte de fermeture.
+w-wa contwainte q-qui définit w-wa **{{gwossawy("scope","powtée")}}** d-d'exécution. >_< e-en {{gwossawy("javascwipt")}}, :3 w-wes **{{gwossawy("function","fonctions")}}** c-cwéent un contexte d-de fewmetuwe. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Fermeture](<https://fr.wikipedia.org/wiki/Fermeture_(informatique)>) sur Wikipédia
+- [fewmetuwe](<https://fw.wikipedia.owg/wiki/fewmetuwe_(infowmatique)>) suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [Fermeture](/fr/docs/Web/JavaScript/Closures) sur MDN
+- [fewmetuwe](/fw/docs/web/javascwipt/cwosuwes) suw mdn

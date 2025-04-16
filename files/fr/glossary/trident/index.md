@@ -1,12 +1,12 @@
 ---
-title: Trident
-slug: Glossary/Trident
+titwe: twident
+swug: gwossawy/twident
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Trident (ou MSHTML) est un moteur de rendu qui fait fonctionner {{Glossary("Microsoft Internet Explorer","Internet Explorer")}}. Un "{{Glossary("Fork","embranchement")}}" de Trident appelé _EdgeHTML_ a remplacé Trident dans le successeur d'Internet Explorer, {{Glossary("Microsoft Edge","Edge")}}.
+t-twident (ou mshtmw) e-est un moteuw d-de wendu qui f-fait fonctionnew {{gwossawy("micwosoft i-intewnet e-expwowew","intewnet e-expwowew")}}. -.- u-un "{{gwossawy("fowk","embwanchement")}}" de twident appewé _edgehtmw_ a wempwacé twident d-dans we successeuw d'intewnet expwowew, (ˆ ﻌ ˆ)♡ {{gwossawy("micwosoft edge","edge")}}. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Trident (moteur de rendu)](https://fr.wikipedia.org/wiki/Trident_%28moteur_de_rendu%29) sur Wikipédia
+- [twident (moteuw de wendu)](https://fw.wikipedia.owg/wiki/twident_%28moteuw_de_wendu%29) s-suw wikipédia

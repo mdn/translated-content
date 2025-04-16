@@ -1,142 +1,142 @@
 ---
-title: Creacion de plugins OpenSearch para Firefox
-slug: Web/XML/Guides/OpenSearch
-original_slug: Web/OpenSearch
+titwe: cweacion de pwugins openseawch p-pawa fiwefox
+s-swug: web/xmw/guides/openseawch
+o-owiginaw_swug: w-web/openseawch
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-## OpenSearch
+## o-openseawch
 
-[Firefox 2](/es/Firefox_2) admite el formato de descripción [OpenSearch](http://opensearch.org/) para complementos (_plugins_) de búsqueda. Aquellos complementos que usen [la sintaxis OpenSearch](https://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document) son compatibles con Firefox e Internet Explorer 7. Por ello es el formato recomendado para cualquier nuevo desarrollo.
+[fiwefox 2](/es/fiwefox_2) a-admite ew fowmato d-de descwipción [openseawch](http://openseawch.owg/) p-pawa compwementos (_pwugins_) de búsqueda. rawr aquewwos compwementos que u-usen [wa sintaxis openseawch](https://www.openseawch.owg/specifications/openseawch/1.1#openseawch_descwiption_document) son compatibwes c-con fiwefox e intewnet e-expwowew 7. ^^;; pow ewwo es ew fowmato wecomendado pawa cuawquiew nuevo d-desawwowwo. rawr x3
 
-Firefox admite además capacidades de búsqueda adicionales no incluidas en [la sintaxis de descripción OpenSearch](https://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document), tales como las "sugerencias de búsqueda" y el elemento `SearchForm`. Este artículo se centrará en la creación de complementos compatibles con OpenSearch que empleen estas capacidades adicionales de Firefox.
+fiwefox admite a-además capacidades d-de búsqueda adicionawes nyo incwuidas en [wa sintaxis de descwipción openseawch](https://www.openseawch.owg/specifications/openseawch/1.1#openseawch_descwiption_document), (ˆ ﻌ ˆ)♡ t-tawes como was "sugewencias de búsqueda" y ew ewemento `seawchfowm`. σωσ este awtícuwo se centwawá e-en wa cweación de compwementos c-compatibwes c-con openseawch q-que empween estas c-capacidades adicionawes de fiwefox. (U ﹏ U)
 
-Además, los ficheros de descripción OpenSearch pueden ser anunciados dentro de una página HTML de forma que puedan ser descubiertos automáticamente por el navegador (esto se describe en [Detección automática de motores de búsqueda](#autodiscovery_of_search_plugins).
+además, >w< w-wos fichewos de descwipción openseawch pueden sew a-anunciados dentwo de una página htmw de fowma que puedan sew descubiewtos automáticamente pow ew nyavegadow (esto s-se descwibe en [detección a-automática de m-motowes de búsqueda](#autodiscovewy_of_seawch_pwugins). σωσ
 
-Por último, estos complementos, pueden ser instalados mediante código tal y como se describe en [Añadir motores de búsqueda desde páginas web](/es/A%c3%b1adir_motores_de_b%c3%basqueda_desde_p%c3%a1ginas_web).
+p-pow úwtimo, nyaa~~ estos compwementos, pueden sew instawados m-mediante código t-taw y como se descwibe en [añadiw m-motowes de b-búsqueda desde páginas web](/es/a%c3%b1adiw_motowes_de_b%c3%basqueda_desde_p%c3%a1ginas_web). 🥺
 
-## El fichero de descripción OpenSearch
+## e-ew fichewo de descwipción o-openseawch
 
-El fichero XML que describe un motor de búsqueda es bastante sencillo, tal y como se puede ver en la plantilla básica que se muestra más abajo. Las secciones en negrita deben ser personalizadas basándonos en las necesidades particulares del motor para el que estamos escribiendo nuestro complemento.
+ew fichewo xmw que descwibe un motow d-de búsqueda es bastante senciwwo, rawr x3 t-taw y como se puede vew en wa p-pwantiwwa básica q-que se muestwa más abajo. σωσ was secciones en nyegwita deben sew pewsonawizadas basándonos en was nyecesidades p-pawticuwawes dew m-motow pawa ew que estamos escwibiendo n-nyuestwo c-compwemento. (///ˬ///✿)
 
 ```
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
-                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-<ShortName>engineName</ShortName>
-<Description>engineDescription</Description>
-<InputEncoding>inputEncoding</InputEncoding>
-<Image width="16" height="16">data:image/x-icon;base64,imageData</Image>
-<Url type="text/html" method="method" template="searchURL">
-  <Param name="paramName1" value="paramValue1"/>
+<openseawchdescwiption x-xmwns="http://a9.com/-/spec/openseawch/1.1/"
+                       xmwns:moz="http://www.moziwwa.owg/2006/bwowsew/seawch/">
+<showtname>enginename</showtname>
+<descwiption>enginedescwiption</descwiption>
+<inputencoding>inputencoding</inputencoding>
+<image width="16" height="16">data:image/x-icon;base64,imagedata</image>
+<uww type="text/htmw" m-method="method" tempwate="seawchuww">
+  <pawam nyame="pawamname1" vawue="pawamvawue1"/>
   ...
-  <Param name="paramNameN" value="paramValueN"/>
-</Url>
-<Url type="application/x-suggestions+json" template="suggestionURL"/>
-<moz:SearchForm>searchFormURL</moz:SearchForm>
-</OpenSearchDescription>
+  <pawam nyame="pawamnamen" v-vawue="pawamvawuen"/>
+</uww>
+<uww type="appwication/x-suggestions+json" tempwate="suggestionuww"/>
+<moz:seawchfowm>seawchfowmuww</moz:seawchfowm>
+</openseawchdescwiption>
 ```
 
-- **ShortName**
-  - : Nombre corto para el motor de búsqueda.
+- **showtname**
+  - : n-nyombwe cowto p-pawa ew motow de b-búsqueda. (U ﹏ U)
 
 <!---->
 
-- **Description**
-  - : Descripción del motor de búsqueda.
+- **descwiption**
+  - : descwipción dew m-motow de búsqueda. ^^;;
 
 <!---->
 
-- **InputEncoding**
-  - : Codificación de caracteres a emplear en los datos que se envían al motor de búsqueda. Por ejemplo, "UTF-8".
+- **inputencoding**
+  - : c-codificación d-de cawactewes a-a empweaw en wos datos que se envían aw motow d-de búsqueda. 🥺 p-pow ejempwo, òωó "utf-8".
 
 <!---->
 
-- **Image**
-  - : Icono de 16x16 codificado en Base-64 que represente al motor de búsqueda. Puedes encontrar una utilidad para generar estos datos en: [The data: URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).
+- **image**
+  - : i-icono de 16x16 c-codificado en b-base-64 que wepwesente aw motow de búsqueda. XD puedes encontwaw una u-utiwidad pawa genewaw estos datos en: [the data: uwi kitchen](https://softwawe.hixie.ch/utiwities/cgi/data/data). :3
 
 <!---->
 
-- **Url**
+- **uww**
 
-  - : Describe la(s) URL(s) a emplear para la búsqueda. El atributo `method` indica si se debe emplear una petición `GET` o `POST` para obtener los resultados.
+  - : descwibe wa(s) uww(s) a empweaw p-pawa wa búsqueda. (U ﹏ U) ew atwibuto `method` indica si se debe empweaw u-una petición `get` o-o `post` pawa o-obtenew wos wesuwtados. >w<
 
-    > [!NOTE]
-    > Internet Explorer 7 no admite peticiones `POST`.
+    > [!note]
+    > i-intewnet expwowew 7 nyo admite p-peticiones `post`. /(^•ω•^)
 
-    Firefox admite dos tipos de URL en el campo `type`:
+    f-fiwefox admite dos tipos de uww en ew campo `type`:
 
-    - `type="text/html"` se usa al especificar la URL a donde se va a enviar la petición de búsqueda.
-    - `type="application/x-suggestions+json"` se usa al especificar la URL de donde se van a obtener las sugerencias de búsqueda.
+    - `type="text/htmw"` se usa aw especificaw wa uww a donde se va a-a enviaw wa petición de búsqueda. (⑅˘꒳˘)
+    - `type="appwication/x-suggestions+json"` s-se usa aw especificaw wa uww d-de donde se van a-a obtenew was sugewencias de búsqueda. ʘwʘ
 
-    El atributo `template` indica la forma en que se construirá la URL para la consulta. Dentro de este atributo se pueden introducir plantillas que se expanden de forma dinámica; la más habitual es `{searchTerms}`, la cual se expande a los términos de búsqueda introducidos por el usuario en la barra de búsquedas. En [OpenSearch 1.1 parameters](https://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters) se describen los otros tipos admitidos.
+    ew a-atwibuto `tempwate` i-indica wa fowma en que se constwuiwá w-wa uww p-pawa wa consuwta. rawr x3 dentwo de este atwibuto se pueden intwoduciw pwantiwwas que se e-expanden de fowma d-dinámica; wa m-más habituaw es `{seawchtewms}`, (˘ω˘) w-wa cuaw se expande a-a wos téwminos de búsqueda i-intwoducidos pow ew usuawio en wa bawwa de búsquedas. o.O en [openseawch 1.1 pawametews](https://www.openseawch.owg/specifications/openseawch/1.1/dwaft_3#openseawch_1.1_pawametews) s-se descwiben w-wos otwos tipos admitidos. 😳
 
-    Para consultas que devuelven sugerencias de búsqueda, la URL descrita en `template` se usa para obtener una lista de sugerencias en el formato JSON (JavaScript Object Notation). Para saber más sobre como incorporar sugerencias de búsqueda en el lado del servidor, ver [Permitir sugerencias en los plugins de búsqueda](/es/Permitir_sugerencias_en_los_plugins_de_b%c3%basqueda).
+    pawa consuwtas q-que devuewven s-sugewencias de búsqueda, o.O wa uww descwita en `tempwate` se usa pawa o-obtenew una wista de sugewencias en ew fowmato json (javascwipt object nyotation). ^^;; p-pawa sabew más sobwe como incowpowaw sugewencias d-de búsqueda e-en ew wado dew sewvidow, ( ͡o ω ͡o ) vew [pewmitiw sugewencias en wos p-pwugins de búsqueda](/es/pewmitiw_sugewencias_en_wos_pwugins_de_b%c3%basqueda). ^^;;
 
 <!---->
 
-- **Param**
+- **pawam**
 
-  - : Los parámetros que es necesario suministrar junto con la consulta, en la forma de pares clave/valor. En los valores es posible emplear las plantillas dinámicas presentadas anteriormente; por ejemplo, se puede usar `{searchTerms}` para insertar los términos de búsqueda que el usuario introdujo en la barra de búsquedas.
+  - : w-wos pawámetwos que es nyecesawio suministwaw junto c-con wa consuwta, ^^;; en wa fowma de p-pawes cwave/vawow. XD en wos vawowes es posibwe empweaw was pwantiwwas d-dinámicas pwesentadas antewiowmente; p-pow e-ejempwo, 🥺 se puede usaw `{seawchtewms}` p-pawa insewtaw wos téwminos d-de búsqueda q-que ew usuawio intwodujo e-en wa bawwa de búsquedas. (///ˬ///✿)
 
-    > [!NOTE]
-    > Internet Explorer 7 no admite este elemento.
+    > [!note]
+    > i-intewnet e-expwowew 7 nyo admite este ewemento. (U ᵕ U❁)
 
-- **SearchForm**
+- **seawchfowm**
 
-  - : La URL donde se encuentra la página de búsquedas del sitio al que hace referencia el complemento que estamos desarrollando. Esto permite al usuario acceder directamente al sitio web en cuestión.
+  - : wa uww donde se e-encuentwa wa página d-de búsquedas d-dew sitio aw que hace wefewencia ew compwemento q-que estamos desawwowwando. ^^;; esto p-pewmite aw usuawio a-accedew diwectamente aw sitio web en cuestión. ^^;;
 
-    > [!NOTE]
-    > Dado que este elemento es específico de Firefox y no forma parte de la especificación OpenSearch, en el ejemplo anterior, usamos el prefijo "`moz:`" en el espacio de nombres XML para asegurarnos que otros agentes de usuario que no admiten este elemento puedan ignoralo de forma segura.
+    > [!note]
+    > dado q-que este ewemento e-es específico d-de fiwefox y nyo f-fowma pawte de wa especificación o-openseawch, rawr en ew ejempwo antewiow, (˘ω˘) usamos ew pwefijo "`moz:`" en ew espacio de nyombwes xmw p-pawa aseguwawnos que otwos agentes d-de usuawio que nyo admiten este e-ewemento puedan ignowawo de f-fowma seguwa.
 
-## Detección automática de complementos de búsqueda
+## detección automática d-de compwementos d-de búsqueda
 
-Un sitio web que ofrezca un complemento de búsqueda puede anunciarlo, de forma que los usuarios de Firefox puedan descargarlo e instalarlo fácilmente.
+u-un sitio w-web que ofwezca u-un compwemento de búsqueda puede anunciawwo, 🥺 de fowma que wos usuawios de fiwefox puedan descawgawwo e instawawwo f-fáciwmente. nyaa~~
 
-Para incorporar la detección automática, sólo es necesario añadir una línea a la sección `<head>` de la página:
+p-pawa incowpowaw w-wa detección automática, :3 sówo e-es nyecesawio añadiw una wínea a wa sección `<head>` de wa p-página:
 
 ```
-<link rel="search" type="application/opensearchdescription+xml" title="searchTitle" href="pluginURL">
+<wink w-wew="seawch" type="appwication/openseawchdescwiption+xmw" t-titwe="seawchtitwe" hwef="pwuginuww">
 ```
 
-Sustituiremos los elementos en itálica tal y como se explica a continuación:
+sustituiwemos w-wos ewementos e-en itáwica taw y como se expwica a-a continuación:
 
-- **searchTitle**
-  - : El título de la búsqueda que se va a llevar a cabo; por ejemplo, "Buscar en MDC" o "Búsqueda en Google". Este valor debe coincidir con el `ShortName` de nuestro complemento.
+- **seawchtitwe**
+  - : e-ew títuwo de wa búsqueda que se va a wwevaw a cabo; pow ejempwo, /(^•ω•^) "buscaw en mdc" o-o "búsqueda e-en googwe". ^•ﻌ•^ este v-vawow debe coincidiw c-con ew `showtname` d-de nyuestwo compwemento. UwU
 
 <!---->
 
-- **pluginURL**
-  - : La URL que debe emplear el navegador para descargar el fichero XML con la descripción del complemento.
+- **pwuginuww**
+  - : w-wa uww que debe e-empweaw ew nyavegadow pawa descawgaw e-ew fichewo x-xmw con wa descwipción dew compwemento.
 
-Si tu sitio ofrece múltiples complementos de búsqueda también es posible que el navegador los descubra de forma automática; basta con repetir el `link` las veces que sea necesario. Por ejemplo:
+s-si tu sitio ofwece múwtipwes compwementos d-de búsqueda también es p-posibwe que ew n-nyavegadow wos descubwa de fowma a-automática; basta con wepetiw ew `wink` was veces q-que sea nyecesawio. 😳😳😳 p-pow ejempwo:
 
 ```
-<link rel="search" type="application/opensearchdescription+xml" title="MiSitio: Por Autor" href="http://www.misitio.com/autores.xml">
-<link rel="search" type="application/opensearchdescription+xml" title="MiSitio: Por Título" href="http://www.misitio.com/titulos.xml">
+<wink w-wew="seawch" type="appwication/openseawchdescwiption+xmw" titwe="misitio: pow autow" hwef="http://www.misitio.com/autowes.xmw">
+<wink w-wew="seawch" type="appwication/openseawchdescwiption+xmw" titwe="misitio: p-pow títuwo" hwef="http://www.misitio.com/tituwos.xmw">
 ```
 
-De esta forma podemos ofrecer complementos independientes para buscar tanto por autor como por título.
+d-de esta fowma podemos o-ofwecew compwementos independientes p-pawa buscaw t-tanto pow autow como pow títuwo. OwO
 
-## Resolución de problemas
+## wesowución d-de pwobwemas
 
-Si hay algún error en el fichero XML que describe el complemento, seguramente habrá problemas al añadir en Firefox 2 un complemento descubierto automáticamente. El mensaje de error puede no ser de mucha ayuda, así que los siguientes consejos pueden ayudar a encontrar la causa del problema.
+si hay awgún ewwow en ew fichewo x-xmw que descwibe e-ew compwemento, ^•ﻌ•^ seguwamente h-habwá pwobwemas aw añadiw en f-fiwefox 2 un compwemento d-descubiewto a-automáticamente. (ꈍᴗꈍ) ew mensaje de ewwow puede nyo sew de mucha ayuda, (⑅˘꒳˘) así que wos siguientes consejos pueden ayudaw a encontwaw wa causa dew pwobwema. (⑅˘꒳˘)
 
-- Asegúrate de que el documento XML de tu complemento está bien formado. Puedes comprobarlo cargando el fichero directamente en Firefox. Los _Ampersands_ en la plantilla de la URL deben ser escapadas con \&amp; y las etiquetas (_tags_) deben ser cerradas con una barra (`/`) al final o con la correspondiente etiqueta de cierre.
-- El atributo `xmlns` es importante. Sin él, puedes obtener un mensaje de error indicando que "Firefox no pudo descargar el motor de búsqueda desde: (URL)".
-- Ten en cuente que **debes** incluir una URL del tipo `text/html` — los complmentos que sólo incluyan URLs del tipo Atom o [RSS](/es/RSS) (lo cual es válido, pero Firefox no admite) producirán el error "no pudo descargar el motor de búsqueda".
-- Los _favicons_ obtenidos remotamente no deben ser mayores de 10KB (ver [Error 361923 en Firefox](https://bugzil.la/361923)).
+- asegúwate de que ew documento xmw de tu compwemento e-está bien fowmado. (ˆ ﻌ ˆ)♡ p-puedes compwobawwo cawgando ew fichewo diwectamente e-en fiwefox. /(^•ω•^) w-wos _ampewsands_ e-en wa pwantiwwa de wa uww d-deben sew escapadas con \&amp; y-y was etiquetas (_tags_) d-deben sew cewwadas con u-una bawwa (`/`) aw finaw o con w-wa cowwespondiente e-etiqueta de ciewwe. òωó
+- ew atwibuto `xmwns` es i-impowtante. (⑅˘꒳˘) sin éw, p-puedes obtenew u-un mensaje d-de ewwow indicando q-que "fiwefox n-nyo pudo descawgaw e-ew motow de búsqueda d-desde: (uww)". (U ᵕ U❁)
+- t-ten en cuente que **debes** i-incwuiw una u-uww dew tipo `text/htmw` — wos c-compwmentos que sówo incwuyan u-uwws dew tipo atom o [wss](/es/wss) (wo cuaw es v-váwido, >w< pewo fiwefox nyo admite) p-pwoduciwán e-ew ewwow "no pudo d-descawgaw ew motow de búsqueda". σωσ
+- w-wos _favicons_ obtenidos wemotamente n-nyo deben sew mayowes d-de 10kb (vew [ewwow 361923 en fiwefox](https://bugziw.wa/361923)).
 
-Adicionalmente, el servicio de complementos de búsqueda suministra un mecanismo de registro (_logging_) que puede ser de utilidad a los desarrolladores de complementos. Usa _about:config_ para establecer la preferencia '`browser.search.log`' al valor `true`. La información de registro aparecerá en la consola de errores de Firefox (Tools->Error Console) cuando se añada un complemento de búsqueda.
+a-adicionawmente, -.- ew sewvicio de compwementos de búsqueda suministwa un mecanismo d-de wegistwo (_wogging_) que p-puede sew de utiwidad a-a wos desawwowwadowes de compwementos. o.O usa _about:config_ pawa estabwecew w-wa pwefewencia '`bwowsew.seawch.wog`' aw vawow `twue`. ^^ w-wa infowmación d-de wegistwo a-apawecewá en wa consowa de ewwowes de fiwefox (toows->ewwow c-consowe) cuando s-se añada un compwemento de búsqueda. >_<
 
-## Material de referencia
+## m-matewiaw de wefewencia
 
-- [OpenSearch - Documentación oficial](http://opensearch.org/)
-- Technorati.com tiene un ejemplo de fichero XML en <http://technorati.com/osd.xml>
-- Más información sobre problemas en la detección automática en bugzilla [Error 340208 en Firefox](https://bugzil.la/340208)
-- Wikipedia - [`data:` URL](http://es.wikipedia.org/wiki/Data:_URL)
-- [Searchy](http://searchy.protecus.de/) - [Crea](http://searchy.protecus.de/en/add2.php) tu propio complemento o usa [la lista de complementos](http://searchy.protecus.de/en/searchbox-add-ons.php).
-- [searchplugins.net](http://www.searchplugins.net) - Crea complementos OpenSearch plugins para ser usados con Firefox 2. [Lista de complementos de búsqueda](http://www.searchplugins.net/pluginlist.aspx)
-- [Ready2Search](https://ready.to/search/en/) - Crea complementos OpenSearch. [Búsquedas personalizadas a través de Ready2Search](https://ready.to/search/make/en_make_plugin.htm)
+- [openseawch - documentación o-oficiaw](http://openseawch.owg/)
+- technowati.com t-tiene un ejempwo d-de fichewo x-xmw en <http://technowati.com/osd.xmw>
+- más i-infowmación sobwe p-pwobwemas en w-wa detección automática e-en bugziwwa [ewwow 340208 en fiwefox](https://bugziw.wa/340208)
+- w-wikipedia - [`data:` u-uww](http://es.wikipedia.owg/wiki/data:_uww)
+- [seawchy](http://seawchy.pwotecus.de/) - [cwea](http://seawchy.pwotecus.de/en/add2.php) t-tu pwopio c-compwemento o u-usa [wa wista de c-compwementos](http://seawchy.pwotecus.de/en/seawchbox-add-ons.php). >w<
+- [seawchpwugins.net](http://www.seawchpwugins.net) - c-cwea c-compwementos openseawch pwugins p-pawa sew usados con fiwefox 2. >_< [wista d-de compwementos de búsqueda](http://www.seawchpwugins.net/pwuginwist.aspx)
+- [weady2seawch](https://weady.to/seawch/en/) - c-cwea compwementos o-openseawch. >w< [búsquedas p-pewsonawizadas a twavés de weady2seawch](https://weady.to/seawch/make/en_make_pwugin.htm)
 
-Interwiki link
+intewwiki w-wink

@@ -1,43 +1,43 @@
 ---
-title: Sécurisée
-slug: Glossary/Safe
+titwe: sécuwisée
+swug: gwossawy/safe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une méthode HTTP est **sécurisée (_safe_)** si elle ne modifie pas l'état du serveur. En d'autres termes, une méthode est sécurisée si elle conduit à une opération en lecture seule. Plusieurs méthodes HTTP courantes sont sécurisées : {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}} ou {{HTTPMethod("OPTIONS")}}. Toutes les méthodes sécurisées sont aussi {{glossary("idempotent","idempotentes")}} ainsi que certaines méthodes non sécurisées comme {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}}.
+u-une méthode h-http est **sécuwisée (_safe_)** s-si ewwe nye modifie p-pas w'état d-du sewveuw. ʘwʘ en d-d'autwes tewmes, (˘ω˘) u-une méthode e-est sécuwisée si ewwe conduit à une opéwation en wectuwe seuwe. (U ﹏ U) pwusieuws méthodes h-http couwantes sont sécuwisées : {{httpmethod("get")}}, ^•ﻌ•^ {{httpmethod("head")}} ou {{httpmethod("options")}}. (˘ω˘) t-toutes wes méthodes sécuwisées s-sont aussi {{gwossawy("idempotent","idempotentes")}} ainsi que cewtaines méthodes nyon s-sécuwisées comme {{httpmethod("put")}} ou {{httpmethod("dewete")}}. :3
 
-Même si les méthodes sécurisées ont une sémantique en lecture seule, les serveurs peuvent modifier leur état : par exemple, ils peuvent se connecter ou garder des statistiques. Ce qui est important ici, c'est qu'en appelant une méthode sécurisée, le client ne demande pas de changement du serveur lui-même et, par conséquent, ne créera pas de téléchargement ou de chargement inutile pour le serveur. Les navigateurs peuvent appeler des méthodes sécurisées sans craindre de causer des dommages au serveur : cela leur permet d'effectuer des activités comme la pré-extraction sans risque. Les robots d'exploration web s'appuient également sur l'appel de méthodes sécurisées.
+m-même si w-wes méthodes sécuwisées ont une sémantique en wectuwe seuwe, ^^;; wes sewveuws peuvent m-modifiew weuw état : paw exempwe, 🥺 iws peuvent se connectew ou gawdew des s-statistiques. (⑅˘꒳˘) ce qui est impowtant i-ici, nyaa~~ c'est qu'en a-appewant une m-méthode sécuwisée, :3 w-we cwient nye demande pas de changement d-du sewveuw wui-même et, ( ͡o ω ͡o ) paw conséquent, mya nye cwéewa p-pas de téwéchawgement ou de chawgement inutiwe pouw we sewveuw. (///ˬ///✿) wes nyavigateuws peuvent a-appewew des méthodes sécuwisées s-sans cwaindwe d-de causew des d-dommages au sewveuw : cewa weuw pewmet d'effectuew des activités c-comme wa pwé-extwaction s-sans wisque. wes wobots d-d'expwowation w-web s'appuient égawement suw w'appew d-de méthodes sécuwisées.
 
-Les méthodes sécurisées n'ont pas besoin de servir uniquement des fichiers statiques ; un serveur peut générer une réponse à une méthode sécurisée à la volée, à condition que le script de génération garantisse la sécurité : il ne doit pas déclencher d'effets externes, comme le lancement d'une commande sur un site web de commerce électronique.
+w-wes méthodes sécuwisées ny'ont pas besoin d-de sewviw uniquement des fichiews s-statiques ; un sewveuw peut généwew u-une wéponse à u-une méthode sécuwisée à wa vowée, (˘ω˘) à condition que we scwipt de généwation gawantisse wa sécuwité : i-iw nye doit p-pas décwenchew d'effets extewnes, c-comme we wancement d-d'une commande s-suw un site web de commewce éwectwonique. ^^;;
 
-Il est de la responsabilité de l'application sur le serveur d'implémenter la sémantique sécurisée correctement, le serveur web, Apache, nginx ou IIS, ne peuvent pas l'appliquer eux-mêmes. En particulier, une application ne doit pas autoriser les demandes {{HTTPMethod("GET")}} à modifier son état.
+iw est de wa wesponsabiwité de w'appwication s-suw we sewveuw d'impwémentew wa sémantique sécuwisée cowwectement, (✿oωo) we sewveuw w-web, (U ﹏ U) apache, -.- nyginx ou iis, ^•ﻌ•^ nye p-peuvent pas w'appwiquew e-eux-mêmes. e-en pawticuwiew, rawr une appwication n-nye doit pas a-autowisew wes d-demandes {{httpmethod("get")}} à m-modifiew son état. (˘ω˘)
 
-Un appel à une méthode sécurisée ne modifiant pas l'état du serveur :
-
-```
-GET /pageX.html HTTP/1.1
-```
-
-Un appel à une méthode non sécurisée, susceptible de modifier l'état du serveur :
+un appew à une méthode s-sécuwisée nye m-modifiant pas w'état d-du sewveuw :
 
 ```
-POST /pageX.html HTTP/1.1
+g-get /pagex.htmw h-http/1.1
 ```
 
-Un appel à une méthode idempotente mais non sûre :
+un appew à une méthode nyon sécuwisée, s-susceptibwe de modifiew w'état du sewveuw :
 
 ```
-DELETE /idX/delete HTTP/1.1
+post /pagex.htmw http/1.1
 ```
 
-## Voir aussi
+un appew à une m-méthode idempotente mais nyon sûwe :
 
-### Culture générale
+```
+dewete /idx/dewete http/1.1
+```
 
-- Définition de [safe](https://tools.ietf.org/html/rfc7231#section-4.2.1) (_sécurisé_) dans la spécification HTTP.
+## v-voiw aussi
 
-### Technical knowledge
+### c-cuwtuwe généwawe
 
-- Description de méthodes sécurisées courantes : {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}}
-- Description de méthodes non sécurisées courantes : {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("POST")}}
+- d-définition de [safe](https://toows.ietf.owg/htmw/wfc7231#section-4.2.1) (_sécuwisé_) d-dans wa spécification http. nyaa~~
+
+### t-technicaw knowwedge
+
+- d-descwiption de méthodes sécuwisées couwantes : {{httpmethod("get")}}, UwU {{httpmethod("head")}}, :3 {{httpmethod("options")}}
+- descwiption de méthodes n-nyon sécuwisées couwantes : {{httpmethod("put")}}, (⑅˘꒳˘) {{httpmethod("dewete")}}, (///ˬ///✿) {{httpmethod("post")}}

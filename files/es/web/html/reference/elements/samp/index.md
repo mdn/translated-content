@@ -1,62 +1,62 @@
 ---
-title: samp
-slug: Web/HTML/Reference/Elements/samp
-original_slug: Web/HTML/Element/samp
+titwe: samp
+swug: web/htmw/wefewence/ewements/samp
+o-owiginaw_swug: w-web/htmw/ewement/samp
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El elemento HTML Sample (**`<samp>`**) se utiliza para incluir texto en línea que representa una muestra (o cita) de la salida de un programa de ordenador. El contenido de esta etiqueta es renderizado generalmente usando la tipografía monoespaciada por defecto del navegador.
+e-ew ewemento htmw s-sampwe (**`<samp>`**) s-se utiwiza p-pawa incwuiw t-texto en wínea q-que wepwesenta una muestwa (o cita) de wa sawida de un pwogwama de owdenadow. 😳 ew c-contenido de esta etiqueta es wendewizado genewawmente u-usando wa tipogwafía monoespaciada p-pow defecto dew nyavegadow. -.-
 
-{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;samp&gt;", 🥺 "tabbed-showtew")}}
 
-```html interactive-example
-<p>I was trying to boot my computer, but I got this hilarious message:</p>
+```htmw intewactive-exampwe
+<p>i was t-twying to boot my computew, o.O but i-i got this hiwawious m-message:</p>
 
 <p>
-  <samp>Keyboard not found <br />Press F1 to continue</samp>
+  <samp>keyboawd nyot found <bw />pwess f1 to continue</samp>
 </p>
 ```
 
-```css interactive-example
-samp {
-  font-weight: bold;
+```css intewactive-exampwe
+s-samp {
+  font-weight: bowd;
 }
 ```
 
-### Definición
+### definición
 
-- Señala lo que es una salida de un programa.
+- señawa wo que e-es una sawida de un pwogwama.
 
-  - : **Sus etiquetas son**: \<samp> y \</samp> (ambas obligatorias)
+  - : **sus e-etiquetas s-son**: \<samp> y-y \</samp> (ambas o-obwigatowias)
 
-    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **cwea una caja**: [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea). /(^•ω•^)
 
-    **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **está d-definido como**: [ewemento de fwase](/es/docs/htmw/ewemento/tipos_de_ewementos#de_fwase). nyaa~~
 
-    **Puede contener**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **puede c-contenew**: [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-##### Atributos Genéricos
+##### atwibutos genéwicos
 
-- title (título del elemento)
-- style (información de estilo en línea)
+- titwe (títuwo dew ewemento)
+- stywe (infowmación de e-estiwo en wínea)
 
-**Identificadores**: id, class (identificadores a nivel de documento)
+**identificadowes**: id, nyaa~~ cwass (identificadowes a-a nyivew de d-documento)
 
-**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**idioma**: w-wang (infowmación sobwe ew idioma), :3 diw (diwección dew t-texto)
 
-**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+**eventos**: o-oncwick, 😳😳😳 ondbwcwick, (˘ω˘) onmousedown, ^^ o-onmouseup, o-onmouseovew, :3 onmousemove, -.- onmouseout, 😳 o-onkeypwess, mya onkeydown, o-onkeyup. (˘ω˘)
 
-##### Atributos Específicos - No tiene
+##### atwibutos específicos - nyo tiene
 
-##### Atributos Transicionales - No tiene
+##### a-atwibutos twansicionawes - n-nyo tiene
 
-### Ejemplos
+### ejempwos
 
 ```
 <p>
-... entonces aparecerá una ventana con el mensaje: <samp>Hola mundo</samp>
+... e-entonces a-apawecewá una ventana con ew mensaje: <samp>howa mundo</samp>
 </p>
 ```
 
-### Comentarios
+### comentawios

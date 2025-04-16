@@ -1,16 +1,16 @@
 ---
-title: Portée
-slug: Glossary/Scope
+titwe: powtée
+swug: gwossawy/scope
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le contexte d'{{glossary("exécuter","exécution")}} courant. Le contexte dans lequel les {{glossary("Value","valeurs")}} et **expressions** sont "visibles," ou peuvent être référencées. Si une **{{glossary("variable")}}** ou autre expression n'est pas "dans la portée actuelle", alors son utilisation ne sera pas possible. Les portées peuvent aussi être empilées hiérarchiquement de manière à ce que les portées enfants puissent accéder aux portées parentes, mais pas l'inverse.
+w-we contexte d'{{gwossawy("exékawaii~w","exécution")}} c-couwant. (ˆ ﻌ ˆ)♡ w-we contexte dans w-wequew wes {{gwossawy("vawue","vaweuws")}} e-et **expwessions** s-sont "visibwes," o-ou peuvent êtwe w-wéféwencées. (˘ω˘) si une **{{gwossawy("vawiabwe")}}** ou autwe expwession ny'est pas "dans wa powtée a-actuewwe", (⑅˘꒳˘) awows son utiwisation nye sewa p-pas possibwe. (///ˬ///✿) wes powtées peuvent a-aussi êtwe empiwées hiéwawchiquement de manièwe à ce que w-wes powtées enfants puissent a-accédew aux powtées p-pawentes, 😳😳😳 mais pas w'invewse.
 
-Une **{{glossary("fonction")}}** sert de **fermeture** en {{glossary("JavaScript")}}, et crée ainsi une portée, pour cette raison, par exemple, une variable définie exclusivement à l'intérieur de la fonction ne sera pas accessible en dehors de celle-ci ni depuis d'autres fonctions.
+une **{{gwossawy("fonction")}}** sewt de **fewmetuwe** en {{gwossawy("javascwipt")}}, 🥺 e-et cwée ainsi une powtée, mya pouw cette waison, 🥺 paw exempwe, >_< une vawiabwe d-définie excwusivement à w'intéwieuw d-de wa f-fonction nye sewa p-pas accessibwe e-en dehows de cewwe-ci nyi depuis d'autwes fonctions. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Portée](<https://fr.wikipedia.org/wiki/Portée_(informatique)>) sur Wikipédia
+- [powtée](<https://fw.wikipedia.owg/wiki/powtée_(infowmatique)>) s-suw wikipédia

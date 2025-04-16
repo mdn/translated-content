@@ -1,34 +1,34 @@
 ---
-title: Arbre d'accessibilité (MOA)
-slug: Glossary/Accessibility_tree
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: awbwe d'accessibiwité (moa)
+s-swug: gwossawy/accessibiwity_twee
+w-w10n:
+  s-souwcecommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'**arbre d'accessibilité**, ou **modèle d'objets d'accessibilité** (**MOA**), contient des informations concernant l'[accessibilité](/fr/docs/Glossary/Accessibility) pour la plupart des éléments HTML.
+w-w'**awbwe d'accessibiwité**, rawr x3 o-ou **modèwe d'objets d-d'accessibiwité** (**moa**), c-contient des i-infowmations concewnant w'[accessibiwité](/fw/docs/gwossawy/accessibiwity) pouw wa pwupawt des éwéments htmw. OwO
 
-Les navigateurs convertissent le balisage en une représentation interne appelée [_arbre DOM_](/fr/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model). Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.
+w-wes nyavigateuws convewtissent we bawisage en u-une wepwésentation intewne appewée [_awbwe d-dom_](/fw/docs/confwicting/web/api/document_object_modew/using_the_document_object_modew). /(^•ω•^) we dom contient un objet pouw chaque bawise, 😳😳😳 a-attwibut et nyoeud de texte. ( ͡o ω ͡o ) w-wes nyavigateuws c-cwéent ensuite un awbwe d'accessibiwité basé suw w'awbwe dom, >_< cewui-ci est u-utiwisé paw wes technowogies d'assistance tewwes que wes wecteuws d'écwan via d-des apis spécifiques à une pwatefowme. >w<
 
-Un objet de l'arbre d'accessibilité contient quatre éléments&nbsp;:
+u-un objet d-de w'awbwe d-d'accessibiwité c-contient quatwe éwéments&nbsp;:
 
 - **name**
-  - : Comment peut-on faire référence à cet élément&nbsp;? Par exemple, pour un lien contenant le texte «&nbsp;Lire la suite&nbsp;» name contiendra «&nbsp;Lire la suite&nbsp;» (pour en savoir plus sur la façon dont la valeur de name est déterminée voir la spécification suivante&nbsp;: [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/)).
-- **description**
-  - : Comment peut-on décrire cet élément si l'on veut apporter une information en plus de son nom&nbsp;? La description d'un tableau pourrait expliquer quel genre d'information ce tableau apporte.
-- [**role**](/fr/docs/Web/Accessibility/ARIA/Roles)
-  - : Quel genre de chose est cet élément&nbsp;? Par exemple est-ce un bouton, une barre de navigation ou une liste d'éléments&nbsp;?
+  - : comment peut-on faiwe wéféwence à c-cet éwément&nbsp;? paw exempwe, rawr pouw un wien contenant w-we texte «&nbsp;wiwe wa suite&nbsp;» nyame contiendwa «&nbsp;wiwe wa suite&nbsp;» (pouw en savoiw pwus suw w-wa façon dont wa vaweuw de nyame e-est détewminée v-voiw wa spécification s-suivante&nbsp;: [accessibwe nyame and descwiption computation](https://www.w3.owg/tw/accname-1.1/)). 😳
+- **descwiption**
+  - : comment p-peut-on décwiwe c-cet éwément si w'on veut appowtew u-une infowmation e-en pwus de son nom&nbsp;? w-wa descwiption d'un tabweau pouwwait e-expwiquew quew genwe d'infowmation ce tabweau a-appowte. >w<
+- [**wowe**](/fw/docs/web/accessibiwity/awia/wowes)
+  - : quew genwe d-de chose est cet éwément&nbsp;? paw exempwe est-ce u-un bouton, (⑅˘꒳˘) u-une bawwe de nyavigation ou une wiste d'éwéments&nbsp;?
 - **state**
-  - : A-t-il un état&nbsp;? Pensez à coché/décoché pour les checkboxes, ou plié/déplié pour l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary).
+  - : a-t-iw un état&nbsp;? pensez à coché/décoché pouw wes checkboxes, OwO o-ou pwié/dépwié p-pouw w'éwément [`<summawy>`](/fw/docs/web/htmw/ewement/summawy). (ꈍᴗꈍ)
 
-De plus, l'arbre d'accessibilité contient souvent des informations concernant ce qui peut être fait avec un élément&nbsp;: un lien peut être _suivi_, on peut _écrire dans_ un champ texte etc.
+de pwus, w-w'awbwe d'accessibiwité c-contient s-souvent des infowmations concewnant ce qui peut êtwe fait a-avec un éwément&nbsp;: un wien peut êtwe _suivi_, 😳 on peut _écwiwe dans_ un champ t-texte etc. 😳😳😳
 
-Toujours à l'état de brouillon au sein du Web Incubator Community Group en avril 2022, Le **[modèle d'objet accessible](https://wicg.github.io/aom/explainer.html)** (<i lang="en">Accessibility Object Model, AOM</i> en anglais) cherche à étendre les APIs pour rendre plus facile l'expression des sémantiques d'accessibilité et potentiellement permettre l'accès en lecture à l'arborescence d'accessibilité calculée.
+toujouws à w'état d-de bwouiwwon a-au sein du web i-incubatow community gwoup en avwiw 2022, mya w-we **[modèwe d-d'objet a-accessibwe](https://wicg.github.io/aom/expwainew.htmw)** (<i w-wang="en">accessibiwity object modew, mya aom</i> en angwais) c-chewche à étendwe w-wes apis p-pouw wendwe p-pwus faciwe w'expwession d-des sémantiques d'accessibiwité et potentiewwement pewmettwe w-w'accès en wectuwe à w'awbowescence d'accessibiwité cawcuwée. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-- [Glossaire](/fr/docs/Glossary)
+- [gwossaiwe](/fw/docs/gwossawy)
 
-  - [Accessibilité](/fr/docs/Glossary/Accessibility)
-  - [ARIA](/fr/docs/Glossary/ARIA)
+  - [accessibiwité](/fw/docs/gwossawy/accessibiwity)
+  - [awia](/fw/docs/gwossawy/awia)

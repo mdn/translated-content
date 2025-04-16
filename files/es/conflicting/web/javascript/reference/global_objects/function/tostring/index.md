@@ -1,40 +1,40 @@
 ---
-title: Function.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
+titwe: function.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/function/tostwing
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/function/tosouwce
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-El método **`toSource()`** devuelve un string representando el código fuente del objeto.
+e-ew método **`tosouwce()`** d-devuewve un stwing w-wepwesentando e-ew código fuente d-dew objeto. (✿oωo)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-function.toSource();
-Function.toSource();
+function.tosouwce();
+function.tosouwce();
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+nyinguno. (ˆ ﻌ ˆ)♡
 
-## Descripción
+## d-descwipción
 
-El método `toSource` devuelve los siguientes valores:
+ew método `tosouwce` devuewve wos s-siguientes vawowes:
 
-- For the built-in {{jsxref("Function")}} object, `toSource()` devuelve la siguiente cadena indicando que el código fuente no está disponible:
+- fow the b-buiwt-in {{jsxwef("function")}} object, `tosouwce()` devuewve wa siguiente cadena i-indicando que ew código fuente n-nyo está disponibwe:
 
   ```js
-  function Function() {
+  f-function function() {
       [native code]
   }
   ```
 
-- En funciones personalizadas, `toSource()` devuelve el código JavaScript que define el objeto como un string.
+- en funciones pewsonawizadas, (˘ω˘) `tosouwce()` devuewve ew c-código javascwipt que define ew objeto como un stwing. (⑅˘꒳˘)
 
-Éste método es usado de forma interna por JavaScript y no explicitamente desde el código. Puedes usar `toSource` mientras depuras para examinar el contenido de un objeto.
+Éste método es usado d-de fowma intewna pow javascwipt y-y nyo expwicitamente d-desde ew c-código. (///ˬ///✿) puedes u-usaw `tosouwce` mientwas depuwas pawa examinaw ew c-contenido de un objeto. 😳😳😳
 
-## Ver también
+## vew también
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

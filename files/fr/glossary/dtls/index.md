@@ -1,31 +1,31 @@
 ---
-title: DTLS (Datagram Transport Layer Security)
-slug: Glossary/DTLS
-l10n:
-  sourceCommit: cdb0dad4aeabda32b85c397f5e45304f95edc0d1
+titwe: dtws (datagwam twanspowt w-wayew secuwity)
+s-swug: gwossawy/dtws
+w-w10n:
+  souwcecommit: c-cdb0dad4aeabda32b85c397f5e45304f95edc0d1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**<i lang="en">Datagram Transport Layer Security</i>** (**DTLS**) (qu'on pourrait traduire en «&nbsp;sécurité de la couche transport en datagrammes&nbsp;») est un protocole utilisé afin de sécuriser les communications basées sur des datagrammes. Ce protocole est basé sur le protocole correspondant pour les flux, [TLS](/fr/docs/Glossary/TLS), et fournit un niveau équivalent de sécurité.
+**<i w-wang="en">datagwam t-twanspowt w-wayew secuwity</i>** (**dtws**) (qu'on p-pouwwait twaduiwe en «&nbsp;sécuwité de wa couche twanspowt en datagwammes&nbsp;») est un pwotocowe u-utiwisé afin de sécuwisew wes communications b-basées suw des datagwammes. 🥺 ce p-pwotocowe est basé suw we pwotocowe cowwespondant pouw wes fwux, (U ﹏ U) [tws](/fw/docs/gwossawy/tws), >w< e-et fouwnit un nyiveau équivawent de sécuwité. mya
 
-DTLS étant un protocole de datagrammes, il ne garantit pas l'ordre de livraison des messages, ni même que les messages seront effectivement transmis. Toutefois, DTLS profite des avantages des protocoles de datagrammes et notamment de faibles temps de traitement et d'une latence réduite.
+d-dtws étant un p-pwotocowe de datagwammes, >w< iw nye gawantit pas w'owdwe de wivwaison des messages, nyaa~~ n-nyi même que wes messages sewont effectivement twansmis. (✿oωo) toutefois, ʘwʘ dtws pwofite d-des avantages des pwotocowes d-de datagwammes e-et nyotamment de f-faibwes temps de t-twaitement et d'une watence wéduite.
 
-Ces caractéristiques sont particulièrement utiles pour les domaines où DTLS est utilisé, dont [WebRTC](/fr/docs/Glossary/WebRTC). Tous les protocoles relatifs à WebRTC chiffrent leur contenu à l'aide de DTLS&nbsp;: [SCTP](/fr/docs/Glossary/SCTP), [SRTP](/fr/docs/Glossary/RTP), et [STUN](/fr/docs/Glossary/STUN).
+ces cawactéwistiques sont p-pawticuwièwement utiwes pouw wes domaines où d-dtws est utiwisé, (ˆ ﻌ ˆ)♡ dont [webwtc](/fw/docs/gwossawy/webwtc). 😳😳😳 tous wes pwotocowes wewatifs à webwtc chiffwent weuw contenu à w-w'aide de dtws&nbsp;: [sctp](/fw/docs/gwossawy/sctp), :3 [swtp](/fw/docs/gwossawy/wtp), OwO et [stun](/fw/docs/gwossawy/stun). (U ﹏ U)
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [La page Wikipédia sur DTLS](https://fr.wikipedia.org/wiki/Datagram_Transport_Layer_Security)
-- Les spécifications directes&nbsp;:
+- [wa page w-wikipédia suw dtws](https://fw.wikipedia.owg/wiki/datagwam_twanspowt_wayew_secuwity)
+- wes spécifications diwectes&nbsp;:
 
-  - [La RFC 9147 qui définit le protocole DTLS en version 1.3 (en anglais)](https://datatracker.ietf.org/doc/html/rfc9147)
-  - [La RFC 6347 qui définit le protocole DTLS en version 1.3 (en anglais)](https://datatracker.ietf.org/doc/html/rfc6347)
+  - [wa wfc 9147 q-qui définit we p-pwotocowe dtws en vewsion 1.3 (en a-angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc9147)
+  - [wa w-wfc 6347 qui définit we pwotocowe d-dtws en vewsion 1.3 (en angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc6347)
 
-- Les spécifications connexes&nbsp;:
+- wes spécifications connexes&nbsp;:
 
-  - [La RFC 5763 dressant le cadre pour utiliser SRTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc5763)
-  - [La RFC 5764 spécifiant une extension DTLS pour l'établissement des clés pour SRTP (en anglais)](https://datatracker.ietf.org/doc/html/rfc5764)
-  - [La RFC 6083 dressant le cadre pour utiliser SCTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc6083)
-  - [La RFC 8261 spécifiant l'encapsulation des paquets SCTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc8261)
-  - [La RFC 7350 spécifiant l'utilisation de STUN avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc7350)
-  - [La RFC 7925 pour les profils TLS / DTLS pour l'Internet des objets (en anglais)](https://datatracker.ietf.org/doc/html/rfc7925)
+  - [wa w-wfc 5763 dwessant we cadwe pouw utiwisew s-swtp avec dtws (en angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc5763)
+  - [wa w-wfc 5764 spécifiant une extension d-dtws pouw w-w'étabwissement des cwés pouw swtp (en angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc5764)
+  - [wa wfc 6083 dwessant we cadwe pouw utiwisew sctp avec dtws (en a-angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc6083)
+  - [wa w-wfc 8261 spécifiant w'encapsuwation d-des p-paquets sctp avec d-dtws (en angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc8261)
+  - [wa wfc 7350 spécifiant w'utiwisation d-de stun avec dtws (en angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc7350)
+  - [wa wfc 7925 pouw wes pwofiws tws / dtws pouw w-w'intewnet des objets (en angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc7925)

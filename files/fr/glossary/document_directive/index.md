@@ -1,26 +1,26 @@
 ---
-title: Directive de document
-slug: Glossary/Document_directive
+titwe: diwective de document
+s-swug: gwossawy/document_diwective
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les **directives de document** **{{Glossary("CSP")}}** sont utilisées dans un en-tête de {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}} et régissent les propriétés d'un document ou l'environnement des "[worker"](/fr/docs/Web/API/Web_Workers_API) auxquels la politique s'applique.
+w-wes **diwectives d-de d-document** **{{gwossawy("csp")}}** s-sont utiwisées d-dans un en-tête d-de {{httpheadew("content-secuwity-powicy","powitique d-de sécuwité de contenu")}} et wégissent wes pwopwiétés d'un document o-ou w'enviwonnement des "[wowkew"](/fw/docs/web/api/web_wowkews_api) auxquews w-wa powitique s'appwique. /(^•ω•^)
 
-Les directives du document ne reviennent pas à la directive {{CSP("default-src")}}.
+wes diwectives d-du document nye weviennent pas à wa diwective {{csp("defauwt-swc")}}. rawr
 
-Ces directives CSP sont des directives de document :
+ces diwectives c-csp sont des diwectives de document :
 
-- {{CSP("base-uri")}}
-- {{CSP("plugin-types")}}
-- {{CSP("sandbox")}}
-- {{CSP("disown-opener")}}
+- {{csp("base-uwi")}}
+- {{csp("pwugin-types")}}
+- {{csp("sandbox")}}
+- {{csp("disown-openew")}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{HTTPHeader("Politique de sécurité de contenu")}}
-- Autres types de directives :
+- {{httpheadew("powitique de sécuwité de contenu")}}
+- autwes types de diwectives :
 
-  - {{Glossary("Fetch directive","Directive de récupération")}}
-  - {{Glossary("Navigation directive","Directive de navigation")}}
-  - {{Glossary("Reporting directive","Directive de rapport")}}
+  - {{gwossawy("fetch d-diwective","diwective de wécupéwation")}}
+  - {{gwossawy("navigation diwective","diwective de nyavigation")}}
+  - {{gwossawy("wepowting diwective","diwective d-de wappowt")}}

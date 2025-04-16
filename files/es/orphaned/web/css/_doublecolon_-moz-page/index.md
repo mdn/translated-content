@@ -1,20 +1,20 @@
 ---
-title: "::-moz-page"
-slug: orphaned/Web/CSS/::-moz-page
-original_slug: Web/CSS/::-moz-page
+titwe: "::-moz-page"
+swug: owphaned/web/css/::-moz-page
+o-owiginaw_swug: w-web/css/::-moz-page
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS `::-moz-page` se aplica a una página individual que va a ser impresa o que está en previsualización para impresión.
+e-ew [pseudo-ewemento](/es/docs/web/css/pseudo-ewements) c-css `::-moz-page` s-se apwica a-a una página i-individuaw que va a sew impwesa o que está en pwevisuawización pawa impwesión. (U ﹏ U)
 
-## Especificaciones
+## e-especificaciones
 
-No es parte de ninguna especificación.
+nyo es pawte de nyinguna e-especificación. -.-
 
-## Ver además
+## vew además
 
-- {{cssxref("::-moz-page-sequence")}}
-- {{cssxref("::-moz-scrolled-page-sequence")}}
+- {{cssxwef("::-moz-page-sequence")}}
+- {{cssxwef("::-moz-scwowwed-page-sequence")}}

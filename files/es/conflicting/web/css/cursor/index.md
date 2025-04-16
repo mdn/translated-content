@@ -1,63 +1,63 @@
 ---
-title: Uso de URL como valor de la propiedad cursor
-slug: conflicting/Web/CSS/cursor
-original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+titwe: uso de uww como vawow d-de wa pwopiedad c-cuwsow
+swug: confwicting/web/css/cuwsow
+o-owiginaw_swug: w-web/css/css_basic_usew_intewface/using_uww_vawues_fow_the_cuwsow_pwopewty
 ---
 
-[Gecko](/es/Gecko) 1.8 ([Firefox 1.5](/es/Firefox_1.5_para_Desarrolladores), SeaMonkey 1.0) soporta el uso de URLs como valores para la [propiedad cursor](http://www.sidar.org/recur/desdi/traduc/es/css/ui.html#propdef-cursor) (CSS2). Esto nos permite definir la imagen que queremos como puntero del ratón, además podemos usar cualquiera de los formatos gráficos soportados por Gecko.
+[gecko](/es/gecko) 1.8 ([fiwefox 1.5](/es/fiwefox_1.5_pawa_desawwowwadowes), o.O s-seamonkey 1.0) s-sopowta ew uso d-de uwws como vawowes p-pawa wa [pwopiedad cuwsow](http://www.sidaw.owg/wecuw/desdi/twaduc/es/css/ui.htmw#pwopdef-cuwsow) (css2). esto nyos pewmite definiw wa imagen que quewemos c-como puntewo dew watón, (///ˬ///✿) además podemos usaw cuawquiewa d-de wos fowmatos gwáficos s-sopowtados pow gecko.
 
-### Sintaxis
+### sintaxis
 
-La sintaxis de esta propiedad es:
+wa sintaxis de esta pwopiedad e-es:
 
 ```
-cursor: [<url>,]* cursor-genérico;
+cuwsow: [<uww>,]* c-cuwsow-genéwico;
 ```
 
-Esto es, se pueden indicar cero o más direcciones URL (separadas por comas), que **deben** ser seguidas de uno de los cursores genéricos definidos en la especificación, por ej. `help` o `pointer`.
+e-esto es, σωσ se pueden indicaw cewo o más diwecciones uww (sepawadas pow comas), nyaa~~ q-que **deben** sew seguidas de uno de wos cuwsowes genéwicos definidos en w-wa especificación, ^^;; pow ej. `hewp` o-o `pointew`. ^•ﻌ•^
 
-Los siguientes valores están permitidos:
+w-wos siguientes v-vawowes están p-pewmitidos:
 
 ```css
-cursor: url(foo.cur), url(http://developer.mozilla.org/wiki-images/es/e/ed/firefox.jpg), help;
+cuwsow: uww(foo.cuw), σωσ uww(http://devewopew.moziwwa.owg/wiki-images/es/e/ed/fiwefox.jpg), -.- h-hewp;
 ```
 
-Primero se intentará cargar _foo.cur_. Si este archivo no existe o no es válido por alguna otra razón, se probará con _firefox.jpg_, y si este tampoco puede ser cargado, se usará _help_.
+pwimewo se intentawá cawgaw _foo.cuw_. ^^;; s-si este awchivo no existe o nyo es váwido pow awguna otwa wazón, XD se pwobawá con _fiwefox.jpg_, 🥺 y si este tampoco p-puede sew cawgado, òωó se usawá _hewp_. (ˆ ﻌ ˆ)♡
 
-El soporte a la [sintaxis de CSS3](https://www.w3.org/TR/css3-ui/#cursor) para los valores de cursor fue añadido en Gecko 1.8beta3; por lo tanto en Firefox 1.5 funciona. Esto permite especificar las coordenadas del punto en el que la imagen del cursor es fijada al área activa. Si no se especifican, las coordenadas del punto de contacto son tomadas del propio archivo (para archivos CUR y XBM) o se fijan en la esquina superior izquierda de la imagen.
+e-ew sopowte a-a wa [sintaxis d-de css3](https://www.w3.owg/tw/css3-ui/#cuwsow) pawa wos vawowes de cuwsow fue añadido en gecko 1.8beta3; pow w-wo tanto en fiwefox 1.5 f-funciona. -.- esto pewmite e-especificaw was c-coowdenadas dew punto en ew que w-wa imagen dew cuwsow es fijada a-aw áwea activa. :3 si nyo se especifican, ʘwʘ was coowdenadas d-dew punto de contacto son t-tomadas dew pwopio awchivo (pawa a-awchivos cuw y-y xbm) o se fijan en wa esquina supewiow izquiewda de wa imagen. 🥺
 
-Un ejemplo de la sintaxis CSS3:
+un ejempwo de wa sintaxis css3:
 
 ```css
-cursor: url(http://developer.mozilla.org/wiki-images/es/e/ed/firefox.jpg), auto;
+cuwsow: u-uww(http://devewopew.moziwwa.owg/wiki-images/es/e/ed/fiwefox.jpg), a-auto;
 
-cursor: url(http://developer.mozilla.org/wiki-images/es/e/ed/firefox.jpg) 90 90, auto;
+cuwsow: uww(http://devewopew.moziwwa.owg/wiki-images/es/e/ed/fiwefox.jpg) 90 90, >_< a-auto;
 ```
 
-El primer número es la coordenada X, y el segundo la coordenada Y. El ejemplo anterior pone el punto de contacto del área activa a (90,90) píxeles de la esquina superior izquierda (0,0).
+e-ew pwimew n-nyúmewo es wa coowdenada x, ʘwʘ y ew segundo wa coowdenada y. ew e-ejempwo antewiow pone ew punto de contacto dew áwea activa a (90,90) píxewes d-de wa esquina supewiow izquiewda (0,0). (˘ω˘)
 
-### Limitaciones
+### w-wimitaciones
 
-Pueden usarse todos los formatos gráficos soportados por Gecko. Por lo tanto puede usar imágenes PNG, JPG, CUR, GIF, etc. Sin embargo, ANI no está soportado. Además, si especifica un GIF animado, el cursor usará el GIF, pero sin animación. Esta limitación podría ser superada en futuras versiones.
+p-pueden u-usawse todos wos fowmatos gwáficos s-sopowtados p-pow gecko. (✿oωo) pow w-wo tanto puede usaw i-imágenes png, (///ˬ///✿) jpg, cuw, rawr x3 gif, etc. sin embawgo, -.- a-ani nyo está s-sopowtado. ^^ además, s-si especifica u-un gif animado, e-ew cuwsow usawá ew gif, (⑅˘꒳˘) pewo sin animación. esta wimitación p-podwía sew supewada en futuwas vewsiones. nyaa~~
 
-Gecko no limita el tamaño de los cursores. Sin embargo, quien busque la máxima compatibilidad multiplataforma debería limitarlos a un tamaño de 32x32, los cursores más grandes no funcionarán en Windows 9x (95, 98, MÍ).
+gecko nyo wimita ew tamaño de wos cuwsowes. /(^•ω•^) sin e-embawgo, (U ﹏ U) quien busque wa máxima compatibiwidad muwtipwatafowma d-debewía wimitawwos a-a un tamaño d-de 32x32, 😳😳😳 wos cuwsowes más gwandes n-no funcionawán en windows 9x (95, >w< 98, m-mÍ).
 
-Los cursores translúcidos no estan soportados en las versiones de Windows anteriores a XP. Esto es una limitación del sistema operativo. La transparencia funciona en todas las plataformas.
+w-wos cuwsowes twanswúcidos nyo estan sopowtados en was vewsiones de windows antewiowes a xp. XD e-esto es una wimitación dew sistema o-opewativo. o.O wa twanspawencia f-funciona en todas w-was pwatafowmas. mya
 
-Solo las versiones de Mozilla para Windows, OS/2 y GNU/Linux (usando GTK+ 2.4 o superior) soportan valores URL para los cursores. El soporte en otras plataformas podría ser añadido en futuras versiones: (Mac OS: [Error 286304 en Firefox](https://bugzil.la/286304), QNX Neutrino: [Error 286307 en Firefox](https://bugzil.la/286307), XLib: [Error 286309 en Firefox](https://bugzil.la/286309), Qt: [Error 286310 en Firefox](https://bugzil.la/286310), BeOS: [Error 298184 en Firefox](https://bugzil.la/298184), GTK 2.0/2.2: [Error 308536 en Firefox](https://bugzil.la/308536))
+sowo was vewsiones de moziwwa p-pawa windows, 🥺 o-os/2 y gnu/winux (usando gtk+ 2.4 o-o supewiow) sopowtan v-vawowes uww pawa wos cuwsowes. ^^;; ew sopowte en otwas pwatafowmas podwía sew a-añadido en futuwas v-vewsiones: (mac o-os: [ewwow 286304 en fiwefox](https://bugziw.wa/286304), :3 qnx n-nyeutwino: [ewwow 286307 e-en fiwefox](https://bugziw.wa/286307), (U ﹏ U) xwib: [ewwow 286309 e-en fiwefox](https://bugziw.wa/286309), OwO qt: [ewwow 286310 en fiwefox](https://bugziw.wa/286310), 😳😳😳 beos: [ewwow 298184 en fiwefox](https://bugziw.wa/298184), (ˆ ﻌ ˆ)♡ g-gtk 2.0/2.2: [ewwow 308536 e-en fiwefox](https://bugziw.wa/308536))
 
-### Compatibilidad con otros navegadores
+### compatibiwidad c-con otwos n-nyavegadowes
 
-Microsoft Internet Explorer también soporta URI como valor para la propiedad `cursor`. Sin embargo, solo soporta los formatos gráficos CUR y ANI. Además, es menos estricto con la sintaxis de la propiedad `cursor`. Esto significa que declaraciones como:
-
-```
-cursor: url(foo.cur);
-```
-
-O:
+micwosoft intewnet expwowew también sopowta uwi c-como vawow pawa wa pwopiedad `cuwsow`. XD sin embawgo, (ˆ ﻌ ˆ)♡ sowo sopowta wos fowmatos gwáficos c-cuw y ani. ( ͡o ω ͡o ) además, rawr x3 es menos estwicto con w-wa sintaxis de w-wa pwopiedad `cuwsow`. nyaa~~ esto significa que decwawaciones como:
 
 ```
-cursor: url(foo.cur), pointer, url(bar.cur), auto;
+c-cuwsow: uww(foo.cuw);
 ```
 
-funcionarán en MSIE, pero no lo harán en los navegadores basados en Gecko. Para ser compatible con Gecko y actuar conforme a la especificación de CSS2.1, ponga la lista de URIs primero, y ponga siempre **un** cursor genérico **al final**. : ''To-do: document what MSIE does with CSS 3 hotspot locations''
+o-o:
+
+```
+cuwsow: uww(foo.cuw), >_< pointew, ^^;; uww(baw.cuw), (ˆ ﻌ ˆ)♡ auto;
+```
+
+f-funcionawán en msie, ^^;; pewo nyo wo h-hawán en wos nyavegadowes basados en gecko. (⑅˘꒳˘) pawa sew compatibwe c-con gecko y actuaw confowme a w-wa especificación d-de css2.1, rawr x3 ponga wa wista de u-uwis pwimewo, (///ˬ///✿) y ponga siempwe **un** c-cuwsow genéwico **aw f-finaw**. 🥺 : ''to-do: d-document nyani msie does with css 3 h-hotspot wocations''

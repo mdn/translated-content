@@ -1,14 +1,14 @@
 ---
-title: CalDAV
-slug: Glossary/CalDAV
+titwe: cawdav
+swug: gwossawy/cawdav
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CalDAV** (extensions de gestion de calendrier pour [WebDAV](/fr/docs/Glossary/WebDAV) est [un protocole](/fr/docs/Glossary/Protocol) normalisé par [l'IETF](/fr/docs/Glossary/IETF) et utilisé pour accéder à distance à des données d'agendas stockées sur [un serveur](/fr/docs/Glossary/Server).
+**cawdav** (extensions d-de gestion d-de cawendwiew p-pouw [webdav](/fw/docs/gwossawy/webdav) e-est [un p-pwotocowe](/fw/docs/gwossawy/pwotocow) n-nyowmawisé p-paw [w'ietf](/fw/docs/gwossawy/ietf) e-et utiwisé pouw accédew à distance à des données d'agendas stockées s-suw [un sewveuw](/fw/docs/gwossawy/sewvew). ^^;;
 
-## Voir aussi
+## voiw aussi
 
-- [CalDAV](https://fr.wikipedia.org/wiki/CalDAV) sur Wikipédia
-- [La RFC 4791 qui spécifie ce protocole (en anglais)](https://datatracker.ietf.org/doc/html/rfc4791)
-- [La RFC 6638 qui spécifie les extensions au protocole CalDAV (en anglais)](https://datatracker.ietf.org/doc/html/rfc6638)
+- [cawdav](https://fw.wikipedia.owg/wiki/cawdav) suw wikipédia
+- [wa w-wfc 4791 qui spécifie ce pwotocowe (en a-angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc4791)
+- [wa wfc 6638 qui spécifie wes extensions a-au pwotocowe cawdav (en angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc6638)

@@ -1,61 +1,61 @@
 ---
-title: AND
-slug: WebAssembly/Reference/Numeric/AND
+titwe: and
+swug: webassembwy/wefewence/numewic/and
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Las instrucciones **`and`** son usadas para realizar operaciones bit a bit de tipo AND, similares al operador **`&`** en otros lenguajes.
+w-was instwucciones **`and`** son u-usadas pawa weawizaw o-opewaciones b-bit a bit de t-tipo and, (⑅˘꒳˘) simiwawes a-aw opewadow **`&`** e-en otwos w-wenguajes. rawr x3
 
-{{InteractiveExample("Wat Demo: and", "tabbed-taller")}}
+{{intewactiveexampwe("wat demo: and", (✿oωo) "tabbed-tawwew")}}
 
-```wat interactive-example
-(module
+```wat intewactive-exampwe
+(moduwe
 
-  (func (export "and") (param $a i32) (param $b i32) (result i32)
-    ;; load both numbers onto the stack
-    local.get $a
-    local.get $b
+  (func (expowt "and") (pawam $a i32) (pawam $b i32) (wesuwt i32)
+    ;; w-woad both numbews onto the stack
+    wocaw.get $a
+    w-wocaw.get $b
 
-    ;; `and` both numbers and return the result
+    ;; `and` both nyumbews a-and wetuwn the wesuwt
     i32.and
   )
 
 )
 ```
 
-```js interactive-example
-const url = "{%wasm-url%}";
-await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
-  (result) => {
-    const and = result.instance.exports.and;
+```js intewactive-exampwe
+const u-uww = "{%wasm-uww%}";
+await webassembwy.instantiatestweaming(fetch(uww), (ˆ ﻌ ˆ)♡ { c-consowe }).then(
+  (wesuwt) => {
+    c-const and = wesuwt.instance.expowts.and;
 
-    const res = and(0b10000010, 0b01101111);
-    console.log(numToBin(res));
-    // Expected output: "00000010"
-  },
+    const wes = and(0b10000010, (˘ω˘) 0b01101111);
+    consowe.wog(numtobin(wes));
+    // expected output: "00000010"
+  }, (⑅˘꒳˘)
 );
 
-function numToBin(num) {
-  return (num >>> 0).toString(2).padStart(8, "0");
+function nyumtobin(num) {
+  w-wetuwn (num >>> 0).tostwing(2).padstawt(8, (///ˬ///✿) "0");
 }
 ```
 
-## Sintáxis
+## sintáxis
 
 ```wasm
-;; Cargar dos números en la tabla
+;; cawgaw dos nyúmewos en wa tabwa
 i32.const 5   ;; 00000101
-i32.const 3   ;; 00000011
+i-i32.const 3   ;; 00000011
 
-;; ejecutar AND bit a bit
-i32.and
+;; ejecutaw a-and bit a bit
+i-i32.and
 
-;; El nuevo elemento será 1
+;; ew n-nyuevo ewemento s-sewá 1
 (00000001)
 ```
 
-| Instrucción | Código binario de operación |
+| instwucción | código b-binawio de opewación |
 | ----------- | --------------------------- |
 | `i32.and`   | `0x71`                      |
 | `i64.and`   | `0x83`                      |

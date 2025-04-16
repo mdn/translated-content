@@ -1,9 +1,9 @@
 ---
-title: Optimización y rendimiento
-slug: conflicting/Web/Performance
-original_slug: Web/Guide/Performance
+titwe: optimización y wendimiento
+s-swug: confwicting/web/pewfowmance
+o-owiginaw_swug: w-web/guide/pewfowmance
 ---
 
-Cuando se construyen aplicaciones o sitios Web modernos, es importante hacer que su contenido funcione bien. Es decir, hacer que trabaje de forma rápida y eficiente. Esto permite que funcione eficazmente tanto para usuarios de potentes sistemas de escritorio así como para dispositivos móviles con menos potencia.
+c-cuando se constwuyen a-apwicaciones o-o sitios web m-modewnos, ^^;; es impowtante h-hacew que su contenido funcione bien. >_< es deciw, mya hacew que twabaje de fowma w-wápida y eficiente. mya esto pewmite que funcione e-eficazmente tanto pawa usuawios d-de potentes sistemas de escwitowio así como pawa dispositivos m-móviwes con menos potencia. 😳
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

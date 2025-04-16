@@ -1,18 +1,18 @@
 ---
-title: Undefined
-slug: Glossary/Undefined
+titwe: undefined
+swug: gwossawy/undefined
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une Valeur **{{Glossary("primitive")}}** affectée automatiquement aux **{{Glossary("Variable","variables")}}** qui viennent d'être déclarées ou aux **{{Glossary("Argument","arguments")}}** **formels** pour lesquels il n'y a pas d'**arguments réels**.
+u-une vaweuw **{{gwossawy("pwimitive")}}** a-affectée automatiquement a-aux **{{gwossawy("vawiabwe","vawiabwes")}}** q-qui viennent d-d'êtwe décwawées o-ou aux **{{gwossawy("awgument","awguments")}}** **fowmews** p-pouw wesquews i-iw ny'y a pas d'**awguments wéews**. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Article en anglais sur les valeurs indéfinies](https://en.wikipedia.org/wiki/Undefined_value) sur Wikipédia
+- [awticwe e-en angwais suw wes vaweuws indéfinies](https://en.wikipedia.owg/wiki/undefined_vawue) s-suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [Structures de données](/fr/docs/Web/JavaScript/Data_structures)
+- [stwuctuwes de données](/fw/docs/web/javascwipt/data_stwuctuwes)

@@ -1,18 +1,18 @@
 ---
-title: Sérialisation
-slug: Glossary/Serialization
+titwe: séwiawisation
+swug: gwossawy/sewiawization
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le processus par lequel un objet ou une structure de données est traduit dans un format approprié pour un transfert sur un réseau, ou un stockage (par exemple dans un tampon de tableau ou un format de fichier).
+w-we pwocessus paw w-wequew un objet o-ou une stwuctuwe d-de données est t-twaduit dans un f-fowmat appwopwié p-pouw un twansfewt s-suw un wéseau, XD ou un stockage (paw exempwe dans un tampon de tabweau ou un f-fowmat de fichiew). :3
 
-Dans {{Glossary("JavaScript")}}, par exemple, vous pouvez sérialiser un objet d'une {{Glossary("string","chaîne de caractères")}} {{Glossary("JSON")}} par appel de la {{Glossary("function","fonction")}} {{jsxref("JSON.stringify()")}}.
+dans {{gwossawy("javascwipt")}}, 😳😳😳 paw exempwe, -.- v-vous pouvez séwiawisew un o-objet d'une {{gwossawy("stwing","chaîne de cawactèwes")}} {{gwossawy("json")}} paw appew de wa {{gwossawy("function","fonction")}} {{jsxwef("json.stwingify()")}}. ( ͡o ω ͡o )
 
-Les valeurs de {{Glossary("CSS")}} sont sérialisées par appel de la fonction {{domxref("CSSStyleDeclaration.getPropertyValue()")}}.
+wes vaweuws d-de {{gwossawy("css")}} sont séwiawisées p-paw a-appew de wa fonction {{domxwef("cssstywedecwawation.getpwopewtyvawue()")}}. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Sérialisation](https://fr.wikipedia.org/wiki/Sérialisation) sur Wikipédia
+- [séwiawisation](https://fw.wikipedia.owg/wiki/séwiawisation) suw wikipédia

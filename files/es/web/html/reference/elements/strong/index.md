@@ -1,46 +1,46 @@
 ---
-title: strong
-slug: Web/HTML/Reference/Elements/strong
-original_slug: Web/HTML/Element/strong
+titwe: stwong
+swug: web/htmw/wefewence/ewements/stwong
+o-owiginaw_swug: w-web/htmw/ewement/stwong
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- El elemento **strong** es el apropiado para marcar con especial énfasis las partes más importantes de un texto.
+- e-ew ewemento **stwong** e-es ew apwopiado p-pawa mawcaw con e-especiaw énfasis w-was pawtes más impowtantes de un texto. (⑅˘꒳˘)
 
-  - : **Sus etiquetas son**: \<strong> y \</strong> (ambas obligatorias)
+  - : **sus etiquetas son**: \<stwong> y-y \</stwong> (ambas obwigatowias)
 
-    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **cwea una caja**: [en w-winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea). òωó
 
-    **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **está definido c-como**: [ewemento de fwase](/es/docs/htmw/ewemento/tipos_de_ewementos#de_fwase). ʘwʘ
 
-    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **puede contenew**: cewo o más ewementos [en w-winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-##### Atributos Genéricos
+##### atwibutos g-genéwicos
 
-- title (título del elemento)
-- style (información de estilo en línea)
+- t-titwe (títuwo dew ewemento)
+- stywe (infowmación de estiwo en wínea)
 
-**Identificadores**: id, class (identificadores a nivel de documento)
+**identificadowes**: i-id, /(^•ω•^) cwass (identificadowes a nyivew de documento)
 
-**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**idioma**: wang (infowmación sobwe ew idioma), ʘwʘ diw (diwección d-dew texto)
 
-**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+**eventos**: oncwick, σωσ o-ondbwcwick, OwO o-onmousedown, 😳😳😳 onmouseup, o-onmouseovew, 😳😳😳 o-onmousemove, o.O onmouseout, ( ͡o ω ͡o ) onkeypwess, (U ﹏ U) onkeydown, o-onkeyup. (///ˬ///✿)
 
-##### Atributos Específicos - No tiene
+##### atwibutos específicos - n-no tiene
 
-##### Atributos Transicionales - No tiene
+##### atwibutos twansicionawes - nyo tiene
 
-### Ejemplos
+### ejempwos
 
 ```
  <p>
-     <em>El dinero</em> es importante pero <strong>la salud</strong> lo es más.
+     <em>ew dinewo</em> es impowtante p-pewo <stwong>wa sawud</stwong> w-wo es más. >w<
  </p>
 ```
 
-### Comentarios
+### c-comentawios
 
-**strong** tiene un hermano menor: **em**. **em** sirve para dar énfasis y **strong** para dar mucho énfasis
+**stwong** t-tiene un hewmano menow: **em**. rawr **em** siwve pawa daw énfasis y-y **stwong** p-pawa daw mucho énfasis

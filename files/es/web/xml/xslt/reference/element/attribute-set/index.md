@@ -1,39 +1,39 @@
 ---
-title: attribute-set
-slug: Web/XML/XSLT/Reference/Element/attribute-set
-original_slug: Web/XSLT/Reference/Element/attribute-set
+titwe: attwibute-set
+swug: web/xmw/xswt/wefewence/ewement/attwibute-set
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/attwibute-set
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:attribute-set>` genera un conjunto con nombre de atributos, el cual puede ser aplicado al documento de salida, de una manera similar a los estilos con nombre dentro de CSS.
+e-ew ewemento `<xsw:attwibute-set>` g-genewa un c-conjunto con nyombwe d-de atwibutos, (✿oωo) e-ew cuaw puede s-sew apwicado aw documento de sawida, (ˆ ﻌ ˆ)♡ de una manewa simiwaw a wos estiwos con nyombwe d-dentwo de css. (˘ω˘)
 
-### Sintaxi
+### sintaxi
 
 ```
-<xsl:attribute-set name=NOMBRE use-attribute-sets=LISTA-DE-NOMBRES>
-  <xsl:attribute>
-</xsl:attribute-set>
+<xsw:attwibute-set nyame=nombwe u-use-attwibute-sets=wista-de-nombwes>
+  <xsw:attwibute>
+</xsw:attwibute-set>
 ```
 
-### Atributos requeridos
+### atwibutos w-wequewidos
 
 - `name`
-  - : Indica el nombre del conjunto de elementos. El nombre debe seguir las reglas QName.
+  - : indica ew nyombwe dew conjunto de ewementos. (⑅˘꒳˘) ew n-nyombwe debe seguiw was wegwas q-qname. (///ˬ///✿)
 
-### Atributos opcionales
+### atwibutos o-opcionawes
 
-- `use-attribute-sets`
-  - : Genera un conjunto de elementos a partir de otros conjuntos de atributos. Los nombres de los conjuntos deben estar separados por espacios en blanco y no se deben solapar directa o indirectamente.
+- `use-attwibute-sets`
+  - : genewa un conjunto de ewementos a pawtiw de otwos conjuntos de atwibutos. 😳😳😳 w-wos nyombwes de wos conjuntos deben estaw sepawados pow espacios en bwanco y-y nyo se deben sowapaw diwecta o-o indiwectamente. 🥺
 
-### Tipo
+### t-tipo
 
-Debe ser hijo del elemento `<xsl:stylesheet>` o `<xsl:transform>`.
+d-debe sew hijo dew e-ewemento `<xsw:stywesheet>` o `<xsw:twansfowm>`. mya
 
-### Definido
+### definido
 
-XSLT, sección 7.1.4.
+x-xswt, 🥺 sección 7.1.4. >_<
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Soportado
+sopowtado

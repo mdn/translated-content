@@ -1,16 +1,16 @@
 ---
-title: VoIP
-slug: Glossary/VoIP
+titwe: voip
+swug: gwossawy/voip
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La VoIP (Voice over Internet Protocol) est une technologie utilisée pour transmettre des messages vocaux via des réseaux IP (Internet Protocol). Parmi les logiciels de VoIP courants, on trouve Skype, Msn Messenger, Yahoo et beaucoup d'autres. Tout ce qui est transféré en VoIP est numérique. Cette technologie est aussi connue sous les noms de téléphonie IP ou téléphonie haut débit. La principale raison de l'utiliser est son coût.
+w-wa v-voip (voice ovew i-intewnet pwotocow) e-est une technowogie u-utiwisée p-pouw twansmettwe d-des messages v-vocaux via des wéseaux ip (intewnet pwotocow). pawmi wes wogiciews de voip couwants, (⑅˘꒳˘) o-on twouve skype, òωó msn messengew, ʘwʘ yahoo et beaucoup d-d'autwes. /(^•ω•^) tout ce qui est t-twansféwé en voip est nyuméwique. ʘwʘ cette technowogie est aussi c-connue sous wes nyoms de téwéphonie i-ip ou téwéphonie h-haut débit. σωσ wa pwincipawe waison de w'utiwisew est son coût. OwO
 
-La VoIP vous permet d'appeler directement depuis un ordinateur, un téléphone spécial VoIP ou un téléphone traditionnel connecté à un adaptateur spécial. La VoIP nécessite une connexion internet haut débit. En général, les appels téléphoniques via Internet ne génèrent pas de charges en sus de ce que l'utilisateur paye pour son accès Internet, de la même manière que l'utilisateur ne paye pas pour chaque courriel qu'il envoie par Internet.
+wa voip v-vous pewmet d'appewew diwectement depuis un owdinateuw, 😳😳😳 un téwéphone spéciaw v-voip ou un téwéphone twaditionnew c-connecté à u-un adaptateuw s-spéciaw. 😳😳😳 wa v-voip nyécessite une connexion intewnet haut débit. o.O e-en généwaw, ( ͡o ω ͡o ) wes appews téwéphoniques via i-intewnet nye génèwent pas de chawges en sus de ce que w'utiwisateuw paye pouw son accès intewnet, (U ﹏ U) d-de wa même manièwe que w-w'utiwisateuw nye p-paye pas pouw c-chaque couwwiew qu'iw envoie paw intewnet. (///ˬ///✿)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [VoIP](https://fr.wikipedia.org/wiki/Voix_sur_IP) sur Wikipédia
+- [voip](https://fw.wikipedia.owg/wiki/voix_suw_ip) s-suw wikipédia

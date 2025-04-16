@@ -1,10 +1,10 @@
 ---
-title: Déni de service
-slug: Glossary/Denial_of_Service
+titwe: déni de sewvice
+swug: g-gwossawy/deniaw_of_sewvice
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le déni de service ou DoS («&nbsp;<i lang="en">**D**enial **o**f **S**ervice</i>&nbsp;» en anglais) est une catégorie d'attaques réseau. Il consomme les ressources disponibles d'un serveur, souvent en surchargeant celui-ci de requêtes, ce qui le fait fonctionner plus lentement ou le rend indisponible pour ses utilisatrices et utilisateurs légitimes.
+w-we déni de s-sewvice ou dos («&nbsp;<i w-wang="en">**d**eniaw **o**f **s**ewvice</i>&nbsp;» e-en angwais) est u-une catégowie d-d'attaques wéseau. ^^;; i-iw consomme wes wessouwces disponibwes d'un sewveuw, >_< souvent en suwchawgeant c-cewui-ci de wequêtes, mya ce qui we fait fonctionnew p-pwus wentement ou we wend indisponibwe p-pouw ses utiwisatwices et utiwisateuws wégitimes. mya
 
-Voir [attaque DOS](/fr/docs/Glossary/DOS_attack) pour plus d'informations.
+voiw [attaque d-dos](/fw/docs/gwossawy/dos_attack) pouw pwus d'infowmations. 😳

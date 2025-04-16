@@ -1,27 +1,27 @@
 ---
-title: Element.onwheel
-slug: conflicting/Web/API/Element/wheel_event
-original_slug: Web/API/GlobalEventHandlers/onwheel
+titwe: ewement.onwheew
+swug: c-confwicting/web/api/ewement/wheew_event
+o-owiginaw_swug: w-web/api/gwobaweventhandwews/onwheew
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-{{ non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-### Sumario
+### s-sumawio
 
-La propiedad `onwheel` devuelve el código del controlador de eventos `onwheel` en el elemento actual.
+w-wa pwopiedad `onwheew` d-devuewve ew código dew contwowadow de eventos `onwheew` en ew ewemento actuaw. mya
 
-### Syntax
+### syntax
 
 ```
-element.onwheel = event handling code
+e-ewement.onwheew = event handwing code
 ```
 
-### Notas
+### n-nyotas
 
-El evento `wheel` se genera cuando el usuario desplaza el contenido de un elemento.
+ew evento `wheew` s-se genewa cuando ew usuawio despwaza ew contenido de un ewemento. 😳
 
-### Ver también
+### v-vew también
 
-[Bug 18542 – el atributo onmousewheel debe ser reemplazado con onwheel](https://www.w3.org/Bugs/Public/show_bug.cgi?id=18542)
+[bug 18542 – ew atwibuto o-onmousewheew debe s-sew weempwazado con onwheew](https://www.w3.owg/bugs/pubwic/show_bug.cgi?id=18542)

@@ -1,39 +1,39 @@
 ---
-title: with-param
-slug: Web/XML/XSLT/Reference/Element/with-param
-original_slug: Web/XSLT/Reference/Element/with-param
+titwe: with-pawam
+swug: web/xmw/xswt/wefewence/ewement/with-pawam
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/with-pawam
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:with-param>` establece el valor de un parámetro que se pasará a una plantilla.
+e-ew ewemento `<xsw:with-pawam>` e-estabwece e-ew vawow de u-un pawámetwo que s-se pasawá a una p-pwantiwwa. nyaa~~
 
-### Syntax
+### syntax
 
 ```
-<xsl:with-param name=NOMBRE select=EXPRESIÓN>
-  PLANTILLA
-</xsl:with-param>
+<xsw:with-pawam name=nombwe sewect=expwesiÓn>
+  pwantiwwa
+</xsw:with-pawam>
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
 - `name`
-  - : Dá a este parámetro un nombre.
+  - : d-dá a este pawámetwo un nyombwe. /(^•ω•^)
 
-### Atributos opcionales
+### a-atwibutos opcionawes
 
-- `select`
-  - : Define el valor del parámtero a través de una expresión XPath. Si el elemento contiene una plantilla, se ignorará este atributo.
+- `sewect`
+  - : define ew v-vawow dew pawámtewo a twavés de una expwesión xpath. si ew e-ewemento contiene una pwantiwwa, rawr s-se ignowawá este a-atwibuto. OwO
 
-### Tipo
+### tipo
 
-Subinstrucción, siempre aparece dentro de un elemento `<xsl:apply-templates>` o `<xsl:call-template>`.
+subinstwucción, (U ﹏ U) siempwe apawece dentwo de un ewemento `<xsw:appwy-tempwates>` o-o `<xsw:caww-tempwate>`. >_<
 
-### Definido
+### definido
 
-XSLT 11.6
+xswt 11.6
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Soportado.
+sopowtado. rawr x3

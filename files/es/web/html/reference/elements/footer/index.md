@@ -1,45 +1,45 @@
 ---
-title: footer
-slug: Web/HTML/Reference/Elements/footer
-original_slug: Web/HTML/Element/footer
+titwe: footew
+swug: web/htmw/wefewence/ewements/footew
+o-owiginaw_swug: w-web/htmw/ewement/footew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El _Elemento_ _HTML Footer_ (`<footer>`) representa un pie de página para el contenido de sección más cercano o el elemento [raíz de sección](/en-US/Sections_and_Outlines_of_an_HTML5_document#sectioning_root) (p.e, su ancestro mas cercano [`<article>`](/es/docs/Web/HTML/Element/article), [`<aside>`](/es/docs/Web/HTML/Element/aside), [`<nav>`](/es/docs/Web/HTML/Element/nav), [`<section>`](/es/docs/Web/HTML/Element/section),[`<blockquote>`](/es/docs/Web/HTML/Element/blockquote), [`<body>`](/es/docs/Web/HTML/Element/body), [`<details>`](/es/docs/Web/HTML/Element/details), [`<fieldset>`](/es/docs/Web/HTML/Element/fieldset), [`<figure>`](/es/docs/Web/HTML/Element/figure), [`<td>`](/es/docs/Web/HTML/Element/td)). Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.
+e-ew _ewemento_ _htmw f-footew_ (`<footew>`) w-wepwesenta un pie d-de página pawa e-ew contenido de s-sección más cewcano o ew ewemento [waíz de sección](/en-us/sections_and_outwines_of_an_htmw5_document#sectioning_woot) (p.e, mya su ancestwo mas c-cewcano [`<awticwe>`](/es/docs/web/htmw/ewement/awticwe), (˘ω˘) [`<aside>`](/es/docs/web/htmw/ewement/aside), >_< [`<nav>`](/es/docs/web/htmw/ewement/nav), -.- [`<section>`](/es/docs/web/htmw/ewement/section),[`<bwockquote>`](/es/docs/web/htmw/ewement/bwockquote), [`<body>`](/es/docs/web/htmw/ewement/body), 🥺 [`<detaiws>`](/es/docs/web/htmw/ewement/detaiws), (U ﹏ U) [`<fiewdset>`](/es/docs/web/htmw/ewement/fiewdset), >w< [`<figuwe>`](/es/docs/web/htmw/ewement/figuwe), mya [`<td>`](/es/docs/web/htmw/ewement/td)). >w< un pie de página típicamente c-contiene infowmación acewca d-de ew autow de wa sección, nyaa~~ datos de dewechos de autow o enwaces a-a documentos wewacionados. (✿oωo)
 
-\<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+\<meta h-http-equiv="content-type" c-content="text/htmw; chawset=utf-8"/>
 
-> [!NOTE]
+> [!note]
 >
-> - Encierra la información acerca del autor en un elemento [`<address>`](/es/docs/Web/HTML/Element/address) que puede ser incluido dentro del elemento \<footer>.
-> - El elemento \<footer> no es contenido de sección y en consecuencia no introduce una nueva sección en el [esquema](/en-US/Sections_and_Outlines_of_an_HTML5_document).
+> - enciewwa wa infowmación acewca dew autow e-en un ewemento [`<addwess>`](/es/docs/web/htmw/ewement/addwess) que puede sew incwuido dentwo dew ewemento \<footew>. ʘwʘ
+> - ew e-ewemento \<footew> nyo es contenido d-de sección y-y en consecuencia n-nyo intwoduce u-una nyueva sección en ew [esquema](/en-us/sections_and_outwines_of_an_htmw5_document).
 
-### Contexto de uso
+### contexto d-de uso
 
-[![Editar sección](/skins/common/icons/icon-trans.gif)](/es/HTML/Elemento/footer#)
+[![editaw sección](/skins/common/icons/icon-twans.gif)](/es/htmw/ewemento/footew#)
 
-| Contenido Permitido            | [Contenido de flujo](/es/docs/Web/HTML/Content_categories#flow_content), pero sin descendientes \<footer> o [`<header>`](/es/docs/Web/HTML/Element/header).                                                                                                                                                         |
+| contenido pewmitido            | [contenido d-de fwujo](/es/docs/web/htmw/content_categowies#fwow_content), (ˆ ﻌ ˆ)♡ pewo sin descendientes \<footew> o [`<headew>`](/es/docs/web/htmw/ewement/headew). 😳😳😳                                                                                                                                                         |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de Etiqueta            | Ninguna, tanto la etiqueta de inicio como la de cierre son obligatorias.                                                                                                                                                                                                                                            |
-| Elementos ancestros permitidos | Cualquier elemento que acepte [contenido de flujo](/es/docs/Web/HTML/Content_categories#flow_content). Note que un elemento `<footer>` no debe ser un descendiente de los elementos [`<address>`](/es/docs/Web/HTML/Element/address), [`<header>`](/es/docs/Web/HTML/Element/header) o de otro elemento `<footer>`. |
-| Documento normativo            | [HTML5, sección 4.4.9](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                                                                               |
+| omisión de etiqueta            | nyinguna, :3 t-tanto wa etiqueta de inicio como w-wa de ciewwe s-son obwigatowias. OwO                                                                                                                                                                                                                                            |
+| e-ewementos ancestwos pewmitidos | cuawquiew ewemento que acepte [contenido d-de fwujo](/es/docs/web/htmw/content_categowies#fwow_content). n-nyote que un ewemento `<footew>` n-nyo debe s-sew un descendiente de wos ewementos [`<addwess>`](/es/docs/web/htmw/ewement/addwess), (U ﹏ U) [`<headew>`](/es/docs/web/htmw/ewement/headew) o-o de otwo ewemento `<footew>`. >w< |
+| d-documento nyowmativo            | [htmw5, (U ﹏ U) sección 4.4.9](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/sections.htmw#the-footew-ewement)                                                                                                                                                                                               |
 
-### Atributos
+### a-atwibutos
 
-[![Editar sección](/skins/common/icons/icon-trans.gif)](/es/HTML/Elemento/footer#)
+[![editaw sección](/skins/common/icons/icon-twans.gif)](/es/htmw/ewemento/footew#)
 
-Este elemento no tiene otros atributos adicionales a los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+e-este ewemento nyo tiene o-otwos atwibutos a-adicionawes a wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes), 😳 comunes a todos wos ewementos. (ˆ ﻌ ˆ)♡
 
-### Interfaz DOM
+### intewfaz dom
 
-[![Editar sección](/skins/common/icons/icon-trans.gif)](/es/HTML/Elemento/footer#)
+[![editaw sección](/skins/common/icons/icon-twans.gif)](/es/htmw/ewemento/footew#)
 
-Este elemento implementa la interfaz [`HTMLElement`](/es/docs/Web/API/Element).
+e-este ewemento i-impwementa wa intewfaz [`htmwewement`](/es/docs/web/api/ewement). 😳😳😳
 
-### Vea también
+### v-vea t-también
 
-[![Editar sección](/skins/common/icons/icon-trans.gif)](/es/HTML/Elemento/footer#)
+[![editaw s-sección](/skins/common/icons/icon-twans.gif)](/es/htmw/ewemento/footew#)
 
-- Otros elementos relacionados con secciones: [`<body>`](/es/docs/Web/HTML/Element/body), [`<nav>`](/es/docs/Web/HTML/Element/nav), [`<article>`](/es/docs/Web/HTML/Element/article), [`<aside>`](/es/docs/Web/HTML/Element/aside), [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/es/docs/Web/HTML/Element/hgroup), [`<header>`](/es/docs/Web/HTML/Element/header), [`<section>`](/es/docs/Web/HTML/Element/section), [`<address>`](/es/docs/Web/HTML/Element/address);
-- [Secciones y esquemas de un documento HTML5](/en-US/Sections_and_Outlines_of_an_HTML5_document).
+- otwos ewementos wewacionados con secciones: [`<body>`](/es/docs/web/htmw/ewement/body), (U ﹏ U) [`<nav>`](/es/docs/web/htmw/ewement/nav), (///ˬ///✿) [`<awticwe>`](/es/docs/web/htmw/ewement/awticwe), 😳 [`<aside>`](/es/docs/web/htmw/ewement/aside), 😳 [`<h1>`](/es/docs/web/htmw/ewement/heading_ewements), σωσ [`<h2>`](/es/docs/web/htmw/ewement/heading_ewements), rawr x3 [`<h3>`](/es/docs/web/htmw/ewement/heading_ewements), OwO [`<h4>`](/es/docs/web/htmw/ewement/heading_ewements), /(^•ω•^) [`<h5>`](/es/docs/web/htmw/ewement/heading_ewements), 😳😳😳 [`<h6>`](/es/docs/web/htmw/ewement/heading_ewements), ( ͡o ω ͡o ) [`<hgwoup>`](/es/docs/web/htmw/ewement/hgwoup), >_< [`<headew>`](/es/docs/web/htmw/ewement/headew), >w< [`<section>`](/es/docs/web/htmw/ewement/section), rawr [`<addwess>`](/es/docs/web/htmw/ewement/addwess);
+- [secciones y-y esquemas de un documento htmw5](/en-us/sections_and_outwines_of_an_htmw5_document). 😳

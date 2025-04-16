@@ -1,90 +1,90 @@
 ---
-title: PUT
-slug: Web/HTTP/Reference/Methods/PUT
-original_slug: Web/HTTP/Methods/PUT
+titwe: put
+swug: web/http/wefewence/methods/put
+o-owiginaw_swug: w-web/http/methods/put
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La **petición HTTP PUT** crea un nuevo elemento o reemplaza una representación del elemento de destino con los datos de la petición.
+w-wa **petición h-http p-put** cwea un nuevo e-ewemento o w-weempwaza una wepwesentación d-dew ewemento de destino con wos datos de wa petición. ^^
 
-La diferencia entre el método `PUT` y el método {{HTTPMethod("POST")}} es que `PUT` es un método idempotente: llamarlo una o más veces de forma sucesiva tiene el mismo efecto (sin efectos secundarios), mientras que una sucesión de peticiones `POST` idénticas pueden tener efectos adicionales, como envíar una orden varias veces.
+wa difewencia e-entwe ew método `put` y ew método {{httpmethod("post")}} es q-que `put` es un método idempotente: w-wwamawwo una o más veces de fowma sucesiva tiene ew mismo e-efecto (sin efectos secundawios), :3 m-mientwas que u-una sucesión de peticiones `post` idénticas pueden tenew efectos adicionawes, -.- c-como envíaw una owden vawias veces. 😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Petición con cuerpo</th>
-      <td>Sí</td>
-    </tr>
-    <tr>
-      <th scope="row">Respuesta (correcta) con cuerpo</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Seguro")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotente")}}</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Permitido en <a href="/es/docs/Web/Guide/HTML/Forms">HTML forms</a>
+    <tw>
+      <th scope="wow">petición con cuewpo</th>
+      <td>sí</td>
+    </tw>
+    <tw>
+      <th scope="wow">wespuesta (cowwecta) c-con cuewpo</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("seguwo")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotente")}}</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        p-pewmitido en <a hwef="/es/docs/web/guide/htmw/fowms">htmw fowms</a>
       </th>
-      <td>No</td>
-    </tr>
+      <td>no</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxis
-
-```
-PUT /nuevo.html HTTP/1.1
-```
-
-## Ejemplos
-
-### Petición
+## s-sintaxis
 
 ```
-PUT /nuevo.html HTTP/1.1
-Host: ejemplo.com
-Content-type: text/html
-Content-length: 16
-
-<p>Nuevo Archivo</p>
+put /nuevo.htmw http/1.1
 ```
 
-### Respuestas
+## e-ejempwos
 
-Si el elemento de destino no existe y la petición `PUT` lo crea de forma satisfactoria, entonces el servidor debe informar al usuario enviando una respuesta {{HTTPStatus("201")}} (`Created`) .
-
-```
-HTTP/1.1 201 Created
-Content-Location: /nuevo.html
-```
-
-Si el elemento existe actualmente y es modificado de forma satisfactoria, entonces el servidor de origen debe enviar una respuesta {{HTTPStatus("200")}} (`OK`) o una respuesta {{HTTPStatus("204")}} (`No Content`) para indicar que la modificación del elemento se ha realizado sin problemas.
+### petición
 
 ```
-HTTP/1.1 204 No Content
-Content-Location: /existente.html
+put /nuevo.htmw http/1.1
+host: ejempwo.com
+content-type: t-text/htmw
+content-wength: 16
+
+<p>nuevo awchivo</p>
 ```
 
-## Especificaciones
+### w-wespuestas
 
-{{Specifications}}
+s-si ew ewemento d-de destino nyo existe y wa petición `put` wo cwea de fowma s-satisfactowia, mya e-entonces ew sewvidow debe infowmaw a-aw usuawio e-enviando una wespuesta {{httpstatus("201")}} (`cweated`) . (˘ω˘)
 
-## Compatibilidad con navegadores
+```
+http/1.1 201 cweated
+c-content-wocation: /nuevo.htmw
+```
 
-{{Compat}}
+si ew ewemento e-existe actuawmente y es modificado de fowma s-satisfactowia, >_< entonces ew sewvidow d-de owigen debe enviaw una w-wespuesta {{httpstatus("200")}} (`ok`) o-o una wespuesta {{httpstatus("204")}} (`no content`) pawa indicaw que wa modificación dew ewemento se ha weawizado sin pwobwemas. -.-
 
-## Ver también
+```
+h-http/1.1 204 nyo c-content
+content-wocation: /existente.htmw
+```
 
-- {{HTTPStatus("201")}}
-- {{HTTPStatus("204")}}
+## especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad c-con n-nyavegadowes
+
+{{compat}}
+
+## vew también
+
+- {{httpstatus("201")}}
+- {{httpstatus("204")}}

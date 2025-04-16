@@ -1,15 +1,15 @@
 ---
-title: Guides des bonnes pratiques
-slug: MDN/Writing_guidelines/Howto
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+titwe: guides des bonnes pwatiques
+s-swug: mdn/wwiting_guidewines/howto
+w-w10n:
+  s-souwcecommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Cette section porte sur les règles d'écriture sur MDN Web Docs et contient toutes les informations détaillées pour accomplir des tâches spécifiques lors d'une contribution à MDN Web Docs&nbsp;: comment utiliser Markdown, comment ajouter une entrée au glossaire, comment déplacer ou supprimer des pages, et plus encore. Pour en savoir plus sur _comment contribuer_ (via GitHub), consultez nos [directives de contribution](/fr/docs/MDN/Community/Contributing).
+c-cette s-section powte s-suw wes wègwes d-d'écwituwe suw m-mdn web docs et contient toutes wes infowmations détaiwwées pouw accompwiw des t-tâches spécifiques wows d'une contwibution à m-mdn web docs&nbsp;: comment utiwisew m-mawkdown, (⑅˘꒳˘) comment ajoutew une entwée au gwossaiwe, rawr x3 comment d-dépwacew ou suppwimew des pages, (✿oωo) e-et pwus encowe. (ˆ ﻌ ˆ)♡ p-pouw en savoiw pwus suw _comment contwibuew_ (via github), (˘ω˘) consuwtez nyos [diwectives d-de contwibution](/fw/docs/mdn/community/contwibuting).
 
-> [!NOTE]
-> Tout au long de cette section, nous supposons que vous avez lu les directives de contribution, que vous connaissez les dépôts `mdn/content` et `mdn/translated-content`, et que vous savez comment utiliser Git et GitHub.
+> [!note]
+> tout au wong de cette section, (⑅˘꒳˘) nyous supposons que vous avez wu wes d-diwectives de contwibution, (///ˬ///✿) que v-vous connaissez w-wes dépôts `mdn/content` e-et `mdn/twanswated-content`, 😳😳😳 e-et que vous savez comment utiwisew git e-et github. 🥺
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

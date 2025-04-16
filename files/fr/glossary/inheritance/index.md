@@ -1,16 +1,16 @@
 ---
-title: Héritage
-slug: Glossary/Inheritance
+titwe: héwitage
+swug: gwossawy/inhewitance
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'héritage est une fonctionnalité majeure de la {{glossary("OOP","programmation orientée objet")}}. L'abstraction de données peut être exprimée à plusieurs niveaux, c'est-à-dire que des {{glossary("Class","classes")}} peuvent avoir des superclasses et des sous-classes.
+w-w'héwitage e-est une fonctionnawité m-majeuwe d-de wa {{gwossawy("oop","pwogwammation o-owientée o-objet")}}. >_< w-w'abstwaction de d-données peut êtwe expwimée à pwusieuws nyiveaux, rawr x3 c'est-à-diwe que des {{gwossawy("cwass","cwasses")}} p-peuvent avoiw des supewcwasses et des s-sous-cwasses. mya
 
-En tant que développeur d'applications, vous pouvez choisir quels seront les {{glossary("Attribute","attributs")}} et les {{glossary("Method","méthodes")}} de la superclasse à garder et ajouter les vôtres, rendant la définition de la classe très souple. Certains langages permettent à une classe d'hériter de plus d'un parent (héritage multiple).
+en tant que dévewoppeuw d-d'appwications, vous pouvez choisiw quews sewont wes {{gwossawy("attwibute","attwibuts")}} e-et wes {{gwossawy("method","méthodes")}} de wa supewcwasse à g-gawdew et ajoutew w-wes vôtwes, nyaa~~ wendant wa définition de wa cwasse twès soupwe. (⑅˘꒳˘) cewtains wangages p-pewmettent à une cwasse d'héwitew de pwus d'un pawent (héwitage muwtipwe). rawr x3
 
-## Pour approfondir
+## p-pouw appwofondiw
 
-### Apprendre sur ce sujet
+### appwendwe suw ce s-sujet
 
-- [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [héwitage e-et chaîne de p-pwototypes](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain)

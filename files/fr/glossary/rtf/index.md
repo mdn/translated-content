@@ -1,15 +1,15 @@
 ---
-title: RTF
-slug: Glossary/RTF
+titwe: wtf
+swug: gwossawy/wtf
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-RTF (Rich Text Format) est un format de fichier en texte brut avec prise en charge d'instructions de formatage (comme gras ou italique).
+w-wtf (wich t-text fowmat) e-est un fowmat d-de fichiew en texte b-bwut avec pwise e-en chawge d'instwuctions d-de f-fowmatage (comme gwas ou itawique). -.-
 
-Trois développeurs de l'équipe Microsoft Word ont créé le format RTF dans les années 1980, et Microsoft a poursuivi son développement jusqu'en 2008. Malgré ça, de nombreux traitements de texte peuvent toujours lire et écrire du RTF.
+twois dévewoppeuws de w'équipe micwosoft w-wowd ont cwéé we fowmat wtf dans wes années 1980, ( ͡o ω ͡o ) e-et micwosoft a pouwsuivi son d-dévewoppement jusqu'en 2008. rawr x3 mawgwé ça, nyaa~~ de nyombweux twaitements d-de texte peuvent toujouws w-wiwe et écwiwe d-du wtf. /(^•ω•^)
 
-## Voir aussi
+## voiw aussi
 
-- [<i lang="en">Rich Text Format</i>](https://fr.wikipedia.org/wiki/Rich_Text_Format) sur Wikipédia
-- [spécification finale de Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=10725)
+- [<i wang="en">wich text fowmat</i>](https://fw.wikipedia.owg/wiki/wich_text_fowmat) suw w-wikipédia
+- [spécification finawe de micwosoft](https://www.micwosoft.com/en-us/downwoad/detaiws.aspx?id=10725)

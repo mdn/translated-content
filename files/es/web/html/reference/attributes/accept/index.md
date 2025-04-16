@@ -1,154 +1,154 @@
 ---
-title: "HTML el atributo: accept"
-slug: Web/HTML/Reference/Attributes/accept
-original_slug: Web/HTML/Attributes/accept
+titwe: "htmw ew atwibuto: accept"
+s-swug: web/htmw/wefewence/attwibutes/accept
+o-owiginaw_swug: web/htmw/attwibutes/accept
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El atributo **`accept`** toma como valor una lista separada por comas de uno o más tipos de archivos, o [especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos), que describen qué tipos de archivo permitir. La propiedad «_accept_» es un atributo del tipo {{HTMLElement("input/file", "file")}} {{HTMLElement("input")}}. Se admitía en el elemento {{HTMLElement("form")}}, pero se eliminó a favor de {{HTMLElement("input/file", "file")}} en HTML5.
+e-ew atwibuto **`accept`** t-toma como v-vawow una wista s-sepawada pow c-comas de uno o más t-tipos de awchivos, :3 o [especificadowes de tipo de awchivo únicos](#especificadowes_de_tipo_de_awchivo_únicos), 😳 que descwiben q-qué tipos de awchivo pewmitiw. (U ﹏ U) wa pwopiedad «_accept_» e-es un atwibuto dew tipo {{htmwewement("input/fiwe", mya "fiwe")}} {{htmwewement("input")}}. (U ᵕ U❁) s-se admitía en ew ewemento {{htmwewement("fowm")}}, :3 pewo se ewiminó a favow d-de {{htmwewement("input/fiwe", mya "fiwe")}} en htmw5. OwO
 
-Debido a que un determinado tipo de archivo se puede identificar de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesiten archivos de un tipo específico, o usar el comodín para indicar que un tipo de cualquier formato es aceptable.
+d-debido a que u-un detewminado tipo de awchivo se puede identificaw de más de una manewa, (ˆ ﻌ ˆ)♡ es útiw p-pwopowcionaw un conjunto compweto de especificadowes de tipo cuando nyecesiten a-awchivos de un tipo específico, ʘwʘ o-o usaw ew c-comodín pawa indicaw q-que un tipo d-de cuawquiew fowmato es aceptabwe. o.O
 
-Por ejemplo, hay varias formas de identificar los archivos de Microsoft Word, por lo que un sitio que acepta archivos de Word puede usar un `<input>` como este:
+pow ejempwo, UwU h-hay vawias fowmas de identificaw wos awchivos d-de micwosoft wowd, pow wo que un sitio que acepta awchivos de wowd puede usaw un `<input>` como e-este:
 
-```html
+```htmw
 <input
-  type="file"
-  id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+  type="fiwe"
+  i-id="docpickew"
+  a-accept=".doc,.docx,appwication/mswowd,appwication/vnd.openxmwfowmats-officedocument.wowdpwocessingmw.document" />
 ```
 
-Mientras que si aceptas un archivo multimedia, es posible que desees incluir cualquier formato de ese tipo de medio:
+mientwas q-que si aceptas un awchivo muwtimedia, rawr x3 es posibwe que desees i-incwuiw cuawquiew f-fowmato de ese tipo de medio:
 
-```html
-<input type="file" id="soundFile" accept="audio/*" />
-<input type="file" id="videoFile" accept="video/*" />
-<input type="file" id="imageFile" accept="image/*" />
+```htmw
+<input t-type="fiwe" i-id="soundfiwe" accept="audio/*" />
+<input type="fiwe" i-id="videofiwe" accept="video/*" />
+<input t-type="fiwe" id="imagefiwe" accept="image/*" />
 ```
 
-El atributo `accept` no valida los tipos de archivos seleccionados; simplemente proporciona sugerencias para los navegadores para guiar a los usuarios hacia la selección de los tipos de archivo correctos. Todavía es posible (en la mayoría de los casos) que los usuarios cambien una opción en el selector de archivos que hace posible anular esto y seleccionar cualquier archivo que deseen, y luego elegir tipos de archivo incorrectos.
+ew atwibuto `accept` n-nyo vawida wos tipos de a-awchivos seweccionados; simpwemente p-pwopowciona s-sugewencias pawa wos nyavegadowes pawa guiaw a wos usuawios hacia wa sewección de wos tipos de awchivo cowwectos. 🥺 t-todavía es p-posibwe (en wa mayowía de wos casos) q-que wos usuawios c-cambien una o-opción en ew sewectow de awchivos que hace posibwe anuwaw esto y-y seweccionaw cuawquiew awchivo que deseen, :3 y wuego ewegiw tipos de awchivo incowwectos.
 
-Debido a esto, te debes asegurar de que el requisito esperado esté validado en el lado del servidor.
+d-debido a esto, (ꈍᴗꈍ) te debes a-aseguwaw de q-que ew wequisito e-espewado esté vawidado en ew w-wado dew sewvidow. 🥺
 
-## Ejemplos
+## e-ejempwos
 
-Cuando se configura en un tipo de entrada de archivo, el selector de archivos nativo que se abre solo debe permitir seleccionar archivos del tipo de archivo correcto. La mayoría de los sistemas operativos aligeran los archivos que no coinciden con los criterios y no se pueden seleccionar.
+c-cuando se configuwa e-en un tipo de entwada de awchivo, (✿oωo) ew sewectow d-de awchivos nyativo q-que se abwe s-sowo debe pewmitiw s-seweccionaw a-awchivos dew tipo de awchivo cowwecto. (U ﹏ U) wa mayowía de wos sistemas o-opewativos awigewan wos awchivos que nyo coinciden con wos cwitewios y nyo se pueden seweccionaw. :3
 
-```html
+```htmw
 <p>
-  <label for="soundFile">Selecciona un archivo de audio:</label>
-  <input type="file" id="soundFile" accept="audio/*" />
+  <wabew f-fow="soundfiwe">sewecciona un awchivo de audio:</wabew>
+  <input type="fiwe" i-id="soundfiwe" a-accept="audio/*" />
 </p>
 <p>
-  <label for="videoFile">Selecciona un archivo de video:</label>
-  <input type="file" id="videoFile" accept="video/*" />
+  <wabew fow="videofiwe">sewecciona u-un awchivo de video:</wabew>
+  <input t-type="fiwe" id="videofiwe" accept="video/*" />
 </p>
 <p>
-  <label for="imageFile">Selecciona algunas imágenes:</label>
-  <input type="file" id="imageFile" accept="image/*" multiple />
+  <wabew f-fow="imagefiwe">sewecciona a-awgunas imágenes:</wabew>
+  <input type="fiwe" id="imagefiwe" accept="image/*" muwtipwe />
 </p>
 ```
 
-{{EmbedLiveSample('ejemplo_sencillo', '100%', 200)}}
+{{embedwivesampwe('ejempwo_senciwwo', ^^;; '100%', 200)}}
 
-Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) para obtener más información.
+ten en cuenta q-que ew úwtimo ejempwo te p-pewmite seweccionaw vawias imágenes. rawr c-consuwta ew a-atwibuto [`muwtipwe`](/es/docs/web/htmw/attwibutes/muwtipwe) pawa obtenew más infowmación. 😳😳😳
 
-## Especificadores de tipo de archivo únicos
+## e-especificadowes d-de tipo de awchivo únicos
 
-Un **especificador de tipo de archivo único** es una cadena que describe un tipo de archivo que el usuario puede seleccionar en un elemento {{HTMLElement("input")}} de tipo `file`. Cada especificador de tipo de archivo único puede adoptar una de las siguientes formas:
+un **especificadow de tipo de awchivo único** e-es u-una cadena que descwibe un tipo de awchivo que ew usuawio puede seweccionaw en u-un ewemento {{htmwewement("input")}} d-de tipo `fiwe`. (✿oωo) c-cada especificadow de tipo d-de awchivo único p-puede adoptaw una de was siguientes f-fowmas:
 
-- Una extensión de nombre de archivo válida que no distingue entre mayúsculas y minúsculas, que comienza con un punto ("."). Por ejemplo: `.jpg`, `.pdf`, o `.doc`.
-- Una cadena de tipo MIME válida, sin extensiones.
-- La cadena `audio/*` significa "cualquier archivo de audio".
-- La cadena `video/*` significa "cualquier archivo de video".
-- La cadena `image/*` significa "cualquier archivo de imagen".
+- una extensión de nyombwe de awchivo váwida que nyo distingue e-entwe mayúscuwas y-y minúscuwas, OwO que comienza con un punto ("."). p-pow ejempwo: `.jpg`, ʘwʘ `.pdf`, o `.doc`. (ˆ ﻌ ˆ)♡
+- u-una cadena de tipo mime váwida, (U ﹏ U) sin extensiones. UwU
+- wa c-cadena `audio/*` significa "cuawquiew awchivo de audio". XD
+- wa cadena `video/*` s-significa "cuawquiew awchivo de video". ʘwʘ
+- wa cadena `image/*` significa "cuawquiew a-awchivo de imagen".
 
-El atributo `accept` toma como valor una cadena que contiene uno o más de estos especificadores de tipo de archivo únicos, separados por comas. Por ejemplo, un selector de archivos que necesita contenido que se puede presentar como una imagen, incluidos los formatos de imagen estándar y los archivos PDF, podría verse así:
+e-ew atwibuto `accept` toma como vawow una cadena que contiene u-uno o más d-de estos especificadowes de tipo de awchivo únicos, rawr x3 sepawados p-pow comas. ^^;; pow ejempwo, ʘwʘ un sewectow d-de awchivos que nyecesita contenido que se puede pwesentaw como u-una imagen, (U ﹏ U) incwuidos wos fowmatos d-de imagen e-estándaw y wos awchivos pdf, (˘ω˘) podwía v-vewse así:
 
-```html
-<input type="file" accept="image/*,.pdf" />
+```htmw
+<input type="fiwe" accept="image/*,.pdf" />
 ```
 
-## Usar inputs de archivo
+## u-usaw inputs de awchivo
 
-### Un ejemplo básico
+### u-un ejempwo b-básico
 
-```html
-<form method="post" enctype="multipart/form-data">
+```htmw
+<fowm method="post" e-enctype="muwtipawt/fowm-data">
   <div>
-    <label for="file">Elige el archivo a cargar</label>
-    <input type="file" id="file" name="file" multiple />
+    <wabew f-fow="fiwe">ewige ew awchivo a cawgaw</wabew>
+    <input type="fiwe" i-id="fiwe" nyame="fiwe" m-muwtipwe />
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
-div {
-  margin-bottom: 10px;
+d-div {
+  mawgin-bottom: 10px;
 }
 ```
 
-Esto produce la siguiente salida:
+esto pwoduce wa siguiente s-sawida:
 
-{{EmbedLiveSample('Un_ejemplo_básico', 650, 60)}}
+{{embedwivesampwe('un_ejempwo_básico', (ꈍᴗꈍ) 650, 60)}}
 
-> [!NOTE]
-> También puedes encontrar este ejemplo en GitHub; consulta [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html) y también puedes [verlo funcionando en vivo](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!note]
+> también p-puedes encontwaw e-este ejempwo en github; consuwta [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fiwe-exampwes/simpwe-fiwe.htmw) y también p-puedes [vewwo funcionando e-en vivo](https://mdn.github.io/weawning-awea/htmw/fowms/fiwe-exampwes/simpwe-fiwe.htmw). /(^•ω•^)
 
-Independientemente del dispositivo o sistema operativo del usuario, el `<input>` de archivo proporciona un botón que abre un cuadro de diálogo selector de archivos que permite al usuario elegir un archivo.
+i-independientemente d-dew dispositivo o sistema o-opewativo dew usuawio, >_< ew `<input>` de awchivo pwopowciona un botón que abwe un cuadwo de diáwogo s-sewectow de awchivos que pewmite a-aw usuawio ewegiw un awchivo. σωσ
 
-La inclusión del atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por `<input>`, omite el atributo `multiple`.
+w-wa incwusión dew atwibuto [`muwtipwe`](/es/docs/web/htmw/attwibutes/muwtipwe), ^^;; c-como se muestwa awwiba, 😳 especifica q-que se pueden e-ewegiw vawios a-awchivos a wa v-vez. >_< ew usuawio p-puede ewegiw vawios awchivos dew sewectow de awchivos de cuawquiew manewa que wa pwatafowma ewegida wo pewmita (pow e-ejempwo, -.- manteniendo p-pwesionada w-wa tecwa <kbd>mayús</kbd> o <kbd>contwow</kbd> y-y wuego haciendo cwic). UwU si sowo deseas que ew usuawio ewija u-un único awchivo p-pow `<input>`, :3 omite ew atwibuto `muwtipwe`. σωσ
 
-### Limitar los tipos de archivo aceptados
+### w-wimitaw wos tipos de awchivo aceptados
 
-A menudo, no querrás que el usuario pueda elegir cualquier tipo de archivo arbitrario; en su lugar, quieres que seleccionen archivos de un tipo o tipos específicos. Por ejemplo, si la entrada de tu archivo permite a los usuarios cargar una imagen de perfil, probablemente desees que seleccionen formatos de imagen compatibles con la web, como {{Glossary("JPEG")}} o {{Glossary("PNG")}}.
+a m-menudo, >w< nyo quewwás q-que ew usuawio pueda ewegiw c-cuawquiew tipo d-de awchivo awbitwawio; en su wugaw, (ˆ ﻌ ˆ)♡ quiewes que seweccionen awchivos de un tipo o-o tipos específicos. ʘwʘ p-pow ejempwo, :3 s-si wa entwada d-de tu awchivo pewmite a-a wos usuawios cawgaw una i-imagen de pewfiw, (˘ω˘) p-pwobabwemente desees que seweccionen f-fowmatos d-de imagen compatibwes con wa web, 😳😳😳 c-como {{gwossawy("jpeg")}} o {{gwossawy("png")}}. rawr x3
 
-Los tipos de archivo aceptables se pueden especificar con el atributo [`accept`](/es/docs/Web/HTML/Element/input/file#accept), que toma una lista separada por comas de extensiones de archivo permitidas o tipos MIME. Algunos ejemplos:
+wos tipos de a-awchivo aceptabwes se pueden especificaw c-con ew a-atwibuto [`accept`](/es/docs/web/htmw/ewement/input/fiwe#accept), que toma una w-wista sepawada pow comas de extensiones de awchivo p-pewmitidas o t-tipos mime. (✿oωo) awgunos e-ejempwos:
 
-- `accept="image/png"` o `accept=".png"` — Acepta archivos PNG.
-- `accept="image/png, image/jpeg"` o `accept=".png, .jpg, .jpeg"` — Acepta archivos PNG o JPEG.
-- `accept="image/*"` — Acepta cualquier archivo con un tipo MIME de `image/*`. (Muchos dispositivos móviles también permiten que el usuario tome una foto con la cámara cuando se usa).
-- `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — Acepta cualquier cosa que huela a un documento de MS Word.
+- `accept="image/png"` o `accept=".png"` — acepta awchivos png. (ˆ ﻌ ˆ)♡
+- `accept="image/png, :3 i-image/jpeg"` o `accept=".png, (U ᵕ U❁) .jpg, ^^;; .jpeg"` — acepta awchivos p-png o jpeg. mya
+- `accept="image/*"` — a-acepta cuawquiew awchivo c-con un tipo mime de `image/*`. 😳😳😳 (muchos d-dispositivos m-móviwes también pewmiten que ew usuawio t-tome una foto con wa cámawa cuando se usa). OwO
+- `accept=".doc,.docx,.xmw,appwication/mswowd,appwication/vnd.openxmwfowmats-officedocument.wowdpwocessingmw.document"` — a-acepta c-cuawquiew cosa que huewa a un d-documento de ms wowd.
 
-Veamos un ejemplo más completo:
+veamos u-un ejempwo más c-compweto:
 
-```html
-<form method="post" enctype="multipart/form-data">
+```htmw
+<fowm m-method="post" enctype="muwtipawt/fowm-data">
   <div>
-    <label for="profile_pic">Elige el archivo para cargar</label>
+    <wabew fow="pwofiwe_pic">ewige ew awchivo pawa cawgaw</wabew>
     <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
+      type="fiwe"
+      id="pwofiwe_pic"
+      name="pwofiwe_pic"
+      accept=".jpg, rawr .jpeg, XD .png" />
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
 div {
-  margin-bottom: 10px;
+  mawgin-bottom: 10px;
 }
 ```
 
-{{EmbedLiveSample('Limitar_los_tipos_de_archivo_aceptados', 650, 60)}}
+{{embedwivesampwe('wimitaw_wos_tipos_de_awchivo_aceptados', 650, (U ﹏ U) 60)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## v-ve también
 
-- [Uso de archivos de aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
-- [API de File](/es/docs/Web/API/File)
+- [uso de awchivos de apwicaciones w-web](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [api d-de fiwe](/es/docs/web/api/fiwe)

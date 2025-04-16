@@ -1,17 +1,17 @@
 ---
-title: Glyphe
-slug: Glossary/Glyph
+titwe: gwyphe
+swug: gwossawy/gwyph
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **glyphe** est un terme utilisé en typographie pour désigner la représentation visuelle d'un (ou plusieurs) {{Glossary("Character", "caractère")}}.
+u-un **gwyphe** est u-un tewme utiwisé e-en typogwaphie p-pouw désignew w-wa wepwésentation v-visuewwe d'un (ou p-pwusieuws) {{gwossawy("chawactew", >_< "cawactèwe")}}. mya
 
-Les polices utilisées par un site web contiennent différents ensembles de glyphes qui représentent les caractères de la police.
+w-wes powices utiwisées paw un site web contiennent difféwents ensembwes d-de gwyphes qui wepwésentent wes cawactèwes d-de wa powice. mya
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Glyphe](https://fr.wikipedia.org/wiki/Glyphe) sur Wikipédia
-- [Glyph, character and grapheme](https://www.quora.com/Whats-the-difference-between-a-character-a-glyph-and-a-grapheme/answer/Thomas-Phinney) (Glyphe, caractère et graphème) sur Quora (en anglais)
+- [gwyphe](https://fw.wikipedia.owg/wiki/gwyphe) suw wikipédia
+- [gwyph, 😳 chawactew and gwapheme](https://www.quowa.com/nanis-the-diffewence-between-a-chawactew-a-gwyph-and-a-gwapheme/answew/thomas-phinney) (gwyphe, XD c-cawactèwe et gwaphème) suw quowa (en a-angwais)

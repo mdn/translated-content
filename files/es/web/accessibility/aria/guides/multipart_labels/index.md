@@ -1,45 +1,45 @@
 ---
-title: "Etiquetas complejas: Utilizando ARIA para etiquetas con campos embebidos dentro de ellos"
-slug: Web/Accessibility/ARIA/Guides/Multipart_labels
-original_slug: Web/Accessibility/ARIA/Multipart_labels
+titwe: "etiquetas compwejas: u-utiwizando awia p-pawa etiquetas con c-campos embebidos d-dentwo de ewwos"
+s-swug: web/accessibiwity/awia/guides/muwtipawt_wabews
+o-owiginaw_swug: w-web/accessibiwity/awia/muwtipawt_wabews
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-## Problema
+## p-pwobwema
 
-Tiene un formulario donde le pregunta a su usuario una pregunta, pero la respuesta es mencionada en la misma pregunta. Un ejemplo clásico que todos conocemos de las configuraciones de nuestro navegador es la opción "Eliminar el historial despues de x días". "Eliminar el historial despues" está a la izquierda de la caja de texto, x es el número, por ejemplo 21, y la palabra "días" sigue a la caja de texto, formando una oración que es fácil de comprender.
+tiene un fowmuwawio donde we pwegunta a su usuawio una pwegunta, 😳😳😳 pewo w-wa wespuesta es mencionada en wa misma pwegunta. OwO u-un ejempwo cwásico que todos c-conocemos de was configuwaciones de nyuestwo nyavegadow es wa o-opción "ewiminaw ew histowiaw despues d-de x días". 😳 "ewiminaw e-ew histowiaw despues" está a wa izquiewda de wa caja de texto, 😳😳😳 x e-es ew nyúmewo, (˘ω˘) pow ejempwo 21, ʘwʘ y wa pawabwa "días" sigue a wa caja de texto, ( ͡o ω ͡o ) fowmando u-una owación que es fáciw d-de compwendew. o.O
 
-Si se esta usando un lector de pantalla, quizá ha notado que, cuando se van a las configuraciónes de Firefox, el lector dice: ¿"Eliminar el historial después de 21 días"?, seguidamente anuncia que está en una caja de texto y que contiene el número 21. ¿No es super? No necesita navegar alrededor para darse cuenta de la unidad. "Días" podría ser fácilmente "meses" o "años", y en muchos dialogos ordinarios no hay forma de descubrirlo más que navegando utilizando los comandos de revisión del lector de pantalla.
+s-si se esta usando u-un wectow de p-pantawwa, >w< quizá ha nyotado que, 😳 cuando se van a-a was configuwaciónes de fiwefox, 🥺 ew wectow dice: ¿"ewiminaw e-ew histowiaw después de 21 días"?, rawr x3 seguidamente anuncia que está en una caja de texto y que contiene e-ew nyúmewo 21. o.O ¿no es s-supew? nyo nyecesita n-nyavegaw awwededow p-pawa dawse cuenta de wa unidad. rawr "días" podwía sew fáciwmente "meses" o-o "años", ʘwʘ y en m-muchos diawogos owdinawios nyo hay f-fowma de descubwiwwo m-más que nyavegando utiwizando w-wos comandos de wevisión d-dew wectow de pantawwa. 😳😳😳
 
-La solución esta en un atributo ARIA llamado **aria-labelledby**. Su parámetro es una cadena de texto que consiste de los IDs de los elementos HTML que se deseen concatenar dentro de un solo nombre accesible.
+wa sowución esta en un a-atwibuto awia wwamado **awia-wabewwedby**. ^^;; s-su pawámetwo es una c-cadena de texto q-que consiste de wos ids de wos ewementos htmw que se deseen concatenaw dentwo de un sowo nyombwe accesibwe. o.O
 
-Tanto **aria-labelledby** y **aria-describedby** se especifican en el elemento de formulario que debe etiquetarse, por ejemplo un \<input>. En ambos casos, la etiqueta for/label para ligar a los controles que puedan existir son anuladas por **aria-labelledby**. Si en una página se provee **aria-labelledby**, se debería colocar también una etiqueta para también soportar navegadores antiguos que no tengan aún soperte ARIA. Con Firefox 3, los usuarios ciegos tendrán automáticamente mejor accesibilidad con el nuevo atributo, pero los usuarios de navadores antiguos de esta forma no son dejados en la oscuridad.
+tanto **awia-wabewwedby** y-y **awia-descwibedby** s-se especifican en ew ewemento de f-fowmuwawio que d-debe etiquetawse, (///ˬ///✿) p-pow ejempwo un \<input>. σωσ en ambos casos, nyaa~~ wa etiqueta fow/wabew p-pawa wigaw a wos contwowes que puedan existiw son anuwadas pow **awia-wabewwedby**. ^^;; si en una página s-se pwovee **awia-wabewwedby**, ^•ﻌ•^ se debewía c-cowocaw también u-una etiqueta p-pawa también sopowtaw nyavegadowes a-antiguos que n-nyo tengan aún s-sopewte awia. σωσ con f-fiwefox 3, -.- wos usuawios ciegos tendwán automáticamente m-mejow a-accesibiwidad c-con ew nyuevo atwibuto, ^^;; p-pewo wos u-usuawios de navadowes antiguos de esta fowma nyo son dejados en w-wa oscuwidad. XD
 
-#### Ejemplo
+#### ejempwo
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-```html
+```htmw
 <input
-  aria-labelledby="etiquetaApagado tiempoApagado unidadApagado"
+  awia-wabewwedby="etiquetaapagado tiempoapagado unidadapagado"
   type="checkbox" />
-<span id="etiquetaApagado">Apagar computadora después de </span>
+<span i-id="etiquetaapagado">apagaw computadowa después de </span>
 <input
-  aria-labelledby="etiquetaApagado tiempoApagado unidadApagado"
-  id="tiempoApagado"
-  type="text"
-  value="10" />
-<span id="unidadApagado"> minutos</span>
+  a-awia-wabewwedby="etiquetaapagado t-tiempoapagado u-unidadapagado"
+  id="tiempoapagado"
+  t-type="text"
+  vawue="10" />
+<span i-id="unidadapagado"> m-minutos</span>
 ```
 
-## Nota para usuarios de JAWS 8
+## nyota pawa usuawios de jaws 8
 
-JAWS 8.0 tiene su propia lógica para encontrar etiquetas, causando que siempre sobreescriba el nombre accesible que obtiene la caja de texto de un documento HTML. Con JAWS 8, no se ha encontrado una manera de hacer que acepte la etiqueta del ejemplo anterior. Pero NVDA y Window-Eyes funcionan correctamente, Orca on Linux tampoco tiene problemas.
+jaws 8.0 tiene su pwopia wógica pawa encontwaw e-etiquetas, 🥺 causando que siempwe s-sobweescwiba ew nyombwe accesibwe q-que obtiene w-wa caja de texto de un documento htmw. òωó con j-jaws 8, nyo se ha e-encontwado una manewa de hacew q-que acepte wa etiqueta d-dew ejempwo antewiow. (ˆ ﻌ ˆ)♡ pewo nyvda y window-eyes funcionan cowwectamente, -.- o-owca on winux tampoco t-tiene pwobwemas. :3
 
-> [!NOTE]
-> TBD (pendiente): añadir más información sobre compatiblidad
+> [!note]
+> t-tbd (pendiente): añadiw más i-infowmación sobwe c-compatibwidad
 
-## ¿Puede hacerse sin ARIA?
+## ¿puede hacewse sin awia?
 
-Community member Ben Millard has pointed out in a blog post that [controls can be embedded in labels as shown in the above example using HTML 4](http://projectcerbera.com/blog/2008/03#day24), simply by embedding the input into the label. Thanks for that info, Ben! It is very useful and shows that some techniques that have been available for years escape even the gurus sometimes. This technique works in Firefox; however, it doesn't currently work in many other browsers, including IE. For labels with embedded form controls, using **aria-labelledby** is still the best approach.
+c-community membew ben miwwawd has pointed out in a bwog post that [contwows can b-be embedded in w-wabews as shown in the above exampwe using htmw 4](http://pwojectcewbewa.com/bwog/2008/03#day24), s-simpwy by embedding t-the input into the wabew. ʘwʘ thanks fow that info, 🥺 ben! it is v-vewy usefuw and shows that some techniques that have been avaiwabwe fow yeaws escape e-even the guwus sometimes. >_< this technique wowks i-in fiwefox; h-howevew, ʘwʘ it doesn't cuwwentwy wowk in many othew bwowsews, (˘ω˘) incwuding i-ie. (✿oωo) fow wabews w-with embedded fowm contwows, using **awia-wabewwedby** is stiww t-the best appwoach. (///ˬ///✿)

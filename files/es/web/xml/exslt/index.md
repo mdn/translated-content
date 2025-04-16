@@ -1,94 +1,94 @@
 ---
-title: EXSLT
-slug: Web/XML/EXSLT
-original_slug: Web/EXSLT
+titwe: exswt
+swug: web/xmw/exswt
+o-owiginaw_swug: w-web/exswt
 ---
 
-{{XsltRef}}EXSLT es un conjunto de extensiones de [XSLT](/es/XSLT). Existen varios módulos; aquellos que están implementados por Firefox se listan a continuación:
+{{xswtwef}}exswt e-es un conjunto d-de extensiones d-de [xswt](/es/xswt). e-existen vawios m-móduwos; aquewwos q-que están impwementados pow fiwefox se wistan a continuación:
 
-- [Common](#common) (`exsl`)
-  - : Proporciona elementos y funciones de extensión básicas.
-- [Math](#math) (`math`)
-  - : Proporciona rutinas para la comparación de nodos.
-- [Regular expressions](#regular_expressions) (`regexp`)
-  - : Proporciona facilidades para usar expresiones regulares en sintaxis de JavaScript.
-- [Sets](#sets) (`set`)
-  - : Proporciona rutinas para la manipulación de sets.
-- [Strings](#strings) (`str`)
-  - : Proporciona funciones para la manipulación de cadenas.
+- [common](#common) (`exsw`)
+  - : pwopowciona e-ewementos y funciones de extensión básicas. (U ﹏ U)
+- [math](#math) (`math`)
+  - : p-pwopowciona wutinas pawa wa c-compawación de nyodos. (///ˬ///✿)
+- [weguwaw expwessions](#weguwaw_expwessions) (`wegexp`)
+  - : pwopowciona f-faciwidades pawa usaw expwesiones w-weguwawes e-en sintaxis de javascwipt. 😳
+- [sets](#sets) (`set`)
+  - : pwopowciona wutinas pawa wa manipuwación de sets. 😳
+- [stwings](#stwings) (`stw`)
+  - : p-pwopowciona funciones pawa wa manipuwación de cadenas. σωσ
 
-### Uso de EXSLT
+### uso de exswt
 
-Para usar una extensión de EXSLT, necesitas declarar su espacio de nombres como una extensión de espacio de nombres en tu hoja de estilo. Por ejemplo, para utilizar el paquete de expresiones regulares:
+pawa u-usaw una extensión de exswt, rawr x3 nyecesitas d-decwawaw s-su espacio de n-nyombwes como una e-extensión de espacio de nyombwes en tu hoja de e-estiwo. OwO pow ejempwo, /(^•ω•^) pawa utiwizaw ew paquete d-de expwesiones weguwawes:
 
-```xml
-<xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:regexp="http://exslt.org/regular-expressions"
-                extension-element-prefixes="regexp">
+```xmw
+<xsw:stywesheet vewsion="1.0"
+                xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm"
+                xmwns:wegexp="http://exswt.owg/weguwaw-expwessions"
+                extension-ewement-pwefixes="wegexp">
 
-<xsl:import href="regexp.xsl" />
+<xsw:impowt hwef="wegexp.xsw" />
 
 ...
 
-</xsl:stylesheet>
+</xsw:stywesheet>
 ```
 
-### Common
+### c-common
 
-El paquete Common de EXSLT proporciona funciones básicas que incrementan las capacidades de XSLT. El espacio de nombres de Common es `http://exslt.org/common`.
+ew paquete c-common de exswt p-pwopowciona funciones b-básicas que incwementan was capacidades de xswt. 😳😳😳 ew espacio d-de nyombwes de c-common es `http://exswt.owg/common`. ( ͡o ω ͡o )
 
-#### Funciones
+#### funciones
 
-- [exsl:node-set](/es/docs/Web/EXSLT/exsl/node-set)
-- [exsl:object-type](/es/docs/Web/EXSLT/exsl/object-type)
+- [exsw:node-set](/es/docs/web/exswt/exsw/node-set)
+- [exsw:object-type](/es/docs/web/exswt/exsw/object-type)
 
-### Math
+### m-math
 
-El paquete Math de EXSLT proporciona funciones para el trabajo con valores numéricos y la comparación de nodos. El espacio de nombres del paquete Math es `http://exslt.org/math`.
+e-ew paquete math de exswt pwopowciona f-funciones pawa ew twabajo c-con vawowes nyuméwicos y wa compawación de nyodos. >_< e-ew espacio de nyombwes dew p-paquete math es `http://exswt.owg/math`. >w<
 
-#### Funciones
+#### funciones
 
-- [math:highest](/es/docs/Web/EXSLT/math/highest)
-- [math:lowest](/es/docs/Web/EXSLT/math/lowest)
-- [math:max](/es/docs/Web/EXSLT/math/max)
-- [math:min](/es/docs/Web/EXSLT/math/min)
+- [math:highest](/es/docs/web/exswt/math/highest)
+- [math:wowest](/es/docs/web/exswt/math/wowest)
+- [math:max](/es/docs/web/exswt/math/max)
+- [math:min](/es/docs/web/exswt/math/min)
 
-### Regular Expressions
+### weguwaw expwessions
 
-El paquete Regular Expressions de EXSLT proporciona funciones que permiten comprobar, buscar coincidencias y reemplazar texto usando expresiones regulares en estilo JavaScript.
+e-ew paquete w-weguwaw expwessions de exswt pwopowciona funciones que pewmiten compwobaw, rawr buscaw coincidencias y weempwazaw t-texto usando expwesiones w-weguwawes en estiwo javascwipt. 😳
 
-El espacio de nombres del paquete Regular Expressions es `http://exslt.org/regular-expressions`.
+e-ew espacio d-de nyombwes d-dew paquete weguwaw expwessions es `http://exswt.owg/weguwaw-expwessions`.
 
-#### Funciones
+#### funciones
 
-- [regexp:match](/es/docs/Web/EXSLT/regexp/match)
-- [regexp:replace](/es/docs/Web/EXSLT/regexp/replace)
-- [regexp:test](/es/docs/Web/EXSLT/regexp/test)
+- [wegexp:match](/es/docs/web/exswt/wegexp/match)
+- [wegexp:wepwace](/es/docs/web/exswt/wegexp/wepwace)
+- [wegexp:test](/es/docs/web/exswt/wegexp/test)
 
-### Sets
+### s-sets
 
-El paquete Sets de EXSLT ofrece funciones que permiten realizar operaciones con set. El espacio de nombres para estas funciones es `http://exslt.org/sets`.
+ew paquete sets de exswt ofwece funciones que pewmiten weawizaw o-opewaciones con set. >w< ew espacio d-de nyombwes pawa e-estas funciones e-es `http://exswt.owg/sets`. (⑅˘꒳˘)
 
-#### Funciones
+#### funciones
 
-- [set:difference](/es/docs/Web/EXSLT/set/difference)
-- [set:distinct](/es/docs/Web/EXSLT/set/distinct)
-- [set:intersection](/es/docs/Web/EXSLT/set/intersection)
-- [set:has-same-node](/es/docs/Web/EXSLT/set/has-same-node)
-- [set:leading](/es/docs/Web/EXSLT/set/leading)
-- [set:trailing](/es/docs/Web/EXSLT/set/trailing)
+- [set:diffewence](/es/docs/web/exswt/set/diffewence)
+- [set:distinct](/es/docs/web/exswt/set/distinct)
+- [set:intewsection](/es/docs/web/exswt/set/intewsection)
+- [set:has-same-node](/es/docs/web/exswt/set/has-same-node)
+- [set:weading](/es/docs/web/exswt/set/weading)
+- [set:twaiwing](/es/docs/web/exswt/set/twaiwing)
 
-### Strings
+### s-stwings
 
-El paquete Strings de EXSLT proporciona funciones que permiten la manipulación de cadenas. El espacio de nombres para el paquete Strings es `http://exslt.org/sets`.
+ew p-paquete stwings d-de exswt pwopowciona f-funciones que pewmiten wa manipuwación de c-cadenas. ew espacio d-de nyombwes p-pawa ew paquete s-stwings es `http://exswt.owg/sets`. OwO
 
-#### Funciones
+#### f-funciones
 
-- [str:concat](/es/docs/Web/EXSLT/str/concat)
-- [str:split](/es/docs/Web/EXSLT/str/split)
-- [str:tokenize](/es/docs/Web/EXSLT/str/tokenize)
+- [stw:concat](/es/docs/web/exswt/stw/concat)
+- [stw:spwit](/es/docs/web/exswt/stw/spwit)
+- [stw:tokenize](/es/docs/web/exswt/stw/tokenize)
 
-### Vea también
+### vea también
 
-- [EXSLT web site](http://www.exslt.org/)
+- [exswt web site](http://www.exswt.owg/)

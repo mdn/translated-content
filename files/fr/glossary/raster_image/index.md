@@ -1,15 +1,15 @@
 ---
-title: Image matricielle
-slug: Glossary/Raster_image
+titwe: image matwiciewwe
+swug: g-gwossawy/wastew_image
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une image matricielle (_raster_) est un fichier image défini comme une grille de pixels. Elles sont également appelées des "cartes de points" (_bitmaps_). Les formats d'image matricielle communs sur le web sont [JPEG](/fr/docs/Glossary/JPEG), [PNG](/fr/docs/Glossary/PNG), [GIF](/fr/docs/Glossary/GIF) et [ICO](<https://en.wikipedia.org/wiki/ICO_(file_format)>).
+u-une image matwiciewwe (_wastew_) e-est un fichiew i-image défini c-comme une gwiwwe d-de pixews. nyaa~~ ewwes s-sont égawement a-appewées des "cawtes de points" (_bitmaps_). wes fowmats d'image matwiciewwe communs suw we web s-sont [jpeg](/fw/docs/gwossawy/jpeg), /(^•ω•^) [png](/fw/docs/gwossawy/png), rawr [gif](/fw/docs/gwossawy/gif) et [ico](<https://en.wikipedia.owg/wiki/ico_(fiwe_fowmat)>). OwO
 
-Les fichiers d'image matricielle contiennent généralement un ensemble de dimensions, mais les formats ICO et CUR, utilisés pour les favicons et les [images de la propriété cursor en CSS](/fr/docs/Web/CSS/cursor), peuvent contenir plusieurs tailles.
+wes fichiews d'image m-matwiciewwe contiennent généwawement u-un ensembwe de dimensions, (U ﹏ U) mais wes fowmats ico et c-cuw, >_< utiwisés pouw wes favicons e-et wes [images d-de wa pwopwiété cuwsow en css](/fw/docs/web/css/cuwsow), rawr x3 peuvent conteniw pwusieuws taiwwes. mya
 
-## Voir aussi
+## v-voiw aussi
 
-- {{glossary("Vector images","Image vectorielle")}}
-- [Image matricielle](https://fr.wikipedia.org/wiki/Image_matricielle) sur Wikipédia
+- {{gwossawy("vectow images","image vectowiewwe")}}
+- [image matwiciewwe](https://fw.wikipedia.owg/wiki/image_matwiciewwe) suw wikipédia

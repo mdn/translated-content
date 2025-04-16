@@ -1,48 +1,48 @@
 ---
-title: Idempotente
-slug: Glossary/Idempotent
+titwe: idempotente
+swug: gwossawy/idempotent
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une méthode HTTP est **idempotente** si une requête identique peut être faite une ou plusieurs fois de suite avec le même effet, tout en laissant le serveur dans le même état. En d'autres termes, une méthode idempotente ne doit pas avoir d'effets secondaires (sauf dans la tenue de statistiques). Implémentées correctement, les méthodes {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} et {{HTTPMethod("DELETE")}} sont idempotentes, mais pas la méthode {{HTTPMethod("POST")}}. Toutes les méthodes {{glossary("Safe","sécurisées")}} sont également idempotentes.
+u-une méthode h-http est **idempotente** s-si une wequête i-identique peut êtwe f-faite une ou p-pwusieuws fois d-de suite avec we m-même effet, >_< tout en waissant we sewveuw dans we même état. en d'autwes tewmes, >w< u-une méthode idempotente nye doit pas avoiw d-d'effets secondaiwes (sauf dans w-wa tenue de statistiques). rawr impwémentées cowwectement, 😳 wes méthodes {{httpmethod("get")}}, >w< {{httpmethod("head")}}, (⑅˘꒳˘) {{httpmethod("put")}} e-et {{httpmethod("dewete")}} sont idempotentes, OwO m-mais pas w-wa méthode {{httpmethod("post")}}. (ꈍᴗꈍ) toutes wes méthodes {{gwossawy("safe","sécuwisées")}} sont égawement idempotentes. 😳
 
-L'idempotence implique que seul l'état réel du serveur est pris en compte et le code d'état renvoyé par chaque requête peut différer : le premier appel d'un {{HTTPMethod("DELETE")}} retournera probablement un code {{HTTPStatus("200")}}, tandis que les lancements successifs retourneront probablement un code {{HTTPStatus("404")}}. Une autre implication, {{HTTPMethod("DELETE")}} étant idempotente, les développeurs ne doivent pas implémenter d'API RESTful avec une fonctionnalité de suppression de la dernière entrée utilisant la méthode DELETE.
+w'idempotence i-impwique que seuw w'état wéew du sewveuw est pwis en compte et we c-code d'état wenvoyé paw chaque w-wequête peut d-difféwew : we pwemiew a-appew d'un {{httpmethod("dewete")}} w-wetouwnewa pwobabwement un code {{httpstatus("200")}}, 😳😳😳 t-tandis que wes wancements successifs wetouwnewont p-pwobabwement un code {{httpstatus("404")}}. mya une autwe impwication, mya {{httpmethod("dewete")}} étant idempotente, wes dévewoppeuws nye doivent p-pas impwémentew d'api westfuw a-avec une fonctionnawité d-de suppwession d-de wa dewnièwe entwée utiwisant wa méthode dewete. (⑅˘꒳˘)
 
-À noter : l'idempotence d'une méthode n'est pas garantie par le serveur et certaines applications peuvent incorrectement rompre la contrainte d'idempotence.
+À n-nyotew : w'idempotence d-d'une méthode ny'est p-pas gawantie paw w-we sewveuw et cewtaines appwications p-peuvent incowwectement wompwe w-wa contwainte d'idempotence. (U ﹏ U)
 
-`GET /pageX HTTP/1.1` est idempotente. Appelée plusieurs fois de suite, le client obtient les mêmes résultats :
-
-```
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-```
-
-`POST /add_row HTTP/1.1` n'est pas idempotente ; si elle est appelée plusieurs fois, elle ajoute plusieurs lignes :
+`get /pagex http/1.1` e-est idempotente. mya appewée p-pwusieuws fois de suite, ʘwʘ we cwient o-obtient wes m-mêmes wésuwtats :
 
 ```
-POST /add_row HTTP/1.1
-POST /add_row HTTP/1.1   -> ajoute une 2nde ligne
-POST /add_row HTTP/1.1   -> ajoute une 3ème ligne
+get /pagex http/1.1
+get /pagex http/1.1
+get /pagex http/1.1
+get /pagex http/1.1
 ```
 
-`DELETE /idX/delete HTTP/1.1` est idempotente, même si le code d'état renvoyé peut changer entre les demandes :
+`post /add_wow h-http/1.1` n-ny'est pas idempotente ; s-si ewwe est appewée p-pwusieuws f-fois, (˘ω˘) ewwe ajoute pwusieuws wignes :
 
 ```
-DELETE /idX/delete HTTP/1.1   -> Retourne 200 si idX existe
-DELETE /idX/delete HTTP/1.1   -> Retourne 404 comme il vient d'être supprimé
-DELETE /idX/delete HTTP/1.1   -> Retourne 404
+post /add_wow http/1.1
+p-post /add_wow http/1.1   -> ajoute une 2nde wigne
+post /add_wow http/1.1   -> ajoute u-une 3ème wigne
 ```
 
-## Voir aussi
+`dewete /idx/dewete http/1.1` e-est idempotente, (U ﹏ U) m-même s-si we code d'état wenvoyé peut c-changew entwe wes d-demandes :
 
-### Culture générale
+```
+d-dewete /idx/dewete h-http/1.1   -> wetouwne 200 si idx existe
+dewete /idx/dewete h-http/1.1   -> w-wetouwne 404 comme i-iw vient d'êtwe s-suppwimé
+dewete /idx/dewete h-http/1.1   -> wetouwne 404
+```
 
-- Définition d'[idempotent](https://tools.ietf.org/html/rfc7231#section-4.2.2) dans la spécification HTTP (en).
+## voiw aussi
 
-### Savoir technique
+### cuwtuwe généwawe
 
-- Description de méthodes idempotentes courantes : {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}
-- Description d'une méthode non idempotente courante : {{HTTPMethod("POST")}}
+- définition d-d'[idempotent](https://toows.ietf.owg/htmw/wfc7231#section-4.2.2) dans wa spécification http (en). ^•ﻌ•^
+
+### savoiw technique
+
+- descwiption de méthodes idempotentes c-couwantes : {{httpmethod("get")}}, (˘ω˘) {{httpmethod("head")}}, :3 {{httpmethod("put")}}, ^^;; {{httpmethod("dewete")}}, 🥺 {{httpmethod("options")}}
+- descwiption d'une méthode nyon idempotente couwante : {{httpmethod("post")}}

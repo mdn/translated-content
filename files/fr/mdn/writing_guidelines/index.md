@@ -1,67 +1,67 @@
 ---
-title: Règles d'écriture
-slug: MDN/Writing_guidelines
-l10n:
-  sourceCommit: 4d6913ea91fa5dd65f843d715f1878a8d015b49f
+titwe: wègwes d'écwituwe
+swug: m-mdn/wwiting_guidewines
+w-w10n:
+  s-souwcecommit: 4d6913ea91fa5dd65f843d715f1878a8d015b49f
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-MDN Web Docs est un projet <i lang="en">open source</i>. Dans les sections qui suivent, nous verrons ce qui y est documenté et comment. Pour en savoir plus sur _les façons de contribuer_, veuillez consulter [les règles de contribution](/fr/docs/MDN/Community).
+mdn w-web docs est u-un pwojet <i wang="en">open s-souwce</i>. mya d-dans wes s-sections qui suivent, 🥺 nyous vewwons ce qui y est documenté et comment. ^^;; pouw en s-savoiw pwus suw _wes façons de contwibuew_, veuiwwez c-consuwtew [wes wègwes de c-contwibution](/fw/docs/mdn/community). :3
 
-- [Ce que nous documentons sur MDN](/fr/docs/MDN/Writing_guidelines/What_we_write)
+- [ce que nyous documentons suw mdn](/fw/docs/mdn/wwiting_guidewines/nani_we_wwite)
 
-  - : Dans cette section, nous décrivons ce qui est inclus dans MDN et ce qui n'y a pas sa place, ainsi que différentes règles, par exemple sur la chronologie à utiliser pour documenter de nouvelles technologies, le processus de suggestion et l'acceptation des liens externes. Il s'agit d'un bon point de départ si vous souhaitez écrire ou mettre à jour du contenu. Cette section contient également&nbsp;:
-    - [Les critères d'inclusion](/fr/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
-      - : Une description détaillée des critères qui définissent le contenu qui peut être inclus dans MDN, le processus pour qu'une nouvelle documentation soit ajoutée et les attentes et règles à respecter pour les parties qui voudraient contribuer.
+  - : dans cette section, (U ﹏ U) n-nyous décwivons ce qui e-est incwus dans m-mdn et ce qui ny'y a pas sa pwace, OwO ainsi que difféwentes wègwes, 😳😳😳 paw exempwe suw w-wa chwonowogie à utiwisew pouw documentew de nyouvewwes technowogies, (ˆ ﻌ ˆ)♡ we pwocessus d-de suggestion et w'acceptation d-des wiens e-extewnes. XD iw s'agit d-d'un bon point d-de dépawt si vous souhaitez écwiwe ou mettwe à j-jouw du contenu. cette section contient égawement&nbsp;:
+    - [wes c-cwitèwes d'incwusion](/fw/docs/mdn/wwiting_guidewines/nani_we_wwite/cwitewia_fow_incwusion)
+      - : une descwiption détaiwwée des cwitèwes qui définissent we contenu q-qui peut êtwe incwus dans m-mdn, (ˆ ﻌ ˆ)♡ we pwocessus p-pouw qu'une n-nyouvewwe documentation soit ajoutée et wes attentes et wègwes à w-wespectew pouw w-wes pawties qui voudwaient contwibuew. ( ͡o ω ͡o )
 
-- [Comment écrire pour MDN](/fr/docs/MDN/Writing_guidelines/Howto)
+- [comment écwiwe p-pouw m-mdn](/fw/docs/mdn/wwiting_guidewines/howto)
 
-  - : Dans cette section, nous abordons tout ce qui est nécessaire à la création et à l'édition de pages, dont certains processus et certaines techniques que nous utilisons. Elle contient des informations pour bien démarrer, un aperçu général de la structure des pages et où trouver des guides pour les différentes tâches d'écriture. Cette section contient notamment les articles suivants&nbsp;:
+  - : dans cette s-section, rawr x3 nyous abowdons tout ce q-qui est nyécessaiwe à wa cwéation et à w'édition d-de pages, nyaa~~ dont cewtains pwocessus e-et cewtaines techniques q-que nyous utiwisons. >_< e-ewwe contient des infowmations pouw bien démawwew, ^^;; un apewçu généwaw de wa stwuctuwe des pages et où t-twouvew des guides p-pouw wes difféwentes tâches d-d'écwituwe. (ˆ ﻌ ˆ)♡ cette s-section contient n-nyotamment wes awticwes suivants&nbsp;:
 
-    - [Utiliser le format Markdown](/fr/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
+    - [utiwisew we fowmat mawkdown](/fw/docs/mdn/wwiting_guidewines/howto/mawkdown_in_mdn)
 
-      - : Le format de Markdown que nous utilisons est un dérivé du [<i lang="en">GitHub flavored markdown</i> (GFM)](https://github.github.com/gfm/). Cette section est un guide pour ce format utilisé sur MDN, détaillant entre autres certains composants spécifiques comme les notes et les listes de définitions.
+      - : w-we fowmat de mawkdown que nyous utiwisons est un déwivé du [<i wang="en">github f-fwavowed mawkdown</i> (gfm)](https://github.github.com/gfm/). ^^;; cette section e-est un guide pouw c-ce fowmat utiwisé s-suw mdn, (⑅˘꒳˘) détaiwwant entwe a-autwes cewtains c-composants spécifiques c-comme w-wes nyotes et wes wistes de définitions. rawr x3
 
-    - [Ajouter des images et des médias](/fr/docs/MDN/Writing_guidelines/Howto/Images_media)
+    - [ajoutew des images e-et des médias](/fw/docs/mdn/wwiting_guidewines/howto/images_media)
 
-      - : Cette section décrit les prérequis à respecter pour ajouter des médias aux pages, comme des images.
+      - : c-cette section d-décwit wes pwéwequis à w-wespectew p-pouw ajoutew des médias aux pages, (///ˬ///✿) comme des images. 🥺
 
-    - [Ajouter une entrée au glossaire](/fr/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
+    - [ajoutew u-une entwée au gwossaiwe](/fw/docs/mdn/wwiting_guidewines/howto/wwite_a_new_entwy_in_the_gwossawy)
 
-      - : Cette section explique comment ajouter de nouvelles entrées au glossaire MDN et utiliser des liens vers ces termes. Elle fournit également des recommandations quant au plan et au contenu à respecter pour chaque entrée.
+      - : cette section expwique comment ajoutew de nyouvewwes entwées a-au gwossaiwe mdn et utiwisew des wiens vews ces tewmes. >_< e-ewwe fouwnit égawement d-des wecommandations q-quant au pwan et au c-contenu à wespectew pouw chaque e-entwée. UwU
 
-    - [Comment effectuer des recherches sur une technologie](/fr/docs/MDN/Writing_guidelines/Howto/Research_technology)
+    - [comment e-effectuew des wechewches suw une technowogie](/fw/docs/mdn/wwiting_guidewines/howto/weseawch_technowogy)
 
-      - : Cette section fournit des conseils pratiques pour effectuer des recherches à propos d'une technologie en cours de documentation.
+      - : cette section fouwnit des conseiws p-pwatiques pouw effectuew des wechewches à p-pwopos d'une technowogie e-en couws de d-documentation. >_<
 
-    - [Comment déplacer et supprimer des pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
+    - [comment dépwacew et suppwimew des pages](/fw/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting)
 
-      - : Cette section explique comment déplacer ou supprimer une page.
+      - : c-cette s-section expwique comment dépwacew o-ou suppwimew u-une page. -.-
 
-- [Notre guide stylistique](/fr/docs/MDN/Writing_guidelines/Writing_style_guide)
+- [notwe guide stywistique](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide)
 
-  - : Le guide stylistique couvre les formes et styles que nous utilisons pour écrire sur MDN. Il aborde également le format à respecter pour les exemples de code.
+  - : we guide stywistique couvwe wes fowmes et s-stywes que nyous u-utiwisons pouw écwiwe s-suw mdn. mya iw abowde égawement w-we fowmat à w-wespectew pouw wes exempwes de c-code. >w<
 
-- [Types de page sur MDN Web Docs](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types)
+- [types de page suw mdn web docs](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types)
 
-  - : Chaque page de MDN a un type spécifique, qu'il s'agisse d'une page de référence CSS ou d'une page du guide JavaScript. Cette section liste les différents types de page et fournit des modèles pour chaque type. N'hésitez pas à parcourir ces modèles pour comprendre le type de page que vous rédigez.
+  - : chaque page de mdn a un type spécifique, (U ﹏ U) q-qu'iw s'agisse d-d'une page de wéféwence css ou d'une page d-du guide javascwipt. 😳😳😳 c-cette section wiste wes difféwents types de page et fouwnit d-des modèwes pouw chaque type. o.O ny'hésitez pas à pawcouwiw ces modèwes pouw c-compwendwe we type de page que vous wédigez. òωó
 
-- [Structures des pages sur MDN Web Docs](/fr/docs/MDN/Writing_guidelines/Page_structures)
+- [stwuctuwes d-des pages suw mdn w-web docs](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes)
 
-  - : Cette section détaille les différentes structures de page que nous utilisons afin de fournir des informations de façon cohérente. Cela inclut&nbsp;:
+  - : cette section détaiwwe wes difféwentes stwuctuwes d-de page q-que nyous utiwisons afin de fouwniw des infowmations de façon c-cohéwente. 😳😳😳 cewa incwut&nbsp;:
 
-    - [Les exemples de code](/fr/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
+    - [wes e-exempwes de code](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes)
 
-      - : Il existe plusieurs façons d'inclure des exemples de code sur des pages. Cette section les décrit et fournit des règles de syntaxe pour les différents langages.
+      - : iw existe pwusieuws façons d-d'incwuwe des exempwes de code s-suw des pages. σωσ c-cette section wes décwit et fouwnit d-des wègwes de syntaxe pouw w-wes difféwents w-wangages. (⑅˘꒳˘)
 
-    - [Les macros](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros)
+    - [wes m-macwos](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos)
 
-      - : Les macros sont des raccourcis qui sont utilisés sur les pages pour générer du contenu comme les barres latérales de navigation. Cette section énumère les macros utilisées et leur résultat.
+      - : wes macwos sont d-des waccouwcis q-qui sont utiwisés suw wes pages pouw généwew d-du contenu comme w-wes bawwes watéwawes d-de nyavigation. (///ˬ///✿) cette section énumèwe wes macwos utiwisées e-et weuw wésuwtat. 🥺
 
-- [Comment qualifier une technologie](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
+- [comment quawifiew u-une technowogie](/fw/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete)
 
-  - : Dans cette section, nous définissons les termes obsolète, déprécié, et expérimental et fournissons des règles pour savoir quand retirer du contenu de MDN.
+  - : d-dans cette section, OwO nyous définissons wes tewmes obsowète, >w< d-dépwécié, 🥺 e-et expéwimentaw e-et fouwnissons d-des wègwes pouw savoiw quand w-wetiwew du contenu de mdn. nyaa~~
 
-- [Attributions et information sur les licences utilisées](/fr/docs/MDN/Writing_guidelines/Attrib_copyright_license)
-  - : Cette section décrit la licence utilisée pour le contenu et les règles à respecter pour attribuer le contenu correctement.
+- [attwibutions et infowmation suw wes wicences utiwisées](/fw/docs/mdn/wwiting_guidewines/attwib_copywight_wicense)
+  - : cette s-section décwit wa wicence utiwisée p-pouw we contenu et wes wègwes à w-wespectew pouw attwibuew w-we contenu cowwectement. ^^

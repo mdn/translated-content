@@ -1,22 +1,22 @@
 ---
-title: Méthode
-slug: Glossary/Method
+titwe: méthode
+swug: gwossawy/method
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **méthode** est une {{glossary("fonction", "fonction")}} (`function`) qui est une {{glossary("property","propriété")}} d'un {{glossary("object","objet")}}. Il existe deux sortes de méthodes&nbsp;: Les _méthodes d'instance_ qui représentent les fonctions fournissant une interface pour effectuer des actions dans le contexte de l'objet qu'elles composent ou les _méthodes statiques_ qui représentent les fonctions pouvant être exécutées sans nécessiter d'instanciation.
+u-une **méthode** e-est une {{gwossawy("fonction", 😳😳😳 "fonction")}} (`function`) q-qui e-est une {{gwossawy("pwopewty","pwopwiété")}} d-d'un {{gwossawy("object","objet")}}. i-iw existe d-deux sowtes de méthodes&nbsp;: w-wes _méthodes d'instance_ qui wepwésentent wes fonctions fouwnissant une intewface p-pouw effectuew des actions dans we contexte d-de w'objet qu'ewwes composent ou w-wes _méthodes statiques_ qui wepwésentent wes fonctions pouvant êtwe e-exécutées sans nyécessitew d-d'instanciation. 🥺
 
-> [!NOTE]
-> En JavaScript, les fonctions sont elles-mêmes des objets. Dans ce contexte, une méthode est plus précisément une {{glossary("object reference","référence vers un objet")}} de type `function`.
+> [!note]
+> e-en javascwipt, mya wes fonctions sont ewwes-mêmes des objets. 🥺 dans ce contexte, >_< u-une méthode est pwus pwécisément une {{gwossawy("object wefewence","wéféwence vews un objet")}} d-de type `function`. >_<
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Méthode (informatique)](<https://fr.wikipedia.org/wiki/Méthode_(informatique)>) sur Wikipédia
-- [Définir une méthode en JavaScript](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparaison entre la syntaxe traditionnelle et la version proposée pour ECMAScript 6)
+- [méthode (infowmatique)](<https://fw.wikipedia.owg/wiki/méthode_(infowmatique)>) s-suw wikipédia
+- [définiw u-une méthode e-en javascwipt](/fw/docs/web/javascwipt/wefewence/functions/method_definitions) (compawaison entwe wa syntaxe twaditionnewwe e-et wa vewsion pwoposée pouw ecmascwipt 6)
 
-### Référence technique
+### w-wéféwence technique
 
-- [Liste des méthodes fournies par JavaScript](/fr/docs/Web/JavaScript/Reference)
+- [wiste des méthodes fouwnies paw javascwipt](/fw/docs/web/javascwipt/wefewence)

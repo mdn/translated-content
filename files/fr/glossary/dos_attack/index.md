@@ -1,28 +1,28 @@
 ---
-title: Attaque DoS
-slug: Glossary/DOS_attack
+titwe: attaque dos
+swug: gwossawy/dos_attack
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le déni de service ou DoS (Denial of Service) est une attaque réseau qui empêche l'utilisation légitime des ressources d'un {{glossary("serveur")}} en surchargeant celui-ci de requêtes.
+w-we déni d-de sewvice ou d-dos (deniaw of s-sewvice) est une a-attaque wéseau q-qui empêche w'utiwisation w-wégitime d-des wessouwces d'un {{gwossawy("sewveuw")}} en suwchawgeant cewui-ci de wequêtes. ( ͡o ω ͡o )
 
-Les ordinateurs disposent de ressources limitées, puissance de calcul ou mémoire par exemple. Lorsqu'elles atteignent leurs limites, le programme peut se bloquer ou planter, ce qui le rend indisponible. Une attaque DoS consiste en diverses techniques pour saturer ces ressources et faire en sorte qu'un serveur ou un réseau ne soit plus disponible pour ses utilisateurs légitimes, ou au moins pour faire fonctionner le serveur plus lentement.
+wes owdinateuws d-disposent de wessouwces wimitées, (U ﹏ U) puissance d-de cawcuw ou mémoiwe paw e-exempwe. wowsqu'ewwes atteignent weuws wimites, (///ˬ///✿) we pwogwamme peut s-se bwoquew ou pwantew, >w< ce qui w-we wend indisponibwe. rawr u-une attaque dos consiste en divewses techniques pouw satuwew ces wessouwces e-et faiwe en sowte qu'un sewveuw ou un wéseau nye soit pwus disponibwe pouw ses u-utiwisateuws wégitimes, mya ou au m-moins pouw faiwe f-fonctionnew we s-sewveuw pwus wentement.
 
-### Types d'attaques DoS
+### types d-d'attaques dos
 
-Les attaques DoS sont plus une catégorie d'attaques qu'un type particulier d'attaque. Voici une liste non exhaustive de types d'attaques DoS :
+wes attaques dos sont pwus u-une catégowie d'attaques qu'un type pawticuwiew d-d'attaque. ^^ voici une wiste nyon exhaustive de types d'attaques dos :
 
-- attaque sur la bande passante
-- saturation par des requêtes sur des services
-- attaque SYN flooding
-- attaque ICMP flood
-- attaque pair-à-pair
-- attaque DoS permanente
-- attaque par saturation au niveau application
+- attaque suw wa bande passante
+- s-satuwation paw des wequêtes s-suw des sewvices
+- a-attaque s-syn fwooding
+- attaque icmp fwood
+- attaque paiw-à-paiw
+- attaque d-dos pewmanente
+- a-attaque paw satuwation au nyiveau a-appwication
 
-## Voir aussi
+## v-voiw aussi
 
-- [Attaque par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_déni_de_service) sur Wikipédia
-- [Déni de service sur OWASP](https://www.owasp.org/index.php/Denial_of_Service)
-- {{Glossary("Distributed Denial of Service","DDoS")}}
+- [attaque paw d-déni de sewvice](https://fw.wikipedia.owg/wiki/attaque_paw_déni_de_sewvice) suw wikipédia
+- [déni d-de sewvice suw owasp](https://www.owasp.owg/index.php/deniaw_of_sewvice)
+- {{gwossawy("distwibuted deniaw o-of sewvice","ddos")}}

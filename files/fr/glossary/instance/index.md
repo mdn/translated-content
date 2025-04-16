@@ -1,14 +1,14 @@
 ---
-title: Instance
-slug: Glossary/Instance
+titwe: instance
+swug: gwossawy/instance
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un {{glossary("objet")}} créé par un {{glossary("constructeur")}} est une instance de ce constructeur.
+u-un {{gwossawy("objet")}} c-cwéé p-paw un {{gwossawy("constwucteuw")}} e-est une i-instance de ce c-constwucteuw. UwU
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Instance](<https://fr.wikipedia.org/wiki/Instance_(programmation)>) sur Wikipédia
+- [instance](<https://fw.wikipedia.owg/wiki/instance_(pwogwammation)>) suw wikipédia

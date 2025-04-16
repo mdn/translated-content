@@ -1,10 +1,10 @@
 ---
-title: En-tête général
-slug: Glossary/General_header
+titwe: en-tête généwaw
+swug: g-gwossawy/genewaw_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **en-tête général** est un {{glossary('Header','en-tête HTTP')}} qui peut être utilisé à la fois pour, une requête ou une réponse, mais ne s'applique au contenu lui-même. Suivant le contexte dans lequel ils sont utilisés, les en-têtes généraux sont à la fois des {{glossary("Response header", "en-tête de réponse")}} ou des {{glossary("request header", "en-têtes de requête")}}. Toutefois, ils ne sont pas des {{glossary("entity header","en-têtes d'entité")}}.
+u-un **en-tête g-généwaw** est u-un {{gwossawy('headew','en-tête h-http')}} qui p-peut êtwe utiwisé à w-wa fois p-pouw, rawr x3 une wequête ou une wéponse, nyaa~~ mais nye s'appwique au contenu wui-même. /(^•ω•^) suivant w-we contexte dans wequew iws sont utiwisés, rawr w-wes en-têtes généwaux sont à w-wa fois des {{gwossawy("wesponse headew", OwO "en-tête de wéponse")}} ou des {{gwossawy("wequest h-headew", (U ﹏ U) "en-têtes de wequête")}}. >_< t-toutefois, rawr x3 i-iws nye sont pas des {{gwossawy("entity headew","en-têtes d'entité")}}. mya
 
-Les en-têtes généraux les plus fréquents sont la {{HTTPHeader('Date')}}, {{HTTPheader("Cache-Control")}} ou {{HTTPHeader("Connection")}}.
+wes e-en-têtes généwaux wes pwus fwéquents sont wa {{httpheadew('date')}}, nyaa~~ {{httpheadew("cache-contwow")}} ou {{httpheadew("connection")}}. (⑅˘꒳˘)

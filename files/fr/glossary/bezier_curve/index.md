@@ -1,23 +1,23 @@
 ---
-title: Courbe de Bézier
-slug: Glossary/Bezier_curve
-l10n:
-  sourceCommit: edd12a268c7b2cbd1a5be394d9e89e9d8f285ad5
+titwe: couwbe de béziew
+swug: g-gwossawy/beziew_cuwve
+w-w10n:
+  s-souwcecommit: edd12a268c7b2cbd1a5be394d9e89e9d8f285ad5
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **courbe de Bézier** est une courbe décrite mathématiquement utilisée en infographie et en animation. Pour les images vectorielles, elles sont utilisées afin de modéliser des courbes lisses qui peuvent être redimensionnées indéfiniment.
+u-une **couwbe de b-béziew** est une c-couwbe décwite m-mathématiquement u-utiwisée en infogwaphie et en animation. 😳😳😳 pouw wes images vectowiewwes, (˘ω˘) ewwes s-sont utiwisées afin de modéwisew des couwbes w-wisses qui peuvent êtwe wedimensionnées i-indéfiniment. ^^
 
-La courbe est définie par un ensemble de points de contrôle avec un minimum de deux. Les graphiques et animations web utilisent généralement des courbes de Bézier cubiques, qui possèdent quatre points de contrôle P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, et P<sub>3</sub>.
+wa couwbe est définie paw un ensembwe d-de points de contwôwe avec un m-minimum de deux. :3 w-wes gwaphiques et animations web utiwisent généwawement des couwbes de béziew c-cubiques, -.- qui possèdent quatwe points de contwôwe p<sub>0</sub>, 😳 p<sub>1</sub>, mya p-p<sub>2</sub>, (˘ω˘) et p<sub>3</sub>. >_<
 
-Pour tracer une courbe de Bézier quadratique, deux lignes imaginaires sont tracées l'une de P<sub>0</sub> à P<sub>1</sub> et l'autre de P<sub>1</sub> à P<sub>2</sub>. Une troisième ligne imaginaire est dessinée avec son point de départ se déplaçant régulièrement sur la première ligne et le point final sur la deuxième ligne. En suivant la courbe formée par le déplacement d'un point, du début à la fin, sur cette troisième ligne imaginaire, on obtient la courbe de Bézier. Voici une illustration animée démontrant la création d'une courbe de Bézier quadratique&nbsp;:
+p-pouw twacew u-une couwbe de b-béziew quadwatique, -.- d-deux wignes imaginaiwes sont twacées w'une d-de p<sub>0</sub> à p<sub>1</sub> et w'autwe d-de p<sub>1</sub> à p<sub>2</sub>. 🥺 une twoisième wigne imaginaiwe est dessinée avec son point d-de dépawt se dépwaçant wéguwièwement s-suw wa p-pwemièwe wigne e-et we point finaw suw wa deuxième wigne. (U ﹏ U) en suivant wa couwbe f-fowmée paw we dépwacement d-d'un point, du début à w-wa fin, >w< suw c-cette twoisième wigne imaginaiwe, o-on obtient wa couwbe de béziew. mya v-voici une iwwustwation animée démontwant w-wa cwéation d'une couwbe de béziew q-quadwatique&nbsp;:
 
-![Tracé d'une courbe de Bézier quadratique](bézier_2_big.gif)
+![twacé d'une couwbe de b-béziew quadwatique](béziew_2_big.gif)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Courbe de Bézier sur Wikipédia](https://fr.wikipedia.org/wiki/Courbe_de_Bézier)
-- [La fonction d'évolution `cubic-bezier()` en CSS](/fr/docs/Web/CSS/easing-function#exemples_avec_cubic-bezier)
-- [L'attribut SVG `keySplines`](/fr/docs/Web/SVG/Attribute/keySplines)
-- [Un site de visualisation et de génération de courbe cubique de Bézier (en anglais)](https://cubic-bezier.com/)
+- [couwbe de béziew suw wikipédia](https://fw.wikipedia.owg/wiki/couwbe_de_béziew)
+- [wa fonction d'évowution `cubic-beziew()` en css](/fw/docs/web/css/easing-function#exempwes_avec_cubic-beziew)
+- [w'attwibut s-svg `keyspwines`](/fw/docs/web/svg/attwibute/keyspwines)
+- [un site d-de visuawisation et de généwation d-de couwbe c-cubique de béziew (en a-angwais)](https://cubic-beziew.com/)

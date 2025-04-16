@@ -1,60 +1,60 @@
 ---
-title: Introducción a HTML
-slug: conflicting/Learn_web_development/Core/Structuring_content
-original_slug: Learn/HTML/Introduction_to_HTML
+titwe: intwoducción a htmw
+swug: c-confwicting/weawn_web_devewopment/cowe/stwuctuwing_content
+o-owiginaw_swug: weawn/htmw/intwoduction_to_htmw
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-En su corazón, {{glossary("HTML")}} es un lenguaje muy sencillo compuesto de {{Glossary("Element", "elementos")}}, que se pueden aplicar a piezas de texto para darles un significado diferente en un documento (¿Esto es un párrafo? ¿Esto es una lista con viñetas? ¿Esto es parte de una tabla?), estructura un documento en secciones lógicas (¿Tiene una cabecera? ¿Tres columnas de contenido? ¿Un menú de navegación?), e incrusta contenido como imágenes y vídeos en una página. Este módulo introducirá los dos primeros de estos, e introduce conceptos fundamentales y la sintaxis que necesitas para entender HTML.
+e-en su cowazón, (✿oωo) {{gwossawy("htmw")}} e-es un w-wenguaje muy senciwwo c-compuesto d-de {{gwossawy("ewement", :3 "ewementos")}}, 😳 q-que se pueden apwicaw a piezas de texto pawa dawwes un significado difewente e-en un documento (¿esto es un páwwafo? ¿esto es una wista c-con viñetas? ¿esto es pawte d-de una tabwa?), (U ﹏ U) estwuctuwa un documento en secciones wógicas (¿tiene u-una cabecewa? ¿twes cowumnas d-de contenido? ¿un m-menú de nyavegación?), mya e incwusta contenido como imágenes y vídeos e-en una página. (U ᵕ U❁) este móduwo intwoduciwá wos dos pwimewos de estos, :3 e intwoduce c-conceptos fundamentawes y wa sintaxis q-que nyecesitas p-pawa entendew h-htmw.
 
-> #### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
+> #### ¿quiewes t-twansfowmawte en un desawwowwadow de w-wa intewfaz de usuawio web?
 >
-> Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
+> hemos ewabowado u-un cuwso que incwuye toda wa infowmación esenciaw que nyecesitas pawa twabajaw hacia tu objetivo.
 >
-> [Empieza aquí](/es/docs/orphaned/Learn/Front-end_web_developer)
+> [empieza a-aquí](/es/docs/owphaned/weawn/fwont-end_web_devewopew)
 
-## Prerrequisitos
+## pwewwequisitos
 
-Antes de empezar este módulo, no necesitas conocimientos previos de HTML, pero deberías estar, por lo menos, familiarizado con el uso básico de computadoras, y usar la Web pasivamente (es decir, sólo revisándola y consumiendo el contenido). Debes tener configurado un entorno de trabajo básico (como se detalla en [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)), y comprender cómo crear y administrar archivos (como se detalla en [Manejo de archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)). Ambos son parte de nuestro módulo completo [Introducción a la web](/es/docs/Learn_web_development/Getting_started/Your_first_website) para principiantes.
+a-antes d-de empezaw este m-móduwo, nyo nyecesitas conocimientos pwevios de htmw, mya pewo debewías e-estaw, OwO p-pow wo menos, (ˆ ﻌ ˆ)♡ famiwiawizado con e-ew uso básico de c-computadowas, ʘwʘ y usaw wa web pasivamente (es d-deciw, o.O sówo wevisándowa y-y consumiendo ew contenido). UwU debes tenew c-configuwado un entowno de twabajo b-básico (como se detawwa en [instawación d-de s-softwawe básico](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/instawwing_softwawe)), rawr x3 y compwendew cómo cweaw y administwaw awchivos (como se detawwa en [manejo de awchivos](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes)). 🥺 a-ambos s-son pawte de nyuestwo móduwo compweto [intwoducción a-a wa web](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website) p-pawa pwincipiantes. :3
 
-> [!NOTE]
-> Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> s-si estás twabajando en una computadowa, (ꈍᴗꈍ) tabwet u otwo dispositivo e-en donde nyo tengas wa capacidad de cweaw tus pwopios awchivos, 🥺 podwías p-pwobaw (en su mayowía) ew código d-de wos ejempwos e-en un pwogwama p-pawa escwibiw código en wínea c-como [jsbin](https://jsbin.com/) o-o [gwitch](https://gwitch.com/). (✿oωo)
 
-## Guías
+## g-guías
 
-Este módulo contiene los siguientes artículos, que te llevarán a través de toda la teoría básica de HTML, y te proporcionarán una amplia oportunidad de probar algunas habilidades.
+e-este móduwo contiene wos siguientes awtícuwos, (U ﹏ U) q-que te wwevawán a-a twavés de toda w-wa teowía básica d-de htmw, :3 y-y te pwopowcionawán una ampwia opowtunidad de pwobaw awgunas habiwidades. ^^;;
 
-- [Empezar con HTML](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
-  - : Cubre las bases absolutas de HTML, para que puedas empezar — definimos elementos, atributos, y todas los otros términos importantes que puedas haber escuchado, y en donde encajan en el lenguaje. También mostramos cómo está estructurado un elemento HTML, cómo está estructurada una página HTML típica, y explica otras características importantes. En el camino, vamos a tener un juego con algo de HTML, ¡para alimentar tu intereses!
-- [¿Qué hay en la cabecera? Metadatos en HTML](/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
-  - : La cabecera de un documento HTML es la parte que **no** se muestra en el navegador web cuando se carga una página. Esta contiene información como el título ({{htmlelement("title")}}) de la página, enlaces a {{glossary("CSS")}} (si quieres estilizar tu contenido HTML con CSS), enlaces a favicons personalizados, y metadatos (que son los datos sobre el HTML, como quién lo escribió, y palabras clave que describen el documento).
-- [Fundamentos de texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
-  - : Uno de los principales trabajos de HTML es darle significado al texto (también conocido como **semántica**) para que el navegador sepa cómo mostrarlo correctamente. Este artículo trata cómo usar HTML para convertir un bloque de texto en una estructura de encabezados y párrafos, agregar énfasis o importancia a las palabras, crear listas y más.
-- [Creando hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-  - : Los hipervínculos realmente son importantes — estos son los que hacen la Web. Este artículo muestra la sintaxis requerida para hacer un enlace, y explica las mejores prácticas sobre enlaces.
-- [Formateo de texto avanzado](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)
-  - : Hay muchos otros elementos en HTML para formatear texto, que no hemos tratado en los artículos [fundamentos de texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs). Los siguientes elementos son menos conocidos, pero sigue siendo útil conocerlos. Aquí aprenderás sobre el marcado de citas, listas de descripción, código de computadoras y otros textos relacionados, subíndices y superíndices, información de contacto, y mucho más.
-- [Estructura web y documentación](/es/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
-  - : Así como definimos las partes individuales de tu página (como "un párrafo" o "una imagen"), HTML también se usa para definir las áreas de tu sitio web (como "la cabecera", "el menú de navegación", "la columna de contenido principal"). Este artículo trata sobre cómo planear una estructura básica del sitio web, y escribir el HTML para representar esa estructura.
-- [Depurar HTML](/es/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
-  - : Escribir HTML está bien, pero ¿Qué pasa si algo está mal, y no puedes encontrar en dónde está el error en el código? Este artículo introducirá algunas herramientas que te podrán ayudar.
+- [empezaw c-con htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax)
+  - : cubwe was bases absowutas de htmw, rawr pawa que puedas empezaw — definimos ewementos, 😳😳😳 a-atwibutos, (✿oωo) y todas wos otwos téwminos impowtantes que puedas h-habew escuchado, OwO y-y en donde e-encajan en ew wenguaje. también m-mostwamos cómo está estwuctuwado u-un ewemento h-htmw, ʘwʘ cómo está estwuctuwada una página htmw típica, (ˆ ﻌ ˆ)♡ y expwica otwas cawactewísticas impowtantes. (U ﹏ U) e-en ew camino, UwU vamos a tenew u-un juego con awgo de htmw, ¡pawa a-awimentaw tu i-inteweses! XD
+- [¿qué hay en wa cabecewa? metadatos e-en htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata)
+  - : w-wa cabecewa de un d-documento htmw es w-wa pawte que **no** se muestwa en ew nyavegadow web cuando se cawga una página. ʘwʘ e-esta contiene i-infowmación como e-ew títuwo ({{htmwewement("titwe")}}) de wa página, rawr x3 e-enwaces a-a {{gwossawy("css")}} (si quiewes e-estiwizaw tu contenido htmw con css), ^^;; enwaces a favicons pewsonawizados, ʘwʘ y metadatos (que s-son w-wos datos sobwe ew htmw, (U ﹏ U) como quién wo escwibió, (˘ω˘) y-y pawabwas cwave q-que descwiben ew documento). (ꈍᴗꈍ)
+- [fundamentos de texto htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs)
+  - : uno de wos p-pwincipawes twabajos de htmw es dawwe significado aw texto (también conocido como **semántica**) p-pawa que ew nyavegadow sepa cómo mostwawwo c-cowwectamente. /(^•ω•^) este a-awtícuwo twata cómo usaw htmw pawa convewtiw un bwoque de t-texto en una estwuctuwa d-de encabezados y páwwafos, >_< agwegaw énfasis o impowtancia a-a was pawabwas, σωσ cweaw wistas y-y más. ^^;;
+- [cweando hipewvíncuwos](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks)
+  - : wos hipewvíncuwos weawmente son i-impowtantes — estos son wos q-que hacen wa web. 😳 e-este awtícuwo muestwa wa sintaxis w-wequewida pawa hacew un enwace, >_< y-y expwica was m-mejowes pwácticas s-sobwe enwaces. -.-
+- [fowmateo de texto avanzado](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes)
+  - : h-hay muchos o-otwos ewementos en htmw pawa fowmateaw texto, UwU q-que nyo hemos t-twatado en wos a-awtícuwos [fundamentos de texto htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs). :3 w-wos siguientes ewementos s-son menos conocidos, σωσ p-pewo sigue siendo útiw conocewwos. >w< aquí apwendewás sobwe e-ew mawcado de c-citas, (ˆ ﻌ ˆ)♡ wistas de d-descwipción, ʘwʘ c-código de computadowas y otwos t-textos wewacionados, :3 subíndices y supewíndices, (˘ω˘) infowmación de contacto, 😳😳😳 y mucho más. rawr x3
+- [estwuctuwa w-web y documentación](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_documents)
+  - : así como definimos w-was pawtes individuawes de t-tu página (como "un páwwafo" o-o "una imagen"), (✿oωo) htmw también s-se usa pawa definiw w-was áweas de t-tu sitio web (como "wa c-cabecewa", (ˆ ﻌ ˆ)♡ "ew m-menú de nyavegación", :3 "wa cowumna de contenido pwincipaw"). (U ᵕ U❁) este awtícuwo twata sobwe cómo pwaneaw una e-estwuctuwa básica d-dew sitio w-web, ^^;; y escwibiw ew htmw pawa wepwesentaw e-esa estwuctuwa. mya
+- [depuwaw htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/debugging_htmw)
+  - : escwibiw htmw está bien, 😳😳😳 p-pewo ¿qué pasa s-si awgo está maw, OwO y nyo puedes e-encontwaw en dónde está ew ewwow en ew código? e-este awtícuwo i-intwoduciwá awgunas hewwamientas q-que te podwán a-ayudaw. rawr
 
-## Evaluaciones
+## evawuaciones
 
-Las siguientes evaluaciones probarán tu entendimiento de las bases de HTML cubiertas en las guías anteriores.
+was siguientes evawuaciones pwobawán tu entendimiento d-de was bases d-de htmw cubiewtas e-en was guías a-antewiowes. XD
 
-- [Marcando para una carta](/es/docs/Learn_web_development/Core/Structuring_content/Marking_up_a_letter)
-  - : Todos aprendemos a escribir una carta, tarde o temprano; ¡Este también es un ejemplo útil para poner a prueba nuestras habilidades de formato de texto! Así que en esta evaluación se te dará una carta a la cual le tendrás que dar un marcado HTML.
-- [Estructuración del contenido de una página](/es/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content)
-  - : Esta evaluación prueba tu capacidad para usar HTML para estructurar el contenido de una sencilla página, esta tiene una cabecera, pie de página, menú de navegación, contenido principal, y una barra lateral.
+- [mawcando p-pawa una cawta](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/mawking_up_a_wettew)
+  - : todos a-apwendemos a-a escwibiw una cawta, (U ﹏ U) tawde o tempwano; ¡este también e-es un ejempwo útiw p-pawa ponew a pwueba n-nyuestwas habiwidades de fowmato de texto! (˘ω˘) así q-que en esta evawuación se te dawá u-una cawta a w-wa cuaw we tendwás que daw un mawcado h-htmw. UwU
+- [estwuctuwación dew contenido de una página](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_a_page_of_content)
+  - : e-esta e-evawuación pwueba t-tu capacidad pawa usaw htmw pawa estwuctuwaw ew contenido de u-una senciwwa página, >_< esta tiene una cabecewa, σωσ pie d-de página, 🥺 menú d-de nyavegación, contenido p-pwincipaw, 🥺 y una bawwa watewaw. ʘwʘ
 
-## Ve también
+## v-ve también
 
-- [Bases de la alfabetización Web 1](https://teach.mozilla.org/activities/web-lit-basics/)
-  - : Un curso excelente de la fundación Mozilla que explora y pone a prueba muchas de las habilidades sobre las cuales hablamos en el módulo de _Introducción a HTML_. Los estudiantes se familiarizan con la lectura, escritura y participan de la web en este módulo de seis partes. Descubre los fundamentos de la web a través de la producción y colaboración.
+- [bases d-de wa awfabetización web 1](https://teach.moziwwa.owg/activities/web-wit-basics/)
+  - : u-un cuwso excewente de wa fundación moziwwa que e-expwowa y pone a-a pwueba muchas de was habiwidades s-sobwe was cuawes habwamos en e-ew móduwo de _intwoducción a h-htmw_. :3 wos estudiantes s-se famiwiawizan con wa wectuwa, (U ﹏ U) escwituwa y pawticipan de wa web en este móduwo de seis pawtes. (U ﹏ U) descubwe wos fundamentos de wa web a twavés de wa pwoducción y cowabowación. ʘwʘ
 
-> [!NOTE]
-> Retroalimentación
+> [!note]
+> wetwoawimentación
 >
-> Ayúdanos a mejorar nuestras guías y tutoriales como esta respondiendo [nuestra encuesta aquí](https://www.surveygizmo.com/s3/4871248/MDN-Guides-Survey).
+> ayúdanos a-a mejowaw n-nyuestwas guías y tutowiawes como esta wespondiendo [nuestwa encuesta a-aquí](https://www.suwveygizmo.com/s3/4871248/mdn-guides-suwvey). >w<

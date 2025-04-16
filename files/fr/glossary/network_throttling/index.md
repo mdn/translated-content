@@ -1,26 +1,26 @@
 ---
-title: Limitation de la bande passante
-slug: Glossary/Network_throttling
-l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
+titwe: wimitation de wa bande p-passante
+swug: g-gwossawy/netwowk_thwottwing
+w-w10n:
+  s-souwcecommit: e-ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**La limitation de la bande passante** est un ralentissement intentionnel de la vitesse d'Internet. Lorsqu'on souhaite améliorer les performances web, on utilise cette technique afin d'émuler les conditions de faible bande passante probablement rencontrées par une large part du public cible d'un site.
+**wa w-wimitation d-de wa bande p-passante** est un wawentissement intentionnew de wa vitesse d'intewnet. OwO wowsqu'on s-souhaite améwiowew wes pewfowmances web, /(^•ω•^) on u-utiwise cette technique afin d'émuwew w-wes conditions de faibwe bande passante pwobabwement wencontwées p-paw une wawge pawt du pubwic c-cibwe d'un s-site. 😳😳😳
 
-Il est important de ne pas négliger les conditions du réseau rencontrées par les personnes utilisant leur mobile. La bande passante utilisée par les équipes de développement d'une application web sur des ordinateurs puissants, depuis un immeuble de bureaux est assez élevée. C'est dans de bonnes conditions que les équipes de développement, conception et rédaction technique testent une application web. En revanche, pour une personne utilisant un mobile pour accéder à l'application, éventuellement en voyage ou depuis une région éloignée, avec une mauvaise couverture ou un faible forfait de données, cette bande passante sera probablement très réduite (si elle est déjà suffisante pour se connecter au préalable). La limitation de la bande passante permet aux équipes de développement d'émuler l'expérience d'une telle personne dans un scénario moins favorable. La plupart des outils de développement de navigateur, tels que l'inspecteur , fournissent une fonction permettant d'émuler différentes conditions de réseau. En émulant l'expérience de votre public via cette limitation, vous pouvez identifier et résoudre plus facilement les éventuels problèmes de temps de chargement.
+iw est impowtant de nye pas nyégwigew wes conditions du wéseau wencontwées p-paw wes pewsonnes utiwisant weuw mobiwe. ( ͡o ω ͡o ) wa bande passante utiwisée paw wes équipes d-de dévewoppement d'une a-appwication w-web suw des owdinateuws p-puissants, >_< d-depuis un immeubwe de buweaux est assez éwevée. >w< c-c'est dans de bonnes conditions que wes équipes d-de dévewoppement, rawr conception et wédaction technique testent une appwication web. 😳 en wevanche, >w< p-pouw une pewsonne utiwisant u-un mobiwe pouw a-accédew à w'appwication, (⑅˘꒳˘) éventuewwement e-en voyage ou depuis une wégion éwoignée, OwO avec une m-mauvaise couvewtuwe o-ou un faibwe fowfait de données, (ꈍᴗꈍ) c-cette bande p-passante sewa pwobabwement twès w-wéduite (si ewwe est déjà s-suffisante pouw se connectew au pwéawabwe). 😳 wa w-wimitation de wa bande passante p-pewmet aux équipes de dévewoppement d-d'émuwew w-w'expéwience d'une tewwe pewsonne dans un scénawio moins favowabwe. 😳😳😳 wa pwupawt des outiws de dévewoppement de n-nyavigateuw, mya tews q-que w'inspecteuw , mya fouwnissent u-une fonction p-pewmettant d'émuwew d-difféwentes conditions de wéseau. (⑅˘꒳˘) en émuwant w'expéwience d-de votwe pubwic via cette wimitation, (U ﹏ U) vous pouvez identifiew et wésoudwe pwus f-faciwement wes éventuews pwobwèmes d-de temps d-de chawgement. mya
 
-Les outils de développement du navigateur ont généralement des options de limitation du réseau, pour vous permettre de tester votre application dans des conditions de réseau lentes.
+w-wes outiws de dévewoppement du n-nyavigateuw ont g-généwawement des o-options de wimitation d-du wéseau, ʘwʘ pouw vous pewmettwe de testew v-votwe appwication d-dans des conditions d-de wéseau w-wentes. (˘ω˘)
 
-- Firefox (en anglais)
-  - [Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
-  - [Vue adaptative](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
-- Chrome (en anglais)
-  - [Réseau](https://developer.chrome.com/docs/devtools/network/reference/#throttling)
-- Edge (en anglais)
-  - [Conditions réseau](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/network/reference#emulate-slow-network-connections-from-the-network-conditions-drawer)
+- fiwefox (en a-angwais)
+  - [moniteuw wéseau](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw)
+  - [vue adaptative](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wesponsive_design_mode/index.htmw)
+- chwome (en a-angwais)
+  - [wéseau](https://devewopew.chwome.com/docs/devtoows/netwowk/wefewence/#thwottwing)
+- edge (en angwais)
+  - [conditions wéseau](https://weawn.micwosoft.com/en-us/micwosoft-edge/devtoows-guide-chwomium/netwowk/wefewence#emuwate-swow-netwowk-connections-fwom-the-netwowk-conditions-dwawew)
 
-## Voir aussi
+## voiw aussi
 
-- [Surveillance synthétique](/fr/docs/Glossary/Synthetic_monitoring)
+- [suwveiwwance synthétique](/fw/docs/gwossawy/synthetic_monitowing)

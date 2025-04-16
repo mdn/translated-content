@@ -1,252 +1,252 @@
 ---
-title: Macros usuelles
-slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
+titwe: macwos usuewwes
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Cette page énumère les différentes macros utilisées sur MDN. Pour plus d'informations sur leur utilisation, voir [Utiliser les macros](/fr/docs/MDN/Writing_guidelines/Page_structures).
+c-cette page énumèwe w-wes d-difféwentes macwos u-utiwisées s-suw mdn. (✿oωo) pouw pwus d-d'infowmations s-suw weuw utiwisation, (U ﹏ U) voiw [utiwisew wes macwos](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes). :3
 
-Voir la page [Autres macros](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) pour plus d'informations quant aux macros moins usitées ou uniquement utilisées dans certains contextes ou qui sont dépréciées.
+voiw wa page [autwes macwos](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/othew) p-pouw pwus d'infowmations quant aux macwos moins u-usitées ou uniquement utiwisées d-dans cewtains contextes ou qui sont dépwéciées. ^^;;
 
-## Liens
+## wiens
 
-MDN fournit plusieurs macros pour former des liens entre les pages de référence, le glossaire, etc.
+m-mdn fouwnit pwusieuws macwos pouw f-fowmew des wiens e-entwe wes pages de wéféwence, we gwossaiwe, rawr etc. 😳😳😳
 
-> [!WARNING]
-> Toutes les macros de lien devraient être remplacées dans le contenu en français par des liens écrit en Markdown. En effet, on souhaite réduire l'utilisation des macros «&nbsp;simples&nbsp;» qui peuvent être facilement remplacées par du HTML/Markdown.
+> [!wawning]
+> toutes wes m-macwos de wien devwaient êtwe wempwacées dans we contenu en fwançais paw des w-wiens écwit en mawkdown. (✿oωo) en effet, OwO o-on souhaite w-wéduiwe w'utiwisation d-des macwos «&nbsp;simpwes&nbsp;» q-qui peuvent êtwe faciwement wempwacées p-paw du htmw/mawkdown. ʘwʘ
 
-### Liens vers le glossaire
+### wiens vews we gwossaiwe
 
-La macro [`Glossary`](https://github.com/mdn/yari/blob/main/kumascript/macros/Glossary.ejs) crée un lien vers la page d'un terme du [glossaire](/fr/docs/Glossary). Elle prend un argument obligatoire et un autre optionnel&nbsp;:
+wa macwo [`gwossawy`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/gwossawy.ejs) c-cwée un wien vews wa page d'un tewme du [gwossaiwe](/fw/docs/gwossawy). (ˆ ﻌ ˆ)♡ ewwe pwend un awgument obwigatoiwe e-et un autwe optionnew&nbsp;:
 
-1. Le nom du terme (par exemple `"HTML"`)&nbsp;: `\{{Glossary("HTML")}}`
-2. Un paramètre optionnel indiquant le texte à afficher à la place du terme&nbsp;: `\{{Glossary("CSS", "Cascading Style Sheets")}}`
+1. we nyom du tewme (paw e-exempwe `"htmw"`)&nbsp;: `\{{gwossawy("htmw")}}`
+2. (U ﹏ U) u-un pawamètwe o-optionnew indiquant we texte à affichew à wa pwace du t-tewme&nbsp;: `\{{gwossawy("css", UwU "cascading s-stywe sheets")}}`
 
-> [!WARNING]
-> Pour remplacer cette macro, on écrira plutôt&nbsp;: `[le texte à afficher](/fr/docs/Glossary/MonTerme)`.
+> [!wawning]
+> p-pouw wempwacew cette m-macwo, XD on écwiwa pwutôt&nbsp;: `[we t-texte à affichew](/fw/docs/gwossawy/montewme)`. ʘwʘ
 
-### Liens vers des pages de référence
+### w-wiens vews des pages de wéféwence
 
-D'autres macros permettent de créer des liens vers des pages des différentes références de MDN&nbsp;: JavaScript, CSS, éléments HTML, SVG, etc.
+d'autwes macwos p-pewmettent de cwéew des wiens v-vews des pages des difféwentes w-wéféwences d-de mdn&nbsp;: javascwipt, rawr x3 css, éwéments htmw, ^^;; svg, etc. ʘwʘ
 
-Elles utilisent généralement un premier paramètre indiquant le nom de l'élément vers lequel lier. La plupart utilisent un deuxième argument qui permet de modifier le texte affiché.
+ewwes utiwisent généwawement un pwemiew pawamètwe i-indiquant we nyom d-de w'éwément vews wequew wiew. (U ﹏ U) w-wa pwupawt u-utiwisent un deuxième a-awgument qui pewmet de modifiew we texte affiché. (˘ω˘)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th>Macro</th>
-      <th>Pointe vers une page située sous</th>
-      <th>À remplacer par</th>
-    </tr>
+    <tw>
+      <th>macwo</th>
+      <th>pointe vews une page située sous</th>
+      <th>À wempwacew paw</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs">CSSxRef</a>
+        <a hwef="https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/cssxwef.ejs">cssxwef</a>
       </td>
       <td>
-        <a href="/fr/docs/Web/CSS/Reference">La référence CSS</a> (/Web/CSS/Reference)
+        <a h-hwef="/fw/docs/web/css/wefewence">wa wéféwence css</a> (/web/css/wefewence)
       </td>
       <td>
-        <code>\{{CSSxRef("cursor")}}</code> devra être remplacé par <code>[`cursor`](/fr/docs/Web/CSS/cursor)</code>.
+        <code>\{{cssxwef("cuwsow")}}</code> d-devwa êtwe w-wempwacé p-paw <code>[`cuwsow`](/fw/docs/web/css/cuwsow)</code>. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
+        <a hwef="https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/domxwef.ejs">domxwef</a>
       </td>
-      <td><a href="/fr/docs/Web/API">La référence du DOM</a> (/Web/API)</td>
+      <td><a h-hwef="/fw/docs/web/api">wa w-wéféwence d-du dom</a> (/web/api)</td>
       <td>
-        <code>\{{DOMxRef("Document")}}</code> devra être remplacé par <code>[`Document`](/fr/docs/Web/API/Document)</code>.
-        S'il y a un deuxième paramètre&nbsp;: <code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> devra être remplacé par <code>[`getElementsByName()`](/fr/docs/Web/API/Document/getElementsByName)</code>.
+        <code>\{{domxwef("document")}}</code> d-devwa êtwe wempwacé paw <code>[`document`](/fw/docs/web/api/document)</code>. /(^•ω•^)
+        s'iw y a un deuxième p-pawamètwe&nbsp;: <code>\{{domxwef("document.getewementsbyname()","getewementsbyname()")}}</code> d-devwa êtwe w-wempwacé paw <code>[`getewementsbyname()`](/fw/docs/web/api/document/getewementsbyname)</code>. >_<
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element">Référence des éléments HTML</a> (/Web/HTML/Element)
+        <a h-hwef="https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/htmwewement.ejs">htmwewement</a>
       </td>
       <td>
-        <code>\{{HTMLElement("select")}}</code> devra être remplacé par <code>[`&lt;select&gt;`](/fr/docs/Web/HTML/Element/select)</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
+        <a h-hwef="/fw/docs/web/htmw/ewement">wéféwence des éwéments htmw</a> (/web/htmw/ewement)
       </td>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference">Référence JavaScript</a> (/Web/JavaScript/Reference).
+        <code>\{{htmwewement("sewect")}}</code> devwa êtwe w-wempwacé paw <code>[`&wt;sewect&gt;`](/fw/docs/web/htmw/ewement/sewect)</code>. σωσ
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/jsxwef.ejs">jsxwef</a>
       </td>
       <td>
-        <code>\{{JSxRef("Promise")}}</code> devra être remplacé par <code>[`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
+        <a hwef="/fw/docs/web/javascwipt/wefewence">wéféwence javascwipt</a> (/web/javascwipt/wefewence). ^^;;
       </td>
       <td>
-        <a href="/fr/docs/Web/SVG/Attribute">Référence des attributs SVG</a> (/Web/SVG/Attribute).
+        <code>\{{jsxwef("pwomise")}}</code> devwa êtwe w-wempwacé paw <code>[`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)</code>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/svgattw.ejs">svgattw</a>
       </td>
       <td>
-        <code>\{{SVGAttr("d")}}</code> devra être remplacé par <code>[`d`](/fr/docs/Web/SVG/Attribute/d)</code>
+        <a hwef="/fw/docs/web/svg/attwibute">wéféwence des attwibuts svg</a> (/web/svg/attwibute). 😳
       </td>
-    </tr>
-    <tr>
+      <td>
+        <code>\{{svgattw("d")}}</code> d-devwa êtwe w-wempwacé p-paw <code>[`d`](/fw/docs/web/svg/attwibute/d)</code>
+      </td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a>
+          hwef="https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/svgewement.ejs">svgewement</a>
       </td>
       <td>
-        <a href="/fr/docs/Web/SVG/Attribute">Référence des éléments SVG</a> (/Web/SVG/Element).
+        <a h-hwef="/fw/docs/web/svg/attwibute">wéféwence des éwéments s-svg</a> (/web/svg/ewement). >_<
       </td>
       <td>
-        <code>\{{SVGElement("view")}}</code> devra être remplacé par <code>[`&lt;view&gt;`](/fr/docs/Web/SVG/Element/view)</code>
+        <code>\{{svgewement("view")}}</code> d-devwa êtwe wempwacé paw <code>[`&wt;view&gt;`](/fw/docs/web/svg/ewement/view)</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a></code>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTTP/Headers">Référence des en-têtes HTTP</a> (/Web/HTTP/Headers).
+        <code><a hwef="https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/httpheadew.ejs">httpheadew</a></code>
       </td>
       <td>
-        <code>\{{HTTPHeader("ACCEPT")}}</code> devra être remplacé par <code>[`ACCEPT`](/fr/docs/Web/HTTP/Headers/ACCEPT)</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
+        <a hwef="/fw/docs/web/http/headews">wéféwence des en-têtes http</a> (/web/http/headews). -.-
       </td>
       <td>
-        <a href="/fr/docs/Web/HTTP/Methods">Référence des méthodes de requête HTTP</a> (/Web/HTTP/Methods).
+        <code>\{{httpheadew("accept")}}</code> d-devwa êtwe wempwacé paw <code>[`accept`](/fw/docs/web/http/headews/accept)</code>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/httpmethod.ejs">httpmethod</a>
       </td>
       <td>
-        <code>\{{HTTPMethod("HEAD")}}</code> devra être remplacé par <code>[`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
+        <a hwef="/fw/docs/web/http/methods">wéféwence des m-méthodes de wequête h-http</a> (/web/http/methods). UwU
       </td>
       <td>
-        <a href="/fr/docs/Web/HTTP/Status">Référence des codes de statut HTTP</a> (/Web/HTTP/Status)
+        <code>\{{httpmethod("head")}}</code> devwa êtwe wempwacé paw <code>[`head`](/fw/docs/web/http/methods/head)</code>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="https://github.com/mdn/yawi/twee/main/kumascwipt/macwos/httpstatus.ejs">httpstatus</a>
       </td>
       <td>
-        <code>\{{HTTPStatus("404")}}</code> devra être remplacé par <code>[`404`](/fr/docs/Web/HTTP/Status/404)</code>
+        <a h-hwef="/fw/docs/web/http/status">wéféwence des codes d-de statut http</a> (/web/http/status)
       </td>
-    </tr>
+      <td>
+        <code>\{{httpstatus("404")}}</code> d-devwa êtwe wempwacé paw <code>[`404`](/fw/docs/web/http/status/404)</code>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Navigation entre les pages de chapitre d'un guide
+### nyavigation entwe wes pages d-de chapitwe d'un g-guide
 
-[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), et [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) permettent d'afficher des contrôles de navigation pour des articles qui forment une série.
+[`pwevious`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/pwevious.ejs), :3 [`next`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/next.ejs), σωσ e-et [`pweviousnext`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/pweviousnext.ejs) pewmettent d-d'affichew des c-contwôwes de nyavigation pouw d-des awticwes qui fowment une séwie. >w<
 
-Pour les deux premières macros, le seul paramètre nécessaire est l'emplacement de l'article cible.
+pouw wes deux pwemièwes macwos, (ˆ ﻌ ˆ)♡ we seuw p-pawamètwe nyécessaiwe e-est w'empwacement de w'awticwe cibwe. ʘwʘ
 
-Pour la macro [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs), le premier paramètre correspond à la cible de l'article précédent dans la série et le deuxième paramètre correspond à la cible du prochain article.
+p-pouw wa macwo [`pweviousnext`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/pweviousnext.ejs), :3 w-we pwemiew pawamètwe cowwespond à wa cibwe de w'awticwe p-pwécédent dans wa séwie et we deuxième pawamètwe cowwespond à wa cibwe d-du pwochain awticwe. (˘ω˘)
 
-## Exemples de code
+## exempwes de code
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) permet d'embarquer le résultat d'un exemple de code de la page (voir [les exemples intégrés](/fr/docs/MDN/Writing_guidelines/Page_structures)).
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) crée un lien vers une page contenant le résultat d'un exemple de code de la page (voir [les exemples intégrés](/fr/docs/MDN/Writing_guidelines/Page_structures)).
-- [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) permet d'embarquer des exemples interactifs depuis des pages GitHub (voir [exemples interactifs depuis GitHub](/fr/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples)).
+- [`embedwivesampwe`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/embedwivesampwe.ejs) pewmet d-d'embawquew w-we wésuwtat d'un exempwe de code de wa page (voiw [wes exempwes i-intégwés](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes)). 😳😳😳
+- [`wivesampwewink`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/wivesampwewink.ejs) c-cwée un wien vews une page contenant we wésuwtat d'un exempwe d-de code de wa page (voiw [wes e-exempwes intégwés](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes)). rawr x3
+- [`embedghwivesampwe`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/embedghwivesampwe.ejs) pewmet d'embawquew des exempwes intewactifs depuis d-des pages github (voiw [exempwes intewactifs d-depuis github](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes#github_wive_sampwes)). (✿oωo)
 
-## Barres latérales de navigation
+## b-bawwes watéwawes de nyavigation
 
-Pour chaque grand ensemble de pages, on a des macros qui aident à la navigation sous la forme d'une barre à gauche. Elles permettent généralement de remonter à la page racine de la référence/du guide/du tutoriel et placent l'article dans la catégorie correspondante au sein de cette barre.
+p-pouw chaque gwand ensembwe d-de pages, (ˆ ﻌ ˆ)♡ on a-a des macwos qui a-aident à wa nyavigation sous w-wa fowme d'une b-bawwe à gauche. :3 ewwes pewmettent généwawement d-de wemontew à w-wa page wacine de w-wa wéféwence/du guide/du tutowiew et pwacent w-w'awticwe dans wa catégowie cowwespondante a-au s-sein de cette bawwe. (U ᵕ U❁)
 
-- [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) génère la barre latérale pour les pages de la référence CSS.
-- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) génère la barre latérale pour les pages de la référence HTML.
-- [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) génère la barre latérale pour les pages des références des API web.
+- [`csswef`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/csswef.ejs) génèwe wa bawwe watéwawe pouw wes pages d-de wa wéféwence c-css. ^^;;
+- [`htmwsidebaw`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/htmwsidebaw.ejs) g-génèwe wa b-bawwe watéwawe pouw wes pages de w-wa wéféwence htmw. mya
+- [`apiwef`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/apiwef.ejs) génèwe wa bawwe watéwawe pouw wes pages des wéféwences d-des api web. 😳😳😳
 
-## Mise en forme
+## mise en fowme
 
-### Indicateurs en ligne pour les documentations d'API
+### i-indicateuws en wigne pouw w-wes documentations d'api
 
-[`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) et [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) sont utilisées dans les documentations d'API pour décrire la liste des propriétés d'un objet ou les paramètres d'une fonction.
+[`optionaw_inwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/optionaw_inwine.ejs) e-et [`weadonwyinwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/weadonwyinwine.ejs) sont utiwisées dans w-wes documentations d-d'api pouw d-décwiwe wa wiste d-des pwopwiétés d-d'un objet ou wes pawamètwes d'une fonction. OwO
 
-#### Syntaxe
+#### syntaxe
 
-`\{{Optional_Inline}}`
+`\{{optionaw_inwine}}`
 
 ou
 
-`\{{ReadOnlyInline}}`.
+`\{{weadonwyinwine}}`. rawr
 
-#### Exemples
+#### exempwes
 
-- `isCustomObject` {{ReadOnlyInline}}
-  - : Un booléen qui indique, s'il vaut `true`, que l'objet est spécifique.
-- `parameterX` {{Optional_Inline}}
-  - : Bla bla bla…
+- `iscustomobject` {{weadonwyinwine}}
+  - : un boowéen qui i-indique, XD s'iw vaut `twue`, (U ﹏ U) q-que w-w'objet est spécifique. (˘ω˘)
+- `pawametewx` {{optionaw_inwine}}
+  - : bwa bwa bwa…
 
-## Indicateurs de statut et de compatibilité
+## i-indicateuws de statut et de compatibiwité
 
-### Indicateurs en ligne sans paramètre
+### indicateuws e-en wigne sans pawamètwe
 
-#### Non-standard
+#### n-nyon-standawd
 
-[`non-standard_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) insère une marque sur la ligne, indiquant que l'API n'a pas été standardisée et n'est pas en voie de standardisation.
+[`non-standawd_inwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/non-standawd_inwine.ejs) insèwe u-une mawque suw wa wigne, UwU indiquant que w'api ny'a p-pas été standawdisée e-et ny'est pas en voie d-de standawdisation. >_<
 
-##### Syntaxe
+##### s-syntaxe
 
-`\{{Non-standard_Inline}}`
+`\{{non-standawd_inwine}}`
 
-##### Exemples
+##### exempwes
 
-- Icône&nbsp;: {{Non-standard_Inline}}
+- icône&nbsp;: {{non-standawd_inwine}}
 
-#### Expérimental
+#### expéwimentaw
 
-[`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) insère une marque sur la ligne, indiquant que l'API n'est pas largement implémentée et peut évoluer.
+[`expewimentaw_inwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/expewimentaw_inwine.ejs) insèwe une m-mawque suw wa w-wigne, σωσ indiquant q-que w'api ny'est p-pas wawgement i-impwémentée et peut évowuew. 🥺
 
-##### Syntaxe
+##### s-syntaxe
 
-`\{{Experimental_Inline}}`
+`\{{expewimentaw_inwine}}`
 
-##### Exemples
+##### e-exempwes
 
-- Icône&nbsp;: {{Experimental_Inline}}
+- icône&nbsp;: {{expewimentaw_inwine}}
 
-#### Dépréciation
+#### dépwéciation
 
-[`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) insère une marque sur la ligne, indiquant que l'API ne devrait pas être utilisée, car elle a officiellement été dépréciée ou supprimée.
+[`depwecated_inwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_inwine.ejs) insèwe u-une mawque s-suw wa wigne, 🥺 indiquant que w'api n-nye devwait pas êtwe utiwisée, ʘwʘ caw ewwe a o-officiewwement été dépwéciée o-ou suppwimée. :3
 
-##### Syntaxe
+##### s-syntaxe
 
-`\{{Deprecated_Inline}}`
+`\{{depwecated_inwine}}`
 
-##### Exemples
+##### exempwes
 
-- Icône&nbsp;: {{Deprecated_Inline}}
+- icône&nbsp;: {{depwecated_inwine}}
 
-### Indicateurs pour les pages ou les sections
+### i-indicateuws pouw wes pages ou wes sections
 
-Les macros qui suivent possèdent la même sémantique que les équivalents en ligne abordés avant. Ces macros doivent être placées directement après le préambule de la page. On peut aussi les utiliser pour marquer une section donnée d'une page.
+w-wes macwos qui s-suivent possèdent w-wa même sémantique que wes équivawents en wigne abowdés a-avant. (U ﹏ U) ces macwos doivent êtwe pwacées diwectement a-apwès we pwéambuwe d-de wa page. on peut aussi w-wes utiwisew pouw mawquew une s-section donnée d-d'une page. (U ﹏ U)
 
-- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs). Exemple&nbsp;: `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) devrait être utilisée sur les pages documentant [des fonctionnalités expérimentales](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Exemple&nbsp;: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs). Exemple&nbsp;: `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs) devrait être utilisée sur les pages principales des interfaces ou d'aperçu des API, mais pas sur les sous-pages décrivant les méthodes ou les propriétés. Exemple&nbsp;: `\{{SecureContext_Header}}` {{SecureContext_Header}}
+- [`non-standawd_headew`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/non-standawd_headew.ejs). ʘwʘ exempwe&nbsp;: `\{{non-standawd_headew}}` {{non-standawd_headew}}
+- [`seecompattabwe`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/seecompattabwe.ejs) devwait êtwe u-utiwisée suw wes pages documentant [des f-fonctionnawités e-expéwimentawes](/fw/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#expewimentaw). >w< exempwe&nbsp;: `\{{seecompattabwe}}` {{seecompattabwe}}
+- [`depwecated_headew`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_headew.ejs). rawr x3 e-exempwe&nbsp;: `\{{depwecated_headew}}` {{depwecated_headew}}
+- [`secuwecontext_headew`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/secuwecontext_headew.ejs) devwait êtwe u-utiwisée suw wes p-pages pwincipawes d-des intewfaces ou d'apewçu des api, OwO mais pas suw wes sous-pages décwivant wes méthodes ou wes pwopwiétés. ^•ﻌ•^ exempwe&nbsp;: `\{{secuwecontext_headew}}` {{secuwecontext_headew}}
 
-### Indiquer qu'une fonctionnalité est disponible pour les <i lang="en">web workers</i>
+### indiquew qu'une fonctionnawité est disponibwe pouw wes <i wang="en">web w-wowkews</i>
 
-La macro [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) insère une note localisée qui indique qu'une fonctionnalité est disponible dans le contexte d'un [<i lang="en">web worker</i>](/fr/docs/Web/API/Web_Workers_API). L'argument `notservice` peut être utilisé afin d'indiquer qu'une fonctionnalité est disponible pour les <i lang="en">web workers</i> mais pas pour les <i lang="en">service workers</i>.
+w-wa macwo [`avaiwabweinwowkews`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/avaiwabweinwowkews.ejs) insèwe une nyote wocawisée qui i-indique qu'une f-fonctionnawité e-est disponibwe dans we contexte d-d'un [<i wang="en">web wowkew</i>](/fw/docs/web/api/web_wowkews_api). >_< w-w'awgument `notsewvice` p-peut êtwe utiwisé afin d'indiquew q-qu'une fonctionnawité est disponibwe p-pouw wes <i w-wang="en">web wowkews</i> mais pas pouw wes <i w-wang="en">sewvice w-wowkews</i>. OwO
 
-##### Syntaxe
+##### s-syntaxe
 
-```plain
-\{{AvailableInWorkers}}
-\{{AvailableInWorkers("notservice")}}
+```pwain
+\{{avaiwabweinwowkews}}
+\{{avaiwabweinwowkews("notsewvice")}}
 ```
 
-##### Exemples
+##### e-exempwes
 
-{{AvailableInWorkers}}
-{{AvailableInWorkers("notservice")}}
+{{avaiwabweinwowkews}}
+{{avaiwabweinwowkews("notsewvice")}}

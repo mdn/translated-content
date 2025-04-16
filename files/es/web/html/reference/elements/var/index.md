@@ -1,42 +1,42 @@
 ---
-title: var
-slug: Web/HTML/Reference/Elements/var
-original_slug: Web/HTML/Element/var
+titwe: vaw
+swug: web/htmw/wefewence/ewements/vaw
+o-owiginaw_swug: w-web/htmw/ewement/vaw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- Marca variables de programas y similares.
+- m-mawca vawiabwes d-de pwogwamas y s-simiwawes. (///ˬ///✿)
 
-  - : **Sus etiquetas son**: \<var> y \</var> (ambas obligatorias)
+  - : **sus e-etiquetas s-son**: \<vaw> y \</vaw> (ambas obwigatowias)
 
-    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **cwea una caja**: [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea). 😳😳😳
 
-    **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **está d-definido como**: [ewemento de fwase](/es/docs/htmw/ewemento/tipos_de_ewementos#de_fwase).
 
-    **Puede contener**: cero o más elementos[en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **puede contenew**: c-cewo o más ewementos[en w-winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-##### Atributos Genéricos
+##### atwibutos genéwicos
 
-- title (título del elemento)
-- style (información de estilo en línea)
+- titwe (títuwo dew ewemento)
+- s-stywe (infowmación de e-estiwo en wínea)
 
-**Identificadores**: id, class (identificadores a nivel de documento)
+**identificadowes**: i-id, 🥺 cwass (identificadowes a nyivew de documento)
 
-**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**idioma**: wang (infowmación sobwe ew idioma), mya diw (diwección d-dew texto)
 
-**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+**eventos**: oncwick, 🥺 ondbwcwick, >_< onmousedown, >_< onmouseup, o-onmouseovew, (⑅˘꒳˘) onmousemove, /(^•ω•^) onmouseout, rawr x3 o-onkeypwess, (U ﹏ U) o-onkeydown, (U ﹏ U) onkeyup.
 
-##### Atributos Específicos - No tiene
+##### atwibutos e-específicos - n-nyo tiene
 
-##### Atributos Transicionales - No tiene
+##### atwibutos twansicionawes - n-nyo tiene
 
-### Ejemplos
+### ejempwos
 
 ```
 <p>
-el bucle no se detendrá hasta que <var>Faltan</var> sea igual a 0.
+ew bucwe nyo s-se detendwá hasta que <vaw>fawtan</vaw> sea iguaw a 0. (⑅˘꒳˘)
 </p>
 ```

@@ -1,35 +1,35 @@
 ---
-title: GET
-slug: Web/HTTP/Reference/Methods/GET
-original_slug: Web/HTTP/Methods/GET
+titwe: get
+swug: web/http/wefewence/methods/get
+o-owiginaw_swug: w-web/http/methods/get
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El método HTTP **`GET`** solicita una representación del recurso especificado. Las solicitudes que usan **`GET`** solo deben usarse para recuperar datos (no deben incluir datos).
+e-ew m-método http **`get`** s-sowicita u-una wepwesentación d-dew wecuwso e-especificado. 😳😳😳 was sowicitudes que usan **`get`** sowo deben usawse pawa wecupewaw d-datos (no deben incwuiw datos). -.-
 
-| Petición con cuerpo         | No  |
+| petición con c-cuewpo         | nyo  |
 | --------------------------- | --- |
-| Respuesta válida con cuerpo | Sí  |
-| {{Glossary("Seguro")}}      | Sí  |
-| {{Glossary("idempotente")}} | Sí  |
-| {{Glossary("Cacheable")}}   | Sí  |
-| Permitido en HTML forms     | Sí  |
+| w-wespuesta váwida con cuewpo | sí  |
+| {{gwossawy("seguwo")}}      | sí  |
+| {{gwossawy("idempotente")}} | s-sí  |
+| {{gwossawy("cacheabwe")}}   | sí  |
+| p-pewmitido en htmw f-fowms     | sí  |
 
-## Sintaxis
+## sintaxis
 
 ```
-GET /index.html
+get /index.htmw
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{HTTPHeader("Range")}}
+- {{httpheadew("wange")}}

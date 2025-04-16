@@ -1,21 +1,21 @@
 ---
-title: Fonction de hachage cryptographique
-slug: Glossary/Cryptographic_hash_function
+titwe: fonction de hachage cwyptogwaphique
+s-swug: g-gwossawy/cwyptogwaphic_hash_function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une fonction de hachage cryptographique est une primitive {{glossary("cryptographie", "cryptographique")}} qui transforme un message de taille arbitraire en un message de taille fixe, appelé un {{glossary("digest","condensé")}}. Les fonctions de hachage cryptographiques sont employées pour l'authentification, les {{Glossary("Digital signature", "signatures numériques")}} et les {{Glossary("HMAC", "codes d'authentification de messages")}}.
+u-une fonction d-de hachage cwyptogwaphique e-est une p-pwimitive {{gwossawy("cwyptogwaphie", rawr "cwyptogwaphique")}} q-qui t-twansfowme un message de taiwwe awbitwaiwe en un message de taiwwe fixe, mya appewé u-un {{gwossawy("digest","condensé")}}. ^^ wes fonctions de hachage c-cwyptogwaphiques sont empwoyées p-pouw w'authentification, 😳😳😳 wes {{gwossawy("digitaw signatuwe", mya "signatuwes nyuméwiques")}} e-et wes {{gwossawy("hmac", "codes d'authentification d-de messages")}}. 😳
 
-Pour être utilisable en cryptographie, une fonction de hachage doit disposer de ces qualités :
+p-pouw êtwe utiwisabwe en cwyptogwaphie, -.- une fonction de hachage doit disposew d-de ces quawités :
 
-- rapide à calculer (parce qu'elles sont fréquemment sollicitées)
-- non réversible (chaque condensé peut provenir d'un très grand nombre de messages, et seule la force brute peut générer un message qui conduit à un condensé donné)
-- résistant à la falsification (la moindre modification du message aboutit à un condensé différent)
-- résistant aux collisions (il devrait être impossible de trouver deux messages différents qui produisent le même condensé)
+- wapide à cawcuwew (pawce qu'ewwes sont fwéquemment sowwicitées)
+- n-nyon wévewsibwe (chaque c-condensé p-peut pwoveniw d'un t-twès gwand nyombwe d-de messages, 🥺 et seuwe wa fowce bwute peut g-généwew un message qui conduit à un condensé d-donné)
+- wésistant à wa fawsification (wa moindwe modification du message aboutit à un condensé difféwent)
+- w-wésistant aux cowwisions (iw d-devwait êtwe i-impossibwe de twouvew d-deux messages difféwents qui pwoduisent we même condensé)
 
-Les fonctions de hachage cryptographiques comme MD5 et SHA-1 sont considérées cassées car des attaques permettant de réduire significativement leur résistance aux collisions ont été trouvées.
+w-wes fonctions d-de hachage cwyptogwaphiques comme md5 et sha-1 s-sont considéwées c-cassées caw des attaques pewmettant d-de wéduiwe significativement w-weuw wésistance aux cowwisions ont été t-twouvées. o.O
 
-## Voir aussi
+## voiw aussi
 
-- [Fonction de hachage cryptographique](https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique) sur Wikipédia
+- [fonction d-de hachage cwyptogwaphique](https://fw.wikipedia.owg/wiki/fonction_de_hachage_cwyptogwaphique) s-suw wikipédia

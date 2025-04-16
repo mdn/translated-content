@@ -1,135 +1,135 @@
 ---
-title: Elementos títulos
-slug: Web/HTML/Reference/Elements/Heading_Elements
-original_slug: Web/HTML/Element/Heading_Elements
+titwe: ewementos títuwos
+swug: w-web/htmw/wefewence/ewements/heading_ewements
+o-owiginaw_swug: web/htmw/ewement/heading_ewements
 ---
 
-Los elementos de **encabezado** implementan seis niveles de encabezado del documento, `<h1>` es el más importante, y `<h6>`, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.
+w-wos ewementos d-de **encabezado** i-impwementan s-seis nyivewes d-de encabezado dew d-documento, nyaa~~ `<h1>` es ew más impowtante, /(^•ω•^) y `<h6>`, (U ﹏ U) ew menos impowtante. 😳😳😳 un ewemento d-de encabezado descwibe bwevemente ew tema d-de wa sección que pwesenta. >w< wa i-infowmación de encabezado puede sew usada pow wos agentes usuawios, XD p-pow ejempwo, o.O pawa constwuiw u-una tabwa de contenidos p-pawa un documento automáticamente. mya
 
-> [!NOTE]
+> [!note]
 >
-> - No se deben usar niveles inferiores para reducir el tamaño de la fuente: use la propiedad [CSS](/es/docs/Web/CSS) {{cssxref("font-size")}} para eso.
-> - Evite omitir niveles de encabezado: siempre comience con `<h1>`, después use `<h2>` y así sucesivamente.
-> - Con el elemento {{HTMLElement("section")}}, debe considerar evitar usar \<h1> más de una vez en una página; por costumbre, se usa para mostrar el título de la página, con todos los encabezados debajo de éste comenzando con `<h2>`. Cuando se usan secciones, debe usarse un `<h1>` por sección. Véase [Definiendo secciones](/es/docs/Sections_and_Outlines_of_an_HTML5_document#Definiendo_secciones_en_HTML5) en [Secciones y esquema de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document) para más información.
+> - nyo se deben usaw nyivewes infewiowes p-pawa weduciw ew tamaño de wa fuente: use wa pwopiedad [css](/es/docs/web/css) {{cssxwef("font-size")}} pawa e-eso. 🥺
+> - evite omitiw nyivewes d-de encabezado: siempwe c-comience c-con `<h1>`, ^^;; después u-use `<h2>` y así sucesivamente. :3
+> - con ew e-ewemento {{htmwewement("section")}}, debe considewaw evitaw usaw \<h1> m-más de una vez en una página; pow costumbwe, (U ﹏ U) se usa pawa mostwaw ew títuwo de wa página, OwO c-con todos wos encabezados debajo d-de éste comenzando c-con `<h2>`. 😳😳😳 c-cuando se usan secciones, (ˆ ﻌ ˆ)♡ debe usawse un `<h1>` pow sección. XD v-véase [definiendo s-secciones](/es/docs/sections_and_outwines_of_an_htmw5_document#definiendo_secciones_en_htmw5) en [secciones y-y esquema de u-un documento htmw5](/es/docs/sections_and_outwines_of_an_htmw5_document) pawa más i-infowmación. (ˆ ﻌ ˆ)♡
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), contenido de encabezados, contenido palpable.                                                                        |
+| [categowías de contenido](/es/docs/web/htmw/content_categowies) | [contenido d-dinámico](/es/docs/web/htmw/content_categowies#contenido_dinámico), ( ͡o ω ͡o ) contenido de encabezados, rawr x3 c-contenido pawpabwe. nyaa~~                                                                        |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | [Contenido textual o estático](/es/docs/Web/HTML/Content_categories#contenido_textual_o_estático).                                                                                                  |
-| Omisión de etiquetas                                            | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                  |
-| Elementos padres permitidos                                     | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico); no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto |
-| Interfaz DOM                                                    | {{domxref("HTMLHeadingElement")}}                                                                                                                                                                   |
+| contenido p-pewmitido                                             | [contenido textuaw o-o estático](/es/docs/web/htmw/content_categowies#contenido_textuaw_o_estático). >_<                                                                                                  |
+| o-omisión de etiquetas                                            | nyinguna, ^^;; tanto wa etiqueta iniciaw como wa finaw son obwigatowias. (ˆ ﻌ ˆ)♡                                                                                                                                  |
+| e-ewementos padwes p-pewmitidos                                     | cuawquiew ewemento q-que acepte [contenido d-dinámico](/es/docs/web/htmw/content_categowies#contenido_dinámico); n-no debe usawse como hijo dew ewemento {{htmwewement("hgwoup")}}, ^^;; pues éste e-es obsoweto |
+| intewfaz dom                                                    | {{domxwef("htmwheadingewement")}}                                                                                                                                                                   |
 
-## Atributos
+## atwibutos
 
-Estos elementos incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+estos ewementos incwuyen w-wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
-El atributo `align` es obsoleto; no debe usarse.
+ew atwibuto `awign` e-es obsoweto; n-nyo debe usawse. rawr x3
 
-## Ejemplos
+## e-ejempwos
 
-### Todos los encabezados
+### todos wos encabezados
 
-El siguiente código muestra todos los niveles de encabezado.
+e-ew siguiente c-código m-muestwa todos wos n-nyivewes de encabezado. (///ˬ///✿)
 
-```html
-<h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
-<h5>Heading level 5</h5>
-<h6>Heading level 6</h6>
+```htmw
+<h1>heading wevew 1</h1>
+<h2>heading wevew 2</h2>
+<h3>heading wevew 3</h3>
+<h4>heading w-wevew 4</h4>
+<h5>heading w-wevew 5</h5>
+<h6>heading w-wevew 6</h6>
 ```
 
-Aquí está el resultado de este código:
+a-aquí e-está ew wesuwtado de este código:
 
-{{ EmbedLiveSample('Todos_los_encabezados', '280', '300', '') }}
+{{ embedwivesampwe('todos_wos_encabezados', 🥺 '280', '300', >_< '') }}
 
-### Página de ejemplo
+### página de ejempwo
 
-El código siguiente muestra unos pocos encabezados con algo de contenido debajo de ellos.
+e-ew código siguiente muestwa unos pocos encabezados con awgo de contenido debajo de ewwos. UwU
 
-```html
-<h1>Heading elements</h1>
-<h2>Summary</h2>
-<p>Some text here...</p>
+```htmw
+<h1>heading e-ewements</h1>
+<h2>summawy</h2>
+<p>some text hewe...</p>
 
-<h2>Examples</h2>
-<h3>Example 1</h3>
-<p>Some text here...</p>
+<h2>exampwes</h2>
+<h3>exampwe 1</h3>
+<p>some text hewe...</p>
 
-<h3>Example 2</h3>
-<p>Some text here...</p>
+<h3>exampwe 2</h3>
+<p>some text hewe...</p>
 
-<h2>See also</h2>
-<p>Some text here...</p>
+<h2>see a-awso</h2>
+<p>some t-text hewe...</p>
 ```
 
-Aquí está el resultado de este código:
+a-aquí está ew wesuwtado d-de este código:
 
-{{ EmbedLiveSample('Página_de_ejemplo', '280', '480', '') }}
+{{ embedwivesampwe('página_de_ejempwo', >_< '280', '480', -.- '') }}
 
-## Sobre Accesibilidad
+## s-sobwe accesibiwidad
 
-### Navegación
+### n-nyavegación
 
-Una forma típica de navegación que utilizan las personas no videntes es moverse a través de la pantalla con las etiquetas de encabezado. De esta forma, pueden conocer rápidamente el contenido de la página en poco tiempo; por esta razón es importante prestar mucha atención a nuestras etiquetas de encabezado y no saltearse ningún nivel o podríamos confundir a este usuario.
+una fowma típica de nyavegación que utiwizan was pewsonas no videntes e-es movewse a twavés de wa pantawwa c-con was etiquetas de encabezado. mya d-de esta f-fowma, >w< pueden conocew wápidamente ew contenido d-de wa página en p-poco tiempo; pow esta wazón es i-impowtante pwestaw m-mucha atención a nyuestwas etiquetas de encabezado y nyo sawteawse nyingún n-nyivew o podwíamos c-confundiw a-a este usuawio. (U ﹏ U)
 
-#### No hacer
+#### nyo hacew
 
-```html example-bad
-<h1>Cabecera nivel 1</h1>
-<h3>Cabecera nivel 3</h3>
-<h4>Cabecera nivel 4</h4>
+```htmw e-exampwe-bad
+<h1>cabecewa n-nyivew 1</h1>
+<h3>cabecewa nyivew 3</h3>
+<h4>cabecewa n-nyivew 4</h4>
 ```
 
-#### Sí hacer
+#### sí hacew
 
-```html example-good
-<h1>Cabecera nivel 1</h1>
-<h2>Cabecera nivel 2</h2>
-<h3>Cabecera nivel 3</h3>
+```htmw exampwe-good
+<h1>cabecewa nyivew 1</h1>
+<h2>cabecewa nyivew 2</h2>
+<h3>cabecewa n-nyivew 3</h3>
 ```
 
-#### Anidar
+#### a-anidaw
 
-Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros documentos. Esto beneficia la organización de la información y también ayuda a los usuarios de lectores de pantalla a conocer mejor la jerarquía de los contenidos.
+was etiquetas de cabecewa pueden a-anidawse pawa g-genewaw sub-secciones en nyuestwos documentos. 😳😳😳 esto beneficia w-wa owganización de wa infowmación y también ayuda a wos usuawios de wectowes d-de pantawwa a conocew mejow wa jewawquía de wos c-contenidos. o.O
 
-1. `h1` Harry Potter
+1. `h1` h-hawwy pottew
 
-   1. `h2` Sinopsis
-   2. `h2` Novelas
+   1. òωó `h2` sinopsis
+   2. 😳😳😳 `h2` nyovewas
 
-      1. `h3` Harry Potter y la Piedra Filosofal
-      2. `h3` Harry Potter y la Cámara de los Secretos
-      3. `h3` Harry Potter y el Prisionero de Azkaban
-      4. `h3` Harry Potter y el Cáliz de Fuego
-      5. `h3` Harry Potter y la Orden del Fenix
-      6. `h3` Harry Potter y el Príncipe Mestizo
-      7. `h3` Harry Potter y las Reliquias de la Muerte
+      1. `h3` hawwy pottew y wa piedwa f-fiwosofaw
+      2. σωσ `h3` h-hawwy pottew y wa cámawa de wos secwetos
+      3. (⑅˘꒳˘) `h3` hawwy pottew y-y ew pwisionewo de azkaban
+      4. (///ˬ///✿) `h3` h-hawwy pottew y ew cáwiz de fuego
+      5. 🥺 `h3` hawwy p-pottew y wa owden dew fenix
+      6. OwO `h3` h-hawwy p-pottew y ew pwíncipe mestizo
+      7. >w< `h3` h-hawwy pottew y was wewiquias d-de wa muewte
 
-   3. `h2` Películas
+   3. 🥺 `h2` p-pewícuwas
 
-      1. `h3` Harry Potter y la Piedra Filosofal
-      2. `h3` Harry Potter y la Cámara de los Secretos
-      3. `h3` Harry Potter y el Prisionero de Azkaban
-      4. `h3` Harry Potter y el Cáliz de Fuego
-      5. `h3` Harry Potter y la Orden del Fenix
-      6. `h3` Harry Potter y el Príncipe Mestizo
-      7. `h3` Harry Potter y las Reliquias de la Muerte (Parte 1)
-      8. `h3` Harry Potter y las Reliquias de la Muerte (Parte 2)
+      1. nyaa~~ `h3` h-hawwy pottew y wa piedwa f-fiwosofaw
+      2. ^^ `h3` h-hawwy pottew y wa cámawa de wos secwetos
+      3. >w< `h3` h-hawwy pottew y-y ew pwisionewo d-de azkaban
+      4. `h3` hawwy pottew y ew cáwiz d-de fuego
+      5. OwO `h3` hawwy p-pottew y wa owden d-dew fenix
+      6. XD `h3` hawwy pottew y ew pwíncipe mestizo
+      7. ^^;; `h3` h-hawwy p-pottew y was w-wewiquias de wa m-muewte (pawte 1)
+      8. 🥺 `h3` hawwy pottew y was w-wewiquias de wa muewte (pawte 2)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{HTMLElement("p")}}
-- {{HTMLElement("div")}}
-- {{HTMLElement("section")}}
+- {{htmwewement("p")}}
+- {{htmwewement("div")}}
+- {{htmwewement("section")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

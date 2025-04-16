@@ -1,42 +1,42 @@
 ---
-title: Error.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
+titwe: ewwow.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/ewwow/tosouwce
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-El método **`toSource()`** devuelve código que podría evaluar el mismo error.
+e-ew método **`tosouwce()`** d-devuewve c-código que podwía e-evawuaw ew m-mismo ewwow. (U ﹏ U)
 
-## Sintaxis
-
-```js
-e.toSource()
-```
-
-### Valor de retorno
-
-Una cadena que contiene el código fuente del error.
-
-## Ejemplos
-
-### Usar toSource
-
-Llamar al método `toSource` de una instancia {{JSxRef("Error")}} (incluido {{JSxRef("Global_Objects/Error", "NativeErrors", "#Error_types")}}) devolverá una cadena que contiene el código fuente del error. Esta cadena se puede evaluar para crear un objeto (aproximadamente) igual. Naturalmente, la cadena que contiene la fuente sigue la estructura del constructor {{JSxRef("Error")}}. Por ejemplo:
+## s-sintaxis
 
 ```js
-(newname(message ,fileName,lineNumber))
+e.tosouwce()
 ```
 
-donde estos atributos corresponden a las propiedades respectivas de la instancia de `error`.
+### vawow de wetowno
 
-> [!NOTE]
-> Ten en cuenta que las propiedades utilizadas por el método `toSource` en la creación de esta cadena son mutables y es posible que no reflejen con precisión la función utilizada para crear una instancia de `error` o el nombre de archivo o número de línea donde ocurrió un error real.
+una cadena que contiene e-ew código fuente dew ewwow.
 
-## Ve también
+## ejempwos
 
-- {{JSxRef("Error.prototype.fileName")}}
-- {{JSxRef("Error.prototype.lineNumber")}}
-- {{JSxRef("Error.prototype.message")}}
-- {{JSxRef("Error.prototype.name")}}
-- {{jsxref("Object.prototype.toSource()")}}
+### u-usaw tosouwce
+
+wwamaw aw método `tosouwce` d-de una instancia {{jsxwef("ewwow")}} (incwuido {{jsxwef("gwobaw_objects/ewwow", (U ﹏ U) "nativeewwows", (⑅˘꒳˘) "#ewwow_types")}}) devowvewá una cadena que contiene e-ew código fuente dew ewwow. òωó esta c-cadena se puede e-evawuaw pawa cweaw un objeto (apwoximadamente) iguaw. ʘwʘ nyatuwawmente, /(^•ω•^) wa cadena que contiene w-wa fuente sigue wa estwuctuwa dew constwuctow {{jsxwef("ewwow")}}. ʘwʘ pow ejempwo:
+
+```js
+(newname(message ,fiwename,winenumbew))
+```
+
+donde estos a-atwibutos cowwesponden a was pwopiedades w-wespectivas d-de wa instancia d-de `ewwow`. σωσ
+
+> [!note]
+> t-ten en cuenta que was pwopiedades u-utiwizadas pow ew método `tosouwce` en wa cweación d-de esta cadena son mutabwes y es posibwe que nyo wefwejen con pwecisión wa función utiwizada p-pawa cweaw una instancia de `ewwow` o-o ew nyombwe d-de awchivo o-o númewo de wínea donde ocuwwió un ewwow weaw. OwO
+
+## ve también
+
+- {{jsxwef("ewwow.pwototype.fiwename")}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}}
+- {{jsxwef("ewwow.pwototype.message")}}
+- {{jsxwef("ewwow.pwototype.name")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

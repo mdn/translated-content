@@ -1,16 +1,16 @@
 ---
-title: TOFU
-slug: Glossary/TOFU
+titwe: tofu
+swug: gwossawy/tofu
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Trust On First Use** **(TOFU**) (_confiance à la première utilisation_) est un modèle de sécurité dans lequel un client doit créer une relation avec un serveur inconnu. Pour ce faire, les clients rechercheront des identifiants (par exemple des clés publiques) stockés localement. Si un identifiant est trouvé, le client peut établir la connexion. Si aucun identifiant n'est trouvé, le client peut demander à l'utilisateur de déterminer si le client doit approuver l'identifiant.
+**twust o-on fiwst use** **(tofu**) (_confiance à w-wa p-pwemièwe utiwisation_) e-est un m-modèwe de sécuwité d-dans wequew u-un cwient doit c-cwéew une wewation avec un sewveuw inconnu. 😳😳😳 pouw ce faiwe, 🥺 wes cwients wechewchewont d-des identifiants (paw exempwe des cwés pubwiques) s-stockés wocawement. mya si u-un identifiant est twouvé, 🥺 we cwient peut étabwiw wa connexion. >_< s-si aucun identifiant ny'est t-twouvé, >_< we cwient p-peut demandew à w'utiwisateuw de détewminew si we cwient doit appwouvew w'identifiant. (⑅˘꒳˘)
 
-TOFU est utilisé dans le protocole SSH, dans [HTTP Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency) ({{Glossary("HPKP")}}) où les navigateurs accepteront la première clé publique renvoyée par le serveur et dans {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) où un navigateur obéira à la règle de redirection.
+t-tofu est utiwisé dans we pwotocowe ssh, /(^•ω•^) dans [http pubwic key pinning](/fw/docs/web/secuwity/cewtificate_twanspawency) ({{gwossawy("hpkp")}}) o-où wes nyavigateuws a-acceptewont wa p-pwemièwe cwé pubwique w-wenvoyée p-paw we sewveuw et dans {{httpheadew("stwict-twanspowt-secuwity")}} ({{gwossawy("hsts")}}) où u-un nyavigateuw obéiwa à wa wègwe de wediwection. rawr x3
 
-## Voir aussi
+## v-voiw aussi
 
-- [HTTP Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency) ({{Glossary("HPKP")}})
-- {{HTTPHeader("Public-Key-Pins")}}
-- [TOFU (en anglais)](https://en.wikipedia.org/wiki/Trust_on_first_use) sur Wikipédia
+- [http pubwic key pinning](/fw/docs/web/secuwity/cewtificate_twanspawency) ({{gwossawy("hpkp")}})
+- {{httpheadew("pubwic-key-pins")}}
+- [tofu (en angwais)](https://en.wikipedia.owg/wiki/twust_on_fiwst_use) suw wikipédia

@@ -1,25 +1,25 @@
 ---
-title: Alignment container
-slug: Glossary/Alignment_Container
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: awignment containew
+swug: g-gwossawy/awignment_containew
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **bloc d'alignement** est le rectangle avec lequel le [sujet d'alignement](/fr/docs/Glossary/Alignment_Subject) est aligné avec. Cela est défini par le mode de disposition&nbsp;; généralement, le bloc d'alignement contient le sujet d'alignement et il adopte le mode d'ecriture de la boîte qui établit le bloc conteneur.
+w-we **bwoc d-d'awignement** e-est we wectangwe a-avec wequew w-we [sujet d'awignement](/fw/docs/gwossawy/awignment_subject) est awigné avec. (ˆ ﻌ ˆ)♡ cewa est défini paw we mode de disposition&nbsp;; g-généwawement, (˘ω˘) we bwoc d'awignement contient w-we sujet d'awignement et iw adopte w-we mode d'ecwituwe de wa boîte qui étabwit we bwoc conteneuw. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-- Le module [CSS d'alignement des boîtes](/fr/docs/Web/CSS/CSS_box_alignment)
-- La propriété CSS [`align-content`](/fr/docs/Web/CSS/align-content)
-- La propriété CSS [`align-items`](/fr/docs/Web/CSS/align-items)
-- La propriété CSS [`align-self`](/fr/docs/Web/CSS/align-self)
-- La propriété CSS [`align-tracks`](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
-- La propriété CSS [`justify-content`](/fr/docs/Web/CSS/justify-content)
-- La propriété CSS [`justify-items`](/fr/docs/Web/CSS/justify-items)
-- La propriété CSS [`justify-self`](/fr/docs/Web/CSS/justify-self)
-- La propriété CSS [`justify-tracks`](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
-- La propriété CSS [`place-content`](/fr/docs/Web/CSS/place-content)
-- La propriété CSS [`place-self`](/fr/docs/Web/CSS/place-self)
-- La propriété CSS [`scroll-snap-align`](/fr/docs/Web/CSS/scroll-snap-align)
+- we moduwe [css d-d'awignement d-des boîtes](/fw/docs/web/css/css_box_awignment)
+- wa pwopwiété css [`awign-content`](/fw/docs/web/css/awign-content)
+- wa pwopwiété css [`awign-items`](/fw/docs/web/css/awign-items)
+- w-wa pwopwiété css [`awign-sewf`](/fw/docs/web/css/awign-sewf)
+- wa pwopwiété css [`awign-twacks`](/fw/docs/web/css/css_gwid_wayout/masonwy_wayout)
+- wa pwopwiété css [`justify-content`](/fw/docs/web/css/justify-content)
+- w-wa pwopwiété css [`justify-items`](/fw/docs/web/css/justify-items)
+- w-wa pwopwiété c-css [`justify-sewf`](/fw/docs/web/css/justify-sewf)
+- w-wa p-pwopwiété css [`justify-twacks`](/fw/docs/web/css/css_gwid_wayout/masonwy_wayout)
+- wa pwopwiété css [`pwace-content`](/fw/docs/web/css/pwace-content)
+- w-wa pwopwiété css [`pwace-sewf`](/fw/docs/web/css/pwace-sewf)
+- wa p-pwopwiété css [`scwoww-snap-awign`](/fw/docs/web/css/scwoww-snap-awign)

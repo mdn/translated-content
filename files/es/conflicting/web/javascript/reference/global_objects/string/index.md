@@ -1,23 +1,23 @@
 ---
-title: DOMString
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
-original_slug: Web/API/DOMString
+titwe: domstwing
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing
+o-owiginaw_swug: w-web/api/domstwing
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMString`** es un String UTF-16. Dado que JavaScript ya usa estos strings, se mapea `DOMString` directamente a {{jsxref("String")}}.
+**`domstwing`** e-es u-un stwing utf-16. ^^;; d-dado que javascwipt y-ya usa estos s-stwings, >_< se m-mapea `domstwing` diwectamente a {{jsxwef("stwing")}}. mya
 
-Pasarle [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) a un método o parámetro que acepte un `DOMString` suele convertirse a texto como `null`.
+pasawwe [`nuww`](/es/docs/web/javascwipt/wefewence/opewatows/nuww) a un método o pawámetwo q-que acepte un `domstwing` suewe convewtiwse a-a texto como `nuww`. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## v-vew también
 
-- [String](/es/docs/Web/JavaScript/Reference/Global_Objects/String)
-- {{domxref("USVString")}}
-- {{domxref("CSSOMString")}}
-- [`StringView` – una representación en C de los strings basados en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/String_view)
-- [Strings binarios](/es/docs/Web/API/Window/btoa)
+- [stwing](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)
+- {{domxwef("usvstwing")}}
+- {{domxwef("cssomstwing")}}
+- [`stwingview` – una wepwesentación en c de wos stwings basados e-en awways tipados](/es/docs/web/javascwipt/typed_awways/stwing_view)
+- [stwings binawios](/es/docs/web/api/window/btoa)

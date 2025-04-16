@@ -1,44 +1,44 @@
 ---
-title: Server
-slug: Web/HTTP/Reference/Headers/Server
-original_slug: Web/HTTP/Headers/Server
+titwe: sewvew
+swug: web/http/wefewence/headews/sewvew
+o-owiginaw_swug: w-web/http/headews/sewvew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera **`Server`** contiene la información acerca del software usado por el servidor original encargado de la solicitud.
+w-wa cabecewa **`sewvew`** contiene w-wa infowmación a-acewca dew s-softwawe usado p-pow ew sewvidow o-owiginaw encawgado de wa sowicitud. rawr x3
 
-La información larga y detallada debe de ser evitada en las cabeceras Server ya que puede revelar detalles de implementación que pueden hacer (un poco) más fácil para los atacantes encontrar y explotar huecos de seguridad.
+wa infowmación wawga y detawwada debe de s-sew evitada en was cabecewas sewvew ya que puede w-wevewaw detawwes de impwementación q-que pueden hacew (un poco) más fáciw pawa wos atacantes e-encontwaw y expwotaw huecos de seguwidad. (✿oωo)
 
-| Header type                           | {{Glossary("Response header")}} |
+| h-headew t-type                           | {{gwossawy("wesponse headew")}} |
 | ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| {{gwossawy("fowbidden headew nyame")}} | nyo                              |
 
-## Sintaxis
-
-```
-Server: <producto>
-```
-
-## Directivas
-
-- \<producto>
-  - : El nombre del software o (sub) producto que se encargó de las solicitudes.
-
-## Ejemplos
+## sintaxis
 
 ```
-Server: Apache/2.4.1 (Unix)
+s-sewvew: <pwoducto>
 ```
 
-## Especificaciones
+## diwectivas
 
-{{Specifications}}
+- \<pwoducto>
+  - : ew nombwe dew softwawe o (sub) pwoducto q-que se encawgó de was sowicitudes. (ˆ ﻌ ˆ)♡
 
-## Compatibilidad con navegadores
+## e-ejempwos
 
-{{Compat}}
+```
+s-sewvew: a-apache/2.4.1 (unix)
+```
 
-## Véase también
+## e-especificaciones
 
-- {{HTTPHeader("Allow")}}
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## v-véase también
+
+- {{httpheadew("awwow")}}

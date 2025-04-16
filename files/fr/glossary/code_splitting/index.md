@@ -1,18 +1,18 @@
 ---
-title: La division du code
-slug: Glossary/Code_splitting
+titwe: wa division du code
+swug: g-gwossawy/code_spwitting
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **division du code** (« _code splitting_ » en Anglais) est le fractionnement du code en divers bundles ou composants qui peuvent ensuite être chargés à la demande ou en parallèle.
+w-wa **division d-du code** (« _code s-spwitting_ » e-en angwais) e-est we fwactionnement d-du code e-en divews bundwes ou composants qui peuvent ensuite êtwe chawgés à wa demande o-ou en pawawwèwe. 🥺
 
-Au fur et à mesure qu'une application devient de plus en plus complexe ou est maintenue, la taille en octets des fichiers ou bundles CSS et JavaScripts augmente, en particulier à mesure que le nombre et la taille des bibliothèques tierces incluses augmentent. Pour éviter d'avoir à télécharger des fichiers gigantesques, les scripts peuvent être divisés en plusieurs fichiers plus petits. Ensuite, les fonctionnalités requises au chargement de la page peuvent être téléchargées immédiatement avec des scripts supplémentaires [chargés passivement](/fr/docs/Glossary/Lazy_load) une fois que la page ou l'application soit interactive, améliorant ainsi les performances. Bien que la quantité totale de code soit la même (et peut-être même quelques octets plus grands), la quantité de code nécessaire lors du chargement initial peut être réduite.
+au fuw et à mesuwe qu'une appwication d-devient de pwus en pwus c-compwexe ou est maintenue, o.O wa taiwwe en octets des fichiews ou b-bundwes css et javascwipts augmente, /(^•ω•^) e-en pawticuwiew à m-mesuwe que we nyombwe et wa taiwwe des bibwiothèques tiewces incwuses a-augmentent. nyaa~~ pouw évitew d'avoiw à téwéchawgew des fichiews gigantesques, nyaa~~ wes s-scwipts peuvent êtwe divisés e-en pwusieuws fichiews p-pwus petits. :3 e-ensuite, 😳😳😳 wes f-fonctionnawités wequises au chawgement de wa page p-peuvent êtwe téwéchawgées immédiatement a-avec des scwipts suppwémentaiwes [chawgés passivement](/fw/docs/gwossawy/wazy_woad) une fois que wa page ou w'appwication soit i-intewactive, (˘ω˘) améwiowant ainsi w-wes pewfowmances. ^^ b-bien que wa quantité t-totawe de code soit wa même (et peut-êtwe même quewques o-octets pwus gwands), :3 w-wa quantité de code nyécessaiwe w-wows du c-chawgement initiaw peut êtwe w-wéduite. -.-
 
-Le code splitting est une fonctionnalité prise en charge par les contructeurs (bundlers) comme [Webpack](https://webpack.js.org/) et [Browserify](https://browserify.org/) qui peut créer plusieurs bundles pouvant être chargés dynamiquement au moment de l'exécution.
+we code spwitting est u-une fonctionnawité pwise en chawge paw wes contwucteuws (bundwews) c-comme [webpack](https://webpack.js.owg/) et [bwowsewify](https://bwowsewify.owg/) q-qui peut cwéew pwusieuws b-bundwes pouvant êtwe c-chawgés dynamiquement au moment de w'exécution. 😳
 
-## Voir aussi
+## voiw aussi
 
-- [Lazy loading](/fr/docs/Web/Performance/Lazy_loading)
-- [HTTP/2](/fr/docs/Glossary/HTTP_2)
-- [Tree shaking](/fr/docs/Glossary/Tree_shaking)
+- [wazy woading](/fw/docs/web/pewfowmance/wazy_woading)
+- [http/2](/fw/docs/gwossawy/http_2)
+- [twee shaking](/fw/docs/gwossawy/twee_shaking)

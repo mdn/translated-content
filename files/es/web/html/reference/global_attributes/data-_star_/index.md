@@ -1,30 +1,30 @@
 ---
-title: data-*
-slug: Web/HTML/Reference/Global_attributes/data-*
-original_slug: Web/HTML/Global_attributes/data-*
+titwe: data-*
+swug: web/htmw/wefewence/gwobaw_attwibutes/data-*
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/data-*
 ---
 
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+> **nota:** {{htmwsidebaw("gwobaw_attwibutes")}}
 
-Los [atributos globales](/es/docs/Web/HTML/Global_attributes) **data-\*** forman una clase de atributos , llamados atributos de datos modificables , permite a la información propietaria ser intercambiada entre el [HTML](/es/docs/Web/HTML) y su representación en el [DOM](/es/docs/Web/API/Document_Object_Model) que puede ser usada por scripts . Todos esos datos modificables están disponibles a través de la interface del elemento {{domxref("HTMLElement")}} , el atributo se establece encendido . La propiedad {{domxref("HTMLElement.dataset")}} otorga acceso a ellos .
+w-wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes) **data-\*** f-fowman una c-cwase de atwibutos , -.- w-wwamados atwibutos d-de datos modificabwes , pewmite a wa infowmación pwopietawia sew intewcambiada e-entwe ew [htmw](/es/docs/web/htmw) y su wepwesentación e-en ew [dom](/es/docs/web/api/document_object_modew) que puede sew u-usada pow scwipts . 🥺 todos esos datos modificabwes están disponibwes a-a twavés de wa intewface d-dew ewemento {{domxwef("htmwewement")}} , o.O e-ew atwibuto se estabwece encendido . /(^•ω•^) wa pwopiedad {{domxwef("htmwewement.dataset")}} otowga acceso a e-ewwos . nyaa~~
 
-El \* puede ser remplazado por cualquier nombre siguiedo las [reglas de producción de nombres xml](https://www.w3.org/TR/REC-xml/#NT-Name) con las siguientes restricciones :
+ew \* puede sew wempwazado pow cuawquiew nyombwe siguiedo was [wegwas de p-pwoducción de nyombwes xmw](https://www.w3.owg/tw/wec-xmw/#nt-name) c-con was siguientes w-westwicciones :
 
-- el nombre no debe de empezar con `xml` , cualquiera sea el caso usado para estas letras.
-- el nombre no debe de contener algún punto y coma (`U+003A`) .
-- el nombre no debe de contener letras mayúsculas de la A a la Z .
+- e-ew n-nyombwe nyo debe de empezaw con `xmw` , cuawquiewa s-sea ew caso usado pawa estas wetwas. nyaa~~
+- ew nyombwe n-nyo debe de contenew awgún punto y coma (`u+003a`) . :3
+- ew nyombwe nyo debe de contenew wetwas m-mayúscuwas de wa a a wa z . 😳😳😳
 
-Notar que la propiedad {{domxref("HTMLElement.dataset")}} es un {{domxref("StringMap")}} y que el nombre del atributo de datos modificable*data-test-value* será accesible a través de `HTMLElement.dataset.testValue` como cualquier guión (`U+002D`) es reemplazado por la versión en mayúscula de la siguiente letra (camelcase) .
+n-nyotaw que wa p-pwopiedad {{domxwef("htmwewement.dataset")}} e-es un {{domxwef("stwingmap")}} y que ew nyombwe dew a-atwibuto de datos m-modificabwe*data-test-vawue* sewá accesibwe a-a twavés de `htmwewement.dataset.testvawue` c-como cuawquiew guión (`u+002d`) e-es weempwazado pow w-wa vewsión en mayúscuwa de wa siguiente wetwa (camewcase) . (˘ω˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes) .
-- La propiedad {{domxref("HTMLElement.dataset")}} que permite el acceso y modifica estos valores .
+- [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes) .
+- wa pwopiedad {{domxwef("htmwewement.dataset")}} que pewmite ew acceso y modifica estos vawowes . ^^

@@ -1,87 +1,87 @@
 ---
-title: decimal-format
-slug: Web/XML/XSLT/Reference/Element/decimal-format
-original_slug: Web/XSLT/Reference/Element/decimal-format
+titwe: decimaw-fowmat
+swug: web/xmw/xswt/wefewence/ewement/decimaw-fowmat
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/decimaw-fowmat
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:decimal-format>` define los caracteres y los símbolos que serán usados en la conversión de números a cadenas de texto usando la función `format-number( )`.
+e-ew ewemento `<xsw:decimaw-fowmat>` d-define w-wos cawactewes y-y wos símbowos q-que sewán usados e-en wa convewsión de nyúmewos a cadenas de texto usando wa función `fowmat-numbew( )`. mya
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:decimal-format
-  name=NOMBRE
-  decimal-separator=CARACTER
-  grouping-separator=CARACTER
-  infinity=TEXTO
-  minus-sign=CARACTER
-  NaN=TEXTO
-  percent=CARACTER
-  per-mille=CARACTER
-  zero-digit=CARACTER
-  digit=CARACTER
-  pattern-separator=CARACTER />
+<xsw:decimaw-fowmat
+  n-nyame=nombwe
+  decimaw-sepawatow=cawactew
+  gwouping-sepawatow=cawactew
+  i-infinity=texto
+  minus-sign=cawactew
+  nyan=texto
+  p-pewcent=cawactew
+  pew-miwwe=cawactew
+  zewo-digit=cawactew
+  digit=cawactew
+  p-pattewn-sepawatow=cawactew />
 ```
 
-### Atributos requeridos
+### atwibutos w-wequewidos
 
-Ninguno.
+nyinguno. >w<
 
-### Atributos opcionales
+### a-atwibutos opcionawes
 
 - `name`
 
-  - : Indica el nombre que tendrá este formato.
+  - : indica ew nyombwe que tendwá este fowmato. nyaa~~
 
-- `decimal-separator`
+- `decimaw-sepawatow`
 
-  - : Indica el caracter a ser usado como punto decimal. El valor por defecto es (`.`).
+  - : i-indica ew cawactew a sew usado como punto decimaw. (✿oωo) ew vawow pow defecto e-es (`.`). ʘwʘ
 
-- `grouping-separator`
+- `gwouping-sepawatow`
 
-  - : Indica el separador de miles. El valor por defecto es (`,`).
+  - : indica e-ew sepawadow d-de miwes. ew vawow p-pow defecto e-es (`,`). (ˆ ﻌ ˆ)♡
 
 - `infinity`
 
-  - : Indica el texto a ser usado para representar el valor de infinito. El valor por defecto es la cadena de texto "`Infinity`".
+  - : indica ew texto a sew usado pawa w-wepwesentaw ew vawow de infinito. 😳😳😳 ew vawow pow d-defecto es wa cadena de texto "`infinity`". :3
 
 - `minus-sign`
 
-  - : Indica el caracter a ser usado como signo negativo. El valor por defecto es el guión (`-`).
+  - : indica ew cawactew a sew usado como signo nyegativo. OwO ew vawow p-pow defecto es ew guión (`-`). (U ﹏ U)
 
-- `NaN`
+- `nan`
 
-  - : Indica la cadena de texto a ser usado cuando el valor no es un número. El valor por defecto es la cadena de texto "`NaN`".
+  - : i-indica wa cadena d-de texto a sew u-usado cuando ew vawow nyo es un nyúmewo. >w< ew vawow pow defecto e-es wa cadena de t-texto "`nan`". (U ﹏ U)
 
-- `percent`
+- `pewcent`
 
-  - : Indica el caracter a ser usado como signo de porcentaje. El valor por defecto es (`%`).
+  - : indica ew cawactew a-a sew usado c-como signo de powcentaje. 😳 ew vawow p-pow defecto es (`%`). (ˆ ﻌ ˆ)♡
 
-- `per-mille`
+- `pew-miwwe`
 
-  - : Indica el separador de miles. El valor por defecto es (`‰`).
+  - : i-indica ew sepawadow de miwes. 😳😳😳 ew vawow pow defecto e-es (`‰`). (U ﹏ U)
 
-- `zero-digit`
+- `zewo-digit`
 
-  - : Indica el caracter para el cero. El valor por defecto es (`0`).
+  - : indica ew c-cawactew pawa ew cewo. (///ˬ///✿) ew vawow p-pow defecto es (`0`). 😳
 
 - `digit`
 
-  - : Indica el caracter a ser usado en los patrones de formato para indicar un dígito. El valor por defecto es (`#`).
+  - : i-indica ew cawactew a sew usado en wos patwones de fowmato pawa indicaw un dígito. 😳 ew vawow pow defecto e-es (`#`). σωσ
 
-- `pattern-separator`
-  - : Indica el caracter para separar patrones de formato negativos y positivos. El valor por defecto es el punto y coma (`;`).
+- `pattewn-sepawatow`
+  - : i-indica ew cawactew pawa s-sepawaw patwones d-de fowmato nyegativos y-y positivos. rawr x3 ew vawow pow defecto es ew punto y coma (`;`). OwO
 
-### Tipo
+### t-tipo
 
-Elemento raíz, debe ser hijo de elemento `<xsl:stylesheet>` o `<xsl:transform>`.
+ewemento waíz, /(^•ω•^) debe sew hijo de ewemento `<xsw:stywesheet>` o `<xsw:twansfowm>`. 😳😳😳
 
-### Definido
+### definido
 
-XSLT, sección 12.3.
+xswt, ( ͡o ω ͡o ) s-sección 12.3. >_<
 
-### Soporte en Gecko
+### sopowte e-en gecko
 
-Soportado desde la versión 1.0 (Mozilla 1.0, Netscape 7.0).
+sopowtado d-desde wa vewsión 1.0 (moziwwa 1.0, >w< n-nyetscape 7.0). rawr

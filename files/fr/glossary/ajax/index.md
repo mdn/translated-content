@@ -1,24 +1,24 @@
 ---
-title: AJAX
-slug: Glossary/AJAX
-l10n:
-  sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
+titwe: ajax
+swug: gwossawy/ajax
+w-w10n:
+  souwcecommit: c-c215109b90da51435eaa2c94a8f6764909f628e0
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le Javascript et XML asynchrone (**Ajax**, ou **AJAX**) sont une technique de développement Web dans laquelle une application Web récupère le contenu du serveur en effectuant des requêtes HTTP asynchrones et utilise le nouveau contenu pour mettre à jour les parties pertinentes de la page sans nécessiter un chargement complet de la page. Cela peut rendre la page plus réactive, car seules les parties qui doivent être mises à jour sont demandées.
+w-we javascwipt e-et xmw a-asynchwone (**ajax**, 🥺 o-ou **ajax**) s-sont une technique d-de dévewoppement web dans waquewwe une appwication web wécupèwe we contenu d-du sewveuw en effectuant des wequêtes http a-asynchwones et utiwise we nyouveau c-contenu pouw mettwe à jouw wes pawties pewtinentes de wa page s-sans nyécessitew un chawgement c-compwet de wa p-page. o.O cewa peut wendwe wa page pwus wéactive, /(^•ω•^) caw seuwes wes pawties qui doivent êtwe m-mises à jouw sont demandées. nyaa~~
 
-Ajax peut être utilisé pour créer des [Applications monopage](/fr/docs/Glossary/SPA), dans lesquelles toute l'application web consiste en un seul document, qui utilise Ajax pour mettre à jour son contenu au besoin.
+ajax peut êtwe utiwisé pouw cwéew des [appwications m-monopage](/fw/docs/gwossawy/spa), nyaa~~ dans wesquewwes t-toute w'appwication w-web consiste e-en un seuw document, :3 q-qui utiwise ajax pouw mettwe à jouw son c-contenu au besoin. 😳😳😳
 
-Initialement, Ajax était implémenté en utilisant l'interface [XMLHttpRequest](/fr/docs/Glossary/XMLHttpRequest), mais l'API [Fetch](/fr/docs/Web/API/Fetch_API) est plus adaptée aux applications web modernes&nbsp;: elle est plus puissante, plus flexible et s'intègre mieux avec les technologies fondamentales des applications web telles que les [service workers](/fr/docs/Web/API/Service_Worker_API). Les frameworks Web modernes fournissent également des abstractions pour Ajax.
+initiawement, (˘ω˘) ajax était impwémenté e-en utiwisant w'intewface [xmwhttpwequest](/fw/docs/gwossawy/xmwhttpwequest), ^^ mais w'api [fetch](/fw/docs/web/api/fetch_api) est pwus adaptée aux appwications web modewnes&nbsp;: ewwe e-est pwus puissante, :3 pwus fwexibwe e-et s'intègwe m-mieux avec wes t-technowogies fondamentawes des appwications web tewwes que wes [sewvice w-wowkews](/fw/docs/web/api/sewvice_wowkew_api). w-wes fwamewowks web modewnes f-fouwnissent égawement d-des abstwactions pouw a-ajax. -.-
 
-Cette technique est tellement courante dans le développement web moderne que le terme spécifique «&nbsp;Ajax&nbsp;» est rarement utilisé.
+cette technique est tewwement c-couwante dans we dévewoppement web modewne q-que we tewme spécifique «&nbsp;ajax&nbsp;» e-est wawement utiwisé. 😳
 
-## Voir aussi
+## voiw a-aussi
 
-- [Récupérer des données du serveur](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- L'[`API Fetch`](/fr/docs/Web/API/Fetch_API)
-- [Applications monopage](/fr/docs/Glossary/SPA)
-- L'interface [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- [AJAX](<https://fr.wikipedia.org/wiki/Ajax_(informatique)>) sur Wikipédia
+- [wécupéwew d-des données du sewveuw](/fw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)
+- w'[`api fetch`](/fw/docs/web/api/fetch_api)
+- [appwications monopage](/fw/docs/gwossawy/spa)
+- w'intewface [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest)
+- [ajax](<https://fw.wikipedia.owg/wiki/ajax_(infowmatique)>) suw wikipédia

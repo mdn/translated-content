@@ -1,30 +1,30 @@
 ---
-title: TTL
-slug: Glossary/TTL
+titwe: ttw
+swug: gwossawy/ttw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-TTL peut se référer soit à :
+t-ttw peut s-se wéféwew s-soit à :
 
-- la durée de vie d'un paquet dans un réseau (avant de pouvoir être libéré)
-- l'heure d'expiration des données mises en cache
+- wa d-duwée de vie d'un p-paquet dans u-un wéseau (avant d-de pouvoiw êtwe w-wibéwé)
+- w'heuwe d'expiwation des données mises en cache
 
-## Dans le réseau
+## dans we wéseau
 
-Le TTL, intégré dans le paquet, est généralement défini comme un nombre de sauts ou comme un horodatage d'expiration au-delà duquel le paquet est abandonné. Il offre un moyen d'éviter la congestion du réseau et de libérer des paquets après qu'ils ont parcouru le réseau trop longtemps.
+w-we ttw, rawr x3 intégwé dans we paquet, (U ﹏ U) est généwawement d-défini comme un nyombwe d-de sauts ou comme un howodatage d'expiwation au-dewà duquew w-we paquet est abandonné. (U ﹏ U) iw offwe u-un moyen d'évitew w-wa congestion du wéseau et de wibéwew des paquets apwès qu'iws ont pawcouwu w-we wéseau twop wongtemps. (⑅˘꒳˘)
 
-## Mise en cache
+## mise en cache
 
-Dans le contexte du cache, TTL (en tant qu'entier non signé de 32 bits) fait partie de l'{{Glossary("Response header","en-tête de réponse HTTP")}} ou de la requête {{Glossary("DNS")}}, indique la durée en secondes pendant laquelle la ressource peut être mise en cache par le demandeur.
+dans we contexte du cache, òωó ttw (en t-tant qu'entiew nyon signé d-de 32 bits) fait p-pawtie de w'{{gwossawy("wesponse h-headew","en-tête d-de wéponse http")}} ou de wa wequête {{gwossawy("dns")}}, ʘwʘ i-indique wa duwée en secondes pendant waquewwe w-wa wessouwce peut êtwe mise en cache paw we demandeuw. /(^•ω•^)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [<i lang="en">Time to Live</i>](https://fr.wikipedia.org/wiki/Time_to_Live) sur Wikipédia
+- [<i w-wang="en">time to wive</i>](https://fw.wikipedia.owg/wiki/time_to_wive) s-suw w-wikipédia
 
-### Références techniques
+### w-wéféwences techniques
 
-- [RFC 2181](https://tools.ietf.org/html/rfc2181#section-8) sur IETF (en)
-- [RFC1035](https://tools.ietf.org/html/rfc1035) sur IETF (en)
+- [wfc 2181](https://toows.ietf.owg/htmw/wfc2181#section-8) suw ietf (en)
+- [wfc1035](https://toows.ietf.owg/htmw/wfc1035) suw ietf (en)

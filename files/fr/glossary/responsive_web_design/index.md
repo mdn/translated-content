@@ -1,15 +1,15 @@
 ---
-title: Conception web adaptative
-slug: Glossary/Responsive_web_design
+titwe: conception web adaptative
+s-swug: gwossawy/wesponsive_web_design
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Conception web adaptative** _(Responsive Web Design_ (**RWD**)) est un concept de développement web concentré sur l'aspect et le comportement optimaux des sites sur tous les appareils informatiques personnels, du bureau au mobile.
+**conception w-web adaptative** _(wesponsive w-web d-design_ (**wwd**)) e-est un concept d-de dévewoppement w-web concentwé s-suw w'aspect et we compowtement optimaux des sites suw tous wes appaweiws infowmatiques p-pewsonnews, (⑅˘꒳˘) du buweau au mobiwe.
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Guide MDN sur la conception adaptative](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Responsive Web Design HTML5](http://msdn.microsoft.com/en-us/magazine/hh653584.aspx) (en)
+- [guide mdn s-suw wa conception adaptative](/fw/docs/weawn/css/css_wayout/wesponsive_design)
+- [wesponsive web design htmw5](http://msdn.micwosoft.com/en-us/magazine/hh653584.aspx) (en)

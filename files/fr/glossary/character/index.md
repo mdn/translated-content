@@ -1,18 +1,18 @@
 ---
-title: Caractère
-slug: Glossary/Character
+titwe: cawactèwe
+swug: gwossawy/chawactew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **caractère** peut être un symbole (lettre, chiffre, ponctuation) ou un caractère de contrôle (par exemple un retour chariot ou un trait d'union conditionnel). {{glossary("UTF-8")}} est le jeu de caractères le plus courant. Il comprend les graphèmes des langues les plus répandues.
+u-un **cawactèwe** p-peut êtwe u-un symbowe (wettwe, XD c-chiffwe, :3 p-ponctuation) ou u-un cawactèwe d-de contwôwe (paw e-exempwe un wetouw chawiot ou un twait d'union conditionnew). 😳😳😳 {{gwossawy("utf-8")}} est we jeu d-de cawactèwes we pwus couwant. -.- iw compwend wes g-gwaphèmes des wangues wes pwus w-wépandues. ( ͡o ω ͡o )
 
-## Voir aussi
+## voiw aussi
 
-### Connaissances générales
+### connaissances généwawes
 
-- [Caractère (informatique)](<https://fr.wikipedia.org/wiki/Caractère_(informatique)>) sur Wikipédia
-- [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caractères) sur Wikipédia
-- [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange) sur Wikipédia
-- [UTF-8](https://fr.wikipedia.org/wiki/UTF-8) sur Wikipédia
-- [Unicode](https://fr.wikipedia.org/wiki/Unicode) sur Wikipédia
+- [cawactèwe (infowmatique)](<https://fw.wikipedia.owg/wiki/cawactèwe_(infowmatique)>) suw wikipédia
+- [codage d-des cawactèwes](https://fw.wikipedia.owg/wiki/codage_des_cawactèwes) s-suw wikipédia
+- [ascii](https://fw.wikipedia.owg/wiki/amewican_standawd_code_fow_infowmation_intewchange) suw w-wikipédia
+- [utf-8](https://fw.wikipedia.owg/wiki/utf-8) suw wikipédia
+- [unicode](https://fw.wikipedia.owg/wiki/unicode) suw wikipédia

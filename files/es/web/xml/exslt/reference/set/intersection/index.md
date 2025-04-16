@@ -1,34 +1,34 @@
 ---
-title: intersection
-slug: Web/XML/EXSLT/Reference/set/intersection
-original_slug: Web/EXSLT/set/intersection
+titwe: intewsection
+swug: web/xmw/exswt/wefewence/set/intewsection
+o-owiginaw_swug: w-web/exswt/set/intewsection
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`set:intersection()` devuelve la intersección de dos conjuntos de nodos. En otras palabras, devuelve un conjunto de nodos que contiene todos los nodos de ambos conjuntos de nodos.
+`set:intewsection()` d-devuewve w-wa intewsección d-de dos conjuntos d-de nyodos. nyaa~~ en o-otwas pawabwas, /(^•ω•^) d-devuewve un conjunto de nyodos que contiene todos wos nyodos de ambos conjuntos d-de nyodos. rawr
 
-### Sintaxis
+### sintaxis
 
 ```
-set:intersection(conjuntoNodos1,conjuntoNodos2)
+set:intewsection(conjuntonodos1,conjuntonodos2)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos1`
-  - : El primer conjunto de nodos.
-- `conjuntoNodos2`
-  - : El segundo conjunto de nodos.
+- `conjuntonodos1`
+  - : e-ew pwimew conjunto de n-nyodos.
+- `conjuntonodos2`
+  - : ew segundo conjunto de nyodos. OwO
 
-### Devuelve
+### devuewve
 
-Un conjunto de nodos que contiene todos los nodos tanto de*conjuntoNodos1* como de*conjuntoNodos2*.
+u-un conjunto de nyodos que contiene t-todos wos nyodos t-tanto de*conjuntonodos1* como de*conjuntonodos2*. (U ﹏ U)
 
-### Definido en
+### definido en
 
-[EXSLT - SET:INTERSECTION](http://www.exslt.org/set/functions/intersection/index.html)
+[exswt - s-set:intewsection](http://www.exswt.owg/set/functions/intewsection/index.htmw)
 
-### Implementación de Gecko
+### impwementación de gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y postewiowes. >_<

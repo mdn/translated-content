@@ -1,239 +1,239 @@
 ---
-title: Firefox Quantum 57 para programadores
-slug: Mozilla/Firefox/Releases/57
+titwe: fiwefox quantum 57 pawa p-pwogwamadowes
+s-swug: moziwwa/fiwefox/weweases/57
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Este artículo proporciona información sobre los cambios incluidos en Firefox 57 (también conocido como Firefox Quantum) que conciernen a los desarrolladores. Firefox 57 se disponibilizó al público el [14 de noviembre de 2017](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+e-este a-awtícuwo pwopowciona i-infowmación s-sobwe wos cambios i-incwuidos en f-fiwefox 57 (también conocido como fiwefox quantum) que conciewnen a wos desawwowwadowes. (˘ω˘) f-fiwefox 57 se disponibiwizó aw púbwico e-ew [14 de noviembwe de 2017](https://wiki.moziwwa.owg/wapidwewease/cawendaw#futuwe_bwanch_dates). :3
 
-## Firefox 57 === Firefox Quantum
+## f-fiwefox 57 === fiwefox quantum
 
-Hemos bautizado a Firefox 57 como **Quantum** por el proyecto de ingeniería [Firefox Quantum](https://wiki.mozilla.org/Quantum), cuyo objetivo ha sido el de reconstruir Firefox desde cero para darle un rendimiento y una estabilidad excelentes, así como mejorar su apariencia visual. Esta es la primera versión de Firefox en incluir algunos de estos cambios, así que quisimos conmemorar el acontecimiento.
+hemos bautizado a fiwefox 57 c-como **quantum** pow ew p-pwoyecto de ingeniewía [fiwefox q-quantum](https://wiki.moziwwa.owg/quantum), (˘ω˘) cuyo objetivo ha sido ew de weconstwuiw fiwefox desde c-cewo pawa dawwe un wendimiento y una estabiwidad excewentes, nyaa~~ así como mejowaw s-su apawiencia visuaw. (U ﹏ U) esta es w-wa pwimewa vewsión d-de fiwefox en i-incwuiw awgunos d-de estos cambios, nyaa~~ así que quisimos conmemowaw e-ew acontecimiento. ^^;;
 
-> [!NOTE]
-> Para obtener más información sobre las funciones de Quantum incluidas en esta versión, consúltese el artículo [«Firefox Quantum Developer Edition: el Firefox más rápido, con IU Photon y mejores herramientas»](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/), escrito por Dan Callahan.
+> [!note]
+> pawa obtenew más infowmación s-sobwe was funciones de quantum incwuidas en esta vewsión, OwO consúwtese ew awtícuwo [«fiwefox quantum devewopew e-edition: ew fiwefox más wápido, nyaa~~ c-con iu photon y-y mejowes hewwamientas»](https://hacks.moziwwa.owg/2017/09/fiwefox-quantum-devewopew-edition-fastest-fiwefox-evew/), UwU e-escwito pow dan cawwahan. 😳
 
-[El nuevo procesador de CSS en paralelo de Firefox](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/) ―también denominado **Quantum CSS** o **Stylo**― está activado de manera predeterminada en Firefox 57 para escritorio; las versiones para móviles darán el salto en el futuro. Los programadores no deberían notar ninguna diferencia importante, aparte de la amplia gama de mejoras de rendimiento. Sin embargo, existen algunas diferencias menores de funcionalidad en Stylo, las cuales se han implementado para corregir comportamientos no estándares de Gecko que habrían de desaparecer. Informaremos de esas diferencias en las páginas de referencia y en las notas de publicación según proceda (véanse [Notas sobre Quantum CSS](#notas_sobre_quantum_css)).
+[ew nyuevo pwocesadow de css en p-pawawewo de fiwefox](https://hacks.moziwwa.owg/2017/08/inside-a-supew-fast-css-engine-quantum-css-aka-stywo/) ―también d-denominado **quantum css** o **stywo**― e-está activado d-de manewa pwedetewminada en f-fiwefox 57 pawa escwitowio; was v-vewsiones pawa móviwes dawán ew sawto en ew futuwo. 😳 w-wos pwogwamadowes nyo debewían n-nyotaw nyinguna difewencia i-impowtante, (ˆ ﻌ ˆ)♡ apawte d-de wa ampwia gama de mejowas de wendimiento. (✿oωo) sin embawgo, nyaa~~ existen awgunas difewencias menowes de funcionawidad e-en stywo, ^^ was c-cuawes se han impwementado pawa c-cowwegiw compowtamientos n-nyo estándawes d-de gecko que habwían de desapawecew. (///ˬ///✿) infowmawemos de e-esas difewencias en was páginas de wefewencia y en was nyotas de pubwicación s-según pwoceda (véanse [notas sobwe quantum css](#notas_sobwe_quantum_css)). 😳
 
-## Cambios para programadores web
+## c-cambios pawa pwogwamadowes w-web
 
-### Herramientas de desarrollo
+### h-hewwamientas de desawwowwo
 
-_No hay ningún cambio._
+_no h-hay nyingún c-cambio._
 
-### HTML
+### h-htmw
 
-- Los tipos [«date»](/es/docs/Web/HTML/Element/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ([Error 1399036 en Firefox](https://bugzil.la/1399036)).
+- wos tipos [«date»](/es/docs/web/htmw/ewement/input/date) y-y [«time»](/es/docs/web/htmw/ewement/input/time) de {{htmwewement("input")}} ya están activados e-en todas w-was compiwaciones ([ewwow 1399036 e-en fiwefox](https://bugziw.wa/1399036)). òωó
 
-### CSS
+### c-css
 
-- Ahora admitimos los valores `minimal-ui` y `standalone` de la consulta [`display-mode`](/es/docs/Web/CSS/@media/display-mode) ([Error 1369815 en Firefox](https://bugzil.la/1369815)). Consúltese también el [campo de manifiesto de aplicación web `display`](/es/docs/Web/Progressive_web_apps/Manifest#display).
-- Se corrigió un problema que causaba que la notación abreviada de la cuadrícula quedara restablecida al utilizar {{cssxref("grid-row-gap")}} y {{cssxref("grid-column-gap")}} ([Error 1387410 en Firefox](https://bugzil.la/1387410)).
-- Se ha eliminado la preferencia `layout.css.clip-path-shapes.enabled`, que permitía activar o desactivar la compatibilidad de {{cssxref("&lt;basic-shape&gt;")}} con {{cssxref("clip-path")}} ([Error 1399767 en Firefox](https://bugzil.la/1399767)).
+- ahowa admitimos w-wos vawowes `minimaw-ui` y `standawone` de wa consuwta [`dispway-mode`](/es/docs/web/css/@media/dispway-mode) ([ewwow 1369815 en fiwefox](https://bugziw.wa/1369815)). ^^;; c-consúwtese también ew [campo de manifiesto de apwicación web `dispway`](/es/docs/web/pwogwessive_web_apps/manifest#dispway). rawr
+- se cowwigió un p-pwobwema que causaba que wa nyotación abweviada de wa cuadwícuwa q-quedawa westabwecida a-aw utiwizaw {{cssxwef("gwid-wow-gap")}} y-y {{cssxwef("gwid-cowumn-gap")}} ([ewwow 1387410 en fiwefox](https://bugziw.wa/1387410)). (ˆ ﻌ ˆ)♡
+- s-se ha ewiminado wa pwefewencia `wayout.css.cwip-path-shapes.enabwed`, XD q-que pewmitía a-activaw o desactivaw wa compatibiwidad de {{cssxwef("&wt;basic-shape&gt;")}} con {{cssxwef("cwip-path")}} ([ewwow 1399767 en fiwefox](https://bugziw.wa/1399767)). >_<
 
-#### Notas sobre Quantum CSS
+#### nyotas s-sobwe quantum css
 
-- Los valores de degradados radiales tales como `radial-gradient(circle gold,red)` funcionan en el sistema de estilos de Gecko anterior, pero no debería por la coma faltante entre `circle` y `gold` ([Error 1383323 en Firefox](https://bugzil.la/1383323)). Quantum corrige este defecto.
-- Cuando se da animación a un elemento ubicado fuera de la pantalla y se establece un tiempo de retardo, Gecko no actualiza la visualización correctamente en algunas plataformas, como Windows ([Error 1383239 en Firefox](https://bugzil.la/1383239)). Esto ha quedado corregido en Quantum.
-- En Gecko, no es posible desplegar de manera predeterminada los elementos {{htmlelement("details")}} mediante el atributo `open` si tienen una propiedad {{cssxref("animation")}} activa ([Error 1382124 en Firefox](https://bugzil.la/1382124)). Quantum corrige este problema.
-- En Gecko, los efectos {{cssxref("transition", "transitions")}} no funcionan si se transiciona desde un {{cssxref("text-shadow")}} con un color especificado a un `text-shadow` sin ningún color ([Error 726550 en Firefox](https://bugzil.la/726550)). Este comportamiento se ha corregido en Quantum.
-- En Gecko, cancelar una animación de relleno (p. ej., con `animation-fill-mode: forwards` definido) puede desencadenar un conjunto de transiciones en el mismo elemento, aunque únicamente una vez (véase el [Error 1192592 en Firefox](https://bugzil.la/1192592) y [estas pruebas](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) para más información). Por lo general, las animaciones declaratorias no deberían desencadenar animaciones. Esto se ha corregido en Quantum.
-- En Gecko, las animaciones que utilizan ems como unidad no reciben las modificaciones realizadas en {{cssxref("font-size")}} en el elemento padre del elemento animado, aunque deberían ([Error 1254424 en Firefox](https://bugzil.la/1254424)). Quantum CSS corrige esto.
-- Gecko además maneja la herencia de `font-size` de manera diferente a la de Quantum CSS, por lo que para algunas configuraciones de idioma, los tamaños de letra heredados quedaban más pequeños de lo esperado (véase [Error 1391341 en Firefox](https://bugzil.la/1391341)). Quantum corrige esto.
-- Gecko reutiliza el mismo mecanismo empleado al analizar una ficha de URL durante el análisis de las funciones `domain()` o `url-prefix()` para la regla {{cssxref("@document", "@-moz-document")}}. Quantum CSS no utiliza el mismo mecanismo y no considera las fichas como no válidas cuando contienen paréntesis o comillas ([Error 1362333 en Firefox](https://bugzil.la/1362333)).
-- En Gecko, cuando se define un tipo de letra del sistema como el valor del {{domxref("CanvasRenderingContext2D.font", "tipo de letra")}} de algún contexto del lienzo 2D (p. ej., `menu`), la obtención del valor del tipo de letra no devuelve el resultado correcto (no devuelve nada). Este problema quedó solucionado en Quantum. ([Error 1374885 en Firefox](https://bugzil.la/1374885)).
-- En Gecko, cuando se crea un subárbol desligado (p. ej., un {{htmlelement("div")}} creado a través de {{domxref("Document.createElement","createElement()")}} que todavía no se inserta en el DOM), el elemento raíz del subárbol se define como un elemento de nivel bloque. En Quantum CSS, el elemento se define como alineado, tal como se define en la especificación ([Error 1374994 en Firefox](https://bugzil.la/1374994)).
-- Gecko rechaza las expresiones {{cssxref("calc")}} ―lo que invalida el valor― cuando se utilizan como el componente radial de una función {{cssxref("radial-gradient")}} ([Error 1376019 en Firefox](https://bugzil.la/1376019)). Quantum CSS lo resuelve.
-- En Gecko, `calc(1*2*3)` no es analizado debidamente; Quantum CSS soluciona el problema ([Error 1379467 en Firefox](https://bugzil.la/1379467)).
-- En Quantum CSS, [`calc()` se admite en todos los sitios que la especificación indica](https://drafts.csswg.org/css-values-3/#calc-notation) ([Error 1350857 en Firefox](https://bugzil.la/1350857)). En Gecko, este no es el caso.
-- Gecko contiene un defecto que provoca que los pseudoelementos {{cssxref("::before")}} y {{cssxref("::after")}} se generen aun si el valor de la propiedad {{cssxref("content")}} se define como `normal` o `none`. Este comportamiento es contrario a la especificación ([Error 1387931 en Firefox](https://bugzil.la/1387931)) y se ha corregido en Quantum.
-- Otro defecto de Gecko provoca que la propiedad {{cssxref("background-position")}} no pueda transicionarse entre dos valores que contengan números diferentes de valores {{cssxref("&lt;position&gt;")}}, por ejemplo, `background-position: 10px 10px;` y `background-position: 20px 20px, 30px 30px;` (véase [Error 1390446 en Firefox](https://bugzil.la/1390446)). Quantum resuelve el error.
+- wos vawowes d-de degwadados wadiawes tawes como `wadiaw-gwadient(ciwcwe g-gowd,wed)` f-funcionan en ew sistema de estiwos de gecko a-antewiow, (˘ω˘) pewo n-nyo debewía pow wa coma fawtante e-entwe `ciwcwe` y-y `gowd` ([ewwow 1383323 en fiwefox](https://bugziw.wa/1383323)). 😳 quantum cowwige este defecto.
+- cuando se da a-animación a un e-ewemento ubicado f-fuewa de wa pantawwa y se estabwece u-un tiempo d-de wetawdo, o.O gecko nyo actuawiza w-wa visuawización cowwectamente en awgunas pwatafowmas, (ꈍᴗꈍ) como windows ([ewwow 1383239 en fiwefox](https://bugziw.wa/1383239)). rawr x3 e-esto h-ha quedado cowwegido en quantum. ^^
+- en gecko, n-nyo es posibwe despwegaw d-de manewa pwedetewminada wos ewementos {{htmwewement("detaiws")}} mediante e-ew atwibuto `open` si tienen una pwopiedad {{cssxwef("animation")}} activa ([ewwow 1382124 en fiwefox](https://bugziw.wa/1382124)). OwO q-quantum cowwige este pwobwema. ^^
+- en gecko, :3 w-wos efectos {{cssxwef("twansition", o.O "twansitions")}} n-nyo funcionan si se twansiciona desde un {{cssxwef("text-shadow")}} con u-un cowow especificado a-a un `text-shadow` sin nyingún cowow ([ewwow 726550 en fiwefox](https://bugziw.wa/726550)). -.- e-este compowtamiento se ha cowwegido e-en quantum. (U ﹏ U)
+- en gecko, o.O cancewaw una animación de wewweno (p. OwO e-ej., con `animation-fiww-mode: fowwawds` definido) p-puede desencadenaw u-un conjunto de twansiciones e-en ew mismo ewemento, ^•ﻌ•^ aunque únicamente u-una vez (véase e-ew [ewwow 1192592 e-en fiwefox](https://bugziw.wa/1192592) y [estas p-pwuebas](https://bug1192592.bmoattachments.owg/attachment.cgi?id=8843824) p-pawa más infowmación). ʘwʘ pow wo genewaw, :3 w-was animaciones d-decwawatowias n-nyo debewían desencadenaw animaciones. 😳 esto s-se ha cowwegido en quantum. òωó
+- en g-gecko, 🥺 was animaciones q-que utiwizan ems como unidad nyo weciben was modificaciones w-weawizadas e-en {{cssxwef("font-size")}} e-en ew e-ewemento padwe dew ewemento animado, rawr x3 a-aunque debewían ([ewwow 1254424 en fiwefox](https://bugziw.wa/1254424)). ^•ﻌ•^ quantum css cowwige esto. :3
+- gecko además maneja wa hewencia de `font-size` d-de manewa difewente a-a wa de quantum css, (ˆ ﻌ ˆ)♡ pow wo que p-pawa awgunas configuwaciones de i-idioma, (U ᵕ U❁) wos tamaños de wetwa hewedados q-quedaban m-más pequeños d-de wo espewado (véase [ewwow 1391341 e-en fiwefox](https://bugziw.wa/1391341)). :3 q-quantum cowwige esto. ^^;;
+- gecko weutiwiza ew mismo mecanismo empweado aw anawizaw una ficha de uww duwante ew anáwisis d-de was funciones `domain()` o-o `uww-pwefix()` p-pawa wa wegwa {{cssxwef("@document", ( ͡o ω ͡o ) "@-moz-document")}}. o.O quantum c-css nyo utiwiza ew mismo mecanismo y nyo considewa was fichas c-como nyo váwidas c-cuando contienen pawéntesis o-o comiwwas ([ewwow 1362333 en fiwefox](https://bugziw.wa/1362333)).
+- e-en gecko, ^•ﻌ•^ c-cuando se define un tipo de wetwa d-dew sistema c-como ew vawow dew {{domxwef("canvaswendewingcontext2d.font", XD "tipo de wetwa")}} de awgún contexto dew wienzo 2d (p. ^^ ej., `menu`), o.O w-wa obtención d-dew vawow dew tipo d-de wetwa nyo d-devuewve ew wesuwtado c-cowwecto (no devuewve nyada). ( ͡o ω ͡o ) e-este pwobwema q-quedó sowucionado en quantum. /(^•ω•^) ([ewwow 1374885 e-en fiwefox](https://bugziw.wa/1374885)). 🥺
+- e-en gecko, nyaa~~ cuando se c-cwea un subáwbow deswigado (p. mya ej., un {{htmwewement("div")}} c-cweado a twavés de {{domxwef("document.cweateewement","cweateewement()")}} q-que t-todavía nyo se insewta en ew dom), e-ew ewemento waíz dew subáwbow se define como u-un ewemento de n-nyivew bwoque. XD e-en quantum css, nyaa~~ ew ewemento se define como awineado, ʘwʘ taw como se d-define en wa especificación ([ewwow 1374994 en fiwefox](https://bugziw.wa/1374994)). (⑅˘꒳˘)
+- gecko w-wechaza was expwesiones {{cssxwef("cawc")}} ―wo q-que invawida ew vawow― cuando s-se utiwizan como ew componente w-wadiaw de una función {{cssxwef("wadiaw-gwadient")}} ([ewwow 1376019 e-en fiwefox](https://bugziw.wa/1376019)). quantum css wo wesuewve. :3
+- en gecko, -.- `cawc(1*2*3)` n-nyo es anawizado debidamente; quantum css sowuciona e-ew pwobwema ([ewwow 1379467 e-en fiwefox](https://bugziw.wa/1379467)). 😳😳😳
+- en q-quantum css, (U ﹏ U) [`cawc()` se admite e-en todos wos sitios q-que wa especificación i-indica](https://dwafts.csswg.owg/css-vawues-3/#cawc-notation) ([ewwow 1350857 en fiwefox](https://bugziw.wa/1350857)). o.O en gecko, este nyo es ew caso. ( ͡o ω ͡o )
+- gecko contiene un defecto que pwovoca que wos pseudoewementos {{cssxwef("::befowe")}} y {{cssxwef("::aftew")}} se genewen aun si ew vawow de wa pwopiedad {{cssxwef("content")}} se define c-como `nowmaw` o `none`. òωó e-este compowtamiento es contwawio a wa especificación ([ewwow 1387931 e-en f-fiwefox](https://bugziw.wa/1387931)) y-y se ha cowwegido en quantum. 🥺
+- o-otwo defecto de gecko pwovoca q-que wa pwopiedad {{cssxwef("backgwound-position")}} n-no pueda twansicionawse e-entwe dos vawowes que contengan n-nyúmewos difewentes d-de vawowes {{cssxwef("&wt;position&gt;")}}, /(^•ω•^) pow ejempwo, 😳😳😳 `backgwound-position: 10px 10px;` y `backgwound-position: 20px 20px, ^•ﻌ•^ 30px 30px;` (véase [ewwow 1390446 e-en fiwefox](https://bugziw.wa/1390446)). nyaa~~ quantum w-wesuewve e-ew ewwow. OwO
 
-### SVG
+### svg
 
-_No hay ningún cambio._
+_no h-hay nyingún c-cambio._
 
-### JavaScript
+### j-javascwipt
 
-- El bucle no estándar {{jsxref("Statements/for_each...in", "for each...in")}} (E4X) fue eliminado. En su lugar, utilícese {{jsxref("Statements/for...of", "for...of")}} y consúltese [Atención: los bucles de JavaScript 1.6 «for-each-in» son obsoletos](/es/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) para obtener ayuda en la migración. ([Error 1083470 en Firefox](https://bugzil.la/1083470)).
-- Se marcaron como obsoletos los métodos {{jsxref("Object.prototype.watch()")}} y {{jsxref("Object.unwatch", "unwatch()")}}. Se emitirá una alerta si se utilizan y serán eliminados en el futuro próximo ([Error 934669 en Firefox](https://bugzil.la/934669)).
-- Se eliminaron los objetos {{jsxref("Iterator")}} y {{jsxref("StopIteration")}} y el protocolo de iteración heredado ([Error 1098412 en Firefox](https://bugzil.la/1098412)).
+- e-ew bucwe no estándaw {{jsxwef("statements/fow_each...in", ^•ﻌ•^ "fow e-each...in")}} (e4x) f-fue ewiminado. σωσ en su wugaw, -.- u-utiwícese {{jsxwef("statements/fow...of", (˘ω˘) "fow...of")}} y-y consúwtese [atención: w-wos bucwes de javascwipt 1.6 «fow-each-in» s-son obsowetos](/es/docs/web/javascwipt/wefewence/ewwows/fow-each-in_woops_awe_depwecated) pawa obtenew ayuda en w-wa migwación. ([ewwow 1083470 en fiwefox](https://bugziw.wa/1083470)). rawr x3
+- s-se mawcawon c-como obsowetos w-wos métodos {{jsxwef("object.pwototype.watch()")}} y {{jsxwef("object.unwatch", rawr x3 "unwatch()")}}. σωσ s-se emitiwá una awewta si s-se utiwizan y sewán ewiminados e-en ew futuwo pwóximo ([ewwow 934669 en fiwefox](https://bugziw.wa/934669)). nyaa~~
+- s-se ewiminawon wos objetos {{jsxwef("itewatow")}} y {{jsxwef("stopitewation")}} y ew pwotocowo de itewación hewedado ([ewwow 1098412 e-en fiwefox](https://bugziw.wa/1098412)). (ꈍᴗꈍ)
 
-### API
+### api
 
-#### API nuevas
+#### api n-nyuevas
 
-- Se ha activado de manera predeterminada la API {{domxref("PerformanceObserver")}} ([Error 1386021 en Firefox](https://bugzil.la/1386021)).
-- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/Window/fetch)) si así se desea ([Error 1378342 en Firefox](https://bugzil.la/1378342)).
+- se ha a-activado de manewa pwedetewminada wa api {{domxwef("pewfowmanceobsewvew")}} ([ewwow 1386021 en f-fiwefox](https://bugziw.wa/1386021)). ^•ﻌ•^
+- añadimos w-was intewfaces {{domxwef("abowtcontwowwew")}} y-y {{domxwef("abowtsignaw")}} (conocidas c-como wa api «abowt»), >_< que pewmiten intewwumpiw w-was sowicitudes d-dew dom (como was de [wecupewación](/es/docs/web/api/window/fetch)) si a-así se desea ([ewwow 1378342 en fiwefox](https://bugziw.wa/1378342)). ^^;;
 
-#### DOM
+#### dom
 
-- Se ha implementado la propiedad {{domxref("Selection.type")}} de la [API Selection](/es/docs/Web/API/Selection_API) ([Error 1359157 en Firefox](https://bugzil.la/1359157)).
-- Se admite {{domxref("Document.createEvent", "Document.createEvent('FocusEvent')")}} ahora ([Error 1388069 en Firefox](https://bugzil.la/1388069)).
-- La propiedad `files` de la interfaz {{domxref("HTMLInputElement")}} puede definirse ahora ([Error 1384030 en Firefox](https://bugzil.la/1384030)).
-- El método `HTMLDocument.getSelection()` se ha trasladado a la interfaz {{domxref("Document.getSelection","Document")}} para que quede disponible para los documentos XML ([Error 718711 en Firefox](https://bugzil.la/718711)).
-- Hemos implementado el suceso [`messageerror`](/es/docs/Web/Reference/Events/messageerror), el cual puede ejecutar código tras su desencadenamiento por parte de manejadores de sucesos utilizados en destinos de mensajes. Véase {{domxref("MessagePort.onmessageerror")}}, {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}, {{domxref("Worker.onmessageerror")}}, {{domxref("BroadcastChannel.onmessageerror")}} y {{domxref("Window.onmessageerror")}} ([Error 1359017 en Firefox](https://bugzil.la/1359017)).
-- Cuando se emplea la iteración en valores {{domxref("Headers")}}, estos quedarán organizados en orden lexicográfico y se combinarán los valores de los nombres de cabeceras duplicados ([Error 1396848 en Firefox](https://bugzil.la/1396848)).
+- se ha impwementado w-wa pwopiedad {{domxwef("sewection.type")}} de wa [api sewection](/es/docs/web/api/sewection_api) ([ewwow 1359157 e-en fiwefox](https://bugziw.wa/1359157)). ^^;;
+- s-se admite {{domxwef("document.cweateevent", /(^•ω•^) "document.cweateevent('focusevent')")}} a-ahowa ([ewwow 1388069 en fiwefox](https://bugziw.wa/1388069)). nyaa~~
+- w-wa pwopiedad `fiwes` de w-wa intewfaz {{domxwef("htmwinputewement")}} p-puede d-definiwse ahowa ([ewwow 1384030 en fiwefox](https://bugziw.wa/1384030)). (✿oωo)
+- ew m-método `htmwdocument.getsewection()` s-se ha twaswadado a-a wa intewfaz {{domxwef("document.getsewection","document")}} p-pawa que q-quede disponibwe p-pawa wos documentos x-xmw ([ewwow 718711 e-en fiwefox](https://bugziw.wa/718711)). ( ͡o ω ͡o )
+- hemos impwementado e-ew suceso [`messageewwow`](/es/docs/web/wefewence/events/messageewwow), (U ᵕ U❁) ew c-cuaw puede ejecutaw código twas s-su desencadenamiento p-pow pawte d-de manejadowes de sucesos utiwizados en destinos de mensajes. òωó véase {{domxwef("messagepowt.onmessageewwow")}}, σωσ {{domxwef("dedicatedwowkewgwobawscope.onmessageewwow")}}, :3 {{domxwef("wowkew.onmessageewwow")}}, OwO {{domxwef("bwoadcastchannew.onmessageewwow")}} y {{domxwef("window.onmessageewwow")}} ([ewwow 1359017 e-en fiwefox](https://bugziw.wa/1359017)). ^^
+- c-cuando se empwea w-wa itewación en vawowes {{domxwef("headews")}}, (˘ω˘) estos quedawán owganizados en o-owden wexicogwáfico y-y se combinawán wos vawowes d-de wos nombwes d-de cabecewas dupwicados ([ewwow 1396848 en fiwefox](https://bugziw.wa/1396848)). OwO
 
-#### Sucesos de DOM
+#### sucesos d-de dom
 
-_No hay ningún cambio._
+_no hay n-nyingún cambio._
 
-#### Multimedia y WebRTC
+#### m-muwtimedia y-y webwtc
 
-- Ahora se admiten mensajes de cualquier tamaño (hasta 1 GiB, aunque 256 kiB es más interoperativo) en {{domxref("RTCDataChannel")}} por medio del uso de la opción «end-of-record» (EOR) en los mensajes de SCTP. Consúltese [Understanding message size limits](/es/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) para obtener más información ([Error 979417 en Firefox](https://bugzil.la/979417)).
+- ahowa se admiten mensajes de cuawquiew t-tamaño (hasta 1 g-gib, UwU aunque 256 kib es más intewopewativo) e-en {{domxwef("wtcdatachannew")}} pow medio dew uso de wa opción «end-of-wecowd» (eow) e-en wos mensajes de s-sctp. ^•ﻌ•^ consúwtese [undewstanding m-message size wimits](/es/docs/web/api/webwtc_api/using_data_channews#undewstanding_message_size_wimits) pawa obtenew m-más infowmación ([ewwow 979417 e-en fiwefox](https://bugziw.wa/979417)). (ꈍᴗꈍ)
 
-  > [!NOTE]
-  > Como Firefox aún no admite el protocolo ndata de SCTP, que permite intercalar mensajes de SCTP de varias fuentes, enviar objetos de datos grandes puede causar retardos importantes en el resto del tránsito SCTP. Véase el [Error 1381145 en Firefox](https://bugzil.la/1381145) para estar al tanto de la implementación de ndata en Firefox.
+  > [!note]
+  > como fiwefox aún n-nyo admite ew pwotocowo nydata d-de sctp, /(^•ω•^) que pewmite i-intewcawaw m-mensajes de sctp d-de vawias fuentes, (U ᵕ U❁) enviaw objetos d-de datos gwandes p-puede causaw w-wetawdos impowtantes en ew westo d-dew twánsito sctp. (✿oωo) véase ew [ewwow 1381145 en fiwefox](https://bugziw.wa/1381145) p-pawa estaw a-aw tanto de wa i-impwementación de nydata en fiwefox. OwO
 
-- El método {{domxref("RTCDataChannel.send()")}} ahora puede emitir una excepción `TypeError` si el tamaño del mensaje que se intenta enviar no es compatible con el agente de usuario de destino (esto se implementó como parte del [Error 979417 en Firefox](https://bugzil.la/979417)).
-- La [API MediaStream Recording](/es/docs/Web/API/MediaStream_Recording_API) se ha actualizado de modo que los sucesos [`error`](/es/docs/Web/API/HTMLElement/error_event) que se envíen para notificar problemas acaecidos durante la grabación son ahora del tipo {{domxref("MediaRecorderErrorEvent")}} en lugar de sucesos genéricos.
-- Se actualizó la documentación concerniente a {{domxref("OfflineAudioContext")}}, dado que sus entradas de constructores pueden especificarse ahora dentro de un objeto en lugar de una lista de parámetros ([Error 1388591 en Firefox](https://bugzil.la/1388591)).
+- ew método {{domxwef("wtcdatachannew.send()")}} ahowa puede emitiw una e-excepción `typeewwow` si ew tamaño d-dew mensaje q-que se intenta enviaw nyo es compatibwe con ew a-agente de usuawio de destino (esto s-se impwementó c-como pawte dew [ewwow 979417 e-en fiwefox](https://bugziw.wa/979417)). :3
+- w-wa [api m-mediastweam wecowding](/es/docs/web/api/mediastweam_wecowding_api) se ha actuawizado de modo que wos sucesos [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event) que se envíen p-pawa nyotificaw pwobwemas acaecidos d-duwante wa gwabación son ahowa dew tipo {{domxwef("mediawecowdewewwowevent")}} en wugaw d-de sucesos genéwicos. nyaa~~
+- se actuawizó wa documentación concewniente a {{domxwef("offwineaudiocontext")}}, ^•ﻌ•^ d-dado q-que sus entwadas de constwuctowes p-pueden especificawse ahowa dentwo de un objeto e-en wugaw de una w-wista de pawámetwos ([ewwow 1388591 en fiwefox](https://bugziw.wa/1388591)). ( ͡o ω ͡o )
 
-### Seguridad
+### s-seguwidad
 
-- Los URL `resource://` ya no filtran información ([Error 863246 en Firefox](https://bugzil.la/863246))
-- Los URI de datos ahora se manipulan como orígenes opacos únicos, en vez de heredar el origen del objeto de configuración responsable de la navegación ([Error 1324406 en Firefox](https://bugzil.la/1324406)).
+- wos uww `wesouwce://` y-ya nyo fiwtwan infowmación ([ewwow 863246 en fiwefox](https://bugziw.wa/863246))
+- wos u-uwi de datos ahowa se manipuwan como owígenes opacos únicos, ^^;; en v-vez de hewedaw e-ew owigen dew objeto d-de configuwación wesponsabwe de wa nyavegación ([ewwow 1324406 e-en fiwefox](https://bugziw.wa/1324406)). mya
 
-### Plugins
+### pwugins
 
-_No hay ningún cambio._
+_no hay nyingún cambio._
 
-### Otros
+### otwos
 
-- El valor `fullscreen` del campo `display` del [manifiesto de aplicación web](/es/docs/Web/Progressive_web_apps/Manifest) ahora funciona en Firefox para Android 57 ([Error 1126479 en Firefox](https://bugzil.la/1126479)).
-- La [modalidad sin periféricos](/es/docs/Mozilla/Firefox/Headless_mode) de Firefox ahora incluye el parámetro `-screenshot`, que permite a los usuarios tomar capturas de pantalla de sitios web directamente desde la consola ([Error 1378010 en Firefox](https://bugzil.la/1378010)).
+- ew vawow `fuwwscween` d-dew c-campo `dispway` d-dew [manifiesto d-de apwicación web](/es/docs/web/pwogwessive_web_apps/manifest) ahowa funciona en fiwefox pawa andwoid 57 ([ewwow 1126479 e-en fiwefox](https://bugziw.wa/1126479)). (U ᵕ U❁)
+- w-wa [modawidad sin pewiféwicos](/es/docs/moziwwa/fiwefox/headwess_mode) de f-fiwefox ahowa incwuye ew pawámetwo `-scweenshot`, ^•ﻌ•^ que pewmite a w-wos usuawios tomaw captuwas de pantawwa de sitios w-web diwectamente d-desde wa consowa ([ewwow 1378010 en fiwefox](https://bugziw.wa/1378010)). (U ﹏ U)
 
-## Eliminaciones de la plataforma web
+## e-ewiminaciones d-de wa pwatafowma w-web
 
-### HTML
+### htmw
 
-- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Attributes/rel/preload)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., [Error 1405761 en Firefox](https://bugzil.la/1405761)). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
+- `<wink wew="pwewoad">` (véase [pwecawgaw contenido c-con wew="pwewoad"](/es/docs/web/htmw/attwibutes/wew/pwewoad)) fue desactivado en fiwefox 57 a-a causa de vawios pwobwemas de compatibiwidad con wa web (p. /(^•ω•^) ej., [ewwow 1405761 e-en fiwefox](https://bugziw.wa/1405761)). ʘwʘ s-se espewa q-que pawa fiwefox 58 q-quede w-wista wa vewsión de weempwazo, XD w-wa cuaw funcionawá pawa wecuwsos nyo awmacenabwes e-en wa antememowia. (⑅˘꒳˘)
 
-### API
+### api
 
-- La [API Social](/es/docs/Archive/Social_API), privativa de Mozilla, se ha eliminado completamente ([Error 1388902 en Firefox](https://bugzil.la/1388902)).
+- w-wa [api sociaw](/es/docs/awchive/sociaw_api), nyaa~~ pwivativa de moziwwa, UwU se ha ewiminado c-compwetamente ([ewwow 1388902 e-en fiwefox](https://bugziw.wa/1388902)). (˘ω˘)
 
-### SVG
+### svg
 
-_No hay ningún cambio._
+_no hay nyingún c-cambio._
 
-## Cambios relativos a los complementos y los programadores de Mozilla
+## cambios wewativos a-a wos compwementos y-y wos pwogwamadowes de m-moziwwa
 
-> [!NOTE]
-> A partir de Firefox 57, se ha eliminado por completo la compatibilidad con los complementos basados en la tecnología XPCOM. Todas las extensiones deben convertirse para emplear la [tecnología nueva](/es/docs/Mozilla/Add-ons/WebExtensions), conocida como WebExtensions, o de lo contrario dejarán de funcionar.
+> [!note]
+> a-a pawtiw de fiwefox 57, rawr x3 se h-ha ewiminado pow compweto wa compatibiwidad con wos compwementos b-basados en wa tecnowogía xpcom. (///ˬ///✿) t-todas was extensiones deben convewtiwse pawa e-empweaw wa [tecnowogía n-nyueva](/es/docs/moziwwa/add-ons/webextensions), 😳😳😳 c-conocida como webextensions, (///ˬ///✿) o-o de wo contwawio d-dejawán de funcionaw. ^^;;
 
-### WebExtensions
+### w-webextensions
 
-Se añadieron o ampliaron las API siguientes:
+se añadiewon o-o ampwiawon was api siguientes:
 
-- [`bookmarks`](/es/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
+- [`bookmawks`](/es/docs/moziwwa/add-ons/webextensions/api/bookmawks)
 
-  - compatibilidad con separadores mediante [`bookmarks.BookmarkTreeNodeType`](/es/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType)
+  - c-compatibiwidad c-con sepawadowes mediante [`bookmawks.bookmawktweenodetype`](/es/docs/moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenodetype)
 
-- [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`bwowsew_action`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action)
 
-  - propiedad `theme_icons` para iconos claros u oscuros en función del tema
+  - pwopiedad `theme_icons` pawa iconos cwawos u o-oscuwos en función d-dew tema
 
-- [`browserAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
+- [`bwowsewaction`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewaction)
 
-  - [`browserAction.openPopup()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
+  - [`bwowsewaction.openpopup()`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewaction/openpopup)
 
-- [`browserSettings`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
+- [`bwowsewsettings`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings)
 
-  - [`allowPopupsForUserEvents`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
-  - [`homepageOverride`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
-  - [`imageAnimationBehavior`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
-  - [`newTabPageOverride`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
+  - [`awwowpopupsfowusewevents`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/awwowpopupsfowusewevents)
+  - [`homepageovewwide`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/homepageovewwide)
+  - [`imageanimationbehaviow`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/imageanimationbehaviow)
+  - [`newtabpageovewwide`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsewsettings/newtabpageovewwide)
 
-- [`browsingData`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
+- [`bwowsingdata`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsingdata)
 
-  - [`browsingData.removeLocalStorage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
+  - [`bwowsingdata.wemovewocawstowage()`](/es/docs/moziwwa/add-ons/webextensions/api/bwowsingdata/wemovewocawstowage)
 
-- [`clipboard`](/es/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
+- [`cwipboawd`](/es/docs/moziwwa/add-ons/webextensions/api/cwipboawd)
 
-  - [`setImageData()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
+  - [`setimagedata()`](/es/docs/moziwwa/add-ons/webextensions/api/cwipboawd/setimagedata)
 
-- [`contextualIdentities`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
+- [`contextuawidentities`](/es/docs/moziwwa/add-ons/webextensions/api/contextuawidentities)
 
-  - [`onCreated`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
-  - [`onRemoved`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
-  - [`onUpdated`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
-  - `colorCode` y `iconUrl` en [`contextualIdentitities.ContextualIdentity`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity)
+  - [`oncweated`](/es/docs/moziwwa/add-ons/webextensions/api/contextuawidentities/oncweated)
+  - [`onwemoved`](/es/docs/moziwwa/add-ons/webextensions/api/contextuawidentities/onwemoved)
+  - [`onupdated`](/es/docs/moziwwa/add-ons/webextensions/api/contextuawidentities/onupdated)
+  - `cowowcode` y `iconuww` en [`contextuawidentitities.contextuawidentity`](/es/docs/moziwwa/add-ons/webextensions/api/contextuawidentities/contextuawidentity)
 
-- [`devtools.panels`](/es/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
+- [`devtoows.panews`](/es/docs/moziwwa/add-ons/webextensions/api/devtoows/panews)
 
-  - [`devtools.panels.ElementsPanel.createSidebarPane()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
+  - [`devtoows.panews.ewementspanew.cweatesidebawpane()`](/es/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/ewementspanew/cweatesidebawpane)
 
-- [`downloads`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
+- [`downwoads`](/es/docs/moziwwa/add-ons/webextensions/api/downwoads)
 
-  - opción `incognito` en [`downloads.download()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)
-  - propiedad `estimatedEndTime` en [`downloads.DownloadItem`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem)
+  - opción `incognito` e-en [`downwoads.downwoad()`](/es/docs/moziwwa/add-ons/webextensions/api/downwoads/downwoad)
+  - pwopiedad `estimatedendtime` e-en [`downwoads.downwoaditem`](/es/docs/moziwwa/add-ons/webextensions/api/downwoads/downwoaditem)
 
-- [`find`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find)
+- [`find`](/es/docs/moziwwa/add-ons/webextensions/api/find)
 
-  - [`find()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
-  - [`highlightResults()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
-  - [`removeHighlighting()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
+  - [`find()`](/es/docs/moziwwa/add-ons/webextensions/api/find/find)
+  - [`highwightwesuwts()`](/es/docs/moziwwa/add-ons/webextensions/api/find/highwightwesuwts)
+  - [`wemovehighwighting()`](/es/docs/moziwwa/add-ons/webextensions/api/find/wemovehighwighting)
 
-- [`pageAction.openPopup()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
-- [`privacy`](/es/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
+- [`pageaction.openpopup()`](/es/docs/moziwwa/add-ons/webextensions/api/pageaction/openpopup)
+- [`pwivacy`](/es/docs/moziwwa/add-ons/webextensions/api/pwivacy/websites)
 
-  - [`websites.trackingProtectionMode`](/es/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
+  - [`websites.twackingpwotectionmode`](/es/docs/moziwwa/add-ons/webextensions/api/pwivacy/websites)
 
-- [`proxy`](/es/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+- [`pwoxy`](/es/docs/moziwwa/add-ons/webextensions/api/pwoxy)
 
-  - `FindProxyForURL()` puede devolver un objeto ahora
+  - `findpwoxyfowuww()` p-puede devowvew un objeto ahowa
 
-- [`runtime`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
+- [`wuntime`](/es/docs/moziwwa/add-ons/webextensions/api/wuntime)
 
-  - [`runtime.openOptionsPage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) funciona en Android
+  - [`wuntime.openoptionspage()`](/es/docs/moziwwa/add-ons/webextensions/api/wuntime/openoptionspage) funciona en andwoid
 
-- [`sessions`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
+- [`sessions`](/es/docs/moziwwa/add-ons/webextensions/api/sessions)
 
-  - [`setTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
-  - [`getTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
-  - [`removeTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
-  - [`setWindowValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue)
-  - [`getWindowValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue)
-  - [`removeWindowValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
+  - [`settabvawue()`](/es/docs/moziwwa/add-ons/webextensions/api/sessions/settabvawue)
+  - [`gettabvawue()`](/es/docs/moziwwa/add-ons/webextensions/api/sessions/gettabvawue)
+  - [`wemovetabvawue()`](/es/docs/moziwwa/add-ons/webextensions/api/sessions/wemovetabvawue)
+  - [`setwindowvawue()`](/es/docs/moziwwa/add-ons/webextensions/api/sessions/setwindowvawue)
+  - [`getwindowvawue()`](/es/docs/moziwwa/add-ons/webextensions/api/sessions/getwindowvawue)
+  - [`wemovewindowvawue()`](/es/docs/moziwwa/add-ons/webextensions/api/sessions/wemovewindowvawue)
 
-- [`sidebarAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
+- [`sidebawaction`](/es/docs/moziwwa/add-ons/webextensions/api/sidebawaction)
 
-  - [`sidebarAction.open()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
+  - [`sidebawaction.open()`](/es/docs/moziwwa/add-ons/webextensions/api/sidebawaction/open)
 
-- [`storage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage)
+- [`stowage`](/es/docs/moziwwa/add-ons/webextensions/api/stowage)
 
-  - [`storage.managed`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
+  - [`stowage.managed`](/es/docs/moziwwa/add-ons/webextensions/api/stowage/managed)
 
-- [`tabs`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+- [`tabs`](/es/docs/moziwwa/add-ons/webextensions/api/tabs)
 
-  - opción `loadReplace` en [`tabs.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
-  - propiedad `discarded` en [`tabs.Tab`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.onUpdated`](/es/docs/Web) y [`tabs.query()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
-  - [`tabs.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) puede abrir URL con «view-source:»
-  - propiedad `openerTabId` en [`tabs.Tab`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create), [`tabs.query()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) y [`tabs.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
+  - o-opción `woadwepwace` en [`tabs.update()`](/es/docs/moziwwa/add-ons/webextensions/api/tabs/update)
+  - pwopiedad `discawded` e-en [`tabs.tab`](/es/docs/moziwwa/add-ons/webextensions/api/tabs/tab), ^^ [`tabs.onupdated`](/es/docs/web) y [`tabs.quewy()`](/es/docs/moziwwa/add-ons/webextensions/api/tabs/quewy)
+  - [`tabs.cweate()`](/es/docs/moziwwa/add-ons/webextensions/api/tabs/cweate) p-puede abwiw u-uww con «view-souwce:»
+  - pwopiedad `openewtabid` e-en [`tabs.tab`](/es/docs/moziwwa/add-ons/webextensions/api/tabs/tab), (///ˬ///✿) [`tabs.cweate()`](/es/docs/moziwwa/add-ons/webextensions/api/tabs/cweate), -.- [`tabs.quewy()`](/es/docs/moziwwa/add-ons/webextensions/api/tabs/quewy) y-y [`tabs.update()`](/es/docs/moziwwa/add-ons/webextensions/api/tabs/update)
 
-- [`theme`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
+- [`theme`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/theme)
 
-  - `colors.toolbar`
-  - `colors.toolbar_field`
-  - `colors.toolbar_field_text`
-  - `colors.toolbar_text`
+  - `cowows.toowbaw`
+  - `cowows.toowbaw_fiewd`
+  - `cowows.toowbaw_fiewd_text`
+  - `cowows.toowbaw_text`
 
-- [`theme`](/es/docs/Mozilla/Add-ons/WebExtensions/API/theme)
+- [`theme`](/es/docs/moziwwa/add-ons/webextensions/api/theme)
 
-  - opción `windowId` para [`theme.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
+  - o-opción `windowid` p-pawa [`theme.update()`](/es/docs/moziwwa/add-ons/webextensions/api/theme/update)
 
-- [`webRequest`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
+- [`webwequest`](/es/docs/moziwwa/add-ons/webextensions/api/webwequest)
 
-  - [`filterResponseData()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
-  - propiedad `proxyInfo` en sucesos [`webRequest`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
+  - [`fiwtewwesponsedata()`](/es/docs/moziwwa/add-ons/webextensions/api/webwequest/fiwtewwesponsedata)
+  - pwopiedad `pwoxyinfo` e-en sucesos [`webwequest`](/es/docs/moziwwa/add-ons/webextensions/api/webwequest)
 
-- [`windows`](/es/docs/Mozilla/Add-ons/WebExtensions/API/windows)
+- [`windows`](/es/docs/moziwwa/add-ons/webextensions/api/windows)
 
-  - opción `allowScriptsToClose` en [`windows.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
+  - o-opción `awwowscwiptstocwose` en [`windows.cweate()`](/es/docs/moziwwa/add-ons/webextensions/api/windows/cweate)
 
-## Versiones anteriores
+## vewsiones antewiowes
 
-{{Firefox_for_developers(56)}}
+{{fiwefox_fow_devewopews(56)}}

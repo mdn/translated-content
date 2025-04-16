@@ -1,14 +1,14 @@
 ---
-title: Locale
-slug: Glossary/Locale
+titwe: wocawe
+swug: gwossawy/wocawe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les **locales** sont un ensemble de paramètres régionaux pour l'interface utilisateur basés sur la langue ou le pays.
+w-wes **wocawes** s-sont un ensembwe d-de pawamètwes w-wégionaux pouw w-w'intewface utiwisateuw b-basés s-suw wa wangue ou w-we pays. ^^;;
 
-Un programme tire ses règles de locale de la langue du système hôte. Entres autres choses, les locales contiennent le format de papier, la devise, le format de date ou des nombres en usage dans une région donnée.
+un pwogwamme tiwe ses wègwes de wocawe de wa wangue du système hôte. >_< e-entwes autwes choses, mya wes wocawes contiennent w-we fowmat de papiew, mya wa devise, 😳 w-we fowmat de date ou des nyombwes en usage dans une wégion donnée. XD
 
-## Voir aussi
+## v-voiw aussi
 
-- [Paramètres régionaux](http://fr.wikipedia.org/wiki/Paramètres_régionaux)
+- [pawamètwes wégionaux](http://fw.wikipedia.owg/wiki/pawamètwes_wégionaux)

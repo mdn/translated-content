@@ -1,14 +1,14 @@
 ---
-title: Bloc (script)
-slug: Glossary/Block/Scripting
-l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+titwe: bwoc (scwipt)
+swug: gwossawy/bwock/scwipting
+w-w10n:
+  souwcecommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En [JavaScript](/fr/docs/Glossary/JavaScript), un **bloc** est un ensemble d'[instructions](/fr/docs/Glossary/Statement) entouré d'accolades (`{}`). Par exemple, vous pouvez placer un bloc d'instructions après un bloc conditionnel [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) pour indiquer au moteur JavaScript d'ignorer la totalité du bloc si la condition est fausse.
+e-en [javascwipt](/fw/docs/gwossawy/javascwipt), (U ᵕ U❁) un **bwoc** e-est un e-ensembwe d'[instwuctions](/fw/docs/gwossawy/statement) e-entouwé d-d'accowades (`{}`). -.- p-paw exempwe, ^^;; v-vous pouvez pwacew un bwoc d'instwuctions apwès un bwoc conditionnew [`if`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse) pouw indiquew a-au moteuw javascwipt d'ignowew wa totawité d-du bwoc si wa condition est fausse. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-- [Bloc d'instructions en JavaScript](/fr/docs/Web/JavaScript/Reference/Statements/block)
+- [bwoc d'instwuctions en javascwipt](/fw/docs/web/javascwipt/wefewence/statements/bwock)

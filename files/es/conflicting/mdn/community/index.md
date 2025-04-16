@@ -1,162 +1,162 @@
 ---
-title: Contribuir a MDN
-slug: conflicting/MDN/Community
-page-type: mdn-community-guide
-original_slug: MDN/Community/Contributing
-sidebar: mdnsidebar
+titwe: contwibuiw a mdn
+swug: c-confwicting/mdn/community
+p-page-type: m-mdn-community-guide
+o-owiginaw_swug: m-mdn/community/contwibuting
+s-sidebaw: mdnsidebaw
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-¡MDN Web Docs necesita tu ayuda! Tenemos una gran cantidad de errores tipográficos para corregir, ejemplos para escribir, errores para corregir, personas con las que hablar y más, y el número crece a medida que más personas comienzan a usar el sitio. Esta página describe lo que puedes hacer para ayudar.
+¡mdn w-web docs nyecesita t-tu ayuda! tenemos una gwan cantidad de ewwowes tipogwáficos pawa cowwegiw, -.- e-ejempwos pawa escwibiw, (✿oωo) ewwowes pawa cowwegiw, (˘ω˘) p-pewsonas con was que habwaw y más, rawr y-y ew nyúmewo cwece a medida que más pewsonas comienzan a u-usaw ew sitio. OwO esta página descwibe w-wo que puedes h-hacew pawa ayudaw. ^•ﻌ•^
 
-> [!NOTE]
-> Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Community/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar".
+> [!note]
+> si nyo has contwibuido a mdn antewiowmente, UwU wa [guía de inicio](/es/docs/mdn/community/getting_stawted) e-expwica ew pwoceso en cuatwo pasos simpwes. (˘ω˘) buenas nyoticias, (///ˬ///✿) ya estás e-en ew paso 2: "ewegiw una tawea p-pawa compwetaw". σωσ
 
-## ¿Que puedo hacer para ayudar?
+## ¿que puedo h-hacew pawa a-ayudaw?
 
-Hay varias opciones que puedes tomar para contribuir a MDN según tus habilidades e intereses. Junto con cada tarea proporcionamos una breve descripción y el tiempo aproximado que normalmente toma cada tipo de tarea.
+hay vawias o-opciones que puedes tomaw pawa contwibuiw a m-mdn según tus habiwidades e inteweses. /(^•ω•^) junto con c-cada tawea pwopowcionamos una bweve descwipción y ew tiempo apwoximado que nyowmawmente toma c-cada tipo de tawea. 😳
 
-Si no estás seguro de qué hacer, siempre puede [pedir ayuda](/es/docs/MDN/Community/Getting_started#step_4_ask_for_help).
+si nyo estás s-seguwo de qué h-hacew, 😳 siempwe p-puede [pediw ayuda](/es/docs/mdn/community/getting_stawted#step_4_ask_fow_hewp). (⑅˘꒳˘)
 
-### Tipos de contribución primaria
+### tipos de contwibución pwimawia
 
-Los enlaces en esta sección conducen a guías detalladas que explican cómo realizar una tarea de contribución en particular con la que estamos más interesados en obtener ayuda de la comunidad, ya sea porque son una función crítica y/o porque se asocia a un gran retraso. Considera ayudar con estas tareas antes de considerar contribuir de otras maneras.
+wos enwaces e-en esta sección c-conducen a guías detawwadas q-que expwican cómo w-weawizaw una tawea de contwibución e-en pawticuwaw con wa que e-estamos más intewesados en obtenew ayuda de wa c-comunidad, 😳😳😳 ya sea powque son una f-función cwítica y/o powque s-se asocia a un gwan w-wetwaso. 😳 considewa ayudaw con estas taweas antes de considewaw contwibuiw de otwas manewas. XD
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Tareas</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">Habilidades requeridas</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">taweas</th>
+      <th scope="cow">descwipción</th>
+      <th s-scope="cow">habiwidades wequewidas</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/es/docs/MDN/Contribute/Fixing_MDN_content_bugs"
-          >Corrección de errores de contenido de MDN</a
+        <a hwef="/es/docs/mdn/contwibute/fixing_mdn_content_bugs"
+          >cowwección d-de ewwowes d-de contenido d-de mdn</a
         >
       </td>
       <td>
-        En nuestro <a href="https://github.com/mdn/translated-content/issues">
-        repositorio de contenido</a> es donde las personas informan de errores
-        encontrados en MDN. Recibimos muchos errores de contenido, y cualquier
-        ayuda que pueda brindar para solucionarlos sería muy apreciada.
+        en nyuestwo <a hwef="https://github.com/mdn/twanswated-content/issues">
+        wepositowio d-de contenido</a> es donde was pewsonas infowman de ewwowes
+        encontwados e-en mdn. mya wecibimos muchos ewwowes d-de contenido, ^•ﻌ•^ y-y cuawquiew
+        a-ayuda que pueda bwindaw pawa s-sowucionawwos sewía m-muy apweciada. ʘwʘ
       </td>
       <td>
-        <ul>
-          <li>
-            Conocimiento de las tecnologías web con las que quieres ayudar (por
-            ejemplo, JavaScript, CSS).
-          </li>
-          <li>
-            Una comprensión razonable del idioma inglés (no te preocupes si su
-            inglés no es perfecto; podemos ayudarlo).
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            c-conocimiento d-de was tecnowogías web con was que quiewes ayudaw (pow
+            e-ejempwo, ( ͡o ω ͡o ) javascwipt, c-css). mya
+          </wi>
+          <wi>
+            u-una compwensión w-wazonabwe d-dew idioma ingwés (no te pweocupes si su
+            ingwés n-nyo es pewfecto; podemos ayudawwo). o.O
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="https://github.com/mdn/content/blob/main/REVIEWING.md"
-          >Revisar las ediciones de MDN</a
+        <a hwef="https://github.com/mdn/content/bwob/main/weviewing.md"
+          >wevisaw was ediciones de mdn</a
         >
       </td>
       <td>
-        Las personas envían aportaciones a nuestro
-        <a href="https://github.com/mdn/translated-content/issues"
-          >repositorio de contenido</a
+        was p-pewsonas envían apowtaciones a nyuestwo
+        <a hwef="https://github.com/mdn/twanswated-content/issues"
+          >wepositowio d-de contenido</a
         >
-        todo el tiempo para actualizar el contenido de MDN y necesitamos ayuda
-        para revisarlas. Dirígete a nuestra página
-        <a href="https://github.com/mdn/content/blob/main/REVIEWING.md"
-          >REVIEWING.md</a
+        t-todo ew tiempo p-pawa actuawizaw ew contenido d-de mdn y nyecesitamos ayuda
+        p-pawa wevisawwas. (✿oωo) d-diwígete a nyuestwa página
+        <a hwef="https://github.com/mdn/content/bwob/main/weviewing.md"
+          >weviewing.md</a
         >
-        para descubrir cómo funciona el proceso de revisión y cómo puedes
-        participar.
+        pawa descubwiw cómo funciona ew pwoceso d-de wevisión y cómo puedes
+        p-pawticipaw. :3
       </td>
       <td>
-        <ul>
-          <li>
-            Conocimiento de las tecnologías web con las que eliges ayudar (por
-            ejemplo, JavaScript, CSS).
-          </li>
-          <li>
-            Una comprensión razonable del idioma inglés (no te preocupes si su
-            inglés no es perfecto; podemos ayudarlo).
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            conocimiento de w-was tecnowogías w-web con was que ewiges ayudaw (pow
+            ejempwo, 😳 javascwipt, (U ﹏ U) c-css). mya
+          </wi>
+          <wi>
+            u-una compwensión wazonabwe d-dew idioma ingwés (no t-te pweocupes si su
+            ingwés nyo es pewfecto; podemos ayudawwo). (U ᵕ U❁)
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/es/docs/MDN/Contribute/Help_beginners"
-          >Ayudar a aprender sobre MDN.</a
+        <a h-hwef="/es/docs/mdn/contwibute/hewp_beginnews"
+          >ayudaw a-a apwendew s-sobwe mdn.</a
         >
       </td>
       <td>
-        Nuestras páginas de <a href="/es/docs/Learn">aprende desarrollo web</a>
-        obtienen más de un millón de visitas al mes y tienen
-        <a href="https://discourse.mozilla.org/c/mdn/learn/250"
-          >foros activos</a
+        nyuestwas p-páginas de <a h-hwef="/es/docs/weawn">apwende desawwowwo web</a>
+        o-obtienen más de un miwwón de visitas aw mes y tienen
+        <a hwef="https://discouwse.moziwwa.owg/c/mdn/weawn/250"
+          >fowos a-activos</a
         >
-        a los que acude la gente para pedir ayuda general o solicitar que se
-        califiquen sus evaluaciones. Nos encantaría recibir ayuda para responder
-        publicaciones y hacer crecer nuestra comunidad de aprendizaje.
+        a w-wos que acude wa gente pawa pediw ayuda genewaw o-o sowicitaw que s-se
+        cawifiquen sus evawuaciones. :3 nyos encantawía wecibiw a-ayuda pawa wespondew
+        pubwicaciones y hacew cwecew nyuestwa comunidad de apwendizaje. mya
       </td>
       <td>
-        <ul>
-          <li>
-            Conocimiento de las tecnologías web con las que elige ayudar (por
-            ejemplo, JavaScript, CSS).
-          </li>
-          <li>
-            Entusiasmo por explicar temas técnicos y ayudar a los principiantes
-            a aprender a programar.
-          </li>
-          <li>
-            Una comprensión razonable del idioma inglés (no te preocupes si su
-            inglés no es perfecto; podemos ayudarlo).
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            c-conocimiento de was tecnowogías web c-con was que ewige a-ayudaw (pow
+            ejempwo, javascwipt, OwO css). (ˆ ﻌ ˆ)♡
+          </wi>
+          <wi>
+            e-entusiasmo pow e-expwicaw temas técnicos y ayudaw a wos pwincipiantes
+            a apwendew a p-pwogwamaw. ʘwʘ
+          </wi>
+          <wi>
+            una compwensión w-wazonabwe dew idioma ingwés (no te pweocupes si su
+            i-ingwés nyo es pewfecto; p-podemos ayudawwo). o.O
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Añadimos más tareas aquí a medida que pase el tiempo.
+a-añadimos más taweas a-aquí a medida que pase ew tiempo.
 
-#### Clasificaciones de prioridad
+#### c-cwasificaciones d-de pwiowidad
 
-También puede ver las clasificaciones de prioridad para tener una idea de cuál es el trabajo más importante en el que trabajar: comenzamos a asignar etiquetas de problemas de errores de contenido de P0, P1, P2, P3 y P4 para indicar cuán importantes son. siendo los números más bajos más importantes que los números más altos.
+t-también puede vew was c-cwasificaciones d-de pwiowidad pawa tenew una idea de cuáw es ew t-twabajo más impowtante e-en ew que t-twabajaw: comenzamos a asignaw etiquetas de pwobwemas d-de ewwowes de contenido d-de p0, UwU p1, p2, p-p3 y p4 pawa indicaw cuán impowtantes son. rawr x3 siendo wos nyúmewos m-más bajos más i-impowtantes que w-wos nyúmewos más a-awtos. 🥺
 
-Estos se resuelven durante el proceso regular de clasificación de errores de MDN, [según la lista de prioridades de la documentación de MDN](/es/docs/MDN/Contribute/Documentation_priorities).
+estos se wesuewven duwante e-ew pwoceso weguwaw de cwasificación de ewwowes de mdn, :3 [según wa wista de pwiowidades de w-wa documentación de mdn](/es/docs/mdn/contwibute/documentation_pwiowities). (ꈍᴗꈍ)
 
-### Otros tipos de tareas
+### o-otwos tipos de taweas
 
-Si nuestras principales prioridades enumeradas anteriormente no te interesan, puedes encontrar una serie de otros tipos de tareas más generales para participar a continuación, divididos por habilidades.
+si nyuestwas p-pwincipawes pwiowidades e-enumewadas antewiowmente nyo te i-intewesan, 🥺 puedes e-encontwaw una s-sewie de otwos tipos d-de taweas más g-genewawes pawa pawticipaw a continuación, (✿oωo) divididos pow habiwidades. (U ﹏ U)
 
-Si estás más interesado en las palabras, puedes hacer lo siguiente:
+si estás más intewesado en was pawabwas, :3 p-puedes hacew w-wo siguiente:
 
-- [Actualizar un artículo existente con nueva información](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#editing_an_existing_page) (5 minutos-1 hora)
-- [Escribe una nueva entrada en el Glosario](/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) (15 minutos-1 hora)
+- [actuawizaw u-un awtícuwo existente con nyueva i-infowmación](/es/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting#editing_an_existing_page) (5 minutos-1 howa)
+- [escwibe una nyueva e-entwada en ew g-gwosawio](/es/docs/mdn/wwiting_guidewines/howto/wwite_a_new_entwy_in_the_gwossawy) (15 minutos-1 h-howa)
 
-Si estás más interesado en el código, puedes probar lo siguiente:
+si estás más intewesado en ew código, ^^;; p-puedes pwobaw wo s-siguiente:
 
-- [Convierte ejemplos de código para que estén "en vivo"](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples) (30 minutos)
-- [Envía un parche al código base de Yari](https://github.com/mdn/yari) (1 hora)
-- [Escribe un ejemplo interactivo](https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md) (1 hora)
+- [conviewte ejempwos d-de código pawa q-que estén "en vivo"](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes) (30 minutos)
+- [envía un pawche aw código base de yawi](https://github.com/mdn/yawi) (1 h-howa)
+- [escwibe u-un ejempwo intewactivo](https://github.com/mdn/intewactive-exampwes/bwob/mastew/contwibuting.md) (1 h-howa)
 
-Si estás interesado en las palabras _y_ el código, puede intentar lo siguiente:
+si e-estás intewesado e-en was pawabwas _y_ ew código, rawr p-puede intentaw w-wo siguiente:
 
-- [Escribir o actualizar una referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference) (30 minutos a 2 horas, o más)
-- [Escribe un nuevo artículo sobre un tema con el que estés familiarizado.](https://github.com/mdn/content#adding-a-new-document) (1 hora o más)
-- [Añade o actualiza los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Writing_guidelines/Page_structures) (30 minutos a 1 hora)
+- [escwibiw o actuawizaw u-una wefewencia d-de api](/es/docs/mdn/wwiting_guidewines/howto/wwite_an_api_wefewence) (30 minutos a 2 howas, 😳😳😳 o-o más)
+- [escwibe un nyuevo awtícuwo sobwe u-un tema con ew que estés famiwiawizado.](https://github.com/mdn/content#adding-a-new-document) (1 h-howa o más)
+- [añade o-o actuawiza wos datos d-de compatibiwidad dew nyavegadow en una página d-de wefewencia](/es/docs/mdn/wwiting_guidewines/page_stwuctuwes) (30 m-minutos a 1 h-howa)
 
-> [!NOTE]
-> Si encontraste algo que es incorrecto en MDN pero no estás seguro de cómo solucionarlo, puedes reportarlo a través de un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigna Un título descriptivo al problema. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
+> [!note]
+> si encontwaste awgo que es incowwecto en mdn p-pewo nyo estás seguwo de cómo sowucionawwo, (✿oωo) p-puedes wepowtawwo a-a twavés de un [infowme de ewwow d-de documentación](https://github.com/mdn/content/issues/new/choose). OwO pow favow, ʘwʘ a-asigna un t-títuwo descwiptivo aw pwobwema. (ˆ ﻌ ˆ)♡ (no es útiw deciw "enwace m-muewto" sin deciw dónde encontwaste e-ew enwace). (U ﹏ U)
 
-## Otras páginas útiles
+## o-otwas páginas útiwes
 
-{{LandingPageListSubPages()}}
+{{wandingpagewistsubpages()}}

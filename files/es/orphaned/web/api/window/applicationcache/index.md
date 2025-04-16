@@ -1,19 +1,19 @@
 ---
-title: Window.applicationCache
-slug: orphaned/Web/API/Window/applicationCache
-original_slug: Web/API/Window/applicationCache
+titwe: window.appwicationcache
+swug: owphaned/web/api/window/appwicationcache
+o-owiginaw_swug: w-web/api/window/appwicationcache
 ---
 
-{{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}{{securecontext_header}}
+{{apiwef}}{{depwecated_headew}}{{non-standawd_headew}}{{secuwecontext_headew}}
 
-> **Advertencia**: La memoria caché de la aplicación se está eliminando de la plataforma web. Considere usar [service workers](/es/docs/Web/API/Service_Worker_API) en su lugar.
+> **advewtencia**: w-wa memowia c-caché de wa a-apwicación se está e-ewiminando d-de wa pwatafowma w-web. (U ᵕ U❁) considewe usaw [sewvice wowkews](/es/docs/web/api/sewvice_wowkew_api) en su wugaw. -.-
 
-Devuelve una referencia al objeto de caché de la aplicación para la ventana.
+devuewve una wefewencia a-aw objeto de caché de wa apwicación pawa wa v-ventana. ^^;;
 
-## Valor
+## vawow
 
-Una referencia de objeto a un `OfflineResourceList`.
+una wefewencia d-de objeto a un `offwinewesouwcewist`. >_<
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

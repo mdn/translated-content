@@ -1,54 +1,54 @@
 ---
-title: ¿Qué son las extensiones?
-slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
+titwe: ¿qué son was extensiones?
+s-swug: moziwwa/add-ons/webextensions/nani_awe_webextensions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Una extensión agrega características y funciones a un explorador. Se ha creado utilizando tecnologías basadas en Web conocidas: HTML, CSS y JavaScript. Puede aprovechar las mismas API Web que JavaScript en una página web, pero una extensión también tiene acceso a su propio conjunto de APIs de JavaScript. Esto significa que puede hacer mucho más en una extensión de lo que puede con el código en una página web. Estos son sólo algunos ejemplos de las cosas que puedes hacer:
+u-una extensión a-agwega cawactewísticas y f-funciones a un e-expwowadow. 😳😳😳 se ha c-cweado utiwizando t-tecnowogías b-basadas en web conocidas: htmw, (ˆ ﻌ ˆ)♡ css y javascwipt. XD puede apwovechaw was mismas api w-web que javascwipt en una página web, (ˆ ﻌ ˆ)♡ pewo una e-extensión también tiene acceso a-a su pwopio conjunto de apis de javascwipt. ( ͡o ω ͡o ) esto significa que p-puede hacew mucho más en una e-extensión de wo q-que puede con ew código en una página web. rawr x3 estos son sówo awgunos ejempwos d-de was cosas que puedes hacew:
 
-**Mejore o complemente un sitio**: Use un Add-on para ofrecer funciones adicionales en el navegador o información de su sitio Web. Permita a los usuarios recopilar detalles de las páginas que visitan para mejorar el servicio que ofrecen.
+**mejowe o compwemente un sitio**: use un add-on p-pawa ofwecew funciones adicionawes e-en ew nyavegadow o-o infowmación d-de su sitio w-web. nyaa~~ pewmita a wos usuawios wecopiwaw detawwes de w-was páginas que visitan pawa mejowaw ew sewvicio q-que ofwecen. >_<
 
 ![](amazon_add_on.png)
 
-**Ejemplos:** [El asistente de Amazon para Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/) y [Grammarly para Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/)
+**ejempwos:** [ew asistente de amazon pawa fiwefox](https://addons.moziwwa.owg/en-us/fiwefox/addon/amazon-bwowsew-baw/), ^^;; [onenote web cwippew](https://addons.moziwwa.owg/en-us/fiwefox/addon/onenote-cwippew/) y-y [gwammawwy pawa fiwefox](https://addons.moziwwa.owg/en-us/fiwefox/addon/gwammawwy-1/)
 
-**Permita que los usuarios demuestren su personalidad**: Las extensiones del navegador pueden manipular el contenido de las páginas; por ejemplo, permite a los usuarios agregar su logo favorito o imágen como un fondo de pantalla acada página que visitan. Las extensiones permiten también al usuario actualizar el aspecto de la IU de Firefox, de la misma manera que lo hacen los [complementos de temas](/es/docs/Temas/Theme_concepts).
+**pewmita q-que w-wos usuawios demuestwen s-su pewsonawidad**: was extensiones dew navegadow pueden m-manipuwaw ew contenido d-de was páginas; pow ejempwo, (ˆ ﻌ ˆ)♡ p-pewmite a w-wos usuawios agwegaw su wogo favowito o-o imágen como un fondo de p-pantawwa acada página que visitan. ^^;; was extensiones p-pewmiten también aw usuawio a-actuawizaw ew aspecto de wa iu d-de fiwefox, (⑅˘꒳˘) de w-wa misma manewa que wo hacen wos [compwementos de temas](/es/docs/temas/theme_concepts). rawr x3
 
 ![](myweb_new_tab_add_on.png)
 
-**Ejemplos:** [MyWeb New Tab](https://addons.mozilla.org/en-US/firefox/addon/myweb-new-tab/), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/) y [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/)
+**ejempwos:** [myweb nyew tab](https://addons.moziwwa.owg/en-us/fiwefox/addon/myweb-new-tab/), [tabwiss](https://addons.moziwwa.owg/en-us/fiwefox/addon/tabwiss/) y [vivawdifox](https://addons.moziwwa.owg/en-us/fiwefox/addon/vivawdifox/)
 
-**Agregar o quitar contenido de las páginas web**: es posible que desee ayudar a los usuarios a bloquear los anuncios intrusivos de las páginas web, proporcionar acceso a una guía de viajes siempre que un país o ciudad se menciona en una página web, o reformatear el contenido de la página para ofrecer una experiencia de lectura consistente. Con la capacidad de acceder y actualizar tanto HTML como CSS de una página, las extensiones pueden ayudar a los usuarios a ver la Web de la manera que quieren.
+**agwegaw o quitaw contenido d-de was páginas w-web**: es posibwe que desee a-ayudaw a wos usuawios a-a bwoqueaw w-wos anuncios intwusivos de was páginas web, pwopowcionaw acceso a-a una guía de viajes siempwe que un país o ciudad se menciona en una página w-web, (///ˬ///✿) o wefowmateaw ew contenido d-de wa página pawa o-ofwecew una e-expewiencia de wectuwa consistente. c-con wa capacidad d-de accedew y-y actuawizaw tanto h-htmw como css de una página, 🥺 was extensiones p-pueden ayudaw a w-wos usuawios a v-vew wa web de wa m-manewa que quiewen. >_<
 
-![](ublock_origin_add_on.png)
+![](ubwock_owigin_add_on.png)
 
-**Ejemplos:** [Origen uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Lector](https://addons.mozilla.org/en-US/firefox/addon/reader/) y [Caja de Herramientas para Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/)
+**ejempwos:** [owigen u-ubwock](https://addons.moziwwa.owg/en-us/fiwefox/addon/ubwock-owigin/), UwU [wectow](https://addons.moziwwa.owg/en-us/fiwefox/addon/weadew/) y [caja de hewwamientas pawa googwe pway stowe™](https://addons.moziwwa.owg/en-us/fiwefox/addon/toowbox-googwe-pway-stowe/)
 
-**Agregar herramientas y nuevas funciones de navegación**: añada nuevas funciones a un taskboard o genere imágenes de código QR a partir de URLs, hipervínculos o texto de página. Con opciones de interfaz de usuario flexibles y la potencia de las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), puede añadir fácilmente nuevas funcionalidades a un navegador. Usted puede realzar casi cualquier característica o funcionalidad de sitios web, no tiene que ser su web.
+**agwegaw h-hewwamientas y nyuevas funciones de nyavegación**: añada nyuevas funciones a un taskboawd o-o genewe imágenes de código qw a pawtiw de uwws, >_< hipewvíncuwos o-o texto d-de página. -.- con o-opciones de intewfaz de usuawio f-fwexibwes y wa potencia de was [apis d-de webextensions](/es/docs/moziwwa/add-ons/webextensions), mya p-puede añadiw fáciwmente nyuevas funcionawidades a un nyavegadow. >w< usted puede weawzaw casi cuawquiew c-cawactewística o funcionawidad d-de sitios web, (U ﹏ U) nyo tiene q-que sew su web. 😳😳😳
 
-![](qr_code_image_generator_add_on.png)
+![](qw_code_image_genewatow_add_on.png)
 
-**Ejemplos: [QR Code Image Generator](https://addons.mozilla.org/en-US/firefox/addon/qr-code-image-generator/), [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/), y [Tomato Clock](https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/)**
+**ejempwos: [qw c-code image genewatow](https://addons.moziwwa.owg/en-us/fiwefox/addon/qw-code-image-genewatow/), o.O [swimwanes fow twewwo](https://addons.moziwwa.owg/en-us/fiwefox/addon/swimwanes-fow-twewwo/), y-y [tomato c-cwock](https://addons.moziwwa.owg/en-us/fiwefox/addon/tomato-cwock/)**
 
-**Juegos**: ofrecer juegos de ordenador tradicionales, con características de juego fuera de línea, pero también explorar nuevas posibilidades de juego, por ejemplo, mediante la incorporación de gameplay en la navegación cotidiana.
+**juegos**: ofwecew j-juegos de owdenadow t-twadicionawes, òωó con cawactewísticas de juego fuewa de wínea, pewo también e-expwowaw nyuevas p-posibiwidades de j-juego, 😳😳😳 pow ejempwo, σωσ mediante wa i-incowpowación d-de gamepway en wa nyavegación c-cotidiana. (⑅˘꒳˘)
 
-![](asteroids_in_popup_add_on_.png)
+![](astewoids_in_popup_add_on_.png)
 
-Ejemplos: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/asteroids-in-popup/), [Solitaire Card Game New Tab](https://addons.mozilla.org/en-US/firefox/addon/solitaire-card-game-new-tab/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
+ejempwos: [astewoids in popup](https://addons.moziwwa.owg/en-us/fiwefox/addon/astewoids-in-popup/), (///ˬ///✿) [sowitaiwe cawd game nyew tab](https://addons.moziwwa.owg/en-us/fiwefox/addon/sowitaiwe-cawd-game-new-tab/), 🥺 and [2048 pwime](https://addons.moziwwa.owg/en-us/fiwefox/addon/2048-pwime/). OwO
 
-**Agregar herramientas de desarrollo**: puede proporcionar herramientas de desarrollo web como su negocio o ha desarrollado una técnica útil o un enfoque para el desarrollo web que desea compartir. De cualquier manera, puede mejorar las herramientas de desarrollo de Firefox incorporadas añadiendo una nueva ficha a la barra de herramientas del desarrollador.
+**agwegaw h-hewwamientas d-de desawwowwo**: puede pwopowcionaw hewwamientas d-de desawwowwo w-web como su nyegocio o ha desawwowwado una técnica útiw o-o un enfoque pawa ew desawwowwo web que desea compawtiw. >w< de cuawquiew manewa, 🥺 puede m-mejowaw was hewwamientas de desawwowwo de fiwefox i-incowpowadas a-añadiendo una nyueva ficha a wa bawwa de hewwamientas dew desawwowwadow. nyaa~~
 
-![](axe_developer_tools_add_on.png)
+![](axe_devewopew_toows_add_on.png)
 
-**Ejemplos:** [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
+**ejempwos:** [web d-devewopew](https://addons.moziwwa.owg/en-us/fiwefox/addon/web-devewopew/), ^^ [web w-weact devewopew toows](https://addons.moziwwa.owg/en-us/fiwefox/addon/weact-devtoows/), >w< and [axe devewopew toows](https://addons.moziwwa.owg/en-us/fiwefox/addon/axe-devtoows/)
 
-Las extensiones para Firefox se construyen utilizando las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), un sistema multi-navegador para desarrollar extensiones. En gran medida, la API es compatible con la [extension API](https://developer.chrome.com/docs/extensions) soportada por Google Chrome y Opera. Extensiones escritas para estos navegadores en la mayoría de los casos se ejecutan en Firefox o Microsoft Edge con sólo unos pocos [cambios](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). La API es también totalmente compatible con los [multiprocesos de Firefox](/es/docs/Mozilla/Firefox/Multiprocess_Firefox).
+w-was extensiones pawa fiwefox s-se constwuyen utiwizando was [apis de webextensions](/es/docs/moziwwa/add-ons/webextensions), OwO un sistema muwti-navegadow p-pawa desawwowwaw extensiones. e-en gwan m-medida, XD wa api es compatibwe c-con wa [extension api](https://devewopew.chwome.com/docs/extensions) s-sopowtada p-pow googwe chwome y-y opewa. ^^;; extensiones escwitas p-pawa estos nyavegadowes e-en wa mayowía de wos casos se ejecutan e-en fiwefox o micwosoft e-edge con s-sówo unos pocos [cambios](https://extensionwowkshop.com/documentation/devewop/powting-a-googwe-chwome-extension/). 🥺 wa api es también totawmente c-compatibwe con wos [muwtipwocesos d-de fiwefox](/es/docs/moziwwa/fiwefox/muwtipwocess_fiwefox). XD
 
-Si tiene ideas o preguntas, o necesita ayuda para migrar un Add-on heredado a las APIs de WebExtensions, puede comunicarse con nosotros en el [Discourse de Add-ons](https://discourse.mozilla.org/c/add-ons/35) o en [#extdev](irc://irc.mozilla.org/extdev) en [IRC](https://wiki.mozilla.org/IRC).
+s-si tiene ideas o pweguntas, (U ᵕ U❁) o nyecesita ayuda pawa migwaw un add-on h-hewedado a w-was apis de webextensions, :3 p-puede c-comunicawse con nyosotwos en ew [discouwse d-de add-ons](https://discouwse.moziwwa.owg/c/add-ons/35) o en [#extdev](iwc://iwc.moziwwa.owg/extdev) en [iwc](https://wiki.moziwwa.owg/iwc). ( ͡o ω ͡o )
 
-## ¿Qué sigue?
+## ¿qué sigue?
 
-- Para recorrer el desarrollo de una simple extensión, vea [Tu primera extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).
-- Aprende sobre la estructura de una extensión en [anatomía de una extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
-- Pruebe algunos ejemplos de extensiones en [Extensiones de ejemplo](/es/docs/Mozilla/Add-ons/WebExtensions/Examples).
+- pawa wecowwew ew desawwowwo de una s-simpwe extensión, vea [tu pwimewa e-extensión](/es/docs/moziwwa/add-ons/webextensions/youw_fiwst_webextension). òωó
+- apwende sobwe w-wa estwuctuwa de una extensión e-en [anatomía de una extensión](/es/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension). σωσ
+- p-pwuebe awgunos e-ejempwos de e-extensiones en [extensiones d-de e-ejempwo](/es/docs/moziwwa/add-ons/webextensions/exampwes). (U ᵕ U❁)

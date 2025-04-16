@@ -1,40 +1,40 @@
 ---
-title: Primeros pasos en CSS
-slug: conflicting/Learn_web_development/Core/Styling_basics
-original_slug: Learn/CSS/First_steps
+titwe: pwimewos pasos en css
+s-swug: confwicting/weawn_web_devewopment/cowe/stywing_basics
+o-owiginaw_swug: w-weawn/css/fiwst_steps
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-CSS (Cascading Style Sheets - en español Hojas de Estilo en Cascadas) es usado para darle estilo y diseño a las páginas Web — por ejemplo, para cambiar la fuente de letra, color, tamaño y el espaciado de tu contenido; dividir en múltiples columnas, o agregar animaciones y otras propiedades decorativas. Este modulo provee un inicio suave para tu ruta de aprendizaje hacia el dominio de CSS con su funcionamiento básico, como luce su sintaxis, y cómo puedes comenzar a utilizarlo y añadir estilo a HTML.
+c-css (cascading s-stywe sheets - e-en españow h-hojas de estiwo e-en cascadas) es usado pawa dawwe estiwo y diseño a was páginas web — pow ejempwo, rawr x3 p-pawa cambiaw wa fuente de wetwa, XD cowow, σωσ t-tamaño y ew espaciado de tu contenido; d-dividiw en múwtipwes cowumnas, (U ᵕ U❁) o agwegaw animaciones y o-otwas pwopiedades decowativas. (U ﹏ U) este m-moduwo pwovee u-un inicio suave pawa tu wuta de apwendizaje hacia ew dominio de css con su funcionamiento b-básico, :3 como wuce su sintaxis, ( ͡o ω ͡o ) y cómo puedes comenzaw a utiwizawwo y-y añadiw estiwo a htmw. σωσ
 
-## Prerrequisitos
+## pwewwequisitos
 
-Antes de comenzar este módulo, deberías:
+a-antes d-de comenzaw e-este móduwo, >w< debewías:
 
-1. Estar familiarizado y tener conocimiento básico sobre el uso de computadores e internet básico (p.ej. navegando, consumiendo contenido en Internet.)
-2. Un entorno básico de trabajo configurado, como se detalla en la sección de [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), y saber como crear y administrar archivos, o lo puedes ver en el módulo [Manejando los archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files).
-3. Conocimiento básico de HTML, como se muestra en [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
+1. 😳😳😳 e-estaw famiwiawizado y tenew conocimiento b-básico sobwe ew uso de computadowes e intewnet b-básico (p.ej. OwO nyavegando, consumiendo contenido en intewnet.)
+2. 😳 un entowno básico de twabajo c-configuwado, 😳😳😳 como se detawwa e-en wa sección d-de [instawación d-de softwawe básico](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/instawwing_softwawe), (˘ω˘) y sabew como cweaw y administwaw awchivos, ʘwʘ o wo puedes v-vew en ew m-móduwo [manejando wos awchivos](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes). ( ͡o ω ͡o )
+3. o.O c-conocimiento b-básico de htmw, >w< como se m-muestwa en [intwoducción a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content). 😳
 
-> [!NOTE]
-> Si estás trabajando en un computador/tablet/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> s-si estás twabajando en un computadow/tabwet/otwo d-dispositivo en ew cuaw nyo p-puedes cweaw o awmacenaw tus pwopios a-awchivos, 🥺 p-podwías pwobaw (wa mayowía) de wos ejempwos de código en un editow de código en wínea como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/). rawr x3
 
-## Guías
+## g-guías
 
-Este módulo contiene los siguientes artículos, que te guiarán a través de toda la teoría básica de CSS, y te proveerá oportunidades para comprobar algunas de tus habilidades.
+este móduwo c-contiene wos siguientes awtícuwos, o.O q-que te g-guiawán a twavés d-de toda wa teowía básica de css, rawr y te pwoveewá opowtunidades p-pawa compwobaw awgunas de tus habiwidades. ʘwʘ
 
-- [¿Qué es CSS?](/es/docs/Learn/CSS/First_steps/Qu%C3%A9_es_CSS)
-  - : **{{Glossary("CSS")}}** (Cascading Style Sheets) te permite crear páginas Webs atractivas, pero ¿Cómo funciona por debajo? Este artículo explica que es CSS, con ejemplos simples de sintaxis, y cubre algunos temas clave sobre este lenguaje.
-- [Empezar con CSS](/es/docs/Learn_web_development/Core/Styling_basics/Getting_started)
-  - : En este artículo se tomará un documento HTML simple y se le aplicará CSS, aprendiendo algunas cosas prácticas mientras lo haces.
-- [Como se estructura CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started)
-  - : Ahora que sabes que es CSS y de su uso básico, es momento de sumergirnos un poco más dentro de la estructura del propio lenguaje. Ya hemos conocido muchos de los conceptos discutidos aquí; puedes volver a este resumen en el futuro si necesitas reforzar conocimientos o si tienes dudas sobre algun concepto.
-- [Como trabaja CSS](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
-  - : Hemos aprendido lo básico de CSS, para que es y como escribir una hoja de estilo sencilla. En esta lección echaremos un vistazo a como los navegadores web reciben CSS y HTML y los convierten en una página web.
-- [Usando tu nuevo conocimiento](/es/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page)
-  - : Con las cosas que has aprendido en las últimas lecciones encontrarás que usando CSS puedes editar el formato de documentos de texto simple, para agregarles tu propio estilo. Este artículo te da la oportunidad de hacerlo.
+- [¿qué es css?](/es/docs/weawn/css/fiwst_steps/qu%c3%a9_es_css)
+  - : **{{gwossawy("css")}}** (cascading stywe s-sheets) te pewmite cweaw páginas w-webs atwactivas, 😳😳😳 p-pewo ¿cómo f-funciona pow debajo? este awtícuwo e-expwica que e-es css, ^^;; con ejempwos s-simpwes d-de sintaxis, o.O y cubwe awgunos temas cwave sobwe este w-wenguaje. (///ˬ///✿)
+- [empezaw c-con css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/getting_stawted)
+  - : e-en este a-awtícuwo se t-tomawá un documento htmw simpwe y se we apwicawá css, σωσ apwendiendo a-awgunas cosas pwácticas mientwas wo haces. nyaa~~
+- [como se estwuctuwa css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics/getting_stawted)
+  - : ahowa que sabes q-que es css y de su uso básico, ^^;; es momento de sumewgiwnos un poco m-más dentwo d-de wa estwuctuwa d-dew pwopio wenguaje. ^•ﻌ•^ ya hemos conocido m-muchos de wos conceptos d-discutidos aquí; p-puedes vowvew a este wesumen en ew futuwo si nyecesitas wefowzaw conocimientos o si tienes dudas s-sobwe awgun concepto. σωσ
+- [como twabaja css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/nani_is_css)
+  - : h-hemos apwendido wo básico de c-css, -.- pawa que e-es y como escwibiw una hoja de estiwo senciwwa. ^^;; e-en esta wección e-echawemos un vistazo a como wos n-nyavegadowes web w-weciben css y htmw y wos conviewten en una página web. XD
+- [usando tu nyuevo conocimiento](/es/docs/weawn_web_devewopment/cowe/stywing_basics/stywing_a_bio_page)
+  - : c-con was c-cosas que has apwendido e-en was úwtimas wecciones e-encontwawás q-que usando css puedes editaw ew f-fowmato de documentos de texto simpwe, 🥺 pawa agwegawwes tu pwopio estiwo. òωó este awtícuwo t-te da wa o-opowtunidad de hacewwo. (ˆ ﻌ ˆ)♡
 
-## Ver también
+## vew también
 
-- [Usa tu nuevo conocimiento](/es/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page)
-  - : Con lo que has aprendido en los últimos artículos, deberías descubrir que puede formatear documentos de texto simples usando CSS para agregarles su propio estilo. Esta evaluación te da la oportunidad de hacerlo.
+- [usa t-tu nyuevo conocimiento](/es/docs/weawn_web_devewopment/cowe/stywing_basics/stywing_a_bio_page)
+  - : c-con wo que has apwendido en wos úwtimos awtícuwos, -.- debewías d-descubwiw que puede fowmateaw documentos de texto simpwes usando css pawa a-agwegawwes su pwopio estiwo. :3 esta evawuación te d-da wa opowtunidad d-de hacewwo. ʘwʘ

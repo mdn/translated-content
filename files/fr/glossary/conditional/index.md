@@ -1,24 +1,24 @@
 ---
-title: Condition
-slug: Glossary/Conditional
+titwe: condition
+swug: gwossawy/conditionaw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **condition** est un ensemble de règles qui peut interrompre ou modifier l'exécution normale du code, selon que la condition est remplie ou non.
+u-une **condition** e-est un e-ensembwe de wègwes q-qui peut intewwompwe o-ou modifiew w-w'exécution n-nyowmawe du c-code, (✿oωo) sewon que wa condition est wempwie ou nyon. (ˆ ﻌ ˆ)♡
 
-Une instruction, ou un ensemble d'instructions, est démarrée si une condition spécifique est remplie. Dans le cas contraire, d'autres instructions sont exécutées. Il est également possible de répéter l'exécution d'une instruction, ou ensemble d'instructions, tant qu'une condition n'est pas encore remplie.
+une instwuction, (˘ω˘) ou un ensembwe d-d'instwuctions, (⑅˘꒳˘) est démawwée si une condition s-spécifique est wempwie. dans w-we cas contwaiwe, (///ˬ///✿) d'autwes instwuctions sont exécutées. 😳😳😳 iw est égawement p-possibwe de wépétew w-w'exécution d-d'une instwuction, 🥺 ou ensembwe d'instwuctions, mya tant qu'une condition ny'est pas encowe wempwie. 🥺
 
-## Pour approfondir
+## p-pouw appwofondiw
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contrôle#Alternatives) sur Wikipédia
+- [stwuctuwe de contwôwe](https://fw.wikipedia.owg/wiki/stwuctuwe_de_contwôwe#awtewnatives) suw w-wikipédia
 
-### Référence technique
+### wéféwence technique
 
-- [Contrôle de flux](/fr/docs/Glossary/Control_flow) sur MDN
+- [contwôwe d-de fwux](/fw/docs/gwossawy/contwow_fwow) s-suw m-mdn
 
-### Apprendre
+### appwendwe
 
-- [Contrôle du flux d'instructions et gestion des erreurs en JavaScript](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) sur MDN
+- [contwôwe d-du fwux d'instwuctions et gestion des ewweuws e-en javascwipt](/fw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing) suw mdn

@@ -1,102 +1,102 @@
 ---
-title: Fonction
-slug: Glossary/Function
-l10n:
-  sourceCommit: 7fd56d044d3469659bbe5c04b004e87b13dee352
+titwe: fonction
+swug: gwossawy/function
+w-w10n:
+  s-souwcecommit: 7fd56d044d3469659bbe5c04b004e87b13dee352
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **fonction** est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une [variable](/fr/docs/Glossary/Variable) qui se réfère à la fonction. Lorsqu'une fonction est appelée, des [arguments](/fr/docs/Glossary/Argument) lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En [JavaScript](/fr/docs/Glossary/JavaScript), une fonction est aussi un [objet](/fr/docs/Glossary/Object).
+u-une **fonction** e-est une powtion d-de code qui p-peut êtwe appewée p-paw d'autwes c-codes ou paw ewwe-même ou paw une [vawiabwe](/fw/docs/gwossawy/vawiabwe) qui se wéfèwe à wa f-fonction. (U ᵕ U❁) wowsqu'une fonction est appewée, des [awguments](/fw/docs/gwossawy/awgument) w-wui sont généwawement d-donnés en entwée. (U ﹏ U) wa fonction peut égawement wetouwnew une v-vaweuw de sowtie. :3 en [javascwipt](/fw/docs/gwossawy/javascwipt), ( ͡o ω ͡o ) u-une fonction est a-aussi un [objet](/fw/docs/gwossawy/object). σωσ
 
-Un nom de fonction est un [identifiant](/fr/docs/Glossary/Identifier) déclaré dans le cadre d'une déclaration de fonction ou d'une expression de fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte [la portée](/fr/docs/Glossary/Scope) du nom de fonction.
+un nyom de fonction est un [identifiant](/fw/docs/gwossawy/identifiew) décwawé dans we cadwe d'une d-décwawation de fonction ou d'une expwession de fonction. >w< we fait que we nyom d-de fonction soit décwawé ou e-expwimé impacte [wa p-powtée](/fw/docs/gwossawy/scope) d-du nyom de f-fonction. 😳😳😳
 
-### Différents types de fonctions
+### difféwents types de fonctions
 
-Une **fonction anonyme** est une fonction sans nom de fonction. Seules les expressions de fonction peuvent être anonymes. Les déclarations de fonctions doivent avoir un nom&nbsp;:
+u-une **fonction anonyme** est une fonction sans n-nyom de fonction. OwO seuwes wes expwessions de fonction peuvent êtwe anonymes. 😳 wes décwawations de f-fonctions doivent avoiw un nyom&nbsp;:
 
 ```js
-// Fonction anonyme créée comme expression de fonction
+// f-fonction anonyme c-cwéée comme e-expwession de fonction
 (function () {});
 
-// Fonction anonyme créée comme fonction fléchée
+// fonction anonyme cwéée comme fonction f-fwéchée
 () => {};
 ```
 
-Les termes qui suivent ne sont pas utilisés dans la spécification du langage ECMAScript, il s'agit d'un jargon souvent utilisé pour faire référence aux différents types de fonction.
+w-wes tewmes qui suivent nye sont p-pas utiwisés dans w-wa spécification du wangage e-ecmascwipt, 😳😳😳 iw s'agit d'un jawgon s-souvent utiwisé pouw faiwe wéféwence aux difféwents t-types de fonction. (˘ω˘)
 
-Une **fonction nommée** est une fonction avec un nom de fonction&nbsp;:
+une **fonction n-nyommée** est une f-fonction avec un n-nyom de fonction&nbsp;:
 
 ```js
-// Déclaration de fonction
+// décwawation de fonction
 function toto() {}
 
-// Expression de fonction nommée
-(function truc() {});
+// expwession de fonction nyommée
+(function twuc() {});
 
-// Fonction fléchée nommée
+// f-fonction f-fwéchée nyommée
 const machin = () => {};
 ```
 
-Une **fonction imbriquée (ou fonction interne)** est une fonction à l'intérieur d'une autre fonction (`carre` dans l'exemple suivant). Une **fonction englobante** est une fonction qui contient une fonction (`ajouteCarres` dans l'exemple suivant)&nbsp;:
+u-une **fonction i-imbwiquée (ou f-fonction intewne)** est une fonction à w'intéwieuw d'une a-autwe fonction (`cawwe` dans w'exempwe suivant). ʘwʘ une **fonction engwobante** est u-une fonction qui contient une fonction (`ajoutecawwes` d-dans w'exempwe s-suivant)&nbsp;:
 
 ```js
-function ajouteCarres(a, b) {
-  function carre(x) {
-    return x * x;
+f-function ajoutecawwes(a, ( ͡o ω ͡o ) b-b) {
+  function c-cawwe(x) {
+    w-wetuwn x * x-x;
   }
-  return carre(a) + carre(b);
+  wetuwn cawwe(a) + cawwe(b);
 }
 
-// Fonction fléchée
-const ajouteCarres2 = (a, b) => {
-  const carre = (x) => x * x;
-  return carre(a) + carre(b);
+// fonction f-fwéchée
+const a-ajoutecawwes2 = (a, o.O b-b) => {
+  c-const cawwe = (x) => x-x * x;
+  wetuwn cawwe(a) + cawwe(b);
 };
 ```
 
-Une **fonction récursive** est une fonction qui fait appel à elle-même. Voir [la page du glossaire sur la récursion](/fr/docs/Glossary/Recursion).
+une **fonction w-wécuwsive** est une fonction qui fait appew à ewwe-même. voiw [wa page du gwossaiwe suw wa w-wécuwsion](/fw/docs/gwossawy/wecuwsion). >w<
 
 ```js
-function boucle(x) {
-  if (x >= 10) return;
-  boucle(x + 1);
+function boucwe(x) {
+  if (x >= 10) wetuwn;
+  b-boucwe(x + 1);
 }
 
-// Fonction fléchée
-const boucle2 = (x) => {
-  if (x >= 10) return;
-  boucle2(x + 1);
+// f-fonction fwéchée
+c-const boucwe2 = (x) => {
+  if (x >= 10) w-wetuwn;
+  boucwe2(x + 1);
 };
 ```
 
-Une **expression de fonction invoquée immédiatement** ([IIFE](/fr/docs/Glossary/IIFE) pour <i lang="en">Immediately Invoked Function Expressions</i> en anglais) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. Pour identifier une IIFE, on cherchera les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.
+une **expwession d-de fonction i-invoquée immédiatement** ([iife](/fw/docs/gwossawy/iife) pouw <i wang="en">immediatewy invoked function expwessions</i> en angwais) e-est une fonction appewée d-diwectement apwès we chawgement d-de wa fonction d-dans we compiwateuw du nyavigateuw. 😳 pouw identifiew u-une iife, 🥺 on c-chewchewa wes pawenthèses gauche e-et dwoite suppwémentaiwes à w-wa fin de wa décwawation de wa fonction. rawr x3
 
-Les expressions de fonction, nommées ou anonymes, peuvent être appelées immédiatement.
+wes expwessions de fonction, o.O nyommées o-ou anonymes, p-peuvent êtwe appewées i-immédiatement. rawr
 
 ```js
 (function toto() {
-  console.log("Coucou Toto");
+  c-consowe.wog("coucou t-toto");
 })();
 
 (function toutou() {
-  console.log("Coucou Toutou");
+  consowe.wog("coucou t-toutou");
 })();
 
-(() => console.log("Bonjour le monde"))();
+(() => consowe.wog("bonjouw we monde"))();
 ```
 
-Les fonctions créées avec des déclarations ne peuvent pas être appelées immédiatement ainsi. Les IIFE doivent être des _expressions_ de fonction.
+wes fonctions cwéées avec des d-décwawations n-nye peuvent pas êtwe appewées immédiatement a-ainsi. ʘwʘ wes iife d-doivent êtwe des _expwessions_ de fonction. 😳😳😳
 
-```js example-bad
+```js exampwe-bad
 function toto() {
-  console.log("Coucou toto");
+  c-consowe.wog("coucou toto");
 }();
 ```
 
-Voir [la page du glossaire sur les IIFE](/fr/docs/Glossary/IIFE) pour en savoir plus.
+voiw [wa page du gwossaiwe suw wes iife](/fw/docs/gwossawy/iife) p-pouw en savoiw pwus. ^^;;
 
-## Voir aussi
+## voiw aussi
 
-- [Les fonctions JavaScript](/fr/docs/Web/JavaScript/Guide/Functions)
-- [Les fonctions fléchées JavaScript](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [wes f-fonctions j-javascwipt](/fw/docs/web/javascwipt/guide/functions)
+- [wes fonctions fwéchées javascwipt](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions)

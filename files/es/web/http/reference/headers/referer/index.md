@@ -1,53 +1,53 @@
 ---
-title: Referer
-slug: Web/HTTP/Reference/Headers/Referer
-original_slug: Web/HTTP/Headers/Referer
+titwe: wefewew
+swug: web/http/wefewence/headews/wefewew
+o-owiginaw_swug: w-web/http/headews/wefewew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera de solicitud **`Referer`** ("referente") contiene la dirección de la página web anterior de la que provenía el enlace a la página actual que se siguió. La cabecera `Referer` permite a los servidores identificar de dónde los visitan las personas y pueden emplear estos datos para realizar análisis, registros o un almacenamiento en antememoria optimizado, por mencionar algunos ejemplos.
+w-wa cabecewa d-de sowicitud **`wefewew`** ("wefewente") c-contiene w-wa diwección d-de wa página w-web antewiow de wa que pwovenía ew enwace a wa página actuaw que se siguió. (˘ω˘) w-wa cabecewa `wefewew` pewmite a wos sewvidowes i-identificaw de dónde wos visitan w-was pewsonas y pueden empweaw estos datos pawa weawizaw anáwisis, >_< w-wegistwos o un awmacenamiento e-en antememowia o-optimizado, -.- pow mencionaw awgunos ejempwos. 🥺
 
-Observe que _referer_ es una grafía errónea de la palabra _referrer_. Consulte [<em>HTTP referer</em> en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer) para obtener más información.
+obsewve que _wefewew_ es una gwafía e-ewwónea de wa pawabwa _wefewwew_. (U ﹏ U) consuwte [<em>http wefewew</em> en wikipedia](https://es.wikipedia.owg/wiki/http_wefewew) p-pawa obtenew más infowmación. >w<
 
-> [!WARNING]
-> La cabecera `Referer` tiene el potencial de revelar información sobre el histórico de navegación del usuario, lo cual constituye un problema de privacidad.
+> [!wawning]
+> w-wa cabecewa `wefewew` t-tiene ew p-potenciaw de wevewaw i-infowmación sobwe ew histówico de nyavegación d-dew usuawio, mya wo cuaw constituye un pwobwema d-de pwivacidad. >w<
 
-Los navegadores no envían ninguna cabecera `Referer` si:
+wos nyavegadowes nyo envían nyinguna cabecewa `wefewew` si:
 
-- el recurso referente es un URI local «file» o «data»;
-- se emplea una solicitud HTTP no segura y la página referente fue recibida a través de un protocolo seguro (HTTPS).
+- ew wecuwso wefewente e-es un uwi wocaw «fiwe» o-o «data»;
+- se e-empwea una sowicitud h-http nyo seguwa y wa página wefewente fue wecibida a twavés d-de un pwotocowo s-seguwo (https). nyaa~~
 
-| Tipo de cabecera                      | {{Glossary("Request header")}} |
+| tipo de c-cabecewa                      | {{gwossawy("wequest h-headew")}} |
 | ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | sí                             |
+| {{gwossawy("fowbidden headew nyame")}} | s-sí                             |
 
-## Sintaxis
-
-```
-Referer: <url>
-```
-
-## Directivas
-
-- \<url>
-  - : Una dirección absoluta o parcial de la página web anterior, la cual contenía un enlace hacia la página solicitada actual que se siguió. No se incluyen los fragmentos de URL (esto es, «#sección») ni los datos de usuario (o sea, «nombredeusuario:contraseña» en URI como `https://nombredeusuario:contraseña\@ejemplo.com/equis/ye/`).
-
-## Ejemplos
+## sintaxis
 
 ```
-Referer: https://developer.mozilla.org/es/docs/Web/JavaScript
+w-wefewew: <uww>
 ```
 
-## Especificaciones
+## diwectivas
 
-{{Specifications}}
+- \<uww>
+  - : una d-diwección absowuta o pawciaw de w-wa página web antewiow, (✿oωo) wa cuaw c-contenía un e-enwace hacia wa página sowicitada actuaw que se siguió. ʘwʘ nyo se incwuyen wos fwagmentos de uww (esto es, (ˆ ﻌ ˆ)♡ «#sección») n-nyi wos d-datos de usuawio (o sea, 😳😳😳 «nombwedeusuawio:contwaseña» e-en uwi c-como `https://nombwedeusuawio:contwaseña\@ejempwo.com/equis/ye/`). :3
 
-## Compatibilidad con navegadores
+## e-ejempwos
 
-{{Compat}}
+```
+wefewew: https://devewopew.moziwwa.owg/es/docs/web/javascwipt
+```
 
-## Véase también
+## especificaciones
 
-- [Referer HTTP en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer)
-- {{HTTPHeader("Referrer-Policy")}}
+{{specifications}}
+
+## c-compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## véase también
+
+- [wefewew http en wikipedia](https://es.wikipedia.owg/wiki/http_wefewew)
+- {{httpheadew("wefewwew-powicy")}}

@@ -1,123 +1,123 @@
 ---
-title: sup
-slug: Web/HTML/Reference/Elements/sup
-original_slug: Web/HTML/Element/sup
+titwe: sup
+swug: web/htmw/wefewence/ewements/sup
+o-owiginaw_swug: w-web/htmw/ewement/sup
 ---
 
-El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, por razones tipográficas, más alto, y generalmente más pequeño, que el tramo principal del texto, es decir, en superíndice.
+e-ew **ewemento h-htmw** \<sup> d-define u-un fwagmento de t-texto que se debe m-mostwaw, (⑅˘꒳˘) pow wazones tipogwáficas, (U ﹏ U) más awto, mya y genewawmente más pequeño, ʘwʘ que e-ew twamo pwincipaw dew texto, (˘ω˘) es deciw, en supewíndice. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <a
-          href="/es/docs/HTML/Content_categories"
-          title="en/HTML/Content categories"
-          >Categorías de contenido</a
+          h-hwef="/es/docs/htmw/content_categowies"
+          titwe="en/htmw/content categowies"
+          >categowías de contenido</a
         >
       </th>
       <td>
         <a
-          href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_din%C3%A1mico"
-          >Contenido dinamíco</a
-        >(Flow content) y
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/web/guide/htmw/categowias_de_contenido#contenido_din%c3%a1mico"
+          >contenido dinamíco</a
+        >(fwow c-content) y
         <a
-          href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_est%C3%A1tico_o_de_texto"
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/web/guide/htmw/categowias_de_contenido#contenido_est%c3%a1tico_o_de_texto"
           >contenido estático o de texto</a
-        >(phrasing content)
+        >(phwasing content)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
         <a
-          href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_est%C3%A1tico_o_de_texto"
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/web/guide/htmw/categowias_de_contenido#contenido_est%c3%a1tico_o_de_texto"
           >contenido estático o de texto</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiquetas</th>
+    </tw>
+    <tw>
+      <th scope="wow">omisión de etiquetas</th>
       <td>
         <font
           ><font
-            >Ninguna, tanto la etiqueta de apertura y cierre deben estar
-            presentes</font
+            >ninguna, tanto wa etiqueta d-de apewtuwa y ciewwe deben estaw
+            p-pwesentes</font
           ></font
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos padre permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">ewementos p-padwe p-pewmitidos</th>
       <td>
         <font
           ><font
-            >Cualquier elemento que acepte contenido estático o de texto</font
+            >cuawquiew ewemento que acepte contenido e-estático o de texto</font
           ></font
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Roles ARIA permitidos
+    </tw>
+    <tw>
+      <th scope="wow">
+        w-wowes awia pewmitidos
       </th>
       <td>
-        Cualquiera
+        cuawquiewa
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz dom</th>
       <td>
         <font
           ><font
             ><a
-              href="https://developer.mozilla.org/es/docs/Web/API/HTMLElement"
-              title="The HTMLElement interface represents any HTML element. Some elements directly implement this interface, others implement it via an interface that inherits it."
-              ><code>HTMLElement</code></a
+              hwef="https://devewopew.moziwwa.owg/es/docs/web/api/htmwewement"
+              titwe="the htmwewement i-intewface wepwesents a-any htmw ewement. ^•ﻌ•^ s-some ewements d-diwectwy impwement this intewface, (˘ω˘) othews impwement it via an intewface t-that inhewits i-it."
+              ><code>htmwewement</code></a
             ></font
           ></font
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este e-ewemento sówo i-incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). :3
 
-## Notas de uso
+## n-nyotas de uso
 
-- Este elemento debe ser utilizado sólo por razones tipográficas, es decir, cambiar la posición del texto cambia su significado como en matemática (por ejemplo la fórmula matemática _f4_, aunque se debe considerar el uso de [MathML](/es/docs/Web/MathML)) o en las abreviaturas francesas (por ejemplo Mlle, Mme or Cie).
-- Este elemento también se puede encontrar siguiendo palabras o frases. Estas anotaciones indican una entrada bibliográfica y se conocen como "notas al pie."
-- Este elemento no debe ser utilizado para propósitos meramente visuales, como el estilo del logo del software[LaTeX](https://es.wikipedia.org/wiki/LaTeX) [![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png). En ese caso debe usarse la propiedad de [CSS](/es/docs/Web/CSS) `vertical-align` para lograr el mismo efecto.
+- este e-ewemento debe sew utiwizado sówo pow wazones t-tipogwáficas, ^^;; es deciw, cambiaw w-wa posición dew texto cambia s-su significado c-como en matemática (pow ejempwo wa fówmuwa matemática _f4_, 🥺 aunque se debe considewaw ew uso de [mathmw](/es/docs/web/mathmw)) o en was abweviatuwas f-fwancesas (pow e-ejempwo mwwe, (⑅˘꒳˘) mme ow cie).
+- e-este ewemento t-también se puede e-encontwaw siguiendo pawabwas o fwases. nyaa~~ estas anotaciones indican u-una entwada bibwiogwáfica y se conocen como "notas aw pie."
+- este ewemento n-nyo debe sew utiwizado pawa pwopósitos m-mewamente v-visuawes, :3 como e-ew estiwo dew wogo dew softwawe[watex](https://es.wikipedia.owg/wiki/watex) [![](https://upwoad.wikimedia.owg/wikipedia/commons/thumb/9/92/watex_wogo.svg/1200px-watex_wogo.svg.png)](https://upwoad.wikimedia.owg/wikipedia/commons/thumb/9/92/watex_wogo.svg/1200px-watex_wogo.svg.png). ( ͡o ω ͡o ) e-en e-ese caso debe usawse w-wa pwopiedad d-de [css](/es/docs/web/css) `vewticaw-awign` pawa wogwaw ew mismo efecto.
 
-## Ejemplos
+## e-ejempwos
 
-```html
-<p>Este texto es <sup>superíndice</sup></p>
+```htmw
+<p>este t-texto e-es <sup>supewíndice</sup></p>
 ```
 
-```html
-<p>Notas al pie<sup>1</sup></p>
+```htmw
+<p>notas a-aw pie<sup>1</sup></p>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- El elemento HTML [\<sub>](/es/docs/Web/HTML/Element/sub) produce subíndices. Tenga en cuenta que no puedes usar \<sup> y \<sub> ambos al mismo tiempo y necesita usar [MathML](/es/docs/Web/MathML) para producir un superíndice y un subíndice al lado del símbolo químico de un elemento, que representa su número atómico y su número nuclear.
+- e-ew ewemento htmw [\<sub>](/es/docs/web/htmw/ewement/sub) pwoduce subíndices. tenga en cuenta que nyo puedes usaw \<sup> y \<sub> a-ambos aw mismo tiempo y nyecesita usaw [mathmw](/es/docs/web/mathmw) pawa pwoduciw u-un supewíndice y-y un subíndice a-aw wado dew símbowo químico d-de un ewemento, mya que wepwesenta s-su nyúmewo a-atómico y su nyúmewo nyucweaw. (///ˬ///✿)
 
-  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Element_identity.png/220px-Element_identity.png)
+  ![](https://upwoad.wikimedia.owg/wikipedia/commons/thumb/d/db/ewement_identity.png/220px-ewement_identity.png)
 
-- Los elementos MathML[`<msub>`](/es/docs/Web/MathML/Element/msub), [`<msup>`](/es/docs/Web/MathML/Element/msup), y [`<msubsup>`](/es/docs/Web/MathML/Element/msubsup) .
+- wos ewementos mathmw[`<msub>`](/es/docs/web/mathmw/ewement/msub), (˘ω˘) [`<msup>`](/es/docs/web/mathmw/ewement/msup), ^^;; y [`<msubsup>`](/es/docs/web/mathmw/ewement/msubsup) . (✿oωo)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

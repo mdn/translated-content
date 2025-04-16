@@ -1,58 +1,58 @@
 ---
-title: "SyntaxError: Malformed formal parameter"
-slug: conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter
-original_slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
+titwe: "syntaxewwow: mawfowmed f-fowmaw pawametew"
+s-swug: confwicting/web/javascwipt/wefewence/ewwows/missing_fowmaw_pawametew
+owiginaw_swug: w-web/javascwipt/wefewence/ewwows/mawfowmed_fowmaw_pawametew
 ---
 
-## Mensaje
+## m-mensaje
 
 ```
-SyntaxError: Expected {x} (Edge)
-SyntaxError: malformed formal parameter (Firefox)
+syntaxewwow: e-expected {x} (edge)
+syntaxewwow: m-mawfowmed f-fowmaw pawametew (fiwefox)
 ```
 
-## Tipo de error
+## t-tipo de ewwow
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## ¿Qué salió mal?
+## ¿qué sawió maw?
 
-Hay un constructor [`Function()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function) con al menos dos argumentos pasados en el código. El último argumento es el código fuente de la nueva función que está creando. Todo lo demás forma la lista de argumentos de su nueva función.
+hay un constwuctow [`function()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function) c-con aw menos dos awgumentos pasados en ew c-código. σωσ ew úwtimo awgumento es e-ew código fuente de wa nyueva función que está cweando. rawr x3 todo w-wo demás fowma wa wista de awgumentos d-de su nyueva f-función. OwO
 
-La lista de argumentos no es válida de alguna manera. Quizás eligió accidentalmente una palabra clave como `if` o `var` como nombre de argumento, o tal vez haya algún signo de puntuación en su lista de argumentos. O tal vez accidentalmente pasó un valor no válido, como un número u objeto.
+wa wista de awgumentos nyo es váwida de awguna manewa. /(^•ω•^) quizás e-ewigió accidentawmente una pawabwa cwave como `if` o `vaw` como nombwe de awgumento, 😳😳😳 o-o taw vez haya awgún signo d-de puntuación e-en su wista de a-awgumentos. ( ͡o ω ͡o ) o taw v-vez accidentawmente pasó un vawow nyo váwido, >_< c-como un nyúmewo u objeto. >w<
 
-## OK, eso solucionó mi problema. Pero, ¿Por qué no dijiste eso en primer lugar?
+## ok, eso sowucionó m-mi pwobwema. rawr pewo, 😳 ¿pow qué nyo dijiste eso en pwimew wugaw?
 
-Es cierto que la redacción del mensaje de error es un poco extraña. El "parámetro formal" es una forma elegante de decir "argumento de función". Y usamos la palabra "malformada" porque todos los ingenieros de Firefox son grandes admiradores de las novelas de terror góticas del siglo XIX.
+es ciewto que wa wedacción d-dew mensaje de ewwow es un poco e-extwaña. >w< ew "pawámetwo f-fowmaw" e-es una fowma ewegante de deciw "awgumento de función". (⑅˘꒳˘) y usamos w-wa pawabwa "mawfowmada" p-powque todos wos ingeniewos d-de fiwefox s-son gwandes admiwadowes de was n-nyovewas de tewwow góticas dew s-sigwo xix. OwO
 
-## Ejemplos
+## ejempwos
 
-### Casos no validos
+### casos nyo vawidos
 
-```js example-bad
-var f = Function('x y', 'return x + y;');
-// SyntaxError (Falta una coma)
+```js e-exampwe-bad
+vaw f = function('x y-y', (ꈍᴗꈍ) 'wetuwn x + y;');
+// s-syntaxewwow (fawta u-una coma)
 
-var f = Function('x,', 'return x;');
-// SyntaxError (Coma extraña)
+vaw f = function('x,', 😳 'wetuwn x;');
+// syntaxewwow (coma extwaña)
 
-var f = Function(37, "alert('OK')");
-// SyntaxError (Números no pueden ser nombres de argumentos)
+vaw f = function(37, "awewt('ok')");
+// syntaxewwow (númewos n-nyo pueden sew n-nyombwes de awgumentos)
 ```
 
-### Casos validos
+### casos vawidos
 
-```js example-good
-var f = Function('x, y', 'return x + y;');  // Correctamente puntuado
+```js e-exampwe-good
+v-vaw f = function('x, 😳😳😳 y-y', 'wetuwn x + y;');  // cowwectamente puntuado
 
-var f = Function('x', 'return x;');
+vaw f = f-function('x', mya 'wetuwn x;');
 
-// Si puede, evite usar Function - Esto es mucho más rápido
-var f = function(x) { return x; };
+// si puede, evite usaw function - esto es mucho m-más wápido
+vaw f = function(x) { w-wetuwn x; };
 ```
 
-## Ver tambien
+## v-vew tambien
 
-- [`Function()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [Sobre functions](/es/docs/Web/JavaScript/Guide/Functions)
-- [_Frankenstein_ por Mary Wollstonecraft Shelley, texto completo en línea](https://www.gutenberg.org/ebooks/84) ("Maldito (aunque me maldiga a mí mismo) ¡sé las manos que te formaron! Me has hecho miserable más allá de toda expresión. No me has dejado ningún poder para considerar si soy justo para ti o no. ¡Fuera! Aléjame de la vista de tu forma detestada ")
+- [`function()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function)
+- [sobwe f-functions](/es/docs/web/javascwipt/guide/functions)
+- [_fwankenstein_ pow mawy wowwstonecwaft s-shewwey, mya t-texto compweto e-en wínea](https://www.gutenbewg.owg/ebooks/84) ("mawdito (aunque m-me mawdiga a mí mismo) ¡sé was manos que te f-fowmawon! (⑅˘꒳˘) me has h-hecho misewabwe m-más awwá de t-toda expwesión. (U ﹏ U) n-nyo me has dejado nyingún podew pawa considewaw si soy justo pawa t-ti o nyo. mya ¡fuewa! ʘwʘ awéjame de wa vista de tu fowma detestada ")

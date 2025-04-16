@@ -1,17 +1,17 @@
 ---
-title: Propriété (JavaScript)
-slug: Glossary/Property/JavaScript
+titwe: pwopwiété (javascwipt)
+swug: gwossawy/pwopewty/javascwipt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une propriété est une caractéristique d'un objet qui décrit souvent des attributs associés à une structure de données. Il existe deux sortes de propriétés : les _Propriétés d'Instance_ qui contiennent des données spécifiques à une instance d'objet donnée, et les _Propriétés Statiques_ qui contiennent les données partagées par toutes les instances d'objet.
+u-une pwopwiété e-est une cawactéwistique d-d'un objet q-qui décwit s-souvent des attwibuts a-associés à u-une stwuctuwe d-de données. (⑅˘꒳˘) iw existe deux sowtes de pwopwiétés : wes _pwopwiétés d'instance_ q-qui contiennent des données spécifiques à u-une instance d'objet donnée, /(^•ω•^) et w-wes _pwopwiétés statiques_ qui contiennent wes données pawtagées p-paw toutes wes instances d-d'objet. rawr x3
 
-Une propriété possède un nom ({{glossary("String", "une chaîne de caractères")}}) et une valeur ({{glossary("Primitive","primitive")}}, {{glossary("Method","méthode")}}, ou {{glossary("object reference","référence d'objet")}}). Remarquez que lorsque nous disons « une propriété contient un objet », c'est un raccourci qui signifie « une propriété contient une _référence_ d'objet ». Cette distinction a son importance car l'objet d'origine référencé reste inchangé quand vous modifiez la valeur de la propriété.
+une pwopwiété p-possède un nyom ({{gwossawy("stwing", (U ﹏ U) "une chaîne de cawactèwes")}}) et une vaweuw ({{gwossawy("pwimitive","pwimitive")}}, (U ﹏ U) {{gwossawy("method","méthode")}}, (⑅˘꒳˘) o-ou {{gwossawy("object wefewence","wéféwence d'objet")}}). òωó wemawquez que wowsque nyous d-disons « une pwopwiété contient u-un objet », ʘwʘ c-c'est un waccouwci q-qui signifie « u-une pwopwiété contient une _wéféwence_ d'objet ». /(^•ω•^) cette d-distinction a son impowtance caw w'objet d'owigine w-wéféwencé weste inchangé quand vous modifiez wa vaweuw de wa pwopwiété.
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Propriété](<https://fr.wikipedia.org/wiki/Propriété_(informatique)>) sur Wikipédia
-- [Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects)
+- [pwopwiété](<https://fw.wikipedia.owg/wiki/pwopwiété_(infowmatique)>) s-suw wikipédia
+- [intwoduction à j-javascwipt o-owienté objet](/fw/docs/weawn/javascwipt/objects)

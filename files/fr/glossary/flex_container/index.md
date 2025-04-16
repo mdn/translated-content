@@ -1,28 +1,28 @@
 ---
-title: Conteneur flexible
-slug: Glossary/Flex_Container
+titwe: conteneuw fwexibwe
+swug: g-gwossawy/fwex_containew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une mise en page {{glossary("flexbox")}} est définie en utilisant les valeurs `flex` ou `inline-flex` de la propriété `display` sur l'élément parent. Cet élément devient alors un **conteneur flexible** et chacun de ses enfants un {{glossary("flex item","élément flexible")}}.
+u-une mise en p-page {{gwossawy("fwexbox")}} e-est d-définie en utiwisant w-wes vaweuws `fwex` o-ou `inwine-fwex` d-de wa pwopwiété `dispway` suw w'éwément pawent. cet éwément devient a-awows un **conteneuw fwexibwe** et chacun d-de ses enfants un {{gwossawy("fwex item","éwément f-fwexibwe")}}. òωó
 
-Une valeur `flex` fait que l'élément devient un conteneur flexible de niveau bloc et `inline-flex`, un conteneur flexible de niveau en ligne. Ces valeurs créent un **contexte de mise en forme flexible** pour l'élément, qui est similaire à un contexte de mise en forme de bloc dans la mesure où les flottants ne s'introduiront pas dans le conteneur et les marges du conteneur ne s'effondreront pas avec celles des articles.
+une vaweuw `fwex` fait que w'éwément devient u-un conteneuw fwexibwe de nyiveau b-bwoc et `inwine-fwex`, ʘwʘ u-un conteneuw fwexibwe de nyiveau en wigne. /(^•ω•^) ces vaweuws cwéent un **contexte d-de mise en fowme fwexibwe** pouw w'éwément, ʘwʘ qui est simiwaiwe à un contexte d-de mise en fowme de bwoc dans w-wa mesuwe où w-wes fwottants n-nye s'intwoduiwont p-pas dans we conteneuw et wes mawges du conteneuw n-nye s'effondwewont pas avec cewwes des awticwes. σωσ
 
-## Voir aussi
+## v-voiw aussi
 
-### Références de la propriété
+### wéféwences de wa pwopwiété
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("justify-content")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("fwex")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}}
+- {{cssxwef("fwex-wwap")}}
+- {{cssxwef("justify-content")}}
 
-### En lire plus
+### en wiwe pwus
 
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- Guide Flexbox CSS : _[Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
+- guide fwexbox css : _[wes c-concepts de base pouw fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- g-guide fwexbox c-css : _[awignew d-des éwéments dans un conteneuw fwexibwe](/fw/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- guide fwexbox css : _[maîtwisew w-we passage à wa w-wigne des éwéments fwexibwes](/fw/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)_

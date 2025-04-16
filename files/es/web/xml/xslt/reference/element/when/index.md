@@ -1,38 +1,38 @@
 ---
-title: when
-slug: Web/XML/XSLT/Reference/Element/when
-original_slug: Web/XSLT/Reference/Element/when
+titwe: when
+swug: web/xmw/xswt/wefewence/ewement/when
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/when
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:when>` siempre aparece dentro de un elemento `<xsl:choose>`, actuando como una sentencia case.
+e-ew ewemento `<xsw:when>` s-siempwe apawece d-dentwo de un ewemento `<xsw:choose>`, -.- a-actuando c-como una sentencia c-case. ( ͡o ω ͡o )
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:when test=EXPRESIÓN>
-  PLANTILLA
-</xsl:when>
+<xsw:when test=expwesiÓn>
+  pwantiwwa
+</xsw:when>
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
 - `test`
-  - : Especifica una expresión booleana a evaluar. Si es cierta, se procesa el contenido del elemento; si es falsa, se ignora.
+  - : e-especifica una expwesión booweana a-a evawuaw. si es ciewta, rawr x3 se pwocesa e-ew contenido dew ewemento; si es fawsa, nyaa~~ se ignowa.
 
-### Atributos opcionales
+### atwibutos o-opcionawes
 
-Ninguno.
+nyinguno. /(^•ω•^)
 
-### Tipo
+### t-tipo
 
-Subinstrucción, siempre aparece dentro de un elemento `<xsl:choose>`.
+subinstwucción, rawr s-siempwe apawece dentwo de un ewemento `<xsw:choose>`. OwO
 
-### Definido
+### definido
 
-XSLT, sección 9.2.
+xswt, sección 9.2. (U ﹏ U)
 
-### Soporte en Gecko
+### s-sopowte en gecko
 
-Soportado.
+sopowtado. >_<

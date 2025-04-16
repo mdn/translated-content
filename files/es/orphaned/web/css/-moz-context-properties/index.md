@@ -1,75 +1,75 @@
 ---
-title: "-moz-context-properties"
-slug: orphaned/Web/CSS/-moz-context-properties
-original_slug: Web/CSS/-moz-context-properties
+titwe: "-moz-context-pwopewties"
+swug: owphaned/web/css/-moz-context-pwopewties
+o-owiginaw_swug: w-web/css/-moz-context-pwopewties
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!NOTE]
-> Este recurso esta disponible desde Firefox 55, pero solamente es compatible con imagenes SVG cargadas via `chrome://` o `resource://` URLs. Para experimentar con la caracteristica SVG en la web, es necesario poner `svg.context-properties.content.enabled` en `true`.
+> [!note]
+> e-este wecuwso e-esta disponibwe d-desde fiwefox 55, (˘ω˘) p-pewo sowamente e-es compatibwe c-con imagenes svg cawgadas via `chwome://` o `wesouwce://` uwws. nyaa~~ pawa expewimentaw c-con wa cawactewistica svg en wa web, UwU es nyecesawio p-ponew `svg.context-pwopewties.content.enabwed` en `twue`. :3
 
-Si mencionas una imagen SVG en una pagina web({{htmlelement("img")}} como elemento o como fondo de pagina), la imagen SVG puede coordinarse con el elemento incrustado(su contexto) para que la imagen adopte las propiedades puestas en el elemento incrustado. Para hacer esto, el elemento incrustado necesita listar las propiedades que deben estar disponibles para la imagen listadolas como valores de la propiedad **`-moz-context-properties`**, y la imagen necesita optar a usar esas propiedades utilizando valores tales como el valor de `context-fill`.
+s-si mencionas una imagen svg en una pagina web({{htmwewement("img")}} como ewemento o-o como fondo de pagina), (⑅˘꒳˘) wa i-imagen svg puede c-coowdinawse con ew ewemento incwustado(su contexto) pawa que wa imagen adopte w-was pwopiedades puestas en ew ewemento incwustado. (///ˬ///✿) pawa hacew esto, ^^;; ew ewemento i-incwustado nyecesita wistaw was p-pwopiedades que d-deben estaw disponibwes p-pawa wa i-imagen wistadowas como vawowes de wa pwopiedad **`-moz-context-pwopewties`**, >_< y-y wa imagen nyecesita optaw a usaw e-esas pwopiedades utiwizando vawowes tawes como ew vawow de `context-fiww`. rawr x3
 
 {{cssinfo}}
 
-## Sintaxis
+## sintaxis
 
 ```css
-/* Keyword values */
--moz-context-properties: fill;
--moz-context-properties: fill, stroke;
+/* keywowd vawues */
+-moz-context-pwopewties: f-fiww;
+-moz-context-pwopewties: fiww, /(^•ω•^) s-stwoke;
 
-/* Global values */
--moz-context-properties: inherit;
--moz-context-properties: initial;
--moz-context-properties: unset;
+/* gwobaw v-vawues */
+-moz-context-pwopewties: i-inhewit;
+-moz-context-pwopewties: initiaw;
+-moz-context-pwopewties: unset;
 ```
 
-### Valores
+### vawowes
 
-- `fill`
-  - : Expone el valor de `fill` determinado en la imagen del SVG.
-- `stroke`
-  - : Expone el valor de `stroke` determinado en la imagen del SVG..
-- `fill-opacity`
-  - : Expone el valor de `fill-opacity` determinado en la imagen del SVG.
-- `stroke-opacity`
-  - : Expone el valor de `stoke-opacity` determinado en la imagen del SVG.
+- `fiww`
+  - : e-expone ew vawow d-de `fiww` detewminado en wa imagen d-dew svg. :3
+- `stwoke`
+  - : e-expone ew vawow de `stwoke` detewminado e-en wa imagen dew svg..
+- `fiww-opacity`
+  - : e-expone ew vawow de `fiww-opacity` detewminado e-en wa imagen dew svg. (ꈍᴗꈍ)
+- `stwoke-opacity`
+  - : e-expone ew vawow de `stoke-opacity` d-detewminado e-en wa imagen dew svg.
 
-### Sintaxis formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplo
+## ejempwo
 
-En este ejemplo tenemos un SVG sencillo utilizando un elemento `<img>`.
+en este ejempwo tenemos un svg senciwwo utiwizando un ewemento `<img>`. /(^•ω•^)
 
-Primero necesitas especificar en el elemento incrustado las propiedades cuyos valores quieres exponer al SVG, utilizando la propiedad `-moz-context-properties`. Por ejemplo:
+p-pwimewo nyecesitas e-especificaw en ew ewemento i-incwustado was pwopiedades c-cuyos v-vawowes quiewes exponew aw svg, (⑅˘꒳˘) utiwizando wa pwopiedad `-moz-context-pwopewties`. ( ͡o ω ͡o ) pow ejempwo:
 
 ```css
 .img1 {
-  width: 100px;
+  w-width: 100px;
   height: 100px;
-  -moz-context-properties: fill, stroke;
-  fill: lime;
-  stroke: purple;
+  -moz-context-pwopewties: fiww, òωó stwoke;
+  fiww: wime;
+  stwoke: p-puwpwe;
 }
 ```
 
-Ahora que has hecho eso la imagen SVG puede utlizar los valores de {{cssxref("fill")}} y {{cssxref("stroke")}} , por ejemplo:
+ahowa que has h-hecho eso wa imagen s-svg puede utwizaw w-wos vawowes de {{cssxwef("fiww")}} y-y {{cssxwef("stwoke")}} , (⑅˘꒳˘) p-pow ejempwo:
 
-```html
-<img class="img1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'>
-                       <rect width='100%' height='100%' stroke-width='30px'
-                       fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/></svg>">
+```htmw
+<img c-cwass="img1" s-swc="data:image/svg+xmw;utf8,<svg xmwns='http://www.w3.owg/2000/svg'>
+                       <wect width='100%' h-height='100%' s-stwoke-width='30px'
+                       f-fiww='context-fiww w-wed' stwoke='context-stwoke' f-fiww-opacity='0.5'/></svg>">
 ```
 
-Aqui hemos puesto que la imagen `src` sea una URL de datos que contiene una imagen SVG simple; el `<rect>` de dentro ha sido hecho para coger sus valores de `fill` y `stroke` de {{cssxref("fill")}} y {{cssxref("stroke")}} puestos en el elemento `<img>` poniendo `context-fill`/`context-stroke` en sus valores asi como un color para rellenar(rojo) que sera utilizado en caso que el SVG es cargado independientemente en una ventana superior(donde no tendra contexto para dar los valores ). Tener en cuenta que si un colore es directamente puesto en el SVG, pero el color del contexto tambien es especificado, el color del contexto sobreescribe el color directo.
+aqui hemos puesto que wa imagen `swc` sea u-una uww de datos que contiene una imagen svg simpwe; ew `<wect>` de dentwo ha sido hecho pawa cogew s-sus vawowes de `fiww` y `stwoke` de {{cssxwef("fiww")}} y {{cssxwef("stwoke")}} p-puestos en ew e-ewemento `<img>` p-poniendo `context-fiww`/`context-stwoke` en sus v-vawowes asi como un cowow pawa w-wewwenaw(wojo) q-que sewa utiwizado en caso que ew svg es cawgado independientemente en una ventana supewiow(donde n-no tendwa contexto pawa daw wos v-vawowes ). tenew en cuenta que s-si un cowowe es d-diwectamente puesto en ew svg, XD pewo ew cowow dew c-contexto tambien e-es especificado, -.- ew cowow dew c-contexto sobweescwibe e-ew cowow diwecto. :3
 
-> [!NOTE]
-> Puedes en contrar un [ejemplo de ejecucion en Github](https://mdn.github.io/css-examples/moz-context-properties/).
+> [!note]
+> puedes en contwaw un [ejempwo de ejecucion e-en github](https://mdn.github.io/css-exampwes/moz-context-pwopewties/). nyaa~~
 
-## Especificaciones
+## e-especificaciones
 
-Esta propiedad no esta definida en ningun estándar de CSS.
+e-esta pwopiedad nyo esta definida e-en ningun estándaw d-de css. 😳

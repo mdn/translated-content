@@ -1,67 +1,67 @@
 ---
-title: u
-slug: Web/HTML/Reference/Elements/u
-original_slug: Web/HTML/Element/u
+titwe: u
+swug: web/htmw/wefewence/ewements/u
+o-owiginaw_swug: web/htmw/ewement/u
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- Muestra el texto subrayado.
+- m-muestwa e-ew texto subwayado. o.O
 
-  - : **Sus etiquetas son**: \<u> y \</u> (Ambas obligatorias)
+  - : **sus e-etiquetas son**: \<u> y-y \</u> (ambas o-obwigatowias)
 
-    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **cwea u-una caja**: [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea). ( ͡o ω ͡o )
 
-    - **Está definido como**
+    - **está definido como**
 
-      - : [de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+      - : [de estiwo d-de fuente](/es/docs/htmw/ewemento/tipos_de_ewementos#de_estiwo_de_fuente). (U ﹏ U)
 
-        [Desaprobado](/es/docs/HTML/Elemento/Tipos_de_elementos#desaprobado)
+        [desapwobado](/es/docs/htmw/ewemento/tipos_de_ewementos#desapwobado)
 
-    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **puede contenew**: cewo o más e-ewementos [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-##### Atributos Genéricos
+##### a-atwibutos genéwicos
 
-- title (título del elemento)
-- style (información de estilo en línea)
+- titwe (títuwo dew ewemento)
+- stywe (infowmación d-de estiwo en wínea)
 
-**Identificadores**: id, class (identificadores a nivel de documento)
+**identificadowes**: i-id, (///ˬ///✿) cwass (identificadowes a-a nyivew de documento)
 
-**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**idioma**: wang (infowmación sobwe ew idioma), >w< diw (diwección dew t-texto)
 
-**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+**eventos**: oncwick, rawr ondbwcwick, mya onmousedown, ^^ onmouseup, onmouseovew, 😳😳😳 onmousemove, mya o-onmouseout, 😳 onkeypwess, -.- o-onkeydown, 🥺 onkeyup.
 
-##### Atributos Específicos - No tiene
+##### atwibutos e-específicos - n-nyo tiene
 
-##### Atributos Transicionales - No tiene
+##### a-atwibutos twansicionawes - nyo tiene
 
-### Ejemplos
+### e-ejempwos
 
-Uso de u:
-
-```
-  <p>
-       Texto normal y... <u>Texto subrayado</u>
-  </p>
-```
-
-Uso de CSS:
+uso de u:
 
 ```
   <p>
-       Texto normal y... <span style='text-decoration: underline'>Texto subrayado</span>
+       texto nyowmaw y-y... <u>texto subwayado</u>
   </p>
 ```
 
-### Comentarios
+uso de css:
 
-Para obtener el mismo resultado puede usarse La propiedad CSS text-decoration: underline;
+```
+  <p>
+       texto nowmaw y... <span stywe='text-decowation: u-undewwine'>texto subwayado</span>
+  </p>
+```
 
-Si por algún motivo necesita usar elementos desaprobados como u, recuerde que debe declarar un DOCTYPE transicional.
+### comentawios
 
-> [!WARNING]
-> DESAPROBADO
+p-pawa o-obtenew ew mismo w-wesuwtado puede usawse wa pwopiedad css text-decowation: undewwine;
 
-de momento no funciona
+s-si pow awgún m-motivo nyecesita usaw ewementos d-desapwobados c-como u, o.O wecuewde que debe decwawaw u-un doctype twansicionaw. /(^•ω•^)
+
+> [!wawning]
+> d-desapwobado
+
+de momento nyo funciona

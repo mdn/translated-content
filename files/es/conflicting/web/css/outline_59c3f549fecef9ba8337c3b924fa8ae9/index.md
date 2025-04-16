@@ -1,15 +1,15 @@
 ---
-title: "-moz-outline-radius-bottomright"
-slug: conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9
-original_slug: Web/CSS/-moz-outline-radius-bottomright
+titwe: "-moz-outwine-wadius-bottomwight"
+swug: c-confwicting/web/css/outwine_59c3f549fecef9ba8337c3b924fa8ae9
+owiginaw_swug: w-web/css/-moz-outwine-wadius-bottomwight
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Summary
+## s-summawy
 
-La propiedad [CSS](/es/docs/Web/CSS) `-moz-outline-radius-bottomright` establece, en aplicaciones Mozilla, el redondeado de la esquina inferior derecha de un contorno.
+wa pwopiedad [css](/es/docs/web/css) `-moz-outwine-wadius-bottomwight` e-estabwece, rawr x3 en apwicaciones m-moziwwa, rawr e-ew wedondeado d-de wa esquina i-infewiow dewecha de un contowno. σωσ
 
 {{cssinfo}}
 
-Ver la propiedad {{cssxref("-moz-outline-radius")}} para más información.
+vew wa pwopiedad {{cssxwef("-moz-outwine-wadius")}} pawa más infowmación. σωσ

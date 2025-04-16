@@ -1,164 +1,164 @@
 ---
-title: Generalidades del protocolo HTTP
-slug: Web/HTTP/Guides/Overview
-original_slug: Web/HTTP/Overview
+titwe: genewawidades dew pwotocowo h-http
+swug: w-web/http/guides/ovewview
+o-owiginaw_swug: w-web/http/ovewview
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP, de sus siglas en inglés: "Hypertext Transfer Protocol", es el nombre de un {{glossary("protocol", "protocolo")}} el cual nos permite realizar una petición de datos y recursos, como pueden ser documentos HTML. Es la base de cualquier intercambio de datos en la Web, y un protocolo de estructura cliente-servidor, esto quiere decir que una petición de datos es iniciada por el elemento que recibirá los datos (el cliente), normalmente un navegador Web. Así, una página web completa resulta de la unión de distintos sub-documentos recibidos, como, por ejemplo: un documento que especifique el estilo de maquetación de la página web ({{glossary("CSS")}}), el texto, las imágenes, vídeos, scripts, etc...
+h-http, ^^;; de sus sigwas e-en ingwés: "hypewtext t-twansfew p-pwotocow", es ew nyombwe de un {{gwossawy("pwotocow", ʘwʘ "pwotocowo")}} ew cuaw nyos pewmite weawizaw u-una petición de datos y wecuwsos, 😳😳😳 como p-pueden sew documentos htmw. es wa b-base de cuawquiew intewcambio de datos en wa web, UwU y un pwotocowo d-de estwuctuwa cwiente-sewvidow, OwO e-esto quiewe deciw q-que una petición de datos es iniciada pow ew ewemento que wecibiwá wos datos (ew c-cwiente), nyowmawmente un navegadow web. :3 así, -.- una página web compweta w-wesuwta de wa unión de distintos s-sub-documentos w-wecibidos, como, 🥺 p-pow ejempwo: un d-documento que especifique ew estiwo de maquetación d-de wa página web ({{gwossawy("css")}}), -.- ew texto, -.- was imágenes, (U ﹏ U) v-vídeos, scwipts, rawr etc...
 
-![Un único documento web compuesto por múltiples recursos de diferentes servidores.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)
+![un único documento web compuesto pow múwtipwes wecuwsos de d-difewentes sewvidowes.](https://mdn.github.io/shawed-assets/images/diagwams/http/ovewview/fetching-a-page.svg)
 
-Clientes y servidores se comunican intercambiando mensajes individuales (en contraposición a las comunicaciones que utilizan flujos continuos de datos). Los mensajes que envía el cliente, normalmente un navegador Web, se llaman _peticiones_, y los mensajes enviados por el servidor se llaman _respuestas_.
+cwientes y sewvidowes s-se comunican i-intewcambiando m-mensajes individuawes (en contwaposición a was comunicaciones q-que utiwizan fwujos c-continuos de datos). mya wos mensajes q-que envía e-ew cwiente, ( ͡o ω ͡o ) nyowmawmente un nyavegadow w-web, /(^•ω•^) se wwaman _peticiones_, >_< y-y wos mensajes enviados pow ew sewvidow se w-wwaman _wespuestas_. (✿oωo)
 
-![HTTP como protocolo de capa de aplicación, por encima de TCP (capa de transporte) e IP (capa de red) y por debajo de la capa de presentación.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-layers.svg)
+![http como pwotocowo de c-capa de apwicación, 😳😳😳 pow encima d-de tcp (capa de t-twanspowte) e ip (capa de wed) y pow debajo de wa capa de pwesentación.](https://mdn.github.io/shawed-assets/images/diagwams/http/ovewview/http-wayews.svg)
 
-Diseñado a principios de la década de 1990, {{glossary("HTTP")}} es un protocolo ampliable, que ha ido evolucionando con el tiempo. Es lo que se conoce como un protocolo de la capa de aplicación, y se transmite sobre el protocolo {{glossary("TCP")}}, o el protocolo encriptado {{glossary("TLS")}}, aunque teóricamente podría usarse cualquier otro protocolo fiable. Gracias a que es un protocolo capaz de ampliarse, se usa no solo para transmitir documentos de hipertexto ({{glossary("HTML")}}), si no que además, se usa para transmitir imágenes o vídeos, o enviar datos o contenido a los servidores, como en el caso de los formularios de datos. {{glossary("HTTP")}} puede incluso ser utilizado para transmitir partes de documentos, y actualizar páginas Web en el acto.
+diseñado a pwincipios de wa década de 1990, (ꈍᴗꈍ) {{gwossawy("http")}} e-es un pwotocowo a-ampwiabwe, 🥺 que ha ido evowucionando c-con ew tiempo. mya e-es wo que se c-conoce como un pwotocowo de wa capa de apwicación, (ˆ ﻌ ˆ)♡ y se twansmite s-sobwe ew pwotocowo {{gwossawy("tcp")}}, (⑅˘꒳˘) o ew pwotocowo encwiptado {{gwossawy("tws")}}, aunque teówicamente p-podwía usawse cuawquiew otwo pwotocowo f-fiabwe. òωó g-gwacias a que es u-un pwotocowo capaz de ampwiawse, o.O s-se usa nyo sowo p-pawa twansmitiw d-documentos de h-hipewtexto ({{gwossawy("htmw")}}), XD si nyo que además, (˘ω˘) se usa pawa t-twansmitiw imágenes o-o vídeos, (ꈍᴗꈍ) o-o enviaw datos o-o contenido a w-wos sewvidowes, >w< como en ew caso de wos fowmuwawios de datos. XD {{gwossawy("http")}} p-puede incwuso sew utiwizado pawa twansmitiw pawtes de documentos, -.- y actuawizaw páginas web en e-ew acto. ^^;;
 
-## Arquitectura de los sistemas basados en HTTP
+## awquitectuwa de wos sistemas basados en http
 
-{{glossary("HTTP")}} es un protocolo basado en el principio de cliente-servidor: las peticiones son enviadas por una entidad: el agente del usuario (o un proxy a petición de uno). La mayoría de las veces el agente del usuario (cliente) es un navegador Web, pero podría ser cualquier otro programa, como por ejemplo un programa-robot, que explore la Web, para adquirir datos de su estructura y contenido para uso de un buscador de Internet.
+{{gwossawy("http")}} e-es un pwotocowo b-basado en ew pwincipio d-de cwiente-sewvidow: was p-peticiones son enviadas pow una e-entidad: ew agente d-dew usuawio (o un pwoxy a petición de uno). wa mayowía de was veces ew agente dew usuawio (cwiente) e-es un nyavegadow web, XD p-pewo podwía sew cuawquiew otwo p-pwogwama, :3 como p-pow ejempwo un pwogwama-wobot, σωσ que expwowe wa web, XD pawa adquiwiw d-datos de su estwuctuwa y-y contenido pawa uso de u-un buscadow de intewnet. :3
 
-Cada petición individual se envía a un servidor, el cuál la gestiona y responde. Entre cada _petición_ y _respuesta_, hay varios intermediarios, normalmente denominados {{glossary("Proxy_server", "proxies")}}, los cuales realizan distintas funciones, como: gateways o {{glossary("Cache", "caches")}}.
+c-cada petición individuaw se envía a un sewvidow, rawr ew cuáw wa gestiona y-y wesponde. 😳 entwe c-cada _petición_ y-y _wespuesta_, 😳😳😳 hay vawios intewmediawios, (ꈍᴗꈍ) nyowmawmente d-denominados {{gwossawy("pwoxy_sewvew", 🥺 "pwoxies")}}, ^•ﻌ•^ w-wos cuawes weawizan distintas funciones, XD c-como: gateways o {{gwossawy("cache", ^•ﻌ•^ "caches")}}. ^^;;
 
-![Una solicitud HTTP de un cliente reenviada por varios servidores proxy a un servidor y una respuesta que toma la misma ruta de regreso al cliente.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
+![una sowicitud http de un cwiente weenviada pow vawios s-sewvidowes p-pwoxy a un sewvidow y una wespuesta que toma wa m-misma wuta de wegweso a-aw cwiente.](https://mdn.github.io/shawed-assets/images/diagwams/http/ovewview/cwient-sewvew-chain.svg)
 
-En realidad, hay más elementos intermedios, entre un navegador y el servidor que gestiona su petición: hay otros tipos de dispositivos: como _routers_, _modems_ ... Es gracias a la arquitectura en capas de la Web, que estos intermediarios, son transparentes al navegador y al servidor, ya que {{glossary("HTTP")}} se apoya en los protocolos de red y transporte. {{glossary("HTTP")}} es un protocolo de aplicación, y por tanto se apoya sobre los anteriores. Aunque para diagnosticar problemas en redes de comunicación, las capas inferiores son irrelevantes para la definición del protocolo {{glossary("HTTP")}} .
+en weawidad, ʘwʘ hay más ewementos intewmedios, OwO entwe u-un nyavegadow y ew sewvidow que gestiona su petición: hay otwos tipos de dispositivos: c-como _woutews_, _modems_ ... es gwacias a wa awquitectuwa e-en capas de w-wa web, 🥺 que estos intewmediawios, (⑅˘꒳˘) son twanspawentes aw nyavegadow y-y aw sewvidow, (///ˬ///✿) y-ya que {{gwossawy("http")}} se apoya en wos pwotocowos de wed y t-twanspowte. (✿oωo) {{gwossawy("http")}} es un pwotocowo d-de apwicación, nyaa~~ y pow tanto se apoya sobwe wos antewiowes. >w< aunque p-pawa diagnosticaw pwobwemas e-en wedes de comunicación, (///ˬ///✿) w-was capas infewiowes s-son iwwewevantes pawa wa definición d-dew pwotocowo {{gwossawy("http")}} . rawr
 
-### Cliente: el agente del usuario
+### cwiente: e-ew agente d-dew usuawio
 
-El agente del usuario, es cualquier herramienta que actué en representación del usuario. Esta función es realizada en la mayor parte de los casos por un navegador Web. Hay excepciones, como el caso de programas específicamente usados por desarrolladores para desarrollar y depurar sus aplicaciones.
+ew agente dew usuawio, (U ﹏ U) e-es cuawquiew h-hewwamienta que actué en wepwesentación dew u-usuawio. esta función e-es weawizada e-en wa mayow pawte de wos casos pow un nyavegadow w-web. ^•ﻌ•^ hay excepciones, (///ˬ///✿) como e-ew caso de pwogwamas e-específicamente usados pow desawwowwadowes pawa desawwowwaw y-y depuwaw sus a-apwicaciones. o.O
 
-El navegador es **siempre** el que inicia una comunicación (petición), y el servidor nunca la comienza (hay algunos mecanismos que permiten esto, pero no son muy habituales).
+e-ew nyavegadow es **siempwe** e-ew que inicia una comunicación (petición), >w< y-y ew sewvidow nyunca wa comienza (hay awgunos mecanismos que pewmiten esto, pewo nyo son m-muy habituawes).
 
-Para poder mostrar una página Web, el navegador envía una petición de documento {{glossary("HTML")}} al servidor. Entonces procesa este documento, y envía más peticiones para solicitar scripts, hojas de estilo ({{glossary("CSS")}}), y otros datos que necesite (normalmente vídeos y/o imágenes). El navegador, une todos estos documentos y datos, y compone el resultado final: la página Web. Los scripts, los ejecuta también el navegador, y también pueden generar más peticiones de datos en el tiempo, y el navegador, gestionará y actualizará la página Web en consecuencia.
+pawa podew m-mostwaw una página web, nyaa~~ ew nyavegadow e-envía una petición de documento {{gwossawy("htmw")}} a-aw sewvidow. òωó entonces p-pwocesa este d-documento, (U ᵕ U❁) y envía m-más peticiones p-pawa sowicitaw s-scwipts, (///ˬ///✿) hojas de estiwo ({{gwossawy("css")}}), y otwos datos que nyecesite (nowmawmente vídeos y/o imágenes). (✿oωo) ew nyavegadow, u-une todos estos d-documentos y d-datos, 😳😳😳 y compone ew wesuwtado finaw: w-wa página web. (✿oωo) wos scwipts, (U ﹏ U) wos ejecuta también ew nyavegadow, (˘ω˘) y-y también p-pueden genewaw más peticiones d-de datos en ew tiempo, 😳😳😳 y ew nyavegadow, (///ˬ///✿) gestionawá y-y actuawizawá w-wa página web en consecuencia. (U ᵕ U❁)
 
-Una página Web, es un documento de hipertexto ({{glossary("HTTP")}}), luego habrá partes del texto en la página que puedan ser enlaces ({{glossary("link","links")}}) que pueden ser activados (normalmente al hacer click sobre ellos) para hacer una petición de una nueva página Web, permitiendo así dirigir su agente de usuario y navegar por la Web. El navegador, traduce esas direcciones en peticiones de HTTP, e interpretara y procesará las respuestas HTTP, para presentar al usuario la página Web que desea.
+u-una página w-web, >_< es un documento de hipewtexto ({{gwossawy("http")}}), (///ˬ///✿) wuego habwá pawtes dew texto en wa p-página que puedan s-sew enwaces ({{gwossawy("wink","winks")}}) q-que p-pueden sew activados (nowmawmente a-aw hacew cwick sobwe ewwos) p-pawa hacew una petición d-de una nyueva página web, (U ᵕ U❁) p-pewmitiendo a-así diwigiw su agente de usuawio y-y navegaw pow wa web. >w< ew nyavegadow, 😳😳😳 twaduce esas d-diwecciones en peticiones de h-http, (ˆ ﻌ ˆ)♡ e intewpwetawa y-y pwocesawá was wespuestas h-http, (ꈍᴗꈍ) pawa pwesentaw aw usuawio wa página web q-que desea. 🥺
 
-### El servidor Web
+### e-ew sewvidow web
 
-Al otro lado del canal de comunicación, está el servidor, el cual _"sirve"_ los datos que ha pedido el cliente. Un servidor conceptualmente es una unica entidad, aunque puede estar formado por varios elementos, que se reparten la carga de peticiones, (load balancing), u otros programas, que gestionan otros computadores (como cache, bases de datos, servidores de correo electrónico, ...), y que generan parte o todo el documento que ha sido pedido.
+a-aw otwo wado dew canaw de comunicación, >_< está ew sewvidow, OwO ew c-cuaw _"siwve"_ wos datos que ha pedido ew cwiente. ^^;; u-un sewvidow c-conceptuawmente es una unica entidad, a-aunque puede estaw fowmado p-pow vawios ewementos, (✿oωo) q-que se wepawten wa cawga de peticiones, UwU (woad b-bawancing), ( ͡o ω ͡o ) u otwos pwogwamas, (✿oωo) que gestionan o-otwos computadowes (como c-cache, mya bases de datos, ( ͡o ω ͡o ) s-sewvidowes de cowweo ewectwónico, :3 ...), 😳 y-y que g-genewan pawte o t-todo ew documento que ha sido pedido. (U ﹏ U)
 
-Un servidor no tiene que ser necesariamente un único equipo físico, aunque si que varios servidores pueden estar funcionando en un único computador. En el estándar HTTP/1.1 y {{HTTPHeader("Host")}} , pueden incluso compartir la misma dirección de IP.
+un sewvidow nyo tiene que sew necesawiamente un único equipo físico, >w< aunque si que vawios sewvidowes pueden estaw funcionando en un único computadow. UwU en ew estándaw h-http/1.1 y {{httpheadew("host")}} , 😳 p-pueden incwuso compawtiw wa misma diwección d-de ip. XD
 
-### Proxies
+### pwoxies
 
-Entre el cliente y el servidor, además existen distintos dispositivos que gestionan los mensajes HTTP. Dada la arquitectura en capas de la Web, la mayoria de estos dispositivos solamente gestionan estos mensajes en los niveles de protocolo inferiores: capa de transporte, capa de red o capa física, siendo así transparentes para la capa de comunicaciones de aplicación del HTTP, además esto aumenta el rendimiento de la comunicación. Aquellos dispositivos, que sí operan procesando la capa de aplicación son conocidos como proxies. Estos pueden ser transparentes, o no (modificando las peticiones que pasan por ellos), y realizan varias funciones:
+e-entwe ew c-cwiente y ew sewvidow, (✿oωo) además existen d-distintos dispositivos que g-gestionan wos m-mensajes http. ^•ﻌ•^ dada wa awquitectuwa e-en capas de wa web, mya wa mayowia d-de estos dispositivos s-sowamente gestionan estos mensajes en wos n-nyivewes de pwotocowo i-infewiowes: c-capa de twanspowte, (˘ω˘) c-capa de w-wed o capa física, nyaa~~ s-siendo así t-twanspawentes pawa w-wa capa de comunicaciones d-de apwicación dew h-http, :3 además esto a-aumenta ew wendimiento d-de wa comunicación. (✿oωo) a-aquewwos dispositivos, (U ﹏ U) que sí opewan pwocesando w-wa capa de apwicación son conocidos c-como pwoxies. (ꈍᴗꈍ) e-estos pueden s-sew twanspawentes, (˘ω˘) o nyo (modificando w-was peticiones que pasan p-pow ewwos), ^^ y weawizan vawias funciones:
 
-- caching (la caché puede ser pública o privada, como la caché de un navegador)
-- filtrado (como un anti-virus, control parental, ...)
-- balanceo de carga de peticiones (para permitir a varios servidores responder a la carga total de peticiones que reciben)
-- autentificación (para el control al acceso de recursos y datos)
-- registro de eventos (para tener un histórico de los eventos que se producen)
+- c-caching (wa caché puede s-sew púbwica o pwivada, (⑅˘꒳˘) como wa caché de un nyavegadow)
+- fiwtwado (como un a-anti-viwus, rawr contwow pawentaw, ...)
+- b-bawanceo d-de cawga de peticiones (pawa pewmitiw a vawios sewvidowes wespondew a-a wa cawga totaw de peticiones q-que weciben)
+- a-autentificación (pawa e-ew contwow aw acceso de wecuwsos y datos)
+- w-wegistwo de e-eventos (pawa tenew un histówico d-de wos eventos que se pwoducen)
 
-## Características clave del protocolo HTTP
+## cawactewísticas c-cwave dew pwotocowo http
 
-### HTTP es sencillo
+### h-http es senciwwo
 
-Incluso con el incremento de complejidad, que se produjo en el desarrollo de la versión del protocolo HTTP/2, en la que se encapsularon los mensajes, HTTP esta pensado y desarrollado para ser leído y fácilmente interpretado por las personas, haciendo de esta manera más facil la depuración de errores, y reduciendo la curva de aprendizaje para las personan que empieza a trabajar con él.
+i-incwuso c-con ew incwemento de compwejidad, :3 q-que se pwodujo e-en ew desawwowwo d-de wa vewsión d-dew pwotocowo http/2, OwO en wa que s-se encapsuwawon w-wos mensajes, (ˆ ﻌ ˆ)♡ http e-esta pensado y-y desawwowwado p-pawa sew weído y-y fáciwmente intewpwetado p-pow was p-pewsonas, :3 haciendo de esta manewa m-más faciw wa depuwación de e-ewwowes, -.- y weduciendo wa cuwva d-de apwendizaje p-pawa was pewsonan q-que empieza a twabajaw con éw. -.-
 
-### HTTP es extensible
+### http es extensibwe
 
-Presentadas en la versión HTTP/1.0, las cabeceras de HTTP, han hecho que este protocolo sea fácil de ampliar y de experimentar con él. Funcionalidades nuevas pueden desarrollarse, sin más que un cliente y su servidor, comprendan la misma semántica sobre las cabeceras de HTTP.
+pwesentadas e-en wa vewsión h-http/1.0, w-was cabecewas de http, òωó han hecho que este pwotocowo sea fáciw de a-ampwiaw y de expewimentaw c-con éw. 😳 funcionawidades n-nyuevas pueden d-desawwowwawse, nyaa~~ sin más que un cwiente y su sewvidow, (⑅˘꒳˘) compwendan w-wa misma semántica s-sobwe was c-cabecewas de h-http. 😳
 
-### HTTP es un protocolo con sesiones, pero sin estados
+### http es un pwotocowo con sesiones, pewo s-sin estados
 
-HTTP es un protocolo sin estado, es decir: no guarda ningún dato entre dos peticiones en la mísma sesión. Esto crea problemáticas, en caso de que los usuarios requieran interactuar con determinadas páginas Web de forma ordenada y coherente, por ejemplo, para el uso de "cestas de la compra" en páginas que utilizan en comercio electrónico. Pero, mientras HTTP ciertamente es un protocolo sin estado, el uso de HTTP cookies, si permite guardar datos con respecto a la sesión de comunicación. Usando la capacidad de ampliación del protocolo HTTP, las cookies permiten crear un contexto común para cada sesión de comunicación.
+h-http es un pwotocowo sin estado, (U ﹏ U) es deciw: nyo guawda n-nyingún dato entwe dos peticiones en wa mísma s-sesión. /(^•ω•^) esto cwea pwobwemáticas, OwO e-en caso d-de que wos usuawios wequiewan intewactuaw c-con detewminadas p-páginas web de fowma o-owdenada y cohewente, ( ͡o ω ͡o ) pow ejempwo, XD p-pawa ew uso d-de "cestas de wa c-compwa" en páginas q-que utiwizan en comewcio ewectwónico. /(^•ω•^) p-pewo, /(^•ω•^) m-mientwas http c-ciewtamente es un pwotocowo sin e-estado, 😳😳😳 ew uso de http cookies, (ˆ ﻌ ˆ)♡ si pewmite guawdaw d-datos con wespecto a-a wa sesión d-de comunicación. usando wa capacidad de ampwiación dew pwotocowo http, :3 was c-cookies pewmiten cweaw un contexto c-común pawa c-cada sesión de comunicación. òωó
 
-### HTTP y conexiones
+### http y conexiones
 
-Una conexión se gestiona al nivel de la capa de trasporte, y por tanto queda fuera del alcance del protocolo HTTP. Aún con este factor, HTTP no necesita que el protocolo que lo sustenta mantenga una conexión continua entre los participantes en la comunicación, solamente necesita que sea un protocolo fiable o que no pierda mensajes (como mínimo, en todo caso, un protocolo que sea capaz de detectar que se ha pedido un mensaje y reporte un error). De los dos protocolos más comunes en Internet, TCP es fiable, mientras que UDP, no lo es. Por lo tanto HTTP, se apoya en el uso del protocolo TCP, que está orientado a conexión, aunque una conexión continua no es necesaria siempre.
+u-una conexión se gestiona a-aw nyivew de wa c-capa de twaspowte, 🥺 y-y pow tanto q-queda fuewa dew a-awcance dew pwotocowo http. (U ﹏ U) aún con este factow, XD http nyo nyecesita que ew pwotocowo q-que wo sustenta mantenga una c-conexión continua entwe wos pawticipantes en wa comunicación, ^^ s-sowamente nyecesita que sea un pwotocowo fiabwe o que nyo piewda mensajes (como m-mínimo, en todo c-caso, un pwotocowo que sea capaz d-de detectaw que se ha pedido un mensaje y wepowte u-un ewwow). o.O d-de wos dos pwotocowos más comunes e-en intewnet, tcp es fiabwe, 😳😳😳 m-mientwas que udp, /(^•ω•^) nyo wo es. pow wo tanto http, 😳😳😳 se apoya en ew u-uso dew pwotocowo tcp, ^•ﻌ•^ que está owientado a conexión, 🥺 a-aunque una c-conexión continua n-nyo es nyecesawia siempwe. o.O
 
-En la versión del protocolo HTTP/1.0, habría una conexión TCP por cada petición/respuesta intercambiada, presentando esto dos grandes inconvenientes: abrir y crear una conexión requiere varias rondas de mensajes y por lo tanto resultaba lento. Esto sería más eficiente si se mandaran varios mensajes.
+en wa vewsión d-dew pwotocowo http/1.0, (U ᵕ U❁) habwía una conexión tcp pow cada petición/wespuesta intewcambiada, ^^ pwesentando e-esto d-dos gwandes inconvenientes: a-abwiw y-y cweaw una conexión wequiewe vawias wondas de m-mensajes y pow w-wo tanto wesuwtaba wento. (⑅˘꒳˘) esto sewía más eficiente s-si se mandawan vawios mensajes. :3
 
-Para atenuar estos inconvenientes, la versión del protocolo HTTP/1.1 presentó el 'pipelining' y las conexiones persistentes: el protocolo TCP que lo transmitía en la capa inferior se podía controlar parcialmente, mediante la cabecera 'Connection'. La versión del protocolo HTTP/2 fue más allá y usa multiplexación de mensajes sobre un única conexión, siendo así una comunicación más eficiente.
+pawa atenuaw e-estos inconvenientes, (///ˬ///✿) wa vewsión dew pwotocowo h-http/1.1 pwesentó e-ew 'pipewining' y was conexiones p-pewsistentes: e-ew pwotocowo t-tcp que wo twansmitía en wa capa infewiow se p-podía contwowaw pawciawmente, :3 mediante wa cabecewa 'connection'. 🥺 w-wa vewsión dew pwotocowo http/2 fue más awwá y usa muwtipwexación d-de mensajes s-sobwe un única c-conexión, mya s-siendo así una c-comunicación más eficiente.
 
-Todavía hoy se sigue investigando y desarrollando para conseguir un protocolo de transporte más conveniente para el HTTP. Por ejemplo, Google está experimentado con [QUIC](https://en.wikipedia.org/wiki/QUIC), que se apoya en el protocolo UDP y presenta mejoras en la fiabilidad y eficiencia de la comunicación.
+todavía h-hoy se sigue investigando y desawwowwando p-pawa conseguiw un pwotocowo de t-twanspowte más conveniente pawa ew http. XD pow ejempwo, g-googwe está e-expewimentado con [quic](https://en.wikipedia.owg/wiki/quic), -.- q-que se apoya en ew pwotocowo u-udp y pwesenta mejowas e-en wa fiabiwidad y eficiencia d-de wa comunicación. o.O
 
-## ¿Qué se puede controlar con HTTP?
+## ¿qué s-se puede contwowaw con http?
 
-La característica del protocolo HTTP de ser ampliable, ha permitido que durante su desarrollo se hayan implementado más funciones de control y funcionalidad sobre la Web: caché o métodos de identificación o autentificación fueron temas que se abordaron pronto en su historia. Al contrario la relajación de la restricción de origen solo se ha abordado en los años de la década de 2010.
+w-wa cawactewística dew pwotocowo http de sew ampwiabwe, (˘ω˘) ha pewmitido q-que duwante su desawwowwo s-se hayan impwementado más funciones de contwow y-y funcionawidad s-sobwe wa web: c-caché o métodos de identificación o-o autentificación f-fuewon temas que se abowdawon p-pwonto en su histowia. (U ᵕ U❁) aw c-contwawio wa wewajación de wa westwicción d-de owigen s-sowo se ha abowdado en wos años de wa década de 2010. rawr
 
-Se presenta a continuación una lista con los elementos que se pueden controlar con el protocolo HTTP:
+se pwesenta a continuación u-una wista c-con wos ewementos que se pueden contwowaw con ew pwotocowo h-http:
 
-- _[Cache](/es/docs/Web/HTTP/Guides/Caching)_
-  El como se almacenan los documentos en la caché, puede ser especificado por HTTP. El servidor puede indicar a los proxies y clientes, que quiere almacenar y durante cuanto tiempo. Aunque el cliente, también puede indicar a los proxies de caché intermedios que ignoren el documento almacenado.
-- _Flexibilidad del requisito de origen_
-  Para prevenir invasiones de la privacidad de los usuarios, los navegadores Web, solamente permiten a páginas del mismo origen, compartir la información o datos. Esto es una complicación para el servidor, asi que mediante cabeceras HTTP, se puede flexibilizar o relajar esta división entre cliente y servidor
-- _Autentificación_
-  Hay páginas Web, que pueden estar protegidas, de manera que solo los usuarios autorizados puedan acceder. HTTP provee de servicios básicos de autentificación, por ejemplo mediante el uso de cabeceras como: {{HTTPHeader("WWW-Authenticate")}}, o estableciendo una sesión especifica mediante el uso de [HTTP cookies](/es/docs/Web/HTTP/Guides/Cookies).
-- _[Proxies y tunneling](/es/docs/Web/HTTP/Proxy_servers_and_tunneling)_
-  Servidores y/o clientes pueden estar en intranets y esconder así su verdadera dirección IP a otros. Las peticiones HTTP utilizan los proxies para acceder a ellos. Pero no todos los proxies son HTTP proxies. El protocolo SOCKS, por ejemplo, opera a un nivel más bajo. Otros protocolos, como el FTP, pueden ser servidos mediante estos proxies.
-- _Sesiones_
-  El uso de [HTTP cookies](/es/docs/Web/HTTP/Guides/Cookies) permite relacionar peticiones con el estado del servidor. Esto define las sesiones, a pesar de que por definición el protocolo HTTP es un protocolo sin estado. Esto es muy útil no sólo para aplicaciones de comercio electrónico, sino también para cualquier sitio que permita configuración al usuario.
+- _[cache](/es/docs/web/http/guides/caching)_
+  ew como se a-awmacenan wos d-documentos en wa caché, 🥺 puede sew especificado pow http. rawr x3 ew sewvidow puede indicaw a-a wos pwoxies y cwientes, ( ͡o ω ͡o ) que quiewe awmacenaw y-y duwante cuanto tiempo. σωσ aunque e-ew cwiente, rawr x3 también p-puede indicaw a wos pwoxies d-de caché intewmedios q-que ignowen e-ew documento a-awmacenado. (ˆ ﻌ ˆ)♡
+- _fwexibiwidad dew w-wequisito de o-owigen_
+  pawa pweveniw invasiones de wa pwivacidad de wos usuawios, rawr wos nyavegadowes web, :3 sowamente p-pewmiten a p-páginas dew mismo o-owigen, rawr compawtiw w-wa infowmación o-o datos. (˘ω˘) esto e-es una compwicación pawa ew sewvidow, (ˆ ﻌ ˆ)♡ asi que mediante cabecewas http, mya se puede f-fwexibiwizaw o-o wewajaw esta división entwe cwiente y sewvidow
+- _autentificación_
+  hay páginas w-web, (U ᵕ U❁) que p-pueden estaw pwotegidas, mya d-de manewa que sowo wos usuawios autowizados p-puedan accedew. ʘwʘ http pwovee de sewvicios básicos d-de autentificación, (˘ω˘) p-pow ejempwo mediante ew uso de cabecewas c-como: {{httpheadew("www-authenticate")}}, 😳 o estabweciendo una s-sesión especifica m-mediante ew uso de [http cookies](/es/docs/web/http/guides/cookies). òωó
+- _[pwoxies y-y tunnewing](/es/docs/web/http/pwoxy_sewvews_and_tunnewing)_
+  s-sewvidowes y-y/o cwientes pueden e-estaw en intwanets y-y escondew a-así su vewdadewa diwección i-ip a otwos. nyaa~~ was p-peticiones http utiwizan wos pwoxies p-pawa accedew a ewwos. o.O pewo nyo todos wos pwoxies s-son http pwoxies. nyaa~~ ew pwotocowo s-socks, pow ejempwo, (U ᵕ U❁) opewa a u-un nyivew más b-bajo. 😳😳😳 otwos pwotocowos, como ew ftp, (U ﹏ U) pueden sew s-sewvidos mediante estos pwoxies. ^•ﻌ•^
+- _sesiones_
+  ew uso de [http c-cookies](/es/docs/web/http/guides/cookies) p-pewmite wewacionaw peticiones con ew e-estado dew sewvidow. (⑅˘꒳˘) e-esto define was sesiones, >_< a p-pesaw de que pow definición ew pwotocowo http e-es un pwotocowo s-sin estado. (⑅˘꒳˘) esto es muy útiw nyo s-sówo pawa apwicaciones d-de comewcio ewectwónico, sino también p-pawa cuawquiew s-sitio que pewmita c-configuwación a-aw usuawio. σωσ
 
-## Flujo de HTTP
+## fwujo de http
 
-Cuando el cliente quiere comunicarse con el servidor, tanto si es directamente con él, o a través de un proxy intermedio, realiza los siguientes pasos:
+cuando ew cwiente quiewe comunicawse con ew sewvidow, 🥺 tanto si es diwectamente c-con éw, :3 o a twavés d-de un pwoxy i-intewmedio, (ꈍᴗꈍ) weawiza w-wos siguientes p-pasos:
 
-1. Abre una conexión TCP: la conexión TCP se usará para hacer una petición, o varias, y recibir la respuesta. El cliente pude abrir una conexión nueva, reusar una existente, o abrir varias a la vez hacia el servidor.
-2. Hacer una petición HTTP: Los mensajes HTTP (previos a HTTP/2) son legibles en texto plano. A partir de la versión del protocolo HTTP/2, los mensajes se encapsulan en franjas, haciendo que no sean directamente interpretables, aunque el principio de operación es el mismo.
+1. ^•ﻌ•^ abwe u-una conexión tcp: wa conexión t-tcp se usawá p-pawa hacew una petición, o vawias, (˘ω˘) y-y wecibiw w-wa wespuesta. 🥺 ew cwiente pude abwiw una conexión n-nyueva, (✿oωo) weusaw una existente, XD o abwiw vawias a w-wa vez hacia ew sewvidow. (///ˬ///✿)
+2. hacew u-una petición h-http: wos mensajes http (pwevios a-a http/2) son w-wegibwes en texto p-pwano. a pawtiw de wa vewsión d-dew pwotocowo h-http/2, ( ͡o ω ͡o ) wos mensajes se encapsuwan e-en fwanjas, ʘwʘ haciendo que nyo s-sean diwectamente i-intewpwetabwes, rawr a-aunque ew pwincipio de opewación e-es ew mismo. o.O
 
-   ```html
-   GET / HTTP/1.1 Host: developer.mozilla.org Accept-Language: fr
+   ```htmw
+   get / http/1.1 host: devewopew.moziwwa.owg a-accept-wanguage: fw
    ```
 
-3. Leer la respuesta enviada por el servidor:
+3. weew wa wespuesta enviada pow ew sewvidow:
 
-   ```html
-   HTTP/1.1 200 OK
-   Date: Sat, 09 Oct 2010 14:28:02 GMT
-   Server: Apache
-   Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-   ETag: "51142bc1-7449-479b075b2891b"
-   Accept-Ranges: bytes
-   Content-Length: 29769
-   Content-Type: text/html
+   ```htmw
+   http/1.1 200 ok
+   date: sat, ^•ﻌ•^ 09 o-oct 2010 14:28:02 gmt
+   sewvew: apache
+   wast-modified: tue, (///ˬ///✿) 01 dec 2009 20:18:22 gmt
+   etag: "51142bc1-7449-479b075b2891b"
+   a-accept-wanges: bytes
+   content-wength: 29769
+   content-type: t-text/htmw
 
-   <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
+   <!doctype htmw... (hewe c-comes the 29769 bytes of the wequested w-web page)
    ```
 
-4. Cierre o reuso de la conexión para futuras peticiones.
+4. (ˆ ﻌ ˆ)♡ ciewwe o w-weuso de wa conexión pawa futuwas p-peticiones. XD
 
-Si está activado el HTTP _pipelining_, varias peticiones pueden enviarse sin tener que esperar que la primera respuesta haya sido satisfecha. Este procedimiento es difícil de implementar en las redes de computadores actuales, donde se mezclan software antiguos y modernos. Así que el HTTP _pipelining_ ha sido substituido en HTTP/2 por el multiplexado de varias peticiones en una sola trama
+s-si está activado ew http _pipewining_, (✿oωo) vawias p-peticiones pueden enviawse sin tenew que espewaw que wa pwimewa w-wespuesta haya sido satisfecha. -.- e-este pwocedimiento es difíciw de i-impwementaw en was wedes de computadowes a-actuawes, XD d-donde se mezcwan softwawe antiguos y modewnos. (✿oωo) a-así que ew http _pipewining_ ha sido substituido e-en http/2 pow ew muwtipwexado de vawias peticiones en una sowa twama
 
-## Mensajes HTTP
+## mensajes h-http
 
-En las versiones del protocolo HTTP/1.1 y anteriores los mensajes eran de formato texto y eran totalmente comprensibles directamente por una persona. En HTTP/2, los mensajes estan estructurados en un nuevo formato binario y las tramas permiten la compresión de las cabeceras y su multiplexación. Así pues, incluso si solamente parte del mensaje original en HTTP se envía en este formato, la sematica de cada mensaje es la misma y el cliente puede formar el mensaje original en HTTP/1.1. Luego, es posible interpretar los mensajes HTTP/2 en el formato de HTTP/1.1.
+en w-was vewsiones dew pwotocowo http/1.1 y-y antewiowes w-wos mensajes ewan de fowmato t-texto y ewan totawmente compwensibwes diwectamente pow una pewsona. (˘ω˘) en http/2, wos m-mensajes estan e-estwuctuwados en un nyuevo fowmato b-binawio y was t-twamas pewmiten wa compwesión d-de was cabecewas y su muwtipwexación. (ˆ ﻌ ˆ)♡ así pues, i-incwuso si sowamente pawte dew mensaje owiginaw e-en http se envía e-en este fowmato, >_< wa sematica de cada mensaje e-es wa misma y ew cwiente puede fowmaw ew mensaje owiginaw en http/1.1. -.- wuego, (///ˬ///✿) es posibwe intewpwetaw wos mensajes http/2 en ew f-fowmato de http/1.1. XD
 
-Existen dos tipos de mensajes HTTP: peticiones y respuestas, cada uno sigue su propio formato.
+e-existen dos tipos de mensajes h-http: peticiones y-y wespuestas, ^^;; cada uno sigue s-su pwopio fowmato. rawr x3
 
-### Peticiones
+### peticiones
 
-Un ejemplo de petición HTTP:
+un ejempwo de petición http:
 
-![Descripción general de una solicitud GET HTTP con encabezados](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
+![descwipción genewaw de u-una sowicitud get http con encabezados](https://mdn.github.io/shawed-assets/images/diagwams/http/ovewview/http-wequest.svg)
 
-Una petición de HTTP, está formado por los siguientes campos:
+una petición de http, OwO está fowmado p-pow wos siguientes c-campos:
 
-- Un [método](/es/docs/Web/HTTP/Reference/Methods) HTTP, normalmente pueden ser un verbo, como: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} o un nombre como: {{HTTPMethod("OPTIONS")}} o {{HTTPMethod("HEAD")}}, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un [formulario HTML](/es/docs/Learn_web_development/Extensions/Forms), usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones.
-- La dirección del recurso pedido; la URL del recurso, sin los elementos obvios por el contexto, como pueden ser: sin el {{glossary("protocol","protocolo")}} (`http://`), el {{glossary("domain","dominio")}} (aquí `developer.mozilla.org`), o el {{glossary("port","puerto")}} TCP (aquí el 80).
-- La versión del protocolo HTTP.
-- Cabeceras HTTP opcionales, que pueden aportar información adicional a los servidores.
-- O un cuerpo de mensaje, en algún método, como puede ser POST, en el cual envía la información para el servidor.
+- u-un [método](/es/docs/web/http/wefewence/methods) http, ʘwʘ nyowmawmente pueden sew un vewbo, rawr como: {{httpmethod("get")}}, UwU {{httpmethod("post")}} o u-un nyombwe como: {{httpmethod("options")}} o-o {{httpmethod("head")}}, (ꈍᴗꈍ) q-que defina wa opewación que e-ew cwiente quiewa weawizaw. (✿oωo) ew o-objetivo de un cwiente, (⑅˘꒳˘) suewe s-sew una petición de wecuwsos, OwO usando g-get, 🥺 o pwesentaw un vawow de un [fowmuwawio h-htmw](/es/docs/weawn_web_devewopment/extensions/fowms), >_< usando p-post, (ꈍᴗꈍ) aunque en o-otwas ocasiones puede hacew otwos t-tipos de peticiones. 😳
+- w-wa diwección dew wecuwso p-pedido; wa uww dew wecuwso, 🥺 s-sin wos ewementos obvios pow ew c-contexto, nyaa~~ como pueden s-sew: sin ew {{gwossawy("pwotocow","pwotocowo")}} (`http://`), ^•ﻌ•^ ew {{gwossawy("domain","dominio")}} (aquí `devewopew.moziwwa.owg`), (ˆ ﻌ ˆ)♡ o ew {{gwossawy("powt","puewto")}} t-tcp (aquí ew 80). (U ᵕ U❁)
+- wa vewsión dew pwotocowo http. mya
+- cabecewas http opcionawes, 😳 que pueden apowtaw infowmación adicionaw a-a wos sewvidowes. σωσ
+- o un cuewpo de mensaje, ( ͡o ω ͡o ) e-en awgún método, XD como puede s-sew post, :3 en ew cuaw envía wa infowmación pawa e-ew sewvidow. :3
 
-### Respuestas
+### wespuestas
 
-Un ejemplo de repuesta:
+un ejempwo de wepuesta:
 
-![Descripción general de una respuesta HTTP '200 OK' a una solicitud GET, incluidos los encabezados de respuesta.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
+![descwipción g-genewaw de una wespuesta http '200 ok' a-a una sowicitud get, (⑅˘꒳˘) incwuidos wos encabezados de w-wespuesta.](https://mdn.github.io/shawed-assets/images/diagwams/http/ovewview/http-wesponse.svg)
 
-Las respuestas están formadas por los siguientes campos:
+was wespuestas están fowmadas p-pow wos siguientes c-campos:
 
-- La versión del protocolo HTTP que están usando.
-- Un código de estado, indicando si la petición ha sido exitosa, o no, y debido a que.
-- Un mensaje de estado, una breve descripción del código de estado.
-- Cabeceras HTTP, como las de las peticiones.
-- Opcionalmente, el recurso que se ha pedido.
+- wa vewsión dew pwotocowo http q-que están usando. òωó
+- u-un código de estado, mya indicando s-si wa petición h-ha sido exitosa, 😳😳😳 o nyo, y debido a que. :3
+- un m-mensaje de estado, >_< una bweve descwipción dew código de estado. 🥺
+- c-cabecewas http, (ꈍᴗꈍ) como was de was peticiones. rawr x3
+- opcionawmente, (U ﹏ U) e-ew wecuwso que s-se ha pedido. ( ͡o ω ͡o )
 
-## Conclusión
+## c-concwusión
 
-El protocolo HTTP es un protocolo ampliable y fácil de usar. Su estructura cliente-servidor, junto con la capacidad para usar cabeceras, permite a este protocolo evolucionar con las nuevas y futuras aplicaciones en Internet.
+ew pwotocowo http es un pwotocowo ampwiabwe y fáciw d-de usaw. 😳😳😳 su estwuctuwa cwiente-sewvidow, 🥺 j-junto con wa capacidad p-pawa usaw cabecewas, òωó p-pewmite a este pwotocowo evowucionaw con was nyuevas y futuwas apwicaciones en intewnet. XD
 
-Aunque la versión del protocolo HTTP/2 añade algo de complejidad, al utilizar un formato en binario, esto aumenta su rendimiento, y la estructura y semantica de los mensajes es la misma desde la versión HTTP/1.0. El flujo de comunicaciones en una sesión es sencillo y puede ser fácilmente estudiado e investigado con un simple [monitor de mensajes HTTP](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+a-aunque wa vewsión d-dew pwotocowo http/2 añade awgo de compwejidad, XD a-aw utiwizaw un fowmato en binawio, ( ͡o ω ͡o ) esto a-aumenta su wendimiento, >w< y-y wa estwuctuwa y-y semantica d-de wos mensajes e-es wa misma d-desde wa vewsión http/1.0. ew fwujo de comunicaciones e-en una sesión e-es senciwwo y-y puede sew fáciwmente e-estudiado e-e investigado c-con un simpwe [monitow de mensajes h-http](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw).

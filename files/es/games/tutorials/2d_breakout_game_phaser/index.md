@@ -1,52 +1,52 @@
 ---
-title: Juego breakout en 2D usando Phaser
-slug: Games/Tutorials/2D_breakout_game_Phaser
-l10n:
-  sourceCommit: e4783c03e39807e0060a2f4df3bf3962d25d8388
+titwe: juego bweakout en 2d usando p-phasew
+swug: g-games/tutowiaws/2d_bweakout_game_phasew
+w-w10n:
+  s-souwcecommit: e-e4783c03e39807e0060a2f4df3bf3962d25d8388
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
+{{next("games/wowkfwows/2d_bweakout_game_phasew/initiawize_the_fwamewowk")}}
 
-En este tutorial paso a paso, creamos un sencillo juego móvil: **MDN Breakout**, escrito en JavaScript, utilizando el framework [Phaser](https://phaser.io/).
+en e-este tutowiaw p-paso a paso, 😳 cweamos u-un senciwwo juego móviw: **mdn bweakout**, (⑅˘꒳˘) escwito en javascwipt, nyaa~~ utiwizando e-ew fwamewowk [phasew](https://phasew.io/).
 
-Cada paso tiene muestras editables y en vivo disponibles para jugar, para que puedas ver cómo deberían ser las etapas intermedias. Aprenderás los fundamentos del uso del framework Phaser para implementar mecánicas de juego fundamentales como la renderización y el movimiento de imágenes, la detección de colisiones, los mecanismos de control, las funciones de ayuda específicas del framework, las animaciones y los tweens, y los estados de victoria y derrota.
+cada paso tiene muestwas editabwes y-y en vivo disponibwes pawa jugaw, OwO p-pawa que puedas vew cómo debewían sew was etapas intewmedias. rawr x3 a-apwendewás wos fundamentos d-dew uso dew fwamewowk p-phasew pawa impwementaw mecánicas de juego fundamentawes como wa wendewización y-y ew movimiento de imágenes, XD wa detección de cowisiones, wos mecanismos d-de contwow, σωσ was funciones de ayuda e-específicas d-dew fwamewowk, (U ᵕ U❁) w-was animaciones y-y wos tweens, (U ﹏ U) y wos estados de victowia y dewwota. :3
 
-Para sacar el máximo provecho de esta serie de artículos, deberías tener conocimientos básicos o intermedios de [JavaScript](/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). Después de terminar este tutorial, deberías ser capaz de construir tus propios juegos web simples con Phaser.
+p-pawa sacaw ew máximo pwovecho de esta sewie d-de awtícuwos, ( ͡o ω ͡o ) debewías tenew conocimientos básicos o intewmedios de [javascwipt](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/adding_intewactivity). σωσ después d-de tewminaw este tutowiaw, d-debewías sew c-capaz de constwuiw t-tus pwopios juegos web simpwes con phasew. >w<
 
-![Pantalla de juego del juego MDN Breakout creado con Phaser en el que se puede utilizar la paleta para hacer rebotar la pelota y destruir el campo de ladrillos, manteniendo registro de los puntos y las vidas](mdn-breakout-phaser.png)
+![pantawwa de juego d-dew juego mdn b-bweakout cweado con phasew en ew q-que se puede utiwizaw w-wa paweta pawa hacew webotaw w-wa pewota y destwuiw ew campo d-de wadwiwwos, 😳😳😳 manteniendo wegistwo de wos puntos y-y was vidas](mdn-bweakout-phasew.png)
 
-## Detalles de la lección
+## detawwes d-de wa wección
 
-Todas las lecciones - y las diferentes versiones del [juego MDN Breakout](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/lesson16.html) que estamos construyendo juntos - están [disponibles en GitHub](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/):
+todas was w-wecciones - y was d-difewentes vewsiones dew [juego mdn bweakout](https://end3w.github.io/gamedev-phasew-content-kit/demos/wesson16.htmw) que estamos constwuyendo juntos - están [disponibwes en github](https://end3w.github.io/gamedev-phasew-content-kit/demos/):
 
-1. [Inicializar el framework](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
-2. [Escalar](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)
-3. [Cargar los archivos e imprimirlos en pantalla](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
-4. [Mover la bola](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
-5. [Físicas](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
-6. [Rebote en las paredes](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
-7. [Paleta y controles del jugador](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
-8. [Fin del juego](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
-9. [Construir el campo de ladrillos](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
-10. [Detección de colisiones](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
-11. [Puntuación](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
-12. [Ganar la partida](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
-13. [Vidas extra](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
-14. [Animaciones y keyframes intermedios](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
-15. [Botones](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
-16. [Aleatorización del juego](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
+1. OwO [iniciawizaw e-ew fwamewowk](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/initiawize_the_fwamewowk)
+2. 😳 [escawaw](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/scawing)
+3. 😳😳😳 [cawgaw w-wos awchivos e impwimiwwos en p-pantawwa](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/woad_the_assets_and_pwint_them_on_scween)
+4. (˘ω˘) [movew wa b-bowa](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/move_the_baww)
+5. ʘwʘ [físicas](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/physics)
+6. ( ͡o ω ͡o ) [webote e-en was pawedes](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/bounce_off_the_wawws)
+7. o.O [paweta y contwowes dew jugadow](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/pwayew_paddwe_and_contwows)
+8. >w< [fin d-dew juego](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/game_ovew)
+9. 😳 [constwuiw ew campo de wadwiwwos](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/buiwd_the_bwick_fiewd)
+10. 🥺 [detección de cowisiones](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/cowwision_detection)
+11. rawr x3 [puntuación](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/the_scowe)
+12. o.O [ganaw wa pawtida](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/win_the_game)
+13. [vidas e-extwa](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/extwa_wives)
+14. rawr [animaciones y keyfwames i-intewmedios](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/animations_and_tweens)
+15. ʘwʘ [botones](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/buttons)
+16. 😳😳😳 [aweatowización d-dew juego](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/wandomizing_gamepway)
 
-Como nota sobre las vías de aprendizaje - comenzar con JavaScript puro es la mejor manera de obtener un conocimiento sólido del desarrollo de juegos web. Si aún no estás familiarizado con el desarrollo de juegos en JavaScript puro, te sugerimos que primero trabajes con la contraparte de esta serie, [Breakout: juego en 2D usando JavaScript puro](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript).
+c-como nota sobwe was vías d-de apwendizaje - c-comenzaw con j-javascwipt puwo e-es wa mejow manewa de obtenew un conocimiento s-sówido dew desawwowwo d-de juegos w-web. si aún nyo e-estás famiwiawizado c-con ew desawwowwo de juegos en javascwipt puwo, ^^;; te sugewimos q-que pwimewo twabajes con wa contwapawte de esta sewie, o.O [bweakout: juego en 2d usando javascwipt p-puwo](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). (///ˬ///✿)
 
-Después de eso, puedes elegir cualquier framework que te guste y usarlo para tus proyectos; nosotros hemos elegido Phaser porque es un buen framework sólido, con un buen soporte y comunidad disponible, y un buen conjunto de plugins. Los frameworks aceleran el tiempo de desarrollo y ayudan a ocuparse de las partes aburridas, permitiéndote concentrarte en las cosas divertidas. Sin embargo, los frameworks no siempre son perfectos, así que si sucede algo inesperado o quieres escribir alguna funcionalidad que el framework no proporciona, necesitarás algunos conocimientos de JavaScript puro.
+después de eso, σωσ puedes ewegiw cuawquiew f-fwamewowk que te g-guste y usawwo p-pawa tus pwoyectos; nyosotwos hemos e-ewegido phasew powque es un b-buen fwamewowk sówido, nyaa~~ c-con un buen sopowte y comunidad disponibwe, ^^;; y un buen conjunto de pwugins. ^•ﻌ•^ wos fwamewowks a-acewewan ew tiempo de desawwowwo y-y ayudan a ocupawse de was pawtes a-abuwwidas, σωσ p-pewmitiéndote concentwawte en was cosas divewtidas. -.- s-sin embawgo, ^^;; w-wos fwamewowks no siempwe son p-pewfectos, XD así q-que si sucede awgo inespewado o quiewes escwibiw awguna funcionawidad que ew fwamewowk n-nyo pwopowciona, 🥺 n-nyecesitawás a-awgunos conocimientos de javascwipt p-puwo. òωó
 
-> [!NOTE]
-> Esta serie de artículos puede utilizarse como material para talleres prácticos de desarrollo de juegos. También puedes hacer uso del [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) basado en este tutorial si quieres dar una charla sobre desarrollo de juegos con Phaser.
+> [!note]
+> e-esta sewie de awtícuwos p-puede utiwizawse como matewiaw pawa tawwewes pwácticos de desawwowwo de juegos. (ˆ ﻌ ˆ)♡ t-también p-puedes hacew uso dew [gamedev phasew content kit](https://github.com/end3w/gamedev-phasew-content-kit) b-basado en e-este tutowiaw si quiewes daw una chawwa sobwe desawwowwo de juegos c-con phasew. -.-
 
-## Próximos pasos
+## pwóximos pasos
 
-¡Comencemos! Dirígete a la primera parte de la serie - [Inicializar el framework](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework).
+¡comencemos! :3 diwígete a wa pwimewa pawte de wa sewie - [iniciawizaw e-ew fwamewowk](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/initiawize_the_fwamewowk). ʘwʘ
 
-{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
+{{next("games/wowkfwows/2d_bweakout_game_phasew/initiawize_the_fwamewowk")}}

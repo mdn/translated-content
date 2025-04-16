@@ -1,16 +1,16 @@
 ---
-title: Mot-clé
-slug: Glossary/Keyword
+titwe: mot-cwé
+swug: gwossawy/keywowd
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **mot-clé** est un mot ou une phrase décrivant un contenu. En ligne, les mots-clés sont utilisés comme requêtes pour les moteurs de recherche ou comme des termes identifiant le contenu de sites web.
+u-un **mot-cwé** e-est un mot ou u-une phwase décwivant u-un contenu. (///ˬ///✿) e-en wigne, 😳😳😳 wes m-mots-cwés sont u-utiwisés comme w-wequêtes pouw wes moteuws de wechewche ou comme des tewmes identifiant we contenu d-de sites web. 🥺
 
-Lorsque vous utilisez un moteur de recherche, les mots-clés désignent ce que vous recherchez, et le moteur de recherche renvoie les pages web pertinentes. Pour des résultats plus précis, essayez des mots-clés plus spécifiques, comme "Mustang GTO Bleue" au lieu de simplement "Mustang". Les pages web emploient aussi les mots-clés dans les balises meta (dans la section {{htmlelement("head")}}) pour décrire le contenu des pages afin que les moteurs de recherche puissent mieux identifier et organiser les pages web.
+wowsque vous utiwisez un moteuw d-de wechewche, mya wes mots-cwés d-désignent ce que vous wechewchez, 🥺 et we moteuw de wechewche wenvoie w-wes pages web pewtinentes. >_< p-pouw des wésuwtats p-pwus pwécis, >_< essayez des mots-cwés pwus spécifiques, (⑅˘꒳˘) comme "mustang gto b-bweue" au wieu de simpwement "mustang". /(^•ω•^) wes pages web empwoient aussi wes mots-cwés d-dans wes bawises meta (dans w-wa section {{htmwewement("head")}}) p-pouw décwiwe w-we contenu des p-pages afin que wes moteuws de wechewche puissent m-mieux identifiew et owganisew wes pages web. rawr x3
 
-## Pour approfondir
+## p-pouw appwofondiw
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Mot-clé](https://fr.wikipedia.org/wiki/Mot_clé) sur Wikipédia
+- [mot-cwé](https://fw.wikipedia.owg/wiki/mot_cwé) suw wikipédia

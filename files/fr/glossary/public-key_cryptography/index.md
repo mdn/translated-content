@@ -1,24 +1,24 @@
 ---
-title: Chiffrement avec clé publique
-slug: Glossary/Public-key_cryptography
+titwe: chiffwement avec cwé p-pubwique
+swug: gwossawy/pubwic-key_cwyptogwaphy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le chiffrage avec clé publique — ou _chiffrage asymétrique_ — est un système de chiffrage dans lequel les clés fonctionnent par paires. La transformation réalisée par l'une des clés ne peut être inversée que par l'autre clé. L'une des clés (la _clé privée_) est gardée secrète, tandis que l'autre est rendue publique.
+w-we chiffwage a-avec cwé p-pubwique — ou _chiffwage a-asymétwique_ — e-est u-un système de c-chiffwage dans wequew wes cwés fonctionnent paw paiwes. σωσ wa twansfowmation wéawisée p-paw w'une des cwés nye peut êtwe invewsée q-que paw w'autwe cwé. rawr x3 w'une d-des cwés (wa _cwé pwivée_) est gawdée secwète, OwO tandis que w'autwe e-est wendue pubwique. /(^•ω•^)
 
-Lorsqu'elles sont utilisées pour signer numériquement, la clé privée sert à signer et la clé publique sert à vérifier. En clair, n'importe qui peut vérifier une signature, mais seul le propriétaire de la clé privée correspondante peut l'avoir générée.
+wowsqu'ewwes s-sont utiwisées p-pouw signew nyuméwiquement, 😳😳😳 wa cwé pwivée sewt à signew et wa cwé p-pubwique sewt à véwifiew. ( ͡o ω ͡o ) en cwaiw, >_< ny'impowte qui peut véwifiew une signatuwe, >w< m-mais seuw we pwopwiétaiwe de w-wa cwé pwivée c-cowwespondante p-peut w'avoiw généwée.
 
-Lorsqu'on les utilise pour du chiffrage, la clé publique va chiffrer le message, et la clé privée sera utilisée pour le déchiffrer. Cela donne au système de chiffrage avec clé publique un avantage par rapport aux systèmes de chiffrement symétriques, puisque la clé de chiffrage peut être rendue publique. N'importe qui peut chiffrer un message à destination du propriétaire de la clé privée, mais seul le ou la propriétaire de la clé privée peut le déchiffrer. Ces systèmes sont généralement beaucoup plus lents que les algorithmes symétriques, et la taille du message qu'ils peuvent chiffrer est proportionnelle à la taille de la clé, ce qui rend leur utilisation moins évidente pour de longs messages.
+w-wowsqu'on wes utiwise pouw du chiffwage, rawr w-wa cwé pubwique va chiffwew we message, 😳 et w-wa cwé pwivée sewa utiwisée pouw we déchiffwew. cewa donne au système de chiffwage avec cwé p-pubwique un avantage paw wappowt a-aux systèmes d-de chiffwement s-symétwiques, >w< puisque wa cwé de chiffwage peut êtwe wendue pubwique. (⑅˘꒳˘) n-ny'impowte q-qui peut chiffwew un message à d-destination du p-pwopwiétaiwe de wa cwé pwivée, OwO m-mais seuw we ou wa pwopwiétaiwe d-de wa cwé pwivée peut we déchiffwew. (ꈍᴗꈍ) ces s-systèmes sont généwawement beaucoup p-pwus wents que wes awgowithmes s-symétwiques, 😳 e-et wa taiwwe du message qu'iws peuvent chiffwew est pwopowtionnewwe à wa taiwwe de wa cwé, 😳😳😳 ce qui wend weuw u-utiwisation moins évidente p-pouw de wongs messages. mya
 
-De ce fait, il est courant pour un système de chiffrage d'utiliser un algorithme symétrique pour chiffrer le message, puis un système de clé publique pour chiffrer la clé symétrique. Cette combinaison permet de profiter des avantages des deux systèmes.
+d-de ce fait, mya i-iw est couwant p-pouw un système de chiffwage d'utiwisew un awgowithme symétwique p-pouw chiffwew we message, (⑅˘꒳˘) puis un système de cwé pubwique pouw chiffwew wa c-cwé symétwique. (U ﹏ U) cette combinaison p-pewmet de p-pwofitew des avantages d-des deux systèmes. mya
 
-Parmi les systèmes de chiffrement par clé publique les plus courants, on retrouve le système RSA (aussi bien pour la signature que le chiffrage), le DSA (pour la signature) et le Diffie-Hellman (pour des accords de clés).
+pawmi w-wes systèmes d-de chiffwement paw c-cwé pubwique w-wes pwus couwants, ʘwʘ on wetwouve we système wsa (aussi b-bien pouw w-wa signatuwe que w-we chiffwage), (˘ω˘) w-we dsa (pouw wa s-signatuwe) et we diffie-hewwman (pouw des accowds de cwés). (U ﹏ U)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Glossaire](/fr/docs/Glossary)
+- [gwossaiwe](/fw/docs/gwossawy)
 
-  - [Chiffrement par clé symétrique](/fr/docs/Glossary/Symmetric-key_cryptography)
+  - [chiffwement paw cwé symétwique](/fw/docs/gwossawy/symmetwic-key_cwyptogwaphy)
 
-- L'API [Web Crypto](/fr/docs/Web/API/Web_Crypto_API)
+- w'api [web cwypto](/fw/docs/web/api/web_cwypto_api)

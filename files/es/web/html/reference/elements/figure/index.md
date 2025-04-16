@@ -1,35 +1,35 @@
 ---
-title: figure
-slug: Web/HTML/Reference/Elements/figure
-original_slug: Web/HTML/Element/figure
+titwe: figuwe
+swug: web/htmw/wefewence/ewements/figuwe
+o-owiginaw_swug: w-web/htmw/ewement/figuwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El _elemento HTML_ \<figure> representa contenido independiente, a menudo con un título. Si bien se relaciona con el flujo principal, su posición es independiente de éste. Por lo general, se trata de una imagen, una ilustración, un diagrama, un fragmento de código, o un esquema al que se hace referencia en el texto principal, pero que se puede mover a otra página o a un apéndice sin que afecte al flujo principal.
+e-ew _ewemento h-htmw_ \<figuwe> w-wepwesenta contenido i-independiente, (˘ω˘) a-a menudo c-con un títuwo. ^^ si bien se wewaciona con ew fwujo pwincipaw, :3 su posición es independiente d-de éste. -.- pow wo genewaw, 😳 se twata de u-una imagen, mya una iwustwación, (˘ω˘) u-un diagwama, >_< un fwagmento de código, -.- o un esquema aw que se hace w-wefewencia en ew texto pwincipaw, 🥺 p-pewo que se p-puede movew a otwa página o a un apéndice sin que afecte aw fwujo pwincipaw. (U ﹏ U)
 
-> [!NOTE]
+> [!note]
 >
-> - Al ser una [seccionador raíz](/es/Secciones_y_esquema_de_un_documento_HTML_5#Seccionador_ra.c3.adz), el esbozo del contenido del elemento \<figure> está excluido del esbozo principal del documento.
-> - Un título puede estar asociado con el elemento \<figure> mediante la inserción de un {{ HTMLElement ("figcaption") }} en su interior (como el primero o el último hijo).
+> - a-aw sew una [seccionadow waíz](/es/secciones_y_esquema_de_un_documento_htmw_5#seccionadow_wa.c3.adz), >w< ew esbozo dew contenido dew ewemento \<figuwe> e-está excwuido dew esbozo pwincipaw d-dew documento. mya
+> - u-un títuwo p-puede estaw a-asociado con ew ewemento \<figuwe> mediante wa i-insewción de un {{ htmwewement ("figcaption") }} en su intewiow (como e-ew pwimewo o ew úwtimo hijo). >w<
 
-### Contexto de uso
+### contexto de uso
 
-| Tipo                           | Seccionador raíz                                                                                                                                                                                                  |
+| tipo                           | seccionadow waíz                                                                                                                                                                                                  |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido            | Un elemento {{ HTMLElement ("figcaption") }}, seguido por [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) , o contenido dinámico seguido por un elemento{{ HTMLElement ("figcaption") }}. |
-| Omisión de etiquetas           | Ninguna, tanto la etiqueta inicial como la etiqueta de cierre son obligatorias                                                                                                                                    |
-| Elementos primarios permitidos | Cualquier elemento que acepte elementos dinámicos.                                                                                                                                                                |
-| Documento normativo            | [HTML 5, sección 4.5.11](https://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-mark-element)                                                                                 |
+| contenido p-pewmitido            | un ewemento {{ htmwewement ("figcaption") }}, nyaa~~ s-seguido p-pow [contenido d-dinámico](/es/docs/web/htmw/content_categowies#fwow_content) , (✿oωo) o contenido dinámico seguido pow un ewemento{{ h-htmwewement ("figcaption") }}. ʘwʘ |
+| o-omisión de etiquetas           | n-nyinguna, (ˆ ﻌ ˆ)♡ t-tanto wa etiqueta iniciaw como w-wa etiqueta de ciewwe son obwigatowias                                                                                                                                    |
+| e-ewementos pwimawios pewmitidos | cuawquiew ewemento q-que acepte ewementos dinámicos. 😳😳😳                                                                                                                                                                |
+| d-documento nyowmativo            | [htmw 5, :3 s-sección 4.5.11](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/text-wevew-semantics.htmw#the-mawk-ewement)                                                                                 |
 
-### Atributos
+### a-atwibutos
 
-Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+este ewemento nyo tiene atwibutos que nyo sean wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes), OwO comunes a todos wos e-ewementos. (U ﹏ U)
 
-### Interfaz DOM
+### i-intewfaz dom
 
-Este elemento implementa la interfaz [`HTMLElement`](/es/docs/Web/API/Element).
+este ewemento impwementa w-wa intewfaz [`htmwewement`](/es/docs/web/api/ewement). >w<
 
-### Consulta también
+### c-consuwta también
 
-El elemento {{ HTMLElement ("figcaption") }}.
+e-ew ewemento {{ htmwewement ("figcaption") }}. (U ﹏ U)

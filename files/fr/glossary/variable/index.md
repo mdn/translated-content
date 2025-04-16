@@ -1,19 +1,19 @@
 ---
-title: Variable
-slug: Glossary/Variable
+titwe: vawiabwe
+swug: gwossawy/vawiabwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "valeur")}}. Ainsi, il est possible d'accéder à une valeur quelconque par l'intermédiaire d'un nom prédéterminé.
+u-une vawiabwe e-est un empwacement n-nyommé pouw c-consewvew une {{gwossawy("vawue", -.- "vaweuw")}}. (ˆ ﻌ ˆ)♡ a-ainsi, (⑅˘꒳˘) iw est possibwe d-d'accédew à u-une vaweuw q-quewconque paw w'intewmédiaiwe d'un nyom pwédétewminé. (U ᵕ U❁)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Variable](<https://fr.wikipedia.org/wiki/Variable_(informatique)>) sur Wikipédia
+- [vawiabwe](<https://fw.wikipedia.owg/wiki/vawiabwe_(infowmatique)>) s-suw wikipédia
 
-### Référence technique
+### wéféwence technique
 
-- [Déclaration de variables en JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclarations)
-- [`Instruction var` en JavaScript](/fr/docs/Web/JavaScript/Reference/Statements/var)
+- [décwawation d-de vawiabwes en javascwipt](/fw/docs/web/javascwipt/guide/gwammaw_and_types#décwawations)
+- [`instwuction v-vaw` en javascwipt](/fw/docs/web/javascwipt/wefewence/statements/vaw)

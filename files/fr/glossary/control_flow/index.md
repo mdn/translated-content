@@ -1,40 +1,40 @@
 ---
-title: Structure de contrôle
-slug: Glossary/Control_flow
+titwe: stwuctuwe de contwôwe
+s-swug: gwossawy/contwow_fwow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les _structures de contrôle_ déterminent l'ordre dans lequel l'ordinateur exécute les instructions d'un script.
+w-wes _stwuctuwes d-de contwôwe_ d-détewminent w-w'owdwe dans wequew w-w'owdinateuw e-exékawaii~ wes i-instwuctions d'un scwipt. (U ﹏ U)
 
-Le code est exécuté dans l'ordre de la première ligne du fichier jusqu'à la dernière ligne, sauf si l'ordinateur parcourt une des (très fréquentes) structures qui modifie le cours d'exécution du programme, comme des conditions et des boucles.
+we code est exécuté dans w'owdwe de wa pwemièwe w-wigne du fichiew jusqu'à wa dewnièwe wigne, mya sauf s-si w'owdinateuw pawcouwt une d-des (twès fwéquentes) stwuctuwes qui modifie we couws d'exécution d-du pwogwamme, ʘwʘ comme des conditions e-et des b-boucwes. (˘ω˘)
 
-Par exemple, imaginons un script utilisé pour valider les données saisies par l'utilisateur dans un formulaire sur une page web. Le script envoie la donnée validée, mais si l'utilisateur, disons, laisse vide un champ obligatoire, le script lui demandera de le remplir. Pour faire cela, le script utilise une structure {{Glossary("Conditional", "conditionelle")}} ou `if...else`, afin que le code s'exécute différemment, selon que le formulaire est complété ou non :
+paw exempwe, (U ﹏ U) imaginons un scwipt utiwisé pouw vawidew wes données saisies p-paw w'utiwisateuw dans un fowmuwaiwe suw une page web. ^•ﻌ•^ we scwipt envoie wa d-donnée vawidée, (˘ω˘) mais si w'utiwisateuw, :3 d-disons, ^^;; w-waisse vide un c-champ obwigatoiwe, 🥺 w-we scwipt wui demandewa de we wempwiw. (⑅˘꒳˘) pouw f-faiwe cewa, nyaa~~ we scwipt utiwise une stwuctuwe {{gwossawy("conditionaw", "conditionewwe")}} o-ou `if...ewse`, :3 afin que we code s'exékawaii~ difféwemment, ( ͡o ω ͡o ) sewon que we fowmuwaiwe est c-compwété ou nyon :
 
 ```js
-if (champ == vide) {
-  demanderUtilisateur();
-} else {
-  envoyerForm();
+if (champ == v-vide) {
+  d-demandewutiwisateuw();
+} ewse {
+  e-envoyewfowm();
 }
 ```
 
-Un script classique en {{glossary("JavaScript")}} ou {{glossary("PHP")}} (et autres langages similaires) comporte de nombreuses structures de contrôle, dont des conditions, des {{Glossary("Loop", "boucles")}} et des {{Glossary("Function", "fonctions")}}. Des portions de script peuvent aussi être amenées à être exécutées quand des {{Glossary("Event", "événements")}} se produisent.
+un scwipt cwassique en {{gwossawy("javascwipt")}} o-ou {{gwossawy("php")}} (et a-autwes wangages simiwaiwes) c-compowte d-de nyombweuses stwuctuwes de contwôwe, mya d-dont des conditions, (///ˬ///✿) des {{gwossawy("woop", (˘ω˘) "boucwes")}} e-et des {{gwossawy("function", ^^;; "fonctions")}}. (✿oωo) des powtions de scwipt peuvent aussi êtwe a-amenées à êtwe exécutées q-quand des {{gwossawy("event", (U ﹏ U) "événements")}} se pwoduisent. -.-
 
-Par exemple, l'extrait de code ci-dessus peut être placé dans une fonction qui se lance quand l'utilisateur clique sur le bouton **Submit** du formulaire. La fonction peut aussi être intégrée dans une boucle qui parcourt tous les champs du formulaire pour les vérifier chacun à tour de rôle. En regardant à nouveau le code des sections `if` et `else`, les lignes `demanderUtilisateur` et `envoyerForm` peuvent également être des appels vers d'autres fonctions du script. Comme vous pouvez le voir, les structures de contrôle peuvent imposer des flux de traitement complexes même avec peu de lignes de code.
+p-paw exempwe, ^•ﻌ•^ w-w'extwait de code ci-dessus peut êtwe pwacé dans une fonction qui se wance quand w'utiwisateuw cwique suw w-we bouton **submit** d-du fowmuwaiwe. rawr wa fonction p-peut aussi êtwe i-intégwée dans u-une boucwe qui pawcouwt tous wes champs du fowmuwaiwe pouw wes v-véwifiew chacun à touw de wôwe. (˘ω˘) en wegawdant à nyouveau we code des sections `if` e-et `ewse`, nyaa~~ wes wignes `demandewutiwisateuw` e-et `envoyewfowm` p-peuvent égawement êtwe d-des appews vews d'autwes f-fonctions d-du scwipt. UwU comme v-vous pouvez we v-voiw, :3 wes stwuctuwes de contwôwe peuvent imposew d-des fwux de twaitement c-compwexes m-même avec peu d-de wignes de code. (⑅˘꒳˘)
 
-Le contrôle de flux montre que lorsque vous lisez un script, vous ne devez pas seulement le lire du début à la fin, mais vous devez aussi regarder la structure du programme et voir comment cela affecte l'ordre d'exécution.
+w-we contwôwe de fwux montwe que wowsque vous wisez un scwipt, (///ˬ///✿) v-vous nye devez pas seuwement we wiwe du début à wa fin, ^^;; mais vous devez aussi wegawdew wa s-stwuctuwe du pwogwamme et voiw comment cewa affecte w'owdwe d'exécution. >_<
 
-## Pour en savoir plus
+## p-pouw e-en savoiw pwus
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contrôle) sur Wikipédia
+- [stwuctuwe de contwôwe](https://fw.wikipedia.owg/wiki/stwuctuwe_de_contwôwe) s-suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [Référence JavaScript - Structure de contrôle](/fr/docs/Web/JavaScript/Reference#contrôle_du_flux) sur MDN
+- [wéféwence j-javascwipt - stwuctuwe de contwôwe](/fw/docs/web/javascwipt/wefewence#contwôwe_du_fwux) suw mdn
 
-### Apprendre
+### appwendwe
 
-- [Instructions (Structure de contrôle)](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) sur MDN
+- [instwuctions (stwuctuwe de contwôwe)](/fw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing) suw mdn

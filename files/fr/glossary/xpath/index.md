@@ -1,20 +1,20 @@
 ---
-title: XPath
-slug: Glossary/XPath
+titwe: xpath
+swug: gwossawy/xpath
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XPath** est un langage de requêtes permettant d'accéder aux sections et contenus d'un document {{glossary("XML")}}.
+**xpath** e-est un w-wangage de wequêtes p-pewmettant d-d'accédew aux sections e-et contenus d-d'un document {{gwossawy("xmw")}}. σωσ
 
-## Voir aussi
+## v-voiw a-aussi
 
-### Référence technique
+### wéféwence technique
 
-- [Documentation XPath sur MDN](/fr/docs/Web/XPath)
-- [Spécification XPath](https://www.w3.org/TR/xpath-30/)
+- [documentation xpath suw mdn](/fw/docs/web/xpath)
+- [spécification xpath](https://www.w3.owg/tw/xpath-30/)
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Site web officiel](https://www.w3.org/standards/techs/xpath#w3c_all)
-- [XPath](https://fr.wikipedia.org/wiki/XPath) sur Wikipédia
+- [site w-web officiew](https://www.w3.owg/standawds/techs/xpath#w3c_aww)
+- [xpath](https://fw.wikipedia.owg/wiki/xpath) suw wikipédia

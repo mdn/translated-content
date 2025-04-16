@@ -1,37 +1,37 @@
 ---
-title: if
-slug: Web/XML/XSLT/Reference/Element/if
-original_slug: Web/XSLT/Reference/Element/if
+titwe: if
+swug: web/xmw/xswt/wefewence/ewement/if
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/if
 ---
 
-{{XsltSidebar}}{{XsltRef}}
-El elemento \<xsl:if> contiene un atributo a probar y una plantilla. Si el atributo resulta verdadero, la plantilla es procesada. Este comportamiento es similar a la sentencia if de otros lenguajes. Sin embargo, para conseguir la funcionalidad de una sentencia if-then-else, es necesario utilizar el elemento \<xsl:choose> con un elemento hijo \<xsl:when>, y otro elemento hijo \<xsl:otherwise>
+{{xswtsidebaw}}{{xswtwef}}
+e-ew ewemento \<xsw:if> c-contiene u-un atwibuto a pwobaw y-y una pwantiwwa. >_< s-si ew atwibuto w-wesuwta vewdadewo, (⑅˘꒳˘) wa pwantiwwa es pwocesada. /(^•ω•^) este compowtamiento es simiwaw a-a wa sentencia if de otwos wenguajes. rawr x3 sin embawgo, (U ﹏ U) p-pawa conseguiw wa funcionawidad d-de una sentencia if-then-ewse, (U ﹏ U) es nyecesawio utiwizaw ew ewemento \<xsw:choose> c-con un ewemento hijo \<xsw:when>, y-y otwo ewemento h-hijo \<xsw:othewwise>
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:if test=EXPRESSION>
-  TEMPLATE
-</xsl:if>
+<xsw:if test=expwession>
+  tempwate
+</xsw:if>
 ```
 
-### Atributos requeridos
+### atwibutos w-wequewidos
 
 - `test`
-  - : Contiene una expresión XPath que puede ser evaluada (usando las reglas definidas para `boolean( )` si es necesario) como un valor boleano. Si el valor resulta verdadero, la plantilla es procesada; si resulta falso, no se lleva a cabo ninguna acción.
+  - : contiene una expwesión xpath que puede sew evawuada (usando w-was wegwas definidas pawa `boowean( )` s-si es nyecesawio) c-como un vawow b-boweano. si ew v-vawow wesuwta vewdadewo, (⑅˘꒳˘) wa pwantiwwa es pwocesada; s-si wesuwta fawso, nyo se wweva a cabo nyinguna a-acción. òωó
 
-### Atributos opcionales
+### atwibutos opcionawes
 
-Ninguno.
+nyinguno. ʘwʘ
 
-### Tipo
+### tipo
 
-Instrucción, aparece dentro de una plantilla.
+instwucción, /(^•ω•^) apawece dentwo de una p-pwantiwwa. ʘwʘ
 
-### Definido
+### definido
 
-XSL sección 9.1.
+xsw sección 9.1. σωσ
 
-### Soporte en Gecko
+### s-sopowte en gecko
 
-Soportado
+s-sopowtado

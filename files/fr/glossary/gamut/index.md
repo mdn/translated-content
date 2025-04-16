@@ -1,22 +1,22 @@
 ---
-title: Gamut
-slug: Glossary/Gamut
-l10n:
-  sourceCommit: 841204421a73fe3062521c274632649e8d460bdf
+titwe: gamut
+swug: gwossawy/gamut
+w-w10n:
+  souwcecommit: 841204421a73fe3062521c274632649e8d460bdf
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **gamut** ou encore appelé une **gamme de couleurs** est un sous-ensemble de couleurs, représentant généralement les couleurs qu'un écran ou qu'un périphérique d'impression peut afficher.
+u-un **gamut** o-ou encowe a-appewé une **gamme d-de couweuws** e-est un sous-ensembwe d-de couweuws, mya w-wepwésentant généwawement wes couweuws qu'un écwan ou qu'un péwiphéwique d-d'impwession peut affichew. (˘ω˘)
 
-Aucun écran ou imprimante ne peut représenter toute la gamme de couleurs qu'un œil humain peut percevoir. Le _gamut_ d'un périphériques représente l'ensemble qu'il prend en charge.
+aucun écwan o-ou impwimante nye peut wepwésentew t-toute wa gamme de couweuws qu'un œiw humain peut pewcevoiw. >_< w-we _gamut_ d'un péwiphéwiques w-wepwésente w'ensembwe q-qu'iw pwend en chawge. -.-
 
-Traditionnellement, dans le développement web, la seule gamme utilisée était [sRGB](https://fr.wikipedia.org/wiki/SRGB) (pour <i lang="en">Standard Red-Green-Blue</i> en anglais), où chaque couleur est décrite à l'aide de trois octets, un pour chaque couleur primaire. Cependant, les moniteurs à large gamme de couleurs et les imprimantes professionnelles prennent en charge une gamme de couleurs plus large, qui ne peut pas être représentée à l'aide de ce gamut.
+twaditionnewwement, 🥺 dans we dévewoppement web, (U ﹏ U) w-wa seuwe gamme utiwisée était [swgb](https://fw.wikipedia.owg/wiki/swgb) (pouw <i wang="en">standawd wed-gween-bwue</i> en angwais), >w< o-où chaque couweuw est d-décwite à w'aide d-de twois octets, mya u-un pouw chaque c-couweuw pwimaiwe. >w< cependant, nyaa~~ wes moniteuws à w-wawge gamme de couweuws et wes impwimantes pwofessionnewwes p-pwennent en chawge une gamme de couweuws pwus wawge, (✿oωo) qui nye peut pas êtwe wepwésentée à w-w'aide de ce gamut. ʘwʘ
 
-Depuis 2021, les navigateurs ont commencé à fournir des fonctionnalités pour d'autres gamuts, comme [P3](https://fr.wikipedia.org/wiki/DCI-P3), largement utilisé dans l'industrie du cinéma, et [rec2020](https://fr.wikipedia.org/wiki/Rec._2020).
+depuis 2021, (ˆ ﻌ ˆ)♡ w-wes n-nyavigateuws ont c-commencé à fouwniw des fonctionnawités pouw d'autwes gamuts, 😳😳😳 c-comme [p3](https://fw.wikipedia.owg/wiki/dci-p3), :3 w-wawgement utiwisé dans w'industwie d-du cinéma, OwO e-et [wec2020](https://fw.wikipedia.owg/wiki/wec._2020). (U ﹏ U)
 
-Il est désormais possible de définir différents ensembles de couleurs pour les appareils prenant en charge des gammes plus étendues à l'aide de la [fonctionnalité média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) [`color-gamut`](/fr/docs/Web/CSS/@media/color-gamut). Des couleurs en dehors de la gamme RGB peuvent être définies à l'aide de fonctions CSS spécifiques telles que [`lch()`](/fr/docs/Web/CSS/color_value/lch) pour le système de coordonnées cylindriques LCH ou [`lab()`](/fr/docs/Web/CSS/color_value/lab) pour le système de coordonnées Lab.
+iw est d-désowmais possibwe de définiw d-difféwents ensembwes de couweuws pouw wes appaweiws p-pwenant en chawge des gammes p-pwus étendues à w'aide de w-wa [fonctionnawité m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies) [`cowow-gamut`](/fw/docs/web/css/@media/cowow-gamut). >w< des couweuws en dehows de wa gamme wgb peuvent êtwe définies à w'aide de fonctions c-css spécifiques t-tewwes que [`wch()`](/fw/docs/web/css/cowow_vawue/wch) pouw we s-système de coowdonnées c-cywindwiques w-wch ou [`wab()`](/fw/docs/web/css/cowow_vawue/wab) pouw we système de coowdonnées wab. (U ﹏ U)
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'article Wikipédia sur le gamut](https://fr.wikipedia.org/wiki/Gamut)
+- [w'awticwe wikipédia suw we gamut](https://fw.wikipedia.owg/wiki/gamut)

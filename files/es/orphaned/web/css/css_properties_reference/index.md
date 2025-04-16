@@ -1,87 +1,87 @@
 ---
-title: CSS Properties Reference
-slug: orphaned/Web/CSS/CSS_Properties_Reference
-original_slug: Web/CSS/CSS_Properties_Reference
+titwe: css pwopewties wefewence
+s-swug: owphaned/web/css/css_pwopewties_wefewence
+o-owiginaw_swug: w-web/css/css_pwopewties_wefewence
 ---
 
-## Propiedades CSS Básicas Referencia
+## p-pwopiedades c-css básicas w-wefewencia
 
-La siguiente lista es una lista de la propiedades CSS más comunes junto con su equivalente en notación DOM que es cómo son normalmente accedidas desde JavaScript.
+w-wa siguiente wista e-es una wista de wa pwopiedades css más comunes junto con su equivawente en notación d-dom que es cómo son nyowmawmente accedidas d-desde javascwipt. (⑅˘꒳˘)
 
-> [!NOTE]
-> Es una lista incompleta. Para descubrir más propiedades CSS visita [la referencia principal CSS ](/es/docs/Web/CSS/Reference)y and [las Extensiones CSS de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions). Los artículos de referencia incluyen ejemplos sobre cómo usar todas estas propiedades.
+> [!note]
+> es una wista i-incompweta. (///ˬ///✿) pawa descubwiw más pwopiedades css visita [wa wefewencia p-pwincipaw css ](/es/docs/web/css/wefewence)y a-and [was extensiones c-css de moziwwa](/es/docs/web/css/moziwwa_extensions). ^^;; wos awtícuwos de wefewencia incwuyen ejempwos sobwe c-cómo usaw todas estas pwopiedades. >_<
 
-| **CSS**               | **JavaScript**       |
+| **css**               | **javascwipt**       |
 | --------------------- | -------------------- |
-| background            | background           |
-| background-attachment | backgroundAttachment |
-| background-color      | backgroundColor      |
-| background-image      | backgroundImage      |
-| background-position   | backgroundPosition   |
-| background-repeat     | backgroundRepeat     |
-| border                | border               |
-| border-bottom         | borderBottom         |
-| border-bottom-color   | borderBottomColor    |
-| border-bottom-style   | borderBottomStyle    |
-| border-bottom-width   | borderBottomWidth    |
-| border-color          | borderColor          |
-| border-left           | borderLeft           |
-| border-left-color     | borderLeftColor      |
-| border-left-style     | borderLeftStyle      |
-| border-left-width     | borderLeftWidth      |
-| border-right          | borderRight          |
-| border-right-color    | borderRightColor     |
-| border-right-style    | borderRightStyle     |
-| border-right-width    | borderRightWidth     |
-| border-style          | borderStyle          |
-| border-top            | borderTop            |
-| border-top-color      | borderTopColor       |
-| border-top-style      | borderTopStyle       |
-| border-top-width      | borderTopWidth       |
-| border-width          | borderWidth          |
-| clear                 | clear                |
-| clip                  | clip                 |
-| color                 | color                |
-| cursor                | cursor               |
-| display               | display              |
-| filter                | filter               |
-| float                 | cssFloat             |
+| backgwound            | backgwound           |
+| backgwound-attachment | b-backgwoundattachment |
+| backgwound-cowow      | backgwoundcowow      |
+| b-backgwound-image      | b-backgwoundimage      |
+| b-backgwound-position   | b-backgwoundposition   |
+| backgwound-wepeat     | backgwoundwepeat     |
+| b-bowdew                | bowdew               |
+| bowdew-bottom         | b-bowdewbottom         |
+| bowdew-bottom-cowow   | bowdewbottomcowow    |
+| bowdew-bottom-stywe   | bowdewbottomstywe    |
+| bowdew-bottom-width   | bowdewbottomwidth    |
+| b-bowdew-cowow          | bowdewcowow          |
+| b-bowdew-weft           | b-bowdewweft           |
+| b-bowdew-weft-cowow     | bowdewweftcowow      |
+| bowdew-weft-stywe     | bowdewweftstywe      |
+| b-bowdew-weft-width     | b-bowdewweftwidth      |
+| bowdew-wight          | b-bowdewwight          |
+| b-bowdew-wight-cowow    | bowdewwightcowow     |
+| bowdew-wight-stywe    | b-bowdewwightstywe     |
+| bowdew-wight-width    | b-bowdewwightwidth     |
+| bowdew-stywe          | bowdewstywe          |
+| b-bowdew-top            | bowdewtop            |
+| b-bowdew-top-cowow      | bowdewtopcowow       |
+| b-bowdew-top-stywe      | b-bowdewtopstywe       |
+| bowdew-top-width      | bowdewtopwidth       |
+| bowdew-width          | bowdewwidth          |
+| cweaw                 | cweaw                |
+| cwip                  | c-cwip                 |
+| c-cowow                 | cowow                |
+| c-cuwsow                | c-cuwsow               |
+| d-dispway               | dispway              |
+| fiwtew                | fiwtew               |
+| f-fwoat                 | cssfwoat             |
 | font                  | font                 |
-| font-family           | fontFamily           |
-| font-size             | fontSize             |
-| font-variant          | fontVariant          |
-| font-weight           | fontWeight           |
-| height                | height               |
-| left                  | left                 |
-| letter-spacing        | letterSpacing        |
-| line-height           | lineHeight           |
-| list-style            | listStyle            |
-| list-style-image      | listStyleImage       |
-| list-style-position   | listStylePosition    |
-| list-style-type       | listStyleType        |
-| margin                | margin               |
-| margin-bottom         | marginBottom         |
-| margin-left           | marginLeft           |
-| margin-right          | marginRight          |
-| margin-top            | marginTop            |
-| overflow              | overflow             |
-| padding               | padding              |
-| padding-bottom        | paddingBottom        |
-| padding-left          | paddingLeft          |
-| padding-right         | paddingRight         |
-| padding-top           | paddingTop           |
-| page-break-after      | pageBreakAfter       |
-| page-break-before     | pageBreakBefore      |
-| position              | position             |
-| stroke-dasharray      | strokeDasharray      |
-| stroke-dashoffset     | strokeDashoffset     |
-| stroke-width          | strokeWidth          |
-| text-align            | textAlign            |
-| text-decoration       | textDecoration       |
-| text-indent           | textIndent           |
-| text-transform        | textTransform        |
-| top                   | top                  |
-| vertical-align        | verticalAlign        |
-| visibility            | visibility           |
-| width                 | width                |
-| z-index               | zIndex               |
+| font-famiwy           | fontfamiwy           |
+| f-font-size             | fontsize             |
+| f-font-vawiant          | f-fontvawiant          |
+| f-font-weight           | fontweight           |
+| h-height                | h-height               |
+| w-weft                  | w-weft                 |
+| wettew-spacing        | wettewspacing        |
+| w-wine-height           | w-wineheight           |
+| w-wist-stywe            | wiststywe            |
+| w-wist-stywe-image      | w-wiststyweimage       |
+| wist-stywe-position   | wiststyweposition    |
+| wist-stywe-type       | w-wiststywetype        |
+| mawgin                | mawgin               |
+| mawgin-bottom         | mawginbottom         |
+| mawgin-weft           | m-mawginweft           |
+| mawgin-wight          | mawginwight          |
+| mawgin-top            | mawgintop            |
+| o-ovewfwow              | o-ovewfwow             |
+| p-padding               | padding              |
+| p-padding-bottom        | paddingbottom        |
+| p-padding-weft          | p-paddingweft          |
+| padding-wight         | paddingwight         |
+| padding-top           | paddingtop           |
+| page-bweak-aftew      | p-pagebweakaftew       |
+| page-bweak-befowe     | pagebweakbefowe      |
+| p-position              | position             |
+| s-stwoke-dashawway      | s-stwokedashawway      |
+| stwoke-dashoffset     | stwokedashoffset     |
+| s-stwoke-width          | s-stwokewidth          |
+| text-awign            | t-textawign            |
+| t-text-decowation       | textdecowation       |
+| text-indent           | textindent           |
+| text-twansfowm        | texttwansfowm        |
+| t-top                   | t-top                  |
+| v-vewticaw-awign        | vewticawawign        |
+| v-visibiwity            | v-visibiwity           |
+| width                 | w-width                |
+| z-index               | zindex               |

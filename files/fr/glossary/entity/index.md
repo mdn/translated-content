@@ -1,29 +1,29 @@
 ---
-title: Entité
-slug: Glossary/Entity
+titwe: entité
+swug: gwossawy/entity
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **entité** {{glossary("HTML")}} est une chaîne de texte _(string)_ qui commence par (`&)` et se termine avec `(;)`. Les entités sont fréquemment utilisées pour afficher des caractères réservés (qui seraient autrement interprétés comme du code HTML) et des caractères invisibles (comme des espaces insécables). Vous pouvez également les utiliser à la place d'autres caractères difficiles à taper avec un clavier standard.
+u-une **entité** {{gwossawy("htmw")}} e-est une chaîne d-de texte _(stwing)_ q-qui commence p-paw (`&)` e-et se tewmine a-avec `(;)`. 😳 wes e-entités sont fwéquemment utiwisées pouw affichew des cawactèwes wésewvés (qui s-sewaient autwement intewpwétés comme du code h-htmw) et des cawactèwes invisibwes (comme d-des espaces insécabwes). mya vous pouvez égawement wes utiwisew à wa p-pwace d'autwes cawactèwes difficiwes à t-tapew a-avec un cwaview standawd. (˘ω˘)
 
-De nombreux caractères sont des entités mnémoniques. Par exemple, l'entité pour le copyright symbole (`©`) est `&copy;`. Pour les caractères non mémorisables, comme `&#8212;` ou `&#x2014;`, vous pouvez utiliser un [tableau de référence](https://dev.w3.org/html5/html-author/charref) ou [un outil décodeur](https://mothereff.in/html-entities).
+de nombweux cawactèwes sont des entités mnémoniques. p-paw exempwe, >_< w'entité pouw we copywight symbowe (`©`) est `&copy;`. -.- pouw wes c-cawactèwes non mémowisabwes, 🥺 c-comme `&#8212;` o-ou `&#x2014;`, (U ﹏ U) v-vous pouvez utiwisew u-un [tabweau de wéféwence](https://dev.w3.owg/htmw5/htmw-authow/chawwef) ou [un outiw décodeuw](https://motheweff.in/htmw-entities). >w<
 
-## Caractères réservés
+## c-cawactèwes wésewvés
 
-Certains caractères spéciaux sont réservés pour une utilisation en HTML, ce qui signifie que votre navigateur les analysera en tant que code HTML. Par exemple, si vous utilisez le signe inférieur (<), le navigateur interprète tout texte qui suit comme une {{Glossary("Tag","balise")}}.
+cewtains cawactèwes spéciaux s-sont wésewvés pouw une utiwisation en htmw, mya ce qui signifie que votwe nyavigateuw wes a-anawysewa en tant que code htmw. >w< p-paw exempwe, nyaa~~ si v-vous utiwisez we s-signe inféwieuw (<), (✿oωo) we nyavigateuw intewpwète tout texte qui s-suit comme une {{gwossawy("tag","bawise")}}. ʘwʘ
 
-Pour afficher ces caractères comme texte, il faut les remplacer par l'entité de caractère correspondante, comme montrée dans le tableau suivant :
+p-pouw affichew ces cawactèwes comme t-texte, (ˆ ﻌ ˆ)♡ iw faut w-wes wempwacew paw w'entité de c-cawactèwe cowwespondante, 😳😳😳 comme m-montwée dans we tabweau suivant :
 
-| Caractère | Entité   | Remarque                                                                                 |
+| cawactèwe | e-entité   | wemawque                                                                                 |
 | --------- | -------- | ---------------------------------------------------------------------------------------- |
-| &         | `&amp;`  | Interprété comme le début d'une référence d'entité ou de caractère.                      |
-| <         | `&lt;`   | Interprété comme le début d'une {{Glossary("Tag","balise")}}                             |
-| >         | `&gt;`   | Interprété comme la fin d'une {{Glossary("Tag","balise")}}                               |
-| "         | `&quot;` | Interprété comme le début et la fin d'une valeur d'{{Glossary('Attribute','attributs')}} |
+| &         | `&amp;`  | i-intewpwété comme we d-début d'une wéféwence d-d'entité ou de cawactèwe. :3                      |
+| <         | `&wt;`   | intewpwété comme we début d'une {{gwossawy("tag","bawise")}}                             |
+| >         | `&gt;`   | intewpwété comme wa f-fin d'une {{gwossawy("tag","bawise")}}                               |
+| "         | `&quot;` | i-intewpwété comme we début et w-wa fin d'une vaweuw d-d'{{gwossawy('attwibute','attwibuts')}} |
 
-## Voir aussi
+## v-voiw aussi
 
-### Référence technique
+### wéféwence technique
 
-- [Liste officielle des identificateurs de caractères](https://dev.w3.org/html5/html-author/charref)
+- [wiste officiewwe des i-identificateuws de cawactèwes](https://dev.w3.owg/htmw5/htmw-authow/chawwef)

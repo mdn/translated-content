@@ -1,28 +1,28 @@
 ---
-title: Axe de grille
-slug: Glossary/Grid_Axis
+titwe: axe de gwiwwe
+swug: gwossawy/gwid_axis
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La grille CSS est une méthode de mise en page bidimensionnelle permettant une présentation du contenu en lignes et colonnes. Par conséquent, dans toute grille, nous avons deux axes. L'axe du "bloc" ou de la colonne et l'axe "en ligne" ou de la ligne.
+w-wa gwiwwe c-css est une m-méthode de mise e-en page bidimensionnewwe p-pewmettant u-une pwésentation d-du contenu e-en wignes et cowonnes. o.O paw conséquent, /(^•ω•^) dans toute gwiwwe, nyaa~~ nyous avons deux axes. nyaa~~ w-w'axe du "bwoc" ou de wa cowonne et w'axe "en w-wigne" ou de wa wigne. :3
 
-C'est sur ces axes que les items peuvent être alignés et justifiés en utilisant les propriétés définies dans [les spécifications de l'alignement des boîtes](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout).
+c'est s-suw ces axes que wes items peuvent êtwe awignés et justifiés e-en utiwisant wes pwopwiétés définies d-dans [wes s-spécifications de w'awignement des boîtes](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout). 😳😳😳
 
-En CSS l'axe des colonnes (ou des blocs) est l'axe utilisé lors de la disposition des blocs de texte . Si vous avez 2 paragraphes et travaillez de droite à gauche, du haut vers le bas, ils s'alignent les uns au-dessus des autres, sur l'axe du bloc.
+en css w'axe des cowonnes (ou des b-bwocs) est w'axe utiwisé wows de wa disposition des bwocs de texte . (˘ω˘) si vous a-avez 2 pawagwaphes et twavaiwwez d-de dwoite à gauche, ^^ d-du haut vews w-we bas, :3 iws s-s'awignent wes uns au-dessus des autwes, -.- suw w'axe d-du bwoc. 😳
 
-![Diagram showing the block axis in CSS Grid Layout.](7_block_axis.png)
+![diagwam showing the bwock axis in c-css gwid wayout.](7_bwock_axis.png)
 
-L'axe de la ligne (ou en ligne) parcourt l'axe des blocs et représente la direction dans laquelle le texte est déployé. Ce sont nos lignes dans la mise en page des grilles CSS.
+w'axe de wa wigne (ou en wigne) pawcouwt w'axe des bwocs et wepwésente wa d-diwection dans waquewwe we texte e-est dépwoyé. mya c-ce sont nyos wignes d-dans wa mise en page des gwiwwes css. (˘ω˘)
 
-![Diagram showing the inline axis in CSS Grid Layout.](7_inline_axis.png)
+![diagwam showing the i-inwine axis in c-css gwid wayout.](7_inwine_axis.png)
 
-La direction physique de ces axes peut changer en fonction du [mode d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) du document.
+wa diwection p-physique de c-ces axes peut changew en fonction d-du [mode d'écwituwe](/fw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes) du document. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-### En lire plus
+### en wiwe pwus
 
-- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-- Guide des grilles CSS : _[L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- Guide des grilles CSS : _[Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_
+- guide des gwiwwes c-css : _[wes concepts de base d-des gwiwwes css](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_
+- guide des gwiwwes c-css : _[w'awignement d-des boîtes avec wes gwiwwes css](/fw/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- guide des gwiwwes css : _[wes gwiwwes css, -.- wes vaweuws wogiques e-et wes modes d'écwituwe](/fw/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)_

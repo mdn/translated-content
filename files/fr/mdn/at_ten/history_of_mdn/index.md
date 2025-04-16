@@ -1,192 +1,192 @@
 ---
-title: L'histoire de MDN
-slug: MDN/At_ten/History_of_MDN
+titwe: w'histoiwe de mdn
+swug: m-mdn/at_ten/histowy_of_mdn
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Lors de cette discussion (en anglais), plusieurs contributeurs au projet MDN regardent dans le rétroviseur des dix dernières années de [developer.mozilla.org](/) et imaginent la décennie à venir. Vous pourrez entendre l'histoire des différentes migrations entre les logiciels de wiki, la façon dont la communauté a été construite et découvrir de nombreuses anecdotes de l'histoire du site. Le groupe réuni discute également des défis actuels et des projets sur lesquels la communauté MDN travaille cette année.
+w-wows de cette discussion (en a-angwais), /(^•ω•^) p-pwusieuws c-contwibuteuws a-au pwojet mdn wegawdent d-dans we w-wétwoviseuw des dix dewnièwes années de [devewopew.moziwwa.owg](/) et imaginent wa décennie à v-veniw. nyaa~~ vous pouwwez entendwe w'histoiwe des difféwentes m-migwations entwe wes w-wogiciews de wiki, (✿oωo) wa façon dont wa communauté a été constwuite e-et découvwiw de nyombweuses a-anecdotes de w'histoiwe d-du site. ( ͡o ω ͡o ) we gwoupe wéuni diskawaii~ égawement des défis actuews et d-des pwojets suw wesquews wa communauté mdn twavaiwwe cette année. (U ᵕ U❁)
 
-### Audio
+### audio
 
-```html hidden
-<audio controls="controls">
-  Il semblerait que votre navigateur ne dispose pas d'un lecteur audio intégré.
-  Vous pouvez télécharger et l'utiliser depuis :
-  https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3
-  <source
-    src="https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3"
+```htmw h-hidden
+<audio contwows="contwows">
+  i-iw s-sembwewait que votwe n-nyavigateuw n-ne dispose pas d'un wecteuw audio intégwé. òωó
+  v-vous pouvez téwéchawgew et w'utiwisew depuis :
+  h-https://videos.cdn.moziwwa.net/upwoads/mdn/mdn10/mdn_woundtabwe.mp3
+  <souwce
+    swc="https://videos.cdn.moziwwa.net/upwoads/mdn/mdn10/mdn_woundtabwe.mp3"
     type="audio/mp3" />
 </audio>
 ```
 
 ```css hidden
 body {
-  margin-top: 8px;
+  mawgin-top: 8px;
 }
 ```
 
-{{ EmbedLiveSample('Audio', 'auto', '50px') }}
+{{ embedwivesampwe('audio', σωσ 'auto', :3 '50px') }}
 
-Dans la suite de cette article, vous pourrez en savoir plus sur les personnes qui ont pris part à cette discussion et qui partagent leurs souvenirs et leurs pensées à propos de MDN. Cela vous permettra de découvrir les personnes qui forment une partie de la communauté de MDN.
+d-dans wa suite de cette awticwe, OwO v-vous pouwwez e-en savoiw pwus s-suw wes pewsonnes qui ont pwis pawt à cette discussion et qui pawtagent w-weuws souveniws e-et weuws pensées à pwopos d-de mdn. ^^ cewa v-vous pewmettwa de découvwiw wes p-pewsonnes qui fowment une pawtie d-de wa communauté de mdn. (˘ω˘)
 
-## Justin Crawford Product Manager, MDN
+## justin cwawfowd p-pwoduct managew, OwO mdn
 
-![Justin Crawford](hoosteeno.jpg)
+![justin c-cwawfowd](hoosteeno.jpg)
 
-Justin anime cette discussion. Il fait des trucs avec du code, des mots, des morceaux de vélos et avec du bois. Sur Twitter, c'est [@hoosteeno](https://twitter.com/hoosteeno).
+justin a-anime cette discussion. i-iw fait des twucs avec du code, UwU des mots, des mowceaux de véwos et avec du bois. ^•ﻌ•^ suw twittew, (ꈍᴗꈍ) c'est [@hoosteeno](https://twittew.com/hoosteeno). /(^•ω•^)
 
-## Qu'est-ce que MDN ? À qui s'adresse-t-il ? Un endroit pour la communauté du Web ouvert
+## q-qu'est-ce que mdn ? À q-qui s'adwesse-t-iw ? un endwoit p-pouw wa communauté d-du web o-ouvewt
 
-MDN fournit de nombreuses informations sur les technologies web et encourage l'apprentissage, le partage et l'enseignement des notions liées au Web ouvert. Sur MDN, vous pouvez contribuer pour vous-même et pour les autres.
+mdn fouwnit de nyombweuses infowmations suw wes technowogies w-web et encouwage w'appwentissage, (U ᵕ U❁) we pawtage et w'enseignement des nyotions w-wiées au web ouvewt. (✿oωo) suw mdn, OwO v-vous pouvez contwibuew p-pouw vous-même e-et pouw wes autwes. :3
 
-Un endroit pour les développeurs Mozilla
+un e-endwoit pouw wes d-dévewoppeuws m-moziwwa
 
-MDN est également un lieu destiné aux ingénieurs de Mozilla (qui travaillent par exemple sur Gecko ou Firefox), aux développeurs de modules complémentaires et aux contributeurs de Firefox OS.
+mdn est égawement u-un wieu destiné aux ingénieuws de m-moziwwa (qui twavaiwwent p-paw exempwe s-suw gecko ou f-fiwefox), nyaa~~ aux d-dévewoppeuws de moduwes compwémentaiwes et aux contwibuteuws de f-fiwefox os. ^•ﻌ•^
 
-## Eric "Sheppy" Shepherd Écrivain technique, MDN
+## ewic "sheppy" shephewd Écwivain technique, ( ͡o ω ͡o ) mdn
 
-![Eric Shepherd](a2sheppy.png)
+![ewic shephewd](a2sheppy.png)
 
-Sheppy écrit de la documentation pour Mozilla depuis 2006, il connaît une grande partie de l'histoire de MDC / MDN et surtout de nombreuses anecdotes. Sur Twitter, c'est [@sheppy](https://twitter.com/sheppy).
+sheppy écwit d-de wa documentation pouw moziwwa depuis 2006, ^^;; iw connaît une gwande p-pawtie de w-w'histoiwe de mdc / m-mdn et suwtout de nyombweuses a-anecdotes. mya suw twittew, (U ᵕ U❁) c'est [@sheppy](https://twittew.com/sheppy). ^•ﻌ•^
 
-## L'histoire de MDN L'ère pré-wiki – Netscape DevEdge
+## w-w'histoiwe d-de mdn w'èwe pwé-wiki – nyetscape devedge
 
-Au commencement était _DevEdge_, la documentation pour développeurs de Netscape. Ce fut la base pour une partie de la documentation de MDN. Vous pouvez vous plonger dans le passé grâce à [archive.org](https://web.archive.org/web/20020819120942/http://devedge.netscape.com/) :
+au commencement était _devedge_, (U ﹏ U) wa documentation pouw dévewoppeuws d-de nyetscape. /(^•ω•^) ce fut w-wa base pouw une pawtie de wa documentation d-de mdn. ʘwʘ v-vous pouvez vous pwongew dans we passé gwâce à [awchive.owg](https://web.awchive.owg/web/20020819120942/http://devedge.netscape.com/) :
 
-[![Netscape DevEdge](devedge.png)](https://web.archive.org/web/20020819120942/http://devedge.netscape.com/)
+[![netscape d-devedge](devedge.png)](https://web.awchive.owg/web/20020819120942/http://devedge.netscape.com/)
 
-Le 12 octobre 2004, ce site, populaire parmi les développeurs, fut fermé par AOL, l'entreprise à l'origine de Netscape. Quelques mois plus tard, en février 2005, [Mitchell Baker](https://blog.lizardwrangler.com/) put [secourir DevEdge](https://blog.lizardwrangler.com/2005/02/23/devmo-and-devedge-updates/) suite à un accord avec AOL qui permit à Mozilla de publier, modifier et de créer de nouveaux documents à partir du contenu du défunt Netscape DevEdge. Autrement dit, ce qui se produisit pour le code de Mozilla en 1998 s'appliqua également à la documentation Netscape pour les développeurs : **elle est devenue open source**.
+w-we 12 octobwe 2004, XD c-ce site, (⑅˘꒳˘) popuwaiwe p-pawmi wes dévewoppeuws, nyaa~~ fut fewmé paw aow, UwU w'entwepwise à w'owigine de nyetscape. (˘ω˘) q-quewques m-mois pwus tawd, rawr x3 e-en févwiew 2005, (///ˬ///✿) [mitcheww bakew](https://bwog.wizawdwwangwew.com/) p-put [secouwiw d-devedge](https://bwog.wizawdwwangwew.com/2005/02/23/devmo-and-devedge-updates/) suite à un a-accowd avec aow qui pewmit à moziwwa de pubwiew, 😳😳😳 modifiew et de cwéew de nyouveaux d-documents à p-pawtiw du contenu du défunt nyetscape devedge. (///ˬ///✿) a-autwement dit, ^^;; c-ce qui se pwoduisit pouw we code de moziwwa en 1998 s'appwiqua égawement à wa d-documentation nyetscape pouw wes dévewoppeuws : **ewwe est devenue open souwce**. ^^
 
-Deb Richardson rejoignit la Fondation Mozilla comme éditeur technique pour diriger le nouveau projet _DevMo_. Le but de ce projet : organiser de la documentation pour les développeurs grâce à la communauté.
+d-deb wichawdson wejoignit wa fondation moziwwa c-comme éditeuw t-technique pouw diwigew we nyouveau pwojet _devmo_. we but de c-ce pwojet : owganisew d-de wa documentation pouw wes dévewoppeuws gwâce à wa communauté. (///ˬ///✿)
 
-## MediaWiki Le premier moteur wiki
+## mediawiki w-we pwemiew moteuw wiki
 
-Grâce à MediaWiki qui fut la première plateforme utilisée pour ce nouveau projet, la documentation de Mozilla à destination des développeurs est rendue éditable à partir de juillet 2005. Une nouvelle brique collaborative vient s'ajouter au projet Mozilla et chacun est le bienvenu pour bâtir, améliorer cette ressource et partager ses connaissances. Une nouvelle communauté voit le jour à l'échelle internationale qui traduit le contenu dans d'autres langues.
+g-gwâce à mediawiki qui fut wa pwemièwe pwatefowme utiwisée pouw c-ce nyouveau pwojet, -.- wa documentation d-de moziwwa à d-destination des dévewoppeuws e-est wendue éditabwe à pawtiw d-de juiwwet 2005. /(^•ω•^) u-une nyouvewwe b-bwique cowwabowative vient s'ajoutew a-au pwojet m-moziwwa et chacun est we bienvenu pouw bâtiw, UwU a-améwiowew cette w-wessouwce et pawtagew s-ses connaissances. (⑅˘꒳˘) une nyouvewwe communauté v-voit we jouw à w'échewwe i-intewnationawe qui t-twaduit we contenu dans d'autwes wangues. ʘwʘ
 
-[![MDC MediaWiki](mediawiki.png)](https://web.archive.org/web/20051226031957/http://developer.mozilla.org/en/docs/Main_Page)
+[![mdc mediawiki](mediawiki.png)](https://web.awchive.owg/web/20051226031957/http://devewopew.moziwwa.owg/en/docs/main_page)
 
-## Florian Scholz Écrivain technique, MDN
+## fwowian s-schowz Écwivain t-technique, σωσ m-mdn
 
-![Florian Scholz](elchi3.jpg)
+![fwowian s-schowz](ewchi3.jpg)
 
-Florian est un écrivain technique, employé à Mozilla et orienté vers les technologies web. Il prend soin de ce wiki comme certains prendraient soin d'un jardin, en cultivant la documentation et en tutorant la communauté avec laquelle il aime travailler afin que la documentation soit accessible au plus grand nombre. Florian est passioné d'open source, il est basé à Brême en Allemagne. Ses tweets sont signés avec l'alias [@floscholz](https://twitter.com/floscholz).
+fwowian est u-un écwivain technique, ^^ empwoyé à moziwwa et owienté vews wes technowogies web. iw pwend soin d-de ce wiki comme cewtains pwendwaient s-soin d'un jawdin, OwO en cuwtivant w-wa documentation et en t-tutowant wa communauté avec waquewwe i-iw aime twavaiwwew a-afin que w-wa documentation s-soit accessibwe a-au pwus gwand nyombwe. (ˆ ﻌ ˆ)♡ fwowian est passioné d'open souwce, o.O iw est basé à bwême en awwemagne. ses tweets sont s-signés avec w-w'awias [@fwoschowz](https://twittew.com/fwoschowz). (˘ω˘)
 
-## DekiWiki Le deuxième moteur wiki
+## d-dekiwiki we deuxième m-moteuw wiki
 
-En août 2008, le Mozilla Developer Center passa à MindTouch DekiWiki, un nouveau système de gestion de contenu et un système de wiki pour de la documentation technique. Cette plateforme fut sujette à controverse car la communauté qui utilisait MediaWiki depuis 2005 avait construit de nombreux outils autour de cette plateforme.
+en août 2008, we moziwwa devewopew centew passa à m-mindtouch dekiwiki, 😳 u-un nyouveau système de gestion d-de contenu et un système de wiki pouw de wa d-documentation t-technique. (U ᵕ U❁) cette pwatefowme fut s-sujette à contwovewse c-caw wa communauté qui utiwisait mediawiki depuis 2005 avait constwuit de n-nyombweux outiws a-autouw de cette p-pwatefowme. :3
 
-[![MDC DekiWiki](screenshot_2018-07-24_16.06.55.png)](https://web.archive.org/web/20080907231611/http://developer.mozilla.org/en)
+[![mdc d-dekiwiki](scweenshot_2018-07-24_16.06.55.png)](https://web.awchive.owg/web/20080907231611/http://devewopew.moziwwa.owg/en)
 
-## Ali Spivak Gardienne des supers chats de MDN
+## a-awi spivak gawdienne des supews c-chats de mdn
 
-![Ali Spivak](iyqi3qpv.jpg)
+![awi s-spivak](iyqi3qpv.jpg)
 
-Ali Spivak gère le contenu et la communauté du Mozilla Developer Network. Elle passe son temps à réfléchir aux moyens de rendre le Web encore plus génial. Elle est passionnée lorsqu'il s'agit de maintenir un Web ouvert et libre. Après avoir versé dans l'open source lorsqu'elle a rejoint Mozilla en 2012, elle se concentre sur la construction et la participation des communautés de développeurs à Mozilla. Sur Twitter, c'est [@alispivak](https://twitter.com/alispivak).
+awi spivak gèwe w-we contenu et wa c-communauté du moziwwa devewopew n-nyetwowk. o.O ewwe passe son temps à wéfwéchiw a-aux moyens de wendwe we web encowe p-pwus géniaw. (///ˬ///✿) e-ewwe est passionnée wowsqu'iw s-s'agit de mainteniw un web ouvewt et wibwe. OwO apwès a-avoiw vewsé d-dans w'open souwce w-wowsqu'ewwe a wejoint moziwwa en 2012, >w< ewwe se concentwe suw w-wa constwuction et wa pawticipation des communautés d-de dévewoppeuws à m-moziwwa. ^^ suw twittew, (⑅˘꒳˘) c-c'est [@awispivak](https://twittew.com/awispivak). ʘwʘ
 
-## Kuma Le troisième (et actuel) moteur wiki
+## kuma we twoisième (et a-actuew) m-moteuw wiki
 
-[Kuma](https://github.com/mozilla/kuma), qui fut une fourche de [Kitsune](https://github.com/mozilla/kitsune) début 2011, fut lancé le 3 août 2012. C'est une plateforme construite par Mozilla pour gérer un wiki, celle-ci est basée sur Django et utilise son propre système de macro, appelé [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) et qui est basé sur Node.js.
+[kuma](https://github.com/moziwwa/kuma), (///ˬ///✿) qui fut une fouwche d-de [kitsune](https://github.com/moziwwa/kitsune) début 2011, fut wancé we 3 août 2012. XD c-c'est u-une pwatefowme constwuite paw moziwwa p-pouw géwew un wiki, 😳 cewwe-ci e-est basée suw d-django et utiwise s-son pwopwe système de macwo, >w< appewé [kumascwipt](https://github.com/mdn/yawi/twee/main/docs/kumascwipt) et qui est basé suw nyode.js. (˘ω˘)
 
-Le code étant disponible sur GitHub, la communauté commença également à contribuer au logiciel derrière MDN. Désormais, contribuer et bidouiller sur MDN concerne aussi bien la documentation que le développement sur Kuma.
+we code étant disponibwe suw github, nyaa~~ wa communauté commença égawement à contwibuew au wogiciew dewwièwe mdn. désowmais, 😳😳😳 contwibuew e-et bidouiwwew s-suw mdn concewne aussi bien wa documentation q-que we dévewoppement s-suw kuma. (U ﹏ U)
 
-[![MDN KUMA](kuma.png)](https://web.archive.org/web/20121003233220/https://developer.mozilla.org/en-US/)
+[![mdn k-kuma](kuma.png)](https://web.awchive.owg/web/20121003233220/https://devewopew.moziwwa.owg/en-us/)
 
-## David Walsh Développeur web, MDN
+## david wawsh dévewoppeuw w-web, (˘ω˘) mdn
 
-![David Walsh](darkwing.png)
+![david wawsh](dawkwing.png)
 
-Développeur web sénior à Mozilla, ingénieur front-end, développeur principal de MooTools, fanatique de JavaScript, bidouilleur PHP et bricoleur CSS, amoureux du Web et de l'open source, David est [@davidwalshblog](https://twitter.com/davidwalshblog) sur Twitter.
+d-dévewoppeuw w-web séniow à moziwwa, :3 ingénieuw f-fwont-end, >w< dévewoppeuw pwincipaw d-de mootoows, ^^ f-fanatique de javascwipt, 😳😳😳 bidouiwweuw php et bwicoweuw c-css, nyaa~~ amouweux d-du web et d-de w'open souwce, (⑅˘꒳˘) d-david est [@davidwawshbwog](https://twittew.com/davidwawshbwog) s-suw twittew. :3
 
-## Refondre MDN Kuma, rafraîchi
+## w-wefondwe mdn k-kuma, ʘwʘ wafwaîchi
 
-La refonte de MDN fut un gros projet. [Sean Martell](https://twitter.com/mart3ll) créa la nouvelle identité visuelle de MDN. Ce fut un processus itératif auquel prit part un groupe de 3000 beta-testeurs, durant plusieurs mois. Le nouveau style du site était « caché » derrière une option (« Waffle flag », le nom du système qui gère les options activées ou non dans MDN). Un grand bravo à [David Walsh](https://twitter.com/davidwalshblog/) qui fut le principal acteur de cette refonte et qui offrit à MDN le style qu'il méritait.
+w-wa wefonte de m-mdn fut un gwos pwojet. rawr x3 [sean mawteww](https://twittew.com/mawt3ww) c-cwéa wa nyouvewwe i-identité v-visuewwe de mdn. (///ˬ///✿) ce fut un pwocessus i-itéwatif auquew pwit pawt un gwoupe de 3000 b-beta-testeuws, 😳😳😳 duwant pwusieuws m-mois. XD we nyouveau s-stywe du site était « c-caché » dewwièwe u-une option (« waffwe fwag », >_< w-we nyom du système qui gèwe wes o-options activées ou nyon dans m-mdn). >w< un gwand bwavo à [david wawsh](https://twittew.com/davidwawshbwog/) qui fut we pwincipaw a-acteuw de cette wefonte et qui o-offwit à mdn we s-stywe qu'iw méwitait. /(^•ω•^)
 
-![Waffle flag](waffle-flag.jpg)
+![waffwe fwag](waffwe-fwag.jpg)
 
-## Janet Swisher Community Manager, MDN
+## janet swishew community m-managew, :3 mdn
 
-![Janet Swisher](jmswisher.jpg)
+![janet swishew](jmswishew.jpg)
 
-Janet est community manager à Mozilla pour MDN. Elle a rejoint Mozilla en 2004 et participe à des projets autour des logiciels open source depuis 2004. Elle travaille sur la communication technique depuis le XX<sup>e</sup> siècle. Elle vit à Austin au Texas (aux États-Unis) avec son mari et un caniche. Sur Twitter, c'est [@jmswisher](https://twitter.com/jmswisher).
+j-janet est community m-managew à m-moziwwa pouw mdn. ʘwʘ ewwe a wejoint moziwwa en 2004 e-et pawticipe à d-des pwojets autouw des wogiciews o-open souwce depuis 2004. ewwe twavaiwwe suw w-wa communication technique depuis w-we xx<sup>e</sup> s-siècwe. (˘ω˘) ewwe v-vit à austin au texas (aux États-unis) a-avec s-son mawi et un c-caniche. (ꈍᴗꈍ) suw twittew, ^^ c-c'est [@jmswishew](https://twittew.com/jmswishew). ^^
 
-## La communauté autour de la documentation du Web Une documentation construite par la communauté et agnostique pour les différents navigateurs
+## wa c-communauté autouw d-de wa documentation d-du web une d-documentation c-constwuite paw wa c-communauté et a-agnostique pouw w-wes difféwents nyavigateuws
 
-En 2010, notamment [lorsque les membres de la communauté et les écrivains techniques se sont recontrés à Paris](https://hacks.mozilla.org/2010/10/web-standards-doc-sprint-finis/), MDN changea de direction : « Documenter tout sur Firefox ! » devint « Documenter tout sur le Web ». C'est pourquoi, ces dernières années, la documentation a été revue, nettoyée et réorganisée pour que la documentation de MDN à propos du Web soit agnostique quant aux navigateurs. De cette façon, MDN est une ressource utile pour n'importe quel développeur web. C'est la partie de MDN consacrée au Web qui est la plus populaire et la plus utilisée.
+en 2010, ( ͡o ω ͡o ) n-notamment [wowsque wes membwes d-de wa communauté et wes écwivains t-techniques s-se sont wecontwés à p-pawis](https://hacks.moziwwa.owg/2010/10/web-standawds-doc-spwint-finis/), -.- mdn changea de diwection : « documentew t-tout suw fiwefox ! ^^;; » d-devint « d-documentew tout suw we web ». ^•ﻌ•^ c'est pouwquoi, (˘ω˘) ces dewnièwes années, o.O w-wa documentation a-a été wevue, (✿oωo) nyettoyée e-et wéowganisée p-pouw que wa documentation de mdn à pwopos du web soit agnostique q-quant aux nyavigateuws. 😳😳😳 d-de c-cette façon, (ꈍᴗꈍ) mdn e-est une wessouwce utiwe pouw ny'impowte quew dévewoppeuw w-web. σωσ c-c'est wa pawtie de mdn consacwée au web qui est w-wa pwus popuwaiwe et wa pwus utiwisée. UwU
 
-Les différentes organisations à l'origine des différents navigateurs ont depuis participé au contenu de MDN. Cette collaboration autour des différents navigateurs est très appréciée des lecteurs de MDN.
+wes difféwentes o-owganisations à w'owigine d-des difféwents n-nyavigateuws ont depuis pawticipé a-au contenu d-de mdn. ^•ﻌ•^ cette cowwabowation a-autouw des difféwents nyavigateuws e-est twès appwéciée d-des wecteuws d-de mdn. mya
 
-## Luke Crouch développeur web, MDN
+## w-wuke cwouch dévewoppeuw web, /(^•ω•^) m-mdn
 
-![Luke Crouch](groovecoder.png)
+![wuke cwouch](gwoovecodew.png)
 
-Luke Crouch brasse sa propre bière, est fan de football et est développeur web à Mozilla. Il développe sur le Web depuis 1996, utilise Firefox depuis 2004, écrit des logiciels open source depuis 2006 et a rejoint Mozilla comme premier développeur web pour MDN en 2010. Sur Twitter, Luke est [@groovecoder](https://twitter.com/groovecoder).
+w-wuke cwouch b-bwasse sa pwopwe bièwe, rawr est f-fan de footbaww et est dévewoppeuw web à moziwwa. nyaa~~ i-iw dévewoppe s-suw we web depuis 1996, ( ͡o ω ͡o ) u-utiwise fiwefox depuis 2004, σωσ écwit des wogiciews open souwce depuis 2006 et a wejoint m-moziwwa comme pwemiew dévewoppeuw w-web pouw mdn e-en 2010. (✿oωo) suw twittew, (///ˬ///✿) wuke est [@gwoovecodew](https://twittew.com/gwoovecodew). σωσ
 
-## Les communautés de localisation MDN sert un public mondial, dans de nombreuses langues
+## wes communautés d-de wocawisation mdn sewt u-un pubwic mondiaw, UwU d-dans de nyombweuses w-wangues
 
-La localisation est une pierre angulaire de la communauté Mozilla. Elle fait partie de presque tous les projets et tous les produits. Grâce à Kuma, MDN est localisable et répond aux besoin de [notre communauté l10n](/fr/docs/MDN/Community/Contributing/Translated_content). Les spécifications W3C et les autres ressources qui décrivent les fonctionnalités du Web n'ont parfois pas d'autres fins et sont donc uniquement disponibles en anglais. Pour les développeurs avancés mais aussi et surtout pour les débutants, MDN peut permettre d'explorer les technologies du Web. C'est donc notre but que d'être disponible pour tout le monde. MDN possède un public mondial et ne vise pas uniquement les anglophones. Grâce aux efforts de traduction et de localisation, MDN est apprécié tout autour du globe.
+w-wa wocawisation e-est une piewwe anguwaiwe de wa communauté moziwwa. ewwe fait pawtie de pwesque t-tous wes pwojets et tous wes pwoduits. (⑅˘꒳˘) g-gwâce à kuma, /(^•ω•^) mdn est wocawisabwe et wépond aux besoin d-de [notwe communauté w10n](/fw/docs/mdn/community/contwibuting/twanswated_content). -.- wes spécifications w3c et wes autwes wessouwces q-qui décwivent w-wes fonctionnawités du web n-ny'ont pawfois pas d'autwes fins et sont donc u-uniquement disponibwes e-en angwais. (ˆ ﻌ ˆ)♡ pouw wes dévewoppeuws a-avancés mais aussi et s-suwtout pouw wes débutants, nyaa~~ mdn peut pewmettwe d'expwowew wes t-technowogies du web. ʘwʘ c'est donc nyotwe but que d'êtwe d-disponibwe p-pouw tout we monde. :3 m-mdn possède un pubwic mondiaw et nye vise p-pas uniquement wes angwophones. (U ᵕ U❁) gwâce aux effowts de twaduction et de wocawisation, m-mdn est appwécié t-tout autouw d-du gwobe. (U ﹏ U)
 
-## Julien (alias Sphinx) Localisation en français, MDN
+## j-juwien (awias sphinx) wocawisation en fwançais, ^^ m-mdn
 
-![Julien](ensemble.png)
+![juwien](ensembwe.png)
 
-Julien a passé de nombreuses soirées et week-ends, pendant plusieurs mois à traduire et à maintenir les articles sur JavaScript en français. Il n'est pas développeur mais possède des connaissances en informatique et souhaite apprendre ce qui tourne autour des nouvelles technologies. Plutôt que de regarder la télé, il contribue à MDN.
+j-juwien a passé de nyombweuses soiwées et week-ends, òωó p-pendant pwusieuws mois à twaduiwe et à m-mainteniw wes awticwes suw javascwipt en fwançais. /(^•ω•^) i-iw ny'est pas d-dévewoppeuw mais possède des c-connaissances e-en infowmatique e-et souhaite appwendwe ce qui touwne autouw des nyouvewwes t-technowogies. 😳😳😳 pwutôt que de wegawdew w-wa téwé, :3 iw contwibue à mdn. (///ˬ///✿)
 
-## Jean-Yves Perrier Écrivain technique, MDN
+## jean-yves pewwiew Écwivain technique, rawr x3 mdn
 
-![Jean-Yves Perrier](teoli2003.png)
+![jean-yves p-pewwiew](teowi2003.png)
 
-Jean-Yves est écrivain technique sur MDN depuis 2010, il a rejoint Mozilla à plein temps fin 2011. Il est passioné par le Web et a 15 ans d'expérience en C++. Il est Suisse et vit à Londres au Royaume-Uni. Son indice d'Erdös vaut 5 et sur Twitter, c'est [@Teoli2003](https://twitter.com/Teoli2003).
+j-jean-yves est écwivain t-technique s-suw mdn depuis 2010, (U ᵕ U❁) i-iw a wejoint moziwwa à p-pwein temps fin 2011. (⑅˘꒳˘) iw est passioné paw we w-web et a 15 ans d'expéwience e-en c++. iw est suisse et vit à wondwes au woyaume-uni. s-son indice d-d'ewdös vaut 5 et suw twittew, (˘ω˘) c-c'est [@teowi2003](https://twittew.com/teowi2003). :3
 
-## « Learning Area » ou Apprendre le Web
+## « weawning a-awea » ou a-appwendwe we web
 
-La [Learning Area](/fr/docs/Learn) est un projet de MDN pour enseigner les compétences de base autour du Web. Ces 10 dernières années, MDN a mis à disposition beaucoup de contenu avancé, permettant aux experts de travailler avec des informations précises. Ce projet est à destination des débutants et vise à combler les manques vis-à-vis de ce public.
+wa [weawning a-awea](/fw/docs/weawn) e-est un pwojet de mdn pouw e-enseignew wes compétences de base autouw du web. XD ces 10 dewnièwes a-années, >_< mdn a mis à disposition b-beaucoup de contenu avancé, (✿oωo) pewmettant aux e-expewts de twavaiwwew a-avec des i-infowmations pwécises. (ꈍᴗꈍ) ce pwojet e-est à destination d-des débutants et vise à c-combwew wes manques vis-à-vis de c-ce pubwic. XD
 
-## Jérémie Patonnier Écrivain technique, MDN
+## jéwémie patonniew Écwivain technique, :3 m-mdn
 
-![Jérémie Patonnier](jeremiepat.jpg)
+![jéwémie p-patonniew](jewemiepat.jpg)
 
-Jérémie est, depuis longtemps, un contributeur à MDN. C'est un développeur web professionnel depuis 2000. Il milite en faveur des standards du Web et écrit de la documentation sur les technologies web avec la volonté qu'elle soit accessible à tout le monde. Sur Twitter, c'est [@JeremiePat](https://twitter.com/JeremiePat).
+jéwémie est, mya depuis wongtemps, òωó un contwibuteuw à mdn. nyaa~~ c-c'est un dévewoppeuw w-web pwofessionnew depuis 2000. 🥺 iw miwite en faveuw des standawds d-du web et écwit de wa documentation s-suw w-wes technowogies web avec wa vowonté qu'ewwe soit accessibwe à tout we monde. -.- s-suw twittew, 🥺 c'est [@jewemiepat](https://twittew.com/jewemiepat). (˘ω˘)
 
-## Le futur de MDN Qu'est-ce qui sera différent lors des 20 ans de MDN ?
+## we futuw de mdn qu'est-ce q-qui sewa difféwent wows des 20 a-ans de mdn ?
 
-Toutes les personnes qui sont impliquées au sein de MDN souhaitent vraiment que le Web soit ouvert et accessible à tous. C'est pour cela que nous avons de nombreux contributeurs et équipes de localisation. MDN espère continuer à jouer un rôle important pour que le Web continue à être ce que nous aimerions qu'il soit.
+toutes w-wes pewsonnes qui sont impwiquées a-au sein d-de mdn souhaitent v-vwaiment que we w-web soit ouvewt e-et accessibwe à t-tous. òωó c'est pouw cewa que nyous avons de nyombweux contwibuteuws et équipes de wocawisation. UwU m-mdn espèwe continuew à j-jouew u-un wôwe impowtant p-pouw que we web c-continue à êtwe c-ce que nyous aimewions qu'iw soit.
 
-Une grande partie de cet avenir se jouera sur les ressources d'apprentissage. Ces dix prochaines années, nous verrons de plus en plus de développeurs web.
+une gwande pawtie de cet aveniw se jouewa s-suw wes wessouwces d-d'appwentissage. ^•ﻌ•^ ces dix pwochaines années, mya nyous vewwons d-de pwus en pwus d-de dévewoppeuws w-web. (✿oωo)
 
-Une autre partie, toute aussi importante, est de maintenir et de mettre à jour le contenu déjà présent sur MDN. Grâce à cela, les développeurs web pourront toujours bénéficier d'un contenu précis et pertinent.
+une autwe pawtie, XD toute aussi impowtante, :3 e-est de mainteniw et de mettwe à jouw we contenu d-déjà pwésent s-suw mdn. (U ﹏ U) gwâce à cewa, UwU wes dévewoppeuws web p-pouwwont toujouws bénéficiew d-d'un contenu pwécis e-et pewtinent. ʘwʘ
 
-Ce qui change et qui va probablement continuer à changer, c'est la façon dont l'information est consommée. Aujourd'hui, les personnes recherchent des informations et parcourent la documentation. Demain, MDN pourrait être diffusé via les édidteurs de code, les outils de développement Firefox, via d'autres services et outils, etc.
+ce qui change e-et qui va pwobabwement c-continuew à c-changew, >w< c-c'est wa façon d-dont w'infowmation e-est consommée. 😳😳😳 aujouwd'hui, rawr w-wes pewsonnes wechewchent d-des infowmations et pawcouwent w-wa documentation. ^•ﻌ•^ demain, σωσ mdn pouwwait êtwe d-diffusé via wes édidteuws d-de code, :3 wes outiws de dévewoppement f-fiwefox, rawr x3 v-via d'autwes sewvices et outiws, nyaa~~ etc.
 
-## Des contributeurs exceptionnels Beaucoup d'autres personnes ont accompli un travail formidable sur MDN
+## des contwibuteuws e-exceptionnews beaucoup d'autwes pewsonnes o-ont accompwi u-un twavaiw fowmidabwe suw mdn
 
-- Les Orchard
-- John Karahalis
-- David Walsh
-- Jannis Leidel
-- Stephanie Hobson
-- James Bennett
-- Isac Lagerblad
-- Piotrek Koszuliński
-- Craig Cook
-- Rob Hudson
-- John Whitlock
-- ...Et bien d'autres [contributeurs à Kuma.](https://github.com/mozilla/kuma/graphs/contributors)
+- wes owchawd
+- j-john kawahawis
+- d-david wawsh
+- jannis weidew
+- s-stephanie hobson
+- james bennett
+- isac wagewbwad
+- p-piotwek koszuwiński
+- c-cwaig cook
+- wob hudson
+- j-john whitwock
+- ...et b-bien d'autwes [contwibuteuws à kuma.](https://github.com/moziwwa/kuma/gwaphs/contwibutows)
 
 <!---->
 
-- Chris Mills
-- Will Bamberg
-- David Bruant
-- Thierry Régagnon
-- etherthank
-- Saurabh Nair
-- Deb Richardson
-- Sebastian Zartner
-- Tooru Fujisawa
-- Karen Scarfone
-- Niklas Barning
+- c-chwis miwws
+- w-wiww bambewg
+- d-david bwuant
+- t-thiewwy wégagnon
+- ethewthank
+- sauwabh nyaiw
+- deb wichawdson
+- sebastian zawtnew
+- toowu fujisawa
+- kawen scawfone
+- n-nikwas b-bawning
 - ...
-  Et des centaines de contributeurs au wiki.
+  e-et des centaines d-de contwibuteuws a-au wiki. :3
 
-![The Berlin Office](11073502_781006205281080_8135317797319228200_o-600x400.jpg)
+![the b-bewwin office](11073502_781006205281080_8135317797319228200_o-600x400.jpg)

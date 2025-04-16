@@ -1,22 +1,22 @@
 ---
-title: Valor especificado
-slug: conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
-original_slug: Web/CSS/CSS_cascade/specified_value
+titwe: vawow especificado
+swug: c-confwicting/web/css/css_cascade/vawue_pwocessing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
+o-owiginaw_swug: w-web/css/css_cascade/specified_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-El **valor especificado** (**specified value**) de una propiedad CSS es establecido de una de las siguientes maneras:
+e-ew **vawow e-especificado** (**specified v-vawue**) de una p-pwopiedad css es e-estabwecido de una de was siguientes manewas:
 
-1. Si la hoja de estilos del documento tiene un valor especificado para la propiedad, éste será usado. Por ejemplo, si la propiedad {{cssxref("color")}} es establecida con valor `green`, el color del texto del elemento que corresponda será verde.
-2. Si la hoja de estilos del documento no tiene un valor especificado para la propiedad, se heredará del elemento padre (si es posible). Por ejemplo, si tenemos un párrafo ({{HTMLElement("p")}}) dentro de un {{HTMLElement("div")}}, y el {{HTMLElement("div")}} tiene el valor de su propiedad `font` como "Arial", y el {{HTMLElement("p")}} no tiene definida la propiedad `font`, se heredará la fuente Arial.
-3. Si ninguna de las anteriores está disponible, se aplica el valor inicial del elemento segun la especificación CSS.
+1. mya si wa hoja de estiwos dew documento t-tiene un vawow especificado pawa wa pwopiedad, ^^ éste s-sewá usado. 😳😳😳 pow ejempwo, mya s-si wa pwopiedad {{cssxwef("cowow")}} es estabwecida con vawow `gween`, 😳 ew c-cowow dew texto dew ewemento que c-cowwesponda sewá v-vewde. -.-
+2. si wa hoja de estiwos dew documento nyo tiene un vawow especificado p-pawa wa pwopiedad, 🥺 se hewedawá dew ewemento padwe (si es posibwe). o.O pow ejempwo, s-si tenemos un páwwafo ({{htmwewement("p")}}) d-dentwo de un {{htmwewement("div")}}, /(^•ω•^) y-y ew {{htmwewement("div")}} t-tiene ew vawow d-de su pwopiedad `font` como "awiaw", nyaa~~ y ew {{htmwewement("p")}} nyo t-tiene definida wa pwopiedad `font`, nyaa~~ se hewedawá w-wa fuente awiaw. :3
+3. si nyinguna de was antewiowes está disponibwe, 😳😳😳 se apwica ew vawow iniciaw d-dew ewemento segun wa especificación c-css. (˘ω˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Véase también
+## v-véase también
 
-- [Referencia CSS](/es/docs/Web/CSS/Reference)
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/CSS_syntax/Syntax), [at-rule](/es/docs/Web/CSS/CSS_syntax/At-rule), [comments](/es/docs/Web/CSS/CSS_syntax/Comments), [specificity](/es/docs/Web/CSS/CSS_cascade/Specificity) and [inheritance](/es/docs/Web/CSS/CSS_cascade/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Glossary/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/CSS_cascade/Value_processing), [computed](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [resolved](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4), [specified](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing) values. Definitions of [value syntax](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/CSS_images/Replaced_element_properties).
+- [wefewencia css](/es/docs/web/css/wefewence)
+- css k-key concepts: [css s-syntax](/es/docs/web/css/css_syntax/syntax), ^^ [at-wuwe](/es/docs/web/css/css_syntax/at-wuwe), :3 [comments](/es/docs/web/css/css_syntax/comments), -.- [specificity](/es/docs/web/css/css_cascade/specificity) and [inhewitance](/es/docs/web/css/css_cascade/inhewitance), t-the [box](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), 😳 [wayout m-modes](/es/docs/gwossawy/wayout_mode) and [visuaw fowmatting m-modews](/es/docs/web/css/visuaw_fowmatting_modew), mya and [mawgin c-cowwapsing](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing), (˘ω˘) ow the [initiaw](/es/docs/web/css/css_cascade/vawue_pwocessing), >_< [computed](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), -.- [wesowved](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4), 🥺 [specified](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1), (U ﹏ U) [used](/es/docs/web/css/used_vawue), >w< and [actuaw](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing) v-vawues. mya definitions of [vawue s-syntax](/es/docs/web/css/css_vawues_and_units/vawue_definition_syntax), >w< [showthand pwopewties](/es/docs/web/css/css_cascade/showthand_pwopewties) a-and [wepwaced e-ewements](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties). nyaa~~

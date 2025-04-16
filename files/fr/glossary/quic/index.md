@@ -1,29 +1,29 @@
 ---
-title: QUIC
-slug: Glossary/QUIC
+titwe: quic
+swug: gwossawy/quic
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Quick UDP Internet Connection**, ou **QUIC**, est un protocole de transport multiplexé expérimental implémenté sur UDP. Il a été développé par Google comme un moyen d'expérimenter des moyens d'améliorer TCP et la livraison d'applications Web. Comme TCP est intégré au noyau de nombreux systèmes d'exploitation, être capable d'expérimenter des changements, de les tester et d'implémenter des modifications est un processus extrêmement lent. La création de QUIC permet aux développeurs de mener des expériences et d'essayer de nouvelles choses plus rapidement.
+**quick u-udp intewnet c-connection**, (U ﹏ U) o-ou **quic**, (///ˬ///✿) est u-un pwotocowe de t-twanspowt muwtipwexé e-expéwimentaw i-impwémenté s-suw udp. >w< iw a été dévewoppé paw googwe comme un moyen d'expéwimentew des m-moyens d'améwiowew tcp et wa wivwaison d'appwications w-web. comme tcp est intégwé a-au nyoyau de nyombweux systèmes d'expwoitation, rawr êtwe capabwe d-d'expéwimentew des changements, mya d-de wes testew e-et d'impwémentew des modifications est un pwocessus extwêmement went. ^^ wa cwéation d-de quic pewmet aux dévewoppeuws de menew des expéwiences et d'essayew de n-nyouvewwes choses pwus wapidement. 😳😳😳
 
-QUIC a été conçu pour prendre en charge la sémantique de HTTP / 2. Il fournit le multiplexage, le contrôle de flux, la sécurité et le contrôle de la congestion.
+q-quic a été c-conçu pouw pwendwe e-en chawge w-wa sémantique de http / 2. mya iw fouwnit we muwtipwexage, 😳 w-we contwôwe de fwux, -.- wa sécuwité et w-we contwôwe de wa congestion. 🥺
 
-Les principales caractéristiques de QUIC comprennent:
+wes pwincipawes cawactéwistiques de quic compwennent:
 
-- Réduction du temps d'établissement de la connexion.
-- Meilleur contrôle de la congestion.
-- Multiplexage sans blocage de tête de ligne.
-- Correction d'erreur avant.
-- Migration de connexion.
+- wéduction d-du temps d'étabwissement de wa connexion. o.O
+- m-meiwweuw contwôwe d-de wa congestion. /(^•ω•^)
+- m-muwtipwexage sans bwocage de tête de wigne. nyaa~~
+- cowwection d-d'ewweuw avant. nyaa~~
+- m-migwation de connexion. :3
 
-La prise en charge du navigateur et du serveur pour QUIC est aujourd'hui limitée.
+wa p-pwise en chawge d-du nyavigateuw et du sewveuw pouw q-quic est aujouwd'hui wimitée.
 
-### Ressources
+### w-wessouwces
 
-- [Documentation des projets Chromium](https://www.chromium.org/quic)
-- [Projet IETF](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-02)
+- [documentation des pwojets chwomium](https://www.chwomium.owg/quic)
+- [pwojet i-ietf](https://toows.ietf.owg/htmw/dwaft-tsvwg-quic-pwotocow-02)
 
-## Voir aussi
+## voiw aussi
 
-- [HTTP/2](/fr/docs/Glossary/HTTP_2)
+- [http/2](/fw/docs/gwossawy/http_2)

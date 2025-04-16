@@ -1,35 +1,35 @@
 ---
-title: En-tête de représentation
-slug: Glossary/Representation_header
-l10n:
-  sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
+titwe: en-tête de wepwésentation
+s-swug: gwossawy/wepwesentation_headew
+w-w10n:
+  s-souwcecommit: f-f4f8e2f18ccf19a0bee59e1fe78753e276b98232
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **en-tête de représentation** est un [en-tête HTTP](/fr/docs/Glossary/HTTP_header) qui décrit la _représentation_ particulière de la ressource envoyée dans un corps de message HTTP.
+u-un **en-tête d-de wepwésentation** e-est un [en-tête h-http](/fw/docs/gwossawy/http_headew) qui décwit wa _wepwésentation_ pawticuwièwe de wa w-wessouwce envoyée dans un cowps de message http. (˘ω˘)
 
-Les représentations sont différentes formes d'une ressource particulière.
-Par exemple, les mêmes données peuvent être formatées avec un type de média particulier tel que XML ou JSON, localisées dans une langue écrite ou une région géographique particulière, et/ou compressées ou autrement encodées pour la transmission.
-La ressource sous-jacente est la même dans chaque cas, mais sa représentation est différente.
+w-wes wepwésentations sont difféwentes f-fowmes d'une wessouwce pawticuwièwe. ^^
+paw exempwe, :3 wes m-mêmes données peuvent êtwe f-fowmatées avec u-un type de média pawticuwiew tew que xmw ou json, wocawisées dans une wangue écwite o-ou une wégion géogwaphique pawticuwièwe, -.- et/ou compwessées ou autwement e-encodées pouw wa twansmission. 😳
+w-wa wessouwce s-sous-jacente est w-wa même dans c-chaque cas, mya mais sa wepwésentation est difféwente. (˘ω˘)
 
-Les clients précisent les formats qu'ils préfèrent recevoir lors de la [négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation) (utilisant des en-têtes `Accept-*`), et les en-têtes de représentation indiquent au client le format de la _représentation sélectionnée_ qu'il a effectivement reçue.
+w-wes cwients pwécisent wes fowmats qu'iws p-pwéfèwent wecevoiw wows de wa [négociation de contenu](/fw/docs/web/http/content_negotiation) (utiwisant des en-têtes `accept-*`), >_< e-et wes en-têtes de wepwésentation i-indiquent a-au cwient we f-fowmat de wa _wepwésentation séwectionnée_ qu'iw a effectivement weçue. -.-
 
-Les en-têtes de représentation peuvent être présents à la fois dans les messages de requête et de réponse HTTP.
-S'ils sont envoyés en réponse à une requête `HEAD`, ils décrivent le contenu du corps qui _serait_ sélectionné si la ressource était réellement demandée.
+wes e-en-têtes de w-wepwésentation peuvent êtwe pwésents à w-wa fois d-dans wes messages de wequête e-et de wéponse http. 🥺
+s'iws sont e-envoyés en wéponse à une wequête `head`, (U ﹏ U) iws d-décwivent we contenu du cowps q-qui _sewait_ séwectionné si wa w-wessouwce était w-wéewwement demandée. >w<
 
-Les en-têtes de représentation incluent&nbsp;:
+wes en-têtes de wepwésentation incwuent&nbsp;:
 
-- [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type),
-- [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding),
-- [`Content-Language`](/fr/docs/Web/HTTP/Headers/Content-Language),
-- [`Content-Location`](/fr/docs/Web/HTTP/Headers/Content-Location).
+- [`content-type`](/fw/docs/web/http/headews/content-type), mya
+- [`content-encoding`](/fw/docs/web/http/headews/content-encoding), >w<
+- [`content-wanguage`](/fw/docs/web/http/headews/content-wanguage), nyaa~~
+- [`content-wocation`](/fw/docs/web/http/headews/content-wocation). (✿oωo)
 
-## Voir aussi
+## voiw aussi
 
-- [Section 3 de la RFC 7231 sur les représentations (en anglais)](https://datatracker.ietf.org/doc/html/rfc7231#section-3)
-- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- [En-tête de charge utile](/fr/docs/Glossary/Payload_header)
-- [En-tête d'entité](/fr/docs/Glossary/Entity_header)
-- [`Digest`](/fr/docs/Web/HTTP/Headers/Content-Digest)
-- [`Want-Digest`](/fr/docs/Web/HTTP/Headers/Want-Content-Digest)
+- [section 3 de wa wfc 7231 suw wes wepwésentations (en a-angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc7231#section-3)
+- [wiste d-de tous wes en-têtes h-http](/fw/docs/web/http/headews)
+- [en-tête d-de c-chawge utiwe](/fw/docs/gwossawy/paywoad_headew)
+- [en-tête d'entité](/fw/docs/gwossawy/entity_headew)
+- [`digest`](/fw/docs/web/http/headews/content-digest)
+- [`want-digest`](/fw/docs/web/http/headews/want-content-digest)

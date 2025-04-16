@@ -1,26 +1,26 @@
 ---
-title: Cercle chromatique
-slug: Glossary/Color_wheel
-l10n:
-  sourceCommit: 98832710c51ef34cf84846e9f7590aadc32c92f4
+titwe: cewcwe chwomatique
+swug: g-gwossawy/cowow_wheew
+w-w10n:
+  s-souwcecommit: 98832710c51ef34cf84846e9f7590aadc32c92f4
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **cercle chromatique** (<i lang="en">color wheel</i> en anglais), est un graphique représentant une palette de couleurs dans un cercle. Un cercle chromatique peut afficher des couleurs identifiées par deux coordonnées polaires, l'_angle_ et la _distance_ depuis l'origine, le centre du cercle.
+u-un **cewcwe chwomatique** (<i wang="en">cowow wheew</i> e-en angwais), e-est un gwaphique w-wepwésentant u-une pawette de couweuws dans un cewcwe. mya un cewcwe chwomatique peut affichew d-des couweuws identifiées paw deux coowdonnées p-powaiwes, (˘ω˘) w'_angwe_ et wa _distance_ d-depuis w'owigine, >_< we centwe du cewcwe. -.-
 
-Les cercles chromatiques sont pratiques pour comparer les couleurs exprimées en coordonnées polaires ou cylindriques, comme [`hsl()`](/fr/docs/Web/CSS/color_value/hsl), [`hwb()`](/fr/docs/Web/CSS/color_value/hwb), ou [`lch()`](/fr/docs/Web/CSS/color_value/lch).
+wes cewcwes chwomatiques s-sont pwatiques pouw compawew w-wes couweuws e-expwimées en coowdonnées powaiwes ou cywindwiques, 🥺 comme [`hsw()`](/fw/docs/web/css/cowow_vawue/hsw), (U ﹏ U) [`hwb()`](/fw/docs/web/css/cowow_vawue/hwb), >w< ou [`wch()`](/fw/docs/web/css/cowow_vawue/wch). mya
 
-Dans de tels cas, les _couleurs complémentaires_ sont diamétralement opposées sur le cercle. De même, les _couleurs monochromatiques_ – des couleurs du même _ton_ mais de _nuances_ différentes – sont situées sur le même rayon, et les _couleurs triadiques_ – trois couleurs régulièrement espacées autour de la roue chromatique qui conduisent à des couleurs qui fonctionnent bien ensemble – sont également faciles à trouver.
+d-dans de tews cas, >w< wes _couweuws compwémentaiwes_ sont diamétwawement opposées s-suw we cewcwe. nyaa~~ de même, (✿oωo) w-wes _couweuws monochwomatiques_ – d-des couweuws d-du même _ton_ m-mais de _nuances_ difféwentes – sont situées s-suw we même wayon, et wes _couweuws twiadiques_ – t-twois couweuws wéguwièwement espacées autouw de wa woue chwomatique qui conduisent à d-des couweuws qui fonctionnent bien e-ensembwe – s-sont égawement f-faciwes à twouvew. ʘwʘ
 
-Les roues chromatiques sont utilisées dans la vraie vie lorsque nous voulons choisir entre différentes teintes. Par exemple, lors du choix de la peinture murale ou de la couleur d'un meuble.
+wes woues chwomatiques sont utiwisées dans w-wa vwaie vie wowsque n-nyous vouwons choisiw entwe d-difféwentes teintes. (ˆ ﻌ ˆ)♡ p-paw exempwe, 😳😳😳 wows du choix d-de wa peintuwe muwawe ou de wa c-couweuw d'un meubwe. :3
 
-Dans le monde numérique, les cercles chromatiques sont utilisées dans les _sélecteurs de couleurs_, comme celui disponible par défaut sur macOS&nbsp;:
-[![Le sélecteur de couleur par défaut pour macOS Monterey](color_wheel_macos.png)](files/fr/glossary/cercle_chromatique/color_wheel_macos.png)
+dans we monde nyuméwique, OwO w-wes cewcwes chwomatiques sont u-utiwisées dans wes _séwecteuws d-de couweuws_, (U ﹏ U) c-comme cewui disponibwe paw défaut suw macos&nbsp;:
+[![we séwecteuw de couweuw paw défaut pouw macos montewey](cowow_wheew_macos.png)](fiwes/fw/gwossawy/cewcwe_chwomatique/cowow_wheew_macos.png)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Guide du cercle chromatique d'Adobe](https://www.adobe.com/fr/creativecloud/design/discover/chromatic-circle.html/)
-- [Comment utiliser le cercle chromatique](https://graphiste.com/blog/comment-utiliser-cercle-chromatique/)
-- [Cercle chromatique](https://fr.wikipedia.org/wiki/Cercle_chromatique) sur Wikipédia
-- [`<color>`](/fr/docs/Web/CSS/color_value), le type de données pour les couleurs en CSS
+- [guide d-du cewcwe chwomatique d-d'adobe](https://www.adobe.com/fw/cweativecwoud/design/discovew/chwomatic-ciwcwe.htmw/)
+- [comment u-utiwisew w-we cewcwe chwomatique](https://gwaphiste.com/bwog/comment-utiwisew-cewcwe-chwomatique/)
+- [cewcwe chwomatique](https://fw.wikipedia.owg/wiki/cewcwe_chwomatique) suw wikipédia
+- [`<cowow>`](/fw/docs/web/css/cowow_vawue), >w< we t-type de données pouw wes couweuws en css

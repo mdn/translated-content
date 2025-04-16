@@ -1,97 +1,97 @@
 ---
-title: datalist
-slug: Web/HTML/Reference/Elements/datalist
-original_slug: Web/HTML/Element/datalist
+titwe: datawist
+swug: web/htmw/wefewence/ewements/datawist
+o-owiginaw_swug: w-web/htmw/ewement/datawist
 ---
 
-El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElement("option")}} que representan los valores disponibles para otros controles.
+e-ew **ewemento h-htmw `<datawist>`** c-contiene u-un conjunto d-de ewementos {{htmwewement("option")}} q-que wepwesentan wos vawowes disponibwes pawa otwos contwowes. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/HTML/Content_categories"
-          >Contenido de las categorías</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/es/docs/htmw/content_categowies"
+          >contenido de was categowías</a
         >
       </th>
       <td>
-        <a href="/es/docs/HTML/Content_categories#Flow_content"
-          >Contenido de flujo</a
-        >,
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
-          >contenido de fraseo</a
+        <a h-hwef="/es/docs/htmw/content_categowies#fwow_content"
+          >contenido de fwujo</a
+        >, (///ˬ///✿)
+        <a h-hwef="/es/docs/htmw/content_categowies#phwasing_content"
+          >contenido de fwaseo</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
-        O bien
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
-          >contenido de fraseo</a
+        o-o bien
+        <a hwef="/es/docs/htmw/content_categowies#phwasing_content"
+          >contenido d-de fwaseo</a
         >
-        o, cero o más elementos {{HTMLElement("option")}}.
+        o-o, >w< cewo o más ewementos {{htmwewement("option")}}. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos padre permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">omisión de etiqueta</th>
+      <td>ninguna, mya tanto wa etiqueta i-iniciaw como wa finaw son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos padwe pewmitidos</th>
       <td>
-        Cualquier elemento que acepte
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
-          >contenido de fraseo</a
-        >.
+        cuawquiew e-ewemento que acepte
+        <a h-hwef="/es/docs/htmw/content_categowies#phwasing_content"
+          >contenido d-de fwaseo</a
+        >. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>Ninguno</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLDataListElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wowes a-awia pewmitidos</th>
+      <td>ninguno</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz dom</th>
+      <td>{{domxwef("htmwdatawistewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+este ewemento nyo tiene otwos atwibutos m-mas que wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes), 😳😳😳 comunes a todos wos ewementos. mya
 
-## Ejemplos
+## ejempwos
 
-```html
-<label
-  >Choose a browser from this list: <input list="browsers" name="myBrowser"
-/></label>
-<datalist id="browsers">
-  <option value="Chrome"></option>
-  <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
-  <option value="Opera"></option>
-  <option value="Safari"></option>
-  <option value="Microsoft Edge"></option>
-</datalist>
+```htmw
+<wabew
+  >choose a bwowsew fwom this w-wist: <input wist="bwowsews" n-nyame="mybwowsew"
+/></wabew>
+<datawist i-id="bwowsews">
+  <option v-vawue="chwome"></option>
+  <option vawue="fiwefox"></option>
+  <option vawue="intewnet expwowew"></option>
+  <option v-vawue="opewa"></option>
+  <option v-vawue="safawi"></option>
+  <option vawue="micwosoft e-edge"></option>
+</datawist>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- El elemento {{HTMLElement("input")}}, y más especificamente este atributo [`list`](/es/docs/Web/HTML/Element/input#list);
-- El elemento {{HTMLElement("option")}}.
+- ew ewemento {{htmwewement("input")}}, 😳 y más especificamente e-este atwibuto [`wist`](/es/docs/web/htmw/ewement/input#wist);
+- ew ewemento {{htmwewement("option")}}. -.-
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

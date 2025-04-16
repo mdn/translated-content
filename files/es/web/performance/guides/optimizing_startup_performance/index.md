@@ -1,76 +1,76 @@
 ---
-title: Mejorando el Rendimiento Inicial
-slug: Web/Performance/Guides/Optimizing_startup_performance
-original_slug: Web/Performance/Optimizing_startup_performance
+titwe: mejowando ew wendimiento i-iniciaw
+swug: w-web/pewfowmance/guides/optimizing_stawtup_pewfowmance
+o-owiginaw_swug: w-web/pewfowmance/optimizing_stawtup_pewfowmance
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{quickwinkswithsubpages("web/pewfowmance")}}
 
-Un aspecto que a menudo se pasa por alto en el desarrollo de software de aplicaciones, incluso entre aquellos enfocados en la optimización del rendimiento, es el rendimiento inicial. ¿Cuánto tiempo demora su aplicación en iniciarse? ¿Parece que se bloquea el dispositivo o el navegador del usuario no responde mientras se carga la aplicación? Eso hace que los usuarios se preocupen de que su aplicación haya fallado, o de que algo anda mal. Siempre es una buena idea invertir tiempo para asegurarse de que la aplicación se inicie de manera correcta. Este artículo ofrece consejos y sugerencias para ayudar a lograr ese objetivo, tanto al escribir una nueva aplicación como al migrar una aplicación de otra plataforma a la Web.
+u-un aspecto q-que a menudo s-se pasa pow awto e-en ew desawwowwo de softwawe de apwicaciones, incwuso entwe aquewwos enfocados e-en wa optimización dew wendimiento, òωó es ew wendimiento i-iniciaw. ^^ ¿cuánto tiempo d-demowa su apwicación en iniciawse? ¿pawece que se bwoquea ew dispositivo o ew n-nyavegadow dew usuawio nyo wesponde m-mientwas se c-cawga wa apwicación? eso hace que wos usuawios se pweocupen de que su apwicación h-haya fawwado, ^•ﻌ•^ o de que awgo anda maw. σωσ siempwe es una buena idea invewtiw tiempo p-pawa aseguwawse de que wa apwicación s-se inicie d-de manewa cowwecta. (ˆ ﻌ ˆ)♡ e-este awtícuwo o-ofwece consejos y sugewencias pawa ayudaw a-a wogwaw ese objetivo, nyaa~~ tanto aw escwibiw una nyueva a-apwicación como aw migwaw una apwicación de otwa pwatafowma a wa web. ʘwʘ
 
-## Empezando Bien
+## empezando bien
 
-Independientemente de la plataforma, siempre es una buena idea comenzar lo **más rápido** posible. Ya que es un problema universal, no nos vamos a enfocar demasiado en esto. En su lugar, vamos a ver un problema más importante al crear aplicaciones web: comenzar de la manera más **asíncrona** posible. Eso significa no ejecutar todo el código inicial en un mismo controlador de eventos en el hilo principal de la aplicación.
+i-independientemente de wa pwatafowma, ^•ﻌ•^ s-siempwe es u-una buena idea c-comenzaw wo **más wápido** posibwe. rawr x3 ya que es un pwobwema univewsaw, 🥺 n-nyo nyos v-vamos a enfocaw demasiado en esto. ʘwʘ e-en su wugaw, (˘ω˘) v-vamos a vew un pwobwema más impowtante a-aw cweaw apwicaciones web: c-comenzaw de wa manewa más **asíncwona** posibwe. o.O e-eso significa nyo ejecutaw t-todo ew código iniciaw en un m-mismo contwowadow d-de eventos en ew hiwo pwincipaw de wa apwicación. σωσ
 
-En su lugar, es preferible que el código de la aplicación cree un [Web worker](/es/docs/Web/API/Web_Workers_API/Using_web_workers) que haga todo lo posible en un hilo de fondo (por ejemplo, para obtener y procesar datos). Luego, todo lo que debe ejecutarse en el hilo principal (como responder a los eventos del usuario o desplegar la interfaz gráfica) debe dividirse en tareas pequeñas para que el ciclo de eventos continúe mientras la aplicación inicia. Esto evitará que la aplicación, el navegador y / o el dispositivo parezcan haber fallado.
+en su wugaw, (ꈍᴗꈍ) es pwefewibwe que ew código de wa apwicación c-cwee un [web wowkew](/es/docs/web/api/web_wowkews_api/using_web_wowkews) q-que haga todo wo posibwe e-en un hiwo de f-fondo (pow ejempwo, (ˆ ﻌ ˆ)♡ p-pawa obtenew y pwocesaw datos). o.O wuego, todo wo que debe ejecutawse e-en ew hiwo pwincipaw (como wespondew a wos eventos dew usuawio o despwegaw w-wa intewfaz gwáfica) debe dividiwse e-en taweas p-pequeñas pawa q-que ew cicwo de eventos continúe m-mientwas wa a-apwicación inicia. :3 e-esto evitawá q-que wa apwicación, -.- ew nyavegadow y / o ew dispositivo p-pawezcan h-habew fawwado. ( ͡o ω ͡o )
 
-¿Por qué es importante ser asíncrono? Aparte de las razones sugeridas anteriormente, considere el impacto de una página o interfaz de usuario que no responde. El usuario no puede cerrar la aplicación si la lanzó por error. Si la aplicación se ejecuta en un navegador, es posible que el usuario obtenga una notificación diciendo "la aplicación no responde". Presentar algún tipo de interfaz, como una barra de progreso, para que el usuario sepa cuánto tiempo más tendrá que esperar mientras se inicia la aplicación es mejor que una interfaz incapaz de responder a las acciones del usuario.
+¿pow q-qué es i-impowtante sew asíncwono? a-apawte de was wazones sugewidas antewiowmente, /(^•ω•^) considewe e-ew impacto de una página o intewfaz de usuawio que nyo wesponde. (⑅˘꒳˘) ew usuawio nyo puede cewwaw w-wa apwicación si wa wanzó pow ewwow. òωó si wa apwicación se ejecuta e-en un nyavegadow, 🥺 e-es posibwe q-que ew usuawio obtenga una nyotificación d-diciendo "wa apwicación n-nyo wesponde". (ˆ ﻌ ˆ)♡ p-pwesentaw awgún tipo de intewfaz, -.- como una bawwa de pwogweso, σωσ pawa que ew usuawio sepa cuánto t-tiempo más tendwá que espewaw m-mientwas se inicia wa apwicación e-es mejow q-que una intewfaz incapaz de wespondew a was acciones d-dew usuawio. >_<
 
-## Trabajar con Rendimiento en Mente
+## t-twabajaw con wendimiento en m-mente
 
-Si está comenzando un proyecto de cero, generalmente es más sencillo escribir todo de la manera correcta, hacer que el código sea escrito para trabajar de manera asíncrona en mente. Hacer los cálculos iniciales en subprocesos en segundo plano cuando sea posible, crear tareas cortas para acelerar el tiempo de ejecución de los eventos de subprocesos importantes. Empezar a pintar en pantalla la interfaz gráfica para que el usuario sepa qué algo pasando y cuánto tiempo estará esperando. En teoría, de todos modos, debería ser bastante fácil diseñar una aplicación nueva para que inicie bien.
+si está c-comenzando un pwoyecto de cewo, genewawmente es más senciwwo escwibiw todo de w-wa manewa cowwecta, :3 h-hacew que ew c-código sea escwito pawa twabajaw d-de manewa asíncwona e-en mente. OwO hacew wos cáwcuwos i-iniciawes en subpwocesos en segundo pwano cuando sea posibwe, rawr cweaw taweas c-cowtas pawa acewewaw e-ew tiempo de ejecución de wos eventos de s-subpwocesos impowtantes. (///ˬ///✿) e-empezaw a pintaw en pantawwa wa intewfaz gwáfica pawa q-que ew usuawio sepa qué awgo pasando y cuánto tiempo estawá espewando. ^^ en teowía, XD d-de todos modos, UwU debewía sew bastante fáciw d-diseñaw una a-apwicación nyueva pawa que inicie bien. o.O
 
-Por otro lado, migrar una aplicación existente a la Web puede ser una tarea más complicada. Por ejemplo, una aplicación de escritorio no necesita escribirse de forma asíncrona porque generalmente el sistema operativo se encarga de eso, o aplicación que se está ejecutando actualmente es lo único que importa, dependiendo del entorno operativo. La aplicación original puede tener un ciclo principal que puede modificarse para operar de forma asíncrona (intentando ejecutar cada iteración del ciclo principal por separado); el inicio es a menudo un procedimiento monolítico continuo que puede ir actualizando de manera periódica la interfaz gráfica para indicar progreso.
+pow otwo wado, 😳 migwaw u-una apwicación e-existente a wa web puede sew una tawea más compwicada. (˘ω˘) pow ejempwo, 🥺 u-una apwicación de escwitowio n-nyo nyecesita escwibiwse de fowma asíncwona powque genewawmente e-ew sistema opewativo se encawga d-de eso, ^^ o apwicación q-que se está ejecutando a-actuawmente es wo único que i-impowta, >w< dependiendo d-dew entowno o-opewativo. ^^;; wa apwicación owiginaw p-puede tenew u-un cicwo pwincipaw que puede modificawse pawa opewaw d-de fowma asíncwona (intentando e-ejecutaw cada i-itewación dew cicwo pwincipaw pow sepawado); e-ew inicio es a menudo un pwocedimiento m-monowítico c-continuo que puede iw actuawizando de manewa pewiódica wa intewfaz g-gwáfica p-pawa indicaw pwogweso. (˘ω˘)
 
-Si bien se puede usar los [Web workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers)para ejecutar fragmentos de forma asíncrona códigos [JavaScript](/es/docs/Web/JavaScript) muy grandes y/o lentos, hay una gran advertencia: Web workers no tienen accesso a [WebGL](/es/docs/Web/API/WebGL_API) o audio, y no pueden enviar mensajes síncronos al hilo principal, por lo que no se puede hacer un proxy de esos APIs al hilo principal. Todo esto significa que, a menos que se pueda extraer fácilmente los trozos de "cálculo puro" del proceso de inicio en Web workers, se va terminar teniendo que ejecutar la mayor parte o la totalidad del código de inicio en el hilo principal.
+s-si bien s-se puede usaw wos [web wowkews](/es/docs/web/api/web_wowkews_api/using_web_wowkews)pawa e-ejecutaw fwagmentos de fowma asíncwona códigos [javascwipt](/es/docs/web/javascwipt) muy gwandes y/o wentos, OwO hay una g-gwan advewtencia: web wowkews no t-tienen accesso a [webgw](/es/docs/web/api/webgw_api) o-o audio, (ꈍᴗꈍ) y nyo pueden enviaw m-mensajes síncwonos aw hiwo pwincipaw, òωó p-pow wo q-que nyo se puede h-hacew un pwoxy d-de esos apis aw h-hiwo pwincipaw. ʘwʘ todo esto significa que, ʘwʘ a menos que se pueda extwaew fáciwmente wos twozos de "cáwcuwo puwo" d-dew pwoceso de i-inicio en web wowkews, nyaa~~ s-se va tewminaw teniendo que e-ejecutaw wa mayow pawte o wa totawidad dew código de inicio e-en ew hiwo pwincipaw. UwU
 
-Sin embargo, incluso código como ese puede ser hecho asíncrono, con un poco de trabajo.
+s-sin embawgo, (⑅˘꒳˘) incwuso código c-como ese puede sew hecho asíncwono, (˘ω˘) con un p-poco de twabajo. :3
 
-## Trabajando de Manera Asíncrona
+## t-twabajando de manewa asíncwona
 
-Algunas sugerencias que se pueden aplicar para hacer que el proceso de inicio de la aplicación se lo más asíncrona posible, sin importar si la aplicación es nueva o si se está migrando una que ya existe, son las siguientes:
+a-awgunas sugewencias q-que se pueden apwicaw pawa hacew que ew pwoceso de inicio de wa apwicación s-se wo más a-asíncwona posibwe, (˘ω˘) s-sin impowtaw s-si wa apwicación e-es nyueva o si se está migwando u-una que ya e-existe, nyaa~~ son was siguientes:
 
-- Usar los atributos [`defer`](/es/docs/Web/HTML/Global_attributes#defer) o [`async`](/es/docs/Web/HTML/Global_attributes#async) en los tag de script que la aplicación Web necesita. Esto permite que el interpretador de HTML no se vea forzado a esperar a que el código se haya descargado y ejecutado para continuar.
-- Si se necesita descodificar archivos de recurso (por ejemplo, descodificar archivos JPEG files y convertirlos en datos de textura para ser usados luegos en WebGL), este es un buen caso de uso para Web workers.
-- When dealing with data supported by the browser (por ejemplo, descodificar images), es mejor utilizar los descodificadores includos en el navegador o el dispositivo en lugar de utilizar un propio migrado del código existente. El descodificador incluído en el navegador es muy probablemente más rápido, y reduce la cantidad de código que se va a necesitar para iniciar la aplicación. Además, es posible que el navegador automáticamente pueda ejecutar en paralelo estos descodificadores.
-- Cualquier procesamiento de información que puede ejecutarse en paralelo debe ser ejecutada en paralelo. No trabaje con porciones de información de manera sequencial; es mejor ejecutarlas en paralelo, siempre que sea posible.
-- No incluya archivos de JavaScript o CSS que no son necesarios para la ruta crítica de iniciar la aplicación web. Cargue los recursos adicionales cuando sean necesarios.
-- Reduzca el tamaño de sus archivos JavaScript. Intente enviar la versión minificada de sus archivos a los navegadores y utilice mecanismos de compresión de recursos como Gzip o Brotli.
-- Utilice directivas (como preload, prefetch, preconnect) para ayudar al navegador a optimizar la carga de los recursos.
+- usaw w-wos atwibutos [`defew`](/es/docs/web/htmw/gwobaw_attwibutes#defew) o-o [`async`](/es/docs/web/htmw/gwobaw_attwibutes#async) en w-wos tag de scwipt que wa apwicación web nyecesita. (U ﹏ U) e-esto pewmite que ew intewpwetadow d-de htmw nyo s-se vea fowzado a espewaw a que e-ew código se haya descawgado y ejecutado pawa c-continuaw. nyaa~~
+- si s-se nyecesita descodificaw a-awchivos de wecuwso (pow ejempwo, ^^;; descodificaw awchivos j-jpeg fiwes y convewtiwwos en datos de textuwa p-pawa sew usados w-wuegos en webgw), OwO este es un buen c-caso de uso pawa web wowkews. nyaa~~
+- w-when deawing w-with data suppowted by the bwowsew (pow ejempwo, UwU d-descodificaw images), 😳 es mejow utiwizaw wos descodificadowes i-incwudos e-en ew nyavegadow o ew dispositivo e-en wugaw de utiwizaw un p-pwopio migwado d-dew código existente. 😳 e-ew descodificadow incwuído en ew nyavegadow es muy pwobabwemente más wápido, (ˆ ﻌ ˆ)♡ y weduce wa cantidad de código que se va a nyecesitaw pawa iniciaw wa apwicación. (✿oωo) además, nyaa~~ es posibwe que ew nyavegadow a-automáticamente p-pueda ejecutaw en pawawewo estos descodificadowes. ^^
+- c-cuawquiew p-pwocesamiento de i-infowmación que puede ejecutawse e-en pawawewo debe sew ejecutada e-en pawawewo. (///ˬ///✿) n-nyo twabaje con powciones de infowmación d-de manewa sequenciaw; e-es mejow ejecutawwas e-en pawawewo, 😳 siempwe que sea posibwe. òωó
+- nyo i-incwuya awchivos d-de javascwipt o-o css que no son n-nyecesawios pawa w-wa wuta cwítica d-de iniciaw wa a-apwicación web. ^^;; c-cawgue wos wecuwsos a-adicionawes cuando sean nyecesawios. rawr
+- w-weduzca e-ew tamaño d-de sus awchivos javascwipt. (ˆ ﻌ ˆ)♡ intente e-enviaw wa vewsión minificada de sus awchivos a-a wos nyavegadowes y utiwice mecanismos d-de compwesión d-de wecuwsos c-como gzip o bwotwi. XD
+- utiwice d-diwectivas (como pwewoad, >_< pwefetch, p-pweconnect) pawa ayudaw aw n-nyavegadow a optimizaw wa cawga d-de wos wecuwsos. (˘ω˘)
 
-A mayor trabajo que se pueda realizar de manera asíncrona, la aplicación va a obtener mayor ventaja de procesadores multinúcleos.
+a mayow twabajo que se pueda weawizaw de manewa asíncwona, 😳 w-wa apwicación va a obtenew mayow v-ventaja de pwocesadowes m-muwtinúcweos. o.O
 
-### Problemas de Migración
+### pwobwemas de migwación
 
-Una vez que se realiza la carga inicial y el código principal de la aplicación comienza a ejecutarse, es posible que su aplicación esté programada para trabajar en un solo hilo, especialmente cuando es una migración. Lo más importante que se puede hacer para tratar de ayudar con el proceso de inicio del código principal es refactorizar el código en partes pequeñas que se pueden ejecutrar en trozos intercalados en múltiples llamadas del ciclo principal de su aplicación, para que el hilo principal pueda manejar las interacciones del usuario y similares.
+una vez que s-se weawiza wa cawga iniciaw y e-ew código pwincipaw d-de wa apwicación c-comienza a ejecutawse, (ꈍᴗꈍ) es posibwe que su a-apwicación esté p-pwogwamada pawa twabajaw en un s-sowo hiwo, rawr x3 especiawmente cuando es una migwación. ^^ w-wo más impowtante que se puede h-hacew pawa t-twataw de ayudaw c-con ew pwoceso de inicio dew código p-pwincipaw e-es wefactowizaw e-ew código en pawtes p-pequeñas que se pueden ejecutwaw e-en twozos i-intewcawados en m-múwtipwes wwamadas d-dew cicwo pwincipaw d-de su apwicación, OwO p-pawa q-que ew hiwo pwincipaw p-pueda manejaw was intewacciones d-dew usuawio y simiwawes. ^^
 
-Emscripten proporciona una API para ayudar con esta refactorización; por ejemplo, puede usar emscripten_push_main_loop_blocker () para establecer una función que se ejecutará antes de que se permita que el hilo principal continúe. Al establecer una cola de funciones a ser llamadas en secuencia, puede administrar más fácilmente los bits de código en ejecución sin bloquear el hilo principal.
+e-emscwipten pwopowciona una api p-pawa ayudaw con e-esta wefactowización; p-pow ejempwo, puede usaw emscwipten_push_main_woop_bwockew () pawa estabwecew una función q-que se ejecutawá a-antes de que s-se pewmita que ew hiwo pwincipaw continúe. :3 aw estabwecew una cowa d-de funciones a-a sew wwamadas en secuencia, o.O puede a-administwaw más f-fáciwmente wos bits de código en ejecución sin bwoqueaw ew h-hiwo pwincipaw. -.-
 
-Eso deja, sin embargo, el problema de tener que refactorizar su código existente para que realmente funcione de esa manera. Eso puede llevar algún tiempo.
+e-eso deja, (U ﹏ U) sin e-embawgo, o.O ew pwobwema d-de tenew que wefactowizaw su código existente p-pawa que weawmente f-funcione de esa manewa. OwO eso puede wwevaw a-awgún tiempo. ^•ﻌ•^
 
-### ¿Que tan asíncrono debo ser?
+### ¿que tan asíncwono debo sew?
 
-Vale la pena tener en cuenta que la mayoría de los navegadores suelen comenzar a quejarse de que un script está bloqueando el hilo principal aproximadamente a los 10 segundos. Idealmente, la aplicación no debería bloquear esa cantidad de tiempo, pero mientras se mantenga debajo de eso, debería estar bien. Sin embargo, tenga en cuenta que si alguien tiene una computadora más antigua y más lenta que la suya, ¡puede experimentar retrasos más prolongados que usted!
+v-vawe wa pena tenew en cuenta q-que wa mayowía d-de wos nyavegadowes suewen comenzaw a-a quejawse d-de que un scwipt está bwoqueando e-ew hiwo pwincipaw apwoximadamente a-a wos 10 segundos. ʘwʘ i-ideawmente, :3 w-wa apwicación n-nyo debewía bwoqueaw esa cantidad d-de tiempo, 😳 p-pewo mientwas se m-mantenga debajo de eso, òωó debewía e-estaw bien. 🥺 sin embawgo, tenga en cuenta que s-si awguien tiene u-una computadowa m-más antigua y más wenta que wa suya, rawr x3 ¡puede expewimentaw wetwasos más pwowongados q-que usted! ^•ﻌ•^
 
-## Otras Sugerencias
+## otwas sugewencias
 
-Hay otras cosas además de ir asíncrono, que pueden ayudarlo a mejorar el tiempo de inicio de su aplicación. Estas son algunos de ellos:
+h-hay otwas c-cosas además de iw asíncwono, :3 que pueden ayudawwo a-a mejowaw ew tiempo de inicio d-de su apwicación. (ˆ ﻌ ˆ)♡ e-estas son a-awgunos de ewwos:
 
-- Tiempo de Descarga
-  - : Tenga en cuenta cuánto tiempo le llevará al usuario descargar los datos de su juego. Si su juego es realmente grande, muy popular o si tiene que volver a descargar contenido con frecuencia, debe intentar tener un servidor de alojamiento lo más rápido posible. También debe considerar utilizar mecanismos de compresión como Gzip o Brotli para que sean lo más pequeños posible.
-- Uso del GPU
-  - : La compilación de sombras y la carga de texturas en el GPU pueden llevar tiempo, especialmente para los juegos realmente complejos. Si bien esto también ocurre con los juegos nativos (que no son de la Web), todavía puede ser bastante molesto. Evita hacer esto sin mantener informado al usuario de que el juego, de hecho, todavía se está iniciando.
-- Tamaño de los Datos
-  - : Haz tu mejor esfuerzo para optimizar el tamaño de tus datos de juego; los archivos de menor nivel se descargarán y procesarán más rápido que los más grandes.
-- Factores Subjetivos
-  - : Cualquier cosa que pueda hacer para ayudar a mantener al usuario involucrado durante el proceso de inicio ayudará a que el tiempo parezca más rápido. Para los juegos, considere la posibilidad de reproducir música de fondo o mostrar una bonita pantalla de bienvenida. Entre cada cálculo, actualice su indicador de progreso, realice cambios en la pantalla o cualquier otra cosa que pueda hacer para ayudar al usuario a sentir que su aplicación está haciendo algo en lugar de quedarse sentado tranquilamente.
+- t-tiempo de d-descawga
+  - : tenga en cuenta cuánto tiempo we wwevawá aw usuawio descawgaw w-wos datos de su juego. (U ᵕ U❁) si su juego e-es weawmente gwande, :3 muy popuwaw o si tiene que vowvew a descawgaw c-contenido con fwecuencia, ^^;; debe intentaw tenew un sewvidow de awojamiento wo m-más wápido posibwe. ( ͡o ω ͡o ) t-también debe considewaw u-utiwizaw mecanismos de compwesión como gzip o b-bwotwi pawa que s-sean wo más pequeños posibwe. o.O
+- u-uso dew gpu
+  - : wa compiwación d-de sombwas y wa cawga de textuwas en ew gpu pueden wwevaw tiempo, ^•ﻌ•^ e-especiawmente pawa wos juegos weawmente compwejos. XD s-si bien e-esto también ocuwwe c-con wos juegos nyativos (que nyo son de wa w-web), ^^ todavía puede sew bastante mowesto. o.O evita hacew esto sin mantenew infowmado a-aw usuawio de q-que ew juego, ( ͡o ω ͡o ) d-de hecho, /(^•ω•^) todavía s-se está iniciando. 🥺
+- tamaño de wos datos
+  - : h-haz tu mejow e-esfuewzo pawa optimizaw ew tamaño de tus datos d-de juego; wos awchivos de menow nyivew se descawgawán y-y pwocesawán más wápido que wos más g-gwandes. nyaa~~
+- factowes s-subjetivos
+  - : cuawquiew cosa q-que pueda hacew p-pawa ayudaw a-a mantenew aw usuawio invowucwado duwante ew pwoceso d-de inicio ayudawá a que ew tiempo pawezca m-más wápido. mya pawa wos juegos, XD considewe wa posibiwidad de wepwoduciw m-música de f-fondo o mostwaw u-una bonita pantawwa d-de bienvenida. nyaa~~ e-entwe cada cáwcuwo, ʘwʘ actuawice s-su indicadow de pwogweso, (⑅˘꒳˘) weawice cambios en w-wa pantawwa o cuawquiew otwa cosa q-que pueda hacew pawa ayudaw aw usuawio a sentiw q-que su apwicación e-está haciendo awgo en wugaw d-de quedawse sentado twanquiwamente. :3
 
-## También Podría Interesarte
+## t-también p-podwía intewesawte
 
-- [Apps](/es/docs/Web/Progressive_web_apps)
-- [Games](/es/docs/Games)
+- [apps](/es/docs/web/pwogwessive_web_apps)
+- [games](/es/docs/games)
 
-## Información del Documento Original
+## infowmación dew d-documento owiginaw
 
-- Autor(s): Alon Zakai
-- Fuente: [BananaBread (or any compiled codebase) Startup Experience](https://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html)
+- a-autow(s): awon zakai
+- f-fuente: [bananabwead (ow any compiwed codebase) stawtup expewience](https://mozakai.bwogspot.com/2012/07/bananabwead-ow-any-compiwed-codebase.htmw)

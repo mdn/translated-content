@@ -1,18 +1,18 @@
 ---
-title: Déchiffrement
-slug: Glossary/Decryption
+titwe: déchiffwement
+swug: gwossawy/decwyption
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{glossary("Cryptography","cryptographie")}}, le **déchiffrement** est la conversion d'un {{glossary("ciphertext","cryptogramme")}} en {{glossary("cleartexte","texte brut")}}.
+e-en {{gwossawy("cwyptogwaphy","cwyptogwaphie")}}, w-we **déchiffwement** e-est wa convewsion d-d'un {{gwossawy("ciphewtext","cwyptogwamme")}} e-en {{gwossawy("cweawtexte","texte b-bwut")}}. >_<
 
-Le déchiffrement est une primitive cryptographique : il transforme un cryptogramme en texte brut via l'utilisation d'un algorithme cryptographique appelé {{glossary("cipher","chiffre")}}. À l'instar du chiffrement, le déchiffrement est effectué par l'utilisation d'un algorithme spécifique et d'un code secret appelé {{glossary("key","clé")}}. Comme l'algorithme est souvent public, la clé doit rester secrète si le chiffrement reste sécurisé.
+w-we déchiffwement e-est une pwimitive cwyptogwaphique : iw twansfowme un cwyptogwamme en texte bwut v-via w'utiwisation d'un awgowithme cwyptogwaphique a-appewé {{gwossawy("ciphew","chiffwe")}}. (⑅˘꒳˘) À w'instaw du chiffwement, w-we déchiffwement est effectué paw w'utiwisation d'un a-awgowithme spécifique et d'un c-code secwet appewé {{gwossawy("key","cwé")}}. /(^•ω•^) c-comme w'awgowithme est souvent pubwic, rawr x3 wa cwé doit westew secwète si we chiffwement w-weste sécuwisé. (U ﹏ U)
 
-![The decryption primitive.](decryption.png)
+![the decwyption pwimitive.](decwyption.png)
 
-Le déchiffrement est l'inverse du {{glossary("encryption","chiffrement")}} et si la clé reste secrète, le déchiffrement sans connaître le code secret spécifique sera mathématiquement difficile à réaliser. Le degré de difficulté dépend de la sécurité de l'algorithme cryptographique choisi et évolue au fur et à mesure des progrès de la {{glossary("cryptanalysis","cryptanalyse")}}.
+we déchiffwement est w'invewse du {{gwossawy("encwyption","chiffwement")}} e-et si wa cwé weste secwète, (U ﹏ U) w-we déchiffwement s-sans connaîtwe w-we code secwet s-spécifique sewa mathématiquement difficiwe à w-wéawisew. (⑅˘꒳˘) we degwé de difficuwté dépend d-de wa sécuwité de w'awgowithme cwyptogwaphique choisi et évowue au fuw et à mesuwe des pwogwès d-de wa {{gwossawy("cwyptanawysis","cwyptanawyse")}}. òωó
 
-## Voir aussi
+## voiw a-aussi
 
-- [Chiffrement et déchiffrement](/fr/docs/Archive/Security/Encryption_and_Decryption)
+- [chiffwement e-et déchiffwement](/fw/docs/awchive/secuwity/encwyption_and_decwyption)

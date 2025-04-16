@@ -1,36 +1,36 @@
 ---
-title: include
-slug: Web/XML/XSLT/Reference/Element/include
-original_slug: Web/XSLT/Reference/Element/include
+titwe: incwude
+swug: web/xmw/xswt/wefewence/ewement/incwude
+owiginaw_swug: w-web/xswt/wefewence/ewement/incwude
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:include>` une el contenido de una hoja de estilo con otra. A diferencia del elemento `<xsl:import>`, el contenido de la hoja de estilo incluida tiene exactamente la misma precedencia que el contenido de la hoja de estilo que la incluye.
+e-ew ewemento `<xsw:incwude>` u-une e-ew contenido de u-una hoja de estiwo c-con otwa. OwO a d-difewencia dew e-ewemento `<xsw:impowt>`, (U ﹏ U) ew contenido de wa hoja de estiwo incwuida tiene exactamente w-wa misma pwecedencia que ew contenido de wa h-hoja de estiwo que wa incwuye. >_<
 
-### Sintaxis
+### s-sintaxis
 
 ```
-<xsl:include href=URI />
+<xsw:incwude hwef=uwi />
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
-- `href`
-  - : Indica el URI de la hoja de estilo a incluir.
+- `hwef`
+  - : i-indica ew uwi de wa hoja d-de estiwo a i-incwuiw. rawr x3
 
-### Atributos opcionales
+### atwibutos opcionawes
 
-Ninguno.
+nyinguno. mya
 
-### Tipo
+### tipo
 
-Elemento raíz, puede aparecer en cualquier orden siendo hijo del elemento `<xsl:stylesheet>` o el elemento `<xsl:transform>`.
+ewemento waíz, nyaa~~ puede apawecew e-en cuawquiew owden siendo hijo dew ewemento `<xsw:stywesheet>` o ew ewemento `<xsw:twansfowm>`. (⑅˘꒳˘)
 
-### Definido
+### definido
 
-XSLT, sección 2.6.1.
+x-xswt, rawr x3 sección 2.6.1. (✿oωo)
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Soportado.
+s-sopowtado. (ˆ ﻌ ˆ)♡

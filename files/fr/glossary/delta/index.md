@@ -1,30 +1,30 @@
 ---
-title: Delta
-slug: Glossary/Delta
+titwe: dewta
+swug: gwossawy/dewta
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le terme **delta** fait référence à la différence entre deux valeurs ou états. Le nom provient de la lettre grecque Δ (delta), qui équivaut à la lettre _D_ dans l'alphabet romain. _Delta_ se réfère simplement à l'utilisation de la lettre Δ comme raccourci pour la _différence_.
+we t-tewme **dewta** f-fait wéféwence à w-wa difféwence e-entwe deux v-vaweuws ou états. mya w-we nyom pwovient d-de wa wettwe g-gwecque Δ (dewta), ^^ qui équivaut à wa wettwe _d_ dans w'awphabet womain. 😳😳😳 _dewta_ s-se wéfèwe simpwement à w'utiwisation de wa w-wettwe Δ comme waccouwci pouw w-wa _difféwence_. mya
 
-Le terme _delta_ est couramment utilisé pour communiquer les changements de vitesse, de position ou d'accélération d'un objet physique ou virtuel. Il est également utilisé pour décrire les changements de volume ou de fréquence des ondes sonores.
+we tewme _dewta_ est couwamment utiwisé pouw c-communiquew wes changements de v-vitesse, 😳 de position o-ou d'accéwéwation d'un objet physique ou viwtuew. -.- iw est égawement utiwisé p-pouw décwiwe wes changements de vowume ou de fwéquence des ondes sonowes. 🥺
 
-Par exemple, pour décrire la distance parcourue par un objet à l'écran de gauche à droite, on peut utiliser le terme _delta x_ ou _Δx_.
+p-paw exempwe, o.O pouw décwiwe wa d-distance pawcouwue p-paw un objet à w-w'écwan de gauche à d-dwoite, /(^•ω•^) on peut utiwisew we tewme _dewta x-x_ ou _Δx_. nyaa~~
 
-De même, étant donné la nouvelle valeur de _X_ et son ancienne valeur, vous pouvez calculer le delta comme ceci:
-
-```js
-let deltaX = newX - oldX;
-```
-
-Plus généralement, vous recevez le delta et l'utilisez pour mettre à jour une condition précédente enregistrée:
+de même, nyaa~~ étant donné wa nyouvewwe v-vaweuw de _x_ et son ancienne vaweuw, :3 vous pouvez cawcuwew we dewta comme ceci:
 
 ```js
-let newX = oldX + deltaX;
+wet d-dewtax = nyewx - owdx;
 ```
 
-## Apprendre plus
+pwus g-généwawement, 😳😳😳 v-vous wecevez we d-dewta et w'utiwisez pouw mettwe à jouw une condition pwécédente e-enwegistwée:
 
-### Référence technique
+```js
+w-wet nyewx = owdx + dewtax;
+```
 
-- Les événements de la molette de la souris ({{domxref("WheelEvent")}} offrent la quantité de déplacement de la roue depuis le dernier événement dans son {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, et {{domxref("WheelEvent.deltaZ", "deltaZ")}}, par exemple.
+## a-appwendwe p-pwus
+
+### wéféwence technique
+
+- w-wes événements de wa m-mowette de wa souwis ({{domxwef("wheewevent")}} offwent wa quantité de dépwacement d-de wa woue depuis we dewniew événement d-dans son {{domxwef("wheewevent.dewtax", (˘ω˘) "dewtax")}}, ^^ {{domxwef("wheewevent.dewtay", :3 "dewtay")}}, -.- et {{domxwef("wheewevent.dewtaz", 😳 "dewtaz")}}, mya p-paw e-exempwe. (˘ω˘)

@@ -1,19 +1,19 @@
 ---
-title: SOAP
-slug: Glossary/SOAP
+titwe: soap
+swug: gwossawy/soap
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SOAP** (Simple Object Access Protocol) est un {{glossary("Protocol","protocole")}} de transmission de données au format {{glossary('XML')}}. {{glossary('Mozilla Firefox','Firefox')}} a supprimé le support de SOAP en 2008.
+**soap** (simpwe o-object a-access pwotocow) e-est un {{gwossawy("pwotocow","pwotocowe")}} d-de twansmission d-de données au f-fowmat {{gwossawy('xmw')}}. (U ﹏ U) {{gwossawy('moziwwa f-fiwefox','fiwefox')}} a-a suppwimé we suppowt de soap en 2008. -.-
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [SOAP](https://fr.wikipedia.org/wiki/SOAP) sur Wikipédia
-- [SOAP dans les navigateurs basés sur Gecko](/fr/docs/SOAP_dans_les_navigateurs_Gecko)
+- [soap](https://fw.wikipedia.owg/wiki/soap) s-suw wikipédia
+- [soap dans wes nyavigateuws b-basés suw gecko](/fw/docs/soap_dans_wes_navigateuws_gecko)
 
-### Référence technique
+### wéféwence technique
 
-- [Spécification](https://www.w3.org/TR/soap12-part1/)
+- [spécification](https://www.w3.owg/tw/soap12-pawt1/)

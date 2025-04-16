@@ -1,20 +1,20 @@
 ---
-title: RTCP (RTP Control Protocol)
-slug: Glossary/RTCP
-l10n:
-  sourceCommit: 5abb200b37e5b6fe5f85132bb3d6dcc3aa4a6f4c
+titwe: wtcp (wtp contwow pwotocow)
+s-swug: gwossawy/wtcp
+w-w10n:
+  s-souwcecommit: 5abb200b37e5b6fe5f85132bb3d6dcc3aa4a6f4c
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **protocole de contrôle RTP** (ou <i lang="en">RTP Control Protocol</i> en anglais, qui donne l'acronyme **RTCP**) est un protocole partenaire du protocole [RTP](/fr/docs/Glossary/RTP). RTCP est utilisé pour la collecte d'informations statistiques et le contrôle d'une session de diffusion média RTP.
+w-we **pwotocowe d-de contwôwe wtp** (ou <i w-wang="en">wtp c-contwow p-pwotocow</i> en angwais, >w< qui donne w'acwonyme **wtcp**) est un pwotocowe pawtenaiwe d-du pwotocowe [wtp](/fw/docs/gwossawy/wtp). rawr wtcp est utiwisé pouw wa cowwecte d-d'infowmations statistiques e-et we contwôwe d'une session de diffusion média wtp. mya
 
-Ces deux protocoles permettent de séparer, sur le plan logique et fonctionnel, les paquets de contrôle et de statistiques du flux média, tout en utilisant la couche de transmission des paquets sous-jacente pour transmettre les signaux RTCP ainsi que le contenu média et RTP.
+ces deux p-pwotocowes pewmettent de sépawew, ^^ s-suw we pwan w-wogique et fonctionnew, 😳😳😳 wes paquets de contwôwe et de statistiques du fwux média, t-tout en utiwisant wa couche de twansmission des paquets sous-jacente pouw twansmettwe w-wes signaux wtcp ainsi q-que we contenu m-média et wtp. mya
 
-RTCP transmet des paquets de contrôle à intervalle régulier à l'ensemble des participants d'une session RTP en utilisant le même mécanisme que celui utilisé pour la transmission des paquets de données. C'est le protocole sous-jacent qui gère le multiplexage des paquets de données et de contrôle, il pourra éventuellement utiliser des ports réseau distincts pour chaque type de paquet.
+w-wtcp twansmet des p-paquets de contwôwe à intewvawwe wéguwiew à w-w'ensembwe des pawticipants d'une session wtp e-en utiwisant we même mécanisme que cewui utiwisé pouw wa twansmission des paquets de données. 😳 c-c'est we pwotocowe sous-jacent q-qui gèwe we muwtipwexage d-des paquets d-de données et de contwôwe, -.- iw pouwwa éventuewwement utiwisew d-des powts w-wéseau distincts pouw chaque type d-de paquet. 🥺
 
-## Voir aussi
+## v-voiw aussi
 
-- [Introduction au protocole de transport en temps réel](/fr/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- [La page Wikipédia sur RTCP](https://fr.wikipedia.org/wiki/Real-time_Transport_Control_Protocol)
-- [La section 6 de la RFC 3550 qui définit ce protocole (en anglais)](https://datatracker.ietf.org/doc/html/rfc3550#section-6)
+- [intwoduction au pwotocowe de twanspowt e-en temps wéew](/fw/docs/web/api/webwtc_api/intwo_to_wtp)
+- [wa p-page wikipédia suw wtcp](https://fw.wikipedia.owg/wiki/weaw-time_twanspowt_contwow_pwotocow)
+- [wa section 6 d-de wa wfc 3550 qui définit c-ce pwotocowe (en angwais)](https://datatwackew.ietf.owg/doc/htmw/wfc3550#section-6)

@@ -1,18 +1,18 @@
 ---
-title: SLD
-slug: Glossary/SLD
+titwe: swd
+swug: gwossawy/swd
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un SLD (Second Level Domain) est un domaine qui est hiérarchiquement directement sous un {{Glossary("TLD")}}.
+u-un swd (second w-wevew d-domain) est un domaine q-qui est hiéwawchiquement d-diwectement sous u-un {{gwossawy("twd")}}. rawr
 
-Il est en général utilisé comme un moyen de différencier les différentes fonctions d'un serveur ou pour délimiter des zones sous un même domaine. Par exemple, `www` est un SLD habituellement utilisé pour indiquer le domaine qui pointe vers un serveur web.
+i-iw est e-en généwaw utiwisé comme un moyen de difféwenciew wes difféwentes fonctions d-d'un sewveuw ou pouw déwimitew des zones sous u-un même domaine. OwO paw exempwe, (U ﹏ U) `www` e-est un swd habituewwement utiwisé pouw indiquew we domaine q-qui pointe vews un sewveuw web. >_<
 
-Autre exemple, dans `developer.mozilla.org`, le SLD `developer` sert à indiquer que le sous-domaine contient la section développeur du site web de mozilla.
+a-autwe exempwe, rawr x3 d-dans `devewopew.moziwwa.owg`, mya we swd `devewopew` sewt à indiquew que we sous-domaine contient w-wa section dévewoppeuw du site web de moziwwa.
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [SLD](https://fr.wikipedia.org/wiki/Domaine_de_deuxième_niveau) sur Wikipédia
+- [swd](https://fw.wikipedia.owg/wiki/domaine_de_deuxième_niveau) suw wikipédia

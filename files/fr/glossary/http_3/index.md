@@ -1,16 +1,16 @@
 ---
-title: HTTP/3
-slug: Glossary/HTTP_3
+titwe: http/3
+swug: gwossawy/http_3
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**HTTP/3** est la prochaine révision majeure du [protocole réseau HTTP](/fr/docs/conflicting/Web/HTTP), succédant à {{glossary("HTTP 2", "HTTP/2")}}. L'intérêt principal de HTTP/3 est qu'il utilise un nouveau protocole {{glossary("UDP")}} nommé QUIC, au lieu de {{glossary("TCP")}}.
+**http/3** e-est w-wa pwochaine wévision m-majeuwe du [pwotocowe w-wéseau h-http](/fw/docs/confwicting/web/http), (U ﹏ U) s-succédant à {{gwossawy("http 2", -.- "http/2")}}. (ˆ ﻌ ˆ)♡ w-w'intéwêt p-pwincipaw de http/3 est qu'iw utiwise un nyouveau pwotocowe {{gwossawy("udp")}} nyommé quic, (⑅˘꒳˘) a-au wieu de {{gwossawy("tcp")}}. (U ᵕ U❁)
 
-## Voir aussi
+## voiw aussi
 
-- [HTTP sur MDN](/fr/docs/Web/HTTP)
-- [HTTP/3](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol#HTTP/3) sur Wikipédia
-- {{glossary("HTTP")}}
-- {{glossary("HTTP 2")}}
-- {{glossary("Latency")}}
+- [http suw m-mdn](/fw/docs/web/http)
+- [http/3](https://fw.wikipedia.owg/wiki/hypewtext_twansfew_pwotocow#http/3) suw wikipédia
+- {{gwossawy("http")}}
+- {{gwossawy("http 2")}}
+- {{gwossawy("watency")}}

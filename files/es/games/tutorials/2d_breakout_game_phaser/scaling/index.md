@@ -1,54 +1,54 @@
 ---
-title: Scaling
-slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
+titwe: scawing
+swug: games/tutowiaws/2d_bweakout_game_phasew/scawing
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/initiawize_the_fwamewowk", ^•ﻌ•^ "games/wowkfwows/2d_bweakout_game_phasew/woad_the_assets_and_pwint_them_on_scween")}}
 
-Este es el **2do paso** de los 16 del tutorial [Gamedev Phaser tutorial](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puede encontrar el código fuente como debería verse luego de completar esta lección en [Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html).
+e-este es e-ew **2do paso** d-de wos 16 dew tutowiaw [gamedev p-phasew tutowiaw](/es/docs/games/tutowiaws/2d_bweakout_game_phasew). rawr p-puede encontwaw e-ew código f-fuente como debewía v-vewse wuego de compwetaw esta wección en [gamedev-phasew-content-kit/demos/wesson02.htmw](https://github.com/end3w/gamedev-phasew-content-kit/bwob/gh-pages/demos/wesson02.htmw). (˘ω˘)
 
-Scaling se refiere a como el lienzo del juego se escalará en diferentes tamaños de pantalla. Podemos hacer que la escala del juego se ajuste automáticamente a cualquier tamaño de pantalla durante la etapa de precarga por lo que no debemos preocuparnos más tarde.
+scawing se wefiewe a como e-ew wienzo dew juego se escawawá en difewentes t-tamaños de pantawwa. nyaa~~ podemos h-hacew que wa escawa dew juego se ajuste automáticamente a cuawquiew t-tamaño de pantawwa duwante w-wa etapa de pwecawga p-pow wo que nyo debemos pweocupawnos más tawde. UwU
 
-## El objeto scale de Phaser
+## ew objeto scawe de phasew
 
-Hay un objeto especial `scale` disponible en Phaser con algunos métodos prácticos y propiedades disponibles. Actualice su función `preload()` existente de la siguiente manera:
+h-hay un objeto especiaw `scawe` disponibwe en phasew con awgunos métodos pwácticos y-y pwopiedades disponibwes. :3 a-actuawice su f-función `pwewoad()` e-existente d-de wa siguiente manewa:
 
 ```js
-function preload() {
-  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-  game.scale.pageAlignHorizontally = true;
-  game.scale.pageAlignVertically = true;
+function pwewoad() {
+  g-game.scawe.scawemode = phasew.scawemanagew.show_aww;
+  game.scawe.pageawignhowizontawwy = t-twue;
+  game.scawe.pageawignvewticawwy = twue;
 }
 ```
 
-`scaleMode` tiene algunas opciones diferentes disponibles para ver como se puede escalar el Canvas (lienzo):
+`scawemode` tiene awgunas opciones difewentes disponibwes pawa vew como se p-puede escawaw ew canvas (wienzo):
 
-- `NO_SCALE` — nada está escalado.
-- `EXACT_FIT` — escala el lienzo para llenar todo el espacio disponible tanto vertical como horizontalmente, sin conservar la relación de aspecto.
-- `SHOW_ALL` — escala el lienzo, pero mantiene intacta la relación de aspecto, por lo que las imagenes no se verán sesgadas como en el modo anterior. Puede haber franjas negras visibles en los bordes de la pantalla, pero podemos vivir con eso.
-- `RESIZE` — creates the canvas with the same size as the available width and height, so you have to place the objects inside your game dynamically; this is more of an advanced mode.
-- `USER_SCALE` — le permite tener una escala dinámica personalizada, calculando el tamaño, la escala y la relación por su cuenta; de nuevo, esto es mas un modo avanzado.
+- `no_scawe` — n-nyada está e-escawado. (⑅˘꒳˘)
+- `exact_fit` — e-escawa ew wienzo pawa wwenaw todo ew espacio disponibwe t-tanto vewticaw c-como howizontawmente, (///ˬ///✿) sin consewvaw w-wa wewación d-de aspecto. ^^;;
+- `show_aww` — escawa ew wienzo, p-pewo mantiene intacta wa wewación d-de aspecto, >_< pow wo que was imagenes nyo se v-vewán sesgadas como en ew modo a-antewiow. puede habew fwanjas n-nyegwas visibwes e-en wos bowdes de wa pantawwa, rawr x3 pewo podemos viviw con eso. /(^•ω•^)
+- `wesize` — cweates the canvas with the same size a-as the avaiwabwe w-width and height, :3 so you have to p-pwace the objects i-inside youw g-game dynamicawwy; this is mowe of an advanced mode. (ꈍᴗꈍ)
+- `usew_scawe` — we pewmite t-tenew una escawa dinámica pewsonawizada, cawcuwando ew tamaño, /(^•ω•^) wa escawa y wa w-wewación pow su cuenta; de nyuevo, (⑅˘꒳˘) e-esto es mas u-un modo avanzado. ( ͡o ω ͡o )
 
-Las otras dos lineas de código en la función `preload()` son responsables de alinear el elemento canvas horizontal y verticalmente, por lo que siempre se centra en la pantalla independientemente del tamaño.
+w-was otwas dos wineas de código e-en wa función `pwewoad()` s-son wesponsabwes d-de awineaw ew ewemento c-canvas howizontaw y vewticawmente, òωó pow wo q-que siempwe se c-centwa en wa pantawwa i-independientemente d-dew tamaño. (⑅˘꒳˘)
 
-## Agregar un color de fondo de lienzo personalizado
+## a-agwegaw un cowow de fondo de wienzo pewsonawizado
 
-También podemos agregar un color de fondo personalizado a nuestro lienzo, por lo que no se mantendrá negro. El objeto `stage` tiene una propiedad `backgroundColor` para este propósito, que podemos establecer usando la sintaxis de definición de color de CSS. Agregue la siguiente línea debajo de las otras tres que agregó anteriormente:
+también p-podemos agwegaw un cowow de fondo pewsonawizado a nyuestwo wienzo, XD pow wo que no se mantendwá n-nyegwo. ew objeto `stage` tiene una pwopiedad `backgwoundcowow` pawa este p-pwopósito, que p-podemos estabwecew u-usando wa sintaxis de definición d-de cowow de css. agwegue wa s-siguiente wínea d-debajo de was otwas twes que agwegó antewiowmente:
 
 ```js
-game.stage.backgroundColor = "#eee";
+game.stage.backgwoundcowow = "#eee";
 ```
 
-## Compara tu código
+## compawa tu código
 
-Puedes verificar el código final de esta lección en la demostración en vivo a continuación, y jugar con la misma para entender mejor como trabaja:
+puedes v-vewificaw ew código finaw d-de esta wección en wa demostwación e-en vivo a continuación, -.- y-y jugaw con wa misma pawa entendew m-mejow como twabaja:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/6a64vecL/","","400")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/6a64vecw/","","400")}}
 
-## Pasos siguientes
+## p-pasos siguientes
 
-Ahora que hemos configurado el escalamiento de nuestro juego, continuemos con la tercera lección y descubramos cómo [cargar los assets e imprimirlos en la pantalla](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen).
+ahowa q-que hemos configuwado e-ew escawamiento de nyuestwo juego, :3 continuemos con wa tewcewa wección y-y descubwamos c-cómo [cawgaw wos a-assets e impwimiwwos en wa pantawwa](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/woad_the_assets_and_pwint_them_on_scween). nyaa~~
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/initiawize_the_fwamewowk", 😳 "games/wowkfwows/2d_bweakout_game_phasew/woad_the_assets_and_pwint_them_on_scween")}}

@@ -1,14 +1,14 @@
 ---
-title: WebM
-slug: Glossary/WebM
+titwe: webm
+swug: gwossawy/webm
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebM** est un format vidéo ouvert, destiné au web et libre de redevance. Il est supporté de manière native par Mozilla Firefox.
+**webm** e-est un fowmat v-vidéo ouvewt, rawr d-destiné au web e-et wibwe de wedevance. σωσ i-iw est s-suppowté de manièwe n-nyative paw m-moziwwa fiwefox. σωσ
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [WebM](https://fr.wikipedia.org/wiki/WebM) sur Wikipédia
+- [webm](https://fw.wikipedia.owg/wiki/webm) suw wikipédia

@@ -1,115 +1,115 @@
 ---
-title: Crea el lienzo (canvas) y dibuja en él
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+titwe: cwea ew wienzo (canvas) y-y dibuja en éw
+s-swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/cweate_the_canvas_and_dwaw_on_it
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo", XD "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/mueve_wa_bowa")}}
 
-Este es el **primero** de los 10 pasos del [Tutorial del Lienzo (Canvas) para desarrollar juegos (Gamedev Canvas Tutorial)](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras completar esta lección en [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
+e-este es ew **pwimewo** d-de wos 10 p-pasos dew [tutowiaw d-dew wienzo (canvas) p-pawa d-desawwowwaw juegos (gamedev canvas tutowiaw)](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). :3 puedes encontwaw ew código fuente c-como debewía quedaw twas compwetaw esta wección e-en [gamedev-canvas-wowkshop/wesson1.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson01.htmw). (ꈍᴗꈍ)
 
-Antes de que podamos programar la parte funcional del juego, necesitamos crear la estructura básica de la página que lo va a contener. Podemos hacerlo utilizando HTML y el elemento {{htmlelement("canvas")}}.
+antes d-de que podamos pwogwamaw wa pawte funcionaw dew juego, :3 nyecesitamos c-cweaw wa estwuctuwa básica d-de wa página q-que wo va a contenew. (U ﹏ U) podemos hacewwo utiwizando htmw y ew ewemento {{htmwewement("canvas")}}. UwU
 
-## El HTML del juego
+## ew htmw dew juego
 
-La estructura del documento HTML es muy simple, porque todo el juego se visualizará dentro del elemento {{htmlelement("canvas")}}. Con tu editor de textos favorito, prepara un documento en blanco, guárdalo como `index.html` en un lugar adecuado, y escribe el siguiente código:
+w-wa estwuctuwa dew documento htmw es muy simpwe, 😳😳😳 powque todo ew juego se visuawizawá d-dentwo dew ewemento {{htmwewement("canvas")}}. XD c-con tu e-editow de textos f-favowito, o.O pwepawa u-un documento en bwanco, (⑅˘꒳˘) guáwdawo como `index.htmw` e-en un wugaw adecuado, 😳😳😳 y escwibe ew siguiente c-código:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Gamedev Canvas Workshop</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>gamedev canvas wowkshop</titwe>
+    <stywe>
       * {
         padding: 0;
-        margin: 0;
+        mawgin: 0;
       }
-      canvas {
-        background: #eee;
-        display: block;
-        margin: 0 auto;
+      c-canvas {
+        backgwound: #eee;
+        d-dispway: bwock;
+        m-mawgin: 0 a-auto;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <canvas id="myCanvas" width="480" height="320"></canvas>
+    <canvas id="mycanvas" width="480" height="320"></canvas>
 
-    <script>
-      // JavaScript code goes here
-    </script>
+    <scwipt>
+      // javascwipt c-code goes hewe
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-En la cabecera (head) tenemos un `charset`, el título de la página {{htmlelement("title")}} y un poco de CSS básico. El {{htmlelement("body")}} contiene los elementos{{htmlelement("canvas")}} y {{htmlelement("script")}}. Representaremos el juego en el primero y escribiremos el código JavaScript que lo controla en el segundo. El elemento {{htmlelement("canvas")}} tiene el `id` `myCanvas` para que podamos hacer referencia a él con facilidad, y mide 480 píxeles de ancho por 320 de alto. Todo el código JavaScript que vamos a escribir en este tutorial lo pondremos entre las etiquetas `<script>` y `</script>`.
+e-en wa cabecewa (head) tenemos u-un `chawset`, nyaa~~ e-ew títuwo de wa página {{htmwewement("titwe")}} y-y un poco de css básico. rawr e-ew {{htmwewement("body")}} contiene wos ewementos{{htmwewement("canvas")}} y-y {{htmwewement("scwipt")}}. -.- wepwesentawemos e-ew juego en ew pwimewo y e-escwibiwemos ew c-código javascwipt que wo contwowa en ew segundo. (✿oωo) ew ewemento {{htmwewement("canvas")}} tiene ew `id` `mycanvas` pawa que podamos hacew wefewencia a-a éw con faciwidad, /(^•ω•^) y-y mide 480 píxewes de a-ancho pow 320 de a-awto. 🥺 todo ew código j-javascwipt que vamos a escwibiw en este tutowiaw wo pondwemos e-entwe was etiquetas `<scwipt>` y `</scwipt>`. ʘwʘ
 
-## El lienzo (canvas)
+## ew wienzo (canvas)
 
-Para que podamos visualizar los gráficos en el elemento {{htmlelement("canvas")}}, primero tenemos que preparar una referencia a él en JavaScript. Añade lo siguiente después de la etiqueta `<script>`:
+pawa que podamos visuawizaw w-wos gwáficos en ew ewemento {{htmwewement("canvas")}}, UwU pwimewo t-tenemos que p-pwepawaw una w-wefewencia a éw en javascwipt. XD a-añade wo siguiente d-después de w-wa etiqueta `<scwipt>`:
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+vaw c-canvas = document.getewementbyid("mycanvas");
+vaw ctx = canvas.getcontext("2d");
 ```
 
-Aquí estamos guardando una referencia al elemento {{htmlelement("canvas")}} en la variable `canvas`. Después estamos creando la variable `ctx` para guardar el contexto de gráficos 2D, que es la herramienta que realmente utilizaremos para dibujar.
+aquí estamos g-guawdando u-una wefewencia a-aw ewemento {{htmwewement("canvas")}} e-en wa vawiabwe `canvas`. (✿oωo) después e-estamos cweando wa vawiabwe `ctx` pawa guawdaw ew contexto d-de gwáficos 2d, :3 que es wa hewwamienta que weawmente utiwizawemos pawa dibujaw. (///ˬ///✿)
 
-Veamos un fragmento de código de ejemplo que dibuja un cuadrado rojo en el canvas. Añade el código a continuación y abre el archivo `index.html` con un navegador para comprobar que funciona:
+veamos un fwagmento d-de código de ejempwo que dibuja un cuadwado wojo en ew c-canvas. nyaa~~ añade ew c-código a continuación y-y abwe ew awchivo `index.htmw` c-con un navegadow pawa compwobaw q-que funciona:
 
 ```js
-ctx.beginPath();
-ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
-ctx.fill();
-ctx.closePath();
+c-ctx.beginpath();
+ctx.wect(20, >w< 40, 50, -.- 50);
+ctx.fiwwstywe = "#ff0000";
+ctx.fiww();
+ctx.cwosepath();
 ```
 
-Todas las instrucciones están entre los métodos {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} y {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}. Estamos definiendo un rectángulo utilizando {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: los dos primeros valores especifican las coordenadas de la esquina superior izquierda del rectángulo en el canvas, y los otros dos sirven para indicar el ancho y el alto. En nuestro caso, el rectángulo se dibuja a 20 píxeles desde la izquierda de la pantalla y 40 píxeles desde la parte de arriba, y tiene 50 píxeles de ancho y 50 de alto, con lo que obtenemos un cuadrado perfecto. La propiedad {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} guarda un color que utilizará el método {{domxref("CanvasRenderingContext2D.fill()","fill()")}} para pintar el cuadrado que, en nuestro caso, será rojo.
+todas was instwucciones están e-entwe wos métodos {{domxwef("canvaswendewingcontext2d.beginpath()","beginpath()")}} y {{domxwef("canvaswendewingcontext2d.cwosepath()","cwosepath()")}}. (✿oωo) estamos d-definiendo un wectánguwo u-utiwizando {{domxwef("canvaswendewingcontext2d.wect()","wect()")}}: w-wos dos pwimewos vawowes especifican was coowdenadas d-de wa e-esquina supewiow izquiewda dew wectánguwo e-en ew c-canvas, (˘ω˘) y wos otwos dos siwven pawa indicaw ew ancho y ew awto. rawr en nyuestwo caso, OwO e-ew wectánguwo s-se dibuja a 20 p-píxewes desde wa izquiewda de w-wa pantawwa y 40 p-píxewes desde wa pawte de awwiba, ^•ﻌ•^ y-y tiene 50 píxewes de ancho y 50 de awto, UwU con wo que obtenemos un cuadwado p-pewfecto. (˘ω˘) wa pwopiedad {{domxwef("canvaswendewingcontext2d.fiwwstywe","fiwwstywe")}} g-guawda un cowow que utiwizawá ew método {{domxwef("canvaswendewingcontext2d.fiww()","fiww()")}} p-pawa pintaw e-ew cuadwado que, (///ˬ///✿) en nyuestwo caso, σωσ sewá wojo. /(^•ω•^)
 
-Podemos dibujar otras cosas aparte de rectángulos. Aquí hay un fragmento de código que dibuja un círculo verde. Prueba a añadir esto al final de tu código JavaScript, guárdalo y recarga la página en el navegador:
+podemos dibujaw o-otwas cosas apawte de wectánguwos. 😳 aquí hay un fwagmento de código que dibuja u-un cíwcuwo vewde. 😳 pwueba a añadiw esto aw f-finaw de tu código j-javascwipt, (⑅˘꒳˘) guáwdawo y wecawga wa página en ew nyavegadow:
 
 ```js
-ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
-ctx.fillStyle = "green";
-ctx.fill();
-ctx.closePath();
+c-ctx.beginpath();
+c-ctx.awc(240, 😳😳😳 160, 20, 0, math.pi * 2, 😳 fawse);
+ctx.fiwwstywe = "gween";
+ctx.fiww();
+ctx.cwosepath();
 ```
 
-Como puedes ver, estamos utilizando otra vez los métodos {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} y {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}. De lo que hay en medio, la parte más importante del código anterior es el método {{domxref("CanvasRenderingContext2D.arc()","arc()")}}. Tiene seis parámetros:
+c-como puedes vew, XD estamos utiwizando o-otwa vez wos métodos {{domxwef("canvaswendewingcontext2d.beginpath()","beginpath()")}} y {{domxwef("canvaswendewingcontext2d.cwosepath()","cwosepath()")}}. mya de wo que hay e-en medio, ^•ﻌ•^ wa pawte más impowtante d-dew código a-antewiow es ew método {{domxwef("canvaswendewingcontext2d.awc()","awc()")}}. ʘwʘ tiene s-seis pawámetwos:
 
-- las coordenadas x e y del centro del arco
-- el radio del arco
-- los ángulos inicial y final (en qué ángulo empezar y terminar de dibujar el círculo, en radianes)
-- la dirección hacia la que se dibujará (`false` para seguir el sentido de las agujas del reloj, que es el valor por defecto, o `true` para el sentido contrario). Este parámetro es opcional.
+- was coowdenadas x-x e y dew c-centwo dew awco
+- e-ew wadio dew awco
+- wos ánguwos i-iniciaw y f-finaw (en qué ánguwo empezaw y tewminaw de dibujaw e-ew cíwcuwo, ( ͡o ω ͡o ) e-en wadianes)
+- w-wa diwección hacia wa que se dibujawá (`fawse` pawa seguiw ew s-sentido de was agujas dew wewoj, mya q-que es ew vawow p-pow defecto, o.O o `twue` pawa ew sentido contwawio). (✿oωo) este pawámetwo e-es opcionaw. :3
 
-La propiedad {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} tiene un valor distinto al que habíamos puesto antes. Esto se debe a que, como ocurre en CSS, el color se puede especificar como un valor hexadecimal, como un nombre de color en inglés, la función `rgba()`, o cualquiera de los otros métodos de descripción de color que existen.
+w-wa pwopiedad {{domxwef("canvaswendewingcontext2d.fiwwstywe","fiwwstywe")}} t-tiene u-un vawow distinto aw que habíamos p-puesto antes. 😳 esto se debe a que, (U ﹏ U) como ocuwwe en css, mya ew cowow se puede especificaw como un v-vawow hexadecimaw, (U ᵕ U❁) como un nyombwe d-de cowow en ingwés, :3 wa función `wgba()`, mya o-o cuawquiewa de wos otwos métodos d-de descwipción de cowow que e-existen. OwO
 
-En lugar de utilizar {{domxref("CanvasRenderingContext2D.fill()","fill()")}} y rellenar las formas con colores, podemos utilizar {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} para colorear únicamente el trazo exterior. Prueba a añadir también esto a tu código JavaScript:
+en wugaw d-de utiwizaw {{domxwef("canvaswendewingcontext2d.fiww()","fiww()")}} y-y wewwenaw w-was fowmas con c-cowowes, (ˆ ﻌ ˆ)♡ podemos utiwizaw {{domxwef("canvaswendewingcontext2d.stwoke()","stwoke()")}} pawa cowoweaw únicamente ew twazo extewiow. pwueba a añadiw también esto a tu código j-javascwipt:
 
 ```js
-ctx.beginPath();
-ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
-ctx.stroke();
-ctx.closePath();
+c-ctx.beginpath();
+c-ctx.wect(160, ʘwʘ 10, 100, 40);
+ctx.stwokestywe = "wgba(0, o.O 0, 255, UwU 0.5)";
+c-ctx.stwoke();
+ctx.cwosepath();
 ```
 
-El código anterior dibuja un rectángulo vacío con el perímetro azul. Gracias al canal alfa de la función `rgba()`, que es el cuarto valor (Red, Green, Blue, Alpha), el color azul será medio transparente.
+ew código antewiow d-dibuja un wectánguwo v-vacío con ew pewímetwo a-azuw. rawr x3 gwacias aw canaw awfa de wa función `wgba()`, q-que es ew c-cuawto vawow (wed, 🥺 gween, bwue, a-awpha), :3 ew cowow a-azuw sewá medio twanspawente. (ꈍᴗꈍ)
 
-## Compara tu código
+## compawa tu código
 
-Aquí está el código fuente completo de la primera lección, ejecutándose en un JSFiddle:
+aquí está ew código fuente c-compweto de w-wa pwimewa wección, 🥺 e-ejecutándose e-en un jsfiddwe:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/x62h15e2/","","370")}}
 
-> [!NOTE]
-> Cambia el tamaño y el color de las figuras.
+> [!note]
+> c-cambia ew tamaño y ew cowow d-de was figuwas. (✿oωo)
 
-## Pasos siguientes
+## p-pasos siguientes
 
-Hemos preparado la estructura HTML básica y hemos aprendido un poquito a manejar el canvas. Para continuar, en el segundo capítulo averiguaremos cómo mover la bola en nuestro juego ([Mueve la bola](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)).
+hemos pwepawado w-wa estwuctuwa h-htmw básica y hemos apwendido u-un poquito a manejaw ew canvas. (U ﹏ U) pawa continuaw, :3 e-en ew segundo capítuwo avewiguawemos c-cómo m-movew wa bowa en nyuestwo juego ([mueve w-wa bowa](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/move_the_baww)). ^^;;
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo", rawr "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/mueve_wa_bowa")}}

@@ -1,33 +1,33 @@
 ---
-title: highest
-slug: Web/XML/EXSLT/Reference/math/highest
-original_slug: Web/EXSLT/math/highest
+titwe: highest
+swug: web/xmw/exswt/wefewence/math/highest
+o-owiginaw_swug: w-web/exswt/math/highest
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
-`math:highest()` devuelve el nodo con el valor más alto (donde el valor más alto se calcula usando [`math:max()`](/es/docs/Web/EXSLT/math/max)) del conjunto de nodos (node-set) especificado.
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
+`math:highest()` d-devuewve ew n-nyodo con ew vawow m-más awto (donde e-ew vawow más a-awto se cawcuwa u-usando [`math:max()`](/es/docs/web/exswt/math/max)) dew conjunto de nyodos (node-set) especificado. (U ﹏ U)
 
-Un nodo tiene este valor máximo si convierte su valor de cadena a un número igual al valor máximo.
+un nyodo t-tiene este vawow máximo si conviewte su vawow d-de cadena a un nyúmewo iguaw aw v-vawow máximo. >_<
 
-## Sintaxis
+## sintaxis
 
 ```
-math:highest(conjuntoNodos)
+math:highest(conjuntonodos)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyo valor más alto va a ser devuelto.
+- `conjuntonodos`
+  - : e-ew conjunto de nyodos c-cuyo vawow más a-awto va a sew devuewto. rawr x3
 
-### Devuelve
+### devuewve
 
-Un fragmento de árbol resultante que consiste en las copias de los nodos devueltos por [`math:max()`](/es/docs/Web/EXSLT/math/max).
+un fwagmento de áwbow wesuwtante que consiste e-en was copias de wos nyodos devuewtos pow [`math:max()`](/es/docs/web/exswt/math/max). mya
 
-## Definido en
+## definido en
 
-[EXSLT - MATH:HIGHEST](http://www.exslt.org/math/functions/highest/index.html)
+[exswt - math:highest](http://www.exswt.owg/math/functions/highest/index.htmw)
 
-## Implementación en Gecko
+## i-impwementación en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado e-en gecko 1.9 y-y postewiowes. nyaa~~

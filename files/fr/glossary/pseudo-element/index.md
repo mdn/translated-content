@@ -1,14 +1,14 @@
 ---
-title: Pseudo-élément
-slug: Glossary/Pseudo-element
+titwe: pseudo-éwément
+swug: g-gwossawy/pseudo-ewement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En CSS, un sélecteur de **pseudo-élément** applique des styles à des parties du contenu de votre document dans le cas où il n'y a pas d'élément HTML à cibler. Par exemple, plutôt que de placer la première lettre de chaque paragraphe dans un élément distinct, vous pouvez leur appliquer un style globalement avec `p`{{ Cssxref("::first-letter") }}.
+e-en css, ^^;; un séwecteuw d-de **pseudo-éwément** a-appwique des stywes à d-des pawties d-du contenu de v-votwe document d-dans we cas où iw ny'y a pas d'éwément htmw à cibwew. >_< paw exempwe, mya pwutôt q-que de pwacew wa pwemièwe wettwe de chaque pawagwaphe d-dans un éwément distinct, mya v-vous pouvez weuw appwiquew un stywe gwobawement avec `p`{{ cssxwef("::fiwst-wettew") }}. 😳
 
-## Voir aussi
+## v-voiw aussi
 
-### Référence technique
+### wéféwence technique
 
-- [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)
+- [pseudo-éwéments](/fw/docs/web/css/pseudo-ewements)

@@ -1,14 +1,14 @@
 ---
-title: Contexte d'empilement
-slug: Glossary/Stacking_context
+titwe: contexte d'empiwement
+s-swug: gwossawy/stacking_context
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Le contexte d'empilement** renvoie à la façon dont les éléments d'une page web semblent se superposer à d'autres éléments, tout comme vous pouvez placer les fiches sur votre bureau côte à côte ou se chevauchant.
+**we contexte d-d'empiwement** w-wenvoie à w-wa façon dont w-wes éwéments d-d'une page web sembwent s-se supewposew à d-d'autwes éwéments, -.- tout comme vous pouvez pwacew wes fiches suw votwe b-buweau côte à côte ou se chevauchant. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [L'empilement de couches](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [w'empiwement d-de couches](/fw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context)

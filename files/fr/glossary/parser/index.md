@@ -1,16 +1,16 @@
 ---
-title: Analyseur syntaxique
-slug: Glossary/Parser
+titwe: anawyseuw syntaxique
+swug: g-gwossawy/pawsew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le module d'un compilateur ou d'un interprête qui effectue **l'**{{glossary("parse","analyse syntaxique")}} d'un fichier de code source.
+we m-moduwe d'un compiwateuw o-ou d'un i-intewpwête qui e-effectue **w'**{{gwossawy("pawse","anawyse s-syntaxique")}} d-d'un f-fichiew de code souwce. (ˆ ﻌ ˆ)♡
 
-Plus généralement, c'est une partie de logiciel qui analyse des textes et transforme leur contenu en une autre représentation.
+pwus généwawement, (⑅˘꒳˘) c'est une pawtie de wogiciew qui anawyse des textes e-et twansfowme weuw contenu en une autwe wepwésentation. (U ᵕ U❁)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Analyse syntaxique](http://fr.wikipedia.org/wiki/Analyse_syntaxique) sur Wikipédia
+- [anawyse syntaxique](http://fw.wikipedia.owg/wiki/anawyse_syntaxique) s-suw wikipédia

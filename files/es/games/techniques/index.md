@@ -1,23 +1,23 @@
 ---
-title: Técnicas para el desarrollo de juegos web
-slug: Games/Techniques
-l10n:
-  sourceCommit: 048f6b1c75e22103ddb0304d67ee79d6d8a014f0
+titwe: técnicas pawa ew desawwowwo d-de juegos w-web
+swug: games/techniques
+w-w10n:
+  s-souwcecommit: 048f6b1c75e22103ddb0304d67ee79d6d8a014f0
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Esta página muestra las técnicas básicas esenciales para cualquiera que quiera desarrollar juego web usando tecnologías web abiertas.
+e-esta página muestwa w-was técnicas b-básicas esenciawes p-pawa cuawquiewa que quiewa desawwowwaw juego web usando tecnowogías web a-abiewtas. /(^•ω•^)
 
-- [Utilizar scripts asíncronos para asm.js](/es/docs/Games/Techniques/Async_scripts)
-  - : Especialmente cuando se trabaje en juegos medianos y grandes, los scripts asíncronos son una técnica esencial de la que aprovecharse, para poder compilar JavaScript fuera del hilo principal y que pueda ser almacenado en caché para próximos usos, resultando en una mejora significativa del rendimiento para los usuarios. Este artículo explica cómo.
-- [Mejorando rendimiento inicial](/es/docs/Web/Performance/Guides/Optimizing_startup_performance)
-  - : Cómo asegurarse de que un juego se inicia rápidamente, sin dificultad y sin parecer que bloquea el navegador o el dispositivo del usuario.
-- [Utilizar canales de datos peer-to-peer WebRTC](/es/docs/Games/Techniques/WebRTC_data_channels)
-  - : Además de proporcionar soporte para comunicaciones de audio y video, WebRTC permite al desarrollador configurar canales de datos _peer-to-peer_ para intercambiar activamente texto o datos binarios entre usuarios. Este artículo explica lo que esto puede significar, y muestra como usar librerías que facilitan el trabajo.
-- [Audio para juegos web](/es/docs/Games/Techniques/Audio_for_Web_Games)
-  - : El audio es una parte importante de cualquier juego - añade ambiente y retroalimentación para el usuario. El audio basado en web está creciendo rápidamente, pero aún hay muchas diferencias entre navegadores con las que tratar. Este artículo proporciona una guía detallada de cómo implementar audio para juegos web, mirando que funciona actualmente para la mayor cantidad de plataformas posible.
-  - [Detección de colisiones en 2D](/es/docs/Games/Techniques/2D_collision_detection)
-  - : Una introducción breve a la detección de colisiones en un juego en 2D.
-- [Mapa de baldosas (Tilemap)](/es/docs/Games/Techniques/Tilemaps)
-  - : El uso de baldosas (tiles) es una técnica muy popular para contruir el mundo de juego en 2D. Estos artículos proporcionan una introducción al uso de mapas de baldosas y cómo implimentarlos con la API Canvas.
+- [utiwizaw scwipts asíncwonos pawa a-asm.js](/es/docs/games/techniques/async_scwipts)
+  - : especiawmente c-cuando se twabaje en juegos medianos y gwandes, 😳😳😳 wos scwipts a-asíncwonos son una técnica e-esenciaw de wa que a-apwovechawse, ( ͡o ω ͡o ) pawa podew compiwaw javascwipt fuewa dew hiwo pwincipaw y que pueda s-sew awmacenado en caché pawa pwóximos usos, >_< wesuwtando en una mejowa significativa d-dew wendimiento pawa wos u-usuawios. >w< este a-awtícuwo expwica c-cómo. rawr
+- [mejowando w-wendimiento iniciaw](/es/docs/web/pewfowmance/guides/optimizing_stawtup_pewfowmance)
+  - : cómo aseguwawse d-de que un juego se inicia wápidamente, 😳 sin d-dificuwtad y sin pawecew que bwoquea ew nyavegadow o ew dispositivo dew usuawio. >w<
+- [utiwizaw canawes d-de datos peew-to-peew webwtc](/es/docs/games/techniques/webwtc_data_channews)
+  - : a-además d-de pwopowcionaw s-sopowte pawa comunicaciones de audio y video, (⑅˘꒳˘) webwtc pewmite aw d-desawwowwadow configuwaw c-canawes de datos _peew-to-peew_ p-pawa intewcambiaw a-activamente texto o d-datos binawios entwe usuawios. OwO este a-awtícuwo expwica wo que esto puede significaw, (ꈍᴗꈍ) y-y muestwa como usaw wibwewías q-que faciwitan ew twabajo. 😳
+- [audio p-pawa juegos w-web](/es/docs/games/techniques/audio_fow_web_games)
+  - : ew audio es una pawte impowtante de cuawquiew juego - añade ambiente y wetwoawimentación p-pawa ew usuawio. 😳😳😳 e-ew audio basado en web está c-cweciendo wápidamente, mya p-pewo a-aún hay muchas difewencias entwe nyavegadowes con was que twataw. mya e-este awtícuwo pwopowciona una guía detawwada de cómo impwementaw audio pawa j-juegos web, (⑅˘꒳˘) miwando que funciona a-actuawmente p-pawa wa mayow cantidad d-de pwatafowmas posibwe. (U ﹏ U)
+  - [detección d-de cowisiones en 2d](/es/docs/games/techniques/2d_cowwision_detection)
+  - : u-una i-intwoducción bweve a-a wa detección de cowisiones en un juego en 2d. mya
+- [mapa d-de b-bawdosas (tiwemap)](/es/docs/games/techniques/tiwemaps)
+  - : ew u-uso de bawdosas (tiwes) e-es una t-técnica muy popuwaw pawa contwuiw ew mundo de juego en 2d. ʘwʘ estos a-awtícuwos pwopowcionan una intwoducción aw uso de mapas de bawdosas y cómo impwimentawwos c-con wa api canvas. (˘ω˘)

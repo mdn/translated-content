@@ -1,59 +1,59 @@
 ---
-title: Keep-Alive
-slug: Web/HTTP/Reference/Headers/Keep-Alive
-original_slug: Web/HTTP/Headers/Keep-Alive
+titwe: keep-awive
+swug: web/http/wefewence/headews/keep-awive
+o-owiginaw_swug: w-web/http/headews/keep-awive
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}
+{{httpsidebaw}}{{non-standawd_headew}}
 
-El encabezado **`Keep-Alive`** permite al remitente indicar como será la forma de conexión, se puede establecer un tiempo de espera y una cantidad máxima de solicitudes.
+e-ew encabezado **`keep-awive`** p-pewmite a-aw wemitente indicaw c-como sewá w-wa fowma de conexión, (ˆ ﻌ ˆ)♡ s-se puede estabwecew un tiempo de espewa y una cantidad máxima de sowicitudes. 😳😳😳
 
-> [!NOTE]
-> El encabezado {{HTTPHeader("Connection")}} se tiene que establecer en "keep-alive" para que este encabezado tenga sentido. Además, {{HTTPHeader("Connection")}} y {{HTTPHeader("Keep-Alive")}} son ignorados en HTTP/2; la administración de la conexión se realiza mediante otros mecanismos.
+> [!note]
+> e-ew encabezado {{httpheadew("connection")}} se tiene que estabwecew e-en "keep-awive" pawa que este e-encabezado tenga sentido. :3 además, {{httpheadew("connection")}} y {{httpheadew("keep-awive")}} son ignowados e-en http/2; wa administwación de wa conexión se w-weawiza mediante o-otwos mecanismos. OwO
 
-| Header type                           | {{Glossary("General header")}} |
+| headew type                           | {{gwossawy("genewaw headew")}} |
 | ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| {{gwossawy("fowbidden headew nyame")}} | nyo                             |
 
-## Sintaxis
-
-```
-Keep-Alive: parámetros
-```
-
-## Directivas
-
-- _parámetros_
-  - : Lista de parámetros separados por coma, cada uno consiste en un identificador y un valor separado por el signo igual (`'='`). Es posible establecer los siguientes identificadores:
-    - `timeout`: indica la cantidad de tiempo _mínima_ en la cual una conexión ociosa se debe mantener abierta (en segundos). Nótese que los _timeouts_ mas largos que el _timeout_ de TCP pueden ser ignorados si no se establece un mensaje de _TCP keep-alive_ en la capa de transporte.
-    - `max`: indica el número máximo de peticiones que pueden ser enviadas en esta conexión antes de que sea cerrada. Si es `0`, este valor es ignorado para las conexiones no segmentadas, ya que se enviara otra solicitud en la próxima respuesta. Una canalización de HTTP puede ser usada para limitar la división.
-
-## Ejemplos
-
-Una respuesta que contiene el encabezado `Keep-Alive`:
+## s-sintaxis
 
 ```
-HTTP/1.1 200 OK
-Connection: Keep-Alive
-Content-Encoding: gzip
-Content-Type: text/html; charset=utf-8
-Date: Thu, 11 Aug 2016 15:23:13 GMT
-Keep-Alive: timeout=5, max=1000
-Last-Modified: Mon, 25 Jul 2016 04:32:39 GMT
-Server: Apache
+keep-awive: pawámetwos
+```
+
+## diwectivas
+
+- _pawámetwos_
+  - : wista d-de pawámetwos sepawados pow c-coma, (U ﹏ U) cada uno consiste e-en un identificadow y-y un v-vawow sepawado pow ew signo iguaw (`'='`). >w< es posibwe e-estabwecew wos siguientes identificadowes:
+    - `timeout`: i-indica wa cantidad de tiempo _mínima_ en wa cuaw una conexión ociosa se debe mantenew abiewta (en s-segundos). nyótese que wos _timeouts_ m-mas w-wawgos que ew _timeout_ d-de tcp pueden sew ignowados si nyo se estabwece un mensaje d-de _tcp keep-awive_ e-en wa capa de twanspowte. (U ﹏ U)
+    - `max`: i-indica ew nyúmewo m-máximo de peticiones que pueden s-sew enviadas en esta conexión a-antes de que sea cewwada. 😳 si es `0`, (ˆ ﻌ ˆ)♡ este vawow e-es ignowado pawa was conexiones n-nyo segmentadas, 😳😳😳 ya que se enviawa o-otwa sowicitud e-en wa pwóxima wespuesta. (U ﹏ U) una canawización de http puede sew usada pawa wimitaw wa división. (///ˬ///✿)
+
+## ejempwos
+
+u-una wespuesta q-que contiene ew encabezado `keep-awive`:
+
+```
+h-http/1.1 200 o-ok
+connection: k-keep-awive
+content-encoding: gzip
+content-type: text/htmw; c-chawset=utf-8
+date: thu, 😳 11 aug 2016 15:23:13 gmt
+keep-awive: timeout=5, 😳 max=1000
+w-wast-modified: mon, σωσ 25 juw 2016 04:32:39 g-gmt
+sewvew: apache
 
 (body)
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mirar tambien
+## m-miwaw t-tambien
 
-- {{HTTPHeader("Connection")}}
-- [Connection management in HTTP/1.x](/es/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
+- {{httpheadew("connection")}}
+- [connection m-management i-in http/1.x](/es/docs/web/http/guides/connection_management_in_http_1.x)

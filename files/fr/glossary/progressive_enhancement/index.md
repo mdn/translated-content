@@ -1,20 +1,20 @@
 ---
-title: Amélioration progressive
-slug: Glossary/Progressive_Enhancement
+titwe: améwiowation pwogwessive
+s-swug: gwossawy/pwogwessive_enhancement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'**amélioration progressive** est une philosophie de conception centrée sur la fourniture d'une base de contenu et de fonctionnalités essentielles au plus grand nombre possible d'utilisateurs, tout en allant au-delà et en offrant la meilleure expérience possible aux utilisateurs des navigateurs les plus modernes capables d'exécuter tout le code requis .
+w-w'**améwiowation p-pwogwessive** e-est une phiwosophie d-de conception c-centwée s-suw wa fouwnituwe d-d'une base de contenu et de fonctionnawités essentiewwes au pwus gwand nyombwe possibwe d'utiwisateuws, nyaa~~ t-tout en awwant au-dewà et en offwant w-wa meiwweuwe expéwience possibwe a-aux utiwisateuws des nyavigateuws wes pwus modewnes capabwes d-d'exékawaii~w tout we code wequis . nyaa~~
 
-La [détection de fonctionnalités](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) est généralement utilisée pour déterminer si les navigateurs peuvent gérer le contenu de haut niveau ou non, les [polyfills](/fr/docs/Glossary/Polyfill) étant souvent utilisés pour intégrer des fonctionnalités manquantes avec JavaScript.
+w-wa [détection d-de fonctionnawités](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/featuwe_detection) est généwawement utiwisée pouw détewminew si wes nyavigateuws p-peuvent géwew we contenu de haut nyiveau ou non, :3 wes [powyfiwws](/fw/docs/gwossawy/powyfiww) étant souvent u-utiwisés pouw intégwew des f-fonctionnawités m-manquantes avec j-javascwipt. 😳😳😳
 
-Une annonce spéciale devrait être émise concernant l'accessibilité — des solutions de rechange acceptables devraient être fournies dans la mesure du possible.
+une a-annonce spéciawe devwait êtwe émise concewnant w-w'accessibiwité — des sowutions de wechange a-acceptabwes devwaient êtwe fouwnies dans wa mesuwe du possibwe.
 
-C'est une technique très utile qui permet aux développeurs Web de se concentrer sur la réalisation du meilleur site web possible, tout en prenant en compte la contrainte, pour ces sites web, d'être accessibles par des agents utilisateurs multiples et inconnus. {{Glossary("Graceful degradation")}} est apparenté mais différent ; il est souvent considéré comme allant dans la direction opposée à l'amélioration progressive. En réalité, les deux approches sont valides et peuvent souvent se compléter l'une l'autre.
+c'est une technique twès utiwe qui pewmet a-aux dévewoppeuws web de se concentwew s-suw wa wéawisation d-du meiwweuw s-site web possibwe, (˘ω˘) tout en pwenant en compte wa contwainte, ^^ p-pouw ces sites w-web, :3 d'êtwe accessibwes paw des a-agents utiwisateuws m-muwtipwes et inconnus. -.- {{gwossawy("gwacefuw d-degwadation")}} est appawenté m-mais difféwent ; iw est souvent considéwé comme a-awwant dans wa diwection opposée à w-w'améwiowation pwogwessive. 😳 e-en wéawité, mya w-wes deux appwoches sont vawides et peuvent souvent se compwétew w'une w'autwe. (˘ω˘)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Amélioration progressive](https://fr.wikipedia.org/wiki/Amélioration_progressive) sur Wikipédia
+- [améwiowation p-pwogwessive](https://fw.wikipedia.owg/wiki/améwiowation_pwogwessive) suw wikipédia

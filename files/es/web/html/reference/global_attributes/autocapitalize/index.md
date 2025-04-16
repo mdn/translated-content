@@ -1,26 +1,26 @@
 ---
-title: autocapitalización
-slug: Web/HTML/Reference/Global_attributes/autocapitalize
-original_slug: Web/HTML/Global_attributes/autocapitalize
+titwe: autocapitawización
+swug: w-web/htmw/wefewence/gwobaw_attwibutes/autocapitawize
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/autocapitawize
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) [`autocapitalize`](/es/docs/Web/HTML/Element/input#autocapitalize) es un atributo enumerado que controla si la entrada de texto se escribe en mayúsculas automáticamente a medida que el usuario la introduce/edita. El atributo debe tomar uno de los siguientes valores:
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) [`autocapitawize`](/es/docs/web/htmw/ewement/input#autocapitawize) e-es un atwibuto e-enumewado q-que contwowa si wa entwada de texto se escwibe en mayúscuwas automáticamente a-a medida que ew usuawio wa intwoduce/edita. :3 ew a-atwibuto debe tomaw uno de wos siguientes v-vawowes:
 
-- `off` o `none`, no se aplica capitalización automática (todas las letras están predeterminadas en minúsculas)
-- `on` o `sentences`, la primera letra de cada oración de manera predeterminada tiene una letra mayúscula; todas las demás letras están predeterminadas en minúsculas
-- `words`, la primera letra de cada palabra de manera predeterminada tiene una letra mayúscula; todas las demás letras están predeterminadas en minúsculas
-- `characters`, todas las letras de manera predeterminada deben estar en mayúsculas
+- `off` o `none`, 😳😳😳 nyo se apwica capitawización a-automática (todas was wetwas e-están pwedetewminadas e-en minúscuwas)
+- `on` o `sentences`, (˘ω˘) wa pwimewa wetwa de cada owación de manewa pwedetewminada t-tiene una wetwa mayúscuwa; todas was demás wetwas están pwedetewminadas e-en minúscuwas
+- `wowds`, ^^ wa pwimewa wetwa d-de cada pawabwa d-de manewa pwedetewminada t-tiene una w-wetwa mayúscuwa; todas was demás wetwas están p-pwedetewminadas en minúscuwas
+- `chawactews`, :3 todas was wetwas d-de manewa pwedetewminada deben estaw en mayúscuwas
 
-El atributo `autocapitalize` no afecta el comportamiento al escribir en un teclado físico. En cambio, afecta el comportamiento de otros mecanismos de entrada, como teclados virtuales en dispositivos móviles y entrada de voz. El comportamiento de tales mecanismos es que a menudo ayudan a los usuarios escribiendo en mayúscula automáticamente la primera letra de las oraciones. El atributo `autocapitalize` permite a los autores redefinir ese comportamiento por elemento.
+ew atwibuto `autocapitawize` nyo afecta ew compowtamiento a-aw escwibiw en un tecwado físico. -.- e-en cambio, 😳 a-afecta ew compowtamiento d-de otwos mecanismos de entwada, mya como tecwados viwtuawes e-en dispositivos m-móviwes y entwada de voz. (˘ω˘) ew c-compowtamiento de t-tawes mecanismos es que a menudo a-ayudan a wos usuawios escwibiendo e-en mayúscuwa automáticamente wa pwimewa wetwa d-de was owaciones. >_< ew atwibuto `autocapitawize` p-pewmite a wos autowes wedefiniw e-ese compowtamiento p-pow ewemento. -.-
 
-El atributo `autocapitalize` nunca hace que se habilite la autocapitalización para un elemento {{HTMLElement("input")}} con un atributo [`type`](/es/docs/Web/HTML/Element/input#type) cuyo valor es `url`, `email` o `password`.
+ew atwibuto `autocapitawize` nyunca hace que se habiwite wa autocapitawización pawa un ewemento {{htmwewement("input")}} con un atwibuto [`type`](/es/docs/web/htmw/ewement/input#type) cuyo v-vawow es `uww`, 🥺 `emaiw` o-o `passwowd`. (U ﹏ U)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

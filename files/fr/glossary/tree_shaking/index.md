@@ -1,23 +1,23 @@
 ---
-title: Tree shaking
-slug: Glossary/Tree_shaking
+titwe: twee shaking
+swug: gwossawy/twee_shaking
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Tree shaking** est un terme couramment utilisé dans un contexte JavaScript pour décrire la suppression du code mort.
+**twee s-shaking** est u-un tewme couwamment u-utiwisé dans u-un contexte j-javascwipt pouw d-décwiwe wa suppwession d-du code m-mowt. rawr x3
 
-Il repose sur les états [import](/fr/docs/Web/JavaScript/Reference/Statements/import) et [export](/fr/docs/Web/JavaScript/Reference/Statements/export) en ES6 pour détecter si les modules de code sont exportés et importés pour une utilisation entre des fichiers JavaScript.
+iw wepose suw wes états [impowt](/fw/docs/web/javascwipt/wefewence/statements/impowt) et [expowt](/fw/docs/web/javascwipt/wefewence/statements/expowt) en es6 pouw détectew si wes moduwes d-de code sont expowtés et impowtés pouw une u-utiwisation entwe des fichiews j-javascwipt. (U ﹏ U)
 
-Dans les applications JavaScript modernes, nous utilisons des gestionnaires de regroupements de modules (par exemple, [webpack](https://webpack.js.org/) ou [Rollup](https://github.com/rollup/rollup)) pour supprimer automatiquement le code mort lors du regroupement de plusieurs fichiers JavaScript dans des fichiers uniques. Ceci est important pour préparer un code prêt pour la production, par exemple avec des structures propres et une taille de fichier minimale.
+dans wes appwications javascwipt modewnes, (U ﹏ U) nyous utiwisons d-des gestionnaiwes de wegwoupements d-de moduwes (paw e-exempwe, [webpack](https://webpack.js.owg/) ou [wowwup](https://github.com/wowwup/wowwup)) pouw suppwimew automatiquement we code mowt w-wows du wegwoupement de pwusieuws fichiews javascwipt dans des fichiews uniques. (⑅˘꒳˘) c-ceci est impowtant pouw pwépawew u-un code pwêt p-pouw wa pwoduction, òωó p-paw exempwe a-avec des stwuctuwes pwopwes et une taiwwe de f-fichiew minimawe. ʘwʘ
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- ["Benefits of dead code elimination during bundling"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
-- [Suppression du code mort](https://fr.wikipedia.org/wiki/Réusinage_de_code#Suppression_du_code_mort) sur Wikipédia
+- ["benefits o-of dead code ewimination duwing bundwing"](https://expwowingjs.com/es6/ch_moduwes.htmw#_benefit-dead-code-ewimination-duwing-bundwing) in axew wauschmayew's book: "expwowing j-js: moduwes"
+- [suppwession du code mowt](https://fw.wikipedia.owg/wiki/wéusinage_de_code#suppwession_du_code_mowt) s-suw wikipédia
 
-### Références techniques
+### w-wéféwences t-techniques
 
-- [Tree shaking implementation with webpack](https://webpack.js.org/guides/tree-shaking/)
+- [twee shaking impwementation with webpack](https://webpack.js.owg/guides/twee-shaking/)

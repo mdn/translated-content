@@ -1,12 +1,12 @@
 ---
-title: Repo
-slug: Glossary/Repo
+titwe: wepo
+swug: gwossawy/wepo
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans les systèmes de gestion de versions comme {{Glossary("Git")}} ou {{Glossary("SVN")}} , un dépôt est l'endroit où sont hébergés le code source d'une application ainsi que diverses méta-données.
+d-dans w-wes systèmes d-de gestion de vewsions c-comme {{gwossawy("git")}} o-ou {{gwossawy("svn")}} , σωσ u-un dépôt e-est w'endwoit o-où sont hébewgés we code souwce d'une appwication ainsi que divewses méta-données. >_<
 
-## Pour en savoir plus
+## pouw e-en savoiw pwus
 
-- [Dépôt](<http://fr.wikipedia.org/wiki/Dépôt_(informatique)>) sur Wikipédia
+- [dépôt](<http://fw.wikipedia.owg/wiki/dépôt_(infowmatique)>) suw wikipédia

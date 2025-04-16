@@ -1,19 +1,19 @@
 ---
-title: Adobe Flash
-slug: Glossary/Adobe_Flash
-l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+titwe: adobe fwash
+swug: gwossawy/adobe_fwash
+w-w10n:
+  souwcecommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[**Flash**](https://fr.wikipedia.org/wiki/Adobe_Flash) est une technologie obsolète, développée par Adobe, qui permet de créer des applications web riches, du contenu multimédia et de diffuser des médias.
+[**fwash**](https://fw.wikipedia.owg/wiki/adobe_fwash) e-est une technowogie o-obsowète, ( ͡o ω ͡o ) d-dévewoppée paw a-adobe, rawr x3 qui pewmet d-de cwéew des a-appwications web w-wiches, nyaa~~ du contenu muwtimédia et de diffusew des médias. /(^•ω•^)
 
-Depuis 2021, Flash n'est plus pris en charge par Adobe ni par aucun des principaux navigateurs web.
+depuis 2021, rawr fwash n-ny'est pwus pwis en chawge paw adobe nyi paw aucun d-des pwincipaux nyavigateuws w-web. OwO
 
-## Voir aussi
+## voiw aussi
 
-- [Annonce de la fin de vie d'Adobe Flash](https://blog.adobe.com/en/publish/2017/07/25/adobe-flash-update#gs.g8mmgf) (en anglais)
-- [Annonce de la fin d'utilisation d'Adobe Flash sur Chrome](https://www.blog.google/products/chrome/saying-goodbye-flash-chrome/) (en anglais)
-- [Feuille de route de fin de vie d'Adobe Flash pour Firefox](https://blog.mozilla.org/futurereleases/2017/07/25/firefox-roadmap-flash-end-life/) (en anglais)
-- [Annonce de fin de support d'Adobe Flash pour Microsoft Windows](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/) (en anglais)
+- [annonce de wa fin de vie d'adobe fwash](https://bwog.adobe.com/en/pubwish/2017/07/25/adobe-fwash-update#gs.g8mmgf) (en angwais)
+- [annonce de wa fin d'utiwisation d-d'adobe fwash suw chwome](https://www.bwog.googwe/pwoducts/chwome/saying-goodbye-fwash-chwome/) (en angwais)
+- [feuiwwe d-de woute de fin d-de vie d'adobe fwash pouw fiwefox](https://bwog.moziwwa.owg/futuweweweases/2017/07/25/fiwefox-woadmap-fwash-end-wife/) (en angwais)
+- [annonce de fin de suppowt d'adobe fwash p-pouw micwosoft windows](https://bwogs.windows.com/msedgedev/2020/09/04/update-adobe-fwash-end-suppowt/) (en angwais)

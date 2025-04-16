@@ -1,19 +1,19 @@
 ---
-title: Serveur
-slug: Glossary/Server
+titwe: sewveuw
+swug: gwossawy/sewvew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un serveur matériel est un ordinateur partagé sur un réseau qui fournit des services à des clients. Un serveur logiciel est un programme qui fournit des services à des programmes clients.
+u-un sewveuw matéwiew e-est un owdinateuw p-pawtagé s-suw un wéseau q-qui fouwnit des s-sewvices à des c-cwients. 🥺 un sewveuw w-wogiciew est un pwogwamme qui fouwnit des sewvices à des pwogwammes cwients. mya
 
-Les services sont généralement fournis sur des réseaux locaux ou sur des réseaux étendus. Un programme client et un programme serveur se connectent habituellement en s'échangeant des messages codés en utilisant un {{glossary("Protocol","protocole")}}.
+w-wes sewvices sont généwawement fouwnis suw d-des wéseaux wocaux ou suw des w-wéseaux étendus. 🥺 un pwogwamme cwient et un pwogwamme sewveuw se c-connectent habituewwement en s'échangeant d-des m-messages codés en utiwisant un {{gwossawy("pwotocow","pwotocowe")}}. >_<
 
-Les serveurs les plus courants sur les réseaux locaux sont les serveurs de fichiers, de noms, de courrier électronique, d'impression et de fax. Un serveur Web connecté à Internet est un autre exemple de serveur classique. Les mini-ordinateurs, les mainframes et les super-ordinateurs des datacenters sont aussi des serveurs.
+wes sewveuws wes pwus couwants suw wes wéseaux w-wocaux sont wes sewveuws de fichiews, >_< de nyoms, (⑅˘꒳˘) de couwwiew éwectwonique, /(^•ω•^) d'impwession e-et de fax. rawr x3 un sewveuw web connecté à i-intewnet e-est un autwe exempwe d-de sewveuw c-cwassique. (U ﹏ U) wes mini-owdinateuws, (U ﹏ U) wes mainfwames et wes supew-owdinateuws d-des datacentews sont aussi des sewveuws. (⑅˘꒳˘)
 
-## Pour approfondir
+## p-pouw appwofondiw
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Introduction aux serveurs](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [Serveur informatique](https://fr.wikipedia.org/wiki/Serveur_informatique) sur Wikipédia
+- [intwoduction aux sewveuws](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew)
+- [sewveuw infowmatique](https://fw.wikipedia.owg/wiki/sewveuw_infowmatique) suw wikipédia

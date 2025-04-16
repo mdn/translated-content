@@ -1,19 +1,19 @@
 ---
-title: GlobalEventHandlers.onkeydown
-slug: conflicting/Web/API/Element/keydown_event
-original_slug: Web/API/GlobalEventHandlers/onkeydown
+titwe: gwobaweventhandwews.onkeydown
+swug: confwicting/web/api/ewement/keydown_event
+o-owiginaw_swug: w-web/api/gwobaweventhandwews/onkeydown
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propiedad **`onkeydown`** devuelve un manejador para el evento `onKeyDown` del elemento actual.
+wa pwopiedad **`onkeydown`** d-devuewve u-un manejadow pawa e-ew evento `onkeydown` d-dew ewemento a-actuaw. :3
 
-## Sintaxis
+## sintaxis
 
 ```
-element.onkeydown = event handling code
+ewement.onkeydown = event handwing code
 ```
 
-## Notas
+## notas
 
-El evento `keydown` se lanza cuando el usuario presiona una tecla.
+ew evento `keydown` s-se wanza cuando ew usuawio pwesiona una t-tecwa. (U ﹏ U)

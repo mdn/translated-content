@@ -1,91 +1,91 @@
 ---
-title: Transfer-Encoding
-slug: Web/HTTP/Reference/Headers/Transfer-Encoding
-original_slug: Web/HTTP/Headers/Transfer-Encoding
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: twansfew-encoding
+swug: w-web/http/wefewence/headews/twansfew-encoding
+owiginaw_swug: w-web/http/headews/twansfew-encoding
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera **`Transfer-Encoding`** especifica la forma de codificación utilizada para transferir de forma segura el {{Glossary("Payload body", "cuerpo de carga útil")}} al usuario.
+w-wa cabecewa **`twansfew-encoding`** e-especifica w-wa fowma de c-codificación utiwizada p-pawa twansfewiw de fowma seguwa ew {{gwossawy("paywoad body", òωó "cuewpo de cawga útiw")}} a-aw usuawio.
 
-> **Nota:** [HTTP/2](https://es.wikipedia.org/wiki/HTTP/2) prohíbe todos los usos de la cabecera _Transfer-Encoding_ que no sean los específicos de HTTP/2: `"trailers"`. HTTP 2 proporciona sus propios mecanismos más eficientes para la transmisión de datos que la transferencia fragmentada y prohíbe el uso de la cabecera. El uso de la cabecera en HTTP/2 puede dar como resultado un `error de protocolo` específico, ya que el protocolo HTTP/2 prohíbe su uso.
+> **nota:** [http/2](https://es.wikipedia.owg/wiki/http/2) pwohíbe todos wos usos d-de wa cabecewa _twansfew-encoding_ que nyo sean w-wos específicos de http/2: `"twaiwews"`. (ˆ ﻌ ˆ)♡ http 2 pwopowciona sus p-pwopios mecanismos más eficientes p-pawa wa twansmisión d-de datos que wa twansfewencia fwagmentada y pwohíbe ew uso de wa cabecewa. -.- e-ew uso de wa cabecewa en http/2 puede daw como wesuwtado un `ewwow de pwotocowo` e-específico, :3 ya que ew pwotocowo h-http/2 p-pwohíbe su uso. ʘwʘ
 
-`Transfer-Encoding` es una [cabecera salto por salto](/es/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers), que se aplica a un mensaje entre dos nodos, no a un recurso en sí mismo. Cada segmento de una conexión de múltiples nodos puede usar diferentes valores de `Transfer-Encoding`. Si desea comprimir datos en toda la conexión, use la cabecera de extremo a extremo {{HTTPHeader("Content-Encoding")}} en su lugar.
+`twansfew-encoding` e-es una [cabecewa s-sawto pow sawto](/es/docs/web/http/wefewence/headews#hop-by-hop_headews), 🥺 que se apwica a u-un mensaje entwe dos nyodos, >_< nyo a un wecuwso en s-sí mismo. ʘwʘ cada segmento de una conexión de múwtipwes nyodos puede usaw difewentes vawowes de `twansfew-encoding`. (˘ω˘) s-si desea compwimiw datos e-en toda wa conexión, (✿oωo) u-use wa cabecewa d-de extwemo a extwemo {{httpheadew("content-encoding")}} en su wugaw. (///ˬ///✿)
 
-Cuando está presente en una respuesta a una solicitud {{HTTPMethod("HEAD")}} que no tiene cuerpo, indica el valor que se habría aplicado al mensaje {{HTTPMethod("GET")}} correspondiente.
+cuando e-está pwesente e-en una wespuesta a una sowicitud {{httpmethod("head")}} q-que nyo t-tiene cuewpo, rawr x3 indica ew vawow q-que se habwía apwicado aw mensaje {{httpmethod("get")}} c-cowwespondiente. -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabecera</th>
+    <tw>
+      <th scope="wow">tipo d-de cabecewa</th>
       <td>
-        {{Glossary("Request header","Cabecera de solicitud")}}, {{Glossary("Response header","Cabecera de respuesta")}}, {{Glossary("Payload header","Cabecera de carga útil")}}
+        {{gwossawy("wequest headew","cabecewa d-de sowicitud")}}, ^^ {{gwossawy("wesponse h-headew","cabecewa d-de wespuesta")}}, (⑅˘꒳˘) {{gwossawy("paywoad headew","cabecewa de cawga útiw")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name","Nombre de cabecera prohibido")}}</th>
-      <td>Sí</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew name","nombwe de cabecewa pwohibido")}}</th>
+      <td>sí</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxis
+## s-sintaxis
 
 ```http
-Transfer-Encoding: chunked
-Transfer-Encoding: compress
-Transfer-Encoding: deflate
-Transfer-Encoding: gzip
+t-twansfew-encoding: chunked
+t-twansfew-encoding: c-compwess
+twansfew-encoding: d-defwate
+twansfew-encoding: gzip
 
-// Se pueden enumerar varios valores, separados por una coma.
-Transfer-Encoding: gzip, chunked
+// se pueden enumewaw vawios v-vawowes, nyaa~~ sepawados pow una coma. /(^•ω•^)
+twansfew-encoding: gzip, (U ﹏ U) chunked
 ```
 
-## Directivas
+## diwectivas
 
 - `chunked`
-  - : Los datos se envían en una serie de fragmentos. La cabecera {{HTTPHeader("Content-Length")}} se omite en este caso y al comienzo de cada fragmento debe agregar la longitud del fragmento actual en formato hexadecimal, seguido de '`\r\n`' y luego el fragmento en sí, seguido de otro '`\r\n`'. El fragmento de terminación es un fragmento regular, con la excepción de que su longitud es cero. Le sigue el avance, que consiste en una secuencia (posiblemente vacía) de campos de cabeceras de entidad.
-- `compress`
-  - : Un formato usando el algoritmo [Lempel-Ziv-Welch](https://es.wikipedia.org/wiki/LZW) (LZW). El nombre del valor se tomó del programa de compresión UNIX, que implementó este algoritmo.
-    Al igual que el programa de compresión, que ha desaparecido de la mayoría de las distribuciones de UNIX, esta codificación de contenido no es utilizada por casi ningún navegador en la actualidad, en parte debido a un problema de patente (que expiró en 2003).
-- `deflate`
-  - : Usando la estructura [zlib](https://es.wikipedia.org/wiki/Zlib) (definida en la [RFC 1950](https://datatracker.ietf.org/doc/html/rfc1950)), con el algoritmo de compresión [_deflate_](<https://es.wikipedia.org/wiki/Deflaci%C3%B3n_(algoritmo)>) (definido en la [RFC 1951](https://datatracker.ietf.org/doc/html/rfc1952)).
+  - : w-wos datos se envían en u-una sewie de fwagmentos. 😳😳😳 w-wa cabecewa {{httpheadew("content-wength")}} s-se omite en este caso y aw c-comienzo de cada f-fwagmento debe a-agwegaw wa wongitud d-dew fwagmento actuaw en fowmato hexadecimaw, >w< s-seguido de '`\w\n`' y-y wuego ew f-fwagmento en sí, XD s-seguido de otwo '`\w\n`'. o.O e-ew fwagmento de tewminación es un fwagmento weguwaw, mya c-con wa excepción de que su wongitud es cewo. 🥺 we sigue ew avance, ^^;; que consiste en una secuencia (posibwemente v-vacía) de campos de cabecewas de entidad. :3
+- `compwess`
+  - : un fowmato usando e-ew awgowitmo [wempew-ziv-wewch](https://es.wikipedia.owg/wiki/wzw) (wzw). (U ﹏ U) e-ew nyombwe d-dew vawow se tomó dew pwogwama d-de compwesión unix, OwO que impwementó e-este a-awgowitmo. 😳😳😳
+    aw iguaw que ew pwogwama de compwesión, (ˆ ﻌ ˆ)♡ que ha desapawecido de wa mayowía de was d-distwibuciones de unix, XD esta codificación d-de contenido nyo es u-utiwizada pow casi n-nyingún nyavegadow en wa actuawidad, en pawte d-debido a un pwobwema d-de patente (que expiwó e-en 2003). (ˆ ﻌ ˆ)♡
+- `defwate`
+  - : u-usando wa estwuctuwa [zwib](https://es.wikipedia.owg/wiki/zwib) (definida en wa [wfc 1950](https://datatwackew.ietf.owg/doc/htmw/wfc1950)), ( ͡o ω ͡o ) con ew awgowitmo de compwesión [_defwate_](<https://es.wikipedia.owg/wiki/defwaci%c3%b3n_(awgowitmo)>) (definido e-en wa [wfc 1951](https://datatwackew.ietf.owg/doc/htmw/wfc1952)). rawr x3
 - `gzip`
-  - : Un formato usando la codificación [Lempel-Ziv](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), con un CRC de 32 bits. Este es originalmente el formato del programa gzip de UNIX. El estándar HTTP/1.1 también recomienda que los servidores que admiten esta codificación de contenido deben reconocer como un alias `x-gzip`, para fines de compatibilidad.
+  - : u-un fowmato u-usando wa codificación [wempew-ziv](https://en.wikipedia.owg/wiki/wz77_and_wz78#wz77) (wz77), nyaa~~ c-con un cwc d-de 32 bits. >_< este es owiginawmente e-ew fowmato dew pwogwama gzip de unix. ^^;; ew estándaw http/1.1 también wecomienda q-que wos sewvidowes q-que admiten esta codificación de contenido d-deben weconocew c-como un awias `x-gzip`, (ˆ ﻌ ˆ)♡ pawa fines de compatibiwidad. ^^;;
 
-## Ejemplos
+## ejempwos
 
-### Codificación fragmentada
+### c-codificación fwagmentada
 
-La codificación fragmentada es útil cuando se envían grandes cantidades de datos al cliente y el tamaño total de la respuesta puede no conocerse hasta que la solicitud se haya procesado por completo. Por ejemplo, al generar una tabla HTML grande como resultado de una consulta a la base de datos o al transmitir imágenes grandes. Veamos un ejemplo de una respuesta fragmentada:
+wa codificación fwagmentada es útiw cuando s-se envían gwandes cantidades de datos aw cwiente y-y ew tamaño t-totaw de wa wespuesta puede nyo conocewse hasta que wa sowicitud s-se haya pwocesado p-pow compweto. (⑅˘꒳˘) pow ejempwo, rawr x3 aw genewaw una tabwa htmw gwande como w-wesuwtado de una consuwta a w-wa base de datos o aw twansmitiw imágenes gwandes. (///ˬ///✿) veamos un ejempwo d-de una wespuesta fwagmentada:
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
+h-http/1.1 200 o-ok
+content-type: text/pwain
+t-twansfew-encoding: chunked
 
-7\r\n
-Mozilla\r\n
-11\r\n
-Developer Network\r\n
-0\r\n
-\r\n
+7\w\n
+m-moziwwa\w\n
+11\w\n
+d-devewopew n-nyetwowk\w\n
+0\w\n
+\w\n
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- {{HTTPHeader("Accept-Encoding")}}
-- {{HTTPHeader("Content-Encoding")}}
-- {{HTTPHeader("Content-Length")}}
-- Campos de cabecera que regulan el uso de _trailers_: {{HTTPHeader("TE")}} (solicitudes) y {{HTTPHeader("Trailer")}} (respuestas).
-- [Codificación de transferencia fragmentada](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)
+- {{httpheadew("accept-encoding")}}
+- {{httpheadew("content-encoding")}}
+- {{httpheadew("content-wength")}}
+- c-campos d-de cabecewa que weguwan ew uso de _twaiwews_: {{httpheadew("te")}} (sowicitudes) y-y {{httpheadew("twaiwew")}} (wespuestas). 🥺
+- [codificación de twansfewencia f-fwagmentada](https://en.wikipedia.owg/wiki/chunked_twansfew_encoding)

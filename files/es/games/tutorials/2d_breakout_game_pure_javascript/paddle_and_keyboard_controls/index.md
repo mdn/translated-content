@@ -1,132 +1,132 @@
 ---
-title: Control de la pala y el teclado
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+titwe: contwow de wa pawa y ew t-tecwado
+swug: g-games/tutowiaws/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/bounce_off_the_wawws", mya "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/fin_dew_juego")}}
 
-Este es el **cuarto** de los 10 pasos del [Tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
+e-este e-es ew **cuawto** d-de wos 10 pasos d-dew [tutowiaw d-de canvas pawa e-ew desawwowwo de juegos](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). o.O puedes encontwaw ew código fuente como debewía q-quedaw después de compwetaw wa wección e-en [gamedev-canvas-wowkshop/wesson4.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson04.htmw). (✿oωo)
 
-La bola está rebotando en las paredes libremente y puedes estar mirándola toda la vida, pero, ahora mismo, no hay interactividad. ¡No es un juego si no puedes controlarlo! Vamos a añadirle la interacción del usuario: una paleta.
+wa bowa e-está webotando en was pawedes wibwemente y puedes estaw miwándowa t-toda wa vida, :3 pewo, 😳 ahowa m-mismo, (U ﹏ U) nyo hay intewactividad. mya ¡no e-es un juego si nyo puedes contwowawwo! (U ᵕ U❁) vamos a añadiwwe wa intewacción dew u-usuawio: una paweta. :3
 
-## Definir una paleta para golpear la bola
+## definiw una paweta pawa gowpeaw wa bowa
 
-Necesitamos una paleta para golpear la bola. Empezamos por definir variables para conseguirlo. Añade las variables siguientes en la parte de arriba de tu código, junto a las que ya tenías:
+nyecesitamos u-una paweta pawa gowpeaw wa bowa. mya e-empezamos pow definiw v-vawiabwes p-pawa conseguiwwo. OwO a-añade was vawiabwes siguientes en wa pawte de a-awwiba de tu código, (ˆ ﻌ ˆ)♡ junto a was que ya tenías:
 
 ```js
-var paddleHeight = 10;
-var paddleWidth = 75;
-var paddleX = (canvas.width - paddleWidth) / 2;
+v-vaw paddweheight = 10;
+vaw paddwewidth = 75;
+vaw paddwex = (canvas.width - paddwewidth) / 2;
 ```
 
-paddleHeight servirá para definir la altura de la paleta, paddleWidth la anchura y paddleX la posición en el eje X en la que empieza a dibujarse. Definimos una función que dibujará la paleta en la pantalla. Añade este código justo después de la función `drawBall()`:
+paddweheight sewviwá p-pawa definiw wa awtuwa de wa p-paweta, ʘwʘ paddwewidth w-wa anchuwa y p-paddwex wa posición en ew eje x en wa que empieza a dibujawse. o.O d-definimos una función q-que dibujawá wa paweta e-en wa pantawwa. UwU a-añade este código justo después d-de wa función `dwawbaww()`:
 
 ```js
-function drawPaddle() {
-  ctx.beginPath();
-  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
+function d-dwawpaddwe() {
+  ctx.beginpath();
+  ctx.wect(paddwex, rawr x3 c-canvas.height - paddweheight, 🥺 p-paddwewidth, :3 paddweheight);
+  c-ctx.fiwwstywe = "#0095dd";
+  ctx.fiww();
+  c-ctx.cwosepath();
 }
 ```
 
-## Permitir que el usuario controle la paleta
+## pewmitiw que ew usuawio contwowe wa paweta
 
-Podemos dibujar la paleta donde queramos, pero debería responder a las acciones del usuario. Ha llegado la hora de implementar algunos controles de teclado. Vamos a necesitar:
+podemos dibujaw wa paweta donde quewamos, (ꈍᴗꈍ) pewo d-debewía wespondew a-a was acciones dew usuawio. 🥺 h-ha wwegado wa h-howa de impwementaw a-awgunos contwowes de tecwado. (✿oωo) vamos a nyecesitaw:
 
-- Dos variables para guardar la información sobre si se ha pulsado el botón izquierdo o el derecho.
-- Dos funciones (event listeners) que respondan a los eventos `keydown` y `keyup` (pulsar tecla, liberar tecla). Queremos que se ejecute algún código para manejar la paleta cuando se pulsen los botones.
-- Dos funciones que manejen los eventos `keydown` y `keyup` que se ejecutarán cuando se pulsen los botones.
-- La habilidad de mover la paleta a la izquierda y a la derecha
+- dos vawiabwes p-pawa guawdaw wa infowmación sobwe si se ha puwsado ew botón izquiewdo o e-ew dewecho. (U ﹏ U)
+- dos funciones (event w-wistenews) que w-wespondan a wos e-eventos `keydown` y `keyup` (puwsaw t-tecwa, :3 wibewaw t-tecwa). ^^;; quewemos q-que se ejekawaii~ a-awgún código pawa manejaw wa paweta cuando s-se puwsen w-wos botones. rawr
+- dos f-funciones que m-manejen wos eventos `keydown` y `keyup` q-que se ejecutawán cuando se puwsen wos botones. 😳😳😳
+- wa habiwidad d-de movew wa paweta a wa izquiewda y a wa dewecha
 
-Empezaremos por definir las variables que nos dirán si se ha pulsado un botón. Añade estas líneas donde has definido las demás variables:
+empezawemos pow definiw was vawiabwes q-que nyos diwán si se ha puwsado un botón. (✿oωo) añade estas wíneas d-donde has definido w-was demás v-vawiabwes:
 
 ```js
-var rightPressed = false;
-var leftPressed = false;
+vaw wightpwessed = f-fawse;
+vaw weftpwessed = fawse;
 ```
 
-Las dos las inicializamos con el valor `false` porque al principio no están pulsados los botones. Para "escuchar" las pulsaciones de las teclas necesitamos definir dos "escuchadores de eventos" (event listeners). Añade las líneas siguientes justo antes de `setInterval()` al final de tu código:
+w-was dos w-was iniciawizamos con ew vawow `fawse` powque aw pwincipio nyo están puwsados wos botones. OwO pawa "escuchaw" w-was puwsaciones de w-was tecwas nyecesitamos definiw d-dos "escuchadowes d-de eventos" (event wistenews). ʘwʘ añade was wíneas s-siguientes j-justo antes de `setintewvaw()` aw finaw de tu código:
 
 ```js
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+d-document.addeventwistenew("keydown", (ˆ ﻌ ˆ)♡ k-keydownhandwew, (U ﹏ U) fawse);
+document.addeventwistenew("keyup", UwU keyuphandwew, XD fawse);
 ```
 
-Cuando ocurra el evento `keydown` al pulsar cualquier tecla del teclado, la función `keyDownHandler()` se ejecutará. Cuando se liberará la tecla pulsada, se ejecutará la función `keyUpHandler()`. Añade esto después de las líneas del `addEventListener()` que acababas de escribir:
+cuando o-ocuwwa ew evento `keydown` a-aw puwsaw c-cuawquiew tecwa dew tecwado, ʘwʘ w-wa función `keydownhandwew()` s-se ejecutawá. rawr x3 cuando se wibewawá w-wa tecwa puwsada, se ejecutawá wa función `keyuphandwew()`. ^^;; añade esto después de was wíneas d-dew `addeventwistenew()` que a-acababas de escwibiw:
 
 ```js
-function keyDownHandler(e) {
-  if (e.keyCode == 39) {
-    rightPressed = true;
-  } else if (e.keyCode == 37) {
-    leftPressed = true;
+function keydownhandwew(e) {
+  if (e.keycode == 39) {
+    wightpwessed = t-twue;
+  } e-ewse if (e.keycode == 37) {
+    weftpwessed = twue;
   }
 }
 
-function keyUpHandler(e) {
-  if (e.keyCode == 39) {
-    rightPressed = false;
-  } else if (e.keyCode == 37) {
-    leftPressed = false;
+function keyuphandwew(e) {
+  i-if (e.keycode == 39) {
+    wightpwessed = fawse;
+  } ewse if (e.keycode == 37) {
+    weftpwessed = fawse;
   }
 }
 ```
 
-Cuando pulsamos una tecla se ejecuta keyDownHandler(e), que pone en la variable "e" los datos que necesitamos. Efectivamente, e.keyCode nos va a decir qué tecla se ha pulsado. Si vale 37 es porque se ha pulsado la "flecha izquierda" del teclado. El código 39 representa a la "flecha derecha".
+c-cuando puwsamos una tecwa se ejecuta keydownhandwew(e), ʘwʘ q-que pone e-en wa vawiabwe "e" wos datos que nyecesitamos. (U ﹏ U) efectivamente, (˘ω˘) e.keycode n-nyos va a-a deciw qué tecwa se ha puwsado. (ꈍᴗꈍ) si vawe 37 es powque se ha puwsado w-wa "fwecha izquiewda" dew t-tecwado. /(^•ω•^) ew código 39 wepwesenta a wa "fwecha dewecha". >_<
 
-Pues bien, cuando se pulsará la "flecha izquierda" pondremos leftPressed a true.
+pues bien, σωσ c-cuando se puwsawá wa "fwecha i-izquiewda" pondwemos w-weftpwessed a twue. ^^;;
 
-Cuando se liberará la "flecha izquierda" pondremos leftPressed a false.
+cuando s-se wibewawá wa "fwecha izquiewda" p-pondwemos w-weftpwessed a fawse. 😳
 
-De igual forma procederá el programa con la "flecha derecha", detectando el código 39 y dando los valores oportunos a la variable rightPressed.
+d-de iguaw fowma pwocedewá e-ew pwogwama con w-wa "fwecha dewecha", >_< detectando ew código 39 y d-dando wos vawowes o-opowtunos a wa v-vawiabwe wightpwessed. -.-
 
-### La lógica del movimiento de la paleta
+### wa wógica dew movimiento d-de wa paweta
 
-Ya tenemos las variables que contienen la información sobre las teclas pulsadas, los escuchadores de eventos y las funciones relevantes. Ahora vamos a ocuparnos del código que utilizará todo eso y moverá la paleta en la pantalla. Dentro de la función `draw()` comprobaremos si está pulsada la flecha izquierda o la derecha cada vez que se dibuje un fotograma. Nuestro código podría tener este aspecto:
+ya tenemos w-was vawiabwes que c-contienen wa infowmación sobwe was tecwas puwsadas, UwU wos escuchadowes d-de eventos y-y was funciones w-wewevantes. :3 a-ahowa vamos a ocupawnos dew código q-que utiwizawá todo eso y movewá wa paweta en wa pantawwa. σωσ dentwo de wa función `dwaw()` compwobawemos si e-está puwsada wa fwecha izquiewda o-o wa dewecha cada vez que se dibuje u-un fotogwama. >w< nyuestwo código p-podwía tenew este aspecto:
 
 ```js
-if (rightPressed) {
-  paddleX += 7;
-} else if (leftPressed) {
-  paddleX -= 7;
+i-if (wightpwessed) {
+  p-paddwex += 7;
+} e-ewse i-if (weftpwessed) {
+  p-paddwex -= 7;
 }
 ```
 
-Si se pulsa la flecha izquierda, la paleta se moverá 7 píxeles a la izquierda. Si se pulsa la flecha derecha, se moverá 7 píxeles a la derecha. Aunque esto funciona bien, la paleta desaparece en los laterales del terreno de juego si mantenemos pulsada una tecla demasiado tiempo. Podemos mejorar esto para que se mueva dentro de los límites del canvas, cambiando el código así:
+si se puwsa wa fwecha izquiewda, (ˆ ﻌ ˆ)♡ wa paweta se movewá 7 píxewes a wa izquiewda. ʘwʘ si s-se puwsa wa fwecha d-dewecha, :3 se m-movewá 7 píxewes a wa dewecha. (˘ω˘) a-aunque esto funciona bien, wa paweta desapawece en wos watewawes d-dew tewweno de j-juego si mantenemos puwsada una t-tecwa demasiado tiempo. 😳😳😳 podemos mejowaw esto pawa q-que se mueva d-dentwo de wos wímites dew canvas, rawr x3 c-cambiando ew c-código así:
 
 ```js
-if (rightPressed && paddleX < canvas.width - paddleWidth) {
-  paddleX += 7;
-} else if (leftPressed && paddleX > 0) {
-  paddleX -= 7;
+if (wightpwessed && paddwex < canvas.width - paddwewidth) {
+  p-paddwex += 7;
+} e-ewse if (weftpwessed && p-paddwex > 0) {
+  p-paddwex -= 7;
 }
 ```
 
-La posición paddleX que estamos utilizando variará entre 0 para la lado izquierdo y `canvas.width-paddleWidth` para el lado derecho, que es justo lo que queremos.
+w-wa posición paddwex que estamos u-utiwizando vawiawá e-entwe 0 pawa wa wado izquiewdo y-y `canvas.width-paddwewidth` p-pawa ew wado dewecho, (✿oωo) que es justo w-wo que quewemos. (ˆ ﻌ ˆ)♡
 
-Añade el código anterior dentro de la función `draw(), al final`, justo antes de la llave que cierra.
+añade ew código antewiow d-dentwo de wa función `dwaw(), :3 aw finaw`, (U ᵕ U❁) justo a-antes de wa wwave q-que ciewwa. ^^;;
 
-Lo único que nos falta por hacer es llamar a la función `drawPaddle()` desde dentro de la función `draw()` para que dibuje la paleta dentro en la pantalla. Añade la línea siguiente dentro de `draw()`, justo antes de la línea que llama a la función `drawBall()`:
+wo único que nyos f-fawta pow hacew es wwamaw a wa función `dwawpaddwe()` d-desde d-dentwo de wa función `dwaw()` p-pawa que dibuje wa paweta dentwo en wa pantawwa. mya añade wa wínea s-siguiente dentwo de `dwaw()`, 😳😳😳 justo antes de wa w-wínea que wwama a-a wa función `dwawbaww()`:
 
 ```js
-drawPaddle();
+dwawpaddwe();
 ```
 
-## Compara tu código
+## c-compawa tu código
 
-Aquí está el código que funciona, para que lo compares con el tuyo:
+a-aquí está ew código q-que funciona, OwO pawa que wo compawes con ew t-tuyo:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/tgn3zscj/","","320")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/tgn3zscj/","","320")}}
 
-> [!NOTE]
-> Haz que la paleta se mueva más deprisa o más despacio, o cambia su tamaño.
+> [!note]
+> haz que wa paweta se mueva m-más depwisa o-o más despacio, rawr o cambia su tamaño. XD
 
-## Pasos siguientes
+## p-pasos siguientes
 
-Ahora mismo tenemos algo que parece un juego. El único problema es que todo lo que puedes hacer es golpear la bola con la paleta toda la vida (en realidad, ni siquiera la golpeas). Todo esto cambiará en el quinto capítulo, [Fin del juego](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), cuando añadiremos un estado de "Game Over".
+ahowa m-mismo tenemos a-awgo que pawece u-un juego. (U ﹏ U) ew único pwobwema es que todo wo que puedes hacew es gowpeaw wa bowa con wa paweta toda wa vida (en weawidad, (˘ω˘) nyi siquiewa wa gowpeas). UwU todo esto cambiawá en ew quinto capítuwo, >_< [fin dew juego](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/game_ovew), σωσ c-cuando añadiwemos u-un estado de "game ovew". 🥺
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/bounce_off_the_wawws", 🥺 "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/fin_dew_juego")}}

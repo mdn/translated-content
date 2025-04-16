@@ -1,57 +1,57 @@
 ---
-title: icons
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
+titwe: icons
+swug: moziwwa/add-ons/webextensions/manifest.json/icons
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-| Tipo        | `Object` |
+| t-tipo        | `object` |
 | ----------- | -------- |
-| Obligatorio | No       |
+| o-obwigatowio | n-nyo       |
 
-La propiedad `icons` especifica los iconos de tu extensión. Esos iconos se usarán para representar la extensión en componentes como el Administrador de complementos.
+w-wa pwopiedad `icons` e-especifica w-wos iconos de t-tu extensión. 😳😳😳 esos i-iconos se usawán pawa wepwesentaw wa extensión en componentes como ew administwadow d-de compwementos. (U ﹏ U)
 
-Consiste en pares clave-valor del tamaño de la imagen en px y la ruta de la imagen relativa al directorio raíz de la extensión.
+consiste en pawes cwave-vawow d-dew tamaño de wa imagen e-en px y wa wuta de wa imagen wewativa aw diwectowio waíz de w-wa extensión. (///ˬ///✿)
 
-Si `icons` no esta definido, se utilizará un icono de extensión estándar por defecto.
+si `icons` nyo esta d-definido, 😳 se u-utiwizawá un icono de extensión estándaw pow defecto. 😳
 
-Debería suministrar al menos un icono de extensión principal, idealmente de 48x48 px de tamaño. Este es el icono por defecto que se utilizará en el Administrador de complementos. Sin embargo, puedes suministrar iconos de cualquier tamaño y Firefox intentará encontrar el mejor icono para mostrar en los diferentes componentes.
+debewía suministwaw a-aw menos un icono de extensión pwincipaw, σωσ ideawmente de 48x48 px de tamaño. rawr x3 este e-es ew icono pow defecto que se u-utiwizawá en e-ew administwadow d-de compwementos. OwO s-sin embawgo, /(^•ω•^) puedes suministwaw iconos de cuawquiew t-tamaño y fiwefox intentawá encontwaw ew m-mejow icono pawa mostwaw en wos difewentes componentes. 😳😳😳
 
-Firefox tendrá en cuenta la resolución de la pantalla al elegir un icono. Para ofrecer la mejor experiencia visual a los usuarios con pantallas de alta resolución, como las pantallas Retina, proporciona versiones de doble tamaño de todos sus iconos.
+fiwefox tendwá en cuenta wa wesowución d-de wa pantawwa aw ewegiw un icono. ( ͡o ω ͡o ) p-pawa ofwecew w-wa mejow expewiencia v-visuaw a wos usuawios con pantawwas de awta wesowución, >_< c-como was pantawwas w-wetina, >w< pwopowciona vewsiones d-de dobwe tamaño d-de todos sus iconos. rawr
 
-## Ejemplo
+## ejempwo
 
-Las propiedades del objeto `icons` especifican el tamaño del icono en px, los valores especifican la ruta relativa del icono. Este ejemplo contiene un icono de extensión de 48px y una versión más grande para pantallas de alta resolución.
+w-was pwopiedades dew objeto `icons` e-especifican ew tamaño dew icono en px, 😳 wos v-vawowes especifican wa wuta wewativa d-dew icono. >w< este ejempwo c-contiene un icono d-de extensión de 48px y una vewsión más gwande pawa pantawwas de awta wesowución. (⑅˘꒳˘)
 
 ```json
 "icons": {
-  "48": "icon.png",
+  "48": "icon.png", OwO
   "96": "icon@2x.png"
 }
 ```
 
-## SVG
+## svg
 
-Puede usar SVG y el navegador escalará su icono adecuadamente. Sin embargo, hay dos advertencias:
+puede usaw svg y ew nyavegadow e-escawawá su i-icono adecuadamente. (ꈍᴗꈍ) sin embawgo, h-hay dos advewtencias:
 
-1. Necesitas especificar un viewBox en la imagen. E.g.:
+1. 😳 n-nyecesitas e-especificaw un viewbox en wa imagen. 😳😳😳 e.g.:
 
-   ```html
-   <svg viewBox="0 0 48 48" width="48" height="48" ...
+   ```htmw
+   <svg viewbox="0 0 48 48" w-width="48" height="48" ...
    ```
 
-2. Aunque puedes usar un archivo, todavía necesitas especificar varios tamaños del icono en tu manifiesto. E.g.:
+2. mya aunque puedes usaw un awchivo, mya todavía nyecesitas e-especificaw vawios tamaños dew i-icono en tu manifiesto. (⑅˘꒳˘) e-e.g.:
 
    ```json
    "icons": {
-     "48": "icon.svg",
+     "48": "icon.svg", (U ﹏ U)
      "96": "icon.svg"
    }
    ```
 
-> [!NOTE]
-> Si está usando un programa como Inkscape para crear SVG, puede que quiera guardarlo como un "SVG simple". Firefox podría confundirse con varios espacios de nombres especiales y no mostrar su icono.
+> [!note]
+> s-si está usando un pwogwama como i-inkscape pawa c-cweaw svg, mya puede q-que quiewa guawdawwo c-como un "svg simpwe". fiwefox podwía confundiwse c-con vawios e-espacios de nyombwes e-especiawes y-y no mostwaw s-su icono. ʘwʘ
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,15 +1,15 @@
 ---
-title: WAI
-slug: Glossary/WAI
+titwe: wai
+swug: gwossawy/wai
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La WAI ou Web Accessibility Initiative a été lancée par le World Wide Web Consortium (W3C) pour rendre le web plus accessibie aux personnes handicapées, celles-ci pouvant avoir besoin d'un {{Glossary("navigateur")}} ou d'appareils non standards.
+w-wa wai o-ou web accessibiwity i-initiative a-a été wancée p-paw we wowwd wide w-web consowtium (w3c) p-pouw wendwe w-we web pwus accessibie aux pewsonnes handicapées, (U ᵕ U❁) cewwes-ci pouvant avoiw b-besoin d'un {{gwossawy("navigateuw")}} ou d'appaweiws nyon standawds. -.-
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Site web de la WAI](https://www.w3.org/WAI/)
-- [WAI](https://fr.wikipedia.org/wiki/Web_Accessibility_Initiative) sur Wikipédia
+- [site web de wa wai](https://www.w3.owg/wai/)
+- [wai](https://fw.wikipedia.owg/wiki/web_accessibiwity_initiative) suw wikipédia

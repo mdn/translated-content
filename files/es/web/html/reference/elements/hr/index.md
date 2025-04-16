@@ -1,148 +1,148 @@
 ---
-title: <hr>
-slug: Web/HTML/Reference/Elements/hr
-original_slug: Web/HTML/Element/hr
+titwe: <hw>
+swug: web/htmw/wefewence/ewements/hw
+o-owiginaw_swug: w-web/htmw/ewement/hw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- El **elemento HTML \<hr>** representa un cambio de tema entre párrafos (por ejemplo, un cambio de escena en una historia, un cambio de tema en una sección). En versiones previas de HTML representaba una línea horizontal. Aún puede ser representada como una línea horizontal en los navegadores visuales, pero ahora es definida en términos semánticos y no tanto en términos representativos, por tanto para dibujar una línea horizontal se debería usar el CSS apropiado.
+- e-ew **ewemento htmw \<hw>** w-wepwesenta u-un cambio d-de tema entwe páwwafos (pow e-ejempwo, (⑅˘꒳˘) un cambio de escena en una histowia, (///ˬ///✿) un cambio de tema en u-una sección). ^^;; en vewsiones pwevias de htmw wepwesentaba u-una wínea howizontaw. >_< a-aún puede sew wepwesentada como una wínea howizontaw en wos nyavegadowes v-visuawes, rawr x3 pewo ahowa e-es definida en téwminos s-semánticos y nyo tanto en téwminos wepwesentativos, /(^•ω•^) pow tanto pawa dibujaw una wínea h-howizontaw se debewía usaw ew css apwopiado. :3
 
-  - : **Sus etiquetas son**: `<hr/>` (solo tiene una).
+  - : **sus etiquetas son**: `<hw/>` (sowo t-tiene una). (ꈍᴗꈍ)
 
-    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **cwea u-una caja**: [en b-bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#en_bwoque). /(^•ω•^)
 
-    **Está definido como**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **está d-definido c-como**: [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#en_bwoque). (⑅˘꒳˘)
 
-    **Puede contener**: Nada, es un "elemento vacío" del un Glosario.
+    **puede contenew**: n-nyada, ( ͡o ω ͡o ) es un "ewemento vacío" dew un g-gwosawio. òωó
 
-#### Atributos
+#### atwibutos
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">Valor</th>
-      <th>Descripción</th>
-    </tr>
-    <tr>
-      <th colspan="4">Genéricos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">title</code></td>
-      <td>Texto</td>
-      <td>Implícito</td>
-      <td>Título consultivo del elemento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">style</code></td>
-      <td>Declaraciones de estilo</td>
-      <td>Implícito</td>
-      <td>Información de estilo en línea.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">id</code></td>
-      <td>Un 'nombre'</td>
-      <td>Implícito</td>
-      <td>Identificador único a nivel de documento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">class</code></td>
-      <td>Lista de clases CSS</td>
-      <td>implícito</td>
-      <td>Identificador a nivel de documento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dir</code></td>
-      <td>Uno de los siguientes: <code>"ltr"</code> o <code>"rtl"</code></td>
-      <td>Implícito</td>
-      <td>Dirección del texto.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">lang</code></td>
-      <td>Código de idioma</td>
-      <td>Implícito</td>
-      <td>Información sobre el idioma.</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+    <tw>
+      <th>atwibuto</th>
+      <th cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
+    <tw>
+      <th cowspan="4">genéwicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">titwe</code></td>
+      <td>texto</td>
+      <td>impwícito</td>
+      <td>títuwo c-consuwtivo dew ewemento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">stywe</code></td>
+      <td>decwawaciones d-de estiwo</td>
+      <td>impwícito</td>
+      <td>infowmación de estiwo en wínea.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">id</code></td>
+      <td>un 'nombwe'</td>
+      <td>impwícito</td>
+      <td>identificadow único a-a nyivew de documento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">cwass</code></td>
+      <td>wista de cwases css</td>
+      <td>impwícito</td>
+      <td>identificadow a-a nyivew de documento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">diw</code></td>
+      <td>uno de wos siguientes: <code>"wtw"</code> o-o <code>"wtw"</code></td>
+      <td>impwícito</td>
+      <td>diwección dew texto.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">wang</code></td>
+      <td>código d-de idioma</td>
+      <td>impwícito</td>
+      <td>infowmación s-sobwe ew idioma.</td>
+    </tw>
+    <tw>
+      <td cowspan="4">
+        <stwong>eventos</stwong>:
+        <code stywe="cowow: gween"
+          >oncwick, (⑅˘꒳˘) ondbwcwick, onmousedown, XD onmouseup, -.- onmouseovew, :3
+          o-onmousemove, nyaa~~ o-onmouseout, 😳 onkeypwess, (⑅˘꒳˘) onkeydown, nyaa~~ o-onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="4">Específicos</th>
-    </tr>
-    <tr>
-      <td colspan="4">No tiene</td>
-    </tr>
-    <tr>
-      <th colspan="4">De transición</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">align</code></td>
-      <td>uno de los siguientes: <code>"left", "center", "right".</code></td>
-      <td>Implícito. Por defecto: <code>"center"</code></td>
-      <td>Indica la alineación horizontal.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">noshade</code></td>
+    </tw>
+    <tw>
+      <th c-cowspan="4">específicos</th>
+    </tw>
+    <tw>
+      <td c-cowspan="4">no tiene</td>
+    </tw>
+    <tw>
+      <th cowspan="4">de twansición</th>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">awign</code></td>
+      <td>uno de wos siguientes: <code>"weft", OwO "centew", rawr x3 "wight".</code></td>
+      <td>impwícito. XD pow defecto: <code>"centew"</code></td>
+      <td>indica wa awineación h-howizontaw.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">noshade</code></td>
       <td><code>"noshade"</code></td>
-      <td>Implícito</td>
-      <td>Elimina el relieve.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">size</code></td>
-      <td>Una cantidad, de píxeles</td>
-      <td>Implícito</td>
-      <td>Indica la altura de la linea.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">width</code></td>
-      <td>Una cantidad, de píxeles, o un porcentaje.</td>
-      <td>Implícito. por defecto: 100%</td>
-      <td>Indica la anchura.</td>
-    </tr>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">Valor</th>
-      <th>Descripción</th>
-    </tr>
+      <td>impwícito</td>
+      <td>ewimina ew w-wewieve.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">size</code></td>
+      <td>una c-cantidad, σωσ d-de píxewes</td>
+      <td>impwícito</td>
+      <td>indica w-wa a-awtuwa de wa winea.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">width</code></td>
+      <td>una c-cantidad, (U ᵕ U❁) de píxewes, o-o un powcentaje.</td>
+      <td>impwícito. (U ﹏ U) p-pow defecto: 100%</td>
+      <td>indica w-wa anchuwa.</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th c-cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos
+### ejempwos
 
 ```
-  <p>Este es un parrafo unicamente visual para ver el uso de
- la etiqueta hr</p>
-  <hr/>
-  <p>Este es el segundo parrafo, separado del primero por la etiqueta hr, que puede
-representarse mediante una línea horizontal.</p>
+  <p>este es un pawwafo unicamente visuaw p-pawa vew ew uso de
+ wa etiqueta hw</p>
+  <hw/>
+  <p>este es ew segundo pawwafo, sepawado dew pwimewo p-pow wa etiqueta hw, :3 que puede
+wepwesentawse mediante una wínea h-howizontaw.</p>
 ```
 
-### Muestra
+### m-muestwa
 
-Este es un parrafo unicamente visual para ver el uso de la etiqueta hr
+e-este es un pawwafo unicamente v-visuaw pawa vew ew uso de wa e-etiqueta hw
 
 ---
 
-Este es el segundo parrafo, separado del primero por una linea horizontal
+e-este es ew segundo pawwafo, ( ͡o ω ͡o ) sepawado dew pwimewo pow una winea howizontaw
 
-### Comentarios
+### comentawios
 
-### Referencia
+### w-wefewencia
 
-- El elemento [**hr** en la especificación](http://html.conclase.net/w3c/html401-es/present/graphics.html#edef-HR) de html 4.01
+- ew ewemento [**hw** e-en wa especificación](http://htmw.concwase.net/w3c/htmw401-es/pwesent/gwaphics.htmw#edef-hw) de htmw 4.01
 
-secciones futuras: == Soporte de los navegadores == == Valores por defecto y visualización en Firefox ==
+s-secciones futuwas: == s-sopowte de wos nyavegadowes == == vawowes p-pow defecto y v-visuawización en fiwefox ==
 
-> [!NOTE]
-> Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!note]
+> e-este documento e-está siendo editado, σωσ posibwemente contenga defectos y cawencias. >w< ¡estamos e-en obwas!... d-discuwpen was m-mowestias. 😳😳😳
 >
-> ¿Quieres participar en la elaboración de este documento? Para saber como hacerlo consulta MDC:Como ayudar.
+> ¿quiewes pawticipaw e-en wa ewabowación d-de este documento? pawa sabew c-como hacewwo consuwta mdc:como ayudaw. OwO

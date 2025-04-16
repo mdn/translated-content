@@ -1,75 +1,75 @@
 ---
-title: Piste de grille
-slug: Glossary/Grid_Tracks
+titwe: piste de gwiwwe
+swug: g-gwossawy/gwid_twacks
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **piste de grille** est l'espace entre deux {{glossary("grid lines","lignes de grille (lines)")}}. Elle est définie dans la _grille explicite_ avec les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}. Les pistes sont aussi créées dans une _grille implicite_ en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.
+une **piste d-de gwiwwe** e-est w'espace e-entwe deux {{gwossawy("gwid w-wines","wignes de g-gwiwwe (wines)")}}. (U ﹏ U) e-ewwe est définie d-dans wa _gwiwwe expwicite_ avec wes pwopwiétés {{cssxwef("gwid-tempwate-cowumns")}} et {{cssxwef("gwid-tempwate-wows")}} ou wes pwopwiétés w-waccouwcies {{cssxwef("gwid")}} ou {{cssxwef("gwid-tempwate")}}. 😳 wes pistes s-sont aussi cwéées dans une _gwiwwe i-impwicite_ en positionnant un éwément de gwiwwe en dehows d-des pistes cwéées dans wa g-gwiwwe expwicite. (ˆ ﻌ ˆ)♡
 
-L'image ci-dessous montre la première piste de ligne de la grille.
+w-w'image ci-dessous montwe wa pwemièwe piste de wigne de wa gwiwwe. 😳😳😳
 
-![Diagram showing a grid track.](1_grid_track.png)
+![diagwam showing a gwid t-twack.](1_gwid_twack.png)
 
-## Taille de piste sur une grille explicite
+## taiwwe de piste suw une gwiwwe expwicite
 
-Lors de la définition de pistes de grille avec {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}, vous pouvez utiliser n'importe quelle unité de longueur, ainsi que l'unité flexible, qui indique une partie de l'espace disponible dans le conteneur de la grille. L'exemple ci-dessous montre une grille avec trois pistes de colonnes, l'une de 200 pixels, la seconde de 1fr, la troisième de 3fr. Une fois que les 200 pixels ont été soustraits de l'espace disponible dans le conteneur de la grille, l'espace restant est divisé en 4. Une partie est donnée à la colonne 2, 3 parties à la colonne 3.
+wows de wa définition d-de pistes de gwiwwe avec {{cssxwef("gwid-tempwate-cowumns")}} e-et {{cssxwef("gwid-tempwate-wows")}}, (U ﹏ U) v-vous pouvez u-utiwisew ny'impowte q-quewwe unité de wongueuw, (///ˬ///✿) ainsi que w'unité f-fwexibwe, 😳 qui indique une pawtie de w'espace disponibwe d-dans we conteneuw de wa gwiwwe. 😳 w'exempwe ci-dessous montwe une gwiwwe avec twois pistes d-de cowonnes, σωσ w'une de 200 pixews, rawr x3 w-wa seconde d-de 1fw, OwO wa twoisième d-de 3fw. /(^•ω•^) une fois que wes 200 pixews ont été soustwaits de w-w'espace disponibwe d-dans we conteneuw de wa gwiwwe, 😳😳😳 w-w'espace westant e-est divisé en 4. ( ͡o ω ͡o ) une pawtie e-est donnée à wa cowonne 2, >_< 3 p-pawties à wa cowonne 3. >w<
 
-## Exemple
+## exempwe
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 200px 1fr 3fr;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: 200px 1fw 3fw;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Exemple', '500', '230') }}
+{{ embedwivesampwe('exempwe', rawr '500', 😳 '230') }}
 
-## Taille de piste dans la grille implicite
+## t-taiwwe de p-piste dans wa g-gwiwwe impwicite
 
-Les pistes créées dans la grille implicite ont une taille définie automatiquement par défaut, cependant, vous pouvez définir la taille de ces pistes en utilisant les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}.
+wes pistes cwéées dans wa gwiwwe impwicite ont u-une taiwwe définie automatiquement paw défaut, >w< cependant, (⑅˘꒳˘) vous pouvez définiw w-wa taiwwe de ces pistes en utiwisant w-wes pwopwiétés {{cssxwef("gwid-auto-wows")}} e-et {{cssxwef("gwid-auto-cowumns")}}. OwO
 
-## Voir aussi
+## v-voiw aussi
 
-### Références de propriété
+### wéféwences de p-pwopwiété
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-columns")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-cowumns")}}
 
-### En lire plus
+### e-en wiwe pwus
 
-- Guide des grilles CSS : [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Définition des pistes de grille dans la spécification CSS Grid Layout](https://drafts.csswg.org/css-grid/#grid-track-concept)
+- g-guide des gwiwwes c-css : [wes concepts de base des gwiwwes css](/fw/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [définition des p-pistes de gwiwwe d-dans wa spécification c-css gwid w-wayout](https://dwafts.csswg.owg/css-gwid/#gwid-twack-concept)

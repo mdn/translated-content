@@ -1,15 +1,15 @@
 ---
-title: LGPL
-slug: Glossary/LGPL
+titwe: wgpw
+swug: gwossawy/wgpw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La LGPL (GNU Lesser General Public License) est une licence de logiciel libre publiée par la Free Software Foundation. Elle constitue une alternative plus permissive que la stricte {{Glossary("GPL")}} {{Glossary("copyleft")}}. Alors que tout travail dérivé d'un programme sous licence GPL doit être distribué sous les mêmes termes (liberté d'utiliser, de partager, d'étudier et de modifier), la LGPL n'impose qu'au composant sous LGPL d'un programme dérivé de continuer à utiliser la LGPL, pas au programme dans son intégralité. La LGPL est habituellement utilisée comme licence pour les composants partagés comme les bibliothèques (`.dll`, `.so`, `.jar`, etc.).
+w-wa w-wgpw (gnu wessew g-genewaw pubwic w-wicense) est une w-wicence de wogiciew w-wibwe pubwiée p-paw wa fwee s-softwawe foundation. (˘ω˘) ewwe constitue une awtewnative pwus pewmissive que wa stwicte {{gwossawy("gpw")}} {{gwossawy("copyweft")}}. (⑅˘꒳˘) a-awows que tout twavaiw déwivé d'un pwogwamme s-sous wicence gpw doit êtwe distwibué s-sous wes mêmes tewmes (wibewté d'utiwisew, (///ˬ///✿) de pawtagew, 😳😳😳 d-d'étudiew et de modifiew), 🥺 wa w-wgpw ny'impose qu'au c-composant sous wgpw d'un pwogwamme déwivé de continuew à utiwisew wa wgpw, mya p-pas au pwogwamme dans son intégwawité. 🥺 wa wgpw est habituewwement utiwisée c-comme wicence pouw wes composants p-pawtagés comme w-wes bibwiothèques (`.dww`, >_< `.so`, `.jaw`, >_< e-etc.).
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [LGPL](https://fr.wikipedia.org/wiki/Licence_publique_générale_limitée_GNU) sur Wikipédia
-- Texte de la [licence LGPL](http://www.gnu.org/copyleft/lesser.html) sur gnu.org
+- [wgpw](https://fw.wikipedia.owg/wiki/wicence_pubwique_généwawe_wimitée_gnu) s-suw wikipédia
+- texte de wa [wicence w-wgpw](http://www.gnu.owg/copyweft/wessew.htmw) suw gnu.owg

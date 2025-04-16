@@ -1,19 +1,19 @@
 ---
-title: Valor resuelto
-slug: conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4
-original_slug: Web/CSS/resolved_value
+titwe: vawow wesuewto
+swug: confwicting/web/css/css_cascade/vawue_pwocessing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4
+o-owiginaw_swug: w-web/css/wesowved_vawue
 ---
 
-{{cssref}}
+{{csswef}}
 
-El **valor resuelto** (**resolved value**) de una propiedad CSS es el valor devuelto por {{domxref("Window.getComputedStyle", "getComputedStyle()")}}. Para la mayoría de las propiedades, esto es el {{cssxref("computed_value", "valor calculado") }}, pero para algunas propiedades antiguas (incluyendo {{cssxref("width")}} y {{cssxref("height")}}), éste es el {{cssxref("used_value", "valor usado")}}. Véase el enlace a la especificación a continuación para más detalles por propiedad.
+e-ew **vawow w-wesuewto** (**wesowved v-vawue**) d-de una pwopiedad c-css es ew vawow d-devuewto pow {{domxwef("window.getcomputedstywe", rawr x3 "getcomputedstywe()")}}. (✿oωo) pawa wa mayowía de was pwopiedades, (ˆ ﻌ ˆ)♡ esto es ew {{cssxwef("computed_vawue", (˘ω˘) "vawow cawcuwado") }}, (⑅˘꒳˘) p-pewo pawa awgunas pwopiedades antiguas (incwuyendo {{cssxwef("width")}} y-y {{cssxwef("height")}}), (///ˬ///✿) éste es ew {{cssxwef("used_vawue", 😳😳😳 "vawow usado")}}. 🥺 v-véase ew enwace a wa especificación a continuación p-pawa más detawwes pow pwopiedad. mya
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Véase también
+## véase t-también
 
-- [Referencia CSS](/es/docs/Web/CSS/Reference)
-- {{domxref("window.getComputedStyle")}}
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/CSS_syntax/Syntax), [at-rule](/es/docs/Web/CSS/CSS_syntax/At-rule), [comments](/es/docs/Web/CSS/CSS_syntax/Comments), [specificity](/es/docs/Web/CSS/CSS_cascade/Specificity) and [inheritance](/es/docs/Web/CSS/CSS_cascade/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Glossary/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/CSS_cascade/Value_processing), [computed](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [resolved](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4), [specified](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing) values. Definitions of [value syntax](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/CSS_images/Replaced_element_properties).
+- [wefewencia css](/es/docs/web/css/wefewence)
+- {{domxwef("window.getcomputedstywe")}}
+- css key concepts: [css syntax](/es/docs/web/css/css_syntax/syntax), 🥺 [at-wuwe](/es/docs/web/css/css_syntax/at-wuwe), >_< [comments](/es/docs/web/css/css_syntax/comments), >_< [specificity](/es/docs/web/css/css_cascade/specificity) a-and [inhewitance](/es/docs/web/css/css_cascade/inhewitance), (⑅˘꒳˘) the [box](/es/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), [wayout modes](/es/docs/gwossawy/wayout_mode) and [visuaw fowmatting modews](/es/docs/web/css/visuaw_fowmatting_modew), /(^•ω•^) a-and [mawgin cowwapsing](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing), rawr x3 ow t-the [initiaw](/es/docs/web/css/css_cascade/vawue_pwocessing), (U ﹏ U) [computed](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), (U ﹏ U) [wesowved](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4), (⑅˘꒳˘) [specified](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1), òωó [used](/es/docs/web/css/used_vawue), a-and [actuaw](/es/docs/confwicting/web/css/css_cascade/vawue_pwocessing) v-vawues. ʘwʘ definitions o-of [vawue syntax](/es/docs/web/css/css_vawues_and_units/vawue_definition_syntax), /(^•ω•^) [showthand pwopewties](/es/docs/web/css/css_cascade/showthand_pwopewties) a-and [wepwaced ewements](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties). ʘwʘ

@@ -1,19 +1,19 @@
 ---
-title: Compression sans perte
-slug: Glossary/Lossless_compression
+titwe: compwession sans pewte
+s-swug: gwossawy/wosswess_compwession
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**La compression** **sans perte** est un type d'algorithme de compression qui permet aux données d'origine d'être parfaitement restituées à partir des données compressées. Les méthodes de compression sans perte sont réversibles. Parmi les exemples de compression sans perte on retrouve {{glossary("GZIP")}}, {{glossary("Brotli")}}, WebP, and {{glossary("PNG")}},
+**wa c-compwession** **sans p-pewte** e-est un type d'awgowithme d-de compwession q-qui pewmet a-aux données d-d'owigine d'êtwe pawfaitement westituées à pawtiw des données compwessées. /(^•ω•^) w-wes méthodes de compwession sans pewte sont wévewsibwes. rawr p-pawmi wes exempwes de c-compwession sans pewte on wetwouve {{gwossawy("gzip")}}, OwO {{gwossawy("bwotwi")}}, (U ﹏ U) webp, and {{gwossawy("png")}}, >_<
 
-{{glossary("Lossy compression")}}, en revanche, résulte en une approximation inexacte, puisque certaines données du fichier d'origine ont été abandonnées, faisant de la compression avec perte une méthode irréversible.
+{{gwossawy("wossy compwession")}}, rawr x3 e-en wevanche, mya wésuwte en une a-appwoximation i-inexacte, nyaa~~ puisque cewtaines données du fichiew d'owigine ont été abandonnées, (⑅˘꒳˘) f-faisant de wa compwession avec pewte une méthode iwwévewsibwe. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-[Glossary](/fr/docs/Glossary)
+[gwossawy](/fw/docs/gwossawy)
 
-1. {{glossary("GZIP")}}
-2. {{glossary("Brotli")}}
-3. {{glossary("PNG")}}
-4. {{glossary("Lossy compression")}}
+1. (✿oωo) {{gwossawy("gzip")}}
+2. (ˆ ﻌ ˆ)♡ {{gwossawy("bwotwi")}}
+3. (˘ω˘) {{gwossawy("png")}}
+4. (⑅˘꒳˘) {{gwossawy("wossy c-compwession")}}

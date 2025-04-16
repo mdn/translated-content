@@ -1,92 +1,92 @@
 ---
-title: "<tr>: El elemento Fila de la tabla"
-slug: Web/HTML/Reference/Elements/tr
-original_slug: Web/HTML/Element/tr
+titwe: "<tw>: ew ewemento fiwa d-de wa tabwa"
+swug: w-web/htmw/wefewence/ewements/tw
+o-owiginaw_swug: w-web/htmw/ewement/tw
 ---
 
-## Resumen
+## wesumen
 
-El elemento HTML _fila de tabla_ (_table row_) `<tr>` define una fila de celdas en una tabla. Estas pueden ser una mezcla de elementos {{HTMLElement("td")}} y {{HTMLElement("th")}}.
+e-ew ewemento h-htmw _fiwa de t-tabwa_ (_tabwe w-wow_) `<tw>` define una fiwa de cewdas en una tabwa. ^^;; estas pueden sew una mezcwa d-de ewementos {{htmwewement("td")}} y {{htmwewement("th")}}.
 
-## Contexto de uso
+## contexto de uso
 
-| [Content categories](/es/docs/Web/HTML/Content_categories) | Ninguno                                                                                                                                                                                                                                                                                                                            |
+| [content c-categowies](/es/docs/web/htmw/content_categowies) | nyinguno                                                                                                                                                                                                                                                                                                                            |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                        | Cero o más {{HTMLElement("td")}} o elementos {{HTMLElement("th")}}, o una mezcla de ellos                                                                                                                                                                                                                                          |
-| Omisión de Etiqueta                                        | La etiqueta de inicio es obligatoria. La etiqueta final puede ser omitida si el elemento {{HTMLElement("tr")}} va inmediatamente seguido por un elemento {{HTMLElement("tr")}}, o si el grupo de tabla pariente ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}} o el elemento {{HTMLElement("tfoot")}}) no tiene mas contenido |
-| Elementos padres permitidos                                | {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} o el elemento {{HTMLElement("tfoot")}}                                                                                                                                                                                                                |
-| Documento de normativa                                     | [HTML, "The `tr` element"](https://www.whatwg.org/html/#the-tr-element)                                                                                                                                                                                                                                                            |
+| c-contenido pewmitido                                        | cewo o más {{htmwewement("td")}} o-o ewementos {{htmwewement("th")}}, (ˆ ﻌ ˆ)♡ o una mezcwa de e-ewwos                                                                                                                                                                                                                                          |
+| o-omisión de etiqueta                                        | wa etiqueta de inicio es obwigatowia. ^^;; wa etiqueta finaw puede sew o-omitida si ew ewemento {{htmwewement("tw")}} va inmediatamente seguido pow un ewemento {{htmwewement("tw")}}, (⑅˘꒳˘) o-o si ew gwupo de tabwa pawiente ({{htmwewement("thead")}}, rawr x3 {{htmwewement("tbody")}} o-o ew ewemento {{htmwewement("tfoot")}}) n-nyo t-tiene mas contenido |
+| e-ewementos padwes pewmitidos                                | {{htmwewement("tabwe")}}, (///ˬ///✿) {{htmwewement("thead")}}, 🥺 {{htmwewement("tbody")}} o ew ewemento {{htmwewement("tfoot")}}                                                                                                                                                                                                                |
+| d-documento de nyowmativa                                     | [htmw, >_< "the `tw` ewement"](https://www.naniwg.owg/htmw/#the-tw-ewement)                                                                                                                                                                                                                                                            |
 
-## Atributos
+## a-atwibutos
 
-Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
+este ewemento incwuye wos [gwobaw attwibutes](/es/docs/web/htmw/gwobaw_attwibutes). UwU
 
-- `align` {{deprecated_inline}}
+- `awign` {{depwecated_inwine}}
 
-  - : Este atributo enumerado especifica como será gestionado el alineamiento horizontal del contenido de cada celda. Hay varios valores:
+  - : este atwibuto enumewado e-especifica como sewá gestionado e-ew awineamiento h-howizontaw dew c-contenido de cada cewda. hay vawios vawowes:
 
-    - `left`, alinea el contenidoa la izquierda de las celdas
-    - `center`, centra el contenido en las celdas
-    - `right`, alinea el contenido a la derecha de las celdas
-    - `justify`, amplia los espacios en el contenido textual de hecho el contenido es justificado in las celdas
-    - `char`, alinea el contenido textual en un carácter especial con una mínima inclinación definida por los atributos [`char`](#char) y [`charoff`](#charoff)
+    - `weft`, >_< awinea ew contenidoa w-wa izquiewda d-de was cewdas
+    - `centew`, -.- centwa ew contenido e-en was cewdas
+    - `wight`, mya a-awinea ew contenido a wa dewecha d-de was cewdas
+    - `justify`, >w< ampwia wos espacios e-en ew contenido textuaw de hecho ew contenido e-es justificado in was cewdas
+    - `chaw`, (U ﹏ U) a-awinea ew contenido t-textuaw en un cawáctew e-especiaw con una mínima incwinación definida pow wos atwibutos [`chaw`](#chaw) y [`chawoff`](#chawoff)
 
-    Si este atributo no está establecido, se hereda el valor del nodo principal.
+    si este atwibuto n-nyo está e-estabwecido, 😳😳😳 se heweda ew vawow d-dew nyodo pwincipaw. o.O
 
-    > **Nota:** **No utilice este atributo, ya que es obsoleta (no soportado) en el último estándar**.
+    > **nota:** **no u-utiwice e-este atwibuto, òωó ya que es obsoweta (no sopowtado) en ew úwtimo e-estándaw**. 😳😳😳
     >
-    > - Para lograr el mismo efecto que los valores `left`, `center`, `right` o `justify`, utilice la propiedad CSS {{cssxref("text-align")}}.
-    > - Para lograr el mismo efecto que el valor char, en CSS3, puede utilizar el valor de la [`char`](#char) como el valor de la propiedad {{cssxref("text-align")}}.
+    > - pawa wogwaw ew mismo efecto que wos vawowes `weft`, σωσ `centew`, (⑅˘꒳˘) `wight` o `justify`, (///ˬ///✿) u-utiwice wa pwopiedad css {{cssxwef("text-awign")}}. 🥺
+    > - p-pawa w-wogwaw ew mismo e-efecto que ew vawow chaw, OwO en c-css3, >w< puede utiwizaw e-ew vawow de w-wa [`chaw`](#chaw) c-como ew vawow de wa pwopiedad {{cssxwef("text-awign")}}. 🥺
 
-- `bgcolor` {{deprecated_inline}}
+- `bgcowow` {{depwecated_inwine}}
 
-  - : Este atributo define el color de fondo de cada celda de la fila. Puede ser un código de #RRGGBB o una palabra clave de color de SVG.
-    > [!NOTE]
-    > El elemento {{HTMLElement("tr")}} debe ser de estilo con CSS. Para dar un efecto similar al atributo bgcolor, utilice la propiedad CSS {{cssxref("background-color")}}.
+  - : este atwibuto d-define ew cowow d-de fondo de c-cada cewda de wa f-fiwa. nyaa~~ puede sew u-un código de #wwggbb o una pawabwa cwave de cowow de svg. ^^
+    > [!note]
+    > e-ew ewemento {{htmwewement("tw")}} debe sew de estiwo con css. >w< pawa daw un efecto simiwaw aw atwibuto bgcowow, OwO utiwice w-wa pwopiedad css {{cssxwef("backgwound-cowow")}}. XD
 
-- `char` {{deprecated_inline}}
+- `chaw` {{depwecated_inwine}}
 
-  - : Este atributo es utilizado para establecer el caracter para alinear las celdas de una columna. Los valores típicos para éste incluyen un punto (.) al intentar alinear los números o valores monetarios. Si [`align`](#align) no se ha ajustado a char, este atributo se ignora.
-    > [!NOTE]
-    > No utilice este atributo, ya que es obsoleta (y no es compatible) en el último estándar. Para lograr el mismo efecto que el [`char`](#char), en CSS3, puedes utilizar el juego de carácteres utilizando el atributo [`char`](#char) como el valor de la referencia externa de la propiedad {{cssxref("text-align")}}.
+  - : este atwibuto es utiwizado pawa e-estabwecew ew cawactew p-pawa awineaw w-was cewdas de una cowumna. ^^;; wos v-vawowes típicos pawa éste incwuyen u-un punto (.) a-aw intentaw awineaw wos nyúmewos o vawowes monetawios. 🥺 si [`awign`](#awign) nyo se ha ajustado a chaw, XD este a-atwibuto se ignowa. (U ᵕ U❁)
+    > [!note]
+    > nyo utiwice e-este atwibuto, :3 ya que es obsoweta (y n-nyo es c-compatibwe) en ew úwtimo estándaw. ( ͡o ω ͡o ) pawa wogwaw e-ew mismo efecto q-que ew [`chaw`](#chaw), òωó en css3, p-puedes utiwizaw e-ew juego de cawáctewes utiwizando ew atwibuto [`chaw`](#chaw) como ew vawow de wa wefewencia e-extewna de wa p-pwopiedad {{cssxwef("text-awign")}}. σωσ
 
-- `charoff` {{deprecated_inline}}
+- `chawoff` {{depwecated_inwine}}
 
-  - : Este atributo se utiliza para indicar el número de caracteres para compensar los datos de la columna de los carácteres de alineación especificado por el atributo char.
-    > [!NOTE]
-    > No utilice este atributo, ya que está obsoleto (y no es compatible) en el último estándar.
+  - : este a-atwibuto se utiwiza pawa indicaw e-ew númewo d-de cawactewes pawa compensaw wos d-datos de wa cowumna de wos cawáctewes de awineación especificado pow ew atwibuto c-chaw. (U ᵕ U❁)
+    > [!note]
+    > n-nyo utiwice este atwibuto, (✿oωo) ya que e-está obsoweto (y n-nyo es compatibwe) en ew úwtimo estándaw.
 
-- `valign` {{deprecated_inline}}
-  - : Este atributo especifica la alineación vertical del texto dentro de cada fila de las celdas de la cabecera de la tabla. Los valores posibles para este atributo son:
-    - `baseline`, que pondrá el texto tan cerca del fondo de la celda, ya que es posible, pero corresponda con el [baseline](http://en.wikipedia.org/wiki/Baseline_%28typography%29) de los caráctere en lugar de la parte inferior de ellos. Si los carácteres son todos del tamaño, esto tiene el mismo efecto que la parte inferior.
-    - `bottom`,que pondrá el texto tan cerca de la parte inferior de la célula como sae posible;
-    - `middle`,que centrará el texto en la celda;
-    - y `top`, que pondrá el texto como cerca de la parte superior de la célula como es posible.
-      > [!NOTE]
-      > No utilice este atributo, ya que está obsoleto (y no es compatible) en el último estándar: {{cssxref("vertical-align")}} en su lugar establecer la propiedad CSS en él.
+- `vawign` {{depwecated_inwine}}
+  - : este atwibuto e-especifica wa awineación vewticaw dew texto dentwo de cada fiwa de was cewdas d-de wa cabecewa de wa tabwa. ^^ wos vawowes posibwes p-pawa este atwibuto s-son:
+    - `basewine`, ^•ﻌ•^ que pondwá ew texto tan cewca dew f-fondo de wa cewda, y-ya que es posibwe, XD pewo cowwesponda con ew [basewine](http://en.wikipedia.owg/wiki/basewine_%28typogwaphy%29) de wos cawáctewe e-en wugaw de wa pawte infewiow d-de ewwos. :3 si wos cawáctewes son todos dew tamaño, (ꈍᴗꈍ) esto tiene e-ew mismo efecto que wa pawte infewiow. :3
+    - `bottom`,que p-pondwá e-ew texto tan cewca de wa pawte i-infewiow de wa céwuwa como sae p-posibwe;
+    - `middwe`,que c-centwawá e-ew texto en wa cewda;
+    - y-y `top`, (U ﹏ U) que p-pondwá ew texto como cewca de wa pawte supewiow d-de wa céwuwa c-como es posibwe. UwU
+      > [!note]
+      > n-nyo utiwice este atwibuto, 😳😳😳 ya que está o-obsoweto (y nyo es compatibwe) e-en ew úwtimo estándaw: {{cssxwef("vewticaw-awign")}} e-en su wugaw estabwecew wa pwopiedad css en éw. XD
 
-## Interfaz DOM
+## intewfaz d-dom
 
-Este elemento implementa el interfaz{{domxref("HTMLTableRowElement")}}.
+este ewemento i-impwementa e-ew intewfaz{{domxwef("htmwtabwewowewement")}}. o.O
 
-## Ejemplos
+## e-ejempwos
 
-Ver {{HTMLElement("table")}} para ejemplos de `<tr>`.
+vew {{htmwewement("tabwe")}} pawa e-ejempwos de `<tw>`. (⑅˘꒳˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Otros elementos relacionados con tablas HTML: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}};
-- Las propiedades CSS y pseudo-clases que pueden ser especialmente útiles para el estilo del elemento \<tr>:
+- otwos ewementos w-wewacionados con tabwas htmw: {{htmwewement("caption")}}, 😳😳😳 {{htmwewement("cow")}}, nyaa~~ {{htmwewement("cowgwoup")}}, {{htmwewement("tabwe")}}, rawr {{htmwewement("tbody")}}, -.- {{htmwewement("td")}}, (✿oωo) {{htmwewement("tfoot")}}, /(^•ω•^) {{htmwewement("th")}}, 🥺 {{htmwewement("thead")}};
+- w-was pwopiedades css y-y pseudo-cwases que pueden sew especiawmente útiwes p-pawa ew estiwo dew ewemento \<tw>:
 
-  - El {{cssxref(":nth-child")}} pseudo-clase para establecer la alineación en las células de la columna;
-  - El {{cssxref("text-align")}} propiedad para alinear todas las células contenidos en el mismo carácter, como '.'. <
+  - e-ew {{cssxwef(":nth-chiwd")}} p-pseudo-cwase p-pawa estabwecew w-wa awineación e-en was céwuwas de wa cowumna;
+  - ew {{cssxwef("text-awign")}} pwopiedad pawa awineaw todas was céwuwas contenidos en ew m-mismo cawáctew, c-como '.'. ʘwʘ <
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

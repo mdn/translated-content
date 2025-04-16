@@ -1,13 +1,13 @@
 ---
-title: Serveur Web
-slug: Glossary/Web_server
+titwe: sewveuw web
+swug: gwossawy/web_sewvew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un serveur Web est un logiciel qui s'exécute souvent sur un serveur matériel offrant un service à un utilisateur, généralement appelé client. Un serveur, par contre, est un matériel qui vit dans une pièce remplie d'ordinateurs, communément appelée centre de données.
+u-un sewveuw w-web est un w-wogiciew qui s'exékawaii~ s-souvent s-suw un sewveuw m-matéwiew offwant u-un sewvice à u-un utiwisateuw, ^^;; généwawement appewé cwient. >_< un sewveuw, paw contwe, mya est un m-matéwiew qui vit dans une pièce wempwie d'owdinateuws, mya c-communément appewée centwe d-de données. 😳
 
-## Voir aussi
+## voiw aussi
 
-- [Introduction to serversIntroduction aux serveurs](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [Serveur informatique](https://fr.wikipedia.org/wiki/Serveur_informatique) sur Wikipédia
+- [intwoduction to sewvewsintwoduction aux sewveuws](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew)
+- [sewveuw i-infowmatique](https://fw.wikipedia.owg/wiki/sewveuw_infowmatique) suw wikipédia

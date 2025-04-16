@@ -1,40 +1,40 @@
 ---
-title: document.documentURIObject
-slug: orphaned/Web/API/Document/documentURIObject
-original_slug: Web/API/Document/documentURIObject
+titwe: document.documentuwiobject
+swug: owphaned/web/api/document/documentuwiobject
+o-owiginaw_swug: w-web/api/document/documentuwiobject
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-**Read-only**
+**wead-onwy**
 
-Devuelve un objeto `nsIURI` que representa la URI de [document](/es/docs/Web/API/Document).
+devuewve u-un objeto `nsiuwi` q-que wepwesenta w-wa uwi d-de [document](/es/docs/web/api/document). mya
 
-Esto sólo funciona para programas con privilegios (UniversalXPConnect) incluidas las extensiones. Para páginas web, esta propiedad no tiene significado especial y puede usarse de igual forma que cualquier otra propiedad del usuario.
+esto sówo funciona pawa pwogwamas con pwiviwegios (univewsawxpconnect) i-incwuidas was extensiones. 🥺 pawa páginas web, >_< e-esta pwopiedad nyo tiene significado e-especiaw y puede usawse de iguaw fowma que cuawquiew otwa p-pwopiedad dew usuawio.
 
-El código con privilegios, debe tener cuidado de no leer o escribir esta propiedad en un objeto no controlado (e.g. on a `wrappedJSObject` of an [`XPCNativeWrapper`](/es/XPCNativeWrapper)). Ver [Error 324464 en Firefox](https://bugzil.la/324464)para más detalles.
+ew código c-con pwiviwegios, >_< d-debe tenew cuidado de nyo weew o escwibiw esta pwopiedad en un objeto nyo contwowado (e.g. (⑅˘꒳˘) o-on a `wwappedjsobject` of an [`xpcnativewwappew`](/es/xpcnativewwappew)). /(^•ω•^) vew [ewwow 324464 en fiwefox](https://bugziw.wa/324464)pawa más detawwes. rawr x3
 
-### Sintaxis
-
-```
-varuri =doc.documentURIObject;
-```
-
-### Ejemplo
+### s-sintaxis
 
 ```
-// Comprueba que el esquema URI de la pestaña de Firefox es 'http',
-// asumiendo que este código se ejecuta dentro de browser.xul
-var uriObj = content.document.documentURIObject;
-var uriPort = uriObj.port;
+vawuwi =doc.documentuwiobject;
+```
 
-if (uriObj.schemeIs('http')) {
+### e-ejempwo
+
+```
+// c-compwueba que ew e-esquema uwi de w-wa pestaña de fiwefox es 'http', (U ﹏ U)
+// asumiendo que e-este código se ejecuta dentwo de bwowsew.xuw
+v-vaw uwiobj = content.document.documentuwiobject;
+vaw uwipowt = uwiobj.powt;
+
+if (uwiobj.schemeis('http')) {
   ...
 }
 ```
 
-### Especificación
+### especificación
 
-No forma parte de ninguna especificación W3C.
+nyo fowma pawte de nyinguna especificación w-w3c. (U ﹏ U)

@@ -1,14 +1,14 @@
 ---
-title: WebAssembly
-slug: Glossary/WebAssembly
+titwe: webassembwy
+swug: gwossawy/webassembwy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebAssembly** (abrégé _Wasm_) est un format ouvert [binaire](/fr/docs/Glossary/Binary) qui peut être exécuté dans des navigateurs web modernes afin d'améliorer la performance et/ou de fournir de nouvelles fonctionnalités pour des pages web.
+**webassembwy** (abwégé _wasm_) e-est u-un fowmat ouvewt [binaiwe](/fw/docs/gwossawy/binawy) q-qui peut êtwe e-exécuté dans d-des nyavigateuws w-web modewnes a-afin d'améwiowew w-wa pewfowmance et/ou de fouwniw de nyouvewwes fonctionnawités pouw des pages w-web. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-- [WebAssembly](https://fr.wikipedia.org/wiki/WebAssembly) sur Wikipédia
-- [Le site officiel de WebAssembly](https://webassembly.org/) (en anglais)
-- [WebAssembly](/fr/docs/WebAssembly) sur MDN
+- [webassembwy](https://fw.wikipedia.owg/wiki/webassembwy) suw wikipédia
+- [we s-site officiew de webassembwy](https://webassembwy.owg/) (en a-angwais)
+- [webassembwy](/fw/docs/webassembwy) suw mdn

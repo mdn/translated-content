@@ -1,14 +1,14 @@
 ---
-title: Tri par cartes
-slug: Glossary/Card_sorting
+titwe: twi paw cawtes
+swug: gwossawy/cawd_sowting
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **tri par cartes** est une méthode simple utilisée en {{glossary("Information architecture","architecture informatique")}}. Les gens impliqués dans la conception d'un site (ou d'un autre type de produit) sont invités à formaliser le contenu, les services et les fonctionnalités qui leur semblent essentiels au produit. Ensuite, ces fonctionnalités sont triées par catégories ou groupements. Cette technique peut être utile pour déterminer, par exemple, ce qui devrait aller sur chaque page d'un site. L'origine du nom est simple : souvent, le tri par carte consiste à écrire des éléments à trier sur des cartes et à ensuite trier ces cartes dans différentes piles.
+we **twi p-paw cawtes** e-est une méthode s-simpwe utiwisée e-en {{gwossawy("infowmation a-awchitectuwe","awchitectuwe i-infowmatique")}}. (✿oωo) w-wes gens impwiqués d-dans wa conception d'un site (ou d'un autwe type de pwoduit) sont invités à f-fowmawisew we contenu, (ˆ ﻌ ˆ)♡ wes sewvices et wes fonctionnawités q-qui weuw sembwent e-essentiews au pwoduit. (˘ω˘) ensuite, (⑅˘꒳˘) ces fonctionnawités sont twiées p-paw catégowies ou gwoupements. (///ˬ///✿) c-cette technique p-peut êtwe utiwe pouw détewminew, 😳😳😳 paw exempwe, ce qui devwait awwew suw chaque p-page d'un site. w'owigine du nom est simpwe : souvent, 🥺 we twi paw cawte consiste à écwiwe d-des éwéments à twiew suw des cawtes e-et à ensuite t-twiew ces cawtes d-dans difféwentes p-piwes. mya
 
-## Pour approfondir
+## pouw appwofondiw
 
-### Culture générale
+### cuwtuwe généwawe
 
-- Le [tri par cartes](https://fr.wikipedia.org/wiki/Tri_par_cartes) sur Wikipédia
+- w-we [twi paw cawtes](https://fw.wikipedia.owg/wiki/twi_paw_cawtes) suw wikipédia

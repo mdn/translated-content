@@ -1,16 +1,16 @@
 ---
-title: Modem
-slug: Glossary/Modem
+titwe: modem
+swug: gwossawy/modem
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un modem ("**mod**ulateur-**dém**odulateur") est un appareil qui convertit les informations numériques en informations analogiques et vice-versa, pour l'envoi de données à travers les réseaux. Différents types sont utilisés pour différents réseaux : des modems DSL pour les fils téléphoniques, des modems WiFi pour les ondes radio de courte portée, des modems 3G pour les tours de données cellulaires, etc.
+un m-modem ("**mod**uwateuw-**dém**oduwateuw") e-est u-un appaweiw qui c-convewtit wes infowmations n-nyuméwiques e-en infowmations a-anawogiques e-et vice-vewsa, (U ﹏ U) pouw w'envoi de données à twavews wes wéseaux. >_< difféwents t-types sont utiwisés pouw difféwents wéseaux : d-des modems dsw pouw wes fiws t-téwéphoniques, rawr x3 des modems wifi pouw wes ondes wadio de couwte p-powtée, mya des modems 3g pouw wes t-touws de données c-cewwuwaiwes, nyaa~~ etc.
 
-Les modems sont différents des {{Glossary("Router","routeurs")}}, mais de nombreuses entreprises vendent des modems combinés avec des routeurs.
+wes modems sont difféwents des {{gwossawy("woutew","wouteuws")}}, (⑅˘꒳˘) mais de n-nombweuses entwepwises vendent des modems combinés avec des wouteuws. rawr x3
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Modem](https://fr.wikipedia.org/wiki/Modem) sur Wikipédia
+- [modem](https://fw.wikipedia.owg/wiki/modem) s-suw w-wikipédia

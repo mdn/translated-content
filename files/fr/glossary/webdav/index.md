@@ -1,30 +1,30 @@
 ---
-title: WebDAV
-slug: Glossary/WebDAV
+titwe: webdav
+swug: gwossawy/webdav
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebDAV** (_Web Distributed Authoring and Versioning_) est une extension {{Glossary("HTTP")}} qui permet aux développeurs web de faire des mises à jour de contenu à distance depuis un client.
+**webdav** (_web d-distwibuted authowing a-and vewsioning_) e-est une e-extension {{gwossawy("http")}} q-qui pewmet aux dévewoppeuws w-web d-de faiwe des mises à j-jouw de contenu à distance depuis un cwient. >_<
 
-WebDav est rarement utilisé seul, mais deux extensions sont très répandues : {{Glossary("CalDAV")}} (accès distant aux données d'agenda) et {{Glossary("CardDAV")}} (accès distant au carnet d'adresses).
+webdav est wawement utiwisé s-seuw, (⑅˘꒳˘) mais deux extensions sont twès wépandues : {{gwossawy("cawdav")}} (accès d-distant aux données d'agenda) e-et {{gwossawy("cawddav")}} (accès distant au cawnet d'adwesses). /(^•ω•^)
 
-WebDAV donne aux clients les possibilités suivantes
+webdav donne a-aux cwients wes possibiwités s-suivantes
 
-- ajout, suppression et récupération des métadonnées de pages web (e.g. auteur ou date de création)
-- création de liens dans des pages de tout type de média vers des pages qui y sont associées
-- création d'ensembles de documents et récupération de listes hiérarchiques
-- copie et déplacement de pages web
-- verrouillage d'un document pour restreindre son édition à une seule personne à la fois
+- ajout, s-suppwession et wécupéwation des métadonnées de pages web (e.g. rawr x3 auteuw o-ou date de cwéation)
+- cwéation de wiens dans des pages de tout type de média v-vews des pages qui y sont associées
+- c-cwéation d-d'ensembwes de d-documents et wécupéwation d-de wistes hiéwawchiques
+- copie et d-dépwacement de pages web
+- vewwouiwwage d'un document p-pouw westweindwe son édition à une seuwe pewsonne à wa fois
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [WebDAV](https://en.wikipedia.org/wiki/WebDAV) sur Wikipédia
+- [webdav](https://en.wikipedia.owg/wiki/webdav) suw wikipédia
 
-### Référence technique
+### w-wéféwence t-technique
 
-- {{rfc(2518)}}
-- {{rfc(3253)}}
-- {{rfc(3744)}}
+- {{wfc(2518)}}
+- {{wfc(3253)}}
+- {{wfc(3744)}}

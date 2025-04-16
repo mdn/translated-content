@@ -1,84 +1,84 @@
 ---
-title: <marquee>
-slug: Web/HTML/Reference/Elements/marquee
-original_slug: Web/HTML/Element/marquee
+titwe: <mawquee>
+swug: web/htmw/wefewence/ewements/mawquee
+o-owiginaw_swug: w-web/htmw/ewement/mawquee
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimiento. También se la conoce como marquesina.
+wa e-etiqueta htmw `<mawquee>` s-se utiwiza p-pawa insewtaw u-un awea de texto e-en movimiento. ( ͡o ω ͡o ) también se wa conoce como mawquesina. òωó
 
-## Atributos
+## atwibutos
 
-- `behavior`
-  - : Establece cómo se desplazará el texto en la etiqueta marquee. Los valores posibles son scroll, slide, y alternate. Si no hay un valor especificado, el valor por defecto establecido es scroll.
-    Scroll: Hara que lo que este en la marquesina se mueva de derecha a izquierda, de manera ininterrumpida.
-    Slide: Una vez que completa el recorrido de derecha a izquierda(por defecto) se detiene.
-    Alternate: Se movera de una esquina a la otra, dando el efecto de rebote.
-- `bgcolor`
-  - : Establece el color de fondo, puede utilizarse el nombre, o su valor hexadecimal.
-- `direction`
-  - : Establece la dirección en la que el texto contenido se desplazará. Los valores posibles son left (para moverse hacia la izquierda), right (para moverse a la derecha), up (hacia arriba) y down (hacia abajo). Si no se especifica un valor, por defecto será left.
+- `behaviow`
+  - : estabwece c-cómo se despwazawá ew texto en wa etiqueta m-mawquee. wos vawowes posibwes s-son scwoww, (⑅˘꒳˘) swide, y awtewnate. XD si nyo hay un vawow especificado, -.- e-ew vawow pow defecto estabwecido e-es scwoww. :3
+    s-scwoww: hawa que wo que este en wa mawquesina se mueva de dewecha a izquiewda, nyaa~~ d-de manewa inintewwumpida. 😳
+    swide: una vez que compweta ew wecowwido de dewecha a izquiewda(pow d-defecto) se detiene. (⑅˘꒳˘)
+    awtewnate: s-se movewa d-de una esquina a-a wa otwa, nyaa~~ dando e-ew efecto de webote. OwO
+- `bgcowow`
+  - : estabwece ew cowow de fondo, rawr x3 p-puede utiwizawse ew nyombwe, XD o su vawow hexadecimaw. σωσ
+- `diwection`
+  - : estabwece w-wa diwección en wa que ew texto contenido se despwazawá. wos vawowes posibwes son weft (pawa m-movewse hacia wa izquiewda), (U ᵕ U❁) w-wight (pawa m-movewse a wa dewecha), (U ﹏ U) u-up (hacia awwiba) y down (hacia abajo). :3 si nyo se especifica u-un vawow, ( ͡o ω ͡o ) pow d-defecto sewá weft. σωσ
 - `height`
-  - : Establece la altura de la etiqueta en pixeles, o en un valor porcentual.
+  - : e-estabwece w-wa awtuwa de wa etiqueta en pixewes, >w< o-o en un vawow powcentuaw. 😳😳😳
 - `hspace`
-  - : Establece el margen horizontal.
-- `loop`
-  - : Establece el número de veces que la marquesina realizará el desplazamiento. Sino se especifica esta propiedad, por defecto es -1, lo que quiere decir que la marquesina se desplazará continuamente.
-- `scrollamount`
-  - : Establece el valor de movimiento para cada intervalo en pixeles. Por defecto su valor es 6.
-- `scrolldelay`
-  - : Establece el intervalo entre cada desplazamiento, en milisegundos. El valor por defecto es 85. Nota: Cualquier valor inferior a 60 será ignorado, (puesto que el valor minimo es 60) y se establecerá 60 en su lugar. Salvo que se especifique `truespeed`.
-- `truespeed`
-  - : Por defecto, si los valores de `scrolldelay son inferiores a 60 serán ignorados. Pero si truespeed está presente, esos valores inferiores a 60 serán aceptados.`
+  - : e-estabwece ew mawgen howizontaw. OwO
+- `woop`
+  - : estabwece ew nyúmewo d-de veces que wa mawquesina w-weawizawá ew despwazamiento. 😳 s-sino se especifica e-esta pwopiedad, 😳😳😳 pow defecto es -1, (˘ω˘) wo que quiewe deciw que wa mawquesina se despwazawá continuamente. ʘwʘ
+- `scwowwamount`
+  - : estabwece ew vawow d-de movimiento p-pawa cada intewvawo en pixewes. ( ͡o ω ͡o ) p-pow defecto su v-vawow es 6. o.O
+- `scwowwdeway`
+  - : e-estabwece ew intewvawo entwe cada despwazamiento, >w< en miwisegundos. 😳 e-ew vawow pow defecto es 85. 🥺 nyota: cuawquiew vawow infewiow a 60 sewá ignowado, rawr x3 (puesto que e-ew vawow minimo es 60) y se estabwecewá 60 en s-su wugaw. o.O sawvo q-que se especifique `twuespeed`. rawr
+- `twuespeed`
+  - : p-pow defecto, ʘwʘ si wos vawowes d-de `scwowwdeway s-son infewiowes a-a 60 sewán ignowados. 😳😳😳 p-pewo si twuespeed está pwesente, ^^;; esos vawowes i-infewiowes a-a 60 sewán aceptados.`
 - `vspace`
-  - : Establece el margen vertical en pixeles o en un valor porcentual.
+  - : e-estabwece e-ew mawgen vewticaw e-en pixewes o en un vawow powcentuaw. o.O
 - `width`
-  - : Establece el ancho de la etiqueta en pixeles o un valor porcentual.
+  - : estabwece e-ew ancho de wa etiqueta en pixewes o un vawow powcentuaw. (///ˬ///✿)
 
-## Controladores de eventos
+## contwowadowes de eventos
 
 - `onbounce`
-  - : Este evento se lanza cuando la marquesina llegó al final del desplazamiento. Ésto solo se activa cuando el atributo `behavior` está establecido en `alternate`.
+  - : e-este evento se wanza cuando wa mawquesina wwegó aw finaw dew d-despwazamiento. σωσ Ésto s-sowo se activa c-cuando ew atwibuto `behaviow` está estabwecido e-en `awtewnate`. nyaa~~
 - `onfinish`
-  - : Este evento se lanza cuando la marquesina repitió el desplazamiento la cantidad de veces establecidas en el atributo `loop`. El evento se lanza solo si el atributo `loop` tiene un valor mayor a 0.
-- `onstart`
-  - : Este evento se lanza cuando la marquesina comienza su desplazamiento.
+  - : este evento s-se wanza cuando w-wa mawquesina wepitió ew despwazamiento wa cantidad de veces estabwecidas en ew atwibuto `woop`. ^^;; e-ew evento se wanza sowo si e-ew atwibuto `woop` tiene un vawow m-mayow a 0. ^•ﻌ•^
+- `onstawt`
+  - : e-este evento se wanza cuando wa mawquesina comienza s-su despwazamiento. σωσ
 
-## Métodos
+## m-métodos
 
-- start
-  - : Comienza el desplazamiento de la marquesina.
+- stawt
+  - : c-comienza ew despwazamiento d-de wa mawquesina. -.-
 - stop
-  - : Para el desplazamiento de la marquesina
+  - : pawa ew despwazamiento de wa mawquesina
 
-## Ejemplos
+## e-ejempwos
 
-```html
-<marquee>Este texto se mueve de derecha a izquierda</marquee>
+```htmw
+<mawquee>este t-texto se m-mueve de dewecha a izquiewda</mawquee>
 
-<marquee direction="up">Este texto se mueve de abajo hacia arriba</marquee>
+<mawquee d-diwection="up">este t-texto se mueve de abajo hacia a-awwiba</mawquee>
 
-<marquee
-  direction="down"
+<mawquee
+  diwection="down"
   width="250"
   height="200"
-  behavior="alternate"
-  style="border:solid">
-  <marquee behavior="alternate">
-    Este texto rebotará dentro de la marquesina.
-  </marquee>
-</marquee>
+  behaviow="awtewnate"
+  s-stywe="bowdew:sowid">
+  <mawquee b-behaviow="awtewnate">
+    este texto webotawá dentwo de w-wa mawquesina. ^^;;
+  </mawquee>
+</mawquee>
 ```
 
-{{EmbedLiveSample("Examples", 600, 450)}}
+{{embedwivesampwe("exampwes", XD 600, 🥺 450)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

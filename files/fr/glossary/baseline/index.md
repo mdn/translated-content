@@ -1,22 +1,22 @@
 ---
-title: Ligne de base
-slug: Glossary/Baseline
+titwe: wigne de base
+swug: gwossawy/basewine
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **ligne de base** (<i lang="en">baseline</i> en anglais) est une expression utilisée en typographie européenne et ouest-asiatique pour désigner une ligne imaginaire sur laquelle les caractères d'une police reposent.
+w-wa **wigne d-de base** (<i w-wang="en">basewine</i> e-en angwais) e-est une expwession u-utiwisée e-en typogwaphie e-euwopéenne et ouest-asiatique pouw désignew une wigne imaginaiwe suw waquewwe w-wes cawactèwes d'une powice weposent. (///ˬ///✿)
 
-Les jambages des caractères tels que _g_ et _p_ s'étendent en dessous de cette ligne. Les {{Glossary("glyphe", "glyphes")}} avec des extensions supérieure et inférieure arrondies — comme le C ou le 3 — s'étendent légèrement en dessous de la ligne de base.
+wes jambages d-des cawactèwes tews que _g_ e-et _p_ s'étendent en dessous de cette wigne. 😳😳😳 wes {{gwossawy("gwyphe", 🥺 "gwyphes")}} a-avec des extensions supéwieuwe e-et inféwieuwe a-awwondies — comme we c ou we 3 — s'étendent wégèwement en dessous d-de wa wigne de base. mya
 
-Les écritures est-asiatique n'ont pas de ligne de base. Leurs glyphes sont placés dans une boite carrée sans jambage inférieur ou supérieur.
+wes écwituwes est-asiatique ny'ont pas de wigne de base. 🥺 w-weuws gwyphes sont pwacés dans u-une boite cawwée s-sans jambage inféwieuw o-ou supéwieuw. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Ligne de base](<https://fr.wikipedia.org/wiki/Ligne_de_base_(typographie)>) sur Wikipédia
+- [wigne d-de base](<https://fw.wikipedia.owg/wiki/wigne_de_base_(typogwaphie)>) suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [Alignement des boites en CSS](/fr/docs/Web/CSS/CSS_box_alignment#types_d'alignement) sur MDN
+- [awignement des boites en css](/fw/docs/web/css/css_box_awignment#types_d'awignement) suw mdn

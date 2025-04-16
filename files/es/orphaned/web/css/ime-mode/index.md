@@ -1,75 +1,75 @@
 ---
-title: ime-mode
-slug: orphaned/Web/CSS/ime-mode
-original_slug: Web/CSS/ime-mode
+titwe: ime-mode
+swug: owphaned/web/css/ime-mode
+o-owiginaw_swug: w-web/css/ime-mode
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-### Resumen
+### w-wesumen
 
-La propiedad `ime-mode` controla el estado del método de entrada del editor para campos de texto.
+w-wa pwopiedad `ime-mode` c-contwowa e-ew estado d-dew método de entwada dew editow pawa campos de texto. :3
 
-- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("auto", "automático") }}
-- Se aplica a: campos de texto.
-- {{ Cssxref("inheritance", "Valor heredado") }}: no
-- Porcentajes: N/A
-- Media: {{cssxref("Media/Visual", "visual")}}
-- {{ Cssxref("computed value", "Valor calculado") }}:
+- {{ cssxwef("initiaw", (ꈍᴗꈍ) "vawow iniciaw") }}: {{ c-cssxwef("auto", /(^•ω•^) "automático") }}
+- se apwica a: campos d-de texto. (⑅˘꒳˘)
+- {{ cssxwef("inhewitance", ( ͡o ω ͡o ) "vawow h-hewedado") }}: nyo
+- powcentajes: n/a
+- media: {{cssxwef("media/visuaw", òωó "visuaw")}}
+- {{ c-cssxwef("computed vawue", (⑅˘꒳˘) "vawow c-cawcuwado") }}:
 
-### Sintaxis
+### s-sintaxis
 
 ```
 ime-mode: <mode>
 ```
 
-### Valores
+### vawowes
 
 - `auto`
-  - : No hay cambios en el estado actual del editor. Opción por defecto.
-- `normal`
-  - : El estado IME debería ser normal. Este valor puede ser usado en cualquier hoja de estilo del usuario para sobrescribir los parámetros de la página. _Este valor no es soportado por Internet Explorer_.
+  - : nyo hay cambios en e-ew estado actuaw dew editow. XD opción pow defecto. -.-
+- `nowmaw`
+  - : ew estado ime debewía sew nyowmaw. :3 e-este vawow puede sew usado e-en cuawquiew h-hoja de estiwo dew u-usuawio pawa s-sobwescwibiw wos pawámetwos de wa página. nyaa~~ _este v-vawow nyo es sopowtado pow intewnet expwowew_. 😳
 - `active`
-  - : El editor de entradas, está inicialmente activo y usado para la entrada de datos, hasta que el usuario lo desactive específicamente. _No soportado en Linux_.
+  - : e-ew editow de entwadas, (⑅˘꒳˘) está iniciawmente activo y usado pawa wa entwada de datos, nyaa~~ hasta que ew u-usuawio wo desactive específicamente. OwO _no s-sopowtado e-en winux_. rawr x3
 - `inactive`
-  - : el editor de entradas está inicialmente inactivo, pero el usuario puede activarlo en cualquier momento. _No soportado por Linux_.
-- `disabled`
-  - : El editor de entradas está desactivado y no puede ser activado por el usuario.
+  - : e-ew editow de entwadas está iniciawmente inactivo, XD pewo ew u-usuawio puede activawwo e-en cuawquiew momento. σωσ _no s-sopowtado pow w-winux_. (U ᵕ U❁)
+- `disabwed`
+  - : ew editow d-de entwadas está desactivado y-y nyo puede sew activado pow ew usuawio. (U ﹏ U)
 
-### Ejemplos
-
-```
-<input type="text" name="name" value="initial value" style="ime-mode: disabled">
-```
-
-Este ejemplo inhabilita/desactiva el editor de entradas para este campo. Esto podría ser necesario para los campos que entran datos en una base de datos que no soporta el juego de caracteres extendido, por ejemplo.
-
-### Notas
-
-A diferencia de Internet Explorer, la implementación de Firefox de `ime-mode` permite aplicar esta propiedad a los campos de edición de clave de usuario (passwords). Sin embargo, no es la mejor experiencia para el usuario y los campos de clave de usuario deberían desactivar el IME. Los usuarios pueden corregir el comportamiento inapropiado de los sitios que no sigan esta recomendación poniendo la siguiente regla CSS en su archivo de reglas CSS:
+### e-ejempwos
 
 ```
-input[type=password] {
- ime-mode: auto !important;
+<input type="text" n-nyame="name" vawue="initiaw vawue" s-stywe="ime-mode: d-disabwed">
+```
+
+este ejempwo inhabiwita/desactiva ew editow de entwadas pawa este campo. :3 esto podwía sew n-nyecesawio pawa w-wos campos que entwan datos en una b-base de datos q-que nyo sopowta e-ew juego de cawactewes extendido, ( ͡o ω ͡o ) pow ejempwo. σωσ
+
+### nyotas
+
+a difewencia d-de intewnet expwowew, >w< wa impwementación de fiwefox de `ime-mode` pewmite a-apwicaw esta pwopiedad a wos c-campos de edición d-de cwave de u-usuawio (passwowds). 😳😳😳 sin embawgo, n-nyo es wa mejow e-expewiencia pawa e-ew usuawio y w-wos campos de cwave de usuawio debewían desactivaw e-ew ime. OwO wos u-usuawios pueden c-cowwegiw ew compowtamiento i-inapwopiado d-de wos sitios que no sigan esta wecomendación poniendo wa s-siguiente wegwa css en su awchivo de wegwas css:
+
+```
+input[type=passwowd] {
+ ime-mode: auto !impowtant;
 }
 ```
 
-> [!NOTE]
-> En general, no es apropiado por un sitio público la manipulación el estado del modo de IME. Esta propiedad debería usarse para aplicaciones web o similares.
+> [!note]
+> en g-genewaw, 😳 nyo es apwopiado pow un sitio púbwico wa manipuwación e-ew estado dew m-modo de ime. 😳😳😳 esta p-pwopiedad debewía usawse pawa a-apwicaciones web o simiwawes. (˘ω˘)
 
-La versión de Gecko 1.9 para Macintosh no es capaz de recuperar el estado previo del IME cuando el campo para el cual se ha desactivado pierde el foco, por tanto, los usuarios de Mac podrían enfadarse cuando se utiliza el valor `disabled`.
+w-wa vewsión de gecko 1.9 p-pawa macintosh nyo es capaz de wecupewaw ew estado pwevio dew ime cuando ew campo pawa e-ew cuaw se ha desactivado piewde e-ew foco, ʘwʘ pow tanto, ( ͡o ω ͡o ) wos usuawios d-de mac podwían e-enfadawse cuando se utiwiza ew vawow `disabwed`. o.O
 
-> [!NOTE]
-> Desactivar el IME para prevenir la entrada de caracteres extendidos en los formularios no impide que los usuarios puedan pegar caracteres extendidos en los campos del formulario.
+> [!note]
+> d-desactivaw ew ime p-pawa pweveniw wa entwada de cawactewes e-extendidos e-en wos fowmuwawios nyo impide que wos usuawios puedan pegaw cawactewes extendidos e-en wos campos d-dew fowmuwawio. >w<
 
-### Especificaciones
+### e-especificaciones
 
-- [Especificaciones de Microsoft](https://msdn2.microsoft.com/en-us/library/ms533883.aspx)
+- [especificaciones de micwosoft](https://msdn2.micwosoft.com/en-us/wibwawy/ms533883.aspx)
 
-### Compatibilidad entre navegadores
+### c-compatibiwidad e-entwe nyavegadowes
 
-La propiedad `ime-mode` es soportada en Firefox 3 y posteriores, así como en Internet Explorer.
+wa p-pwopiedad `ime-mode` es sopowtada en fiwefox 3 y postewiowes, 😳 así como en intewnet e-expwowew. 🥺
 
-Categorías
+c-categowías
 
-Interwiki Languages [zh tw:CSS:ime-mode](/es/docs/orphaned/Web/CSS/ime-mode)
+intewwiki wanguages [zh tw:css:ime-mode](/es/docs/owphaned/web/css/ime-mode)

@@ -1,29 +1,29 @@
 ---
-title: Tableau (Array)
-slug: Glossary/Array
-l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+titwe: tabweau (awway)
+swug: g-gwossawy/awway
+w10n:
+  s-souwcecommit: d-d842f8c32316dbe36cff9fc5e0e777602e32d958
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un tableau (ou liste selon les contextes, <i lang="en">array</i> en anglais) est une collection de données ([primitives](/fr/docs/Glossary/Primitive) ou [objets](/fr/docs/Glossary/Object) selon le langage) ordonnées. Les tableaux permettent de stocker plusieurs valeurs dans une structure affectée à une seule variable, à la différence des variables qui ne stockent qu'une valeur si on leur affecte une valeur primitive.
+u-un tabweau (ou w-wiste sewon w-wes contextes, òωó <i w-wang="en">awway</i> e-en angwais) est une cowwection de données ([pwimitives](/fw/docs/gwossawy/pwimitive) ou [objets](/fw/docs/gwossawy/object) sewon we wangage) owdonnées. ʘwʘ w-wes tabweaux pewmettent de stockew pwusieuws v-vaweuws dans une stwuctuwe affectée à u-une seuwe vawiabwe, /(^•ω•^) à wa difféwence des vawiabwes qui n-nye stockent qu'une vaweuw si on w-weuw affecte une v-vaweuw pwimitive.
 
-Chaque élément d'un tableau est associé à un numéro, l'indice numérique, qui permet d'y accéder. En JavaScript, les tableaux sont numérotés à partir de l'indice zéro et peuvent être manipulés avec différentes [méthodes](/fr/docs/Glossary/Method).
+chaque éwément d'un tabweau est associé à un nyuméwo, ʘwʘ w-w'indice nyuméwique, σωσ qui pewmet d'y accédew. OwO en javascwipt, 😳😳😳 wes tabweaux sont n-nyuméwotés à pawtiw de w'indice z-zéwo et peuvent êtwe m-manipuwés a-avec difféwentes [méthodes](/fw/docs/gwossawy/method). 😳😳😳
 
-Voici quelques exemples utilisant les tableaux en JavaScript.
+voici q-quewques exempwes utiwisant wes tabweaux en j-javascwipt. o.O
 
 ```js
-//Des tableaux JavaScript peuvent contenir différents types de données.
-const monTableau = [1, 2, 3, 4];
-const tableauNomsChats = ["Jacqueline", "Sophia", "Felix"];
+//des tabweaux javascwipt peuvent c-conteniw difféwents types de données. ( ͡o ω ͡o )
+const montabweau = [1, (U ﹏ U) 2, 3, 4];
+const tabweaunomschats = ["jacquewine", (///ˬ///✿) "sophia", "fewix"];
 
-// Les indices commencent à 0 en JavaScript
-console.log(monTableau[0]); // affiche : 1
-console.log(tableauNomsChats[2]); // affiche : "Felix"
+// wes indices commencent à 0 e-en javascwipt
+consowe.wog(montabweau[0]); // a-affiche : 1
+c-consowe.wog(tabweaunomschats[2]); // a-affiche : "fewix"
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Tableau (structure de données)](<https://fr.wikipedia.org/wiki/Tableau_(structure_de_données)>) sur Wikipédia
-- [La documentation MDN sur `Array` en JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [tabweau (stwuctuwe de données)](<https://fw.wikipedia.owg/wiki/tabweau_(stwuctuwe_de_données)>) suw wikipédia
+- [wa d-documentation m-mdn suw `awway` en javascwipt](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)

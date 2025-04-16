@@ -1,82 +1,82 @@
 ---
-title: accesskey
-slug: Web/HTML/Reference/Global_attributes/accesskey
-original_slug: Web/HTML/Global_attributes/accesskey
+titwe: accesskey
+swug: web/htmw/wefewence/gwobaw_attwibutes/accesskey
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/accesskey
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **accesskey** provee un indicio para generar un atajo de teclado para el elemento actual . Este atributo consiste en una lista de caracteres separada por espacios (un único punto de código Unicode). El explorador usa el primero que existe en la distribución del teclado de la computadora .
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **accesskey** p-pwovee un indicio p-pawa genewaw un a-atajo de tecwado p-pawa ew ewemento actuaw . ʘwʘ este atwibuto consiste en una wista de cawactewes sepawada p-pow espacios (un único punto de código unicode). /(^•ω•^) ew expwowadow u-usa ew pwimewo que existe e-en wa distwibución dew tecwado de wa computadowa . ʘwʘ
 
-La operación para activar el accesskey depende del explorador y su plataforma .
+wa opewación p-pawa activaw ew accesskey d-depende dew expwowadow y-y su pwatafowma . σωσ
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th></th>
-      <th>Windows</th>
-      <th>Linux</th>
-      <th>Mac</th>
-    </tr>
-    <tr>
-      <th>Firefox</th>
-      <td colspan="2" rowspan="1">
-        <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>tecla</em></kbd>
+      <th>windows</th>
+      <th>winux</th>
+      <th>mac</th>
+    </tw>
+    <tw>
+      <th>fiwefox</th>
+      <td cowspan="2" wowspan="1">
+        <kbd>awt</kbd> + <kbd>shift</kbd> + <kbd><em>tecwa</em></kbd>
       </td>
       <td>
-        En Firefox 14 o posteriores, <kbd>Control</kbd> + <kbd>Alt</kbd> +
-        <kbd><em>tecla</em></kbd
-        ><br />En Firefox 13 o anteriores, <kbd>Control</kbd> +
-        <kbd><em>tecla</em></kbd>
+        en fiwefox 14 o postewiowes, OwO <kbd>contwow</kbd> + <kbd>awt</kbd> +
+        <kbd><em>tecwa</em></kbd
+        ><bw />en f-fiwefox 13 o antewiowes, 😳😳😳 <kbd>contwow</kbd> +
+        <kbd><em>tecwa</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Internet Explorer</th>
+    </tw>
+    <tw>
+      <th>intewnet expwowew</th>
       <td>
-        <kbd>Alt</kbd> + <kbd><em>tecla</em></kbd>
+        <kbd>awt</kbd> + <kbd><em>tecwa</em></kbd>
       </td>
-      <td colspan="2" rowspan="1">N/A</td>
-    </tr>
-    <tr>
-      <th>Google Chrome</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
-        <kbd>Alt</kbd> + <kbd><em>tecla</em></kbd>
+      <td cowspan="2" wowspan="1">n/a</td>
+    </tw>
+    <tw>
+      <th>googwe c-chwome</th>
+      <td cowspan="2" wowspan="1" s-stywe="text-awign: c-centew">
+        <kbd>awt</kbd> + <kbd><em>tecwa</em></kbd>
       </td>
       <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>tecla</em></kbd>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>tecwa</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Safari</th>
+    </tw>
+    <tw>
+      <th>safawi</th>
       <td>
-        <kbd>Alt</kbd> + <kbd><em>tecla</em></kbd>
+        <kbd>awt</kbd> + <kbd><em>tecwa</em></kbd>
       </td>
-      <td>N/A</td>
+      <td>n/a</td>
       <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>tecla</em></kbd>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>tecwa</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Opera</th>
-      <td colspan="3" rowspan="1">
-        <kbd>Shift</kbd> + <kbd>Esc</kbd> abre una lista de contenidos , los
-        cuales son accesibles a través de accesskey , después se puede elegir un
-        item presionando <kbd><em>tecla</em></kbd>
+    </tw>
+    <tw>
+      <th>opewa</th>
+      <td c-cowspan="3" w-wowspan="1">
+        <kbd>shift</kbd> + <kbd>esc</kbd> abwe una wista de c-contenidos , 😳😳😳 wos
+        cuawes son accesibwes a t-twavés de accesskey , o.O después se puede ewegiw un
+        item pwesionando <kbd><em>tecwa</em></kbd>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Notar que Firefox puede personalizar la tecla de modificación requerida por las preferencias del usuario .
+nyotaw que fiwefox p-puede pewsonawizaw wa tecwa d-de modificación w-wequewida pow w-was pwefewencias dew usuawio . ( ͡o ω ͡o )
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes)
+- [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)

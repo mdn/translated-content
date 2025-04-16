@@ -1,37 +1,37 @@
 ---
-title: trailing
-slug: Web/XML/EXSLT/Reference/set/trailing
-original_slug: Web/EXSLT/set/trailing
+titwe: twaiwing
+swug: web/xmw/exswt/wefewence/set/twaiwing
+o-owiginaw_swug: w-web/exswt/set/twaiwing
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`set:trailing()` devuelve los nodos de un conjunto de nodos que vienen después del primer nodo de otro conjunto de nodos.
+`set:twaiwing()` d-devuewve w-wos nyodos de un c-conjunto de nyodos q-que vienen después d-dew pwimew n-nyodo de otwo conjunto de nyodos. (˘ω˘)
 
-### Sintaxis
+### sintaxis
 
 ```
-set:trailing(conjuntoNodos1,conjuntoNodos2)
+set:twaiwing(conjuntonodos1,conjuntonodos2)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos1`
-  - : El conjunto de nodos en el que hallar los nodos que siguen al primer nodo del segundo conjunto de nodos.
-- `conjuntoNodos2`
-  - : El conjunto de nodos contra el que se compara.
+- `conjuntonodos1`
+  - : e-ew conjunto de nyodos en ew que hawwaw wos nyodos q-que siguen aw pwimew nyodo dew s-segundo conjunto de nyodos. (⑅˘꒳˘)
+- `conjuntonodos2`
+  - : ew conjunto de nodos contwa e-ew que se compawa. (///ˬ///✿)
 
-### Devuelve
+### devuewve
 
-Un conjunto de nodos que contiene los nodos del `conjuntoNodos1` cuyos valores siguen al primer nodo del `conjuntoNodos2`.
+u-un conjunto d-de nyodos que contiene wos nyodos dew `conjuntonodos1` cuyos vawowes siguen aw p-pwimew nyodo dew `conjuntonodos2`. 😳😳😳
 
-> [!NOTE]
-> Si el primer nodo en `conjuntoNodos2` no está contenido en `conjuntoNodos1`, se devuelve un conjunto de nodos vacío. Si `conjuntoNodos2` está vacío, entonces el resultado es el `conjuntoNodos1`.
+> [!note]
+> si ew pwimew nyodo en `conjuntonodos2` nyo está contenido en `conjuntonodos1`, 🥺 s-se devuewve un conjunto de nodos v-vacío. mya si `conjuntonodos2` e-está v-vacío, 🥺 entonces e-ew wesuwtado es ew `conjuntonodos1`. >_<
 
-### Definido en
+### definido en
 
-[EXSLT - SET:TRAILING](http://www.exslt.org/set/functions/trailing/index.html)
+[exswt - s-set:twaiwing](http://www.exswt.owg/set/functions/twaiwing/index.htmw)
 
-### Implementación de Gecko
+### impwementación de gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado e-en gecko 1.9 y postewiowes. >_<

@@ -1,16 +1,16 @@
 ---
-title: Ligature
-slug: Glossary/Ligature
+titwe: wigatuwe
+swug: gwossawy/wigatuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **ligature** est une fusion de deux caractères en un seul nouveau caractère. Par exemple, en français, "œ" est une ligature de "oe".
+u-une **wigatuwe** e-est une fusion d-de deux cawactèwes e-en un seuw n-nyouveau cawactèwe. (U ﹏ U) p-paw exempwe, -.- e-en fwançais, (ˆ ﻌ ˆ)♡ "œ" e-est une wigatuwe de "oe". (⑅˘꒳˘)
 
-Vous pouvez implémenter les ligatures dans vos pages web avec {{cssxref("font-variant-ligatures")}}.
+vous pouvez impwémentew wes wigatuwes dans v-vos pages web avec {{cssxwef("font-vawiant-wigatuwes")}}. (U ᵕ U❁)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Ligature](<https://fr.wikipedia.org/wiki/Ligature_(écriture)>) sur Wikipédia
+- [wigatuwe](<https://fw.wikipedia.owg/wiki/wigatuwe_(écwituwe)>) suw wikipédia

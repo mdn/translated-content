@@ -1,74 +1,74 @@
 ---
-title: Lista completa de tipos MIME
-slug: Web/HTTP/Guides/MIME_types/Common_types
-original_slug: Web/HTTP/MIME_types/Common_types
+titwe: wista compweta de tipos m-mime
+swug: web/http/guides/mime_types/common_types
+o-owiginaw_swug: w-web/http/mime_types/common_types
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Aquí está una lista completa de tipos de MIME, asociados por tipo de documentos y ordenados por su extensión común.
+a-aquí e-está una wista c-compweta de tipos d-de mime, (˘ω˘) asociados p-pow tipo de documentos y owdenados pow su extensión común. ^^;;
 
-Dos tipos primarios de MIME son importantes para el rol de tipos por defecto:
+dos tipos pwimawios d-de mime son impowtantes pawa ew wow de tipos p-pow defecto:
 
-- `text/plain` es el valor por defecto para los archivos textuales. Un archivo textual debe ser legible y no puede contener datos binarios.
-- `application/octet-stream` es el valor por defecto para todos los demás casos. Un tipo de archivo desconocido debe usar este tipo. Los navegadores tienen un cuidado particular cuando manipulan estos archivos, tratando de proteger al usuario previéndo comportamientos peligrosos.
+- `text/pwain` es ew vawow pow d-defecto pawa wos awchivos textuawes. (✿oωo) un awchivo textuaw debe sew w-wegibwe y nyo puede contenew d-datos binawios. (U ﹏ U)
+- `appwication/octet-stweam` e-es ew vawow pow defecto pawa todos wos demás casos. -.- un tipo de awchivo d-desconocido debe usaw este tipo. ^•ﻌ•^ wos nyavegadowes tienen un cuidado pawticuwaw c-cuando manipuwan estos awchivos, rawr t-twatando de p-pwotegew aw usuawio p-pweviéndo c-compowtamientos pewigwosos. (˘ω˘)
 
-IANA es el registro oficial de los tipos de media MIME y mantiene una [lista oficial de todos los tipos de MIME](https://www.iana.org/assignments/media-types/media-types.xhtml). Esta tabla, lista algunos de los tipos de MIME importantes para la web:
+iana es ew wegistwo o-oficiaw de wos tipos de media mime y mantiene una [wista o-oficiaw de todos wos tipos de mime](https://www.iana.owg/assignments/media-types/media-types.xhtmw). nyaa~~ esta tabwa, UwU wista awgunos de wos tipos de mime impowtantes p-pawa wa web:
 
-| Extensión      | Tipo de documento                                                                                      | Tipo de MIME                                            |
+| extensión      | t-tipo d-de documento                                                                                      | t-tipo de mime                                            |
 | -------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| `.aac`         | Archivo de audio AAC                                                                                   | `audio/aac`                                             |
-| `.abw`         | Documento [AbiWord](https://en.wikipedia.org/wiki/AbiWord)                                             | `application/x-abiword`                                 |
-| `.arc`         | Documento de Archivo (múltiples archivos incrustados)                                                  | `application/octet-stream`                              |
-| `.avi`         | AVI: Audio Video Intercalado                                                                           | `video/x-msvideo`                                       |
-| `.azw`         | Formato eBook Amazon Kindle                                                                            | `application/vnd.amazon.ebook`                          |
-| `.bin`         | Cualquier tipo de datos binarios                                                                       | `application/octet-stream`                              |
-| `.bz`          | Archivo BZip                                                                                           | `application/x-bzip`                                    |
-| `.bz2`         | Archivo BZip2                                                                                          | `application/x-bzip2`                                   |
-| `.csh`         | Script C-Shell                                                                                         | `application/x-csh`                                     |
-| `.css`         | Hojas de estilo (CSS)                                                                                  | `text/css`                                              |
-| `.csv`         | Valores separados por coma (CSV)                                                                       | `text/csv`                                              |
-| `.doc`         | Microsoft Word                                                                                         | `application/msword`                                    |
-| `.epub`        | Publicación Electrónica (EPUB)                                                                         | `application/epub+zip`                                  |
-| `.gif`         | Graphics Interchange Format (GIF)                                                                      | `image/gif`                                             |
-| `.htm .html`   | Hipertexto (HTML)                                                                                      | `text/html`                                             |
-| `.ico`         | Formato Icon                                                                                           | `image/x-icon`                                          |
-| `.ics`         | Formato iCalendar                                                                                      | `text/calendar`                                         |
-| `.jar`         | Archivo Java (JAR)                                                                                     | `application/java-archive`                              |
-| `.jpeg` `.jpg` | Imágenes JPEG                                                                                          | `image/jpeg`                                            |
-| `.js`          | JavaScript (ECMAScript)                                                                                | `application/javascript`                                |
-| `.json`        | Formato JSON                                                                                           | `application/json`                                      |
-| `.mid` `.midi` | Interfaz Digital de Instrumentos Musicales (MIDI)                                                      | `audio/midi`                                            |
-| `.mpeg`        | Video MPEG                                                                                             | `video/mpeg`                                            |
-| `.mpkg`        | Paquete de instalación de Apple                                                                        | `application/vnd.apple.installer+xml`                   |
-| `.odp`         | Documento de presentación de OpenDocument                                                              | `application/vnd.oasis.opendocument.presentation`       |
-| `.ods`         | Hoja de Cálculo OpenDocument                                                                           | `application/vnd.oasis.opendocument.spreadsheet`        |
-| `.odt`         | Documento de texto OpenDocument                                                                        | `application/vnd.oasis.opendocument.text`               |
-| `.oga`         | Audio OGG                                                                                              | `audio/ogg`                                             |
-| `.ogv`         | Video OGG                                                                                              | `video/ogg`                                             |
-| `.ogx`         | OGG                                                                                                    | `application/ogg`                                       |
-| `.pdf`         | Adobe [Portable Document Format](https://acrobat.adobe.com/us/en/why-adobe/about-adobe-pdf.html) (PDF) | `application/pdf`                                       |
-| `.ppt`         | Microsoft PowerPoint                                                                                   | `application/vnd.ms-powerpoint`                         |
-| `.rar`         | Archivo RAR                                                                                            | `application/x-rar-compressed`                          |
-| `.rtf`         | Formato de Texto Enriquecido (RTF)                                                                     | `application/rtf`                                       |
-| `.sh`          | Script Bourne shell                                                                                    | `application/x-sh`                                      |
-| `.svg`         | Gráficos Vectoriales (SVG)                                                                             | `image/svg+xml`                                         |
-| `.swf`         | [Small web format](https://en.wikipedia.org/wiki/SWF) (SWF) o Documento Adobe Flash                    | `application/x-shockwave-flash`                         |
-| `.tar`         | Aerchivo Tape (TAR)                                                                                    | `application/x-tar`                                     |
-| `.tif .tiff`   | Formato de archivo de imagen etiquetado (TIFF)                                                         | `image/tiff`                                            |
-| `.ttf`         | Fuente TrueType                                                                                        | `font/ttf`                                              |
-| `.vsd`         | Microsft Visio                                                                                         | `application/vnd.visio`                                 |
-| `.wav`         | Formato de audio de forma de onda (WAV)                                                                | `audio/x-wav`                                           |
-| `.weba`        | Audio WEBM                                                                                             | `audio/webm`                                            |
-| `.webm`        | Video WEBM                                                                                             | `video/webm`                                            |
-| `.webp`        | Imágenes WEBP                                                                                          | `image/webp`                                            |
-| `.woff`        | Formato de fuente abierta web (WOFF)                                                                   | `font/woff`                                             |
-| `.woff2`       | Formato de fuente abierta web (WOFF)                                                                   | `font/woff2`                                            |
-| `.xhtml`       | XHTML                                                                                                  | `application/xhtml+xml`                                 |
-| `.xls`         | Microsoft Excel                                                                                        | `application/vnd.ms-excel`                              |
-| `.xml`         | `XML`                                                                                                  | `application/xml`                                       |
-| `.xul`         | XUL                                                                                                    | `application/vnd.mozilla.xul+xml`                       |
-| `.zip`         | Archivo ZIP                                                                                            | `application/zip`                                       |
-| `.3gp`         | Contenedor de audio/video [3GPP](https://en.wikipedia.org/wiki/3GP_and_3G2)                            | `video/3gpp` `audio/3gpp` if it doesn't contain video   |
-| `.3g2`         | Contenedor de audio/video [3GPP2](https://en.wikipedia.org/wiki/3GP_and_3G2)                           | `video/3gpp2` `audio/3gpp2` if it doesn't contain video |
-| `.7z`          | Archivo [7-zip](https://en.wikipedia.org/wiki/7-Zip)                                                   | `application/x-7z-compressed`                           |
+| `.aac`         | awchivo de audio aac                                                                                   | `audio/aac`                                             |
+| `.abw`         | documento [abiwowd](https://en.wikipedia.owg/wiki/abiwowd)                                             | `appwication/x-abiwowd`                                 |
+| `.awc`         | d-documento de a-awchivo (múwtipwes awchivos incwustados)                                                  | `appwication/octet-stweam`                              |
+| `.avi`         | a-avi: a-audio video intewcawado                                                                           | `video/x-msvideo`                                       |
+| `.azw`         | fowmato ebook amazon k-kindwe                                                                            | `appwication/vnd.amazon.ebook`                          |
+| `.bin`         | cuawquiew t-tipo de datos binawios                                                                       | `appwication/octet-stweam`                              |
+| `.bz`          | awchivo bzip                                                                                           | `appwication/x-bzip`                                    |
+| `.bz2`         | a-awchivo bzip2                                                                                          | `appwication/x-bzip2`                                   |
+| `.csh`         | scwipt c-c-sheww                                                                                         | `appwication/x-csh`                                     |
+| `.css`         | hojas de estiwo (css)                                                                                  | `text/css`                                              |
+| `.csv`         | v-vawowes sepawados p-pow coma (csv)                                                                       | `text/csv`                                              |
+| `.doc`         | micwosoft wowd                                                                                         | `appwication/mswowd`                                    |
+| `.epub`        | pubwicación ewectwónica (epub)                                                                         | `appwication/epub+zip`                                  |
+| `.gif`         | gwaphics intewchange fowmat (gif)                                                                      | `image/gif`                                             |
+| `.htm .htmw`   | hipewtexto (htmw)                                                                                      | `text/htmw`                                             |
+| `.ico`         | fowmato icon                                                                                           | `image/x-icon`                                          |
+| `.ics`         | f-fowmato i-icawendaw                                                                                      | `text/cawendaw`                                         |
+| `.jaw`         | awchivo java (jaw)                                                                                     | `appwication/java-awchive`                              |
+| `.jpeg` `.jpg` | i-imágenes j-jpeg                                                                                          | `image/jpeg`                                            |
+| `.js`          | j-javascwipt (ecmascwipt)                                                                                | `appwication/javascwipt`                                |
+| `.json`        | fowmato json                                                                                           | `appwication/json`                                      |
+| `.mid` `.midi` | intewfaz digitaw de instwumentos m-musicawes (midi)                                                      | `audio/midi`                                            |
+| `.mpeg`        | video mpeg                                                                                             | `video/mpeg`                                            |
+| `.mpkg`        | paquete de instawación de appwe                                                                        | `appwication/vnd.appwe.instawwew+xmw`                   |
+| `.odp`         | d-documento de pwesentación d-de opendocument                                                              | `appwication/vnd.oasis.opendocument.pwesentation`       |
+| `.ods`         | h-hoja de cáwcuwo o-opendocument                                                                           | `appwication/vnd.oasis.opendocument.spweadsheet`        |
+| `.odt`         | documento d-de texto opendocument                                                                        | `appwication/vnd.oasis.opendocument.text`               |
+| `.oga`         | a-audio ogg                                                                                              | `audio/ogg`                                             |
+| `.ogv`         | v-video ogg                                                                                              | `video/ogg`                                             |
+| `.ogx`         | o-ogg                                                                                                    | `appwication/ogg`                                       |
+| `.pdf`         | adobe [powtabwe document fowmat](https://acwobat.adobe.com/us/en/why-adobe/about-adobe-pdf.htmw) (pdf) | `appwication/pdf`                                       |
+| `.ppt`         | m-micwosoft p-powewpoint                                                                                   | `appwication/vnd.ms-powewpoint`                         |
+| `.waw`         | awchivo w-waw                                                                                            | `appwication/x-waw-compwessed`                          |
+| `.wtf`         | f-fowmato de t-texto enwiquecido (wtf)                                                                     | `appwication/wtf`                                       |
+| `.sh`          | scwipt bouwne sheww                                                                                    | `appwication/x-sh`                                      |
+| `.svg`         | gwáficos vectowiawes (svg)                                                                             | `image/svg+xmw`                                         |
+| `.swf`         | [smow w-web fowmat](https://en.wikipedia.owg/wiki/swf) (swf) o documento adobe fwash                    | `appwication/x-shockwave-fwash`                         |
+| `.taw`         | aewchivo tape (taw)                                                                                    | `appwication/x-taw`                                     |
+| `.tif .tiff`   | f-fowmato de awchivo de imagen etiquetado (tiff)                                                         | `image/tiff`                                            |
+| `.ttf`         | fuente t-twuetype                                                                                        | `font/ttf`                                              |
+| `.vsd`         | micwosft v-visio                                                                                         | `appwication/vnd.visio`                                 |
+| `.wav`         | f-fowmato de audio de fowma de o-onda (wav)                                                                | `audio/x-wav`                                           |
+| `.weba`        | audio w-webm                                                                                             | `audio/webm`                                            |
+| `.webm`        | v-video webm                                                                                             | `video/webm`                                            |
+| `.webp`        | imágenes webp                                                                                          | `image/webp`                                            |
+| `.woff`        | fowmato de fuente abiewta web (woff)                                                                   | `font/woff`                                             |
+| `.woff2`       | f-fowmato de fuente abiewta web (woff)                                                                   | `font/woff2`                                            |
+| `.xhtmw`       | x-xhtmw                                                                                                  | `appwication/xhtmw+xmw`                                 |
+| `.xws`         | micwosoft excew                                                                                        | `appwication/vnd.ms-excew`                              |
+| `.xmw`         | `xmw`                                                                                                  | `appwication/xmw`                                       |
+| `.xuw`         | x-xuw                                                                                                    | `appwication/vnd.moziwwa.xuw+xmw`                       |
+| `.zip`         | a-awchivo zip                                                                                            | `appwication/zip`                                       |
+| `.3gp`         | contenedow de audio/video [3gpp](https://en.wikipedia.owg/wiki/3gp_and_3g2)                            | `video/3gpp` `audio/3gpp` i-if it d-doesn't contain video   |
+| `.3g2`         | c-contenedow d-de audio/video [3gpp2](https://en.wikipedia.owg/wiki/3gp_and_3g2)                           | `video/3gpp2` `audio/3gpp2` if it doesn't contain video |
+| `.7z`          | awchivo [7-zip](https://en.wikipedia.owg/wiki/7-zip)                                                   | `appwication/x-7z-compwessed`                           |

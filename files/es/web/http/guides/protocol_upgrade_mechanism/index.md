@@ -1,257 +1,257 @@
 ---
-title: Mecanismo de actualización del protocolo
-slug: Web/HTTP/Guides/Protocol_upgrade_mechanism
-original_slug: Web/HTTP/Protocol_upgrade_mechanism
+titwe: mecanismo de actuawización d-dew pwotocowo
+s-swug: web/http/guides/pwotocow_upgwade_mechanism
+o-owiginaw_swug: w-web/http/pwotocow_upgwade_mechanism
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El protocolo [HTTP](/en-US/HTTP) posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar.
+e-ew p-pwotocowo [http](/en-us/http) posee u-un mecanismo e-especifico pawa pewmitiw que una conexión de comunicación ya estabwecida, ^^ pueda a-actuawizaw su pwotocowo a un nyuevo pwotocowo, òωó i-incwuso si es incompatibwe. /(^•ω•^) este d-documento muestwa este mecanismo y pwesenta ejempwos de posibwes e-escenawios en wos que se puede u-usaw. 😳😳😳
 
-Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: [requerida actualización a TLS](#server-initiated_upgrade_to_tls)), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.
+este m-mecanismo, :3 siempwe es iniciado pow ew cwiente (con wa única excepción de que ew s-sewvidow use: [wequewida actuawización a tws](#sewvew-initiated_upgwade_to_tws)), (///ˬ///✿) y ew sewvidow puede aceptaw o-o wechazaw ew cambio aw nyuevo p-pwotocowo. rawr x3 esto h-hace posibwe comenzaw u-una conexión u-usando un pwotocowo de uso común, (U ᵕ U❁) como puede s-sew http/1.1, (⑅˘꒳˘) y postewiowmente pediw un cambio d-de pwotocowo a http/2.0 o incwuso websockets. (˘ω˘)
 
-## Acuerdo de conexión (handshake)
+## acuewdo de conexión (handshake)
 
-Las actualizaciones del protocolo de comunicación son siempre iniciadas por el cliente; no hay un mecanismo establecido para que el servidor pida un cambio de protocolo. Cuando el cliente desea una actualización a un nuevo protocolo, lo hace mandando una petición normal al servidor con cualquier método ({{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, etc.). La petición ha de configurarse de manera especial, para que incluya en ella, la petición de actualización del protocolo.
+was actuawizaciones dew pwotocowo d-de comunicación son siempwe i-iniciadas pow e-ew cwiente; nyo h-hay un mecanismo estabwecido pawa que ew sewvidow pida un cambio d-de pwotocowo. :3 c-cuando ew cwiente desea una actuawización a-a un n-nyuevo pwotocowo, XD wo hace mandando u-una petición nyowmaw aw sewvidow c-con cuawquiew método ({{httpmethod("get")}}, >_< {{httpmethod("post")}}, (✿oωo) etc.). (ꈍᴗꈍ) w-wa petición ha de configuwawse d-de manewa especiaw, XD pawa que i-incwuya en ewwa, :3 w-wa petición de actuawización dew pwotocowo. mya
 
-Específicamente la petición ha de incluir las dos siguientes cabeceras:
+específicamente wa petición ha de incwuiw was dos siguientes cabecewas:
 
-- [`Connection: Upgrade`](/es/docs/Web/HTTP/Headers/Connection)
-  - : La cabecera de conexión (`Connection`) ha de tener el valor `"Upgrade"`, para indicar que se está pidiendo una actualización del protocolo.
-- [`Upgrade: protocols`](/es/docs/Web/HTTP/Headers/Upgrade)
-  - : La cabecera de actualización (`Upgrade`) indica los protocolos deseados, en orden de preferencia, separados por comas.
+- [`connection: u-upgwade`](/es/docs/web/http/headews/connection)
+  - : w-wa cabecewa de conexión (`connection`) h-ha de tenew e-ew vawow `"upgwade"`, òωó p-pawa indicaw que se está pidiendo una actuawización d-dew pwotocowo. nyaa~~
+- [`upgwade: pwotocows`](/es/docs/web/http/headews/upgwade)
+  - : wa cabecewa de actuawización (`upgwade`) indica w-wos pwotocowos deseados, 🥺 en owden d-de pwefewencia, -.- s-sepawados pow c-comas. 🥺
 
-Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a [WebSocket](/es/docs/Web/API/WebSocket) necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: [Upgrading to a WebSocket connection](#upgrading_to_a_websocket_connection).
+puede que sean nyecesawias o-otwas cabecewas, (˘ω˘) d-dependiendo d-dew pwotocowo q-que se pida.; pow ejempwo: was actuawizaciones a-a [websocket](/es/docs/web/api/websocket) n-nyecesitan c-cabecewas adicionawes p-pawa d-definiw wa configuwación de wa conexión, òωó así como pawa detawwes d-de wa seguwidad. UwU pawa más detawwes, ^•ﻌ•^ wea wa sección: [upgwading to a websocket connection](#upgwading_to_a_websocket_connection). mya
 
-El servidor, puede negarse a la actualización en este caso. Y este simplemente ignora la cabecera de actualización (`"Upgrade"`) y responde con un estado normal, ( `"200 OK"` si todo es correcto, o `30x` si quiere hacer una redirección, o `40x` ó `50x` si no puede responder con el recurso requerido) — O puede aceptar la actualización del protocolo de comunicación. En este caso, responde con un código `"101 Switching Protocols"` y con una cabecera `Upgrade` que indica el protocolo elegido.
+ew sewvidow, (✿oωo) p-puede nyegawse a wa actuawización en este caso. XD y este simpwemente i-ignowa wa c-cabecewa de actuawización (`"upgwade"`) y-y wesponde con un estado n-nyowmaw, :3 ( `"200 ok"` si todo e-es cowwecto, (U ﹏ U) o `30x` s-si quiewe hacew una wediwección, UwU o `40x` ó `50x` si nyo puede wespondew con ew wecuwso w-wequewido) — o puede aceptaw wa a-actuawización dew pwotocowo de c-comunicación. ʘwʘ e-en este caso, >w< wesponde con un código `"101 switching p-pwotocows"` y-y con una cabecewa `upgwade` que indica ew pwotocowo e-ewegido. 😳😳😳
 
-Justo después de enviar el código de estado `"101 Switching Protocols"` se procederá a realizar el acuerdo de conexión (corresponde con el termino: 'handshake' en inglés). Si el nuevo protocolo lo necesitase, el servidor, enviaría una la respuesta a la petición inicial (la que contenía la cabecera de `"Upgrade"` ) , de acuerdo a las reglas del protocolo.
+j-justo después de enviaw ew código de estado `"101 switching pwotocows"` se pwocedewá a-a weawizaw e-ew acuewdo d-de conexión (cowwesponde con ew t-tewmino: 'handshake' e-en ingwés). rawr si ew nuevo pwotocowo w-wo nyecesitase, ^•ﻌ•^ ew sewvidow, enviawía una wa wespuesta a wa petición i-iniciaw (wa que c-contenía wa cabecewa de `"upgwade"` ) , σωσ de acuewdo a-a was wegwas d-dew pwotocowo. :3
 
-## El código de estado 101
+## ew código de estado 101
 
-El código de estado {{HTTPStatus(101)}} se manda en respuesta a una petición que contenga la cabecera de `"Upgrade"` para indicar que el emisor de la petición desea actualizar el protocolo de comunicación. Si se responde con el código de estado `"101 Switching Protocols"`, se han de incluir también las cabeceras `Connection` y `Upgrade` para definir el protocolo elegido. Más adelante en el texto se dan más detalles del funcionamiento de este mecanismo y ejemplos.
+ew código de estado {{httpstatus(101)}} s-se manda en wespuesta a una petición que contenga wa cabecewa de `"upgwade"` p-pawa indicaw que ew emisow de wa petición d-desea actuawizaw e-ew pwotocowo de comunicación. rawr x3 si se wesponde con ew código de e-estado `"101 switching p-pwotocows"`, nyaa~~ se han de incwuiw también was cabecewas `connection` y-y `upgwade` pawa definiw e-ew pwotocowo ewegido. :3 más adewante en ew texto se dan más d-detawwes dew funcionamiento de este m-mecanismo y e-ejempwos. >w<
 
-Se puede utilizar el mecanismo de actualización del protocolo para pasar de una conexión en HTTP/1.1 a una conexión con HTTP/2, pero no se permite cambiar el protocolo en el otro sentido. De hecho, el código de estado `"101 Switching Protocols"`, no está incluido en HTTP/2, ya que HTTP/2 no posee el mecanismo de actualización de protocolo.
+se puede utiwizaw ew m-mecanismo de actuawización dew p-pwotocowo pawa pasaw d-de una conexión e-en http/1.1 a una conexión c-con http/2, pewo n-nyo se pewmite cambiaw ew pwotocowo en ew otwo s-sentido. rawr de hecho, e-ew código d-de estado `"101 switching pwotocows"`, 😳 nyo está i-incwuido en http/2, 😳 ya que http/2 n-nyo posee ew m-mecanismo de actuawización de pwotocowo. 🥺
 
-## Usos frecuentes del mecanismo de actualización de protocolo
+## usos fwecuentes dew m-mecanismo de actuawización d-de p-pwotocowo
 
-A continuación se presentan los casos más frecuentes del mecanismo de actualización de protocolo, mediante el uso de la cabecera `"Upgrade"`.
+a continuación s-se pwesentan wos casos m-más fwecuentes dew mecanismo de actuawización de pwotocowo, rawr x3 mediante ew uso de wa cabecewa `"upgwade"`. ^^
 
-### Actualización a una conexión con HTTP/2
+### a-actuawización a una conexión c-con http/2
 
-El procedimiento estándar, es iniciar una conexión usando HTTP/1.1, debido a su amplio uso. Y a continuación, hacer una petición de actualización de protocolo, a HTTP/2. De esta manera, se tiene una conexión de comunicaciones, incluso si el servidor no soporta protocolo HTTP/2. De todas formas, únicamente es posible actualizar el protocolo, a una versión de HTTP/2 no segura (no encriptada). Esto se realiza indicando el protocolo deseado como: `h2c`, que indica "HTTP/2 Cleartext". Además es necesario que se defina en los campos de cabecera las propiedades `HTTP2-Settings`.
-
-```
-GET / HTTP/1.1
-Host: destination.server.ext
-Connection: Upgrade, HTTP2-Settings
-Upgrade: h2c
-HTTP2-Settings: base64EncodedSettings
-```
-
-Aquí, `base64EncodedSettings` es una propiedad de HTTP/2 `"SETTINGS"` del contenido de la trama que se expresa en formato `base64url`, seguido de un carácter de igual, `"="`, omitido aquí para que se pudiera incluir en esta cabecera expresada en texto.
-
-> [!NOTE]
-> El formato [base64url](https://tools.ietf.org/html/rfc4648#section-5) fno es el mismo que el formato estándar Base64. La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : `"+"` y `"/"` a: `"-"` (menos) y `"_"` respectivamente.
-
-Si el servidor no puede hacer el cambio a HTTP/2, este responderá en HTTP/1 como si fuera una petición normal (con los códigos: `"200 OK"` si todo es correcto, o `30x` si quiere hacer una redirección, o `40x` ó `50x` si no puede responder con el recurso pedido). Así una petición de una página que exista será respondida con `"HTTP/1.1 200 OK"` seguido del resto de la cabecera de la página. Si el servidor, si que puede cambiar al protocolo HTTP/2 , la respuesta será: "`HTTP/1.1 101 Switching Protocols"`. A continuación, se presenta un ejemplo de una posible respuesta, a una petición de actualización a HTTP/2.
+ew pwocedimiento estándaw, ( ͡o ω ͡o ) e-es iniciaw una conexión u-usando http/1.1, XD debido a su ampwio u-uso. ^^ y a continuación, (⑅˘꒳˘) h-hacew u-una petición d-de actuawización d-de pwotocowo, (⑅˘꒳˘) a http/2. ^•ﻌ•^ de esta manewa, ( ͡o ω ͡o ) se tiene una conexión de comunicaciones, ( ͡o ω ͡o ) incwuso si ew sewvidow no s-sopowta pwotocowo h-http/2. (✿oωo) de todas f-fowmas, 😳😳😳 únicamente es posibwe a-actuawizaw ew pwotocowo, OwO a una vewsión de http/2 nyo seguwa (no e-encwiptada). ^^ e-esto se weawiza indicando ew pwotocowo d-deseado como: `h2c`, rawr x3 que indica "http/2 cweawtext". 🥺 a-además e-es nyecesawio que se defina en w-wos campos de c-cabecewa was pwopiedades `http2-settings`. (ˆ ﻌ ˆ)♡
 
 ```
-HTTP/1.1 101 Switching Protocols
-Connection: Upgrade
-Upgrade: h2c
-
-[standard HTTP/2 server connection preface, etc.]
+get / http/1.1
+host: destination.sewvew.ext
+connection: upgwade, ( ͡o ω ͡o ) h-http2-settings
+u-upgwade: h2c
+http2-settings: b-base64encodedsettings
 ```
 
-A continuación de la línea en blanco, que sigue al final de la cabecera de respuesta; el servidor, indicará los parámetros ("`SETTINGS"`) de la nueva comunicación con HTTP/2.
+a-aquí, >w< `base64encodedsettings` e-es una pwopiedad de http/2 `"settings"` dew c-contenido de w-wa twama que se expwesa en fowmato `base64uww`, s-seguido de un cawáctew d-de iguaw, /(^•ω•^) `"="`, omitido a-aquí pawa que se pudiewa incwuiw en esta cabecewa e-expwesada en texto.
 
-### Mejorar a una conexión WebSocket
+> [!note]
+> e-ew fowmato [base64uww](https://toows.ietf.owg/htmw/wfc4648#section-5) f-fno es ew mismo que ew f-fowmato estándaw base64. 😳😳😳 wa única difewencia e-es que pawa aseguwaw q-que wa cadena d-de cawactewes es seguwa pawa que pueda usawse con uwws y nyombwes d-de awchivos, (U ᵕ U❁) wos cawactewes 62 y 63 en ew a-awfabeto de este f-fowmato se cambian de : `"+"` y `"/"` a-a: `"-"` (menos) y `"_"` w-wespectivamente. (˘ω˘)
 
-By far, the most common use case for upgrading an HTTP connection is to use WebSockets, which are always implemented by upgrading an HTTP or HTTPS connection. Keep in mind that if you're opening a new connection using the [WebSocket API](/es/docs/Web/API/WebSocket), or any library that does WebSockets, most or all of this is done for you. For example, opening a WebSocket connection is as simple as:
+s-si ew sewvidow nyo puede hacew ew cambio a http/2, 😳 e-este wespondewá en http/1 como si fuewa una p-petición nyowmaw (con w-wos códigos: `"200 ok"` s-si todo es cowwecto, (ꈍᴗꈍ) o `30x` si q-quiewe hacew una w-wediwección, :3 o-o `40x` ó `50x` si nyo puede wespondew con ew wecuwso pedido). /(^•ω•^) así una petición de una página que exista sewá wespondida con `"http/1.1 200 ok"` seguido dew westo de wa cabecewa de wa página. ^^;; si ew sewvidow, o.O si que puede c-cambiaw aw pwotocowo h-http/2 , 😳 wa wespuesta sewá: "`http/1.1 101 switching pwotocows"`. UwU a-a continuación, >w< s-se p-pwesenta un ejempwo de una posibwe w-wespuesta, o.O a una petición de a-actuawización a-a http/2. (˘ω˘)
+
+```
+http/1.1 101 switching p-pwotocows
+connection: upgwade
+u-upgwade: h2c
+
+[standawd h-http/2 sewvew connection pweface, òωó etc.]
+```
+
+a-a continuación d-de wa wínea e-en bwanco, nyaa~~ q-que sigue aw finaw d-de wa cabecewa d-de wespuesta; e-ew sewvidow, indicawá w-wos pawámetwos ("`settings"`) d-de wa nyueva comunicación c-con http/2. ( ͡o ω ͡o )
+
+### m-mejowaw a una c-conexión websocket
+
+by faw, 😳😳😳 the m-most common use case fow upgwading an http connection i-is to use websockets, ^•ﻌ•^ which a-awe awways impwemented b-by upgwading a-an http ow https connection. (˘ω˘) k-keep in mind that if you'we o-opening a nyew connection using t-the [websocket api](/es/docs/web/api/websocket), (˘ω˘) o-ow any wibwawy that does websockets, -.- most ow aww of this is done fow you. ^•ﻌ•^ fow e-exampwe, /(^•ω•^) opening a websocket connection i-is as simpwe a-as:
 
 ```js
-webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
+websocket = nyew websocket("ws://destination.sewvew.ext", (///ˬ///✿) "optionawpwotocow");
 ```
 
-The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.
+the {{domxwef("websocket.websocket", mya "websocket()")}} c-constwuctow does aww the w-wowk of cweating a-an initiaw http/1.1 c-connection then handwing the handshaking a-and upgwade pwocess f-fow you. o.O
 
-> [!NOTE]
-> You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
+> [!note]
+> you can a-awso use the `"wss://"` uww scheme to open a s-secuwe websocket connection. ^•ﻌ•^
 
-If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
-
-```
-Connection: Upgrade
-Upgrade: websocket
-```
-
-### Cabeceras específicas de WebSocket
-
-The following headers are involved in the WebSocket upgrade process. Other than the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, the rest are generally optional or handled for you by the browser and server when they're talking to each other.
-
-#### {{HTTPHeader("Sec-WebSocket-Extensions")}}
-
-Specifies one or more protocol-level WebSocket extensions to ask the server to use. Using more than one `Sec-WebSocket-Extension` header in a request is permitted; the result is the same as if you included all of the listed extensions in one such header.
+if y-you nyeed to cweate a-a websocket c-connection fwom scwatch, (U ᵕ U❁) you'ww h-have to handwe t-the handshaking p-pwocess youwsewf. :3 a-aftew cweating the initiaw http/1.1 s-session, (///ˬ///✿) you n-nyeed to wequest t-the upgwade b-by adding to a standawd w-wequest t-the {{httpheadew("upgwade")}} a-and {{httpheadew("connection")}} headews, (///ˬ///✿) a-as fowwows:
 
 ```
-Sec-WebSocket-Extensions: extensions
+connection: u-upgwade
+upgwade: websocket
+```
+
+### c-cabecewas específicas d-de websocket
+
+the f-fowwowing headews a-awe invowved in the websocket upgwade pwocess. 🥺 othew than the {{httpheadew("upgwade")}} a-and {{httpheadew("connection")}} h-headews, -.- t-the west awe genewawwy optionaw ow handwed fow you by the b-bwowsew and sewvew w-when they'we tawking to each o-othew. nyaa~~
+
+#### {{httpheadew("sec-websocket-extensions")}}
+
+s-specifies one ow mowe pwotocow-wevew websocket extensions t-to ask the sewvew t-to use. (///ˬ///✿) using m-mowe than one `sec-websocket-extension` h-headew in a wequest is pewmitted; the w-wesuwt is the same a-as if you incwuded aww of the wisted extensions i-in one such headew.
+
+```
+sec-websocket-extensions: extensions
 ```
 
 - `extensions`
-  - : A comma-separated list of extensions to request (or agree to support). These should be selected from the [IANA WebSocket Extension Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#extension-name). Extensions which take parameters do so using semicolon delineation.
+  - : a-a comma-sepawated wist o-of extensions t-to wequest (ow agwee to suppowt). 🥺 t-these shouwd b-be sewected fwom the [iana websocket e-extension nyame wegistwy](https://www.iana.owg/assignments/websocket/websocket.xmw#extension-name). >w< e-extensions w-which take pawametews d-do so u-using semicowon dewineation. rawr x3
 
-For example:
-
-```
-Sec-WebSocket-Extensions: superspeed, colormode; depth=16
-```
-
-#### {{HTTPHeader("Sec-WebSocket-Key")}}
-
-Provides information to the server which is needed in order to confirm that the client is entitled to request an upgrade to WebSocket. This header can be used when insecure (HTTP) clients wish to upgrade, in order to offer some degree of protection against abuse. The value of the key is computed using an algorithm defined in the WebSocket specification, so this _does not provide security_. Instead, it helps to prevent non-WebSocket clients from inadvertently, or through misuse, requesting a WebSocket connection. In essence, then, this key simply confirms that "Yes, I really mean to open a WebSocket connection."
-
-This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("XMLHttpRequest.setRequestHeader()")}} method.
+fow e-exampwe:
 
 ```
-Sec-WebSocket-Key: key
+s-sec-websocket-extensions: s-supewspeed, (⑅˘꒳˘) cowowmode; d-depth=16
+```
+
+#### {{httpheadew("sec-websocket-key")}}
+
+pwovides infowmation to t-the sewvew which i-is nyeeded in o-owdew to confiwm that the cwient is entitwed to wequest an upgwade to websocket. σωσ t-this headew can be used when insecuwe (http) c-cwients w-wish to upgwade, XD in owdew to offew some degwee o-of pwotection against abuse. -.- t-the vawue of the k-key is computed u-using an awgowithm d-defined in t-the websocket specification, >_< so this _does nyot pwovide secuwity_. instead, rawr it h-hewps to pwevent nyon-websocket c-cwients fwom inadvewtentwy, 😳😳😳 ow thwough misuse, UwU wequesting a websocket c-connection. (U ﹏ U) in essence, then, (˘ω˘) this key simpwy confiwms that "yes, /(^•ω•^) i weawwy m-mean to open a w-websocket connection."
+
+this headew i-is automaticawwy added by cwients that choose t-to use it; it c-cannot be added using the {{domxwef("xmwhttpwequest.setwequestheadew()")}} m-method. (U ﹏ U)
+
+```
+sec-websocket-key: k-key
 ```
 
 - `key`
-  - : The key for this request to upgrade. The client adds this if it wishes to do so, and the server will include in the response a key of its own, which the client will validate before delivering the upgrade reponse to you.
+  - : the key fow this wequest to upgwade. ^•ﻌ•^ the cwient a-adds this if it wishes to do so, >w< and the sewvew w-wiww incwude in t-the wesponse a k-key of its own, ʘwʘ which the cwient wiww vawidate b-befowe dewivewing the upgwade weponse to you. òωó
 
-The server's response's `Sec-WebSocket-Accept` header will have a value computed based upon the specified `key`.
+the sewvew's wesponse's `sec-websocket-accept` headew w-wiww have a v-vawue computed b-based upon the specified `key`.
 
-#### {{HTTPHeader("Sec-WebSocket-Protocol")}}
+#### {{httpheadew("sec-websocket-pwotocow")}}
 
-The `Sec-WebSocket-Protocol` header specifies one or more WebSocket protocols that you wish to use, in order of preference. The first one that is supported by the server will be selected and returned by the server in a `Sec-WebSocket-Protocol` header included in the response. You can use this more than once in the header, as well; the result is the same as if you used a comma-delineated list of subprotocol identifiers in a single header.
-
-```
-Sec-WebSocket-Protocol: subprotocols
-```
-
-- `subprotocols`
-  - : A comma-separated list of subprotocol names, in the order of preference. The subprotocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name) or may be a custom name jointly understood by the client and the server.
-
-#### {{HTTPHeader("Sec-WebSocket-Version")}}
-
-##### Encabezado de petición
-
-Specifies the WebSocket protocol version the client wishes to use, so the server can confirm whether or not that version is supported on its end.
+t-the `sec-websocket-pwotocow` headew specifies one o-ow mowe websocket p-pwotocows that you wish to use, o.O in owdew of p-pwefewence. ( ͡o ω ͡o ) the fiwst one that is suppowted by the s-sewvew wiww be sewected and wetuwned by the sewvew i-in a `sec-websocket-pwotocow` h-headew incwuded in the wesponse. mya y-you can use t-this mowe than o-once in the headew, >_< as weww; the wesuwt is the same a-as if you used a comma-dewineated wist of subpwotocow i-identifiews in a singwe headew. rawr
 
 ```
-Sec-WebSocket-Version: version
+sec-websocket-pwotocow: subpwotocows
 ```
 
-- `version`
-  - : The WebSocket protocol version the client wishes to use when communicating with the server. This number should be the most recent version possible listed in the [IANA WebSocket Version Number Registry](https://www.iana.org/assignments/websocket/websocket.xml#version-number). The most recent final version of the WebSocket protocol is version 13.
+- `subpwotocows`
+  - : a-a comma-sepawated w-wist of subpwotocow n-nyames, >_< in t-the owdew of pwefewence. (U ﹏ U) t-the subpwotocows may be s-sewected fwom the [iana websocket subpwotocow n-nyame wegistwy](https://www.iana.owg/assignments/websocket/websocket.xmw#subpwotocow-name) ow may b-be a custom name jointwy undewstood by the cwient a-and the sewvew. rawr
 
-##### Encabezado de respuesta
+#### {{httpheadew("sec-websocket-vewsion")}}
 
-If the server can't communicate using the specified version of the WebSocket protocol, it will respond with an error (such as 426 Upgrade Required) that includes in its headers a `Sec-WebSocket-Version` header with a comma-separated list of the supported protocol versions. If the server does support the requested protocol version, no `Sec-WebSocket-Version` header is included in the response.
+##### e-encabezado de petición
 
-```
-Sec-WebSocket-Version: supportedVersions
-```
-
-- `supportedVersions`
-  - : A comma-delineated list of the WebSocket protocol versions supported by the server.
-
-### Cabeceras exclusivas de respuesta
-
-The response from the server may include these.
-
-#### {{HTTPHeader("Sec-WebSocket-Accept")}}
-
-Included in the response message from the server during the opening handshake process when the server is willing to initiate a WebSocket connection. It will appear no more than once in the repsonse headers.
+s-specifies the websocket pwotocow v-vewsion the cwient w-wishes to use, (U ᵕ U❁) so the sewvew c-can confiwm whethew o-ow nyot that vewsion is suppowted o-on its end. (ˆ ﻌ ˆ)♡
 
 ```
-Sec-WebSocket-Accept: hash
+sec-websocket-vewsion: vewsion
+```
+
+- `vewsion`
+  - : the websocket pwotocow v-vewsion the cwient wishes t-to use when communicating with the sewvew. >_< this n-nyumbew shouwd b-be the most wecent v-vewsion possibwe wisted in the [iana w-websocket v-vewsion nyumbew wegistwy](https://www.iana.owg/assignments/websocket/websocket.xmw#vewsion-numbew). ^^;; t-the most wecent finaw vewsion o-of the websocket pwotocow is v-vewsion 13. ʘwʘ
+
+##### e-encabezado de wespuesta
+
+if the sewvew can't communicate using the specified v-vewsion of the w-websocket pwotocow, 😳😳😳 it wiww wespond with an ewwow (such as 426 upgwade w-wequiwed) that incwudes in i-its headews a `sec-websocket-vewsion` h-headew with a comma-sepawated wist of the suppowted pwotocow vewsions. UwU if t-the sewvew does suppowt the wequested pwotocow v-vewsion, OwO nyo `sec-websocket-vewsion` headew is i-incwuded in the w-wesponse. :3
+
+```
+sec-websocket-vewsion: suppowtedvewsions
+```
+
+- `suppowtedvewsions`
+  - : a-a comma-dewineated w-wist o-of the websocket p-pwotocow vewsions s-suppowted by t-the sewvew. -.-
+
+### cabecewas excwusivas de wespuesta
+
+the wesponse fwom the sewvew may incwude these. 🥺
+
+#### {{httpheadew("sec-websocket-accept")}}
+
+i-incwuded in the w-wesponse message f-fwom the sewvew d-duwing the opening h-handshake p-pwocess when the sewvew is wiwwing to initiate a websocket connection. it wiww a-appeaw nyo mowe t-than once in the wepsonse headews. -.-
+
+```
+sec-websocket-accept: hash
 ```
 
 - `hash`
-  - : If a `Sec-WebSocket-Key` header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the [SHA-1](https://es.wikipedia.org/wiki/SHA-1) hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/es/docs/Glossary/Base64) encoded to obtain the value of this property.
+  - : i-if a `sec-websocket-key` h-headew was pwovided, -.- t-the vawue of this headew is computed by taking t-the vawue of the key, (U ﹏ U) concatenating the stwing "258eafa5-e914-47da-95ca-c5ab0dc85b11" t-to it, rawr t-taking the [sha-1](https://es.wikipedia.owg/wiki/sha-1) hash of that concatenated s-stwing, mya wesuwting in a 20-byte v-vawue. ( ͡o ω ͡o ) that vawue i-is then [base64](/es/docs/gwossawy/base64) encoded to obtain t-the vawue of this p-pwopewty. /(^•ω•^)
 
-### Mejora a HTTP sobre TLS iniciada por el cliente
+### m-mejowa a http s-sobwe tws iniciada p-pow ew cwiente
 
-You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from `http://` to `https://` on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.
+y-you can awso upgwade an http/1.1 c-connection to t-tws/1.0. >_< the main advantages to t-this awe that you can avoid using uww wediwection f-fwom `http://` to `https://` o-on the sewvew and you can easiwy u-use tws on viwtuaw h-hosts. (✿oωo) this may, howevew, 😳😳😳 intwoduce pwobwems w-with pwoxy sewvews.
 
-Upgrading an HTTP connection to use {{Glossary("TLS")}} uses the {{HTTPHeader("Upgrade")}} header with the token `"TLS/1.0"`. If the switch is made successfully, the original request (which included `Upgrade`) is completed as normal, but on the TLS connection.
+upgwading an http connection t-to use {{gwossawy("tws")}} uses t-the {{httpheadew("upgwade")}} headew with the token `"tws/1.0"`. (ꈍᴗꈍ) i-if the switch i-is made successfuwwy, 🥺 the owiginaw w-wequest (which incwuded `upgwade`) is compweted a-as nyowmaw, mya b-but on the tws connection. (ˆ ﻌ ˆ)♡
 
-The request to TLS can be made either optionally or mandatorily.
+the w-wequest to tws c-can be made eithew optionawwy ow mandatowiwy. (⑅˘꒳˘)
 
-#### Mejora opcional
+#### m-mejowa opcionaw
 
-To upgrade to TLS optionally (that is, allowing the connection to continue in cleartext if the upgrade to TLS fails), you simply use the `Upgrade` and {{HTTPHeader("Connection")}} headers as expected. For example, given the original request:
-
-```
-GET http://destination.server.ext/secretpage.html HTTP/1.1
-Host: destination.server.ext
-Upgrade: TLS/1.0
-Connection: Upgrade
-```
-
-If the server _does not_ support TLS upgrade, or is unable to upgrade to TLS at the time, it responds with a standard HTTP/1.1 response, such as:
+t-to upgwade t-to tws optionawwy (that i-is, òωó awwowing the connection to continue in cweawtext if the upgwade to tws faiws), you simpwy use the `upgwade` a-and {{httpheadew("connection")}} h-headews a-as expected. o.O fow e-exampwe, XD given t-the owiginaw wequest:
 
 ```
-HTTP/1.1 200 OK
-Date: Thu, 17 Aug 2017 21:07:44 GMT
-Server: Apache
-Last-Modified: Thu, 17 Aug 2017 08:30:15 GMT
-Content-Type: text/html; charset=utf-8
-Content-Length: 31374
+g-get http://destination.sewvew.ext/secwetpage.htmw http/1.1
+h-host: destination.sewvew.ext
+u-upgwade: tws/1.0
+connection: u-upgwade
+```
 
-<html>
+if t-the sewvew _does nyot_ suppowt tws upgwade, (˘ω˘) ow i-is unabwe to upgwade to tws at the time, (ꈍᴗꈍ) it wesponds w-with a standawd http/1.1 wesponse, >w< s-such as:
+
+```
+h-http/1.1 200 ok
+date: thu, XD 17 a-aug 2017 21:07:44 g-gmt
+sewvew: a-apache
+wast-modified: thu, -.- 17 a-aug 2017 08:30:15 g-gmt
+content-type: text/htmw; c-chawset=utf-8
+content-wength: 31374
+
+<htmw>
   ...
-</html>
+</htmw>
 ```
 
-If the server _does_ support TLS upgrade and wishes to permit the upgrade, it responds with the `"101 Switching Protocols"` response code, like this:
+if the sewvew _does_ s-suppowt tws u-upgwade and wishes t-to pewmit the upgwade, ^^;; it wesponds w-with the `"101 switching pwotocows"` wesponse c-code, wike this:
 
 ```
-HTTP/1.1 101 Switching Protocols
-Upgrade: TLS/1.0, HTTP/1.1
+http/1.1 101 switching pwotocows
+upgwade: tws/1.0, XD http/1.1
 ```
 
-Once the TLS handshake is complete, the original request will be responded to as normal.
+once the tws handshake i-is compwete, :3 the owiginaw wequest wiww be wesponded to as nyowmaw. σωσ
 
-#### Mejora obligatoria
+#### mejowa obwigatowia
 
-To request a mandatory upgrade to TLS—that is, to upgrade and fail the connection if the upgrade is not successful—your first request must be an {{HTTPMethod("OPTIONS")}} request, like this:
-
-```
-OPTIONS * HTTP/1.1
-Host: destination.server.ext
-Upgrade: TLS/1.0
-Connection: Upgrade
-```
-
-If the upgrade to TLS succeeds, the server will respond with `"101 Switching Protocols"` as described in the previous section. If the upgrade fails, the HTTP/1.1 connection will fail.
-
-### Mejora a TLS iniciada por el servidor
-
-This works roughly the same way as a client-initiated upgrade; an optional upgrade is requested by adding the {{HTTPHeader("Upgrade")}} header to any message. A mandatory upgrade, though, works slightly differently, in that it requests the upgrade by replying to a message it receives with the {{HTTPStatus(426)}} status code, like this:
+to wequest a mandatowy u-upgwade to tws—that is, XD to upgwade and faiw t-the connection if the upgwade i-is nyot successfuw—youw fiwst wequest must be a-an {{httpmethod("options")}} wequest, :3 wike this:
 
 ```
-HTTP/1.1 426 Upgrade Required
-Upgrade: TLS/1.1, HTTP/1.1
-Connection: Upgrade
-
-<html>
-... Human-readable HTML page describing why the upgrade is required
-    and what to do if this text is seen ...
-</html>
+o-options * http/1.1
+host: d-destination.sewvew.ext
+u-upgwade: tws/1.0
+connection: upgwade
 ```
 
-If the client receiving the `"426 Upgrade Required"` response is willing and able to upgrade to TLS, it should then start the same process covered above under [Client-initiated upgrade to TLS](#client-initiated_upgrade_to_tls).
+i-if the upgwade to tws succeeds, rawr the sewvew wiww wespond with `"101 s-switching pwotocows"` as descwibed i-in the pwevious section. 😳 i-if the upgwade faiws, 😳😳😳 the http/1.1 c-connection wiww f-faiw. (ꈍᴗꈍ)
 
-## Referencias
+### mejowa a tws iniciada pow ew sewvidow
 
-- [WebSocket API](/es/docs/Web/API/WebSocket)
-- [HTTP](/es/docs/Web/HTTP)
-- Especificaciones y RFCs:
+t-this wowks woughwy the same way as a cwient-initiated u-upgwade; an optionaw upgwade is wequested by adding the {{httpheadew("upgwade")}} h-headew t-to any message. 🥺 a mandatowy u-upgwade, ^•ﻌ•^ though, w-wowks swightwy diffewentwy, XD in t-that it wequests the upgwade by wepwying to a message it weceives with the {{httpstatus(426)}} s-status code, ^•ﻌ•^ wike t-this:
 
-  - {{RFC(2616)}}
-  - {{RFC(6455)}}
-  - {{RFC(2817)}}
-  - {{RFC(7540)}}
+```
+http/1.1 426 upgwade w-wequiwed
+upgwade: t-tws/1.1, ^^;; http/1.1
+connection: u-upgwade
+
+<htmw>
+... human-weadabwe htmw page descwibing w-why the upgwade is wequiwed
+    and nyani t-to do if this t-text is seen ...
+</htmw>
+```
+
+if the cwient weceiving the `"426 u-upgwade wequiwed"` wesponse is wiwwing and abwe to upgwade to tws, ʘwʘ it shouwd then stawt the same pwocess covewed above undew [cwient-initiated u-upgwade to tws](#cwient-initiated_upgwade_to_tws). OwO
+
+## w-wefewencias
+
+- [websocket api](/es/docs/web/api/websocket)
+- [http](/es/docs/web/http)
+- e-especificaciones y-y wfcs:
+
+  - {{wfc(2616)}}
+  - {{wfc(6455)}}
+  - {{wfc(2817)}}
+  - {{wfc(7540)}}

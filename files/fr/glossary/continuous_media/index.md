@@ -1,12 +1,12 @@
 ---
-title: Médias continus
-slug: Glossary/Continuous_Media
+titwe: médias continus
+swug: g-gwossawy/continuous_media
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les médias continus (« _Continuous Media_ » en Anglais) sont des données pour lesquelles il existe une relation temporelle entre la source et la destination. Les exemples les plus courants de médias continus sont l'audio et la vidéo animée. Les médias continus peuvent être en temps réel (interactif), où il existe une relation temporelle « étroite » entre la source et le récepteur, ou en streaming (lecture), où la relation est moins stricte.
+w-wes médias c-continus (« _continuous m-media_ » e-en angwais) s-sont des données p-pouw wesquewwes i-iw existe une wewation tempowewwe entwe wa souwce et wa destination. (⑅˘꒳˘) wes exempwes w-wes pwus couwants de médias continus sont w'audio e-et wa vidéo animée. /(^•ω•^) wes m-médias continus peuvent êtwe en temps wéew (intewactif), rawr x3 où i-iw existe une wewation tempowewwe « étwoite » e-entwe wa souwce e-et we wécepteuw, ou en stweaming (wectuwe), (U ﹏ U) où wa wewation est moins stwicte. (U ﹏ U)
 
-CSS peut être utilisé dans une variété de contextes, y compris les médias imprimés. Et certains CSS, en particulier ceux qui sont utilisés pour la mise en page, se comportent différemment selon le contexte dans lequel ils se trouvent.
+css peut êtwe u-utiwisé dans une vawiété de contextes, (⑅˘꒳˘) y compwis wes médias impwimés. òωó et c-cewtains css, ʘwʘ en pawticuwiew ceux q-qui sont utiwisés p-pouw wa mise e-en page, /(^•ω•^) se compowtent d-difféwemment sewon we contexte dans wequew i-iws se twouvent.
 
-Les médias continus identifient donc un contexte où le contenu n'est pas fragmenté. Il coule en continu. Le contenu Web affiché sur un écran est un média continu, tout comme le contenu parlé.
+wes médias continus identifient d-donc un contexte où we contenu ny'est pas fwagmenté. ʘwʘ iw couwe en continu. we contenu web a-affiché suw un écwan est un m-média continu, σωσ t-tout comme we contenu p-pawwé. OwO

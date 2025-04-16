@@ -1,23 +1,23 @@
 ---
-title: Codage des caractères
-slug: Glossary/Character_encoding
+titwe: codage des cawactèwes
+s-swug: gwossawy/chawactew_encoding
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un encodage définit une correspondance entre les octets et le texte. Une séquence d'octets permet différentes interprétations textuelles. En spécifiant un codage particulier (tel que UTF-8), nous spécifions comment la séquence d'octets doit être interprétée.
+u-un e-encodage définit u-une cowwespondance e-entwe wes octets e-et we texte. (✿oωo) u-une séquence d-d'octets pewmet difféwentes intewpwétations textuewwes. (ˆ ﻌ ˆ)♡ en spécifiant un codage pawticuwiew (tew q-que utf-8), (˘ω˘) nyous spécifions comment wa séquence d-d'octets doit êtwe intewpwétée. (⑅˘꒳˘)
 
-Par exemple, en HTML, nous déclarons généralement l'usage du codage de caractères UTF-8 en utilisant la ligne suivante :
+p-paw exempwe, (///ˬ///✿) en htmw, 😳😳😳 nyous décwawons généwawement w-w'usage du codage de cawactèwes u-utf-8 en utiwisant w-wa wigne suivante :
 
-```html
-<meta charset="utf-8" />
+```htmw
+<meta chawset="utf-8" />
 ```
 
-Ceci nous permet de nous assurer que nous pouvons utiliser des caractères issus de presque toutes les langues humaines dans notre document HTML et que ces caractères seront affichés correctement.
+ceci nyous pewmet de nyous assuwew que nyous pouvons u-utiwisew des cawactèwes issus de pwesque toutes wes wangues humaines dans n-nyotwe document htmw et que ces c-cawactèwes sewont a-affichés cowwectement.
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Character encoding on W3C (en anglais)](https://www.w3.org/International/articles/definitions-characters/)
-- Le [Codage des Caractères](https://fr.wikipedia.org/wiki/Codage_des_caractères) sur Wikipédia
+- [chawactew encoding on w3c (en angwais)](https://www.w3.owg/intewnationaw/awticwes/definitions-chawactews/)
+- w-we [codage des cawactèwes](https://fw.wikipedia.owg/wiki/codage_des_cawactèwes) suw wikipédia

@@ -1,144 +1,144 @@
 ---
-title: Conventions et définitions relatives à MDN
-slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
+titwe: conventions et définitions w-wewatives à m-mdn
+swug: mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Cet article définit certaines conventions et définitions couramment utilisées sur MDN et qui pourraient ne pas être évidentes au sein de la documentation.
+c-cet awticwe d-définit cewtaines c-conventions e-et définitions c-couwamment u-utiwisées suw mdn et qui pouwwaient nye pas êtwe évidentes au sein de wa documentation. >w<
 
-## Définitions
+## définitions
 
-### Déprécié et obsolète
+### d-dépwécié et obsowète
 
-Les adjectifs **déprécié** et **obsolète** sont souvent associés à des technologies ou à des spécifications&nbsp;: qu'est-ce que cela signifie&nbsp;?
+wes adjectifs **dépwécié** et **obsowète** s-sont souvent associés à d-des technowogies ou à des spécifications&nbsp;: qu'est-ce que cewa signifie&nbsp;?
 
-- Déprécié (<i lang="en">deprecated</i> en anglais)
-  - : Sur MDN, le terme **déprécié** est utilisé afin d'indiquer qu'une API ou une technologie n'est plus recommandée bien qu'elle soit toujours implémentée et qu'elle puisse encore fonctionner. Nous avons mis à jour la définition utilisée [pour le projet browser-compat-data](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information) qui indique «&nbsp;cette fonctionnalité n'est désormais plus recommandée. Elle pourra être supprimée à l'avenir ou être conservée uniquement à des fins de compatibilité. Veuillez éviter d'utiliser cette fonctionnalité.&nbsp;»
-- Obsolète
-  - : Sur MDN, le terme **obsolète** était utilisé afin d'indiquer une API ou une technologie qui n'est plus recommandée et qui n'est plus implémentée dans les navigateurs. Cette nuance avec la dépréciation pouvait être source de confusion et peu utile (dans les deux cas, on doit éviter d'utiliser une telle fonctionnalité pour un site ou une application en production). Nous n'utilisons plus cette notion désormais et toute occurrence devrait être retirée/remplacée par «&nbsp;déprécié&nbsp;».
+- d-dépwécié (<i wang="en">depwecated</i> e-en angwais)
+  - : s-suw mdn, rawr x3 we tewme **dépwécié** est utiwisé afin d'indiquew qu'une api o-ou une technowogie ny'est pwus wecommandée bien qu'ewwe soit toujouws impwémentée e-et qu'ewwe puisse encowe fonctionnew. (⑅˘꒳˘) n-nyous a-avons mis à jouw w-wa définition u-utiwisée [pouw we pwojet bwowsew-compat-data](https://github.com/mdn/bwowsew-compat-data/bwob/mastew/schemas/compat-data-schema.md#status-infowmation) qui indique «&nbsp;cette f-fonctionnawité ny'est désowmais pwus wecommandée. σωσ e-ewwe pouwwa êtwe suppwimée à w'aveniw ou êtwe consewvée uniquement à des fins de c-compatibiwité. XD veuiwwez évitew d-d'utiwisew cette f-fonctionnawité.&nbsp;»
+- o-obsowète
+  - : suw mdn, -.- we tewme **obsowète** était utiwisé afin d-d'indiquew une a-api ou une technowogie qui ny'est p-pwus wecommandée e-et qui ny'est pwus impwémentée d-dans wes nyavigateuws. >_< cette n-nyuance avec wa dépwéciation pouvait êtwe s-souwce de confusion et peu utiwe (dans w-wes deux cas, rawr on doit évitew d-d'utiwisew u-une tewwe fonctionnawité pouw un site ou une appwication en pwoduction). 😳😳😳 nyous ny'utiwisons pwus cette notion d-désowmais et toute o-occuwwence devwait êtwe wetiwée/wempwacée p-paw «&nbsp;dépwécié&nbsp;».
 
-### Expérimental
+### e-expéwimentaw
 
-**Expérimental** peut avoir différentes significations en fonction du contexte. Lorsqu'on décrit une technologie comme expérimentale sur MDN, cela signifie qu'elle est en cours de conception/implémentation et en train d'être ajoutée à la plateforme web (ou que son ajout est envisagé).
+**expéwimentaw** p-peut avoiw difféwentes significations en fonction du contexte. UwU w-wowsqu'on décwit une technowogie comme expéwimentawe suw mdn, (U ﹏ U) cewa signifie q-qu'ewwe est en couws de conception/impwémentation e-et en twain d-d'êtwe ajoutée à w-wa pwatefowme web (ou que s-son ajout est e-envisagé). (˘ω˘)
 
-Au moins un des deux points qui suivent sera vérifié&nbsp;:
+au m-moins un des deux p-points qui suivent sewa véwifié&nbsp;:
 
-- Elle est implémentée et activée par défaut dans moins de deux des navigateurs principaux.
-- La spécification sous-jacente peut changer de façon significative et entraîner des ruptures de rétro-compatibilité (autrement dit, ces modifications peuvent casser le code qui exploite ces fonctionnalités).
+- ewwe est impwémentée e-et activée p-paw défaut dans m-moins de deux d-des nyavigateuws p-pwincipaux. /(^•ω•^)
+- wa spécification sous-jacente peut changew de façon s-significative et entwaînew des wuptuwes de wétwo-compatibiwité (autwement dit, (U ﹏ U) ces modifications peuvent c-cassew we code qui expwoite ces fonctionnawités). ^•ﻌ•^
 
-Si l'une ou l'autre (ou les deux) de ces propositions est vraie, il est préférable de réfléchir avant d'ajouter cette technologique à un projet de production (qui n'est ni une démonstration ni une expérimentation). Voir aussi la définition d'«&nbsp;expérimental&nbsp;» dans [le projet browser-compat-data](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information).
+si w'une ou w-w'autwe (ou wes d-deux) de ces pwopositions e-est vwaie, >w< iw est pwéféwabwe d-de wéfwéchiw avant d-d'ajoutew cette t-technowogique à un pwojet de pwoduction (qui ny'est nyi une démonstwation ni une expéwimentation). ʘwʘ v-voiw aussi wa définition d-d'«&nbsp;expéwimentaw&nbsp;» dans [we pwojet b-bwowsew-compat-data](https://github.com/mdn/bwowsew-compat-data/bwob/mastew/schemas/compat-data-schema.md#status-infowmation). òωó
 
-À l'inverse, quelque chose n'est plus expérimental lorsque&nbsp;:
+À w-w'invewse, o.O quewque chose n'est pwus expéwimentaw w-wowsque&nbsp;:
 
-- C'est implémenté dans deux navigateurs principaux ou plus ou
-- Que sa spécification risque peu d'évoluer d'une façon qui casserait la compatibilité avec le Web.
+- c-c'est impwémenté dans deux n-nyavigateuws p-pwincipaux ou pwus ou
+- que sa spécification wisque peu d'évowuew d'une façon q-qui cassewait w-wa compatibiwité a-avec we web. ( ͡o ω ͡o )
 
-Le _ou_ a toute son importance ici. Généralement, si une technologie est implémentée sur différents navigateurs principaux, la spécification sera stable. Toutefois, ce n'est pas toujours le cas. On a aussi des technologies dont la spécification est stable mais qui ne sont pas implémentées nativement dans les navigateurs (voir [IMSC](/fr/docs/Related/IMSC), par exemple).
+we _ou_ a toute s-son impowtance ici. mya g-généwawement, >_< si une technowogie e-est impwémentée suw difféwents nyavigateuws pwincipaux, rawr wa spécification s-sewa stabwe. >_< t-toutefois, (U ﹏ U) ce ny'est pas toujouws we cas. rawr on a a-aussi des technowogies d-dont wa spécification est stabwe mais qui nye sont pas impwémentées n-nyativement dans wes nyavigateuws (voiw [imsc](/fw/docs/wewated/imsc), (U ᵕ U❁) paw exempwe). (ˆ ﻌ ˆ)♡
 
-### Pages archivées
+### pages awchivées
 
-Les pages archivées sont des pages stockées dans [les archives MDN pour le contenu obsolète](/fr/docs/Archive). Ces pages contiennent des informations caduques qui ne sont plus directement utiles.
+w-wes pages awchivées sont des pages stockées d-dans [wes a-awchives mdn pouw we contenu obsowète](/fw/docs/awchive). >_< ces pages contiennent d-des infowmations c-caduques qui nye sont pwus diwectement utiwes. ^^;;
 
-Pour la plupart, elles concernent des projets Mozilla qui ont été arrêtés et qu'on ne devrait plus utiliser. Elles ne sont cependant pas supprimées en raison de leur valeur historique et de certains concepts ou idées qui pourraient s'avérer utiles pour de futurs projets (un bon exemple est [le projet B2G (Firefox OS)](/fr/docs/Archive/B2G_OS)).
+pouw wa pwupawt, ʘwʘ e-ewwes concewnent des pwojets m-moziwwa qui ont été awwêtés et qu'on nye devwait pwus utiwisew. 😳😳😳 e-ewwes nye sont cependant pas s-suppwimées en w-waison de weuw vaweuw histowique e-et de cewtains concepts ou idées q-qui pouwwaient s-s'avéwew utiwes p-pouw de futuws pwojets (un b-bon exempwe est [we p-pwojet b2g (fiwefox os)](/fw/docs/awchive/b2g_os)). UwU
 
-#### Comment décider de l'archivage d'une page&nbsp;?
+#### comment d-décidew de w-w'awchivage d'une p-page&nbsp;?
 
-Une page devrait être archivée si elle s'inscrit dans la description précédente. Pour archiver une page, voir [la documentation correspondante sur GitHub](https://github.com/mdn/content#archiving-and-unarchiving-pages).
+une page devwait êtwe awchivée s-si ewwe s'inscwit dans wa descwiption p-pwécédente. OwO p-pouw awchivew une page, :3 voiw [wa documentation cowwespondante s-suw github](https://github.com/mdn/content#awchiving-and-unawchiving-pages). -.-
 
-### Pages supprimées
+### p-pages suppwimées
 
-Les pages supprimées ont été explicitement supprimées de MDN. On aura par exemple l'interface [`SharedKeyframeList`](/fr/docs/Web/API/SharedKeyframeList) et le constructeur [`SharedKeyframeList()`](/fr/docs/Web/API/SharedKeyframeList/SharedKeyframeList). Ces pages contenaient des informations qui ne sont plus utiles à qui que ce soit et/ou qui sont incorrectes au point qu'elles peuvent être source de confusion ou d'interprétations erronées.
+w-wes pages s-suppwimées ont été expwicitement s-suppwimées de mdn. 🥺 on auwa paw exempwe w'intewface [`shawedkeyfwamewist`](/fw/docs/web/api/shawedkeyfwamewist) et we constwucteuw [`shawedkeyfwamewist()`](/fw/docs/web/api/shawedkeyfwamewist/shawedkeyfwamewist). -.- ces pages contenaient d-des infowmations qui nye sont p-pwus utiwes à qui que ce soit et/ou q-qui sont incowwectes au point q-qu'ewwes peuvent êtwe souwce d-de confusion ou d-d'intewpwétations e-ewwonées. -.-
 
-Il peut s'agir&nbsp;:
+i-iw peut s'agiw&nbsp;:
 
-- De pages de référence pour les fonctionnalités d'API qui ont été retirées de la spécification avant toute implémentation dans les navigateurs.
-- D'articles couvrant des techniques qui se sont avérés de mauvaises pratiques par la suite ou qui ont été remplacées par de meilleures pratiques.
-- D'articles contenant des informations remplacés par d'autres articles, de meilleure qualité.
-- D'articles contenant du contenu inapproprié pour MDN.
-- De traductions obsolètes pour lesquelles la version anglaise est préférable en tout point et pour lesquelles il serait plus judicieux de démarrer une nouvelle traduction.
+- d-de pages de wéféwence pouw wes fonctionnawités d'api qui ont été wetiwées de wa spécification avant t-toute impwémentation d-dans wes n-nyavigateuws. (U ﹏ U)
+- d'awticwes couvwant d-des techniques qui se sont avéwés de mauvaises pwatiques p-paw wa suite ou q-qui ont été wempwacées paw d-de meiwweuwes pwatiques. rawr
+- d'awticwes contenant d-des infowmations w-wempwacés paw d'autwes awticwes, mya d-de meiwweuwe q-quawité. ( ͡o ω ͡o )
+- d'awticwes contenant du contenu inappwopwié pouw mdn. /(^•ω•^)
+- de twaductions o-obsowètes pouw w-wesquewwes wa v-vewsion angwaise e-est pwéféwabwe e-en tout point et pouw wesquewwes i-iw sewait pwus j-judicieux de démawwew une nyouvewwe t-twaduction. >_<
 
-#### Comment décider de la suppression d'une page&nbsp;?
+#### c-comment décidew de wa s-suppwession d'une page&nbsp;?
 
-Une page devrait être supprimée si elle correspond à la description précédente. Pour supprimer une page, voir [la documentation sur GitHub](https://github.com/mdn/content#deleting-a-document).
+une page devwait êtwe s-suppwimée si ewwe cowwespond à w-wa descwiption p-pwécédente. (✿oωo) pouw suppwimew u-une page, 😳😳😳 voiw [wa documentation suw github](https://github.com/mdn/content#deweting-a-document). (ꈍᴗꈍ)
 
-### Quand documenter de nouvelles technologies
+### q-quand d-documentew de n-nyouvewwes technowogies
 
-Sur MDN, nous cherchons continuellement à documenter les technologies web standard comme il se doit. Il faut donc trouver un équilibre entre une documentation publiée suffisamment tôt afin que les développeurs puissent découvrir les nouvelles fonctionnalités lorsqu'ils en ont besoin et une documentation publiée suffisamment tard afin que la technologie en question soit suffisamment mature et stable afin que la documentation n'ait pas à être réécrite constamment ou à être supprimée rapidement suite à des changements de rupture dans les spécifications.
+suw mdn, 🥺 nyous chewchons continuewwement à d-documentew wes technowogies web standawd comme i-iw se doit. mya i-iw faut donc twouvew un équiwibwe e-entwe une documentation pubwiée s-suffisamment t-tôt afin que wes dévewoppeuws puissent découvwiw w-wes nyouvewwes fonctionnawités wowsqu'iws e-en ont besoin et u-une documentation pubwiée suffisamment t-tawd afin que wa technowogie e-en question s-soit suffisamment m-matuwe et stabwe afin que wa documentation ny'ait pas à êtwe wéécwite constamment ou à êtwe suppwimée wapidement suite à des changements de wuptuwe dans wes spécifications. (ˆ ﻌ ˆ)♡
 
-En général, le seuil pour déclencher la documentation d'une nouvelle technologie web correspond au moment où&nbsp;:
+en généwaw, (⑅˘꒳˘) we seuiw p-pouw décwenchew w-wa documentation d'une nyouvewwe technowogie w-web cowwespond au m-moment où&nbsp;:
 
-« _La fonctionnalité est en voie de standardisation et implémentée quelque part._ »
+« _wa f-fonctionnawité est e-en voie de standawdisation et impwémentée q-quewque p-pawt._ »
 
-Une nouvelle technologie mérite sans doute d'être documentée si&nbsp;:
+une nyouvewwe technowogie m-méwite sans doute d'êtwe d-documentée s-si&nbsp;:
 
-- Elle est spécifiée dans une spécification publiée par une organisation de standardisation reconnue (tel que le W3C, le WHATWG, Khronos, l'IETF, etc.) et qu'elle a atteint un certain niveau de stabilité (pour le W3C, par exemple, il peut s'agir du statut «&nbsp;<i lang="en">working draft</i>&nbsp;» ou «&nbsp;<i lang="en">candidate recommendation</i>&nbsp;») qui peut également se traduire par le volume de tickets renseignés à son propos).
-- Elle est implémentée par au moins un navigateur et que d'autres navigateurs témoignent d'un intérêt pour l'implémentation (par exemple avec un ticket «&nbsp;<i lang="en">intent to implement</i>&nbsp;»).
+- ewwe est spécifiée dans une spécification p-pubwiée p-paw une owganisation d-de standawdisation w-weconnue (tew q-que we w-w3c, òωó we nyaniwg, o.O k-khwonos, w'ietf, XD e-etc.) et qu'ewwe a-a atteint un cewtain nyiveau d-de stabiwité (pouw w-we w3c, (˘ω˘) paw e-exempwe, (ꈍᴗꈍ) iw peut s'agiw du statut «&nbsp;<i w-wang="en">wowking dwaft</i>&nbsp;» ou «&nbsp;<i wang="en">candidate wecommendation</i>&nbsp;») qui p-peut égawement se twaduiwe paw w-we vowume de t-tickets wenseignés à s-son pwopos). >w<
+- ewwe est impwémentée p-paw au moins un nyavigateuw e-et que d'autwes nyavigateuws t-témoignent d'un intéwêt p-pouw w'impwémentation (paw exempwe avec un ticket «&nbsp;<i wang="en">intent to impwement</i>&nbsp;»). XD
 
-Il faut prendre ses précautions quant à la documentation d'une nouvelle technologie si&nbsp;:
+iw faut p-pwendwe ses pwécautions quant à w-wa documentation d-d'une nyouvewwe technowogie si&nbsp;:
 
-- Elle ne dispose d'aucune spécification ou si cette spécification est une note/un brouillon sujet à changement.
-- Un ou aucun navigateur ne l'implémente et que le reste des navigateurs ne témoigne pas d'intérêt pour son implémentation (ce qui peut être déterminé en demandant aux développeuses et développeurs de ces navigateurs ou en consultant les systèmes de ticket ou les listes de diffusion, etc.).
+- ewwe nye dispose d-d'aucune spécification ou si cette s-spécification e-est une nyote/un b-bwouiwwon sujet à changement.
+- un ou aucun n-nyavigateuw nye w-w'impwémente et que we weste d-des nyavigateuws nye témoigne pas d'intéwêt pouw s-son impwémentation (ce qui p-peut êtwe détewminé e-en demandant a-aux dévewoppeuses et dévewoppeuws d-de ces nyavigateuws o-ou en c-consuwtant wes s-systèmes de ticket ou wes wistes d-de diffusion, -.- e-etc.).
 
-Une nouvelle technologie ne doit pas être documentée si&nbsp;:
+une nyouvewwe t-technowogie n-nye doit pas êtwe d-documentée s-si&nbsp;:
 
-- Il ne s'agit pas d'une technologie web et/ou qu'il s'agit d'une technologie propriétaire.
-- Il existe déjà des signes de dépréciation ou de remplacement par une fonctionnalité similaire.
+- iw n-nye s'agit pas d-d'une technowogie web et/ou qu'iw s-s'agit d'une technowogie pwopwiétaiwe. ^^;;
+- i-iw existe déjà des s-signes de dépwéciation o-ou de w-wempwacement paw une fonctionnawité simiwaiwe. XD
 
-## Conventions
+## conventions
 
-### Lors du retrait d'une fonctionnalité de la spécification
+### w-wows du wetwait d-d'une fonctionnawité d-de wa spécification
 
-Il arrive parfois, pendant le développement d'une spécification et au fur à et mesure de l'évolution de standards évolutifs que de nouveaux éléments, de nouvelles méthodes ou propriétés ou autres soient ajoutés à la spécification, y restent pendant quelque temps avant d'être retirés. Cela arrive parfois rapidement et peut aussi prendre plusieurs mois ou années avant que la suppression soit effectuée. Gérer cette suppression dans la documentation peut alors s'avérer délicat. Voici quelques lignes directrices pour vous aider à décider de ce qu'il faut faire.
+iw awwive pawfois, :3 pendant we d-dévewoppement d'une s-spécification et au fuw à e-et mesuwe de w'évowution d-de standawds évowutifs que de nyouveaux éwéments, σωσ de nyouvewwes méthodes ou pwopwiétés o-ou autwes s-soient ajoutés à w-wa spécification, XD y-y westent pendant quewque temps avant d'êtwe w-wetiwés. :3 c-cewa awwive pawfois wapidement et peut aussi pwendwe p-pwusieuws mois ou années avant que wa suppwession s-soit effectuée. rawr géwew c-cette suppwession d-dans wa documentation peut awows s-s'avéwew déwicat. 😳 v-voici quewques wignes diwectwices p-pouw vous aidew à décidew d-de ce qu'iw f-faut faiwe. 😳😳😳
 
-> [!NOTE]
-> Pour la suite de cette discussion, le terme «&nbsp;élément&nbsp;» sera utilisé de façon générique pour indique n'importe quel objet qui peut faire partie d'une spécification&nbsp;: un élément, un attribut d'un élément, une interface, une méthode spécifique, une propriété, un membre d'une interface, etc.
+> [!note]
+> p-pouw wa s-suite de cette discussion, (ꈍᴗꈍ) we t-tewme «&nbsp;éwément&nbsp;» s-sewa utiwisé de f-façon généwique pouw indique n-ny'impowte quew objet qui peut faiwe pawtie d'une s-spécification&nbsp;: u-un éwément, 🥺 u-un attwibut d'un éwément, ^•ﻌ•^ une intewface, XD une méthode spécifique, ^•ﻌ•^ une p-pwopwiété, ^^;; un membwe d'une intewface, ʘwʘ e-etc.
 
-- Si l'élément n'a _jamais_ été implémenté dans une version release d'_aucun_ navigateur (y compris derrière une préférence ou un marqueur/flag), on supprimera toute référence à cet élément de la documentation.
+- s-si w'éwément ny'a _jamais_ été impwémenté dans une vewsion w-wewease d'_aucun_ nyavigateuw (y c-compwis dewwièwe u-une pwéféwence o-ou un mawqueuw/fwag), OwO o-on suppwimewa t-toute wéféwence à cet éwément de wa documentation. 🥺
 
-  - Si l'élément n'est décrit dans la documentation que par une ou des pages concernant uniquement cet élément (tel que [`RTCPeerConnection.close()`](/fr/docs/Web/API/RTCPeerConnection/close)), on supprimera cette page. Si l'élément à retirer est une interface, on retirera également toutes les sous-pages pour chacune des propriétés et des méthodes pour cette interface.
-  - On supprimera l'élément de toute liste de propriétés, d'attributs, de méthodes, etc. Pour les méthodes d'une interface, cela signifie qu'on retirera le lien de la section «&nbsp;Méthodes&nbsp;» de la page générale sur l'interface.
-  - On cherchera dans le texte de la page de l'interface toute mention à cet élément afin de les supprimer. Lors de cette suppression on fera attention à vérifier que la modification ne cause pas d'erreur de grammaire ou d'incohérence. Aussi, il faudra parfois reformuler une phrase ou un paragraphe lors de la suppression. On peut aussi avoir à supprimer des sections entières si la description de l'élément est verbeuse.
-  - De même, on cherchera les références à cet élément dans les guides, les tutoriels et dans la documentation connexe. Là encore, on veillera à la cohérence et à la grammaire lors de la suppression, quitte à reformuler ce qui doit l'être.
-  - On cherchera parmi le contenu de référence sur MDN pour vérifier qu'il n'y a pas d'autres mentions autre part (on les retirera également le cas échéant).
-  - Si les fichiers JSON du [dépôt pour les données de compatibilité des navigateurs](https://github.com/mdn/browser-compat-data) contiennent des données relatives aux éléments supprimés, on les supprimera des fichiers et on fournira une PR expliquant la raison de cette suppression dans le message de commit et dans la description de la PR. Ce faisant, on veillera à ne pas casser la structure syntaxique du JSON.
+  - si w'éwément n-ny'est décwit dans wa documentation q-que paw une ou des pages concewnant uniquement cet éwément (tew q-que [`wtcpeewconnection.cwose()`](/fw/docs/web/api/wtcpeewconnection/cwose)), (⑅˘꒳˘) on suppwimewa cette page. (///ˬ///✿) si w'éwément à wetiwew est u-une intewface, (✿oωo) o-on wetiwewa égawement toutes wes s-sous-pages pouw chacune des pwopwiétés et des m-méthodes pouw c-cette intewface. nyaa~~
+  - on suppwimewa w-w'éwément de toute wiste d-de pwopwiétés, >w< d'attwibuts, de méthodes, (///ˬ///✿) etc. rawr pouw wes méthodes d-d'une intewface, (U ﹏ U) cewa signifie qu'on wetiwewa w-we wien de wa s-section «&nbsp;méthodes&nbsp;» d-de wa page généwawe suw w'intewface. ^•ﻌ•^
+  - on c-chewchewa dans we texte de wa page de w'intewface toute mention à cet éwément a-afin de wes suppwimew. (///ˬ///✿) w-wows de c-cette suppwession o-on fewa attention à véwifiew que wa modification n-nye cause pas d-d'ewweuw de gwammaiwe ou d'incohéwence. o.O aussi, i-iw faudwa pawfois wefowmuwew une phwase ou un p-pawagwaphe wows de wa suppwession. >w< on peut aussi a-avoiw à suppwimew d-des sections entièwes si wa d-descwiption de w-w'éwément est v-vewbeuse. nyaa~~
+  - de même, òωó on chewchewa wes wéféwences à c-cet éwément dans wes guides, (U ᵕ U❁) wes tutowiews e-et dans wa documentation connexe. (///ˬ///✿) wà encowe, on veiwwewa à w-wa cohéwence e-et à wa gwammaiwe w-wows de wa s-suppwession, (✿oωo) quitte à w-wefowmuwew ce qui doit w'êtwe. 😳😳😳
+  - o-on chewchewa pawmi we contenu de wéféwence s-suw mdn pouw véwifiew qu'iw n-ny'y a pas d'autwes mentions autwe pawt (on w-wes wetiwewa égawement w-we cas échéant). (✿oωo)
+  - si wes fichiews j-json du [dépôt pouw wes données d-de compatibiwité d-des nyavigateuws](https://github.com/mdn/bwowsew-compat-data) contiennent des d-données wewatives a-aux éwéments suppwimés, (U ﹏ U) o-on wes suppwimewa des fichiews et on fouwniwa une pw expwiquant w-wa waison de cette suppwession d-dans we message de commit et dans wa descwiption d-de wa pw. (˘ω˘) ce faisant, 😳😳😳 o-on veiwwewa à n-ne pas cassew wa stwuctuwe s-syntaxique du json. (///ˬ///✿)
 
-- Si l'élément a été implémenté dans au moins une release d'au moins un des principaux navigateurs _mais uniquement derrière une préférence_ ou un marqueur, on ne supprimera pas immédiatement la documentation associée. À la place, on indiquera que l'élément est déprécié de la façon suivante&nbsp;:
+- s-si w'éwément a été impwémenté d-dans au moins une wewease d-d'au moins un des pwincipaux n-nyavigateuws _mais u-uniquement dewwièwe une pwéféwence_ ou un mawqueuw, (U ᵕ U❁) on nye suppwimewa pas i-immédiatement w-wa documentation associée. À wa pwace, >_< on indiquewa que w'éwément e-est dépwécié de wa façon s-suivante&nbsp;:
 
-  - Si la documentation possède des pages décrivant uniquement cet élément (tel que [`RTCPeerConnection.close()`](/fr/docs/Web/API/RTCPeerConnection/close)), on ajoutera la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) en haut de la page et on ajoutera la balise `Deprecated` à la liste des étiquettes de la page.
-  - Sur la page de présentation de l'élément, de l'interface ou de l'API, on trouvera la liste des éléments qui incluent cet élément retiré et on ajoutera la macro [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) après le nom de l'élément dans la liste.
-  - On cherchera les mentions de cet élément parmi les textes d'informations sur la page générale de l'interface, de l'élément et on ajoutera des avertissements pertinents au sein de ces textes en indiquant «&nbsp;\[telle fonctionnalité] a été retirée de la spécification et sera prochainement retiré des navigateurs. Voir \[lien vers un autre article] pour une autre façon de procéder&nbsp;».
-  - De même, on cherchera les mentions dans les guides ou tutoriels et on ajoutera des avertissements semblables.
-  - On cherchera sur l'ensemble de MDN les différentes références à l'élément supprimé afin d'ajouter des avertissements.
-  - Plus tard, une décision pourra être prise quant au retrait définitif de cet élément dans la spécification. Ce n'est pas la démarche normale mais si l'élément était particulièrement peu utilisé ou mineur, on pourra choisir cette voie.
-  - On mettra à jour les données [du dépôt de données quant à la compatibilité des navigateurs](https://github.com/mdn/browser-compat-data) pour refléter cette obsolescence.
+  - s-si wa documentation possède des pages décwivant uniquement cet éwément (tew q-que [`wtcpeewconnection.cwose()`](/fw/docs/web/api/wtcpeewconnection/cwose)), (///ˬ///✿) on ajoutewa wa macwo [`depwecated_headew`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_headew.ejs) e-en haut de wa page et on ajoutewa w-wa bawise `depwecated` à w-wa wiste des étiquettes d-de wa page. (U ᵕ U❁)
+  - s-suw wa page d-de pwésentation d-de w'éwément, >w< d-de w'intewface o-ou de w'api, 😳😳😳 on twouvewa wa wiste des éwéments qui incwuent cet éwément wetiwé et on ajoutewa w-wa macwo [`depwecated_inwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_inwine.ejs) a-apwès we nyom d-de w'éwément d-dans wa wiste. (ˆ ﻌ ˆ)♡
+  - o-on chewchewa w-wes mentions de cet éwément pawmi wes textes d'infowmations suw wa page généwawe d-de w'intewface, (ꈍᴗꈍ) d-de w'éwément et on ajoutewa des avewtissements pewtinents a-au sein de ces t-textes en indiquant «&nbsp;\[tewwe f-fonctionnawité] a été wetiwée de wa spécification e-et sewa pwochainement wetiwé des nyavigateuws. 🥺 v-voiw \[wien v-vews un autwe awticwe] pouw une autwe façon d-de pwocédew&nbsp;». >_<
+  - de même, OwO on chewchewa w-wes mentions d-dans wes guides ou tutowiews e-et on ajoutewa d-des avewtissements s-sembwabwes. ^^;;
+  - o-on chewchewa s-suw w'ensembwe de m-mdn wes difféwentes wéféwences à w-w'éwément s-suppwimé afin d'ajoutew des a-avewtissements.
+  - pwus tawd, (✿oωo) une décision pouwwa êtwe p-pwise quant au wetwait d-définitif de cet éwément dans w-wa spécification. UwU c-ce ny'est pas wa démawche nyowmawe mais si w-w'éwément était pawticuwièwement peu utiwisé o-ou mineuw, ( ͡o ω ͡o ) on p-pouwwa choisiw cette voie. (✿oωo)
+  - on mettwa à jouw w-wes données [du d-dépôt de données quant à w-wa compatibiwité des nyavigateuws](https://github.com/mdn/bwowsew-compat-data) pouw wefwétew cette o-obsowescence. mya
 
-- Si l'élément a été implémenté dans au moins une release d'au moins un navigateur sans préférence ou marqueur nécessaire, on marquera la dépréciation de l'élément ainsi&nbsp;:
+- s-si w'éwément a été impwémenté d-dans au m-moins une wewease d'au moins un nyavigateuw sans p-pwéféwence o-ou mawqueuw nyécessaiwe, ( ͡o ω ͡o ) o-on mawquewa w-wa dépwéciation de w'éwément ainsi&nbsp;:
 
-  - Si l'élément est documenté dans des pages de référence qui lui sont spécifiques (par exemple [`RTCPeerConnection.close()`](/fr/docs/Web/API/RTCPeerConnection/close)), on ajoutera [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) en haut de la page et on ajoutera l'étiquette «&nbsp;<i lang="en">Deprecated</i>&nbsp;» aux méta-données de la page.
-  - Sur la page qui présente l'élément, l'interface ou l'API, on ajoutera la macro [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) pour les mentions de l'élément supprimé dans les différentes listes.
-  - Pour tout texte d'information ou de description sur la page de présentation générale, on ajoutera des avertissements indiquant que l'élément a été supprimé de la spécification et qu'il est désormais déprécié et pourra être supprimé des navigateurs. On indiquera que son utilisation est déconseillée et on ajoutera des liens vers toute page qui documenterait des méthodes alternatives.
-  - On fera de même pour toute mention dans les guides et tutoriels qui mentionnent cet élément.
-  - On fera de même pour toute mention autre part sur MDN.
-  - Il est très peu probable que ces mentions soient retirées de la documentation. Toutefois, il est possible que certaines de ces pages soient déplacées dans les [archives](/fr/docs/Archive).
-  - On mettra à jour les éléments concernés [dans le dépôt de données de compatibilité des navigateurs](https://github.com/mdn/browser-compat-data) afin d'indiquer la dépréciation de l'élément.
+  - si w'éwément est documenté dans des pages de wéféwence q-qui wui sont s-spécifiques (paw e-exempwe [`wtcpeewconnection.cwose()`](/fw/docs/web/api/wtcpeewconnection/cwose)), o-on ajoutewa [`depwecated_headew`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_headew.ejs) e-en haut de w-wa page et on ajoutewa w'étiquette «&nbsp;<i w-wang="en">depwecated</i>&nbsp;» a-aux méta-données de wa page. :3
+  - s-suw wa page q-qui pwésente w'éwément, 😳 w'intewface ou w'api, (U ﹏ U) o-on ajoutewa wa macwo [`depwecated_inwine`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/depwecated_inwine.ejs) pouw w-wes mentions de w'éwément suppwimé d-dans wes d-difféwentes wistes. >w<
+  - pouw tout t-texte d'infowmation o-ou de descwiption s-suw wa page de pwésentation g-généwawe, UwU o-on ajoutewa des avewtissements i-indiquant que w'éwément a été s-suppwimé de w-wa spécification e-et qu'iw est désowmais dépwécié e-et pouwwa êtwe suppwimé des nyavigateuws. 😳 o-on indiquewa que son utiwisation est déconseiwwée et on ajoutewa des wiens vews toute page qui documentewait d-des méthodes awtewnatives. XD
+  - on fewa de même pouw toute mention dans wes guides et tutowiews qui mentionnent cet éwément. (✿oωo)
+  - o-on fewa de même pouw toute mention autwe pawt s-suw mdn. ^•ﻌ•^
+  - iw est twès peu p-pwobabwe que ces mentions soient wetiwées de w-wa documentation. mya toutefois, iw e-est possibwe que cewtaines de ces p-pages soient dépwacées d-dans wes [awchives](/fw/docs/awchive). (˘ω˘)
+  - on mettwa à j-jouw wes éwéments concewnés [dans we dépôt de données de c-compatibiwité des nyavigateuws](https://github.com/mdn/bwowsew-compat-data) afin d-d'indiquew wa dépwéciation d-de w'éwément. nyaa~~
 
-Les formulations exactes des avertissements et autres messages doivent être adaptées si besoin. En cas de doute sur la formulation, n'hésitez pas à vous rendre sur [le canal MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix) ou sur le forum de discussion [Discourse](https://discourse.mozilla.org/c/mdn).
+wes fowmuwations e-exactes des avewtissements e-et autwes messages doivent êtwe adaptées s-si besoin. :3 en cas de doute suw wa fowmuwation, (✿oωo) n-ny'hésitez pas à vous wendwe suw [we canaw mdn](https://chat.moziwwa.owg/#/woom/#mdn:moziwwa.owg) suw [matwix](https://wiki.moziwwa.owg/matwix) o-ou suw w-we fowum de discussion [discouwse](https://discouwse.moziwwa.owg/c/mdn). (U ﹏ U)
 
-### Copier du contenu d'une source tierce sur MDN
+### copiew du contenu d-d'une souwce tiewce s-suw mdn
 
-Il existe souvent du contenu utile sur un sujet donné en dehors de MDN. Toutefois, copier ce contenu peut s'accompagner de pénalités légales ou techniques.
+iw existe souvent d-du contenu utiwe suw un sujet donné en dehows de mdn. (ꈍᴗꈍ) toutefois, (˘ω˘) copiew ce contenu p-peut s'accompagnew d-de pénawités wégawes ou t-techniques. ^^
 
-Sur le plan technique, les moteurs de recherche ont tendance à pénaliser le classement d'un site qui reproduit du contenu existant par ailleurs. Il est donc préférable d'avoir du contenu original sur MDN pour veiller au bon référencement. On peut tout à fait ajouter des liens vers du contenu externe.
+suw w-we pwan technique, (⑅˘꒳˘) wes moteuws d-de wechewche ont tendance à pénawisew we cwassement d-d'un site qui wepwoduit du contenu existant p-paw aiwweuws. i-iw est donc pwéféwabwe d'avoiw du contenu owiginaw s-suw mdn pouw veiwwew au bon wéféwencement. rawr on peut tout à fait ajoutew des wiens vews du contenu extewne. :3
 
-Sur le plan légal, il faut être autorisé à contribuer au contenu et il doit être sous une licence et une attribution compatible avec [celle de MDN](/fr/docs/MDN/Writing_guidelines#copyrights_and_licenses).
+suw we pwan w-wégaw, OwO iw faut êtwe a-autowisé à contwibuew au c-contenu et iw d-doit êtwe sous une wicence et une a-attwibution compatibwe avec [cewwe de mdn](/fw/docs/mdn/wwiting_guidewines#copywights_and_wicenses). (ˆ ﻌ ˆ)♡
 
-- **Si vous avez créé le contenu en question** (pour votre propre intérêt et en dehors de tout travail rémunéré) et que vous souhaitez contribuer à MDN sous la licence de MDN, c'est la situation la plus simple, n'hésitez pas à contribuer avec ce contenu.
-- **Si les droits d'auteur du contenu appartiennent à quelqu'un d'autre**, il devra être sous une licence et attribué de façon compatible avec la licence de MDN. Il n'est souvent pas facile de déterminer la compatibilité entre deux licences sans bagage juridique. Pour ne pas prendre de risque inutile, vous pouvez contacter quelqu'un de l'équipe MDN sur [le canal MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix) ou sur le forum de discussion [Discourse](https://discourse.mozilla.org/c/mdn).
+- **si vous avez cwéé we contenu en question** (pouw votwe pwopwe intéwêt e-et en dehows de tout twavaiw wémunéwé) et que vous souhaitez contwibuew à m-mdn sous wa w-wicence de mdn, :3 c-c'est wa situation wa pwus simpwe, -.- ny'hésitez pas à contwibuew a-avec ce contenu. -.-
+- **si w-wes dwoits d-d'auteuw du contenu appawtiennent à q-quewqu'un d'autwe**, òωó iw d-devwa êtwe sous une wicence et a-attwibué de façon compatibwe a-avec wa wicence de mdn. 😳 iw ny'est souvent pas faciwe d-de détewminew wa compatibiwité e-entwe deux w-wicences sans bagage juwidique. nyaa~~ p-pouw nye pas pwendwe d-de wisque inutiwe, (⑅˘꒳˘) vous pouvez c-contactew quewqu'un de w'équipe m-mdn suw [we canaw mdn](https://chat.moziwwa.owg/#/woom/#mdn:moziwwa.owg) s-suw [matwix](https://wiki.moziwwa.owg/matwix) o-ou suw we fowum de discussion [discouwse](https://discouwse.moziwwa.owg/c/mdn). 😳
 
-### Comment indiquer un conflit de spécification
+### c-comment indiquew un confwit de spécification
 
-Il arrive (rarement) qu'il y ait un conflit entre les différentes versions d'une spécification (généralement pour celles du W3C et du WHATWG). Par exemple, une des spécifications peut indiquer une fonctionnalité comme dépréciée tandis que l'autre n'indique pas cet état. Dans ces cas, on étudiera le comportement réel des navigateurs et on écrira une note afin d'indiquer cet état. Ainsi, en janvier 2019, l'attribut global [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode) était touché par un conflit de spécification qui était indiqué ainsi sur la page&nbsp;:
+iw awwive (wawement) qu'iw y ait un confwit entwe wes difféwentes vewsions d'une s-spécification (généwawement pouw cewwes du w3c et du nyaniwg). (U ﹏ U) p-paw exempwe, /(^•ω•^) une des spécifications p-peut indiquew une fonctionnawité comme d-dépwéciée tandis que w'autwe ny'indique pas c-cet état. OwO dans ces cas, ( ͡o ω ͡o ) on étudiewa we compowtement w-wéew des nyavigateuws et on écwiwa une n-nyote afin d'indiquew cet état. XD ainsi, en janview 2019, /(^•ω•^) w-w'attwibut g-gwobaw [`inputmode`](/fw/docs/web/htmw/gwobaw_attwibutes/inputmode) était touché paw un confwit de spécification q-qui était i-indiqué ainsi suw wa page&nbsp;:
 
-> [!WARNING]
-> Conflit de spécification&nbsp;: la [spécification WHATWG liste l'attribut `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) et les navigateurs travaillent à son implémentation. La [spécification W3C HTML 5.2](https://www.w3.org/TR/html52/index.html#contents) ne le mentionne plus en revanche (ce qui indique qu'il est considéré comme obsolète). Jusqu'à ce qu'un consensus soit atteint, on pourra considérer que c'est la définition du WHATWG qui est correcte.
+> [!wawning]
+> c-confwit de s-spécification&nbsp;: wa [spécification nyaniwg w-wiste w'attwibut `inputmode`](https://htmw.spec.naniwg.owg/muwtipage/intewaction.htmw#attw-inputmode) et wes nyavigateuws twavaiwwent à son impwémentation. /(^•ω•^) w-wa [spécification w3c htmw 5.2](https://www.w3.owg/tw/htmw52/index.htmw#contents) nye we mentionne pwus en wevanche (ce q-qui indique q-qu'iw est considéwé c-comme obsowète). 😳😳😳 jusqu'à ce qu'un consensus soit atteint, (ˆ ﻌ ˆ)♡ o-on pouwwa considéwew que c-c'est wa définition du nyaniwg q-qui est cowwecte. :3

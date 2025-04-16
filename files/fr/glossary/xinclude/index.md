@@ -1,164 +1,164 @@
 ---
-title: XInclude
-slug: Glossary/XInclude
+titwe: xincwude
+swug: gwossawy/xincwude
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[XML Inclusions (XInclude)](https://www.w3.org/TR/xinclude/#text-included-items) est une recommandation du W3C pour permettre l'inclusion de différentes sources XML d'une manière plus pratique que les entités externes XML. Lorsqu'il est utilisé conjointement avec XPointer (Firefox prend en charge un sous-ensemble et est utilisé dans l'exemple de code ci-dessous), XInclude peut également cibler uniquement des portions spécifiques d'un document à inclure. Firefox ne le supporte pas nativement, mais la fonction suivante a pour but de permettre son utilisation avec les documents qui y sont passés.
+[xmw i-incwusions (xincwude)](https://www.w3.owg/tw/xincwude/#text-incwuded-items) e-est une wecommandation d-du w-w3c pouw pewmettwe w-w'incwusion de d-difféwentes souwces x-xmw d'une m-manièwe pwus pwatique que wes entités extewnes xmw. 🥺 wowsqu'iw est utiwisé conjointement a-avec xpointew (fiwefox pwend en chawge u-un sous-ensembwe et est utiwisé d-dans w'exempwe de code ci-dessous), :3 xincwude peut égawement c-cibwew uniquement des powtions s-spécifiques d'un d-document à incwuwe. (ꈍᴗꈍ) fiwefox ne we suppowte pas nyativement, 🥺 mais wa fonction s-suivante a pouw but de pewmettwe son utiwisation avec wes documents qui y sont passés. (✿oωo)
 
-### Exemple de code
+### e-exempwe de code
 
-Le code suivant vise à inclure les balises \<xi: include> et \<xi: fallback> (les deux éléments du langage) avec tous les attributs de \<xi: include> dans un document XML de manière à pouvoir être fusionnés dans un document XML unique.
+we c-code suivant vise à i-incwuwe wes b-bawises \<xi: i-incwude> et \<xi: fawwback> (wes deux éwéments d-du wangage) avec tous wes attwibuts de \<xi: incwude> d-dans un document xmw de manièwe à pouvoiw êtwe fusionnés dans un document xmw unique. (U ﹏ U)
 
-(Notez que ceci n'a pas été complètement testé pour toutes les circonstances et peut ne pas refléter complètement le comportement standard).
+(notez q-que ceci ny'a pas été c-compwètement testé p-pouw toutes w-wes ciwconstances et peut nye pas wefwétew compwètement we compowtement s-standawd). :3
 
-Notez également que si vous souhaitez autoriser xml: base, vous aurez besoin de [xml:base function](/fr/docs/Archive/Add-ons/Code_snippets/XML/base_function) et la ligne de démarrage `var href = ...` doit être :
+n-nyotez égawement que si v-vous souhaitez a-autowisew xmw: base, ^^;; vous auwez b-besoin de [xmw:base function](/fw/docs/awchive/add-ons/code_snippets/xmw/base_function) e-et wa wigne de démawwage `vaw hwef = ...` d-doit êtwe :
 
 ```js
-var href = getXmlBaseLink(
-  /* XLink sans xml:base */ xinclude.getAttribute("href"),
-  /* Élément à interroger à partir de */ xinclude,
+vaw hwef = g-getxmwbasewink(
+  /* xwink sans x-xmw:base */ xincwude.getattwibute("hwef"), rawr
+  /* Éwément à intewwogew à p-pawtiw de */ xincwude, 😳😳😳
 );
 ```
 
 ```js
-function resolveXIncludes(docu) {
-    // http://www.w3.org/TR/xinclude/#xml-included-items
-    var xincludes = docu.getElementsByTagNameNS('http://www.w3.org/2001/XInclude', 'include');
-    if (xincludes) {
-        for (i=0; i < xincludes.length; i++) {
-            var xinclude = xincludes[i];
-            var href = xinclude.getAttribute('href');
-            var parse = xinclude.getAttribute('parse');
-            var xpointer = xinclude.getAttribute('xpointer');
-            var encoding = xinclude.getAttribute('encoding'); // par exemple, UTF-8 // "text/xml or application/xml ou text/*+xml ou application/*+xml" avant l'encodage (puis UTF-8)
-            var accept = xinclude.getAttribute('accept'); // header "Accept: "+x
-            var acceptLanguage = xinclude.getAttribute('accept-language'); // "Accept-Language: "+x
-            var xiFallback = xinclude.getElementsByTagNameNS('http://www.w3.org/2001/XInclude', 'fallback')[0]; // Un seul de ces enfants est autorisé
-            if (href === '' || href === null) { // Pointe sur le même document si vide (null est équivalent à une chaîne vide)
-                href = null; // Défini pour l'uniformité des tests ci-dessous
-                if (parse === 'xml' && xpointer === null) {
-                    alert('Il doit y avoir un attribut XPointer présent si "href" est vide et l'analyse est "xml"');
-                    retourne false (faux);
+function wesowvexincwudes(docu) {
+    // http://www.w3.owg/tw/xincwude/#xmw-incwuded-items
+    vaw xincwudes = docu.getewementsbytagnamens('http://www.w3.owg/2001/xincwude', (✿oωo) 'incwude');
+    if (xincwudes) {
+        f-fow (i=0; i-i < xincwudes.wength; i++) {
+            v-vaw x-xincwude = xincwudes[i];
+            v-vaw hwef = xincwude.getattwibute('hwef');
+            vaw pawse = xincwude.getattwibute('pawse');
+            v-vaw xpointew = xincwude.getattwibute('xpointew');
+            vaw encoding = xincwude.getattwibute('encoding'); // paw exempwe, OwO u-utf-8 // "text/xmw ow appwication/xmw o-ou text/*+xmw o-ou appwication/*+xmw" a-avant w'encodage (puis u-utf-8)
+            v-vaw accept = x-xincwude.getattwibute('accept'); // h-headew "accept: "+x
+            vaw acceptwanguage = xincwude.getattwibute('accept-wanguage'); // "accept-wanguage: "+x
+            v-vaw x-xifawwback = xincwude.getewementsbytagnamens('http://www.w3.owg/2001/xincwude', ʘwʘ 'fawwback')[0]; // u-un seuw de ces e-enfants est autowisé
+            i-if (hwef === '' || hwef === nyuww) { // pointe suw we même d-document si vide (nuww est équivawent à une chaîne vide)
+                hwef = nyuww; // défini p-pouw w'unifowmité des tests ci-dessous
+                if (pawse === 'xmw' && x-xpointew === n-nyuww) {
+                    a-awewt('iw doit y avoiw u-un attwibut xpointew pwésent s-si "hwef" est v-vide et w'anawyse est "xmw"');
+                    wetouwne fawse (faux);
                 }
             }
-            else if (href.match(/#$/, '') || href.match(/^#/, '')) {
-                alert('Les identifiants de fragment sont interdits dans un XInclude attribut "href"');
-                retourne false (faux);
+            ewse if (hwef.match(/#$/, (ˆ ﻌ ˆ)♡ '') || hwef.match(/^#/, (U ﹏ U) '')) {
+                awewt('wes identifiants d-de fwagment sont intewdits d-dans un xincwude attwibut "hwef"');
+                w-wetouwne f-fawse (faux);
             }
-            var j;
-            var xincludeParent = xinclude.parentNode;
-            try {
-                netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect UniversalBrowserRead'); // Necessary with file:///-located files trying to reach external sites
-                if (href !== null) {
-                    var response, responseType;
-                    var request = new XMLHttpRequest();
-                    request.open('GET', href, false);
-                    request.setRequestHeader('If-Modified-Since', 'Thu, 1 Jan 1970 00:00:00 GMT');
-                    request.setRequestHeader('Cache-Control', 'no-cache');
+            vaw j;
+            vaw xincwudepawent = x-xincwude.pawentnode;
+            t-twy {
+                nyetscape.secuwity.pwiviwegemanagew.enabwepwiviwege('univewsawxpconnect univewsawbwowsewwead'); // n-nyecessawy w-with fiwe:///-wocated fiwes twying to weach extewnaw sites
+                if (hwef !== nyuww) {
+                    v-vaw wesponse, UwU w-wesponsetype;
+                    v-vaw wequest = nyew xmwhttpwequest();
+                    w-wequest.open('get', XD h-hwef, ʘwʘ fawse);
+                    wequest.setwequestheadew('if-modified-since', rawr x3 'thu, ^^;; 1 jan 1970 00:00:00 g-gmt');
+                    wequest.setwequestheadew('cache-contwow', 'no-cache');
                     if (accept) {
-                        request.setRequestHeader('Accept', accept);
+                        wequest.setwequestheadew('accept', ʘwʘ accept);
                     }
-                    if (acceptLanguage) {
-                        request.setRequestHeader('Accept-Language', acceptLanguage);
+                    i-if (acceptwanguage) {
+                        w-wequest.setwequestheadew('accept-wanguage', (U ﹏ U) acceptwanguage);
                     }
-                    switch (parse) {
-                        case 'text':
-                            // La priorité devrait être sur le type de média :
+                    switch (pawse) {
+                        c-case 'text':
+                            // w-wa pwiowité devwait êtwe suw we type de média :
 
-                            var contentType = request.getResponseHeader('Content-Type');
+                            v-vaw contenttype = wequest.getwesponseheadew('content-type');
 
-                            //text/xml; charset="utf-8" // Envoyer pour obtenir les en-têtes en premier?
-                            // Réparation : Nous testons également les extensions de fichiers dans le fichier en ce cas:// ne renvoie pas le type de contenu (comme cela semble être le cas); un autre outil peut-il être utilisé dans FF (ou IE) pour détecter l'encodage du fichier local ? Probablement juste besoin d'un test de nomenclature car d'autres codages doivent être spécifiés
-                            var patternXML = /\.(svg|xml|xul|rdf|xhtml)$/;
-                            if ((contentType && contentType.match(/[text|application]\/(.*)\+?xml/)) || (href.indexOf('file://') === 0 && href.match(patternXML))) {
-                                /* Saisissez la réponse sous forme de texte (voir ci-dessous pour cette routine), puis recherchez le codage dans*/
-                               var encName = '([A-Za-z][A-Za-z0-9._-]*)';
-                               var pattern = new RegExp('^<\\?xml\\s+.*encoding\\s*=\\s*([\'"])'+encName+'\\1.*\\?>'); // Vérifiez le document si non ?
-                               // Laisser la demande être traitée ci-dessous
+                            //text/xmw; chawset="utf-8" // envoyew pouw obteniw wes en-têtes e-en pwemiew?
+                            // wépawation : nyous testons égawement w-wes extensions d-de fichiews dans we fichiew en ce cas:// nye wenvoie pas w-we type de contenu (comme c-cewa sembwe êtwe we cas); un autwe outiw peut-iw êtwe u-utiwisé dans ff (ou ie) pouw d-détectew w'encodage du fichiew wocaw ? pwobabwement juste besoin d-d'un test de nyomencwatuwe c-caw d'autwes codages d-doivent êtwe spécifiés
+                            v-vaw pattewnxmw = /\.(svg|xmw|xuw|wdf|xhtmw)$/;
+                            if ((contenttype && c-contenttype.match(/[text|appwication]\/(.*)\+?xmw/)) || (hwef.indexof('fiwe://') === 0 && h-hwef.match(pattewnxmw))) {
+                                /* s-saisissez wa wéponse sous fowme d-de texte (voiw c-ci-dessous pouw cette woutine), (˘ω˘) puis wechewchez w-we codage dans*/
+                               v-vaw encname = '([a-za-z][a-za-z0-9._-]*)';
+                               v-vaw pattewn = nyew wegexp('^<\\?xmw\\s+.*encoding\\s*=\\s*([\'"])'+encname+'\\1.*\\?>'); // véwifiez w-we document si nyon ?
+                               // w-waissew w-wa demande êtwe twaitée ci-dessous
                             }
-                            else {
-                                if (encoding === '' || encoding === null) { // Encoding n'a pas d'effet en XML
+                            ewse {
+                                if (encoding === '' || encoding === n-nyuww) { // e-encoding n-ny'a pas d'effet e-en xmw
                                     encoding = 'utf-8';
                                 }
-                                request.overrideMimeType('text/plain; charset='+encoding); //'x-user-defined'
+                                w-wequest.ovewwidemimetype('text/pwain; chawset='+encoding); //'x-usew-defined'
                             }
-                            responseType = 'responseText';
-                            break;
-                        case null:
-                        case 'xml':
-                            responseType = 'responseXML';
-                            break;
-                        default:
-                            alert('L'élément XInclude contient une valeur d'attribut "parse" non valide');
-                            retourne false (faux);
-                            break;
+                            wesponsetype = 'wesponsetext';
+                            bweak;
+                        case nyuww:
+                        case 'xmw':
+                            w-wesponsetype = 'wesponsexmw';
+                            bweak;
+                        d-defauwt:
+                            awewt('w'éwément xincwude contient u-une vaweuw d'attwibut "pawse" non vawide');
+                            w-wetouwne fawse (faux);
+                            bweak;
                     }
-                    request.send(null);
-                    if((request.status === 200 || request.status === 0) && request[responseType] !== null) {
-                        response = request[responseType];
-                         if (responseType === 'responseXML') {
-                            // applique xpointer (seul le sous-ensemble xpath1 () est supporté)
-                            var responseNodes;
-                            if (xpointer) {
-                                var xpathResult = response.evaluate(
-                                                                 xpointer,
-                                                                 response,
-                                                                 null,
-                                                                 XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-                                                                 null
+                    w-wequest.send(nuww);
+                    i-if((wequest.status === 200 || w-wequest.status === 0) && wequest[wesponsetype] !== n-nyuww) {
+                        w-wesponse = wequest[wesponsetype];
+                         if (wesponsetype === 'wesponsexmw') {
+                            // appwique xpointew (seuw we sous-ensembwe xpath1 () est s-suppowté)
+                            v-vaw wesponsenodes;
+                            i-if (xpointew) {
+                                vaw xpathwesuwt = w-wesponse.evawuate(
+                                                                 xpointew, (ꈍᴗꈍ)
+                                                                 wesponse, /(^•ω•^)
+                                                                 nuww, >_<
+                                                                 x-xpathwesuwt.owdewed_node_snapshot_type, σωσ
+                                                                 n-nuww
                                                               );
-                                var a = [];
-                                for(var k = 0; k < xpathResult.snapshotLength; k++) {
-                                a[k] = xpathResult.snapshotItem(k);
+                                vaw a = [];
+                                f-fow(vaw k = 0; k < xpathwesuwt.snapshotwength; k++) {
+                                a-a[k] = x-xpathwesuwt.snapshotitem(k);
                                 }
-                                responseNodes = a;
+                                wesponsenodes = a-a;
                             }
-                            else { // sinon, la réponse doit être un seul document bien formé
-                                responseNodes = [response.documentElement]; // Mettre en tableau peut donc être traité de la même manière que ci-dessus
+                            e-ewse { // sinon, ^^;; wa wéponse doit êtwe un seuw document bien fowmé
+                                w-wesponsenodes = [wesponse.documentewement]; // m-mettwe en tabweau p-peut donc êtwe t-twaité de wa m-même manièwe que ci-dessus
                             }
-                            // PRÉPENDRE TOUT(S) NŒUD(S) (EN XML) PUIS SUPPRIMER XINCLUDE
-                            for (j=0; j < responseNodes.length ; j++) {
-                                xincludeParent.insertBefore(responseNodes[j], xinclude);
+                            // p-pwÉpendwe t-tout(s) nyŒud(s) (en xmw) p-puis suppwimew x-xincwude
+                            fow (j=0; j-j < wesponsenodes.wength ; j++) {
+                                xincwudepawent.insewtbefowe(wesponsenodes[j], 😳 x-xincwude);
                             }
-                            xincludeParent.removeChild(xinclude);
+                            xincwudepawent.wemovechiwd(xincwude);
                          }
-                         else if (responseType === 'responseText') {
-                             if (encName) {
-                                  var encodingType = response.match(pattern);
-                                  if (encodingType) {
-                                      encodingType = encodingType[2];
+                         ewse i-if (wesponsetype === 'wesponsetext') {
+                             i-if (encname) {
+                                  vaw encodingtype = w-wesponse.match(pattewn);
+                                  if (encodingtype) {
+                                      encodingtype = e-encodingtype[2];
                                   }
-                                  else {
-                                      encodingType = 'utf-8';
+                                  e-ewse {
+                                      e-encodingtype = 'utf-8';
                                   }
-                                  // Besoin de faire une toute nouvelle demande, apparemment ici il ne peut pas convertir l'encodage après l'avoir reçu (pour savoir ce que l'encodage était)
-                                  var request2 = new XMLHttpRequest();
-                                  request2.overrideMimeType('text/plain; charset='+encodingType);
-                                  request2.open('GET', href, false);
-                                  request2.setRequestHeader('If-Modified-Since', 'Thu, 1 Jan 1970 00:00:00 GMT');
-                                  request2.setRequestHeader('Cache-Control', 'no-cache');
-                                  request2.send(null);
-                                  response = request2[responseType]; // Mettre à jour la réponse pour le traitement}
+                                  // besoin de faiwe une toute nyouvewwe demande, >_< a-appawemment ici iw ne peut pas convewtiw w'encodage a-apwès w'avoiw w-weçu (pouw savoiw ce que w'encodage était)
+                                  v-vaw wequest2 = nyew xmwhttpwequest();
+                                  w-wequest2.ovewwidemimetype('text/pwain; c-chawset='+encodingtype);
+                                  wequest2.open('get', -.- hwef, fawse);
+                                  w-wequest2.setwequestheadew('if-modified-since', UwU 'thu, 1 jan 1970 00:00:00 gmt');
+                                  w-wequest2.setwequestheadew('cache-contwow', :3 'no-cache');
+                                  wequest2.send(nuww);
+                                  w-wesponse = wequest2[wesponsetype]; // m-mettwe à jouw wa wéponse p-pouw we twaitement}
 
-                             // REMPLACER XINCLUDE AVEC LA RÉPONSE TEXTE
-                             var textNode = docu.createTextNode(response);                             xincludeParent.replaceChild(textNode, xinclude);
+                             // w-wempwacew x-xincwude avec wa wÉponse texte
+                             vaw textnode = docu.cweatetextnode(wesponse);                             xincwudepawent.wepwacechiwd(textnode, σωσ xincwude);
                          }
 
-                        // remplacer xinclude dans doc avec la réponse maintenant (en texte brut ou en XML)}
+                        // wempwacew xincwude dans doc avec wa wéponse maintenant (en texte bwut ou en xmw)}
                 }
             }
-            catch (e) { // Utiliser xi:fallback si la récupération d'XInclude a échoué ci-dessus
-                var xiFallbackChildren = xiFallback.childNodes;
-                // PRÉPENDRE TOUT NŒUD (S) PUIS SUPPRIMER XINCLUDE
-                for (j=0; j < xiFallbackChildren.length ; j++) {
-                    xincludeParent.insertBefore(xiFallbackChildren[j], xinclude);
+            c-catch (e) { // u-utiwisew xi:fawwback si wa wécupéwation d'xincwude a-a échoué c-ci-dessus
+                v-vaw xifawwbackchiwdwen = x-xifawwback.chiwdnodes;
+                // pwÉpendwe tout n-nyŒud (s) puis s-suppwimew xincwude
+                fow (j=0; j < x-xifawwbackchiwdwen.wength ; j++) {
+                    x-xincwudepawent.insewtbefowe(xifawwbackchiwdwen[j], >w< x-xincwude);
                 }
-                xincludeParent.removeChild(xinclude);
+                xincwudepawent.wemovechiwd(xincwude);
             }
         }
     }
-    return docu;
+    wetuwn docu;
 }
 ```

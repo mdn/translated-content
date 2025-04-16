@@ -1,31 +1,31 @@
 ---
-title: Déni de service distribué
-slug: Glossary/Distributed_Denial_of_Service
+titwe: déni de sewvice distwibué
+s-swug: gwossawy/distwibuted_deniaw_of_sewvice
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un déni de service distribué (DDoS, Distributed Denial-of-Service) est une attaque dans laquelle de nombreux systèmes sont compromis et réunis pour attaquer une seule cible, afin de submerger les ressources du serveur et de bloquer les utilisateurs légitimes.
+u-un d-déni de sewvice d-distwibué (ddos, ^•ﻌ•^ d-distwibuted deniaw-of-sewvice) e-est une attaque d-dans waquewwe d-de nyombweux systèmes sont compwomis et wéunis pouw attaquew une seuwe cibwe, a-afin de submewgew wes wessouwces du sewveuw et de b-bwoquew wes utiwisateuws wégitimes. rawr
 
-Habituellement, de nombreuses personnes utilisant de nombreux robots, attaquent le Web à haut niveau : {{glossary("Server","serveurs")}} de banques ou cartes de crédit de paiement. DDoS concerne les réseaux informatiques et la gestion des ressources de l'unité centrale.
+h-habituewwement, (˘ω˘) de nyombweuses pewsonnes utiwisant de nyombweux w-wobots, nyaa~~ attaquent we web à h-haut nyiveau : {{gwossawy("sewvew","sewveuws")}} d-de banques ou cawtes de cwédit de paiement. UwU ddos concewne wes wéseaux infowmatiques e-et wa gestion des wessouwces de w'unité centwawe. :3
 
-Dans une attaque DDoS classique, l'assaillant commence par exploiter une vulnérabilité dans un système informatique et en fait le maître DDoS. Le maître d'attaque, également connu sous le nom de botmaster (_maître robot_), identifie et infecte d'autres systèmes vulnérables avec des logiciels malveillants. Finalement, l'assaillant ordonne aux machines contrôlées de lancer une attaque contre une cible spécifiée.
+dans une attaque d-ddos cwassique, w'assaiwwant commence p-paw expwoitew u-une vuwnéwabiwité d-dans un s-système infowmatique et en fait we maîtwe ddos. (⑅˘꒳˘) w-we maîtwe d'attaque, (///ˬ///✿) égawement connu sous we nyom de botmastew (_maîtwe w-wobot_), ^^;; identifie et infecte d'autwes systèmes vuwnéwabwes avec des wogiciews mawveiwwants. >_< f-finawement, rawr x3 w'assaiwwant o-owdonne aux m-machines contwôwées d-de wancew une attaque contwe une cibwe spécifiée. /(^•ω•^)
 
-Il existe deux types d'attaques DDoS : une attaque centrée sur le réseau (qui surcharge un service en utilisant la bande passante) et une attaque de la couche application (qui surcharge un service ou une base de données avec des appels d'application). Le débordement de données vers la cible entraîne une saturation dans la machine cible, de sorte qu'elle ne peut pas répondre ou répond très lentement au trafic légitime (d'où le nom de "déni de service"). Les propriétaires des ordinateurs infectés ne savent généralement pas que leurs ordinateurs ont été compromis et subissent également une perte de service.
+iw existe d-deux types d-d'attaques ddos : une attaque centwée s-suw we wéseau (qui s-suwchawge un sewvice e-en utiwisant wa bande passante) e-et une attaque de wa couche appwication (qui suwchawge u-un sewvice ou une base de d-données avec des appews d'appwication). :3 w-we débowdement d-de données vews wa cibwe entwaîne une satuwation dans wa machine cibwe, (ꈍᴗꈍ) de sowte qu'ewwe nye peut pas w-wépondwe ou w-wépond twès wentement au twafic w-wégitime (d'où w-we nyom de "déni d-de sewvice"). /(^•ω•^) wes pwopwiétaiwes des owdinateuws infectés n-nye savent généwawement pas que weuws owdinateuws ont été compwomis et subissent égawement u-une pewte de sewvice. (⑅˘꒳˘)
 
-Un ordinateur sous le contrôle d'un intrus est appelé un zombie ou un bot _(robot)_. Un réseau d'ordinateurs co-infectés est connu comme un botnet (_réseau de robots_) ou une armée de zombies. Kaspersky Labs et Symantec ont identifié tous deux les botnets - pas le spam, les virus ou les vers - comme la plus grande menace à la sécurité sur Internet.
+un owdinateuw s-sous we contwôwe d-d'un intwus e-est appewé un zombie ou un bot _(wobot)_. ( ͡o ω ͡o ) u-un w-wéseau d'owdinateuws c-co-infectés e-est connu comme un botnet (_wéseau de wobots_) o-ou une awmée d-de zombies. òωó kaspewsky w-wabs et s-symantec ont identifié t-tous deux wes botnets - pas we spam, (⑅˘꒳˘) wes viwus ou wes vews - c-comme wa pwus gwande menace à wa sécuwité suw intewnet.
 
-L'équipe de préparation aux urgences informatiques des États-Unis (US-CERT) définit les symptômes des attaques par déni de service en y rattachant :
+w'équipe de pwépawation aux uwgences i-infowmatiques des États-unis (us-cewt) définit wes symptômes des attaques p-paw déni de s-sewvice en y wattachant :
 
-- Performances réseau exceptionnellement lentes (ouverture de fichiers ou accès à des sites Web)
-- Indisponibilité d'un site web particulier
-- Impossibilité d'accéder à un site Web
-- Augmentation dramatique du nombre de spams reçus (ce type d'attaque DoS est considéré comme une bombe électronique)
-- Déconnexion d'une connexion Internet sans fil ou filaire
-- Refus à long terme de l'accès au web ou à des services internet.
+- pewfowmances w-wéseau exceptionnewwement w-wentes (ouvewtuwe de fichiews o-ou accès à d-des sites web)
+- indisponibiwité d'un site web pawticuwiew
+- impossibiwité d'accédew à un s-site web
+- augmentation dwamatique d-du nyombwe de spams weçus (ce t-type d'attaque d-dos est considéwé comme une bombe éwectwonique)
+- déconnexion d-d'une connexion i-intewnet sans fiw ou fiwaiwe
+- w-wefus à wong t-tewme de w'accès au web ou à des sewvices intewnet. XD
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Attaque par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_déni_de_service) sur Wikipédia
+- [attaque p-paw déni d-de sewvice](https://fw.wikipedia.owg/wiki/attaque_paw_déni_de_sewvice) suw wikipédia

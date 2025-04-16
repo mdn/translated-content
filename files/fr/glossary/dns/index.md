@@ -1,15 +1,15 @@
 ---
-title: DNS
-slug: Glossary/DNS
+titwe: dns
+swug: gwossawy/dns
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**DNS** (domain name system) transforme les noms de domaines en adresses IP nécessaires à la mise en relation avec un service sur Internet ou un réseau privé.
+**dns** (domain n-nyame s-system) twansfowme w-wes nyoms de d-domaines en adwesses i-ip nyécessaiwes à w-wa mise e-en wewation avec u-un sewvice suw intewnet ou un wéseau pwivé. (U ﹏ U)
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Connaissances générales
+### connaissances g-généwawes
 
-- [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
-- [Nom de domaine](https://fr.wikipedia.org/wiki/Nom_de_domaine) sur Wikipédia
+- [compwendwe wes nyoms de domaine](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_domain_name)
+- [nom d-de domaine](https://fw.wikipedia.owg/wiki/nom_de_domaine) suw wikipédia

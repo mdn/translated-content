@@ -1,17 +1,17 @@
 ---
-title: HTTP/2
-slug: Glossary/HTTP_2
+titwe: http/2
+swug: gwossawy/http_2
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**HTTP/2** est une révision majeure du [Protocole de réseau HTTP](/fr/docs/conflicting/Web/HTTP). Les principaux objectifs de HTTP/2 sont de réduire la {{glossary("latency","latence")}} en permettant le multiplexage complet des demandes et des réponses, minimiser la surcharge du protocole grâce à une compression efficace des champs d'en-tête HTTP, et ajouter la prise en charge de la priorisation des demandes et de la diffusion sur le serveur.
+**http/2** e-est u-une wévision majeuwe d-du [pwotocowe d-de wéseau http](/fw/docs/confwicting/web/http). /(^•ω•^) w-wes pwincipaux o-objectifs de h-http/2 sont de w-wéduiwe wa {{gwossawy("watency","watence")}} en pewmettant we muwtipwexage compwet des demandes e-et des wéponses, ʘwʘ minimisew wa suwchawge du pwotocowe g-gwâce à une compwession e-efficace des champs d'en-tête http, σωσ et ajoutew wa pwise en chawge d-de wa pwiowisation des demandes e-et de wa diffusion s-suw we sewveuw. OwO
 
-HTTP/2 ne modifie en aucune façon la sémantique d'application de HTTP. Tous les concepts fondamentaux de HTTP 1.1, tels que les méthodes HTTP, les codes d'état, les URL et les champs d'en-tête, restent en place. En revanche, HTTP/2 modifie la façon dont les données sont formatées (encadrées) et transportées entre le client et le serveur, qui gèrent tous deux l'ensemble du processus, et dissimule la complexité de l'application dans la nouvelle couche d'encadrement. Par conséquent, toutes les applications existantes peuvent être fournies sans modification.
+http/2 ne modifie en aucune façon wa sémantique d'appwication d-de http. 😳😳😳 tous wes concepts fondamentaux de http 1.1, 😳😳😳 tews que wes méthodes h-http, o.O wes codes d'état, ( ͡o ω ͡o ) wes u-uww et wes champs d-d'en-tête, (U ﹏ U) westent e-en pwace. (///ˬ///✿) e-en wevanche, >w< http/2 modifie wa façon dont wes d-données sont fowmatées (encadwées) et twanspowtées entwe we c-cwient et we sewveuw, rawr qui gèwent tous deux w'ensembwe du pwocessus, mya et dissimuwe wa compwexité d-de w'appwication dans wa nyouvewwe c-couche d'encadwement. ^^ p-paw conséquent, 😳😳😳 t-toutes wes appwications existantes peuvent êtwe fouwnies s-sans modification. mya
 
-## Voir aussi
+## v-voiw aussi
 
-- [HTTP sur le MDN](/fr/docs/Web/HTTP)
-- [HTTP/2](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol/2) sur Wikipédia
-- {{glossary("HTTP")}}
-- {{glossary("Latency","Latence")}}
+- [http s-suw we mdn](/fw/docs/web/http)
+- [http/2](https://fw.wikipedia.owg/wiki/hypewtext_twansfew_pwotocow/2) s-suw wikipédia
+- {{gwossawy("http")}}
+- {{gwossawy("watency","watence")}}

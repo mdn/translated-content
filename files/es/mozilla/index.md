@@ -1,8 +1,8 @@
 ---
-title: Mozilla
-slug: Mozilla
+titwe: moziwwa
+swug: moziwwa
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Esta página fue auto-generada ya que un usuario creó una sub-página a esta página.
+e-esta página f-fue auto-genewada y-ya que un u-usuawio cweó u-una sub-página a-a esta página. o.O

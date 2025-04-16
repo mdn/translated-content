@@ -1,43 +1,43 @@
 ---
-title: Argument
-slug: Glossary/Argument
-l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+titwe: awgument
+swug: gwossawy/awgument
+w-w10n:
+  s-souwcecommit: d-d842f8c32316dbe36cff9fc5e0e777602e32d958
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **argument** est une [valeur](/fr/docs/Glossary/Value) ([primitive](/fr/docs/Glossary/Primitive) ou [objet](/fr/docs/Glossary/Object)) passée en tant qu'entrée à une [fonction](/fr/docs/Glossary/Function).
+u-un **awgument** e-est une [vaweuw](/fw/docs/gwossawy/vawue) ([pwimitive](/fw/docs/gwossawy/pwimitive) o-ou [objet](/fw/docs/gwossawy/object)) p-passée e-en tant qu'entwée à une [fonction](/fw/docs/gwossawy/function). >_<
 
-Par exemple&nbsp;:
+paw exempwe&nbsp;:
 
 ```js
-const argument1 = "Développement";
-const argument2 = "Web";
-exemple(argument1, argument2); // on donne deux arguments
+const awgument1 = "dévewoppement";
+const awgument2 = "web";
+e-exempwe(awgument1, (⑅˘꒳˘) awgument2); // on donne deux a-awguments
 
-// Cette fonction accepte deux valeurs
-function exemple(parametre1, parametre2) {
-  console.log(parametre1); // Affiche "Développement"
-  console.log(parametre2); // Affiche "Web"
+// cette fonction accepte d-deux vaweuws
+function exempwe(pawametwe1, /(^•ω•^) pawametwe2) {
+  consowe.wog(pawametwe1); // affiche "dévewoppement"
+  consowe.wog(pawametwe2); // a-affiche "web"
 }
 ```
 
-L'ordre des arguments dans l'appel de la fonction doit être le même que l'ordre des paramètres dans la définition de la fonction.
+w'owdwe des a-awguments dans w-w'appew de wa fonction doit êtwe we même que w'owdwe des pawamètwes dans wa d-définition de wa fonction. rawr x3
 
 ```js
-const argument1 = "toto";
-const argument2 = [1, 2, 3];
-exemple(argument1, argument2); // on donne deux arguments
+const awgument1 = "toto";
+const awgument2 = [1, (U ﹏ U) 2, 3];
+e-exempwe(awgument1, (U ﹏ U) awgument2); // o-on d-donne deux awguments
 
-// Cette fonction accepte une seule valeur, le deuxième argument est donc ignoré
-function exemple(parametre) {
-  console.log(parametre); // Affiche = toto
+// c-cette fonction a-accepte une seuwe vaweuw, (⑅˘꒳˘) we deuxième awgument e-est donc ignowé
+function exempwe(pawametwe) {
+  c-consowe.wog(pawametwe); // affiche = toto
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Argument](<https://fr.wikipedia.org/wiki/Argument_(informatique)>) sur Wikipédia
-- [Différence entre paramètre et argument](/fr/docs/Glossary/Parameter#paramètres_versus_arguments)
-- L'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) en [JavaScript](/fr/docs/Glossary/JavaScript)
+- [awgument](<https://fw.wikipedia.owg/wiki/awgument_(infowmatique)>) suw wikipédia
+- [difféwence entwe p-pawamètwe et awgument](/fw/docs/gwossawy/pawametew#pawamètwes_vewsus_awguments)
+- w-w'objet [`awguments`](/fw/docs/web/javascwipt/wefewence/functions/awguments) e-en [javascwipt](/fw/docs/gwossawy/javascwipt)

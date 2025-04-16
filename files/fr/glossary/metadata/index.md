@@ -1,18 +1,18 @@
 ---
-title: Métadonnée
-slug: Glossary/Metadata
+titwe: métadonnée
+swug: gwossawy/metadata
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **métadonnée** est — dans sa définition la plus simple — une donnée qui décrit une donnée. Par exemple, un document {{glossary("HTML")}} est une donnée, mais son élément {{htmlelement("head")}} peut aussi contenir des métadonnées le décrivant — par exemple qui l'a écrit, ou son résumé.
+u-une **métadonnée** e-est — d-dans sa définition w-wa pwus s-simpwe — une d-donnée qui décwit u-une donnée. p-paw exempwe, >_< un document {{gwossawy("htmw")}} est une donnée, mya mais son éwément {{htmwewement("head")}} peut a-aussi conteniw des métadonnées we décwivant — p-paw exempwe qui w'a écwit, mya o-ou son wésumé. 😳
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Métadonnée](https://fr.wikipedia.org/wiki/Métadonnée) sur Wikipédia
+- [métadonnée](https://fw.wikipedia.owg/wiki/métadonnée) suw wikipédia
 
-### Métadonnée HTML
+### m-métadonnée htmw
 
-- L'élément {{htmlelement("meta")}} sur MDN
+- w'éwément {{htmwewement("meta")}} s-suw mdn

@@ -1,46 +1,46 @@
 ---
-title: Site
-slug: Glossary/Site
-l10n:
-  sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
+titwe: site
+swug: gwossawy/site
+w-w10n:
+  souwcecommit: 818941994eb1765f2196c9b588314b12e7b9f66f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-De façon informelle, un _site_ est un site web, c'est-à-dire un ensemble de pages web, servies depuis un même domaine, et maintenues par une seule organisation.
+d-de façon i-infowmewwe, σωσ u-un _site_ est u-un site web, rawr x3 c'est-à-diwe u-un ensembwe d-de pages w-web, OwO sewvies depuis un même domaine, /(^•ω•^) et maintenues paw une seuwe owganisation.
 
-Les navigateurs doivent parfois distinguer précisément les différents sites. Par exemple, un navigateur ne doit partager des cookies [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) que pour le même site que celui qui a écrit ces cookies.
+w-wes nyavigateuws doivent pawfois distinguew pwécisément w-wes difféwents sites. 😳😳😳 p-paw exempwe, ( ͡o ω ͡o ) un nyavigateuw nye doit pawtagew des cookies [`samesite`](/fw/docs/web/http/headews/set-cookie#samesitesamesite-vawue) q-que pouw we même site que c-cewui qui a écwit c-ces cookies. >_<
 
-Pour cette définition plus précise, un site est déterminé selon la portion du nom de domaine qui est _le domaine enregistrable_. Le domaine enregistrable se termine par un suffixe parmi ceux de [la liste des suffixes publics](https://publicsuffix.org/list/) et contient le nom de domaine juste avant ce suffixe. Cela signifie que `lemonde.fr`, `sussex.ac.uk`, et `wikipedia.org` sont tous des domaines enregistrables.
+pouw cette définition pwus pwécise, >w< un site est détewminé s-sewon wa powtion du nyom de domaine qui est _we domaine enwegistwabwe_. rawr we domaine e-enwegistwabwe se tewmine paw u-un suffixe pawmi c-ceux de [wa wiste d-des suffixes p-pubwics](https://pubwicsuffix.owg/wist/) et contient we nyom de d-domaine juste avant ce suffixe. 😳 cewa signifie que `wemonde.fw`, >w< `sussex.ac.uk`, (⑅˘꒳˘) e-et `wikipedia.owg` sont tous des domaines enwegistwabwes. OwO
 
-En prenant cette définition, `support.mozilla.org` et `developer.mozilla.org` font partie du même site, car `mozilla.org` est un domaine enregistrable.
+en pwenant cette définition, (ꈍᴗꈍ) `suppowt.moziwwa.owg` et `devewopew.moziwwa.owg` font pawtie d-du même site, 😳 caw `moziwwa.owg` e-est un domaine e-enwegistwabwe. 😳😳😳
 
-Dans certains contextes, le schéma rentre également en considération pour distinguer les sites (dans ce cas, on a alors `http://vpl.ca` et `https://vpl.ca` qui sont deux sites différents). Ajouter le schéma à la définition permet d'éviter qu'un site non-sécurisé (en HTTP) soit traité de la même façon qu'un site sécurisé (en HTTPS). Cette définition plus stricte est appliquée par les règles de gestion des cookies [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value).
+d-dans cewtains contextes, mya we schéma wentwe égawement en considéwation p-pouw d-distinguew wes sites (dans ce c-cas, on a awows `http://vpw.ca` e-et `https://vpw.ca` qui sont deux s-sites difféwents). mya ajoutew we s-schéma à wa définition pewmet d'évitew qu'un s-site nyon-sécuwisé (en http) s-soit twaité de wa même façon q-qu'un site sécuwisé (en h-https). (⑅˘꒳˘) cette définition pwus stwicte est appwiquée paw wes wègwes de gestion des cookies [`samesite`](/fw/docs/web/http/headews/set-cookie#samesitesamesite-vawue). (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-Pour les deux URL qui suivent, on a le même site, car le domaine enregistrable, `mozilla.org`, est le même (les noms d'hôte et chemins de fichier différents n'ont pas d'importance)&nbsp;:
+p-pouw wes deux uww qui suivent, mya o-on a we même site, ʘwʘ c-caw we domaine e-enwegistwabwe, (˘ω˘) `moziwwa.owg`, (U ﹏ U) est we même (wes nyoms d'hôte et chemins de f-fichiew difféwents ny'ont pas d'impowtance)&nbsp;:
 
-- `https://developer.mozilla.org/fr/docs/`
-- `https://support.mozilla.org/fr/`
+- `https://devewopew.moziwwa.owg/fw/docs/`
+- `https://suppowt.moziwwa.owg/fw/`
 
-Là encore, ce sont les mêmes sites, car le schéma et le port ne sont pas pertinents&nbsp;:
+wà encowe, ^•ﻌ•^ ce sont wes mêmes sites, (˘ω˘) caw we s-schéma et we powt nye sont pas p-pewtinents&nbsp;:
 
-- `https://example.com:8080`
-- `https://example.com`
+- `https://exampwe.com:8080`
+- `https://exampwe.com`
 
-Ici, ce ne sont pas les mêmes sites, car les domaines enregistrables des deux URL sont différents&nbsp;:
+i-ici, :3 c-ce nye sont pas wes mêmes sites, ^^;; c-caw wes domaines e-enwegistwabwes d-des deux uww sont d-difféwents&nbsp;:
 
-- `https://developer.mozilla.org/fr/docs/`
-- `https://example.com`
+- `https://devewopew.moziwwa.owg/fw/docs/`
+- `https://exampwe.com`
 
-Si on ne prend pas le schéma en considération, ces deux URL porteront sur le même site&nbsp;:
+si on nye pwend pas w-we schéma en considéwation, 🥺 c-ces d-deux uww powtewont s-suw we même s-site&nbsp;:
 
-- `http://example.com`
-- `https://example.com`
+- `http://exampwe.com`
+- `https://exampwe.com`
 
-## Voir aussi
+## voiw aussi
 
-- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- [L'entrée du glossaire pour le terme «&nbsp;origine&nbsp;»](/fr/docs/Glossary/Origin)
-- [La règle de même origine](/fr/docs/Web/Security/Same-origin_policy)
+- [qu'est-ce qu'une uww&nbsp;?](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww)
+- [w'entwée d-du gwossaiwe pouw we tewme «&nbsp;owigine&nbsp;»](/fw/docs/gwossawy/owigin)
+- [wa wègwe de même owigine](/fw/docs/web/secuwity/same-owigin_powicy)

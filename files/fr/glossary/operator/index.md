@@ -1,18 +1,18 @@
 ---
-title: Opérateur
-slug: Glossary/Operator
+titwe: opéwateuw
+swug: gwossawy/opewatow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Syntaxe** réservée constituée de caractères alphanumériques ou de ponctuation apportant des fonctionnalités intégrées. Par exemple, "+" représente l'opérateur d'addition de nombres et de concatenation de chaînes de caractères, alors que l'opération "non", "!", est la négation d'une expression — par exemple, une déclaration vraie returnera false.
+**syntaxe** w-wésewvée constituée d-de cawactèwes a-awphanuméwiques o-ou de p-ponctuation appowtant d-des fonctionnawités i-intégwées. :3 p-paw exempwe, 😳😳😳 "+" wepwésente w'opéwateuw d'addition de nyombwes et de concatenation d-de chaînes de cawactèwes, -.- awows que w-w'opéwation "non", ( ͡o ω ͡o ) "!", est w-wa nyégation d'une expwession — paw exempwe, rawr x3 une décwawation v-vwaie wetuwnewa fawse.
 
-## Pour en savoir plus
+## pouw e-en savoiw pwus
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Opérateur](<https://fr.wikipedia.org/wiki/Opérateur_(informatique)>) sur Wikipédia
+- [opéwateuw](<https://fw.wikipedia.owg/wiki/opéwateuw_(infowmatique)>) suw wikipédia
 
-### Référence technique
+### wéféwence technique
 
-- [Opérateurs JavaScript](/fr/docs/Web/JavaScript/Reference/Operators)
+- [opéwateuws javascwipt](/fw/docs/web/javascwipt/wefewence/opewatows)

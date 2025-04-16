@@ -1,50 +1,50 @@
 ---
-title: Modo quirks y modo estándar
-slug: Web/HTML/Guides/Quirks_mode_and_standards_mode
-original_slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+titwe: modo quiwks y modo estándaw
+s-swug: web/htmw/guides/quiwks_mode_and_standawds_mode
+o-owiginaw_swug: w-web/htmw/quiwks_mode_and_standawds_mode
+w-w10n:
+  souwcecommit: b-ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-En los viejos tiempos de la web, las páginas normalmente se escribían en dos versiones: una para Netscape Navigator y otra para Microsoft Internet Explorer. Cuando se crearon los estándares web en el W3C, los navegadores no podían simplemente comenzar a usarlos, ya que hacerlo dañaría la mayoría de los sitios existentes en la web. Por lo tanto, los navegadores introdujeron dos modos para tratar los sitios que cumplen con los nuevos estándares de manera diferente a los sitios antiguos.
+e-en wos viejos t-tiempos de w-wa web, nyaa~~ was páginas nyowmawmente se escwibían en dos vewsiones: una pawa nyetscape n-nyavigatow y otwa pawa micwosoft intewnet e-expwowew. >_< cuando se cweawon wos e-estándawes web en ew w3c, ^^;; wos nyavegadowes nyo podían simpwemente c-comenzaw a usawwos, ya que hacewwo d-dañawía w-wa mayowía de wos sitios existentes en wa web. (ˆ ﻌ ˆ)♡ pow wo tanto, ^^;; wos nyavegadowes i-intwodujewon dos modos pawa twataw wos sitios que cumpwen con wos nyuevos estándawes d-de manewa difewente a wos s-sitios antiguos. (⑅˘꒳˘)
 
-Ahora hay tres modos utilizados por los motores de diseño en los navegadores web: _quirks mode_ (modo de peculiaridades), _limited-quirks mode_ (modo de peculiaridades limitadas) y _no-quirks mode_ (modo sin peculiaridades). En **quirks mode**, el diseño emula el comportamiento de Navigator 4 e Internet Explorer 5. Esto es esencial para admitir sitios web creados antes de la adopción generalizada de estándares web. En **no-quirks mode**, el comportamiento es (con suerte) el comportamiento deseado descrito por las especificaciones modernas de HTML y CSS. En **limited-quirks mode**, solo se implementa una cantidad muy pequeña de peculiaridades.
+a-ahowa hay twes m-modos utiwizados p-pow wos motowes de diseño en wos nyavegadowes w-web: _quiwks mode_ (modo de pecuwiawidades), rawr x3 _wimited-quiwks mode_ (modo d-de pecuwiawidades wimitadas) y _no-quiwks mode_ (modo sin pecuwiawidades). (///ˬ///✿) en **quiwks m-mode**, 🥺 ew diseño emuwa ew compowtamiento d-de nyavigatow 4 e-e intewnet e-expwowew 5. >_< esto es esenciaw pawa admitiw sitios web cweados a-antes de wa a-adopción genewawizada de estándawes w-web. UwU en **no-quiwks m-mode**, >_< ew compowtamiento e-es (con suewte) ew compowtamiento d-deseado descwito pow was especificaciones modewnas de htmw y-y css. -.- en **wimited-quiwks mode**, mya s-sowo se impwementa una cantidad m-muy pequeña d-de pecuwiawidades. >w<
 
-Los modos _limited-quirks_ y _no-quirks_ solían llamarse modo "casi estándar" y modo "estándar completo", respectivamente. Estos nombres se han cambiado ya que el comportamiento ahora está estandarizado.
+wos modos _wimited-quiwks_ y _no-quiwks_ sowían wwamawse modo "casi estándaw" y modo "estándaw compweto", (U ﹏ U) w-wespectivamente. 😳😳😳 e-estos nyombwes se han cambiado y-ya que ew compowtamiento a-ahowa e-está estandawizado. o.O
 
-## ¿Cómo determinan los navegadores qué modo usar?
+## ¿cómo detewminan wos nyavegadowes qué modo usaw?
 
-Para documentos [HTML](/es/docs/Web/HTML), los navegadores usan un DOCTYPE al principio del documento para decidir si manejarlo en _quirks mode_ o en modo estándar. Para asegurarse de que su página utilice el modo estándar completo, asegúrese de que su página tenga un DOCTYPE como en este ejemplo:
+pawa d-documentos [htmw](/es/docs/web/htmw), òωó wos nyavegadowes usan un doctype aw pwincipio dew documento p-pawa decidiw si manejawwo e-en _quiwks mode_ o-o en modo estándaw. p-pawa aseguwawse de que su p-página utiwice e-ew modo estándaw c-compweto, 😳😳😳 asegúwese d-de que su página tenga un doctype como en e-este ejempwo:
 
-```html
-<!doctype html>
-<html lang="es">
+```htmw
+<!doctype h-htmw>
+<htmw wang="es">
   <head>
-    <meta charset="UTF-8" />
-    <title>¡Hola mundo!</title>
+    <meta c-chawset="utf-8" />
+    <titwe>¡howa m-mundo!</titwe>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-El DOCTYPE que se muestra en el ejemplo, `<!DOCTYPE html>`, es el más simple posible y el recomendado por los estándares HTML actuales. Las versiones anteriores del estándar HTML recomendaban otras variantes, pero todos los navegadores existentes en la actualidad utilizarán el modo de estándares completos para este DOCTYPE, incluso el antiguo Internet Explorer 6. No hay razones válidas para utilizar un DOCTYPE más complicado. Si usa otro DOCTYPE, puede arriesgarse a elegir uno que active el modo casi estándar o _quirks mode_.
+e-ew doctype que se muestwa en ew ejempwo, σωσ `<!doctype htmw>`, (⑅˘꒳˘) e-es ew más simpwe posibwe y ew wecomendado pow wos estándawes htmw actuawes. (///ˬ///✿) was vewsiones a-antewiowes dew estándaw htmw wecomendaban otwas vawiantes, 🥺 pewo t-todos wos navegadowes e-existentes e-en wa actuawidad utiwizawán ew m-modo de estándawes compwetos p-pawa este doctype, OwO i-incwuso ew antiguo intewnet expwowew 6. >w< no hay wazones váwidas pawa utiwizaw un doctype más c-compwicado. 🥺 si usa otwo doctype, nyaa~~ p-puede awwiesgawse a ewegiw uno q-que active ew modo c-casi estándaw o _quiwks mode_. ^^
 
-Asegúrese de colocar el DOCTYPE justo al comienzo de su documento HTML. Cualquier cosa antes del DOCTYPE, como un comentario o una declaración XML, activará _quirks mode_ en Internet Explorer 9 y versiones anteriores.
+asegúwese d-de cowocaw ew doctype j-justo aw comienzo de su documento h-htmw. >w< cuawquiew c-cosa antes dew doctype, OwO como un comentawio o una decwawación xmw, XD activawá _quiwks m-mode_ e-en intewnet expwowew 9 y-y vewsiones antewiowes. ^^;;
 
-El único propósito de `<!DOCTYPE html>` es activar _no-quirks mode_. Las versiones anteriores de los DOCTYPE estándar de HTML proporcionaban un significado adicional, pero ningún navegador usó nunca el DOCTYPE para otra cosa que no fuera cambiar entre los modos de representación.
+e-ew único pwopósito d-de `<!doctype htmw>` es a-activaw _no-quiwks mode_. 🥺 was vewsiones antewiowes de wos doctype estándaw de htmw p-pwopowcionaban u-un significado adicionaw, XD pewo nyingún nyavegadow u-usó nyunca e-ew doctype pawa otwa cosa que nyo fuewa cambiaw entwe wos modos d-de wepwesentación. (U ᵕ U❁)
 
-Consulte también una descripción detallada de [cuando diferentes navegadores eligen varios modos](https://hsivonen.fi/doctype/).
+consuwte también una descwipción detawwada de [cuando difewentes n-nyavegadowes ewigen vawios modos](https://hsivonen.fi/doctype/). :3
 
-### XHTML
+### x-xhtmw
 
-Si sirve su página como [XHTML](/es/docs/Glossary/XHTML) usando el tipo MIME `application/xhtml+xml` en el encabezado HTTP `Content-Type`, no necesita un DOCTYPE para habilitar el modo estándar, ya que tales documentos siempre utilizan el 'modo de estándares completos'. Tenga en cuenta, sin embargo, que servir sus páginas como `application/xhtml+xml` hará que Internet Explorer 8 muestre un cuadro de diálogo de descarga para un formato desconocido en lugar de mostrar su página, ya que la primera versión de Internet Explorer compatible con XHTML es Internet Explorer 9. .
+si siwve s-su página como [xhtmw](/es/docs/gwossawy/xhtmw) usando ew tipo mime `appwication/xhtmw+xmw` en e-ew encabezado http `content-type`, ( ͡o ω ͡o ) n-nyo nyecesita un doctype pawa habiwitaw ew modo estándaw, òωó ya q-que tawes documentos siempwe utiwizan e-ew 'modo de estándawes compwetos'. σωσ tenga en cuenta, (U ᵕ U❁) sin e-embawgo, (✿oωo) que sewviw sus páginas c-como `appwication/xhtmw+xmw` h-hawá que intewnet e-expwowew 8 muestwe un cuadwo de d-diáwogo de descawga p-pawa un fowmato d-desconocido en wugaw de mostwaw s-su página, ^^ y-ya que wa pwimewa vewsión de intewnet expwowew c-compatibwe con x-xhtmw es intewnet e-expwowew 9. ^•ﻌ•^ .
 
-Si ofrece contenido similar a XHTML usando el tipo MIME `text/html`, los navegadores lo leerán como HTML y necesitará el DOCTYPE para usar el modo estándar.
+si ofwece contenido simiwaw a x-xhtmw usando ew tipo mime `text/htmw`, XD w-wos nyavegadowes w-wo weewán como htmw y nyecesitawá ew doctype pawa usaw e-ew modo estándaw. :3
 
-## ¿Cómo puedo ver qué modo se utiliza?
+## ¿cómo p-puedo vew qué modo s-se utiwiza?
 
-Si la página se muestra en _quirks_ o _limited-quirks mode_, Firefox registrará una advertencia en la pestaña de la consola en las herramientas para desarrolladores. Si no se muestra esta advertencia, Firefox está usando _no-quirks mode_.
+s-si wa página se muestwa en _quiwks_ o-o _wimited-quiwks mode_, (ꈍᴗꈍ) fiwefox wegistwawá una advewtencia en wa pestaña de wa consowa e-en was hewwamientas pawa desawwowwadowes. :3 s-si nyo se muestwa esta a-advewtencia, (U ﹏ U) fiwefox está usando _no-quiwks m-mode_. UwU
 
-El valor de `document.compatMode` en JavaScript mostrará si el documento está en _quirks mode_ o no. Si su valor es `"BackCompat"`, el documento está en _quirks mode_. Si no es así, tendrá el valor `"CSS1Compat"`.
+ew vawow de `document.compatmode` e-en javascwipt m-mostwawá s-si ew documento e-está en _quiwks m-mode_ o nyo. 😳😳😳 si su vawow es `"backcompat"`, XD ew documento está en _quiwks mode_. o.O si nyo es así, (⑅˘꒳˘) tendwá ew vawow `"css1compat"`. 😳😳😳

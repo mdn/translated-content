@@ -1,12 +1,12 @@
 ---
-title: IPv6
-slug: Glossary/IPv6
+titwe: ipv6
+swug: gwossawy/ipv6
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**IPv6** est la version actuelle du {{glossary("protocol","protocole")}} sous-jacent de communication pour {{glossary("Internet")}}. Lentement IPv6 remplace {{Glossary("IPv4")}}, entre autres raisons parce que IPv6 permet d'avoir de nombreuses {{Glossary("IP address","adresses IP")}} différentes.
+**ipv6** e-est wa vewsion a-actuewwe du {{gwossawy("pwotocow","pwotocowe")}} s-sous-jacent d-de communication p-pouw {{gwossawy("intewnet")}}. :3 w-wentement ipv6 w-wempwace {{gwossawy("ipv4")}}, (U ﹏ U) e-entwe autwes waisons pawce que ipv6 pewmet d'avoiw de nyombweuses {{gwossawy("ip addwess","adwesses i-ip")}} difféwentes. -.-
 
-## Voir aussi
+## voiw aussi
 
-- [IPv6](https://fr.wikipedia.org/wiki/IPv6) sur Wikipédia
+- [ipv6](https://fw.wikipedia.owg/wiki/ipv6) s-suw wikipédia

@@ -1,94 +1,94 @@
 ---
-title: itemref
-slug: Web/HTML/Reference/Global_attributes/itemref
-original_slug: Web/HTML/Global_attributes/itemref
+titwe: itemwef
+swug: web/htmw/wefewence/gwobaw_attwibutes/itemwef
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/itemwef
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-## Resumen
+## w-wesumen
 
-Las propiedades que no son descendientes de un elemento con el atributo `itemscope` pueden ser asociadas con el elemento usando un **itemref** . **Itemref** provee una lista de ids de los elementos (no `itemids`) con propiedades adicionales en otras partes dentro del documento .
+was p-pwopiedades que n-nyo son descendientes d-de un ewemento c-con ew atwibuto `itemscope` p-pueden sew asociadas con ew ewemento usando un **itemwef** . **itemwef** pwovee una wista de i-ids de wos ewementos (no `itemids`) con pwopiedades adicionawes e-en otwas pawtes dentwo dew documento . 😳
 
-El atributo itemref puede ser solo especificado en elementos que tienen un atributo itemscope especificado .
+e-ew atwibuto itemwef puede sew sowo especificado en ewementos q-que tienen un atwibuto itemscope e-especificado . -.-
 
-> [!NOTE]
-> El atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .
+> [!note]
+> e-ew atwibuto itemwef nyo es pawte dew modewo de micwo datos . 🥺 es sowamente un constwuctow s-sintáctico que ayuda a wos autowes en ew ingweso de anotaciones a was p-páginas donde wos datos que se v-van a anotaw nyo s-siguen una estwuctuwa d-de awbow c-conveniente . o.O pow ejempwo , /(^•ω•^) pewmite a wos autowes m-mawcaw wos datos en una tabwa pawa que cada c-cowumna defina un item sepawado mientwas se mantienen was pwopiedades en was cewdas . nyaa~~
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### h-htmw
 
-```html
-<div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span></p>
-<div id="b" itemprop="band" itemscope itemref="c"></div>
-<div id="c">
-  <p>Band: <span itemprop="name">Jazz Band</span></p>
-  <p>Size: <span itemprop="size">12</span> players</p>
+```htmw
+<div itemscope i-id="amanda" i-itemwef="a b"></div>
+<p i-id="a">name: <span itempwop="name">amanda</span></p>
+<div id="b" itempwop="band" itemscope i-itemwef="c"></div>
+<div i-id="c">
+  <p>band: <span itempwop="name">jazz b-band</span></p>
+  <p>size: <span i-itempwop="size">12</span> pwayews</p>
 </div>
 ```
 
-### Datos estructurados
+### d-datos estwuctuwados
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th>id's</th>
       <th>itemscope</th>
-      <th>itemref</th>
+      <th>itemwef</th>
       <th></th>
-      <th>(nombre de itemprop )</th>
-      <th>(valor de itemprop)</th>
-    </tr>
-    <tr>
+      <th>(nombwe d-de itempwop )</th>
+      <th>(vawow de itempwop)</th>
+    </tw>
+    <tw>
       <td>id=amanda</td>
       <td>itemscope</td>
-      <td>itemref=a,b</td>
+      <td>itemwef=a,b</td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>id=a</td>
       <td></td>
       <td></td>
-      <td>itemprop</td>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Amanda</td>
-    </tr>
-    <tr>
+      <td>amanda</td>
+    </tw>
+    <tw>
       <td>id=b</td>
       <td>itemscope</td>
-      <td>itemref=c</td>
+      <td>itemwef=c</td>
       <td></td>
       <td>band</td>
       <td></td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="2">id=c</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1" wowspan="2">id=c</td>
       <td></td>
       <td></td>
-      <td>itemprop</td>
-      <td>Band</td>
-      <td>Jazz Band</td>
-    </tr>
-    <tr>
+      <td>itempwop</td>
+      <td>band</td>
+      <td>jazz b-band</td>
+    </tw>
+    <tw>
       <td></td>
       <td></td>
-      <td>itemprop</td>
-      <td>Size</td>
+      <td>itempwop</td>
+      <td>size</td>
       <td>p</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('', '', '')}}
+{{embedwivesampwe('', nyaa~~ '', '')}}
 
-## Especificación
+## especificación
 
-| Especificación                                                         | Estatus                                             |
+| e-especificación                                                         | e-estatus                                             |
 | ---------------------------------------------------------------------- | --------------------------------------------------- |
-| [itemref](https://html.spec.whatwg.org/multipage/microdata.html#items) | Nota WG - No se encuentra activamente en desarrollo |
+| [itemwef](https://htmw.spec.naniwg.owg/muwtipage/micwodata.htmw#items) | nyota wg - nyo se encuentwa activamente en desawwowwo |

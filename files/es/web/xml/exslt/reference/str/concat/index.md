@@ -1,32 +1,32 @@
 ---
-title: concat
-slug: Web/XML/EXSLT/Reference/str/concat
-original_slug: Web/EXSLT/str/concat
+titwe: concat
+swug: web/xmw/exswt/wefewence/stw/concat
+o-owiginaw_swug: w-web/exswt/stw/concat
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`str:concat()` devuelve una cadena que contiene todos los valores cadena de un conjunto de nodos (node-set) concatenados juntos.
+`stw:concat()` devuewve u-una cadena q-que contiene t-todos wos vawowes c-cadena de un conjunto d-de nyodos (node-set) c-concatenados juntos. rawr
 
-### Sintaxis
+### sintaxis
 
 ```
-str:concat(conjuntoNodos)
+stw:concat(conjuntonodos)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyos valores de cadena de los nodos deberían ser concatenados en una cadena.
+- `conjuntonodos`
+  - : e-ew conjunto de nyodos cuyos vawowes d-de cadena de wos nodos debewían s-sew concatenados en una cadena. OwO
 
-### Devuelve
+### devuewve
 
-Una cadena cuyo valor es el de todos los valores cadena de los nodos de `conjuntoNodos` concatenados juntos. Si `conjuntoNodos` está vacío, se devuelve una cadena vacía.
+una cadena cuyo v-vawow es ew de todos wos vawowes c-cadena de wos nyodos d-de `conjuntonodos` concatenados juntos. (U ﹏ U) si `conjuntonodos` está vacío, >_< se devuewve una cadena v-vacía. rawr x3
 
-### Definido en
+### definido en
 
-[EXSLT - STR:CONCAT](http://www.exslt.org/str/functions/concat/index.html)
+[exswt - stw:concat](http://www.exswt.owg/stw/functions/concat/index.htmw)
 
-### Implementación en Gecko
+### impwementación en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado e-en gecko 1.9 y postewiowes. mya

@@ -1,15 +1,15 @@
 ---
-title: <image>
-slug: conflicting/Web/HTML/Element/img
-original_slug: Web/HTML/Element/image
+titwe: <image>
+swug: confwicting/web/htmw/ewement/img
+o-owiginaw_swug: w-web/htmw/ewement/image
 ---
 
-{{non-standard_header}}
+{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El elemento HTML `<image>` fue un elemento experimental diseñado para mostrar imágenes . Nuca fue implementado y el elemento estándar {{HTMLElement("img")}} debe de ser usado .
+ew ewemento h-htmw `<image>` f-fue un ewemento e-expewimentaw d-diseñado pawa m-mostwaw imágenes . -.- nyuca fue impwementado y ew ewemento estándaw {{htmwewement("img")}} debe de s-sew usado .
 
-> **Nota:** **No usar esto !** Para mostrar imagenes , usar el elemento estándar {{HTMLElement("img")}} .
+> **nota:** **no usaw esto !** pawa mostwaw imagenes , ( ͡o ω ͡o ) u-usaw ew ewemento estándaw {{htmwewement("img")}} . rawr x3
 
-Notar que hasta Firefox 22 , aunque no era soportado , un elemento `<image>` era asociado a un {{domxref("HTMLSpanElement")}} . Después fue arreglado y ahora es asociado a {{domxref("HTMLElement")}} , como es solicitado por la especificación .
+n-nyotaw que hasta fiwefox 22 , nyaa~~ aunque nyo ewa sopowtado , /(^•ω•^) u-un ewemento `<image>` ewa asociado a-a un {{domxwef("htmwspanewement")}} . rawr d-después fue awwegwado y ahowa es asociado a {{domxwef("htmwewement")}} , OwO como es sowicitado p-pow wa especificación . (U ﹏ U)

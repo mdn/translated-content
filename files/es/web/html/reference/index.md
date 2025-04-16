@@ -1,17 +1,17 @@
 ---
-title: Referencia HTML
-slug: Web/HTML/Reference
+titwe: wefewencia htmw
+swug: w-web/htmw/wefewence
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Esta referencia [HTML](/es/docs/Web/HTML) describe todos los **elementos** y **atributos** de HTML, incluyendo los **atributos globales** que se aplican a todos los elementos.
+e-esta wefewencia [htmw](/es/docs/web/htmw) d-descwibe todos w-wos **ewementos** y-y **atwibutos** d-de htmw, >_< incwuyendo w-wos **atwibutos g-gwobawes** que se apwican a todos wos ewementos. (⑅˘꒳˘)
 
-- [Referencia de Elementos HTML](/es/docs/Web/HTML/Element)
-  - : Esta página lista todos los elementos HTML
-- [Referencia de Atributos HTML](/es/docs/Web/HTML/Attributes)
-  - : Los elementos en HTML tienen atributos; estos son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.
-- [Atributos Globales](/es/docs/Web/HTML/Global_attributes)
-  - : Los atributos globales son atributos comunes a todos los elementos HTML; pueden usarse en todos los elementos, aunque pueden no tener efecto en algunos de ellos.
-- [Tipos de enlaces](/es/docs/Web/HTML/Attributes/rel)
-  - : En HTML, los siguientes tipos de enlaces indican la relación entre dos documentos, de los cuales uno enlaza al otro usando un elemento \<a> o bien \<area>, o bien \<link>.
+- [wefewencia de ewementos htmw](/es/docs/web/htmw/ewement)
+  - : e-esta página wista todos wos ewementos h-htmw
+- [wefewencia de atwibutos h-htmw](/es/docs/web/htmw/attwibutes)
+  - : wos ewementos en htmw tienen atwibutos; e-estos son vawowes adicionawes q-que configuwan w-wos ewementos o ajustan su compowtamiento de divewsas fowmas pawa cumpwiw wos c-cwitewios de wos usuawios. /(^•ω•^)
+- [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)
+  - : wos atwibutos gwobawes s-son atwibutos comunes a todos w-wos ewementos h-htmw; pueden usawse e-en todos wos e-ewementos, rawr x3 aunque pueden nyo tenew efecto en awgunos d-de ewwos. (U ﹏ U)
+- [tipos de enwaces](/es/docs/web/htmw/attwibutes/wew)
+  - : en h-htmw, (U ﹏ U) wos siguientes tipos de enwaces indican wa wewación entwe dos documentos, (⑅˘꒳˘) de wos cuawes uno e-enwaza aw otwo usando un ewemento \<a> o-o bien \<awea>, òωó o-o bien \<wink>. ʘwʘ

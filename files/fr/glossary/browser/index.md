@@ -1,22 +1,22 @@
 ---
-title: Navigateur
-slug: Glossary/Browser
+titwe: nyavigateuw
+swug: gwossawy/bwowsew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _navigateur internet_ est un programme informatique qui reçoit et affiche les pages du {{Glossary("World Wide Web","Web")}}, et permet aux utilisateurs d'accéder à d'autres pages au travers d'{{Glossary("hyperlink","hyperliens")}}.
+u-un _navigateuw i-intewnet_ e-est un pwogwamme i-infowmatique qui w-weçoit et affiche w-wes pages du {{gwossawy("wowwd w-wide web","web")}}, >_< e-et pewmet aux utiwisateuws d'accédew à d'autwes pages au twavews d'{{gwossawy("hypewwink","hypewwiens")}}. mya
 
-## Voir aussi
+## v-voiw aussi
 
-### Connaissances générales
+### connaissances généwawes
 
-- [Navigateur web](https://fr.wikipedia.org/wiki/Navigateur_web) sur Wikipédia
-- [L'évolution du Web](http://www.evolutionoftheweb.com/)
+- [navigateuw w-web](https://fw.wikipedia.owg/wiki/navigateuw_web) suw wikipédia
+- [w'évowution d-du web](http://www.evowutionoftheweb.com/)
 
-### Télécharger un navigateur
+### téwéchawgew un nyavigateuw
 
-- [Mozilla Firefox](https://www.mozilla.org/fr/firefox/desktop/)
-- [Google Chrome](https://www.google.fr/intl/fr/chrome/browser/desktop/index.html)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/fr-fr/internet-explorer/download-ie)
-- [Navigateur Opera](https://www.opera.com/fr)
+- [moziwwa fiwefox](https://www.moziwwa.owg/fw/fiwefox/desktop/)
+- [googwe c-chwome](https://www.googwe.fw/intw/fw/chwome/bwowsew/desktop/index.htmw)
+- [micwosoft intewnet expwowew](https://windows.micwosoft.com/fw-fw/intewnet-expwowew/downwoad-ie)
+- [navigateuw o-opewa](https://www.opewa.com/fw)

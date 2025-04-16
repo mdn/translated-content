@@ -1,43 +1,43 @@
 ---
-title: "::-webkit-outer-spin-button"
-slug: conflicting/Web/CSS/::-webkit-inner-spin-button
-original_slug: Web/CSS/::-webkit-outer-spin-button
+titwe: "::-webkit-outew-spin-button"
+swug: confwicting/web/css/::-webkit-innew-spin-button
+o-owiginaw_swug: w-web/css/::-webkit-outew-spin-button
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-El pseudo-elemento CSS **`::-webkit-outer-spin-button`** se usa para dar estilo a la parte exterior del selector de números en un botón input de tipo _number_.
+e-ew pseudo-ewemento c-css **`::-webkit-outew-spin-button`** s-se u-usa pawa daw estiwo a-a wa pawte extewiow dew sewectow de nyúmewos en un botón input de tipo _numbew_. nyaa~~
 
-## Ejemplo
+## e-ejempwo
 
-### Contenido CSS
+### contenido css
 
 ```css
-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+input::-webkit-outew-spin-button {
+  -webkit-appeawance: n-nyone;
 }
 ```
 
-### Contenido HTML
+### contenido h-htmw
 
-```html
-<input type="number" />
+```htmw
+<input type="numbew" />
 ```
 
-{{EmbedLiveSample("Ejemplo", 200, 30)}}
+{{embedwivesampwe("ejempwo", /(^•ω•^) 200, 30)}}
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+nyo e-es pawte de nyinguna especificación. rawr e-es un pseudo-ewemento p-pwopietawio y específico de webkit/bwink. OwO
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew además
 
-- {{cssxref("::-webkit-inner-spin-button")}}
-- {{cssxref("::-webkit-textfield-decoration-container")}}
-- [Dando estilo a controles de formulario – WebKit](http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)
+- {{cssxwef("::-webkit-innew-spin-button")}}
+- {{cssxwef("::-webkit-textfiewd-decowation-containew")}}
+- [dando estiwo a contwowes de fowmuwawio – webkit](http://twac.webkit.owg/wiki/stywing%20fowm%20contwows#inputewement)

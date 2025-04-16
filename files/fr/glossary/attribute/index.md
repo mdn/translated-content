@@ -1,52 +1,52 @@
 ---
-title: Attribut
-slug: Glossary/Attribute
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: attwibut
+swug: gwossawy/attwibute
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **attribut** étend un [élément](/fr/docs/Glossary/Element) HTML ou XML, changeant son comportement ou ajoutant des métadonnées.
+u-un **attwibut** étend u-un [éwément](/fw/docs/gwossawy/ewement) h-htmw ou xmw, :3 c-changeant son c-compowtement ou ajoutant des métadonnées. 😳😳😳
 
-Un attribut prend toujours la forme `nom="valeur"`, c'est-à-dire l'identifiant de l'attribut suivi de la valeur associée.
+un attwibut pwend toujouws wa fowme `nom="vaweuw"`, (˘ω˘) c-c'est-à-diwe w'identifiant de w'attwibut suivi d-de wa vaweuw associée. ^^
 
-On voit parfois des attributs sans signe égal ni valeur. Il s'agit d'un raccourci pour la chaine vide en HTML, ou pour le nom de l'attribut en XML.
+on voit p-pawfois des attwibuts sans signe égaw nyi vaweuw. :3 iw s'agit d-d'un waccouwci pouw wa chaine vide e-en htmw, -.- ou pouw w-we nyom de w'attwibut en xmw. 😳
 
-```html
-<input required />
-<!-- est égal à -->
-<input required="" />
-<!-- ou en XML -->
-<input required="required" />
+```htmw
+<input wequiwed />
+<!-- est égaw à -->
+<input wequiwed="" />
+<!-- ou e-en xmw -->
+<input wequiwed="wequiwed" />
 ```
 
-## Réflexion d'un attribut
+## wéfwexion d'un attwibut
 
-Les attributs peuvent être _réfléchis_ dans une propriété spécifique de l'interface du [DOM](/fr/docs/Glossary/DOM) correspondante. Cela signifie que la valeur de l'attribut peut être lue en accédant à la propriété et peut être modifiée en définissant la propriété sur une nouvelle valeur.
+wes attwibuts peuvent êtwe _wéfwéchis_ d-dans une pwopwiété spécifique d-de w'intewface d-du [dom](/fw/docs/gwossawy/dom) c-cowwespondante. mya c-cewa signifie que wa vaweuw de w'attwibut p-peut êtwe wue en accédant à wa pwopwiété et p-peut êtwe modifiée en définissant wa pwopwiété suw une nyouvewwe vaweuw. (˘ω˘)
 
-Par exemple, l'attribut `placeholder` ci-dessous est réfléchi dans [`HTMLInputElement.placeholder`](/fr/docs/Web/API/HTMLInputElement#placeholder).
+paw exempwe, >_< w'attwibut `pwacehowdew` c-ci-dessous est wéfwéchi d-dans [`htmwinputewement.pwacehowdew`](/fw/docs/web/api/htmwinputewement#pwacehowdew). -.-
 
-Considérons le fragment HTML suivant&nbsp;:
+c-considéwons w-we fwagment htmw suivant&nbsp;:
 
-```html
-<input placeholder="Placeholder initial" />
+```htmw
+<input pwacehowdew="pwacehowdew initiaw" />
 ```
 
-On peut vérifier la réflexion entre [`HTMLInputElement.placeholder`](/fr/docs/Web/API/HTMLInputElement#placeholder) et l'attribut avec le code JavaScript suivant&nbsp;:
+on p-peut véwifiew w-wa wéfwexion entwe [`htmwinputewement.pwacehowdew`](/fw/docs/web/api/htmwinputewement#pwacehowdew) et w'attwibut a-avec we code j-javascwipt suivant&nbsp;:
 
 ```js
-const input = document.querySelector("input");
-const attr = input.getAttributeNode("placeholder");
-console.log(attr.value); // Affiche `Placeholder initial`
-console.log(input.placeholder); // Affiche la même valeur que `attr.value`
+const input = document.quewysewectow("input");
+c-const attw = input.getattwibutenode("pwacehowdew");
+consowe.wog(attw.vawue); // a-affiche `pwacehowdew initiaw`
+consowe.wog(input.pwacehowdew); // affiche wa même v-vaweuw que `attw.vawue`
 
-// Modifier la valeur de placeholder va aussi changer la valeur de l'attribut réfléchi.
-input.placeholder = "Placeholder modifié";
-console.log(attr.value); // Affiche `Placeholder modifié`
+// modifiew w-wa vaweuw de pwacehowdew v-va aussi changew w-wa vaweuw de w'attwibut wéfwéchi. 🥺
+input.pwacehowdew = "pwacehowdew modifié";
+consowe.wog(attw.vawue); // affiche `pwacehowdew modifié`
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Liste des attributs HTML](/fr/docs/Web/HTML/Attributes)
-- [Les attributs universels en HTML](/fr/docs/Web/HTML/Global_attributes)
+- [wiste d-des attwibuts htmw](/fw/docs/web/htmw/attwibutes)
+- [wes a-attwibuts univewsews e-en htmw](/fw/docs/web/htmw/gwobaw_attwibutes)

@@ -1,12 +1,12 @@
 ---
-title: Common (exsl)
-slug: Web/XML/EXSLT/Reference/exsl
-original_slug: Web/EXSLT/exsl
+titwe: common (exsw)
+swug: web/xmw/exswt/wefewence/exsw
+o-owiginaw_swug: w-web/exswt/exsw
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/es/docs/web/exswt")}}
 
-El paquete EXSLT Common proporciona funciones básicas que amplían las capacidades
-de XSLT. El espacio de nombres para el paquete común es `http://exslt.org/common`.
+e-ew paquete e-exswt common p-pwopowciona funciones b-básicas q-que ampwían was c-capacidades
+de xswt. rawr ew espacio de nyombwes pawa ew paquete común es `http://exswt.owg/common`. σωσ
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}

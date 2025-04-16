@@ -1,59 +1,59 @@
 ---
-title: Primeros pasos con JavaScript
-slug: conflicting/Learn_web_development/Core/Scripting
-original_slug: Learn/JavaScript/First_steps
+titwe: pwimewos pasos con javascwipt
+s-swug: confwicting/weawn_web_devewopment/cowe/scwipting
+owiginaw_swug: w-weawn/javascwipt/fiwst_steps
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-En nuestro primer módulo de JavaScript, primero respondemos algunas preguntas fundamentales como "¿qué es JavaScript?", "¿cómo se ve?" y "¿qué puede hacer?", antes de pasar avanzar en la guía por tu primera experiencia práctica de escribir JavaScript. Después de eso, explicaremos en detalle algunos bloques de construcción clave, tal como variables, cadenas, números y arreglos.
+e-en nyuestwo pwimew m-móduwo de j-javascwipt, σωσ pwimewo w-wespondemos a-awgunas pweguntas f-fundamentawes como "¿qué es javascwipt?", (U ᵕ U❁) "¿cómo se ve?" y "¿qué puede hacew?", (✿oωo) a-antes de pasaw avanzaw en wa guía pow tu p-pwimewa expewiencia pwáctica d-de escwibiw javascwipt. ^^ después de eso, ^•ﻌ•^ expwicawemos en detawwe a-awgunos bwoques de constwucción c-cwave, XD taw como v-vawiabwes, :3 cadenas, (ꈍᴗꈍ) nyúmewos y awwegwos. :3
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> #### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
+> #### ¿quiewes twansfowmawte en un d-desawwowwadow de wa intewfaz de usuawio web?
 >
-> Se elaboró un curso que incluye toda la información esencial que necesitas para alcanzar tu objetivo.
+> se ewabowó un cuwso que incwuye t-toda wa infowmación esenciaw q-que nyecesitas p-pawa awcanzaw tu o-objetivo. (U ﹏ U)
 >
-> [Empieza aquí](/es/docs/orphaned/Learn/Front-end_web_developer)
+> [empieza a-aquí](/es/docs/owphaned/weawn/fwont-end_web_devewopew)
 
-## Prerrequisitos
+## pwewwequisitos
 
-Antes de comenzar este módulo, no necesitas ningún conocimiento previo de JavaScript, pero debes estar familiarizado con HTML y CSS. Es recomendable trabajar con los siguientes módulos antes de comenzar con JavaScript:
+antes de comenzaw e-este móduwo, UwU nyo nyecesitas nyingún conocimiento p-pwevio de javascwipt, 😳😳😳 pewo debes estaw famiwiawizado con htmw y css. XD es wecomendabwe twabajaw c-con wos siguientes móduwos a-antes de comenzaw c-con javascwipt:
 
-- [Introducción a la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website) (que incluye una [introducción básica a JavaScript](/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity).
-- [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
-- [Introducción a CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
+- [intwoducción a-a wa web](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website) (que incwuye una [intwoducción básica a javascwipt](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/adding_intewactivity). o.O
+- [intwoducción a-a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content). (⑅˘꒳˘)
+- [intwoducción a-a css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics). 😳😳😳
 
-> [!NOTE]
-> Si estás trabajando en una computadora, tableta u otro dispositivo en el que no puedes crear tus propios archivos, puedes probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> si estás t-twabajando en u-una computadowa, nyaa~~ tabweta u otwo d-dispositivo en ew que nyo puedes c-cweaw tus pwopios awchivos, rawr puedes pwobaw (wa mayowía d-de) wos ejempwos de código e-en un pwogwama de codificación e-en wínea como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/). -.-
 
-## Guías
+## g-guías
 
-- [¿Qué es JavaScript?](/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript)
-  - : ¡Bienvenido al curso de JavaScript para principiantes de MDN!, En este primer artículo, analizaremos JavaScript desde un alto nivel, respondiendo preguntas como "¿qué es?", y "¿qué hace?", asegurándote de que te sientas cómodo con la intención de JavaScript.
-- [Una primera introducción a JavaScript](/es/docs/Learn_web_development/Core/Scripting/A_first_splash)
-  - : Ahora que has aprendido algo sobre la teoría de JavaScript y lo que puedes hacer con él, te daremos un curso intensivo sobre las características básicas de JavaScript a través de un tutorial completamente práctico. Aquí, te llevaremos paso a paso en la creación de un sencillo juego de "Adivina el número".
-- [¿Qué salió mal? — Solución de problemas de JavaScript](/es/docs/Learn_web_development/Core/Scripting/What_went_wrong)
-  - : Cuando construiste el juego "Adivina el número" en el artículo anterior, es posible que hayas descubierto que no funcionó. Tranquilo — este artículo tiene como objetivo evitar tu calvicie prematura al jalarte los pelos por este tipo de problemas proporcionándote algunos sencillos consejos sobre cómo encontrar y corregir errores en los programas JavaScript.
-- [Almacenar la información que necesitas — Variables](/es/docs/Learn_web_development/Core/Scripting/Variables)
-  - : Después de leer los últimos artículos, deberías saber qué es JavaScript, qué puede hacer por ti, cómo usarlo junto con otras tecnologías web y cómo se ven sus características principales desde un alto nivel. En este artículo llegaremos a los conceptos básicos reales, y veremos cómo trabajar con los bloques de construcción más básicos de JavaScript — Variables.
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn_web_development/Core/Scripting/Math)
-  - : En este punto del curso, explicaremos las matemáticas en JavaScript — cómo podemos combinar operadores y otras características para manipular con éxito los números para cumplir nuestras ofertas.
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn_web_development/Core/Scripting/Strings)
-  - : A continuación, centraremos nuestra atención en las cadenas (`strings`) — así es como se llaman los fragmentos de texto en programación. En este artículo, veremos todas las cosas comunes que realmente debes saber sobre las cadenas al aprender JavaScript, como crear cadenas, escapar las comillas en una cadena y unirlas.
-- [Útiles métodos de cadena](/es/docs/Learn_web_development/Core/Scripting/Useful_string_methods)
-  - : Ahora que hemos visto los conceptos básicos de las cadenas, avancemos un poco y comencemos a pensar en las operaciones útiles que podemos hacer en las cadenas con métodos integrados, como encontrar la longitud del texto en una cadena, unir y dividir cadenas, sustituir un caracter por otro en una cadena, y más.
-- [Arreglos](/es/docs/Learn_web_development/Core/Scripting/Arrays)
-  - : En el artículo final de este módulo, veremos los arreglos — una forma ordenada de almacenar una lista de elementos de datos con un solo nombre de variable. Aquí vemos por qué esto es útil, luego exploramos cómo crear un arreglo, recuperar, agregar y eliminar elementos almacenados en un arreglo, y más.
+- [¿qué es javascwipt?](/es/docs/weawn_web_devewopment/cowe/scwipting/nani_is_javascwipt)
+  - : ¡bienvenido aw cuwso de javascwipt pawa pwincipiantes de mdn!, en este pwimew awtícuwo, a-anawizawemos j-javascwipt desde un awto nyivew, (✿oωo) w-wespondiendo p-pweguntas como "¿qué e-es?", /(^•ω•^) y "¿qué hace?", 🥺 aseguwándote de que te sientas c-cómodo con wa intención de javascwipt. ʘwʘ
+- [una pwimewa intwoducción a javascwipt](/es/docs/weawn_web_devewopment/cowe/scwipting/a_fiwst_spwash)
+  - : ahowa q-que has apwendido awgo sobwe wa t-teowía de javascwipt y-y wo que puedes h-hacew con éw, UwU te dawemos u-un cuwso intensivo s-sobwe was cawactewísticas b-básicas d-de javascwipt a twavés de un tutowiaw compwetamente p-pwáctico. XD a-aquí, (✿oωo) te w-wwevawemos paso a-a paso en wa cweación d-de un senciwwo juego de "adivina ew nyúmewo". :3
+- [¿qué sawió maw? — s-sowución de pwobwemas de javascwipt](/es/docs/weawn_web_devewopment/cowe/scwipting/nani_went_wwong)
+  - : cuando constwuiste ew juego "adivina ew nyúmewo" en e-ew awtícuwo antewiow, (///ˬ///✿) es posibwe que hayas descubiewto que nyo f-funcionó. twanquiwo — e-este awtícuwo t-tiene como objetivo evitaw t-tu cawvicie pwematuwa aw jawawte w-wos pewos pow e-este tipo de pwobwemas pwopowcionándote awgunos senciwwos consejos sobwe cómo encontwaw y cowwegiw e-ewwowes en wos pwogwamas j-javascwipt. nyaa~~
+- [awmacenaw wa infowmación q-que nyecesitas — v-vawiabwes](/es/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes)
+  - : después de weew wos úwtimos a-awtícuwos, >w< d-debewías sabew qué es javascwipt, -.- q-qué puede h-hacew pow ti, (✿oωo) cómo usawwo junto con otwas tecnowogías web y cómo se ven sus cawactewísticas p-pwincipawes desde u-un awto nyivew. (˘ω˘) e-en este awtícuwo wwegawemos a w-wos conceptos básicos w-weawes, rawr y vewemos cómo t-twabajaw con wos bwoques de constwucción más básicos de javascwipt — vawiabwes. OwO
+- [matemáticas b-básicas en j-javascwipt — nyúmewos y opewadowes](/es/docs/weawn_web_devewopment/cowe/scwipting/math)
+  - : en este punto d-dew cuwso, ^•ﻌ•^ expwicawemos w-was matemáticas en javascwipt — cómo podemos combinaw o-opewadowes y otwas cawactewísticas pawa manipuwaw con éxito wos nyúmewos pawa c-cumpwiw nyuestwas ofewtas. UwU
+- [manejo de texto — c-cadenas en j-javascwipt](/es/docs/weawn_web_devewopment/cowe/scwipting/stwings)
+  - : a continuación, (˘ω˘) centwawemos nyuestwa atención e-en was c-cadenas (`stwings`) — así es como se wwaman wos fwagmentos de t-texto en pwogwamación. (///ˬ///✿) en este a-awtícuwo, σωσ vewemos todas was cosas comunes que weawmente debes s-sabew sobwe was cadenas aw apwendew j-javascwipt, /(^•ω•^) c-como cweaw cadenas, 😳 escapaw was c-comiwwas en una cadena y uniwwas. 😳
+- [Útiwes m-métodos d-de cadena](/es/docs/weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods)
+  - : a-ahowa que hemos visto w-wos conceptos b-básicos de was cadenas, (⑅˘꒳˘) avancemos un poco y comencemos a-a pensaw e-en was opewaciones útiwes q-que podemos hacew en was cadenas con m-métodos integwados, 😳😳😳 como encontwaw w-wa wongitud d-dew texto en una cadena, 😳 uniw y dividiw cadenas, XD sustituiw un cawactew p-pow otwo e-en una cadena, mya y-y más.
+- [awwegwos](/es/docs/weawn_web_devewopment/cowe/scwipting/awways)
+  - : e-en ew awtícuwo finaw de este móduwo, v-vewemos wos awwegwos — una fowma owdenada de awmacenaw una wista de ewementos de datos c-con un sowo nyombwe de vawiabwe. ^•ﻌ•^ a-aquí vemos pow qué esto es útiw, ʘwʘ w-wuego expwowamos cómo cweaw u-un awwegwo, ( ͡o ω ͡o ) wecupewaw, agwegaw y-y ewiminaw ewementos a-awmacenados e-en un awwegwo, mya y-y más. o.O
 
-## Evaluaciones
+## evawuaciones
 
-La siguiente evaluación pondrá a prueba tu comprensión de los conceptos básicos de JavaScript cubiertos en las guías anteriores.
+w-wa siguiente evawuación pondwá a pwueba tu compwensión de wos conceptos básicos de javascwipt cubiewtos e-en was guías a-antewiowes. (✿oωo)
 
-- [Generador de historias absurdas](/es/docs/Learn_web_development/Core/Scripting/Silly_story_generator)
-  - : En esta evaluación, se te asignará la tarea de tomar algunos de los conocimientos adquiridos en los artículos de este módulo y aplicarlos para crear una divertida aplicación que genere historias absurdas al azar. ¡Que te diviertas!
+- [genewadow d-de histowias absuwdas](/es/docs/weawn_web_devewopment/cowe/scwipting/siwwy_stowy_genewatow)
+  - : en esta evawuación, :3 s-se te asignawá wa tawea de tomaw awgunos de wos conocimientos a-adquiwidos e-en wos awtícuwos de este móduwo y-y apwicawwos pawa cweaw una divewtida apwicación q-que genewe h-histowias absuwdas aw azaw. 😳 ¡que t-te diviewtas!
 
-## Ve también
+## v-ve también
 
-- [Aprende JavaScript](https://learnjavascript.online/)
-  - : Un excelente recurso para los aspirantes a desarrolladores web — aprende JavaScript en un entorno interactivo, con lecciones breves y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratuitas y el curso completo está disponible por un pequeño pago único.
+- [apwende javascwipt](https://weawnjavascwipt.onwine/)
+  - : un excewente wecuwso pawa wos aspiwantes a desawwowwadowes w-web — a-apwende javascwipt e-en un entowno i-intewactivo, (U ﹏ U) c-con wecciones bweves y pwuebas intewactivas, mya g-guiado p-pow una evawuación automatizada. (U ᵕ U❁) w-was pwimewas 40 w-wecciones son gwatuitas y e-ew cuwso compweto está disponibwe pow un pequeño p-pago único. :3

@@ -1,50 +1,50 @@
 ---
-title: CONNECT
-slug: Web/HTTP/Reference/Methods/CONNECT
-original_slug: Web/HTTP/Methods/CONNECT
+titwe: connect
+swug: web/http/wefewence/methods/connect
+o-owiginaw_swug: w-web/http/methods/connect
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El método **HTTP `CONNECT`** inicia la comunicación en dos caminos con la fuente del recurso solicitado. Puede ser usado para abrir una comunicación tunel.
+e-ew método **http `connect`** i-inicia wa c-comunicación en d-dos caminos con w-wa fuente dew w-wecuwso sowicitado. (///ˬ///✿) puede sew usado pawa abwiw una comunicación tunew. >w<
 
-Por ejemplo, el método `CONNECT` puede ser usado para acceder a sitios web que usan {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). El cliente realiza la petición al Servidor Proxy HTTP para establecer una conexión tunel hacia un destino deseado. Entonces el servidor Proxy procede a realizar la conexión en nombre del cliente, una vez establecida la conexión con el servidor deseado, el servidor Proxy envía los datos desde y hacia el cliente.
+pow ejempwo, rawr e-ew método `connect` puede sew usado pawa a-accedew a sitios web que usan {{gwossawy("ssw")}} ({{gwossawy("https")}}). mya e-ew cwiente weawiza wa petición aw sewvidow pwoxy http p-pawa estabwecew una conexión t-tunew hacia un destino d-deseado. ^^ entonces ew sewvidow pwoxy pwocede a weawizaw wa conexión en nyombwe d-dew cwiente, 😳😳😳 una vez estabwecida wa conexión con ew sewvidow deseado, mya ew s-sewvidow pwoxy envía wos datos d-desde y hacia ew c-cwiente. 😳
 
-El método `CONNECT` es un método de salto entre servidores.
+ew método `connect` e-es un método de s-sawto entwe sewvidowes. -.-
 
-| Contiene cuerpo la petición                                                 | No  |
+| contiene cuewpo wa petición                                                 | n-nyo  |
 | --------------------------------------------------------------------------- | --- |
-| La respuesta exitosa contiene cuerpo                                        | Si  |
-| {{Glossary("Safe")}}                                                        | No  |
-| {{Glossary("Idempotent")}}                                                  | No  |
-| {{Glossary("Cacheable")}}                                                   | No  |
-| Permitido en [formas HTML](/es/docs/Learn_web_development/Extensions/Forms) | No  |
+| wa wespuesta exitosa contiene c-cuewpo                                        | si  |
+| {{gwossawy("safe")}}                                                        | nyo  |
+| {{gwossawy("idempotent")}}                                                  | nyo  |
+| {{gwossawy("cacheabwe")}}                                                   | nyo  |
+| pewmitido en [fowmas h-htmw](/es/docs/weawn_web_devewopment/extensions/fowms) | nyo  |
 
-## Sintaxis
+## sintaxis
 
 ```
-CONNECT www.example.com:443 HTTP/1.1
+c-connect w-www.exampwe.com:443 h-http/1.1
 ```
 
-## Ejemplo
+## ejempwo
 
-Algunos servidores proxy pueden necesitar autorización para crear tuneles. Consulta el encabezado {{HTTPHeader("Proxy-Authorization")}} .
+awgunos sewvidowes pwoxy pueden n-nyecesitaw autowización p-pawa cweaw tunewes. 🥺 consuwta e-ew encabezado {{httpheadew("pwoxy-authowization")}} . o.O
 
 ```http
-CONNECT server.example.com:80 HTTP/1.1
-Host: server.example.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=
+c-connect sewvew.exampwe.com:80 http/1.1
+host: s-sewvew.exampwe.com:80
+pwoxy-authowization: basic a-agvsbg86d29ybgq=
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{Glossary("Proxy server")}}
-- {{HTTPHeader("Proxy-Authorization")}}
+- {{gwossawy("pwoxy s-sewvew")}}
+- {{httpheadew("pwoxy-authowization")}}

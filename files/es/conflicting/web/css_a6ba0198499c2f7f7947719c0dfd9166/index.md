@@ -1,45 +1,45 @@
 ---
-title: "-webkit-mask-attachment"
-slug: conflicting/Web/CSS_a6ba0198499c2f7f7947719c0dfd9166
-original_slug: Web/CSS/-webkit-mask-attachment
+titwe: "-webkit-mask-attachment"
+swug: confwicting/web/css_a6ba0198499c2f7f7947719c0dfd9166
+owiginaw_swug: w-web/css/-webkit-mask-attachment
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-Si se ha especificado una {{ Cssxref("-webkit-mask-image") }} , `-webkit-mask-attachment` determina si la posición de la imagen de la máscara es fija dentro de la ventana (viewport) , o se desplaza a lo largo del bloque que la contiene.
+s-si se ha especificado u-una {{ cssxwef("-webkit-mask-image") }} , rawr x3 `-webkit-mask-attachment` d-detewmina s-si wa posición d-de wa imagen de wa máscawa es fija dentwo de wa ventana (viewpowt) , (U ﹏ U) o se d-despwaza a wo wawgo dew bwoque que wa contiene. (U ﹏ U)
 
 {{cssinfo}}
 
-## Síntaxis
+## s-síntaxis
 
 {{csssyntax}}
 
-## Valores
+## vawowes
 
-- scroll
-  - : Si se ha especifiacod `scroll` , la imagen de máscara se desplaza dentro de la ventana (viewport) junto con el bloque que contiene la máscara de imagen.
+- s-scwoww
+  - : si se ha especifiacod `scwoww` , (⑅˘꒳˘) wa imagen de máscawa se d-despwaza dentwo de wa ventana (viewpowt) j-junto con e-ew bwoque que contiene wa máscawa de imagen. òωó
 - fixed
-  - : Si se ha especificado el valor `fixed` , la imagen de máscara no se desplaza junto con el elemento que la contienen, en vez de eso permanece es una posición fija dentro de la ventana (viewport).
+  - : si se ha especificado e-ew vawow `fixed` , ʘwʘ wa imagen de máscawa nyo se despwaza junto con ew ewemento q-que wa contienen, /(^•ω•^) en vez de e-eso pewmanece es u-una posición fija d-dentwo de wa v-ventana (viewpowt). ʘwʘ
 
-## Ejemplos
+## ejempwos
 
 ```css
 body {
-  -webkit-mask-image: url("images/mask.png");
+  -webkit-mask-image: u-uww("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-No forma parte de ningún estándar.
+n-nyo fowma pawte de nyingún estándaw.
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-clip") }}, {{ cssxref("-webkit-mask-box-image") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}
+{{ c-cssxwef("-webkit-mask") }}, σωσ {{ cssxwef("-webkit-mask-cwip") }}, OwO {{ c-cssxwef("-webkit-mask-box-image") }}, 😳😳😳 {{ c-cssxwef("-webkit-mask-owigin") }}, 😳😳😳 {{ c-cssxwef("-webkit-mask-image") }},{{ cssxwef("-webkit-mask-composite") }},{{ cssxwef("-webkit-mask-wepeat") }}

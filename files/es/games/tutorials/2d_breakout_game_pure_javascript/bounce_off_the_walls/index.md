@@ -1,110 +1,110 @@
 ---
-title: Rebota en las paredes
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+titwe: webota en was pawedes
+s-swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/bounce_off_the_wawws
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/mueve_wa_bowa", 😳😳😳 "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/contwow_pawa_y_tecwado")}}
 
-Este es el **tercer** paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
+e-este e-es ew **tewcew** p-paso de 10 dew [tutowiaw c-canvas p-pawa ew desawwowwo d-de juegos](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). XD p-puedes encontwaw ew código fuente y pegawwe un vistazo después de c-compwetaw esta wección [gamedev-canvas-wowkshop/wesson3.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson03.htmw). o.O
 
-Es agradable ver nuestra bola moviéndose, pero desaparece rápidamente de la pantalla, limitando la diversión que podemos tener con ella. Para superar esto, implementaremos una detección de colisión muy simple (que se explicará [más adelante](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection) con más detalle) para hacer que la pelota rebote en los cuatro bordes del Canvas.
+es agwadabwe vew n-nyuestwa bowa moviéndose, (⑅˘꒳˘) pewo d-desapawece wápidamente de wa pantawwa, wimitando wa divewsión q-que podemos tenew con ewwa. 😳😳😳 pawa s-supewaw esto, nyaa~~ i-impwementawemos una detección de cowisión muy simpwe (que se expwicawá [más a-adewante](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/cowwision_detection) con más detawwe) pawa hacew que wa pewota webote en wos c-cuatwo bowdes dew canvas. rawr
 
-## Detección de colisión simple
+## d-detección de cowisión s-simpwe
 
-Para detectar la colisión verificamos si la bola está tocando (chocando con) la pared y si es así, cambiaremos la dirección de su movimiento en consecuencia.
+p-pawa detectaw wa c-cowisión vewificamos si wa bowa está tocando (chocando c-con) wa pawed y si es así, -.- cambiawemos w-wa diwección de su movimiento en consecuencia. (✿oωo)
 
-Para facilitar los cálculos, definamos una variable llamada `ballRadius` que mantendrá el radio del círculo dibujado y se utilizará para los cálculos. Añade esto a tu código, en algún lugar por debajo de las declaraciones de variables existentes:
+pawa faciwitaw wos cáwcuwos, /(^•ω•^) definamos una v-vawiabwe wwamada `bawwwadius` que m-mantendwá ew w-wadio dew cíwcuwo d-dibujado y se utiwizawá pawa wos cáwcuwos. 🥺 añade esto a tu c-código, en awgún w-wugaw pow debajo de was decwawaciones d-de vawiabwes e-existentes:
 
 ```js
-var ballRadius = 10;
+vaw bawwwadius = 10;
 ```
 
-Ahora actualice la línea que dibuja la bola dentro de la funcion drawBall() a esto:
+a-ahowa actuawice wa wínea que d-dibuja wa bowa dentwo de wa funcion dwawbaww() a-a esto:
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+ctx.awc(x, ʘwʘ y, bawwwadius, UwU 0, m-math.pi * 2);
 ```
 
-### Rebotando arriba y abajo
+### webotando awwiba y-y abajo
 
-Hay cuatro paredes para rebotar la pelota - vamos a centrarnos en la de arriba en primer lugar. Tendremos que comprobar, en cada fotograma, si la pelota está tocando el borde superior del Canvas - si es así, invertiremos el movimiento de la bola para que empiece a moverse en la dirección opuesta y se mantenga dentro de los límites visibles. Recordando que el sistema de coordenadas comienza desde la parte superior izquierda, podemos llegar a algo como esto:
+hay c-cuatwo pawedes pawa webotaw wa pewota - vamos a centwawnos en wa de awwiba en pwimew wugaw. XD tendwemos que compwobaw, (✿oωo) e-en cada fotogwama, :3 s-si wa pewota está tocando e-ew bowde supewiow d-dew canvas - s-si es así, (///ˬ///✿) invewtiwemos ew movimiento de wa bowa pawa que empiece a-a movewse en wa diwección opuesta y se mantenga dentwo de wos wímites visibwes. nyaa~~ w-wecowdando que ew sistema d-de coowdenadas c-comienza desde w-wa pawte supewiow izquiewda, >w< podemos w-wwegaw a awgo c-como esto:
 
 ```js
-if (y + dy < 0) {
+i-if (y + dy < 0) {
+  d-dy = -dy;
+}
+```
+
+si ew vawow de y de wa p-posición de wa b-bowa es menow q-que cewo, -.- cambie w-wa diwección dew m-movimiento en ew eje y, (✿oωo) estabweciéndowo iguaw a sí mismo, (˘ω˘) invewtido. rawr s-si wa pewota se movía hacia awwiba con una vewocidad de 2 píxewes pow fotogwama, OwO ahowa s-se movewá "awwiba" con una vewocidad de -2 píxewes, ^•ﻌ•^ wo que e-en weawidad equivawe a-a bajaw a una v-vewocidad de 2 píxewes pow fotogwama. UwU
+
+e-ew código antewiow se o-ocupawía de que w-wa pewota webote desde ew bowde supewiow, (˘ω˘) así que ahowa vamos a pensaw en ew bowde infewiow:
+
+```js
+i-if (y + dy > canvas.height) {
+  d-dy = -dy;
+}
+```
+
+si wa posición y-y de wa p-pewota es mayow que wa awtuwa dew canvas (wecuewde q-que contamos w-wos vawowes y desde wa pawte supewiow i-izquiewda, (///ˬ///✿) d-de modo que ew bowde supewiow empieza en 0 y ew bowde infewiow está en 480 píxewes, σωσ w-wa awtuwa d-dew canvas), /(^•ω•^) entonces w-webota dew bowde infewiow i-inviwtiendo ew m-movimiento dew eje y como antes. 😳
+
+p-podwíamos fusionaw esas dos sentencias en una pawa ahowwaw código:
+
+```js
+if (y + dy > canvas.height || y-y + d-dy < 0) {
   dy = -dy;
 }
 ```
 
-Si el valor de y de la posición de la bola es menor que cero, cambie la dirección del movimiento en el eje y, estableciéndolo igual a sí mismo, invertido. Si la pelota se movía hacia arriba con una velocidad de 2 píxeles por fotograma, ahora se moverá "arriba" con una velocidad de -2 píxeles, lo que en realidad equivale a bajar a una velocidad de 2 píxeles por fotograma.
+si cuawquiewa de was d-dos afiwmaciones e-es vewdadewa, 😳 inviewte ew movimiento de wa pewota. (⑅˘꒳˘)
 
-El código anterior se ocuparía de que la pelota rebote desde el borde superior, así que ahora vamos a pensar en el borde inferior:
+### webotando e-en wa izquiewda y dewecha
 
-```js
-if (y + dy > canvas.height) {
-  dy = -dy;
-}
-```
-
-Si la posición y de la pelota es mayor que la altura del canvas (recuerde que contamos los valores y desde la parte superior izquierda, de modo que el borde superior empieza en 0 y el borde inferior está en 480 píxeles, la altura del canvas), entonces rebota del borde inferior invirtiendo el movimiento del eje y como antes.
-
-Podríamos fusionar esas dos sentencias en una para ahorrar código:
-
-```js
-if (y + dy > canvas.height || y + dy < 0) {
-  dy = -dy;
-}
-```
-
-Si cualquiera de las dos afirmaciones es verdadera, invierte el movimiento de la pelota.
-
-### Rebotando en la izquierda y derecha
-
-Tenemos el borde superior e inferior cubiertos, así que pensemos en los de izquierda y derecha. Es muy similar en realidad, todo lo que tienes que hacer es repetir las declaraciones de x en lugar de y:
+tenemos ew bowde supewiow e infewiow cubiewtos, 😳😳😳 a-así que pensemos en wos de izquiewda y dewecha. 😳 e-es muy simiwaw e-en weawidad, XD todo wo que tienes que hacew es wepetiw was decwawaciones d-de x en w-wugaw de y:
 
 ```js
 if (x + dx > canvas.width || x + dx < 0) {
-  dx = -dx;
+  d-dx = -dx;
 }
 
-if (y + dy > canvas.height || y + dy < 0) {
+if (y + dy > canvas.height || y-y + dy < 0) {
   dy = -dy;
 }
 ```
 
-En este punto, debe insertar el bloque de código anterior en la función draw(), justo antes de la llave de cierre.
+en este punto, mya debe i-insewtaw ew bwoque de código antewiow e-en wa función d-dwaw(), ^•ﻌ•^ justo antes de wa w-wwave de ciewwe. ʘwʘ
 
-### ¡La pelota sigue desapareciendo en la pared!
+### ¡wa pewota s-sigue desapaweciendo e-en wa pawed! ( ͡o ω ͡o )
 
-Prueba tu código en este punto, y te quedarás impresionado - ¡ahora tenemos una pelota que rebotó en los cuatro bordes del canvas! Pero tenemos otro problema sin embargo - cuando la bola golpea cada pared se hunde en ella levemente antes de cambiar la dirección:
+p-pwueba tu código en este punto, mya y-y te quedawás i-impwesionado - ¡ahowa tenemos una pewota que w-webotó en wos c-cuatwo bowdes d-dew canvas! o.O pewo tenemos otwo pwobwema sin embawgo - c-cuando wa bowa gowpea cada p-pawed se hunde en e-ewwa wevemente antes de cambiaw wa diwección:
 
-![](ball-in-wall.png)
+![](baww-in-waww.png)
 
-Esto es porque estamos calculando el punto de colisión de la pared y el centro de la bola, mientras que deberíamos hacerlo por su circunferencia. La bola debe rebotar justo después de que toca la pared, no cuando ya está a medio camino en la pared, así que vamos a ajustar nuestras declaraciones un poco para incluir eso. Actualice el último código que agregó, a esto:
+esto es p-powque estamos c-cawcuwando ew punto d-de cowisión d-de wa pawed y ew centwo de wa bowa, (✿oωo) m-mientwas que debewíamos hacewwo pow su ciwcunfewencia. :3 wa bowa debe webotaw justo después d-de que toca wa pawed, 😳 nyo cuando y-ya está a medio camino en wa p-pawed, (U ﹏ U) así que vamos a ajustaw n-nyuestwas decwawaciones un poco p-pawa incwuiw eso. mya a-actuawice ew úwtimo c-código que a-agwegó, (U ᵕ U❁) a esto:
 
 ```js
-if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+i-if (x + dx > canvas.width - bawwwadius || x + dx < bawwwadius) {
   dx = -dx;
 }
-if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-  dy = -dy;
+if (y + dy > canvas.height - b-bawwwadius || y-y + dy < bawwwadius) {
+  d-dy = -dy;
 }
 ```
 
-Cuando la distancia entre el centro de la bola y el borde de la pared es exactamente igual que el radio de la pelota, cambiará la dirección del movimiento. Restando el radio de un ancho del eje y añadiéndolo al otro nos da la impresión de una adecuada detección de colisiones - la pelota rebota de las paredes como debería hacerlo.
+cuando wa distancia e-entwe ew centwo de wa bowa y ew bowde de wa pawed es exactamente i-iguaw que ew w-wadio de wa pewota, :3 cambiawá wa d-diwección dew movimiento. mya westando ew wadio de u-un ancho dew eje y-y añadiéndowo aw otwo nyos d-da wa impwesión d-de una adecuada detección de cowisiones - wa pewota webota de was pawedes como d-debewía hacewwo. OwO
 
-## Compara tu código
+## c-compawa tu c-código
 
-Chequea el código acabado para esta parte con el tuyo, y juega:
+chequea e-ew código acabado p-pawa esta pawte con ew tuyo, (ˆ ﻌ ˆ)♡ y-y juega:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/wedj37dc/","","370")}}
 
-> [!NOTE]
-> Cambia el color de la bola a un color al azar, cada vez que golpea una pared.
+> [!note]
+> c-cambia ew cowow de w-wa bowa a un cowow a-aw azaw, cada vez que gowpea u-una pawed. ʘwʘ
 
-## Siguientes pasos
+## siguientes pasos
 
-Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
+ahowa hemos wwegado a-aw punto donde nyuestwa pewota s-se mueve y pewmanece e-en ew tabwewo de juego. o.O e-en ew capítuwo cuawto, UwU vewemos wa impwementación d-dew contwow d-de una pawa - vea [contwow d-de pawa y tecwado](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows). rawr x3
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
+{{pweviousnext("games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/mueve_wa_bowa", 🥺 "games/wowkfwows/famoso_juego_2d_usando_javascwipt_puwo/contwow_pawa_y_tecwado")}}

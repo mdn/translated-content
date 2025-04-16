@@ -1,91 +1,91 @@
 ---
-title: PATCH
-slug: Web/HTTP/Reference/Methods/PATCH
-original_slug: Web/HTTP/Methods/PATCH
+titwe: patch
+swug: web/http/wefewence/methods/patch
+o-owiginaw_swug: w-web/http/methods/patch
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El **método HTTP PATCH** aplica modificaciones parciales a un recurso.
+e-ew **método h-http patch** apwica m-modificaciones p-pawciawes a un w-wecuwso. :3
 
-El método HTTP PUT únicamente permite reemplazar completamente un documento. A diferencia de `PUT`, el método `PATCH` no es idempotente, esto quiere decir que peticiones identicas sucesivas _pueden_ tener efectos diferentes. Sin embargo, es posible emitir peticiones `PATCH` de tal forma que sean idempotentes.
+ew método h-http put únicamente pewmite weempwazaw compwetamente un documento. OwO a difewencia d-de `put`, (U ﹏ U) ew método `patch` nyo es idempotente, >w< e-esto quiewe deciw que peticiones i-identicas sucesivas _pueden_ tenew efectos difewentes. (U ﹏ U) s-sin embawgo, 😳 es posibwe emitiw p-peticiones `patch` d-de taw fowma que sean idempotentes. (ˆ ﻌ ˆ)♡
 
-`PATCH` (al igual que `POST`) _puede_ provocar efectos secundarios a otros recursos.
+`patch` (aw iguaw que `post`) _puede_ pwovocaw efectos secundawios a-a otwos wecuwsos. 😳😳😳
 
-Para averiguar si un servidor soporta `PATCH`, el servidor puede notificar su compatibilidad al añadirlo a la lista en el header: {{HTTPHeader("Allow")}} o {{HTTPHeader("Access-Control-Allow-Methods")}} (para CORS).
+pawa avewiguaw si un sewvidow sopowta `patch`, (U ﹏ U) ew s-sewvidow puede nyotificaw su compatibiwidad a-aw añadiwwo a-a wa wista e-en ew headew: {{httpheadew("awwow")}} o-o {{httpheadew("access-contwow-awwow-methods")}} (pawa cows).
 
-Otra indicación (implícita) de que las peticiones PATCH son permitidas, es la presencia del header: {{HTTPHeader("Accept-Patch")}}, el cual especifica los formatos de documento patch aceptados por el servidor.
+otwa indicación (impwícita) de que was p-peticiones patch son pewmitidas, (///ˬ///✿) es wa pwesencia d-dew headew: {{httpheadew("accept-patch")}}, 😳 ew cuaw especifica wos fowmatos de documento patch aceptados pow ew sewvidow. 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Petición con cuerpo</th>
-      <td>Sí</td>
-    </tr>
-    <tr>
-      <th scope="row">Respuesta exitosa con cuerto</th>
-      <td>Sí</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Seguro")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotente")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Permitido en
-        <a href="/es/docs/Web/Guide/HTML/Forms">formularios HTML</a>
+    <tw>
+      <th scope="wow">petición c-con c-cuewpo</th>
+      <td>sí</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wespuesta exitosa con cuewto</th>
+      <td>sí</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("seguwo")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotente")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        pewmitido e-en
+        <a h-hwef="/es/docs/web/guide/htmw/fowms">fowmuwawios htmw</a>
       </th>
-      <td>No</td>
-    </tr>
+      <td>no</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxis
+## s-sintaxis
 
 ```
-PATCH /file.txt HTTP/1.1
+patch /fiwe.txt h-http/1.1
 ```
 
-## Ejemplo
+## ejempwo
 
-### Petición
+### petición
 
 ```http
-PATCH /file.txt HTTP/1.1
-Host: www.example.com
-Content-Type: application/example
-If-Match: "e0023aa4e"
-Content-Length: 100
+p-patch /fiwe.txt http/1.1
+h-host: www.exampwe.com
+content-type: a-appwication/exampwe
+i-if-match: "e0023aa4e"
+content-wength: 100
 
-[description of changes]
+[descwiption of changes]
 ```
 
-### Respuesta
+### wespuesta
 
-Una respuesta exitosa es indicada con un código de respuesta {{HTTPStatus("204")}}, porque la respuesta no tiene mensaje en el body. (el cual tendría una respuesta con el código 200). Tenga en cuenta que también se pueden utilizar otros códigos.
+una wespuesta exitosa es indicada con un código d-de wespuesta {{httpstatus("204")}}, σωσ p-powque wa wespuesta nyo t-tiene mensaje e-en ew body. rawr x3 (ew c-cuaw tendwía una wespuesta con ew código 200). OwO tenga en cuenta q-que también se pueden utiwizaw otwos códigos. /(^•ω•^)
 
 ```
-HTTP/1.1 204 No Content
-Content-Location: /file.txt
-ETag: "e0023aa4f"
+http/1.1 204 nyo content
+c-content-wocation: /fiwe.txt
+etag: "e0023aa4f"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-| Especificación           | Título                |
+| e-especificación           | t-títuwo                |
 | ------------------------ | --------------------- |
-| {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
+| {{wfc("5789", "patch")}} | patch method fow h-http |
 
-## Ver también
+## vew t-también
 
-- {{HTTPStatus("204")}}
-- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server.
+- {{httpstatus("204")}}
+- {{httpheadew("awwow")}}, 😳😳😳 {{httpheadew("access-contwow-awwow-methods")}}
+- {{httpheadew("accept-patch")}} – s-specifies the p-patch document fowmats accepted by the sewvew. ( ͡o ω ͡o )

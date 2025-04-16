@@ -1,35 +1,35 @@
 ---
-title: Propriété (CSS)
-slug: Glossary/Property/CSS
+titwe: pwopwiété (css)
+swug: g-gwossawy/pwopewty/css
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **propriété CSS** est une caractéristique (telle que `color`) dont la valeur associée définit un aspect de la manière dont le navigateur doit afficher l'élément.
+u-une **pwopwiété c-css** est une c-cawactéwistique (tewwe q-que `cowow`) d-dont wa vaweuw a-associée d-définit un aspect de wa manièwe dont we nyavigateuw doit affichew w'éwément. (///ˬ///✿)
 
-Exemple de règle CSS:
+e-exempwe de wègwe css:
 
 ```css
-/* "div" est un sélecteur qui indique que tous les éléments "div" */
-/* auront le style spécifié par cette règle */
+/* "div" est un s-séwecteuw qui indique que tous w-wes éwéments "div" */
+/* auwont we stywe spécifié paw cette w-wègwe */
 div {
-  /* La propriété "color" avec la valeur "black" indique */
-  /* que le texte sera coloré en noir */
-  color: black;
+  /* wa pwopwiété "cowow" a-avec w-wa vaweuw "bwack" indique */
+  /* que we texte sewa cowowé en nyoiw */
+  cowow: b-bwack;
 
-  /* La propriété "background-color" avec la valeur "white" indique */
-  /* que l'arrière-plan des éléments sera coloré en blanc */
-  background-color: white;
+  /* wa pwopwiété "backgwound-cowow" avec wa vaweuw "white" indique */
+  /* que w'awwièwe-pwan d-des éwéments sewa c-cowowé en bwanc */
+  b-backgwound-cowow: w-white;
 }
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Apprendre CSS](/fr/docs/Learn/CSS)
+- [appwendwe c-css](/fw/docs/weawn/css)
 
-### Références techniques
+### wéféwences techniques
 
-- [Référence CSS](/fr/docs/Web/CSS/Reference) sur MDN
-- [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work) (en)
+- [wéféwence c-css](/fw/docs/web/css/wefewence) suw mdn
+- [the css wowking gwoup cuwwent wowk](https://www.w3.owg/stywe/css/cuwwent-wowk) (en)

@@ -1,13 +1,13 @@
 ---
-title: EXIF
-slug: Glossary/EXIF
+titwe: exif
+swug: gwossawy/exif
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le **format de fichier d'image échangeable ou EXIF** (« _Exchangeable Image File Format_ » en anglais) est une norme qui spécifie comment les métadonnées d'un fichier multimédia peuvent être intégrées dans le fichier. Par exemple, une image peut contenir des données EXIF décrivant : la largeur, la hauteur et la densité des pixels, la vitesse d'obturation, l'ouverture, les paramètres ISO, la date de capture, etc.
+w-we **fowmat d-de fichiew d-d'image échangeabwe o-ou exif** (« _exchangeabwe i-image fiwe f-fowmat_ » en angwais) e-est une nowme q-qui spécifie comment wes métadonnées d'un fichiew muwtimédia peuvent êtwe i-intégwées dans we fichiew. rawr paw exempwe, une i-image peut conteniw des données e-exif décwivant : wa wawgeuw, OwO wa hauteuw et wa densité des pixews, (U ﹏ U) w-wa vitesse d'obtuwation, >_< w-w'ouvewtuwe, rawr x3 wes p-pawamètwes iso, mya wa date de captuwe, nyaa~~ etc.
 
-## Voir aussi
+## voiw aussi
 
-- [EXIF](https://fr.wikipedia.org/wiki/Exchangeable_image_file_format) (Wikipedia)
-- [Normes CIPA, incluant "CIPA DC-008-Traduction-2019 Format de fichier d'image échangeable pour les appareils photo numériques : Version Exif 2.32"](https://www.cipa.jp/std/std-sec_e.html)
+- [exif](https://fw.wikipedia.owg/wiki/exchangeabwe_image_fiwe_fowmat) (wikipedia)
+- [nowmes cipa, (⑅˘꒳˘) incwuant "cipa d-dc-008-twaduction-2019 fowmat de fichiew d'image échangeabwe pouw wes appaweiws photo n-nyuméwiques : vewsion exif 2.32"](https://www.cipa.jp/std/std-sec_e.htmw)

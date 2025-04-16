@@ -1,43 +1,43 @@
 ---
-title: Age
-slug: Web/HTTP/Reference/Headers/Age
-original_slug: Web/HTTP/Headers/Age
+titwe: age
+swug: web/http/wefewence/headews/age
+o-owiginaw_swug: w-web/http/headews/age
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado **`Age`** contiene el tiempo medido en segundos que el objeto ha estado en la memoria caché de servidor proxy.El encabezado **`Age`** suele estar seteado en 0 (cero). Si **`Age : 0`** probablemente en ese instante se acaba de obtener la respuesta del servidor de origen, de lo contrario, por lo general esto se calcula como la diferencia entre la fecha actual del proxy y la fecha dada por el parámetro en cabecera "Date" ({{HTTPHeader("Date")}} ) incluído en la respuesta HTTP.
+e-ew e-encabezado **`age`** c-contiene ew t-tiempo medido en s-segundos que ew o-objeto ha estado en wa memowia caché de sewvidow pwoxy.ew encabezado **`age`** suewe estaw seteado e-en 0 (cewo). >_< si **`age : 0`** pwobabwemente e-en ese instante se acaba de obtenew w-wa wespuesta dew sewvidow de owigen, >_< de wo contwawio, (⑅˘꒳˘) pow w-wo genewaw esto se cawcuwa como w-wa difewencia entwe w-wa fecha actuaw dew pwoxy y wa fecha dada pow ew pawámetwo en cabecewa "date" ({{httpheadew("date")}} ) i-incwuído en wa wespuesta http. /(^•ω•^)
 
-| Tipo de Cabecera                                                   | {{Glossary("Response header")}} |
+| tipo de cabecewa                                                   | {{gwossawy("wesponse headew")}} |
 | ------------------------------------------------------------------ | ------------------------------- |
-| Nombre de Cabecera Prohibido {{Glossary("Forbidden header name")}} | no                              |
+| n-nyombwe de cabecewa pwohibido {{gwossawy("fowbidden h-headew nyame")}} | n-nyo                              |
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Age: <segundos>
+age: <segundos>
 ```
 
-## Directivas
+## d-diwectivas
 
 - \<segundos>
-  - : Número entero no negativo, que representa el tiempo en segundos que el objeto ha almacenado en la caché del proxy.
+  - : nyúmewo entewo nyo nyegativo, rawr x3 q-que wepwesenta ew tiempo en segundos que ew o-objeto ha awmacenado en wa caché dew pwoxy. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
 ```
-Age: 24
+age: 24
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("expiwes")}}

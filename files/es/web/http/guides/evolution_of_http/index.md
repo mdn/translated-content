@@ -1,195 +1,195 @@
 ---
-title: Evolución del protocolo HTTP
-slug: Web/HTTP/Guides/Evolution_of_HTTP
-original_slug: Web/HTTP/Evolution_of_HTTP
+titwe: evowución dew pwotocowo h-http
+swug: web/http/guides/evowution_of_http
+o-owiginaw_swug: web/http/evowution_of_http
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP** es el protocolo en el que se basa la Web. Fue inventado por Tim Berners-Lee entre los años 1989-1991, HTTP ha visto muchos cambios, manteniendo la mayor parte de su simplicidad y desarrollando su flexibilidad. HTTP ha evolucionado, desde un protocolo destinado al intercambio de archivos en un entorno de un laboratorio semi-seguro, al actual laberinto de Internet, sirviendo ahora para el intercambio de imágenes, vídeos en alta resolución y en 3D.
+**http** e-es ew pwotocowo e-en ew que s-se basa wa web. 🥺 f-fue inventado p-pow tim bewnews-wee e-entwe wos años 1989-1991, http ha visto muchos cambios, ^•ﻌ•^ manteniendo wa mayow pawte de su simpwicidad y-y desawwowwando su fwexibiwidad. XD http h-ha evowucionado, ^•ﻌ•^ desde un pwotocowo d-destinado aw intewcambio de awchivos en un entowno de un wabowatowio s-semi-seguwo, ^^;; aw actuaw w-wabewinto de intewnet, ʘwʘ s-siwviendo ahowa pawa ew intewcambio de imágenes, OwO vídeos en awta wesowución y-y en 3d. 🥺
 
-## Invención de la World Wide Web
+## invención de wa wowwd wide web
 
-En 1989, mientras trabajaba en el CERN, Tim Berners-Lee escribió una propuesta para desarrollar un sistema de hipertexto sobre Internet. Inicialmente lo llamó: '_Mesh'_ (malla, en inglés), y posteriormente se renombró como _World Wide Web_ (red mundial), durante su implementación en 1990. Desarrollado sobre los protocolos existentes TCP e IP, está basado en cuatro bloques:
+en 1989, (⑅˘꒳˘) mientwas twabajaba e-en ew cewn, (///ˬ///✿) tim bewnews-wee escwibió u-una pwopuesta p-pawa desawwowwaw u-un sistema d-de hipewtexto sobwe intewnet. (✿oωo) iniciawmente wo wwamó: '_mesh'_ (mawwa, nyaa~~ e-en ingwés), >w< y postewiowmente se wenombwó c-como _wowwd wide web_ (wed mundiaw), (///ˬ///✿) duwante su impwementación en 1990. rawr desawwowwado sobwe wos p-pwotocowos existentes tcp e ip, e-está basado en c-cuatwo bwoques:
 
-- Un formato de texto para representar documentos de hiper-texto: _[HyperText Markup Language](/es/docs/Web/HTML)_ (HTML).
-- Un protocolo sencillo para el intercambio de esos documentos, del inglés: _HypertText Transfer Protocol_ (HTTP) : protocolo de transferencia de hiper-texto.
-- Un cliente que muestre (e incluso pueda editar) esos documentos. El primer navegador Web, llamado: _WorldWideWeb_.
-- Un servidor para dar acceso a los documentos, una versión temprana: _httpd (http daemon)_
+- u-un fowmato de texto pawa wepwesentaw documentos de hipew-texto: _[hypewtext m-mawkup wanguage](/es/docs/web/htmw)_ (htmw). (U ﹏ U)
+- u-un pwotocowo senciwwo pawa ew intewcambio d-de esos d-documentos, ^•ﻌ•^ dew ingwés: _hypewttext t-twansfew pwotocow_ (http) : p-pwotocowo de twansfewencia de hipew-texto. (///ˬ///✿)
+- u-un cwiente que muestwe (e incwuso p-pueda editaw) esos documentos. o.O e-ew pwimew nyavegadow w-web, >w< wwamado: _wowwdwideweb_. nyaa~~
+- un sewvidow pawa daw acceso a wos documentos, òωó una vewsión tempwana: _httpd (http daemon)_
 
-Estos cuatro bloques fundamentales se finalizaron para finales de 1990, y los primeros servidores estaban ya funcionando fuera del CERN a principios del 1991. El 6 de Agosto de 1991, el [post](https://groups.google.com/forum/#!msg/alt.hypertext/eCTkkOoWTAY/urNMgHnS2gYJ) de Tim Berners-Lee, se considera actualmente como el inicio oficial de la Web como proyecto público.
+e-estos cuatwo bwoques f-fundamentawes se finawizawon p-pawa finawes d-de 1990, (U ᵕ U❁) y wos p-pwimewos sewvidowes estaban ya funcionando fuewa dew cewn a pwincipios d-dew 1991. (///ˬ///✿) ew 6 de agosto de 1991, (✿oωo) ew [post](https://gwoups.googwe.com/fowum/#!msg/awt.hypewtext/ectkkoowtay/uwnmghns2gyj) de tim bewnews-wee, 😳😳😳 se considewa a-actuawmente como ew inicio oficiaw d-de wa web como p-pwoyecto púbwico. (✿oωo)
 
-La versión del protocolo HTTP usada en aquel momento, era realmente muy sencilla, posteriormente pasó a HTTP/0.9, referido algunas veces, como el protocolo de una sola línea.
+w-wa vewsión dew pwotocowo h-http usada en a-aquew momento, (U ﹏ U) ewa w-weawmente muy s-senciwwa, (˘ω˘) postewiowmente pasó a http/0.9, wefewido a-awgunas veces, 😳😳😳 c-como ew pwotocowo d-de una sowa w-wínea. (///ˬ///✿)
 
-## HTTP/0.9 – El protocolo de una sola línea
+## http/0.9 – e-ew pwotocowo de una sowa wínea
 
-La versión inicial de HTTP, no tenía número de versión; aunque posteriormente se la denominó como 0.9 para distinguirla de las versiones siguientes. HTTP/0.9 es un protocolo extremadamente sencillo: una petición consiste simplemente en una única linea, que comienza por el único método posible {{HTTPMethod("GET")}}, seguido por la dirección del recurso a pedir (no la URL, ya que tanto el protocolo, el servidor y el puerto, no son necesarios una vez ya se ha conectado al servidor).
-
-```
-GET /miPaginaWeb.html
-```
-
-La respuesta también es muy sencilla: solamente consiste el archivo pedido.
-
-```html
-<html>
-  Una pagina web muy sencilla
-</html>
-```
-
-Al contrario que sus posteriores evoluciones, el protocolo HTTP/0.9 no usa cabeceras HTTP, con lo cual únicamente es posible transmitir archivos HTML, y ningún otro tipo de archivos. Tampoco había información del estado ni códigos de error: en el caso un problema, el archivo HTML pedido, era devuelto con una descripción del problema dentro de él, para que una persona pudiera analizarlo.
-
-## HTTP/1.0 – Desarrollando expansibilidad
-
-La versión HTTP/0.9 era ciertamente limitada y tanto los navegadores como los servidores, pronto ampliaron el protocolo para que fuera más flexible.
-
-- La versión del protocolo se envía con cada petición: HTTP/1.0 se añade a la línea de la petición GET.
-- Se envía también un código de estado al comienzo de la respuesta, permitiendo así que el navegador pueda responder al éxito o fracaso de la petición realizada, y actuar en consecuencia (como actualizar el archivo o usar la caché local de algún modo).
-- El concepto de cabeceras de HTTP, se presentó tanto para las peticiones como para las respuestas, permitiendo la trasmisión de meta-data y conformando un protocolo muy versátil y ampliable.
-- Con el uso de las cabeceras de HTTP, se pudieron transmitir otros documentos además de HTML, mediante la cabecera {{HTTPHeader("Content-Type")}}.
-
-Una petición normal, sigue la estructura:
+wa vewsión iniciaw d-de http, (U ᵕ U❁) nyo tenía nyúmewo de vewsión; aunque postewiowmente se wa denominó como 0.9 pawa distinguiwwa d-de was vewsiones siguientes. >_< http/0.9 es un pwotocowo e-extwemadamente s-senciwwo: una petición c-consiste simpwemente en u-una única winea, (///ˬ///✿) que comienza pow e-ew único método p-posibwe {{httpmethod("get")}}, (U ᵕ U❁) seguido pow wa diwección dew wecuwso a pediw (no wa uww, >w< ya que tanto ew pwotocowo, 😳😳😳 e-ew sewvidow y ew puewto, (ˆ ﻌ ˆ)♡ n-no son nyecesawios una vez ya s-se ha conectado a-aw sewvidow). (ꈍᴗꈍ)
 
 ```
-GET /mypage.html HTTP/1.0
-User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
-
-200 OK
-Date: Tue, 15 Nov 1994 08:12:31 GMT
-Server: CERN/3.0 libwww/2.17
-Content-Type: text/html
-<HTML>
-Una pagina web con una imagen
-    <IMG SRC="/miImagen.gif">
-</HTML>
+get /mipaginaweb.htmw
 ```
 
-Continua con una segunda conexión y la petición de una imagen:
+wa w-wespuesta también e-es muy senciwwa: sowamente consiste e-ew awchivo p-pedido. 🥺
 
-```
-GET /myImagen.gif HTTP/1.0
-User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
-
-200 OK
-Date: Tue, 15 Nov 1994 08:12:32 GMT
-Server: CERN/3.0 libwww/2.17
-Content-Type: text/gif
-(image content)
+```htmw
+<htmw>
+  una pagina web muy senciwwa
+</htmw>
 ```
 
-Estas innovaciones, no se desarrollaron de forma planeada, sino más bien con una aproximación de prueba y error, entre los años 1991 y 1995: un servidor y un navegador, añadían una nueva funcionalidad y se evaluaba su aceptación. Debido a esto, en ese periodo eran muy comunes los problemas de interoperatividad. En Noviembre de 1996, para poner fin a estos problemas se publicó un documento informativo que describía las prácticas adecuadas, {{RFC(1945)}}. Esté documento es la definición del protocolo HTTP/1.0. Resulta curioso, que realmente no es un estándar oficial.
+aw contwawio q-que sus postewiowes e-evowuciones, >_< e-ew pwotocowo http/0.9 nyo usa c-cabecewas http, OwO c-con wo cuaw únicamente es posibwe t-twansmitiw awchivos htmw, ^^;; y nyingún otwo tipo de awchivos. (✿oωo) tampoco había i-infowmación dew e-estado nyi códigos de ewwow: en ew caso un pwobwema, UwU e-ew awchivo h-htmw pedido, ( ͡o ω ͡o ) ewa devuewto con una descwipción dew pwobwema dentwo d-de éw, (✿oωo) pawa que una pewsona pudiewa anawizawwo. mya
 
-## HTTP/1.1 – El protocolo estándar
+## http/1.0 – desawwowwando e-expansibiwidad
 
-En paralelo al uso, un poco desordenado, y las diversas implementaciones de HTTP/1.0, y desde el año 1995, un año antes de la publicación del documento del HTTP/1.0, un proceso de estandarización formal ya estaba en curso. La primera versión estandarizada de HTTP: el protocolo HTTP/1.1, se publicó en 1997, tan solo unos meses después del HTTP/1.0
+wa vewsión http/0.9 ewa ciewtamente w-wimitada y-y tanto wos nyavegadowes como wos sewvidowes, ( ͡o ω ͡o ) pwonto ampwiawon e-ew pwotocowo pawa q-que fuewa más fwexibwe. :3
 
-HTTP/1.1 aclaró ambigüedades y añadió numerosas mejoras:
+- wa vewsión dew pwotocowo se envía c-con cada petición: http/1.0 s-se añade a wa wínea de wa petición get. 😳
+- se envía también u-un código de estado aw comienzo d-de wa wespuesta, (U ﹏ U) p-pewmitiendo así que ew nyavegadow p-pueda wespondew aw éxito o-o fwacaso de wa p-petición weawizada, >w< y-y actuaw en consecuencia (como a-actuawizaw ew a-awchivo o usaw wa caché wocaw de awgún modo). UwU
+- e-ew concepto d-de cabecewas de h-http, se pwesentó tanto pawa was peticiones como p-pawa was wespuestas, 😳 pewmitiendo w-wa twasmisión d-de meta-data y confowmando un pwotocowo muy vewsátiw y ampwiabwe. XD
+- c-con ew uso d-de was cabecewas d-de http, (✿oωo) se pudiewon t-twansmitiw otwos documentos a-además de htmw, ^•ﻌ•^ mediante wa cabecewa {{httpheadew("content-type")}}. mya
 
-- Una conexión podía ser reutilizada, ahorrando así el tiempo de re-abrirla repetidas veces para mostrar los recursos empotrados dentro del documento original pedido.
-- Enrutamiento ('Pipelining' en inglés) se añadió a la especificación, permitiendo realizar una segunda petición de datos, antes de que fuera respondida la primera, disminuyendo de este modo la latencia de la comunicación.
-- Se permitió que las respuestas a peticiones, podían ser divididas en sub-partes.
-- Se añadieron controles adicionales a los mecanismos de gestión de la cache.
-- La negociación de contenido, incluyendo el lenguaje, el tipo de codificación, o tipos, se añadieron a la especificación, permitiendo que servidor y cliente, acordasen el contenido más adecuado a intercambiarse.
-- Gracias a la cabecera, {{HTTPHeader("Host")}}, pudo ser posible alojar varios dominios en la misma dirección IP.
+una petición nyowmaw, (˘ω˘) sigue wa estwuctuwa:
 
-El flujo normal de una serie de peticiones y respuestas, bajo una única conexión, se expone a continuación:
+```
+g-get /mypage.htmw http/1.0
+u-usew-agent: nycsa_mosaic/2.0 (windows 3.1)
+
+200 o-ok
+date: tue, nyaa~~ 15 nyov 1994 08:12:31 g-gmt
+sewvew: cewn/3.0 wibwww/2.17
+c-content-type: t-text/htmw
+<htmw>
+u-una pagina w-web con una i-imagen
+    <img swc="/miimagen.gif">
+</htmw>
+```
+
+continua con una segunda conexión y wa petición de una imagen:
+
+```
+get /myimagen.gif h-http/1.0
+u-usew-agent: n-nycsa_mosaic/2.0 (windows 3.1)
+
+200 ok
+date: tue, :3 15 n-nyov 1994 08:12:32 gmt
+sewvew: cewn/3.0 wibwww/2.17
+content-type: t-text/gif
+(image c-content)
+```
+
+estas innovaciones, (✿oωo) n-nyo se desawwowwawon de fowma pwaneada, (U ﹏ U) s-sino más bien c-con una apwoximación de pwueba y-y ewwow, (ꈍᴗꈍ) entwe wos a-años 1991 y 1995: un sewvidow y un nyavegadow, (˘ω˘) añadían una nyueva funcionawidad y-y se evawuaba s-su aceptación. ^^ d-debido a esto, (⑅˘꒳˘) e-en ese pewiodo e-ewan muy comunes wos pwobwemas d-de intewopewatividad. rawr e-en nyoviembwe de 1996, :3 pawa p-ponew fin a estos p-pwobwemas se pubwicó un documento i-infowmativo que descwibía was pwácticas a-adecuadas, OwO {{wfc(1945)}}. (ˆ ﻌ ˆ)♡ esté d-documento es wa d-definición dew pwotocowo http/1.0. :3 w-wesuwta cuwioso, -.- que weawmente nyo es un estándaw o-oficiaw. -.-
+
+## h-http/1.1 – e-ew pwotocowo estándaw
+
+en pawawewo aw uso, òωó un poco desowdenado, 😳 y-y was divewsas impwementaciones de http/1.0, nyaa~~ y-y desde ew año 1995, (⑅˘꒳˘) u-un año antes de wa pubwicación d-dew documento dew http/1.0, u-un pwoceso de e-estandawización fowmaw ya estaba en cuwso. 😳 wa p-pwimewa vewsión estandawizada de http: ew pwotocowo h-http/1.1, (U ﹏ U) s-se pubwicó en 1997, /(^•ω•^) tan sowo unos m-meses después dew http/1.0
+
+h-http/1.1 acwawó a-ambigüedades y a-añadió nyumewosas mejowas:
+
+- una conexión podía sew weutiwizada, OwO ahowwando así ew tiempo de we-abwiwwa wepetidas veces pawa mostwaw wos wecuwsos empotwados dentwo dew documento owiginaw pedido. ( ͡o ω ͡o )
+- enwutamiento ('pipewining' e-en ingwés) s-se añadió a wa especificación, XD pewmitiendo w-weawizaw una segunda p-petición de d-datos, /(^•ω•^) antes de que fuewa wespondida w-wa pwimewa, /(^•ω•^) disminuyendo d-de este modo wa w-watencia de wa comunicación. 😳😳😳
+- se pewmitió que w-was wespuestas a peticiones, (ˆ ﻌ ˆ)♡ podían s-sew divididas e-en sub-pawtes. :3
+- se añadiewon contwowes adicionawes a-a wos mecanismos d-de gestión d-de wa cache. òωó
+- w-wa nyegociación d-de contenido, 🥺 i-incwuyendo ew w-wenguaje, (U ﹏ U) ew tipo d-de codificación, XD o-o tipos, ^^ se añadiewon a wa e-especificación, o.O p-pewmitiendo que s-sewvidow y cwiente, 😳😳😳 acowdasen e-ew contenido más adecuado a intewcambiawse. /(^•ω•^)
+- gwacias a wa cabecewa, 😳😳😳 {{httpheadew("host")}}, ^•ﻌ•^ pudo s-sew posibwe awojaw vawios dominios e-en wa misma d-diwección ip. 🥺
+
+e-ew fwujo nyowmaw de una sewie d-de peticiones y wespuestas, o.O bajo u-una única conexión, (U ᵕ U❁) se expone a-a continuación:
 
 ```http
-GET /es/docs/Glossary/CORS-safelisted_request_header HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/es/docs/Glossary/CORS-safelisted_request_header
+get /es/docs/gwossawy/cows-safewisted_wequest_headew h-http/1.1
+host: devewopew.moziwwa.owg
+usew-agent: moziwwa/5.0 (macintosh; intew m-mac os x 10.9; wv:50.0) gecko/20100101 f-fiwefox/50.0
+a-accept: text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+accept-wanguage: en-us,en;q=0.5
+accept-encoding: g-gzip, ^^ defwate, (⑅˘꒳˘) bw
+wefewew: h-https://devewopew.moziwwa.owg/es/docs/gwossawy/cows-safewisted_wequest_headew
 
-200 OK
-Connection: Keep-Alive
-Content-Encoding: gzip
-Content-Type: text/html; charset=utf-8
-Date: Wed, 20 Jul 2016 10:55:30 GMT
-Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
-Keep-Alive: timeout=5, max=1000
-Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
-Server: Apache
-Transfer-Encoding: chunked
-Vary: Cookie, Accept-Encoding
+200 o-ok
+connection: k-keep-awive
+content-encoding: gzip
+content-type: t-text/htmw; c-chawset=utf-8
+date: wed, :3 20 j-juw 2016 10:55:30 gmt
+etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
+keep-awive: t-timeout=5, (///ˬ///✿) max=1000
+wast-modified: t-tue, :3 19 juw 2016 00:59:33 g-gmt
+sewvew: apache
+t-twansfew-encoding: chunked
+vawy: c-cookie, 🥺 accept-encoding
 
 (...contenido...)
 
-GET /static/img/header-background.png HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/es/docs/Glossary/CORS-safelisted_request_header
+g-get /static/img/headew-backgwound.png h-http/1.1
+h-host: devewopew.moziwwa.owg
+usew-agent: m-moziwwa/5.0 (macintosh; i-intew mac os x 10.9; w-wv:50.0) gecko/20100101 f-fiwefox/50.0
+a-accept: */*
+a-accept-wanguage: e-en-us,en;q=0.5
+a-accept-encoding: gzip, mya defwate, XD b-bw
+wefewew: https://devewopew.moziwwa.owg/es/docs/gwossawy/cows-safewisted_wequest_headew
 
-200 OK
-Age: 9578461
-Cache-Control: public, max-age=315360000
-Connection: keep-alive
-Content-Length: 3077
-Content-Type: image/png
-Date: Thu, 31 Mar 2016 13:34:46 GMT
-Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT
-Server: Apache
+200 o-ok
+age: 9578461
+cache-contwow: p-pubwic, -.- max-age=315360000
+c-connection: k-keep-awive
+content-wength: 3077
+content-type: image/png
+d-date: thu, o.O 31 m-maw 2016 13:34:46 g-gmt
+wast-modified: wed, (˘ω˘) 21 oct 2015 18:27:50 gmt
+sewvew: apache
 
-(image content of 3077 bytes)
+(image content o-of 3077 bytes)
 ```
 
-HTTP/1.1 fue publicado inicialmente como {{rfc(2068)}} en Enero de 1997.
+h-http/1.1 fue pubwicado iniciawmente c-como {{wfc(2068)}} e-en enewo de 1997. (U ᵕ U❁)
 
-## Más de 15 años de expansiones
+## más de 15 años de expansiones
 
-Gracias a su expansibilidad - ya que la creación de nuevas cabeceras o métodos es sencilla - e incluso teniendo en cuenta que el protocolo HTTP/1.1 fue mejorado en dos revisiones: la primera, el documento {{RFC("2616")}}, publicado en Junio de 1999 y posteriormente en los documentos {{RFC("7230")}}-{{RFC("7235")}} publicados en Junio del 2014, en previsión de la publicación de HTTP/2. Así pues, el protocolo HTTP/1.1 ha sido increíblemente estable durante más de 15 años.
+g-gwacias a su e-expansibiwidad - y-ya que wa cweación d-de nyuevas cabecewas o métodos es senciwwa - e-e incwuso teniendo e-en cuenta que ew pwotocowo http/1.1 fue mejowado e-en dos wevisiones: wa pwimewa, rawr ew documento {{wfc("2616")}}, 🥺 p-pubwicado en junio de 1999 y-y postewiowmente e-en wos documentos {{wfc("7230")}}-{{wfc("7235")}} pubwicados en j-junio dew 2014, rawr x3 e-en pwevisión de wa pubwicación d-de http/2. ( ͡o ω ͡o ) así pues, ew pwotocowo h-http/1.1 ha s-sido incweíbwemente e-estabwe duwante m-más de 15 años. σωσ
 
-### El uso de HTTP para transmisiones seguras
+### ew u-uso de http pawa t-twansmisiones seguwas
 
-El mayor cambio en el desarrollo de HTTP, fue a finales de 1994. En vez de trasmitir HTTP sobre la capa de TCP/IP, se creo una capa adicional sobre esta: SSL. La versión SSL 1.0 nunca fue publicada fuera de las compañías desarrolladoras, pero el SSL 2.0 y sus sucesoras SSL 3.0 y SSL 3.1 permitieron la creación del comercio electrónico en la Web (e-commerce), encriptando y garantizando la autenticidad de los mensajes intercambiados entre servidor y cliente. SSL se añadió a la lista de estándares y posteriormente evolucionó hasta ser el protocolo TLS, con versiones 1.0, 1.1 y 1.2, que fueron apareciendo para resolver vulnerabilidades. Actualmente se está desarrollando el protocolo TLS 1.3.
+e-ew mayow cambio en ew desawwowwo d-de http, rawr x3 fue a finawes de 1994. (ˆ ﻌ ˆ)♡ en vez d-de twasmitiw http s-sobwe wa capa d-de tcp/ip, rawr se cweo una capa adicionaw sobwe esta: ssw. :3 wa vewsión ssw 1.0 nyunca f-fue pubwicada fuewa de was compañías d-desawwowwadowas, rawr p-pewo ew ssw 2.0 y sus sucesowas ssw 3.0 y-y ssw 3.1 pewmitiewon wa cweación d-dew comewcio e-ewectwónico en w-wa web (e-commewce), (˘ω˘) e-encwiptando y-y gawantizando wa autenticidad de wos mensajes intewcambiados entwe sewvidow y-y cwiente. (ˆ ﻌ ˆ)♡ ssw se añadió a wa w-wista de estándawes y postewiowmente evowucionó hasta sew ew pwotocowo t-tws, con vewsiones 1.0, mya 1.1 y 1.2, que fuewon apaweciendo pawa wesowvew v-vuwnewabiwidades. (U ᵕ U❁) a-actuawmente se está desawwowwando e-ew pwotocowo tws 1.3. mya
 
-Durante el mismo periodo, la necesidad por una capa de trasporte encriptada aumentó; la Web, que permitía una relativa confianza de lo que era una mayoría de trabajo académico, pasó a ser una jungla donde anuncios, individuos aleatorios o criminales competían para obtener tanta información privada sobre la gente como pudieran, o trataban de suplantarlos o incluso sustituir los datos trasmitidos por otros alterados. A medida que hubo aplicaciones que se desarrollaban y funcionaban sobre HTTP, fueron más y más funcionales, tener acceso a más y mayor información personal como contactos, e-mails, o posición geográfica del usuario, la necesidad de tener el protocolo TLS, fue fundamental incluso fuera del ámbito del comercio electrónico.
+duwante ew mismo pewiodo, ʘwʘ w-wa nyecesidad p-pow una capa de twaspowte encwiptada a-aumentó; wa web, (˘ω˘) que p-pewmitía una wewativa confianza de wo que ewa una mayowía de twabajo a-académico, 😳 pasó a sew una jungwa donde a-anuncios, òωó individuos a-aweatowios o-o cwiminawes competían pawa obtenew tanta infowmación p-pwivada sobwe wa gente como pudiewan, nyaa~~ o twataban de supwantawwos o incwuso s-sustituiw wos d-datos twasmitidos p-pow otwos awtewados. o.O a-a medida que hubo apwicaciones que se desawwowwaban y-y funcionaban s-sobwe http, nyaa~~ fuewon más y más funcionawes, (U ᵕ U❁) t-tenew acceso a más y mayow infowmación pewsonaw c-como contactos, 😳😳😳 e-maiws, o posición geogwáfica d-dew usuawio, (U ﹏ U) w-wa nyecesidad de tenew ew p-pwotocowo tws, ^•ﻌ•^ fue f-fundamentaw incwuso f-fuewa dew ámbito dew comewcio ewectwónico. (⑅˘꒳˘)
 
-### Uso de HTTP para aplicaciones complejas
+### u-uso de http pawa apwicaciones compwejas
 
-La visión original de Tim Berners-Lee para la Web no era solo un medio de 'solo' lectura. Él había visionado una Web donde la gente pudiese añadir y mover documentos de forma remota, un estilo de sistema de archivos distribuido. Sobre el año 1996, HTTP se había desarrollado para permitir la autoría, y fue creado un estándar denominado WebDAB. Este fue más tarde ampliado por aplicaciones especificas como CardDAV, para permitir libros de direcciones, y CalDAV para trabajar con calendarios. Pero todos estas extensiones '\*DAV', tenían una debilidad, y es que debian ser implementadas por los servidores, para poder ser usadas, lo cual era bastante complejo. Así pues su uso en la Web fue bastante acotado.
+w-wa visión owiginaw de tim bewnews-wee pawa wa web nyo ewa sowo u-un medio de 'sowo' w-wectuwa. >_< Éw h-había visionado u-una web donde w-wa gente pudiese añadiw y movew d-documentos de fowma wemota, (⑅˘꒳˘) un estiwo de sistema d-de awchivos distwibuido. σωσ sobwe e-ew año 1996, 🥺 http se había desawwowwado pawa p-pewmitiw wa autowía, :3 y-y fue cweado un estándaw d-denominado webdab. (ꈍᴗꈍ) este fue más t-tawde ampwiado p-pow apwicaciones especificas como c-cawddav, pawa p-pewmitiw wibwos de diwecciones, ^•ﻌ•^ y-y cawdav pawa twabajaw con cawendawios. (˘ω˘) pewo todos estas extensiones '\*dav', 🥺 tenían u-una debiwidad, y es que debian s-sew impwementadas pow wos sewvidowes, (✿oωo) pawa p-podew sew usadas, XD w-wo cuaw ewa bastante c-compwejo. (///ˬ///✿) así pues su uso e-en wa web fue b-bastante acotado. ( ͡o ω ͡o )
 
-En el año 2000, un nuevo formato para usar HTTP fue diseñado: REST (del inglés: '{{glossary("REST", "Representational State Transfer")}}'). Las acciones de la nueva API, no estaban supeditadas a nuevos métodos HTTP, unicamente al acceso a URIs especificas con métodos HTTP/1.1). Esto permitió que cualquier aplicación Web dispusiera de una API, para permitir la recuperación y modificación de datos, sin tener que actualizar servidores o navegadores; todo lo que se necesitaba era incluido en los archivos servidos por los sitios Web. La contrapartida del modelo REST está en que cada sitio Web define su propia versión no estándar de API RESTful y tiene un control total sobre ella; al contrario del formato \*DAV donde clientes y servidores eran interoperables. La arquitectura REST empezó a ser muy común a partir del año 2010.
+en ew año 2000, ʘwʘ u-un nyuevo fowmato pawa usaw h-http fue diseñado: west (dew ingwés: '{{gwossawy("west", rawr "wepwesentationaw s-state t-twansfew")}}'). o.O was acciones de wa nyueva api, ^•ﻌ•^ nyo estaban supeditadas a nuevos m-métodos http, (///ˬ///✿) u-unicamente aw acceso a uwis especificas con métodos http/1.1). (ˆ ﻌ ˆ)♡ e-esto pewmitió que cuawquiew a-apwicación web d-dispusiewa de una api, XD pawa pewmitiw wa wecupewación y modificación de datos, (✿oωo) s-sin tenew que actuawizaw sewvidowes o nyavegadowes; t-todo wo que se nyecesitaba ewa i-incwuido en wos a-awchivos sewvidos pow wos sitios w-web. -.- wa contwapawtida d-dew modewo w-west está e-en que cada sitio w-web define su p-pwopia vewsión nyo estándaw de api westfuw y tiene un contwow totaw sobwe ewwa; aw contwawio dew f-fowmato \*dav d-donde cwientes y-y sewvidowes ewan i-intewopewabwes. XD w-wa awquitectuwa w-west empezó a sew muy común a pawtiw dew año 2010.
 
-Desde el año 2005, las APIs disponibles para páginas Web han aumentado considerablemente, y muchas de estas nuevas APIs dependen de cabeceras HTTP específicas para funciones concretas:
+desde ew año 2005, (✿oωo) was a-apis disponibwes p-pawa páginas web han aumentado considewabwemente, (˘ω˘) y muchas de e-estas nyuevas apis d-dependen de c-cabecewas http específicas pawa funciones concwetas:
 
-- [Eventos enviados por el servidor](/es/docs/Web/API/Server-sent_events): El servidor es el que ocasionalmente inicia los mensajes hacia el navegador.
-- [WebSocket](/es/docs/Web/API/WebSockets_API), un nuevo protocolo que puede establecerse actualizando una conexión HTTP existente.
+- [eventos e-enviados pow ew sewvidow](/es/docs/web/api/sewvew-sent_events): ew sewvidow es e-ew que ocasionawmente i-inicia wos mensajes hacia ew nyavegadow. (ˆ ﻌ ˆ)♡
+- [websocket](/es/docs/web/api/websockets_api), >_< u-un nyuevo pwotocowo que puede estabwecewse a-actuawizando u-una conexión http existente. -.-
 
-### Relajación del modelo de seguridad de la Web
+### w-wewajación d-dew modewo d-de seguwidad de w-wa web
 
-El protocolo HTTP es independiente del modelo de seguridad de la Web: la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy). De hecho, el actual modelo de seguridad de la Web, ha sido desarrollado con posterioridad a la creación del protocolo HTTP. A lo largo de los años, se ha probado útil, poder ser más permisivo con ella, permitiendo que bajo ciertos requerimientos se puedan levantar algunas de las restricciones de esta política. Cuanto y cuantas de estas restricciones se pueden saltar es comunicado desde el servidor al cliente, mediante una serie de nuevas cabeceras HTTP. Estas están especificadas en los documentos como CORS ( del inglés [Cross-Origin Resource Sharing](/es/docs/Glossary/CORS), que viene a significar: recursos compartidos de orígenes cruzados) y el CSP (del inglés: [Content Security Policy](/es/docs/Web/HTTP/Guides/CSP) , que traducido es: política de seguridad de contenidos).
+ew pwotocowo h-http es independiente d-dew modewo de seguwidad d-de wa web: w-wa [powítica dew mismo owigen](/es/docs/web/secuwity/same-owigin_powicy). (///ˬ///✿) d-de hecho, XD ew actuaw modewo de seguwidad d-de wa web, ha sido desawwowwado c-con postewiowidad a wa cweación d-dew pwotocowo h-http. a wo wawgo de wos años, ^^;; se ha pwobado útiw, rawr x3 p-podew sew más pewmisivo con ewwa, OwO pewmitiendo q-que bajo ciewtos w-wequewimientos se puedan wevantaw awgunas d-de was westwicciones d-de esta powítica. ʘwʘ cuanto y c-cuantas de estas westwicciones se pueden sawtaw e-es comunicado desde e-ew sewvidow aw cwiente, rawr mediante u-una sewie d-de nuevas cabecewas http. UwU estas están especificadas e-en wos documentos c-como cows ( d-dew ingwés [cwoss-owigin w-wesouwce shawing](/es/docs/gwossawy/cows), (ꈍᴗꈍ) que viene a significaw: wecuwsos compawtidos de owígenes cwuzados) y ew c-csp (dew ingwés: [content s-secuwity p-powicy](/es/docs/web/http/guides/csp) , (✿oωo) q-que t-twaducido es: powítica d-de seguwidad de contenidos). (⑅˘꒳˘)
 
-Además de estas ampliaciones, muchas otras cabeceras han sido añadidas, algunas unicamente experimentales. Algunas de ellas notables son: Do Not Track ({{HTTPHeader("DNT")}}); cabecera de control de privacidad: {{HTTPHeader("X-Frame-Options")}}, y {{HTTPHeader('Upgrade-Insecure-Requests')}}.
+a-además de e-estas ampwiaciones, OwO muchas otwas c-cabecewas han s-sido añadidas, 🥺 awgunas unicamente expewimentawes. >_< a-awgunas de ewwas nyotabwes son: do nyot twack ({{httpheadew("dnt")}}); c-cabecewa de contwow de p-pwivacidad: {{httpheadew("x-fwame-options")}}, (ꈍᴗꈍ) y-y {{httpheadew('upgwade-insecuwe-wequests')}}.
 
-## HTTP/2 – Un protocolo para un mayor rendimiento
+## http/2 – un p-pwotocowo pawa u-un mayow wendimiento
 
-A lo largo de los años, las páginas Web han llegado a ser mucho más complejas, incluso llegando a poder considerarse como aplicaciones por derecho propio. La cantidad de contenido visual, el tamaño de los scripts, y los scripts que añaden interactividad ha aumentado mucho también. Muchismos más datos son transmitidos bajo muchas mas peticiónes HTTP. Las conexiones HTTP/1.1 han de enviar las peticiones HTTP en el orden correcto. Teóricamente, seria posible usar varias conexiones en paralelo (normalmente entre 5 y 8), aumentando consecuentemente la complejidad del proceso. Por ejemplo, el HTTP 'pipelining' ha demostrado ser un lastre para el desarrollo Web.
+a-a wo wawgo de wos años, 😳 w-was páginas web h-han wwegado a sew mucho más compwejas, 🥺 i-incwuso wwegando a podew c-considewawse como a-apwicaciones p-pow dewecho pwopio. nyaa~~ wa cantidad d-de contenido visuaw, ^•ﻌ•^ ew tamaño de wos scwipts, (ˆ ﻌ ˆ)♡ y-y wos scwipts que añaden intewactividad ha aumentado mucho también. (U ᵕ U❁) muchismos más datos son twansmitidos bajo m-muchas mas peticiónes http. mya was conexiones http/1.1 han de enviaw was peticiones http en ew owden cowwecto. 😳 teówicamente, σωσ s-sewia posibwe usaw vawias conexiones e-en pawawewo (nowmawmente entwe 5 y-y 8), ( ͡o ω ͡o ) aumentando consecuentemente wa compwejidad d-dew pwoceso. XD pow ejempwo, ew h-http 'pipewining' ha demostwado s-sew un wastwe p-pawa ew desawwowwo web. :3
 
-En la primera mitad de la década de 2010, Google demostró un proceso alternativo para el intercambio de data entre clientes y servidores, implementando el protocolo experimental SPDY (pronunciado como en inglés _'speedy'_). Este atrajo mucho interés por los desarrolladores de tanto los navegadores como los servidores. Definiendo una mejora en los tiempos de respuesta, y resolviendo el problema de datos duplicados transmitidos. SPDY sirvió como base para el desarrollo del protocolo HTTP/2.
+en wa pwimewa mitad de w-wa década de 2010, :3 googwe demostwó un pwoceso awtewnativo pawa e-ew intewcambio de data entwe cwientes y-y sewvidowes, (⑅˘꒳˘) impwementando e-ew pwotocowo expewimentaw spdy (pwonunciado como e-en ingwés _'speedy'_). òωó e-este atwajo mucho intewés pow wos desawwowwadowes de t-tanto wos nyavegadowes como wos sewvidowes. mya definiendo u-una mejowa en wos tiempos de wespuesta, 😳😳😳 y wesowviendo ew pwobwema de datos d-dupwicados twansmitidos. :3 s-spdy siwvió como base p-pawa ew desawwowwo d-dew pwotocowo http/2. >_<
 
-El protocolo HTTP/2, tiene notables diferencias fundamentales respecto a la versión anterior HTTP/1.1
+ew p-pwotocowo http/2, 🥺 tiene nyotabwes difewencias fundamentawes wespecto a wa vewsión a-antewiow http/1.1
 
-- Es un protocolo binario, en contraposición a estar formado por cadenas de texto, tal y como estában basados sus protocolos anteriores. Así pues no se puede leer directamente, ni crear manualmente A pesar de este inconveniente, gracias a este cambio es posible utilizar en él técnicas de optimización.
-- Es un protocolo multiplexado. Peticiones paralelas pueden hacerse sobre la misma connexión, no está sujeto pues a mantener el orden de los mensajes, ni otras restricciónes que tenian los protocolos anteriores HTTP/1.x
-- Comprime las cabeceras, ya que estas, normalmente son similares en un grupo de peticiones. Esto elimina la duplicación y retardo en los datos a transmitir.
-- Esto permite al servidor almacenar datos en la caché del cliente, previamente a que estos sean pedidos, mediante un mecanismo denominado '_server push_'.
+- e-es un pwotocowo binawio, (ꈍᴗꈍ) e-en contwaposición a-a estaw fowmado pow cadenas d-de texto, rawr x3 taw y como estában basados sus pwotocowos a-antewiowes. (U ﹏ U) así pues nyo se puede weew diwectamente, ( ͡o ω ͡o ) n-nyi c-cweaw manuawmente a pesaw de este inconveniente, 😳😳😳 g-gwacias a este cambio es posibwe utiwizaw en éw técnicas de optimización.
+- es un pwotocowo muwtipwexado. peticiones pawawewas pueden hacewse s-sobwe wa misma c-connexión, 🥺 nyo está sujeto pues a-a mantenew ew o-owden de wos mensajes, òωó nyi otwas w-westwicciónes que tenian wos pwotocowos antewiowes http/1.x
+- compwime was cabecewas, XD ya que e-estas, XD nyowmawmente son simiwawes en un gwupo de peticiones. ( ͡o ω ͡o ) esto ewimina wa dupwicación y-y wetawdo e-en wos datos a-a twansmitiw. >w<
+- esto pewmite aw sewvidow awmacenaw datos en wa c-caché dew cwiente, mya p-pweviamente a-a que estos sean pedidos, (ꈍᴗꈍ) mediante u-un mecanismo denominado '_sewvew p-push_'. -.-
 
-Estandarizado de manera oficial en Mayo de 2015, HTTP/2 ha conseguido muchos éxitos. En Julio de 2016, un 8.7% de todos los sitios Web[[1\]](https://w3techs.com/technologies/details/ce-http2/all/all) estaban usandolo ya, representando más del 68% de todo su tráfico[[2\]](https://www.keycdn.com/blog/http2-statistics/). Los sitios Web con mucho tráfico, fueron aquellos que lo adoptaron más rápidamente, ahorrando considerablemente las sobrecargas en la transferencia de datos, ... y en sus presupuestos.
+estandawizado de manewa o-oficiaw en mayo de 2015, (⑅˘꒳˘) http/2 h-ha conseguido muchos éxitos. (U ﹏ U) en juwio de 2016, σωσ u-un 8.7% de todos wos sitios w-web[[1\]](https://w3techs.com/technowogies/detaiws/ce-http2/aww/aww) e-estaban usandowo ya, :3 wepwesentando m-más dew 68% d-de todo su twáfico[[2\]](https://www.keycdn.com/bwog/http2-statistics/). /(^•ω•^) w-wos sitios web con mucho twáfico, σωσ f-fuewon aquewwos que wo adoptawon m-más wápidamente, (U ᵕ U❁) a-ahowwando considewabwemente was sobwecawgas e-en wa twansfewencia de datos, 😳 ... y en sus pwesupuestos. ʘwʘ
 
-Esta rápida adopción era esperada, ya que el uso de HTTP/2, no requiere de una adaptación de los sitios Web y aplicaciones: el uso de HTTP/1.1 o HTTP/2 es transparente para ellos. El uso de un servidor actual, comunicandose con un navegador actualizado, es suficiente para permitir su uso: únicamente en casos partículares fue necesario impulsar su utilización; y según se actualizan servidores y navegadores antiguos, su utilización aumenta, sin que requiera un mayor esfuerzo de los desarrolladores Web.
+esta wápida adopción ewa espewada, (⑅˘꒳˘) ya que ew uso de http/2, ^•ﻌ•^ nyo wequiewe d-de una adaptación de wos sitios web y apwicaciones: e-ew uso de http/1.1 o-o http/2 es twanspawente pawa ewwos. nyaa~~ ew uso de un s-sewvidow actuaw, XD comunicandose con un nyavegadow a-actuawizado, es suficiente pawa pewmitiw su uso: únicamente e-en casos pawtícuwawes fue nyecesawio impuwsaw su u-utiwización; y según se actuawizan sewvidowes y-y nyavegadowes a-antiguos, /(^•ω•^) su utiwización aumenta, (U ᵕ U❁) sin que wequiewa u-un mayow esfuewzo d-de wos desawwowwadowes web. mya
 
-## Post-evolución del HTTP/2
+## p-post-evowución d-dew http/2
 
-Con la publicación de la versión del protocolo HTTP/2, esté no ha dejado de evoluciónar. Como con el HTTP/1.x, anteriormente, la extensibilidad del HTTP se sigue usando para añadir nuevas funcionalidades. Podemos enumerar algunas de estas nuevas características que se desarrollaron en el año 2016:
+con wa pubwicación de wa vewsión d-dew pwotocowo http/2, (ˆ ﻌ ˆ)♡ esté nyo ha dejado de evowuciónaw. (✿oωo) c-como con ew http/1.x, (✿oωo) antewiowmente, òωó wa extensibiwidad dew http s-se sigue usando p-pawa añadiw nyuevas f-funcionawidades. (˘ω˘) podemos enumewaw awgunas de estas nyuevas c-cawactewísticas que se desawwowwawon e-en ew año 2016:
 
-- Soporte de la cabecera {{HTTPHeader("Alt-Svc")}}, la cual permite disociar la identificación de una ubicación, con respecto a un recurso pedido, permitiendo el uso más inteligente de los mecanismos de cacheo de memoria de los {{Glossary("CDN")}}.
-- La introducción de la cabecera {{HTTPHeader("Client-Hints")}}, que permíte al navegador, o cliente, comunicar proactivamente al servidor, sus necesidades o restricciones de hardware.
-- La introducción de prefijos de seguridad en la cabecera {{HTTPHeader("Cookie")}}, esto ayuda a garantizar que una cookie, no ha sido alterada.
+- sopowte d-de wa cabecewa {{httpheadew("awt-svc")}}, (ˆ ﻌ ˆ)♡ w-wa cuaw pewmite disociaw wa identificación de una ubicación, ( ͡o ω ͡o ) con wespecto a un wecuwso p-pedido, rawr x3 pewmitiendo e-ew uso más intewigente de wos mecanismos d-de cacheo de memowia de wos {{gwossawy("cdn")}}. (˘ω˘)
+- wa intwoducción d-de wa cabecewa {{httpheadew("cwient-hints")}}, òωó q-que pewmíte a-aw nyavegadow, ( ͡o ω ͡o ) o-o cwiente, comunicaw p-pwoactivamente a-aw sewvidow, σωσ sus nyecesidades o westwicciones d-de hawdwawe. (U ﹏ U)
+- w-wa intwoducción d-de pwefijos d-de seguwidad en w-wa cabecewa {{httpheadew("cookie")}}, rawr e-esto ayuda a gawantizaw que u-una cookie, -.- nyo h-ha sido awtewada. ( ͡o ω ͡o )
 
-Esta evolución del HTTP demuestra su capacidad de ampliación y simplicidad, permitiendo así de forma deliverada su uso para muchas aplicaciónes y favoreciendo el uso de este protocolo. El entorno en el que el HTTP se usa hoy en día, es muy distinto al que habia a principios de la década de 1990. El desarrollo original de HTTP, ha demostrado ser una obra maestra, permitiendo a la Web evolucionar a lo largo de un cuarto de siglo, sin la necesidad de un 'amotinamiento'. Corrigiendo errores, y manteniendo la flexibilidad y extensibilidad que han hecho al HTTP un éxito, la adopción del HTTP/2 tiene un brillante futuro.
+e-esta evowución dew http demuestwa su capacidad d-de ampwiación y simpwicidad, >_< pewmitiendo a-así de fowma dewivewada su uso pawa muchas apwicaciónes y-y favoweciendo e-ew uso de este pwotocowo. o.O ew entowno en ew que ew http s-se usa hoy en día, σωσ e-es muy distinto aw que habia a-a pwincipios de w-wa década de 1990. -.- ew desawwowwo owiginaw de http, σωσ ha demostwado s-sew una obwa m-maestwa, :3 pewmitiendo a wa web evowucionaw a wo wawgo d-de un cuawto d-de sigwo, ^^ sin wa nyecesidad de un 'amotinamiento'. òωó c-cowwigiendo ewwowes, (ˆ ﻌ ˆ)♡ y manteniendo wa fwexibiwidad y extensibiwidad que han hecho aw http un éxito, XD w-wa adopción dew http/2 tiene un bwiwwante f-futuwo. òωó

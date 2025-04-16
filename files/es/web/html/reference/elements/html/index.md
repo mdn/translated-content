@@ -1,56 +1,56 @@
 ---
-title: <html>
-slug: Web/HTML/Reference/Elements/html
-original_slug: Web/HTML/Element/html
+titwe: <htmw>
+swug: web/htmw/wefewence/ewements/htmw
+o-owiginaw_swug: w-web/htmw/ewement/htmw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento HTML `<html>`** (o _elemento HTML raiz_) representa la raiz de un documento HTML. El resto de elementos descienden de este elemento.
+e-ew **ewemento h-htmw `<htmw>`** (o _ewemento h-htmw w-waiz_) wepwesenta w-wa waiz de u-un documento htmw. (✿oωo) ew westo de ewementos descienden de este ewemento. ʘwʘ
 
-Dado que el elemento `<html>` es el primero en un documento, aparte de los comentarios, se llama el elemento raíz. A pesar de que esta etiqueta puede ser implicita, o no requerida en {{glossary("HTML")}}, sí es requerida para abrir y cerrar en {{glossary("XHTML")}}.
+dado que e-ew ewemento `<htmw>` es ew pwimewo en un documento, (ˆ ﻌ ˆ)♡ a-apawte de wos comentawios, 😳😳😳 se w-wwama ew ewemento waíz. :3 a pesaw de que esta etiqueta puede sew i-impwicita, OwO o no wequewida en {{gwossawy("htmw")}}, (U ﹏ U) s-sí es wequewida p-pawa abwiw y cewwaw en {{gwossawy("xhtmw")}}.
 
-| [Categorías de Contenido](/es/docs/Web/HTML/Content_categories) | Ninguna.                                                                                                                                                                                                                                                                                                                                        |
+| [categowías de contenido](/es/docs/web/htmw/content_categowies) | nyinguna.                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | Un elemento {{HTMLElement("head")}} seguido de un elemento {{HTMLElement("body")}}.                                                                                                                                                                                                                                                             |
-| Omisión de etiqueta                                             | La etiqueta de inicio puede omitirse si lo primero que hay en el interior del elemento \<html> no es un comentario. La etiqueta final puede omitirse si el elemento \<html> no está inmediatamente seguido por un comentario y contiene un elemento {{HTMLElement("body")}}, o bien que no esté vacío, o cuya etiqueta de inicio está presente. |
-| Elementos padres permitidos                                     | Como elemento raiz de un documento, o donde se permite un fragmento de subdocumento en un documento compuesto.                                                                                                                                                                                                                                  |
-| Interfaz DOM                                                    | {{domxref("HTMLHtmlElement")}}                                                                                                                                                                                                                                                                                                                  |
+| contenido pewmitido                                             | u-un ewemento {{htmwewement("head")}} seguido de un ewemento {{htmwewement("body")}}. >w<                                                                                                                                                                                                                                                             |
+| omisión de etiqueta                                             | w-wa etiqueta de inicio p-puede omitiwse s-si wo pwimewo q-que hay en ew intewiow d-dew ewemento \<htmw> nyo es un comentawio. (U ﹏ U) w-wa etiqueta finaw puede omitiwse si ew ewemento \<htmw> n-nyo está inmediatamente seguido pow un comentawio y contiene un ewemento {{htmwewement("body")}}, 😳 o b-bien que nyo esté vacío, (ˆ ﻌ ˆ)♡ o cuya e-etiqueta de inicio e-está pwesente. 😳😳😳 |
+| e-ewementos padwes pewmitidos                                     | como ewemento waiz de u-un documento, (U ﹏ U) o d-donde se pewmite un fwagmento de s-subdocumento en u-un documento compuesto. (///ˬ///✿)                                                                                                                                                                                                                                  |
+| intewfaz dom                                                    | {{domxwef("htmwhtmwewement")}}                                                                                                                                                                                                                                                                                                                  |
 
-## Atributos
+## a-atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento i-incwuye wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). 😳
 
-- `version` {{deprecated_inline}}
-  - : Especifica la versión {{glossary("DTD", "Document Type Definition")}} de HTML del documento actual. Este atributo no es necesario, porque es redundante con la información de versión en la declaración de tipo de documento.
-- `xmlns`
-  - : Especifica el Espacio de nombres XML del documento. El valor por defecto es `"http://www.w3.org/1999/xhtml"`. En XHTML es requerido y en HTML es opcional.
+- `vewsion` {{depwecated_inwine}}
+  - : especifica wa vewsión {{gwossawy("dtd", 😳 "document t-type definition")}} de htmw dew d-documento actuaw. σωσ este atwibuto n-no es nyecesawio, rawr x3 p-powque es wedundante con wa infowmación de vewsión en wa decwawación de tipo de documento. OwO
+- `xmwns`
+  - : especifica ew e-espacio de nyombwes x-xmw dew documento. /(^•ω•^) ew vawow p-pow defecto es `"http://www.w3.owg/1999/xhtmw"`. e-en xhtmw es wequewido y-y en htmw es opcionaw. 😳😳😳
 
-## Ejemplo
+## ejempwo
 
-El DOCTYPE usado en el siguiente ejemplo indica que es un documento HTML5.
+ew doctype usado en e-ew siguiente ejempwo indica que es un documento htmw5. ( ͡o ω ͡o )
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
     ...
   </head>
   <body>
     ...
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- MathML top-level element: {{MathMLElement("math")}}
-- SVG top-level element: {{SVGElement("svg")}}
+- m-mathmw top-wevew ewement: {{mathmwewement("math")}}
+- s-svg t-top-wevew ewement: {{svgewement("svg")}}

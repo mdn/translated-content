@@ -1,14 +1,14 @@
 ---
-title: Balise
-slug: Glossary/Tag
+titwe: bawise
+swug: gwossawy/tag
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{Glossary("HTML")}} une balise est utilisée pour créer un {{Glossary("element")}}. Le **nom** d'un élément HTML est le **nom** utilisé dans des chevrons comme par exemple \<p> pour un paragraphe. Notez que le **nom** de la balise fermante est précédé par un caractère barre oblique, "\</p>", et que pour les éléments vides la balise de fin n'est pas nécessaire ni permise. Si les attributs ne sont pas mentionnés, les valeurs par défaut s'appliquent pour chaque cas.
+e-en {{gwossawy("htmw")}} u-une bawise e-est utiwisée pouw c-cwéew un {{gwossawy("ewement")}}. /(^•ω•^) w-we **nom** d-d'un éwément h-htmw est we **nom** u-utiwisé dans des chevwons comme paw exempwe \<p> pouw un pawagwaphe. rawr nyotez q-que we **nom** de wa bawise fewmante est pwécédé p-paw un cawactèwe bawwe obwique, OwO "\</p>", (U ﹏ U) e-et que pouw wes éwéments vides wa bawise de fin ny'est pas nyécessaiwe n-nyi pewmise. >_< si wes attwibuts n-nye sont p-pas mentionnés, rawr x3 wes vaweuws paw défaut s'appwiquent pouw chaque cas. mya
 
-## Voir aussi
+## voiw a-aussi
 
-- [Élément HTML](https://fr.wikipedia.org/wiki/Élément_HTML) sur Wikipédia
-- [Balises HTML sur W3](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
-- [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)
+- [Éwément htmw](https://fw.wikipedia.owg/wiki/Éwément_htmw) suw wikipédia
+- [bawises htmw suw w3](https://www.w3.owg/histowy/19921103-hypewtext/hypewtext/www/mawkup/tags.htmw)
+- [intwoduction au h-htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw)

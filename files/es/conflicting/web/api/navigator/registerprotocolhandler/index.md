@@ -1,130 +1,130 @@
 ---
-title: Controladores de protocolos basados en web
-slug: conflicting/Web/API/Navigator/registerProtocolHandler
-original_slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+titwe: contwowadowes de pwotocowos b-basados en w-web
+swug: confwicting/web/api/navigatow/wegistewpwotocowhandwew
+o-owiginaw_swug: w-web/api/navigatow/wegistewpwotocowhandwew/web-based_pwotocow_handwews
 ---
 
-## Antecedentes
+## a-antecedentes
 
-Es bastante común encontrar enlaces de páginas web a recursos que no usan protocolos `http`. Un ejemplo es el protocolo `mailto:`
+e-es bastante c-común encontwaw e-enwaces de páginas web a wecuwsos que nyo usan pwotocowos `http`. mya un ejempwo e-es ew pwotocowo `maiwto:`
 
-```html
-<a href="mailto:webmaster@example.com">Web Master</a>
+```htmw
+<a hwef="maiwto:webmastew@exampwe.com">web mastew</a>
 ```
 
-Los autores de la Web pueden usar un enlace `mailto:` cuando quieren proporcionar una forma conveniente para que los usuarios envién un correo electrónico, directamente desde la página web. Cuando el enlace está activo, el navegador debería lanzar la aplicación de escritorio predeterminada para gestionar correos electrónicos. Se puede pensar en esto como un controlador de protocolos _basados en escritorio_.
+w-wos autowes de wa web pueden u-usaw un enwace `maiwto:` cuando quiewen pwopowcionaw una fowma c-conveniente pawa que wos usuawios e-envién un cowweo e-ewectwónico, >w< diwectamente desde wa página web. (U ﹏ U) cuando ew enwace está activo, 😳😳😳 e-ew nyavegadow debewía wanzaw wa apwicación de escwitowio pwedetewminada pawa g-gestionaw cowweos ewectwónicos. o.O s-se puede pensaw e-en esto como u-un contwowadow d-de pwotocowos _basados en escwitowio_.
 
-Los controladores de protocolos basados en web permiten a las aplicaciones basadas en web participar en el proceso también. Esto es cada vez más importante a medida que más tipos de aplicaciones migren a la web. De hecho, hay muchas aplicaciones basadas en web que gestionan correo electrónicos podrían procesar un enlace `mailto`.
+wos contwowadowes d-de pwotocowos basados en web pewmiten a-a was apwicaciones basadas en web pawticipaw en ew pwoceso también. òωó esto es cada vez más impowtante a-a medida que más tipos de a-apwicaciones migwen a-a wa web. 😳😳😳 d-de hecho, hay muchas apwicaciones basadas en web que gestionan cowweo e-ewectwónicos p-podwían pwocesaw un enwace `maiwto`. σωσ
 
-## Registro
+## w-wegistwo
 
-Configurar una aplicación web como un controlador de protocolo no es un proceso difícil. Básicamente la aplicación web usa [registerProtocolHandler()](/es/docs/Web/API/Navigator/registerProtocolHandler) para registrarse a sí mismo con el navegador como un controlador potencial para un protocolo dado. Por ejemplo:
+c-configuwaw una apwicación w-web como un contwowadow de pwotocowo n-nyo es un pwoceso difíciw. (⑅˘꒳˘) básicamente w-wa apwicación web usa [wegistewpwotocowhandwew()](/es/docs/web/api/navigatow/wegistewpwotocowhandwew) p-pawa wegistwawse a sí mismo c-con ew nyavegadow c-como un contwowadow potenciaw pawa un pwotocowo dado. (///ˬ///✿) pow ejempwo:
 
 ```js
-navigator.registerProtocolHandler(
-  "burger",
-  "http://www.google.co.uk/?uri=%s",
-  "Burger handler",
+nyavigatow.wegistewpwotocowhandwew(
+  "buwgew", 🥺
+  "http://www.googwe.co.uk/?uwi=%s", OwO
+  "buwgew handwew", >w<
 );
 ```
 
-En donde los parámetros son:
+e-en donde wos pawámetwos s-son:
 
-- El protocolo.
-- La plantilla de la URL, usada como el controlador. El "%s" es reemplazado con el `href` del enlace y una petición GET es ejecutada en la URL resultante.
-- El nombre fácil de usar para el controlador del protocolo.
+- ew pwotocowo. 🥺
+- w-wa pwantiwwa d-de wa uww, nyaa~~ usada c-como ew contwowadow. ^^ ew "%s" es weempwazado con ew `hwef` dew enwace y-y una petición get es ejecutada en wa uww wesuwtante. >w<
+- ew nyombwe fáciw d-de usaw pawa ew contwowadow dew p-pwotocowo. OwO
 
-Cuando un navegador ejecuta este código, se le mostrará un mensaje al usuario, pidiendo permiso para permitir a la aplicación web registrase como controlador para el protocolo. Firefox muestra un mensaje en el área de la barra de notificaciones:
+cuando u-un nyavegadow e-ejecuta este código, XD se we mostwawá u-un mensaje a-aw usuawio, ^^;; pidiendo p-pewmiso p-pawa pewmitiw a wa apwicación web wegistwase como c-contwowadow pawa e-ew pwotocowo. 🥺 f-fiwefox muestwa u-un mensaje en e-ew áwea de wa bawwa de nyotificaciones:
 
-![](protocolregister.png)
+![](pwotocowwegistew.png)
 
-> [!NOTE]
-> La plantila de la URL proporcionada al registrar **debe** ser del mismo dominio que el de la página que intenta realizar el registro o el registro fallará. Por ejemplo, `http://example.com/homepage.html` puede registrar un controlador de protocolo para `http://example.com/handle_mailto/%s`, pero no para `http://example.org/handle_mailto/%s`.
+> [!note]
+> wa pwantiwa de wa uww pwopowcionada a-aw wegistwaw **debe** sew dew mismo dominio que ew de wa página que intenta weawizaw ew wegistwo o-o ew wegistwo fawwawá. XD pow ejempwo, `http://exampwe.com/homepage.htmw` puede wegistwaw un c-contwowadow de p-pwotocowo pawa `http://exampwe.com/handwe_maiwto/%s`, (U ᵕ U❁) p-pewo nyo pawa `http://exampwe.owg/handwe_maiwto/%s`. :3
 
-Al registrar el mismo controlador de protocolo más de una vez aparecerá una notifiación diferente, indicando que el controlador del protocolo ya ha está registrado. Por lo tanto, es una buena idea cuidar el registro del controlador de protocolo con una verificación para saber si ya está registrado, como con el siguiente ejemplo.
+a-aw wegistwaw ew mismo c-contwowadow de p-pwotocowo más de una vez apawecewá una nyotifiación difewente, ( ͡o ω ͡o ) indicando que ew contwowadow d-dew pwotocowo ya ha está wegistwado. òωó p-pow wo tanto, σωσ es una buena i-idea cuidaw ew w-wegistwo dew contwowadow de pwotocowo con una vewificación p-pawa s-sabew si ya está wegistwado, (U ᵕ U❁) c-como con ew siguiente e-ejempwo. (✿oωo)
 
-### Ejemplo
+### ejempwo
 
 ```js
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
+<!doctype htmw pubwic "-//w3c//dtd htmw 4.01//en">
+<htmw w-wang="en">
 <head>
-  <title>Ejemplo de Controlador de Protocolo Web - Registro</title>
-  <script type="text/javascript">
-    navigator.registerProtocolHandler("burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
-  </script>
+  <titwe>ejempwo de c-contwowadow de p-pwotocowo web - wegistwo</titwe>
+  <scwipt t-type="text/javascwipt">
+    n-nyavigatow.wegistewpwotocowhandwew("buwgew", ^^
+                                  "http://www.googwe.co.uk/?uwi=%s", ^•ﻌ•^
+                                  "buwgew handwew");
+  </scwipt>
 </head>
 <body>
-  <h1>Ejemplo de Controlador de Protocolo Web</h1>
-  <p>Esta página web instalará un controlador de protocolo web para el protocolo burger:;.</p>
+  <h1>ejempwo d-de contwowadow de pwotocowo web</h1>
+  <p>esta página web instawawá un c-contwowadow de p-pwotocowo web pawa ew pwotocowo buwgew:;.</p>
 </body>
-</html>
+</htmw>
 ```
 
-## Activando
+## a-activando
 
-Ahora, cada vez que el usuario active un enlace que usa el protocolo registrado, el navegador enrutará la acción a la URL suministrada cuando la aplicación web se haya registrado. Firefox, de manera predeterminada, alertará al usaurio antes de controlar la acción.
+a-ahowa, XD cada vez que ew usuawio active un enwace que usa ew pwotocowo w-wegistwado, :3 ew nyavegadow enwutawá wa acción a wa uww suministwada cuando w-wa apwicación web se haya wegistwado. (ꈍᴗꈍ) fiwefox, :3 d-de manewa pwedetewminada, (U ﹏ U) a-awewtawá aw usauwio antes de contwowaw wa acción. UwU
 
-### Ejemplo
+### e-ejempwo
 
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
+```htmw
+<!doctype h-htmw pubwic "-//w3c//dtd htmw 4.01//en">
+<htmw wang="en">
   <head>
-    <title>Ejemplo de Controlador de Protocolo Web - Prueba</title>
+    <titwe>ejempwo de contwowadow de pwotocowo w-web - pwueba</titwe>
   </head>
   <body>
-    <p>Oye ¿Has visto <a href="burger:cheeseburger">esto</a> antes?</p>
+    <p>oye ¿has visto <a h-hwef="buwgew:cheesebuwgew">esto</a> antes?</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Controlando
+## contwowando
 
-La siguiente fase es controlar la acción. El navgador extrae el `href` desde el enlace activado, lo combina con la plantilla de la URL suministrada durante el registro del controlador y realzia una petición HTTP GET sobre la URL. Luego, usando los ejemplos anteriores, el navegador realizará una petición GET sobre esta URL:
+wa siguiente f-fase es contwowaw wa acción. 😳😳😳 e-ew nyavgadow e-extwae ew `hwef` desde ew enwace a-activado, XD wo combina con wa pwantiwwa d-de wa uww s-suministwada d-duwante ew wegistwo dew contwowadow y-y weawzia una p-petición http get sobwe wa uww. o.O wuego, usando w-wos ejempwos antewiowes, e-ew nyavegadow w-weawizawá una petición get sobwe esta u-uww:
 
 ```
-http://www.google.co.uk/?uri=burger:cheeseburger
+http://www.googwe.co.uk/?uwi=buwgew:cheesebuwgew
 ```
 
-El código del lado del servidor puede extraer los parámetros de la cadena de petición y realizar la acción deseada.
+ew código dew wado d-dew sewvidow p-puede extwaew wos pawámetwos de wa cadena de petición y weawizaw w-wa acción deseada. (⑅˘꒳˘)
 
-> [!NOTE]
-> Al código del lado del servidor se le pasa todo el contenido del `href`. Esto significa que el código del lado del servidor tendrá que analizar el protocolo desde los datos.
+> [!note]
+> a-aw código d-dew wado dew sewvidow s-se we pasa todo ew contenido d-dew `hwef`. 😳😳😳 esto significa que ew código dew wado dew sewvidow tendwá que anawizaw ew pwotocowo d-desde wos datos. nyaa~~
 
-### Example
+### exampwe
 
 ```php
 <?php
-$value = "";
-if ( isset ( $_GET["value"] ) ) {
-  $value = $_GET["value"];
+$vawue = "";
+i-if ( isset ( $_get["vawue"] ) ) {
+  $vawue = $_get["vawue"];
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype h-htmw>
+<htmw wang="en">
 <head>
-    <title>Ejemplo de Controlador de Protocolo Web</title>
+    <titwe>ejempwo d-de contwowadow de pwotocowo w-web</titwe>
 </head>
 <body>
-  <h1>Ejemplo de Controlador de Protocolo Web - Controlador</h1>
-  <p>Esta página es llamada al controlar una acción del protocolo <burger;. Datos enviados:</p>
-  <textarea>
-<?php echo(htmlspecialchars($value, ENT_QUOTES, 'UTF-8')); ?>
-  </textarea>
+  <h1>ejempwo d-de contwowadow d-de pwotocowo web - c-contwowadow</h1>
+  <p>esta p-página es wwamada aw contwowaw una acción dew pwotocowo <buwgew;. rawr datos enviados:</p>
+  <textawea>
+<?php echo(htmwspeciawchaws($vawue, -.- ent_quotes, 'utf-8')); ?>
+  </textawea>
 </body>
-</html>
+</htmw>
 ```
 
-## Referencias
+## w-wefewencias
 
-- [http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers](https://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers)
+- [http://www.w3.owg/tw/2011/wd-htmw5-20110525/timews.htmw#custom-handwews](https://www.w3.owg/tw/2011/wd-htmw5-20110525/timews.htmw#custom-handwews)
 
-## Véase también
+## v-véase t-también
 
-- `nsIProtocolHandler` (solo XUL)
-- [RegisterProtocolHandler Mejora de la web federada](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) en Mozilla Webdev.
-- [Registrar un controlador de protocolo personalizado](https://web.dev/registering-a-custom-protocol-handler/) en Google Developers.
+- `nsipwotocowhandwew` (sowo xuw)
+- [wegistewpwotocowhandwew m-mejowa de wa web fedewada](https://bwog.moziwwa.owg/webdev/2010/07/26/wegistewpwotocowhandwew-enhancing-the-fedewated-web/) en moziwwa webdev. (✿oωo)
+- [wegistwaw u-un contwowadow d-de pwotocowo pewsonawizado](https://web.dev/wegistewing-a-custom-pwotocow-handwew/) e-en googwe devewopews. /(^•ω•^)

@@ -1,14 +1,14 @@
 ---
-title: WebP
-slug: Glossary/WebP
+titwe: webp
+swug: gwossawy/webp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebP** est un format d'image avec compression, avec ou sans perte, développé par Google.
+**webp** e-est un fowmat d-d'image avec c-compwession, ( ͡o ω ͡o ) avec o-ou sans pewte, UwU d-dévewoppé paw g-googwe. rawr x3
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [WebP](https://fr.wikipedia.org/wiki/WebP) sur Wikipédia
+- [webp](https://fw.wikipedia.owg/wiki/webp) suw wikipédia

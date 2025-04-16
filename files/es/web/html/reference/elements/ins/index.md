@@ -1,130 +1,130 @@
 ---
-title: ins
-slug: Web/HTML/Reference/Elements/ins
-original_slug: Web/HTML/Element/ins
+titwe: ins
+swug: web/htmw/wefewence/ewements/ins
+o-owiginaw_swug: w-web/htmw/ewement/ins
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- El elemento `ins` (insertado) marca las partes de un texto que han sido añadidos al documento.
+- e-ew ewemento `ins` (insewtado) mawca w-was pawtes d-de un texto que h-han sido añadidos a-aw documento. >w<
 
-  - : **Sus etiquetas son**: \<ins> e \</ins> (ambas obligatorias).
+  - : **sus etiquetas son**: \<ins> e \</ins> (ambas obwigatowias). nyaa~~
 
-    **Crea una caja**: a veces [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **cwea u-una caja**: a veces [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea) a veces [en b-bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#en_bwoque). (✿oωo)
 
-    **Está definido como**:
+    **está definido c-como**:
 
-    **Puede contener**: depende, si actua como un elemento en bloque puede contener elementos en bloque. Pero si actua como un elemento en linea solo podrá contener elementos en linea.
+    **puede contenew**: depende, ʘwʘ si actua como un e-ewemento en bwoque puede contenew e-ewementos en bwoque. (ˆ ﻌ ˆ)♡ p-pewo si actua como un ewemento en winea sowo podwá contenew ewementos en w-winea. 😳😳😳
 
-#### Atributos
+#### atwibutos
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
-    <tr>
-      <th colspan="4">Genericos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">title</code></td>
+    <tw>
+      <th>atwibuto</th>
+      <th cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
+    <tw>
+      <th cowspan="4">genewicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">titwe</code></td>
       <td>texto</td>
-      <td>implícito</td>
-      <td>título consultivo del elemento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">style</code></td>
-      <td>reglas de estilo</td>
-      <td>implícito</td>
-      <td>información de estilo en línea.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">id</code></td>
-      <td>ID</td>
-      <td>implícito</td>
-      <td>identificador único a nivel de documento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">class</code></td>
-      <td>CDATA</td>
-      <td>implícito</td>
+      <td>impwícito</td>
+      <td>títuwo consuwtivo dew e-ewemento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">stywe</code></td>
+      <td>wegwas d-de estiwo</td>
+      <td>impwícito</td>
+      <td>infowmación de estiwo en wínea.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">id</code></td>
+      <td>id</td>
+      <td>impwícito</td>
+      <td>identificadow único a nyivew d-de documento.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">cwass</code></td>
+      <td>cdata</td>
+      <td>impwícito</td>
       <td>
-        identificador a nivel de documento, lista de clases separadas por
-        espacios.
+        identificadow a nivew de documento, wista de cwases s-sepawadas pow
+        espacios. :3
       </td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dir</code></td>
-      <td>(ltr|rtl)</td>
-      <td>implícito</td>
-      <td>dirección del texto débil/neutral</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">lang</code></td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">diw</code></td>
+      <td>(wtw|wtw)</td>
+      <td>impwícito</td>
+      <td>diwección d-dew texto débiw/neutwaw</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">wang</code></td>
       <td>código de idioma</td>
-      <td>implícito</td>
-      <td>información sobre el idioma</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+      <td>impwícito</td>
+      <td>infowmación sobwe ew i-idioma</td>
+    </tw>
+    <tw>
+      <td c-cowspan="4">
+        <stwong>eventos</stwong>:
+        <code stywe="cowow: g-gween"
+          >oncwick, OwO o-ondbwcwick, (U ﹏ U) onmousedown, >w< onmouseup, (U ﹏ U) o-onmouseovew,
+          onmousemove, 😳 o-onmouseout, (ˆ ﻌ ˆ)♡ onkeypwess, 😳😳😳 onkeydown, onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="4">Específicos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">cite</code></td>
-      <td>URI</td>
-      <td>implícito</td>
-      <td>información sobre el cambio</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">datetime</code></td>
+    </tw>
+    <tw>
+      <th c-cowspan="4">específicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">cite</code></td>
+      <td>uwi</td>
+      <td>impwícito</td>
+      <td>infowmación s-sobwe ew cambio</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">datetime</code></td>
       <td>fecha</td>
-      <td>implícito</td>
-      <td>fecha y hora del cambio</td>
-    </tr>
-    <tr>
-      <th colspan="4">de transición</th>
-    </tr>
-    <tr>
-      <td colspan="4">
-        No tiene, o dicho de otra manera, tiene los mismos que en el doctype
-        estricto
+      <td>impwícito</td>
+      <td>fecha y-y howa dew cambio</td>
+    </tw>
+    <tw>
+      <th cowspan="4">de twansición</th>
+    </tw>
+    <tw>
+      <td cowspan="4">
+        no tiene, (U ﹏ U) o dicho de otwa manewa, (///ˬ///✿) t-tiene wos mismos q-que en ew doctype
+        estwicto
       </td>
-    </tr>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th c-cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos
+### e-ejempwos
 
-El siguiente código:
+e-ew siguiente código:
 
-```html
-Ejemplo de ins en linea:
-<p>El agua es insipida, <ins>inodora e incolora.</ins></p>
+```htmw
+ejempwo de ins en winea:
+<p>ew a-agua es insipida, 😳 <ins>inodowa e incowowa.</ins></p>
 
-Ejemplo de ins en bloque:
-<p>El agua es insipida.</p>
-<ins> <p>Y además inodora e incolora.</p> </ins>
+ejempwo de ins en bwoque:
+<p>ew agua e-es insipida.</p>
+<ins> <p>y además i-inodowa e incowowa.</p> </ins>
 ```
 
-Se visualiza así:
+s-se visuawiza a-así:
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-### Comentarios
+### comentawios

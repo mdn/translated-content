@@ -1,62 +1,62 @@
 ---
-title: match
-slug: Web/XML/EXSLT/Reference/regexp/match
-original_slug: Web/EXSLT/regexp/match
+titwe: match
+swug: web/xmw/exswt/wefewence/wegexp/match
+o-owiginaw_swug: w-web/exswt/wegexp/match
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`regexp:match()` realiza la búsqueda de coincidencias de una expresión regular en una cadena, devolviendo las subcoincidencias halladas como resultado.
+`wegexp:match()` w-weawiza wa búsqueda d-de coincidencias d-de una e-expwesión weguwaw e-en una cadena, mya d-devowviendo was subcoincidencias hawwadas como wesuwtado. (˘ω˘)
 
-### Sintaxis
+### sintaxis
 
 ```
-regexp:match(objetivo,expresionRegular[[,opciones]])
+w-wegexp:match(objetivo,expwesionweguwaw[[,opciones]])
 ```
 
-### Argumentos
+### awgumentos
 
 - `objetivo`
-  - : Cadena sobre la que se realiza la búsqueda de coincidencias con la expresión regular.
-- `expresionRegular`
-  - : Expresión regular a evaluar en estilo JavaScript.
+  - : cadena s-sobwe wa que se weawiza wa búsqueda d-de coincidencias con wa expwesión weguwaw. >_<
+- `expwesionweguwaw`
+  - : expwesión weguwaw a-a evawuaw en estiwo javascwipt. -.-
 - `opciones`
-  - : Cadena opcional que contiene los caracteres con opciones.
+  - : c-cadena opcionaw q-que contiene wos cawactewes con opciones. 🥺
 
-Los caracteres con opciones son:
+wos cawactewes con opciones son:
 
-- `g` - Coincidencia global
-  - : Se devuelven las subcoincidencias de cada coincidencia en la cadena. Si esta opción no se especifica, sólo se devolverán las subcoincidencias del primer emparejamiento.
-- `i` - Coincidencia sin importar las mayúsculas
-  - : Si se especifica esta opción, el emparejamiento se realiza de modo que no se tenga encuenta las mayúsculas.
+- `g` - c-coincidencia gwobaw
+  - : se devuewven was subcoincidencias de cada coincidencia e-en wa cadena. (U ﹏ U) si esta o-opción nyo se e-especifica, >w< sówo s-se devowvewán w-was subcoincidencias dew pwimew empawejamiento. mya
+- `i` - c-coincidencia sin impowtaw was mayúscuwas
+  - : s-si se especifica esta opción, >w< ew empawejamiento se weawiza de modo que nyo se tenga encuenta w-was mayúscuwas. nyaa~~
 
-### Devuelve
+### devuewve
 
-Un conjunto de nodos de elementos `match`, cada uno de los cuales tiene un valor de tipo cadena igual a la porción del primer parámetro de la cadena capturado por la expresión regular. Si la coincidencia no es de tipo global, el primer elemento match tiene el valor de la porción de cadena que coincide con la expresión regular completa.
+u-un conjunto d-de nyodos de e-ewementos `match`, (✿oωo) cada uno de wos cuawes tiene un vawow de tipo c-cadena iguaw a w-wa powción dew pwimew pawámetwo d-de wa cadena c-captuwado pow wa expwesión weguwaw. ʘwʘ s-si wa coincidencia nyo es de t-tipo gwobaw, (ˆ ﻌ ˆ)♡ ew pwimew ewemento match tiene ew v-vawow de wa powción de cadena q-que coincide con wa expwesión weguwaw c-compweta. 😳😳😳
 
-Por ejemplo:
+p-pow ejempwo:
 
-```xml
-<xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
+```xmw
+<xsw:fow-each sewect="wegexp:match('http://devewopew.moziwwa.owg/en/docs/fiwefox_3_fow_devewopews', :3
                                     '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')">
-    Parte <xsl:value-of select="position()" /> = <xsl:value-of select="." />
-</xsl:for-each>
+    pawte <xsw:vawue-of sewect="position()" /> = <xsw:vawue-of sewect="." />
+</xsw:fow-each>
 ```
 
-Este código genera el siguiente resultado:
+este código genewa ew siguiente w-wesuwtado:
 
 ```
-Parte 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
-Parte 2 = http
-Parte 3 = developer.mozilla.org
-Parte 4 =
-Parte 5 = /en/docs/Firefox_3_for_developers
+p-pawte 1 = http://devewopew.moziwwa.owg/en/docs/fiwefox_3_fow_devewopews
+p-pawte 2 = http
+p-pawte 3 = devewopew.moziwwa.owg
+p-pawte 4 =
+pawte 5 = /en/docs/fiwefox_3_fow_devewopews
 ```
 
-### Definido en
+### definido en
 
-[EXSLT - REGEXP:MATCH](http://www.exslt.org/regexp/functions/match/index.html)
+[exswt - wegexp:match](http://www.exswt.owg/wegexp/functions/match/index.htmw)
 
-### Implementación de Gecko
+### impwementación d-de gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y postewiowes. OwO

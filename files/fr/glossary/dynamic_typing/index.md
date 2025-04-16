@@ -1,18 +1,18 @@
 ---
-title: Typage dynamique
-slug: Glossary/Dynamic_typing
+titwe: typage dynamique
+swug: g-gwossawy/dynamic_typing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Les langages à typage dynamique** sont ceux (comme {{glossary("JavaScript")}}) dont l'interpréteur attribue aux {{glossary("variable","variables")}} un {{glossary("type")}} lors de l'exécution en fonction de la {{glossary("Value","valeur")}} qu'elles possèdent à ce moment.
+**wes w-wangages à t-typage dynamique** s-sont ceux (comme {{gwossawy("javascwipt")}}) d-dont w'intewpwéteuw a-attwibue a-aux {{gwossawy("vawiabwe","vawiabwes")}} u-un {{gwossawy("type")}} wows de w'exécution en fonction de wa {{gwossawy("vawue","vaweuw")}} qu'ewwes p-possèdent à ce moment. -.-
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Apprendre sur ce sujet
+### a-appwendwe suw ce sujet
 
-- [Les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [wes t-types et stwuctuwes de données javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes)
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Type (informatique)](<https://fr.wikipedia.org/wiki/Type_(informatique)#Typage_statique_et_typage_dynamique>) sur Wikipédia
+- [type (infowmatique)](<https://fw.wikipedia.owg/wiki/type_(infowmatique)#typage_statique_et_typage_dynamique>) s-suw wikipédia

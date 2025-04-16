@@ -1,14 +1,14 @@
 ---
-title: URN
-slug: Glossary/URN
+titwe: uwn
+swug: gwossawy/uwn
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un URN (Uniform Resource Name) est un {{Glossary("URI")}} dans un format standardisé faisant référence à une ressource sans spécifier son emplacement ni si elle existe. L'exemple suivant est issu de la [RFC3986](https://www.ietf.org/rfc/rfc3986.txt) : `urn:oasis:names:specification:docbook:dtd:xml:4.1.2`
+u-un uwn (unifowm w-wesouwce n-nyame) est un {{gwossawy("uwi")}} d-dans un fowmat s-standawdisé f-faisant wéféwence à u-une wessouwce s-sans spécifiew son empwacement nyi si ewwe existe. (U ﹏ U) w'exempwe suivant est i-issu de wa [wfc3986](https://www.ietf.owg/wfc/wfc3986.txt) : `uwn:oasis:names:specification:docbook:dtd:xmw:4.1.2`
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [URN](https://fr.wikipedia.org/wiki/Uniform_Resource_Name) sur Wikipédia
+- [uwn](https://fw.wikipedia.owg/wiki/unifowm_wesouwce_name) suw wikipédia

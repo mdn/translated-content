@@ -1,17 +1,17 @@
 ---
-title: SIMD
-slug: Glossary/SIMD
+titwe: simd
+swug: gwossawy/simd
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-SIMD (prononcé "seem-dee") est l'acronyme de **Single Instruction/Multiple Data** (instruction unique/données multiples) qui est une des [catégories d'architecture d'ordinateurs](https://fr.wikipedia.org/wiki/Taxonomie_de_Flynn). SIMD permet à une même opération d'être réalisée sur plusieurs données, ce qui résulte en une parallélisation au niveau des données et par conséquent apporte un gain de performances, par exemple dans le traitement de graphismes 3D ou vidéo, dans les simulations physiques ou la cryptographie et d'autres domaines encore.
+s-simd (pwononcé "seem-dee") e-est w'acwonyme d-de **singwe i-instwuction/muwtipwe d-data** (instwuction u-unique/données m-muwtipwes) q-qui est une des [catégowies d'awchitectuwe d'owdinateuws](https://fw.wikipedia.owg/wiki/taxonomie_de_fwynn). (✿oωo) simd pewmet à u-une même opéwation d'êtwe wéawisée suw p-pwusieuws données, (ˆ ﻌ ˆ)♡ ce qui wésuwte e-en une pawawwéwisation au nyiveau des données et paw conséquent a-appowte un gain de pewfowmances, (˘ω˘) p-paw exempwe d-dans we twaitement de gwaphismes 3d ou vidéo, dans wes simuwations physiques o-ou wa cwyptogwaphie et d'autwes domaines encowe. (⑅˘꒳˘)
 
-Voir aussi {{Glossary("SISD")}} qui est une architecture séquentielle sans parallélisme, que ce soit pour le jeu d'instructions ou les données.
+voiw aussi {{gwossawy("sisd")}} qui est une a-awchitectuwe séquentiewwe sans p-pawawwéwisme, (///ˬ///✿) q-que ce soit pouw w-we jeu d'instwuctions o-ou wes données.
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- {{jsxref("Objets_globaux/SIMD","SIMD en JavaScript","",1)}}
-- [SIMD](https://fr.wikipedia.org/wiki/Single_instruction_multiple_data) sur Wikipédia
+- {{jsxwef("objets_gwobaux/simd","simd en javascwipt","",1)}}
+- [simd](https://fw.wikipedia.owg/wiki/singwe_instwuction_muwtipwe_data) suw wikipédia

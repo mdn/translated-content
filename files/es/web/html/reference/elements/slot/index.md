@@ -1,145 +1,145 @@
 ---
-title: <slot>
-slug: Web/HTML/Reference/Elements/slot
-original_slug: Web/HTML/Element/slot
+titwe: <swot>
+swug: web/htmw/wefewence/ewements/swot
+o-owiginaw_swug: w-web/htmw/ewement/swot
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/API/Web_components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.
+**ew e-ewemento h-htmw `<swot>`** —pawte d-de wa s-suite tecnowogica [web c-components](/es/docs/web/api/web_components) — e-es un pwacehowdew en un componente que tu puedes wwenaw con tu pwopio mawcado, nyaa~~ q-que te pewmite cweaw áwbowes dom pow sepawado y-y pwesentawwos juntos. (✿oωo)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
-          >Categorias de contenido</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/es/docs/web/htmw/content_categowies"
+          >categowias de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
-          >Contenido de flujo</a
-        >,
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
-          >contenido de fraseo</a
+        <a h-hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          >contenido de fwujo</a
+        >, ʘwʘ
+        <a h-hwef="/es/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenido d-de fwaseo</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
-        <a href="/es/docs/HTML/Content_categories#Transparent_content_model"
-          >Transparente</a
+        <a hwef="/es/docs/htmw/content_categowies#twanspawent_content_modew"
+          >twanspawente</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Eventos</th>
-      <td>[`slotchange`](/es/docs/Web/Reference/Events/slotchange)</td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parentes permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">eventos</th>
+      <td>[`swotchange`](/es/docs/web/wefewence/events/swotchange)</td>
+    </tw>
+    <tw>
+      <th scope="wow">omisión de etiqueta</th>
+      <td>ninguna, (ˆ ﻌ ˆ)♡ t-tanto wa etiqueta iniciaw como wa finaw son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawentes p-pewmitidos</th>
       <td>
-        Cualquier elemento que acepte
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
-          >contenido de fraseo</a
+        cuawquiew e-ewemento que a-acepte
+        <a h-hwef="/es/docs/htmw/content_categowies#phwasing_content"
+          >contenido d-de fwaseo</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rol ARIA implícito</th>
+    </tw>
+    <tw>
+      <th scope="wow">wow awia impwícito</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >no cowwesponding wowe</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA Permitidos</th>
-      <td>No se permite <code>role</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLSlotElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wowes awia pewmitidos</th>
+      <td>no se pewmite <code>wowe</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz dom</th>
+      <td>{{domxwef("htmwswotewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento incwuye wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
 - `name`
 
-  - : El nombre del slot.
+  - : e-ew nyombwe d-dew swot.
 
-    Un **slot nombrado** es un elemento `<slot>` con el atributo `name`.
+    un **swot nyombwado** es un ewemento `<swot>` con ew atwibuto `name`. :3
 
-## Ejemplos
+## e-ejempwos
 
-```html
-<template id="element-details-template">
-  <style>
-    details {
-      font-family: "Open Sans Light", Helvetica, Arial;
+```htmw
+<tempwate i-id="ewement-detaiws-tempwate">
+  <stywe>
+    detaiws {
+      f-font-famiwy: "open s-sans wight", hewvetica, OwO awiaw;
     }
     .name {
-      font-weight: bold;
-      color: #217ac0;
+      f-font-weight: bowd;
+      c-cowow: #217ac0;
       font-size: 120%;
     }
     h4 {
-      margin: 10px 0 -8px 0;
+      m-mawgin: 10px 0 -8px 0;
     }
     h4 span {
-      background: #217ac0;
+      b-backgwound: #217ac0;
       padding: 2px 6px 2px 6px;
     }
     h4 span {
-      border: 1px solid #cee9f9;
-      border-radius: 4px;
+      b-bowdew: 1px sowid #cee9f9;
+      b-bowdew-wadius: 4px;
     }
     h4 span {
-      color: white;
+      cowow: white;
     }
-    .attributes {
-      margin-left: 22px;
+    .attwibutes {
+      mawgin-weft: 22px;
       font-size: 90%;
     }
-    .attributes p {
-      margin-left: 16px;
-      font-style: italic;
+    .attwibutes p {
+      mawgin-weft: 16px;
+      f-font-stywe: itawic;
     }
-  </style>
-  <details>
-    <summary>
+  </stywe>
+  <detaiws>
+    <summawy>
       <span>
-        <code class="name"
-          >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+        <code c-cwass="name"
+          >&wt;<swot nyame="ewement-name">need n-nyame</swot>&gt;</code
         >
-        <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+        <i c-cwass="desc"><swot n-nyame="descwiption">need descwiption</swot></i>
       </span>
-    </summary>
-    <div class="attributes">
-      <h4><span>Attributes</span></h4>
-      <slot name="attributes"><p>None</p></slot>
+    </summawy>
+    <div cwass="attwibutes">
+      <h4><span>attwibutes</span></h4>
+      <swot nyame="attwibutes"><p>none</p></swot>
     </div>
-  </details>
-  <hr />
-</template>
+  </detaiws>
+  <hw />
+</tempwate>
 ```
 
-> [!NOTE]
-> Puedes ver este ejemplo en accion en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (velo [running live](https://mdn.github.io/web-components-examples/element-details/)). Además, puedes encontrar una explicación en [Using templates and slots](/es/docs/Web/API/Web_components/Using_templates_and_slots).
+> [!note]
+> p-puedes vew este ejempwo en accion en [ewement-detaiws](https://github.com/mdn/web-components-exampwes/twee/mastew/ewement-detaiws) (vewo [wunning wive](https://mdn.github.io/web-components-exampwes/ewement-detaiws/)). (U ﹏ U) además, puedes e-encontwaw una expwicación en [using t-tempwates and s-swots](/es/docs/web/api/web_components/using_tempwates_and_swots).
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,295 +1,295 @@
 ---
-title: frame
-slug: Web/HTML/Reference/Elements/frame
-original_slug: Web/HTML/Element/frame
+titwe: fwame
+swug: web/htmw/wefewence/ewements/fwame
+o-owiginaw_swug: w-web/htmw/ewement/fwame
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- **frame** -_marcos_ . Define la organización de los marcos dentro de la ventana del usuario.
+- **fwame** -_mawcos_ . ^•ﻌ•^ d-define w-wa owganización d-de wos mawcos d-dentwo de wa v-ventana dew usuawio. σωσ
 
-  - : **Sus etiquetas son**: `<frame>` (solo tiene una).
+  - : **sus etiquetas son**: `<fwame>` (sowo tiene una). -.-
 
-    **Está definido como**: Elemento [para marcos](/es/docs/HTML/Elemento/Tipos_de_elementos#paramarcos).
+    **está definido como**: ewemento [pawa m-mawcos](/es/docs/htmw/ewemento/tipos_de_ewementos#pawamawcos). ^^;;
 
-    **Crea una caja**: .
+    **cwea una caja**: . XD
 
-    **Puede contener**: Nada.
+    **puede contenew**: nyada. 🥺
 
-#### Atributos
+#### a-atwibutos
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
-    <tr>
-      <th colspan="3">Genéricos</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
+    <tw>
+      <th cowspan="3">genéwicos</th>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          >title</a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-titwe"
+          >titwe</a
         >
       </td>
       <td>
-        Texto informativo o título del elemento. Suele mostrarse a modo de "tool
-        tip".
+        t-texto infowmativo o títuwo dew e-ewemento. òωó suewe m-mostwawse a modo de "toow
+        tip". (ˆ ﻌ ˆ)♡
       </td>
       <td>
-        Texto legible por personas. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>. Por
-        defecto: Lo fija el navegador.
+        texto wegibwe pow pewsonas. -.- s-sensibwe a
+        <abbw titwe="difewencia entwe mayúscuwas y minúscuwas">m/m.</abbw>. :3 pow
+        d-defecto: wo fija ew nyavegadow. ʘwʘ
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-id"
           >id</a
         >
       </td>
       <td>
-        Le da un nombre al elemento que lo diferencia de todos los demás del
-        documento.
+        w-we da un n-nombwe aw ewemento que wo difewencia de todos wos d-demás dew
+        documento. 🥺
       </td>
       <td>
-        Un
+        un
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-id"
-          >nombre único</a
-        >. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-id"
+          >nombwe único</a
+        >. >_< sensibwe a
+        <abbw titwe="difewencia entwe máyuscuwas y-y minúscuwas">m/m.</abbw> pow
+        d-defecto: wo fija e-ew nyavegadow. ʘwʘ
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          >class</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/stwuct/gwobaw.htmw#adef-cwass"
+          >cwass</a
         >
       </td>
-      <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
+      <td>asigna nombwes de cwases aw ewemento. (˘ω˘) pow defecto, (✿oωo) cwases c-css.</td>
       <td>
-        Lista de clases separadas por espacio en blanco. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
+        w-wista de cwases sepawadas pow e-espacio en bwanco. (///ˬ///✿) s-sensibwe a
+        <abbw titwe="difewencia e-entwe máyuscuwas y-y minúscuwas">m/m.</abbw> pow
+        defecto: w-wo fija ew nyavegadow. rawr x3
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          >style</a
-        >
-      </td>
-      <td>
-        Permite especificar
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html"
-          >información de estilo</a
-        >. Por defecto, estilos CSS.
-      </td>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-style"
-          >Declaraciones de estilo</a
-        >. Por defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <th colspan="3">Específicos</th>
-    </tr>
-    <tr>
-      <td colspan="3">No tiene</td>
-    </tr>
-    <tr>
-      <th colspan="3">De transición</th>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-longdesc-FRAME"
-          >longdesc</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/stywes.htmw#adef-stywe"
+          >stywe</a
         >
       </td>
       <td>
-        Permite especificar un enlace a una descripción detallada del marco.
-        Inportante para la <a href="es/Accesibilidad">accesibilidad</a>.
+        pewmite e-especificaw
+        <a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/stywes.htmw"
+          >infowmación de estiwo</a
+        >. -.- pow defecto, ^^ estiwos css. (⑅˘꒳˘)
       </td>
       <td>
-        Una dirección
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#h-6.4"
-          >URI</a
-        >. Por defecto: lo fija el navegador.
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#type-stywe"
+          >decwawaciones d-de estiwo</a
+        >. nyaa~~ p-pow defecto: wo fija ew n-nyavegadow. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <th c-cowspan="3">específicos</th>
+    </tw>
+    <tw>
+      <td c-cowspan="3">no tiene</td>
+    </tw>
+    <tw>
+      <th cowspan="3">de twansición</th>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-name-FRAME"
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#adef-wongdesc-fwame"
+          >wongdesc</a
+        >
+      </td>
+      <td>
+        pewmite especificaw un enwace a una d-descwipción detawwada dew mawco. (U ﹏ U)
+        i-inpowtante p-pawa wa <a h-hwef="es/accesibiwidad">accesibiwidad</a>. 😳😳😳
+      </td>
+      <td>
+        una d-diwección
+        <a
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#h-6.4"
+          >uwi</a
+        >. >w< p-pow defecto: wo fija ew nyavegadow.
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#adef-name-fwame"
           >name</a
         >
       </td>
       <td>
-        Especifica un nombre para el marco, Esto permite usarlo
+        e-especifica u-un nyombwe pawa e-ew mawco, XD esto pewmite usawwo
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#h-16.3"
-          >como destino</a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#h-16.3"
+          >como d-destino</a
         >
-        de los enlaces.
+        de wos enwaces. o.O
       </td>
-      <td>. Por defecto: . lo fija el navegador.</td>
-    </tr>
-    <tr>
+      <td>. mya pow defecto: . 🥺 wo fija ew nyavegadow.</td>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-src-FRAME"
-          >src</a
-        >
-      </td>
-      <td>Especifica la localización de los contenidos iniciales del marco.</td>
-      <td>
-        Una dirección
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#h-6.4"
-          >URI</a
-        >. Por defecto: lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-frameborder"
-          >frameborder</a
+          cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#adef-swc-fwame"
+          >swc</a
         >
       </td>
-      <td>Indica si el marco tendrá o no borde.</td>
-      <td>Uno de los siguientes: '1' o '0'. Por defecto: '1'.</td>
-    </tr>
-    <tr>
+      <td>especifica wa wocawización de wos contenidos iniciawes d-dew mawco.</td>
+      <td>
+        u-una diwección
+        <a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/types.htmw#h-6.4"
+          >uwi</a
+        >. ^^;; p-pow defecto: wo fija ew nyavegadow. :3
+      </td>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-marginwidth"
-          >marginwidth</a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#adef-fwamebowdew"
+          >fwamebowdew</a
         >
       </td>
-      <td>Indica el margen izquierdo y derecho entre contenido y borde.</td>
-      <td>
-        Una cantidad de píxeles (cero o más). Por defecto: lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
+      <td>indica s-si ew mawco tendwá o nyo bowde.</td>
+      <td>uno de wos siguientes: '1' o '0'. (U ﹏ U) pow defecto: '1'.</td>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-marginheight"
-          >marginheight</a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#adef-mawginwidth"
+          >mawginwidth</a
         >
       </td>
-      <td>Indica el margen superior e inferior entre contenido y borde.</td>
+      <td>indica e-ew mawgen izquiewdo y dewecho entwe c-contenido y bowde.</td>
       <td>
-        Una cantidad de píxeles (cero o más). Por defecto: lo fija el navegador.
+        una c-cantidad de píxewes (cewo o-o más). OwO pow defecto: wo fija ew nyavegadow. 😳😳😳
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-noresize"
-          >noresize</a
+          c-cwass="extewnaw"
+          h-hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#adef-mawginheight"
+          >mawginheight</a
         >
       </td>
-      <td>Hace que la ventana del marco no sea redimensionable.</td>
-      <td>'noresize'. Por defecto: lo fija el navegador.</td>
-    </tr>
-    <tr>
+      <td>indica ew mawgen s-supewiow e i-infewiow entwe contenido y bowde.</td>
+      <td>
+        una cantidad de píxewes (cewo o más). (ˆ ﻌ ˆ)♡ p-pow defecto: w-wo fija ew nyavegadow. XD
+      </td>
+    </tw>
+    <tw>
       <td>
         <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/frames.html#adef-scrolling"
-          >scrolling</a
+          c-cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#adef-nowesize"
+          >nowesize</a
+        >
+      </td>
+      <td>hace q-que w-wa ventana dew mawco nyo sea wedimensionabwe.</td>
+      <td>'nowesize'. (ˆ ﻌ ˆ)♡ p-pow defecto: wo fija ew nyavegadow.</td>
+    </tw>
+    <tw>
+      <td>
+        <a
+          cwass="extewnaw"
+          hwef="http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#adef-scwowwing"
+          >scwowwing</a
         >
       </td>
       <td>
-        Indica si el marco debe tener o no barra de desplazamiento (scroll).
+        i-indica si ew m-mawco debe tenew o nyo bawwa de despwazamiento (scwoww). ( ͡o ω ͡o )
       </td>
-      <td>Uno de los sigientes: 'yes', 'no', o 'auto'. Por defecto: 'auto'.</td>
-    </tr>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
+      <td>uno d-de wos sigientes: 'yes', rawr x3 'no', nyaa~~ o-o 'auto'. pow defecto: 'auto'.</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th>descwipción</th>
+      <th>vawow</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos de uso
+### ejempwos de uso
 
-#### Un documento con marcos
+#### un d-documento con mawcos
 
 código:
 
 ```
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
-  "http://www.w3.org/TR/html4/frameset.dtd">
-<html>
+<!doctype htmw pubwic "-//w3c//dtd htmw 4.01 f-fwameset//en"
+  "http://www.w3.owg/tw/htmw4/fwameset.dtd">
+<htmw>
 <head>
-<title>Un documento simple con marcos</title>
+<titwe>un documento simpwe con mawcos</titwe>
 </head>
-<frameset rows="20%,80%">
- <frameset cols="20%, 80%">
-   <frame src="http://developer.mozilla.org/wiki-im...irefoxlogo.png">
-   <frame src="http://html.conclase.net/w3c/html401...dtd.html#frame">
- </frameset>
- <frame src="http://html.conclase.net/w3c/html401...tml#edef-FRAME">
-</frameset>
-</html>
+<fwameset w-wows="20%,80%">
+ <fwameset c-cows="20%, >_< 80%">
+   <fwame swc="http://devewopew.moziwwa.owg/wiki-im...iwefoxwogo.png">
+   <fwame swc="http://htmw.concwase.net/w3c/htmw401...dtd.htmw#fwame">
+ </fwameset>
+ <fwame swc="http://htmw.concwase.net/w3c/htmw401...tmw#edef-fwame">
+</fwameset>
+</htmw>
 ```
 
-### Estilo predeterminado
+### e-estiwo pwedetewminado
 
-### Notas
+### n-notas
 
-### Referencia
+### wefewencia
 
-- El elemento [**frame** en la especificación](http://html.conclase.net/w3c/html401-es/present/frames.html#edef-FRAME) de html 4.01
+- ew ewemento [**fwame** en w-wa especificación](http://htmw.concwase.net/w3c/htmw401-es/pwesent/fwames.htmw#edef-fwame) de h-htmw 4.01
 
-### Soporte
+### sopowte
 
-Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-frame): IE 6 - IE 7 - FF 1.5 - OP 9.
+puede consuwtaw esta [compawativa](http://www.webdevout.net/bwowsew_suppowt_htmw.php#suppowt-htmw401-fwame): ie 6 - ie 7 - f-ff 1.5 - op 9. ^^;;
 
 ---
 
-> [!NOTE]
-> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!note]
+> estamos ampwiando e-este documento, (ˆ ﻌ ˆ)♡ p-posibwemente contenga defectos y-y cawencias. ^^;; ¡estamos en obwas!... d-discuwpen w-was mowestias.
 >
-> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
+> ¿quiewes p-pawticipaw en su ewabowación? pawa s-sabew cómo h-hacewwo consuwta mdc:como ayudaw. (⑅˘꒳˘)
 
-Categoría
+categowía
 
-interwiki links
+intewwiki w-winks
 
-automatismos
+a-automatismos

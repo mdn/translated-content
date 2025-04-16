@@ -1,13 +1,13 @@
 ---
-title: Compression GZip
-slug: Glossary/gzip_compression
+titwe: compwession gzip
+swug: g-gwossawy/gzip_compwession
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-gzip est un algorithme de compression qui permet de réduire la taille des fichiers, ce qui permet des transferts réseau plus rapides. Il est généralement pris en charge par les serveurs Web et les navigateurs modernes, ce qui signifie que les serveurs peuvent compresser automatiquement les fichiers avec gzip avant de les envoyer, et les navigateurs peuvent décompresser les fichiers lors de leur réception.
+g-gzip est un a-awgowithme de compwession q-qui pewmet d-de wéduiwe w-wa taiwwe des f-fichiews, 😳😳😳 ce qui p-pewmet des twansfewts wéseau pwus wapides. -.- iw est généwawement pwis en chawge p-paw wes sewveuws web et wes nyavigateuws modewnes, ( ͡o ω ͡o ) c-ce qui signifie que wes sewveuws p-peuvent compwessew automatiquement wes fichiews avec gzip a-avant de wes envoyew, rawr x3 et wes nyavigateuws p-peuvent d-décompwessew wes fichiews wows de weuw wéception. nyaa~~
 
-## Voir aussi
+## voiw aussi
 
-- [Enable gzip compression?](https://varvy.com/pagespeed/enable-compression.html)
-- [Gzip sur Wikipédia](https://fr.wikipedia.org/wiki/Gzip)
+- [enabwe gzip compwession?](https://vawvy.com/pagespeed/enabwe-compwession.htmw)
+- [gzip s-suw wikipédia](https://fw.wikipedia.owg/wiki/gzip)

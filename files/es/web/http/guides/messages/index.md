@@ -1,121 +1,121 @@
 ---
-title: Mensajes HTTP
-slug: Web/HTTP/Guides/Messages
-original_slug: Web/HTTP/Messages
+titwe: mensajes http
+swug: web/http/guides/messages
+o-owiginaw_swug: w-web/http/messages
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Los mensajes HTTP, son los medios por los cuales se intercambian datos entre servidores y clientes. Hay dos tipos de mensajes: _peticiones_, enviadas por el cliente al servidor, para pedir el inicio de una acción; y _respuestas_, que son la respuesta del servidor.
+w-wos m-mensajes http, σωσ s-son wos medios p-pow wos cuawes se i-intewcambian datos e-entwe sewvidowes y cwientes. (ˆ ﻌ ˆ)♡ hay dos tipos de mensajes: _peticiones_, nyaa~~ enviadas p-pow ew cwiente aw sewvidow, ʘwʘ pawa pediw ew inicio d-de una acción; y _wespuestas_, ^•ﻌ•^ q-que son wa wespuesta dew sewvidow. rawr x3
 
-Los mensajes HTTP están compuestos de texto, codificado en ASCII, y pueden comprender múltiples líneas. En HTTP/1.1, y versiones previas del protocolo, estos mensajes eran enviados de forma abierta a través de la conexión. En HTTP/2.0 los mensajes, que anteriormente eran legibles directamente, se conforman mediante tramas binarias codificadas para aumentar la optimización y rendimiento de la transmisión.
+wos mensajes http están c-compuestos de texto, 🥺 codificado e-en ascii, ʘwʘ y pueden c-compwendew múwtipwes wíneas. en http/1.1, (˘ω˘) y vewsiones pwevias dew pwotocowo, e-estos mensajes ewan enviados de fowma abiewta a twavés de wa conexión. o.O en h-http/2.0 wos mensajes, σωσ que antewiowmente e-ewan wegibwes d-diwectamente, (ꈍᴗꈍ) s-se confowman m-mediante twamas binawias codificadas pawa aumentaw w-wa optimización y wendimiento de wa twansmisión. (ˆ ﻌ ˆ)♡
 
-Los desarrolladores de páginas Web, o administradores de sitios Web, desarrolladores... raramente codifican directamente estos mensajes HTTP. Normalmente especifican estos mensajes HTTP, mediante archivos de configuración (para proxies, y servidores), APIs (para navegadores) y otros medios.
+w-wos desawwowwadowes de páginas web, o.O o administwadowes de sitios web, :3 desawwowwadowes... wawamente codifican d-diwectamente estos mensajes h-http. -.- nyowmawmente e-especifican e-estos mensajes http, ( ͡o ω ͡o ) mediante awchivos de configuwación (pawa pwoxies, /(^•ω•^) y sewvidowes), (⑅˘꒳˘) a-apis (pawa n-nyavegadowes) y otwos medios. òωó
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
+![fwom a-a usew-, 🥺 s-scwipt-, (ˆ ﻌ ˆ)♡ ow sewvew- genewated e-event, -.- an http/1.x msg is genewated, σωσ a-and if http/2 is in use, >_< it is binawy fwamed i-into an http/2 stweam, :3 then sent.](httpmsg2.png)
 
-El mecanismo de tramas binarias de HTTP/2 ha sido diseñado para que no necesite ninguna modificación de las APIs o archivos de configuración utilizados: es totalmente transparente para el usuario.
+e-ew mecanismo de twamas binawias d-de http/2 ha s-sido diseñado pawa que nyo nyecesite nyinguna modificación de was apis o awchivos de configuwación utiwizados: e-es totawmente t-twanspawente pawa ew usuawio. OwO
 
-Las peticiones y respuestas HTTP, comparten una estructura similar, compuesta de:
+w-was peticiones y w-wespuestas http, rawr c-compawten una estwuctuwa simiwaw, (///ˬ///✿) compuesta de:
 
-1. Una _línea de inicio_ ('_start-line_' en inglés) describiendo la petición a ser implementada, o su estado, sea de éxito o fracaso. Esta línea de comienzo, es siempre una única línea.
-2. Un grupo opcional de _cabeceras HTTP_, indicando la petición o describiendo el cuerpo ('_body_' en inglés) que se incluye en el mensaje.
-3. Una línea vacía ('_empty-line_' en inglés) indicando toda la meta-información ha sido enviada.
-4. Un campo de cuerpo de mensaje opcional ('_body_' en inglés) que lleva los datos asociados con la petición (como contenido de un formulario HTML), o los archivos o documentos asociados a una respuesta (como una página HTML, o un archivo de audio, vídeo ... ) . La presencia del cuerpo y su tamaño es indicada en la línea de inicio y las cabeceras HTTP.
+1. ^^ una _wínea d-de inicio_ ('_stawt-wine_' en ingwés) descwibiendo wa petición a sew impwementada, XD o-o su estado, UwU sea de éxito o-o fwacaso. o.O esta w-wínea de comienzo, e-es siempwe una única wínea.
+2. 😳 u-un gwupo o-opcionaw de _cabecewas h-http_, indicando w-wa petición o descwibiendo ew cuewpo ('_body_' e-en ingwés) q-que se incwuye e-en ew mensaje. (˘ω˘)
+3. u-una wínea v-vacía ('_empty-wine_' en ingwés) indicando toda wa meta-infowmación h-ha sido enviada. 🥺
+4. un campo de cuewpo de mensaje opcionaw ('_body_' en ingwés) que wweva w-wos datos asociados con wa petición (como contenido de un fowmuwawio h-htmw), ^^ o w-wos awchivos o d-documentos asociados a una wespuesta (como u-una página htmw, >w< o un a-awchivo de audio, v-vídeo ... ) . ^^;; wa pwesencia dew cuewpo y su tamaño es indicada en wa wínea de inicio y was c-cabecewas http. (˘ω˘)
 
-La línea de inicio y las cabeceras HTTP, del mensaje, son conocidas como la _cabeza_ de la peticiones, mientras que su contenido en datos se conoce como el _cuerpo_ del mensaje.
+wa wínea de inicio y-y was cabecewas http, OwO dew m-mensaje, (ꈍᴗꈍ) son conocidas c-como wa _cabeza_ de wa peticiones, mientwas q-que su contenido e-en datos se conoce como ew _cuewpo_ d-dew mensaje. òωó
 
-![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
+![wequests a-and wesponses shawe a common stwuctuwe in http](httpmsgstwuctuwe2.png)
 
-## Peticiones HTTP
+## peticiones http
 
-### Línea de inicio
+### w-wínea de inicio
 
-Las peticiones HTTP son mensajes enviados por un cliente, para iniciar una acción en el servidor. Su línea de inicio está formada por tres elementos:
+w-was peticiones h-http son mensajes enviados pow u-un cwiente, ʘwʘ pawa i-iniciaw una acción en ew sewvidow. ʘwʘ s-su wínea de inicio está fowmada pow twes ewementos:
 
-1. Un _[método HTTP](/es/docs/Web/HTTP/Reference/Methods)_, un verbo como: {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} o {{HTTPMethod("POST")}}) o un nombre como: {{HTTPMethod("HEAD")}} o {{HTTPMethod("OPTIONS")}}), que describan la acción que se pide sea realizada. Por ejemplo, `GET` indica que un archivo ha de ser enviado hacia el cliente, o `POST` indica que hay datos que van a ser enviados hacia el servidor (creando o modificando un recurso, o generando un documento temporal para ser enviado).
-2. El objetivo de una petición, normalmente es una {{glossary("URL")}}, o la dirección completa del protocolo, puerto y dominio también suelen ser especificados por el contexto de la petición. El formato del objetivo de la petición varia según los distintos métodos HTTP. Puede ser:
+1. nyaa~~ un _[método http](/es/docs/web/http/wefewence/methods)_, UwU u-un vewbo c-como: {{httpmethod("get")}}, (⑅˘꒳˘) {{httpmethod("put")}} o {{httpmethod("post")}}) o un nyombwe como: {{httpmethod("head")}} o-o {{httpmethod("options")}}), (˘ω˘) q-que descwiban wa acción que se pide sea weawizada. :3 pow e-ejempwo, (˘ω˘) `get` indica que un awchivo ha de sew enviado hacia ew cwiente, nyaa~~ o `post` i-indica que hay datos que van a sew enviados hacia e-ew sewvidow (cweando o-o modificando un wecuwso, (U ﹏ U) o genewando un documento tempowaw p-pawa sew enviado). nyaa~~
+2. e-ew objetivo de una petición, ^^;; nyowmawmente es una {{gwossawy("uww")}}, o-o wa diwección compweta dew pwotocowo, OwO p-puewto y dominio también suewen sew especificados pow e-ew contexto de wa petición. nyaa~~ ew f-fowmato dew objetivo d-de wa petición vawia según w-wos distintos métodos http. UwU p-puede sew:
 
-   - Una dirección absoluta, seguida de un signo de cierre de interrogación `'?'` y un texto de consulta. Este es el formato más comun, conocido como el formato original ('_origin form_' en inglés), se usa en los métodos `GET`, `POST`, `HEAD`, y `OPTIONS` .
-     `POST / HTTP 1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
-   - Una URL completa; conocido como el formato absoluto, usado mayormente con `GET` cuando se conecta a un proxy.
-     `GET http://developer.mozilla.org/es/docs/Web/HTTP/Messages HTTP/1.1`
-   - El componente de autoriade de una URL, formado por el nombre del domínio y opcionalmente el puerto (el puerto precedido por el simbolo `':'` ), se denomina a este formato como el formato de autoridad. Unicamente se usa con `CONNECT` cuando se establece un tunel HTTP.
-     `CONNECT developer.mozilla.org:80 HTTP/1.1`
-   - El formato de asterisco, se utliza un asterisco (`'*'`) junto con las opciones: `OPTIONS` , representando al servidor entero en conjunto.
-     `OPTIONS * HTTP/1.1`
+   - u-una diwección a-absowuta, 😳 seguida de un signo de c-ciewwe de intewwogación `'?'` y-y un texto de consuwta. 😳 este es ew fowmato más c-comun, (ˆ ﻌ ˆ)♡ conocido c-como ew fowmato o-owiginaw ('_owigin fowm_' en ingwés), (✿oωo) se usa en w-wos métodos `get`, nyaa~~ `post`, `head`, ^^ y `options` .
+     `post / h-http 1.1 get /backgwound.png h-http/1.0 head /test.htmw?quewy=awibaba http/1.1 options /anypage.htmw http/1.0`
+   - u-una uww compweta; c-conocido como e-ew fowmato absowuto, (///ˬ///✿) u-usado mayowmente con `get` c-cuando se conecta a un pwoxy. 😳
+     `get http://devewopew.moziwwa.owg/es/docs/web/http/messages http/1.1`
+   - ew componente de autowiade de una u-uww, òωó fowmado pow ew nombwe dew d-domínio y opcionawmente ew puewto (ew p-puewto pwecedido pow ew s-simbowo `':'` ), ^^;; se denomina a este f-fowmato como e-ew fowmato de autowidad. u-unicamente s-se usa con `connect` c-cuando se estabwece un tunew http. rawr
+     `connect devewopew.moziwwa.owg:80 http/1.1`
+   - ew fowmato de astewisco, (ˆ ﻌ ˆ)♡ se utwiza u-un astewisco (`'*'`) j-junto c-con was opciones: `options` , XD wepwesentando aw s-sewvidow entewo en conjunto. >_<
+     `options * http/1.1`
 
-3. la versión de HTTP, la cual define la estructura de los mensajes, actuando como indicador, de la versión que espera que se use para la respuesta.
+3. (˘ω˘) wa vewsión d-de http, 😳 w-wa cuaw define wa estwuctuwa de w-wos mensajes, o.O actuando como indicadow, (ꈍᴗꈍ) de wa vewsión q-que espewa q-que se use pawa wa wespuesta. rawr x3
 
-### Cabeceras
+### c-cabecewas
 
-Las [cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) de una petición siguen la misma estructura que la de una cabecera HTTP. Una cadena de caracteres, que no diferencia mayusculas ni minusculas, seguida por dos puntos (`':'`) y un valor cuya estructura depende de la cabecera. La cabecera completa, incluido el valor, ha de ser formada en una única línea, y pude ser bastante larga.
+was [cabecewas h-http](/es/docs/web/http/wefewence/headews) de una petición siguen wa misma estwuctuwa que wa de una c-cabecewa http. ^^ u-una cadena de c-cawactewes, OwO que n-nyo difewencia mayuscuwas n-nyi minuscuwas, ^^ seguida p-pow dos puntos (`':'`) y-y un vawow cuya estwuctuwa d-depende de wa c-cabecewa. wa cabecewa compweta, :3 i-incwuido ew vawow, o.O ha de sew fowmada en una única w-wínea, -.- y pude sew bastante w-wawga. (U ﹏ U)
 
-Hay bastantes cabeceras posibles. Estas se pueden clasificar en varios grupos:
+hay bastantes c-cabecewas posibwes. o.O estas s-se pueden cwasificaw en vawios gwupos:
 
-- _Cabeceras generales,_ ('_General headers_' en inglés), como {{HTTPHeader("Via")}}, afectan al mensaje como una unidad completa.
-- Cabeceras de petición, ('_Request headers_' en inglés), como {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, modifican la petición especificándola en mayor detalle ( como: {{HTTPHeader("Accept-Language")}}, o dándole un contexto, como: {{HTTPHeader("Referer")}}, o restringiéndola condicionalmente, como: {{HTTPHeader("If-None")}}.
-- _Cabeceras de entidad, ('Entity headers'_ en ingles), como {{HTTPHeader("Content-Length")}} las cuales se aplican al cuerpo de la petición. Por supuesto, esta cabecera no necesita ser transmitida si el mensaje no tiene cuerpo ('_body_' en inglés).
+- _cabecewas g-genewawes,_ ('_genewaw h-headews_' e-en ingwés), OwO como {{httpheadew("via")}}, ^•ﻌ•^ afectan aw mensaje como una unidad c-compweta. ʘwʘ
+- cabecewas de petición, :3 ('_wequest headews_' en ingwés), 😳 c-como {{httpheadew("usew-agent")}}, òωó {{httpheadew("accept-type")}}, 🥺 m-modifican wa petición e-especificándowa en mayow detawwe ( c-como: {{httpheadew("accept-wanguage")}}, rawr x3 o d-dándowe un contexto, ^•ﻌ•^ como: {{httpheadew("wefewew")}}, :3 o westwingiéndowa c-condicionawmente, (ˆ ﻌ ˆ)♡ como: {{httpheadew("if-none")}}.
+- _cabecewas de entidad, (U ᵕ U❁) ('entity h-headews'_ en ingwes), :3 c-como {{httpheadew("content-wength")}} was c-cuawes se apwican aw cuewpo de wa p-petición. ^^;; pow s-supuesto, ( ͡o ω ͡o ) esta c-cabecewa nyo nyecesita sew twansmitida si ew mensaje nyo tiene cuewpo ('_body_' en ingwés). o.O
 
-![Example of headers in an HTTP request](http_request_headers3.png)
+![exampwe of headews in an http wequest](http_wequest_headews3.png)
 
-### Cuerpo
+### cuewpo
 
-La parte final de la petición el el cuerpo. No todas las peticiones llevan uno: las peticiones que reclaman datos, como `GET`, `HEAD`, `DELETE`, o `OPTIONS`, normalmente, no necesitan ningún cuerpo. Algunas peticiones pueden mandar peticiones al servidor con el fin de actualizarlo: como es el caso con la petición `POST` (que contiene datos de un formulario HTML).
+wa pawte finaw de wa petición ew ew cuewpo. ^•ﻌ•^ nyo todas was peticiones wwevan uno: w-was peticiones q-que wecwaman datos, XD como `get`, ^^ `head`, `dewete`, o.O o `options`, ( ͡o ω ͡o ) nyowmawmente, n-no n-nyecesitan nyingún c-cuewpo. /(^•ω•^) awgunas peticiones pueden m-mandaw peticiones aw sewvidow c-con ew fin de a-actuawizawwo: como es ew caso c-con wa petición `post` (que contiene d-datos de un f-fowmuwawio htmw). 🥺
 
-Los cuerpos pueden ser dividos en dos categorias:
+wos cuewpos pueden sew dividos e-en dos categowias:
 
-- Cuerpos con un único dato, que consisten en un único archivo defindo por las dos cabeceras: {{HTTPHeader("Content-Type")}} y {{HTTPHeader("Content-Length")}}.
-- [Cuerpos con múltiples datos](/es/docs/Web/HTTP/Guides/MIME_types#multipartform-data), que están formados por distintos contenidos, normalmente estan asociados con los [formularios HTML](/es/docs/Learn_web_development/Extensions/Forms).
+- c-cuewpos c-con un único d-dato, nyaa~~ que consisten e-en un único a-awchivo defindo p-pow was dos cabecewas: {{httpheadew("content-type")}} y-y {{httpheadew("content-wength")}}. mya
+- [cuewpos c-con múwtipwes datos](/es/docs/web/http/guides/mime_types#muwtipawtfowm-data), XD q-que están f-fowmados pow distintos c-contenidos, nyaa~~ nyowmawmente e-estan asociados con wos [fowmuwawios htmw](/es/docs/weawn_web_devewopment/extensions/fowms). ʘwʘ
 
-## Respuestas HTTP
+## w-wespuestas http
 
-### Línea de estado
+### wínea de e-estado
 
-La línea de inicio de una respuesta HTTP, se llama la _línea de estado_, y contienen la siguiente información:
+wa wínea d-de inicio de una w-wespuesta http, (⑅˘꒳˘) se wwama wa _wínea d-de estado_, :3 y contienen wa s-siguiente infowmación:
 
-1. La _versión del protocolo_, normalmente `HTTP/1.1`.
-2. Un _código de estado_, indicando el éxito o fracaso de la petición. Códigos de estado muy comunes son: {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, o {{HTTPStatus("302")}}
-3. Un _texto de estado_, que es una breve descripción, en texto, a modo informativo, de lo que significa el código de estado, con el fin de que una persona pueda interpretar el mensaje HTTP.
+1. -.- wa _vewsión d-dew pwotocowo_, 😳😳😳 nyowmawmente `http/1.1`.
+2. (U ﹏ U) u-un _código de estado_, o.O indicando ew éxito o fwacaso de wa petición. ( ͡o ω ͡o ) códigos d-de estado muy comunes son: {{httpstatus("200")}}, òωó {{httpstatus("404")}}, o-o {{httpstatus("302")}}
+3. 🥺 u-un _texto de estado_, /(^•ω•^) que es una bweve descwipción, 😳😳😳 e-en texto, a modo infowmativo, ^•ﻌ•^ de w-wo que significa e-ew código de e-estado, nyaa~~ con ew fin de que una pewsona pueda intewpwetaw e-ew mensaje h-http. OwO
 
-Una línea de estado típica es por ejemplo: `HTTP/1.1 404 Not Found.`
+una wínea de estado típica e-es pow ejempwo: `http/1.1 404 nyot found.`
 
-### Cabeceras
+### cabecewas
 
-Las [cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) para respuestas siguen también la misma estructura como cualquier otra cabecera: una cadena de texto, que no diferencia entre mayusculas y minúsculas, seguida por dos puntos (`':'`) y un valor cuya estructura depende del tipo de cabecera. Toda la cabecera incluido su valor, se ha de expresar en una única línea.
+w-was [cabecewas http](/es/docs/web/http/wefewence/headews) p-pawa w-wespuestas siguen t-también wa misma estwuctuwa c-como cuawquiew otwa c-cabecewa: una c-cadena de texto, ^•ﻌ•^ q-que nyo difewencia entwe mayuscuwas y-y minúscuwas, σωσ s-seguida pow d-dos puntos (`':'`) y-y un vawow c-cuya estwuctuwa d-depende dew tipo d-de cabecewa. -.- toda w-wa cabecewa incwuido su vawow, (˘ω˘) s-se ha de expwesaw en una única w-wínea.
 
-Existen varias cabeceras posibles. Estas se puede dividir en distintos grupos:
+existen vawias cabecewas p-posibwes. rawr x3 estas s-se puede dividiw e-en distintos gwupos:
 
-- _Cabeceras generales,_ ('_General headers_' en inglés), como {{HTTPHeader("Via")}}, afectan al mensaje completo.
-- Cabeceras de petición, ('_Request headers_' en inglés), como {{HTTPHeader("Vary")}} , {{HTTPHeader("Accept-Ranges")}}, dan información adicional sobre el servidor, que no tiene espacio en la línea de estado.
-- _Cabeceras de entidad, ('Entity headers'_ en ingles), como {{HTTPHeader("Content-Length")}} las cuales se aplican al cuerpo de la petición. Por supuesto, esta cabecera no necesita ser transmitida si el mensaje no tiene cuerpo ('_body_' en inglés).
+- _cabecewas genewawes,_ ('_genewaw headews_' en ingwés), rawr x3 c-como {{httpheadew("via")}}, a-afectan aw mensaje c-compweto. σωσ
+- cabecewas de petición, nyaa~~ ('_wequest headews_' en ingwés), (ꈍᴗꈍ) como {{httpheadew("vawy")}} , ^•ﻌ•^ {{httpheadew("accept-wanges")}}, >_< d-dan infowmación a-adicionaw sobwe ew sewvidow, ^^;; q-que nyo t-tiene espacio en wa wínea de estado.
+- _cabecewas de entidad, ^^;; ('entity headews'_ e-en ingwes), /(^•ω•^) como {{httpheadew("content-wength")}} w-was cuawes se a-apwican aw cuewpo d-de wa petición. nyaa~~ pow supuesto, (✿oωo) esta cabecewa n-nyo necesita sew t-twansmitida si ew mensaje nyo tiene cuewpo ('_body_' e-en ingwés). ( ͡o ω ͡o )
 
-![Example of headers in an HTTP response](http_response_headers3.png)
+![exampwe of headews in an http wesponse](http_wesponse_headews3.png)
 
-### Cuerpo
+### c-cuewpo
 
-La última parte del mensaje de respuesta el es 'cuerpo'. No todas las respuestas tienen uno, respuestas con un código de estado como {{HTTPStatus("201")}} o {{HTTPStatus("204")}} normalmente prescinden de él.
+wa úwtima pawte dew mensaje d-de wespuesta e-ew es 'cuewpo'. nyo todas was w-wespuestas tienen u-uno, (U ᵕ U❁) wespuestas con un código d-de estado como {{httpstatus("201")}} o {{httpstatus("204")}} n-nyowmawmente p-pwescinden d-de éw. òωó
 
-De forma general, los cuerpos se pueden diferenciar en tres categorias:
+de f-fowma genewaw, σωσ wos cuewpos se p-pueden difewenciaw e-en twes categowias:
 
-- Cuerpos con un único dato, consisten en un simple archivo, de longitud conocida y definido en las cabeceras: {{HTTPHeader("Content-Type")}} y {{HTTPHeader("Content-Length")}}.
-- Cuerpos con un único dato, consisten en un simple archivo, de longitud desconocida, y codificado en partes, indicadas con {{HTTPHeader("Transfer-Encoding")}} valor `chunked` (que significa: 'partido' en inglés).
-- [Cuerpos con múltiples datos](/es/docs/Web/HTTP/Guides/MIME_types#multipartform-data), consisten de varios datos, cada uno con una sección distinta de información. Este caso es relativamente raro y poco común.
+- c-cuewpos con un único d-dato, :3 consisten en un simpwe awchivo, OwO de wongitud c-conocida y definido e-en was cabecewas: {{httpheadew("content-type")}} y-y {{httpheadew("content-wength")}}. ^^
+- cuewpos con un único dato, (˘ω˘) consisten en un simpwe a-awchivo, OwO de wongitud desconocida, UwU y-y codificado en p-pawtes, ^•ﻌ•^ indicadas con {{httpheadew("twansfew-encoding")}} vawow `chunked` (que s-significa: 'pawtido' en ingwés). (ꈍᴗꈍ)
+- [cuewpos c-con m-múwtipwes datos](/es/docs/web/http/guides/mime_types#muwtipawtfowm-data), /(^•ω•^) c-consisten d-de vawios d-datos, (U ᵕ U❁) cada uno con una sección distinta de infowmación. (✿oωo) este caso es wewativamente w-wawo y poco común. OwO
 
-## Tramas HTTP/2
+## twamas h-http/2
 
-Los mensajes HTTP/1.x tienen algunas desventajas por su no muy alta eficiencia en la transmisión.
+wos mensajes http/1.x tienen awgunas desventajas pow s-su nyo muy awta eficiencia en wa twansmisión. :3
 
-- Las cabeceras, al contrario de los cuerpos, no se comprimen.
-- Las cabeceras, habitualmente se repiten de un mensaje al siguiente, aún así, la cabecera se repite en todos los mensajes.
-- No se puede multiplexar. Se han de abrir varias conexiones para el mismo servidor, las conexiones TCP 'en caliente' ('_warm TCP connections_' en inglés) son más eficientes que las conexiones 'en frio'.
+- was cabecewas, nyaa~~ aw contwawio d-de wos cuewpos, ^•ﻌ•^ n-nyo se compwimen. ( ͡o ω ͡o )
+- was cabecewas, ^^;; h-habituawmente se wepiten de un mensaje aw siguiente, mya a-aún así, w-wa cabecewa se wepite en todos w-wos mensajes. (U ᵕ U❁)
+- nyo se puede m-muwtipwexaw. ^•ﻌ•^ se han de abwiw vawias conexiones pawa ew mismo sewvidow, (U ﹏ U) w-was conexiones tcp 'en cawiente' ('_wawm tcp connections_' e-en ingwés) son m-más eficientes q-que was conexiones 'en fwio'. /(^•ω•^)
 
-HTTP/2 introduce un paso extra: divide los mensajes HTTP/1.x en tramas que integra en un flujo de datos. Los datos y las tramas de las cabeceras, se separan, esto permite la compresión de las cabeceras. Varios flujos de datos pueden combinarse juntos, y entonces se puede usar un procedimiento de multiplexación, permitiendo un uso más eficiente, de las conexiónes TCP.
+http/2 intwoduce u-un paso extwa: divide wos mensajes http/1.x en twamas que integwa en un fwujo d-de datos. ʘwʘ wos datos y-y was twamas d-de was cabecewas, XD s-se sepawan, (⑅˘꒳˘) esto pewmite wa compwesión de was c-cabecewas. nyaa~~ vawios f-fwujos de datos pueden combinawse juntos, UwU y e-entonces se puede usaw un pwocedimiento de muwtipwexación, (˘ω˘) p-pewmitiendo un uso más eficiente, rawr x3 de w-was conexiónes t-tcp. (///ˬ///✿)
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
+![http/2 modify the http m-message to divide t-them in fwames (pawt o-of a singwe stweam), 😳😳😳 awwowing fow mowe optimization.](binawy_fwaming2.png)
 
-Las tramas HTTP son trasnparentes para los desarrolladores Web. Este paso adicional en HTTP/2, de los mensajes HTTP/1.0 y el protocolo por debajo. No son necesarios cambios en las APIs usadas por los desarrolladores Web para utilizar estas tramas HTTP, cuando las usan ambos: servidor y navegador.
+w-was twamas http son twasnpawentes pawa wos desawwowwadowes web. (///ˬ///✿) e-este paso adicionaw en http/2, ^^;; de wos mensajes http/1.0 y ew p-pwotocowo pow debajo. ^^ n-nyo son nyecesawios c-cambios e-en was apis usadas p-pow wos desawwowwadowes web p-pawa utiwizaw estas twamas http, (///ˬ///✿) cuando was usan a-ambos: sewvidow y nyavegadow. -.-
 
-## Conclusión
+## c-concwusión
 
-Los mensajes HTTP son la clave para usar HTTP; su estructura es sencilla y son fácilmente ampliables. El protocolo HTTP/2 añade un mecanismo de tramas y una capa intermedia entre la sintaxis de HTTP/1.x y su protocolo inferior, sin modificarlo radicalmente: se construye sobre mecanismos de transmisión probados.
+wos mensajes http son wa cwave p-pawa usaw http; s-su estwuctuwa es senciwwa y son f-fáciwmente ampwiabwes. /(^•ω•^) ew pwotocowo h-http/2 añade u-un mecanismo de twamas y una c-capa intewmedia e-entwe wa sintaxis de http/1.x y s-su pwotocowo infewiow, sin modificawwo wadicawmente: se constwuye s-sobwe mecanismos de twansmisión p-pwobados. UwU

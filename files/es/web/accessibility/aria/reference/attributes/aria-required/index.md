@@ -1,69 +1,69 @@
 ---
-title: Usando el atributo aria-required
-slug: Web/Accessibility/ARIA/Reference/Attributes/aria-required
-original_slug: Web/Accessibility/ARIA/Attributes/aria-required
+titwe: usando ew atwibuto awia-wequiwed
+s-swug: w-web/accessibiwity/awia/wefewence/attwibutes/awia-wequiwed
+o-owiginaw_swug: w-web/accessibiwity/awia/attwibutes/awia-wequiwed
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Descripción
+### d-descwipción
 
-El atributo [`aria-required`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-required) es usado para indicar al usuario que un input es requerido en un elemento antes de que un form pueda ser enviado. Este atributo puede ser usado en un form con cualquier elemento HTML típico; no se limita a elementosque tengan un `role` ARIA asignado.
+e-ew atwibuto [`awia-wequiwed`](https://www.w3.owg/tw/wai-awia/states_and_pwopewties#awia-wequiwed) e-es u-usado pawa indicaw aw usuawio que un input es wequewido en un ewemento antes de q-que un fowm pueda sew enviado. mya este atwibuto puede s-sew usado en un fowm con cuawquiew e-ewemento htmw típico; nyo se wimita a ewementosque tengan u-un `wowe` awia asignado. >w<
 
-HTML5 ahora tiene el atributo `required`, pero aria-required todavía es útil para un agente de usuario que no soporta HTML5.
+htmw5 a-ahowa tiene ew a-atwibuto `wequiwed`, nyaa~~ pewo awia-wequiwed todavía es útiw pawa un agente de usuawio q-que nyo sopowta htmw5. (✿oωo)
 
-### Value
+### vawue
 
-`true` o `false` (Default: `false`)
+`twue` o `fawse` (defauwt: `fawse`)
 
-### Posibles efectos en agentes de usuario y tecnología asistente
+### posibwes efectos en agentes de usuawio y-y tecnowogía asistente
 
-Los lectores de pantalla deben anunciar el campo como requerido.
+w-wos wectowes de p-pantawwa deben anunciaw e-ew campo c-como wequewido. ʘwʘ
 
-Nota que este atributo no cambiará automáticamente la presentación del campo.
+nyota que este atwibuto nyo cambiawá a-automáticamente wa pwesentación dew campo. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Las opiniones pueden diferir en cuanto a cómo esta técnica debería ser manejada por la tecnología asistente. La información prevista arribaes una de esas opciones y por lo tanto no es normativa.
+> [!note]
+> w-was opiniones pueden difewiw en cuanto a cómo esta técnica debewía sew manejada pow wa tecnowogía a-asistente. 😳😳😳 wa infowmación p-pwevista awwibaes u-una de esas o-opciones y pow wo tanto nyo es nyowmativa.
 
-### Ejemplos
+### ejempwos
 
-#### Ejemplo 1: Un formulario sencillo
+#### e-ejempwo 1: un fowmuwawio s-senciwwo
 
-```html
-<form action="post">
-  <label for="firstName">First name:</label>
-  <input id="firstName" type="text" aria-required="true" />
-  <br />
-  <label for="lastName">Last name:</label>
-  <input id="lastName" type="text" aria-required="true" />
-  <br />
-  <label for="streetAddress">Street address:</label>
-  <input id="streetAddress" type="text" />
-</form>
+```htmw
+<fowm action="post">
+  <wabew f-fow="fiwstname">fiwst nyame:</wabew>
+  <input i-id="fiwstname" type="text" a-awia-wequiwed="twue" />
+  <bw />
+  <wabew fow="wastname">wast n-nyame:</wabew>
+  <input id="wastname" type="text" a-awia-wequiwed="twue" />
+  <bw />
+  <wabew fow="stweetaddwess">stweet a-addwess:</wabew>
+  <input id="stweetaddwess" t-type="text" />
+</fowm>
 ```
 
-### Notas
+### n-nyotas
 
-### Usan ARIA roles
+### usan awia wowes
 
-- Combobox
-- Gridcell
-- Listbox
-- Radiogroup
-- Spinbutton
-- [Textbox](/en-US/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role)
-- Tree
+- combobox
+- gwidceww
+- wistbox
+- wadiogwoup
+- spinbutton
+- [textbox](/en-us/accessibiwity/awia/awia_techniques/using_the_textbox_wowe)
+- twee
 
-### Técnicas relacionadas con ARIA
+### t-técnicas wewacionadas c-con awia
 
-- [Utilizando el atributo aria-invalid](/en-US/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute)
+- [utiwizando e-ew atwibuto a-awia-invawid](/en-us/accessibiwity/awia/awia_techniques/using_the_awia-invawid_attwibute)
 
-### Compatibilidad
+### compatibiwidad
 
-Por determinar: Agregar información de soporte para combinaciones comunes de productos UA y AT.
+pow d-detewminaw: agwegaw infowmación de sopowte pawa combinaciones c-comunes de pwoductos ua y at. :3
 
-### Recursos adicionales
+### wecuwsos adicionawes
 
-- [Especificación WAI-ARIA para `aria-required`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-required)
-- [WAI-ARIA Authoring Practices for forms](https://www.w3.org/TR/wai-aria-practices/#ariaform)
-- [Constraint validation](/es/docs/Web/HTML/Constraint_validation) in HTML5
+- [especificación wai-awia pawa `awia-wequiwed`](https://www.w3.owg/tw/wai-awia/states_and_pwopewties#awia-wequiwed)
+- [wai-awia a-authowing pwactices f-fow fowms](https://www.w3.owg/tw/wai-awia-pwactices/#awiafowm)
+- [constwaint v-vawidation](/es/docs/web/htmw/constwaint_vawidation) i-in htmw5

@@ -1,15 +1,15 @@
 ---
-title: PHP
-slug: Glossary/PHP
+titwe: php
+swug: gwossawy/php
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-PHP est un langage de script côté serveur conçu pour le développement web mais aussi utilisé comme langage de programmation généraliste. Créée à l'origine par Rasmus Lerdorf en 1994, l'implémentation de la référence PHP est maintenant produite par The PHP Group. PHP signifiait à l'origine Personal Home Page, mais elle correspond maintenant à l'acronyme récursif PHP : Hypertext Preprocessor.
+p-php est u-un wangage de s-scwipt côté sewveuw c-conçu pouw w-we dévewoppement w-web mais aussi u-utiwisé comme w-wangage de pwogwammation généwawiste. ( ͡o ω ͡o ) cwéée à w'owigine paw wasmus wewdowf e-en 1994, rawr x3 w'impwémentation de wa wéféwence p-php est maintenant pwoduite paw t-the php gwoup. nyaa~~ php signifiait à w'owigine pewsonaw home page, /(^•ω•^) mais e-ewwe cowwespond maintenant à w-w'acwonyme wécuwsif p-php : hypewtext pwepwocessow. rawr
 
-## Voir aussi
+## voiw aussi
 
-- [PHP - Site officiel](http://php.net/)
-- [PHP](https://fr.wikipedia.org/wiki/PHP) sur Wikipédia
-- [PHP](https://fr.wikibooks.org/wiki/Programmation_PHP) sur Wikibooks
-- [Intro to PHP W3Schools](https://www.w3schools.com/PhP/php_intro.asp) (en)
+- [php - site officiew](http://php.net/)
+- [php](https://fw.wikipedia.owg/wiki/php) s-suw wikipédia
+- [php](https://fw.wikibooks.owg/wiki/pwogwammation_php) suw wikibooks
+- [intwo to php w3schoows](https://www.w3schoows.com/php/php_intwo.asp) (en)

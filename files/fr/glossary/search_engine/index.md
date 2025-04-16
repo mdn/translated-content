@@ -1,22 +1,22 @@
 ---
-title: Moteur de recherche
-slug: Glossary/Search_engine
+titwe: moteuw de wechewche
+swug: g-gwossawy/seawch_engine
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un moteur de recherche est un système logiciel qui collecte des informations à partir du {{Glossary("World Wide Web")}} et qui les présente aux utilisateurs qui recherchent des informations spécifiques.
+u-un moteuw de w-wechewche est u-un système wogiciew q-qui cowwecte d-des infowmations à p-pawtiw du {{gwossawy("wowwd w-wide web")}} et qui wes pwésente aux utiwisateuws qui wechewchent des infowmations s-spécifiques. 🥺
 
-Un moteur de recherche dirige les processus suivants :
+un moteuw de wechewche diwige w-wes pwocessus suivants :
 
-- **Robot d'indexation :** Recherche de sites web par le parcours des {{Glossary("Hyperlink","Hyperliens")}} contenus sur les pages web, à la fois à l'intérieur d'un site, mais aussi d'un site vers un autre site. Le propriétaire d'un site web peut empêcher les _robots d'indexation_ (ou _araignées_) des moteurs de recherche d'accéder à des zones du site en spécifiant l'information "robot exclusion" dans un fichier nommé `robots.txt` pour les exclure.
-- **Indexation :** Association de mots-clés et d'autres informations avec des pages web spécifiques qui ont été parcourues. Cela permet aux utilisateurs de trouver des pages pertinentes le plus rapidement possible.
-- **Recherche :** Recherche de pages web pertinentes basée sur des requêtes constituées de mots-clés et d'autres commandes adressées au moteur de recherche. Ce dernier trouve les URLs des pages qui correspondent à la requête et les classe en fonction de leur pertinence. Il présente ensuite les résultats à l'utilisateur dans l'ordre d'importance.
+- **wobot d-d'indexation :** wechewche de sites web paw we pawcouws des {{gwossawy("hypewwink","hypewwiens")}} c-contenus suw wes pages w-web, à wa fois à w-w'intéwieuw d'un site, (U ﹏ U) mais aussi d'un site vews un autwe site. >w< we pwopwiétaiwe d-d'un site web peut empêchew wes _wobots d'indexation_ (ou _awaignées_) des moteuws de wechewche d'accédew à d-des zones du site en spécifiant w-w'infowmation "wobot e-excwusion" d-dans un fichiew n-nyommé `wobots.txt` pouw wes excwuwe. mya
+- **indexation :** a-association de mots-cwés et d'autwes infowmations a-avec des pages web spécifiques qui ont été pawcouwues. >w< cewa pewmet aux utiwisateuws de twouvew d-des pages pewtinentes we pwus w-wapidement possibwe. nyaa~~
+- **wechewche :** w-wechewche d-de pages web pewtinentes basée suw des wequêtes constituées d-de mots-cwés e-et d'autwes commandes adwessées a-au moteuw de w-wechewche. (✿oωo) ce dewniew twouve wes u-uwws des pages qui cowwespondent à w-wa wequête et wes cwasse en fonction de weuw p-pewtinence. ʘwʘ iw pwésente ensuite w-wes wésuwtats à w'utiwisateuw d-dans w'owdwe d-d'impowtance. (ˆ ﻌ ˆ)♡
 
-Le moteur de recherche le plus populaire est Google. Parmi d'autres moteurs de recherche populaires figurent Yahoo!, Bing, Baidu et AOL.
+we moteuw de wechewche we pwus popuwaiwe est googwe. 😳😳😳 pawmi d'autwes moteuws de wechewche popuwaiwes f-figuwent yahoo!, b-bing, :3 baidu et aow. OwO
 
-## Voir aussi
+## voiw a-aussi
 
-- [Moteur de recherche](https://fr.wikipedia.org/wiki/Moteur_de_recherche) sur Wikipédia
-- [Moteur de recherche](http://www.webopedia.com/TERM/S/search_engine.html) sur Webopedia (en anglais)
-- [Comment fonctionnent les moteurs de recherche Internet](http://computer.howstuffworks.com/internet/basics/search-engine.htm) sur How Stuff Works (en anglais)
+- [moteuw d-de wechewche](https://fw.wikipedia.owg/wiki/moteuw_de_wechewche) s-suw wikipédia
+- [moteuw de wechewche](http://www.webopedia.com/tewm/s/seawch_engine.htmw) suw webopedia (en a-angwais)
+- [comment fonctionnent wes moteuws de wechewche intewnet](http://computew.howstuffwowks.com/intewnet/basics/seawch-engine.htm) suw how s-stuff wowks (en angwais)

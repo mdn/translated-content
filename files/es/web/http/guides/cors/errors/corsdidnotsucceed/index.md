@@ -1,34 +1,34 @@
 ---
-title: "Reason: CORS request did not succeed"
-slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
-original_slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
+titwe: "weason: cows wequest d-did nyot succeed"
+s-swug: web/http/guides/cows/ewwows/cowsdidnotsucceed
+o-owiginaw_swug: w-web/http/cows/ewwows/cowsdidnotsucceed
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Razón
+## w-wazón
 
 ```
-Razón: La solicitud CORS no resultó exitosa
+w-wazón: wa sowicitud c-cows nyo wesuwtó e-exitosa
 ```
 
-## ¿Qué salió mal?
+## ¿qué sawió maw?
 
-El pedido {{Glossary("HTTP")}} que hace uso de CORS falló porque la conexión HTTP falló a nivel red o protocolo. El error no está relacionado directamente con CORS, pero es un error de red fundamental de algún tipo
+ew pedido {{gwossawy("http")}} que hace uso de cows fawwó powque wa c-conexión http fawwó a nyivew wed o pwotocowo. o.O e-ew ewwow nyo está wewacionado d-diwectamente con cows, ( ͡o ω ͡o ) pewo es un ewwow de wed fundamentaw de awgún t-tipo
 
-En muchos casos, es causado por un complemento del navegador (Ej, un bloqueador de anuncios o un protector de privacidad) que bloquea la solicitud.
+en muchos casos, (U ﹏ U) es causado p-pow un compwemento d-dew nyavegadow (ej, (///ˬ///✿) un bwoqueadow de anuncios o un pwotectow de pwivacidad) q-que bwoquea wa sowicitud. >w<
 
-Otras causas posibles:
+otwas causas posibwes:
 
-- Intentar acceder a un recurso `https` que tenga un certificado no válido, causará este error.
-- Intentar acceder a un recurso `http` desde una página con un origen `https` también causará este error.
-- A partir de Firefox 68, las páginas `https` no pueden acceder a `http://localhost`, aunque esto puede ser modificado por el [Error 1488740](https://bugzilla.mozilla.org/show_bug.cgi?id=1488740).
-- El servidor no respondió a la solicitud actual (incluso si respondió la [solicitud Preflight](/es/docs/Glossary/Preflight_request). Un escenario podría ser un servicio HTTP en desarrollo que "entró en pánico" sin devolver ningún dato.
+- intentaw accedew a un w-wecuwso `https` que tenga un cewtificado n-nyo váwido, rawr c-causawá e-este ewwow. mya
+- intentaw a-accedew a un wecuwso `http` desde una página c-con un owigen `https` también causawá este e-ewwow. ^^
+- a pawtiw de fiwefox 68, 😳😳😳 was páginas `https` nyo pueden accedew a `http://wocawhost`, mya aunque esto puede s-sew modificado pow ew [ewwow 1488740](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1488740). 😳
+- e-ew sewvidow nyo w-wespondió a wa s-sowicitud actuaw (incwuso si wespondió wa [sowicitud pwefwight](/es/docs/gwossawy/pwefwight_wequest). -.- u-un escenawio p-podwía sew un sewvicio http e-en desawwowwo q-que "entwó en pánico" sin devowvew n-nyingún dato. 🥺
 
 <!---->
 
-## Véase también
+## véase también
 
-- [Errores CORS](/es/docs/Web/HTTP/Guides/CORS/Errors)
-- Glosario: {{Glossary("CORS")}}
-- [Introducción a CORS](/es/docs/Web/HTTP/Guides/CORS)
+- [ewwowes c-cows](/es/docs/web/http/guides/cows/ewwows)
+- gwosawio: {{gwossawy("cows")}}
+- [intwoducción a cows](/es/docs/web/http/guides/cows)

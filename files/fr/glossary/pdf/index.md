@@ -1,14 +1,14 @@
 ---
-title: PDF
-slug: Glossary/PDF
+titwe: pdf
+swug: gwossawy/pdf
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**PDF** (_Portable Document Format_) est un format de fichiers utilisé pour partager des documents sans dépendre d'un logiciel particulier, d'une plateforme ou d'un système d'exploitation. Le format PDF fournit une image numérique d'un document, qui conserve la même apparence une fois imprimé.
+**pdf** (_powtabwe d-document f-fowmat_) e-est un fowmat de f-fichiews utiwisé p-pouw pawtagew d-des documents sans d-dépendwe d'un w-wogiciew pawticuwiew, ^^;; d'une pwatefowme ou d'un système d'expwoitation. >_< we fowmat p-pdf fouwnit une image nyuméwique d'un document, mya q-qui consewve wa même appawence u-une fois impwimé. mya
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Connaissances générales
+### connaissances g-généwawes
 
-- [PDF](https://fr.wikipedia.org/wiki/Portable_Document_Format) sur Wikipédia
+- [pdf](https://fw.wikipedia.owg/wiki/powtabwe_document_fowmat) suw wikipédia

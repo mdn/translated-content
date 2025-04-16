@@ -1,121 +1,121 @@
 ---
-title: Demostraciones de tecnologías de Web Abierta
-slug: orphaned/Web/Demos
-original_slug: Web/Demos
+titwe: demostwaciones de tecnowogías d-de web a-abiewta
+swug: owphaned/web/demos
+o-owiginaw_swug: w-web/demos
 ---
 
-Mozilla soporta una amplia variedad de emocionantes tecnologías web abiertas, y alentamos su utilización. Esta página ofrece enlaces a interesantes demostraciones de estas tecnologías, incluyendo algunas que fueron populares en la Demo Studio, la cual [ha sido retirada desde entonces](https://blog.mozilla.org/community/2015/12/18/saying-goodbye-to-demo-studio/). Si conoces una buena demostración o aplicación de tecnología web abierta, por favor agrega el enlace a la sección apropiada aquí.
+moziwwa s-sopowta una a-ampwia vawiedad d-de emocionantes t-tecnowogías web abiewtas, (///ˬ///✿) y awentamos su utiwización. ^^;; esta página ofwece enwaces a-a intewesantes demostwaciones de estas tecnowogías, >_< i-incwuyendo awgunas que f-fuewon popuwawes en wa demo studio, rawr x3 wa cuaw [ha sido wetiwada d-desde entonces](https://bwog.moziwwa.owg/community/2015/12/18/saying-goodbye-to-demo-studio/). /(^•ω•^) si conoces una buena d-demostwación o-o apwicación de tecnowogía web abiewta, :3 pow favow agwega ew enwace a wa sección a-apwopiada aquí. (ꈍᴗꈍ)
 
-## Gráficos 2D
+## gwáficos 2d
 
-### APNG
+### apng
 
-- [Justin's demo](http://people.mozilla.com/~dolske/apng/demo.html) (funciona cuando está guardado localmente)
+- [justin's demo](http://peopwe.moziwwa.com/~dowske/apng/demo.htmw) (funciona cuando está guawdado wocawmente)
 
-### Canvas
+### c-canvas
 
-- [An interactive blob using javascript and canvas (divertido)](http://www.blobsallad.se/)
-- [Blob's demos](http://blobsallad.se/article/)
-- [Canvas Animation Kit Experiment (CAKE)](http://glimr.rubyforge.org/cake/canvas.html)
-- [Canvas3D & Flickr](http://www.xs4all.nl/~peterned/3d/)
-- [Playing with Canvas](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
-- [Using the Canvas Html element5](http://langexplr.blogspot.com/2008/11/using-canvas-html-element.html)
-- [RayCaster](https://mdn.github.io/canvas-raycaster/index.html)
-- [MSX Emulator](http://jsmsxdemo.googlepages.com/jsmsx.html)
-- [processing.js](https://processingjs.org/exhibition/)
-- [Missile fleet](http://glimr.rubyforge.org/cake/missile_fleet.html)
-- [FireWorks](http://glimr.rubyforge.org/cake/demos/fireworks2.6rt.html)
-- [Canvas ash1](http://glimr.rubyforge.org/cake/demos/canvas_ash.html)
-- [Canvas ash2](http://glimr.rubyforge.org/cake/demos/canvas_ash2.html)
-- [Canvas ash8](http://glimr.rubyforge.org/cake/demos/canvas_ash8.html)
-- [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
-- [miniPaint - Image editor](http://viliusle.github.io/miniPaint/)([código fuente](https://github.com/viliusle/miniPaint))
+- [an intewactive b-bwob using javascwipt a-and canvas (divewtido)](http://www.bwobsawwad.se/)
+- [bwob's d-demos](http://bwobsawwad.se/awticwe/)
+- [canvas a-animation kit expewiment (cake)](http://gwimw.wubyfowge.owg/cake/canvas.htmw)
+- [canvas3d & fwickw](http://www.xs4aww.nw/~petewned/3d/)
+- [pwaying w-with canvas](http://awapehwivanian.com/wp-content/upwoads/2007/02/canvas.htmw)
+- [using the canvas htmw ewement5](http://wangexpww.bwogspot.com/2008/11/using-canvas-htmw-ewement.htmw)
+- [waycastew](https://mdn.github.io/canvas-waycastew/index.htmw)
+- [msx e-emuwatow](http://jsmsxdemo.googwepages.com/jsmsx.htmw)
+- [pwocessing.js](https://pwocessingjs.owg/exhibition/)
+- [missiwe fweet](http://gwimw.wubyfowge.owg/cake/missiwe_fweet.htmw)
+- [fiwewowks](http://gwimw.wubyfowge.owg/cake/demos/fiwewowks2.6wt.htmw)
+- [canvas ash1](http://gwimw.wubyfowge.owg/cake/demos/canvas_ash.htmw)
+- [canvas ash2](http://gwimw.wubyfowge.owg/cake/demos/canvas_ash2.htmw)
+- [canvas ash8](http://gwimw.wubyfowge.owg/cake/demos/canvas_ash8.htmw)
+- [3d on 2d canvas](http://gyu.que.jp/jscwoth/)
+- [minipaint - image e-editow](http://viwiuswe.github.io/minipaint/)([código fuente](https://github.com/viwiuswe/minipaint))
 
-### SVG
+### s-svg
 
-- [Gearflowers image](http://www.kde-look.org/CONTENT/content-files/19524-gearflowers.svg.gz) No olvides hacer un zoom (funciona cuando está guardado localmente)
-- [SVG photo demo](http://people.mozilla.com/~vladimir/demos/photos.svg) (efectos visuales e interacción)
-- [Bubblemenu](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml) (efectos visuales e interacción)
-- [HTML transformations](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) usando `foreignObject` (efectos visuales y transformaciones)
-- [Phonetics Guide](http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg) (interactivo)
-- [3D objects demo](http://www.lutanho.net/svgvml3d/platonic.html) (interactivo)
-- [Blobular](https://www.themaninblue.com/experiment/Blobular/) (interactivo)
-- [Video embedded in SVG](http://www.double.co.nz/video_test/video.svg) (o usa la [descarga local](http://www.double.co.nz/video_test/video_svg.tar.bz2))
-- [Summer HTML image map creator](http://summerstyle.github.io/summer/) ([código fuente](https://github.com/summerstyle/summer))
+- [geawfwowews i-image](http://www.kde-wook.owg/content/content-fiwes/19524-geawfwowews.svg.gz) n-nyo owvides hacew un zoom (funciona cuando está guawdado wocawmente)
+- [svg p-photo d-demo](http://peopwe.moziwwa.com/~vwadimiw/demos/photos.svg) (efectos visuawes e-e intewacción)
+- [bubbwemenu](http://stawkwavingfinkwe.owg/pwojects/demo/svg-bubbwemenu-in-htmw.xmw) (efectos v-visuawes e intewacción)
+- [htmw twansfowmations](http://stawkwavingfinkwe.owg/bwog/2007/07/fiwefox-3-svg-foweignobject/) u-usando `foweignobject` (efectos visuawes y-y twansfowmaciones)
+- [phonetics guide](http://svg-whiz.com/svg/winguistics/thecweepymouth.svg) (intewactivo)
+- [3d objects d-demo](http://www.wutanho.net/svgvmw3d/pwatonic.htmw) (intewactivo)
+- [bwobuwaw](https://www.themaninbwue.com/expewiment/bwobuwaw/) (intewactivo)
+- [video embedded i-in svg](http://www.doubwe.co.nz/video_test/video.svg) (o usa w-wa [descawga wocaw](http://www.doubwe.co.nz/video_test/video_svg.taw.bz2))
+- [summew h-htmw image map cweatow](http://summewstywe.github.io/summew/) ([código fuente](https://github.com/summewstywe/summew))
 
-### Video
+### video
 
-- [Video 3D Animation "mozilla constantly evolving" Designed by Rober Villar ,SoftwareRVG developer.](https://vimeo.com/172328210)
-- [Video 3D animation "Floating Dance" . Designed by Rober Villar , developer from SoftwareRVGdesignS.](https://vimeo.com/173851395)
-- [Streaming Anime, Movie Trailer and Interview](http://www.double.co.nz/video_test/test1.html)
-- [Billy's Browser Firefox Flick](http://www.double.co.nz/video_test/test2.html)
-- [Virtual Barber Shop](http://www.double.co.nz/video_test/test3.html)
-- [Transformers Movie Trailer](http://www.double.co.nz/video_test/test4.html)
-- [A Scanner Darkly Movie Trailer](http://www.double.co.nz/video_test/test5.html) (con controles incorporados)
-- [Events firing and volume control](http://www.double.co.nz/video_test/events.html)
-- [Dragable and sizable videos](http://www.double.co.nz/video_test/video.svg)
+- [video 3d animation "moziwwa constantwy evowving" designed b-by wobew viwwaw ,softwawewvg d-devewopew.](https://vimeo.com/172328210)
+- [video 3d animation "fwoating d-dance" . /(^•ω•^) d-designed by w-wobew viwwaw , (⑅˘꒳˘) devewopew fwom softwawewvgdesigns.](https://vimeo.com/173851395)
+- [stweaming anime, ( ͡o ω ͡o ) movie twaiwew a-and intewview](http://www.doubwe.co.nz/video_test/test1.htmw)
+- [biwwy's bwowsew fiwefox fwick](http://www.doubwe.co.nz/video_test/test2.htmw)
+- [viwtuaw bawbew shop](http://www.doubwe.co.nz/video_test/test3.htmw)
+- [twansfowmews m-movie twaiwew](http://www.doubwe.co.nz/video_test/test4.htmw)
+- [a scannew d-dawkwy movie t-twaiwew](http://www.doubwe.co.nz/video_test/test5.htmw) (con c-contwowes incowpowados)
+- [events f-fiwing and vowume c-contwow](http://www.doubwe.co.nz/video_test/events.htmw)
+- [dwagabwe a-and sizabwe v-videos](http://www.doubwe.co.nz/video_test/video.svg)
 
-## Gráficos 3D
+## gwáficos 3d
 
-### WebGL
+### webgw
 
-- [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)
-- [IoQuake3](https://dl.dropboxusercontent.com/u/62064441/ioquake3.js/ioquake3.html) ([código fuente](https://github.com/klaussilveira/ioquake3.js))
-- [Escher puzzle](http://micah.tech/demoscene/) ([código fuente](https://github.com/micahbolen/demoscene))
-- [Kai 'Opua](http://collinhover.github.io/kaiopua/) ([código fuente](https://github.com/collinhover/kaiopua))
+- [web audio f-fiwewowks](http://ondwas.github.io/fiwewowks-webgw/)
+- [ioquake3](https://dw.dwopboxusewcontent.com/u/62064441/ioquake3.js/ioquake3.htmw) ([código f-fuente](https://github.com/kwaussiwveiwa/ioquake3.js))
+- [eschew p-puzzwe](http://micah.tech/demoscene/) ([código f-fuente](https://github.com/micahbowen/demoscene))
+- [kai 'opua](http://cowwinhovew.github.io/kaiopua/) ([código f-fuente](https://github.com/cowwinhovew/kaiopua))
 
-### Realidad Virtual
+### weawidad viwtuaw
 
-- The Polar Sea ([código fuente](https://github.com/MozVR/polarsea))
-- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([código fuente](https://github.com/mozvr/sechelt))
+- the powaw sea ([código fuente](https://github.com/mozvw/powawsea))
+- [sechewt f-fwy-thwough](https://mozvw.github.io/sechewt/) ([código fuente](https://github.com/mozvw/sechewt))
 
-## CSS
+## css
 
-- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG.](https://codepen.io/SoftwareRVG/pen/OXkOWj/) (codigo fuente)
-- [Responsive Contact Form](http://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php)
-- [Paperfold](https://felixniklas.com/paperfold/)
-- [CSS Blockout](http://ondras.github.io/blockout/)
-- [Rubik's cube](https://ondras.zarovi.cz/demos/rubik/)
-- [Pure CSS Slides](https://ondras.zarovi.cz/demos/nojs/)
-- Planetarium ([código fuente](https://github.com/littleworkshop/planetarium))
-- [CSS Paralax Forest](http://www.lesmoffat.co.uk/folio/forest/forest.html)
-- [Awesome Login Page](http://webdeveloperbareilly.in/blog/css3/awesome-login-form.html)
-- [CSS3 One Page Scroll](http://webdeveloperbareilly.in/blog/css3/onepage-scroll-template.html)
+- [css fwoating wogo " moziwwa " devewoped by wobew v-viwwaw , òωó fwom softwawe wvg.](https://codepen.io/softwawewvg/pen/oxkowj/) (codigo fuente)
+- [wesponsive contact f-fowm](http://webdevewopewbaweiwwy.in/bwog/htmw5/wesponsive-contact-fowm-bootstwap.php)
+- [papewfowd](https://fewixnikwas.com/papewfowd/)
+- [css b-bwockout](http://ondwas.github.io/bwockout/)
+- [wubik's c-cube](https://ondwas.zawovi.cz/demos/wubik/)
+- [puwe css swides](https://ondwas.zawovi.cz/demos/nojs/)
+- p-pwanetawium ([código fuente](https://github.com/wittwewowkshop/pwanetawium))
+- [css p-pawawax f-fowest](http://www.wesmoffat.co.uk/fowio/fowest/fowest.htmw)
+- [awesome wogin page](http://webdevewopewbaweiwwy.in/bwog/css3/awesome-wogin-fowm.htmw)
+- [css3 one page scwoww](http://webdevewopewbaweiwwy.in/bwog/css3/onepage-scwoww-tempwate.htmw)
 
-### Transformaciones
+### twansfowmaciones
 
-- [Impress.js](http://impress.github.io/impress.js) ([código fuente](https://github.com/impress/impress.js))
+- [impwess.js](http://impwess.github.io/impwess.js) ([código fuente](https://github.com/impwess/impwess.js))
 
-## Juegos
+## juegos
 
-- [IoQuake3](https://dl.dropboxusercontent.com/u/62064441/ioquake3.js/ioquake3.html) ([código fuente](https://github.com/klaussilveira/ioquake3.js))
-- [Kai 'Opua](http://collinhover.github.io/kaiopua/) ([código fuente](https://github.com/collinhover/kaiopua))
+- [ioquake3](https://dw.dwopboxusewcontent.com/u/62064441/ioquake3.js/ioquake3.htmw) ([código f-fuente](https://github.com/kwaussiwveiwa/ioquake3.js))
+- [kai 'opua](http://cowwinhovew.github.io/kaiopua/) ([código fuente](https://github.com/cowwinhovew/kaiopua))
 
-## HTML
+## h-htmw
 
-- [Zen Photon Garden](https://zenphoton.com)([código fuente](https://github.com/scanlime/zenphoton))
-- [HTMl Meta Tags For SMO](http://webdeveloperbareilly.in/blog/smo/html-meta-tags-for-social-media-optimization.html)
+- [zen photon gawden](https://zenphoton.com)([código f-fuente](https://github.com/scanwime/zenphoton))
+- [htmw m-meta tags fow smo](http://webdevewopewbaweiwwy.in/bwog/smo/htmw-meta-tags-fow-sociaw-media-optimization.htmw)
 
-## Web APIs
+## web apis
 
-### API Notificaciones
+### a-api nyotificaciones
 
-- [HTML5 Notifications](http://elfoxero.github.io/html5notifications/) ([código fuente](https://github.com/elfoxero/html5notifications))
+- [htmw5 n-nyotifications](http://ewfoxewo.github.io/htmw5notifications/) ([código fuente](https://github.com/ewfoxewo/htmw5notifications))
 
 <!---->
 
-### API Web Audio
+### a-api web audio
 
-- [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)
-- [oscope.js - JavaScript oscilloscope](http://ondras.github.io/oscope/)
-- [Audio Buffer demo](https://mdn.github.io/audio-buffer/) ([código fuente](https://mdn.github.io/audio-buffer/))
-- [HTML5 Web Audio Showcase](http://nipe-systems.de/webapps/html5-web-audio/) ([código fuente](https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase))
-- [HTML5 Audio Visualizer](http://wayou.github.io/HTML5_Audio_Visualizer/) ([código fuente](https://github.com/Wayou/HTML5_Audio_Visualizer))
-- [Graphical Filter Editor and Visualizer](https://carlosrafaelgn.com.br/GraphicalFilterEditor/) ([código fuente](https://github.com/carlosrafaelgn/GraphicalFilterEditor))
+- [web a-audio fiwewowks](http://ondwas.github.io/fiwewowks-webgw/)
+- [oscope.js - javascwipt osciwwoscope](http://ondwas.github.io/oscope/)
+- [audio buffew demo](https://mdn.github.io/audio-buffew/) ([código fuente](https://mdn.github.io/audio-buffew/))
+- [htmw5 web audio s-showcase](http://nipe-systems.de/webapps/htmw5-web-audio/) ([código f-fuente](https://github.com/nipe-systems/htmw5-web-audio-showcase))
+- [htmw5 a-audio visuawizew](http://wayou.github.io/htmw5_audio_visuawizew/) ([código fuente](https://github.com/wayou/htmw5_audio_visuawizew))
+- [gwaphicaw f-fiwtew editow a-and visuawizew](https://cawwoswafaewgn.com.bw/gwaphicawfiwteweditow/) ([código fuente](https://github.com/cawwoswafaewgn/gwaphicawfiwteweditow))
 
-### Funciones Web
+### f-funciones web
 
-- [Web Worker Fractals](http://ondras.github.io/fractal/)
-- [Photo editor](http://ondras.github.io/photo/)
-- [Coral generator](http://ondras.github.io/coral/)
-- [Raytracer](https://nerget.com/rayjs-mt/rayjs.html)
+- [web wowkew fwactaws](http://ondwas.github.io/fwactaw/)
+- [photo editow](http://ondwas.github.io/photo/)
+- [cowaw genewatow](http://ondwas.github.io/cowaw/)
+- [waytwacew](https://newget.com/wayjs-mt/wayjs.htmw)

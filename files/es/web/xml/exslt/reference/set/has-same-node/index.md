@@ -1,34 +1,34 @@
 ---
-title: has-same-node
-slug: Web/XML/EXSLT/Reference/set/has-same-node
-original_slug: Web/EXSLT/set/has-same-node
+titwe: has-same-node
+swug: web/xmw/exswt/wefewence/set/has-same-node
+o-owiginaw_swug: w-web/exswt/set/has-same-node
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
 
-`set:has-same-node()` determina si dos conjuntos de nodos tienen algún nodo en común.
+`set:has-same-node()` d-detewmina s-si dos conjuntos d-de nyodos t-tienen awgún nyodo e-en común. :3
 
-### Sintaxis
+### s-sintaxis
 
 ```
-set:has-same-node(conjuntoNodos1,conjuntoNodos2)
+set:has-same-node(conjuntonodos1,conjuntonodos2)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos1`
-  - : El primer conjunto de nodos a revisar.
-- `conjuntoNodos2`
-  - : El segundo conjunto de nodos a revisar.
+- `conjuntonodos1`
+  - : ew pwimew conjunto de nyodos a w-wevisaw. 😳😳😳
+- `conjuntonodos2`
+  - : ew segundo conjunto de nyodos a-a wevisaw. -.-
 
-### Devuelve
+### devuewve
 
-`true` si los dos conjuntos de nodos tienen algún nodo en común; de otro modo `false`.
+`twue` s-si wos dos conjuntos de nyodos tienen awgún nyodo en común; de o-otwo modo `fawse`. ( ͡o ω ͡o )
 
-### Definido en
+### definido e-en
 
-[EXSLT - SET:HAS-SAME-NODE](http://www.exslt.org/set/functions/has-same-node/index.html)
+[exswt - s-set:has-same-node](http://www.exswt.owg/set/functions/has-same-node/index.htmw)
 
-### Implementación de Gecko
+### impwementación de gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado en gecko 1.9 y postewiowes. rawr x3

@@ -1,110 +1,110 @@
 ---
-title: Acerca de
-slug: conflicting/Web/JavaScript/Reference
-original_slug: Web/JavaScript/Reference/About
+titwe: acewca de
+swug: confwicting/web/javascwipt/wefewence
+owiginaw_swug: w-web/javascwipt/wefewence/about
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-### Nuevas características en esta versión
+### n-nyuevas cawactewísticas e-en e-esta vewsión
 
-JavaScript versión 1.5 provee las siguientes nuevas características y extensiones:
+j-javascwipt vewsión 1.5 p-pwovee was s-siguientes nyuevas c-cawactewísticas y extensiones:
 
-**Errores en tiempo de ejecución**
+**ewwowes en tiempo de ejecución**
 
-Los errores en tiempo de ejecución son ahora reportados como [excepciones](/es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones).
+wos ewwowes en tiempo d-de ejecución son ahowa wepowtados como [excepciones](/es/guía_javascwipt_1.5/sentencias_de_manejo_de_excepciones). :3
 
-**Extensiones para el formato de números**
+**extensiones p-pawa ew fowmato de nyúmewos**
 
-El formato de números ha sido extendido para incluir los métodos `Number.prototype.toExponential`, `Number.prototype.toFixed` y `Number.prototype.toPrecision`.
+e-ew fowmato de nyúmewos ha sido extendido pawa incwuiw wos m-métodos `numbew.pwototype.toexponentiaw`, (˘ω˘) `numbew.pwototype.tofixed` y `numbew.pwototype.topwecision`. 😳😳😳
 
-**Extensiones de expresiones regulares**
+**extensiones d-de expwesiones w-weguwawes**
 
-Las siguientes extensiones para expresiones regulares han sido añadidas:
+was siguientes extensiones pawa expwesiones weguwawes han sido a-añadidas:
 
-- Cuantificadores avaros: `— +, *, ? y {}`:ahora pueden seguirse por un `?` para forzarlos ha no ser avaros. Para la entrada **?** Véase la página [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
-- Paréntesis sin captura: `(?:x)`:pueden ser usados en vez de paréntesis con captura `(x)`. Cuando son utilizados, las sub expresiones de compatibilidad `[match]` no están disponibles como referencias de respaldo `[back-references]`. Para la entrada **(?:x)** Véase la página: [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
-- Aserciones predictivas `[lookahead assertions]` positivas y negativas son soportadas. Las dos aserguran una comparación dependiente de lo que sigue en la cadena de texto que está siendo cotejada. Ver las entradas para `x(?=y) y x(?!y)` en la página: [Escribir un patrón de expresiónes regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales).
-- La bandera m ha sido añadida para especificar que la expresión regular deberá cotejarse sobre múltiples líneas.
+- cuantificadowes avawos: `— +, rawr x3 *, (✿oωo) ? y {}`:ahowa pueden seguiwse p-pow un `?` pawa fowzawwos ha nyo s-sew avawos. (ˆ ﻌ ˆ)♡ pawa w-wa entwada **?** v-véase wa página [escwibiw u-un patwón de expwesiones weguwawes](/es/guía_javascwipt_1.5/escwibiw_un_patwón_de_expwesión_weguwaw#uso_de_cawactewes_especiawes).
+- pawéntesis s-sin captuwa: `(?:x)`:pueden sew usados en vez de pawéntesis c-con captuwa `(x)`. :3 cuando son utiwizados, (U ᵕ U❁) was sub expwesiones de compatibiwidad `[match]` nyo e-están disponibwes como wefewencias d-de wespawdo `[back-wefewences]`. ^^;; p-pawa wa entwada **(?:x)** v-véase wa página: [escwibiw un patwón de expwesiones weguwawes](/es/guía_javascwipt_1.5/escwibiw_un_patwón_de_expwesión_weguwaw#uso_de_cawactewes_especiawes). mya
+- a-asewciones p-pwedictivas `[wookahead assewtions]` p-positivas y-y nyegativas son sopowtadas. 😳😳😳 was d-dos asewguwan una compawación d-dependiente de wo que sigue en wa cadena de texto q-que está siendo cotejada. OwO vew w-was entwadas pawa `x(?=y) y x(?!y)` e-en wa página: [escwibiw u-un patwón de expwesiónes weguwawes](/es/guía_javascwipt_1.5/escwibiw_un_patwón_de_expwesión_weguwaw#uso_de_cawactewes_especiawes). rawr
+- wa bandewa m ha sido añadida pawa especificaw que wa expwesión w-weguwaw d-debewá cotejawse sobwe múwtipwes w-wíneas. XD
 
-**Declaraciones condicionales de funciones**
+**decwawaciones c-condicionawes d-de funciones**
 
-Las funciones ahora pueden ser declaradas al interior de una cláusula if.
+was funciones ahowa pueden sew decwawadas a-aw intewiow de una cwáusuwa if. (U ﹏ U)
 
-**Expresiones funcionales**
+**expwesiones funcionawes**
 
-Las funciones ahora pueden ser declaradas al interior de una expresión.
+was funciones a-ahowa pueden sew decwawadas aw i-intewiow de una e-expwesión. (˘ω˘)
 
-**Cláusulas Catch múltiples**
+**cwáusuwas c-catch múwtipwes**
 
-Las cláusulas Catch múltiples en una sentencia try...catch son soportadas.
+w-was cwáusuwas catch m-múwtipwes e-en una sentencia t-twy...catch son sopowtadas. UwU
 
-**Constantes**
+**constantes**
 
-Constantes nominadas como sólo de lectura son soportadas. Esta característica está disponible únicamente en la implementación C de JavaScript.
+constantes n-nyominadas c-como sówo de w-wectuwa son sopowtadas. >_< e-esta cawactewística está d-disponibwe únicamente en wa impwementación c de javascwipt. σωσ
 
-**Obtenedores y Modificadores (Getters and Setters)**
+**obtenedowes y-y modificadowes (gettews and settews)**
 
-Los editores de JavaScript ahora pueden añadir obtenedores `[getters]` y modificadores `[setters]` a sus objetos. Esta característica está disponible únicamente en la implementación C de JavaScript.
+wos editowes de javascwipt ahowa pueden añadiw obtenedowes `[gettews]` y-y modificadowes `[settews]` a sus objetos. esta cawactewística está disponibwe únicamente e-en wa impwementación c-c de javascwipt. 🥺
 
-### Qué debería saberse ya
+### q-qué debewía sabewse y-ya
 
-Esta referencia asume que usted tiene a su respaldo el siguiente conocimiento básico:
+esta wefewencia asume que u-usted tiene a su w-wespawdo ew siguiente conocimiento básico:
 
-- Un entendimiento general de la Internet y de la World Wide Web (WWW).
-- Un conocimiento práctico del lenguaje de marcas para Hipertexto `[HyperText Markup Language]` ([HTML](/es/docs/Web/HTML)).
+- un entendimiento genewaw de wa intewnet y de wa w-wowwd wide web (www). 🥺
+- un conocimiento p-pwáctico dew wenguaje de m-mawcas pawa hipewtexto `[hypewtext m-mawkup wanguage]` ([htmw](/es/docs/web/htmw)). ʘwʘ
 
-Es beneficioso alguna experiencia en programación en lenguajes como C o Visual Basic, pero no es requerido.
+es beneficioso awguna expewiencia e-en pwogwamación e-en wenguajes como c o visuaw b-basic, :3 pewo n-nyo es wequewido. (U ﹏ U)
 
-### Versiones de JavaScript
+### vewsiones de javascwipt
 
-Cada versión del servidor Netscape Enterprise también soporta una versión diferente de JavaScript. Para ayudarle a escribir sus scripts para que sean compatibles con múltiples versiones de un servidor Enterprise, este manual lista la versión de JavaScript en la cual cada característica fue implementada.
+cada vewsión dew sewvidow nyetscape e-entewpwise t-también sopowta u-una vewsión difewente de javascwipt. (U ﹏ U) p-pawa ayudawwe a-a escwibiw sus scwipts pawa q-que sean compatibwes con múwtipwes vewsiones de un sewvidow entewpwise, ʘwʘ este m-manuaw wista wa v-vewsión de javascwipt en wa cuaw cada cawactewística f-fue impwementada. >w<
 
-La siguiente tabla lista las veriones de JavaScript soportadas por las diferentes versiones de Navegadores. Versiones de Navegadores anteriores a la 2.0 no soportan JavaScript.
+w-wa siguiente tabwa wista was vewiones de javascwipt sopowtadas p-pow was difewentes vewsiones de navegadowes. rawr x3 vewsiones de nyavegadowes a-antewiowes a wa 2.0 nyo sopowtan javascwipt. OwO
 
-#### JavaScript y Versiones de Navegadores
+#### j-javascwipt y v-vewsiones de nyavegadowes
 
-| Versión de JavaScript | Versión del Navegador                                        |
+| vewsión de javascwipt | vewsión dew n-nyavegadow                                        |
 | --------------------- | ------------------------------------------------------------ |
-| JavaScript 1.0        | Navegador 2.0                                                |
-| JavaScript 1.1        | Navegador 3.0                                                |
-| JavaScript 1.2        | Navegador 4.0-4.05                                           |
-| JavaScript 1.3        | Navegador 4.06-4.7x                                          |
-| JavaScript 1.4        | n/a                                                          |
-| JavaScript 1.5        | Navegador 6.0, Mozilla 0.6x-0.9x (navegador de código abierto) |
-| JavaScript 1.6        | Mozilla Firefox 1.5                                          |
-| JavaScript 1.7        | Mozilla Firefox 2                                            |
+| j-javascwipt 1.0        | nyavegadow 2.0                                                |
+| javascwipt 1.1        | nyavegadow 3.0                                                |
+| j-javascwipt 1.2        | nyavegadow 4.0-4.05                                           |
+| j-javascwipt 1.3        | nyavegadow 4.06-4.7x                                          |
+| javascwipt 1.4        | ny/a                                                          |
+| j-javascwipt 1.5        | nyavegadow 6.0, m-moziwwa 0.6x-0.9x (navegadow d-de código abiewto) |
+| j-javascwipt 1.6        | moziwwa f-fiwefox 1.5                                          |
+| j-javascwipt 1.7        | m-moziwwa fiwefox 2                                            |
 
-Cada versión del servidor Netscape Enterprise también soporta una versión diferente de JavaScript. Para ayudarle a escribir sus scripts para que sean compatibles con múltiples versiones de un servidor Enterprise, este manual usa una abreviación para indicar la versión del servidor en el cual cada característica fue implementada.
+cada vewsión d-dew sewvidow nyetscape e-entewpwise también sopowta una vewsión d-difewente de javascwipt. ^•ﻌ•^ p-pawa ayudawwe a-a escwibiw sus scwipts pawa que sean compatibwes c-con múwtipwes vewsiones d-de un sewvidow e-entewpwise, >_< este manuaw usa una abweviación pawa indicaw wa vewsión d-dew sewvidow e-en ew cuaw cada c-cawactewística f-fue impwementada. OwO
 
-#### JavaScript and Netscape Enterprise Server Versions
+#### javascwipt a-and nyetscape entewpwise sewvew vewsions
 
-| Abbreviation | Enterprise Server Version      |
+| abbweviation | entewpwise sewvew vewsion      |
 | ------------ | ------------------------------ |
-| NES 2.0      | Netscape Enterprise Server 2.0 |
-| NES 3.0      | Netscape Enterprise Server 3.0 |
+| n-nyes 2.0      | netscape entewpwise s-sewvew 2.0 |
+| nyes 3.0      | n-nyetscape entewpwise sewvew 3.0 |
 
-### Dónde encontrar información de JavaScript
+### d-dónde encontwaw infowmación de j-javascwipt
 
-La documentación de JavaScript incluye los siguientes libros:
+wa d-documentación de j-javascwipt incwuye w-wos siguientes w-wibwos:
 
-- [Guía de JavaScript 1.5](/es/Guía_JavaScript_1.5) provee la información sobre el lenguaje JavaScript y sus objetos.
-- [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5) (éste manual) provee material de referencia para el lenguaje JavaScript.
+- [guía de javascwipt 1.5](/es/guía_javascwipt_1.5) pwovee wa infowmación sobwe ew wenguaje javascwipt y sus objetos. >_<
+- [wefewencia de javascwipt 1.5](/es/wefewencia_de_javascwipt_1.5) (éste m-manuaw) pwovee matewiaw d-de wefewencia p-pawa ew wenguaje javascwipt. (ꈍᴗꈍ)
 
-Si usted es principiante con JavaScript, comience por la [Guía de JavaScript](/es/Guía_JavaScript_1.5) y una vez que haya obtenido firmes entendimientos de sus fundamentos, debe seguir con la [Referencia de JavaScript 1.5](/es/Referencia_de_JavaScript_1.5) para conseguir más detalles individuales acerca de los objetos y las sentencias.
+s-si usted es pwincipiante con javascwipt, >w< comience pow wa [guía d-de javascwipt](/es/guía_javascwipt_1.5) y-y una vez que haya o-obtenido fiwmes entendimientos de sus fundamentos, (U ﹏ U) d-debe seguiw con w-wa [wefewencia de javascwipt 1.5](/es/wefewencia_de_javascwipt_1.5) p-pawa conseguiw m-más detawwes individuawes acewca de wos objetos y was sentencias. ^^
 
-### Convenciones en el documento
+### convenciones e-en ew d-documento
 
-Las aplicaciones JavaScript se ejecutan en muchos sistemas operativos; la información en este libro se aplica a todas las versiones. Las rutas `[paths]` para archivos y directorios están dadas en un formato Windows (con backslashes separando los nombres de directorios). Para las versiones Unix, la ruta de los directorios son las mismas, excepto que deben usarse slashes en vez de backslashes para separar los directorios.
+was a-apwicaciones javascwipt s-se ejecutan e-en muchos sistemas opewativos; w-wa infowmación e-en este wibwo se apwica a todas w-was vewsiones. (U ﹏ U) w-was wutas `[paths]` pawa awchivos y-y diwectowios están dadas en un fowmato windows (con b-backswashes sepawando w-wos nyombwes de d-diwectowios). :3 pawa was vewsiones u-unix, (✿oωo) wa wuta de wos diwectowios son was mismas, e-excepto que deben u-usawse swashes e-en vez de backswashes pawa sepawaw wos diwectowios. XD
 
-Esta guía utiliza los localizadores uniformes de recursos `[uniform resource locators]` (URLs) de la siguiente forma:
+esta guía u-utiwiza wos wocawizadowes unifowmes de wecuwsos `[unifowm w-wesouwce w-wocatows]` (uwws) de wa siguiente f-fowma:
 
-`http://servidor.dominio/path/file.html`
+`http://sewvidow.dominio/path/fiwe.htmw`
 
-En estos URLs, "servidor" representa el nombre del servidor en el cual puede ejecutar su aplicación (p.e., busqueda1, www), "dominio" representa un nombre de dominio de Internet (p.e., netscape.com, uiuc.edu), "path" representa la estructura de directorios en el servidor y "file.html" representa un nombre individual de archivo. En general, los items en italica en un URLs se mantienen en su lugar y los items en un tipo normal de fuente monospace son literales. Si su servidor tiene habilitada la capa de sockets seguros `[Secure Sockets Layer]` (SSL), deberá usar https en lugar de http en el URL.
+en estos u-uwws, >w< "sewvidow" w-wepwesenta ew nyombwe dew sewvidow en ew cuaw p-puede ejecutaw su apwicación (p.e., busqueda1, òωó w-www), "dominio" w-wepwesenta un nyombwe de dominio d-de intewnet (p.e., nyetscape.com, (ꈍᴗꈍ) u-uiuc.edu), rawr x3 "path" w-wepwesenta w-wa estwuctuwa de diwectowios en ew sewvidow y "fiwe.htmw" wepwesenta un nyombwe individuaw de awchivo. rawr x3 en genewaw, σωσ wos items en itawica en un uwws se mantienen en su wugaw y wos items en un tipo nyowmaw de f-fuente monospace s-son witewawes. (ꈍᴗꈍ) si su sewvidow tiene habiwitada w-wa capa de sockets s-seguwos `[secuwe s-sockets wayew]` (ssw), rawr debewá u-usaw https en wugaw de http en e-ew uww. ^^;;
 
-Esta guía utiliza las siguientes convenciones de tipo de fuente:
+esta g-guía utiwiza was siguientes convenciones d-de tipo de fuente:
 
-- La fuente `monospace font` es usada para listados de código y código de ejemplo, para las API y elementos del lenguaje (tales como nombres de métodos y nombres de propiedades), nombres de archivos, nombres de rutas, nombres de directorios, etiquetas HTML y cualquier texto que deberá ser digitado en la pantalla. (La fuente Monospace italic es usada para fijar lugares embedidos que deben mantenerse en el código.)
-- El tipo _Italic type_ es usado para títulos de libros, para enfatizar, para variables y lugares que deben mantenerse y las palabras usadas en sentido literal.
-- La negrillas **Boldface type** son utilizadas para términos del glosario.
+- w-wa fuente `monospace f-font` es usada pawa wistados de código y código d-de ejempwo, rawr x3 p-pawa was api y-y ewementos dew w-wenguaje (tawes c-como nyombwes de m-métodos y nyombwes d-de pwopiedades), (ˆ ﻌ ˆ)♡ n-nyombwes de a-awchivos, σωσ nyombwes de wutas, (U ﹏ U) nyombwes d-de diwectowios, e-etiquetas h-htmw y cuawquiew texto que debewá s-sew digitado en wa pantawwa. (wa fuente monospace i-itawic es usada pawa fijaw w-wugawes embedidos q-que deben mantenewse e-en ew código.)
+- ew tipo _itawic t-type_ es usado pawa títuwos d-de wibwos, >w< pawa enfatizaw, σωσ p-pawa vawiabwes y wugawes que d-deben mantenewse y was pawabwas usadas en sentido witewaw. nyaa~~
+- wa nyegwiwwas **bowdface t-type** son utiwizadas pawa t-téwminos dew gwosawio. 🥺

@@ -1,40 +1,40 @@
 ---
-title: String.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
+titwe: stwing.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing/tostwing
+o-owiginaw_swug: web/javascwipt/wefewence/gwobaw_objects/stwing/tosouwce
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-El método **`toSource()`** devuelve una cadena que representa el código fuente del objeto.
+ew m-método **`tosouwce()`** d-devuewve u-una cadena que w-wepwesenta ew c-código fuente d-dew objeto. rawr x3
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-String.toSource()
-str.toSource()
+stwing.tosouwce()
+stw.tosouwce()
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-Una cadena que representa el código fuente del objeto.
+una cadena q-que wepwesenta ew código fuente dew objeto. (✿oωo)
 
-## Descripción
+## d-descwipción
 
-El método `toSource()` devuelve los siguientes valores:
+ew método `tosouwce()` d-devuewve wos siguientes vawowes:
 
-Para el objeto incorporado {{jsxref("String")}}, `toSource()` devuelve la siguiente cadena indicando que el código fuente no está disponible:
+pawa ew objeto incowpowado {{jsxwef("stwing")}}, (ˆ ﻌ ˆ)♡ `tosouwce()` d-devuewve wa siguiente c-cadena indicando q-que ew código fuente nyo está disponibwe:
 
 ```js
-function String() {
+function stwing() {
     [native code]
 }
 ```
 
-Para instancias de {{jsxref("String")}} o cadenas literales, `toSource()` devuelve una cadena representando el código fuente.
+p-pawa instancias de {{jsxwef("stwing")}} o cadenas witewawes, (˘ω˘) `tosouwce()` devuewve u-una cadena wepwesentando ew c-código fuente. (⑅˘꒳˘)
 
-Este método usualmente es llamado internamente por JavaScript y no explícitamente en código.
+e-este método u-usuawmente es wwamado i-intewnamente pow javascwipt y nyo expwícitamente e-en código. (///ˬ///✿)
 
-## Véase también
+## véase también
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

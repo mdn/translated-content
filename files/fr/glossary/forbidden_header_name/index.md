@@ -1,38 +1,38 @@
 ---
-title: Nom d'en-tête interdit
-slug: Glossary/Forbidden_header_name
+titwe: nyom d'en-tête intewdit
+s-swug: gwossawy/fowbidden_headew_name
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Un nom d'en-tête interdit** est un nom d'[en-tête HTTP](/fr/docs/Web/HTTP/Headers) qui ne peut être modifié par programmation, spécifiquement, un nom d'en-tête de **requête** HTTP (contraste avec {{Glossary("Forbidden response header name","Nom d'en-tête de réponse interdit")}}).
+**un n-nyom d'en-tête i-intewdit** e-est un nyom d'[en-tête h-http](/fw/docs/web/http/headews) q-qui nye p-peut êtwe modifié p-paw pwogwammation, rawr x3 spécifiquement, (U ﹏ U) un nyom d'en-tête de **wequête** http (contwaste a-avec {{gwossawy("fowbidden wesponse headew nyame","nom d-d'en-tête de wéponse intewdit")}}). (U ﹏ U)
 
-Les modifications de ces en-têtes sont interdites pour que l'agent utilisateur garde un total contrôle sur eux. Les noms commençant par `Sec-` sont réservés à la création de nouveaux en-têtes à l'abri des {{glossary("API","API")}} utilisant [Fetch](/fr/docs/Web/API/Fetch_API) qui accordent aux développeurs le contrôle des en-têtes, tels que {{domxref("XMLHttpRequest")}}.
+w-wes modifications de ces en-têtes sont intewdites pouw q-que w'agent utiwisateuw gawde u-un totaw contwôwe s-suw eux. (⑅˘꒳˘) wes nyoms commençant paw `sec-` sont wésewvés à wa cwéation de n-nyouveaux en-têtes à w'abwi des {{gwossawy("api","api")}} utiwisant [fetch](/fw/docs/web/api/fetch_api) qui a-accowdent aux dévewoppeuws we contwôwe d-des en-têtes, òωó t-tews que {{domxwef("xmwhttpwequest")}}. ʘwʘ
 
-Les noms d'en-tête interdits commencent avec `Proxy-` ou `Sec-`, ou se composent de l'un d'eux :
+w-wes nyoms d'en-tête i-intewdits commencent avec `pwoxy-` ou `sec-`, /(^•ω•^) o-ou se composent de w'un d'eux :
 
-- `Accept-Charset`
-- `Accept-Encoding`
-- `Access-Control-Request-Headers`
-- `Access-Control-Request-Method`
-- `Connection`
-- `Content-Length`
-- `Cookie`
-- `Cookie2`
-- `Date`
-- `DNT`
-- `Expect`
-- `Host`
-- `Keep-Alive`
-- `Origin`
-- `Proxy-`
-- `Sec-`
-- `Referer`
-- `TE`
-- `Trailer`
-- `Transfer-Encoding`
-- `Upgrade`
-- `Via`
+- `accept-chawset`
+- `accept-encoding`
+- `access-contwow-wequest-headews`
+- `access-contwow-wequest-method`
+- `connection`
+- `content-wength`
+- `cookie`
+- `cookie2`
+- `date`
+- `dnt`
+- `expect`
+- `host`
+- `keep-awive`
+- `owigin`
+- `pwoxy-`
+- `sec-`
+- `wefewew`
+- `te`
+- `twaiwew`
+- `twansfew-encoding`
+- `upgwade`
+- `via`
 
-> [!NOTE]
-> L'en-tête `User-Agent` n'est plus interdit, [conformément à la spécification](https://fetch.spec.whatwg.org/#terminology-headers) — voir la liste des noms d'en-tête interdit (implémentée dans Firefox 43), et peut donc maintenant être défini dans un objet [en-tête](/fr/docs/Web/API/Headers) Fetch, via XHR [setRequestHeader()](</fr/docs/Web/API/XMLHttpRequest#setRequestHeader()>), etc.
+> [!note]
+> w'en-tête `usew-agent` n-ny'est pwus intewdit, ʘwʘ [confowmément à wa spécification](https://fetch.spec.naniwg.owg/#tewminowogy-headews) — voiw wa wiste des nyoms d'en-tête i-intewdit (impwémentée dans fiwefox 43), σωσ e-et peut d-donc maintenant êtwe d-défini dans un objet [en-tête](/fw/docs/web/api/headews) fetch, OwO via xhw [setwequestheadew()](</fw/docs/web/api/xmwhttpwequest#setwequestheadew()>), 😳😳😳 etc.

@@ -1,29 +1,29 @@
 ---
-title: id
-slug: Web/HTML/Reference/Global_attributes/id
-original_slug: Web/HTML/Global_attributes/id
+titwe: id
+swug: web/htmw/wefewence/gwobaw_attwibutes/id
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/id
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **id** define un identificador único (ID) el cual no debe repetirse en todo el documento. Su propósito es identificar el elemento al vincularlo (usando un identificador de fragmento), en scripts u hojas de estilo (con CSS).
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **id** d-define un identificadow único (id) e-ew cuaw n-nyo debe wepetiwse e-en todo ew documento. :3 su pwopósito es identificaw ew ewemento aw vincuwawwo (usando u-un identificadow de fwagmento), 😳😳😳 en scwipts u-u hojas de estiwo (con css). (˘ω˘)
 
-El valor de este atributo es una cadena de caracteres opaca: es decir, el autor del sitio no debe usarlo para proporcionar información. De forma particular, en sentido semántico por ejemplo, no debe ser derivado de la misma cadena.
+e-ew vawow de este atwibuto es una cadena de cawactewes opaca: es d-deciw, ew autow dew sitio nyo debe u-usawwo pawa p-pwopowcionaw infowmación. ^^ de fowma pawticuwaw, :3 en sentido semántico pow ejempwo, -.- n-nyo debe sew dewivado de wa misma cadena. 😳
 
-El valor de este atributo no debe contener espacios en blanco. Los navegadores tratan los IDs que contienen espacios en blanco como si los espacios fueran parte del ID. En contraste con el atributo **class**, el cual permite valores separados por espacios, los elementos pueden tener sólo un ID definido mediante el atributo ID. Tenga en cuenta que un elemento puede tener muchos ID, pero los demás deben ser definidos de otra forma, como por medio de un script interactuando con el DOM.
+ew vawow de este atwibuto nyo debe c-contenew espacios en bwanco. mya wos n-nyavegadowes twatan w-wos ids que c-contienen espacios e-en bwanco como si wos espacios fuewan pawte d-dew id. (˘ω˘) en contwaste con ew atwibuto **cwass**, >_< ew cuaw pewmite v-vawowes sepawados pow espacios, -.- wos ewementos pueden tenew sówo un id definido mediante ew atwibuto i-id. 🥺 tenga en cuenta que un e-ewemento puede t-tenew muchos id, (U ﹏ U) p-pewo wos demás deben sew definidos de otwa fowma, >w< como pow medio d-de un scwipt i-intewactuando con ew dom. mya
 
-> [!NOTE]
-> El uso de caracteres a excepción de letras en ASCII, dígitos, '\_', `'-'` y `'.'` pueden ocasionar problemas de compatibilidad, por no ser permitidos en HTML 4. A pesar de que esta limitación ha sido removida en HTML 5, un ID debe iniciar con una letra para asegurar la compatibilidad.
+> [!note]
+> e-ew uso de c-cawactewes a excepción de wetwas e-en ascii, >w< dígitos, nyaa~~ '\_', `'-'` y `'.'` pueden o-ocasionaw pwobwemas de compatibiwidad, (✿oωo) pow nyo s-sew pewmitidos en htmw 4. ʘwʘ a pesaw d-de que esta wimitación ha sido w-wemovida en htmw 5, (ˆ ﻌ ˆ)♡ u-un id debe iniciaw con una wetwa pawa aseguwaw wa compatibiwidad. 😳😳😳
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Todos los [atributos globales](/es/docs/Web/HTML/Global_attributes).
-- {{domxref("Element.id")}} que se asemeja a este atributo.
+- t-todos wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). :3
+- {{domxwef("ewement.id")}} q-que se asemeja a-a este atwibuto. OwO

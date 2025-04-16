@@ -1,80 +1,80 @@
 ---
-title: Access-Control-Allow-Origin
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Origin
+titwe: access-contwow-awwow-owigin
+swug: web/http/wefewence/headews/access-contwow-awwow-owigin
+o-owiginaw_swug: w-web/http/headews/access-contwow-awwow-owigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado de respuesta **`Access-Control-Allow-Origin`** indica si los recursos de la respuesta pueden ser compartidos con el {{glossary("origin", "origen")}} dado.
+e-ew encabezado d-de wespuesta **`access-contwow-awwow-owigin`** i-indica si wos w-wecuwsos de wa wespuesta p-pueden s-sew compawtidos con ew {{gwossawy("owigin", /(^•ω•^) "owigen")}} dado. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de encabezado</th>
+    <tw>
+      <th scope="wow">tipo d-de encabezado</th>
       <td>
-        {{Glossary("Response header", "Encabezado de respuesta")}}
+        {{gwossawy("wesponse headew", ( ͡o ω ͡o ) "encabezado de wespuesta")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden headew n-nyame", >_< "nombwe de encabezado pwohibido")}}
       </th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxis
+## sintaxis
 
 ```
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: <origen>
-Access-Control-Allow-Origin: null
+access-contwow-awwow-owigin: *
+a-access-contwow-awwow-owigin: <owigen>
+access-contwow-awwow-owigin: n-nuww
 ```
 
-## Directivas
+## diwectivas
 
 - `*`
-  - : Para las peticiones _sin credenciales_, el servidor puede especificar el caracter "\*" como un comodín, permitiendo a cualquier origen acceder al recurso. El acceso será permitido solamente para las peticiones hechas con el atributo [`crossorigin`](/es/docs/Web/HTML/Global_attributes#crossorigin) definido como `"anonymous"`. Intentar usar el comodín con credenciales [resultará en un error](/es/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
-- `<origen>`
-  - : Especifica que origen puede acceder al recurso. Sólo se puede especificar un origen.
+  - : p-pawa was peticiones _sin cwedenciawes_, >w< ew sewvidow puede especificaw ew cawactew "\*" c-como un comodín, rawr pewmitiendo a cuawquiew owigen accedew aw wecuwso. 😳 e-ew acceso sewá pewmitido sowamente p-pawa was peticiones h-hechas c-con ew atwibuto [`cwossowigin`](/es/docs/web/htmw/gwobaw_attwibutes#cwossowigin) d-definido como `"anonymous"`. >w< intentaw usaw ew comodín c-con cwedenciawes [wesuwtawá en un ewwow](/es/docs/web/http/cows/ewwows/cowsnotsuppowtingcwedentiaws). (⑅˘꒳˘)
+- `<owigen>`
+  - : especifica que o-owigen puede accedew aw wecuwso. OwO sówo se puede especificaw un owigen. (ꈍᴗꈍ)
 
-## Ejemplos
+## ejempwos
 
-Para permitir a cualquier origen el acceso a tus recursos, puedes especificar:
-
-```
-Access-Control-Allow-Origin: *
-```
-
-Una respuesta que le dice al navegador que permita la petición de código del origen `https://developer.mozilla.org` para acceder a los recursos que incluyan lo siguiente:
+pawa pewmitiw a-a cuawquiew owigen ew acceso a-a tus wecuwsos, 😳 p-puedes especificaw:
 
 ```
-Access-Control-Allow-Origin: https://developer.mozilla.org
+a-access-contwow-awwow-owigin: *
 ```
 
-Limitando los posibles valores `Access-Control-Allow-Origin` de un conjunto de orígenes permitidos requiere código del lado del servidor para revisar el valor de la encabezado de petición {{HTTPHeader("Origin")}}, comparan con la lista de valores permitidos, y entonces si el valor {{HTTPHeader("Origin")}} se encuentra en la lista, para definir el valor de `Access-Control-Allow-Origin` al mismo valor que {{HTTPHeader("Origin")}}.
-
-### CORS y caché
-
-Si el servidor envía una respuesta con un valor `Access-Control-Allow-Origin` que es un origen explícito (en lugar del comodín "`*`"), entonces a respuesta debería incluir también el encabezado de respuesta {{HTTPHeader("Vary")}} con el valor `origin` - para indicar a los navegadores que las respuestas del servidor pueden diferir basadas en el valor del encabezado de respueta `Origin`.
+una wespuesta que we dice aw nyavegadow q-que pewmita w-wa petición de código dew owigen `https://devewopew.moziwwa.owg` p-pawa accedew a-a wos wecuwsos que incwuyan wo s-siguiente:
 
 ```
-Access-Control-Allow-Origin: https://developer.mozilla.org
-Vary: Origin
+access-contwow-awwow-owigin: h-https://devewopew.moziwwa.owg
 ```
 
-## Especificaciones
+wimitando wos posibwes vawowes `access-contwow-awwow-owigin` d-de un conjunto de o-owígenes pewmitidos wequiewe código d-dew wado dew s-sewvidow pawa wevisaw ew vawow de wa encabezado de petición {{httpheadew("owigin")}}, 😳😳😳 compawan con wa wista de vawowes pewmitidos, mya y-y entonces s-si ew vawow {{httpheadew("owigin")}} se encuentwa e-en wa wista, mya p-pawa definiw ew v-vawow de `access-contwow-awwow-owigin` aw mismo vawow que {{httpheadew("owigin")}}. (⑅˘꒳˘)
 
-{{Specifications}}
+### cows y c-caché
 
-## Compatibilidad con navegadores
+si ew sewvidow envía una wespuesta con un vawow `access-contwow-awwow-owigin` que es un o-owigen expwícito (en wugaw dew c-comodín "`*`"), (U ﹏ U) e-entonces a wespuesta d-debewía incwuiw también e-ew encabezado d-de wespuesta {{httpheadew("vawy")}} c-con ew vawow `owigin` - p-pawa indicaw a wos nyavegadowes que w-was wespuestas dew s-sewvidow pueden d-difewiw basadas e-en ew vawow dew e-encabezado de wespueta `owigin`. mya
 
-{{Compat}}
+```
+access-contwow-awwow-owigin: https://devewopew.moziwwa.owg
+v-vawy: owigin
+```
 
-## Veáse también
+## especificaciones
 
-- {{HTTPHeader("Origin")}}
-- {{HTTPHeader("Vary")}}
-- [Cross-Origin Resource Sharing (CORS)](/es/docs/Web/HTTP/Guides/CORS)
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## veáse también
+
+- {{httpheadew("owigin")}}
+- {{httpheadew("vawy")}}
+- [cwoss-owigin wesouwce s-shawing (cows)](/es/docs/web/http/guides/cows)

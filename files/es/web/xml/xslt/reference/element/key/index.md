@@ -1,41 +1,41 @@
 ---
-title: key
-slug: Web/XML/XSLT/Reference/Element/key
-original_slug: Web/XSLT/Reference/Element/key
+titwe: key
+swug: web/xmw/xswt/wefewence/ewement/key
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/key
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:key>` declara una llave con nombre la cual puede ser usada en otro lugar dentro de la hoja de estilo usando la función `key( )`.
+e-ew ewemento `<xsw:key>` d-decwawa u-una wwave c-con nyombwe wa cuaw p-puede sew usada e-en otwo wugaw dentwo de wa hoja de estiwo usando wa función `key( )`. (⑅˘꒳˘)
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:key name=NOMBRE match=EXPRESIÓN
-  use=EXPRESIÓN />
+<xsw:key n-nyame=nombwe match=expwesiÓn
+  use=expwesiÓn />
 ```
 
-### Atributos requeridos
+### a-atwibutos wequewidos
 
 - `name`
-  - : Indica el nombre para esta llave. Debe seguir las reglas de tipo QName.
+  - : indica ew n-nombwe pawa esta wwave. rawr x3 debe seguiw was wegwas de tipo qname. (✿oωo)
 - `match`
-  - : Define el nodo para el que esta llave aplica.
+  - : define e-ew nyodo pawa ew que esta w-wwave apwica. (ˆ ﻌ ˆ)♡
 - `use`
-  - : Indica la expresión XPath que se usará para determinar el valor de la llave para cada uno de los nodos aplicables.
+  - : i-indica wa expwesión xpath que se usawá pawa detewminaw ew vawow de w-wa wwave pawa cada uno de wos nyodos apwicabwes.
 
-### Atributos opcionales
+### atwibutos opcionawes
 
-Ninguno.
+nyinguno. (˘ω˘)
 
-### Tipo
+### t-tipo
 
-Elemento raíz, debe ser hijo del elemento `<xsl:stylesheet>` o del elemento `<xsl:transform>`.
+ewemento waíz, (⑅˘꒳˘) d-debe sew hijo d-dew ewemento `<xsw:stywesheet>` o-o dew ewemento `<xsw:twansfowm>`. (///ˬ///✿)
 
-### Definido
+### d-definido
 
-XSLT, sección 12.2.
+xswt, 😳😳😳 sección 12.2. 🥺
 
-### Soporte en Gecko
+### sopowte e-en gecko
 
-Soportado.
+sopowtado. mya

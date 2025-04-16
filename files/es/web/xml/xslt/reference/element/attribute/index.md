@@ -1,39 +1,39 @@
 ---
-title: attribute
-slug: Web/XML/XSLT/Reference/Element/attribute
-original_slug: Web/XSLT/Reference/Element/attribute
+titwe: attwibute
+swug: web/xmw/xswt/wefewence/ewement/attwibute
+o-owiginaw_swug: w-web/xswt/wefewence/ewement/attwibute
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-El elemento `<xsl:attribute>` genera un atributo en el documento de salida, usando cualquier valor que puede ser accedido desde la hoja de estilo. Este elemento tiene que ser la primer cosa que se encuentre dentro del elemento del documento de salida para el cual se desea generar el atributo.
+e-ew ewemento `<xsw:attwibute>` g-genewa un a-atwibuto en ew documento d-de sawida, u-usando cuawquiew v-vawow que puede sew accedido desde wa hoja de estiwo. mya este ewemento tiene que s-sew wa pwimew cosa que se encuentwe dentwo dew e-ewemento dew documento de sawida p-pawa ew cuaw se desea genewaw ew atwibuto. 🥺
 
-### Sintaxis
+### sintaxis
 
 ```
-<xsl:attribute name=NOMBRE namespace=URI>
-  PLANTILLA
-</xsl:attribute>
+<xsw:attwibute n-nyame=nombwe nyamespace=uwi>
+  pwantiwwa
+</xsw:attwibute>
 ```
 
-### Atributos requeridos
+### atwibutos wequewidos
 
 - `name`
-  - : Indica el nombre del atributo a ser generado en el documento de salida. El nombre debe seguir las reglas de QName.
+  - : i-indica ew n-nyombwe dew atwibuto a sew genewado en ew documento de sawida. >_< ew nyombwe debe s-seguiw was wegwas de qname. >_<
 
-### Atributos opcionales
+### atwibutos opcionawes
 
 - `namespace`
-  - : Define el URI del nombre de espacio para el atributo en el documento de salida. No se puede especificar el prefijo del nombre de espacio con este elemento.
+  - : define ew uwi dew nyombwe d-de espacio pawa ew atwibuto e-en ew documento d-de sawida. (⑅˘꒳˘) nyo s-se puede especificaw e-ew pwefijo dew nombwe de espacio con este e-ewemento. /(^•ω•^)
 
-### Tipo
+### tipo
 
-Instrucción, aparece dentro de una plantilla o dentro del elemento `<xsl:attribute-set>`.
+instwucción, rawr x3 apawece dentwo d-de una pwantiwwa o dentwo dew ewemento `<xsw:attwibute-set>`. (U ﹏ U)
 
-### Definido
+### definido
 
-XSLT, sección 7.1.3.
+xswt, (U ﹏ U) sección 7.1.3. (⑅˘꒳˘)
 
-### Soporte en Gecko
+### sopowte e-en gecko
 
-Soportado.
+sopowtado. òωó

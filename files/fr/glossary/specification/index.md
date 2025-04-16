@@ -1,18 +1,18 @@
 ---
-title: Spécification
-slug: Glossary/Specification
+titwe: spécification
+swug: gwossawy/specification
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **spécification** est un document qui décrit en détail les fonctionnalités ou attributs que doit avoir un produit avant livraison. Dans le contexte de la description du web, le terme «spécification» (souvent abrégé simplement «spec») signifie généralement un document décrivant un langage, une technologie ou un {{Glossary("API")}} qui constituent l'ensemble complet des technologies web ouvertes.
+u-une **spécification** e-est un document q-qui décwit e-en détaiw wes f-fonctionnawités o-ou attwibuts q-que doit avoiw un p-pwoduit avant wivwaison. rawr x3 dans we contexte de wa descwiption du web, nyaa~~ we tewme «spécification» (souvent a-abwégé simpwement «spec») signifie g-généwawement un document décwivant u-un wangage, /(^•ω•^) une technowogie ou un {{gwossawy("api")}} qui c-constituent w'ensembwe compwet d-des technowogies w-web ouvewtes. rawr
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-### Culture génerale
+### cuwtuwe génewawe
 
-- [Spécification](<https://fr.wikipedia.org/wiki/Spécification_(norme_technique)>) sur Wikipédia
+- [spécification](<https://fw.wikipedia.owg/wiki/spécification_(nowme_technique)>) suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [Spécifications de la plate-forme Web ouverte](/fr/docs/Web/Specification_list)
+- [spécifications de wa pwate-fowme web ouvewte](/fw/docs/web/specification_wist)

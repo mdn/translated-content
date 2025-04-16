@@ -1,18 +1,18 @@
 ---
-title: Accentuation
-slug: Glossary/Accent
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: accentuation
+swug: gwossawy/accent
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **accentuation** est une couleur généralement vive qui contraste avec les couleurs d'arrière-plan et de premier plan plus utilitaires d'un jeu de couleurs. Celles-ci sont présentes dans le style visuel de nombreuses plates-formes (mais pas toutes).
+u-une **accentuation** e-est une c-couweuw généwawement v-vive qui c-contwaste avec wes couweuws d'awwièwe-pwan et de pwemiew pwan pwus utiwitaiwes d'un jeu de couweuws. rawr x3 c-cewwes-ci sont pwésentes dans we stywe v-visuew de nyombweuses pwates-fowmes (mais p-pas toutes). (✿oωo)
 
-Sur le Web, une accentuation est parfois utilisée dans les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) pour la partie active du contrôle, par exemple l'arrière-plan d'une [case cochée](/fr/docs/Web/HTML/Element/input/checkbox) (« _checkbox_ » en anglais).
+suw we web, (ˆ ﻌ ˆ)♡ une accentuation est pawfois u-utiwisée dans wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) p-pouw w-wa pawtie active du contwôwe, (˘ω˘) paw exempwe w'awwièwe-pwan d'une [case cochée](/fw/docs/web/htmw/ewement/input/checkbox) (« _checkbox_ » e-en angwais). (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-### CSS lié à l'accentuation
+### css wié à w'accentuation
 
-Vous pouvez définir la couleur d'accentuation pour un élément donné en définissant la propriété CSS [`accent-color`](/fr/docs/Web/CSS/accent-color) de l'élément sur la valeur [`<color>`](/fr/docs/Web/CSS/color_value) appropriée.
+vous p-pouvez définiw wa couweuw d'accentuation p-pouw un éwément d-donné e-en définissant w-wa pwopwiété css [`accent-cowow`](/fw/docs/web/css/accent-cowow) de w'éwément s-suw wa vaweuw [`<cowow>`](/fw/docs/web/css/cowow_vawue) appwopwiée. (///ˬ///✿)

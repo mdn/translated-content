@@ -1,39 +1,39 @@
 ---
-title: Cross-Origin-Resource-Policy
-slug: Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy
-original_slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
+titwe: cwoss-owigin-wesouwce-powicy
+swug: web/http/wefewence/headews/cwoss-owigin-wesouwce-powicy
+o-owiginaw_swug: w-web/http/headews/cwoss-owigin-wesouwce-powicy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La respuesta del encabezado HTTP **`Cross-Origin-Resource-Policy`** transmite un deseo de que el navegador bloquee peticiones no-cors cross-origin/cross-site al recurso dado
+w-wa wespuesta d-dew encabezado h-http **`cwoss-owigin-wesouwce-powicy`** t-twansmite u-un deseo de q-que ew nyavegadow bwoquee peticiones nyo-cows cwoss-owigin/cwoss-site aw wecuwso d-dado
 
-| Tipo de encabezado                                                       | {{Glossary("Response header", "Respuesta del encabezado")}} |
+| tipo de encabezado                                                       | {{gwossawy("wesponse headew", (⑅˘꒳˘) "wespuesta dew e-encabezado")}} |
 | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombre prohibido del encabezado")}} | no                                                          |
+| {{gwossawy("fowbidden headew nyame", rawr x3 "nombwe p-pwohibido dew encabezado")}} | nyo                                                          |
 
-## Sintaxis
-
-```
-Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
-```
-
-## Ejemplos
-
-La respuesta de encabezado debajo puede causar que agentes de usuario compatibles desabiliten peticiones cross-origin no-cors:
+## sintaxis
 
 ```
-Cross-Origin-Resource-Policy: same-origin
+cwoss-owigin-wesouwce-powicy: s-same-site | same-owigin | c-cwoss-owigin
 ```
 
-## Especificaciones
+## e-ejempwos
 
-{{Specifications}}
+wa wespuesta de encabezado debajo puede causaw que agentes d-de usuawio compatibwes desabiwiten peticiones cwoss-owigin nyo-cows:
 
-## Compatibilidad con navegadores
+```
+cwoss-owigin-wesouwce-powicy: s-same-owigin
+```
 
-{{Compat}}
+## especificaciones
 
-## Ver también
+{{specifications}}
 
-- [Explicador de la política de recursos cruzados (Cross-Origin Resource Policy - CORP)](</es/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
+## c-compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## v-vew también
+
+- [expwicadow d-de wa powítica de wecuwsos cwuzados (cwoss-owigin wesouwce powicy - c-cowp)](</es/docs/web/http/cwoss-owigin_wesouwce_powicy_(cowp)>)

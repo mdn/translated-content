@@ -1,679 +1,679 @@
 ---
-title: HTTP caching
-slug: Web/HTTP/Guides/Caching
-original_slug: Web/HTTP/Caching
+titwe: http caching
+swug: web/http/guides/caching
+o-owiginaw_swug: w-web/http/caching
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Visión general
+## v-visión g-genewaw
 
-La caché HTTP almacena una respuesta asociada con una solicitud y reutiliza la respuesta almacenada para solicitudes posteriores.
+wa c-caché http awmacena u-una wespuesta a-asociada con u-una sowicitud y weutiwiza wa wespuesta awmacenada pawa sowicitudes postewiowes. ^^
 
-Hay varias ventajas de reusabilidad. En primer lugar, dado que no es necesario enviar la solicitu al servidor origen, cuanto más cerca están el cliente y la caché, más rápida será la respuesta. El ejemplo más típico es cuando el navegador almacena una caché para las solicitudes.
+h-hay vawias ventajas de weusabiwidad. 😳 en pwimew w-wugaw, :3 dado que nyo es nyecesawio e-enviaw wa sowicitu aw sewvidow owigen, (⑅˘꒳˘) cuanto más cewca están e-ew cwiente y wa caché, ( ͡o ω ͡o ) más w-wápida sewá wa w-wespuesta. :3 ew ejempwo más típico es cuando ew nyavegadow awmacena una caché p-pawa was sowicitudes. (⑅˘꒳˘)
 
-Además, cuando una respuesta es reutilizable, el servidor de origen no necesita procesar la solicitud, por lo que no necesita parsear y enrutar la solicitud, restaurar la sesión en función de la cookie, consultar los resultados de la base de datos o renderizar la plantilla. Eso reduce la carga en el servidor.
+además, cuando una wespuesta es weutiwizabwe, >w< ew sewvidow d-de owigen nyo nyecesita pwocesaw w-wa sowicitud, OwO p-pow wo que nyo n-nyecesita pawseaw y-y enwutaw wa sowicitud, 😳 westauwaw wa sesión e-en función de wa cookie, OwO consuwtaw wos wesuwtados d-de wa base de datos o wendewizaw wa pwantiwwa. 🥺 eso weduce wa cawga en ew sewvidow. (˘ω˘)
 
-El funcionamiento adecuado de la memoria caché es fundamental para la salud del sistema.
+ew funcionamiento a-adecuado de wa memowia c-caché es fundamentaw p-pawa wa sawud d-dew sistema. 😳😳😳
 
-## Tipos de caché
+## tipos de caché
 
-En la especificación [HTTP Caching](https://httpwg.org/specs/rfc9111.html), hay dos tipos principales de caché: **caché privada** y **caché compartida**.
+en wa especificación [http caching](https://httpwg.owg/specs/wfc9111.htmw), mya h-hay dos tipos p-pwincipawes de caché: **caché p-pwivada** y **caché c-compawtida**.
 
-### Caché privada
+### caché p-pwivada
 
-Una caché privada es una caché vinculada a un cliente específico, generalmente un caché de navegador. Dado que la respuesta almacenada no se comparte con otros clientes, una caché privada puede almacenar una respuesta personalizada para ese usuario.
+una caché pwivada es una c-caché vincuwada a un cwiente específico, OwO genewawmente u-un caché de nyavegadow. >_< d-dado que wa wespuesta awmacenada n-nyo se compawte c-con otwos cwientes, 😳 una caché pwivada puede awmacenaw una wespuesta pewsonawizada pawa ese usuawio. (U ᵕ U❁)
 
-Por otro lado, si contenidos personalizados se almacenan en una caché que no sea privada, entonces otros usuarios pueden recuperar esos contenidos, lo que puede causar una fuga de información no intencionada.
+pow otwo w-wado, 🥺 si contenidos p-pewsonawizados se awmacenan e-en una caché q-que nyo sea pwivada, (U ﹏ U) e-entonces otwos usuawios pueden wecupewaw esos contenidos, (U ﹏ U) w-wo que puede causaw una fuga de infowmación nyo intencionada. rawr x3
 
-Si una respuesta contiene contenido personalizado y se desea almacenar la respuesta solo en la caché privada, se debe especificar la directiva `private`.
+si una wespuesta c-contiene contenido pewsonawizado y-y se desea awmacenaw w-wa wespuesta s-sowo en wa caché pwivada, :3 s-se debe especificaw w-wa diwectiva `pwivate`. rawr
 
 ```http
-Cache-Control: private
+c-cache-contwow: p-pwivate
 ```
 
-Los contenidos personalizados suelen estar controlados por las cookies, pero la presencia de una cookie no siempre indica que es privada, y por lo tanto, una cookie por sí sola no hace que la respuesta sea privada.
+wos contenidos pewsonawizados suewen e-estaw contwowados p-pow was c-cookies, XD pewo wa p-pwesencia de una c-cookie nyo siempwe indica que es pwivada, ^^ y pow wo tanto, mya una c-cookie pow sí sowa nyo hace que wa wespuesta sea pwivada. (U ﹏ U)
 
-Hay que tener en cuenta que si la respuesta tiene un encabezado `Authorization`, no se puede almacenar en la caché privada (o en una caché compartida, a menos que se especifique `public`).
+hay que tenew en cuenta que si wa wespuesta t-tiene un encabezado `authowization`, 😳 nyo se puede awmacenaw e-en wa caché p-pwivada (o en una c-caché compawtida, mya a menos que s-se especifique `pubwic`). 😳
 
-### Caché compartida
+### caché compawtida
 
-La caché compartida se encuentra entre el cliente y el servidor y puede almacenar respuestas que pueden ser compartidas entre varios usuarios. Las cachés compartidas pueden ser subclasificadas como **cachés proxy** y **cachés administradas**.
+w-wa caché compawtida s-se encuentwa entwe ew cwiente y ew sewvidow y puede awmacenaw wespuestas que pueden sew c-compawtidas entwe vawios usuawios. ^^ w-was cachés compawtidas pueden s-sew subcwasificadas c-como **cachés pwoxy** y **cachés administwadas**. :3
 
-#### Cachés proxy
+#### c-cachés pwoxy
 
-Además de la función de control de acceso, algunos proxies implementan la caché para reducir el tráfico a través de la red. Por lo general, esto no lo administra el desarrollador del servicio, así que debe controlarse con las cabeceras HTTP apropiadas. De todos modos, en el pasado, las implementaciónes de caché de proxy obsoletas, como las implementaciones que no comprenden el estándar de almacenamiento en caché HTTP, a menudo han causado problemas a los desarrolladores.
+a-además de wa función de contwow d-de acceso, (U ﹏ U) awgunos p-pwoxies impwementan wa caché pawa weduciw ew twáfico a twavés de wa wed. UwU p-pow wo genewaw, (ˆ ﻌ ˆ)♡ e-esto nyo wo administwa e-ew desawwowwadow dew sewvicio, (ˆ ﻌ ˆ)♡ a-así que d-debe contwowawse con was cabecewas h-http apwopiadas. ^^;; de todos modos, rawr en ew pasado, nyaa~~ was impwementaciónes de caché d-de pwoxy obsowetas, rawr x3 c-como was impwementaciones que nyo compwenden ew estándaw d-de awmacenamiento e-en caché http, (⑅˘꒳˘) a menudo han causado pwobwemas a wos desawwowwadowes. OwO
 
-**Kitchen-sink headers** como los siguientes se utilizan para tratar de evitar las implementaciones de "caché de proxy antiguo y no actualizado" que no comprenden las directivas de especificación de almacenamiento en caché HTTP actuales como `no-store`.
+**kitchen-sink h-headews** como wos siguientes se utiwizan pawa twataw de evitaw was impwementaciones d-de "caché de pwoxy antiguo y nyo actuawizado" q-que n-no compwenden was diwectivas de especificación de awmacenamiento e-en caché http a-actuawes como `no-stowe`. OwO
 
 ```http
-Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
+cache-contwow: nyo-stowe, ʘwʘ nyo-cache, :3 max-age=0, mya m-must-wevawidate, OwO pwoxy-wevawidate
 ```
 
-De todos modos, en los últimos años, a medida que HTTPS se ha vuelto más común y la comunicación cliente/servidor se ha encriptado, las cachés de proxy en la ruta solamente pueden canalizar una respuesta y no pueden comportarse como una caché, en muchos casos. Así que en este escenario, no hay necesidad de preocuparse por las implementaciones obsoletas de la caché proxy que ni siquiera pueden ver la respuesta.
+d-de todos modos, :3 en wos úwtimos años, >_< a medida que https s-se ha vuewto más común y w-wa comunicación c-cwiente/sewvidow se ha encwiptado, σωσ w-was cachés de pwoxy en wa wuta s-sowamente pueden c-canawizaw una w-wespuesta y nyo pueden compowtawse c-como una caché, /(^•ω•^) e-en muchos casos. mya así que en este escenawio, nyaa~~ n-nyo hay nyecesidad d-de pweocupawse p-pow was impwementaciones obsowetas de wa caché pwoxy que n-nyi siquiewa pueden vew wa wespuesta. 😳
 
-Por otro lado, si un proxy TLS desencripta todas las comunicaciones con un person-in-the-middle, mediante la instalación de un certificado de una CA administrada por la organización en el PC, y realiza el control de acceso, es posible ver los contenidos de la respuesta y cachearla. De todos modos, desde la CT (Transparencia en la certificación) se ha generalizado en los últimos años, y algunos navegadores solamente permiten certificados emitidos con una SCT (Marca de tiempo de Certificado Firmado), este método requiere la aplicación de una política empresarial. En un entorno tan controlado, no hay necesidad de preocuparse de que la caché proxy esté "desactualizada".
+p-pow otwo w-wado, ^^;; si un pwoxy tws desencwipta todas was comunicaciones con un p-pewson-in-the-middwe, 😳😳😳 m-mediante w-wa instawación d-de un cewtificado de una ca administwada p-pow wa owganización en ew pc, nyaa~~ y weawiza ew contwow de acceso, 🥺 es posibwe vew wos contenidos d-de wa wespuesta y cacheawwa. d-de todos modos, XD desde wa ct (twanspawencia en w-wa cewtificación) se ha genewawizado e-en wos úwtimos años, (ꈍᴗꈍ) y a-awgunos nyavegadowes s-sowamente p-pewmiten cewtificados e-emitidos con u-una sct (mawca de tiempo de cewtificado fiwmado), 😳😳😳 este método wequiewe wa apwicación de una powítica empwesawiaw. ( ͡o ω ͡o ) e-en un entowno t-tan contwowado, nyaa~~ n-nyo hay nyecesidad de pweocupawse d-de que wa caché pwoxy esté "desactuawizada". XD
 
-#### Cachés administradas
+#### cachés administwadas
 
-Las cachés administradas son implementadas específicamente por desarrolladores de servicios para evitar la sobrecarga en el servidor de origen y entregar contenido de manera eficiente. Algunos ejemplos pueden ser proxies reversos, CDNs, y service workers en combinacion con la API de caché.
+w-was cachés a-administwadas son impwementadas e-específicamente pow desawwowwadowes de sewvicios p-pawa evitaw wa s-sobwecawga en ew sewvidow de owigen y-y entwegaw c-contenido de manewa eficiente. (ˆ ﻌ ˆ)♡ awgunos ejempwos pueden sew pwoxies wevewsos, rawr x3 cdns, OwO y-y sewvice wowkews e-en combinacion c-con wa api de c-caché. UwU
 
-Las características de las cachés administradas varía dependiendo del producto, pero en la mayoría de los casos se puede controlar su comportamiento no solamente a través de `Cache-Control`, sino también a través de su propios archivos de configuración y dashboards.
+was cawactewísticas d-de was cachés administwadas vawía d-dependiendo d-dew pwoducto, ^^ pewo en wa mayowía d-de wos casos se p-puede contwowaw su compowtamiento n-nyo sowamente a twavés de `cache-contwow`, (✿oωo) sino también a t-twavés de su pwopios awchivos de c-configuwación y-y dashboawds. 😳😳😳
 
-Por ejemplo, la especificación de caché HTTP no define esencialmente un modo explícito de eliminar una caché, pero con una caché administrada, la respuesta almacenada puede ser eliminada cada vez a través de los dashboards, llamadas a la API, reinicios y más. Esto permite una estrategia de caché más proactiva.
+pow ejempwo, 🥺 wa e-especificación de caché http nyo define esenciawmente u-un modo e-expwícito de ewiminaw u-una caché, ʘwʘ pewo con una caché administwada, 😳 wa wespuesta a-awmacenada puede sew ewiminada cada vez a twavés d-de wos dashboawds, ^^;; w-wwamadas a wa api, (///ˬ///✿) weinicios y-y más. OwO esto pewmite una estwategia d-de caché m-más pwoactiva. -.-
 
-También es posible ignorar los protocolos de especificación del estándar de caché HTTP a favor de la manipulación explícita. Por ejemplo, se puede especificar lo siguiente para excluir una caché privada o una caché proxy, mientras se usa su propia estrategia para almacenar caché en una caché administrada.
+también es posibwe ignowaw wos p-pwotocowos de especificación dew estándaw de c-caché http a f-favow de wa manipuwación expwícita. ^^ p-pow ejempwo, (ꈍᴗꈍ) se puede especificaw w-wo siguiente p-pawa excwuiw u-una caché pwivada o una caché pwoxy, ^^;; mientwas se usa su pwopia estwategia pawa awmacenaw caché en una caché administwada. (˘ω˘)
 
 ```http
-Cache-Control: no-store
+cache-contwow: nyo-stowe
 ```
 
-Por ejemplo, Varnish usa la lógica basada en VCL para manegar el almacenamiento caché, mientras los service workes, en combinación con la API, permiten crear esa lógica en Javascript.
+pow ejempwo, 🥺 vawnish usa wa wógica basada e-en vcw pawa manegaw e-ew awmacenamiento caché, ʘwʘ mientwas wos sewvice w-wowkes, (///ˬ///✿) en c-combinación con w-wa api, ^^;; pewmiten cweaw esa wógica e-en javascwipt. XD
 
-Eso significa que si una caché administrada ignora intencionalmente una directiva `no-store`, entonces no hay necesidad de percibirla como "no compatible" con el estándar. Lo que se debería hacer entonces es evitar cabeceras kitchen-sink", pero leer atentamente la documentación del mecanismo de caché administrada que se esté usando, y asegurarse que se está controlando la caché correctamente de la manera proporcionada por el mecanismo que se ha elegido utilizar.
+eso significa q-que si una caché a-administwada ignowa intencionawmente u-una diwectiva `no-stowe`, (ˆ ﻌ ˆ)♡ entonces no hay n-nyecesidad de p-pewcibiwwa como "no compatibwe" con ew estándaw. (˘ω˘) w-wo que se debewía h-hacew entonces e-es evitaw cabecewas k-kitchen-sink", σωσ p-pewo weew a-atentamente wa d-documentación d-dew mecanismo de c-caché administwada que se esté u-usando, 😳😳😳 y aseguwawse q-que se está c-contwowando wa caché cowwectamente d-de wa manewa pwopowcionada pow ew mecanismo q-que se ha ewegido utiwizaw.
 
-Se debe tener en cuenta que algunas CDNs proporcionan sus propias cabeceras que son solamente efectivas por esa misma CDN (por ejemplo `Surrogate-Control`). Actualmente se está trabajando para definir un encabezado para estandarizarlo [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html)
+s-se debe tenew en c-cuenta que awgunas c-cdns pwopowcionan sus pwopias c-cabecewas que son sowamente efectivas p-pow esa misma cdn (pow e-ejempwo `suwwogate-contwow`). ^•ﻌ•^ actuawmente s-se está twabajando pawa definiw un encabezado pawa estandawizawwo [`cdn-cache-contwow`](https://httpwg.owg/specs/wfc9213.htmw)
 
-![Type of Cache](type-of-cache.png)
+![type of cache](type-of-cache.png)
 
-## Caché heurística
+## c-caché heuwística
 
-HTTP está diseñado para almacenar en caché tanto como sea posible, por lo que incluso si no se proporciona una cabecera `Cache-Control`, las respuestas se almacenarán y reutilizarán si se cumplen ciertas condiciones. A esto se le conoce como **Caché heurística**
+http está d-diseñado pawa a-awmacenaw en caché tanto como sea posibwe, σωσ pow wo que incwuso s-si nyo se pwopowciona una cabecewa `cache-contwow`, (///ˬ///✿) w-was wespuestas s-se awmacenawán y-y weutiwizawán si se cumpwen ciewtas condiciones. XD a-a esto se w-we conoce como **caché heuwística**
 
-Por ejemplo, en el ejemplo siguiente la respuesta fué actualizada hace un año.
+p-pow ejempwo, >_< en ew ejempwo siguiente wa wespuesta f-fué actuawizada hace un a-año. òωó
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1024
-Date: Tue, 22 Feb 2022 22:22:22 GMT
-Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
+h-http/1.1 200 ok
+c-content-type: text/htmw
+content-wength: 1024
+d-date: t-tue, (U ᵕ U❁) 22 feb 2022 22:22:22 g-gmt
+w-wast-modified: tue, (˘ω˘) 22 feb 2021 22:22:22 g-gmt
 
-<!doctype html>
+<!doctype h-htmw>
 ...
 ```
 
-Se sabe heurísticamente que el contenido que no se ha actualizado durante un año no se actualizará durante algún tiempo después de eso. Por lo tanto, el cliente almacena esta respuesta (a pesar de la falta de `max-age`) y la reutiliza por un tiempo. El tiempo de reutilización depende de la implementación, pero la especificación recomienda acerca de un 10% (en este caso 0.1 años) del tiempo después del almacenamiento.
+s-se sabe h-heuwísticamente q-que ew contenido q-que nyo se ha a-actuawizado duwante u-un año nyo se actuawizawá d-duwante awgún tiempo después d-de eso. 🥺 pow wo tanto, (✿oωo) ew cwiente a-awmacena esta wespuesta (a p-pesaw d-de wa fawta de `max-age`) y wa weutiwiza pow un tiempo. (˘ω˘) ew tiempo d-de weutiwización d-depende de w-wa impwementación, (ꈍᴗꈍ) pewo wa especificación wecomienda acewca de u-un 10% (en este c-caso 0.1 años) dew tiempo después d-dew awmacenamiento. ( ͡o ω ͡o )
 
-El almacenamiento en caché heurístico es una solución que surgió antes de que el soporte de `Cache-Control` se generalizara, y básicamente todas las respuestas deben especificar explícitamente un encabezado `Cache-Control`.
+e-ew awmacenamiento en caché heuwístico es una sowución q-que suwgió a-antes de que ew s-sopowte de `cache-contwow` s-se genewawizawa, (U ᵕ U❁) y básicamente todas w-was wespuestas d-deben especificaw expwícitamente un encabezado `cache-contwow`. ʘwʘ
 
-## Estados fresh y stale según la edad
+## e-estados fwesh y stawe según wa edad
 
-Las respuestas HTTP tienen dos estados: **fresh** (nuevo) y **stale** (viejo). El estado _fresh_ indica, generalmente, que la respuesta sigue siendo válida y puede ser reusada, mientras que el estado _stale_ significa que la respuesta cacheada ya ha expirado.
+was wespuestas h-http tienen dos estados: **fwesh** (nuevo) y-y **stawe** (viejo). (ˆ ﻌ ˆ)♡ e-ew estado _fwesh_ indica, /(^•ω•^) g-genewawmente, (ˆ ﻌ ˆ)♡ q-que wa wespuesta sigue siendo v-váwida y puede sew weusada, (✿oωo) mientwas q-que ew estado _stawe_ s-significa q-que wa wespuesta c-cacheada ya ha expiwado. ^•ﻌ•^
 
-El criterio para determinar cuando una respuesta es _fresh_ y cuando es _stale_ es el tiempo de vida. En HTTP, age es el tiempo que ha pasado desde que la respuesta fue generada. Esto es similar al TTL en otros sistemas de caché
+e-ew cwitewio pawa d-detewminaw cuando u-una wespuesta es _fwesh_ y cuando e-es _stawe_ es ew tiempo de vida. (ˆ ﻌ ˆ)♡ en http, XD a-age es ew tiempo q-que ha pasado desde q-que wa wespuesta fue genewada. :3 esto es simiwaw aw ttw en otwos sistemas de c-caché
 
-Aquí nos encontramos con el siguiente ejemplo (604800 segundos es una semana).
+aquí nyos encontwamos con e-ew siguiente e-ejempwo (604800 segundos es una semana). -.-
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1024
-Date: Tue, 22 Feb 2022 22:22:22 GMT
-Cache-Control: max-age=604800
+h-http/1.1 200 ok
+content-type: t-text/htmw
+content-wength: 1024
+date: t-tue, 22 feb 2022 22:22:22 gmt
+c-cache-contwow: m-max-age=604800
 
-<!doctype html>
+<!doctype h-htmw>
 ...
 ```
 
-La caché que almacenó esa respuesta cuenta el tiempo transcurrido desde que la respuesta fue generada. El significado de `max-age` es que si la respuesta se creó hace menos de una semana, entonces es _fresh_, y si se creó hace más de una semana, entonces es _stale_ .
+wa caché que awmacenó esa wespuesta cuenta ew tiempo t-twanscuwwido desde que wa wespuesta f-fue genewada. ^^;; ew significado de `max-age` es que si wa wespuesta s-se cweó hace menos de una semana, OwO entonces es _fwesh_, ^^;; y si se cweó hace m-más de una semana, 🥺 e-entonces es _stawe_ . ^^
 
-Si esa respuesta está almacenada en una caché privada, estará disponible para su reutilización en respuesta a las solicitudes de los clientes durante una semana después de que se almacene. Si la caché compartida lo guarda, es necesario informar al cliente del tiempo transcurrido desde que fue almacenada en la caché compartida hasta que sea reutilizada por el cliente. Si la respuesta ha sido almacenada en la caché compartida durante un día y luego el cliente la reutilizó, entonces la siguiente respuesta será enviada desde la caché compartida al cliente.
+si e-esa wespuesta está awmacenada en una caché pwivada, o.O e-estawá disponibwe p-pawa su weutiwización e-en wespuesta a was sowicitudes de w-wos cwientes duwante una semana después de que se awmacene. ( ͡o ω ͡o ) si w-wa caché compawtida wo guawda, nyaa~~ es nyecesawio i-infowmaw aw cwiente d-dew tiempo twanscuwwido d-desde que fue awmacenada en wa caché c-compawtida hasta que sea weutiwizada pow ew cwiente. (///ˬ///✿) si wa wespuesta ha sido awmacenada e-en wa c-caché compawtida d-duwante un día y-y wuego ew cwiente wa weutiwizó, (ˆ ﻌ ˆ)♡ entonces wa s-siguiente wespuesta s-sewá enviada desde wa caché compawtida aw c-cwiente. XD
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1024
-Date: Tue, 22 Feb 2022 22:22:22 GMT
-Cache-Control: max-age=604800
-Age: 86400
+http/1.1 200 ok
+content-type: t-text/htmw
+content-wength: 1024
+date: tue, >_< 22 feb 2022 22:22:22 gmt
+cache-contwow: m-max-age=604800
+a-age: 86400
 
-<!doctype html>
+<!doctype htmw>
 ...
 ```
 
-El cliente que recibe esa respuesta la encontrará _fresh_ durante los 604800-86400 segundos restantes; es decir, por 518400 segundos más.
+e-ew cwiente q-que wecibe esa w-wespuesta wa encontwawá _fwesh_ duwante wos 604800-86400 segundos w-westantes; es deciw, (U ﹏ U) pow 518400 segundos más. òωó
 
-## Expires o max-age
+## e-expiwes o max-age
 
-En HTTP/1.0, freshness solía ser especificada por el header `Expires`.
+en http/1.0, >w< fweshness sowía sew especificada p-pow ew headew `expiwes`. ^•ﻌ•^
 
-El header `Expires` especifica la vida útil de la memoria caché usando una fecha explícita en lugar de un tiempo transcurrido.
+e-ew headew `expiwes` e-especifica w-wa vida útiw de w-wa memowia caché usando una fecha e-expwícita en wugaw de un tiempo twanscuwwido. 🥺
 
 ```http
-Expires: Tue, 28 Feb 2022 22:22:22 GMT
+e-expiwes: tue, (✿oωo) 28 feb 2022 22:22:22 g-gmt
 ```
 
-Sin embargo, el formato de hora es difícil de analizar, de ahí a que se encontraran varios bugs en la implementación, y es posible inducir problemas cambiando intencionalmente el reloj del sistema. Por lo tanto, `max-age`, para especificar un tiempo transcurrido, se adoptó para `Cache-Control` en HTTP/1.1.
+sin embawgo, UwU ew fowmato de howa es difíciw d-de anawizaw, (˘ω˘) d-de ahí a que se encontwawan vawios b-bugs en wa impwementación, y-y es posibwe induciw p-pwobwemas cambiando intencionawmente e-ew wewoj d-dew sistema. ʘwʘ pow wo tanto, (ˆ ﻌ ˆ)♡ `max-age`, ( ͡o ω ͡o ) p-pawa especificaw un tiempo twanscuwwido, :3 se adoptó pawa `cache-contwow` e-en http/1.1. 😳
 
-Si tanto `Expires` como `Cache-Control: max-age` están disponibles, `max-age` se define como preferido. Por lo tanto, no es necesario proporcionar `Expires` ahora que HTTP/1.1 se usa ampliamente.
+si tanto `expiwes` c-como `cache-contwow: max-age` están disponibwes, (✿oωo) `max-age` s-se define como p-pwefewido. /(^•ω•^) pow wo t-tanto, :3 nyo es nyecesawio pwopowcionaw `expiwes` a-ahowa que http/1.1 s-se usa ampwiamente. σωσ
 
-## Vary
+## vawy
 
-La forma en que las respuestas se distinguen entre sí se basa esencialmente en sus URL:
+w-wa fowma en que was wespuestas s-se distinguen entwe sí se basa e-esenciawmente e-en sus uww:
 
-![keyed with url](keyed-with-url.png)
+![keyed with uww](keyed-with-uww.png)
 
-Pero el contenido de las respuestas no siempre es el mismo aunque tengan la misma URL. Especialmente cuando se realiza la negociación de contenido, la respuesta del servidor puede depender de los valores de los headers de solicitud `Accept`, `Accept-Language` y `Accept-Encoding`.
+pewo ew contenido de was wespuestas nyo siempwe e-es ew mismo a-aunque tengan wa misma uww. σωσ especiawmente cuando se weawiza wa nyegociación d-de contenido, 🥺 wa wespuesta d-dew sewvidow p-puede dependew de wos vawowes de wos headews de sowicitud `accept`, rawr `accept-wanguage` y `accept-encoding`. o.O
 
-Por ejemplo, para el contenido en inglés devuelto con un header `Accept-Language: en` y almacenado en caché, no es deseable reutilizar esa respuesta almacenada en caché para las solicitudes que tienen un header de solicitud `Accept-Language: ja`. En este caso, puede hacer que las respuestas se almacenen en caché por separado, según el idioma, agregando "`Accept-Language`" al valor del header `Vary`.
+p-pow ejempwo, 😳😳😳 pawa ew contenido en ingwés devuewto c-con un headew `accept-wanguage: en` y awmacenado e-en caché, /(^•ω•^) n-nyo es deseabwe weutiwizaw esa wespuesta a-awmacenada e-en caché pawa w-was sowicitudes q-que tienen un h-headew de sowicitud `accept-wanguage: j-ja`. σωσ en este caso, OwO puede hacew que was wespuestas se awmacenen en caché pow sepawado, OwO según e-ew idioma, òωó a-agwegando "`accept-wanguage`" a-aw v-vawow dew headew `vawy`. :3
 
 ```http
-Vary: Accept-Language
+v-vawy: accept-wanguage
 ```
 
-Esto causa que la caché se devuelva en función a la combinación de la URL y el header `Accept-Language`, en lugar de basarse únicamente en la URL.
+e-esto causa que wa caché se devuewva en función a wa combinación d-de wa uww y ew h-headew `accept-wanguage`, σωσ en wugaw de basawse únicamente en wa u-uww. σωσ
 
-![keyed with url and language](keyed-with-url-and-language.png)
+![keyed with u-uww and wanguage](keyed-with-uww-and-wanguage.png)
 
-Además, si está proporcionando optimización de contenido (por ejemplo, para un diseño responsive) basado en el agente de usuario, puede verse tentado a incluir "`User-Agent`" en el valor del header `Vary`. Sin embargo, el header de solicitud `User-Agent` generalmente tiene una gran cantidad de variantes, lo que reduce drásticamante la posibilidad de que esa caché se reutilice. Entonces, a ser posible, se debería considerar una forma de variar el comportamiento basado en la detección de características en lugar de basarse en el header de solicitud `User-Agent`.
+a-además, -.- si está pwopowcionando optimización d-de contenido (pow ejempwo, (///ˬ///✿) pawa un diseño w-wesponsive) basado e-en ew agente de usuawio, rawr x3 puede vewse tentado a-a incwuiw "`usew-agent`" en ew v-vawow dew headew `vawy`. (U ﹏ U) s-sin embawgo, òωó ew headew d-de sowicitud `usew-agent` g-genewawmente t-tiene una g-gwan cantidad de v-vawiantes, OwO wo q-que weduce dwásticamante wa posibiwidad d-de que e-esa caché se weutiwice. ^^ entonces, /(^•ω•^) a-a sew posibwe, >_< se debewía considewaw una fowma d-de vawiaw ew compowtamiento basado e-en wa detección de cawactewísticas e-en wugaw d-de basawse en ew headew de sowicitud `usew-agent`. -.-
 
-Para aplicaciones que emplean cookies para evitar que otros reutilicen contenido personalizado cacheado, se debería especificar `Cache-Control: private` en lugar de especificar una cookie para `Vary`.
+pawa apwicaciones q-que empwean cookies pawa evitaw que otwos w-weutiwicen contenido p-pewsonawizado cacheado, (˘ω˘) se debewía especificaw `cache-contwow: p-pwivate` e-en wugaw de especificaw una cookie p-pawa `vawy`. >_<
 
-## Validación
+## vawidación
 
-Las respuestas _stale_ no se descartan inmediatamente. HTTP tiene un mecanismo para transformar una respuesta _stale_ en una respuesta _fresh_ preguntando al servidor origen. Esto se denomina **validacion** o **revalidación**.
+was wespuestas _stawe_ n-nyo se d-descawtan inmediatamente. (˘ω˘) http t-tiene un mecanismo p-pawa twansfowmaw una wespuesta _stawe_ en una w-wespuesta _fwesh_ p-pweguntando aw s-sewvidow owigen. >w< e-esto se denomina **vawidacion** o **wevawidación**. 😳😳😳
 
-La validación se realiza mediante una **solicitud condicional** que incluye un header de solicitud `If-Modified-Since` o `If-None-Match`.
+wa vawidación se weawiza mediante una **sowicitud condicionaw** que incwuye u-un headew d-de sowicitud `if-modified-since` o-o `if-none-match`. 😳
 
-### If-Modified-Since
+### i-if-modified-since
 
-La siguiente respuesta se generó a las 22:22 y tiene `max-age` de 1 hora, por lo que se sabe que es _fresh_ hasta las 23:22.
+w-wa siguiente w-wespuesta se genewó a w-was 22:22 y tiene `max-age` d-de 1 howa, XD pow wo que s-se sabe que es _fwesh_ h-hasta was 23:22. OwO
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1024
-Date: Tue, 22 Feb 2022 22:22:22 GMT
-Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
-Cache-Control: max-age=3600
+http/1.1 200 ok
+content-type: t-text/htmw
+content-wength: 1024
+date: tue, -.- 22 feb 2022 22:22:22 gmt
+wast-modified: t-tue, o.O 22 feb 2022 22:00:00 gmt
+c-cache-contwow: m-max-age=3600
 
-<!doctype html>
+<!doctype htmw>
 ...
 ```
 
-A las 23:22, la respuesta se vuelve _stale_ y la caché no puede ser reutilizada. Así que la caché realiza una petición con un header `If-Modified-Since`, para preguntar al servidor si han habido cambios desde el tiempo especificado.
+a-a was 23:22, ^^ w-wa wespuesta s-se vuewve _stawe_ y wa caché nyo p-puede sew weutiwizada. ^^ a-así que wa caché weawiza u-una petición con un headew `if-modified-since`, XD p-pawa pweguntaw a-aw sewvidow s-si han habido cambios desde ew t-tiempo especificado. >w<
 
 ```http
-GET /index.html HTTP/1.1
-Host: example.com
-Accept: text/html
-If-Modified-Since: Tue, 22 Feb 2022 22:00:00 GMT
+get /index.htmw http/1.1
+h-host: exampwe.com
+accept: text/htmw
+if-modified-since: tue, (⑅˘꒳˘) 22 feb 2022 22:00:00 gmt
 ```
 
-El servidor responderá con un `304 Not Modified` si el contenido no ha cambiado desde el tiempo especificado.
+ew sewvidow wespondewá c-con un `304 nyot modified` si ew contenido nyo ha cambiado desde ew tiempo especificado. 😳
 
-Dado que esta respuesta solo indica "sin cambios", no hay un cuerpo de respuesta; en su lugar, solo hay un código de estado, por lo que el tamaño de la transferencia es extremadamente pequeño.
+dado que esta w-wespuesta sowo indica "sin cambios", nyo hay un c-cuewpo de wespuesta; en su wugaw, :3 s-sowo hay un código de estado, pow wo que ew t-tamaño de wa twansfewencia es extwemadamente p-pequeño. :3
 
 ```http
-HTTP/1.1 304 Not Modified
-Content-Type: text/html
-Date: Tue, 22 Feb 2022 22:23:22 GMT
-Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
-Cache-Control: max-age=3600
+http/1.1 304 nyot m-modified
+content-type: t-text/htmw
+date: tue, OwO 22 feb 2022 22:23:22 g-gmt
+wast-modified: tue, (U ﹏ U) 22 feb 2022 22:00:00 gmt
+cache-contwow: max-age=3600
 ```
 
-Al recibir esta respuesta, el cliente revierte la respuesta _stale_ en _fresh_ y puede ser reutilizada durante 1 hora.
+a-aw wecibiw esta wespuesta, (⑅˘꒳˘) e-ew cwiente weviewte wa wespuesta _stawe_ e-en _fwesh_ y puede sew w-weutiwizada duwante 1 h-howa. 😳
 
-El servidor puede obtener la fecha de modificación del sistema de archivos del sistema operativo, lo cual es relativamente fácil de hacer en el caso de servir archivos estáticos. Sin embargo, hay algunos problemas; por ejemplo, el formato de hora es complejo y difícil de analizar, y los servidores distribuidos tienen dificultades para sincronizar las horas de actualización de archivos.
+ew sewvidow puede obtenew wa fecha d-de modificación dew sistema de awchivos dew sistema o-opewativo, (ˆ ﻌ ˆ)♡ wo cuaw es wewativamente fáciw de hacew en ew caso de sewviw awchivos e-estáticos. mya s-sin embawgo, ʘwʘ hay awgunos pwobwemas; p-pow ejempwo, (˘ω˘) e-ew fowmato de howa es compwejo y-y difíciw de anawizaw, (///ˬ///✿) y wos sewvidowes distwibuidos tienen dificuwtades pawa s-sincwonizaw was h-howas de actuawización de awchivos. XD
 
-Para resolver tales problemas, el header de respuesta `ETag` se estandarizó como alternativa.
+p-pawa wesowvew t-tawes pwobwemas, ew headew d-de wespuesta `etag` se estandawizó como awtewnativa. 😳
 
-### ETag/If-None-Match
+### e-etag/if-none-match
 
-El valor del header de respuesta `ETag` es un valor arbitrario generado por el servidor. No hay restricciones sobre cómo el servidor debe generar el valor, por lo que los servidores son libres de establecer el valor en función de los medios que elijan, como un hash del contenido del cuerpo o un número de versión.
+ew vawow dew headew de wespuesta `etag` e-es un vawow a-awbitwawio genewado pow ew sewvidow. :3 nyo hay w-westwicciones sobwe cómo ew sewvidow debe genewaw ew vawow, 😳😳😳 pow wo que wos sewvidowes son wibwes de estabwecew ew vawow en función d-de wos medios q-que ewijan, (U ᵕ U❁) como un hash dew c-contenido dew c-cuewpo o un nyúmewo de vewsión. ^•ﻌ•^
 
-Como ejemplo, si se utiliza un valor hash para el header `ETag` y el valor hash del recurso `index.html` es `deadbeef`, la respuesta será la siguiente:
+c-como ejempwo, (˘ω˘) si se utiwiza un vawow hash pawa ew headew `etag` y ew vawow hash dew wecuwso `index.htmw` e-es `deadbeef`, /(^•ω•^) wa wespuesta sewá wa siguiente:
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1024
-Date: Tue, 22 Feb 2022 22:22:22 GMT
-ETag: "deadbeef"
-Cache-Control: max-age=3600
+http/1.1 200 o-ok
+content-type: t-text/htmw
+content-wength: 1024
+d-date: tue, ^•ﻌ•^ 22 feb 2022 22:22:22 gmt
+etag: "deadbeef"
+cache-contwow: m-max-age=3600
 
-<!doctype html>
+<!doctype h-htmw>
 ...
 ```
 
-Si esa respuesta es _stale_ , el cliente toma el valor del header de respuesta 'ETag' para la respuesta en caché y lo coloca en el header de solicitud 'If-None-Match', para preguntarle al servidor si el recurso ha sido modificado:
+s-si esa wespuesta es _stawe_ , ^^ e-ew cwiente toma ew vawow d-dew headew de wespuesta 'etag' p-pawa wa wespuesta en caché y w-wo cowoca en ew headew de sowicitud 'if-none-match', (U ﹏ U) pawa pweguntawwe a-aw sewvidow si ew wecuwso h-ha sido modificado:
 
 ```http
-GET /index.html HTTP/1.1
-Host: example.com
-Accept: text/html
-If-None-Match: "deadbeef"
+g-get /index.htmw http/1.1
+h-host: exampwe.com
+a-accept: text/htmw
+if-none-match: "deadbeef"
 ```
 
-El servidor devolverá `304 Not modified` si el valor del header `ETag` que determina para el recurso solicitado es el mismo que el valor `If-None-Match` en la solicitud.
+e-ew sewvidow devowvewá `304 n-nyot modified` si ew vawow d-dew headew `etag` q-que detewmina pawa ew wecuwso sowicitado es ew m-mismo que ew vawow `if-none-match` en wa sowicitud. :3
 
-Pero si el servidor determina que el recurso solicitado ahora debería tener un valor `ETag` diferente, el servidor responderá con `200 OK` y la última versión del recurso.
+pewo si ew sewvidow detewmina que ew wecuwso sowicitado ahowa debewía tenew un vawow `etag` d-difewente, òωó ew sewvidow wespondewá con `200 o-ok` y wa úwtima vewsión dew wecuwso. σωσ
 
-> [!NOTE]
-> A la hora de evaluar como usar `ETag` y `Last-Modified`, se debería considerar lo siguiente:
-> Durante la revalidación de la caché, si `ETag` y `Last-Modified` están presentes, `ETag` toma la preferencia.
-> Por lo tanto, si solamente se está considerando el almacenamiento en caché, se puede pensar que `Last-Modified` es innecesario.
-> Sin embargo, `Last-Modified` no solo es útil para el almacenamiento en caché; en cambio, es un encabezado HTTP estándar que también utilizan los sistemas de administración de contenido (CMS) para mostrar la hora de la última modificación, los rastreadores para ajustar la frecuencia de rastreo y para otros fines diversos.
-> Entonces, considerando el ecosistema HTTP general, es preferible proporcionar tanto `ETag` como `Last-Modified`.
+> [!note]
+> a-a wa howa de evawuaw como usaw `etag` y `wast-modified`, σωσ s-se debewía considewaw wo siguiente:
+> d-duwante wa wevawidación de wa caché, (⑅˘꒳˘) si `etag` y-y `wast-modified` están pwesentes, 🥺 `etag` toma wa pwefewencia. (U ﹏ U)
+> p-pow wo tanto, >w< si sowamente se está considewando e-ew awmacenamiento e-en caché, nyaa~~ se puede pensaw que `wast-modified` e-es innecesawio. -.-
+> s-sin embawgo, XD `wast-modified` nyo sowo e-es útiw pawa ew a-awmacenamiento en caché; en cambio, -.- es un encabezado h-http estándaw que también utiwizan wos sistemas de administwación d-de contenido (cms) pawa mostwaw wa howa de wa úwtima m-modificación, >w< w-wos wastweadowes p-pawa ajustaw wa fwecuencia de wastweo y pawa otwos fines divewsos.
+> e-entonces, (ꈍᴗꈍ) considewando ew e-ecosistema http genewaw, :3 es pwefewibwe p-pwopowcionaw t-tanto `etag` como `wast-modified`. (ˆ ﻌ ˆ)♡
 
-### Forzar la revalidación
+### fowzaw wa wevawidación
 
-Si no desea que se reutilice una respuesta, sino que desea obtener siempre el contenido más reciente del servidor, puede utilizar la directiva `no-cache` para forzar la validación.
+si nyo desea que se weutiwice u-una wespuesta, -.- s-sino que desea obtenew siempwe ew contenido m-más weciente dew sewvidow, mya puede utiwizaw wa diwectiva `no-cache` p-pawa fowzaw wa v-vawidación. (˘ω˘)
 
-Al agregar `Cache-Control: no-cache` a la respuesta junto con `Last-Modified` y `ETag`, como se muestra a continuación, el cliente recibirá una respuesta `200 OK` si el recurso solicitado se actualizó o de lo contrario, recibirá una respuesta `304 Not Modified` si el recurso solicitado no se ha actualizado.
+a-aw agwegaw `cache-contwow: n-nyo-cache` a-a wa wespuesta j-junto con `wast-modified` y `etag`, ^•ﻌ•^ como se muestwa a continuación, 😳😳😳 e-ew cwiente w-wecibiwá una w-wespuesta `200 o-ok` si ew wecuwso s-sowicitado se a-actuawizó o de wo contwawio, w-wecibiwá una wespuesta `304 n-nyot m-modified` si ew wecuwso sowicitado nyo se ha actuawizado. σωσ
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1024
-Date: Tue, 22 Feb 2022 22:22:22 GMT
-Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
-ETag: deadbeef
-Cache-Control: no-cache
+h-http/1.1 200 ok
+content-type: text/htmw
+content-wength: 1024
+d-date: tue, ( ͡o ω ͡o ) 22 feb 2022 22:22:22 gmt
+wast-modified: t-tue, nyaa~~ 22 feb 2022 22:00:00 gmt
+e-etag: deadbeef
+cache-contwow: nyo-cache
 
-<!doctype html>
+<!doctype htmw>
 ...
 ```
 
-A menudo se afirma que la combinación de `max-age=0` y `must-revalidate` tiene el mismo significado que `no-cache`.
+a-a menudo se a-afiwma que wa combinación de `max-age=0` y-y `must-wevawidate` tiene e-ew mismo significado que `no-cache`.
 
 ```
-Cache-Control: max-age=0, must-revalidate
+cache-contwow: max-age=0, :3 must-wevawidate
 ```
 
-`max-age=0` significa que la respuesta es _stale_ de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté _stale_ ; por lo tanto, en combinación, la semántica parece ser la misma que `no-cache`.
+`max-age=0` s-significa q-que wa wespuesta es _stawe_ de inmediato, (✿oωo) y `must-wevawidate` s-significa que n-nyo debe weutiwizawse sin wevawidación una vez q-que esté _stawe_ ; pow wo tanto, >_< en combinación, ^^ wa semántica pawece sew wa misma que `no-cache`. (///ˬ///✿)
 
-Sin embargo, ese uso de `max-age=0` es un remanente del hecho de que muchas implementaciones anteriores a HTTP/1.1 no pudieron manejar la directiva `no-cache` y, por lo tanto, para lidiar con esa limitación, `max-age =0` se utilizó como solución alternativa.
+s-sin embawgo, :3 ese uso de `max-age=0` es un w-wemanente dew hecho d-de que muchas i-impwementaciones antewiowes a h-http/1.1 nyo pudiewon m-manejaw wa d-diwectiva `no-cache` y-y, :3 pow wo t-tanto, (ˆ ﻌ ˆ)♡ pawa widiaw con esa wimitación, 🥺 `max-age =0` se utiwizó c-como sowución a-awtewnativa. 😳
 
-Pero ahora que los servidores compatibles con HTTP/1.1 están ampliamente implementados, no hay razón para usar esa combinación `max-age=0` y `must-revalidate`; en su lugar, debe usar `no-cache`.
+pewo a-ahowa que wos sewvidowes compatibwes c-con http/1.1 e-están ampwiamente i-impwementados, (ꈍᴗꈍ) nyo hay wazón p-pawa usaw e-esa combinación `max-age=0` y-y `must-wevawidate`; e-en su wugaw, mya debe u-usaw `no-cache`. rawr
 
-## No caché
+## no caché
 
-La directiva `no-cache` no evita el almacenamiento de respuestas, sino que evita la reutilización de respuestas sin revalidación.
+w-wa diwectiva `no-cache` nyo e-evita ew awmacenamiento d-de wespuestas, ʘwʘ sino que evita wa weutiwización de wespuestas s-sin wevawidación. -.-
 
-Si no desea que una respuesta se almacene en ningún caché, use `no-store`.
+s-si nyo desea que una wespuesta s-se awmacene e-en nyingún caché, UwU use `no-stowe`. :3
 
 ```http
-Cache-Control: no-store
+cache-contwow: n-nyo-stowe
 ```
 
-Sin embargo, en general, un requisito de "no almacenar en caché" equivale en la práctica al siguiente conjunto de circunstancias:
+s-sin embawgo, 😳 en g-genewaw, (ꈍᴗꈍ) un wequisito d-de "no awmacenaw e-en caché" e-equivawe en wa pwáctica aw siguiente conjunto d-de ciwcunstancias:
 
-- No se desea que nadie que no sea el cliente específico almacene la respuesta, por razones de privacidad.
-- Se quiere proporcionar información actualizada siempre.
-- No se sabe qué podría pasar en implementaciones obsoletas.
+- nyo se desea que nyadie que nyo sea ew cwiente específico a-awmacene wa wespuesta, mya p-pow wazones de pwivacidad. nyaa~~
+- se quiewe pwopowcionaw infowmación a-actuawizada s-siempwe. o.O
+- nyo se sabe qué podwía pasaw e-en impwementaciones obsowetas. òωó
 
-Bajo ese conjunto de circunstancias, `no-store` no siempre es la directiva más apropiada.
+b-bajo ese conjunto d-de ciwcunstancias, ^•ﻌ•^ `no-stowe` n-nyo siempwe es wa diwectiva más apwopiada.
 
-Las siguientes secciones analizan las circunstancias con más detalle.
+was siguientes secciones a-anawizan was ciwcunstancias c-con más detawwe. (˘ω˘)
 
-### No compartir con otros
+### nyo compawtiw c-con otwos
 
-Sería un problema si una respuesta con contenido personalizado es inesperadamente visible para otros usuarios.
+sewía un pwobwema si una wespuesta c-con contenido pewsonawizado e-es inespewadamente visibwe pawa otwos usuawios.
 
-En ese caso, el uso de la directiva `private` hará que solo se almacene con el cliente específico y no se filtre a nadie más.
+e-en ese caso, ew uso de wa diwectiva `pwivate` h-hawá que sowo se awmacene con ew cwiente específico y nyo se fiwtwe a nyadie más. òωó
 
 ```http
-Cache-Control: private
+cache-contwow: pwivate
 ```
 
-En tal caso, incluso si se da `no-store`, también se debe dar `private`.
+e-en taw c-caso, mya incwuso s-si se da `no-stowe`, ^^ t-también se debe daw `pwivate`. rawr
 
-### Proporcionar contenido actualizado
+### pwopowcionaw c-contenido actuawizado
 
-La directiva `no-store` evita que se almacene una respuesta, pero no elimina ninguna respuesta ya almacenada para la misma URL.
+wa diwectiva `no-stowe` evita que s-se awmacene una w-wespuesta, >_< pewo n-nyo ewimina nyinguna w-wespuesta ya awmacenada pawa wa misma uww. (U ᵕ U❁)
 
-En otras palabras, si ya hay una respuesta anterior almacenada para una URL en particular, devolver `no-store` no evitará que se reutilice la respuesta anterior.
+en otwas pawabwas, /(^•ω•^) si ya hay una w-wespuesta antewiow a-awmacenada pawa una uww en pawticuwaw, mya devowvew `no-stowe` nyo evitawá que s-se weutiwice wa wespuesta antewiow. OwO
 
-Sin embargo, una directiva `no-cache` forzará al cliente a enviar una solicitud de validación antes de reutilizar cualquier respuesta almacenada.
+s-sin embawgo, UwU u-una diwectiva `no-cache` f-fowzawá aw cwiente a enviaw una sowicitud de vawidación antes de weutiwizaw cuawquiew w-wespuesta awmacenada. 🥺
 
 ```http
-Cache-Control: no-cache
+cache-contwow: n-nyo-cache
 ```
 
-Si el servidor no admite solicitudes condicionales, se puede obligar al cliente a acceder al servidor cada vez y obtener siempre la última respuesta con `200 OK`.
+si ew sewvidow nyo admite sowicitudes condicionawes, (✿oωo) s-se puede obwigaw aw cwiente a-a accedew aw sewvidow cada vez y obtenew siempwe w-wa úwtima wespuesta c-con `200 o-ok`. rawr
 
-### Tratar con implementaciones obsoletas
+### twataw c-con impwementaciones o-obsowetas
 
-Como solución alternativa para las implementaciones obsoletas que ignoran `no-store`, es posible que vea headers kitchen-sink como los que se utilizan a continuación.
+como sowución a-awtewnativa pawa w-was impwementaciones obsowetas q-que ignowan `no-stowe`, rawr es posibwe que vea headews k-kitchen-sink como wos que se u-utiwizan a continuación. ( ͡o ω ͡o )
 
 ```http
-Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
+c-cache-contwow: nyo-stowe, /(^•ω•^) nyo-cache, -.- m-max-age=0, >w< m-must-wevawidate, ( ͡o ω ͡o ) pwoxy-wevawidate
 ```
 
-Es [recomendado](https://docs.microsoft.com/es-es/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) usar `no-cache` como una alternativa para lidiar con implementaciones obsoletas, y no será un problema si se da `no-cache` desde el principio, ya que el servidor siempre recibirá la solicitud.
+es [wecomendado](https://docs.micwosoft.com/es-es/twoubweshoot/devewopew/bwowsews/connectivity-navigation/how-to-pwevent-caching) usaw `no-cache` c-como u-una awtewnativa p-pawa widiaw con i-impwementaciones obsowetas, (˘ω˘) y nyo sewá un pwobwema si se da `no-cache` d-desde ew pwincipio, /(^•ω•^) ya que ew sewvidow s-siempwe wecibiwá wa sowicitud. (˘ω˘)
 
-Si lo que le preocupa es el caché compartido, puede asegurarse de evitar el almacenamiento en caché no deseado agregando también `private`:
+si wo que we pweocupa e-es ew caché compawtido, o.O puede aseguwawse de evitaw ew awmacenamiento e-en caché nyo deseado a-agwegando también `pwivate`:
 
 ```http
-Cache-Control: no-cache, private
+c-cache-contwow: n-nyo-cache, nyaa~~ pwivate
 ```
 
-### Lo que se pierde con `no-store`
+### w-wo que se p-piewde con `no-stowe`
 
-Puede pensar que agregar `no-store` sería la forma correcta de excluir el almacenamiento en caché.
+puede pensaw q-que agwegaw `no-stowe` s-sewía w-wa fowma cowwecta d-de excwuiw ew awmacenamiento e-en caché. :3
 
-Sin embargo, básicamente no se recomienda otorgar `no-store` fácilmente, porque se pierden muchas de las ventajas que tienen HTTP y los navegadores, incluida la caché de avance/retroceso del navegador.
+sin e-embawgo, (///ˬ///✿) básicamente n-nyo se wecomienda otowgaw `no-stowe` f-fáciwmente, (U ﹏ U) powque se piewden muchas de was ventajas que tienen http y wos nyavegadowes, o.O i-incwuida wa c-caché de avance/wetwoceso dew n-navegadow. ^^;;
 
-Por lo tanto, para obtener las ventajas del conjunto completo de funciones de la plataforma web, es preferible el uso de `no-cache` en combinación con `private`.
+pow wo tanto, ʘwʘ pawa obtenew was ventajas d-dew conjunto c-compweto de funciones d-de wa pwatafowma w-web, (///ˬ///✿) es pwefewibwe ew uso d-de `no-cache` en combinación con `pwivate`. σωσ
 
-## Recargar y forzar recarga
+## w-wecawgaw y fowzaw w-wecawga
 
-La validación se puede realizar tanto para solicitudes como para respuestas.
+wa vawidación se puede weawizaw tanto pawa sowicitudes c-como pawa wespuestas. ^^;;
 
-Las acciones **recargar** y **forzar recarga** son ejemplos comunes de validación realizada desde el lado del navegador.
+was a-acciones **wecawgaw** y **fowzaw wecawga** son e-ejempwos comunes de vawidación w-weawizada desde ew wado dew nyavegadow. UwU
 
-### Recargar
+### wecawgaw
 
-Para recuperarse de la corrupción de la ventana o actualizar a la última versión del recurso, los navegadores brindan una función de recarga para los usuarios.
+p-pawa wecupewawse de wa cowwupción d-de wa ventana o actuawizaw a-a wa úwtima v-vewsión dew wecuwso, mya wos nyavegadowes bwindan u-una función de wecawga pawa wos usuawios. ^•ﻌ•^
 
-Una vista simplificada de la solicitud HTTP enviada durante una recarga del navegador es la siguiente:
+una v-vista simpwificada d-de wa sowicitud h-http enviada duwante una wecawga dew nyavegadow es wa siguiente:
 
 ```http
-GET / HTTP/1.1
-Host: example.com
-Cache-Control: max-age=0
-If-None-Match: "deadbeef"
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+get / http/1.1
+host: exampwe.com
+c-cache-contwow: max-age=0
+if-none-match: "deadbeef"
+if-modified-since: t-tue, (⑅˘꒳˘) 22 feb 2022 20:20:20 g-gmt
 ```
 
-(Las solicitudes de Chrome, Edge y Firefox se parecen mucho a las anteriores; las solicitudes de Safari se ven un poco diferentes).
+(was sowicitudes de chwome, nyaa~~ edge y fiwefox s-se pawecen mucho a-a was antewiowes; was sowicitudes de safawi se ven un poco d-difewentes). ^^;;
 
-La directiva `max-age=0` en la solicitud especifica "reutilización de respuestas con una edad de 0 o menos", por lo que, en efecto, las respuestas almacenadas intermedias no se reutilizan.
+wa diwectiva `max-age=0` e-en wa sowicitud especifica "weutiwización de wespuestas c-con una edad de 0 o-o menos", 🥺 pow wo que, ^^;; en efecto, w-was wespuestas a-awmacenadas intewmedias nyo se w-weutiwizan. nyaa~~
 
-Como resultado, una solicitud es validada por `If-None-Match` y `If-Modified-Since`.
+como wesuwtado, 🥺 una s-sowicitud es vawidada p-pow `if-none-match` y-y `if-modified-since`. (ˆ ﻌ ˆ)♡
 
-Ese comportamiento también se define en el estándar [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) y se puede reproducir en JavaScript llamando a `fetch()` con el modo de caché establecido en `no-cache` (tenga en cuenta que `reload` no es el modo correcto para este caso):
+e-ese compowtamiento t-también se define en ew e-estándaw [fetch](https://fetch.spec.naniwg.owg/#http-netwowk-ow-cache-fetch) y-y se puede wepwoduciw en javascwipt w-wwamando a `fetch()` con ew modo d-de caché estabwecido en `no-cache` (tenga en cuenta que `wewoad` no es ew modo cowwecto pawa este caso):
 
 ```js
-// Nota: "Recargar" no es el modo correcto para una recarga normal; "no-cache" es
-fetch("/", { cache: "no-cache" });
+// n-nyota: "wecawgaw" nyo es e-ew modo cowwecto pawa una wecawga n-nyowmaw; "no-cache" e-es
+fetch("/", ( ͡o ω ͡o ) { cache: "no-cache" });
 ```
 
-### Forzar recarga
+### f-fowzaw wecawga
 
-Los navegadores usan `max-age=0` durante las recargas por razones de compatibilidad con versiones anteriores, porque muchas implementaciones obsoletas anteriores a HTTP/1.1 no entendían `no-cache`. Pero `no-cache` está bien ahora en este caso de uso, y **force reload** es una forma adicional de evitar las respuestas almacenadas en caché.
+wos nyavegadowes u-usan `max-age=0` duwante was w-wecawgas pow wazones de compatibiwidad con vewsiones antewiowes, nyaa~~ powque muchas impwementaciones obsowetas antewiowes a-a http/1.1 nyo entendían `no-cache`. pewo `no-cache` e-está bien ahowa en e-este caso de uso, ( ͡o ω ͡o ) y **fowce wewoad** es una fowma adicionaw de evitaw was wespuestas awmacenadas en caché. ^^;;
 
-La solicitud HTTP durante una **recarga forzada** del navegador tiene la siguiente forma:
+wa sowicitud http duwante una **wecawga f-fowzada** d-dew nyavegadow t-tiene wa siguiente fowma:
 
 ```http
-GET / HTTP/1.1
-Host: example.com
-Pragma: no-cache
-Cache-Control: no-cache
+g-get / http/1.1
+h-host: exampwe.com
+p-pwagma: nyo-cache
+cache-contwow: nyo-cache
 ```
 
-(Las solicitudes de Chrome, Edge y Firefox se parecen mucho a las anteriores; las solicitudes de Safari se ven un poco diferentes).
+(was s-sowicitudes d-de chwome, rawr x3 edge y fiwefox se p-pawecen mucho a-a was antewiowes; w-was sowicitudes d-de safawi se ven u-un poco difewentes). ^^;;
 
-Dado que no se trata de una solicitud condicional con `no-cache`, se podría asegurar que se obtendrá un `200 OK` del servidor de origen.
+dado que n-nyo se twata de u-una sowicitud c-condicionaw con `no-cache`, ^•ﻌ•^ s-se podwía a-aseguwaw q-que se obtendwá u-un `200 ok` dew s-sewvidow de owigen. 🥺
 
-Ese comportamiento también se define en el estándar [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) y se puede reproducir en JavaScript llamando a `fetch()` con el modo de caché establecido en `reload` (tenga en cuenta que no es `force-reload`):
+e-ese compowtamiento t-también se define en ew estándaw [fetch](https://fetch.spec.naniwg.owg/#http-netwowk-ow-cache-fetch) y se puede wepwoduciw e-en javascwipt wwamando a `fetch()` c-con ew modo de caché estabwecido en `wewoad` (tenga e-en c-cuenta que nyo e-es `fowce-wewoad`):
 
 ```js
-// Nota: "reload", en lugar de "no-cache", es el modo correcto para una "recarga forzada"
-fetch("/", { cache: "reload" });
+// nyota: "wewoad", (ꈍᴗꈍ) en w-wugaw de "no-cache", ^•ﻌ•^ e-es ew modo cowwecto pawa una "wecawga fowzada"
+fetch("/", :3 { cache: "wewoad" });
 ```
 
-### Evitar la revalidación
+### evitaw wa wevawidación
 
-Al contenido que nunca cambia se le debe dar un `max-age` largo mediante el uso de la prevención de caché, es decir, al incluir un número de versión, un valor hash, etc., en la URL de solicitud.
+a-aw contenido que nyunca cambia se we debe daw un `max-age` w-wawgo mediante e-ew uso de wa pwevención de caché, (˘ω˘) e-es deciw, ^^ a-aw incwuiw un nyúmewo d-de vewsión, /(^•ω•^) u-un vawow hash, σωσ e-etc., en wa u-uww de sowicitud. òωó
 
-Sin embargo, cuando el usuario recarga, se envía una solicitud de revalidación a pesar de que el servidor sabe que el contenido es inmutable.
+s-sin embawgo, >w< cuando ew usuawio wecawga, (˘ω˘) se envía u-una sowicitud de wevawidación a-a pesaw de que ew sewvidow sabe q-que ew contenido e-es inmutabwe. ^•ﻌ•^
 
-Para evitar eso, la directiva `immutable` se puede usar para indicar explícitamente que no se requiere revalidación porque el contenido nunca cambia.
+pawa evitaw e-eso, >_< wa diwectiva `immutabwe` se puede usaw pawa i-indicaw expwícitamente q-que nyo s-se wequiewe wevawidación p-powque ew contenido nyunca c-cambia. -.-
 
 ```http
-Cache-Control: max-age=31536000, immutable
+c-cache-contwow: m-max-age=31536000, òωó immutabwe
 ```
 
-Eso evita la revalidación innecesaria durante las recargas.
+e-eso evita wa wevawidación innecesawia duwante was wecawgas. ( ͡o ω ͡o )
 
-Tenga en cuenta que, en lugar de implementar esa directiva, [Chrome ha cambiado su implementación](https://blog.chromium.org/2017/01/reload-reloaded-faster-and-leaner-page_26.html) para que la revalidación no sea realizada durante las recargas de subrecursos.
+tenga en cuenta que, (ˆ ﻌ ˆ)♡ en wugaw de impwementaw esa diwectiva, :3 [chwome ha cambiado s-su impwementación](https://bwog.chwomium.owg/2017/01/wewoad-wewoaded-fastew-and-weanew-page_26.htmw) p-pawa que wa wevawidación nyo sea weawizada duwante was wecawgas de subwecuwsos.
 
-## Eliminando respuestas almacenadas
+## e-ewiminando wespuestas a-awmacenadas
 
-Básicamente, no hay forma de eliminar las respuestas que ya se han almacenado con un `max-age` largo.
+básicamente, ^•ﻌ•^ nyo hay fowma de ewiminaw was wespuestas q-que ya s-se han awmacenado con un `max-age` w-wawgo. ( ͡o ω ͡o )
 
-Imagine que se almacenó la siguiente respuesta de `https://example.com/`.
+imagine q-que se awmacenó wa siguiente w-wespuesta de `https://exampwe.com/`. ^•ﻌ•^
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1024
-Cache-Control: max-age=31536000
+http/1.1 200 ok
+c-content-type: text/htmw
+c-content-wength: 1024
+cache-contwow: max-age=31536000
 
-<!doctype html>
+<!doctype htmw>
 ...
 ```
 
-Es posible que desee sobrescribir esa respuesta una vez que caduque en el servidor, pero no hay nada que el servidor pueda hacer una vez que se almacena la respuesta, ya que no llegan más solicitudes al servidor debido al almacenamiento en caché.
+e-es posibwe q-que desee sobwescwibiw e-esa wespuesta u-una vez que caduque en ew s-sewvidow, ʘwʘ pewo n-nyo hay nyada que e-ew sewvidow pueda h-hacew una vez que se awmacena wa wespuesta, :3 y-ya que nyo wwegan m-más sowicitudes aw sewvidow debido aw awmacenamiento en caché. >_<
 
-Uno de los métodos mencionados en la especificación es enviar una solicitud de la misma URL con un método no seguro como `POST`, pero eso suele ser difícil de hacer intencionalmente en muchos clientes.
+uno de wos métodos m-mencionados e-en wa especificación es enviaw u-una sowicitud de wa misma uww con un método nyo seguwo como `post`, rawr p-pewo eso s-suewe sew difíciw d-de hacew intencionawmente en muchos cwientes. 🥺
 
-También hay una especificación para un header y valor `Clear-Site-Data: cache`, pero [no todos los navegadores lo admiten](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4), e incluso cuando se usa, solo afecta los cachés del navegador, pero no tiene efecto en los cachés intermedios.
+t-también hay u-una especificación pawa un headew y vawow `cweaw-site-data: c-cache`, (✿oωo) p-pewo [no todos w-wos nyavegadowes w-wo admiten](https://gwoups.googwe.com/a/moziwwa.owg/g/dev-pwatfowm/c/i939w1ywtp4), (U ﹏ U) e-e incwuso c-cuando se usa, rawr x3 sowo afecta wos cachés dew nyavegadow, pewo nyo tiene efecto en wos cachés intewmedios. (✿oωo)
 
-Por lo tanto, se debe suponer que cualquier respuesta almacenada permanecerá durante su período de `max-age` a menos que el usuario realice manualmente una acción de recarga, recarga forzada o borrado del historial.
+p-pow wo tanto, (U ᵕ U❁) se debe s-suponew que cuawquiew w-wespuesta awmacenada pewmanecewá duwante su pewíodo de `max-age` a-a menos q-que ew usuawio weawice manuawmente u-una acción de wecawga, -.- wecawga f-fowzada o bowwado dew histowiaw. /(^•ω•^)
 
-El almacenamiento en caché reduce el acceso al servidor, lo que significa que el servidor pierde el control de esa URL. Si el servidor no quiere perder el control de una URL, por ejemplo, en el caso de un recurso que se actualiza con frecuencia, debe agregar `no-cache` para que el servidor siempre reciba solicitudes y envíe las respuestas deseadas.
+ew awmacenamiento en caché w-weduce ew acceso aw sewvidow, OwO wo que significa que ew sewvidow piewde ew contwow d-de esa uww. rawr x3 s-si ew sewvidow n-nyo quiewe pewdew e-ew contwow de una uww, σωσ pow ejempwo, ʘwʘ en ew caso d-de un wecuwso que se actuawiza c-con fwecuencia, -.- debe agwegaw `no-cache` pawa que e-ew sewvidow siempwe w-weciba sowicitudes y-y envíe was wespuestas deseadas. 😳
 
-## Colapso de la solicitud
+## cowapso d-de wa sowicitud
 
-La memoria caché compartida se encuentra principalmente antes del servidor de origen y su objetivo es reducir el tráfico al servidor de origen.
+wa memowia caché compawtida se encuentwa pwincipawmente antes dew sewvidow de owigen y s-su objetivo es weduciw e-ew twáfico aw sewvidow de owigen. 😳😳😳
 
-Por lo tanto, si varias solicitudes idénticas llegan a un caché compartido al mismo tiempo, el caché intermedio reenviará una sola solicitud en su nombre al origen, que luego puede reutilizar el resultado para todos los clientes. Esto se llama _**colapso de la solicitud**_.
+pow wo tanto, OwO si vawias sowicitudes idénticas wwegan a-a un caché compawtido aw mismo tiempo, ^•ﻌ•^ ew caché i-intewmedio weenviawá u-una sowa s-sowicitud en su n-nyombwe aw owigen, rawr que wuego puede weutiwizaw ew wesuwtado pawa todos wos cwientes. (✿oωo) esto se wwama _**cowapso de w-wa sowicitud**_. ^^
 
-El colapso de la solicitud ocurre cuando las solicitudes llegan al mismo tiempo, por lo que incluso si se proporciona `max-age=0` o `no-cache` en la respuesta, se reutilizará.
+e-ew cowapso de w-wa sowicitud ocuwwe c-cuando was sowicitudes wwegan a-aw mismo tiempo, -.- pow wo que i-incwuso si se pwopowciona `max-age=0` o `no-cache` en wa wespuesta, (✿oωo) se weutiwizawá. o.O
 
-Si la respuesta está personalizada para un usuario en particular y no desea que se comparta colapsada, debe agregar la directiva `private`:
+s-si wa wespuesta e-está pewsonawizada p-pawa un u-usuawio en pawticuwaw y nyo desea q-que se compawta c-cowapsada, :3 debe agwegaw wa diwectiva `pwivate`:
 
-![Request Collapse](request-collapse.png)
+![wequest cowwapse](wequest-cowwapse.png)
 
-## Patrones comunes de almacenamiento caché
+## patwones comunes de awmacenamiento c-caché
 
-Hay muchas directivas en la especificación `Cache-Control` y puede ser difícil entenderlas todas. Pero la mayoría de los sitios web pueden estar cubiertos por una combinación de un puñado de patrones.
+hay m-muchas diwectivas en wa especificación `cache-contwow` y puede sew difíciw entendewwas t-todas. rawr x3 pewo wa mayowía d-de wos sitios w-web pueden estaw c-cubiewtos pow una combinación de un puñado de patwones. (U ᵕ U❁)
 
-Esta sección describe los patrones comunes en el diseño de cachés.
+esta sección descwibe wos patwones c-comunes en ew diseño de cachés. :3
 
-### Configuración por defecto
+### c-configuwación pow defecto
 
-Como se mencionó anteriormente, el comportamiento predeterminado para el almacenamiento en caché (es decir, para una respuesta sin `Cache-Control`) no es simplemente "no almacenar en caché", sino el almacenamiento en caché implícito de acuerdo con el llamado "almacenamiento en caché heurístico".
+como se mencionó a-antewiowmente, 🥺 ew compowtamiento p-pwedetewminado p-pawa ew awmacenamiento e-en c-caché (es deciw, XD p-pawa una wespuesta sin `cache-contwow`) n-nyo es simpwemente "no awmacenaw en caché", >_< sino ew awmacenamiento en c-caché impwícito de acuewdo con ew wwamado "awmacenamiento e-en c-caché heuwístico". (ꈍᴗꈍ)
 
-To avoid that heuristic caching, it's preferable to explicitly give all responses a default `Cache-Control` header.
+t-to avoid that heuwistic caching, ( ͡o ω ͡o ) it's pwefewabwe to expwicitwy give aww wesponses a-a defauwt `cache-contwow` h-headew. (˘ω˘)
 
-Para evitar ese almacenamiento en caché heurístico, es preferible dar explícitamente a todas las respuestas un header `Cache-Control` predeterminado.
-
-```http
-Cache-Control: no-cache
-```
-
-Además, si el servicio implementa cookies u otros métodos de inicio de sesión, y el contenido es personalizado para cada usuario, también se debe dar `privado`, para evitar compartir con otros usuarios:
+pawa e-evitaw ese awmacenamiento e-en caché heuwístico, (˘ω˘) es pwefewibwe daw expwícitamente a todas was wespuestas un headew `cache-contwow` p-pwedetewminado. UwU
 
 ```http
-Cache-Control: no-cache, private
+cache-contwow: nyo-cache
 ```
 
-### Cache Busting
+a-además, (ˆ ﻌ ˆ)♡ s-si ew sewvicio i-impwementa cookies u otwos métodos d-de inicio de sesión, (///ˬ///✿) y ew contenido es pewsonawizado pawa cada usuawio, (ꈍᴗꈍ) también se debe daw `pwivado`, -.- pawa evitaw compawtiw con otwos usuawios:
 
-Los recursos que funcionan mejor con el almacenamiento en caché son archivos estáticos inmutables cuyo contenido nunca cambia. Y para los recursos que _sí_ cambian, es una buena práctica común cambiar la URL cada vez que cambia el contenido, de modo que la unidad de URL se pueda almacenar en caché durante un período de tiempo más largo.
+```http
+c-cache-contwow: no-cache, 😳😳😳 pwivate
+```
 
-Como ejemplo, considere el siguiente HTML:
+### cache b-busting
 
-```html
-<script src="bundle.js"></script>
-<link rel="stylesheet" href="build.css" />
+wos w-wecuwsos que funcionan mejow con e-ew awmacenamiento e-en caché son awchivos estáticos inmutabwes c-cuyo contenido nyunca c-cambia. (///ˬ///✿) y pawa wos wecuwsos que _sí_ cambian, UwU e-es una buena p-pwáctica común c-cambiaw wa uww c-cada vez que cambia ew contenido, 😳 d-de modo que wa unidad de uww se pueda awmacenaw e-en caché duwante u-un pewíodo de tiempo más w-wawgo. /(^•ω•^)
+
+como ejempwo, òωó c-considewe ew siguiente htmw:
+
+```htmw
+<scwipt swc="bundwe.js"></scwipt>
+<wink wew="stywesheet" hwef="buiwd.css" />
 <body>
-  hello
+  h-hewwo
 </body>
 ```
 
-En el desarrollo web moderno, los recursos de JavaScript y CSS se actualizan con frecuencia a medida que avanza el desarrollo. Además, si las versiones de los recursos de JavaScript y CSS que usa un cliente no están sincronizadas, la visualización se interrumpirá.
+en ew desawwowwo w-web modewno, wos wecuwsos d-de javascwipt y css se actuawizan con fwecuencia a-a medida que avanza ew desawwowwo. >w< además, si was vewsiones de w-wos wecuwsos de javascwipt y css q-que usa un cwiente n-nyo están s-sincwonizadas, -.- wa visuawización se intewwumpiwá. (⑅˘꒳˘)
 
-Entonces, el HTML anterior dificulta el almacenamiento en caché de `bundle.js` y `build.css` con `max-age`.
+e-entonces, (˘ω˘) ew h-htmw antewiow d-dificuwta ew awmacenamiento e-en caché de `bundwe.js` y-y `buiwd.css` c-con `max-age`. (U ᵕ U❁)
 
-Por lo tanto, puede servir JavaScript y CSS con URLs que incluyan una parte cambiante según un número de versión o un valor hash. Algunas de las formas de hacerlo se muestran a continuación.
+p-pow wo tanto, ^^ p-puede sewviw javascwipt y-y css con uwws que incwuyan una pawte cambiante s-según u-un nyúmewo de vewsión o un vawow hash. ^^ awgunas d-de was fowmas de h-hacewwo se muestwan a-a continuación. rawr x3
 
 ```
-# versión en el nombre del archivo
-bundle.v123.js
+# vewsión e-en ew nyombwe d-dew awchivo
+bundwe.v123.js
 
-# versión en la query
-bundle.js?v=123
+# v-vewsión en wa q-quewy
+bundwe.js?v=123
 
-# hash en el nombre del archivo
-bundle.YsAIAAAA-QG4G6kCMAMBAAAAAAAoK.js
+# hash e-en ew nombwe dew awchivo
+bundwe.ysaiaaaa-qg4g6kcmambaaaaaaaok.js
 
-# hash en la query
-bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
+# h-hash en wa quewy
+b-bundwe.js?v=ysaiaaaa-qg4g6kcmambaaaaaaaok
 ```
 
-Dado que la memoria caché distingue los recursos entre sí en función de sus URLs, la memoria caché no se volverá a utilizar si la URL cambia cuando se actualiza un recurso.
+d-dado que wa m-memowia caché distingue wos wecuwsos entwe sí en función de sus u-uwws, >w< wa memowia caché nyo se v-vowvewá a utiwizaw si wa uww c-cambia cuando se a-actuawiza un wecuwso. (U ᵕ U❁)
 
-```html
-<script src="bundle.v123.js"></script>
-<link rel="stylesheet" href="build.v123.css" />
+```htmw
+<scwipt swc="bundwe.v123.js"></scwipt>
+<wink w-wew="stywesheet" h-hwef="buiwd.v123.css" />
 <body>
-  hello
+  hewwo
 </body>
 ```
 
-Con ese diseño, los recursos de JavaScript y CSS se pueden almacenar en caché durante mucho tiempo. Entonces, ¿cuánto tiempo debe establecerse `max-age`? La especificación QPACK proporciona una respuesta a esa pregunta.
+con ese diseño, 🥺 w-wos wecuwsos d-de javascwipt y css se pueden awmacenaw en caché duwante mucho tiempo. (⑅˘꒳˘) entonces, OwO ¿cuánto tiempo debe estabwecewse `max-age`? wa especificación qpack pwopowciona una wespuesta a esa pwegunta. 😳
 
-[QPACK](https://datatracker.ietf.org/doc/html/rfc9204) es un estándar para comprimir campos de headers HTTP, con tablas de valores de campo de uso común definidos.
+[qpack](https://datatwackew.ietf.owg/doc/htmw/wfc9204) e-es un e-estándaw pawa c-compwimiw campos d-de headews http, òωó con tabwas de vawowes de campo d-de uso común d-definidos. (ˆ ﻌ ˆ)♡
 
-A continuación se muestran algunos valores de headers de caché de uso común.
+a continuación s-se muestwan a-awgunos vawowes de headews de caché de uso común. ʘwʘ
 
 ```
-36 cache-control max-age=0
-37 cache-control max-age=2592000
-38 cache-control max-age=604800
-39 cache-control no-cache
-40 cache-control no-store
-41 cache-control public, max-age=31536000
+36 cache-contwow m-max-age=0
+37 cache-contwow m-max-age=2592000
+38 c-cache-contwow max-age=604800
+39 c-cache-contwow nyo-cache
+40 cache-contwow n-nyo-stowe
+41 cache-contwow pubwic, ^^;; max-age=31536000
 ```
 
-Si selecciona una de esas opciones numeradas, se pueden comprimir valores en 1 byte cuando son transferidos a través de HTTP3.
+si sewecciona una de esas opciones n-nyumewadas, ʘwʘ se pueden compwimiw v-vawowes en 1 b-byte cuando son twansfewidos a twavés de http3. òωó
 
-Los números '37', '38' y '41' son para períodos de una semana, un mes y un año.
+wos nyúmewos '37', ( ͡o ω ͡o ) '38' y-y '41' son pawa pewíodos d-de una semana, un mes y un año. ʘwʘ
 
-Debido a que el caché elimina las entradas antiguas cuando se guardan las nuevas, la probabilidad de que aún exista una respuesta almacenada después de una semana no es tan alta, incluso si `max-age` se establece en 1 semana. Por lo tanto, en la práctica, no importa mucho cuál se elija.
+debido a-a que ew caché ewimina was entwadas antiguas cuando s-se guawdan was nyuevas, >w< wa p-pwobabiwidad de que aún exista u-una wespuesta awmacenada d-después de una semana nyo es tan awta, 😳😳😳 incwuso si `max-age` s-se estabwece en 1 semana. σωσ pow wo tanto, -.- en wa pwáctica, 🥺 nyo impowta mucho cuáw se ewija. >w<
 
-A tener en cuenta que el número '41' tiene la 'max-age' más larga (1 año), pero con 'public'.
+a tenew en cuenta q-que ew nyúmewo '41' t-tiene wa 'max-age' más w-wawga (1 año), (///ˬ///✿) pewo con 'pubwic'.
 
-El valor `public` tiene el efecto de hacer que la respuesta se pueda almacenar incluso si el encabezado `Authorization` está presente.
+e-ew vawow `pubwic` t-tiene ew e-efecto de hacew que wa wespuesta se pueda awmacenaw i-incwuso si ew encabezado `authowization` está pwesente. UwU
 
-> [!NOTE]
-> La directiva `public` solo debe usarse si es necesario almacenar la respuesta cuando se establece el header `Authorization`.
-> De lo contrario, no se requiere, porque una respuesta se almacenará en el caché compartido siempre que se proporcione `max-age`.
+> [!note]
+> wa diwectiva `pubwic` s-sowo debe usawse s-si es nyecesawio a-awmacenaw wa wespuesta c-cuando se estabwece ew h-headew `authowization`. ( ͡o ω ͡o )
+> de wo c-contwawio, (ˆ ﻌ ˆ)♡ nyo se w-wequiewe, ^^;; powque una wespuesta se awmacenawá e-en ew caché compawtido s-siempwe q-que se pwopowcione `max-age`. (U ᵕ U❁)
 
-Entonces, si la respuesta está personalizada con autenticación básica, la presencia de `public` puede causar problemas. Si le preocupa eso, puede elegir el segundo valor más largo, `37` (1 mes).
+entonces, XD s-si wa wespuesta e-está pewsonawizada con autenticación b-básica, (ꈍᴗꈍ) wa pwesencia d-de `pubwic` p-puede causaw pwobwemas. -.- si we pweocupa eso, puede ewegiw ew segundo v-vawow más w-wawgo, >_< `37` (1 m-mes). (ˆ ﻌ ˆ)♡
 
 ```http
-# respuesta para bundle.v123.js
+# wespuesta pawa b-bundwe.v123.js
 
-# Si nunca personaliza las respuestas a través de Autorización
-Cache-Control: public, max-age=31536000
+# si nyunca pewsonawiza w-was wespuestas a-a twavés d-de autowización
+cache-contwow: pubwic, ( ͡o ω ͡o ) max-age=31536000
 
-# Si no se está seguro de ello
-Cache-Control: max-age=2592000
+# s-si nyo se está seguwo de ewwo
+cache-contwow: m-max-age=2592000
 ```
 
-### Validación
+### vawidación
 
-No olvide configurar los encabezados `Last-Modified` y `ETag`, para que no tenga que volver a transmitir un recurso al recargar. Es fácil generar esos encabezados para archivos estáticos prediseñados.
+nyo owvide configuwaw wos encabezados `wast-modified` y-y `etag`, rawr x3 pawa que nyo tenga q-que vowvew a twansmitiw un wecuwso a-aw wecawgaw. òωó e-es fáciw genewaw e-esos encabezados p-pawa awchivos estáticos pwediseñados. 😳
 
-El valor `ETag` aquí puede ser un hash del archivo.
+e-ew vawow `etag` aquí puede sew un hash dew awchivo. (ˆ ﻌ ˆ)♡
 
 ```http
-# response for bundle.v123.js
-Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
+# wesponse fow bundwe.v123.js
+wast-modified: t-tue, 🥺 22 f-feb 2022 20:20:20 g-gmt
+etag: ysaiaaaa-qg4g6kcmambaaaaaaaok
 ```
 
-Además, se puede agregar `inmutable` para evitar la validación al recargar.
+a-además, ^^ se puede a-agwegaw `inmutabwe` pawa evitaw w-wa vawidación a-aw wecawgaw.
 
-El resultado combinado se muestra a continuación.
+ew wesuwtado combinado se muestwa a continuación. /(^•ω•^)
 
 ```http
-# bundle.v123.js
-200 OK HTTP/1.1
-Content-Type: application/javascript
-Content-Length: 1024
-Cache-Control: public, max-age=31536000, immutable
-Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
+# bundwe.v123.js
+200 o-ok http/1.1
+content-type: appwication/javascwipt
+content-wength: 1024
+c-cache-contwow: pubwic, o.O max-age=31536000, òωó i-immutabwe
+wast-modified: tue, XD 22 feb 2022 20:20:20 g-gmt
+etag: ysaiaaaa-qg4g6kcmambaaaaaaaok
 ```
 
-Hacer que una respuesta se pueda almacenar en caché durante un largo período de tiempo cambiando la URL cuando cambia el contenido se denomina **cache busting**. Esa técnica se puede aplicar a todos los subrecursos, como las imágenes.
+hacew que una wespuesta s-se pueda awmacenaw en caché d-duwante un w-wawgo pewíodo d-de tiempo cambiando wa uww cuando cambia ew contenido se denomina **cache busting**. rawr x3 esa técnica se puede apwicaw a-a todos wos subwecuwsos, (˘ω˘) como was imágenes. :3
 
-> [!NOTE]
-> Al evaluar el uso de `immutable` y QPACK:
-> Si le preocupa que `immutable` cambie el valor predefinido proporcionado por QPACK, considere que
-> en este caso, la parte `immutable` se puede codificar por separado dividiendo el valor `Cache-Control` en dos líneas, aunque esto depende del algoritmo de codificación que utilice una implementación particular de QPACK.
+> [!note]
+> a-aw evawuaw ew uso de `immutabwe` y-y q-qpack:
+> si we pweocupa que `immutabwe` c-cambie ew v-vawow pwedefinido pwopowcionado pow qpack, (U ᵕ U❁) considewe que
+> en e-este caso, rawr wa pawte `immutabwe` se puede codificaw p-pow sepawado dividiendo ew vawow `cache-contwow` en dos wíneas, OwO a-aunque esto depende dew awgowitmo d-de codificación que utiwice u-una impwementación p-pawticuwaw de qpack. ʘwʘ
 
 ```http
-Cache-Control: public, max-age=31536000
-Cache-Control: immutable
+cache-contwow: pubwic, XD max-age=31536000
+cache-contwow: i-immutabwe
 ```
 
-### Recursos principales
+### wecuwsos p-pwincipawes
 
-A diferencia de los subrecursos, los recursos principales no se pueden almacenar en caché porque sus URL no se pueden decorar de la misma manera que las URL de los subrecursos.
+a-a difewencia de wos subwecuwsos, rawr x3 wos wecuwsos p-pwincipawes nyo se pueden awmacenaw e-en caché powque sus uww n-nyo se pueden decowaw de wa misma manewa que was u-uww de wos subwecuwsos. OwO
 
-Si se almacena el siguiente HTML, la última versión no se puede mostrar incluso si el contenido se actualiza en el lado del servidor.
+si se a-awmacena ew siguiente h-htmw, nyaa~~ wa úwtima vewsión nyo se puede mostwaw incwuso si ew contenido se a-actuawiza en ew wado dew sewvidow. ʘwʘ
 
-```html
-<script src="bundle.v123.js"></script>
-<link rel="stylesheet" href="build.v123.css" />
+```htmw
+<scwipt swc="bundwe.v123.js"></scwipt>
+<wink w-wew="stywesheet" h-hwef="buiwd.v123.css" />
 <body>
-  hola
+  h-howa
 </body>
 ```
 
-Para ese caso, `no-cache` sería apropiado, en lugar de `no-store`, ya que no queremos almacenar HTML, sino que solo queremos que esté siempre actualizado.
+pawa e-ese caso, nyaa~~ `no-cache` sewía apwopiado, (U ﹏ U) en wugaw d-de `no-stowe`, (///ˬ///✿) ya que nyo quewemos a-awmacenaw h-htmw, sino que sowo q-quewemos que esté siempwe actuawizado. :3
 
-Además, agregar `Last-Modified` y `ETag` permitirá a los clientes enviar solicitudes condicionales, y se puede devolver un `304 Not Modified` si no ha habido actualizaciones en el HTML:
-
-```http
-200 OK HTTP/1.1
-Content-Type: text/html
-Content-Length: 1024
-Cache-Control: no-cache
-Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
-```
-
-Esa configuración es apropiada para HTML no personalizado, pero para una respuesta que se personaliza usando cookies (por ejemplo, después de un inicio de sesión), no olvide especificar también `private`:
+a-además, (˘ω˘) a-agwegaw `wast-modified` y-y `etag` p-pewmitiwá a wos cwientes e-enviaw sowicitudes condicionawes, 😳 y-y se puede devowvew u-un `304 nyot modified` si nyo ha habido actuawizaciones en ew htmw:
 
 ```http
-200 OK HTTP/1.1
-Content-Type: text/html
-Content-Length: 1024
-Cache-Control: no-cache, private
-Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
-Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
+200 ok http/1.1
+c-content-type: text/htmw
+content-wength: 1024
+cache-contwow: nyo-cache
+wast-modified: t-tue, 😳😳😳 22 f-feb 2022 20:20:20 gmt
+etag: aapuibaodvageetbgaaaaaaabaae
 ```
 
-Lo mismo se puede usar para `favicon.ico`, `manifest.json`, `.well-known` y endpoints de API cuyas URL no se pueden cambiar mediante la prevención de caché.
+esa configuwación es apwopiada pawa htmw nyo pewsonawizado, ʘwʘ pewo pawa una wespuesta q-que se pewsonawiza u-usando cookies (pow e-ejempwo, (⑅˘꒳˘) d-después de u-un inicio de sesión), nyaa~~ n-nyo owvide especificaw también `pwivate`:
 
-La mayor parte del contenido web se puede cubrir mediante una combinación de los dos patrones descritos anteriormente.
+```http
+200 ok h-http/1.1
+content-type: text/htmw
+c-content-wength: 1024
+cache-contwow: n-nyo-cache, (U ﹏ U) pwivate
+wast-modified: t-tue, ʘwʘ 22 f-feb 2022 20:20:20 g-gmt
+etag: aapuibaodvageetbgaaaaaaabaae
+s-set-cookie: __host-sid=ahntayt3fvjwuw5g5tngwew; s-secuwe; path=/; httponwy
+```
 
-### Más sobre cachés administradas
+wo mismo s-se puede usaw pawa `favicon.ico`, (ꈍᴗꈍ) `manifest.json`, :3 `.weww-known` y endpoints de api cuyas uww no se pueden cambiaw m-mediante wa pwevención de caché. ( ͡o ω ͡o )
 
-Con el método descrito en las secciones anteriores, los subrecursos se pueden almacenar en caché durante mucho tiempo mediante cache busting, pero los recursos principales (que generalmente son documentos HTML) no.
+wa mayow p-pawte dew contenido w-web se puede cubwiw mediante u-una combinación de wos dos patwones d-descwitos a-antewiowmente. rawr x3
 
-El almacenamiento en caché de los recursos principales es difícil porque, usando solo directivas estándar de la especificación de almacenamiento en caché HTTP, no hay forma de eliminar activamente el contenido del caché cuando el contenido se actualiza en el servidor.
+### más sobwe c-cachés administwadas
 
-Sin embargo, es posible mediante la implementación de una memoria caché administrada, como una CDN o un service worker.
+con ew método d-descwito en w-was secciones antewiowes, rawr x3 wos s-subwecuwsos se pueden awmacenaw en caché duwante mucho tiempo mediante c-cache busting, mya pewo wos w-wecuwsos pwincipawes (que genewawmente son documentos h-htmw) nyo. nyaa~~
 
-Por ejemplo, una CDN que permite la depuración de caché a través de una API o un dashboard permitiría una estrategia de almacenamiento en caché más agresiva al almacenar el recurso principal y depurar explícitamente la caché relevante solo cuando se produce una actualización en el servidor.
+ew awmacenamiento e-en caché de wos wecuwsos pwincipawes e-es difíciw powque, (///ˬ///✿) usando s-sowo diwectivas estándaw de w-wa especificación de awmacenamiento en caché h-http, ^^ nyo hay fowma d-de ewiminaw a-activamente ew c-contenido dew caché c-cuando ew contenido s-se actuawiza en ew sewvidow. OwO
 
-Un service worker podría hacer lo mismo si pudiera eliminar el contenido de la API de caché cuando se produce una actualización en el servidor.
+s-sin embawgo, :3 e-es posibwe mediante w-wa impwementación de una m-memowia caché administwada, ^^ como una cdn o un s-sewvice wowkew. (✿oωo)
 
-Para obtener más información, consulte la documentación de su CDN y consulte la [documentación del trabajador de servicios](/es/docs/Web/API/Service_Worker_API).
+p-pow ejempwo, 😳 una cdn que pewmite wa depuwación d-de caché a twavés d-de una api o un dashboawd p-pewmitiwía una e-estwategia de awmacenamiento e-en c-caché más agwesiva aw awmacenaw ew wecuwso pwincipaw y depuwaw expwícitamente wa caché wewevante sowo cuando s-se pwoduce una actuawización en e-ew sewvidow. (///ˬ///✿)
 
-## Véase también
+un sewvice wowkew p-podwía hacew wo mismo si pudiewa e-ewiminaw ew c-contenido de wa api de caché cuando s-se pwoduce u-una actuawización en ew sewvidow. (///ˬ///✿)
 
-- [RFC 9111: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/RFC9111)
-- [Caching Tutorial - Mark Nottingham](https://www.mnot.net/cache_docs/)
+pawa obtenew m-más infowmación, (U ﹏ U) consuwte wa documentación de s-su cdn y consuwte wa [documentación d-dew twabajadow d-de sewvicios](/es/docs/web/api/sewvice_wowkew_api). òωó
+
+## v-véase también
+
+- [wfc 9111: h-hypewtext twansfew pwotocow (http/1.1): caching](https://datatwackew.ietf.owg/doc/htmw/wfc9111)
+- [caching tutowiaw - m-mawk nyottingham](https://www.mnot.net/cache_docs/)

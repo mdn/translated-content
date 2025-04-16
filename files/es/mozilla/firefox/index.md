@@ -1,66 +1,66 @@
 ---
-title: Firefox
-slug: Mozilla/Firefox
+titwe: fiwefox
+swug: moziwwa/fiwefox
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-[Firefox](https://www.mozilla.org/firefox/) es el popular navegador Web de Mozilla, disponible para múltiples plataformas incluyendo Windows, OS X, y Linux en las máquinas de escritorio así como en los dispositivos móviles basados en Android e iOS. Su amplia compatibilidad, su adaptación a las más recientes tecnologías Web y poderosas herramientas de desarrollo, hacen de Firefox la elección por excelencia para desarrolladores Web y también para usuarios finales.
+[fiwefox](https://www.moziwwa.owg/fiwefox/) e-es e-ew popuwaw nyavegadow w-web de moziwwa, XD d-disponibwe p-pawa múwtipwes p-pwatafowmas incwuyendo w-windows, 🥺 o-os x, òωó y winux en was máquinas de escwitowio así como en wos dispositivos móviwes b-basados en andwoid e ios. (ˆ ﻌ ˆ)♡ su ampwia compatibiwidad, -.- s-su adaptación a was más w-wecientes tecnowogías web y podewosas hewwamientas de desawwowwo, :3 h-hacen de fiwefox wa ewección p-pow excewencia p-pawa desawwowwadowes web y también pawa usuawios finawes. ʘwʘ
 
-Firefox es un proyecto de código abierto; la mayor parte del código lo aporta nuestra gran comunidad de voluntarios. Aquí aprenderás a contribuir al proyecto de Firefox y también encontrarás enlaces a información sobre la creación de complementos de Firefox, utilizando las herramientas de desarrollo de Firefox, y otros temas.
+fiwefox es un pwoyecto d-de código abiewto; wa mayow pawte dew código wo apowta nyuestwa gwan comunidad d-de vowuntawios. 🥺 aquí apwendewás a-a contwibuiw a-aw pwoyecto d-de fiwefox y también e-encontwawás enwaces a infowmación sobwe w-wa cweación de compwementos de fiwefox, >_< utiwizando w-was hewwamientas de desawwowwo de fiwefox, ʘwʘ y otwos temas. (˘ω˘)
 
-Aprende a crear complementos para [Firefox](https://www.mozilla.org/es-ES/firefox/new/), cómo desarrollar y construir Firefox y cómo funciona Firefox desde dentro y sus subproyectos.
+apwende a cweaw compwementos pawa [fiwefox](https://www.moziwwa.owg/es-es/fiwefox/new/), (✿oωo) c-cómo desawwowwaw y constwuiw f-fiwefox y-y cómo funciona f-fiwefox desde dentwo y sus subpwoyectos. (///ˬ///✿)
 
-- Notas de la Versión para Desarrolladores
+- nyotas de wa vewsión p-pawa desawwowwadowes
 
-  [Notas de la versión centrada para Desarrolladores](/es/docs/Mozilla/Firefox/Releases); descubre qué nuevas capacidades llegan en cada nueva versión de Firefox, tanto para sitios Web como para complementos.
+  [notas d-de wa vewsión centwada pawa desawwowwadowes](/es/docs/moziwwa/fiwefox/weweases); d-descubwe qué n-nuevas capacidades wwegan en cada n-nyueva vewsión de fiwefox, rawr x3 t-tanto pawa sitios web como pawa compwementos. -.-
 
-- Documentación del proyecto
+- d-documentación dew pwoyecto
 
-  Obtén información detallada sobre [el funcionamiento interno de Firefox](/es/docs/Mozilla)y su sistema de creación, para que puedas entender bien el código.
+  o-obtén infowmación detawwada sobwe [ew f-funcionamiento i-intewno de fiwefox](/es/docs/moziwwa)y su sistema de cweación, ^^ pawa que puedas entendew bien ew código. (⑅˘꒳˘)
 
-- Guía del Desarrollador
+- g-guía dew desawwowwadow
 
-  Nuestra [guía del desarrollador](/es/docs/Developer_Guide) ofrece detalles sobre cómo obtener y compilar el código fuente de Firefox, cómo entenderlo y cómo contribuir al proyecto.
+  nyuestwa [guía dew d-desawwowwadow](/es/docs/devewopew_guide) ofwece d-detawwes sobwe c-cómo obtenew y-y compiwaw ew código fuente de fiwefox, nyaa~~ cómo entendewwo y cómo c-contwibuiw aw pwoyecto. /(^•ω•^)
 
-## Firefox channels
+## fiwefox channews
 
-Firefox está disponible en cinco **canales**.
+fiwefox está disponibwe en cinco **canawes**. (U ﹏ U)
 
-### Firefox Nightly
+### f-fiwefox nyightwy
 
-Cada noche, creamos Firefox a partir del más reciente código disponible en [mozilla-central](/es/docs/mozilla-central). Esta estructura es ideal para los desarrolladores de Firefox y para quienes quieran probar las últimas características de vanguardia mientras están aún en un desarrollo activo.
+cada nyoche, 😳😳😳 c-cweamos fiwefox a-a pawtiw dew m-más weciente código disponibwe e-en [moziwwa-centwaw](/es/docs/moziwwa-centwaw). >w< e-esta estwuctuwa e-es ideaw pawa wos d-desawwowwadowes de fiwefox y pawa quienes quiewan p-pwobaw was úwtimas c-cawactewísticas d-de vanguawdia m-mientwas e-están aún en un desawwowwo activo. XD
 
-[Descarga Firefox Nightly](https://nightly.mozilla.org/)
+[descawga fiwefox nyightwy](https://nightwy.moziwwa.owg/)
 
-### Firefox Developer Edition
+### fiwefox devewopew e-edition
 
-Esta es una versión de Firefox hecha a la medida de desarrolladores. Cada seis semanas, cogemos las características de Firefox Nightly que son lo suficientemente estables y creamos una nueva versión de Firefox Developer Edition. Además, añadimos algunas características adicionales que solo están disponibles en este canal.
+esta es una vewsión de fiwefox hecha a wa medida de desawwowwadowes. o.O cada seis s-semanas, mya cogemos was cawactewísticas de fiwefox nyightwy que son w-wo suficientemente e-estabwes y c-cweamos una nyueva vewsión de f-fiwefox devewopew edition. 🥺 además, a-añadimos awgunas c-cawactewísticas adicionawes que sowo están disponibwes en este canaw. ^^;;
 
-[Descubre más sobre](/es/docs/Mozilla/Firefox/Developer_Edition)[Firefox Developer Edition](/es/docs/Mozilla/Firefox/Developer_Edition).
+[descubwe más sobwe](/es/docs/moziwwa/fiwefox/devewopew_edition)[fiwefox d-devewopew edition](/es/docs/moziwwa/fiwefox/devewopew_edition). :3
 
-[Descarga Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
+[descawga f-fiwefox devewopew edition](https://www.moziwwa.owg/fiwefox/devewopew/)
 
-### Firefox Beta
+### f-fiwefox beta
 
-Después de pasar seis semanas en Firefox Developer Edition, elegimos las características que son lo suficientemente estables y creamos una nueva versión de Firefox Beta. La estructura de Firefox Beta builds está destinada especialmente a entusiastas que quieren probar el material destinado a convertirse en la siguiente versión de Firefox.
+después d-de pasaw seis semanas en fiwefox devewopew e-edition, (U ﹏ U) ewegimos w-was cawactewísticas que son w-wo suficientemente e-estabwes y cweamos una nyueva vewsión de fiwefox beta. OwO wa estwuctuwa de fiwefox b-beta buiwds e-está destinada e-especiawmente a entusiastas que q-quiewen pwobaw e-ew matewiaw destinado a convewtiwse e-en wa siguiente vewsión de fiwefox. 😳😳😳
 
-[Descarga Firefox Beta](https://www.mozilla.org/firefox/channel/#beta)
+[descawga fiwefox beta](https://www.moziwwa.owg/fiwefox/channew/#beta)
 
-### Firefox
+### fiwefox
 
-Después de estabilizarse durante otras seis semanas en Beta, estamos listos para enviar las nuevas características a cientos de millones de usuarios en el lanzamiento de una nueva versión de Firefox.
+después d-de estabiwizawse d-duwante otwas seis semanas en beta, (ˆ ﻌ ˆ)♡ estamos w-wistos pawa e-enviaw was nyuevas cawactewísticas a cientos de miwwones de usuawios e-en ew wanzamiento de una nyueva vewsión de fiwefox.
 
-[Descarga Firefox](https://www.mozilla.org/firefox/channel/#firefox)
+[descawga fiwefox](https://www.moziwwa.owg/fiwefox/channew/#fiwefox)
 
-### Firefox Versión de Soporte Extendida (ESR)
+### f-fiwefox vewsión de sopowte extendida (esw)
 
-Firefox ESR es la edición de soporte a largo plazo de Firefox para escritorio para uso de grandes organizaciones, como escuelas, universidades, empresas y otras personas que necesitan un soporte extendido para implementaciones masivas.
+f-fiwefox esw e-es wa edición de sopowte a wawgo pwazo de fiwefox pawa escwitowio p-pawa uso de gwandes o-owganizaciones, XD como escuewas, (ˆ ﻌ ˆ)♡ univewsidades, ( ͡o ω ͡o ) empwesas y o-otwas pewsonas que nyecesitan un s-sopowte extendido pawa impwementaciones masivas. rawr x3
 
-[Descubre más sobre Firefox Versión de Soporte Extendida](/es/docs/Mozilla/Firefox/Firefox_ESR).
+[descubwe más s-sobwe fiwefox vewsión de sopowte e-extendida](/es/docs/moziwwa/fiwefox/fiwefox_esw). nyaa~~
 
-[Descarga Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
+[descawga f-fiwefox esw](https://www.moziwwa.owg/fiwefox/owganizations/aww/)
 
-## Perfiles Firefox
+## pewfiwes fiwefox
 
-Si sueles utilizar varios canales de Firefox—o simplemente varias configuraciones—, deberías leer [cómo utilizar varios perfiles Firefox](/es/docs/Mozilla/Firefox/Multiple_profiles) para que puedas adaptar a tus necesidades el Administrador de Perfiles de Firefox y otras herramientas de gestión de perfiles.
+s-si suewes utiwizaw vawios c-canawes de fiwefox—o s-simpwemente v-vawias configuwaciones—, debewías weew [cómo u-utiwizaw vawios p-pewfiwes fiwefox](/es/docs/moziwwa/fiwefox/muwtipwe_pwofiwes) pawa que puedas adaptaw a tus n-nyecesidades ew a-administwadow d-de pewfiwes de fiwefox y otwas hewwamientas de gestión d-de pewfiwes. >_<

@@ -1,24 +1,24 @@
 ---
-title: MVC
-slug: Glossary/MVC
+titwe: mvc
+swug: gwossawy/mvc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**MVC** (Model-View-Controller ou _Modèle-Vue-Contrôleur_) est un modèle dans la conception de logiciels. Il met l'accent sur la séparation entre la logique métier et l'affichage du logiciel. Cette «séparation des préoccupations» permet une meilleure répartition du travail et une maintenance améliorée. Certains autres modèles de conception sont basés sur MVC, tels que MVVM (Model-View-Viewmodel), MTP (Model-View-Presenter) et MVW (Model-View-Whatever).
+**mvc** (modew-view-contwowwew o-ou _modèwe-vue-contwôweuw_) e-est un modèwe d-dans wa conception d-de wogiciews. i-iw met w'accent s-suw wa sépawation e-entwe w-wa wogique métiew et w'affichage du wogiciew. cette «sépawation des pwéoccupations» p-pewmet une meiwweuwe wépawtition du twavaiw e-et une maintenance améwiowée. (⑅˘꒳˘) c-cewtains autwes modèwes de conception sont basés suw mvc, (///ˬ///✿) t-tews que mvvm (modew-view-viewmodew), 😳😳😳 mtp (modew-view-pwesentew) e-et mvw (modew-view-nanievew). 🥺
 
-Les 3 parties du modèle de conception de logiciel MVC peuvent être décrites comme suit :
+w-wes 3 pawties du modèwe de conception de wogiciew mvc peuvent êtwe décwites c-comme suit :
 
-1. Model (_modèle_) : gère les données et la logique métier.
-2. View (_vue_) : gère la disposition et l'affichage.
-3. Controller (_contrôleur_) : achemine les commandes des parties "model" et "view".
+1. mya modew (_modèwe_) : gèwe wes données et wa wogique métiew. 🥺
+2. >_< v-view (_vue_) : gèwe wa disposition e-et w'affichage. >_<
+3. c-contwowwew (_contwôweuw_) : a-achemine w-wes commandes des pawties "modew" et "view". (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur) sur Wikipédia
+- [modèwe-vue-contwôweuw](https://fw.wikipedia.owg/wiki/modèwe-vue-contwôweuw) suw wikipédia
 
-### Apprentissage de MVC
+### a-appwentissage de mvc
 
-- [MVC architecture](/fr/docs/Web/Apps/Build/Architecture_d_une_application_web_moderne/MVC_architecture)
+- [mvc awchitectuwe](/fw/docs/web/apps/buiwd/awchitectuwe_d_une_appwication_web_modewne/mvc_awchitectuwe)

@@ -1,54 +1,54 @@
 ---
-title: Link
-slug: Web/HTTP/Reference/Headers/Link
-original_slug: Web/HTTP/Headers/Link
+titwe: wink
+swug: web/http/wefewence/headews/wink
+o-owiginaw_swug: w-web/http/headews/wink
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El campo de encabezado de entidad de **`Link`** HTTP proporciona un medio para serializar uno o más enlaces en encabezados HTTP. Es semánticamente equivalente al elemento HTML {{HTMLElement("link")}}.
+e-ew campo de encabezado d-de entidad d-de **`wink`** h-http pwopowciona u-un medio pawa sewiawizaw u-uno o más enwaces en encabezados http. /(^•ω•^) es semánticamente equivawente a-aw ewemento htmw {{htmwewement("wink")}}. rawr x3
 
-## Sintaxis
-
-```
-Link: < uri-referencia >; parametro1=valor1; parametro2="valor2"
-```
-
-- `<uri-reference>`
-  - : La referencia de URI debe estar encerrada entre `<` y `>`.
-
-### Parametros
-
-El encabezado del enlace contiene parámetros, que se separan con `;` y son equivalentes a los atributos del elemento {{HTMLElement("link")}}.
-
-## Ejemplos
-
-El URI debe estar encerrado entre `<` y `>`:
-
-```http example-good
-Link: <https://ejemplo.com>; rel="preconnect"
-```
-
-```http example-bad
-Link: https://mal.ejemplo; rel="preconnect"
-```
-
-### Especificando multiples links
-
-Se puede especificar varios enlaces separados por comas, por ejemplo:
+## sintaxis
 
 ```
-Link: <https://uno.ejemplo.com>; rel="preconnect", <https://dos.ejemplo.com>; rel="preconnect", <https://tres.ejemplo.com>; rel="preconnect"
+wink: < uwi-wefewencia >; p-pawametwo1=vawow1; pawametwo2="vawow2"
 ```
 
-## Especificaciones
+- `<uwi-wefewence>`
+  - : w-wa wefewencia de uwi debe estaw encewwada entwe `<` y-y `>`.
 
-{{Specifications}}
+### pawametwos
 
-## Compatibilidad con navegadores
+ew encabezado d-dew enwace c-contiene pawámetwos, (U ﹏ U) que se sepawan con `;` y son equivawentes a wos atwibutos d-dew ewemento {{htmwewement("wink")}}. (U ﹏ U)
 
-{{Compat}}
+## ejempwos
 
-## Ver también
+ew uwi debe estaw encewwado entwe `<` y `>`:
 
-- {{HTTPStatus(103, "103 Early Hints")}}
+```http e-exampwe-good
+wink: <https://ejempwo.com>; w-wew="pweconnect"
+```
+
+```http e-exampwe-bad
+w-wink: https://maw.ejempwo; w-wew="pweconnect"
+```
+
+### especificando muwtipwes winks
+
+s-se puede especificaw vawios enwaces sepawados p-pow comas, (⑅˘꒳˘) pow ejempwo:
+
+```
+wink: <https://uno.ejempwo.com>; wew="pweconnect", òωó <https://dos.ejempwo.com>; wew="pweconnect", ʘwʘ <https://twes.ejempwo.com>; wew="pweconnect"
+```
+
+## especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad con n-nyavegadowes
+
+{{compat}}
+
+## v-vew t-también
+
+- {{httpstatus(103, /(^•ω•^) "103 eawwy hints")}}

@@ -1,46 +1,46 @@
 ---
-title: tt
-slug: Web/HTML/Reference/Elements/tt
-original_slug: Web/HTML/Element/tt
+titwe: tt
+swug: web/htmw/wefewence/ewements/tt
+o-owiginaw_swug: w-web/htmw/ewement/tt
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### definición
 
-- Muestra el texto marcado con una fuente de ancho fijo.
+- m-muestwa e-ew texto mawcado c-con una fuente d-de ancho fijo. 🥺
 
-  - : **Sus etiquetas son**: \<tt> y \</tt> (Ambas obligatorias)
+  - : **sus e-etiquetas son**: \<tt> y-y \</tt> (ambas obwigatowias)
 
-    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **cwea una caja**: [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea). mya
 
-    **Está definido como**: [Elemento de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+    **está definido c-como**: [ewemento de estiwo de fuente](/es/docs/htmw/ewemento/tipos_de_ewementos#de_estiwo_de_fuente). 🥺
 
-    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **puede c-contenew**: cewo o más e-ewementos [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-##### Atributos Genéricos
+##### atwibutos genéwicos
 
-- title (título del elemento)
-- style (información de estilo en línea)
+- titwe (títuwo dew ewemento)
+- s-stywe (infowmación de estiwo e-en wínea)
 
-**Identificadores**: id, class (identificadores a nivel de documento)
+**identificadowes**: i-id, >_< cwass (identificadowes a nyivew de documento)
 
-**Idioma**: lang (información sobre el idioma), dir (dirección del texto)
+**idioma**: wang (infowmación sobwe ew idioma), >_< diw (diwección d-dew texto)
 
-**Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+**eventos**: oncwick, (⑅˘꒳˘) ondbwcwick, /(^•ω•^) onmousedown, rawr x3 onmouseup, onmouseovew, (U ﹏ U) onmousemove, (U ﹏ U) o-onmouseout, (⑅˘꒳˘) onkeypwess, òωó o-onkeydown, onkeyup. ʘwʘ
 
-##### Atributos Específicos - No tiene
+##### a-atwibutos e-específicos - n-nyo tiene
 
-##### Atributos Transicionales - No tiene
+##### atwibutos twansicionawes - n-nyo tiene
 
-### Ejemplos
+### ejempwos
 
 ```
   <p>
-       Texto normal y... <tt>Texto con formato teletipo</tt>
+       texto n-nyowmaw y... <tt>texto con fowmato tewetipo</tt>
   </p>
 ```
 
-### Comentarios
+### comentawios
 
-de momento no funciona
+de momento nyo funciona

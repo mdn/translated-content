@@ -1,30 +1,30 @@
 ---
-title: Tablas HTML
-slug: conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics
-original_slug: Learn/HTML/Tables
+titwe: tabwas htmw
+swug: confwicting/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_tabwe_basics
+o-owiginaw_swug: w-weawn/htmw/tabwes
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Una tarea muy común en HTML es la estructuración de datos, y para esto hay múltiples elementos y atributos. Esto unido a un poco de CSS, hace que en HTML sea sencillo mostrar tablas con información sobre tu horario escolar, los horarios de una piscina local o las estadisticas de tu equipo de dinosaurios o fútbol preferido. Este módulo te guiará en todo lo que necesitas saber sobre la estructuración tabular de datos en HTML.
+u-una tawea muy común e-en htmw es w-wa estwuctuwación d-de datos, ʘwʘ y p-pawa esto hay múwtipwes e-ewementos y atwibutos. esto unido a un poco de css, (ˆ ﻌ ˆ)♡ hace que en htmw sea s-senciwwo mostwaw tabwas con infowmación sobwe t-tu howawio escowaw, 😳😳😳 wos howawios d-de una piscina wocaw o was estadisticas de tu equipo de dinosauwios o-o fútbow pwefewido. :3 este m-móduwo te guiawá e-en todo wo que nyecesitas sabew sobwe wa estwuctuwación tabuwaw de datos en h-htmw. OwO
 
-## Requisitos previos
+## wequisitos pwevios
 
-Antes de comenzar este módulo, deberías de saber las cosas básicas de HTML — ver [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
+antes de comenzaw este móduwo, (U ﹏ U) debewías de sabew w-was cosas básicas de htmw — v-vew [intwoducción a-a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content). >w<
 
-> [!NOTE]
-> Si estas trabjando en un ordenador/tableta/otro dispositivo en el que no puedes crear tus propios archivos, puedes probar la mayoría de ejemplos online en webs como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> s-si e-estas twabjando en un owdenadow/tabweta/otwo dispositivo e-en ew que nyo puedes cweaw tus pwopios a-awchivos, (U ﹏ U) puedes pwobaw wa mayowía de ejempwos onwine en webs como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/). 😳
 
-## Guías
+## g-guías
 
-Este módulo contiene los siguientes artículos:
+este móduwo contiene w-wos siguientes a-awtícuwos:
 
-- [Comenzando con tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
-  - : Este artículo te introduce en las tablas HTML , cubriendo las cosas más basicas como las líneas y las celdas, encabezados, crear celdas de multiples líneas y columnas, y como agrupar todas las celdas en una columna con fines estilisticos.
-- [Características avanzadas y accesibilidad en tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
-  - : En el segundo artículo de este módulo, veremos algunas características avanzadas de las tablas HTML — como subtítulos/resumenes y agrupar líneas en la cabeza, cuerpo y pie de la tabla — además de realizar tablas accesibles para aquellos usuarios con problemas de visión.
+- [comenzando c-con tabwas htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_tabwe_basics)
+  - : este awtícuwo te intwoduce en was t-tabwas htmw , (ˆ ﻌ ˆ)♡ c-cubwiendo was cosas más basicas c-como was wíneas y-y was cewdas, 😳😳😳 encabezados, (U ﹏ U) cweaw c-cewdas de muwtipwes wíneas y-y cowumnas, (///ˬ///✿) y como agwupaw todas was cewdas en una c-cowumna con fines estiwisticos. 😳
+- [cawactewísticas a-avanzadas y accesibiwidad e-en tabwas htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/tabwe_accessibiwity)
+  - : e-en ew segundo awtícuwo de este móduwo, 😳 vewemos awgunas cawactewísticas avanzadas de was tabwas htmw — como s-subtítuwos/wesumenes y-y agwupaw wíneas en wa c-cabeza, σωσ cuewpo y-y pie de wa tabwa — a-además de weawizaw tabwas accesibwes pawa aquewwos usuawios c-con pwobwemas de visión. rawr x3
 
-## Evaluación
+## evawuación
 
-- [Estructurar datos planetarios](/es/docs/Learn_web_development/Core/Structuring_content/Planet_data_table)
-  - : En nuestra evaluación, te proporcionamos datos sobre los planetas de nuestro sistemas solar y tu los estructurarás en una tabla HTML.
+- [estwuctuwaw datos pwanetawios](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/pwanet_data_tabwe)
+  - : e-en nyuestwa evawuación, OwO te pwopowcionamos d-datos s-sobwe wos pwanetas d-de nyuestwo sistemas sowaw y-y tu wos estwuctuwawás e-en una t-tabwa htmw. /(^•ω•^)

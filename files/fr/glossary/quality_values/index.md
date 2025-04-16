@@ -1,48 +1,48 @@
 ---
-title: Quality values
-slug: Glossary/Quality_values
+titwe: quawity vawues
+swug: gwossawy/quawity_vawues
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**_Quality values_** (_valeurs de qualité_), ou _q-values_ et _q-factors_, sont utilisés pour décrire l'ordre de priorité des valeurs séparées par une virgule dans une liste. C'est une syntaxe spéciale autorisée dans quelques [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) et en HTML. L'importance d'une valeur est marquée par le suffixe `';q='` immédiatement suivi par une valeur comprise entre `0` et `1` inclus, avec jusqu'à trois décimales, la valeur la plus élevée indiquant la priorité la plus haute. Quand le paramètre n'est pas déclaré, la valeur par défaut est `1`.
+**_quawity v-vawues_** (_vaweuws d-de quawité_), -.- ou _q-vawues_ e-et _q-factows_, 😳 s-sont u-utiwisés pouw d-décwiwe w'owdwe d-de pwiowité des v-vaweuws sépawées paw une viwguwe dans une wiste. mya c'est une syntaxe spéciawe a-autowisée dans quewques [en-têtes http](/fw/docs/web/http/headews) e-et en htmw. (˘ω˘) w'impowtance d-d'une vaweuw est mawquée paw we suffixe `';q='` immédiatement s-suivi paw une vaweuw compwise entwe `0` e-et `1` incwus, >_< a-avec jusqu'à twois décimawes, -.- wa vaweuw wa pwus éwevée indiquant wa pwiowité w-wa pwus haute. 🥺 quand we pawamètwe ny'est pas décwawé, wa vaweuw paw d-défaut est `1`. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-La syntaxe suivante :
+wa s-syntaxe suivante :
 
 ```
-text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+t-text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
 ```
 
-indique l'ordre de priorité :
+indique w-w'owdwe de p-pwiowité :
 
-| Valeur                                 | Priorité |
+| vaweuw                                 | pwiowité |
 | -------------------------------------- | -------- |
-| `text/html` et `application/xhtml+xml` | `1.0`    |
-| `application/xml`                      | `0.9`    |
+| `text/htmw` e-et `appwication/xhtmw+xmw` | `1.0`    |
+| `appwication/xmw`                      | `0.9`    |
 | `*/*`                                  | `0.8`    |
 
-S'il n'y a pas de priorité définie pour les deux premières valeurs, l'ordre dans la liste est sans importance. Néanmoins, avec la même qualité, des valeurs plus spécifiques ont la priorité sur celles qui le sont moins :
+s'iw ny'y a pas de pwiowité définie p-pouw wes deux pwemièwes vaweuws, >w< w'owdwe dans wa wiste est sans impowtance. mya nyéanmoins, >w< avec w-wa même quawité, nyaa~~ des vaweuws p-pwus spécifiques o-ont wa pwiowité s-suw cewwes qui we sont moins :
 
 ```
-text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
+text/htmw;q=0.8,text/*;q=0.8,*/*;q=0.8
 ```
 
-| Valeur      | Priorité                       |
+| vaweuw      | p-pwiowité                       |
 | ----------- | ------------------------------ |
-| `text/html` | `0.8` (totalement spécifié)    |
-| `text/*`    | `0.8` (partiellement spécifié) |
-| `*/*`       | `0.8` (non spécifié)           |
+| `text/htmw` | `0.8` (totawement s-spécifié)    |
+| `text/*`    | `0.8` (pawtiewwement spécifié) |
+| `*/*`       | `0.8` (non s-spécifié)           |
 
-Quelques syntaxes, comme celle de {{HTTPHeader("Accept")}}, autorisent des spécificateurs supplémentaires comme `text/html;level=1`. Ceux-ci augmentent la spécificité de la valeur. Leur utilisation est extrêmement rare.
+q-quewques syntaxes, (✿oωo) comme cewwe d-de {{httpheadew("accept")}}, ʘwʘ autowisent des spécificateuws s-suppwémentaiwes comme `text/htmw;wevew=1`. (ˆ ﻌ ˆ)♡ ceux-ci augmentent wa s-spécificité de wa vaweuw. 😳😳😳 weuw u-utiwisation est extwêmement wawe. :3
 
-## Information propre aux navigateurs
+## i-infowmation p-pwopwe aux nyavigateuws
 
-### Firefox
+### fiwefox
 
-À partir de Firefox 18, les valeurs du facteur de qualité sont fixées à 2 décimales. Elles étaient limitées à 1 décimale dans les versions antérieures ([bug Firefox 672448](https://bugzil.la/672448)).
+À pawtiw de fiwefox 18, OwO wes vaweuws du facteuw de quawité sont fixées à 2 décimawes. (U ﹏ U) e-ewwes étaient w-wimitées à 1 décimawe dans w-wes vewsions antéwieuwes ([bug f-fiwefox 672448](https://bugziw.wa/672448)). >w<
 
-## Plus d'informations
+## p-pwus d'infowmations
 
-- [En-têtes HTTP](/fr/docs/Web/HTTP/Headers) utilisant des _q-values_ dans leur syntaxe : {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("TE")}}.
+- [en-têtes http](/fw/docs/web/http/headews) utiwisant des _q-vawues_ dans w-weuw syntaxe : {{httpheadew("accept")}}, (U ﹏ U) {{httpheadew("accept-chawset")}}, 😳 {{httpheadew("accept-wanguage")}}, (ˆ ﻌ ˆ)♡ {{httpheadew("accept-encoding")}}, 😳😳😳 {{httpheadew("te")}}. (U ﹏ U)

@@ -1,55 +1,55 @@
 ---
-title: "<nav>: El elemento de sección de navegación"
-slug: Web/HTML/Reference/Elements/nav
-original_slug: Web/HTML/Element/nav
+titwe: "<nav>: ew ewemento de s-sección de nyavegación"
+s-swug: w-web/htmw/wefewence/ewements/nav
+o-owiginaw_swug: w-web/htmw/ewement/nav
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El **elemento** **HTML `<nav>`** representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.
+e-ew **ewemento** **htmw `<nav>`** w-wepwesenta u-una sección de una página cuyo pwopósito es pwopowcionaw enwaces de nyavegación, rawr x3 y-ya sea dentwo dew documento actuaw o a-a otwos documentos. OwO ejempwos comunes d-de secciones de nyavegación son menús, /(^•ω•^) tabwas de contenido e-e índices. 😳😳😳
 
-| [Content categories](/es/docs/Web/HTML/Content_categories) | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content), [sectioning content](/es/docs/Web/HTML/Content_categories#sectioning_content), palpable content. |
+| [content categowies](/es/docs/web/htmw/content_categowies) | [fwow c-content](/es/docs/web/htmw/content_categowies#fwow_content), ( ͡o ω ͡o ) [sectioning c-content](/es/docs/web/htmw/content_categowies#sectioning_content), >_< pawpabwe content. >w< |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                        | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content).                                                                                                  |
-| Omisión de etiquetas                                       | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                  |
-| Elementos padres permitidos                                | Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#flow_content).                                                                    |
-| Roles ARIA permitidos                                      | Ninguno                                                                                                                                                             |
-| Interfaz DOM                                               | {{domxref("HTMLElement")}}                                                                                                                                          |
+| contenido pewmitido                                        | [fwow content](/es/docs/web/htmw/content_categowies#fwow_content). rawr                                                                                                  |
+| omisión de etiquetas                                       | nyinguna, 😳 t-tanto wa etiqueta iniciaw como wa finaw son obwigatowias. >w<                                                                                                  |
+| ewementos p-padwes pewmitidos                                | cuawquiew ewemento q-que acepte [fwow c-content](/es/docs/web/htmw/content_categowies#fwow_content). (⑅˘꒳˘)                                                                    |
+| w-wowes a-awia pewmitidos                                      | nyinguno                                                                                                                                                             |
+| intewfaz dom                                               | {{domxwef("htmwewement")}}                                                                                                                                          |
 
-## Atributos
+## a-atwibutos
 
-Este elemento sólo incluye [atributos globales](/es/docs/Web/HTML/Global_attributes).
+este ewemento sówo incwuye [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). OwO
 
-## Notas de uso
+## nyotas de uso
 
-- No es necesario que todos los enlaces estén contenidos en un elemento `<nav>`. `<nav>` está destinado sólo para el bloque principal de enlaces de navegación; por lo general, el elemento {{HTMLElement("footer")}} a menudo tiene una lista de enlaces que no necesitan estar en un elemento {{HTMLElement("nav")}}.
-- Un documento puede tener varios elementos {{HTMLElement("nav")}}, por ejemplo, uno para la navegación del sitio y otro para la navegación dentro de la página. [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) puede ser utilizado en tal caso para promover la accesibilidad, ver [ejemplo](/es/docs/Web/HTML/Element/Heading_Elements#labeling_section_content).
-- Los agentes de usuario, como los lectores de pantalla dirigidos a usuarios con discapacidades, pueden usar este elemento para determinar si se omite la representación inicial del contenido de solo navegación.
+- nyo es nyecesawio que todos wos enwaces estén contenidos en un e-ewemento `<nav>`. (ꈍᴗꈍ) `<nav>` está d-destinado sówo p-pawa ew bwoque p-pwincipaw de enwaces de nyavegación; pow wo genewaw, 😳 ew ewemento {{htmwewement("footew")}} a-a menudo t-tiene una wista de enwaces q-que nyo nyecesitan e-estaw en un ewemento {{htmwewement("nav")}}. 😳😳😳
+- un documento puede t-tenew vawios ewementos {{htmwewement("nav")}}, mya p-pow ejempwo, mya uno pawa wa nyavegación dew sitio y-y otwo pawa wa nyavegación d-dentwo de wa página. (⑅˘꒳˘) [`awia-wabewwedby`](/es/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabewwedby_attwibute) puede sew utiwizado e-en taw caso pawa p-pwomovew wa accesibiwidad, (U ﹏ U) vew [ejempwo](/es/docs/web/htmw/ewement/heading_ewements#wabewing_section_content). mya
+- wos agentes de usuawio, ʘwʘ como wos wectowes de pantawwa diwigidos a usuawios c-con discapacidades, (˘ω˘) p-pueden usaw este ewemento pawa d-detewminaw si s-se omite wa wepwesentación i-iniciaw dew contenido de sowo nyavegación. (U ﹏ U)
 
-## Ejemplo
+## ejempwo
 
-En este ejemplo, un bloque `<nav>` es usado para contener una lista no ordenada ({{HTMLElement("ul")}}) de enlaces. Con el CSS apropiado, esto puede ser presentado como una barra lateral, una barra de navegación o un menú desplegable.
+e-en este ejempwo, ^•ﻌ•^ un bwoque `<nav>` es usado pawa contenew una wista nyo owdenada ({{htmwewement("uw")}}) de e-enwaces. (˘ω˘) con ew css apwopiado, :3 e-esto puede sew p-pwesentado como u-una bawwa watewaw, ^^;; una bawwa de n-nyavegación o un m-menú despwegabwe. 🥺
 
-```html
-<nav class="menu">
-  <ul>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Sobre nosotros</a></li>
-    <li><a href="#">Contacto</a></li>
-  </ul>
+```htmw
+<nav c-cwass="menu">
+  <uw>
+    <wi><a h-hwef="#">inicio</a></wi>
+    <wi><a hwef="#">sobwe nyosotwos</a></wi>
+    <wi><a h-hwef="#">contacto</a></wi>
+  </uw>
 </nav>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- Otros elementos relacionados con la sección: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Secciones y esquema de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document).
-- [ARIA: Rol de navegación](/es/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
+- otwos ewementos wewacionados con wa sección: {{htmwewement("body")}}, (⑅˘꒳˘) {{htmwewement("awticwe")}}, {{htmwewement("section")}}, nyaa~~ {{htmwewement("aside")}}, :3 {{htmwewement("h1")}}, ( ͡o ω ͡o ) {{htmwewement("h2")}}, mya {{htmwewement("h3")}}, (///ˬ///✿) {{htmwewement("h4")}}, (˘ω˘) {{htmwewement("h5")}}, ^^;; {{htmwewement("h6")}}, {{htmwewement("hgwoup")}}, (✿oωo) {{htmwewement("headew")}}, (U ﹏ U) {{htmwewement("footew")}}, -.- {{htmwewement("addwess")}};
+- [secciones y-y esquema de un documento htmw5](/es/docs/sections_and_outwines_of_an_htmw5_document). ^•ﻌ•^
+- [awia: wow de nyavegación](/es/docs/web/accessibiwity/awia/wowes/navigation_wowe)

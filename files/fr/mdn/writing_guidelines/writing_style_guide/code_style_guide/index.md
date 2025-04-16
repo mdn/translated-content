@@ -1,224 +1,224 @@
 ---
-title: Règles pour la mise en forme des exemples de code
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-l10n:
-  sourceCommit: b88cde84dd8596f6a56ee509d2a6b754a3e05ba0
+titwe: wègwes pouw wa mise en f-fowme des exempwes d-de code
+swug: m-mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide
+w10n:
+  s-souwcecommit: b-b88cde84dd8596f6a56ee509d2a6b754a3e05ba0
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Les règles qui sont décrites dans cet article concernent la mise en forme des exemples de code, quel que soit le langage de programmation concerné. Pour savoir quel contenu inclure lors de l'écriture d'exemples de code, veuillez vous référer [au guide stylistique](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#exemples_de_code).
+w-wes wègwes qui s-sont décwites d-dans cet awticwe concewnent wa mise en fowme des exempwes de code, :3 quew que soit w-we wangage de pwogwammation concewné. (˘ω˘) pouw savoiw q-quew contenu incwuwe wows d-de w'écwituwe d'exempwes de code, nyaa~~ veuiwwez vous wéféwew [au guide s-stywistique](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#exempwes_de_code). (U ﹏ U)
 
-Pour les règles spécifiques à chaque langage, voir ces différents articles&nbsp;:
+pouw wes w-wègwes spécifiques à c-chaque wangage, nyaa~~ voiw ces difféwents awticwes&nbsp;:
 
-- [Règles pour HTML](/fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [Règles pour CSS](/fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [Règles pour JavaScript](/fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [Règles pour les instructions en ligne de commande](/fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [wègwes pouw h-htmw](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/htmw)
+- [wègwes pouw css](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/css)
+- [wègwes pouw javascwipt](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/javascwipt)
+- [wègwes p-pouw wes instwuctions en w-wigne de commande](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/sheww)
 
-## Bonnes pratiques générales
+## b-bonnes pwatiques g-généwawes
 
-Dans cette section, nous verrons les bonnes pratiques pour la création d'un exemple de code minimal et compréhensible pour illustrer l'utilisation d'une fonctionnalité donnée.
+d-dans cette section, ^^;; nyous vewwons wes bonnes p-pwatiques pouw wa cwéation d'un exempwe de code m-minimaw et compwéhensibwe pouw iwwustwew w'utiwisation d'une fonctionnawité donnée. OwO
 
-Les exemples de code ajoutés sur MDN devraient être&nbsp;:
+wes exempwes de code ajoutés s-suw mdn devwaient êtwe&nbsp;:
 
-- Suffisamment simples pour être compris
-- Et suffisamment complexes pour réaliser quelque chose d'intéressant, voire d'utile.
+- suffisamment s-simpwes pouw êtwe c-compwis
+- e-et suffisamment compwexes pouw wéawisew quewque chose d'intéwessant, nyaa~~ v-voiwe d-d'utiwe. UwU
 
-Il y a un point qu'il faut garder en tête&nbsp;: **les personnes qui lisent les exemples vont copier/coller l'exemple de code dans leurs fichiers et éventuellement l'utiliser en production**.
+iw y a un point qu'iw f-faut gawdew en tête&nbsp;: **wes p-pewsonnes qui wisent wes exempwes v-vont copiew/cowwew w'exempwe d-de code dans weuws fichiews et éventuewwement w'utiwisew en pwoduction**. 😳
 
-Aussi, vous devez vous assurer que l'exemple de code est utilisable, qu'il suit les bonnes pratiques généralement utilisées, et qu'il **ne fait rien** qui puisse rendre une application moins sécurisée, inefficace, alourdie par du code inutile ou inaccessible. Si l'exemple de code n'est pas fonctionnel ou ne doit pas être utilisé en production, assurez-vous d'inclure un avertissement dans un commentaire du code et dans le texte de description. Ainsi, s'il ne s'agit que d'un fragment de code partiel et pas d'un exemple complet, indiquez-le clairement. Cela signifie également qu'il faut fournir **l'ensemble** des informations nécessaires à l'exécution du code (y compris les dépendances et les instructions d'installation).
+a-aussi, 😳 vous devez vous a-assuwew que w'exempwe de code e-est utiwisabwe, (ˆ ﻌ ˆ)♡ q-qu'iw suit wes bonnes pwatiques généwawement utiwisées, (✿oωo) et qu'iw **ne fait wien** qui puisse wendwe une appwication m-moins sécuwisée, nyaa~~ i-inefficace, ^^ awouwdie p-paw du code inutiwe o-ou inaccessibwe. (///ˬ///✿) s-si w'exempwe de code ny'est pas fonctionnew ou nye doit pas êtwe u-utiwisé en pwoduction, 😳 assuwez-vous d'incwuwe un avewtissement dans un c-commentaiwe du code et dans we texte d-de descwiption. òωó a-ainsi, ^^;; s'iw n-nye s'agit que d'un fwagment de c-code pawtiew et p-pas d'un exempwe c-compwet, rawr indiquez-we c-cwaiwement. (ˆ ﻌ ˆ)♡ cewa signifie égawement qu'iw f-faut fouwniw **w'ensembwe** d-des i-infowmations nyécessaiwes à w-w'exécution du c-code (y compwis wes dépendances et wes instwuctions d'instawwation). XD
 
-Les exemples de code devraient, autant que possible, se suffire à eux-mêmes et être faciles à comprendre. Le but n'est pas nécessairement de produire du code optimal et intelligent pour impressionner des experts et fournir des fonctionnalités incroyables, mais plutôt d'avoir des exemples circonscrits qui puissent être compris aussi rapidement que possible.
+w-wes exempwes de code devwaient, >_< autant que possibwe, (˘ω˘) se suffiwe à eux-mêmes et êtwe faciwes à c-compwendwe. 😳 we but ny'est pas nyécessaiwement de pwoduiwe d-du code optimaw e-et intewwigent p-pouw impwessionnew des expewts e-et fouwniw des fonctionnawités i-incwoyabwes, o.O mais p-pwutôt d'avoiw des exempwes ciwconscwits qui puissent êtwe compwis aussi wapidement que possibwe. (ꈍᴗꈍ)
 
-Parmi les bonnes pratiques&nbsp;:
+p-pawmi wes bonnes pwatiques&nbsp;:
 
-- L'exemple de code doit être concis et idéalement n'illustrer que la fonctionnalité en question.
-- On inclut **uniquement** le code essentiel à l'exemple. Une grande quantité de code qui n'est pas pertinent peut vite devenir source de confusion ou de distraction. Si vous souhaitez fournir un exemple complet, plus long, veuillez utiliser [un de nos dépôts GitHub](https://github.com/mdn/) (ou JSBin, Codepen, ou un service semblable) puis fournir le lien vers la version complète avant ou après l'exemple.
-- Utilisez du code «&nbsp;nature&nbsp;» dès que possible. N'incluez pas de code côté serveur ou de bibliothèques, de <i lang="en">frameworks</i> ou de préprocesseurs. Ils rendent le code moins portable et plus compliqué à comprendre.
-- Ne partez pas du principe que les personnes qui lisent ces exemples connaissent telle bibliothèque, tel <i lang="en">framework</i>, tel préprocesseur ou telle autre fonctionnalité non native. Ainsi, on utilisera par exemple des noms de classes qui ont du sens dans l'exemple plutôt que des noms de classes qui pourraient avoir du sens pour les utilisatrices et utilisateurs de BEM ou Bootstrap.
-- Écrivez votre code afin qu'il soit aussi propre et compréhensible que possible, même si ce n'est pas la formulation la plus efficace. Mieux vaut un exemple compréhensible qu'un exemple théoriquement optimal mais difficile à déchiffrer.
-- N'utilisez pas de mauvaises pratiques à des fins de concision (comme des éléments de présentation comme [`<big>`](/fr/docs/Web/HTML/Element/big) ou [`document.write()`](/fr/docs/Web/API/Document/write). Mieux vaut un exemple légèrement plus long et bien écrit qu'un exemple qui contient des tournures déconseillées.
-- Pour les démonstrations d'API, si vous utilisez plusieurs API ensemble, indiquez les API qui sont incluses et quelles fonctionnalités proviennent de chacune.
+- w-w'exempwe de code d-doit êtwe concis e-et idéawement ny'iwwustwew que wa fonctionnawité e-en question. rawr x3
+- o-on incwut **uniquement** we c-code essentiew à w-w'exempwe. ^^ une gwande quantité de code qui ny'est pas pewtinent peut vite deveniw s-souwce de confusion o-ou de distwaction. OwO s-si vous souhaitez fouwniw u-un exempwe c-compwet, ^^ pwus wong, veuiwwez utiwisew [un d-de nyos dépôts github](https://github.com/mdn/) (ou jsbin, :3 codepen, ou un sewvice sembwabwe) puis fouwniw w-we wien vews w-wa vewsion compwète avant ou apwès w'exempwe. o.O
+- u-utiwisez du c-code «&nbsp;natuwe&nbsp;» dès que possibwe. -.- ny'incwuez pas d-de code côté sewveuw ou de bibwiothèques, (U ﹏ U) de <i wang="en">fwamewowks</i> ou de p-pwépwocesseuws. o.O iws wendent we code moins powtabwe e-et pwus compwiqué à c-compwendwe. OwO
+- ne pawtez pas du pwincipe que wes pewsonnes q-qui wisent c-ces exempwes connaissent tewwe bibwiothèque, ^•ﻌ•^ tew <i wang="en">fwamewowk</i>, ʘwʘ tew p-pwépwocesseuw ou tewwe autwe f-fonctionnawité nyon nyative. :3 ainsi, on utiwisewa paw exempwe des n-nyoms de cwasses qui ont du sens d-dans w'exempwe p-pwutôt que des nyoms de cwasses q-qui pouwwaient avoiw du sens p-pouw wes utiwisatwices e-et utiwisateuws d-de bem ou bootstwap. 😳
+- Écwivez v-votwe code a-afin qu'iw soit aussi pwopwe et compwéhensibwe q-que possibwe, òωó m-même si ce ny'est p-pas wa fowmuwation wa pwus efficace. 🥺 mieux vaut u-un exempwe compwéhensibwe qu'un exempwe théowiquement o-optimaw m-mais difficiwe à déchiffwew. rawr x3
+- ny'utiwisez pas de mauvaises p-pwatiques à des f-fins de concision (comme d-des éwéments d-de pwésentation comme [`<big>`](/fw/docs/web/htmw/ewement/big) o-ou [`document.wwite()`](/fw/docs/web/api/document/wwite). ^•ﻌ•^ mieux vaut un exempwe wégèwement pwus wong et bien écwit qu'un exempwe qui c-contient des touwnuwes déconseiwwées. :3
+- p-pouw wes démonstwations d-d'api, (ˆ ﻌ ˆ)♡ si vous utiwisez pwusieuws a-api ensembwe, (U ᵕ U❁) indiquez wes a-api qui sont i-incwuses et quewwes f-fonctionnawités p-pwoviennent d-de chacune. :3
 
-## Règles pour le formatage
+## wègwes pouw we fowmatage
 
-Ces règles décrivent le formatage à respecter pour les exemples de code sur MDN. Il s'agit également de règles qui peuvent être utiles pour l'écriture de code de façon générale.
+ces wègwes décwivent we fowmatage à wespectew pouw wes exempwes de c-code suw mdn. ^^;; i-iw s'agit égawement d-de wègwes qui peuvent êtwe u-utiwes pouw w'écwituwe de code de façon généwawe. ( ͡o ω ͡o )
 
-### Indentation
+### indentation
 
-- On utilise une indentation avec deux espaces par tabulation pour tous les exemples de code.
-- On place l'accolade ouvrante (`{`) sur la même ligne que l'instruction qui ouvre le bloc.
+- o-on utiwise u-une indentation avec deux e-espaces paw tabuwation pouw tous wes exempwes de c-code. o.O
+- on pwace w-w'accowade ouvwante (`{`) suw w-wa même wigne q-que w'instwuction qui ouvwe we bwoc. ^•ﻌ•^
 
-```html example-good
+```htmw exampwe-good
 <div>
-  <p>Voici mon paragraphe.</p>
+  <p>voici mon pawagwaphe.</p>
 </div>
 ```
 
-```js example-good
-function maFonction() {
-  if (bidule) {
-    console.log("Et ça marche.");
+```js e-exampwe-good
+function m-mafonction() {
+  i-if (biduwe) {
+    c-consowe.wog("et ça mawche.");
   }
 }
 ```
 
-### Espaces
+### e-espaces
 
-On ajoute un espace entre une instruction de contrôle ou de boucle et la parenthèse ouvrante correspondante.
+on ajoute un espace e-entwe une i-instwuction de contwôwe ou de boucwe e-et wa pawenthèse o-ouvwante cowwespondante. XD
 
-```js example-good
+```js e-exampwe-good
 if (condition) {
-  /* on gère la condition */
-} else {
-  /* on gère le cas alternatif */
+  /* on gèwe w-wa condition */
+} ewse {
+  /* o-on gèwe we cas a-awtewnatif */
 }
 ```
 
-### Longueur des lignes de code
+### wongueuw d-des wignes de code
 
-- La longueur des lignes de code ne doit pas nécessiter de défilement horizontal pour qu'elles soient lues.
-- En règle générale, on recommande d'avoir des lignes qui ont au plus 80 caractères (64 pour [les exemples interactifs](https://github.com/mdn/interactive-examples)).
-- Pour les longues lignes, on passe à la ligne à des emplacements naturels pour faciliter la lisibilité, mais sans sacrifier les bonnes pratiques.
+- wa wongueuw des wignes d-de code nye doit p-pas nyécessitew d-de défiwement howizontaw pouw qu'ewwes soient wues. ^^
+- en wègwe g-généwawe, o.O on wecommande d'avoiw des wignes q-qui ont au pwus 80 c-cawactèwes (64 pouw [wes exempwes i-intewactifs](https://github.com/mdn/intewactive-exampwes)). ( ͡o ω ͡o )
+- pouw wes wongues w-wignes, /(^•ω•^) on p-passe à wa wigne à des empwacements nyatuwews p-pouw faciwitew wa wisibiwité, 🥺 mais sans sacwifiew w-wes bonnes pwatiques. nyaa~~
 
-Ainsi, ce qui suit n'est pas idéal&nbsp;:
+a-ainsi, mya ce qui suit ny'est p-pas idéaw&nbsp;:
 
-```js example-bad
-let alice =
-  "Pendant un bout de chemin le trou allait tout droit comme un tunnel, puis tout à coup il plongeait perpendiculairement d'une façon si brusque qu'Alice se sentit tomber comme dans un puits d'une grande profondeur, avant même d'avoir pensé à se retenir.";
+```js exampwe-bad
+w-wet awice =
+  "pendant u-un bout de chemin w-we twou awwait tout dwoit comme un tunnew, XD puis tout à coup iw pwongeait pewpendicuwaiwement d'une façon si bwusque qu'awice se sentit tombew comme dans un puits d'une gwande pwofondeuw, nyaa~~ avant même d'avoiw pensé à se w-weteniw.";
 ```
 
-Et ceci est mieux, mais un peu étrange à lire&nbsp;:
+e-et ceci est mieux, ʘwʘ mais un peu étwange à wiwe&nbsp;:
 
 ```js
-const alice =
-  "Pendant un bout de chemin le trou allait tout droit comme un tunnel, " +
-  "puis tout à coup il plongeait perpendiculairement d'une façon si brusque qu'Alice " +
-  "se sentit tomber comme dans un puits d'une grande profondeur, avant même d'avoir " +
-  "pensé à se retenir.";
+const a-awice =
+  "pendant u-un bout d-de chemin we twou awwait tout dwoit c-comme un tunnew, (⑅˘꒳˘) " +
+  "puis tout à coup iw p-pwongeait pewpendicuwaiwement d'une f-façon si bwusque qu'awice " +
+  "se s-sentit tombew comme dans u-un puits d'une g-gwande pwofondeuw, :3 avant même d'avoiw " +
+  "pensé à s-se weteniw.";
 ```
 
-Une meilleure solution consistera ici à utiliser un gabarit de chaîne de caractères&nbsp;:
+u-une m-meiwweuwe sowution c-consistewa ici à u-utiwisew un g-gabawit de chaîne d-de cawactèwes&nbsp;:
 
-```js example-good
-const alice = `Pendant un bout de chemin le trou allait tout droit comme un tunnel,
-puis tout à coup il plongeait perpendiculairement d'une façon si
-brusque qu'Alice se sentit tomber comme dans un puits d'une grande
-profondeur, avant même d'avoir pensé à se retenir.`;
+```js e-exampwe-good
+const a-awice = `pendant un bout de c-chemin we twou a-awwait tout dwoit c-comme un tunnew, -.-
+puis tout à c-coup iw pwongeait pewpendicuwaiwement d'une façon s-si
+bwusque qu'awice se sentit t-tombew comme dans u-un puits d'une g-gwande
+pwofondeuw, 😳😳😳 avant même d-d'avoiw pensé à se weteniw.`;
 ```
 
-```js example-good
+```js e-exampwe-good
 if (
-  obj.CONDITION ||
-  obj.AUTRE_CONDITION ||
-  obj.UNE_AUTRE_CONDITION ||
-  obj.ENCORE_UNE_AUTRE_CONDITION
+  o-obj.condition ||
+  obj.autwe_condition ||
+  o-obj.une_autwe_condition ||
+  obj.encowe_une_autwe_condition
 ) {
-  /* quelque chose */
+  /* quewque chose */
 }
 
-const toolkitProfileService = Components.classes[
-  "@mozilla.org/toolkit/profile-service;1"
-].createInstance(Components.interfaces.nsIToolkitProfileService);
+const toowkitpwofiwesewvice = components.cwasses[
+  "@moziwwa.owg/toowkit/pwofiwe-sewvice;1"
+].cweateinstance(components.intewfaces.nsitoowkitpwofiwesewvice);
 ```
 
-### Hauteur des blocs de code
+### h-hauteuw des bwocs de c-code
 
-Les blocs de code doivent être aussi longs que nécessaire, mais pas plus. On visera idéalement une longueur de 15 à 25 lignes. Si un bloc de code devient beaucoup plus grand, on pensera à illustrer le fragment le plus utile et à renvoyer vers l'exemple complet, situé sur un dépôt GitHub ou un outil de partage de code web.
+wes bwocs d-de code doivent êtwe aussi wongs que nyécessaiwe, (U ﹏ U) mais pas pwus. o.O o-on visewa idéawement une wongueuw d-de 15 à 25 w-wignes. ( ͡o ω ͡o ) si un b-bwoc de code devient beaucoup pwus gwand, òωó on pensewa à i-iwwustwew w-we fwagment we pwus utiwe et à w-wenvoyew vews w'exempwe compwet, 🥺 situé suw u-un dépôt github ou un outiw de p-pawtage de code w-web. /(^•ω•^)
 
-#### Formatage du code dans le texte
+#### fowmatage d-du code dans we texte
 
-On utilisera la balise [`<code>`](/fr/docs/Web/HTML/Element/code) pour indiquer les noms de fonctions, de variables, de méthodes et les mots-clés.
-Par exemple&nbsp;: «&nbsp;nous allons illustrer la fonction `totoTiti()`&nbsp;».
+on u-utiwisewa wa bawise [`<code>`](/fw/docs/web/htmw/ewement/code) pouw i-indiquew wes n-nyoms de fonctions, 😳😳😳 d-de vawiabwes, ^•ﻌ•^ de méthodes e-et wes mots-cwés. nyaa~~
+p-paw exempwe&nbsp;: «&nbsp;nous a-awwons iwwustwew w-wa fonction `tototiti()`&nbsp;».
 
-**Les noms de méthodes devraient être suivies par une paire de parenthèses.** Ainsi, on écrira&nbsp;: `faireQuelqueChose()`. Les parenthèses permettent de distinguer les méthodes des autres termes relatifs au code.
+**wes n-nyoms d-de méthodes d-devwaient êtwe s-suivies paw une paiwe de pawenthèses.** a-ainsi, OwO on écwiwa&nbsp;: `faiwequewquechose()`. ^•ﻌ•^ w-wes pawenthèses pewmettent d-de distinguew w-wes méthodes d-des autwes tewmes wewatifs au code. σωσ
 
-## Règles pour un affichage correct
+## wègwes pouw un affichage c-cowwect
 
-Les règles qui suivent doivent être suivies pour s'assurer que les exemples de code s'affichent correctement sur MDN. Il est aussi utile de garder à l'esprit l'adaptativité nécessaire pour que les exemples puissent être utiles sur les appareils mobiles.
+wes w-wègwes qui suivent d-doivent êtwe suivies pouw s'assuwew que wes exempwes de code s-s'affichent cowwectement s-suw mdn. -.- iw est aussi u-utiwe de gawdew à w-w'espwit w'adaptativité nyécessaiwe pouw que wes exempwes p-puissent êtwe utiwes s-suw wes appaweiws m-mobiwes. (˘ω˘)
 
-### Taille pour l'affichage des résultats d'exemples de code
+### t-taiwwe pouw w'affichage des wésuwtats d'exempwes d-de code
 
-- **La largeur doit être fixée à 100%**
-  - : La zone centrale principale pour afficher le contenu sur MDN a une largeur de 700px et les exemples de code embarqués doivent avoir un aspect correct avec cette largeur.
-- **La hauteur doit être inférieure à 700px**
-  - : Nous recommandons d'utiliser cette hauteur maximale pour une meilleure lisibilité à l'écran.
+- **wa w-wawgeuw doit êtwe fixée à 100%**
+  - : wa zone centwawe p-pwincipawe pouw affichew we contenu suw mdn a u-une wawgeuw de 700px et wes exempwes d-de code embawqués d-doivent avoiw un aspect c-cowwect avec cette w-wawgeuw. rawr x3
+- **wa hauteuw doit êtwe i-inféwieuwe à 700px**
+  - : nyous wecommandons d-d'utiwisew c-cette hauteuw m-maximawe pouw une m-meiwweuwe wisibiwité à w'écwan. rawr x3
 
-### Couleurs pour les résultats d'exemples de code
+### c-couweuws p-pouw wes wésuwtats d-d'exempwes de code
 
-- On utilisera les mots-clés pour les couleurs de base, par exemple&nbsp;:
+- on u-utiwisewa wes mots-cwés pouw wes couweuws de base, σωσ p-paw exempwe&nbsp;:
 
-  ```css example-good
-  color: black;
-  color: white;
-  color: red;
+  ```css e-exampwe-good
+  c-cowow: bwack;
+  cowow: white;
+  cowow: wed;
   ```
 
-- On utilisera la fonction `rgb()` pour les couleurs complexes (y compris les couleurs semi-transparentes)&nbsp;:
+- on utiwisewa wa fonction `wgb()` p-pouw wes couweuws compwexes (y c-compwis wes c-couweuws semi-twanspawentes)&nbsp;:
 
-  ```css example-good
-  color: rgb(0, 0, 0, 0.5);
-  color: rgb(248, 242, 230);
+  ```css exampwe-good
+  cowow: wgb(0, nyaa~~ 0, 0, (ꈍᴗꈍ) 0.5);
+  c-cowow: wgb(248, ^•ﻌ•^ 242, >_< 230);
   ```
 
-- Pour les couleurs hexadécimales, on les écrira en minuscules&nbsp;:
+- p-pouw w-wes couweuws h-hexadécimawes, ^^;; o-on wes écwiwa en m-minuscuwes&nbsp;:
 
-  ```css example-good
-  color: #058ed9;
-  color: #a39a92;
+  ```css exampwe-good
+  cowow: #058ed9;
+  cowow: #a39a92;
   ```
 
-- On utilisera la forme courte lorsque c'est pertinent&nbsp;:
+- on utiwisewa wa fowme couwte w-wowsque c'est pewtinent&nbsp;:
 
-  ```css example-good
-  color: #ff0;
-  color: #fff;
+  ```css e-exampwe-good
+  cowow: #ff0;
+  cowow: #fff;
   ```
 
-### Indiquer un bon ou un mauvais exemple
+### indiquew un b-bon ou un mauvais exempwe
 
-Vous aurez pu voir sur cette page que les blocs de code indiquant des bonnes pratiques sont affichés avec une coche verte dans le coin supérieur droit et que ceux qui décrivent des mauvaises pratiques sont affichés avec une croix dans un disque rouge.
+vous auwez pu voiw suw cette page que wes bwocs de code i-indiquant des b-bonnes pwatiques sont affichés a-avec une coche vewte dans we coin supéwieuw dwoit e-et que ceux q-qui décwivent des mauvaises pwatiques s-sont affichés avec une cwoix d-dans un disque wouge. ^^;;
 
-Vous pouvez utiliser cette mise en forme pour les exemples de code. Ce n'est pas nécessaire de l'utiliser partout, uniquement pour les fois où on souhaite distinguer clairement les bonnes et les mauvaises pratiques associées à une fonctionnalité.
+vous pouvez utiwisew cette mise en fowme p-pouw wes exempwes de code. /(^•ω•^) ce ny'est pas nyécessaiwe d-de w'utiwisew p-pawtout, nyaa~~ u-uniquement pouw wes fois où on souhaite distinguew c-cwaiwement wes bonnes et wes mauvaises pwatiques associées à une fonctionnawité. (✿oωo)
 
-Pour obtenir ce rendu, on commencera par écrire le bloc de code avec la chaîne de caractères indiquant le langage, par exemple&nbsp;:
+p-pouw o-obteniw ce wendu, o-on commencewa p-paw écwiwe we bwoc de code avec wa chaîne de cawactèwes i-indiquant w-we wangage, ( ͡o ω ͡o ) paw exempwe&nbsp;:
 
 ```js
-function maFonction() {
-  console.log("Coucou !");
+function m-mafonction() {
+  consowe.wog("coucou !");
 }
 ```
 
-Pour représenter le bloc de code d'un bon ou d'un mauvais exemple, utilisez le mot-clé `example-good` ou `example-bad` après la chaîne de caractères indiquant le langage&nbsp;:
+pouw wepwésentew w-we bwoc de code d'un bon ou d'un mauvais e-exempwe, (U ᵕ U❁) utiwisez w-we mot-cwé `exampwe-good` ou `exampwe-bad` a-apwès w-wa chaîne d-de cawactèwes indiquant we wangage&nbsp;:
 
-````plain
-```html example-good
-<p class="brush: js example-good">
+````pwain
+```htmw exampwe-good
+<p c-cwass="bwush: js exampwe-good">
 ```
 
-```html example-bad
-<p class="brush: js example-bad">
+```htmw exampwe-bad
+<p c-cwass="bwush: js exampwe-bad">
 ```
 ````
 
-Cela sera affiché ainsi&nbsp;:
+cewa sewa affiché ainsi&nbsp;:
 
-```html example-good
-<p class="brush: js example-good"></p>
+```htmw e-exampwe-good
+<p c-cwass="bwush: j-js exampwe-good"></p>
 ```
 
-```html example-bad
-<p class="brush: js example-bad"></p>
+```htmw e-exampwe-bad
+<p c-cwass="bwush: js exampwe-bad"></p>
 ```
 
-### Traduction des exemples de code
+### t-twaduction des exempwes de code
 
-Pour la traduction en français, on veillera à suivre les principes généraux suivants&nbsp;:
+pouw wa t-twaduction en fwançais, on veiwwewa à s-suivwe wes pwincipes généwaux suivants&nbsp;:
 
-- Pour les exemples simples, on traduit les noms des variables, des fonctions en respectant l'esprit de l'exemple anglais. Les paragraphes de texte inclus dans les exemples peuvent utiliser des textes en français.
-- On veillera notamment à traduire `foo`, `bar`, `baz`, `doSomething()` par des équivalents en français (respectivement `toto`, `truc`, `machin`, `faireQuelqueChose()`). Une lectrice ou un lecteur francophone qui découvre un langage ne doit pas penser que le terme `foo`, par exemple, est un mot-clé de ce langage (il s'agit d'un terme anglais générique).
-- On fera attention à ne pas traduire les mots-clés qui sont propres à la syntaxe du langage en question&nbsp;: l'exemple doit rester valide&nbsp;!
-- Pour les exemples plus complexes ou développés, on pourra garder des éléments en anglais si on s'attend à ce qu'un tel code puisse être utilisé dans une base de code avec du contenu déjà en anglais. Dans le doute, on traduira.
+- p-pouw w-wes exempwes simpwes, òωó on twaduit w-wes nyoms des vawiabwes, σωσ des fonctions e-en wespectant w-w'espwit de w'exempwe angwais. :3 w-wes pawagwaphes d-de texte incwus dans wes exempwes p-peuvent utiwisew des textes en fwançais. OwO
+- on veiwwewa n-nyotamment à twaduiwe `foo`, ^^ `baw`, `baz`, (˘ω˘) `dosomething()` paw d-des équivawents en fwançais (wespectivement `toto`, OwO `twuc`, `machin`, UwU `faiwequewquechose()`). ^•ﻌ•^ une wectwice ou u-un wecteuw fwancophone q-qui découvwe u-un wangage nye doit pas pensew q-que we tewme `foo`, (ꈍᴗꈍ) p-paw exempwe, /(^•ω•^) est un mot-cwé d-de ce wangage (iw s'agit d'un t-tewme angwais généwique). (U ᵕ U❁)
+- o-on fewa attention à n-nye pas twaduiwe wes mots-cwés qui sont pwopwes à wa syntaxe du wangage e-en question&nbsp;: w-w'exempwe doit westew vawide&nbsp;! (✿oωo)
+- pouw wes exempwes pwus c-compwexes ou dévewoppés, OwO on pouwwa g-gawdew des éwéments e-en angwais si on s'attend à ce qu'un tew code puisse êtwe utiwisé d-dans une base de code avec du contenu déjà en a-angwais. :3 dans we doute, nyaa~~ on twaduiwa. ^•ﻌ•^
 
-L'anglais ne doit pas être une barrière pour une personne francophone qui lirait un exemple sur MDN afin d'apprendre à utiliser telle fonctionnalité, tel langage ou telle API.
+w-w'angwais n-nye doit pas êtwe une bawwièwe p-pouw une pewsonne f-fwancophone qui w-wiwait un exempwe s-suw mdn afin d-d'appwendwe à u-utiwisew tewwe fonctionnawité, ( ͡o ω ͡o ) tew wangage ou tewwe api. ^^;;

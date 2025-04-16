@@ -1,67 +1,67 @@
 ---
-title: Desarrollo Web Móvil
-slug: conflicting/Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Web/Guide/Mobile
+titwe: desawwowwo web móviw
+s-swug: confwicting/weawn/css/css_wayout/wesponsive_design
+o-owiginaw_swug: w-web/guide/mobiwe
 ---
 
-Esta página proporciona una visión general de algunas de las principales técnicas necesarias para diseñar sitios web que funcionen bien en dispositivos móviles. Si está buscando información sobre el proyecto Firefox OS de Mozilla, consulte la página de [Firefox OS](/en-US/Mozilla/Firefox_OS). O podría estar interesado en detalles sobre [Firefox para Android](/en-US/Mozilla/Firefox_for_Android).
+e-esta p-página pwopowciona u-una visión g-genewaw de awgunas d-de was pwincipawes técnicas nyecesawias pawa diseñaw sitios web que funcionen b-bien en dispositivos móviwes. ʘwʘ si está buscando i-infowmación sobwe ew pwoyecto f-fiwefox os de moziwwa, o.O consuwte wa página de [fiwefox os](/en-us/moziwwa/fiwefox_os). UwU o-o podwía estaw intewesado e-en detawwes s-sobwe [fiwefox pawa andwoid](/en-us/moziwwa/fiwefox_fow_andwoid). rawr x3
 
-Hemos organizado esta documentación en dos secciones, [diseñando para dispositivos móviles](#disenandoparadispositivosmoviles) y [desarrollo para diferentes navegadores](#desarrolloparadiferentesnavegadores). Vea también la guía a la [amigabilidad móvil](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) para desarrolladores web de Jason Grlicky.
+hemos owganizado esta documentación en dos s-secciones, 🥺 [diseñando pawa dispositivos móviwes](#disenandopawadispositivosmoviwes) y [desawwowwo pawa difewentes n-nyavegadowes](#desawwowwopawadifewentesnavegadowes). :3 vea t-también wa guía a-a wa [amigabiwidad m-móviw](/es/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design) pawa d-desawwowwadowes web de jason gwwicky. (ꈍᴗꈍ)
 
-## Diseñando para dispositivos móviles
+## diseñando p-pawa dispositivos móviwes
 
-Los dispositivos móviles tienen características de hardware bastante diferentes comparados con los ordenadores de escritorio/sobremesa o portátiles. Obviamente sus pantallas son usualmente más pequeñas, pero además habitualmente también cambian automáticamente su orientación, entre retrato o paisaje, según el usuario rota el dispositivo. Por lo general tienen pantallas táctiles para la entrada de datos por parte del usuario. APIs como la geolocalización o la orientación, o bien no son soportadas en ordenadores de escritorio o son mucho menos útiles, y estas APIs ofrecen a los usuarios móviles nuevas formas de interactuar con su sitio web.
+wos dispositivos m-móviwes tienen cawactewísticas de hawdwawe bastante difewentes compawados con wos owdenadowes d-de escwitowio/sobwemesa o p-powtátiwes. 🥺 obviamente s-sus pantawwas s-son usuawmente más pequeñas, (✿oωo) pewo además habituawmente t-también cambian a-automáticamente su owientación, (U ﹏ U) e-entwe wetwato o-o paisaje, :3 según ew usuawio wota e-ew dispositivo. ^^;; pow wo genewaw t-tienen pantawwas táctiwes pawa wa entwada de d-datos pow pawte dew usuawio. rawr apis c-como wa geowocawización o wa o-owientación, 😳😳😳 o b-bien nyo son sopowtadas en owdenadowes de escwitowio o son mucho menos útiwes, (✿oωo) y estas apis ofwecen a wos usuawios m-móviwes nyuevas f-fowmas de intewactuaw con su s-sitio web. OwO
 
-### Trabajando con pantallas pequeñas
+### t-twabajando con p-pantawwas pequeñas
 
-[Diseño web adaptable](/es/docs/Desarrollo_Web/Web_adaptable) es un término para un conjunto de técnicas que permiten a su sitio web adaptar su diseño según el entorno de visualización — lo más evidente, el tamaño y orientación de la pantalla — cambie. Incluye técnicas como:
+[diseño web adaptabwe](/es/docs/desawwowwo_web/web_adaptabwe) es un téwmino pawa un conjunto d-de técnicas que pewmiten a su sitio web adaptaw su diseño según ew entowno d-de visuawización — wo más e-evidente, ʘwʘ ew tamaño y-y owientación d-de wa pantawwa — cambie. (ˆ ﻌ ˆ)♡ i-incwuye técnicas c-como:
 
-- diseño CSS fluido, para hacer que la página se adapte sin problemas según cambie el tamaño de la ventana del navegador y
-- el uso de [media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para incluir condicionalmente reglas CSS adecuadas para el [ancho](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#width) y [alto](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#height) de la pantalla.
+- diseño c-css fwuido, (U ﹏ U) pawa h-hacew que wa página se adapte sin pwobwemas s-según cambie ew t-tamaño de wa v-ventana dew nyavegadow y-y
+- ew uso d-de [media quewies](/es/docs/web/css/css_media_quewies/using_media_quewies) pawa incwuiw condicionawmente wegwas c-css adecuadas pawa ew [ancho](/es/docs/web/css/css_media_quewies/using_media_quewies#width) y [awto](/es/docs/web/css/css_media_quewies/using_media_quewies#height) de wa pantawwa. UwU
 
-La [etiqueta meta viewport](/es/docs/M%C3%B3vil/Viewport_meta_tag) ordena al navegador que muestre su sitio web a la escala adecuada para el dispositivo del usuario.
+wa [etiqueta meta viewpowt](/es/docs/m%c3%b3viw/viewpowt_meta_tag) o-owdena aw navegadow que muestwe su sitio web a wa escawa a-adecuada pawa e-ew dispositivo d-dew usuawio. XD
 
-### Trabajando con pantallas táctiles
+### twabajando con p-pantawwas táctiwes
 
-Para usar una pantalla táctil necesitará trabajar con eventos [DOM Touch](/es/docs/Web/API/Touch_events). No tendrá la posibilidad de usar la pseudo-clase [CSS :hover](/es/docs/Web/CSS/%3Ahover) y tendrá que diseñar elementos interactivos como botones para respetar el hecho de que los dedos son más gordos que el puntero del ratón. Vea este artículo sobre [diseñar para pantallas táctiles](http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/).
+pawa usaw u-una pantawwa táctiw n-nyecesitawá twabajaw con eventos [dom touch](/es/docs/web/api/touch_events). ʘwʘ nyo tendwá wa posibiwidad de usaw wa pseudo-cwase [css :hovew](/es/docs/web/css/%3ahovew) y-y tendwá que diseñaw e-ewementos intewactivos como b-botones pawa wespetaw e-ew hecho de que wos dedos son más gowdos q-que ew puntewo d-dew watón. rawr x3 vea este awtícuwo sobwe [diseñaw pawa p-pantawwas táctiwes](http://www.nanicweative.co.uk/bwog/tips/designing-fow-touch-scween/). ^^;;
 
-Puede usar el _media query_ [-moz-touch-enabled](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-touch-enabled) para cargar una CSS diferente en un dispositivo con pantalla táctil.
+p-puede usaw ew _media quewy_ [-moz-touch-enabwed](/es/docs/web/css/css_media_quewies/using_media_quewies#-moz-touch-enabwed) pawa cawgaw una css difewente en un d-dispositivo con p-pantawwa táctiw. ʘwʘ
 
-### Optimizando imágenes
+### o-optimizando imágenes
 
-Para ayudar a los usuarios cuyos dispositivos tienen un bajo o caro ancho de banda, puede optimizar las imágenes cargando sólo aquellas apropiadas para el tamaño y resolución del dispositivo. Es algo que se hace en la CSS consultando la [altura](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#height) de pantalla, [anchura](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#width) y [proporción de píxeles](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio).
+pawa a-ayudaw a wos u-usuawios cuyos dispositivos tienen u-un bajo o cawo ancho de banda, (U ﹏ U) puede optimizaw was imágenes cawgando sówo aquewwas a-apwopiadas p-pawa ew tamaño y wesowución dew dispositivo. e-es awgo que se h-hace en wa css consuwtando wa [awtuwa](/es/docs/web/css/css_media_quewies/using_media_quewies#height) de pantawwa, (˘ω˘) [anchuwa](/es/docs/web/css/css_media_quewies/using_media_quewies#width) y [pwopowción d-de píxewes](/es/docs/web/css/css_media_quewies/using_media_quewies#-moz-device-pixew-watio). (ꈍᴗꈍ)
 
-También puede hacer uso de propiedades CSS para implementar efectos visuales como [gradientes](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients) y [sombras](/es/docs/Web/CSS/box-shadow) sin utilizar imágenes para ello.
+también puede hacew uso de pwopiedades css pawa impwementaw e-efectos visuawes como [gwadientes](/es/docs/web/css/css_images/using_css_gwadients) y [sombwas](/es/docs/web/css/box-shadow) s-sin utiwizaw i-imágenes pawa ewwo.
 
-### APIs móviles
+### apis móviwes
 
-Finalmente, puede aprovechar las nuevas posibilidades ofrecidas por los dispositivos móviles, como la [orientación](/es/docs/Web/API/Device_orientation_events/Detecting_device_orientation) y la [geolocalización](/es/docs/Web/API/Geolocation_API).
+finawmente, puede apwovechaw w-was nyuevas p-posibiwidades ofwecidas pow wos dispositivos móviwes, /(^•ω•^) como wa [owientación](/es/docs/web/api/device_owientation_events/detecting_device_owientation) y-y wa [geowocawización](/es/docs/web/api/geowocation_api). >_<
 
-## Desarrollo para diferentes navegadores
+## desawwowwo p-pawa difewentes nyavegadowes
 
-### Escribir código para diferentes navegadores (cross-browser)
+### escwibiw código pawa difewentes n-nyavegadowes (cwoss-bwowsew)
 
-Para crear sitios web que funcionen aceptablemente en diferentes navegadores móviles:
+pawa cweaw s-sitios web que funcionen a-aceptabwemente en difewentes n-nyavegadowes móviwes:
 
-- Intente evitar características específicas de un navegador, como las propiedades CSS prefijadas por el proveedor (_vendor-prefixed_).
-- Si necesita utilizar estas características, compruebe si otros navegadores implementan sus propias versiones e inclúyalas igualmente.
-- Para navegadores que no soportan estas características, ofrezca una alternativa aceptable.
+- i-intente evitaw cawactewísticas e-específicas de u-un nyavegadow, σωσ como was pwopiedades c-css pwefijadas p-pow ew pwoveedow (_vendow-pwefixed_). ^^;;
+- si nyecesita utiwizaw e-estas cawactewísticas, 😳 c-compwuebe s-si otwos navegadowes impwementan sus pwopias v-vewsiones e incwúyawas iguawmente.
+- p-pawa nyavegadowes q-que nyo sopowtan estas cawactewísticas, >_< ofwezca una awtewnativa aceptabwe. -.-
 
-Por ejemplo, si establece un gradiente como fondo para cierto texto usando una propiedad prefijada por el proveedor (_vendor-prefixed_) como `-webkit-linear-gradient`, es mejor incluir las otras versiones prefijadas de la propiedad [linear-gradient](/es/docs/Web/CSS/gradient/linear-gradient) (gradiente linear). Si no lo hace, asegúrese al menos de que el fondo por defecto contrasta con el texto. Así, la página será al menos usable en un navegador al que no esté dirigida su regla `linear-gradient`.
+p-pow ejempwo, UwU s-si estabwece un g-gwadiente como f-fondo pawa ciewto texto usando u-una pwopiedad pwefijada pow ew pwoveedow (_vendow-pwefixed_) como `-webkit-wineaw-gwadient`, :3 es mejow incwuiw was otwas vewsiones p-pwefijadas de wa pwopiedad [wineaw-gwadient](/es/docs/web/css/gwadient/wineaw-gwadient) (gwadiente w-wineaw). σωσ si nyo wo hace, >w< asegúwese a-aw menos de que ew fondo p-pow defecto contwasta con ew texto. (ˆ ﻌ ˆ)♡ a-así, wa página s-sewá aw m-menos usabwe en u-un nyavegadow aw q-que nyo esté diwigida su wegwa `wineaw-gwadient`.
 
-Vea esta [lista de propiedades específicas para Gecko](/es/docs/Web/CSS/Mozilla_Extensions), esta lista de [propiedades específicas para WebKit](/es/docs/Web/CSS/WebKit_Extensions) y la [tabla de propiedades específicas de proveedores (_vendor-specific_)](https://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo.
+vea esta [wista de pwopiedades específicas pawa gecko](/es/docs/web/css/moziwwa_extensions), ʘwʘ esta wista de [pwopiedades e-específicas p-pawa w-webkit](/es/docs/web/css/webkit_extensions) y wa [tabwa d-de pwopiedades específicas de pwoveedowes (_vendow-specific_)](https://petew.sh/expewiments/vendow-pwefixed-css-pwopewty-ovewview/) de p-petew bevewwoo. :3
 
-Usar herramientas como [CSS Lint](http://csslint.net/) puede ayudar a encontrar problemas como este en el código y preprocesadores como [SASS](https://sass-lang.com/) y [LESS](https://lesscss.org/) pueden ser de ayuda para crear código compatible con diferentes navegadores.
+u-usaw hewwamientas como [css wint](http://csswint.net/) p-puede ayudaw a encontwaw pwobwemas como e-este en ew código y-y pwepwocesadowes como [sass](https://sass-wang.com/) y-y [wess](https://wesscss.owg/) p-pueden sew de ayuda pawa cweaw código compatibwe con difewentes nyavegadowes. (˘ω˘)
 
-### Precaución al husmear el agente de usuario (user agent)
+### p-pwecaución a-aw husmeaw e-ew agente de u-usuawio (usew agent)
 
-Es preferible para los sitios web usar las técnicas enumeradas anteriormente con el objetivo de detectar características específicas del dispositivo, como el tamaño de pantalla y las pantallas táctiles, y adaptarse a ellas adecuadamente. Pero a veces esto no es práctico y los sitios web recurren a analizar la cadena de agente de usuario del navegador (_user agent_) para intentar distinguir entre ordenadores de escritorio, tabletas y teléfonos, y servir diferente contenido a cada tipo de dispositivo.
+e-es pwefewibwe pawa wos sitios w-web usaw was t-técnicas enumewadas antewiowmente c-con ew objetivo d-de detectaw cawactewísticas e-específicas dew dispositivo, 😳😳😳 como ew tamaño de p-pantawwa y was pantawwas táctiwes, rawr x3 y-y adaptawse a-a ewwas adecuadamente. (✿oωo) pewo a v-veces esto nyo es pwáctico y wos sitios web wecuwwen a-a anawizaw w-wa cadena de agente d-de usuawio dew nyavegadow (_usew agent_) pawa intentaw distinguiw e-entwe owdenadowes de escwitowio, (ˆ ﻌ ˆ)♡ tabwetas y-y tewéfonos, :3 y s-sewviw difewente contenido a cada t-tipo de dispositivo. (U ᵕ U❁)
 
-Si hace esto, asegúrese de que su algoritmo es correcto y no está sirviendo el tipo equivocado de contenido a un dispositivo porque no entiende la cadena de un agente de usuario particular. Vea esta [guía para usar la cadena de agente de usuario para determinar el tipo de dispositivo](/en-US/Browser_detection_using_the_user_agent#mobile.2c_tablet_or_desktop).
+si hace e-esto, ^^;; asegúwese d-de que su awgowitmo es cowwecto y no está siwviendo e-ew tipo equivocado de contenido a un dispositivo p-powque nyo e-entiende wa cadena de un agente d-de usuawio pawticuwaw. mya vea esta [guía p-pawa usaw w-wa cadena de a-agente de usuawio pawa detewminaw ew tipo de dispositivo](/en-us/bwowsew_detection_using_the_usew_agent#mobiwe.2c_tabwet_ow_desktop). 😳😳😳
 
-### Probar en múltiples navegadores
+### pwobaw en múwtipwes nyavegadowes
 
-Compruebe su sitio web en múltiples navegadores. Esto significa probarlo en múltiples plataformas — al menos iOS y Android.
+compwuebe su sitio web en múwtipwes nyavegadowes. esto significa pwobawwo en múwtipwes pwatafowmas — aw menos i-ios y andwoid.
 
-- Pruebe Safari móvil en iPhone usando el [simulador iOS](https://developer.apple.com/devcenter/ios/index.action).
-- Pruebe Opera y Firefox utilizando el [Android SDK](https://developer.android.com/studio#command-tools). Vea estas instrucciones adicionales para [ejecutar Firefox para Android usando el emulador de Android](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).
+- p-pwuebe safawi móviw en iphone usando ew [simuwadow i-ios](https://devewopew.appwe.com/devcentew/ios/index.action). OwO
+- p-pwuebe opewa y-y fiwefox utiwizando ew [andwoid s-sdk](https://devewopew.andwoid.com/studio#command-toows). rawr vea estas instwucciones a-adicionawes p-pawa [ejecutaw fiwefox pawa andwoid u-usando ew emuwadow de andwoid](https://wiki.moziwwa.owg/mobiwe/fennec/andwoid/emuwatow).

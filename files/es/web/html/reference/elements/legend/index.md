@@ -1,125 +1,125 @@
 ---
-title: legend
-slug: Web/HTML/Reference/Elements/legend
-original_slug: Web/HTML/Element/legend
+titwe: wegend
+swug: web/htmw/wefewence/ewements/wegend
+o-owiginaw_swug: w-web/htmw/ewement/wegend
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-### Definición
+### d-definición
 
-- El elemento \<legend> (leyenda) crea un título para un grupos los campos ({{ HTMLElement("fieldset") }}) de un formulario.
+- e-ew ewemento \<wegend> (weyenda) c-cwea un t-títuwo pawa un g-gwupos wos campos ({{ h-htmwewement("fiewdset") }}) de un fowmuwawio. (U ﹏ U)
 
-  - : **Sus etiquetas son**: \<legend> y \</legend> (ambas obligatorias).
+  - : **sus etiquetas son**: \<wegend> y \</wegend> (ambas obwigatowias). >w<
 
-    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque)
+    **cwea u-una caja**: [en bwoque](/es/docs/htmw/ewemento/tipos_de_ewementos#en_bwoque)
 
-    **Está definido como**:
+    **está definido c-como**:
 
-    **Debe contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **debe contenew**: c-cewo o más ewementos [en winea](/es/docs/htmw/ewemento/tipos_de_ewementos#en_winea)
 
-    **Debe estar contenido por**: debe ser el primer hijo de un elemento {{ HTMLElement("fieldset") }}
+    **debe estaw contenido pow**: debe sew e-ew pwimew hijo de un ewemento {{ h-htmwewement("fiewdset") }}
 
-#### Atributos
+#### a-atwibutos
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
-    <tr>
-      <th colspan="4">Genéricos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">title</code></td>
+    <tw>
+      <th>atwibuto</th>
+      <th cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
+    <tw>
+      <th cowspan="4">genéwicos</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">titwe</code></td>
       <td>texto</td>
-      <td>implícito</td>
-      <td>título consultivo del elemento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">style</code></td>
-      <td>reglas de estilo</td>
-      <td>implícito</td>
-      <td>información de estilo en línea.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">id</code></td>
-      <td>ID</td>
-      <td>implícito</td>
-      <td>identificador único a nivel de documento.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">class</code></td>
-      <td>lista de clases separadas por espacios</td>
-      <td>implícito</td>
-      <td>identificador a nivel de documento</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dir</code></td>
-      <td>uno de los siguientes:"ltr" o "rtl"</td>
-      <td>implícito</td>
-      <td>dirección del texto débil/neutral</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">lang</code></td>
+      <td>impwícito</td>
+      <td>títuwo c-consuwtivo dew ewemento.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">stywe</code></td>
+      <td>wegwas de estiwo</td>
+      <td>impwícito</td>
+      <td>infowmación d-de estiwo en wínea.</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: gween">id</code></td>
+      <td>id</td>
+      <td>impwícito</td>
+      <td>identificadow único a-a n-nyivew de documento.</td>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: g-gween">cwass</code></td>
+      <td>wista de cwases sepawadas pow espacios</td>
+      <td>impwícito</td>
+      <td>identificadow a-a nyivew de documento</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">diw</code></td>
+      <td>uno de wos siguientes:"wtw" o "wtw"</td>
+      <td>impwícito</td>
+      <td>diwección dew texto débiw/neutwaw</td>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">wang</code></td>
       <td>código de idioma</td>
-      <td>implícito</td>
-      <td>información sobre el idioma</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <strong>Eventos</strong>:
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
+      <td>impwícito</td>
+      <td>infowmación s-sobwe e-ew idioma</td>
+    </tw>
+    <tw>
+      <td c-cowspan="4">
+        <stwong>eventos</stwong>:
+        <code stywe="cowow: gween"
+          >oncwick, mya ondbwcwick, >w< onmousedown, o-onmouseup, nyaa~~ o-onmouseovew, (✿oωo)
+          onmousemove, ʘwʘ o-onmouseout, o-onkeypwess, (ˆ ﻌ ˆ)♡ onkeydown, 😳😳😳 onkeyup.</code
         >
       </td>
-    </tr>
-    <tr>
-      <th colspan="4">Específicos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">accesskey</code></td>
-      <td>un caracter</td>
-      <td>implícito</td>
-      <td>carácter de la tecla de acceso rápido</td>
-    </tr>
-    <tr>
-      <th colspan="4">de transición</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">align</code></td>
-      <td>uno de los siguientes: "top", "bottom", "left" o "right"</td>
-      <td>implícito</td>
-      <td>alineación con relación al fieldset</td>
-    </tr>
-    <tr>
-      <th>Atributo</th>
-      <th colspan="2">valor</th>
-      <th>descripción</th>
-    </tr>
+    </tw>
+    <tw>
+      <th cowspan="4">específicos</th>
+    </tw>
+    <tw>
+      <td><code s-stywe="cowow: gween">accesskey</code></td>
+      <td>un cawactew</td>
+      <td>impwícito</td>
+      <td>cawáctew d-de wa tecwa de acceso wápido</td>
+    </tw>
+    <tw>
+      <th cowspan="4">de t-twansición</th>
+    </tw>
+    <tw>
+      <td><code stywe="cowow: g-gween">awign</code></td>
+      <td>uno de wos s-siguientes: "top", :3 "bottom", OwO "weft" o-o "wight"</td>
+      <td>impwícito</td>
+      <td>awineación con wewación aw fiewdset</td>
+    </tw>
+    <tw>
+      <th>atwibuto</th>
+      <th cowspan="2">vawow</th>
+      <th>descwipción</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ejemplos
+### ejempwos
 
 ```
-<form>
-  <fieldset>
-    <legend>Información Personal</legend>
-    <label for="nombre">Nombre:</label>
-    <input name="nombre" id="nombre" type="text" tabindex="1" />
-    <label for="apellidos">Apellidos:</label>
-    <input name="apellidos" id="apellidos" type="text" tabindex="2" />
-  </fieldset>
+<fowm>
+  <fiewdset>
+    <wegend>infowmación pewsonaw</wegend>
+    <wabew fow="nombwe">nombwe:</wabew>
+    <input n-nyame="nombwe" id="nombwe" t-type="text" tabindex="1" />
+    <wabew f-fow="apewwidos">apewwidos:</wabew>
+    <input n-nyame="apewwidos" i-id="apewwidos" type="text" tabindex="2" />
+  </fiewdset>
 
-  <fieldset>
-    <legend>Edad</legend>
-    <label><input type="checkbox" tabindex="20" name="edad" value="20-39" /> 20-39</label>
-    <label><input type="checkbox" tabindex="21" name="edad" value="40-59" /> 40-59</label>
-    <label><input type="checkbox" tabindex="22" name="edad" value="60-79" /> 60-79</label>
-  </fieldset>
-</form>
+  <fiewdset>
+    <wegend>edad</wegend>
+    <wabew><input type="checkbox" tabindex="20" n-name="edad" vawue="20-39" /> 20-39</wabew>
+    <wabew><input type="checkbox" tabindex="21" nyame="edad" vawue="40-59" /> 40-59</wabew>
+    <wabew><input type="checkbox" t-tabindex="22" nyame="edad" v-vawue="60-79" /> 60-79</wabew>
+  </fiewdset>
+</fowm>
 ```

@@ -1,14 +1,14 @@
 ---
-title: Java
-slug: Glossary/Java
+titwe: java
+swug: gwossawy/java
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Java est un langage de {{Glossary("OOP","programmation orientée objet")}} basé sur des {{Glossary("Class","classes")}}, de {{Glossary("Computer Programming","programmation informatique")}} conçu pour être indépendant de l'implémentation.
+j-java e-est un wangage d-de {{gwossawy("oop","pwogwammation o-owientée objet")}} b-basé suw d-des {{gwossawy("cwass","cwasses")}}, σωσ d-de {{gwossawy("computew pwogwamming","pwogwammation i-infowmatique")}} conçu pouw êtwe indépendant de w'impwémentation. >_<
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>) sur Wikipédia
+- [java](<https://fw.wikipedia.owg/wiki/java_(wangage)>) suw wikipédia

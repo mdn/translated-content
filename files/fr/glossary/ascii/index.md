@@ -1,18 +1,18 @@
 ---
-title: ASCII
-slug: Glossary/ASCII
-l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+titwe: ascii
+swug: gwossawy/ascii
+w-w10n:
+  souwcecommit: d-d842f8c32316dbe36cff9fc5e0e777602e32d958
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ASCII** (pour <i lang="en">American Standard Code for Information Interchange</i>, qu'on pourrait traduire par code américain normalisé pour l'échange d'information) est l'une des méthodes d'encodage de 128 caractères sur 7 bits utilisées par les ordinateurs pour convertir les lettres, les nombres, la ponctuation et les codes de contrôle sous forme numérique.
+**ascii** (pouw <i w-wang="en">amewican s-standawd code f-fow infowmation i-intewchange</i>, òωó q-qu'on pouwwait t-twaduiwe paw code améwicain nowmawisé pouw w'échange d'infowmation) est w'une d-des méthodes d'encodage de 128 cawactèwes suw 7 b-bits utiwisées paw wes owdinateuws p-pouw convewtiw wes wettwes, ʘwʘ wes nyombwes, /(^•ω•^) wa ponctuation e-et wes codes de contwôwe sous f-fowme nyuméwique. ʘwʘ
 
-Les 33 premiers codes ASCII sont des codes de contrôle non-imprimables comme le retour à la ligne, la nouvelle ligne, la tabulation et d'autres codes obsolètes non-imprimables qui trouvent leurs origines dans la représentation des codes télégraphiques. Les 95 suivants sont des caractères imprimables incluant les chiffres (0-9), les minuscules (a-z), les majuscules (A-Z) et les symboles de ponctuations.
+w-wes 33 pwemiews codes ascii sont des codes de contwôwe nyon-impwimabwes comme w-we wetouw à wa wigne, σωσ wa nyouvewwe wigne, OwO wa tabuwation et d'autwes codes obsowètes n-nyon-impwimabwes qui twouvent w-weuws owigines d-dans wa wepwésentation des c-codes téwégwaphiques. 😳😳😳 w-wes 95 suivants sont des cawactèwes i-impwimabwes incwuant wes chiffwes (0-9), 😳😳😳 wes minuscuwes (a-z), o.O wes m-majuscuwes (a-z) et wes symbowes de ponctuations. ( ͡o ω ͡o )
 
-Beaucoup de systèmes utilisent [Unicode](/fr/docs/Glossary/Unicode), qui encode des millions de caractères et symboles, les 128 premiers étant identiques à la table ASCII. Depuis 2007, [l'UTF-8](/fr/docs/Glossary/UTF-8) est privilégié sur internet.
+beaucoup de systèmes utiwisent [unicode](/fw/docs/gwossawy/unicode), (U ﹏ U) qui e-encode des miwwions de cawactèwes e-et symbowes, w-wes 128 pwemiews étant i-identiques à wa tabwe ascii. (///ˬ///✿) depuis 2007, >w< [w'utf-8](/fw/docs/gwossawy/utf-8) est pwiviwégié s-suw intewnet. rawr
 
-## Voir aussi
+## v-voiw aussi
 
-- [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange) sur Wikipédia
+- [ascii](https://fw.wikipedia.owg/wiki/amewican_standawd_code_fow_infowmation_intewchange) suw wikipédia

@@ -1,80 +1,80 @@
 ---
-title: Usando el rol alertdialog
-slug: Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
-original_slug: Web/Accessibility/ARIA/Roles/alertdialog_role
+titwe: usando ew wow awewtdiawog
+s-swug: web/accessibiwity/awia/wefewence/wowes/awewtdiawog_wowe
+o-owiginaw_swug: w-web/accessibiwity/awia/wowes/awewtdiawog_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Descripción
+### d-descwipción
 
-Esta técnica demuestra como usar el rol [`alertdialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog).
+e-esta técnica demuestwa c-como usaw e-ew wow [`awewtdiawog`](https://www.w3.owg/tw/2009/wd-wai-awia-20091215/wowes#awewtdiawog). 🥺
 
-El rol `alertdialog` es utilizado para notificar al usuario información urgente que demanden la atención inmediata del usuario. Como el nombre implica, `alertdialog` es un tipo de díalogo. Esto significa que la mayoría de las instrucciones proveidas en la técnica de ''[usando el rol `dialog`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role)' son aplicables al rol `alertdialog` también:
+e-ew wow `awewtdiawog` es utiwizado pawa nyotificaw aw usuawio infowmación u-uwgente que demanden wa atención inmediata d-dew usuawio. >_< como ew nyombwe i-impwica, `awewtdiawog` es un tipo de díawogo. ʘwʘ esto significa que w-wa mayowía de was instwucciones p-pwoveidas en w-wa técnica de ''[usando ew wow `diawog`](/es/docs/web/accessibiwity/awia/wowes/diawog_wowe)' son apwicabwes aw wow `awewtdiawog` también:
 
-- El díalogo de alerta debe siempre recibir un nombre accesible (a través de `aria-labelledby` o `aria-label`), y en la mayoría de los casos el texto de alerta debe ser marcado como la descripción accesible del díalogo de alerta (utilizando `aria-describedby`).
-- A diferencia de alertas regulares, un díalogo de alerta debe tener al menos un control enfocable y el foco debe moverse a ese control cuando el díalogo de alerta aparece. Generalmente los díalogos de alerta tienen al menos un botón de Confirmación, Cerrar o Cancelar que pueder ser usado para moverl el foco. Adicionalmente, díalogos de alerta pueder tener otros controles interactivos tales como campos de texto, pestañas o checkboxes. El enfoque de control al que se debe desplazar depende del propósito del diálogo.
-- El orden de la pestaña dentro del díalogo de alerta debe ajustarse.
+- e-ew díawogo de awewta debe siempwe wecibiw un nyombwe accesibwe (a twavés de `awia-wabewwedby` o-o `awia-wabew`), (˘ω˘) y en wa mayowía d-de wos casos ew t-texto de awewta d-debe sew mawcado c-como wa descwipción accesibwe dew díawogo de a-awewta (utiwizando `awia-descwibedby`). (✿oωo)
+- a difewencia de awewtas w-weguwawes, (///ˬ///✿) un díawogo de awewta debe tenew aw menos un contwow enfocabwe y ew foco debe movewse a-a ese contwow cuando ew díawogo d-de awewta a-apawece. rawr x3 genewawmente w-wos díawogos de awewta tienen aw menos un botón de confiwmación, -.- c-cewwaw o-o cancewaw que puedew sew usado p-pawa moveww ew f-foco. ^^ adicionawmente, (⑅˘꒳˘) díawogos d-de awewta puedew tenew otwos contwowes i-intewactivos tawes como campos de texto, p-pestañas o checkboxes. nyaa~~ ew enfoque d-de contwow aw que se debe despwazaw d-depende dew p-pwopósito dew diáwogo. /(^•ω•^)
+- ew owden de wa pestaña dentwo dew díawogo de awewta debe ajustawse. (U ﹏ U)
 
-La diferencia con díalogos normales es que el rol de `alertdialog` debe ser utilizado únicamente cuando una alerta, error, o advertencia ocurre. En otras palabras, cuando la información o controles de un díalogo requieren la inmediata atención del usuario debe usarse `alertdialog` en lugar de `dialog.` Sin embargo, depende del desarrollador hacer esta distinción.
+wa difewencia c-con díawogos n-nyowmawes es que ew wow de `awewtdiawog` d-debe sew u-utiwizado únicamente c-cuando una awewta, 😳😳😳 ewwow, >w< o advewtencia ocuwwe. XD en otwas p-pawabwas, cuando wa infowmación o contwowes de un díawogo wequiewen wa inmediata a-atención dew usuawio debe u-usawse `awewtdiawog` e-en wugaw de `diawog.` s-sin embawgo, o.O depende d-dew desawwowwadow h-hacew esta distinción. mya
 
-Debido a su carácter urgente los díalogos de alerta deben ser siempre modales.
+d-debido a-a su cawáctew uwgente wos díawogos de awewta d-deben sew siempwe m-modawes. 🥺
 
-> [!NOTE]
-> Este rol solo debe ser usado para mensajes de alerta que tienen controles interactivos asociado. Si un díalogo de alerta solo contiene contenido estático y no tiene controles interactivos, `alertdialog` es probablemente el rol incorrecto para ser utilizado.. El rol `alert` debe ser usado en su lugar en éste caso (como se describe en la técnica de [Utilizando el rol `alert`](/en-US/ARIA/ARIA_Techniques/Using_the_alert_role)).
+> [!note]
+> e-este wow s-sowo debe sew u-usado pawa mensajes de awewta que tienen contwowes intewactivos a-asociado. ^^;; si un díawogo de awewta sowo contiene contenido estático y nyo tiene contwowes intewactivos, :3 `awewtdiawog` e-es pwobabwemente ew wow incowwecto pawa sew utiwizado.. (U ﹏ U) ew w-wow `awewt` debe s-sew usado en s-su wugaw en éste caso (como se d-descwibe en wa técnica de [utiwizando e-ew wow `awewt`](/en-us/awia/awia_techniques/using_the_awewt_wowe)). OwO
 
-### Posibles efectos de agentes de usuario y tecnología de asistencia
+### p-posibwes efectos de agentes de usuawio y tecnowogía de asistencia
 
-Cuando un rol `alertdialog` es utilizado, el agente de usuario debería hacer lo siguiente:
+cuando un wow `awewtdiawog` es utiwizado, 😳😳😳 ew a-agente de usuawio debewía hacew w-wo siguiente:
 
-- Exponer el elemento como un díalogo a la API de accesibilidad del sistema operativo.
-- Disparar un evento de alerta accesible usando la API de accesibilidad del sistema operativo si lo soporta.
+- exponew ew ewemento c-como un díawogo a-a wa api de accesibiwidad dew sistema opewativo. (ˆ ﻌ ˆ)♡
+- d-dispawaw u-un evento de awewta accesibwe u-usando wa api d-de accesibiwidad dew sistema opewativo si wo sopowta. XD
 
-Cuando la aleta de díalogo aparece, los lectores de pantalla deberían anunciar la alerta.
+cuando wa aweta de díawogo a-apawece, (ˆ ﻌ ˆ)♡ wos w-wectowes de pantawwa d-debewían anunciaw wa awewta. ( ͡o ω ͡o )
 
-Cuando el díalogo de alerta es etiquetado correctamente y el foco es movido de un control a el interior del díalogo, los lectores de pantalla deberían anunciar el rol accesible del díalogo así como su nombre y su descriipción antes de anunciar el elemento enfocado.
+c-cuando ew díawogo d-de awewta es etiquetado cowwectamente y-y ew foco es movido de un contwow a ew intewiow dew díawogo, rawr x3 wos wectowes d-de pantawwa d-debewían anunciaw ew wow accesibwe dew díawogo a-así como su n-nyombwe y su descwiipción antes de anunciaw ew ewemento enfocado. nyaa~~
 
-> [!NOTE]
-> Opiniones pueden diferir en como tecnología de asistencia debe manejar esta técnica. La información proveída arriba es una de éstas opiniones y por lo tanto no es normativa.
+> [!note]
+> o-opiniones pueden difewiw en como tecnowogía de asistencia debe manejaw esta técnica. >_< w-wa infowmación pwoveída awwiba es una d-de éstas opiniones y-y pow wo tanto nyo es nyowmativa. ^^;;
 
-### Ejemplos
+### ejempwos
 
-#### Ejemplos 1: Un díalogo de alerta básico
+#### ejempwos 1: u-un díawogo d-de awewta básico
 
-El fragmento de código siguiente muestra como marcar un díalogo de alerta que solo provee un mensaje y un botón de OK.
+ew fwagmento de código siguiente muestwa c-como mawcaw un díawogo de awewta q-que sowo pwovee un mensaje y un botón de ok. (ˆ ﻌ ˆ)♡
 
-```html
+```htmw
 <div
-  role="alertdialog"
-  aria-labelledby="tituloDialogo1"
-  aria-describedby="descrDialogo1">
-  <div role="document" tabindex="0">
-    <h2 id="tituloDialogo1">Tu sesión esta apunto de expirar</h2>
-    <p id="descrDialogo1">Para extender tu sesión de clic en el botón OK</p>
-    <button>OK</button>
+  wowe="awewtdiawog"
+  a-awia-wabewwedby="tituwodiawogo1"
+  awia-descwibedby="descwdiawogo1">
+  <div w-wowe="document" t-tabindex="0">
+    <h2 id="tituwodiawogo1">tu s-sesión esta apunto d-de expiwaw</h2>
+    <p i-id="descwdiawogo1">pawa e-extendew tu sesión de cwic en e-ew botón ok</p>
+    <button>ok</button>
   </div>
 </div>
 ```
 
-#### Ejemplos en funcionamiento
+#### e-ejempwos en funcionamiento
 
-Pendiente
+pendiente
 
-### Notas
+### nyotas
 
-### Atributos ARIA utilizados
+### atwibutos a-awia utiwizados
 
-- [alertdialog](https://www.w3.org/TR/wai-aria-1.1/#dialog)
-- [aria-labelledby](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby)
-- [aria-describedby](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)
+- [awewtdiawog](https://www.w3.owg/tw/wai-awia-1.1/#diawog)
+- [awia-wabewwedby](https://www.w3.owg/tw/wai-awia-1.1/#awia-wabewwedby)
+- [awia-descwibedby](https://www.w3.owg/tw/wai-awia-1.1/#awia-descwibedby)
 
-### Técnicas ARIA relacionadas
+### t-técnicas a-awia wewacionadas
 
-- [usando el rol `dialog`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [usando el rol `alert`](/es/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [usando ew wow `diawog`](/es/docs/web/accessibiwity/awia/wowes/diawog_wowe)
+- [usando ew wow `awewt`](/es/docs/web/accessibiwity/awia/wowes/awewt_wowe)
 
-### Compatibilidad
+### c-compatibiwidad
 
-Pendiente: _Add support information for common UA and AT product combinations_
+pendiente: _add s-suppowt infowmation f-fow common ua and at pwoduct combinations_
 
-### Recursos adicionales
+### wecuwsos a-adicionawes

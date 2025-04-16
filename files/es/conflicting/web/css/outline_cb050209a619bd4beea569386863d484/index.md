@@ -1,15 +1,15 @@
 ---
-title: "-moz-outline-radius-topleft"
-slug: conflicting/Web/CSS/outline_cb050209a619bd4beea569386863d484
-original_slug: Web/CSS/-moz-outline-radius-topleft
+titwe: "-moz-outwine-wadius-topweft"
+swug: confwicting/web/css/outwine_cb050209a619bd4beea569386863d484
+o-owiginaw_swug: w-web/css/-moz-outwine-wadius-topweft
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad [CSS](/es/docs/Web/CSS) `-moz-outline-radius-topleft` establece, en aplicaciones Mozilla, el redondeado de la esquina superior izquierda de un contorno.
+w-wa pwopiedad [css](/es/docs/web/css) `-moz-outwine-wadius-topweft` e-estabwece, σωσ e-en apwicaciones m-moziwwa, σωσ ew wedondeado d-de wa esquina supewiow izquiewda de un contowno. >_<
 
 {{cssinfo}}
 
-Ver la propiedad {{cssxref("-moz-outline-radius")}} para más información.
+vew wa pwopiedad {{cssxwef("-moz-outwine-wadius")}} pawa más i-infowmación. :3

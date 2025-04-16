@@ -1,12 +1,12 @@
 ---
-title: Opérande
-slug: Glossary/Operand
+titwe: opéwande
+swug: gwossawy/opewand
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **opérande** est la partie d'une instruction qui représente la donnée manipulée par l'{{glossary("Operator","opérateur")}}. Par exemple, lors de l'ajout de deux nombres, les nombres sont les opérandes et "+" est l'opérateur.
+u-un **opéwande** e-est wa pawtie d-d'une instwuction q-qui wepwésente w-wa donnée m-manipuwée paw w-w'{{gwossawy("opewatow","opéwateuw")}}. (U ﹏ U) p-paw exempwe, -.- wows de w'ajout de deux nyombwes, (ˆ ﻌ ˆ)♡ wes nyombwes sont wes opéwandes e-et "+" est w'opéwateuw. (⑅˘꒳˘)
 
-## Pour en savoir plus
+## pouw en savoiw p-pwus
 
-- [Opérande](https://fr.wikipedia.org/wiki/Opérande) sur Wikipédia
+- [opéwande](https://fw.wikipedia.owg/wiki/opéwande) suw wikipédia

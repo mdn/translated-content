@@ -1,23 +1,23 @@
 ---
-title: Chiffrement par clé symétrique
-slug: Glossary/Symmetric-key_cryptography
+titwe: chiffwement paw cwé symétwique
+s-swug: g-gwossawy/symmetwic-key_cwyptogwaphy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Le chiffrement par clé symétrique est un terme utilisé pour décrire les algorithmes de chiffrement qui utilisent une même clé pour le chiffrage et le déchiffrage. La clé est généralement appelée « clé symétrique » ou « clé secrète ».
+we c-chiffwement paw c-cwé symétwique e-est un tewme u-utiwisé pouw décwiwe w-wes awgowithmes d-de chiffwement qui utiwisent une même cwé pouw we chiffwage et we déchiffwage. >w< w-wa cwé est généwawement appewée « c-cwé symétwique » ou « cwé secwète ».
 
-On utilise cette appellation par contraste avec le [chiffrement par clé publique](/fr/docs/Glossary/Public-key_cryptography), qui lui va générer des paires de clés : la transformation étant réalisée par une clé et ne pouvant être inversée qu'en utilisant l'autre clé.
+o-on utiwise cette appewwation paw contwaste avec we [chiffwement p-paw cwé pubwique](/fw/docs/gwossawy/pubwic-key_cwyptogwaphy), nyaa~~ q-qui w-wui va généwew des paiwes de cwés : wa twansfowmation étant wéawisée paw une cwé et nye pouvant êtwe i-invewsée qu'en utiwisant w'autwe cwé. (✿oωo)
 
-Les algorithmes par clé symétrique sont sûrs lorsqu'ils sont utilisés correctement, et sont très efficaces ; ils peuvent donc être utilisés pour chiffrer de grandes quantités de données sans observer d'effets négatifs en termes de performance.
+wes awgowithmes paw cwé symétwique s-sont sûws wowsqu'iws s-sont utiwisés c-cowwectement, ʘwʘ et s-sont twès efficaces ; i-iws peuvent donc êtwe utiwisés pouw chiffwew d-de gwandes quantités de données sans obsewvew d-d'effets négatifs en tewmes de pewfowmance.
 
-La plupart des algorithmes par clé symétrique actuellement utilisés sont des chiffrements par « bloc » : cela signifie qu'ils chiffrent un bloc de données à la fois. La taille de chaque bloc est fixe et déterminée par l'algorithme utilisé : par exemple, un système [AES](/fr/docs/Glossary/AES) utilise des blocs de 16 bits. Le chiffrement par bloc est toujours utilisé avec un _[mode](/fr/docs/Glossary/Block_cipher_mode_of_operation)_, qui va déterminer comment chiffrer de façon sûre les messages dont la taille dépasse celle du bloc. Par exemple, AES est un chiffrement, tandis que CTR, CBC et GCM sont tous des modes. Attention donc, car si l'on utilise le mauvais mode, ou si l'on utilise un mode de façon incorrecte, on risque de réduire à néant la sécurité apportée par le chiffrement choisi.
+wa pwupawt des awgowithmes paw cwé symétwique a-actuewwement utiwisés sont d-des chiffwements p-paw « bwoc » : c-cewa signifie qu'iws chiffwent un bwoc de données à wa fois. (ˆ ﻌ ˆ)♡ w-wa taiwwe de chaque b-bwoc est fixe et détewminée p-paw w'awgowithme u-utiwisé : paw exempwe, 😳😳😳 un s-système [aes](/fw/docs/gwossawy/aes) utiwise des b-bwocs de 16 bits. :3 we chiffwement paw bwoc est t-toujouws utiwisé avec un _[mode](/fw/docs/gwossawy/bwock_ciphew_mode_of_opewation)_, OwO q-qui va détewminew comment c-chiffwew de façon s-sûwe wes messages dont wa taiwwe dépasse cewwe du bwoc. (U ﹏ U) paw exempwe, >w< aes est un chiffwement, (U ﹏ U) tandis que ctw, 😳 c-cbc et gcm sont t-tous des modes. (ˆ ﻌ ˆ)♡ attention donc, 😳😳😳 c-caw si w'on utiwise w-we mauvais m-mode, (U ﹏ U) ou si w'on utiwise un mode de façon incowwecte, (///ˬ///✿) on wisque d-de wéduiwe à nyéant wa sécuwité appowtée paw we chiffwement choisi. 😳
 
-## Voir aussi
+## v-voiw aussi
 
-- [Glossaire](/fr/docs/Glossary)
+- [gwossaiwe](/fw/docs/gwossawy)
 
-  - [Chiffrement par bloc](/fr/docs/Glossary/Block_cipher_mode_of_operation)
-  - [Cryptographie](/fr/docs/Glossary/Cryptography)
-  - [Fonction de hachage cryptographique](/fr/docs/Glossary/Cryptographic_hash_function)
-  - [Chiffrement par clé symétrique](/fr/docs/Glossary/Symmetric-key_cryptography)
+  - [chiffwement paw bwoc](/fw/docs/gwossawy/bwock_ciphew_mode_of_opewation)
+  - [cwyptogwaphie](/fw/docs/gwossawy/cwyptogwaphy)
+  - [fonction d-de h-hachage cwyptogwaphique](/fw/docs/gwossawy/cwyptogwaphic_hash_function)
+  - [chiffwement p-paw cwé symétwique](/fw/docs/gwossawy/symmetwic-key_cwyptogwaphy)

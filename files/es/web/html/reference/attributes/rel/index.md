@@ -1,249 +1,249 @@
 ---
-title: Tipos de enlaces
-slug: Web/HTML/Reference/Attributes/rel
-original_slug: Web/HTML/Attributes/rel
+titwe: tipos de enwaces
+swug: w-web/htmw/wefewence/attwibutes/wew
+o-owiginaw_swug: w-web/htmw/attwibutes/wew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-En HTML, los siguientes tipos de enlaces indican la relación entre dos documentos, de los cuales uno enlaza al otro usando un elemento {{HTMLElement("a")}} o bien {{HTMLElement("area")}}, o bien {{HTMLElement("link")}}.
+e-en htmw, 🥺 wos siguientes t-tipos de e-enwaces indican w-wa wewación entwe d-dos documentos, (U ᵕ U❁) de wos cuawes uno enwaza aw otwo usando un ewemento {{htmwewement("a")}} o bien {{htmwewement("awea")}}, 😳😳😳 o-o bien {{htmwewement("wink")}}. nyaa~~
 
-<table class="standard-table">
-    <caption>Lista de tipos de link y su significado en HTML</caption>
+<tabwe cwass="standawd-tabwe">
+    <caption>wista de tipos de wink y-y su significado en htmw</caption>
     <thead>
-     <tr>
-      <th scope="col">Tipo de Link</th>
-      <th scope="col">Descripción</th>
-      <th scope="col" style="width: 12em;">Permitido en estos elementos</th>
-      <th scope="col">No permitido en estos elementos</th>
-     </tr>
+     <tw>
+      <th s-scope="cow">tipo de wink</th>
+      <th scope="cow">descwipción</th>
+      <th scope="cow" s-stywe="width: 12em;">pewmitido en estos ewementos</th>
+      <th s-scope="cow">no p-pewmitido en estos ewementos</th>
+     </tw>
     </thead>
     <tbody>
-     <tr>
-      <td><code>alternate</code></td>
+     <tw>
+      <td><code>awtewnate</code></td>
       <td>
-       <ul>
-        <li>Si el elemento es {{HTMLElement("link")}} y el atributo <a href="/es/docs/Web/HTML/Element/link#rel"><code>rel</code></a> tambien contiene el tipo <code>stylesheet</code>, el enlace define una <a href="/es/docs/Alternative_style_sheets">hoja de estilo alternativa</a>; en ese caso el atributo <a href="/es/docs/Web/HTML/Element/link#title"><code>title</code></a> deberá estar presente y no ser una cadena vacia.</li>
-        <li>Si el atributo <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> es puesto a <code>application/rss+xml</code> o <code>application/atom+xml</code>, el enlace define un <a href="/es/docs/RSS/Getting_Started/Syndicating">feed de distribución</a>. El primero de ellos definido en la pagina es el tomado por default.</li>
-        <li>De otra forma, el enlace define una pagina alternativa, de uno de los siguientes tipos:
-         <ul>
-          <li>para otros medios, como un dispositivo portatil (si el atributo <a href="/es/docs/Web/HTML/Element/link#media"><code>media</code></a> esta indicado)</li>
-          <li>en otro lenguaje (si el atributo <a href="/es/docs/Web/HTML/Element/link#hreflang"><code>hreflang</code></a> esta indicado),</li>
-          <li>en otro formato, como un PDF (si el atributo <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> esta indicado)</li>
-          <li>una combinacion de los anteriores.</li>
-         </ul>
-        </li>
-       </ul>
+       <uw>
+        <wi>si ew ewemento es {{htmwewement("wink")}} y ew atwibuto <a h-hwef="/es/docs/web/htmw/ewement/wink#wew"><code>wew</code></a> tambien contiene ew tipo <code>stywesheet</code>, (˘ω˘) ew enwace define una <a hwef="/es/docs/awtewnative_stywe_sheets">hoja d-de estiwo awtewnativa</a>; e-en ese caso e-ew atwibuto <a h-hwef="/es/docs/web/htmw/ewement/wink#titwe"><code>titwe</code></a> d-debewá estaw pwesente y nyo sew una cadena v-vacia.</wi>
+        <wi>si ew atwibuto <a hwef="/es/docs/web/htmw/ewement/wink#type"><code>type</code></a> e-es puesto a <code>appwication/wss+xmw</code> o <code>appwication/atom+xmw</code>, >_< ew enwace define un <a hwef="/es/docs/wss/getting_stawted/syndicating">feed d-de distwibución</a>. XD ew pwimewo de ewwos d-definido en wa p-pagina es ew tomado p-pow defauwt.</wi>
+        <wi>de otwa fowma, rawr x3 ew enwace define una pagina awtewnativa, d-de uno d-de wos siguientes tipos:
+         <uw>
+          <wi>pawa o-otwos m-medios, ( ͡o ω ͡o ) como un dispositivo powtatiw (si e-ew atwibuto <a hwef="/es/docs/web/htmw/ewement/wink#media"><code>media</code></a> e-esta indicado)</wi>
+          <wi>en otwo wenguaje (si e-ew atwibuto <a hwef="/es/docs/web/htmw/ewement/wink#hwefwang"><code>hwefwang</code></a> e-esta indicado),</wi>
+          <wi>en o-otwo fowmato, :3 c-como un pdf (si ew atwibuto <a hwef="/es/docs/web/htmw/ewement/wink#type"><code>type</code></a> esta indicado)</wi>
+          <wi>una combinacion de wos antewiowes.</wi>
+         </uw>
+        </wi>
+       </uw>
       </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None</em>.</td>
-     </tr>
-     <tr>
-      <td><code>archives</code></td>
-      <td>Define un hipervínculo a un documento que contiene un enlace de archivo a este. Por ejemplo, la entrada de un blog podria enlazar a una página de indice mensual de esta forma.<br>
-       <br>
-       <strong>Nota:</strong> Aunque se reconoce, el singular <code>archive</code> es incorrecto y debe ser evitado.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>author</code></td>
-      <td>Define un hipervinculo a una página describiendo el autor o proporcionando una forma de contactar al autor.<br>
-       <br>
-       <strong>Nota:</strong> Este puede ser un hipervinculo <code>mailto:</code>, pero esto no es recomendable en paginas públicas por que robots cosechadores podrian rápidamente llevar una gran cantidad de span a esa dirección. En ese caso, es mejor mandarlos a una página con un formulario de contacto.<br>
-       <br>
-       Aunque reconocido, el atributo <a href="/es/docs/Web/HTML/Element/link#rev"><code>rev</code></a> en elementos {{HTMLElement("a")}}, {{HTMLElement("area")}} o {{HTMLElement("link")}} con un enlace de tipo <code>made</code> es incorrecto y debiera ser reemplazado por el atributo <a href="/es/docs/Web/HTML/Element/link#rel"><code>rel</code></a> con este tipo de enlace.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>bookmark</code></td>
-      <td>Indica que el hipervínculo es un <a href="/es/docs/Permalink">permalink</a> al ancestro más cercano del elemento {{HTMLElement("article")}}. Si no hay ninguno, entonces es un permalink para la <a href="/es/docs/Sections_and_Outlines_of_an_HTML5_document">sección</a> con la que el elemento está más estrechamente asociado.<br>
-       <br>
-       Esto permite crear marcadores a un artículo en particular dentro de una página con múltiples artículos, como por ejemplo una página con un resumen mensual de un blog, o un agregador de blog.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-     </tr>
-     <tr>
-      <td><code>external</code></td>
-      <td>Indica que el hipervínculo llevará a una fuente externa al sitio en el que se encuentra la página actual; o lo que es lo mismo, seguir el enlace hará que el usuario abandone el sitio.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-     </tr>
-     <tr>
-      <td><code>first</code></td>
+      <td>{{htmwewement("a")}}, mya {{htmwewement("awea")}}, σωσ {{htmwewement("wink")}}</td>
+      <td><em>none</em>.</td>
+     </tw>
+     <tw>
+      <td><code>awchives</code></td>
+      <td>define un hipewvíncuwo a-a un documento q-que contiene un enwace de awchivo a-a este. (ꈍᴗꈍ) pow ejempwo, OwO w-wa entwada d-de un bwog podwia enwazaw a una página de indice mensuaw de esta f-fowma.<bw>
+       <bw>
+       <stwong>nota:</stwong> aunque se weconoce, o.O ew singuwaw <code>awchive</code> es i-incowwecto y debe sew evitado.</td>
+      <td>{{htmwewement("a")}}, 😳😳😳 {{htmwewement("awea")}}, /(^•ω•^) {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>authow</code></td>
+      <td>define u-un hipewvincuwo a-a una página d-descwibiendo ew autow o pwopowcionando u-una fowma d-de contactaw aw a-autow.<bw>
+       <bw>
+       <stwong>nota:</stwong> e-este puede sew un hipewvincuwo <code>maiwto:</code>, OwO pewo e-esto nyo es wecomendabwe e-en paginas p-púbwicas pow q-que wobots cosechadowes p-podwian wápidamente wwevaw una gwan cantidad de span a-a esa diwección. ^^ en ese caso, es mejow mandawwos a una página con un fowmuwawio de contacto.<bw>
+       <bw>
+       a-aunque weconocido, (///ˬ///✿) ew atwibuto <a hwef="/es/docs/web/htmw/ewement/wink#wev"><code>wev</code></a> en ewementos {{htmwewement("a")}}, (///ˬ///✿) {{htmwewement("awea")}} o-o {{htmwewement("wink")}} c-con u-un enwace de tipo <code>made</code> es incowwecto y-y debiewa sew weempwazado pow e-ew atwibuto <a hwef="/es/docs/web/htmw/ewement/wink#wew"><code>wew</code></a> c-con este tipo de enwace.</td>
+      <td>{{htmwewement("a")}}, (///ˬ///✿) {{htmwewement("awea")}}, ʘwʘ {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>bookmawk</code></td>
+      <td>indica que ew hipewvíncuwo es un <a hwef="/es/docs/pewmawink">pewmawink</a> aw ancestwo más c-cewcano dew ewemento {{htmwewement("awticwe")}}. ^•ﻌ•^ si nyo hay nyinguno, OwO e-entonces es un pewmawink p-pawa wa <a hwef="/es/docs/sections_and_outwines_of_an_htmw5_document">sección</a> c-con wa que ew ewemento está más estwechamente a-asociado.<bw>
+       <bw>
+       e-esto pewmite cweaw mawcadowes a-a un awtícuwo e-en pawticuwaw dentwo de una página con múwtipwes awtícuwos, (U ﹏ U) como pow ejempwo u-una página con u-un wesumen mensuaw d-de un bwog, (ˆ ﻌ ˆ)♡ o un agwegadow d-de bwog.</td>
+      <td>{{htmwewement("a")}}, (⑅˘꒳˘) {{htmwewement("awea")}}</td>
+      <td>{{htmwewement("wink")}}</td>
+     </tw>
+     <tw>
+      <td><code>extewnaw</code></td>
+      <td>indica q-que ew hipewvíncuwo w-wwevawá a una fuente extewna aw sitio en ew que se encuentwa wa página actuaw; o-o wo que es wo m-mismo, (U ﹏ U) seguiw ew enwace hawá que ew usuawio abandone e-ew sitio.</td>
+      <td>{{htmwewement("a")}}, o.O {{htmwewement("awea")}}</td>
+      <td>{{htmwewement("wink")}}</td>
+     </tw>
+     <tw>
+      <td><code>fiwst</code></td>
       <td>
-       <p>Indica que el hipervínculo conduce al primer recurso de la <em>secuencia</em> en la que se encuentra la página actual.<br>
+       <p>indica q-que ew hipewvíncuwo conduce aw pwimew wecuwso de w-wa <em>secuencia</em> en wa que se encuentwa wa página actuaw.<bw>
          </p>
-       <p><strong>Nota:</strong> Otros tipos de enlaces relacionados con los recursos en secuencia son <code>last</code>, <code>prev</code>, <code>next</code>.</p>
-       <p>Aunque parezca evidente, los sinónimos <code>being</code> y <code>start</code> son incorrectos y deben evitarse.</p>
+       <p><stwong>nota:</stwong> otwos tipos de e-enwaces wewacionados con wos wecuwsos en secuencia s-son <code>wast</code>, mya <code>pwev</code>, XD <code>next</code>.</p>
+       <p>aunque p-pawezca evidente, òωó wos sinónimos <code>being</code> y <code>stawt</code> son incowwectos y-y deben evitawse.</p>
       </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>help</code></td>
+      <td>{{htmwewement("a")}}, (˘ω˘) {{htmwewement("awea")}}, :3 {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>hewp</code></td>
       <td>
-       <ul>
-        <li>If the element is {{HTMLElement("a")}} or {{HTMLElement("area")}}, it indicates that the hyperlink leads to a resource giving further help about the parent of the element, and its descendants.</li>
-        <li>If the element is {{HTMLElement("link")}} it indicates that the hyperlink leads to a resource giving further help about the page as a whole.</li>
-       </ul>
+       <uw>
+        <wi>if t-the ewement is {{htmwewement("a")}} ow {{htmwewement("awea")}}, it indicates that the hypewwink w-weads to a wesouwce giving fuwthew h-hewp about the pawent of the ewement, OwO and its descendants.</wi>
+        <wi>if t-the ewement is {{htmwewement("wink")}} i-it indicates t-that the hypewwink weads t-to a wesouwce giving fuwthew hewp a-about the page a-as a whowe.</wi>
+       </uw>
       </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
+      <td>{{htmwewement("a")}}, mya {{htmwewement("awea")}}, (˘ω˘) {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
       <td><code>icon</code></td>
-      <td>Defines a resource for representing the page in the user interface, usually an icon (auditory or visual).<br>
-       <br>
-       The <a href="/es/docs/Web/HTML/Element/link#media"><code>media</code></a>, <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> and <a href="/es/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a> attributes allow the browser to select the most appropriate icon for its context. If several resources match, the browser will select the last one declared, in tree order. As these attributes are merely hints, and the resources may be inappropriate upon further inspection, the browser will then select another one, if appropriate.<br>
-       <br>
-       <strong>Note:</strong> Apple's iOS does not use this link type, nor the <a href="/es/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a> attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.<br>
-       <br>
-       The <code>shortcut</code> link type is often seen before <code>icon</code>, but this link type is non-conforming, ignored and <strong>web authors must not use it anymore</strong>.</td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-     </tr>
-     <tr>
+      <td>defines a-a wesouwce fow wepwesenting t-the page in t-the usew intewface, o.O usuawwy an icon (auditowy ow v-visuaw).<bw>
+       <bw>
+       t-the <a hwef="/es/docs/web/htmw/ewement/wink#media"><code>media</code></a>, (✿oωo) <a hwef="/es/docs/web/htmw/ewement/wink#type"><code>type</code></a> a-and <a hwef="/es/docs/web/htmw/ewement/wink#sizes"><code>sizes</code></a> attwibutes awwow the bwowsew t-to sewect the most appwopwiate i-icon fow its c-context. (ˆ ﻌ ˆ)♡ if sevewaw wesouwces match, ^^;; the bwowsew wiww sewect t-the wast one decwawed, OwO i-in twee owdew. 🥺 a-as these attwibutes a-awe mewewy hints, mya and t-the wesouwces may be inappwopwiate upon fuwthew inspection, 😳 the bwowsew wiww then sewect anothew o-one, òωó if appwopwiate.<bw>
+       <bw>
+       <stwong>note:</stwong> appwe's ios d-does nyot use this wink type, /(^•ω•^) nyow t-the <a hwef="/es/docs/web/htmw/ewement/wink#sizes"><code>sizes</code></a> attwibute, -.- w-wike othews mobiwe bwowsews d-do, òωó to sewect a-a webpage icon f-fow web cwip ow a-a stawt-up pwacehowdew. /(^•ω•^) i-instead it uses the nyon-standawd <a hwef="http://edw.euwo.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawiwebcontent/configuwingwebappwications/configuwingwebappwications.htmw#//appwe_wef/doc/uid/tp40002051-ch3-sw4"><code>appwe-touch-icon</code></a> and <a hwef="http://edw.euwo.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawiwebcontent/configuwingwebappwications/configuwingwebappwications.htmw#//appwe_wef/doc/uid/tp40002051-ch3-sw6"><code>appwe-touch-stawtup-image</code></a> wespectivewy.<bw>
+       <bw>
+       the <code>showtcut</code> w-wink t-type is often seen b-befowe <code>icon</code>, /(^•ω•^) but t-this wink type is nyon-confowming, 😳 ignowed and <stwong>web authows m-must nyot use i-it anymowe</stwong>.</td>
+      <td>{{htmwewement("wink")}}</td>
+      <td>{{htmwewement("a")}}, :3 {{htmwewement("awea")}}</td>
+     </tw>
+     <tw>
       <td><code>index</code></td>
-      <td>Indicates that the page is part of a <em>hierarchical</em> structure and that the hyperlink leads to the top level resource of that structure.<br>
-       <br>
-       If one or several <code>up</code> link types are also present, the number of these <code>up</code> indicates the depth of the current page in the hierarchy.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>last</code></td>
-      <td>Indicates that the hyperlink leads to the <em>last</em> resource of the <em>sequence</em> the current page is in.<br>
-       <br>
-       <strong>Note:</strong> Other link types related to linking resources in the same sequence are <code>first</code>, <code>prev</code>, <code>next</code>.<br>
-       <br>
-       Although recognized, the synomyn <code>end</code> is incorrect and must be avoided.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>license</code></td>
-      <td>Indicates that the hyperlink leads to a document describing the licensing information. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.<br>
-       <br>
-       <strong>Note: </strong>Although recognized, the synonym <code>copyright</code> is incorrect and must be avoided.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
+      <td>indicates that t-the page is pawt of a <em>hiewawchicaw</em> stwuctuwe a-and that the h-hypewwink weads to the top wevew w-wesouwce of t-that stwuctuwe.<bw>
+       <bw>
+       if one ow sevewaw <code>up</code> wink types awe awso pwesent, (U ᵕ U❁) t-the nyumbew o-of these <code>up</code> i-indicates t-the depth of t-the cuwwent page in the hiewawchy.</td>
+      <td>{{htmwewement("a")}}, ʘwʘ {{htmwewement("awea")}}, o.O {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>wast</code></td>
+      <td>indicates t-that the h-hypewwink weads to the <em>wast</em> w-wesouwce of t-the <em>sequence</em> the cuwwent p-page is in.<bw>
+       <bw>
+       <stwong>note:</stwong> othew wink types wewated t-to winking wesouwces in the s-same sequence a-awe <code>fiwst</code>, ʘwʘ <code>pwev</code>, ^^ <code>next</code>.<bw>
+       <bw>
+       awthough wecognized, ^•ﻌ•^ t-the synomyn <code>end</code> is incowwect and must be a-avoided.</td>
+      <td>{{htmwewement("a")}}, mya {{htmwewement("awea")}}, UwU {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>wicense</code></td>
+      <td>indicates t-that the hypewwink w-weads to a document descwibing the wicensing infowmation. >_< if n-nyot inside the {{htmwewement("head")}} ewement, /(^•ω•^) the standawd doesn't d-distinguish b-between a hypewwink appwying to a-a specific pawt of the document o-ow to the document a-as a whowe. òωó onwy the data on the page can indicate t-this.<bw>
+       <bw>
+       <stwong>note: </stwong>awthough wecognized, σωσ the synonym <code>copywight</code> i-is incowwect a-and must be avoided.</td>
+      <td>{{htmwewement("a")}}, ( ͡o ω ͡o ) {{htmwewement("awea")}}, nyaa~~ {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
       <td><code>next</code></td>
-      <td>Indicates that the hyperlink leads to the <em>next</em> resource of the <em>sequence</em> the current page is in.<br>
-       <br>
-       <strong>Note:</strong> Other link types related to linking resources in the same sequence are <code>first</code>, <code>prev</code>, <code>last</code>.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>nofollow</code></td>
-      <td>Indica que el documento enlazado no cuenta con el aval o aprobación del autor de este documento, por ejemplo si no tiene control sobre el mismo, si es un mal ejemplo o si hay una relación comercial entre los dos (un enlace de pago). Este enlace puede ser usado por algunos motores de búsqueda que usan técnicas de clasificación de popularidad.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-     </tr>
-     <tr>
-      <td><code>noreferrer</code></td>
+      <td>indicates that the h-hypewwink weads to the <em>next</em> w-wesouwce o-of the <em>sequence</em> t-the cuwwent page is in.<bw>
+       <bw>
+       <stwong>note:</stwong> othew wink types wewated to winking wesouwces in the same sequence awe <code>fiwst</code>, :3 <code>pwev</code>, UwU <code>wast</code>.</td>
+      <td>{{htmwewement("a")}}, o.O {{htmwewement("awea")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>nofowwow</code></td>
+      <td>indica que ew documento enwazado nyo cuenta con ew avaw o apwobación dew autow de este documento, ^^;; p-pow ejempwo si nyo t-tiene contwow sobwe ew mismo, ʘwʘ si es un maw ejempwo o-o si hay una w-wewación comewciaw e-entwe wos dos (un enwace d-de pago). σωσ este enwace puede sew u-usado pow awgunos m-motowes de búsqueda que usan t-técnicas de cwasificación de popuwawidad.</td>
+      <td>{{htmwewement("a")}}, ^^;; {{htmwewement("awea")}}</td>
+      <td>{{htmwewement("wink")}}</td>
+     </tw>
+     <tw>
+      <td><code>nowefewwew</code></td>
       <td>
-       <p>Prevents the browser, when navigating to another page, to send this page name, or any other value, as referrer via the <code>Referer:</code> HTTP header.<br>
-        (In Firefox, before Firefox 37, this worked only in links found in pages. Links clicked in the UI, like "Open in a new tab" via the contextual menu, doesn't abide for this value)</p>
+       <p>pwevents the b-bwowsew, ʘwʘ when n-nyavigating to anothew page, ^^ to send this page n-nyame, nyaa~~ ow any othew v-vawue, (///ˬ///✿) as wefewwew v-via the <code>wefewew:</code> h-http headew.<bw>
+        (in f-fiwefox, XD befowe f-fiwefox 37, :3 this w-wowked onwy in w-winks found in p-pages. òωó winks cwicked in the ui, ^^ w-wike "open in a n-nyew tab" via the c-contextuaw menu, doesn't abide f-fow this vawue)</p>
       </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-     </tr>
-     <tr>
+      <td>{{htmwewement("a")}}, {{htmwewement("awea")}}</td>
+      <td>{{htmwewement("wink")}}</td>
+     </tw>
+     <tw>
       <td><code>pingback</code></td>
-      <td>Defines an external resource URI to call if one make a comment or a citation about the webpage. The protocol used to make such a call is defined in the <a href="http://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a> specification.<br>
-       <br>
-       <strong>Note:</strong> if the <code>X-Pingback:</code> HTTP header is also present, this header has precedence over the {{HTMLElement("link")}} element with this link type</td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-     </tr>
-     <tr>
-      <td><code>preconnect</code> {{experimental_inline}}</td>
-      <td>Hints the browser to open in advance the connection to the linked web site, without disclosing any private information.</td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-     </tr>
-     <tr>
-      <td><code>prefetch</code></td>
-      <td>Hints the browser to fetch in advance the linked resource, as it will likely be requested by the user.<br>
-       <br>
-       <strong>Note:</strong> the <a href="/es/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
-      <td>{{HTMLElement("a")}},<br>
-       {{HTMLElement("area")}},<br>
-       {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>preload</code></td>
-      <td>Tells the browser to download a resource because this resource will be needed later during the current navigation.</td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-     </tr>
-     <tr>
-      <td><code>prerender</code> {{experimental_inline}}</td>
-      <td>Comunica al navegador que carge en segundo plano el recurso suministrado (Pagina Web).</td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-     </tr>
-     <tr>
-      <td><code>prev</code></td>
-      <td>Indicates that the hyperlink leads to the <em>preceding</em> resource of the <em>sequence</em> the current page is in.<br>
-       <br>
-       <strong>Note:</strong> other link types related to linking resources in the same sequence are <code>first</code>, <code>last</code>, <code>next</code>.<br>
-       <br>
-       Although recognized, the synomyn <code>previous</code> is incorrect and must be avoided.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>search</code></td>
-      <td>Indicates that the hyperlink reference a document whose interface is specially designing for searching in this document, or site, and its resources.<br>
-       <br>
-       If the <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/es/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
-      <td><code>stylesheet</code></td>
-      <td>Defines an external resource to be used as a stylesheet. If the <code>type</code> is not set, the browser should assume it is a <code>text/css</code> stylesheet until further inspection.<br>
-       <br>
-       If used in combination with the <code>alternate</code> keyword, it defines an <a href="/es/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the <a href="/es/docs/Web/HTML/Element/link#title"><code>title</code></a> attribute must be present and not be the empty string.</td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-     </tr>
-     <tr>
-      <td><code>sidebar</code></td>
-      <td>Indicates that the hyperlink leads to a resource that would be better suited for a secondary browsing context, like a <em>sidebar</em>. Browsers, that don't have such a context will ignore this keyword.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
+      <td>defines an extewnaw wesouwce uwi to caww i-if one make a comment ow a citation a-about the w-webpage. ^•ﻌ•^ the pwotocow u-used to make such a caww i-is defined in the <a hwef="http://www.hixie.ch/specs/pingback/pingback">pingback 1.0</a> s-specification.<bw>
+       <bw>
+       <stwong>note:</stwong> if the <code>x-pingback:</code> h-http headew is awso pwesent, σωσ t-this headew has pwecedence ovew the {{htmwewement("wink")}} ewement with this wink type</td>
+      <td>{{htmwewement("wink")}}</td>
+      <td>{{htmwewement("a")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("awea")}}</td>
+     </tw>
+     <tw>
+      <td><code>pweconnect</code> {{expewimentaw_inwine}}</td>
+      <td>hints t-the bwowsew to open in advance t-the connection t-to the winked web site, nyaa~~ without discwosing any pwivate infowmation.</td>
+      <td>{{htmwewement("wink")}}</td>
+      <td>{{htmwewement("a")}}, ʘwʘ {{htmwewement("awea")}}</td>
+     </tw>
+     <tw>
+      <td><code>pwefetch</code></td>
+      <td>hints t-the bwowsew to fetch i-in advance the w-winked wesouwce, ^•ﻌ•^ a-as it wiww wikewy be wequested by the usew.<bw>
+       <bw>
+       <stwong>note:</stwong> t-the <a h-hwef="/es/docs/wink_pwefetching_faq">wink pwefetch f-faq</a> has detaiws on which winks can be p-pwefetched and on awtewnative methods.</td>
+      <td>{{htmwewement("a")}},<bw>
+       {{htmwewement("awea")}},<bw>
+       {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>pwewoad</code></td>
+      <td>tewws the b-bwowsew to downwoad a-a wesouwce b-because this wesouwce wiww be n-nyeeded watew duwing t-the cuwwent n-nyavigation.</td>
+      <td>{{htmwewement("wink")}}</td>
+      <td>{{htmwewement("a")}}, rawr x3 {{htmwewement("awea")}}</td>
+     </tw>
+     <tw>
+      <td><code>pwewendew</code> {{expewimentaw_inwine}}</td>
+      <td>comunica a-aw nyavegadow que cawge e-en segundo p-pwano ew wecuwso s-suministwado (pagina w-web).</td>
+      <td>{{htmwewement("wink")}}</td>
+      <td>{{htmwewement("a")}}, 🥺 {{htmwewement("awea")}}</td>
+     </tw>
+     <tw>
+      <td><code>pwev</code></td>
+      <td>indicates that t-the hypewwink w-weads to the <em>pweceding</em> w-wesouwce of the <em>sequence</em> t-the cuwwent page is in.<bw>
+       <bw>
+       <stwong>note:</stwong> o-othew wink types wewated t-to winking wesouwces in the same s-sequence awe <code>fiwst</code>, ʘwʘ <code>wast</code>, <code>next</code>.<bw>
+       <bw>
+       a-awthough wecognized, (˘ω˘) t-the synomyn <code>pwevious</code> is incowwect and must be avoided.</td>
+      <td>{{htmwewement("a")}}, o.O {{htmwewement("awea")}}, σωσ {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>seawch</code></td>
+      <td>indicates t-that the hypewwink w-wefewence a document w-whose intewface is speciawwy designing fow seawching in t-this document, (ꈍᴗꈍ) ow s-site, and its wesouwces.<bw>
+       <bw>
+       i-if the <a hwef="/es/docs/web/htmw/ewement/wink#type"><code>type</code></a> a-attwibute is set to <code>appwication/openseawchdescwiption+xmw </code>the wesouwce is an <a hwef="/es/docs/cweating_openseawch_pwugins_fow_fiwefox">openseawch p-pwugin</a> t-that can b-be easiwy added t-to the intewface of some bwowsews wike fiwefox o-ow intewnet expwowew.</td>
+      <td>{{htmwewement("a")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("awea")}}, o.O {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
+      <td><code>stywesheet</code></td>
+      <td>defines a-an extewnaw wesouwce to be used as a-a stywesheet. :3 if the <code>type</code> is nyot set, -.- t-the bwowsew shouwd assume it i-is a <code>text/css</code> s-stywesheet untiw fuwthew i-inspection.<bw>
+       <bw>
+       i-if used in combination with t-the <code>awtewnate</code> keywowd, ( ͡o ω ͡o ) it defines a-an <a hwef="/es/docs/awtewnative_stywe_sheets">awtewnative s-stywe s-sheet</a>; in t-that case the <a hwef="/es/docs/web/htmw/ewement/wink#titwe"><code>titwe</code></a> a-attwibute m-must be pwesent a-and nyot be the empty stwing.</td>
+      <td>{{htmwewement("wink")}}</td>
+      <td>{{htmwewement("a")}}, /(^•ω•^) {{htmwewement("awea")}}</td>
+     </tw>
+     <tw>
+      <td><code>sidebaw</code></td>
+      <td>indicates t-that the hypewwink weads to a wesouwce that w-wouwd be bettew s-suited fow a secondawy b-bwowsing context, (⑅˘꒳˘) wike a <em>sidebaw</em>. òωó bwowsews, 🥺 that don't have such a context wiww i-ignowe this keywowd.</td>
+      <td>{{htmwewement("a")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("awea")}}, -.- {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
       <td><code>tag</code></td>
-      <td>Indicates that the hyperlink refers to a document describing a <em>tag</em> that applies to this document.<br>
-       <br>
-       <strong>Note:</strong> this link type should not be set on links to a member of a tag cloud as these do not apply to a single document but to a set of pages.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
-     <tr>
+      <td>indicates that the h-hypewwink wefews t-to a document descwibing a <em>tag</em> that appwies t-to this document.<bw>
+       <bw>
+       <stwong>note:</stwong> this wink t-type shouwd nyot b-be set on winks t-to a membew of a-a tag cwoud as these d-do nyot appwy to a singwe document but to a set of pages.</td>
+      <td>{{htmwewement("a")}}, {{htmwewement("awea")}}, σωσ {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
+     <tw>
       <td><code>up</code></td>
-      <td>Indicates that the page is part of a <em>hierarchical</em> structure and that the hyperlink leads to the higher level resource of that structure.<br>
-       <br>
-       The number of <code>up</code> link types indicates the depth difference between the current page and the linked resource.</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-     </tr>
+      <td>indicates that the page is p-pawt of a <em>hiewawchicaw</em> stwuctuwe and that t-the hypewwink weads to the highew wevew wesouwce of that stwuctuwe.<bw>
+       <bw>
+       the n-nyumbew of <code>up</code> wink types indicates the depth diffewence between t-the cuwwent page a-and the winked wesouwce.</td>
+      <td>{{htmwewement("a")}}, >_< {{htmwewement("awea")}}, :3 {{htmwewement("wink")}}</td>
+      <td><em>none.</em></td>
+     </tw>
     </tbody>
-   </table>
+   </tabwe>
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}

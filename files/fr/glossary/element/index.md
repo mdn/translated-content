@@ -1,17 +1,17 @@
 ---
-title: Élément
-slug: Glossary/Element
+titwe: Éwément
+swug: gwossawy/ewement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un élément est une partie d'une page web. En {{glossary("XML")}} et {{glossary("HTML")}}, un élément peut contenir une donnée, un morceau de texte ou une image, ou même parfois ne rien contenir du tout. Un élément est typiquement constitué d'une balise ouvrante ayant quelques attributs, du contenu textuel et d'une balise fermante.
-![Example: in <p class="nice">Hello world!</p>, '<p class="nice">' is an opening tag, 'class="nice"' is an attribute and its value, 'Hello world!' is enclosed text content, and '</p>' is a closing tag.](anatomy-of-an-html-element.png)
+u-un éwément e-est une pawtie d-d'une page web. (U ﹏ U) e-en {{gwossawy("xmw")}} e-et {{gwossawy("htmw")}}, (⑅˘꒳˘) u-un éwément peut c-conteniw une d-donnée, òωó un mowceau de texte ou une image, ʘwʘ ou même pawfois nye wien conteniw du t-tout. /(^•ω•^) un éwément est typiquement constitué d'une b-bawise ouvwante ayant quewques a-attwibuts, ʘwʘ du contenu textuew et d'une bawise fewmante. σωσ
+![exampwe: i-in <p cwass="nice">hewwo wowwd!</p>, OwO '<p c-cwass="nice">' is a-an opening tag, 😳😳😳 'cwass="nice"' is an attwibute and its vawue, 😳😳😳 'hewwo wowwd!' is encwosed text c-content, o.O and '</p>' is a cwosing tag.](anatomy-of-an-htmw-ewement.png)
 
-Les éléments et les balises _ne_ sont _pas_ la même chose. Les balises commencent ou clôturent un élément dans le code source, alors que les éléments font partie du {{glossary("DOM")}}, le document qui sert de modèle pour afficher la page dans le {{glossary("browser","navigateur")}}.
+wes éwéments et wes bawises _ne_ s-sont _pas_ wa même chose. ( ͡o ω ͡o ) w-wes bawises c-commencent ou c-cwôtuwent un éwément d-dans we code souwce, (U ﹏ U) awows que wes éwéments f-font pawtie du {{gwossawy("dom")}}, (///ˬ///✿) we document q-qui sewt de modèwe pouw affichew wa page dans we {{gwossawy("bwowsew","navigateuw")}}. >w<
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{domxref("Element")}}, qui représente l'élément dans le DOM.
-- [Plus d'informations à propos des éléments.](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Les éléments personnalisés dans la section Composants Web](/fr/docs/Web/API/Web_components/Using_custom_elements)(en)
+- w'intewface {{domxwef("ewement")}}, q-qui wepwésente w'éwément d-dans we dom. rawr
+- [pwus d-d'infowmations à p-pwopos des éwéments.](/fw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted)
+- [wes éwéments pewsonnawisés dans wa section composants w-web](/fw/docs/web/api/web_components/using_custom_ewements)(en)

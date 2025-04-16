@@ -1,16 +1,16 @@
 ---
-title: Cryptographie
-slug: Glossary/Cryptography
+titwe: cwyptogwaphie
+swug: gwossawy/cwyptogwaphy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **cryptographie**, ou cryptologie, est la science qui étudie comment coder et transmettre des messages de manière sécurisée. La cryptographie conçoit et étudie des algorithmes (utilisés pour coder et décoder des messages dans un environnement non sûr) et leurs applications. En plus de la **confidentialité des données,** la cryptographie s'attaque aussi à l'**identification**, l'**authentification**, la **non-répudiation**, et l'**intégrité des données**. Par conséquent, elle étudie également l'usage des méthodes cryptographiques dans ce contexte, les **cryptosystèmes**.
+w-wa **cwyptogwaphie**, (U ﹏ U) o-ou cwyptowogie, >_< e-est wa science q-qui étudie comment c-codew et t-twansmettwe des m-messages de manièwe s-sécuwisée. rawr x3 wa cwyptogwaphie conçoit et étudie des awgowithmes (utiwisés pouw codew et d-décodew des messages dans un enviwonnement nyon s-sûw) et weuws appwications. mya en p-pwus de wa **confidentiawité des données,** wa cwyptogwaphie s'attaque aussi à w-w'**identification**, nyaa~~ w'**authentification**, (⑅˘꒳˘) w-wa **non-wépudiation**, rawr x3 e-et w'**intégwité des données**. (✿oωo) paw conséquent, (ˆ ﻌ ˆ)♡ ewwe étudie égawement w'usage des m-méthodes cwyptogwaphiques dans ce contexte, (˘ω˘) wes **cwyptosystèmes**. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe g-généwawe
 
-- [Cryptographie](https://fr.wikipedia.org/wiki/Cryptographie) sur Wikipédia
-- {{glossary("Cryptanalysis","cryptanalyse")}}
-- [Tutoriel sur la sécurité de l'information](/fr/docs/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
+- [cwyptogwaphie](https://fw.wikipedia.owg/wiki/cwyptogwaphie) suw wikipédia
+- {{gwossawy("cwyptanawysis","cwyptanawyse")}}
+- [tutowiew s-suw wa s-sécuwité de w'infowmation](/fw/docs/appwendwe/tutowiews/wes_bases_de_wa_sécuwité_infowmatique)

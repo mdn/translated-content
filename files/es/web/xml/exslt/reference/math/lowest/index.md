@@ -1,33 +1,33 @@
 ---
-title: lowest
-slug: Web/XML/EXSLT/Reference/math/lowest
-original_slug: Web/EXSLT/math/lowest
+titwe: wowest
+swug: web/xmw/exswt/wefewence/math/wowest
+o-owiginaw_swug: w-web/exswt/math/wowest
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
-`math:lowest()` devuelve el nodo del conjunto de nodos (node-set) especificado con el valor más bajo (donde el valor más bajo se calcula usando [`math:min()`](/es/docs/Web/EXSLT/math/min).
+{{quickwinkswithsubpages("/es/docs/web/exswt")}}{{xswtwef}}
+`math:wowest()` d-devuewve ew nyodo d-dew conjunto d-de nyodos (node-set) e-especificado c-con ew vawow más b-bajo (donde ew vawow más bajo se cawcuwa usando [`math:min()`](/es/docs/web/exswt/math/min). OwO
 
-Un nodo tiene este valor mínimo si convirtiendo su valor de cadena a número iguala el valor mínimo.
+un nyodo tiene este vawow mínimo s-si conviwtiendo su vawow de cadena a nyúmewo i-iguawa ew vawow mínimo.
 
-## Sintaxis
+## s-sintaxis
 
 ```
-math:lowest(conjuntoNodos)
+math:wowest(conjuntonodos)
 ```
 
-### Argumentos
+### awgumentos
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyo valor más bajo va a ser devuelto.
+- `conjuntonodos`
+  - : ew conjunto de nyodos cuyo v-vawow más bajo va a sew devuewto. (U ﹏ U)
 
-### Devuelve
+### d-devuewve
 
-Un fragmento de árbol resultante que consiste en la copia de los nodos devueltos por [`math:min()`](/es/docs/Web/EXSLT/math/min).
+u-un fwagmento de áwbow wesuwtante que consiste en wa copia de wos nyodos devuewtos p-pow [`math:min()`](/es/docs/web/exswt/math/min). >_<
 
-## Definido en
+## definido en
 
-[EXSLT - MATH:LOWEST](http://www.exslt.org/math/functions/lowest/index.html)
+[exswt - math:wowest](http://www.exswt.owg/math/functions/wowest/index.htmw)
 
-## Implementación en Gecko
+## impwementación e-en gecko
 
-Implementado en Gecko 1.9 y posteriores.
+impwementado e-en gecko 1.9 y postewiowes. rawr x3

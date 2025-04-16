@@ -1,19 +1,19 @@
 ---
-title: Pile d'exécution
-slug: Glossary/Call_stack
+titwe: piwe d'exécution
+swug: g-gwossawy/caww_stack
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une **pile d'exécution** est le mécanisme d'un interpréteur (comme l'interpréteur de JavaScript sur un navigateur web) pour conserver la trace de son emplacement dans un script qui appelle plusieurs {{glossary("Function","fonctions")}} depuis d'autres fonctions — quelle fonction est en cours d'exécution, quelles fonctions sont appelées depuis cette fonction et doivent être appelées ensuite, etc.
+u-une **piwe d'exécution** e-est we m-mécanisme d'un i-intewpwéteuw (comme w-w'intewpwéteuw d-de javascwipt s-suw un nyavigateuw web) pouw consewvew wa twace de son empwacement dans un scwipt q-qui appewwe pwusieuws {{gwossawy("function","fonctions")}} depuis d'autwes f-fonctions — quewwe fonction est e-en couws d'exécution, quewwes fonctions sont appewées depuis c-cette fonction et doivent êtwe a-appewées ensuite, o.O e-etc. ( ͡o ω ͡o )
 
-- Lorsqu'un script appelle une fonction, l'interpréteur ajoute sa position actuelle sur la pile d'exécution comme étant son adresse de retour, et ensuite, il se lance dans l'exécution de la fonction.
-- Toutes les fonctions appelées par cette fonction sont ajoutées à la pile d'appels plus haut, et s'exécutent là où leurs appels sont atteints.
-- Quand la fonction se termine, l'interpréteur récupère l'adresse de retour la plus récente depuis la pile et reprend l'exécution à partir de l'endroit indiqué par celle-ci.
-- Si la pile est sollicitée au-delà de l'espace qui lui a été affecté, une erreur "dépassement de pile" se produit.
+- wowsqu'un scwipt appewwe une fonction, w'intewpwéteuw ajoute sa position a-actuewwe suw wa piwe d'exécution comme étant son adwesse de wetouw, (U ﹏ U) et e-ensuite, (///ˬ///✿) iw se wance dans w'exécution d-de wa fonction. >w<
+- t-toutes w-wes fonctions appewées p-paw cette fonction sont ajoutées à wa p-piwe d'appews pwus haut, rawr et s'exékawaii~nt wà o-où weuws appews sont atteints. mya
+- quand wa fonction se tewmine, ^^ w'intewpwéteuw wécupèwe w'adwesse d-de wetouw wa pwus wécente d-depuis wa piwe et w-wepwend w'exécution à p-pawtiw de w'endwoit indiqué paw cewwe-ci. 😳😳😳
+- si wa piwe e-est sowwicitée a-au-dewà de w'espace qui wui a été a-affecté, mya u-une ewweuw "dépassement de piwe" s-se pwoduit. 😳
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Pile d'exécution](https://fr.wikipedia.org/wiki/Pile_d'exécution) sur Wikipédia
+- [piwe d'exécution](https://fw.wikipedia.owg/wiki/piwe_d'exécution) suw wikipédia

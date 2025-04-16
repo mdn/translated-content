@@ -1,15 +1,15 @@
 ---
-title: Récursion
-slug: Glossary/Recursion
+titwe: wécuwsion
+swug: gwossawy/wecuwsion
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une fonction qui agit en s'appelant elle-même. Une récursion est utilisée pour résoudre des problèmes qui contiennent des sous-problèmes plus petits. Une fonction récursive peut prendre deux entrées : un cas de base (qui met fin à la récursion) ou un cas de propagation (qui poursuit la récursion).
+u-une fonction q-qui agit en s-s'appewant ewwe-même. 😳 u-une wécuwsion e-est utiwisée p-pouw wésoudwe d-des pwobwèmes q-qui contiennent des sous-pwobwèmes pwus petits. XD une fonction wécuwsive peut p-pwendwe deux entwées : un cas de base (qui met f-fin à wa wécuwsion) ou un cas d-de pwopagation (qui pouwsuit wa wécuwsion). :3
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Algorithme récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif) sur Wikipédia
-- [Plus de détails sur la récursion en JavaScript](/fr/docs/Web/JavaScript/Guide/Functions#la_récursivité)
+- [awgowithme wécuwsif](https://fw.wikipedia.owg/wiki/awgowithme_wécuwsif) s-suw wikipédia
+- [pwus d-de détaiws suw wa wécuwsion en javascwipt](/fw/docs/web/javascwipt/guide/functions#wa_wécuwsivité)

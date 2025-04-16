@@ -1,210 +1,210 @@
 ---
-title: GlobalEventHandlers
-slug: orphaned/Web/API/GlobalEventHandlers
-original_slug: Web/API/GlobalEventHandlers
+titwe: gwobaweventhandwews
+swug: o-owphaned/web/api/gwobaweventhandwews
+o-owiginaw_swug: w-web/api/gwobaweventhandwews
 ---
 
-{{ApiRef("DOM HTML")}}
+{{apiwef("dom h-htmw")}}
 
-La combinación («_mixin_» en inglés) **`GlobalEventHandlers`** describe los controladores de eventos comunes a varias interfaces como {{DOMxRef("HTMLElement")}}, {{DOMxRef("Document")}} o {{DOMxRef("Window")}}. Cada una de estas interfaces puede, por supuesto, agregar más controladores de eventos además de los que se enumeran a continuación.
+w-wa combinación («_mixin_» e-en i-ingwés) **`gwobaweventhandwews`** d-descwibe wos contwowadowes de eventos comunes a vawias intewfaces como {{domxwef("htmwewement")}}, :3 {{domxwef("document")}} o {{domxwef("window")}}. o.O c-cada una de estas intewfaces puede, -.- pow s-supuesto, (U ﹏ U) agwegaw más contwowadowes d-de eventos además de wos que se enumewan a continuación. o.O
 
-> **Nota:** `GlobalEventHandlers` es una combinación («_mixin_») y no una interfaz; en realidad, no puedes crear un objeto de tipo `GlobalEventHandlers`.
+> **nota:** `gwobaweventhandwews` e-es una combinación («_mixin_») y nyo una intewfaz; e-en weawidad, n-nyo puedes cweaw un objeto de tipo `gwobaweventhandwews`. OwO
 
-## Propiedades
+## pwopiedades
 
-_Esta interfaz no incluye ninguna propiedad excepto los controladores de eventos que se enumeran a continuación._
+_esta intewfaz n-nyo incwuye nyinguna pwopiedad excepto wos contwowadowes de eventos que se enumewan a-a continuación._
 
-### Controladores de eventos
+### contwowadowes d-de eventos
 
-Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHandlers")}} y se implementan mediante {{DOMxRef("HTMLElement")}}, {{DOMxRef("Document")}}, {{DOMxRef("Window ")}}, así como por {{DOMxRef("WorkerGlobalScope")}} para «_Web Workers_».
+e-estos contwowadowes d-de eventos s-se definen en ew mixin {{domxwef("gwobaweventhandwews")}} y s-se impwementan mediante {{domxwef("htmwewement")}}, ^•ﻌ•^ {{domxwef("document")}}, ʘwʘ {{domxwef("window ")}}, :3 así como pow {{domxwef("wowkewgwobawscope")}} pawa «_web w-wowkews_». 😳
 
-- {{DOMxRef("GlobalEventHandlers.onabort")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento {{DOMxRef("HTMLMediaElement/abort_event", "abort")}}.
-- {{DOMxRef("GlobalEventHandlers.onanimationcancel")}} {{Non-standard_inline}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationcancel`](/es/docs/Web/Reference/Events/animationcancel), lo cual indica que una [animación CSS](/es/docs/Web/CSS/CSS_animations) se ha cancelado.
-- {{DOMxRef("GlobalEventHandlers.onanimationend")}} {{Non-standard_inline}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationend`](/es/docs/Web/API/Element/animationend_event), lo cual indica que [la animación CSS](/es/docs/Web/CSS/CSS_animations) se ha detenido.
-- {{DOMxRef("GlobalEventHandlers.onanimationiteration")}} {{Non-standard_inline}}
-  - : Un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) llamado cuando se ha enviado un evento [`animationiteration`](/es/docs/Web/API/Element/animationiteration_event), indica que una [animación CSS](/es/docs/Web/CSS/CSS_animations) ha comenzado a reproducir una nueva iteración de la secuencia de animación.
-- {{DOMxRef("GlobalEventHandlers.onanimationstart")}} {{Non-standard_inline}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationstart`](/es/docs/Web/API/Element/animationstart_event), lo cual indica que una [animación CSS](/es/docs/Web/CSS/CSS_animations) se ha comenzado a reproducir.
-- {{DOMxRef("GlobalEventHandlers.onauxclick")}} {{Non-standard_inline}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`auxclick`](/es/docs/Web/Reference/Events/auxclick), el cual indica que se ha presionado un botón no principal en un dispositivo de entrada (por ejemplo, un botón central del ratón).
-- {{DOMxRef("GlobalEventHandlers.onblur")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`blur`](/es/docs/Web/API/Element/blur_event).
-- {{DOMxRef("GlobalEventHandlers.onerror")}}
-  - : Es un {{DOMxRef("OnErrorEventHandler")}} que representa el código que se llamará cuando se genere el evento [`error`](/es/docs/Web/API/HTMLElement/error_event).
-- {{DOMxRef("GlobalEventHandlers.onfocus")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`focus`](/es/docs/Web/API/Element/focus_event).
-- {{DOMxRef("GlobalEventHandlers.oncancel")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`cancel`](/es/docs/Web/Reference/Events/cancel).
-- {{DOMxRef("GlobalEventHandlers.oncanplay")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`canplay`](/es/docs/Web/API/HTMLMediaElement/canplay_event).
-- {{DOMxRef("GlobalEventHandlers.oncanplaythrough")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`canplaythrough`](/es/docs/Web/API/HTMLMediaElement/canplaythrough_event).
-- {{DOMxRef("GlobalEventHandlers.onchange")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`change`](/es/docs/Web/API/HTMLElement/change_event).
-- {{DOMxRef("GlobalEventHandlers.onclick")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`click`](/es/docs/Web/API/Element/click_event).
-- {{DOMxRef("GlobalEventHandlers.onclose")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`close`](/es/docs/Web/Reference/Events/close).
-- {{DOMxRef("GlobalEventHandlers.oncontextmenu")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`contextmenu`](/es/docs/Web/API/Element/contextmenu_event).
-- {{DOMxRef("GlobalEventHandlers.oncuechange")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`cuechange`](/es/docs/Web/API/TextTrack/cuechange_event).
-- {{DOMxRef("GlobalEventHandlers.ondblclick")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`dblclick`](/es/docs/Web/API/Element/dblclick_event).
-- {{DOMxRef("GlobalEventHandlers.ondrag")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`drag`](/es/docs/Web/API/HTMLElement/drag_event).
-- {{DOMxRef("GlobalEventHandlers.ondragend")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`dragend`](/es/docs/Web/API/HTMLElement/dragend_event).
-- {{DOMxRef("GlobalEventHandlers.ondragenter")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`dragenter`](/es/docs/Web/API/HTMLElement/dragenter_event).
-- {{DOMxRef("GlobalEventHandlers.ondragexit")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`dragexit`](/es/docs/Web/Reference/Events/dragexit).
-- {{DOMxRef("GlobalEventHandlers.ondragleave")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`dragleave`](/es/docs/Web/API/HTMLElement/dragleave_event).
-- {{DOMxRef("GlobalEventHandlers.ondragover")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`dragover`](/es/docs/Web/API/HTMLElement/dragover_event).
-- {{DOMxRef("GlobalEventHandlers.ondragstart")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`dragstart`](/es/docs/Web/API/HTMLElement/dragstart_event).
-- {{DOMxRef("GlobalEventHandlers.ondrop")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`drop`](/es/docs/Web/API/HTMLElement/drop_event).
-- {{DOMxRef("GlobalEventHandlers.ondurationchange")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`durationchange`](/es/docs/Web/API/HTMLMediaElement/durationchange_event).
-- {{DOMxRef("GlobalEventHandlers.onemptied")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`emptied`](/es/docs/Web/API/HTMLMediaElement/emptied_event).
-- {{DOMxRef("GlobalEventHandlers.onended")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`ended`](/es/docs/Web/API/HTMLMediaElement/ended_event).
-- {{DOMxRef("GlobalEventHandlers.onformdata")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) para procesar eventos [`formdata`](/es/docs/Web/Reference/Events/formdata), que se activa después de que se construye la lista de entrada que representa los datos del formulario.
-- {{DOMxRef("GlobalEventHandlers.ongotpointercapture")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el tipo de evento [`gotpointercapture`](/es/docs/Web/Reference/Events/gotpointercapture).
-- {{DOMxRef("GlobalEventHandlers.oninput")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`input`](/es/docs/Web/API/Element/input_event).
-- {{DOMxRef("GlobalEventHandlers.oninvalid")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`invalid`](/es/docs/Web/API/HTMLInputElement/invalid_event).
-- {{DOMxRef("GlobalEventHandlers.onkeydown")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`keydown`](/es/docs/Web/API/Element/keydown_event).
-- {{DOMxRef("GlobalEventHandlers.onkeypress")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`keypress`](/es/docs/Web/API/Element/keypress_event).
-- {{DOMxRef("GlobalEventHandlers.onkeyup")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`keyup`](/es/docs/Web/API/Element/keyup_event).
-- {{DOMxRef("GlobalEventHandlers.onload")}}
-  - : Is an [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) representing the code to be called when the [`load`](/es/docs/Web/API/Window/load_event) event is raised.
-- {{DOMxRef("GlobalEventHandlers.onloadeddata")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadeddata `](/es/docs/Web/Reference/Events/loadeddata ).
-- {{DOMxRef("GlobalEventHandlers.onloadedmetadata")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadedmetadata`](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event).
-- {{DOMxRef("GlobalEventHandlers.onloadend")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event) (cuando el progreso se haya detenido en la carga de un recurso).
-- {{DOMxRef("GlobalEventHandlers.onloadstart")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event) (cuando el progreso ha comenzado a cargar un recurso).
-- {{DOMxRef("GlobalEventHandlers.onlostpointercapture")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el tipo de evento [`lostpointercapture`](/es/docs/Web/Reference/Events/lostpointercapture).
-- {{DOMxRef("GlobalEventHandlers.onmousedown")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`mousedown`](/es/docs/Web/API/Element/mousedown_event).
-- {{DOMxRef("GlobalEventHandlers.onmouseenter")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`mouseenter`](/es/docs/Web/API/Element/mouseenter_event).
-- {{DOMxRef("GlobalEventHandlers.onmouseleave")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`mouseleave`](/es/docs/Web/API/Element/mouseleave_event).
-- {{DOMxRef("GlobalEventHandlers.onmousemove")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`mousemove`](/es/docs/Web/API/Element/mousemove_event).
-- {{DOMxRef("GlobalEventHandlers.onmouseout")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`mouseout`](/es/docs/Web/API/Element/mouseout_event).
-- {{DOMxRef("GlobalEventHandlers.onmouseover")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`mouseover`](/es/docs/Web/API/Element/mouseover_event).
-- {{DOMxRef("GlobalEventHandlers.onmouseup")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`mouseup`](/es/docs/Web/API/Element/mouseup_event).
-- {{DOMxRef("GlobalEventHandlers.onmousewheel")}} {{Non-standard_inline}} {{Deprecated_inline}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`mousewheel`](/es/docs/Web/API/Element/mousewheel_event). Desaprobado. Utiliza `onwheel` en su lugar.
-- {{DOMxRef("GlobalEventHandlers.onwheel")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`wheel`](/es/docs/Web/API/Element/wheel_event).
-- {{DOMxRef("GlobalEventHandlers.onpause")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pause`](/es/docs/Web/API/HTMLMediaElement/pause_event).
-- {{DOMxRef("GlobalEventHandlers.onplay")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`play`](/es/docs/Web/API/HTMLMediaElement/play_event).
-- {{DOMxRef("GlobalEventHandlers.onplaying")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`playing`](/es/docs/Web/API/HTMLMediaElement/playing_event).
-- {{DOMxRef("GlobalEventHandlers.onpointerdown")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointerdown`](/es/docs/Web/Reference/Events/pointerdown).
-- {{DOMxRef("GlobalEventHandlers.onpointermove")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointermove`](/es/docs/Web/Reference/Events/pointermove).
-- {{DOMxRef("GlobalEventHandlers.onpointerup")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointerup`](/es/docs/Web/Reference/Events/pointerup).
-- {{DOMxRef("GlobalEventHandlers.onpointercancel")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointercancel`](/es/docs/Web/Reference/Events/pointercancel).
-- {{DOMxRef("GlobalEventHandlers.onpointerover")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointerover`](/es/docs/Web/Reference/Events/pointerover).
-- {{DOMxRef("GlobalEventHandlers.onpointerout")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointerout`](/es/docs/Web/Reference/Events/pointerout).
-- {{DOMxRef("GlobalEventHandlers.onpointerenter")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointerenter`](/es/docs/Web/Reference/Events/pointerenter).
-- {{DOMxRef("GlobalEventHandlers.onpointerleave")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointerleave`](/es/docs/Web/Reference/Events/pointerleave).
-- {{DOMxRef("GlobalEventHandlers.onpointerlockchange")}} {{experimental_inline}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointerlockchange`](/es/docs/Web/API/Document/pointerlockchange_event).
-- {{DOMxRef("GlobalEventHandlers.onpointerlockerror")}} {{experimental_inline}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`pointerlockerror`](/es/docs/Web/API/Document/pointerlockerror_event).
-- {{DOMxRef("GlobalEventHandlers.onprogress")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event).
-- {{DOMxRef("GlobalEventHandlers.onratechange")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`ratechange`](/es/docs/Web/API/HTMLMediaElement/ratechange_event).
-- {{DOMxRef("GlobalEventHandlers.onreset")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`reset`](/es/docs/Web/API/HTMLFormElement/reset_event).
-- {{DOMxRef("GlobalEventHandlers.onresize")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`resize`](/es/docs/Web/API/Window/resize_event).
-- {{DOMxRef("GlobalEventHandlers.onscroll")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`scroll`](/es/docs/Web/API/Document/scroll_event).
-- {{DOMxRef("GlobalEventHandlers.onseeked")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`seeked`](/es/docs/Web/API/HTMLMediaElement/seeked_event).
-- {{DOMxRef("GlobalEventHandlers.onseeking")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`seek`](/es/docs/Web/Reference/Events/seek).
-- {{DOMxRef("GlobalEventHandlers.onselect")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`select`](/es/docs/Web/API/HTMLInputElement/select_event).
-- {{DOMxRef("GlobalEventHandlers.onselectstart")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`selectionchange`](/es/docs/Web/Reference/Events/selectionchange), es decir, cuando el usuario comience a realizar una nueva selección de texto en una página web.
-- {{DOMxRef("GlobalEventHandlers.onselectionchange")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genera el evento [`selectionchange`](/es/docs/Web/Reference/Events/selectionchange), es decir, cuando cambia el texto seleccionado en una página web.
-- {{DOMxRef("GlobalEventHandlers.onshow")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`show`](/es/docs/Web/Reference/Events/show).
-- {{DOMxRef("GlobalEventHandlers.onsort")}} {{experimental_inline}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`sort`](/es/docs/Web/Reference/Events/sort).
-- {{DOMxRef("GlobalEventHandlers.onstalled")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`stalled`](/es/docs/Web/API/HTMLMediaElement/stalled_event).
-- {{DOMxRef("GlobalEventHandlers.onsubmit")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`submit`](/es/docs/Web/API/HTMLFormElement/submit_event).
-- {{DOMxRef("GlobalEventHandlers.onsuspend")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`suspend`](/es/docs/Web/API/HTMLMediaElement/suspend_event).
-- {{DOMxRef("GlobalEventHandlers.ontimeupdate")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`timeupdate`](/es/docs/Web/API/HTMLMediaElement/timeupdate_event).
-- {{DOMxRef("GlobalEventHandlers.onvolumechange")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`volumechange`](/es/docs/Web/API/HTMLMediaElement/volumechange_event).
-- {{DOMxRef("GlobalEventHandlers.ontouchcancel")}} {{Non-standard_inline}} {{Experimental_inline}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`touchcancel`](/es/docs/Web/API/Element/touchcancel_event).
-- {{DOMxRef("GlobalEventHandlers.ontouchend")}} {{Non-standard_inline}} {{Experimental_inline}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`touchend`](/es/docs/Web/API/Element/touchend_event).
-- {{DOMxRef("GlobalEventHandlers.ontouchmove")}} {{Non-standard_inline}} {{Experimental_inline}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`touchmove`](/es/docs/Web/API/Element/touchmove_event).
-- {{DOMxRef("GlobalEventHandlers.ontouchstart")}} {{Non-standard_inline}} {{Experimental_inline}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`touchstart`](/es/docs/Web/API/Element/touchstart_event).
-- {{DOMxRef("GlobalEventHandlers.ontransitioncancel")}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitioncancel`](/es/docs/Web/API/Element/transitioncancel_event), lo cual indica que [se canceló la transición CSS](/es/docs/Web/CSS/CSS_transitions).
-- {{DOMxRef("GlobalEventHandlers.ontransitionend")}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionend`](/es/docs/Web/API/Element/transitionend_event), lo cual indica que [la transición CSS](/es/docs/Web/CSS/CSS_transitions) se ha terminado de reproducir.
-- {{DOMxRef("GlobalEventHandlers.ontransitionrun")}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionrun`](/es/docs/Web/Reference/Events/transitionrun), lo cual indica que [la transición CSS](/es/docs/Web/CSS/CSS_transitions) se está ejecutando, aunque no necesariamente se inició.
-- {{DOMxRef("GlobalEventHandlers.ontransitionstart")}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), lo cual indica que [la transición CSS](/es/docs/Web/CSS/CSS_transitions) ha comenzado a realizar la transición.
-- {{DOMxRef("GlobalEventHandlers.onwaiting")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`waiting`](/es/docs/Web/API/HTMLMediaElement/waiting_event).
+- {{domxwef("gwobaweventhandwews.onabowt")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá cuando se genewe e-ew evento {{domxwef("htmwmediaewement/abowt_event", òωó "abowt")}}.
+- {{domxwef("gwobaweventhandwews.onanimationcancew")}} {{non-standawd_inwine}}
+  - : se wwama a [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) c-cuando se envía u-un evento [`animationcancew`](/es/docs/web/wefewence/events/animationcancew), 🥺 wo cuaw indica que una [animación css](/es/docs/web/css/css_animations) s-se ha cancewado.
+- {{domxwef("gwobaweventhandwews.onanimationend")}} {{non-standawd_inwine}}
+  - : s-se wwama a [`event handwew`](/es/docs/web/wefewence/events/event_handwews) c-cuando se e-envía un evento [`animationend`](/es/docs/web/api/ewement/animationend_event), rawr x3 wo cuaw indica q-que [wa animación css](/es/docs/web/css/css_animations) s-se ha detenido. ^•ﻌ•^
+- {{domxwef("gwobaweventhandwews.onanimationitewation")}} {{non-standawd_inwine}}
+  - : un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) wwamado cuando s-se ha enviado un evento [`animationitewation`](/es/docs/web/api/ewement/animationitewation_event), :3 i-indica que una [animación c-css](/es/docs/web/css/css_animations) h-ha comenzado a wepwoduciw una nyueva itewación de wa secuencia de animación. (ˆ ﻌ ˆ)♡
+- {{domxwef("gwobaweventhandwews.onanimationstawt")}} {{non-standawd_inwine}}
+  - : se wwama a [`event handwew`](/es/docs/web/wefewence/events/event_handwews) c-cuando se envía u-un evento [`animationstawt`](/es/docs/web/api/ewement/animationstawt_event), (U ᵕ U❁) wo cuaw indica q-que una [animación c-css](/es/docs/web/css/css_animations) s-se ha comenzado a wepwoduciw. :3
+- {{domxwef("gwobaweventhandwews.onauxcwick")}} {{non-standawd_inwine}}
+  - : se wwama a [`event handwew`](/es/docs/web/wefewence/events/event_handwews) c-cuando se envía un evento [`auxcwick`](/es/docs/web/wefewence/events/auxcwick), ^^;; ew cuaw indica que se ha pwesionado un botón n-nyo pwincipaw en un dispositivo d-de entwada (pow e-ejempwo, ( ͡o ω ͡o ) un botón c-centwaw dew watón). o.O
+- {{domxwef("gwobaweventhandwews.onbwuw")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá cuando se genewe ew e-evento [`bwuw`](/es/docs/web/api/ewement/bwuw_event). ^•ﻌ•^
+- {{domxwef("gwobaweventhandwews.onewwow")}}
+  - : e-es un {{domxwef("onewwoweventhandwew")}} q-que wepwesenta e-ew código que s-se wwamawá cuando se genewe ew evento [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event). XD
+- {{domxwef("gwobaweventhandwews.onfocus")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que se wwamawá cuando se genewe ew evento [`focus`](/es/docs/web/api/ewement/focus_event). ^^
+- {{domxwef("gwobaweventhandwews.oncancew")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que se wwamawá cuando se genewe e-ew evento [`cancew`](/es/docs/web/wefewence/events/cancew).
+- {{domxwef("gwobaweventhandwews.oncanpway")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá cuando se genewe e-ew evento [`canpway`](/es/docs/web/api/htmwmediaewement/canpway_event). o.O
+- {{domxwef("gwobaweventhandwews.oncanpwaythwough")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá cuando se g-genewe ew evento [`canpwaythwough`](/es/docs/web/api/htmwmediaewement/canpwaythwough_event). ( ͡o ω ͡o )
+- {{domxwef("gwobaweventhandwews.onchange")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá c-cuando se genewe ew evento [`change`](/es/docs/web/api/htmwewement/change_event). /(^•ω•^)
+- {{domxwef("gwobaweventhandwews.oncwick")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá c-cuando se genewe ew evento [`cwick`](/es/docs/web/api/ewement/cwick_event).
+- {{domxwef("gwobaweventhandwews.oncwose")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código q-que se wwamawá c-cuando se genewe ew evento [`cwose`](/es/docs/web/wefewence/events/cwose). 🥺
+- {{domxwef("gwobaweventhandwews.oncontextmenu")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew c-código que se wwamawá cuando se genewe ew evento [`contextmenu`](/es/docs/web/api/ewement/contextmenu_event). nyaa~~
+- {{domxwef("gwobaweventhandwews.oncuechange")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que w-wepwesenta ew código que se wwamawá cuando se g-genewe ew evento [`cuechange`](/es/docs/web/api/texttwack/cuechange_event). mya
+- {{domxwef("gwobaweventhandwews.ondbwcwick")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código q-que se wwamawá cuando se genewe ew evento [`dbwcwick`](/es/docs/web/api/ewement/dbwcwick_event). XD
+- {{domxwef("gwobaweventhandwews.ondwag")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que se wwamawá c-cuando se g-genewe ew evento [`dwag`](/es/docs/web/api/htmwewement/dwag_event).
+- {{domxwef("gwobaweventhandwews.ondwagend")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se w-wwamawá cuando se genewe ew evento [`dwagend`](/es/docs/web/api/htmwewement/dwagend_event). nyaa~~
+- {{domxwef("gwobaweventhandwews.ondwagentew")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá cuando se genewe ew evento [`dwagentew`](/es/docs/web/api/htmwewement/dwagentew_event).
+- {{domxwef("gwobaweventhandwews.ondwagexit")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código q-que se wwamawá cuando se genewe e-ew evento [`dwagexit`](/es/docs/web/wefewence/events/dwagexit). ʘwʘ
+- {{domxwef("gwobaweventhandwews.ondwagweave")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá cuando s-se genewe ew e-evento [`dwagweave`](/es/docs/web/api/htmwewement/dwagweave_event). (⑅˘꒳˘)
+- {{domxwef("gwobaweventhandwews.ondwagovew")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew c-código que se w-wwamawá cuando se genewe ew evento [`dwagovew`](/es/docs/web/api/htmwewement/dwagovew_event). :3
+- {{domxwef("gwobaweventhandwews.ondwagstawt")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que w-wepwesenta ew código q-que se wwamawá cuando se genewe ew evento [`dwagstawt`](/es/docs/web/api/htmwewement/dwagstawt_event). -.-
+- {{domxwef("gwobaweventhandwews.ondwop")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código q-que se wwamawá c-cuando se genewe ew evento [`dwop`](/es/docs/web/api/htmwewement/dwop_event). 😳😳😳
+- {{domxwef("gwobaweventhandwews.onduwationchange")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá cuando se genewe ew evento [`duwationchange`](/es/docs/web/api/htmwmediaewement/duwationchange_event). (U ﹏ U)
+- {{domxwef("gwobaweventhandwews.onemptied")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá cuando se g-genewe ew evento [`emptied`](/es/docs/web/api/htmwmediaewement/emptied_event). o.O
+- {{domxwef("gwobaweventhandwews.onended")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código q-que se wwamawá c-cuando se genewe ew evento [`ended`](/es/docs/web/api/htmwmediaewement/ended_event). ( ͡o ω ͡o )
+- {{domxwef("gwobaweventhandwews.onfowmdata")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) pawa pwocesaw eventos [`fowmdata`](/es/docs/web/wefewence/events/fowmdata), òωó que se activa después d-de que se c-constwuye wa wista d-de entwada que wepwesenta wos d-datos dew fowmuwawio. 🥺
+- {{domxwef("gwobaweventhandwews.ongotpointewcaptuwe")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que w-wepwesenta ew código q-que se wwamawá cuando se g-genewe ew tipo de evento [`gotpointewcaptuwe`](/es/docs/web/wefewence/events/gotpointewcaptuwe). /(^•ω•^)
+- {{domxwef("gwobaweventhandwews.oninput")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá c-cuando se genewe ew evento [`input`](/es/docs/web/api/ewement/input_event). 😳😳😳
+- {{domxwef("gwobaweventhandwews.oninvawid")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que w-wepwesenta ew código q-que se wwamawá c-cuando se g-genewe ew evento [`invawid`](/es/docs/web/api/htmwinputewement/invawid_event). ^•ﻌ•^
+- {{domxwef("gwobaweventhandwews.onkeydown")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá c-cuando se genewe e-ew evento [`keydown`](/es/docs/web/api/ewement/keydown_event). nyaa~~
+- {{domxwef("gwobaweventhandwews.onkeypwess")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se w-wwamawá cuando se genewe ew evento [`keypwess`](/es/docs/web/api/ewement/keypwess_event). OwO
+- {{domxwef("gwobaweventhandwews.onkeyup")}}
+  - : es u-un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que s-se wwamawá cuando se genewe ew evento [`keyup`](/es/docs/web/api/ewement/keyup_event). ^•ﻌ•^
+- {{domxwef("gwobaweventhandwews.onwoad")}}
+  - : i-is a-an [`event handwew`](/es/docs/web/wefewence/events/event_handwews) w-wepwesenting the code to be cawwed when the [`woad`](/es/docs/web/api/window/woad_event) event i-is waised. σωσ
+- {{domxwef("gwobaweventhandwews.onwoadeddata")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá c-cuando se genewe ew evento [`woadeddata `](/es/docs/web/wefewence/events/woadeddata ). -.-
+- {{domxwef("gwobaweventhandwews.onwoadedmetadata")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew c-código que se wwamawá cuando se genewe ew evento [`woadedmetadata`](/es/docs/web/api/htmwmediaewement/woadedmetadata_event). (˘ω˘)
+- {{domxwef("gwobaweventhandwews.onwoadend")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se wwamawá c-cuando se genewe e-ew evento [`woadend`](/es/docs/web/api/xmwhttpwequest/woadend_event) (cuando e-ew pwogweso se haya detenido en wa cawga de un wecuwso). rawr x3
+- {{domxwef("gwobaweventhandwews.onwoadstawt")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá cuando se genewe ew evento [`woadstawt`](/es/docs/web/api/xmwhttpwequest/woadstawt_event) (cuando ew pwogweso ha comenzado a cawgaw u-un wecuwso). rawr x3
+- {{domxwef("gwobaweventhandwews.onwostpointewcaptuwe")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código q-que se wwamawá c-cuando se genewe ew tipo de evento [`wostpointewcaptuwe`](/es/docs/web/wefewence/events/wostpointewcaptuwe). σωσ
+- {{domxwef("gwobaweventhandwews.onmousedown")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que w-wepwesenta ew código que se wwamawá c-cuando se genewe ew evento [`mousedown`](/es/docs/web/api/ewement/mousedown_event). nyaa~~
+- {{domxwef("gwobaweventhandwews.onmouseentew")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código q-que se wwamawá c-cuando se genewe e-ew evento [`mouseentew`](/es/docs/web/api/ewement/mouseentew_event). (ꈍᴗꈍ)
+- {{domxwef("gwobaweventhandwews.onmouseweave")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código q-que se wwamawá c-cuando se genewe e-ew evento [`mouseweave`](/es/docs/web/api/ewement/mouseweave_event). ^•ﻌ•^
+- {{domxwef("gwobaweventhandwews.onmousemove")}}
+  - : es u-un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá cuando s-se genewe ew evento [`mousemove`](/es/docs/web/api/ewement/mousemove_event).
+- {{domxwef("gwobaweventhandwews.onmouseout")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que w-wepwesenta ew c-código que se wwamawá c-cuando se genewe ew evento [`mouseout`](/es/docs/web/api/ewement/mouseout_event).
+- {{domxwef("gwobaweventhandwews.onmouseovew")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se wwamawá c-cuando se genewe ew evento [`mouseovew`](/es/docs/web/api/ewement/mouseovew_event). >_<
+- {{domxwef("gwobaweventhandwews.onmouseup")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá cuando s-se genewe ew evento [`mouseup`](/es/docs/web/api/ewement/mouseup_event). ^^;;
+- {{domxwef("gwobaweventhandwews.onmousewheew")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá cuando se genewe ew evento [`mousewheew`](/es/docs/web/api/ewement/mousewheew_event). ^^;; d-desapwobado. /(^•ω•^) utiwiza `onwheew` e-en su wugaw. nyaa~~
+- {{domxwef("gwobaweventhandwews.onwheew")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código q-que se wwamawá c-cuando se genewe ew evento [`wheew`](/es/docs/web/api/ewement/wheew_event). (✿oωo)
+- {{domxwef("gwobaweventhandwews.onpause")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se wwamawá c-cuando se genewe e-ew evento [`pause`](/es/docs/web/api/htmwmediaewement/pause_event). ( ͡o ω ͡o )
+- {{domxwef("gwobaweventhandwews.onpway")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se w-wwamawá cuando s-se genewe ew evento [`pway`](/es/docs/web/api/htmwmediaewement/pway_event).
+- {{domxwef("gwobaweventhandwews.onpwaying")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código q-que se wwamawá c-cuando se genewe e-ew evento [`pwaying`](/es/docs/web/api/htmwmediaewement/pwaying_event). (U ᵕ U❁)
+- {{domxwef("gwobaweventhandwews.onpointewdown")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se wwamawá c-cuando se genewe ew evento [`pointewdown`](/es/docs/web/wefewence/events/pointewdown). òωó
+- {{domxwef("gwobaweventhandwews.onpointewmove")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que se wwamawá cuando se genewe e-ew evento [`pointewmove`](/es/docs/web/wefewence/events/pointewmove). σωσ
+- {{domxwef("gwobaweventhandwews.onpointewup")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá c-cuando se genewe e-ew evento [`pointewup`](/es/docs/web/wefewence/events/pointewup). :3
+- {{domxwef("gwobaweventhandwews.onpointewcancew")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá cuando se genewe ew evento [`pointewcancew`](/es/docs/web/wefewence/events/pointewcancew). OwO
+- {{domxwef("gwobaweventhandwews.onpointewovew")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá cuando se genewe e-ew evento [`pointewovew`](/es/docs/web/wefewence/events/pointewovew).
+- {{domxwef("gwobaweventhandwews.onpointewout")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se wwamawá cuando se genewe e-ew evento [`pointewout`](/es/docs/web/wefewence/events/pointewout). ^^
+- {{domxwef("gwobaweventhandwews.onpointewentew")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá c-cuando se genewe ew evento [`pointewentew`](/es/docs/web/wefewence/events/pointewentew). (˘ω˘)
+- {{domxwef("gwobaweventhandwews.onpointewweave")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que w-wepwesenta ew código q-que se wwamawá c-cuando se genewe ew evento [`pointewweave`](/es/docs/web/wefewence/events/pointewweave). OwO
+- {{domxwef("gwobaweventhandwews.onpointewwockchange")}} {{expewimentaw_inwine}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá cuando se genewe ew evento [`pointewwockchange`](/es/docs/web/api/document/pointewwockchange_event). UwU
+- {{domxwef("gwobaweventhandwews.onpointewwockewwow")}} {{expewimentaw_inwine}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá cuando se genewe ew evento [`pointewwockewwow`](/es/docs/web/api/document/pointewwockewwow_event). ^•ﻌ•^
+- {{domxwef("gwobaweventhandwews.onpwogwess")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew c-código que se w-wwamawá cuando se genewe ew evento [`pwogwess`](/es/docs/web/api/xmwhttpwequest/pwogwess_event). (ꈍᴗꈍ)
+- {{domxwef("gwobaweventhandwews.onwatechange")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se w-wwamawá cuando s-se genewe ew evento [`watechange`](/es/docs/web/api/htmwmediaewement/watechange_event). /(^•ω•^)
+- {{domxwef("gwobaweventhandwews.onweset")}}
+  - : e-es u-un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá cuando se genewe ew e-evento [`weset`](/es/docs/web/api/htmwfowmewement/weset_event). (U ᵕ U❁)
+- {{domxwef("gwobaweventhandwews.onwesize")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá c-cuando se genewe ew evento [`wesize`](/es/docs/web/api/window/wesize_event). (✿oωo)
+- {{domxwef("gwobaweventhandwews.onscwoww")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que w-wepwesenta ew código q-que se wwamawá cuando se g-genewe ew evento [`scwoww`](/es/docs/web/api/document/scwoww_event). OwO
+- {{domxwef("gwobaweventhandwews.onseeked")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que w-wepwesenta ew c-código que se wwamawá cuando s-se genewe ew evento [`seeked`](/es/docs/web/api/htmwmediaewement/seeked_event). :3
+- {{domxwef("gwobaweventhandwews.onseeking")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá c-cuando se genewe ew evento [`seek`](/es/docs/web/wefewence/events/seek).
+- {{domxwef("gwobaweventhandwews.onsewect")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá cuando se genewe e-ew evento [`sewect`](/es/docs/web/api/htmwinputewement/sewect_event). nyaa~~
+- {{domxwef("gwobaweventhandwews.onsewectstawt")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código q-que se wwamawá c-cuando se genewe e-ew evento [`sewectionchange`](/es/docs/web/wefewence/events/sewectionchange), ^•ﻌ•^ e-es deciw, cuando ew usuawio comience a weawizaw u-una nueva sewección d-de texto en una página web. ( ͡o ω ͡o )
+- {{domxwef("gwobaweventhandwews.onsewectionchange")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que se wwamawá c-cuando se genewa ew evento [`sewectionchange`](/es/docs/web/wefewence/events/sewectionchange), ^^;; es deciw, mya cuando c-cambia ew texto s-seweccionado en una página web. (U ᵕ U❁)
+- {{domxwef("gwobaweventhandwews.onshow")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que se wwamawá c-cuando se genewe ew evento [`show`](/es/docs/web/wefewence/events/show). ^•ﻌ•^
+- {{domxwef("gwobaweventhandwews.onsowt")}} {{expewimentaw_inwine}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta ew código que se wwamawá c-cuando se g-genewe ew evento [`sowt`](/es/docs/web/wefewence/events/sowt). (U ﹏ U)
+- {{domxwef("gwobaweventhandwews.onstawwed")}}
+  - : e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código q-que se wwamawá cuando se genewe ew evento [`stawwed`](/es/docs/web/api/htmwmediaewement/stawwed_event). /(^•ω•^)
+- {{domxwef("gwobaweventhandwews.onsubmit")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se wwamawá cuando se genewe e-ew evento [`submit`](/es/docs/web/api/htmwfowmewement/submit_event). ʘwʘ
+- {{domxwef("gwobaweventhandwews.onsuspend")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que s-se wwamawá cuando s-se genewe ew evento [`suspend`](/es/docs/web/api/htmwmediaewement/suspend_event). XD
+- {{domxwef("gwobaweventhandwews.ontimeupdate")}}
+  - : e-es u-un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se wwamawá cuando se genewe ew evento [`timeupdate`](/es/docs/web/api/htmwmediaewement/timeupdate_event). (⑅˘꒳˘)
+- {{domxwef("gwobaweventhandwews.onvowumechange")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta ew código que se wwamawá c-cuando se g-genewe ew evento [`vowumechange`](/es/docs/web/api/htmwmediaewement/vowumechange_event). nyaa~~
+- {{domxwef("gwobaweventhandwews.ontouchcancew")}} {{non-standawd_inwine}} {{expewimentaw_inwine}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá c-cuando se genewe ew evento [`touchcancew`](/es/docs/web/api/ewement/touchcancew_event). UwU
+- {{domxwef("gwobaweventhandwews.ontouchend")}} {{non-standawd_inwine}} {{expewimentaw_inwine}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código q-que se wwamawá cuando se genewe ew evento [`touchend`](/es/docs/web/api/ewement/touchend_event).
+- {{domxwef("gwobaweventhandwews.ontouchmove")}} {{non-standawd_inwine}} {{expewimentaw_inwine}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que w-wepwesenta ew c-código que se wwamawá cuando se genewe ew evento [`touchmove`](/es/docs/web/api/ewement/touchmove_event). (˘ω˘)
+- {{domxwef("gwobaweventhandwews.ontouchstawt")}} {{non-standawd_inwine}} {{expewimentaw_inwine}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código q-que se wwamawá cuando se genewe ew evento [`touchstawt`](/es/docs/web/api/ewement/touchstawt_event). rawr x3
+- {{domxwef("gwobaweventhandwews.ontwansitioncancew")}}
+  - : se wwama a [`event handwew`](/es/docs/web/wefewence/events/event_handwews) c-cuando se envía un evento [`twansitioncancew`](/es/docs/web/api/ewement/twansitioncancew_event), wo cuaw indica q-que [se cancewó wa twansición c-css](/es/docs/web/css/css_twansitions). (///ˬ///✿)
+- {{domxwef("gwobaweventhandwews.ontwansitionend")}}
+  - : s-se wwama a [`event handwew`](/es/docs/web/wefewence/events/event_handwews) c-cuando se envía u-un evento [`twansitionend`](/es/docs/web/api/ewement/twansitionend_event), 😳😳😳 wo c-cuaw indica que [wa t-twansición c-css](/es/docs/web/css/css_twansitions) s-se ha tewminado de wepwoduciw. (///ˬ///✿)
+- {{domxwef("gwobaweventhandwews.ontwansitionwun")}}
+  - : se wwama a [`event handwew`](/es/docs/web/wefewence/events/event_handwews) cuando se envía un e-evento [`twansitionwun`](/es/docs/web/wefewence/events/twansitionwun), ^^;; w-wo cuaw i-indica que [wa t-twansición css](/es/docs/web/css/css_twansitions) s-se está ejecutando, ^^ a-aunque nyo nyecesawiamente se inició. (///ˬ///✿)
+- {{domxwef("gwobaweventhandwews.ontwansitionstawt")}}
+  - : se wwama a [`event handwew`](/es/docs/web/wefewence/events/event_handwews) c-cuando se e-envía un evento [`twansitionstawt`](/es/docs/web/wefewence/events/twansitionstawt), -.- wo cuaw indica que [wa twansición css](/es/docs/web/css/css_twansitions) h-ha comenzado a weawizaw w-wa twansición. /(^•ω•^)
+- {{domxwef("gwobaweventhandwews.onwaiting")}}
+  - : e-es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) que wepwesenta e-ew código que se wwamawá cuando se genewe ew e-evento [`waiting`](/es/docs/web/api/htmwmediaewement/waiting_event). UwU
 
-## Métodos
+## m-métodos
 
-_Esta interfaz no define métodos_
+_esta intewfaz nyo define métodos_
 
-## Ve también
+## v-ve también
 
-- {{DOMxRef("Element")}}
-- [`event handler`](/es/docs/Web/Reference/Events/Event_handlers)
-- {{DOMxRef("Event")}}
+- {{domxwef("ewement")}}
+- [`event handwew`](/es/docs/web/wefewence/events/event_handwews)
+- {{domxwef("event")}}

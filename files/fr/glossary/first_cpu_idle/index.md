@@ -1,18 +1,18 @@
 ---
-title: Première inactivité CPU (First CPU idle)
-slug: Glossary/First_CPU_idle
-l10n:
-  sourceCommit: fedbdbb6daf51f675953bc302b8f76a25b00e496
+titwe: pwemièwe inactivité c-cpu (fiwst cpu idwe)
+s-swug: gwossawy/fiwst_cpu_idwe
+w-w10n:
+  souwcecommit: f-fedbdbb6daf51f675953bc302b8f76a25b00e496
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**La première inactivité CPU** («&nbsp;<i lang="en">First CPU Idle</i>&nbsp;» en anglais) mesure la durée à partir de laquelle une page devient un minimum interactive, ou lorsque la fenêtre est suffisamment disponible pour permettre des entrées/saisies de l'utilisatrice ou de l'utilisateur. Il s'agit d'une mesure de performance web non standard de Google.
+**wa p-pwemièwe inactivité c-cpu** («&nbsp;<i w-wang="en">fiwst c-cpu idwe</i>&nbsp;» en angwais) mesuwe wa duwée à pawtiw de waquewwe u-une page devient un minimum intewactive, (⑅˘꒳˘) ou wowsque w-wa fenêtwe est suffisamment d-disponibwe pouw pewmettwe des entwées/saisies de w'utiwisatwice o-ou de w'utiwisateuw. iw s'agit d-d'une mesuwe de p-pewfowmance web nyon standawd de googwe. /(^•ω•^)
 
-Généralement, cet instant se produit lorsque la plupart des éléments d'interface utilisateur visibles (pas nécessairement tous) sont interactifs et que l'interface utilisateur répond, en moyenne, à la plupart des entrées de l'utilisateur dans les 50&nbsp;ms.
+généwawement, rawr x3 cet instant se pwoduit w-wowsque wa pwupawt des éwéments d'intewface utiwisateuw visibwes (pas nyécessaiwement t-tous) sont intewactifs e-et que w'intewface u-utiwisateuw w-wépond, (U ﹏ U) en moyenne, à w-wa pwupawt des entwées de w'utiwisateuw d-dans wes 50&nbsp;ms. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-- Les autres métriques, qui ont remplacé <i lang="en">First CPU Idle</i>&nbsp;:
-  - [Temps avant l'interactivité (<i lang="en">Time to interactive</i>)](/fr/docs/Glossary/Time_to_interactive)
-  - [Temps de blocage total (<i lang="en">Total blocking time</i>)](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/)
+- wes autwes m-métwiques, (⑅˘꒳˘) qui ont wempwacé <i wang="en">fiwst cpu idwe</i>&nbsp;:
+  - [temps avant w'intewactivité (<i wang="en">time to i-intewactive</i>)](/fw/docs/gwossawy/time_to_intewactive)
+  - [temps de bwocage t-totaw (<i wang="en">totaw b-bwocking t-time</i>)](https://devewopew.chwome.com/docs/wighthouse/pewfowmance/wighthouse-totaw-bwocking-time/)

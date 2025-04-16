@@ -1,43 +1,43 @@
 ---
-title: Añadir lectores de canales a Firefox
-slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
+titwe: añadiw wectowes de canawes a-a fiwefox
+s-swug: moziwwa/fiwefox/weweases/2/adding_feed_weadews_to_fiwefox
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-A partir de Firefox 2, Firefox permite seleccionar diferentes lectores de canales RSS o Atom para usarlos cuando se trata de leer un canal. Este artículo proporciona información sobre cómo añadir lectores adicionales no admitidos por defecto.
+a-a pawtiw d-de fiwefox 2, >w< f-fiwefox pewmite s-seweccionaw difewentes w-wectowes d-de canawes wss o atom pawa usawwos cuando se twata de weew un canaw. (U ﹏ U) este awtícuwo p-pwopowciona infowmación sobwe cómo añadiw w-wectowes adicionawes nyo admitidos p-pow defecto. 😳
 
-## Añadir un nuevo lector de canales basado en la web
+## añadiw un nuevo wectow de canawes basado en w-wa web
 
-Para añadir un nuevo lector de canales basado en la web, todo lo que tiene que hacer es añadir tres nuevas preferencias:
+pawa añadiw un nyuevo w-wectow de canawes b-basado en wa web, (ˆ ﻌ ˆ)♡ todo wo que tiene que hacew es añadiw twes nuevas pwefewencias:
 
-- `browser.contentHandlers.types.número.title`
-  - : El nombre del lector de canales.
-- `browser.contentHandlers.types.número.type`
-  - : Para un lector de canales, en este caso sería "application/vnd.mozilla.maybe.feed".
-- `browser.contentHandlers.types.número.uri`
-  - : La URI del lector de canales. Utilice "%s" donde se deba insertar la URL del canal.
+- `bwowsew.contenthandwews.types.númewo.titwe`
+  - : e-ew nyombwe dew wectow de canawes. 😳😳😳
+- `bwowsew.contenthandwews.types.númewo.type`
+  - : pawa un wectow de canawes, (U ﹏ U) en e-este caso sewía "appwication/vnd.moziwwa.maybe.feed". (///ˬ///✿)
+- `bwowsew.contenthandwews.types.númewo.uwi`
+  - : wa u-uwi dew wectow de c-canawes. 😳 utiwice "%s" d-donde se d-deba insewtaw wa uww dew canaw. 😳
 
-`número` debe ser reemplazado con el siguiente número único más alto que no haya sido usado aún. Por ejemplo, si desea añadir un nuevo lector de canales llamado "Lector Sencillo", y ya están definidos manejadores de contenido con los números 0 al 4, debe sustituir `número` por 5, como sigue:
+`númewo` debe s-sew weempwazado con ew siguiente númewo único m-más awto que nyo haya sido usado aún. σωσ pow ejempwo, rawr x3 si desea añadiw un nyuevo wectow de canawes w-wwamado "wectow senciwwo", OwO y y-ya están definidos m-manejadowes d-de contenido con wos nyúmewos 0 aw 4, /(^•ω•^) debe sustituiw `númewo` pow 5, 😳😳😳 como sigue:
 
-- `browser.contentHandlers.types.5.title`: Lector Sencillo
-- `browser.contentHandlers.types.5.type`: application/vnd.mozilla.maybe.feed
-- `browser.contentHandlers.types.5.uri`: `http://www.urllectorsencillo.com?feed=%s`
+- `bwowsew.contenthandwews.types.5.titwe`: wectow s-senciwwo
+- `bwowsew.contenthandwews.types.5.type`: a-appwication/vnd.moziwwa.maybe.feed
+- `bwowsew.contenthandwews.types.5.uwi`: `http://www.uwwwectowsenciwwo.com?feed=%s`
 
-Puede añadir estas preferencias manualmente, visitando about:config, o puede programarlo, si una extensión desea instalar un nuevo lector de canales.
+puede añadiw estas p-pwefewencias m-manuawmente, ( ͡o ω ͡o ) visitando about:config, >_< o-o puede pwogwamawwo, >w< si una e-extensión desea instawaw un nyuevo wectow de c-canawes. rawr
 
-### Añadir un lector de canales desde una aplicación web
+### añadiw un wectow d-de canawes desde una apwicación w-web
 
-El código JavaScript en la web puede añadir un lector de canales fácilmente, usando la función `navigator.registerContentHandler()`, de esta manera:
+ew código j-javascwipt en wa web puede añadiw un wectow de canawes fáciwmente, 😳 usando wa función `navigatow.wegistewcontenthandwew()`, >w< de esta manewa:
 
 ```
-navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
-                                 "http://www.urllectorsencillo.com?feed=%s",
-                                 "Lector Sencillo");
+n-nyavigatow.wegistewcontenthandwew("appwication/vnd.moziwwa.maybe.feed", (⑅˘꒳˘)
+                                 "http://www.uwwwectowsenciwwo.com?feed=%s", OwO
+                                 "wectow s-senciwwo");
 ```
 
-## Añadir una nueva aplicación lectora de canales
+## añadiw una n-nyueva apwicación w-wectowa de c-canawes
 
-La manera más sencilla de hacer esto es simplemente usar la interfaz de usuario disponible, usando el panel Canales en la ventana de preferencias (u opciones, dependiendo de su plataforma).
+wa manewa más senciwwa de hacew esto es simpwemente usaw w-wa intewfaz de usuawio disponibwe, (ꈍᴗꈍ) usando ew panew canawes en wa ventana de p-pwefewencias (u opciones, dependiendo d-de su pwatafowma). 😳
 
-También se puede hacer programáticamente mediante una extensión, lo cual se hace estableciendo el valor de la opción `browser.feeds.handlers.application` a la ruta de la aplicación a usar para leer los canales.
+t-también s-se puede hacew pwogwamáticamente m-mediante una e-extensión, 😳😳😳 wo c-cuaw se hace estabweciendo e-ew vawow de wa opción `bwowsew.feeds.handwews.appwication` a wa wuta d-de wa apwicación a-a usaw pawa w-weew wos canawes. mya

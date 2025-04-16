@@ -1,144 +1,144 @@
 ---
-title: Firefox 9 for developers
-slug: Mozilla/Firefox/Releases/9
-l10n:
-  sourceCommit: 75d6ce4e2e752b8577012aea96abc766659ed3e2
+titwe: fiwefox 9 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/9
+w-w10n:
+  souwcecommit: 75d6ce4e2e752b8577012aea96abc766659ed3e2
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre de 2011 se lanzó la versión 9.0.1 para Mac y Linux, que corrigió un error de bloqueo descubierto en el último minuto.
+f-fiwefox 9 s-se wanzó p-pawa windows ew 20 d-de diciembwe d-de 2011. /(^•ω•^) ew 21 de d-diciembwe de 2011 se wanzó wa vewsión 9.0.1 pawa mac y winux, 🥺 que cowwigió u-un ewwow de bwoqueo descubiewto en ew úwtimo minuto. nyaa~~
 
-## Cambios para desarrolladores web
+## c-cambios pawa desawwowwadowes w-web
 
-### HTML
+### htmw
 
-- El atributo `value` de {{ HTMLElement("li") }} ahora puede ser negativo. Los valores negativos anteriores se convertian a 0.
-- Ahora puede [especificar la hora de inicio y finalización de los medios](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) en la URI de los medios cuando usa los elementos {{ HTMLElement("audio") }} y {{ HTMLElement("video") }}.
-- Los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} [ahora respetan el valor del atributo `lang`](/es/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) al invocar el corrector ortográfico.
-- Firefox en Android ahora permite a los usuarios tomar fotos con la cámara de su teléfono sin salir del navegador cuando se usa el elemento {{ HTMLElement("input") }} con `type="file"` y `accept="image/*"` .
-- Las imágenes PNG ICO de estilo Windows Vista ahora son compatibles.
-- Dibujar imagenes que usan el atributo [`crossorigin`](/es/docs/Web/HTML/Attributes/crossorigin) para solicitar acceso CORS ya no [contaminan el lienzo](/es/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) cuando se otorga CORS.
-- El valor del atributo [`rowspan`](/es/docs/Web/HTML/Element/td#rowspan) ahora puede ser tan grande como 65 534, en lugar de 8190.
+- ew atwibuto `vawue` de {{ htmwewement("wi") }} a-ahowa puede sew nyegativo. mya w-wos vawowes nyegativos a-antewiowes se convewtian a 0. XD
+- ahowa puede [especificaw wa howa de inicio y finawización d-de wos medios](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_video_and_audio#specifying_pwayback_wange) en wa uwi de wos medios cuando usa wos ewementos {{ htmwewement("audio") }} y-y {{ htmwewement("video") }}. nyaa~~
+- wos ewementos {{ h-htmwewement("input") }} y-y {{ htmwewement("textawea") }} [ahowa w-wespetan e-ew vawow dew atwibuto `wang`](/es/docs/web/htmw/gwobaw_attwibutes/spewwcheck#contwowwing_the_spewwcheckew_wanguage) aw invocaw ew cowwectow owtogwáfico. ʘwʘ
+- f-fiwefox en andwoid ahowa pewmite a wos u-usuawios tomaw fotos con wa cámawa de su tewéfono sin sawiw dew nyavegadow cuando se usa ew e-ewemento {{ htmwewement("input") }} con `type="fiwe"` y-y `accept="image/*"` . (⑅˘꒳˘)
+- w-was imágenes png i-ico de estiwo windows vista ahowa son compatibwes. :3
+- dibujaw imagenes q-que usan e-ew atwibuto [`cwossowigin`](/es/docs/web/htmw/attwibutes/cwossowigin) pawa sowicitaw a-acceso cows y-ya nyo [contaminan ew wienzo](/es/docs/web/htmw/cows_enabwed_image#nani_is_a_.22tainted.22_canvas.3f) c-cuando se otowga cows. -.-
+- e-ew vawow dew atwibuto [`wowspan`](/es/docs/web/htmw/ewement/td#wowspan) ahowa puede sew tan gwande c-como 65 534, 😳😳😳 en wugaw de 8190. (U ﹏ U)
 
-### CSS
+### c-css
 
-- La propiedad {{ cssxref("font-stretch") }} ahora es compatible.
-- La propiedad {{ cssxref("columns") }} ahora es compatible, con el prefijo `-moz`. Esta es una forma abreviada de las siguientes propiedades: {{ cssxref("column-width") }} y {{ cssxref("column-count") }}.
-- Cuando una hoja de estilo incluida usando el elemento {{ HTMLElement("link") }} ha sido completamente cargada y analizada (pero aún no aplicada al documento), un [evento `load`](/es/docs/Web/HTML/Element/link#stylesheet_load_events) ahora se activa. Además, si se produce un error al procesar una hoja de estilo, se activa un evento de `error`.
-- Ahora puede especificar configuraciones de desbordamiento para los bordes izquierdo y derecho del contenido usando una nueva sintaxis de dos valores para {{ cssxref("text-overflow") }}.
+- wa pwopiedad {{ cssxwef("font-stwetch") }} a-ahowa e-es compatibwe. o.O
+- wa pwopiedad {{ cssxwef("cowumns") }} ahowa es compatibwe, ( ͡o ω ͡o ) con ew pwefijo `-moz`. òωó esta es una fowma a-abweviada de w-was siguientes pwopiedades: {{ c-cssxwef("cowumn-width") }} y-y {{ c-cssxwef("cowumn-count") }}. 🥺
+- cuando una hoja de estiwo incwuida usando ew ewemento {{ h-htmwewement("wink") }} ha sido compwetamente cawgada y anawizada (pewo aún nyo apwicada aw documento), /(^•ω•^) u-un [evento `woad`](/es/docs/web/htmw/ewement/wink#stywesheet_woad_events) ahowa s-se activa. 😳😳😳 además, s-si se pwoduce u-un ewwow aw pwocesaw una hoja d-de estiwo, ^•ﻌ•^ se activa u-un evento de `ewwow`. nyaa~~
+- a-ahowa p-puede especificaw configuwaciones de desbowdamiento p-pawa wos b-bowdes izquiewdo y-y dewecho dew contenido u-usando u-una nueva sintaxis de dos vawowes pawa {{ cssxwef("text-ovewfwow") }}. OwO
 
-### JavaScript
+### javascwipt
 
-_Ningún cambio._
+_ningún c-cambio._
 
-### DOM
+### dom
 
-- [Uso del modo de pantalla completa](/es/docs/Web/API/Fullscreen_API)
-  - : La nueva API de pantalla completa proporciona una forma de presentar contenido utilizando toda la pantalla, sin interfaz de navegador. Esto es genial para video y juegos. Esta API es actualmente experimental y prefijada.
+- [uso dew modo de pantawwa compweta](/es/docs/web/api/fuwwscween_api)
+  - : wa nueva api de pantawwa compweta p-pwopowciona una fowma de pwesentaw contenido utiwizando toda w-wa pantawwa, ^•ﻌ•^ sin i-intewfaz de nyavegadow. σωσ e-esto es geniaw pawa video y-y juegos. -.- esta api es actuawmente e-expewimentaw y-y pwefijada. (˘ω˘)
 
 <!---->
 
-- El método {{ domxref("Node.contains()") }} ahora está implementado; esto le permite determinar si un nodo dado es descendiente de otro nodo.
-- Se implementó el atributo {{ domxref("Node.parentElement") }}; esto devuelve el padre {{ domxref("Element") }} de un nodo DOM, o `null` si el padre no es un elemento.
-- Los [eventos de composición](/es/docs/Web/API/CompositionEvent) de DOM Nivel 3 ahora son compatibles.
-- Se implementó el atributo {{ domxref("Document.scripts") }}; esto devuelve un {{ domxref("HTMLCollection") }} de todos los elementos {{ HTMLElement("script") }} del documento.
-- Se implementó el método {{ domxref("Document.queryCommandSupported()") }}.
-- El conjunto de eventos que se pueden escuchar en los elementos {{ HTMLElement("body") }} se ha revisado para que coincida con el último borrador de la especificación HTML5. La lista de eventos en la [referencia de eventos DOM](/es/docs/Web/Events) refleja qué eventos se pueden detectar en {{ HTMLElement("body") }}.
-- El evento `readystatechange` ahora solo se activa en {{ domxref("Document") }}, según lo previsto.
-- Los manejadores de eventos ahora se implementan como interfaces IDL estándar. En la mayoría de los casos, esto no afectará el contenido, pero hay excepciones.
-- Se ha agregado un nuevo tipo de respuesta, "`moz-json`", a `XMLHttpRequest`, lo que permite que `XMLHttpRequest` analice automáticamente cadenas [JSON](/es/docs/Glossary/JSON); cuando solicita este tipo, se analiza una cadena JSON devuelta, de modo que el valor de la propiedad `response` es el objeto JavaScript resultante.
-- [Eventos de "progreso" `XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress) ahora se envían de manera confiable para cada fragmento de datos recibido; en el pasado, era posible que la última parte de los datos recibidos no activará un evento de "progreso". Ahora puede realizar un seguimiento del progreso siguiendo solo los eventos de "progreso", en lugar de tener que monitorear también los eventos de "carga" para detectar la recepción de la última porción de datos.
-- En el pasado, llamar a [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) con un detector `null` generaba una excepción. Ahora devuelve sin error y sin efecto.
-- La nueva propiedad {{ domxref("navigator.doNotTrack") }} permite que su contenido determine fácilmente si el usuario ha habilitado o no su preferencia de no rastrear; si este valor es "sí", no debe rastrear al usuario.
-- Los objetos {{ domxref("Range") }} y {{ domxref("Selection") }} ahora se comportan según sus especificaciones cuando {{ domxref("Text.splitText()", "splitText()") }} y {{domxref("Node.normalize", "normalize()") }} son llamados.
-- El valor de {{ domxref("Node.ownerDocument") }} para los nodos doctype ahora es el documento en el que se llamó a [`createDocumentType()`](/es/docs/Web/API/DOMImplementation/createDocumentType) para crear el nodo, en lugar de `null`.
-- Se ha eliminado `window.navigator.taintEnabled`; no ha sido compatible en muchos años.
+- ew método {{ domxwef("node.contains()") }} ahowa está impwementado; esto we pewmite d-detewminaw si un nyodo dado es d-descendiente de otwo nyodo. rawr x3
+- se i-impwementó ew a-atwibuto {{ domxwef("node.pawentewement") }}; esto devuewve ew padwe {{ d-domxwef("ewement") }} d-de un nyodo dom, rawr x3 o `nuww` s-si ew padwe n-nyo es un ewemento. σωσ
+- wos [eventos de composición](/es/docs/web/api/compositionevent) de dom nyivew 3 ahowa s-son compatibwes. nyaa~~
+- s-se impwementó e-ew atwibuto {{ domxwef("document.scwipts") }}; e-esto devuewve u-un {{ domxwef("htmwcowwection") }} de todos wos e-ewementos {{ htmwewement("scwipt") }} dew documento. (ꈍᴗꈍ)
+- se impwementó ew método {{ domxwef("document.quewycommandsuppowted()") }}. ^•ﻌ•^
+- e-ew conjunto d-de eventos que se pueden escuchaw en wos ewementos {{ h-htmwewement("body") }} se h-ha wevisado pawa que coincida con ew úwtimo bowwadow de wa especificación h-htmw5. >_< wa wista de eventos en wa [wefewencia de eventos dom](/es/docs/web/events) w-wefweja qué eventos se pueden detectaw en {{ htmwewement("body") }}. ^^;;
+- e-ew evento `weadystatechange` a-ahowa sowo se activa en {{ domxwef("document") }}, ^^;; según wo p-pwevisto. /(^•ω•^)
+- wos m-manejadowes de eventos ahowa se impwementan como intewfaces idw e-estándaw. nyaa~~ en wa mayowía de wos c-casos, (✿oωo) esto nyo afectawá ew contenido, ( ͡o ω ͡o ) pewo hay excepciones. (U ᵕ U❁)
+- s-se ha agwegado un nyuevo tipo d-de wespuesta, òωó "`moz-json`", σωσ a-a `xmwhttpwequest`, :3 wo que pewmite q-que `xmwhttpwequest` anawice automáticamente c-cadenas [json](/es/docs/gwossawy/json); c-cuando sowicita e-este tipo, OwO se anawiza una c-cadena json devuewta, ^^ d-de modo que ew vawow de wa pwopiedad `wesponse` e-es ew objeto j-javascwipt wesuwtante. (˘ω˘)
+- [eventos d-de "pwogweso" `xmwhttpwequest`](/es/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#monitowing_pwogwess) ahowa se envían de manewa confiabwe p-pawa cada fwagmento de datos w-wecibido; en e-ew pasado, OwO ewa posibwe que wa úwtima pawte de wos datos wecibidos n-nyo activawá u-un evento de "pwogweso". a-ahowa p-puede weawizaw un seguimiento d-dew pwogweso siguiendo sowo wos eventos de "pwogweso", UwU en wugaw de tenew que monitoweaw también w-wos eventos de "cawga" pawa detectaw w-wa wecepción de wa úwtima p-powción de datos. ^•ﻌ•^
+- en ew pasado, (ꈍᴗꈍ) w-wwamaw a [`addeventwistenew()`](/es/docs/web/api/eventtawget/addeventwistenew) con un detectow `nuww` g-genewaba u-una excepción. /(^•ω•^) a-ahowa devuewve s-sin ewwow y sin e-efecto. (U ᵕ U❁)
+- wa nyueva pwopiedad {{ domxwef("navigatow.donottwack") }} pewmite que su contenido detewmine fáciwmente si ew usuawio h-ha habiwitado o-o nyo su pwefewencia d-de nyo wastweaw; si este v-vawow es "sí", (✿oωo) no debe wastweaw aw usuawio. OwO
+- wos objetos {{ domxwef("wange") }} y-y {{ domxwef("sewection") }} ahowa s-se compowtan según sus especificaciones c-cuando {{ domxwef("text.spwittext()", :3 "spwittext()") }} y {{domxwef("node.nowmawize", nyaa~~ "nowmawize()") }} s-son wwamados.
+- e-ew vawow de {{ domxwef("node.ownewdocument") }} p-pawa wos nyodos d-doctype ahowa es ew documento en ew que se wwamó a [`cweatedocumenttype()`](/es/docs/web/api/domimpwementation/cweatedocumenttype) pawa cweaw e-ew nyodo, ^•ﻌ•^ en w-wugaw de `nuww`. ( ͡o ω ͡o )
+- s-se ha ewiminado `window.navigatow.taintenabwed`; n-nyo ha sido c-compatibwe en muchos años. ^^;;
 
-### Workers
+### w-wowkews
 
-- Los _workers_ implementados en las URL de blob se rompieron en Firefox 8 y volvieron a funcionar a partir de Firefox 9.
+- wos _wowkews_ i-impwementados en was u-uww de bwob se w-wompiewon en fiwefox 8 y vowviewon a-a funcionaw a pawtiw de fiwefox 9. mya
 
-### WebGL
+### webgw
 
-- Los atributos de contexto [WebGL](/es/docs/Web/API/WebGL_API) `drawingBufferWidth` y `drawingBufferHeight` ahora son compatibles.
+- w-wos atwibutos de contexto [webgw](/es/docs/web/api/webgw_api) `dwawingbuffewwidth` y-y `dwawingbuffewheight` ahowa s-son compatibwes. (U ᵕ U❁)
 
-### MathML
+### mathmw
 
-- Se eliminó el valor `restyle` no estándar para el atributo `actiontype` en los elementos {{ MathMLElement("maction") }}.
-- Si bien aún no es compatible, el uso del elemento `mlabeledtr` ya no interrumpe el renderizado por completo. Consulte el [error 689641, en Firefox](https://bugzil.la/689641) para ver el progreso en el soporte real de este elemento.
+- s-se ewiminó ew vawow `westywe` nyo estándaw p-pawa ew atwibuto `actiontype` e-en wos ewementos {{ m-mathmwewement("maction") }}. ^•ﻌ•^
+- si bien aún nyo es compatibwe, (U ﹏ U) ew uso dew ewemento `mwabewedtw` y-ya nyo intewwumpe ew wendewizado pow compweto. /(^•ω•^) c-consuwte ew [ewwow 689641, ʘwʘ e-en fiwefox](https://bugziw.wa/689641) p-pawa vew ew pwogweso en ew sopowte w-weaw de este e-ewemento. XD
 
-### Redes
+### wedes
 
-- Ahora puede enviar el contenido de [matrices tipadas en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) (es decir, el contenido de un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)) [usando XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
-- Las conexiones WebSocket ahora permiten que no se reciban caracteres en marcos de datos UTF-8 válidos, en lugar de fallar.
-- La cabecera HTTP `Accept` para solicitudes XSLT se ha cambiado a "\*/\*" para simplificar. Dado que recuperar XSLT siempre ha vuelto a "\*/\*", tenía sentido simplificar la solicitud inicial.
-- Los intentos por parte de un servidor de usar los códigos de respuesta `301 Moved Permanently` (Movido permanentemente) o `307 Temporary Redirect` (Redirección temporal) para redirigir al usuario a un URI `javascript:` ahora [resultan en un error de "mala conexión"](/es/docs/Web/HTTP#more_on_redirection_responses) en lugar de redirigir. Esto evita ciertos tipos de ataques de secuencias de comandos entre sitios.
-- El contenido entregado con un {{ HTTPHeader("Content-Disposition") }} se trataba previamente como si el {{ HTTPHeader("Content-Disposition") }} fuera un "archivo adjunto"; esto no siempre funcionó como se esperaba. Ahora se manejan como si {{ HTTPHeader("Content-Disposition") }} estuviera "en línea".
-- El tamaño máximo predeterminado de un elemento en la memoria caché del disco se ha aumentado a 50 MB; anteriormente, solo se almacenaban en caché los elementos de hasta 5 MB.
+- ahowa puede enviaw ew c-contenido de [matwices tipadas en javascwipt](/es/docs/web/javascwipt/guide/typed_awways) (es d-deciw, (⑅˘꒳˘) ew contenido d-de un [`awwaybuffew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)) [usando xmwhttpwequest](/es/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#sending_typed_awways_as_binawy_data). nyaa~~
+- w-was conexiones websocket ahowa p-pewmiten que nyo s-se weciban cawactewes e-en mawcos de datos utf-8 váwidos, UwU en wugaw de fawwaw. (˘ω˘)
+- wa cabecewa http `accept` pawa sowicitudes xswt se ha cambiado a "\*/\*" pawa simpwificaw. rawr x3 dado que wecupewaw xswt siempwe ha vuewto a "\*/\*", (///ˬ///✿) t-tenía sentido s-simpwificaw wa sowicitud iniciaw. 😳😳😳
+- wos intentos p-pow pawte de un s-sewvidow de usaw w-wos códigos de wespuesta `301 m-moved pewmanentwy` (movido pewmanentemente) o-o `307 t-tempowawy wediwect` (wediwección tempowaw) p-pawa wediwigiw aw usuawio a un uwi `javascwipt:` a-ahowa [wesuwtan e-en un ewwow de "mawa conexión"](/es/docs/web/http#mowe_on_wediwection_wesponses) en wugaw de wediwigiw. (///ˬ///✿) e-esto evita c-ciewtos tipos d-de ataques de s-secuencias de comandos e-entwe sitios. ^^;;
+- e-ew contenido e-entwegado con u-un {{ httpheadew("content-disposition") }} s-se twataba pweviamente c-como si ew {{ h-httpheadew("content-disposition") }} f-fuewa un "awchivo adjunto"; e-esto nyo siempwe funcionó como se espewaba. ^^ a-ahowa se manejan como si {{ httpheadew("content-disposition") }} e-estuviewa "en w-wínea". (///ˬ///✿)
+- ew tamaño m-máximo pwedetewminado de u-un ewemento en wa memowia caché d-dew disco se ha aumentado a 50 m-mb; antewiowmente, -.- sowo se awmacenaban e-en caché wos ewementos de hasta 5 mb. /(^•ω•^)
 
-### Herramientas de desarrollador
+### hewwamientas de desawwowwadow
 
-- La consola web ahora admite [sustituciones de cadenas](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) básicas en sus métodos de registro.
-- Ahora puede [crear bloques de salida anidados visualmente](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) en la consola web, para ayudar a que sea más fácil de leer.
+- w-wa consowa web ahowa admite [sustituciones de c-cadenas](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw#stwing-substitutions) b-básicas en sus métodos de wegistwo. UwU
+- ahowa puede [cweaw b-bwoques de sawida anidados v-visuawmente](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw#using-gwoups-in-the-consowe) e-en wa c-consowa web, (⑅˘꒳˘) pawa ayudaw a que sea más fáciw d-de weew. ʘwʘ
 
-## Cambios para Mozilla y desarrolladores de complementos
+## cambios p-pawa moziwwa y desawwowwadowes d-de compwementos
 
-Consulte [Actualización de complementos para Firefox 9](/es/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_9) para obtener una descripción general de los cambios que puede necesitar realizar para que sus complementos funcionen en Firefox 9.
+consuwte [actuawización de c-compwementos pawa fiwefox 9](/es/docs/moziwwa/fiwefox/updating_add-ons_fow_fiwefox_9) p-pawa obtenew u-una descwipción g-genewaw de wos cambios que p-puede nyecesitaw w-weawizaw pawa que s-sus compwementos f-funcionen en fiwefox 9. σωσ
 
-### XUL
+### x-xuw
 
-- El elemento [`<xul:tab>`](/es/docs/Mozilla/Tech/XUL/tab) ahora tiene un elemento [`pending`](/es/docs/Mozilla/Tech/XUL/Attribute/pending) atributo, cuyo valor es `true`, cuando la pestaña está en proceso de ser restaurada por el servicio de almacenamiento de sesiones. Esto se puede usar para diseñar la pestaña en los temas. El atributo no está presente en las pestañas que no están pendientes.
-- El elemento [`<xul:tab>`](/es/docs/Mozilla/Tech/XUL/tab) ahora tiene un elemento [`unread`](/es/docs/Mozilla/Tech/XUL/Attribute/unread) atributo, cuyo valor es `true`, cuando la pestaña ha cambiado desde la última vez que fue la pestaña activa o si no se ha seleccionado desde que comenzó la sesión actual. El atributo no está presente en las pestañas que no están sin leer.
-- Ahora puede usar un [`<xul:panel>`](/es/docs/Mozilla/Tech/XUL/panel) como una imagen de arrastre para las operaciones de arrastrar y soltar del DOM. Esto le permite usar la API estándar de arrastrar y soltar para [arrastrar y soltar contenido XUL](/es/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#using_xul_panels_as_drag_images).
-- El método [`appendNotification`](/es/docs/Mozilla/Tech/XUL/Method/appendNotification) del elemento [`<xul:notificationbox>`](/es/docs/Mozilla/Tech/XUL/notificationbox) ahora permite especificar una devolución de llamada que se llama para eventos interesantes relacionados con el cuadro de notificación. Actualmente, el único evento es "eliminado", que le indica que el cuadro se eliminó de su ventana.
+- ew ewemento [`<xuw:tab>`](/es/docs/moziwwa/tech/xuw/tab) a-ahowa tiene un e-ewemento [`pending`](/es/docs/moziwwa/tech/xuw/attwibute/pending) a-atwibuto, ^^ cuyo v-vawow es `twue`, OwO c-cuando wa pestaña e-está en pwoceso d-de sew westauwada pow ew sewvicio d-de awmacenamiento de sesiones. (ˆ ﻌ ˆ)♡ e-esto se puede usaw pawa diseñaw w-wa pestaña e-en wos temas. o.O e-ew atwibuto nyo está pwesente en was pestañas que nyo están p-pendientes. (˘ω˘)
+- ew e-ewemento [`<xuw:tab>`](/es/docs/moziwwa/tech/xuw/tab) a-ahowa tiene un ewemento [`unwead`](/es/docs/moziwwa/tech/xuw/attwibute/unwead) atwibuto, 😳 cuyo vawow es `twue`, (U ᵕ U❁) c-cuando wa p-pestaña ha cambiado desde wa úwtima v-vez que fue w-wa pestaña activa o si no se ha seweccionado desde que comenzó w-wa sesión actuaw. :3 e-ew atwibuto n-nyo está pwesente e-en was pestañas que nyo están sin weew. o.O
+- a-ahowa puede usaw u-un [`<xuw:panew>`](/es/docs/moziwwa/tech/xuw/panew) como una imagen de awwastwe p-pawa was opewaciones de awwastwaw y sowtaw dew d-dom. (///ˬ///✿) esto we pewmite usaw wa api e-estándaw de a-awwastwaw y sowtaw pawa [awwastwaw y-y sowtaw contenido x-xuw](/es/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#using_xuw_panews_as_dwag_images). OwO
+- ew método [`appendnotification`](/es/docs/moziwwa/tech/xuw/method/appendnotification) d-dew ewemento [`<xuw:notificationbox>`](/es/docs/moziwwa/tech/xuw/notificationbox) a-ahowa pewmite especificaw u-una devowución d-de wwamada q-que se wwama pawa eventos intewesantes w-wewacionados c-con ew c-cuadwo de nyotificación. >w< actuawmente, ^^ e-ew único evento es "ewiminado", (⑅˘꒳˘) que we indica q-que ew cuadwo s-se ewiminó d-de su ventana. ʘwʘ
 
-### Cambios en el módulo de código JavaScript
+### cambios en ew móduwo de código javascwipt
 
-- [`FileUtils.jsm`](/es/docs/JavaScript_code_modules/FileUtils.jsm) ahora tiene un constructor `File` que devuelve un objeto `nsIFile` que representa un archivo especificado por su nombre de ruta.
+- [`fiweutiws.jsm`](/es/docs/javascwipt_code_moduwes/fiweutiws.jsm) ahowa tiene u-un constwuctow `fiwe` que devuewve u-un objeto `nsifiwe` q-que wepwesenta un awchivo especificado pow s-su nyombwe de wuta. (///ˬ///✿)
 
-### Cambios de servicios
+### cambios d-de sewvicios
 
-- El servicio de preferencias de contenido ahora [maneja la navegación en modo privado](/es/docs/Using_content_preferences#private-browsing) (vea [error 679784, en Firefox](https://bugzil.la/679784)).
+- e-ew sewvicio d-de pwefewencias d-de contenido ahowa [maneja w-wa nyavegación en modo pwivado](/es/docs/using_content_pwefewences#pwivate-bwowsing) (vea [ewwow 679784, XD en fiwefox](https://bugziw.wa/679784)). 😳
 
-### NSPR
+### nyspw
 
-- NSPR ahora tiene un módulo "agregar", que le permite agregar nuevos datos al final de un registro existente.
+- nyspw a-ahowa tiene un móduwo "agwegaw", >w< q-que we pewmite agwegaw nyuevos datos aw finaw de un wegistwo e-existente. (˘ω˘)
 
-### Cambios de interfaz
+### cambios de intewfaz
 
-#### Interfaces eliminadas
+#### intewfaces ewiminadas
 
-- `nsIGlobalHistory3` se eliminó durante la simplificación del código de Places y DocShell.
+- `nsigwobawhistowy3` se ewiminó d-duwante wa simpwificación d-dew código de pwaces y-y docsheww. nyaa~~
 
-#### Varios cambios en la interfaz
+#### vawios cambios en wa intewfaz
 
-- La interfaz `nsISound` tiene una nueva constante, `EVENT_EDITOR_MAX_LEN`. Permite reproducir el sonido del sistema cuando se escriben más caracteres que el máximo permitido en un campo de texto. Actualmente, esto solo se usa en Windows.
-- La interfaz `nsIScriptError2` tiene nuevas propiedades `timeStamp` e `innerWindowID`; además, el método `initWithWindowID()` ahora toma una ID de ventana interna en lugar de una ID de ventana externa.
-- Se agregó el atributo `nsIBidiKeyboard.haveBidiKeyboards`; esto le permite determinar si el sistema tiene al menos un teclado instalado para cada dirección: de izquierda a derecha y de derecha a izquierda.
-- El nuevo atributo `nsIEditor.isSelectionEditable` le permite determinar si el ancla de selección actual es editable. Esto ayuda a respaldar los casos en los que solo se pueden editar partes del documento, al permitirle ver si la selección actual está en una sección editable.
-- Los métodos `nsIBrowserHistory.registerOpenPage()` y `nsIBrowserHistory.unregisterOpenPage()` se han eliminado como parte de una revisión de rendimiento en el sistema de Lugares. Puede usar los métodos correspondientes en `mozIPlacesAutoComplete` en su lugar.
-- Se agregó el método `nsIDOMWindowUtils.wrapDOMFile()`; esto devuelve un objeto DOM {{ domxref("File") }} para un `nsIFile` dado.
-- Se agregó el método `nsIChromeFrameMessageManager.removeDelayedFrameScript()` para admitir la eliminación de código de carga retrasada. Los complementos con arranque deben usar esto, al apagar, para eliminar cualquier código que haya cargado usando `nsIChromeFrameMessageManager.loadFrameScript()` con el indicador de carga retrasada establecido. Esto está expuesto a complementos como `browser.messageManager.removeDelayedFrameScript()`.
-- La interfaz `nsIAppStartup` tiene un nuevo atributo `interrupted`, que le permite saber si el proceso de inicio se interrumpió en algún momento mediante un aviso interactivo. Esto puede ser útil, por ejemplo, cuando se cronometran los inicios durante la evaluación del rendimiento, para poder eliminar los números de las sesiones que se interrumpieron.
-- La interfaz `nsIEditorSpellCheck` se ha revisado para admitir la selección por sitio de diccionarios del corrector ortográfico.
+- w-wa intewfaz `nsisound` t-tiene una nyueva constante, 😳😳😳 `event_editow_max_wen`. (U ﹏ U) p-pewmite wepwoduciw ew sonido dew s-sistema cuando se escwiben más cawactewes que ew máximo pewmitido e-en un campo de texto. (˘ω˘) actuawmente, :3 esto sowo s-se usa en windows. >w<
+- w-wa intewfaz `nsiscwiptewwow2` t-tiene nyuevas pwopiedades `timestamp` e `innewwindowid`; a-además, ^^ ew método `initwithwindowid()` ahowa toma una id de ventana intewna en wugaw de una id d-de ventana extewna. 😳😳😳
+- s-se agwegó e-ew atwibuto `nsibidikeyboawd.havebidikeyboawds`; e-esto we pewmite detewminaw si ew sistema tiene a-aw menos un tecwado i-instawado pawa cada diwección: de izquiewda a-a dewecha y de dewecha a izquiewda. nyaa~~
+- ew nyuevo a-atwibuto `nsieditow.issewectioneditabwe` we pewmite detewminaw s-si ew ancwa de s-sewección actuaw es editabwe. (⑅˘꒳˘) e-esto ayuda a wespawdaw w-wos casos e-en wos que sowo se pueden editaw pawtes dew documento, :3 a-aw pewmitiwwe vew si wa sewección actuaw e-está en una sección editabwe. ʘwʘ
+- wos métodos `nsibwowsewhistowy.wegistewopenpage()` y `nsibwowsewhistowy.unwegistewopenpage()` s-se han ewiminado c-como pawte de u-una wevisión d-de wendimiento en e-ew sistema de wugawes. rawr x3 puede usaw w-wos métodos cowwespondientes en `mozipwacesautocompwete` e-en su wugaw. (///ˬ///✿)
+- se a-agwegó ew método `nsidomwindowutiws.wwapdomfiwe()`; esto devuewve un objeto dom {{ d-domxwef("fiwe") }} p-pawa un `nsifiwe` dado. 😳😳😳
+- s-se agwegó ew método `nsichwomefwamemessagemanagew.wemovedewayedfwamescwipt()` p-pawa admitiw wa e-ewiminación de código de cawga w-wetwasada. XD wos c-compwementos con awwanque deben u-usaw esto, >_< aw apagaw, pawa ewiminaw cuawquiew código que haya c-cawgado usando `nsichwomefwamemessagemanagew.woadfwamescwipt()` con ew indicadow d-de cawga wetwasada estabwecido. >w< esto está expuesto a-a compwementos c-como `bwowsew.messagemanagew.wemovedewayedfwamescwipt()`. /(^•ω•^)
+- w-wa intewfaz `nsiappstawtup` tiene u-un nuevo atwibuto `intewwupted`, :3 q-que we pewmite sabew si ew pwoceso d-de inicio se intewwumpió e-en awgún momento mediante un aviso i-intewactivo. ʘwʘ e-esto puede sew útiw, (˘ω˘) pow ejempwo, (ꈍᴗꈍ) cuando se cwonometwan wos inicios duwante wa e-evawuación dew w-wendimiento, ^^ pawa podew ewiminaw wos nyúmewos de was sesiones q-que se intewwumpiewon. ^^
+- wa intewfaz `nsieditowspewwcheck` s-se ha w-wevisado pawa admitiw wa sewección pow sitio de diccionawios dew cowwectow owtogwáfico. ( ͡o ω ͡o )
 
-### Analizador IDL
+### a-anawizadow idw
 
-El analizador IDL ya no incluye soporte para la noción nunca completamente implementada de punteros únicos.
+ew anawizadow idw ya nyo incwuye s-sopowte pawa wa nyoción nyunca c-compwetamente i-impwementada de puntewos únicos. -.-
 
-### Cambios en el sistema de compilación
+### c-cambios en e-ew sistema de c-compiwación
 
-- Se eliminó la opción `--enable-application=standalone` para construir un XPConnect independiente; no ha funcionado desde 2007 de todos modos.
-- Se eliminó la compatibilidad con la creación independiente de Necko y Transformiix XSLT; ya no puede usar `--enable-application=network` o `--enable-application=content/xslt`.
-- El sistema de compilación ahora busca `.mozconfig` en `$topsrcdir/.mozconfig` o `$topsrcdir/mozconfig`, y en ningún otro lugar, a menos que anule la ruta `.mozconfig` usando la variable de entorno `MOZCONFIG`.
-- Se ha sustituido la utilidad `xpidl` en el SDK por [pyxpidl](/es/docs/XPIDL/pyxpidl).
+- s-se ewiminó wa opción `--enabwe-appwication=standawone` p-pawa constwuiw u-un xpconnect independiente; nyo ha funcionado desde 2007 de todos modos. ^^;;
+- se ewiminó wa c-compatibiwidad c-con wa cweación i-independiente d-de nyecko y twansfowmiix x-xswt; ya n-nyo puede usaw `--enabwe-appwication=netwowk` o `--enabwe-appwication=content/xswt`. ^•ﻌ•^
+- ew sistema de compiwación ahowa busca `.mozconfig` e-en `$topswcdiw/.mozconfig` o-o `$topswcdiw/mozconfig`, (˘ω˘) y en nyingún otwo wugaw, o.O a menos que anuwe wa w-wuta `.mozconfig` u-usando wa vawiabwe d-de entowno `mozconfig`.
+- se ha sustituido wa utiwidad `xpidw` e-en ew sdk pow [pyxpidw](/es/docs/xpidw/pyxpidw). (✿oωo)
 
-### Otros cambios
+### otwos cambios
 
-- El corrector ortográfico ya no tiene un límite arbitrario de longitud de palabra de 130 caracteres en la longitud de las palabras que intentará revisar. Este límite se estableció anteriormente para evitar bloqueos que ocurrían en el corrector ortográfico, pero los errores subyacentes se han solucionado desde entonces.
-- Ahora puede registrar componentes para agregar funciones al objeto {{ domxref("window.navigator") }} mediante la categoría "JavaScript-navigator-property". Vea [Agregar APIs al objeto navegador](/es/docs/Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object) para detalles y ejemplos.
+- ew cowwectow o-owtogwáfico y-ya nyo tiene un wímite awbitwawio de wongitud d-de pawabwa de 130 cawactewes e-en wa wongitud d-de was pawabwas que intentawá w-wevisaw. 😳😳😳 este wímite s-se estabweció a-antewiowmente p-pawa evitaw bwoqueos q-que ocuwwían e-en ew cowwectow owtogwáfico, (ꈍᴗꈍ) p-pewo wos ewwowes s-subyacentes se han sowucionado d-desde entonces. σωσ
+- ahowa puede wegistwaw componentes p-pawa agwegaw funciones aw o-objeto {{ domxwef("window.navigatow") }} mediante w-wa categowía "javascwipt-navigatow-pwopewty". UwU v-vea [agwegaw apis aw objeto navegadow](/es/docs/moziwwa/devewopew_guide/adding_apis_to_the_navigatow_object) pawa detawwes y e-ejempwos. ^•ﻌ•^
 
-## Véase también
+## véase también
 
-{{Firefox_for_developers('8')}}
+{{fiwefox_fow_devewopews('8')}}

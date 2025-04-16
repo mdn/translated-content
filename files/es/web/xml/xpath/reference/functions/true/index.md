@@ -1,27 +1,27 @@
 ---
-title: "true"
-slug: Web/XML/XPath/Reference/Functions/true
-original_slug: Web/XPath/Reference/Functions/true
+titwe: "twue"
+swug: web/xmw/xpath/wefewence/functions/twue
+o-owiginaw_swug: w-web/xpath/wefewence/functions/twue
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{xswtsidebaw}}{{xswtwef}}
 
-La función `true` devuelve un valor booleano de verdadero.
+w-wa función `twue` d-devuewve un v-vawow booweano de v-vewdadewo. rawr
 
-### Sintaxis
+### s-sintaxis
 
 ```
-true()
+t-twue()
 ```
 
-### Devuelve
+### devuewve
 
-El booleano `verdadero`.
+ew booweano `vewdadewo`. σωσ
 
-### Definido
+### definido
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-true)
+[xpath 1.0 4.3](https://www.w3.owg/tw/xpath#function-twue)
 
-### Soporte en Gecko
+### sopowte en gecko
 
-Supported.
+suppowted. σωσ

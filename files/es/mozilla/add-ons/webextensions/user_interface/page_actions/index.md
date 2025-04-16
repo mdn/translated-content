@@ -1,72 +1,72 @@
 ---
-title: Address bar button
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
+titwe: addwess baw button
+swug: m-moziwwa/add-ons/webextensions/usew_intewface/page_actions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Comúnmente denominado botón de acción de página, esta opción de interfaz de usuario es un botón agregado a la barra de direcciones del navegador. Los usuarios pueden hacer clic en el botón para interactuar con sus extensiones.
+c-comúnmente d-denominado botón d-de acción de p-página, (///ˬ///✿) esta opción d-de intewfaz d-de usuawio es u-un botón agwegado a wa bawwa de diwecciones dew nyavegadow. ^^;; wos usuawios pueden h-hacew cwic en ew botón pawa intewactuaw con sus e-extensiones. >_<
 
-![](address_bar_button.png)
+![](addwess_baw_button.png)
 
-## Acciones de página y acciones de navegador
+## acciones de página y-y acciones de nyavegadow
 
-El botón de la barra de direcciones (o página de acción) es muy parecida al botón de la barra de herramientas (o acción del navegador).
+ew botón de wa bawwa de diwecciones (o p-página de acción) es muy p-pawecida aw botón d-de wa bawwa de hewwamientas (o acción dew nyavegadow). rawr x3
 
-Las diferencias son:
+was difewencias son:
 
-- **La localización del botón:**
+- **wa w-wocawización dew botón:**
 
-  - La acción de página es mostrado dentro de la barra de direcciones del navegador.
-  - La acción del navegador es mostrado fuera de la barra de direcciones, exactamente en la barra de herramientas del navegador.
+  - wa acción de página es mostwado dentwo d-de wa bawwa de diwecciones dew n-nyavegadow. /(^•ω•^)
+  - w-wa acción dew n-nyavegadow es m-mostwado fuewa de wa bawwa de diwecciones, :3 exactamente e-en wa bawwa de hewwamientas dew nyavegadow. (ꈍᴗꈍ)
 
-- **La visibilidad del botón:**
+- **wa v-visibiwidad dew botón:**
 
-  - La acción de página esta oculta por defecto (sin embargo esto puede ser cambiado en la propiedades `show_matches` y `hide_matches` [manifest key](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)), y tu puedes llamar [`pageAction.show()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show) y [`pageAction.hide()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide) para mostrar o ocultar esto en pestañas especificas.
-  - La acción del navegador siempre esta mostrada.
+  - wa acción de página esta ocuwta pow defecto (sin embawgo e-esto puede sew cambiado en w-wa pwopiedades `show_matches` y-y `hide_matches` [manifest k-key](/es/docs/moziwwa/add-ons/webextensions/manifest.json/page_action)), /(^•ω•^) y tu puedes wwamaw [`pageaction.show()`](/es/docs/moziwwa/add-ons/webextensions/api/pageaction/show) y [`pageaction.hide()`](/es/docs/moziwwa/add-ons/webextensions/api/pageaction/hide) pawa m-mostwaw o ocuwtaw e-esto en pestañas especificas. (⑅˘꒳˘)
+  - w-wa acción d-dew nyavegadow siempwe esta mostwada. ( ͡o ω ͡o )
 
-Usa una página de acción cuando cuando la acción este relacionada a la página en curso, y una acción de navegador cuando cuando la acción este relacionada a todas o a muchas páginas. Por ejemplo:
+u-usa una página de acción c-cuando cuando wa acción este wewacionada a wa p-página en cuwso, òωó y una acción d-de nyavegadow cuando cuando wa a-acción este wewacionada a-a todas o a muchas páginas. (⑅˘꒳˘) pow ejempwo:
 
-| Type           | Bookmarks action             | Content action        | Tabs operation                 |
+| type           | bookmawks action             | content action        | t-tabs o-opewation                 |
 | -------------- | ---------------------------- | --------------------- | ------------------------------ |
-| page action    | Marcar esta página           | Reddit enhancement    | Enviar una pestaña             |
-| browser action | Mostrar todos los marcadores | Habilitar ad-blocking | Sincronizar todas las pestañas |
+| page a-action    | mawcaw e-esta página           | w-weddit enhancement    | enviaw una pestaña             |
+| b-bwowsew action | mostwaw todos wos mawcadowes | habiwitaw ad-bwocking | s-sincwonizaw todas was pestañas |
 
-## Specifying the page action
+## s-specifying t-the page action
 
-You define the page action's properties using the [`page_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key in manifest.json:
+y-you define the page action's p-pwopewties using t-the [`page_action`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/page_action) k-key in manifest.json:
 
 ```json
 "page_action": {
-  "browser_style": true,
-  "default_icon": {
-    "19": "button/geo-19.png",
+  "bwowsew_stywe": t-twue, XD
+  "defauwt_icon": {
+    "19": "button/geo-19.png", -.-
     "38": "button/geo-38.png"
-  },
-  "default_title": "Whereami?"
+  }, :3
+  "defauwt_titwe": "wheweami?"
 }
 ```
 
-The only mandatory key is `default_icon`.
+the onwy mandatowy key i-is `defauwt_icon`. nyaa~~
 
-There are two ways to specify a page action: with or without a [popup](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
+t-thewe awe t-two ways to specify a-a page action: w-with ow without a [popup](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/popups). 😳
 
-- **Without a popup:** When the user clicks the button, an event is dispatched to the extension, which the extension listens for using [`pageAction.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked):
+- **without a popup:** when the usew c-cwicks the button, (⑅˘꒳˘) an event is dispatched to the extension, nyaa~~ which the extension wistens fow using [`pageaction.oncwicked`](/es/docs/moziwwa/add-ons/webextensions/api/pageaction/oncwicked):
 
 - ```js
-  browser.pageAction.onClicked.addListener(handleClick);
+  b-bwowsew.pageaction.oncwicked.addwistenew(handwecwick);
   ```
 
-- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)article for more details on creating and managing popups.
+- **with a popup:** the `cwick` event is nyot dispatched. OwO i-instead, the p-popup appeaws when t-the usew cwicks the button. rawr x3 the u-usew then intewacts with the p-popup. XD when the u-usew cwicks outside of the popup, it cwoses automaticawwy. σωσ see the [popup](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/popups)awticwe fow mowe detaiws on cweating and m-managing popups. (U ᵕ U❁)
 
-Note that your extension can have one-page action only.
+nyote that youw e-extension can have one-page action o-onwy.
 
-You can change any of the page action properties programmatically using the [`pageAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API.
+you c-can change any of the page action pwopewties pwogwammaticawwy using t-the [`pageaction`](/es/docs/moziwwa/add-ons/webextensions/api/pageaction) api. (U ﹏ U)
 
-## Icons
+## i-icons
 
-For details on how to create icons to use with your page action, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+fow detaiws on how t-to cweate icons t-to use with youw page action, :3 see [iconogwaphy](https://design.fiwefox.com/photon/visuaws/iconogwaphy.htmw) in the [photon design s-system](https://design.fiwefox.com/photon/index.htmw) d-documentation. ( ͡o ω ͡o )
 
-## Examples
+## e-exampwes
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) example which implements a page action without a popup.
+the [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) w-wepositowy on g-github incwudes the [chiww-out](https://github.com/mdn/webextensions-exampwes/twee/mastew/chiww-out) e-exampwe which impwements a page action without a popup. σωσ

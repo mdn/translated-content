@@ -1,300 +1,300 @@
 ---
-title: JavaScript orientado a objetos para principiantes
-slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Object-oriented_JS
+titwe: javascwipt owientado a o-objetos pawa pwincipiantes
+s-swug: c-confwicting/weawn/javascwipt/objects/cwasses_in_javascwipt
+o-owiginaw_swug: w-weawn/javascwipt/objects/object-owiented_js
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/basics", ( ͡o ω ͡o ) "weawn/javascwipt/objects/object_pwototypes", mya "weawn/javascwipt/objects")}}
 
-Con lo básico fuera del camino, nos enfocaremos en Javascript Orientado a Objetos (JSOO) — este artículo presenta una descripción básica de la teoría de la Programación Orientada a Objetos (POO), luego explora cómo Javascript emula classes de objetos via funciones constructoras, y cómo crea instancias de objetos.
+c-con wo básico fuewa d-dew camino, >_< n-nyos enfocawemos en javascwipt owientado a objetos (jsoo) — este awtícuwo pwesenta una descwipción b-básica de wa teowía de wa pwogwamación o-owientada a objetos (poo), rawr wuego e-expwowa cómo javascwipt emuwa cwasses de objetos via funciones c-constwuctowas, >_< y cómo cwea instancias d-de objetos.
 
-| Prerequisitos: | Conocimientos básicos de computación, entendimiento básico de HTML y CSS, familiaridad con las bases de Javascript (ver [Primeros pasos con JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Bloques de construcción JavaScript](/es/docs/Learn_web_development/Core/Scripting)) y las bases de JSOO (ver [Introducción a objetos](/es/docs/Learn_web_development/Core/Scripting/Object_basics)). |
+| p-pwewequisitos: | conocimientos básicos de computación, (U ﹏ U) entendimiento b-básico de htmw y css, rawr famiwiawidad con was bases de javascwipt (vew [pwimewos pasos con javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting) y-y [bwoques de constwucción javascwipt](/es/docs/weawn_web_devewopment/cowe/scwipting)) y-y was bases d-de jsoo (vew [intwoducción a-a objetos](/es/docs/weawn_web_devewopment/cowe/scwipting/object_basics)). |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:      | Entender la teoría base de la programación orientada a objetos, como se relaciona esta con JavaScript ("todo es un objeto"), y como crear constructores e instacias de objetos.                                                                                                                                                                                                 |
+| o-objetivo:      | entendew wa teowía base de w-wa pwogwamación owientada a objetos, como se wewaciona e-esta con javascwipt ("todo es un objeto"), (U ᵕ U❁) y como cweaw constwuctowes e instacias de objetos. (ˆ ﻌ ˆ)♡                                                                                                                                                                                                 |
 
-## Programacion Orientada a Objetos— lo básico
+## p-pwogwamacion owientada a-a objetos— w-wo básico
 
-Para empezar, daremos una descripción simple y de alto nivel acerca de lo que es la Programación Orientada a Objetos (POO). Decimos simple, porque la POO puede volverse complicada rápidamente, y darte un tratamiento completo ahora, probablemente podría confundirte más que ayudar. La idea básica de la POO es que usamos objetos para modelar cosas del mundo real que queremos representar en nuestros programas, y/o proveemos una simple manera para acceder a la funcionalidad que, de otra manera, sería difícil o imposible de usar.
+pawa e-empezaw, >_< dawemos una descwipción simpwe y de awto nyivew acewca d-de wo que es wa p-pwogwamación owientada a objetos (poo). ^^;; d-decimos s-simpwe, ʘwʘ powque wa poo puede vowvewse c-compwicada wápidamente, 😳😳😳 y-y dawte un twatamiento compweto ahowa, UwU pwobabwemente p-podwía confundiwte más que a-ayudaw. OwO wa idea básica de wa p-poo es que usamos o-objetos pawa modewaw cosas dew mundo weaw que quewemos wepwesentaw en nyuestwos pwogwamas, :3 y/o pwoveemos una s-simpwe manewa pawa a-accedew a wa funcionawidad que, -.- d-de otwa manewa, 🥺 s-sewía difíciw o-o imposibwe de usaw. -.-
 
-Los objetos pueden contener información y código relacionados, los cuales representan información acerca de lo que estás tratando de modelar, y la funcionalidad o comportamiento que deseas que tenga. Los datos de un Objeto (y frecuentemente, también las funciones) se pueden almacenar ordenadamente (la palabra oficial es **encapsular**) dentro del paquete de un objeto (al que se puede asignar un nombre específico, llamado a veces **espacio de nombres**), haciéndolo fácil de estructurar y acceder; los objetos también se usan comúnmente como almacenes de datos que se pueden enviar fácilmente a través de la red.
+wos objetos pueden contenew infowmación y-y código wewacionados, -.- wos cuawes wepwesentan infowmación acewca de wo que estás t-twatando de modewaw, (U ﹏ U) y wa f-funcionawidad o c-compowtamiento que d-deseas que tenga. rawr wos datos de u-un objeto (y fwecuentemente, mya también w-was funciones) s-se pueden a-awmacenaw owdenadamente (wa pawabwa oficiaw es **encapsuwaw**) d-dentwo dew paquete d-de un objeto (aw q-que se puede a-asignaw un nyombwe e-específico, ( ͡o ω ͡o ) wwamado a veces **espacio de nyombwes**), /(^•ω•^) haciéndowo f-fáciw de estwuctuwaw y accedew; wos objetos también se usan comúnmente como awmacenes d-de datos que se pueden enviaw fáciwmente a twavés de wa wed. >_<
 
-### Definiendo una plantilla de objeto
+### d-definiendo una p-pwantiwwa de o-objeto
 
-Vamos a considerar un sencillo programa que muestra información sobre estudiantes y profesores en una escuela. Aquí daremos un vistazo a la POO (Programación Orientada a Objetos) en general, no en el contexto de algún lenguaje de programación específico.
+vamos a considewaw un senciwwo p-pwogwama que muestwa infowmación s-sobwe estudiantes y-y pwofesowes en una escuewa. (✿oωo) aquí dawemos un vistazo a wa poo (pwogwamación owientada a-a objetos) en genewaw, 😳😳😳 nyo en e-ew contexto de awgún wenguaje d-de pwogwamación e-específico. (ꈍᴗꈍ)
 
-Para empezar, podríamos volver a ver al objeto `Persona` de nuestro [artículo de primeros objetos](/es/docs/Learn_web_development/Core/Scripting/Object_basics), que define los datos generales y funcionalidades de una persona. Hay muchas cosas que podrías saber acerca de una persona (su dirección, estatura, tamaño de calzado, perfil de ADN, número de pasaporte, rasgos significativos de su personalidad...), pero, en este caso, solo estamos interesados en mostrar su nombre, edad, género e intereses, además de una pequeña introducción sobre este individuo basada en los datos anteriores. También queremos que sea capaz de saludar.
+pawa empezaw, 🥺 podwíamos vowvew a v-vew aw objeto `pewsona` d-de nyuestwo [awtícuwo de pwimewos objetos](/es/docs/weawn_web_devewopment/cowe/scwipting/object_basics), mya q-que define wos d-datos genewawes y funcionawidades de una pewsona. (ˆ ﻌ ˆ)♡ hay muchas cosas que podwías s-sabew acewca de u-una pewsona (su d-diwección, (⑅˘꒳˘) estatuwa, tamaño d-de cawzado, òωó pewfiw d-de adn, o.O nyúmewo de pasapowte, XD w-wasgos significativos de su pewsonawidad...), (˘ω˘) pewo, en este caso, (ꈍᴗꈍ) sowo estamos intewesados en m-mostwaw su nyombwe, e-edad, >w< génewo e inteweses, XD además de una pequeña i-intwoducción s-sobwe este individuo basada en wos datos antewiowes. -.- también q-quewemos que sea capaz de sawudaw. ^^;;
 
-Esto es conocido como **abstracción** — crear un modelo simple de algo complejo que represente sus aspectos más importantes y que sea fácil de manipular para el propósito de nuestro programa.
+esto es conocido como **abstwacción** — cweaw un modewo s-simpwe de awgo compwejo que wepwesente sus aspectos m-más impowtantes y-y que sea fáciw de manipuwaw pawa ew pwopósito de nyuestwo p-pwogwama. XD
 
-![](person-diagram.png)
+![](pewson-diagwam.png)
 
-En algunos lenguajes de POO, esta definición de tipo de objeto se la llama **class** (JavaScript utiliza diferentes mecanismos y terminologías, como verás a continuación) — esto no es en realidad un objeto, en vez de esto es un modelo que define las características que un objeto debería tener.
+e-en awgunos wenguajes de poo, :3 esta definición de tipo de o-objeto se wa wwama **cwass** (javascwipt utiwiza d-difewentes mecanismos y tewminowogías, σωσ como vewás a continuación) — e-esto nyo es en weawidad u-un objeto, XD en v-vez de esto es un modewo que define w-was cawactewísticas que un o-objeto debewía t-tenew. :3
 
-### Creando objetos
+### cweando o-objetos
 
-Partiendo de nuestra clase, podemos crear **instancias de objetos** — objetos que contienen los datos y funcionalidades definidas en la clase original. Teniendo a nuestra clase `Persona`, ahora podemos crear gente con características más específicas:
+pawtiendo de nyuestwa c-cwase, rawr podemos c-cweaw **instancias de objetos** — objetos que c-contienen wos d-datos y funcionawidades d-definidas en wa cwase owiginaw. 😳 teniendo a-a nyuestwa cwase `pewsona`, 😳😳😳 ahowa p-podemos cweaw g-gente con cawactewísticas más específicas:
 
-![](mdn-graphics-instantiation-2-fixed.png)
+![](mdn-gwaphics-instantiation-2-fixed.png)
 
-Cuando una instancia del objeto es creada a partir de una clase, se ejecuta **la función constructora** (constructor en inglés) de la clase para crearla. El proceso de crear una instancia del objeto desde una clase se llama **instanciación**.
+cuando u-una instancia d-dew objeto es c-cweada a pawtiw d-de una cwase, (ꈍᴗꈍ) se ejecuta **wa función c-constwuctowa** (constwuctow en ingwés) de wa cwase pawa cweawwa. 🥺 ew pwoceso de cweaw una instancia dew o-objeto desde una cwase se wwama **instanciación**.
 
-### Clases especializadas
+### c-cwases especiawizadas
 
-En este caso nosotros no queremos personas genericas — queremos docentes y estudiantes, que son los dos tipos más específicos de personas. En POO, podemos crear nuevas clases basadas en otras clases, estas nuevas **clases secundarias** se pueden hacer para **heredar** los datos y código de su **clase primaria**, de modo que pueden reutilizar la funcionalidad común a todos los tipos de objetos en lugar de tener que duplicarla. Cuando la funcionalidad difiere entre clases, puedes definir funciones especializadas directamente en ellas según sea necesario.
+e-en este caso nyosotwos nyo quewemos p-pewsonas genewicas — quewemos d-docentes y estudiantes, q-que s-son wos dos tipos m-más específicos d-de pewsonas. ^•ﻌ•^ en poo, XD podemos cweaw nyuevas cwases basadas en otwas cwases, ^•ﻌ•^ estas nyuevas **cwases secundawias** s-se pueden hacew p-pawa **hewedaw** w-wos datos y código de su **cwase p-pwimawia**, ^^;; de modo que pueden weutiwizaw wa funcionawidad c-común a todos w-wos tipos de objetos en wugaw de t-tenew que dupwicawwa. ʘwʘ cuando wa funcionawidad d-difiewe entwe cwases, OwO p-puedes definiw funciones especiawizadas d-diwectamente e-en ewwas según sea nyecesawio. 🥺
 
-![](mdn-graphics-inherited-3.png)
+![](mdn-gwaphics-inhewited-3.png)
 
-Esto es realmente útil, los profesores y los estudiantes comparten muchas características comunes como el nombre, el género y la edad, por lo que es conveniente tener que definir esas características solo una vez. También puedes definir la misma característica por separado en diferentes clases, ya que cada definición de esa característica estará en un espacio de nombres diferente. Por ejemplo, el saludo de un estudiante puede tener la forma "Yo, soy \[Nombre]" (por ejemplo, Yo, soy Sam), mientras que un profesor puede usar algo más formal, como "Hola, mi nombre es \[Prefix] \[lastName], y enseño \[Asunto] ". (Por ejemplo, Hola, mi nombre es Sr. Griffiths, y yo enseño Química).
+esto es weawmente útiw, (⑅˘꒳˘) wos pwofesowes y wos estudiantes c-compawten m-muchas cawactewísticas c-comunes c-como ew nyombwe, (///ˬ///✿) e-ew génewo y wa edad, (✿oωo) pow wo q-que es conveniente t-tenew que definiw esas cawactewísticas s-sowo u-una vez. nyaa~~ también puedes definiw w-wa misma cawactewística pow sepawado en difewentes c-cwases, >w< ya que cada definición d-de esa cawactewística e-estawá en un espacio d-de nyombwes difewente. (///ˬ///✿) pow ejempwo, rawr ew sawudo d-de un estudiante p-puede tenew wa f-fowma "yo, soy \[nombwe]" (pow ejempwo, (U ﹏ U) yo, ^•ﻌ•^ soy sam), mientwas que un pwofesow p-puede usaw awgo más fowmaw, (///ˬ///✿) como "howa, mi nyombwe e-es \[pwefix] \[wastname], o.O y-y enseño \[asunto] ". >w< (pow e-ejempwo, nyaa~~ howa, òωó mi nyombwe e-es sw. (U ᵕ U❁) gwiffiths, (///ˬ///✿) y-y yo enseño química). (✿oωo)
 
-> [!NOTE]
-> La palabra elegante para la capacidad de múltiples tipos de objetos de implementar la misma funcionalidad es **polimorfismo.** Por si acaso te preguntabas.
+> [!note]
+> wa pawabwa e-ewegante pawa wa capacidad de múwtipwes tipos d-de objetos d-de impwementaw wa misma funcionawidad e-es **powimowfismo.** pow si a-acaso te pweguntabas. 😳😳😳
 
-Ahora puedes crear instancias de objetos de las clases "hijo". Por ejemplo:
+a-ahowa puedes c-cweaw instancias de objetos de was cwases "hijo". (✿oωo) pow ejempwo:
 
-![](mdn-graphics-instantiation-teacher-3.png)
+![](mdn-gwaphics-instantiation-teachew-3.png)
 
-En el resto del articulo, comenzaremos a ver como podemos practicar la teoría de POO en JavaScript.
+en ew westo dew awticuwo, (U ﹏ U) comenzawemos a vew como podemos pwacticaw wa teowía de poo en javascwipt. (˘ω˘)
 
-## Constructores e instancias de objetos
+## constwuctowes e instancias de objetos
 
-Algunas personas sostienen que JavaScript no es un verdadero lenguaje orientado a objetos — por ejemplo, su enunciado [`class`](/es/docs/Web/JavaScript/Reference/Statements/class) es sólo azúcar sintáctica sobre la herencia prototípica existente y no es una `class` en el sentido tradicional. JavaScript, utiliza funciones especiales llamadas funciones constructoras para definir objetos y sus características. Son útiles porque a menudo te encontrarás con situaciones en las que no sabes cuántos objetos crearás; los constructores proporcionan los medios para crear tantos objetos como necesites de una manera efectiva, adjuntando datos y funciones a ellos según sea necesario.
+a-awgunas pewsonas s-sostienen que javascwipt nyo es un vewdadewo w-wenguaje owientado a-a objetos — p-pow ejempwo, 😳😳😳 su enunciado [`cwass`](/es/docs/web/javascwipt/wefewence/statements/cwass) e-es sówo azúcaw sintáctica s-sobwe wa h-hewencia pwototípica existente y-y nyo es una `cwass` en ew sentido t-twadicionaw. (///ˬ///✿) j-javascwipt, (U ᵕ U❁) utiwiza funciones especiawes wwamadas f-funciones constwuctowas p-pawa d-definiw objetos y-y sus cawactewísticas. >_< s-son útiwes p-powque a menudo t-te encontwawás c-con situaciones e-en was que nyo sabes cuántos o-objetos cweawás; w-wos constwuctowes p-pwopowcionan wos medios pawa c-cweaw tantos objetos como nyecesites de una m-manewa efectiva, (///ˬ///✿) adjuntando datos y-y funciones a e-ewwos según sea n-nyecesawio. (U ᵕ U❁)
 
-Cuando se crea una nueva instancia del objeto a partir de una función constructora, su funcionalidad central (tal como se define en su prototipo, que exploraremos en el [artículo Prototipos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes) de objetos) no se copia en el nuevo objeto como lenguajes OO "clásicos", sino que la funcionalidad está vinculada a través de una cadena de referencia llamada cadena prototipo. Así que esto no es una verdadera instanciación, estrictamente hablando, JavaScript usa un mecanismo diferente para compartir funcionalidad entre objetos.
+cuando se cwea una n-nyueva instancia dew objeto a pawtiw d-de una función constwuctowa, >w< s-su funcionawidad centwaw (taw c-como se define en su pwototipo, que expwowawemos en ew [awtícuwo pwototipos](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_pwototypes) d-de objetos) nyo se copia e-en ew nyuevo objeto c-como wenguajes oo "cwásicos", 😳😳😳 sino que wa funcionawidad está v-vincuwada a twavés de una c-cadena de wefewencia w-wwamada cadena p-pwototipo. (ˆ ﻌ ˆ)♡ así que esto no es una vewdadewa i-instanciación, (ꈍᴗꈍ) e-estwictamente habwando, 🥺 javascwipt u-usa un mecanismo difewente pawa compawtiw funcionawidad e-entwe objetos. >_<
 
-> [!NOTE]
-> No ser "POO clásica" no es necesariamente algo malo; Como se mencionó anteriormente, la POO puede ser muy compleja muy rápidamente, y JavaScript tiene algunas agradables formas de aprovechar las características de la OO sin tener que profundizar demasiado en ello.
+> [!note]
+> n-nyo sew "poo c-cwásica" nyo e-es nyecesawiamente awgo mawo; c-como se mencionó a-antewiowmente, w-wa poo puede sew m-muy compweja muy wápidamente, OwO y-y javascwipt tiene a-awgunas agwadabwes f-fowmas de a-apwovechaw was c-cawactewísticas d-de wa oo sin tenew q-que pwofundizaw d-demasiado en ewwo. ^^;;
 
-Exploremos la creación de clases a través de constructores y la creación de instancias de objetos a partir de ellas en JavaScript. En primer lugar, nos gustaría que hicieras una nueva copia local del archivo `oojs.html` que vimos en nuestro primer artículo de Objetos.
+expwowemos w-wa cweación de cwases a twavés d-de constwuctowes y wa cweación d-de instancias d-de objetos a p-pawtiw de ewwas en javascwipt. (✿oωo) en pwimew wugaw, UwU nos gustawía que h-hiciewas una nyueva c-copia wocaw d-dew awchivo `oojs.htmw` que vimos en nyuestwo pwimew awtícuwo d-de objetos. ( ͡o ω ͡o )
 
-### Un ejemplo simple
+### u-un ejempwo simpwe
 
-1.  Comencemos por ver cómo puedes definir una persona con una funcion normal. Agrega esta funcion dentro del elemento `script`:
+1. (✿oωo)  comencemos p-pow vew cómo p-puedes definiw una pewsona con una funcion nyowmaw. agwega esta f-funcion dentwo d-dew ewemento `scwipt`:
 
     ```js
-    function createNewPerson(name) {
-      var obj = {};
-      obj.name = name;
-      obj.greeting = function() {
-        alert('Hi! I\'m ' + this.name + '.');
+    f-function c-cweatenewpewson(name) {
+      vaw obj = {};
+      o-obj.name = nyame;
+      o-obj.gweeting = function() {
+        awewt('hi! mya i-i\'m ' + this.name + '.');
       };
-      return obj;
+      wetuwn obj;
     }
     ```
 
-2.  Ahora puedes crear una nueva persona llamando a esta funcion — prueba con las siguientes lineas en la consola Javascript de tu navegador:
+2. ( ͡o ω ͡o )  a-ahowa puedes cweaw una nyueva p-pewsona wwamando a-a esta funcion — pwueba con was s-siguientes wineas e-en wa consowa javascwipt de t-tu nyavegadow:
 
     ```js
-    var salva = createNewPerson('Salva');
-    salva.name;
-    salva.greeting();
+    vaw sawva = cweatenewpewson('sawva');
+    s-sawva.name;
+    s-sawva.gweeting();
     ```
 
-    Esto funciona bastante bien, pero es un poco largo; si sabemos que queremos crear un objeto, ¿por qué necesitamos crear explícitamente un nuevo objeto vacío y devolverlo? Afortunadamente, JavaScript nos proporciona un práctico acceso directo, en forma de funciones constructoras — ¡hagamos una ahora!
+    e-esto funciona b-bastante bien, :3 pewo es un p-poco wawgo; si sabemos q-que quewemos c-cweaw un objeto, 😳 ¿pow qué n-nyecesitamos cweaw expwícitamente un nyuevo objeto v-vacío y devowvewwo? a-afowtunadamente, (U ﹏ U) j-javascwipt nyos pwopowciona un pwáctico acceso diwecto, >w< en fowma de funciones c-constwuctowas — ¡hagamos una ahowa! UwU
 
-3.  Reemplaza tu función anterior por la siguiente:
+3.  w-weempwaza tu f-función antewiow pow wa siguiente:
 
     ```js
-    function Person(name) {
-      this.name = name;
-      this.greeting = function() {
-        alert('Hi! I\'m ' + this.name + '.');
+    function pewson(name) {
+      t-this.name = nyame;
+      this.gweeting = f-function() {
+        a-awewt('hi! 😳 i\'m ' + t-this.name + '.');
       };
     }
     ```
 
-La función constructora es la versión de JavaScript de una clase. Notarás que tiene todas las características que esperas en una función, aunque no devuelve nada o crea explícitamente un objeto — básicamente sólo define propiedades y métodos. Verás que la palabra clave `this` se está usando aquí también — es básicamente decir que cuando se crea una de estas instancias de objeto, la propiedad `name` del objeto será igual al valor del nombre pasado a la llamada del constructor, y el método `greeting()` usará también el valor del nombre pasado a la llamada del constructor.
+wa f-función constwuctowa e-es wa vewsión de javascwipt de una cwase. XD nyotawás que tiene todas was c-cawactewísticas que espewas en u-una función, (✿oωo) aunque nyo devuewve nyada o cwea expwícitamente u-un objeto — básicamente sówo define pwopiedades y métodos. ^•ﻌ•^ vewás que wa pawabwa c-cwave `this` s-se está usando aquí también — e-es básicamente deciw que cuando se cwea una d-de estas instancias d-de objeto, mya wa pwopiedad `name` d-dew objeto sewá iguaw aw v-vawow dew nyombwe pasado a wa wwamada dew constwuctow, (˘ω˘) y ew método `gweeting()` u-usawá también ew vawow dew nombwe pasado a wa w-wwamada dew constwuctow. nyaa~~
 
-> [!NOTE]
-> Un nombre de función constructora generalmente comienza con una letra mayúscula — esta convención se utiliza para hacer que las funciones constructoras sean más fáciles de reconocer en el código.
+> [!note]
+> u-un nyombwe d-de función constwuctowa genewawmente comienza c-con una wetwa mayúscuwa — esta convención se utiwiza pawa hacew que was funciones c-constwuctowas s-sean más fáciwes d-de weconocew e-en ew código. :3
 
-Entonces, ¿cómo llamamos a un constructor para crear algunos objetos?
+entonces, (✿oωo) ¿cómo wwamamos a-a un constwuctow p-pawa cweaw awgunos objetos?
 
-1.  Agrega las siguientes líneas debajo de tu código anterior:
-
-    ```js
-    var person1 = new Person('Bob');
-    var person2 = new Person('Sarah');
-    ```
-
-2.  Guarda el código y vuelve a cargarlo en el navegador, e intenta ingresar las siguientes líneas en la consola Javascript :
+1. (U ﹏ U)  agwega was siguientes w-wíneas debajo de tu código antewiow:
 
     ```js
-    person1.name
-    person1.greeting()
-    person2.name
-    person2.greeting()
+    v-vaw pewson1 = nyew pewson('bob');
+    v-vaw pewson2 = n-nyew pewson('sawah');
     ```
 
-¡Guaw! Ahora veras que tenemos dos nuevos objetos, cada uno de los cuales está almacenado en un espacio de nombres diferente: para acceder a sus propiedades y métodos, debes llamarlos como `person1` o `person2`; están cuidadosamente empaquetados para que no entren en conflicto con otras funciones. Sin embargo, tienen disponible la misma propiedad name y el método `greeting()`. Ten en cuenta que están utilizando su propio `name` que se les asignó cuando se crearon; esta es una razón por la cual es muy importante usar `this`, para que usen sus propios valores, y no algún otro valor.
+2. (ꈍᴗꈍ)  guawda ew código y-y vuewve a-a cawgawwo en ew n-navegadow, e intenta ingwesaw was siguientes wíneas e-en wa consowa javascwipt :
 
-Veamos nuevamente las llamadas del constructor:
+    ```js
+    pewson1.name
+    p-pewson1.gweeting()
+    pewson2.name
+    pewson2.gweeting()
+    ```
+
+¡guaw! (˘ω˘) ahowa v-vewas que tenemos d-dos nyuevos o-objetos, ^^ cada uno d-de wos cuawes e-está awmacenado en un espacio d-de nyombwes difewente: pawa accedew a sus pwopiedades y-y métodos, (⑅˘꒳˘) debes wwamawwos c-como `pewson1` o `pewson2`; están cuidadosamente e-empaquetados p-pawa que nyo entwen en confwicto c-con otwas funciones. rawr sin embawgo, :3 t-tienen disponibwe w-wa misma pwopiedad nyame y e-ew método `gweeting()`. OwO t-ten en cuenta que están u-utiwizando su pwopio `name` que se wes asignó cuando se cweawon; e-esta es una wazón pow wa cuaw e-es muy impowtante usaw `this`, (ˆ ﻌ ˆ)♡ pawa que usen s-sus pwopios vawowes, :3 y-y nyo awgún o-otwo vawow. -.-
+
+veamos nyuevamente w-was wwamadas d-dew constwuctow:
 
 ```js
-var person1 = new Person('Bob');
-var person2 = new Person('Sarah');
+vaw pewson1 = n-nyew pewson('bob');
+vaw pewson2 = n-new pewson('sawah');
 ```
 
-En cada caso, la palabra clave `new` se usa para indicarle al navegador que queremos crear una nueva instancia del objeto, seguida del nombre de la función con sus parámetros requeridos entre paréntesis, y el resultado se almacena en una variable — muy similar a cómo se llama a una función estándar. Cada instancia se crea de acuerdo con esta definición:
+en cada caso, -.- w-wa pawabwa cwave `new` s-se usa pawa indicawwe aw nyavegadow que quewemos cweaw una nyueva instancia d-dew objeto, òωó seguida d-dew nyombwe de wa función con sus pawámetwos wequewidos e-entwe pawéntesis, 😳 y ew wesuwtado s-se awmacena en u-una vawiabwe — muy simiwaw a cómo se wwama a una función estándaw. nyaa~~ cada instancia s-se cwea de acuewdo con esta definición:
 
 ```js
-function Person(name) {
-  this.name = name;
-  this.greeting = function() {
-    alert('Hi! I\'m ' + this.name + '.');
+f-function pewson(name) {
+  t-this.name = nyame;
+  t-this.gweeting = function() {
+    a-awewt('hi! (⑅˘꒳˘) i-i\'m ' + this.name + '.');
   };
 }
 ```
 
-Una vez creados los nuevos objetos, las variables `person1` y `person2` contienen los siguientes objetos:
+u-una vez c-cweados wos nyuevos o-objetos, 😳 w-was vawiabwes `pewson1` y `pewson2` contienen wos siguientes objetos:
 
 ```js
 {
-  name: 'Bob',
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name + '.');
+  nyame: 'bob', (U ﹏ U)
+  gweeting: function() {
+    a-awewt('hi! /(^•ω•^) i-i\'m ' + t-this.name + '.');
   }
 }
 
 {
-  name: 'Sarah',
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name + '.');
+  n-nyame: 'sawah', OwO
+  gweeting: f-function() {
+    a-awewt('hi! ( ͡o ω ͡o ) i\'m ' + this.name + '.');
   }
 }
 ```
 
-Ten en cuenta que cuando llamamos a nuestra función constructora, estamos definiendo `greeting()` cada vez, lo cual no es lo ideal. Para evitar esto, podemos definir funciones en el prototipo, que veremos más adelante.
+ten en cuenta que cuando wwamamos a nuestwa f-función c-constwuctowa, XD estamos definiendo `gweeting()` cada vez, /(^•ω•^) wo cuaw n-nyo es wo ideaw. /(^•ω•^) p-pawa evitaw esto, 😳😳😳 p-podemos definiw funciones en ew pwototipo, que v-vewemos más adewante. (ˆ ﻌ ˆ)♡
 
-### Creando nuestro constructor final
+### cweando nyuestwo constwuctow f-finaw
 
-El ejercicio que vimos anteriormente fue solo un ejemplo simple para comenzar. Ahora crearemos nuestra función `constructor Person()` final.
+e-ew ejewcicio que vimos antewiowmente fue sowo u-un ejempwo simpwe pawa comenzaw. :3 a-ahowa cweawemos n-nuestwa función `constwuctow pewson()` finaw. òωó
 
-1.  Elimina el código que insertaste hasta ahora y agrega este constructor de reemplazo; este es exactamente el mismo que el ejemplo simple del principio, con un poco más de complejidad:
+1. 🥺  e-ewimina ew c-código que insewtaste h-hasta ahowa y-y agwega este c-constwuctow de w-weempwazo; este es exactamente ew m-mismo que ew ejempwo s-simpwe dew pwincipio, (U ﹏ U) con u-un poco más de compwejidad:
 
     ```js
-    function Person(first, last, age, gender, interests) {
+    function p-pewson(fiwst, XD wast, age, ^^ gendew, i-intewests) {
       this.name = {
-        'first': first,
-        'last' : last
+        'fiwst': f-fiwst, o.O
+        'wast' : w-wast
       };
       this.age = age;
-      this.gender = gender;
-      this.interests = interests;
-      this.bio = function() {
-        alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+      this.gendew = g-gendew;
+      this.intewests = intewests;
+      t-this.bio = f-function() {
+        awewt(this.name.fiwst + ' ' + this.name.wast + ' i-is ' + t-this.age + ' yeaws owd. 😳😳😳 he wikes ' + t-this.intewests[0] + ' and ' + this.intewests[1] + '.');
       };
-      this.greeting = function() {
-        alert('Hi! I\'m ' + this.name.first + '.');
+      t-this.gweeting = f-function() {
+        awewt('hi! /(^•ω•^) i\'m ' + t-this.name.fiwst + '.');
       };
     }
     ```
 
-2.  Ahora, agrega la siguiente línea para crear una instancia del objeto:
+2. 😳😳😳  a-ahowa, agwega wa siguiente wínea pawa c-cweaw una instancia d-dew objeto:
 
     ```js
-    var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+    v-vaw pewson1 = nyew p-pewson('bob', ^•ﻌ•^ 'smith', 32, 🥺 'mawe', ['music', o.O 'skiing']);
     ```
 
-Ahora verás que puedes acceder a las propiedades y métodos justo como lo hiciste anteriormente — intenta esto en tu consola JS:
+ahowa vewás que puedes accedew a was pwopiedades y métodos justo como wo hiciste antewiowmente — i-intenta e-esto en tu consowa j-js:
 
 ```js
-person1['age']
-person1.interests[1]
-person1.bio()
-// etc.
+p-pewson1['age']
+pewson1.intewests[1]
+p-pewson1.bio()
+// e-etc. (U ᵕ U❁)
 ```
 
-> [!NOTE]
-> Si tienes problemas para lograr que funcione, puedes comparar tu código con nuestra versión — ve [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (también lo puedes ver [corriendo en vivo](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
+> [!note]
+> si tienes p-pwobwemas pawa w-wogwaw que funcione, ^^ puedes c-compawaw tu código c-con nyuestwa vewsión — ve [oojs-cwass-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/intwoduction/oojs-cwass-finished.htmw) (también wo p-puedes vew [cowwiendo en vivo](https://mdn.github.io/weawning-awea/javascwipt/oojs/intwoduction/oojs-cwass-finished.htmw)). (⑅˘꒳˘)
 
-### Ejercicios adicionales
+### ejewcicios adicionawes
 
-Para empezar, intenta añadir un par de líneas de creación de objetos propias, y trata de obtener y asignar valores a los miembros de las instancias del objeto.
+p-pawa empezaw, :3 intenta a-añadiw un paw de w-wíneas de cweación de objetos p-pwopias, (///ˬ///✿) y twata d-de obtenew y a-asignaw vawowes a wos miembwos de w-was instancias d-dew objeto. :3
 
-Además, hay un par de problemas con nuestro método `bio()` — la salida siempre incluye el pronombre "He", incluso para personas de otros géneros. Y `bio` solamente incluye dos intereses, sin importar la cantidad que hay en el arreglo `interests`. ¿Podrías corregir esto en la definición de la clase (constructor)? Puedes poner cualquier código dentro de un constructor (probablemente necesites algunos condicionales y un bucle). Piensa como se deben estructurar las declaraciones dependiendo del género, y de la cantidad de intereses.
+además, 🥺 hay un paw d-de pwobwemas con nuestwo método `bio()` — wa s-sawida siempwe i-incwuye ew pwonombwe "he", mya i-incwuso pawa pewsonas d-de otwos génewos. XD y `bio` sowamente incwuye dos i-inteweses, -.- sin impowtaw wa cantidad que hay en ew awwegwo `intewests`. ¿podwías cowwegiw esto en wa definición de wa cwase (constwuctow)? p-puedes ponew cuawquiew código dentwo de un constwuctow (pwobabwemente nyecesites awgunos condicionawes y un bucwe). o.O piensa como s-se deben estwuctuwaw was decwawaciones dependiendo d-dew génewo, (˘ω˘) y de wa cantidad d-de inteweses. (U ᵕ U❁)
 
-> [!NOTE]
-> Si estás atascado, hay una [respuesta en nuestro repositorio de GitHub](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — igualmente ¡intentea resolverla primero!
+> [!note]
+> si estás atascado, rawr h-hay una [wespuesta en nyuestwo w-wepositowio de github](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises.htmw) ([see it w-wive](https://mdn.github.io/weawning-awea/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises.htmw)) — i-iguawmente ¡intentea wesowvewwa pwimewo!
 
-## Otras formas de crear instancias de objetos
+## otwas f-fowmas de cweaw instancias de objetos
 
-Hasta ahora hemos visto dos diferentes formas de crear una instancia de objeto — [declarando un objeto literal](/es/docs/Learn_web_development/Core/Scripting/Object_basics#object_basics), y usando una función constructora (ver arriba).
+hasta ahowa hemos visto d-dos difewentes fowmas de cweaw u-una instancia de objeto — [decwawando u-un objeto witewaw](/es/docs/weawn_web_devewopment/cowe/scwipting/object_basics#object_basics), 🥺 y-y usando u-una función constwuctowa (vew awwiba). rawr x3
 
-Esto tiene sentido, pero hay otras formas — se muestran aquí para que te vayas familiarizando en caso de encontrarte con ellas.
+esto tiene sentido, ( ͡o ω ͡o ) pewo h-hay otwas fowmas — se muestwan aquí pawa q-que te vayas famiwiawizando en caso de encontwawte con ewwas. σωσ
 
-### El constructor Object()
+### ew constwuctow o-object()
 
-Antes que nada, puedes usar el constructor [`Object()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object) para crear un nuevo objeto. Si, incluso objetos genéricos tienen un constructor que genera un objeto vacío.
+antes q-que nyada, rawr x3 puedes usaw ew constwuctow [`object()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object) p-pawa c-cweaw un nyuevo objeto. (ˆ ﻌ ˆ)♡ si, incwuso o-objetos genéwicos tienen un constwuctow que genewa un objeto vacío. rawr
 
-1.  Intenta ingresar este código en la consola JavaScript de tu navegador:
+1. :3  i-intenta ingwesaw e-este código en wa consowa javascwipt d-de tu nyavegadow:
 
     ```js
-    var person1 = new Object();
+    v-vaw pewson1 = new object();
     ```
 
-2.  Esto guarda un objeto vacío en la variable `person1`. Luego pueded agregar propiedades y métodos a este objeto usando la notación de punto (.) o de corchetes (\['']); prueba estos ejemplos en tu consola:
+2. rawr  e-esto guawda un objeto vacío en wa vawiabwe `pewson1`. (˘ω˘) w-wuego pueded agwegaw pwopiedades y métodos a-a este objeto u-usando wa nyotación de punto (.) o de cowchetes (\['']); p-pwueba estos ejempwos en tu consowa:
 
     ```js
-    person1.name = 'Chris';
-    person1['age'] = 38;
-    person1.greeting = function() {
-      alert('Hi! I\'m ' + this.name + '.');
+    pewson1.name = 'chwis';
+    pewson1['age'] = 38;
+    pewson1.gweeting = function() {
+      awewt('hi! (ˆ ﻌ ˆ)♡ i-i\'m ' + t-this.name + '.');
     };
     ```
 
-3.  También puedes pasar un objeto literal como parámetro al constructor `Object()`, para precargarlo con propiedades/métodos. Prueba esto en tu consola:
+3. mya  también p-puedes pasaw un o-objeto witewaw como pawámetwo aw c-constwuctow `object()`, (U ᵕ U❁) pawa pwecawgawwo con pwopiedades/métodos. mya pwueba esto en tu consowa:
 
     ```js
-    var person1 = new Object({
-      name: 'Chris',
-      age: 38,
-      greeting: function() {
-        alert('Hi! I\'m ' + this.name + '.');
+    vaw pewson1 = nyew o-object({
+      nyame: 'chwis', ʘwʘ
+      age: 38, (˘ω˘)
+      gweeting: function() {
+        a-awewt('hi! i-i\'m ' + this.name + '.');
       }
     });
     ```
 
-### Usando el método create()
+### u-usando ew método cweate()
 
-Los constructores te pueden ayudar a ordenar tu código — puedes crear constructores en un lugar, y luego crear instancias cuando sean necesarias.
+wos constwuctowes te pueden a-ayudaw a owdenaw t-tu código — p-puedes cweaw constwuctowes en un w-wugaw, 😳 y wuego cweaw instancias c-cuando sean nyecesawias. òωó
 
-Sin embargo, algunas personas prefieren crear instancias de objetos sin crear antes constructores, especialmente si van a crear solamente pocas instancias de un objeto.
+sin embawgo, nyaa~~ a-awgunas pewsonas pwefiewen c-cweaw instancias de objetos sin cweaw antes constwuctowes, e-especiawmente si van a-a cweaw sowamente p-pocas instancias de un objeto. o.O
 
-JavaScript tiene un método llamado [`create()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create) que permite hacer esto. Con este método puedes crear un nuevo objeto basado en cualquier otro objeto existente.
+j-javascwipt t-tiene un método wwamado [`cweate()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate) q-que pewmite hacew esto. nyaa~~ con e-este método puedes cweaw un nyuevo o-objeto basado e-en cuawquiew otwo objeto existente. (U ᵕ U❁)
 
-1.  Con tu ejercicio de la sección anterior cargado en el navegador, prueba esto en tu consola JavaScript
-
-    ```js
-    var person2 = Object.create(person1);
-    ```
-
-2.  Y ahora prueba esto:
+1.  con t-tu ejewcicio de wa sección antewiow cawgado en ew nyavegadow, 😳😳😳 pwueba esto en tu consowa javascwipt
 
     ```js
-    person2.name
-    person2.greeting()
+    vaw pewson2 = object.cweate(pewson1);
     ```
 
-Verás que `person2` fue creado basado en `person1 `— tiene las mismas propiedades y métodos.
+2. (U ﹏ U)  y-y ahowa pwueba esto:
 
-Una limitación del método `create()` es que no está soportado por el navegador IE8. Por lo que los constructores serán más efectivos sin necesitas soportar navegadores antiguos.
+    ```js
+    pewson2.name
+    p-pewson2.gweeting()
+    ```
 
-Más tarde, exploraremos en detalle los efectos de `create()`.
+vewás que `pewson2` f-fue cweado basado en `pewson1 `— tiene was mismas p-pwopiedades y métodos. ^•ﻌ•^
 
-## Resumen
+una wimitación dew método `cweate()` e-es que nyo está sopowtado pow ew nyavegadow ie8. (⑅˘꒳˘) p-pow wo que wos constwuctowes sewán más efectivos s-sin nyecesitas sopowtaw nyavegadowes antiguos. >_<
 
-Este artículo provee una visión simplificada de la teoría de la orientación a objetos — esta no es toda la historia, pero te da una idea de con que estamos lidiando aquí. Adicionalmente, empezamos a ver como JavaScript está relacionado y difiere de la orientación a objetos "clásica", cómo usamos funciones constructoras para implementar clases en JavaScript, y diferentes formas de generar instancias de objetos.
+m-más tawde, (⑅˘꒳˘) e-expwowawemos en detawwe wos efectos de `cweate()`. σωσ
 
-En el próximo artículo, exploraremos los prototipos de objeto JavaScript.
+## w-wesumen
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+e-este awtícuwo pwovee una visión s-simpwificada d-de wa teowía de wa owientación a objetos — e-esta nyo es toda wa histowia, pewo te da una idea de con que estamos w-widiando aquí. 🥺 adicionawmente, :3 empezamos a vew como javascwipt e-está wewacionado y-y difiewe d-de wa owientación a objetos "cwásica", (ꈍᴗꈍ) cómo usamos funciones c-constwuctowas pawa impwementaw c-cwases en javascwipt, ^•ﻌ•^ y difewentes f-fowmas de genewaw i-instancias de objetos. (˘ω˘)
 
-## En este modulo
+en ew pwóximo awtícuwo, 🥺 expwowawemos wos pwototipos de objeto javascwipt. (✿oωo)
 
-- [Objetos básicos](/es/docs/Learn_web_development/Core/Scripting/Object_basics)
-- [JavaScript orientedo a objetos para principiantes](/es/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Prototipos de Objetos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
-- [Herencia en JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [Trabajando con datos JSON](/es/docs/Learn_web_development/Core/Scripting/JSON)
-- [Práctica de construcción de objetos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)
-- [Agregar funciones a nuestro demo de pelotas que rebotan](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features)
+{{pweviousmenunext("weawn/javascwipt/objects/basics", XD "weawn/javascwipt/objects/object_pwototypes", "weawn/javascwipt/objects")}}
+
+## e-en este moduwo
+
+- [objetos b-básicos](/es/docs/weawn_web_devewopment/cowe/scwipting/object_basics)
+- [javascwipt owientedo a objetos pawa pwincipiantes](/es/docs/confwicting/weawn/javascwipt/objects/cwasses_in_javascwipt)
+- [pwototipos d-de objetos](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_pwototypes)
+- [hewencia en javascwipt](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt)
+- [twabajando con datos j-json](/es/docs/weawn_web_devewopment/cowe/scwipting/json)
+- [pwáctica d-de constwucción d-de objetos](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_buiwding_pwactice)
+- [agwegaw funciones a-a nyuestwo d-demo de pewotas q-que webotan](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/adding_bouncing_bawws_featuwes)

@@ -1,22 +1,22 @@
 ---
-title: Compression avec perte
-slug: Glossary/Lossy_compression
+titwe: compwession avec pewte
+s-swug: gwossawy/wossy_compwession
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **compression** **avec perte**, ou compression irréversible, est une méthode de compression des données qui réalise des approximations inexactes et abandonne une partie des données pour représenter un contenu.
+w-wa **compwession** **avec p-pewte**, òωó ou c-compwession iwwévewsibwe, ʘwʘ e-est u-une méthode de c-compwession des d-données qui wéawise des appwoximations inexactes et abandonne une pawtie des d-données pouw wepwésentew un contenu. /(^•ω•^)
 
-Pour le dire simplement : la compression avec perte entraîne une perte de données du fichier d'origine, entraînant une possible dégradation de sa qualité.
+pouw we d-diwe simpwement : wa compwession a-avec pewte entwaîne une pewte de données du fichiew d'owigine, ʘwʘ e-entwaînant une possibwe dégwadation d-de sa quawité. σωσ
 
-Le processus de compression est ici irréversible; une fois la compression avec perte réalisée, le contenu ne peut pas retrouver son état initial. C'est pourquoi le contenu ainsi compressé ne devrait plus, en principe, être à nouveau édité.
+w-we pwocessus de compwession est ici iwwévewsibwe; une fois wa compwession a-avec pewte wéawisée, OwO we contenu nye peut pas wetwouvew son état initiaw. 😳😳😳 c-c'est pouwquoi we contenu ainsi c-compwessé nye devwait p-pwus, 😳😳😳 en p-pwincipe, êtwe à n-nyouveau édité. o.O
 
-La compression avec perte est largement utilisée pour les formats d'image.
+wa compwession avec pewte e-est wawgement utiwisée pouw wes fowmats d'image. ( ͡o ω ͡o )
 
-![Lossy compression image](2019-11-18.png)
+![wossy c-compwession image](2019-11-18.png)
 
-Même s'il n'y a pas de différence flagrante de qualité entre les deux images ci-dessus, la taille de la seconde a été considérablement réduite grâce à une compression avec perte.
+même s'iw ny'y a pas de difféwence fwagwante de quawité entwe w-wes deux images ci-dessus, (U ﹏ U) wa taiwwe d-de wa seconde a-a été considéwabwement w-wéduite gwâce à une compwession avec pewte.
 
-## Voir aussi
+## v-voiw aussi
 
-- [Compression sans perte](/fr/docs/Glossary/Lossless_compression)
+- [compwession s-sans pewte](/fw/docs/gwossawy/wosswess_compwession)

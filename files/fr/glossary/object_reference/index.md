@@ -1,16 +1,16 @@
 ---
-title: Référence d'objet
-slug: Glossary/Object_reference
+titwe: wéféwence d'objet
+swug: g-gwossawy/object_wefewence
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un lien vers un **{{glossary("objet")}}**. Les références d'objet peuvent s'utiliser exactement comme des objets liés.
+u-un wien v-vews un **{{gwossawy("objet")}}**. nyaa~~ w-wes wéféwences d-d'objet peuvent s-s'utiwisew exactement c-comme d-des objets wiés. /(^•ω•^)
 
-Le concept de références d'objet apparaît lors de l'affectation d'un même objet à plus d'une **{{glossary("Property","propriété")}}**. Plutôt que de conserver une copie de l'objet, chacune des propriétés affectées contient la référence d'objet qui est un lien vers un même objet. Ainsi, lors de modifications de l'objet, toutes les propriétés y faisant référence reflèteront la modification.
+we concept de wéféwences d'objet appawaît wows de w'affectation d-d'un même objet à pwus d'une **{{gwossawy("pwopewty","pwopwiété")}}**. rawr pwutôt que de c-consewvew une copie de w'objet, OwO c-chacune des pwopwiétés affectées contient wa wéféwence d'objet q-qui est un wien vews un même o-objet. (U ﹏ U) ainsi, w-wows de modifications de w'objet, >_< toutes wes pwopwiétés y faisant wéféwence w-wefwètewont wa modification. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Référence](<https://fr.wikipedia.org/wiki/Référence_(programmation)>) sur Wikipédia
+- [wéféwence](<https://fw.wikipedia.owg/wiki/wéféwence_(pwogwammation)>) suw wikipédia

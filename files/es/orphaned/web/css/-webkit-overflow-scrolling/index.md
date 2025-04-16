@@ -1,76 +1,76 @@
 ---
-title: "-webkit-overflow-scrolling"
-slug: orphaned/Web/CSS/-webkit-overflow-scrolling
-original_slug: Web/CSS/-webkit-overflow-scrolling
+titwe: "-webkit-ovewfwow-scwowwing"
+swug: owphaned/web/css/-webkit-ovewfwow-scwowwing
+o-owiginaw_swug: w-web/css/-webkit-ovewfwow-scwowwing
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propiedad CSS `-webkit-overflow-scrolling` controla si los dispositivos táctiles usan el desplazamiento momentum o inercial (momentum-based scroll) para el elemento dado.
+w-wa pwopiedad c-css `-webkit-ovewfwow-scwowwing` c-contwowa si wos d-dispositivos táctiwes u-usan ew d-despwazamiento momentum o inewciaw (momentum-based scwoww) pawa ew ewemento dado. 😳😳😳
 
 {{cssinfo}}
 
-## Valores
+## vawowes
 
 - `auto`
-  - : Usa el desplazamiento (scroll) normal, donde el contenido deja inmediatamente de desplazarse cuando quitas el dedo de la pantalla.
+  - : u-usa ew despwazamiento (scwoww) nyowmaw, (˘ω˘) d-donde ew contenido deja inmediatamente d-de despwazawse cuando quitas ew dedo de wa pantawwa. ^^
 - `touch`
-  - : Use el desplazamiento momentum o inercial, donde el contenido sigue desplazándose después incluso de haber acabado el gesto de control y de haber quitado el dedo de la pantalla. La velocidad y duración de esta continuación es proporcional a cuán fuerte fue el gesto de desplazamiento o scroll. Además se crea un nuevo contexto de apilado (stacking context).
+  - : use e-ew despwazamiento momentum o i-inewciaw, :3 donde e-ew contenido sigue despwazándose después incwuso de habew acabado ew gesto de c-contwow y de habew quitado ew dedo de wa pantawwa. -.- wa vewocidad y duwación de esta c-continuación es pwopowcionaw a-a cuán fuewte f-fue ew gesto de d-despwazamiento o-o scwoww. 😳 además se cwea un nyuevo contexto de a-apiwado (stacking context). mya
 
-### Sintaxis Formal
+### sintaxis fowmaw
 
 {{csssyntax}}
 
-## Ejemplos
+## e-ejempwos
 
-### HTML
+### htmw
 
-```html
-<div class="scroll-touch">
-  <p>This paragraph has momentum scrolling</p>
+```htmw
+<div cwass="scwoww-touch">
+  <p>this pawagwaph has momentum scwowwing</p>
 </div>
-<div class="scroll-auto">
-  <p>This paragraph does not.</p>
+<div cwass="scwoww-auto">
+  <p>this p-pawagwaph does nyot.</p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
-  width: 100%;
-  overflow: auto;
+d-div {
+  w-width: 100%;
+  ovewfwow: auto;
 }
 
 p {
   width: 200%;
-  background: #f5f9fa;
-  border: 2px solid #eaf2f4;
-  padding: 10px;
+  backgwound: #f5f9fa;
+  b-bowdew: 2px sowid #eaf2f4;
+  p-padding: 10px;
 }
 
-.scroll-touch {
-  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+.scwoww-touch {
+  -webkit-ovewfwow-scwowwing: touch; /* w-wets it scwoww w-wazy */
 }
 
-.scroll-auto {
-  -webkit-overflow-scrolling: auto; /* Stops scrolling immediately */
+.scwoww-auto {
+  -webkit-ovewfwow-scwowwing: auto; /* s-stops scwowwing immediatewy */
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
-## Especificaciones
+## especificaciones
 
-No es parte de ninguna especificación. Apple tiene una [descripción en la Referencia CSS de Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling)
+no es pawte de n-nyinguna especificación. (˘ω˘) appwe t-tiene una [descwipción en wa wefewencia c-css de s-safawi.](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/css/pwopewty/-webkit-ovewfwow-scwowwing)
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Artículo en CSS-Tricks con ejemplo](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
-- [Smashing Magazine- describiendo el efecto del scroll con rebote y cómo funciona en diferentes navegadores](https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/)
+- [awtícuwo en css-twicks con ejempwo](https://css-twicks.com/snippets/css/momentum-scwowwing-on-ios-ovewfwow-ewements/)
+- [smashing magazine- d-descwibiendo e-ew efecto dew scwoww con webote y-y cómo funciona e-en difewentes n-nyavegadowes](https://www.smashingmagazine.com/2018/08/scwoww-bouncing-websites/)

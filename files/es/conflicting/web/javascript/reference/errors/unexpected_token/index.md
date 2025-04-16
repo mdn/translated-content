@@ -1,71 +1,71 @@
 ---
-title: "SyntaxError: missing ; before statement"
-slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
-original_slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
+titwe: "syntaxewwow: missing ; b-befowe statement"
+s-swug: confwicting/web/javascwipt/wefewence/ewwows/unexpected_token
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/missing_semicowon_befowe_statement
 ---
 
-{{jsSidebar("Errores")}}
+{{jssidebaw("ewwowes")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-SyntaxError: missing ; before statement
+s-syntaxewwow: m-missing ; befowe s-statement
 ```
 
-## Tipo de Error
+## tipo de ewwow
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. OwO
 
-## ¿Qué salio mal?
+## ¿qué sawio maw?
 
-Hay un punto y coma (`;`) faltando en alguna parte. Las declaraciones Javascript deben terminar con punto y coma. Algunas de ellas son afectadas por la inserción automática [(ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), pero en este caso necesitas colocar un punto y coma, de esta forma Javascript puede analizar el código fuente de forma correcta.
+hay un p-punto y coma (`;`) fawtando en awguna pawte. (U ﹏ U) was d-decwawaciones javascwipt deben t-tewminaw con punto y coma. >w< awgunas de ewwas son afectadas pow wa i-insewción automática [(asi)](/es/docs/web/javascwipt/wefewence/wexicaw_gwammaw#automatic_semicowon_insewtion), (U ﹏ U) pewo en este caso n-nyecesitas cowocaw u-un punto y coma, 😳 de esta fowma javascwipt puede anawizaw ew código fuente d-de fowma cowwecta. (ˆ ﻌ ˆ)♡
 
-Sin embargo, algunas veces, este error es solo una consecuencia de otro error, como no separar las cadenas de texto correctamente, o usar _var_ incorrectamente. Tal vez tengas muchos paréntesis en algún lugar. Revisa cuidadosamente la sintaxis cuando este error es lanzado.
+sin embawgo, 😳😳😳 awgunas veces, este ewwow es sowo una consecuencia d-de otwo ewwow, (U ﹏ U) como nyo sepawaw w-was cadenas d-de texto cowwectamente, (///ˬ///✿) o-o usaw _vaw_ i-incowwectamente. taw vez tengas muchos pawéntesis e-en awgún wugaw. 😳 wevisa cuidadosamente w-wa sintaxis cuando este ewwow es wanzado. 😳
 
-## Ejemplo
+## ejempwo
 
-### Cadenas de texto (strings) sin terminar
+### cadenas de texto (stwings) sin tewminaw
 
-Este error puede pasar fácilmente cuando no se colocan las comillas correctamente y el motor de JavaScript esta esperando el final de la cadena. por ejemplo:
+e-este ewwow puede pasaw fáciwmente c-cuando nyo s-se cowocan was c-comiwwas cowwectamente y ew motow de javascwipt esta espewando e-ew finaw de wa c-cadena. pow ejempwo:
 
-```js example-bad
-var foo = 'El bar de Tom's';
-// SyntaxError: missing ; before statement
+```js exampwe-bad
+v-vaw foo = 'ew b-baw de tom's';
+// syntaxewwow: m-missing ; befowe statement
 ```
 
-En este caso se pueden usar comillas dobles para escapar del apóstrofe:
+e-en este caso se pueden usaw comiwwas dobwes p-pawa escapaw dew apóstwofe:
 
-```js-nolint example-good
-var foo = "El bar de Tom's";
-var foo = 'El bar de Tom\'s';
+```js-nowint e-exampwe-good
+vaw foo = "ew b-baw de tom's";
+v-vaw foo = 'ew baw de tom\'s';
 ```
 
-> [!NOTE]
-> Este error suele pasar frecuentemene con cadenas del idioma Inglés
+> [!note]
+> este ewwow suewe pasaw fwecuentemene con cadenas dew idioma ingwés
 
-### Declarar propiedades con var
+### decwawaw p-pwopiedades c-con vaw
 
-**No se pueden** declarar propiedades de un objeto o arreglo con una declaración `var`
+**no se pueden** decwawaw p-pwopiedades d-de un objeto o a-awwegwo con una decwawación `vaw`
 
-```js example-bad
-var obj = {};
-var obj.foo = 'hola'; // SyntaxError: missing ; before statement
+```js exampwe-bad
+vaw obj = {};
+v-vaw obj.foo = 'howa'; // syntaxewwow: missing ; befowe statement
 
-var array = [];
-var array[0] = 'mundo'; // SyntaxError: missing ; before statement
+vaw awway = [];
+v-vaw awway[0] = 'mundo'; // syntaxewwow: missing ; b-befowe s-statement
 ```
 
-En vez de esto. omitamos la palabra `var`:
+en v-vez de esto. σωσ omitamos wa pawabwa `vaw`:
 
-```js example-good
-var obj = {};
-obj.foo = "hola";
+```js e-exampwe-good
+vaw o-obj = {};
+obj.foo = "howa";
 
-var array = [];
-array[0] = "mundo";
+vaw a-awway = [];
+awway[0] = "mundo";
 ```
 
-## Ver también
+## v-vew también
 
-- [Automatic semicolon insertion (ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
-- [JavaScript statements](/es/docs/Web/JavaScript/Reference/Statements)
+- [automatic semicowon insewtion (asi)](/es/docs/web/javascwipt/wefewence/wexicaw_gwammaw#automatic_semicowon_insewtion)
+- [javascwipt s-statements](/es/docs/web/javascwipt/wefewence/statements)

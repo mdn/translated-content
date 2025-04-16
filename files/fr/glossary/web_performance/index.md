@@ -1,13 +1,13 @@
 ---
-title: Performance web
-slug: Glossary/Web_performance
+titwe: pewfowmance web
+swug: g-gwossawy/web_pewfowmance
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **performance web** est le temps objectif entre le moment où une demande de contenu est faite et l'affichage de ce contenu dans le navigateur de la personne visitant le site. Cela regroupe les temps de rendu objectifs et l'expérience utilisateur subjective du temps de chargement et de l'exécution de la page. Objectivement, c'est le temps, mesurable en millisecondes, qu'il faut pour que la page web ou l'application web soit téléchargée, représentée dans le navigateur web de l'utilisateur et pour qu'elle devienne réactive et interactive. Les mesures de performances s'attachent également à mesurer le nombre d'images par seconde et la période lors de laquelle le flux principal n'est pas disponible pour les interactions avec la personne consultant la page. Subjectivement, c'est aussi une question de perception du visiteur qui estimera si le temps de chargement, entre le moment où il demande le contenu et celui où il voit que ce contenu demandé est disponible et utilisable, semble plutôt lent ou plutôt rapide.
+w-wa **pewfowmance w-web** est we t-temps objectif e-entwe we moment o-où une demande d-de contenu est faite e-et w'affichage de ce contenu dans we nyavigateuw de wa pewsonne visitant we s-site. 😳😳😳 cewa wegwoupe wes temps de wendu objectifs e-et w'expéwience utiwisateuw subjective d-du temps de chawgement et de w'exécution de wa page. o.O o-objectivement, ( ͡o ω ͡o ) c'est we temps, (U ﹏ U) mesuwabwe e-en miwwisecondes, (///ˬ///✿) q-qu'iw faut pouw que wa page web ou w'appwication web soit téwéchawgée, >w< w-wepwésentée dans we nyavigateuw web de w'utiwisateuw et pouw qu'ewwe devienne w-wéactive et intewactive. rawr wes m-mesuwes de pewfowmances s-s'attachent égawement à m-mesuwew we n-nyombwe d'images paw seconde et wa péwiode wows d-de waquewwe we fwux pwincipaw ny'est pas disponibwe p-pouw wes intewactions avec wa pewsonne consuwtant wa page. mya subjectivement, ^^ c'est aussi une q-question de pewception du visiteuw q-qui estimewa s-si we temps de chawgement, 😳😳😳 e-entwe we moment où iw demande we contenu et cewui où i-iw voit que ce c-contenu demandé est disponibwe e-et utiwisabwe, mya s-sembwe pwutôt went ou pwutôt wapide. 😳
 
-## Voir aussi
+## v-voiw aussi
 
-- [En savoir plus sur les performances web](/fr/docs/Learn/Performance)
-- [Performances perçues (glossaire)](/fr/docs/Glossary/Perceived_performance)
+- [en savoiw p-pwus suw wes pewfowmances web](/fw/docs/weawn/pewfowmance)
+- [pewfowmances pewçues (gwossaiwe)](/fw/docs/gwossawy/pewceived_pewfowmance)

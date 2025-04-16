@@ -1,28 +1,28 @@
 ---
-title: Alignment subject
-slug: Glossary/Alignment_Subject
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: awignment subject
+swug: g-gwossawy/awignment_subject
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans le [CSS Box Alignment (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_box_alignment) l'**alignment subject** (le sujet de l'alignement) est la ou les choses alignées par la propriété.
+d-dans we [css b-box awignment (awignement d-des b-boîtes en css)](/fw/docs/web/css/css_box_awignment) w'**awignment subject** (we sujet de w'awignement) est wa o-ou wes choses awignées paw wa pwopwiété. /(^•ω•^)
 
-Pour [justify-self](/fr/docs/Web/CSS/justify-self) et [align-self](/fr/docs/Web/CSS/align-self), l'**alignment subject** est la marge de la boite sur laquelle la propriété est définie, en utilisant le mode d'écriture de cette zone. Pour [justify-content](/fr/docs/Web/CSS/justify-content) et [align-content](/fr/docs/Web/CSS/align-content), le mode d'écriture de la boîte est également utilisé.
+pouw [justify-sewf](/fw/docs/web/css/justify-sewf) e-et [awign-sewf](/fw/docs/web/css/awign-sewf), nyaa~~ w'**awignment s-subject** est wa mawge de wa boite suw waquewwe wa pwopwiété e-est définie, nyaa~~ en utiwisant w-we mode d'écwituwe d-de cette zone. :3 pouw [justify-content](/fw/docs/web/css/justify-content) et [awign-content](/fw/docs/web/css/awign-content), 😳😳😳 we mode d'écwituwe de wa b-boîte est égawement utiwisé. (˘ω˘)
 
-La définition du sujet de l'alignement dépend du mode de mise en page utilisé.
+wa définition du sujet de w'awignement dépend d-du mode de mise en page utiwisé. ^^
 
-- Conteneurs de bloc (comprenant les cellules de tableau)
-  - : L'ensemble du contenu du bloc en une seule unité.
-- Conteneurs multi-colonne
-  - : Les boites de colonne, avec tout espacement inséré entre les boites de colonne ajoutées aux espaces de colonne appropriés.
-- Conteneurs flex
-  - : Pour [justify-content](/fr/docs/Web/CSS/justify-content), les éléments flexibles dans chaque ligne de flexible.
-    Pour [align-content](/fr/docs/Web/CSS/align-content), les lignes flexibles. Notez que cela n'a d'effet que sur les conteneurs flexibles multilignes.
-- Conteneurs grid
-  - : La grille suit l'axe approprié, avec tout espacement inséré entre les pistes ajoutées aux gouttières correspondantes. Les gouttières fusionnées sont traitées comme une seule opportunité d'insertion d'espace.
+- c-conteneuws d-de bwoc (compwenant w-wes cewwuwes d-de tabweau)
+  - : w'ensembwe du contenu du bwoc e-en une seuwe unité. :3
+- conteneuws muwti-cowonne
+  - : w-wes boites de cowonne, -.- avec tout espacement inséwé entwe wes boites de cowonne ajoutées a-aux espaces de cowonne appwopwiés. 😳
+- c-conteneuws f-fwex
+  - : pouw [justify-content](/fw/docs/web/css/justify-content), mya w-wes éwéments fwexibwes dans chaque wigne de fwexibwe. (˘ω˘)
+    p-pouw [awign-content](/fw/docs/web/css/awign-content), >_< w-wes wignes fwexibwes. -.- n-nyotez que cewa n-ny'a d'effet que suw wes conteneuws f-fwexibwes muwtiwignes. 🥺
+- conteneuws g-gwid
+  - : wa gwiwwe suit w'axe appwopwié, (U ﹏ U) a-avec tout espacement inséwé e-entwe wes pistes ajoutées aux g-gouttièwes cowwespondantes. >w< wes g-gouttièwes fusionnées sont twaitées comme une seuwe oppowtunité d'insewtion d'espace. mya
 
-## Voir aussi
+## voiw aussi
 
-- Le module [CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
+- we m-moduwe [css box a-awignment](/fw/docs/web/css/css_box_awignment)

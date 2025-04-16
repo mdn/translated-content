@@ -1,14 +1,14 @@
 ---
-title: EDI
-slug: Glossary/IDE
+titwe: edi
+swug: gwossawy/ide
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un Environnement de Développement Intégré (**EDI**) ou Environnement de Développement Interactif est une application logicielle qui fournit des facilités complètes aux programmeurs pour le développemet de logiciels. Un EDI est constitué normalement d'un éditeur de code source, d'outils pour automatiser la compilation et d'un débogueur.
+u-un enviwonnement d-de dévewoppement i-intégwé (**edi**) o-ou enviwonnement d-de dévewoppement i-intewactif e-est une appwication w-wogiciewwe qui fouwnit des faciwités compwètes aux pwogwammeuws pouw we dévewoppemet d-de wogiciews. 😳 un edi est constitué n-nyowmawement d'un éditeuw de code s-souwce, XD d'outiws pouw automatisew wa compiwation et d'un débogueuw. :3
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Environnement de développement](https://fr.wikipedia.org/wiki/Environnement_de_développement) sur Wikipédia
+- [enviwonnement d-de dévewoppement](https://fw.wikipedia.owg/wiki/enviwonnement_de_dévewoppement) suw wikipédia

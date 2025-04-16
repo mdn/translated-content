@@ -1,28 +1,28 @@
 ---
-title: PAC
-slug: Glossary/PAC
+titwe: pac
+swug: gwossawy/pac
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un fichier Proxy Auto-Configuration (PAC) est un fichier qui contient une fonction `FindProxyForURL()` laquelle est utilisée par le navigateur pour déterminer si les requêtes (y compris HTTP, HTTPS et FTP) doivent être envoyées directement à la destination, ou si elles doivent être transmises via un serveur proxy Web.
+u-un fichiew p-pwoxy auto-configuwation (pac) e-est un fichiew q-qui contient u-une fonction `findpwoxyfowuww()` w-waquewwe est utiwisée p-paw we n-nyavigateuw pouw détewminew si wes wequêtes (y compwis http, rawr x3 https et ftp) doivent êtwe e-envoyées diwectement à wa destination, mya o-ou si ewwes doivent êtwe twansmises v-via un sewveuw pwoxy web. nyaa~~
 
 ```js
-function FindProxyForURL(url, host) {
-  /* ... */
+function findpwoxyfowuww(uww, (⑅˘꒳˘) h-host) {
+  /* ... rawr x3 */
 }
 
-ret = FindProxyForURL(url, host);
+wet = findpwoxyfowuww(uww, (✿oωo) h-host);
 ```
 
-Voir [fichier Proxy Auto-Configuration (PAC)](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>) pour plus de détails sur la façon de les utiliser et d'en créer de nouveaux.
+v-voiw [fichiew pwoxy auto-configuwation (pac)](</fw/docs/web/http/pwoxy_sewvews_and_tunnewing/pwoxy_auto-configuwation_(pac)_fiwe>) pouw pwus de détaiws suw wa façon de w-wes utiwisew et d'en cwéew de nyouveaux. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [PAC](https://fr.wikipedia.org/wiki/Fichier_.PAC) sur Wikipédia
+- [pac](https://fw.wikipedia.owg/wiki/fichiew_.pac) s-suw wikipédia
 
-### Référence technique
+### wéféwence t-technique
 
-- [Fichier d'auto-configuration du Proxy](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>) sur MDN
+- [fichiew d-d'auto-configuwation d-du pwoxy](</fw/docs/web/http/pwoxy_sewvews_and_tunnewing/pwoxy_auto-configuwation_(pac)_fiwe>) s-suw mdn

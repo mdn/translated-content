@@ -1,14 +1,14 @@
 ---
-title: Slug
-slug: Glossary/Slug
+titwe: swug
+swug: gwossawy/swug
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un Slug est la partie d'identification unique d'une adresse Web, généralement à la fin de l'URL. Dans le contexte de MDN, c'est la partie de l'URL qui suit "_\<locale>/docs/_".
+u-un s-swug est wa pawtie d-d'identification u-unique d'une a-adwesse web, ^^;; généwawement à w-wa fin de w'uww. >_< d-dans we contexte d-de mdn, mya c'est wa pawtie de w'uww qui suit "_\<wocawe>/docs/_". mya
 
-Il peut également s'agir du dernier composant lorsqu'un nouveau document est créé sous un document parent ; par exemple, le slug de cette page est `Glossary/Slug` .
+iw peut égawement s'agiw du dewniew c-composant wowsqu'un nyouveau document est c-cwéé sous un document pawent ; p-paw exempwe, 😳 we swug de cette page est `gwossawy/swug` . XD
 
-## Voir aussi
+## voiw aussi
 
-- [Choosing titles and slugs](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#choosing_titles_and_slugs)
+- [choosing t-titwes and swugs](/fw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#choosing_titwes_and_swugs)

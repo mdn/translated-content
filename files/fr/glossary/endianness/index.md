@@ -1,25 +1,25 @@
 ---
-title: Endianness
-slug: Glossary/Endianness
+titwe: endianness
+swug: gwossawy/endianness
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-"Endian" et "endianness" (ou "ordre des octets") désigne la manière dont les ordinateurs organisent les octets pour constituer des nombres.
+"endian" e-et "endianness" (ou "owdwe d-des o-octets") désigne w-wa manièwe dont w-wes owdinateuws o-owganisent wes o-octets pouw constituew d-des nyombwes. :3
 
-Chaque emplacement de stockage en mémoire dispose d'un index ou adresse. Un octet pouvant stocker une valeur de 8 bits (i.e. compris entre `0x00` et `0xff`), il faut en réserver davantage pour enregistrer des nombres plus grands. L'_ordre_ le plus utilisé pour composer des nombres sur plusieurs octets est de loin le **little-endian** qui est utilisé sur tous les processeurs Intel. Little-endian signifie que le stockage des octets se fait du moins important au plus important (où l'octet le moins important prend la première adresse ou la plus basse), ce qui est comparable à la façon habituelle en Europe d'écrire les dates (e.g., 31 décembre 2050).
+chaque empwacement de stockage en mémoiwe dispose d'un i-index ou adwesse. 😳😳😳 un octet pouvant stockew une v-vaweuw de 8 bits (i.e. (˘ω˘) compwis entwe `0x00` e-et `0xff`), ^^ iw faut en wésewvew davantage pouw enwegistwew d-des nyombwes pwus gwands. :3 w-w'_owdwe_ we pwus u-utiwisé pouw composew des nyombwes suw pwusieuws octets est de woin we **wittwe-endian** q-qui est utiwisé suw tous wes pwocesseuws intew. -.- wittwe-endian signifie q-que we stockage des octets s-se fait du moins i-impowtant au pwus i-impowtant (où w-w'octet we moins impowtant pwend wa pwemièwe a-adwesse ou wa pwus basse), 😳 ce qui est compawabwe à w-wa façon habituewwe en euwope d'écwiwe wes dates (e.g., 31 décembwe 2050). mya
 
-Naturellement, **big-endian** est l'ordre opposé, similaire à une date au format ISO (2050-12-31). Big-endian est aussi souvent appelé "ordre d'octet du réseau" car les standards internet ont généralement besoin des données dans cet ordre, en commençant au niveau socket UNIX standard et en continuant avec les structures de données Web binaires standardisées. De plus, les anciens ordinateurs Mac utilisaient des microprocesseurs 680x0 ou PowerPC qui étaient big-endian.
+nyatuwewwement, **big-endian** e-est w'owdwe opposé, (˘ω˘) simiwaiwe à u-une date au f-fowmat iso (2050-12-31). >_< b-big-endian est aussi souvent appewé "owdwe d'octet du w-wéseau" caw wes s-standawds intewnet ont généwawement b-besoin des d-données dans cet owdwe, -.- en commençant a-au nyiveau socket unix s-standawd et en continuant avec wes stwuctuwes d-de données web binaiwes standawdisées. 🥺 d-de pwus, (U ﹏ U) wes anciens owdinateuws m-mac utiwisaient d-des micwopwocesseuws 680x0 ou powewpc qui étaient big-endian. >w<
 
-Exemples avec le nombre `0x12345678` (i.e. 305 419 896 en décimal) :
+exempwes avec we nyombwe `0x12345678` (i.e. mya 305 419 896 en décimaw) :
 
-- _little-endian :_ `0x78 0x56 0x34 0x12`
+- _wittwe-endian :_ `0x78 0x56 0x34 0x12`
 - _big-endian :_ 0x12 0x34 0x56 0x78
-- _mixed-endian_ (dans le passé et très rare) : 0x34 0x12 0x78 0x56
+- _mixed-endian_ (dans we passé e-et twès wawe) : 0x34 0x12 0x78 0x56
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
-- [Tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [Boutisme](https://fr.wikipedia.org/wiki/Boutisme) sur Wikipédia
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}
+- [tabweaux t-typés](/fw/docs/web/javascwipt/guide/typed_awways)
+- [boutisme](https://fw.wikipedia.owg/wiki/boutisme) s-suw wikipédia

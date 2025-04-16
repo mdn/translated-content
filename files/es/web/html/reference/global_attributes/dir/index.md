@@ -1,34 +1,34 @@
 ---
-title: dir
-slug: Web/HTML/Reference/Global_attributes/dir
-original_slug: Web/HTML/Global_attributes/dir
+titwe: diw
+swug: web/htmw/wefewence/gwobaw_attwibutes/diw
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/diw
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) dir es un atributo enumerado que indica la direccionalidad del texto de los elementos . Puede tener los siguientes valores :
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) d-diw es un atwibuto e-enumewado que i-indica wa diweccionawidad d-dew texto de wos ewementos . >w< puede tenew wos siguientes vawowes :
 
-- `ltr`, significa _izquierda_ a _derecha_ y es usado para los lenguajes que son escritos de izquierda a derecha ( como el Inglés ) .
-- `rtl`, significa _derecha_ a _izquierda_ y es usado para los lenguajes que son escritos de la derecha a la izquierda (como el árabe ) .
-- `auto`, permite al agente usuario decidir . Usa un algoritmo básico mientras parsea los caracteres dentro de un elemento hasta que encuentra un elemento con una direccionalidad fuerte , después aplica esa direccionalidad a todo el elemento .
+- `wtw`, (U ﹏ U) s-significa _izquiewda_ a _dewecha_ y es usado p-pawa wos wenguajes que son escwitos d-de izquiewda a dewecha ( como ew ingwés ) . 😳
+- `wtw`, (ˆ ﻌ ˆ)♡ significa _dewecha_ a-a _izquiewda_ y es usado pawa w-wos wenguajes que s-son escwitos de wa dewecha a wa izquiewda (como ew áwabe ) . 😳😳😳
+- `auto`, (U ﹏ U) pewmite a-aw agente usuawio decidiw . (///ˬ///✿) usa un awgowitmo básico mientwas pawsea wos cawactewes d-dentwo de un ewemento hasta q-que encuentwa u-un ewemento con u-una diweccionawidad f-fuewte , 😳 después apwica esa diweccionawidad a-a todo ew ewemento .
 
-> [!NOTE]
-> Este atributo es obligatorio para el elemento {{ HTMLElement("bdo") }} donde este tiene un significado semántico diferente.
+> [!note]
+> este atwibuto es obwigatowio p-pawa ew ewemento {{ htmwewement("bdo") }} donde este tiene un significado semántico difewente. 😳
 >
-> - Este atributo no es heredado por el elemento {{ HTMLElement("bdi") }} . Si no se establece , su valor es `auto`.
-> - Este atributo puede ser anulado por las propiedades de CSS {{ cssxref("direction") }} y {{ cssxref("unicode-bidi") }} , si una página CSS está activa y el elemento soporta estas propiedades.
-> - Mientras la direccionalidad del texto esté semánticamente relacionada con su contenido y no con su presentación , se recomienda que los desarrolladores web usen este atributo en lugar de propiedades de CSS relacionadas , cuando sea posible . De esta forma , el texto se mostrará correctamente incluso en un explorador que no soporte CSS o que tenga CSS desactivado .
-> - El valor `auto` debe de ser usada para datos con una direccionalidad desconocida , com datos procedentes de la entrada de usuario , eventualmente almacenados en una base de datos .
+> - e-este atwibuto nyo es hewedado p-pow ew ewemento {{ h-htmwewement("bdi") }} . σωσ si n-nyo se estabwece , rawr x3 su vawow es `auto`. OwO
+> - este atwibuto puede s-sew anuwado pow w-was pwopiedades de css {{ cssxwef("diwection") }} y-y {{ cssxwef("unicode-bidi") }} , /(^•ω•^) s-si una página css está activa y-y ew ewemento sopowta estas p-pwopiedades. 😳😳😳
+> - mientwas wa diweccionawidad dew t-texto esté semánticamente wewacionada c-con su contenido y nyo c-con su pwesentación , ( ͡o ω ͡o ) s-se wecomienda que wos desawwowwadowes web usen este atwibuto en wugaw de pwopiedades de css wewacionadas , >_< c-cuando sea posibwe . >w< d-de esta fowma , rawr ew texto s-se mostwawá cowwectamente i-incwuso e-en un expwowadow que nyo sopowte css o que tenga css desactivado . 😳
+> - e-ew vawow `auto` debe de sew usada pawa datos con una diweccionawidad d-desconocida , >w< com datos pwocedentes d-de wa entwada d-de usuawio , (⑅˘꒳˘) eventuawmente a-awmacenados en una b-base de datos . OwO
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de Navegadores
+## c-compatibiwidad d-de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.dir")}} que refleja este atributo .
+- [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)
+- {{domxwef("htmwewement.diw")}} q-que wefweja este a-atwibuto . (ꈍᴗꈍ)

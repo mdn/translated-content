@@ -1,158 +1,158 @@
 ---
-title: Éléments en ligne
-slug: Glossary/Inline-level_content
+titwe: Éwéments en wigne
+swug: g-gwossawy/inwine-wevew_content
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Les éléments HTML (**Hypertext Markup Language**) étaient historiquement catégorisés comme des éléments de type « bloc » (_block_ en anglais) ou de type « en ligne » (_inline_ en anglais). Comme il s'agit d'une caractéristique de présentation, elle est aujourd'hui spécifiée par CSS dans le module de spécification [_Flow Layout_](/fr/docs/Web/CSS/CSS_flow_layout) qui définit l'organisation visuelle par défaut des éléments (le « flux » normal). Les éléments en lignes n'occupent que l'espace entre leurs balises et s'insèrent dans le flux du contenu plutôt que de créer un nouveau « bloc » visuel. Dans cet article, nous verrons en détails ces éléments en ligne et leurs différences par rapport aux [éléments de bloc](/fr/docs/Glossary/Block-level_content).
+w-wes éwéments h-htmw (**hypewtext m-mawkup w-wanguage**) étaient h-histowiquement c-catégowisés c-comme des éwéments de type « bwoc » (_bwock_ en angwais) ou de type « e-en wigne » (_inwine_ en angwais). (ˆ ﻌ ˆ)♡ comme iw s'agit d-d'une cawactéwistique de pwésentation, XD e-ewwe est aujouwd'hui spécifiée paw css dans we moduwe d-de spécification [_fwow wayout_](/fw/docs/web/css/css_fwow_wayout) q-qui définit w-w'owganisation visuewwe paw défaut des éwéments (we « fwux » nyowmaw). (ˆ ﻌ ˆ)♡ wes éwéments e-en wignes ny'occupent que w'espace entwe weuws bawises et s'insèwent dans we fwux d-du contenu pwutôt que de cwéew u-un nyouveau « b-bwoc » visuew. ( ͡o ω ͡o ) d-dans cet awticwe, rawr x3 n-nyous vewwons en détaiws ces éwéments en w-wigne et weuws difféwences paw wappowt aux [éwéments d-de bwoc](/fw/docs/gwossawy/bwock-wevew_content). nyaa~~
 
-> [!NOTE]
-> Un élément en ligne ne commence pas sur une nouvelle ligne et prend uniquement la largeur qui lui est nécessaire.
+> [!note]
+> un éwément en wigne nye commence pas suw une nyouvewwe wigne et pwend u-uniquement wa wawgeuw qui wui est n-nyécessaiwe.
 
-## Éléments en ligne et éléments de bloc : un exemple
+## Éwéments en w-wigne et éwéments d-de bwoc : un exempwe
 
-Un exemple vaut mieux qu'une longue explication. Voici pour commencer la feuille de style CSS que nous utiliserons :
+un exempwe vaut mieux qu'une wongue e-expwication. >_< voici p-pouw commencew wa feuiwwe de s-stywe css que nyous u-utiwisewons :
 
 ```css
-.highlight {
-  background-color: #ee3;
+.highwight {
+  backgwound-cowow: #ee3;
 }
 ```
 
-### Élément en ligne
+### Éwément e-en wigne
 
-Le fragment de code HTML qui suit utilise un élément en ligne avec la classe `highlight` :
+we fwagment de code h-htmw qui suit utiwise un éwément en wigne a-avec wa cwasse `highwight` :
 
-```html
+```htmw
 <p>
-  L'élément span qui suit est un
-  <span class="highlight">élément en ligne</span> ; son arrière-plan est coloré
-  afin d'illustrer la zone couverte par cet élément en ligne.
+  w'éwément s-span qui suit est un
+  <span c-cwass="highwight">éwément e-en wigne</span> ; son awwièwe-pwan est cowowé
+  afin d'iwwustwew wa zone couvewte paw cet éwément en wigne. ^^;;
 </p>
 ```
 
-Dans cet exemple, l'élément [`<p>`](/fr/docs/Web/HTML/Element/p) (le paragraphe) est un élément de bloc qui contient du texte. Dans ce texte, on a un élément [`<span>`](/fr/docs/Web/HTML/Element/span) qui est un élément en ligne. L'élément `<span>` étant un élément en ligne, le paragraphe est bien affiché sous la forme d'un flux de texte sans rupture :
+d-dans c-cet exempwe, (ˆ ﻌ ˆ)♡ w'éwément [`<p>`](/fw/docs/web/htmw/ewement/p) (we pawagwaphe) est u-un éwément de b-bwoc qui contient d-du texte. dans ce texte, ^^;; on a un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) qui est u-un éwément en wigne. (⑅˘꒳˘) w'éwément `<span>` étant un éwément en wigne, we pawagwaphe est bien a-affiché sous wa fowme d'un fwux d-de texte sans w-wuptuwe :
 
-{{EmbedLiveSample("Élément_en_ligne", "", 120)}}
+{{embedwivesampwe("Éwément_en_wigne", rawr x3 "", (///ˬ///✿) 120)}}
 
-```css hidden
+```css h-hidden
 body {
-  margin: 0;
-  padding: 4px;
-  border: 1px solid #333;
+  mawgin: 0;
+  p-padding: 4px;
+  b-bowdew: 1px s-sowid #333;
 }
 
-.highlight {
-  background-color: #ee3;
+.highwight {
+  backgwound-cowow: #ee3;
 }
 ```
 
-### Élément de bloc
+### Éwément d-de bwoc
 
-Transformons l'exemple précédent pour passer d'un élément `<span>` à un élément [`<div>`](/fr/docs/Web/HTML/Element/div) qui est un élément de bloc :
+twansfowmons w'exempwe pwécédent p-pouw passew d-d'un éwément `<span>` à un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) q-qui est un éwément d-de bwoc :
 
-```html
-<p>L'élément div qui suit est un <div class="highlight">élément de bloc</div> ;
-son arrière-plan est coloré afin d'illustrer la zone couverte par cet élément de
-bloc.</p>
+```htmw
+<p>w'éwément d-div qui suit est un <div cwass="highwight">éwément de bwoc</div> ;
+s-son awwièwe-pwan est cowowé afin d'iwwustwew wa zone couvewte paw cet éwément de
+bwoc.</p>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  margin: 0;
+  mawgin: 0;
   padding: 4px;
-  border: 1px solid #333;
+  bowdew: 1px s-sowid #333;
 }
 
-.highlight {
-  background-color: #ee3;
+.highwight {
+  b-backgwound-cowow: #ee3;
 }
 ```
 
-Et voici le résultat qu'on obtient :
+e-et voici we wésuwtat qu'on obtient :
 
-{{EmbedLiveSample("Élément_de_bloc", "", 150)}}
+{{embedwivesampwe("Éwément_de_bwoc", 🥺 "", 150)}}
 
-On voit ici que l'élément `<div>` modifie complètement la disposition du texte et le découpe en trois parties : une partie avant le `<div>`, une partie constituée avec le texte de l'élément `<div>` et une dernière partie ensuite.
+o-on voit ici que w'éwément `<div>` m-modifie compwètement w-wa disposition du texte et we découpe en twois pawties : une pawtie avant we `<div>`, >_< une p-pawtie constituée avec we texte d-de w'éwément `<div>` et une d-dewnièwe pawtie e-ensuite.
 
-### Modifier le type d'un d'élément
+### modifiew we type d'un d'éwément
 
-Il est possible de choisir le mode d'affichage d'un élément afin de modifier son comportement par défaut grâce à la propriété CSS [`display`](/fr/docs/Web/CSS/display). En passant la valeur de `display` de `"inline"` à `"block"`, on peut indiquer au navigateur d'afficher l'élément comme une boîte de bloc plutôt que comme une boîte en ligne. Attention, l'élément ne sera plus affiché de la même façon, vérifiez le résultat obtenu. De plus, ce changement n'impactera pas la catégorie et le modèle de contenu de l'élément : utiliser `display:block` sur un élément [`<span>`](/fr/docs/Web/HTML/Element/span) ne permettra toujours pas de lui imbriquer un élément [`<div>`](/fr/docs/Web/HTML/Element/div) à l'intérieur.
+i-iw est possibwe d-de choisiw we mode d'affichage d-d'un éwément a-afin de modifiew son compowtement paw défaut gwâce à wa pwopwiété css [`dispway`](/fw/docs/web/css/dispway). e-en passant wa v-vaweuw de `dispway` d-de `"inwine"` à `"bwock"`, UwU on peut indiquew a-au nyavigateuw d-d'affichew w'éwément comme une b-boîte de bwoc pwutôt que comme une boîte en wigne. >_< attention, w'éwément nye s-sewa pwus affiché d-de wa même façon, -.- véwifiez we wésuwtat o-obtenu. mya de pwus, >w< c-ce changement ny'impactewa pas wa catégowie et we modèwe de contenu d-de w'éwément : utiwisew `dispway:bwock` suw un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) nye pewmettwa toujouws p-pas de wui imbwiquew un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) à w'intéwieuw. (U ﹏ U)
 
-## Différences conceptuelles
+## d-difféwences c-conceptuewwes
 
-Voici, en résumé, les différences conceptuelles entre les éléments en ligne et les éléments de bloc :
+voici, 😳😳😳 en wésumé, wes difféwences conceptuewwes e-entwe wes éwéments e-en wigne et wes éwéments de bwoc :
 
-- Modèle de contenu
-  - : En général, les éléments en ligne ne peuvent contenir que des données ou d'autres éléments en ligne. Il n'est pas possible de placer des éléments de bloc à l'intérieur d'éléments en ligne.
-- Formatage
-  - : Par défaut, les éléments en ligne n'introduisent pas de saut de ligne dans le flux du document. En revanche, les éléments de bloc provoquent un saut de ligne (ce comportement peut être modifié grâce au CSS).
+- modèwe de contenu
+  - : e-en généwaw, o.O wes éwéments e-en wigne nye peuvent conteniw que des données ou d'autwes éwéments e-en wigne. òωó iw ny'est p-pas possibwe de p-pwacew des éwéments de bwoc à w-w'intéwieuw d'éwéments en wigne. 😳😳😳
+- f-fowmatage
+  - : p-paw défaut, σωσ w-wes éwéments en wigne ny'intwoduisent p-pas d-de saut de wigne dans we fwux du document. (⑅˘꒳˘) en wevanche, (///ˬ///✿) w-wes éwéments d-de bwoc pwovoquent u-un saut de wigne (ce compowtement peut êtwe m-modifié gwâce au css). 🥺
 
-## Liste des éléments en ligne
+## w-wiste des éwéments e-en wigne
 
-Bien que cette notion de présentation soit désormais (depuis HTML5) portée par le CSS et remplacée par les [catégories de contenu](/fr/docs/Web/HTML/Content_categories), voici les éléments HTML qui se comportent par défaut comme des éléments en ligne:
+bien que cette nyotion de pwésentation soit d-désowmais (depuis h-htmw5) powtée p-paw we css et w-wempwacée paw wes [catégowies de contenu](/fw/docs/web/htmw/content_categowies), OwO v-voici wes éwéments htmw qui se compowtent paw défaut comme des éwéments en wigne:
 
-- [`<a>`](/fr/docs/Web/HTML/Element/a)
-- [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)
-- [`<acronym>`](/fr/docs/Web/HTML/Element/acronym)
-- [`<audio>`](/fr/docs/Web/HTML/Element/audio) (si les contrôles sont visibles)
-- [`<b>`](/fr/docs/Web/HTML/Element/b)
-- [`<bdi>`](/fr/docs/Web/HTML/Element/bdi)
-- [`<bdo>`](/fr/docs/Web/HTML/Element/bdo)
-- [`<big>`](/fr/docs/Web/HTML/Element/big)
-- [`<br>`](/fr/docs/Web/HTML/Element/br)
-- [`<button>`](/fr/docs/Web/HTML/Element/button)
-- [`<canvas>`](/fr/docs/Web/HTML/Element/canvas)
-- [`<cite>`](/fr/docs/Web/HTML/Element/cite)
-- [`<code>`](/fr/docs/Web/HTML/Element/code)
-- [`<data>`](/fr/docs/Web/HTML/Element/data)
-- [`<datalist>`](/fr/docs/Web/HTML/Element/datalist)
-- [`<del>`](/fr/docs/Web/HTML/Element/del)
-- [`<dfn>`](/fr/docs/Web/HTML/Element/dfn)
-- [`<em>`](/fr/docs/Web/HTML/Element/em)
-- [`<embed>`](/fr/docs/Web/HTML/Element/embed)
-- [`<i>`](/fr/docs/Web/HTML/Element/i)
-- [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
-- [`<img>`](/fr/docs/Web/HTML/Element/img)
-- [`<input>`](/fr/docs/Web/HTML/Element/input)
-- [`<ins>`](/fr/docs/Web/HTML/Element/ins)
-- [`<kbd>`](/fr/docs/Web/HTML/Element/kbd)
-- [`<label>`](/fr/docs/Web/HTML/Element/label)
-- [`<map>`](/fr/docs/Web/HTML/Element/map)
-- [`<mark>`](/fr/docs/Web/HTML/Element/mark)
-- [`<meter>`](/fr/docs/Web/HTML/Element/meter)
-- [`<noscript>`](/fr/docs/Web/HTML/Element/noscript)
-- [`<object>`](/fr/docs/Web/HTML/Element/object)
-- [`<output>`](/fr/docs/Web/HTML/Element/output)
-- [`<picture>`](/fr/docs/Web/HTML/Element/picture)
-- [`<progress>`](/fr/docs/Web/HTML/Element/progress)
-- [`<q>`](/fr/docs/Web/HTML/Element/q)
-- [`<ruby>`](/fr/docs/Web/HTML/Element/ruby)
-- [`<s>`](/fr/docs/Web/HTML/Element/s)
-- [`<samp>`](/fr/docs/Web/HTML/Element/samp)
-- [`<script>`](/fr/docs/Web/HTML/Element/script)
-- [`<select>`](/fr/docs/Web/HTML/Element/select)
-- [`<slot>`](/fr/docs/Web/HTML/Element/slot)
-- [`<small>`](/fr/docs/Web/HTML/Element/small)
-- [`<span>`](/fr/docs/Web/HTML/Element/span)
-- [`<strong>`](/fr/docs/Web/HTML/Element/strong)
-- [`<sub>`](/fr/docs/Web/HTML/Element/sub)
-- [`<sup>`](/fr/docs/Web/HTML/Element/sup)
-- [`<svg>`](/fr/docs/Web/SVG/Element/svg)
-- [`<template>`](/fr/docs/Web/HTML/Element/template)
-- [`<u>`](/fr/docs/Web/HTML/Element/u)
-- [`<tt>`](/fr/docs/Web/HTML/Element/tt)
-- [`<var>`](/fr/docs/Web/HTML/Element/var)
-- [`<video>`](/fr/docs/Web/HTML/Element/video)
-- [`<wbr>`](/fr/docs/Web/HTML/Element/wbr)
+- [`<a>`](/fw/docs/web/htmw/ewement/a)
+- [`<abbw>`](/fw/docs/web/htmw/ewement/abbw)
+- [`<acwonym>`](/fw/docs/web/htmw/ewement/acwonym)
+- [`<audio>`](/fw/docs/web/htmw/ewement/audio) (si w-wes contwôwes sont visibwes)
+- [`<b>`](/fw/docs/web/htmw/ewement/b)
+- [`<bdi>`](/fw/docs/web/htmw/ewement/bdi)
+- [`<bdo>`](/fw/docs/web/htmw/ewement/bdo)
+- [`<big>`](/fw/docs/web/htmw/ewement/big)
+- [`<bw>`](/fw/docs/web/htmw/ewement/bw)
+- [`<button>`](/fw/docs/web/htmw/ewement/button)
+- [`<canvas>`](/fw/docs/web/htmw/ewement/canvas)
+- [`<cite>`](/fw/docs/web/htmw/ewement/cite)
+- [`<code>`](/fw/docs/web/htmw/ewement/code)
+- [`<data>`](/fw/docs/web/htmw/ewement/data)
+- [`<datawist>`](/fw/docs/web/htmw/ewement/datawist)
+- [`<dew>`](/fw/docs/web/htmw/ewement/dew)
+- [`<dfn>`](/fw/docs/web/htmw/ewement/dfn)
+- [`<em>`](/fw/docs/web/htmw/ewement/em)
+- [`<embed>`](/fw/docs/web/htmw/ewement/embed)
+- [`<i>`](/fw/docs/web/htmw/ewement/i)
+- [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)
+- [`<img>`](/fw/docs/web/htmw/ewement/img)
+- [`<input>`](/fw/docs/web/htmw/ewement/input)
+- [`<ins>`](/fw/docs/web/htmw/ewement/ins)
+- [`<kbd>`](/fw/docs/web/htmw/ewement/kbd)
+- [`<wabew>`](/fw/docs/web/htmw/ewement/wabew)
+- [`<map>`](/fw/docs/web/htmw/ewement/map)
+- [`<mawk>`](/fw/docs/web/htmw/ewement/mawk)
+- [`<metew>`](/fw/docs/web/htmw/ewement/metew)
+- [`<noscwipt>`](/fw/docs/web/htmw/ewement/noscwipt)
+- [`<object>`](/fw/docs/web/htmw/ewement/object)
+- [`<output>`](/fw/docs/web/htmw/ewement/output)
+- [`<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe)
+- [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess)
+- [`<q>`](/fw/docs/web/htmw/ewement/q)
+- [`<wuby>`](/fw/docs/web/htmw/ewement/wuby)
+- [`<s>`](/fw/docs/web/htmw/ewement/s)
+- [`<samp>`](/fw/docs/web/htmw/ewement/samp)
+- [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt)
+- [`<sewect>`](/fw/docs/web/htmw/ewement/sewect)
+- [`<swot>`](/fw/docs/web/htmw/ewement/swot)
+- [`<smow>`](/fw/docs/web/htmw/ewement/smow)
+- [`<span>`](/fw/docs/web/htmw/ewement/span)
+- [`<stwong>`](/fw/docs/web/htmw/ewement/stwong)
+- [`<sub>`](/fw/docs/web/htmw/ewement/sub)
+- [`<sup>`](/fw/docs/web/htmw/ewement/sup)
+- [`<svg>`](/fw/docs/web/svg/ewement/svg)
+- [`<tempwate>`](/fw/docs/web/htmw/ewement/tempwate)
+- [`<u>`](/fw/docs/web/htmw/ewement/u)
+- [`<tt>`](/fw/docs/web/htmw/ewement/tt)
+- [`<vaw>`](/fw/docs/web/htmw/ewement/vaw)
+- [`<video>`](/fw/docs/web/htmw/ewement/video)
+- [`<wbw>`](/fw/docs/web/htmw/ewement/wbw)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les éléments de bloc](/fr/docs/Glossary/Block-level_content)
-- [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
-- [La propriété CSS `display`](/fr/docs/Web/CSS/display)
-- [Les catégories de contenu](/fr/docs/Web/HTML/Content_categories)
-- [Les éléments de bloc et les éléments en ligne dans le flux normal](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [wes éwéments d-de bwoc](/fw/docs/gwossawy/bwock-wevew_content)
+- [wéféwence des éwéments h-htmw](/fw/docs/web/htmw/ewement)
+- [wa pwopwiété css `dispway`](/fw/docs/web/css/dispway)
+- [wes c-catégowies d-de contenu](/fw/docs/web/htmw/content_categowies)
+- [wes éwéments d-de bwoc e-et wes éwéments e-en wigne dans we fwux nyowmaw](/fw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow)
 
-{{QuickLinksWithSubpages("/fr/docs/Web/HTML/")}}
+{{quickwinkswithsubpages("/fw/docs/web/htmw/")}}

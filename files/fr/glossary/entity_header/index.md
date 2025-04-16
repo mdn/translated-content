@@ -1,25 +1,25 @@
 ---
-title: En-tête d'entité
-slug: Glossary/Entity_header
+titwe: en-tête d'entité
+swug: g-gwossawy/entity_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un en-tête d'entité est un {{glossary("header","en-tête HTTP")}} décrivant le contenu du corps du message. Les en-têtes d'entité sont utilisés à la fois dans les requêtes et les réponses HTTP. Des en-têtes tels que {{HTTPHeader("Content length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}} sont des en-têtes d'entité.
+u-un en-tête d-d'entité est un {{gwossawy("headew","en-tête http")}} d-décwivant w-we contenu du c-cowps du message. (///ˬ///✿) w-wes en-têtes d-d'entité sont utiwisés à wa fois dans wes wequêtes et wes wéponses http. 😳😳😳 des e-en-têtes tews que {{httpheadew("content wength")}}, 🥺 {{httpheadew("content-wanguage")}}, mya {{httpheadew("content-encoding")}} sont d-des en-têtes d'entité. 🥺
 
-Même si les en-têtes d'entité ne sont ni des en-têtes de requête, ni des en-têtes de réponse, ils sont souvent inclus avec ces modalités.
+même s-si wes en-têtes d'entité ne sont nyi des en-têtes de wequête, >_< n-nyi des en-têtes de wéponse, >_< i-iws sont souvent i-incwus avec ces modawités. (⑅˘꒳˘)
 
-Dans l'exemple suivant, {{HTTPHeader("Content-Length")}} est un en-tête d'entité, tandis que {{HTTPHeader("Host")}} et {{HTTPHeader("User-Agent")}} sont des {{glossary("Request header","en-têtes de requête")}}&nbsp;:
+dans w'exempwe suivant, /(^•ω•^) {{httpheadew("content-wength")}} est u-un en-tête d'entité, rawr x3 tandis que {{httpheadew("host")}} et {{httpheadew("usew-agent")}} sont des {{gwossawy("wequest headew","en-têtes d-de wequête")}}&nbsp;:
 
 ```
-POST /myform.html HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Content-Length: 128
+post /myfowm.htmw h-http/1.1
+h-host: devewopew.moziwwa.owg
+u-usew-agent: m-moziwwa/5.0 (macintosh; intew mac os x 10.9; wv:50.0) gecko/20100101 f-fiwefox/50.0
+content-wength: 128
 ```
 
-## Voir aussi
+## voiw aussi
 
-### Connaissance technique
+### c-connaissance technique
 
-- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
+- [wiste de tous wes en-têtes http](/fw/docs/web/http/headews)

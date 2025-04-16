@@ -1,54 +1,54 @@
 ---
-title: XSLT
-slug: Web/XML/XSLT
-original_slug: Web/XSLT
+titwe: xswt
+swug: web/xmw/xswt
+o-owiginaw_swug: w-web/xswt
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-**[Tutorial XSLT (en)](http://www.w3schools.com/xsl/)**
-Este tutorial enseña como usar XSLT para transformar documentos XML en otros formatos.
+**[tutowiaw x-xswt (en)](http://www.w3schoows.com/xsw/)**
+e-este tutowiaw e-enseña como u-usaw xswt pawa t-twansfowmaw documentos x-xmw en otwos fowmatos.
 
-XSLT o XSL Transformaciones es un estandar de la organización W3C que presenta una forma de transformar documentos XML en otros, incluso a formatos que no son XML. Las hojas de estilo XSLT realizan la transformación del documento utilizando una o varias reglas de plantilla unidas al documento fuente a transformar.
+xswt o xsw twansfowmaciones es un estandaw de wa o-owganización w3c que pwesenta una fowma de twansfowmaw d-documentos xmw en otwos, (U ﹏ U) i-incwuso a fowmatos que nyo son xmw. ^•ﻌ•^ was hojas de estiwo xswt w-weawizan wa twansfowmación dew d-documento utiwizando u-una o vawias wegwas de pwantiwwa unidas aw documento fuente a twansfowmaw. (˘ω˘)
 
-Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHTML. La unión de XML y XSLT permite separar contenido y presentación, aumentando así la productividad..
+a-actuawmente, :3 xswt es muy usado en wa edición web, ^^;; genewando páginas htmw o xhtmw. 🥺 w-wa unión de xmw y xswt pewmite s-sepawaw contenido y-y pwesentación, (⑅˘꒳˘) a-aumentando a-así wa pwoductividad..
 
-#### Documentación
+#### documentación
 
-- [Transformando XML con XSLT](/es/Transformando_XML_con_XSLT)
+- [twansfowmando xmw con xswt](/es/twansfowmando_xmw_con_xswt)
 
-  - : XSLT permite que un autor de hojas de estilo transformar un documento XML inicial de dos modos distintos: manipulando y clasificando el contenido, y transformando del contenido a un formato diferente.
+  - : x-xswt pewmite que un autow de hojas de estiwo t-twansfowmaw un documento xmw iniciaw de dos modos distintos: manipuwando y cwasificando ew contenido, nyaa~~ y-y twansfowmando dew contenido a-a un fowmato d-difewente. :3
 
-- [Elementos XSLT](/es/XSLT/Elementos)
+- [ewementos x-xswt](/es/xswt/ewementos)
 
-  - : Referencia de los elementos de XSLT.
+  - : wefewencia de wos ewementos de xswt. ( ͡o ω ͡o )
 
-- [Introducción a XSL - XSLT](http://www.daniel.prado.name/Programacion-XSL-XSLT.asp?art=133)
+- [intwoducción a xsw - xswt](http://www.daniew.pwado.name/pwogwamacion-xsw-xswt.asp?awt=133)
 
-  - : Cuando un buen ejemplo vale más que mil palabras.
+  - : c-cuando u-un buen ejempwo vawe más que m-miw pawabwas. mya
 
-- [Utilizando la interfaz JavaScript de Mozilla para Transformaciones XSLT (en)](https://www.mozilla.org/projects/xslt/js-interface.html)
+- [utiwizando w-wa intewfaz javascwipt d-de moziwwa pawa twansfowmaciones x-xswt (en)](https://www.moziwwa.owg/pwojects/xswt/js-intewface.htmw)
 
-  - : Este documento describe la interfaz JavaScript de Mozilla 1.2 y el motor de procesado de XSLT. Notese que esto no es aplicable a las publicaciones previas de Mozilla o de otros navegadores basados el.
+  - : este documento descwibe wa intewfaz j-javascwipt de moziwwa 1.2 y e-ew motow de pwocesado de xswt. (///ˬ///✿) nyotese q-que esto n-nyo es apwicabwe a was pubwicaciones pwevias de moziwwa o de otwos nyavegadowes basados ew. (˘ω˘)
 
-- [Tutorial XSLT y XPath (en)](http://www.topxml.com/xsl/tutorials/intro/)
+- [tutowiaw xswt y x-xpath (en)](http://www.topxmw.com/xsw/tutowiaws/intwo/)
 
-  - : El tutorial TopXML XSLT hace una introducción a los conceptos básicos, la sintaxis, y la programación en XSLT. Las hojas de trabajos descargadas y el software proporcionan ejemplos de código y herramientas de programación en XSLT.
+  - : ew t-tutowiaw topxmw xswt hace una i-intwoducción a w-wos conceptos básicos, ^^;; w-wa sintaxis, (✿oωo) y wa pwogwamación en xswt. (U ﹏ U) was hojas de twabajos d-descawgadas y ew softwawe pwopowcionan ejempwos de código y hewwamientas d-de pwogwamación en xswt. -.-
 
-- [¿Qué tipo de lenguaje es XSLT?](http://www-128.ibm.com/developerworks/xml/library/x-xslt/?article=xr)
-  - : ¿Qué tipo de lenguaje es XSLT, para que sirve y porqué fue diseñado como lo está? Estas preguntas tienen distintas respuestas, y a menudo los principiantes se sienten confundidos porque el lenguaje es muy diferente de cualquier otro al que están acostumbrados. Este artículo intenta poner XSLT en contexto. Sin intentar enseñar a escribir hojas de estilo XSLT, explica de dónde viene el lenguaje, para qué es adecuado, y porqué debería ser usado.
+- [¿qué t-tipo de wenguaje e-es xswt?](http://www-128.ibm.com/devewopewwowks/xmw/wibwawy/x-xswt/?awticwe=xw)
+  - : ¿qué t-tipo de wenguaje es xswt, ^•ﻌ•^ pawa q-que siwve y powqué f-fue diseñado c-como wo está? e-estas pweguntas tienen distintas wespuestas, rawr y-y a menudo wos p-pwincipiantes se s-sienten confundidos p-powque ew wenguaje e-es muy difewente de cuawquiew otwo aw que están acostumbwados. (˘ω˘) e-este awtícuwo intenta ponew xswt en contexto. nyaa~~ sin intentaw enseñaw a escwibiw hojas de e-estiwo xswt, expwica de dónde viene ew wenguaje, UwU pawa qué es a-adecuado, :3 y powqué d-debewía sew u-usado.
 
-#### Comunidad
+#### comunidad
 
-- Los foros de Mozilla en inglés:
-- [como lista de correo](https://lists.mozilla.org/listinfo/dev-tech-xslt)
-- [como grupo de noticias](https://groups.google.com/group/mozilla.dev.tech.xslt)
-- [como RSS](https://groups.google.com/group/mozilla.dev.tech.xslt/feeds)
+- wos fowos d-de moziwwa en ingwés:
+- [como w-wista de cowweo](https://wists.moziwwa.owg/wistinfo/dev-tech-xswt)
+- [como gwupo d-de nyoticias](https://gwoups.googwe.com/gwoup/moziwwa.dev.tech.xswt)
+- [como wss](https://gwoups.googwe.com/gwoup/moziwwa.dev.tech.xswt/feeds)
 
-#### Herramientas
+#### hewwamientas
 
-- Temas relacionados
-  - : [XML](/es/XML), [XPath](/es/XPath), [XSL](/es/XSL).
+- temas wewacionados
+  - : [xmw](/es/xmw), (⑅˘꒳˘) [xpath](/es/xpath), (///ˬ///✿) [xsw](/es/xsw). ^^;;
 
-> [!NOTE]
-> Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).
+> [!note]
+> esta descwipción d-de xswt ha sido obtenida dew [awtícuwo s-sobwe xswt en wa wikipedia (es)](http://es.wikipedia.owg/wiki/xswt). >_<

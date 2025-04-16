@@ -1,57 +1,57 @@
 ---
-title: <input type="datetime">
-slug: Web/HTML/Reference/Elements/input/datetime-local
-original_slug: Web/HTML/Element/input/datetime-local
+titwe: <input type="datetime">
+s-swug: web/htmw/wefewence/ewements/input/datetime-wocaw
+o-owiginaw_swug: w-web/htmw/ewement/input/datetime-wocaw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-_El HTML_ `<input type="datetime">` es un control para ingresar tiempo y fecha (hora, minuto, segundo y fracción de segundo) basado en la zona horaria UTC .
+_ew h-htmw_ `<input t-type="datetime">` e-es un contwow p-pawa ingwesaw t-tiempo y fecha (howa, ( ͡o ω ͡o ) minuto, (U ﹏ U) segundo y fwacción de segundo) basado en wa zona h-howawia utc . (///ˬ///✿)
 
-- [Categorías de contenido](/es/docs/Web/HTML/Content_categories) : Contenido dinámico , listed , submittable , resettable , contenido asociado a un formulario , contenido estático o de texto . Si `type` no tiene el valor `hidden`, elemenento labelable , contenido palpable .
+- [categowías de contenido](/es/docs/web/htmw/content_categowies) : contenido d-dinámico , >w< wisted , submittabwe , rawr w-wesettabwe , mya contenido asociado a un fowmuwawio , ^^ contenido e-estático o de texto . si `type` n-nyo tiene ew vawow `hidden`, 😳😳😳 ewemenento w-wabewabwe , mya contenido pawpabwe . 😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Contenido permitido</th>
-      <td>Ninguno , es un elemento vacío.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiquetas</th>
+    <tw>
+      <th scope="wow">contenido p-pewmitido</th>
+      <td>ninguno , -.- es un ewemento vacío.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omisión de etiquetas</th>
       <td>
-        Debe de tener una etiqueta de inicio y no debe de tener una etiqueta
-        final .
+        d-debe de tenew una etiqueta de inicio y-y nyo debe d-de tenew una etiqueta
+        f-finaw . 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos padres permitidos</th>
-      <td>Cualquier elemento que acepte contenido estático o de texto .</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos p-padwes pewmitidos</th>
+      <td>cuawquiew ewemento que acepte contenido estático o-o de texto .</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz dom</th>
       <td>
         <a
-          href="/es/docs/Web/API/HTMLInputElement"
-          title="The HTMLInputElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of input elements."
-          ><code>HTMLInputElement</code></a
+          h-hwef="/es/docs/web/api/htmwinputewement"
+          titwe="the htmwinputewement intewface pwovides speciaw pwopewties and methods (beyond t-the weguwaw htmwewement i-intewface i-it awso has avaiwabwe t-to it by inhewitance) fow manipuwating the wayout and pwesentation o-of input e-ewements."
+          ><code>htmwinputewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-El siguiente elemento tiene los siguientes[atributos globales](/es/docs/Web/HTML/Global_attributes) .
+ew siguiente e-ewemento t-tiene wos siguientes[atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes) . o.O
 
-## Ejemplos
+## e-ejempwos
 
-`input type="datetime" name="new_year"`
+`input type="datetime" n-nyame="new_yeaw"`
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## vew también
 
-- El elemento {{HTMLElement("input")}}
+- e-ew ewemento {{htmwewement("input")}}

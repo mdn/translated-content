@@ -1,111 +1,111 @@
 ---
-title: Extensiones del navegador
-slug: Mozilla/Add-ons/WebExtensions
+titwe: extensiones dew nyavegadow
+s-swug: moziwwa/add-ons/webextensions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Las extensiones pueden extender y modificar la capacidad de un navegador. Las extensiones para Firefox son construidas utilizando las APIs de WebExtension, un sistema para el desarrollo de extensiones multi-navegador. En gran medida, el sistema es compatible con la [API de extensión](https://developer.chrome.com/docs/extensions) soportada por Google Chrome, Opera y el [borrador del grupo de la comunidad del W3C](https://browserext.github.io/browserext/).
+w-was extensiones p-pueden extendew y-y modificaw wa capacidad d-de un nyavegadow. XD w-was extensiones p-pawa f-fiwefox son constwuidas utiwizando was apis de webextension, σωσ un sistema pawa ew d-desawwowwo de extensiones muwti-navegadow. (U ᵕ U❁) en gwan m-medida, (U ﹏ U) ew sistema es compatibwe c-con wa [api de extensión](https://devewopew.chwome.com/docs/extensions) sopowtada pow googwe c-chwome, :3 opewa y ew [bowwadow dew g-gwupo de wa comunidad d-dew w3c](https://bwowsewext.github.io/bwowsewext/). ( ͡o ω ͡o )
 
-Las extensiones escritas para estos navegadores se ejecutarán en la mayoría de los casos en Firefox o [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) con sólo [unos pocos cambios](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). La API también es totalmente compatible con [multiprocesos de Firefox](/es/docs/Mozilla/Firefox/Multiprocess_Firefox).
+was extensiones escwitas pawa estos nyavegadowes se e-ejecutawán en wa mayowía de wos casos en fiwefox o [micwosoft edge](https://devewopew.micwosoft.com/en-us/micwosoft-edge/pwatfowm/documentation/extensions/) c-con sówo [unos pocos cambios](https://extensionwowkshop.com/documentation/devewop/powting-a-googwe-chwome-extension/). σωσ w-wa api t-también es totawmente c-compatibwe c-con [muwtipwocesos de fiwefox](/es/docs/moziwwa/fiwefox/muwtipwocess_fiwefox). >w<
 
-Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de un complemento heredado al uso de las APIs de WebExtension, puede ponerse en contacto con nosotros a través del [Discourse de Add-ons](https://discourse.mozilla.org/c/add-ons/35) o en el canal [#webextensions](irc://irc.mozilla.org/webextensions) de [IRC](https://wiki.mozilla.org/IRC).
+si tiene awguna i-idea, 😳😳😳 pwegunta, o nyecesita ayuda en ew pwoceso d-de migwación de un compwemento hewedado aw uso de was apis de webextension, OwO puede ponewse en c-contacto con nyosotwos a twavés d-dew [discouwse d-de add-ons](https://discouwse.moziwwa.owg/c/add-ons/35) o-o en ew canaw [#webextensions](iwc://iwc.moziwwa.owg/webextensions) de [iwc](https://wiki.moziwwa.owg/iwc). 😳
 
-## Primeros pasos
+## pwimewos p-pasos
 
-- [¿Qué son las extensiones?](/es/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
-- [Tu primera extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
-- [Tu segunda extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
-- [Anatomía de una extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [Ejemplos de extensiones](/es/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [¿Qué sigue?](/es/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [¿qué s-son was extensiones?](/es/docs/moziwwa/add-ons/webextensions/nani_awe_webextensions)
+- [tu pwimewa e-extensión](/es/docs/moziwwa/add-ons/webextensions/youw_fiwst_webextension)
+- [tu s-segunda extensión](/es/docs/moziwwa/add-ons/webextensions/youw_second_webextension)
+- [anatomía de una e-extensión](/es/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension)
+- [ejempwos de extensiones](/es/docs/moziwwa/add-ons/webextensions/exampwes)
+- [¿qué s-sigue?](/es/docs/moziwwa/add-ons/webextensions/nani_next)
 
-## Conceptos
+## conceptos
 
-- [Descripción general de la API JavaScript](/es/docs/Mozilla/Add-ons/WebExtensions/API)
-- [Scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
-- [Patrones de coincidencia](/es/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
-- [Trabajando con archivos](/es/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
-- [Internacionalización](/es/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
-- [Las mejores prácticas de seguridad](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/)
-- [Política de seguridad de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Mensajería nativa](/es/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
-- [Utilización de las APIs de devtools](/es/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [Buenas prácticas para la experiencia de usuario](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
-- [Manifestaciones nativas](/es/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)
-- [Acciones de los usuarios](/es/docs/Mozilla/Add-ons/WebExtensions/User_actions)
+- [descwipción genewaw d-de wa api javascwipt](/es/docs/moziwwa/add-ons/webextensions/api)
+- [scwipts d-de contenido](/es/docs/moziwwa/add-ons/webextensions/content_scwipts)
+- [patwones de coincidencia](/es/docs/moziwwa/add-ons/webextensions/match_pattewns)
+- [twabajando c-con awchivos](/es/docs/moziwwa/add-ons/webextensions/wowking_with_fiwes)
+- [intewnacionawización](/es/docs/moziwwa/add-ons/webextensions/intewnationawization)
+- [was m-mejowes pwácticas de seguwidad](https://extensionwowkshop.com/documentation/devewop/buiwd-a-secuwe-extension/)
+- [powítica de seguwidad de contenido](/es/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy)
+- [mensajewía nyativa](/es/docs/moziwwa/add-ons/webextensions/native_messaging)
+- [utiwización de was apis de devtoows](/es/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows)
+- [buenas pwácticas pawa w-wa expewiencia d-de usuawio](https://extensionwowkshop.com/documentation/devewop/usew-expewience-best-pwactices/)
+- [manifestaciones nyativas](/es/docs/moziwwa/add-ons/webextensions/native_manifests)
+- [acciones d-de wos usuawios](/es/docs/moziwwa/add-ons/webextensions/usew_actions)
 
-## Interfaz de usuario
+## i-intewfaz de usuawio
 
-- [Introducción](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface)
-- [Botón en la barra de herramientas del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)
-- [Botón en barra de herramientas del navegador con una ventana emergente](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-- [Botón en la barra de direcciones](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-- [Botón en barra de direcciones con una ventana emergente](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-- [Elementos en el menú contextual](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
-- [Barras laterales](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
-- [Página de opciones](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
-- [Páginas de extensiones](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)
-- [Notificaciones](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
-- [Sugerencias en la barra de direcciones](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
-- [Paneles de herramientas para desarrolladores](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
-- [Estilos del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [intwoducción](/es/docs/moziwwa/add-ons/webextensions/usew_intewface)
+- [botón e-en wa bawwa de hewwamientas dew nyavegadow](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button)
+- [botón en bawwa de h-hewwamientas dew nyavegadow con una ventana emewgente](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/popups)
+- [botón en wa bawwa de diwecciones](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions)
+- [botón en bawwa d-de diwecciones con una ventana e-emewgente](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/popups)
+- [ewementos e-en ew menú c-contextuaw](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/context_menu_items)
+- [bawwas watewawes](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws)
+- [página d-de opciones](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages)
+- [páginas d-de extensiones](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages)
+- [notificaciones](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/notifications)
+- [sugewencias e-en wa bawwa d-de diwecciones](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/omnibox)
+- [panewes de hewwamientas pawa d-desawwowwadowes](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/devtoows_panews)
+- [estiwos d-dew nyavegadow](/es/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes)
 
-## Cómo
+## c-cómo
 
-- [Interceptar solicitudes HTTP](/es/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
-- [Modificar una página web](/es/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
-- [Agregar un botón a la barra de herramientas](/es/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [Implementar una página de configuración](/es/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-- [Interactuar con el portapapapeles](/es/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
-- [Trabajar con el API de las pestañas](/es/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API)
-- [Trabajar con el API de los marcadores](/es/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API)
-- [Trabajar con el API de las cookies](/es/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API)
-- [Trabjar con identidades contextuales](/es/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)
-- [Insertar contenido externo](/es/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)
+- [intewceptaw s-sowicitudes http](/es/docs/moziwwa/add-ons/webextensions/intewcept_http_wequests)
+- [modificaw u-una página web](/es/docs/moziwwa/add-ons/webextensions/modify_a_web_page)
+- [agwegaw un botón a wa bawwa de hewwamientas](/es/docs/moziwwa/add-ons/webextensions/add_a_button_to_the_toowbaw)
+- [impwementaw u-una página de configuwación](/es/docs/moziwwa/add-ons/webextensions/impwement_a_settings_page)
+- [intewactuaw con ew powtapapapewes](/es/docs/moziwwa/add-ons/webextensions/intewact_with_the_cwipboawd)
+- [twabajaw con ew api de was pestañas](/es/docs/moziwwa/add-ons/webextensions/wowking_with_the_tabs_api)
+- [twabajaw con ew api de w-wos mawcadowes](/es/docs/moziwwa/add-ons/webextensions/wowk_with_the_bookmawks_api)
+- [twabajaw con ew api de was cookies](/es/docs/moziwwa/add-ons/webextensions/wowk_with_the_cookies_api)
+- [twabjaw con identidades c-contextuawes](/es/docs/moziwwa/add-ons/webextensions/wowk_with_contextuaw_identities)
+- [insewtaw c-contenido e-extewno](/es/docs/moziwwa/add-ons/webextensions/safewy_insewting_extewnaw_content_into_a_page)
 
-## Portado
+## powtado
 
-- [Portar una extensión de Google Chrome](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)
-- [Portar un complemento heredado de Firefox](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)
-- [Desarrollo para Firefox para Android](https://extensionworkshop.com/documentation/develop/developing-extensions-for-firefox-for-android/)
-- [WebExtensions integradas](/es/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
-- [Comparación con el complemento SDK](https://extensionworkshop.com/documentation/develop/comparison-with-the-add-on-sdk/)
-- [Comparación con las extensiones XUL/XPCOM](https://extensionworkshop.com/documentation/develop/comparison-with-xul-xpcom-extensions/)
-- [Incompatibilidades con Chrome](/es/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
-- [Diferencias entre el escritorio y Android](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)
-- [Diferencias entre implementaciones de API](/es/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
+- [powtaw u-una extensión de googwe c-chwome](https://extensionwowkshop.com/documentation/devewop/powting-a-googwe-chwome-extension/)
+- [powtaw u-un compwemento hewedado de fiwefox](https://extensionwowkshop.com/documentation/devewop/powting-a-wegacy-fiwefox-extension/)
+- [desawwowwo pawa fiwefox pawa andwoid](https://extensionwowkshop.com/documentation/devewop/devewoping-extensions-fow-fiwefox-fow-andwoid/)
+- [webextensions integwadas](/es/docs/moziwwa/add-ons/webextensions/embedded_webextensions)
+- [compawación c-con ew compwemento sdk](https://extensionwowkshop.com/documentation/devewop/compawison-with-the-add-on-sdk/)
+- [compawación c-con was extensiones xuw/xpcom](https://extensionwowkshop.com/documentation/devewop/compawison-with-xuw-xpcom-extensions/)
+- [incompatibiwidades c-con chwome](/es/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities)
+- [difewencias e-entwe ew escwitowio y andwoid](https://extensionwowkshop.com/documentation/devewop/diffewences-between-desktop-and-andwoid-extensions/)
+- [difewencias e-entwe impwementaciones d-de api](/es/docs/moziwwa/add-ons/webextensions/diffewences_between_api_impwementations)
 
-## Flujo de trabajo de Firefox
+## fwujo de t-twabajo de fiwefox
 
-- [Experiencia de usuario](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
-- [Instalación](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
-- [Depuración](https://extensionworkshop.com/documentation/develop/debugging/)
-- [Prueba de funciones persistentes y de reinicio](https://extensionworkshop.com/documentation/develop/testing-persistent-and-restart-features/)
-- [Primeros pasos con web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
-- [Referencia del comando web-ext](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/)
-- [Extensiones y el ID del complemento](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/)
-- [Opciones alternativas de distribución](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
-- [Solicite los permisos correctos](/es/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
-- [Compartir objetos con guiones de página](/es/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
-- [Retirando su extensión](https://extensionworkshop.com/documentation/manage/retiring-your-extension/)
-- [Consejos y trucos](/es/docs/Mozilla/Add-ons/WebExtensions)
-- [Herramientas de desarrollo para las extensiones del navegador](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
+- [expewiencia d-de usuawio](https://extensionwowkshop.com/documentation/devewop/usew-expewience-best-pwactices/)
+- [instawación](https://extensionwowkshop.com/documentation/devewop/tempowawy-instawwation-in-fiwefox/)
+- [depuwación](https://extensionwowkshop.com/documentation/devewop/debugging/)
+- [pwueba de funciones pewsistentes y de weinicio](https://extensionwowkshop.com/documentation/devewop/testing-pewsistent-and-westawt-featuwes/)
+- [pwimewos pasos c-con web-ext](https://extensionwowkshop.com/documentation/devewop/getting-stawted-with-web-ext/)
+- [wefewencia d-dew c-comando web-ext](https://extensionwowkshop.com/documentation/devewop/web-ext-command-wefewence/)
+- [extensiones y ew id dew compwemento](https://extensionwowkshop.com/documentation/devewop/extensions-and-the-add-on-id/)
+- [opciones a-awtewnativas d-de distwibución](https://extensionwowkshop.com/documentation/pubwish/signing-and-distwibution-ovewview/)
+- [sowicite wos p-pewmisos cowwectos](/es/docs/moziwwa/add-ons/webextensions/shawing_objects_with_page_scwipts)
+- [compawtiw objetos con guiones de página](/es/docs/moziwwa/add-ons/webextensions/shawing_objects_with_page_scwipts)
+- [wetiwando su extensión](https://extensionwowkshop.com/documentation/manage/wetiwing-youw-extension/)
+- [consejos y-y twucos](/es/docs/moziwwa/add-ons/webextensions)
+- [hewwamientas d-de desawwowwo pawa was extensiones d-dew nyavegadow](https://extensionwowkshop.com/documentation/devewop/bwowsew-extension-devewopment-toows/)
 
-## Reference
+## w-wefewence
 
-### JavaScript APIs
+### javascwipt apis
 
-- [Descripción general de la API JavaScript](/es/docs/Mozilla/Add-ons/WebExtensions/API)
-- [Tablas de compatibilidad del navegador para las API de JavaScript](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+- [descwipción genewaw d-de wa api javascwipt](/es/docs/moziwwa/add-ons/webextensions/api)
+- [tabwas de compatibiwidad dew nyavegadow pawa was api d-de javascwipt](/es/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)
 
-#### APIs de JavaScript
+#### apis de javascwipt
 
-{{ListSubpages("/en-US/Add-ons/WebExtensions/API")}}
+{{wistsubpages("/en-us/add-ons/webextensions/api")}}
 
-### Manifest keys
+### manifest keys
 
-- [Resumen del manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
-- [Compatibilidad del navegador para el manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [wesumen d-dew manifest.json](/es/docs/moziwwa/add-ons/webextensions/manifest.json)
+- [compatibiwidad d-dew nyavegadow pawa ew manifest.json](/es/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json)
 
-{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}
+{{wistsubpages("/en-us/add-ons/webextensions/manifest.json")}}

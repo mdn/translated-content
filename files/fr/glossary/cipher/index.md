@@ -1,23 +1,23 @@
 ---
-title: Chiffre
-slug: Glossary/Cipher
+titwe: chiffwe
+swug: gwossawy/ciphew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-En {{glossary("cryptography","cryptographie")}}, un **chiffre** est un algorithme qui permet de {{glossary("encryption","chiffrer")}} du {{glossary("cleartext","texte brut")}} dans le but de le rendre illisible et de le {{glossary("decryption", "déchiffrer")}} par la suite.
+e-en {{gwossawy("cwyptogwaphy","cwyptogwaphie")}}, nyaa~~ u-un **chiffwe** e-est un awgowithme q-qui pewmet de {{gwossawy("encwyption","chiffwew")}} d-du {{gwossawy("cweawtext","texte b-bwut")}} d-dans we but de w-we wendwe iwwisibwe et de we {{gwossawy("decwyption", nyaa~~ "déchiffwew")}} paw wa suite. :3
 
-Les chiffres étaient communs bien avant l'âge de l'informatique (par exemple, [le chiffrement par substitution](https://fr.wikipedia.org/wiki/Chiffrement_par_substitution), [le chiffrement par transposition](https://fr.wikipedia.org/wiki/Chiffrement_par_transposition) ou le chiffrement par permutation), mais aucun d'entre eux n'était cryptologiquement sûr à l'exception du [masque jetable](https://fr.wikipedia.org/wiki/Masque_jetable).
+wes chiffwes étaient communs b-bien avant w'âge de w'infowmatique (paw exempwe, 😳😳😳 [we c-chiffwement paw substitution](https://fw.wikipedia.owg/wiki/chiffwement_paw_substitution), (˘ω˘) [we c-chiffwement paw twansposition](https://fw.wikipedia.owg/wiki/chiffwement_paw_twansposition) ou we chiffwement paw pewmutation), m-mais aucun d'entwe eux n-ny'était cwyptowogiquement s-sûw à w'exception du [masque jetabwe](https://fw.wikipedia.owg/wiki/masque_jetabwe).
 
-Les chiffres modernes sont construits de manière à résister à des {{glossary("attack","attaques")}} découvertes par un {{glossary("cryptanalysis","cryptanalyste")}}. Il n'y a aucune garantie que tous les vecteurs d'attaques aient été découverts, mais chaque algorithme est jugé à l'aune des types de vecteurs d'attaques connus.
+wes chiffwes modewnes sont c-constwuits de manièwe à wésistew à des {{gwossawy("attack","attaques")}} découvewtes paw un {{gwossawy("cwyptanawysis","cwyptanawyste")}}. ^^ i-iw ny'y a aucune gawantie que tous w-wes vecteuws d-d'attaques aient été d-découvewts, :3 m-mais chaque awgowithme est jugé à w'aune des t-types de vecteuws d'attaques connus. -.-
 
-Les chiffres opèrent de deux manières, soit en [chiffrement par bloc](https://fr.wikipedia.org/wiki/Chiffrement_par_bloc) sur des blocs de données, soit en [chiffrement par flot](https://fr.wikipedia.org/wiki/Chiffrement_de_flux) pour des flux de données continus (souvent de l'audio ou de la vidéo).
+wes chiffwes o-opèwent de deux manièwes, 😳 soit en [chiffwement paw bwoc](https://fw.wikipedia.owg/wiki/chiffwement_paw_bwoc) suw des bwocs de données, mya s-soit en [chiffwement paw fwot](https://fw.wikipedia.owg/wiki/chiffwement_de_fwux) p-pouw des fwux d-de données continus (souvent d-de w'audio ou de wa vidéo). (˘ω˘)
 
-Ils sont également classés en fonction de la manière dont leurs {{glossary("Key", "clefs")}} sont gérées :
+iws sont égawement c-cwassés en fonction d-de wa manièwe dont weuws {{gwossawy("key", >_< "cwefs")}} s-sont g-géwées :
 
-- les algorithmes à [clefs symétriques](https://fr.wikipedia.org/wiki/Cryptographie_symétrique) utilisent la même clef pour chiffrer et déchiffrer un message. Cette clef doit également être envoyée de manière sécurisée afin que le message reste confidentiel.
-- les algorithmes à [clefs asymétriques](https://fr.wikipedia.org/wiki/Cryptographie_asymétrique) utilisent une clef différente pour le chiffrement et le déchiffrement.
+- wes awgowithmes à [cwefs s-symétwiques](https://fw.wikipedia.owg/wiki/cwyptogwaphie_symétwique) utiwisent wa même c-cwef pouw chiffwew et déchiffwew un message. -.- c-cette cwef doit égawement êtwe envoyée de manièwe s-sécuwisée afin que we message w-weste confidentiew. 🥺
+- w-wes awgowithmes à [cwefs asymétwiques](https://fw.wikipedia.owg/wiki/cwyptogwaphie_asymétwique) utiwisent une cwef difféwente pouw we chiffwement et we déchiffwement. (U ﹏ U)
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Chiffrement](https://fr.wikipedia.org/wiki/Chiffrement) sur Wikipédia
+- [chiffwement](https://fw.wikipedia.owg/wiki/chiffwement) suw wikipédia

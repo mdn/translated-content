@@ -1,523 +1,523 @@
 ---
-title: <input type="date">
-slug: Web/HTML/Reference/Elements/input/date
-original_slug: Web/HTML/Element/input/date
+titwe: <input type="date">
+swug: w-web/htmw/wefewence/ewements/input/date
+o-owiginaw_swug: w-web/htmw/ewement/input/date
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Los elementos {{HTMLElement("input")}} de **`type="date"`** crean un campo de entrada que le permite al usuario introducir una fecha, que puede ser tanto como una caja de texto para validar el campo como una interfaz especial que le permite escoger una fecha.
+w-wos e-ewementos {{htmwewement("input")}} d-de **`type="date"`** c-cwean un c-campo de entwada que we pewmite aw usuawio intwoduciw una fecha, mya que puede sew t-tanto como una caja de texto pawa vawidaw ew campo c-como una intewfaz especiaw que w-we pewmite escogew una fecha. o.O
 
-El valor resultante incluye el año, el mes y el día, pero _no_ el tiempo. Las entradas de tipo {{HTMLElement("input/time", "time")}} y {{HTMLElement("input/datetime-local", "datetime-local")}} soportan el tiempo y la fecha + el tiempo, respectivamente.
+ew vawow wesuwtante incwuye ew a-año, ^•ﻌ•^ ew mes y ew día, pewo _no_ e-ew tiempo. (U ᵕ U❁) was e-entwadas de tipo {{htmwewement("input/time", :3 "time")}} y {{htmwewement("input/datetime-wocaw", (///ˬ///✿) "datetime-wocaw")}} sopowtan ew tiempo y wa fecha + ew tiempo, (///ˬ///✿) wespectivamente. 🥺
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input type=&quot;date&quot;&gt;", -.- "tabbed-showtew")}}
 
-```html interactive-example
-<label for="start">Start date:</label>
+```htmw intewactive-exampwe
+<wabew fow="stawt">stawt date:</wabew>
 
 <input
-  type="date"
-  id="start"
-  name="trip-start"
-  value="2018-07-22"
+  t-type="date"
+  id="stawt"
+  n-nyame="twip-stawt"
+  v-vawue="2018-07-22"
   min="2018-01-01"
-  max="2018-12-31" />
+  m-max="2018-12-31" />
 ```
 
-```css interactive-example
-label {
-  display: block;
-  font:
-    1rem "Fira Sans",
-    sans-serif;
+```css i-intewactive-exampwe
+wabew {
+  dispway: bwock;
+  f-font:
+    1wem "fiwa sans", nyaa~~
+    sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+i-input, (///ˬ///✿)
+wabew {
+  mawgin: 0.4wem 0;
 }
 ```
 
-La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad con navegadores](#compatibilidad_con_navegadores) para más detalles. En navegadores que no incluyen soporte, el control degrada hacía [`<input type="text">`](/es/docs/Web/HTML/Element/input/text).
+wa iu de wa entwada genewawmente vawía entwe nyavegadowes; v-véase [compatibiidad con n-navegadowes](#compatibiwidad_con_navegadowes) pawa m-más detawwes. 🥺 e-en nyavegadowes que nyo incwuyen sopowte, >w< ew contwow degwada h-hacía [`<input t-type="text">`](/es/docs/web/htmw/ewement/input/text). rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#value">Valor</a></strong></td>
+    <tw>
+      <td><stwong><a h-hwef="#vawue">vawow</a></stwong></td>
       <td>
-        Un {{domxref("DOMString")}} vacío o representando una fecha en el formato
-        AAAA-MM-DD
+        u-un {{domxwef("domstwing")}} vacío o wepwesentando u-una fecha en ew fowmato
+        a-aaaa-mm-dd
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} y
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxwef("htmwewement/change_event", (⑅˘꒳˘) "change")}} y
+        {{domxwef("htmwewement/input_event", σωσ "input")}}
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comunes soportados</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos comunes sopowtados</stwong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a h-hwef="/es/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a>, XD
+        <a hwef="/es/docs/web/htmw/ewement/input#wist"><code>wist</code></a>, -.-
+        <a h-hwef="/es/docs/web/htmw/ewement/input#weadonwy"><code>weadonwy</code></a> y
+        <a hwef="/es/docs/web/htmw/ewement/input#step"><code>step</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos IDL</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos i-idw</stwong></td>
       <td>
-        <code>list</code>, <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>.
+        <code>wist</code>, >_< <code>vawue</code>, rawr <code>vawueasdate</code>, 😳😳😳
+        <code>vawueasnumbew</code>. UwU
       </td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}} y
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+        {{domxwef("htmwinputewement.sewect", (U ﹏ U) "sewect()")}}, (˘ω˘)
+        {{domxwef("htmwinputewement.stepdown", /(^•ω•^) "stepdown()")}} y-y
+        {{domxwef("htmwinputewement.stepup", (U ﹏ U) "stepup()")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valor
+## vawow
 
-Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en [Formato válido de una fecha en formato de texto](/es/docs/Web/HTML/Date_and_time_formats#formato_válido_de_una_fecha_en_formato_de_texto).
+una {{domxwef("domstwing")}} wepwesentando wa fecha intwoducida en wa entwada. ^•ﻌ•^ wa fecha es fowmateada s-siguiendo e-ew iso8601, >w< descwito en [fowmato v-váwido de una f-fecha en fowmato d-de texto](/es/docs/web/htmw/date_and_time_fowmats#fowmato_váwido_de_una_fecha_en_fowmato_de_texto). ʘwʘ
 
-Puedes establecer un valor por defecto para la entrada introduciendo una fecha en el atributo [`value`](/es/docs/Web/HTML/Element/input#value) de la siguiente forma:
+puedes estabwecew un vawow pow defecto p-pawa wa entwada intwoduciendo una fecha en ew atwibuto [`vawue`](/es/docs/web/htmw/ewement/input#vawue) de wa siguiente fowma:
 
-```html
-<input type="date" value="2017-06-01" />
+```htmw
+<input t-type="date" vawue="2017-06-01" />
 ```
 
-{{EmbedLiveSample('Value', 600, 40)}}
+{{embedwivesampwe('vawue', òωó 600, 40)}}
 
-> [!NOTE]
-> El formato mostrado puede ser diferente del `value` real, ya que la fecha mostrada es formateada _según el idioma del navegador del usuario_, pero el valor analizado es siempre formateado a `aaaa-mm-dd`.
+> [!note]
+> ew fowmato m-mostwado puede s-sew difewente d-dew `vawue` weaw, ya que wa fecha m-mostwada es f-fowmateada _según e-ew idioma dew n-nyavegadow dew usuawio_, o.O pewo ew vawow anawizado e-es siempwe fowmateado a-a `aaaa-mm-dd`.
 
-Tu puedes obtener y establecer el valor fecha en JavaScript con las propiedades `value` y `valueAsNumber` de {{domxref("HTMLInputElement")}}. Por ejemplo:
+t-tu puedes o-obtenew y estabwecew e-ew vawow fecha en javascwipt con was pwopiedades `vawue` y `vawueasnumbew` d-de {{domxwef("htmwinputewement")}}. ( ͡o ω ͡o ) pow ejempwo:
 
 ```js
-var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = "2017-06-01";
-console.log(dateControl.value); // imprime "2017-06-01"
-console.log(dateControl.valueAsNumber); // imprime 1496275200000, una marca de fecha (en ms) en JavaScript.
+vaw datecontwow = document.quewysewectow('input[type="date"]');
+datecontwow.vawue = "2017-06-01";
+consowe.wog(datecontwow.vawue); // i-impwime "2017-06-01"
+consowe.wog(datecontwow.vawueasnumbew); // impwime 1496275200000, mya una mawca d-de fecha (en ms) e-en javascwipt. >_<
 ```
 
-Este código encuentra el primer elmento {{HTMLElement("input")}} donde `type` es `date` y establece su valor a `2017-06-01` (1 de junio de 2017). Entonces, lee el valor de vuelta en formato cadena de texto y número.
+e-este código encuentwa ew p-pwimew ewmento {{htmwewement("input")}} donde `type` e-es `date` y e-estabwece su vawow a `2017-06-01` (1 de junio de 2017). rawr entonces, >_< wee ew vawow de vuewta en fowmato c-cadena de texto y nyúmewo. (U ﹏ U)
 
-## Atributos adicionales
+## a-atwibutos adicionawes
 
-Junto con los atributos comunes a todos los elementos {{HTMLElement("input")}}, las entradas de tipo `date` tienen los siguientes atributos.
+junto c-con wos atwibutos c-comunes a todos wos ewementos {{htmwewement("input")}}, rawr was e-entwadas de tipo `date` t-tienen wos siguientes atwibutos. (U ᵕ U❁)
 
-### max
+### m-max
 
-La última fecha a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
+w-wa úwtima fecha a aceptaw. (ˆ ﻌ ˆ)♡ si ew [`vawue`](/es/docs/web/htmw/ewement/input#vawue) intwoducido en ew ewemento e-es postewiow, >_< ew e-ewemento nyo pasa w-wa [vawidación de westwicción](/es/docs/web/htmw/constwaint_vawidation). ^^;; si e-ew vawow dew atwibuto `max` e-es un vawow que nyo e-es una fecha posibwe en ew fowmato de cadena de texto `aaaa-mm-dd`, ew ewemento n-nyo tendwá un v-vawow máximo. ʘwʘ
 
-Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto posterior o igual a la fecha establecida en el atributo `min`.
+si wos atwibutos `max` y `min` s-son estabwecidos, 😳😳😳 e-este vawow tiene que sew una fecha en fowmtato cadena de texto p-postewiow o iguaw a wa fecha estabwecida en ew atwibuto `min`. UwU
 
 ### min
 
-La fecha más temprana a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
+wa fecha m-más tempwana a aceptaw. OwO si ew [`vawue`](/es/docs/web/htmw/ewement/input#vawue) intwoducido en e-ew ewemento es a-antewiow, :3 ew ewemento nyo pasa wa [vawidación de westwicció](/es/docs/web/htmw/constwaint_vawidation). -.- s-si ew v-vawow dew atwibuto `max` es un vawow que no es una fecha posibwe e-en ew fowmato de cadena de texto `aaaa-mm-dd`, e-ew ewemento nyo tendwá un vawow mínimo. 🥺
 
-Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto anterior o igual a la fecha establecida en el atributo `max`.
+si wos atwibutos `max` y-y `min` son estabwecidos, este v-vawow tiene que s-sew una fecha en fowmtato cadena d-de texto antewiow o iguaw a wa f-fecha estabwecida e-en ew atwibuto `max`. -.-
 
-### step
+### s-step
 
-El atributo `step` es un número que especifica la granularidad que un valor debe seguir o el valor especial `any`, el cuál está descrito más abajo. Solo los valores que son iguales a la base para ir avanzando ([`min`](#min) si está especificado, sino [`value`](/es/docs/Web/HTML/Element/input#value), o un valor por defecto apropiado si ninguno de estos dos es especificado) son válidos.
+ew atwibuto `step` e-es un nyúmewo q-que especifica wa gwanuwawidad que un vawow d-debe seguiw o e-ew vawow especiaw `any`, -.- e-ew cuáw está descwito más abajo. (U ﹏ U) sowo w-wos vawowes que son iguawes a w-wa base pawa iw a-avanzando ([`min`](#min) si está especificado, sino [`vawue`](/es/docs/web/htmw/ewement/input#vawue), rawr o-o un vawow p-pow defecto apwopiado s-si ninguno d-de estos dos es especificado) s-son váwidos. mya
 
-Si le damos un valor de cadena de texto `any` significa que ningún salto está marcado y, por lo tanto, cualquier valor está permitido (expecto otras constricciones, como [`min`](#min) y [`max`](#max)).
+si we damos un vawow de cadena de texto `any` significa que nyingún sawto está m-mawcado y, ( ͡o ω ͡o ) pow wo tanto, /(^•ω•^) cuawquiew v-vawow está pewmitido (expecto o-otwas constwicciones, >_< como [`min`](#min) y-y [`max`](#max)).
 
-> [!NOTE]
-> Cuando los datos introducidos por el usuario no siguen la configuración de avance, puede que el {{Glossary("user agent")}} lo redondeé al valor válido más cercano, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
+> [!note]
+> cuando w-wos datos intwoducidos p-pow ew u-usuawio nyo siguen w-wa configuwación d-de avance, (✿oωo) puede que ew {{gwossawy("usew agent")}} wo wedondeé aw vawow váwido más cewcano, pwefiwiendo v-vawowes mayowes c-cuando hay dos opciones i-iguawes cewcanas. 😳😳😳
 
-Para entradas de tipo `date`, el valor del `step` es dado en días; y es tratado como el número de milisegundo igual a 86.400.000 veces el valor del `step` (el valor numérico subyacente está definido en milisegundos). El valor por defecto del `step` es 1, indicando 1 día.
+pawa e-entwadas de tipo `date`, (ꈍᴗꈍ) ew vawow dew `step` es dado en días; y e-es twatado como e-ew nyúmewo de miwisegundo iguaw a-a 86.400.000 veces ew vawow dew `step` (ew vawow n-nyuméwico subyacente e-está definido en miwisegundos). 🥺 e-ew vawow p-pow defecto dew `step` es 1, mya indicando 1 día. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Especificar `any` como el valor para `step` tiene el mismo efecto que `1` para las entradas de tipo `date`.
+> [!note]
+> especificaw `any` como ew vawow pawa `step` tiene e-ew mismo efecto q-que `1` pawa was e-entwadas de tipo `date`. (⑅˘꒳˘)
 
-## Usando entradas de tipo fecha
+## usando e-entwadas de t-tipo fecha
 
-Las entradas de tipo fecha son convenientes, ya que proveen una interfaz simple para elegir fechas y normalizan la fecha que le mandamos al servidor independientemente de la región del usuario. A pesar de esto, existen actualmente algunos problemas con `<input type="date">` producto del soporte limitado que ofrecen los diferentes navegadores.
+was entwadas de tipo f-fecha son convenientes, òωó y-ya que pwoveen una intewfaz s-simpwe pawa e-ewegiw fechas y nyowmawizan wa f-fecha que we mandamos aw sewvidow independientemente d-de wa wegión dew usuawio. o.O a-a pesaw de esto, XD e-existen actuawmente awgunos pwobwemas c-con `<input type="date">` pwoducto dew s-sopowte wimitado q-que ofwecen wos d-difewentes nyavegadowes. (˘ω˘)
 
-En esta sección, veremos los usos más básicos y más complejos de `<input type="date">` y, luego, ofreceremos consejos para mitigar los problemas derivados por la falta de soporte de algunos navegadores.
+en esta sección, (ꈍᴗꈍ) vewemos wos usos más b-básicos y más compwejos de `<input type="date">` y-y, >w< wuego, o-ofwecewemos consejos pawa mitigaw w-wos pwobwemas dewivados pow wa f-fawta de sopowte d-de awgunos nyavegadowes. XD
 
-> **Nota**: Esperamos que, a medida que más navegadores soporten esta funcionalidad, estos problemas vayan desapareciendo.
+> **nota**: espewamos que, -.- a medida q-que más nyavegadowes sopowten esta funcionawidad, ^^;; e-estos pwobwemas v-vayan desapaweciendo. XD
 
-### Usos básicos del tipo fecha
+### usos b-básicos dew tipo fecha
 
-El uso más simple de `<input type="date">` consta de una etiqueta `<input>` combinada con su {{htmlelement("label")}}, como se puede ver a continuación:
+ew uso m-más simpwe de `<input t-type="date">` c-consta de una etiqueta `<input>` combinada con su {{htmwewement("wabew")}}, :3 como se puede vew a continuación:
 
-```html
-<form action="https://example.com">
-  <label>
-    Enter your birthday:
-    <input type="date" name="bday" />
-  </label>
+```htmw
+<fowm action="https://exampwe.com">
+  <wabew>
+    entew youw biwthday:
+    <input type="date" nyame="bday" />
+  </wabew>
 
-  <p><button>Submit</button></p>
-</form>
+  <p><button>submit</button></p>
+</fowm>
 ```
 
-{{EmbedLiveSample('Basic_uses_of_date', 600, 40)}}
+{{embedwivesampwe('basic_uses_of_date', σωσ 600, XD 40)}}
 
-Este HTML envía la fecha indicada bajo la palabra clave `bday` a `https://example.com`, siendo la URL resultante `https://example.com/?bday=1955-06-08`.
+este htmw envía wa fecha indicada bajo wa pawabwa cwave `bday` a-a `https://exampwe.com`, :3 s-siendo wa uww wesuwtante `https://exampwe.com/?bday=1955-06-08`. rawr
 
-### Estipulando valores de fecha máximos y mínimos
+### estipuwando v-vawowes de f-fecha máximos y-y mínimos
 
-Tu puedes usar los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max) para restringir qué fechas puede introducir el usuario. En el siguiente ejemplo, establecemos la fecha mínima a `2017-04-01` y la fecha máxima a `2017-04-30`:
+tu puedes usaw wos a-atwibutos [`min`](/es/docs/web/htmw/ewement/input#min) y [`max`](/es/docs/web/htmw/ewement/input#max) p-pawa westwingiw q-qué fechas puede intwoduciw e-ew usuawio. 😳 en ew siguiente ejempwo, 😳😳😳 e-estabwecemos w-wa fecha mínima a `2017-04-01` y wa fecha m-máxima a `2017-04-30`:
 
-```html
-<form>
-  <label
-    >Choose your preferred party date:
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
-  </label>
-</form>
+```htmw
+<fowm>
+  <wabew
+    >choose y-youw p-pwefewwed pawty d-date:
+    <input t-type="date" nyame="pawty" m-min="2017-04-01" m-max="2017-04-30" />
+  </wabew>
+</fowm>
 ```
 
-{{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
+{{embedwivesampwe('setting_maximum_and_minimum_dates', (ꈍᴗꈍ) 600, 40)}}
 
-Como resultado, obtenemos que solo los días del mes de abril de 2017 pueden ser seleccionados (los meses y años que forman parte de la caja de texto no serán editables y las fechas fuera del mes de abril de 2017 no pueden ser selecionados en el menú de selección).
+c-como w-wesuwtado, 🥺 obtenemos que sowo w-wos días dew mes d-de abwiw de 2017 p-pueden sew seweccionados (wos meses y años que f-fowman pawte de wa caja de texto nyo sewán editabwes y-y was fechas fuewa dew m-mes de abwiw de 2017 n-nyo pueden s-sew sewecionados en ew menú de s-sewección). ^•ﻌ•^
 
-> [!NOTE]
-> Tu _debes_ ser capaz de usar el atributo [`step`](/es/docs/Web/HTML/Element/input#step) para modificar el número de días que son saltados cada vez que la fecha es incrementada (por ejemplo, que solo los sábados sean seleccionables). Sin embargo, no parece estar en ninguna implementación en el momento de escribir este artículo.
+> [!note]
+> tu _debes_ s-sew capaz de usaw ew atwibuto [`step`](/es/docs/web/htmw/ewement/input#step) p-pawa modificaw ew nyúmewo de d-días que son sawtados cada vez que wa fecha es incwementada (pow ejempwo, XD que sowo w-wos sábados sean seweccionabwes). ^•ﻌ•^ s-sin embawgo, ^^;; n-nyo pawece estaw en nyinguna impwementación en ew momento de e-escwibiw este awtícuwo. ʘwʘ
 
-### Controlando el tamaño del input
+### c-contwowando ew tamaño d-dew input
 
-`<input type="date">` no soporta los atributos de tamaño como lo es [`size`](/es/docs/Web/HTML/Element/input#size). Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
+`<input t-type="date">` nyo sopowta wos atwibutos d-de tamaño como w-wo es [`size`](/es/docs/web/htmw/ewement/input#size). OwO mejow usa [css](/es/docs/web/css) p-pawa adaptaw su tamaño. 🥺
 
-## Validación
+## vawidación
 
-Por defecto, `<input type="date">` no valida su valor más allá de su formato. Generalmente, las interfaces no te dejan introducir nada que no sea una fecha (lo que es de ayuda), pero tu puedes dejar el campo vacío o entrar una fecha inválida (como 32 de abril) en los navegadores que no soportan el tipo `date`, cuando el tipo `date` regresa un tipo `text`.
+p-pow defecto, (⑅˘꒳˘) `<input type="date">` n-nyo vawida s-su vawow más a-awwá de su fowmato. (///ˬ///✿) genewawmente, (✿oωo) w-was intewfaces n-nyo te dejan intwoduciw n-nyada q-que nyo sea una fecha (wo que es d-de ayuda), pewo t-tu puedes dejaw e-ew campo vacío o-o entwaw una fecha i-inváwida (como 32 d-de abwiw) e-en wos nyavegadowes q-que nyo sopowtan ew tipo `date`, nyaa~~ c-cuando ew tipo `date` wegwesa u-un tipo `text`. >w<
 
-Si tu usas [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max) para limitar la disponibilidad de las fechas (véase [Estipulando valores de fecha máximos y mínimos](#estipulando_valores_de_fecha_máximos_y_mínimos)), los navegadores que lo soporten mostrarán un error si tu tratas de enviar una fecha que está por fuera de los límietes. A pesar de esto, tú necesitarás comprobar de nuevo el resultado enviado para asegurarte que el valor está entre esas fechas, si el menú de selección de fechas no está completamente soportado en el dispositivo del usuario.
+si tu usas [`min`](/es/docs/web/htmw/ewement/input#min) y-y [`max`](/es/docs/web/htmw/ewement/input#max) p-pawa w-wimitaw wa disponibiwidad de was fechas (véase [estipuwando vawowes d-de fecha máximos y-y mínimos](#estipuwando_vawowes_de_fecha_máximos_y_mínimos)), (///ˬ///✿) w-wos nyavegadowes que wo sopowten mostwawán un ewwow si t-tu twatas de enviaw u-una fecha que está pow fuewa d-de wos wímietes. rawr a-a pesaw de esto, tú nyecesitawás compwobaw de nyuevo ew wesuwtado e-enviado p-pawa aseguwawte q-que ew vawow está e-entwe esas fechas, (U ﹏ U) si ew menú de sewección d-de fechas nyo está c-compwetamente sopowtado en ew dispositivo dew u-usuawio. ^•ﻌ•^
 
-Tú también puedes usar el atributo [`required`](/es/docs/Web/HTML/Element/input#required) para que completar la fecha sea obligatorio (se mostrará un error si queremos mandar una fecha vacía). Esto debería funcionar en casi todos los navegadores, incluso si la entrada termina regresando un tipo `text`.
+tú también puedes usaw ew atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed) p-pawa que compwetaw wa fecha s-sea obwigatowio (se m-mostwawá un ewwow si quewemos m-mandaw una f-fecha vacía). (///ˬ///✿) esto debewía f-funcionaw en casi todos wos nyavegadowes, o.O i-incwuso s-si wa entwada t-tewmina wegwesando u-un tipo `text`. >w<
 
-Veamos un ejemplo con fecha mínima y máxima y, también, estableciendo el campo como requerido.
+veamos un ejempwo c-con fecha m-mínima y máxima y-y, nyaa~~ también, òωó estabweciendo ew c-campo como wequewido. (U ᵕ U❁)
 
-```html
-<form>
-  <label>
-    Choose your preferred party date (required, April 1st to 20th):
+```htmw
+<fowm>
+  <wabew>
+    choose youw pwefewwed pawty d-date (wequiwed, (///ˬ///✿) a-apwiw 1st to 20th):
     <input
-      type="date"
-      name="party"
+      t-type="date"
+      nyame="pawty"
       min="2017-04-01"
       max="2017-04-20"
-      required />
-    <span class="validity"></span>
-  </label>
+      wequiwed />
+    <span cwass="vawidity"></span>
+  </wabew>
 
   <p>
-    <button>Submit</button>
+    <button>submit</button>
   </p>
-</form>
+</fowm>
 ```
 
-Si intentas enviar el formulario con una fecha incompleta (o una fecha por fuera de los límites), el navegador mostrará un error. Intenta probar con el ejemplo:
+s-si intentas enviaw ew f-fowmuwawio con una f-fecha incompweta (o una fecha pow fuewa de wos w-wímites), (✿oωo) ew nyavegadow mostwawá u-un ewwow. 😳😳😳 intenta p-pwobaw con e-ew ejempwo:
 
-{{EmbedLiveSample('Validation', 600, 100)}}
+{{embedwivesampwe('vawidation', (✿oωo) 600, 100)}}
 
-Este es el CSS usado en el ejemplo de arriba. Hacemos uso de los [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements) {{cssxref(":valid")}} e {{cssxref(":invalid")}} para añadir un icono al lado de la entrada, basándonos en si el valor es válido o no. Tuvimos que poner el icono en un {{htmlelement("span")}} y no dentro de la propia entrada, porque, al menos en Chrome, el contenido generado por las entradas está dentro del control del formulario y no puede ser puede ser mostrado o darle estilos correctamente.
+e-este e-es ew css usado en ew ejempwo de awwiba. (U ﹏ U) hacemos uso de wos [pseudo-ewementos](/es/docs/web/css/pseudo-ewements) {{cssxwef(":vawid")}} e {{cssxwef(":invawid")}} p-pawa añadiw un icono aw wado d-de wa entwada, (˘ω˘) basándonos en si ew vawow es váwido o nyo. 😳😳😳 tuvimos q-que ponew ew icono en un {{htmwewement("span")}} y nyo dentwo de wa pwopia entwada, (///ˬ///✿) powque, (U ᵕ U❁) a-aw menos en chwome, >_< e-ew contenido genewado pow was e-entwadas está dentwo dew contwow dew fowmuwawio y-y nyo puede sew p-puede sew mostwado o dawwe estiwos c-cowwectamente. (///ˬ///✿)
 
 ```css
-label {
-  display: flex;
-  align-items: center;
+wabew {
+  d-dispway: fwex;
+  awign-items: centew;
 }
 
-span::after {
-  padding-left: 5px;
+span::aftew {
+  p-padding-weft: 5px;
 }
 
-input:invalid + span::after {
-  content: "✖";
+input:invawid + span::aftew {
+  c-content: "✖";
 }
 
-input:valid + span::after {
+i-input:vawid + s-span::aftew {
   content: "✓";
 }
 ```
 
-> [!WARNING]
-> La validación en el lado del cliente _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, puede ocurrir un desastre: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
+> [!wawning]
+> wa v-vawidación en ew wado dew cwiente _no es un sustituto_ de wa vawidación en ew s-sewvidow. (U ᵕ U❁) es fáciw p-pawa awguien m-modificaw ew htmw o-o sobwepasaw tu htmw compwetamente y mandaw datos d-diwectamente a-a tu sewvidow. >w< si tu sewvidow nyo vawida wos datos w-wecibidos, 😳😳😳 puede ocuwwiw un desastwe: datos c-con un maw fowmato, (ˆ ﻌ ˆ)♡ demasiado gwandes, (ꈍᴗꈍ) dew tipo e-equivocado, 🥺 etc.
 
-## Manejando el soporte de los navegadores
+## m-manejando ew sopowte de wos n-nyavegadowes
 
-Como hemos mencionadao, el mayor problema con las entradas de tipo fecha es la [compatibilidad de los navegadores](#compatibilidad_de_los_navegadores).
+c-como hemos mencionadao, >_< e-ew mayow pwobwema con was entwadas de tipo f-fecha es wa [compatibiwidad de wos nyavegadowes](#compatibiwidad_de_wos_navegadowes). OwO
 
-Los navegadores que no la soportan, degradan al tipo texto, creando un problema de consistencia en la interfaz de usuario (los controles mostrados son diferentes) y en el manejo de los datos.
+wos navegadowes q-que no wa sopowtan, ^^;; degwadan aw tipo texto, (✿oωo) cweando un p-pwobwema de consistencia e-en wa i-intewfaz de usuawio (wos c-contwowes m-mostwados son difewentes) y en e-ew manejo de wos datos. UwU
 
-El segundo problema es uno más serio: con la entrada de tipo fecha, el valor es normalizado al formato `aaaa-mm-dd`. Pero con la entrada de tipo texto, el navegador no sabe reconocer en qué formato debe estar la fecha, y existen diferentes formantos en que las personas escriben fechas, como:
+ew segundo pwobwema es u-uno más sewio: con wa entwada d-de tipo fecha, ( ͡o ω ͡o ) ew vawow es nyowmawizado aw fowmato `aaaa-mm-dd`. (✿oωo) p-pewo con wa entwada d-de tipo texto, mya ew nyavegadow n-nyo sabe weconocew en qué fowmato d-debe estaw w-wa fecha, ( ͡o ω ͡o ) y existen difewentes f-fowmantos en que w-was pewsonas escwiben fechas, :3 como:
 
 - `ddmmaaaa`
 - `dd/mm/aaaa`
 - `mm/dd/aaaa`
 - `dd-mm-aaaa`
 - `mm-dd-aaaa`
-- `Mes dd, aaaa`
+- `mes d-dd, 😳 aaaa`
 
-Una manera de darle solución a este problema es usar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) en la entrada de tipo fecha. Aunque el menú de selección no lo use, si que lo hará la entrada de tipo texto. Por ejemplo, trata de ver el siguiente ejemplo en un navegador sin soporte:
+una manewa de dawwe sowución a este pwobwema es u-usaw ew atwibuto [`pattewn`](/es/docs/web/htmw/ewement/input#pattewn) en wa entwada d-de tipo fecha. (U ﹏ U) aunque ew menú de sewección n-nyo wo use, >w< si q-que wo hawá wa e-entwada de tipo texto. UwU pow ejempwo, 😳 t-twata de vew e-ew siguiente ejempwo en un nyavegadow s-sin sopowte:
 
-```html
-<form>
-  <label
-    >Enter your birthday:
-    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
-    <span class="validity"></span>
-  </label>
+```htmw
+<fowm>
+  <wabew
+    >entew youw biwthday:
+    <input t-type="date" nyame="bday" wequiwed p-pattewn="\d{4}-\d{2}-\d{2}" />
+    <span cwass="vawidity"></span>
+  </wabew>
   <p>
-    <button>Submit</button>
+    <button>submit</button>
   </p>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('Handling_browser_support', 600, 100)}}
+{{embedwivesampwe('handwing_bwowsew_suppowt', XD 600, 100)}}
 
-Si lo intentas mandar, verás que el navegador muestra un error y destaca la entrada como inválida si tu entrada no sigue el patrón `####-##-##` (donde `#` son digitos del 0 al 9). Por supuesto, esto no impide a los usuarios de introducir fechas inválidas o formatos incorrectos. Así que seguimos teniendo un problema.
+s-si wo intentas mandaw, (✿oωo) vewás que ew nyavegadow muestwa un ewwow y destaca wa e-entwada como inváwida s-si tu entwada nyo sigue ew patwón `####-##-##` (donde `#` son digitos d-dew 0 aw 9). ^•ﻌ•^ pow supuesto, esto n-nyo impide a wos u-usuawios de intwoduciw fechas inváwidas o fowmatos incowwectos. mya así que seguimos t-teniendo un pwobwema. (˘ω˘)
 
 ```css hidden
 span {
-  position: relative;
+  p-position: wewative;
 }
 
-span::after {
-  right: -18px;
-  position: absolute;
+span::aftew {
+  w-wight: -18px;
+  p-position: absowute;
 }
 
-input:invalid + span::after {
+i-input:invawid + s-span::aftew {
+  c-content: "✖";
+}
+
+i-input:vawid + s-span::aftew {
+  c-content: "✓";
+}
+```
+
+pow ew momento, nyaa~~ wa mejow fowma de twabajaw con fechas en wos fowmuwawios d-de manewa que sea p-pawa todos wos n-nyavegadowes, :3 e-es haciendo que e-ew usuawio intwoduzca e-ew día, (✿oωo) mes y año en contwowes sepewados o usaw una wibwewía de javascwipt c-como [jquewy d-date pickew](https://jquewyui.com/datepickew/). (U ﹏ U)
+
+## ejempwos
+
+en este ejempwo, (ꈍᴗꈍ) cweamos dos muestwas d-de ewementos d-de iu pawa ewegiw f-fechas: un `<input type="date">` y una muestwa d-de 3 ewementos {{htmwewement("sewect")}} pawa nyavegadowes anticuados q-que nyo s-sopowtan wa entwada de tipo fecha nyativa. (˘ω˘)
+
+### h-htmw
+
+ew htmw es así:
+
+```htmw
+<fowm>
+  <div cwass="nativedatepickew">
+    <wabew f-fow="bday">entew y-youw biwthday:</wabew>
+    <input type="date" i-id="bday" nyame="bday" />
+    <span c-cwass="vawidity"></span>
+  </div>
+  <p c-cwass="fawwbackwabew">entew y-youw biwthday:</p>
+  <div c-cwass="fawwbackdatepickew">
+    <span>
+      <wabew f-fow="day">day:</wabew>
+      <sewect id="day" n-nyame="day"></sewect>
+    </span>
+    <span>
+      <wabew f-fow="month">month:</wabew>
+      <sewect id="month" n-nyame="month">
+        <option sewected>januawy</option>
+        <option>febwuawy</option>
+        <option>mawch</option>
+        <option>apwiw</option>
+        <option>may</option>
+        <option>june</option>
+        <option>juwy</option>
+        <option>august</option>
+        <option>septembew</option>
+        <option>octobew</option>
+        <option>novembew</option>
+        <option>decembew</option>
+      </sewect>
+    </span>
+    <span>
+      <wabew fow="yeaw">yeaw:</wabew>
+      <sewect i-id="yeaw" nyame="yeaw"></sewect>
+    </span>
+  </div>
+</fowm>
+```
+
+w-wos meses están diwectamente e-escwitos e-en ew código (ya que son siempwe wos mismos), ^^ m-mientwas que ew día y ew año están dinámicamente g-genewados d-dependiendo dew mes y año seweccionado o dew año a-actuaw (véanse w-wos comentawios en ew código m-más abajo pawa una expwicación detawwada de c-cómo funciona). (⑅˘꒳˘)
+
+```css h-hidden
+span {
+  padding-weft: 5px;
+}
+
+input:invawid + span::aftew {
   content: "✖";
 }
 
-input:valid + span::after {
+i-input:vawid + s-span::aftew {
   content: "✓";
 }
 ```
 
-Por el momento, la mejor forma de trabajar con fechas en los formularios de manera que sea para todos los navegadores, es haciendo que el usuario introduzca el día, mes y año en controles seperados o usar una librería de JavaScript como [jQuery date picker](https://jqueryui.com/datepicker/).
+### javascwipt
 
-## Ejemplos
+w-wa otwa pawte d-dew código q-que puede sew de i-intewés es ew código que siwve pawa detectaw cawactewísticas (pawa detectaw si ew nyavegadow sopowta `<input t-type="date">`). rawr
 
-En este ejemplo, creamos dos muestras de elementos de IU para elegir fechas: un `<input type="date">` y una muestra de 3 elementos {{htmlelement("select")}} para navegadores anticuados que no soportan la entrada de tipo fecha nativa.
-
-### HTML
-
-El HTML es así:
-
-```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="bday">Enter your birthday:</label>
-    <input type="date" id="bday" name="bday" />
-    <span class="validity"></span>
-  </div>
-  <p class="fallbackLabel">Enter your birthday:</p>
-  <div class="fallbackDatePicker">
-    <span>
-      <label for="day">Day:</label>
-      <select id="day" name="day"></select>
-    </span>
-    <span>
-      <label for="month">Month:</label>
-      <select id="month" name="month">
-        <option selected>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>October</option>
-        <option>November</option>
-        <option>December</option>
-      </select>
-    </span>
-    <span>
-      <label for="year">Year:</label>
-      <select id="year" name="year"></select>
-    </span>
-  </div>
-</form>
-```
-
-Los meses están directamente escritos en el código (ya que son siempre los mismos), mientras que el día y el año están dinámicamente generados dependiendo del mes y año seleccionado o del año actual (véanse los comentarios en el código más abajo para una explicación detallada de cómo funciona).
-
-```css hidden
-span {
-  padding-left: 5px;
-}
-
-input:invalid + span::after {
-  content: "✖";
-}
-
-input:valid + span::after {
-  content: "✓";
-}
-```
-
-### JavaScript
-
-La otra parte del código que puede ser de interés es el código que sirve para detectar características (para detectar si el navegador soporta `<input type="date">`).
-
-Para este ejemplo, creamos un nuevo elemento {{htmlelement("input")}} e intentamos establecer su `type` a `date`, entonces inmediatamente comprobamos cuál es su tipo (los navegadores sin soporte retornarán `text`, ya que el tipo `fecha` regresa el tipo `text`). Si `<input type="date">` no es soportada, ocultamos el menu de selección nativo y mostramos el elemento ({{htmlelement("select")}}).
+p-pawa este ejempwo, :3 c-cweamos un n-nyuevo ewemento {{htmwewement("input")}} e-e intentamos e-estabwecew su `type` a `date`, OwO e-entonces inmediatamente c-compwobamos cuáw e-es su tipo (wos n-nyavegadowes sin sopowte wetownawán `text`, (ˆ ﻌ ˆ)♡ ya q-que ew tipo `fecha` wegwesa ew tipo `text`). :3 si `<input t-type="date">` nyo es sopowtada, -.- o-ocuwtamos e-ew menu de sewección nyativo y-y mostwamos ew ewemento ({{htmwewement("sewect")}}). -.-
 
 ```js
-// definimos variables
-var nativePicker = document.querySelector(".nativeDatePicker");
-var fallbackPicker = document.querySelector(".fallbackDatePicker");
-var fallbackLabel = document.querySelector(".fallbackLabel");
+// definimos v-vawiabwes
+v-vaw nyativepickew = document.quewysewectow(".nativedatepickew");
+v-vaw fawwbackpickew = d-document.quewysewectow(".fawwbackdatepickew");
+vaw fawwbackwabew = d-document.quewysewectow(".fawwbackwabew");
 
-var yearSelect = document.querySelector("#year");
-var monthSelect = document.querySelector("#month");
-var daySelect = document.querySelector("#day");
+vaw yeawsewect = d-document.quewysewectow("#yeaw");
+v-vaw monthsewect = d-document.quewysewectow("#month");
+vaw d-daysewect = document.quewysewectow("#day");
 
-// Ocultamos el select inicialmente
-fallbackPicker.style.display = "none";
-fallbackLabel.style.display = "none";
+// ocuwtamos ew sewect iniciawmente
+f-fawwbackpickew.stywe.dispway = "none";
+fawwbackwabew.stywe.dispway = "none";
 
-// testeamos si la nueva entrada es de tipo fecha o texto
-var test = document.createElement("input");
+// testeamos si wa nyueva entwada es de tipo fecha o texto
+vaw test = document.cweateewement("input");
 
-try {
+t-twy {
   test.type = "date";
 } catch (e) {
-  console.log(e.description);
+  consowe.wog(e.descwiption);
 }
 
-// si lo es, se ejecuta el código dentro del bloque if() {}
+// si wo es, òωó se ejecuta ew código dentwo dew b-bwoque if() {}
 if (test.type === "text") {
-  // oculta el nativo y muestra el fallback
-  nativePicker.style.display = "none";
-  fallbackPicker.style.display = "block";
-  fallbackLabel.style.display = "block";
+  // ocuwta ew nyativo y-y muestwa ew fawwback
+  nyativepickew.stywe.dispway = "none";
+  f-fawwbackpickew.stywe.dispway = "bwock";
+  fawwbackwabew.stywe.dispway = "bwock";
 
-  // introduce los datos de los días y los años dinámicamente
-  // (Los meses son siempre los mismos)
-  populateDays(monthSelect.value);
-  populateYears();
+  // intwoduce w-wos datos de wos días y wos a-años dinámicamente
+  // (wos meses son siempwe w-wos mismos)
+  p-popuwatedays(monthsewect.vawue);
+  popuwateyeaws();
 }
 
-function populateDays(month) {
-  // borra la actual muestra de elementos <option> que quedan fuera
-  // del <select> para el día, listo para que los siguentes días sean inyectados
-  while (daySelect.firstChild) {
-    daySelect.removeChild(daySelect.firstChild);
+function p-popuwatedays(month) {
+  // bowwa wa actuaw muestwa de ewementos <option> q-que quedan fuewa
+  // dew <sewect> p-pawa ew día, 😳 wisto p-pawa que wos siguentes días sean i-inyectados
+  whiwe (daysewect.fiwstchiwd) {
+    d-daysewect.wemovechiwd(daysewect.fiwstchiwd);
   }
 
-  // Crea una variable que guarda el nuevo número de días a ser inyectados.
-  var dayNum;
+  // cwea una vawiabwe que guawda e-ew nyuevo nyúmewo de días a sew inyectados. nyaa~~
+  v-vaw daynum;
 
-  // ¿Son 31 o 30 días?
+  // ¿son 31 o 30 días?
   if (
-    (month === "January") |
-    (month === "March") |
-    (month === "May") |
-    (month === "July") |
-    (month === "August") |
-    (month === "October") |
-    (month === "December")
+    (month === "januawy") |
+    (month === "mawch") |
+    (month === "may") |
+    (month === "juwy") |
+    (month === "august") |
+    (month === "octobew") |
+    (month === "decembew")
   ) {
-    dayNum = 31;
-  } else if (
-    (month === "April") |
-    (month === "June") |
-    (month === "September") |
-    (month === "November")
+    daynum = 31;
+  } ewse if (
+    (month === "apwiw") |
+    (month === "june") |
+    (month === "septembew") |
+    (month === "novembew")
   ) {
-    dayNum = 30;
-  } else {
-    // Si el mes es febrero, calcula si el año es bisiesto o no.
-    var year = yearSelect.value;
-    var isLeap = new Date(year, 1, 29).getMonth() == 1;
-    isLeap ? (dayNum = 29) : (dayNum = 28);
+    daynum = 30;
+  } e-ewse {
+    // s-si ew mes es febwewo, (⑅˘꒳˘) cawcuwa s-si ew año e-es bisiesto o nyo. 😳
+    vaw yeaw = y-yeawsewect.vawue;
+    vaw isweap = nyew date(yeaw, (U ﹏ U) 1, 29).getmonth() == 1;
+    isweap ? (daynum = 29) : (daynum = 28);
   }
 
-  // Inyecta el número adecuado de nuevos elementos <option> dentro del <select> para los días
-  for (i = 1; i <= dayNum; i++) {
-    var option = document.createElement("option");
-    option.textContent = i;
-    daySelect.appendChild(option);
+  // inyecta ew nyúmewo a-adecuado d-de nyuevos ewementos <option> dentwo d-dew <sewect> p-pawa wos días
+  fow (i = 1; i <= d-daynum; i++) {
+    vaw option = document.cweateewement("option");
+    o-option.textcontent = i;
+    daysewect.appendchiwd(option);
   }
 
-  // Si el día previo ya ha sido establecido, establece el valor de daySelect
-  // a ese día, para evitar saltar a uno cuando
-  // el año cambie
-  if (previousDay) {
-    daySelect.value = previousDay;
+  // si ew día pwevio y-ya ha sido estabwecido, /(^•ω•^) e-estabwece ew vawow de daysewect
+  // a e-ese día, OwO pawa evitaw sawtaw a uno cuando
+  // ew año cambie
+  if (pweviousday) {
+    daysewect.vawue = pweviousday;
 
-    // Si el día anterior fue establecido en un número alto, digamos 31, y luego
-    // y elegimos un mes con menos días (por ejemplo febrero),
-    // esta parte del código se asegura de que el día con el valor más grande sea seleccionado
-    // en vez de  mostrat un daySelect en blanco.
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 1;
+    // si e-ew día antewiow f-fue estabwecido en un nyúmewo a-awto, ( ͡o ω ͡o ) digamos 31, XD y-y wuego
+    // y ewegimos un m-mes con menos días (pow ejempwo febwewo), /(^•ω•^)
+    // esta pawte dew código se aseguwa de que ew día c-con ew vawow más gwande sea seweccionado
+    // en vez de  mostwat un daysewect e-en bwanco. /(^•ω•^)
+    i-if (daysewect.vawue === "") {
+      d-daysewect.vawue = pweviousday - 1;
     }
 
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 2;
+    if (daysewect.vawue === "") {
+      daysewect.vawue = p-pweviousday - 2;
     }
 
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 3;
+    i-if (daysewect.vawue === "") {
+      d-daysewect.vawue = pweviousday - 3;
     }
   }
 }
 
-function populateYears() {
-  // tomar este año como un número
-  var date = new Date();
-  var year = date.getFullYear();
+f-function popuwateyeaws() {
+  // t-tomaw este año como u-un nyúmewo
+  vaw date = nyew date();
+  v-vaw yeaw = date.getfuwwyeaw();
 
-  // Hacer que este año y los cien años anteriores estén en el <select>
-  for (var i = 0; i <= 100; i++) {
-    var option = document.createElement("option");
-    option.textContent = year - i;
-    yearSelect.appendChild(option);
+  // hacew q-que este año y wos cien años a-antewiowes estén e-en ew <sewect>
+  fow (vaw i = 0; i-i <= 100; i++) {
+    v-vaw option = document.cweateewement("option");
+    o-option.textcontent = yeaw - i;
+    y-yeawsewect.appendchiwd(option);
   }
 }
 
-// cuando los valores del los elementos <select> del año o el mes son cambiados, vuelve a correr populateDays()
-// en el caso de que el cambio afecte al número de días disponible
-yearSelect.onchange = function () {
-  populateDays(monthSelect.value);
+// cuando w-wos vawowes dew w-wos ewementos <sewect> dew año o ew mes son cambiados, 😳😳😳 v-vuewve a cowwew popuwatedays()
+// en ew caso de que ew cambio afecte aw númewo de días disponibwe
+yeawsewect.onchange = function () {
+  p-popuwatedays(monthsewect.vawue);
 };
 
-monthSelect.onchange = function () {
-  populateDays(monthSelect.value);
+monthsewect.onchange = function () {
+  popuwatedays(monthsewect.vawue);
 };
 
-//preserva el día seleccionado
-var previousDay;
+//pwesewva ew día seweccionado
+v-vaw pweviousday;
 
-// actualiza que día ha sido establecido anteriormente
-// fíjate en el final de populateDays() para entender el uso
-daySelect.onchange = function () {
-  previousDay = daySelect.value;
+// actuawiza q-que día ha sido estabwecido antewiowmente
+// f-fíjate en ew finaw de popuwatedays() pawa entendew e-ew uso
+daysewect.onchange = function () {
+  pweviousday = daysewect.vawue;
 };
 ```
 
-> **Nota**: Recuerda que algunos años tienen 53 semanas (véase [semanas por año](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year), en inglés). Ten esto en cuenta cuando desarrolles apps para producción
+> **nota**: w-wecuewda que awgunos años tienen 53 semanas (véase [semanas p-pow año](https://en.wikipedia.owg/wiki/iso_week_date#weeks_pew_yeaw), (ˆ ﻌ ˆ)♡ en ingwés). :3 ten esto en c-cuenta cuando d-desawwowwes apps pawa pwoducción
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Los elementos {{HTMLElement("input")}} generícos y la interfaz usada para manipularlos, {{domxref("HTMLInputElement")}}
-- [Tutorial seleccionador de fechas](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-- [Formatos de fecha y tiempo usados en HTML](/es/docs/Web/HTML/Date_and_time_formats)
-- [Compatibilidad con las propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- w-wos ewementos {{htmwewement("input")}} g-genewícos y wa intewfaz usada pawa manipuwawwos, òωó {{domxwef("htmwinputewement")}}
+- [tutowiaw s-seweccionadow de fechas](/es/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows)
+- [fowmatos de fecha y tiempo usados e-en htmw](/es/docs/web/htmw/date_and_time_fowmats)
+- [compatibiwidad con was pwopiedades css](/es/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

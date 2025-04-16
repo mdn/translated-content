@@ -1,189 +1,189 @@
 ---
-title: Lignes directrices pour le HTML
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+titwe: wignes diwectwices pouw w-we htmw
+swug: m-mdn/wwiting_guidewines/wwiting_stywe_guide/code_stywe_guide/htmw
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Les directives suivantes couvrent la manière d'écrire du HTML pour les exemples de code MDN.
+w-wes diwectives s-suivantes couvwent w-wa manièwe d-d'écwiwe du h-htmw pouw wes exempwes d-de code mdn. (U ﹏ U)
 
-## Dans cet article
+## dans cet awticwe
 
-- [Doctype et méta-données](#doctype_and_metadata)
+- [doctype et méta-données](#doctype_and_metadata)
 
-  - [Doctype](#doctype)
-  - [Langue du document](#document_language)
-  - [Jeu de caractères du document](#document_characterset)
-  - [Méta-balise Viewport](#viewport_meta_tag)
+  - [doctype](#doctype)
+  - [wangue du document](#document_wanguage)
+  - [jeu de c-cawactèwes du document](#document_chawactewset)
+  - [méta-bawise viewpowt](#viewpowt_meta_tag)
 
-- [Style général de codage des balises](#general_markup_coding_style)
+- [stywe g-généwaw de codage d-des bawises](#genewaw_mawkup_coding_stywe)
 
-  - [Utiliser les minuscules](#use_lowercase)
-  - [Barre oblique de fermeture (slash)](#trailing_slashes)
-  - [Guillemets des attributs](#quoting_attributes)
-  - [Utiliser les guillemets doubles](#use_double_quotes)
-  - [Attributs booléens](#boolean_attributes)
-  - [Noms de classes et d'ID](#class_and_id_names)
-  - [Références des entités](#entity_references)
+  - [utiwisew wes minuscuwes](#use_wowewcase)
+  - [bawwe obwique de fewmetuwe (swash)](#twaiwing_swashes)
+  - [guiwwemets d-des attwibuts](#quoting_attwibutes)
+  - [utiwisew wes guiwwemets d-doubwes](#use_doubwe_quotes)
+  - [attwibuts b-boowéens](#boowean_attwibutes)
+  - [noms de cwasses et d'id](#cwass_and_id_names)
+  - [wéféwences des entités](#entity_wefewences)
 
-## Doctype et méta-données
+## doctype et méta-données
 
-> [!NOTE]
-> Les directives de cette section ne s'appliquent que lorsque vous devez montrer un document HTML complet. La plupart du temps, vous n'aurez pas besoin de le faire ; un extrait est généralement suffisant pour démontrer une fonctionnalité. Lorsque vous utilisez la macro [EmbedLiveSample](/fr/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), il suffit d'inclure l'extrait HTML ; il sera automatiquement inséré dans un document HTML complet lors de son affichage.
+> [!note]
+> w-wes diwectives de cette section nye s'appwiquent que wowsque vous devez montwew u-un document htmw compwet. w-wa pwupawt du temps, mya v-vous ny'auwez p-pas besoin de w-we faiwe ; un extwait est généwawement suffisant p-pouw démontwew une fonctionnawité. (U ᵕ U❁) wowsque v-vous utiwisez wa macwo [embedwivesampwe](/fw/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes#twaditionaw_wive_sampwes), :3 iw suffit d'incwuwe w'extwait htmw ; iw sewa automatiquement i-inséwé dans un document htmw compwet w-wows de son a-affichage.
 
-### Doctype
+### d-doctype
 
-Vous devez utiliser le doctype HTML5. Il est court, facile à retenir et rétrocompatible :
+vous devez utiwisew we doctype htmw5. mya iw est couwt, OwO f-faciwe à weteniw e-et wétwocompatibwe :
 
-```html example-good
-<!doctype html>
+```htmw exampwe-good
+<!doctype h-htmw>
 ```
 
-### Langue du document
+### w-wangue du document
 
-Définissez la langue du document à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) de votre élément [`<html>`](/fr/docs/Web/HTML/Element/html) :
+définissez w-wa wangue du document à w-w'aide de w'attwibut [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#wang) de votwe éwément [`<htmw>`](/fw/docs/web/htmw/ewement/htmw) :
 
-```html example-good
-<html lang="fr"></html>
+```htmw exampwe-good
+<htmw w-wang="fw"></htmw>
 ```
 
-C'est bon pour l'accessibilité et les moteurs de recherche, cela aide à localiser le contenu et cela rappelle aux gens d'utiliser les meilleures pratiques.
+c'est b-bon pouw w'accessibiwité et wes m-moteuws de wechewche, (ˆ ﻌ ˆ)♡ c-cewa aide à wocawisew we contenu et cewa wappewwe aux gens d'utiwisew wes meiwweuwes pwatiques. ʘwʘ
 
-### Jeu de caractères du document
+### jeu d-de cawactèwes d-du document
 
-Vous devez également définir le jeu de caractères de votre document comme suit :
+vous devez égawement d-définiw we j-jeu de cawactèwes d-de votwe document comme suit :
 
-```html example-good
-<meta charset="utf-8" />
+```htmw exampwe-good
+<meta chawset="utf-8" />
 ```
 
-Utilisez UTF-8 à moins que vous n'ayez une très bonne raison de ne pas le faire ; il couvrira vos besoins en caractères à peu près indépendamment de la langue que vous utilisez dans votre document. En outre, vous devriez toujours spécifier le jeu de caractères le plus tôt possible dans le bloc [`<head>`](/fr/docs/Web/HTML/Element/head) de votre HTML (dans le premier kilooctet), car cela vous protège contre une [vulnérabilité de sécurité d'Internet Explorer](http://support.microsoft.com/kb/928847).
+u-utiwisez utf-8 à moins que vous ny'ayez une twès bonne waison de nye pas w-we faiwe ; iw couvwiwa vos besoins e-en cawactèwes à p-peu pwès i-indépendamment de wa wangue que v-vous utiwisez dans v-votwe document. o.O e-en outwe, vous d-devwiez toujouws spécifiew we jeu de cawactèwes w-we pwus tôt p-possibwe dans w-we bwoc [`<head>`](/fw/docs/web/htmw/ewement/head) d-de votwe htmw (dans w-we pwemiew kiwooctet), UwU caw cewa vous pwotège contwe une [vuwnéwabiwité d-de sécuwité d'intewnet expwowew](http://suppowt.micwosoft.com/kb/928847). rawr x3
 
-### Méta-balise Viewport
+### méta-bawise viewpowt
 
-Enfin, vous devez toujours ajouter la métabalise viewport dans votre HTML [`<head>`](/fr/docs/Web/HTML/Element/head), pour donner à l'exemple une meilleure chance de fonctionner sur les appareils mobiles. Vous devez inclure au moins les éléments suivants dans votre document, que vous pourrez modifier ultérieurement en fonction des besoins :
+enfin, vous devez toujouws ajoutew wa métabawise v-viewpowt dans votwe htmw [`<head>`](/fw/docs/web/htmw/ewement/head), 🥺 pouw donnew à w'exempwe une meiwweuwe c-chance de f-fonctionnew suw w-wes appaweiws mobiwes. vous devez i-incwuwe au moins wes éwéments s-suivants dans v-votwe document, :3 que vous pouwwez modifiew uwtéwieuwement en fonction des besoins :
 
-```html example-good
-<meta name="viewport" content="width=device-width" />
+```htmw exampwe-good
+<meta n-nyame="viewpowt" content="width=device-width" />
 ```
 
-Voir [Zones d'affichage sur mobiles](/fr/docs/Web/CSS/Viewport_concepts#mobile_viewports) pour plus de détails.
+v-voiw [zones d'affichage suw m-mobiwes](/fw/docs/web/css/viewpowt_concepts#mobiwe_viewpowts) p-pouw pwus de détaiws. (ꈍᴗꈍ)
 
-## Style général de codage des balises
+## stywe généwaw de codage d-des bawises
 
-### Utiliser les minuscules
+### u-utiwisew wes minuscuwes
 
-Utilisez les minuscules pour tous les noms d'éléments et les noms/valeurs d'attributs, car elles sont plus nettes et vous permettent d'écrire plus rapidement les balises :
+u-utiwisez wes minuscuwes p-pouw tous wes nyoms d'éwéments et wes nyoms/vaweuws d'attwibuts, 🥺 caw ewwes s-sont pwus nyettes e-et vous pewmettent d-d'écwiwe pwus wapidement w-wes bawises :
 
-C'est bien :
+c-c'est bien :
 
-```html example-good
-<p class="nice">Ça a l'air sympa et soigné</p>
+```htmw exampwe-good
+<p c-cwass="nice">Ça a w'aiw sympa et soigné</p>
 ```
 
-Ce n'est pas très bon :
+ce ny'est pas twès b-bon :
 
-```html-nolint example-bad
-<P CLASS="WHOA-THERE">Pourquoi mon balisage crie-t-il ?</P>
+```htmw-nowint e-exampwe-bad
+<p cwass="whoa-thewe">pouwquoi mon bawisage cwie-t-iw ?</p>
 ```
 
-### Barre oblique de fermeture (slash)
+### b-bawwe obwique d-de fewmetuwe (swash)
 
-N'incluez pas les barres obliques de fin de style XHTML pour les éléments vides, car elles sont inutiles et ralentissent le processus. Elles peuvent également casser les anciens navigateurs si vous ne faites pas attention (bien que, d'après ce dont nous nous souvenons, cela n'a pas été un problème depuis Netscape 4).
+ny'incwuez pas wes bawwes obwiques de f-fin de stywe xhtmw pouw wes éwéments vides, (✿oωo) caw ewwes sont inutiwes et wawentissent w-we pwocessus. (U ﹏ U) ewwes peuvent égawement cassew w-wes anciens n-nyavigateuws si vous nye faites pas attention (bien que, :3 d'apwès c-ce dont nous n-nyous souvenons, ^^;; cewa ny'a pas été un pwobwème depuis nyetscape 4). rawr
 
-C'est bon :
+c-c'est bon :
 
-```html example-good
+```htmw exampwe-good
+<input t-type="text" />
+<hw />
+```
+
+wes bawwes obwiques nye sont pas nyécessaiwes :
+
+```htmw e-exampwe-bad
 <input type="text" />
-<hr />
+<hw />
 ```
 
-Les barres obliques ne sont pas nécessaires :
+### g-guiwwemets d-des attwibuts
 
-```html example-bad
-<input type="text" />
-<hr />
-```
+vous devez mettwe t-toutes wes vaweuws d'attwibut e-entwe guiwwemets. i-iw est tentant d-d'omettwe wes guiwwemets puisque h-htmw5 we pewmet, 😳😳😳 m-mais we bawisage est pwus nyet et pwus faciwe à w-wiwe si vous w-wes incwuez. (✿oωo) p-paw exempwe, OwO ceci est mieux :
 
-### Guillemets des attributs
-
-Vous devez mettre toutes les valeurs d'attribut entre guillemets. Il est tentant d'omettre les guillemets puisque HTML5 le permet, mais le balisage est plus net et plus facile à lire si vous les incluez. Par exemple, ceci est mieux :
-
-```html example-good
+```htmw exampwe-good
 <img
-  src="images/logo.jpg"
-  alt="Une icône de globe circulaire"
-  class="no-border" />
+  s-swc="images/wogo.jpg"
+  awt="une icône d-de gwobe ciwcuwaiwe"
+  c-cwass="no-bowdew" />
 ```
 
 que ça :
 
-```html example-bad
-<img src=images/logo.jpg alt=Une icône de globe circulaire class=no-border>
+```htmw exampwe-bad
+<img swc=images/wogo.jpg a-awt=une i-icône de gwobe c-ciwcuwaiwe cwass=no-bowdew>
 ```
 
-Cela peut également causer des problèmes - dans l'exemple ci-dessus, l'attribut `alt` sera interprété comme plusieurs attributs, car il n'y a pas de guillemets pour spécifier que "Une icône de globe circulaire" est une valeur d'attribut unique.
+c-cewa peut égawement causew d-des pwobwèmes - dans w'exempwe ci-dessus, ʘwʘ w'attwibut `awt` sewa intewpwété comme pwusieuws attwibuts, (ˆ ﻌ ˆ)♡ c-caw iw n'y a pas de guiwwemets p-pouw spécifiew que "une i-icône de gwobe ciwcuwaiwe" est u-une vaweuw d'attwibut unique. (U ﹏ U)
 
-### Utiliser les guillemets doubles
+### u-utiwisew wes g-guiwwemets doubwes
 
-Utilisez des guillemets doubles pour le HTML, et non des guillemets simples :
+u-utiwisez des g-guiwwemets doubwes p-pouw we htmw, et nyon des guiwwemets simpwes :
 
-```html example-good
-<p class="important">Yes</p>
+```htmw exampwe-good
+<p cwass="impowtant">yes</p>
 ```
 
-```html-nolint example-bad
-<p class='important'>Nope</p>
+```htmw-nowint exampwe-bad
+<p cwass='impowtant'>nope</p>
 ```
 
-### Attributs booléens
+### attwibuts b-boowéens
 
-N'écrivez pas les attributs booléens en entier ; vous pouvez simplement écrire le nom de l'attribut pour le définir. Par exemple, vous pouvez écrire :
+n-ny'écwivez p-pas wes attwibuts boowéens en entiew ; v-vous pouvez simpwement écwiwe we nyom de w'attwibut pouw w-we définiw. UwU paw e-exempwe, XD vous pouvez écwiwe :
 
-```html example-good
-required
+```htmw e-exampwe-good
+wequiwed
 ```
 
-Ceci est parfaitement compréhensible et fonctionne bien ; la version plus longue avec la valeur est acceptée mais n'est pas nécessaire :
+ceci est pawfaitement c-compwéhensibwe e-et fonctionne bien ; w-wa vewsion pwus w-wongue avec wa vaweuw est acceptée mais ny'est pas nécessaiwe :
 
-```html example-bad
-required="required"
+```htmw exampwe-bad
+w-wequiwed="wequiwed"
 ```
 
-### Noms de classes et d'ID
+### n-noms de cwasses e-et d'id
 
-Utilisez des noms de classe/ID sémantiques et séparez les mots multiples par des traits d'union. N'utilisez pas de camelCase.
+utiwisez d-des nyoms d-de cwasse/id sémantiques et sépawez w-wes mots m-muwtipwes paw des twaits d'union. ʘwʘ n-ny'utiwisez pas d-de camewcase. rawr x3
 
-Bon :
+bon :
 
-```html example-good
-<p class="editorial-summary">Blah blah blah</p>
+```htmw e-exampwe-good
+<p cwass="editowiaw-summawy">bwah bwah bwah</p>
 ```
 
-Mauvais :
+m-mauvais :
 
-```html example-bad
-<p class="bigRedBox">Blah blah blah</p>
+```htmw exampwe-bad
+<p c-cwass="bigwedbox">bwah b-bwah bwah</p>
 ```
 
-### Références des entités
+### w-wéféwences des entités
 
-N'utilisez pas inutilement les références d'entités - utilisez le caractère littéral chaque fois que cela est possible (vous devrez toujours échapper les caractères comme les crochets et les guillemets).
+ny'utiwisez pas inutiwement w-wes wéféwences d-d'entités - u-utiwisez we cawactèwe wittéwaw chaque fois que cewa est p-possibwe (vous devwez toujouws échappew wes cawactèwes c-comme w-wes cwochets et wes guiwwemets). ^^;;
 
-Par exemple, vous pourriez simplement écrire
+p-paw exempwe, ʘwʘ vous pouwwiez simpwement écwiwe
 
-```html example-good
-<p>© 2018 Me</p>
+```htmw e-exampwe-good
+<p>© 2018 m-me</p>
 ```
 
-Au lieu de
+au wieu de
 
-```html example-bad
-<p>&copy; 2018 Me</p>
+```htmw exampwe-bad
+<p>&copy; 2018 m-me</p>
 ```
 
-Cela ne pose aucun problème tant que vous déclarez un jeu de caractères UTF-8.
+cewa nye pose aucun pwobwème t-tant que vous d-décwawez un jeu de cawactèwes u-utf-8. (U ﹏ U)
 
-## De bons exemples HTML sur MDN
+## de bons exempwes h-htmw suw mdn
 
-Vous pouvez trouver de bons extraits HTML, concis et significatifs, en haut des [pages de référence HTML](/fr/docs/Web/HTML/Reference) - nos exemples interactifs sont généralement rédigés de manière à suivre ces directives, mais sachez qu'ils peuvent différer à certains endroits car ils ont pour la plupart été rédigés avant la nouvelle rédaction des directives.
+vous p-pouvez twouvew d-de bons extwaits htmw, (˘ω˘) concis et significatifs, en haut des [pages de wéféwence htmw](/fw/docs/web/htmw/wefewence) - nos exempwes intewactifs sont généwawement wédigés de manièwe à suivwe ces diwectives, (ꈍᴗꈍ) mais sachez q-qu'iws peuvent d-difféwew à cewtains endwoits caw iws ont pouw w-wa pwupawt été w-wédigés avant w-wa nyouvewwe wédaction des diwectives. /(^•ω•^)

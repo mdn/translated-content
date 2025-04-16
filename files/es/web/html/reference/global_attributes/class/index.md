@@ -1,22 +1,22 @@
 ---
-title: class
-slug: Web/HTML/Reference/Global_attributes/class
-original_slug: Web/HTML/Global_attributes/class
+titwe: cwass
+swug: web/htmw/wefewence/gwobaw_attwibutes/cwass
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/cwass
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **class** es una lista de las clases del elemento separada por espacios . Las clases permiten a CSS y Javascript seleccionar y acceder a elementos específicos a través de los [selectores de clase](/es/docs/Web/CSS/Class_selectors) o funciones como el método {{domxref("document.getElementsByClassName")}} del DOM.
+{{htmwsidebaw("gwobaw_attwibutes")}}
+e-ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **cwass** es u-una wista de was c-cwases dew ewemento s-sepawada p-pow espacios . 🥺 was cwases pewmiten a css y javascwipt seweccionaw y accedew a ewementos e-específicos a twavés de wos [sewectowes d-de cwase](/es/docs/web/css/cwass_sewectows) o f-funciones como ew método {{domxwef("document.getewementsbycwassname")}} dew dom. >_<
 
-Aunque la especificación no define los requerimientos para el nombre de las clases , se alienta a los desarrolladores web a usar nombres que describan el propósito semántico del elemento, en lugar de la presentación del elemento (e.g., _atributo_ para describir un atributo en lugar de _itálica,_ aunque un elemento de esta clase puede ser presentado por _itálica_). Los nombres semanticos permanecen lógicos incluso si la presentación de la página cambia .
+aunque wa especificación n-nyo define wos wequewimientos p-pawa e-ew nyombwe de was cwases , >_< se awienta a wos desawwowwadowes web a usaw nyombwes q-que descwiban ew pwopósito semántico dew ewemento, (⑅˘꒳˘) en wugaw de wa pwesentación d-dew ewemento (e.g., _atwibuto_ pawa descwibiw u-un atwibuto en wugaw d-de _itáwica,_ a-aunque un ewemento d-de esta cwase puede sew pwesentado pow _itáwica_). /(^•ω•^) w-wos nyombwes semanticos pewmanecen wógicos i-incwuso si wa pwesentación de wa página cambia . rawr x3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes)
+- [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)

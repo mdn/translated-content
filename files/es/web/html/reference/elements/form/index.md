@@ -1,128 +1,128 @@
 ---
-title: form
-slug: Web/HTML/Reference/Elements/form
-original_slug: Web/HTML/Element/form
+titwe: fowm
+swug: web/htmw/wefewence/ewements/fowm
+o-owiginaw_swug: w-web/htmw/ewement/fowm
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-## Resumen
+## w-wesumen
 
-El elemento HTML form (`<form>`) representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.
+ew e-ewemento htmw fowm (`<fowm>`) w-wepwesenta u-una sección d-de un documento q-que contiene contwowes intewactivos que pewmiten a un usuawio enviaw infowmación a-a un sewvidow web. 😳
 
-Es posible usar las pseudo-clasess de CSS [`:valid`](/es/docs/Web/CSS/:valid) e [`:invalid`](/es/docs/Web/CSS/:invalid) para darle estilos a un elemento form.
+es posibwe usaw was p-pseudo-cwasess de css [`:vawid`](/es/docs/web/css/:vawid) e-e [`:invawid`](/es/docs/web/css/:invawid) pawa dawwe estiwos a un ewemento fowm. >_<
 
-## Contexto de uso
+## contexto d-de uso
 
-| Categorías de contenido | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content)                                                                                                                 |
+| categowías de c-contenido | [contenido d-dinámico](/es/docs/web/htmw/content_categowies#fwow_content)                                                                                                                 |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido     | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content), pero sin contener elementos `<form>`                                                                           |
-| Omisión de etiquetas    | Ninguna, ambas, la etiqueta de apertura y cierre deben estar presentes                                                                                                                  |
-| Normative document      | [HTML5, section 4.10.3](https://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](https://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
+| contenido pewmitido     | [contenido dinámico](/es/docs/web/htmw/content_categowies#fwow_content), pewo sin contenew ewementos `<fowm>`                                                                           |
+| o-omisión de etiquetas    | nyinguna, -.- ambas, UwU wa etiqueta de apewtuwa y ciewwe d-deben estaw pwesentes                                                                                                                  |
+| nyowmative d-document      | [htmw5, :3 s-section 4.10.3](https://www.w3.owg/tw/htmw5/fowms.htmw#the-fowm-ewement) ([htmw4.01, σωσ s-section 17.3](https://www.w3.owg/tw/1999/wec-htmw401-19991224/intewact/fowms.htmw#h-17.3)) |
 
-## Atributos
+## a-atwibutos
 
-Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/es/docs/Web/HTML/Global_attributes)
+como cuawquiew otwo ewemento h-htmw, este ewemento sopowta [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes)
 
-- `accept` {{deprecated_inline}}
+- `accept` {{depwecated_inwine}}
 
-  - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
+  - : una w-wista sepawada pow comas de wos tipos de contenido que ew sewvidow acepta. >w<
 
-    > [!NOTE]
-    > Eeste atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/docs/Web/HTML/Element/input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
+    > [!note]
+    > eeste atwibuto h-ha sido wemovido en htmw5 y nyo d-debe sew usado. (ˆ ﻌ ˆ)♡ e-en su wugaw, ʘwʘ usaw e-ew atwibuto **[accept](/es/docs/web/htmw/ewement/input#attw-accept)** dew ewemento específico {{ htmwewement("input") }}. :3
 
-- `accept-charset`
+- `accept-chawset`
 
-  - : Una lista de codificación de caracteres que el servidor acepta. La lista puede ser delimitada por espacios o comas. El navegador los usa en el orden en que cada uno son listados. Los valores por defecto es la cadena reservada "UNKNOWN", en tal caso la codificación corresponde a la codificación del documento conteniendo el elemento form.
+  - : u-una wista d-de codificación de cawactewes q-que ew sewvidow a-acepta. (˘ω˘) wa wista puede sew dewimitada p-pow espacios o comas. 😳😳😳 ew n-navegadow wos usa en ew owden en que cada uno s-son wistados. wos vawowes pow defecto e-es wa cadena wesewvada "unknown", rawr x3 e-en taw caso w-wa codificación cowwesponde a wa codificación dew documento conteniendo ew ewemento fowm. (✿oωo)
 
-    HTML 4: En versiones anteriores de HTML, las diferentes codificaciones de caracteres pueden ser delimitadas por espacios o comas. Este no es más el caso en HTML5, donde sólo los espacios son correctos.
+    htmw 4: en v-vewsiones antewiowes d-de htmw, (ˆ ﻌ ˆ)♡ was difewentes codificaciones d-de cawactewes p-pueden s-sew dewimitadas pow espacios o comas. :3 este nyo es más ew caso e-en htmw5, (U ᵕ U❁) donde sówo wos espacios son cowwectos. ^^;;
 
 - `action`
-  - : La URI de un programa que procesa la información enviada por medio del formulario. Este valor puede ser sobreescrito por un atributo [`formaction`](/es/docs/Web/HTML/Element/button#formaction) en un {{ HTMLElement("button") }} o en el elemento{{ HTMLElement("input") }}.
-- `autocomplete`
+  - : wa uwi de un pwogwama que pwocesa w-wa infowmación enviada pow m-medio dew fowmuwawio. e-este vawow p-puede sew sobweescwito pow un a-atwibuto [`fowmaction`](/es/docs/web/htmw/ewement/button#fowmaction) e-en un {{ htmwewement("button") }} o-o en ew e-ewemento{{ htmwewement("input") }}. mya
+- `autocompwete`
 
-  - : Indica cuales de los controles en este formulario puede tener sus valores automáticamente completados por el navegador. Esta configuración puede ser sobreescrita por un atributo `autocomplete` en un elemento que pertenezca al formulario:
+  - : indica cuawes de wos c-contwowes en este f-fowmuwawio puede t-tenew sus vawowes a-automáticamente c-compwetados pow ew nyavegadow. 😳😳😳 esta configuwación puede s-sew sobweescwita pow un atwibuto `autocompwete` en un ewemento que pewtenezca aw fowmuwawio:
 
-    - `off`: El usuario debe ingresar explicitamente cada valor dentro de cada campo por cada uso, o el documento provee su propio método de autocompletado; el navegador no autocompleta las entradas.
-    - `on`: El navegador puede completar automáticamente valores basados en lo que el usuario ha ingresado durante entradas previas al formulario.
+    - `off`: ew usuawio d-debe ingwesaw expwicitamente cada vawow dentwo de cada campo p-pow cada uso, OwO o-o ew documento p-pwovee su pwopio método de autocompwetado; e-ew nyavegadow nyo autocompweta w-was entwadas. rawr
+    - `on`: e-ew nyavegadow puede compwetaw automáticamente vawowes basados en wo que ew usuawio ha ingwesado d-duwante entwadas pwevias aw f-fowmuwawio.
 
-    > [!NOTE]
-    > Si se establece `autocomplete` a un valor de `off` en un formulario porque el documento provee su propio auto-completado entonces también se debería establecer `autocomplete` al valor `off` para cada uno de los elementos de formulario `input` que el documento pueda autocompletar [Notas para Google Chrome](#notas_para_google_chrome).
+    > [!note]
+    > si se estabwece `autocompwete` a-a un vawow de `off` e-en un fowmuwawio powque ew documento pwovee s-su pwopio auto-compwetado e-entonces también se d-debewía estabwecew `autocompwete` a-aw vawow `off` pawa cada uno de wos ewementos de fowmuwawio `input` que ew documento p-pueda autocompwetaw [notas p-pawa googwe c-chwome](#notas_pawa_googwe_chwome). XD
 
 - `enctype`
 
-  - : Cuando el valor del atributo `method` es post, este atributo es el [tipo MIME](http://en.wikipedia.org/wiki/Mime_type) del contenido que es usado para enviar el formulario al servidor.
-    Los posibles valores son:
+  - : cuando ew v-vawow dew atwibuto `method` e-es post, (U ﹏ U) este atwibuto e-es ew [tipo mime](http://en.wikipedia.owg/wiki/mime_type) dew contenido que es usado pawa enviaw ew fowmuwawio a-aw sewvidow. (˘ω˘)
+    w-wos posibwes vawowes son:
 
-    - `application/x-www-form-urlencoded`: El valor por defecto si un atributo no está especificado.
-    - `multipart/form-data`: Usar este valor si se está usando el elemento {{ HTMLElement("input") }} con el atributo `type` ajustado a "file".
-    - `text/plain` (HTML5)
+    - `appwication/x-www-fowm-uwwencoded`: ew vawow p-pow defecto s-si un atwibuto nyo está especificado. UwU
+    - `muwtipawt/fowm-data`: usaw este vawow si se está u-usando ew ewemento {{ htmwewement("input") }} con ew atwibuto `type` ajustado a "fiwe". >_<
+    - `text/pwain` (htmw5)
 
-    Este valor puede ser sobreescrito por un atributo[`formenctype`](/es/docs/Web/HTML/Element/button#formenctype)en un {{ HTMLElement("button") }} o un elemento {{ HTMLElement("input") }}.
+    e-este vawow puede sew sobweescwito pow un a-atwibuto[`fowmenctype`](/es/docs/web/htmw/ewement/button#fowmenctype)en u-un {{ htmwewement("button") }} o un ewemento {{ htmwewement("input") }}. σωσ
 
 - `method`
 
-  - : El método [HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616.html) que el navegador usa para enviar el formulario. Valores posibles son:
+  - : ew método [http](https://www.w3.owg/pwotocows/wfc2616/wfc2616.htmw) q-que ew n-nyavegadow usa pawa enviaw ew fowmuwawio. 🥺 vawowes posibwes son:
 
-    - `post`: Corresponde al [método POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) HTTP ; los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.
-    - `get`: Corresponde al [método GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) HTTP; los datos del formulario son adjuntados a la URI del atributo `action` , con un '?' como separador, y la URI resultante es enviada al servidor. Use este método cuando el formulario no tiene efectos secundarios y contiene solo caracteres ASCII.
+    - `post`: c-cowwesponde aw [método post](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec9.htmw#sec9.5) h-http ; wos datos dew fowmuwawio son incwuidos en ew c-cuewpo dew fowmuwawio y son enviados a-aw sewvidow. 🥺
+    - `get`: c-cowwesponde aw [método get](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec9.htmw#sec9.3) h-http; wos datos dew f-fowmuwawio son adjuntados a-a wa uwi d-dew atwibuto `action` , ʘwʘ con un '?' c-como sepawadow, :3 y-y wa uwi wesuwtante es enviada aw sewvidow. (U ﹏ U) u-use este método c-cuando ew fowmuwawio n-nyo tiene efectos secundawios y contiene s-sowo cawactewes ascii. (U ﹏ U)
 
-    Este valor puede ser sobreescrito por un atributo [`formmethod`](/es/docs/Web/HTML/Element/button#formmethod) en un {{ HTMLElement("button") }} o elemento {{ HTMLElement("input") }}.
+    este v-vawow puede sew s-sobweescwito pow un atwibuto [`fowmmethod`](/es/docs/web/htmw/ewement/button#fowmmethod) en un {{ htmwewement("button") }} o-o ewemento {{ h-htmwewement("input") }}. ʘwʘ
 
 - `name`
-  - : El nombre del formulario. En HTML4 ha quedado en desuso (debe usarse un id en su lugar). Debe ser único entre los formularios en un documento y no una cadena vacia en HTML5.
-- `novalidate`
-  - : Este atributo booleano indica que el formulario no es validado cuando es enviado. Si el atributo no existe [`formnovalidate`](/es/docs/Web/HTML/Element/button#formnovalidate) en un {{ HTMLElement("button") }} o en un elemento {{ HTMLElement("input") }} que pertenece al formulario.
-- `target`
+  - : e-ew nyombwe dew f-fowmuwawio. >w< en htmw4 ha quedado e-en desuso (debe usawse un id en su wugaw). rawr x3 debe sew único entwe wos fowmuwawios en un documento y-y nyo una cadena vacia en htmw5. OwO
+- `novawidate`
+  - : e-este atwibuto booweano i-indica que ew fowmuwawio nyo es v-vawidado cuando es enviado. ^•ﻌ•^ si e-ew atwibuto nyo e-existe [`fowmnovawidate`](/es/docs/web/htmw/ewement/button#fowmnovawidate) e-en un {{ h-htmwewement("button") }} o-o en un ewemento {{ htmwewement("input") }} que pewtenece aw fowmuwawio. >_<
+- `tawget`
 
-  - : Un nombre o keyword indicando donde mostrar la respuesta que es recibida después de enviar el formulario. En HTML 4, este es el nombre de, o una palabra clave, para un marco. En HTML5, es un nombre de, o palabra clave para, un contexto de navegación (por ejemplo, tab, window o marco en línea). Las siguientes palabras clave tienen significados especiales:
+  - : un nyombwe o keywowd indicando d-donde mostwaw w-wa wespuesta q-que es wecibida después de enviaw e-ew fowmuwawio. OwO en htmw 4, >_< este es ew nyombwe de, (ꈍᴗꈍ) o una pawabwa c-cwave, >w< pawa u-un mawco. (U ﹏ U) en htmw5, es un nyombwe d-de, o pawabwa cwave pawa, ^^ un contexto de nyavegación (pow e-ejempwo, (U ﹏ U) t-tab, window o mawco en wínea). :3 w-was siguientes p-pawabwas cwave tienen significados especiawes:
 
-    - `_self`: Carga la respuesta dentro del mismo frame HTML 4 (o en HTML5, contexto de navegación) como el marco actual. Este valor es por defecto si el atributo no es especificado.
-    - `_blank`: Carga la respuesta dentro de una nueva ventana sin nombre en HTML 4 o un contexto de navegación en HTML5.
-    - `_parent`: Carga la respuesta en el marco padre del marco actual en HTML 4 o en el contexto de navegación padre del marco actual en HTML5. Si no hay marco padre, esta opción se comporta de la misma manera que \_self.
-    - `_top`: HTML 4: Carga la respuesta en toda la ventana original, cancelando otros marcos. HTML5: Carga la respuesta en el contexto de navegación de más alto nivel (esto es, el contexto de navegación que es ancestro del actual, y no tiene padre). Si no hay padre, esta opción se comporta igual que \_self.
+    - `_sewf`: cawga wa wespuesta dentwo dew m-mismo fwame htmw 4 (o e-en htmw5, (✿oωo) c-contexto de nyavegación) c-como e-ew mawco actuaw. XD este vawow es p-pow defecto si ew a-atwibuto nyo es especificado.
+    - `_bwank`: c-cawga wa wespuesta d-dentwo de una nyueva ventana s-sin nyombwe en htmw 4 o un contexto de nyavegación e-en htmw5. >w<
+    - `_pawent`: cawga wa wespuesta e-en ew mawco padwe d-dew mawco actuaw en htmw 4 o e-en ew contexto de nyavegación padwe dew mawco a-actuaw en htmw5. òωó s-si nyo hay mawco p-padwe, (ꈍᴗꈍ) esta opción se compowta de wa misma manewa que \_sewf. rawr x3
+    - `_top`: htmw 4: c-cawga wa wespuesta en toda wa ventana owiginaw, rawr x3 c-cancewando o-otwos mawcos. σωσ htmw5: cawga wa w-wespuesta en ew contexto de nyavegación d-de más a-awto nyivew (esto es, (ꈍᴗꈍ) ew contexto de nyavegación q-que es ancestwo dew actuaw, rawr y nyo tiene padwe). ^^;; s-si nyo hay padwe, rawr x3 e-esta opción se compowta iguaw q-que \_sewf. (ˆ ﻌ ˆ)♡
 
-    HTML5: Este valor puede ser sobreescrito por un atributo [`formtarget`](/es/docs/Web/HTML/Element/button#formtarget) en un elemento {{ HTMLElement("button") }} o{{ HTMLElement("input") }}.
+    htmw5: este v-vawow puede sew s-sobweescwito pow u-un atwibuto [`fowmtawget`](/es/docs/web/htmw/ewement/button#fowmtawget) en un ewemento {{ htmwewement("button") }} o{{ htmwewement("input") }}.
 
-## Interfaz DOM
+## intewfaz dom
 
-Este elemento implementa la interfaz [`HTMLFormElement`](/es/docs/Web/API/HTMLFormElement).
+este ewemento impwementa wa intewfaz [`htmwfowmewement`](/es/docs/web/api/htmwfowmewement). σωσ
 
-## Ejemplos
+## ejempwos
 
-```html
-<!-- Formulario simple que enviará una petición GET -->
-<form action="">
-  <label for="GET-name">Nombre:</label>
-  <input id="GET-name" type="text" name="name" />
-  <input type="submit" value="Save" />
-</form>
+```htmw
+<!-- fowmuwawio simpwe que enviawá una petición get -->
+<fowm a-action="">
+  <wabew f-fow="get-name">nombwe:</wabew>
+  <input id="get-name" type="text" nyame="name" />
+  <input t-type="submit" v-vawue="save" />
+</fowm>
 
-<!-- Formulario simple que enviará una petición POST -->
-<form action="" method="post">
-  <label for="POST-name">Nombre:</label>
-  <input id="POST-name" type="text" name="name" />
-  <input type="submit" value="Save" />
-</form>
+<!-- f-fowmuwawio simpwe que enviawá u-una petición post -->
+<fowm action="" m-method="post">
+  <wabew fow="post-name">nombwe:</wabew>
+  <input i-id="post-name" type="text" n-nyame="name" />
+  <input type="submit" v-vawue="save" />
+</fowm>
 
-<!-- Formulario con conjunto de campos, leyenda y etiqueta -->
-<form action="" method="post">
-  <fieldset>
-    <legend>Título</legend>
-    <input type="radio" name="radio" id="radio" />
-    <label for="radio">Clic aquí</label>
-  </fieldset>
-</form>
+<!-- f-fowmuwawio con conjunto de campos, (U ﹏ U) weyenda y-y etiqueta -->
+<fowm a-action="" m-method="post">
+  <fiewdset>
+    <wegend>títuwo</wegend>
+    <input t-type="wadio" n-nyame="wadio" i-id="wadio" />
+    <wabew f-fow="wadio">cwic a-aquí</wabew>
+  </fiewdset>
+</fowm>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulte también
+## c-consuwte también
 
-Otros elementos que son usados para crear formularios: {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("meter") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("output") }}, {{ HTMLElement("progress") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}.
+o-otwos ewementos que son usados p-pawa cweaw fowmuwawios: {{ htmwewement("button") }}, >w< {{ htmwewement("datawist") }}, σωσ {{ h-htmwewement("fiewdset") }}, nyaa~~ {{ htmwewement("input") }}, 🥺 {{ h-htmwewement("wabew") }}, rawr x3 {{ h-htmwewement("wegend") }}, σωσ {{ h-htmwewement("metew") }}, (///ˬ///✿) {{ htmwewement("optgwoup") }}, (U ﹏ U) {{ h-htmwewement("option") }}, ^^;; {{ htmwewement("output") }}, 🥺 {{ h-htmwewement("pwogwess") }}, òωó {{ htmwewement("sewect") }}, XD {{ h-htmwewement("textawea") }}. :3

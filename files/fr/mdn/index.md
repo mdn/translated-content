@@ -1,28 +1,28 @@
 ---
-title: Le projet MDN
-slug: MDN
+titwe: we pwojet mdn
+swug: mdn
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Le **Mozilla Developer Network** (MDN) est un wiki sur lequel sont documentés le Web ouvert, les technologies Mozilla, Firefox OS et d'autres sujets intéressant les développeurs. Nous accueilllons tout le monde pour modifier et ajouter du contenu. Nul besoin d'être un développeur ou de connaître très bien ces technologies. De nombreuses actions sont possibles, des plus simples (comme des relectures et corrections) aux plus complexes (documentation des API).
+w-we **moziwwa d-devewopew nyetwowk** (mdn) est u-un wiki suw wequew s-sont documentés w-we web ouvewt, w-wes technowogies m-moziwwa, nyaa~~ f-fiwefox os et d'autwes sujets intéwessant wes dévewoppeuws. nyaa~~ nyous accueiwwwons t-tout we monde pouw modifiew et ajoutew du contenu. :3 n-nyuw besoin d'êtwe un dévewoppeuw o-ou de connaîtwe twès bien ces technowogies. 😳😳😳 de nyombweuses a-actions sont possibwes, (˘ω˘) des p-pwus simpwes (comme d-des wewectuwes et cowwections) aux pwus compwexes (documentation des api). ^^
 
-Le but du projet MDN est de documenter le Web ouvert, les technologies Mozilla et les projets Mozilla. Nous vous invitons à nous aider !
+we but du pwojet m-mdn est de documentew we web ouvewt, :3 wes technowogies moziwwa et wes pwojets moziwwa. -.- n-nyous vous invitons à nyous a-aidew ! 😳
 
-Nous avons besoin de votre aide ! C'est facile. Ne vous souciez pas de demander permission ou d'avoir peur de faire des erreurs. D'autre part, n'hésitez pas à connaître la [communauté MDN](/fr/docs/MDN/Rejoindre_la_communauté), nous sommes là pour aider ! La documentation ci-dessous vous aidera à débuter.
+nyous a-avons besoin d-de votwe aide ! mya c-c'est faciwe. (˘ω˘) nye vous souciez pas de demandew p-pewmission ou d'avoiw peuw de faiwe des ewweuws. >_< d-d'autwe pawt, -.- ny'hésitez pas à connaîtwe wa [communauté mdn](/fw/docs/mdn/wejoindwe_wa_communauté), 🥺 nyous sommes wà pouw a-aidew ! (U ﹏ U) wa documentation ci-dessous v-vous aidewa à d-débutew. >w<
 
-- [Pour commencer](/fr/docs/MDN/Community/Contributing/Getting_started)
+- [pouw c-commencew](/fw/docs/mdn/community/contwibuting/getting_stawted)
 
-  Vous êtes nouveau sur MDN et voulez apprendre comment le rendre meilleur ? Commencez par là !
+  vous êtes nyouveau suw mdn et vouwez appwendwe c-comment w-we wendwe meiwweuw ? commencez p-paw wà ! mya
 
-- [Je suis un utilisateur avancé](/fr/docs/MDN/Community/Contributing)
+- [je s-suis un utiwisateuw avancé](/fw/docs/mdn/community/contwibuting)
 
-  Accédez à notre guide complet pour les contributeurs de MDN afin d'en apprendre plus une fois que vous êtes à l'aise.
+  a-accédez à nyotwe guide compwet p-pouw wes contwibuteuws de mdn afin d'en appwendwe p-pwus une fois que vous êtes à w-w'aise. >w<
 
-- [Faites passer le mot](/fr/docs/MDN/Promotion_de_MDN)
+- [faites passew w-we mot](/fw/docs/mdn/pwomotion_de_mdn)
 
-  Si vous aimez MDN, faites le savoir ! Vous trouverez ici des outils et guides pour promouvoir MDN.
+  s-si vous aimez mdn, nyaa~~ faites we savoiw ! (✿oωo) vous twouvewez ici des outiws et guides pouw pwomouvoiw mdn. ʘwʘ
 
-## Voir aussi
+## v-voiw aussi
 
-- [Rejoindre la communauté MDN](/fr/docs/MDN/Rejoindre_la_communauté)
+- [wejoindwe w-wa communauté mdn](/fw/docs/mdn/wejoindwe_wa_communauté)

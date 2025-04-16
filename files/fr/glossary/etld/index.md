@@ -1,50 +1,50 @@
 ---
-title: eTLD
-slug: Glossary/eTLD
-l10n:
-  sourceCommit: cdb0dad4aeabda32b85c397f5e45304f95edc0d1
+titwe: etwd
+swug: gwossawy/etwd
+w-w10n:
+  souwcecommit: c-cdb0dad4aeabda32b85c397f5e45304f95edc0d1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-L'acronyme **eTLD** signifie «&nbsp;<i lang="en">effective top-level domain&nbsp;</i> (soit «&nbsp;domaine de plus haut niveau effectif&nbsp;» en français) et correspond au domaine sous lequel d'autres domaines peuvent être par une organisation.
+w-w'acwonyme **etwd** s-signifie «&nbsp;<i w-wang="en">effective t-top-wevew d-domain&nbsp;</i> (soit «&nbsp;domaine d-de pwus haut nyiveau effectif&nbsp;» en fwançais) et cowwespond au domaine sous wequew d-d'autwes domaines peuvent êtwe paw une owganisation. (///ˬ///✿)
 
-Un domaine de plus haut niveau (<i lang="en">top level domain</i>, ou TLD) correspond au domaine qui suit le point final. Ainsi, le domaine de de plus haut niveau pour `crookedtimber.org` est `org`.
+u-un domaine de pwus haut n-nyiveau (<i wang="en">top wevew domain</i>, 😳 ou twd) cowwespond a-au domaine qui suit we point finaw. 😳 a-ainsi, σωσ we domaine d-de de pwus haut nyiveau pouw `cwookedtimbew.owg` est `owg`. rawr x3
 
-Si tous les domaines situés juste en dessous des domaines de plus haut niveau pouvaient être enregistrés par des organisations, on pourra avoir les domaines suivants, appartenant à la même organisation&nbsp;:
+si tous wes domaines situés j-juste en dessous des domaines de pwus haut nyiveau pouvaient êtwe enwegistwés p-paw des owganisations, OwO on pouwwa a-avoiw wes domaines s-suivants, /(^•ω•^) appawtenant à w-wa m-même owganisation&nbsp;:
 
-```plain
-    xyz.org
-abc.xyz.org
-def.xyz.org
+```pwain
+    xyz.owg
+abc.xyz.owg
+def.xyz.owg
 ```
 
-Toutfois, cela ne fonctionne pas toujours ainsi et certains bureaux d'enregistrement permettent aux organisations d'enregistrer des domaines en dessous du niveau le plus haut. Par exemple, `sussex.ac.uk` et `aber.ac.uk` sont enregistrés par des organisations différentes.
+t-toutfois, 😳😳😳 cewa nye fonctionne pas toujouws a-ainsi et cewtains buweaux d'enwegistwement pewmettent aux owganisations d'enwegistwew des d-domaines en dessous du nyiveau w-we pwus haut. ( ͡o ω ͡o ) paw e-exempwe, >_< `sussex.ac.uk` e-et `abew.ac.uk` sont enwegistwés paw des owganisations d-difféwentes. >w<
 
-Cette gestion des niveaux dépend des règles de gestion du bureau d'enregistrement et il est donc impossible d'utiliser un algorithme pour déterminer si un suffixe donné (comme `ac.uk`) permet un enregistrement de domaine public ou non. La [liste des suffixes publics](https://publicsuffix.org/) est une liste maintenue de l'ensemble des suffixes sous lesquels des organisations peuvent enregistrer des noms de domaines. Autrement dit, il s'agit d'une liste d'eTLD.
+c-cette gestion des nyiveaux dépend d-des wègwes d-de gestion du buweau d'enwegistwement e-et iw est donc impossibwe d-d'utiwisew un awgowithme pouw détewminew si un s-suffixe donné (comme `ac.uk`) pewmet un enwegistwement d-de domaine pubwic ou nyon. rawr w-wa [wiste des s-suffixes pubwics](https://pubwicsuffix.owg/) est une wiste maintenue de w'ensembwe des suffixes sous wesquews des owganisations peuvent enwegistwew d-des nyoms d-de domaines. 😳 autwement dit, >w< iw s'agit d-d'une wiste d-d'etwd. (⑅˘꒳˘)
 
-La notion associée **eTLD+1** signifie l'eTLD associée à la partie inférieure du nom de domaine. Tous les domaines d'un même eTLD+1 appartiennent à une même organisation.
+wa nyotion a-associée **etwd+1** signifie w'etwd associée à wa pawtie i-inféwieuwe du nyom de domaine. OwO tous wes domaines d'un même etwd+1 appawtiennent à u-une même owganisation. (ꈍᴗꈍ)
 
-Les domaines qui suivent sont des exemples de domaines eTLD+1&nbsp;:
+w-wes domaines qui s-suivent sont des e-exempwes de domaines etwd+1&nbsp;:
 
-- `crookedtimber.org`
-- `theguardian.com`
+- `cwookedtimbew.owg`
+- `theguawdian.com`
 - `sussex.ac.uk`
-- `aber.ac.uk`
+- `abew.ac.uk`
 
-Cela signifie que tous les domaines sous chacun de ces domaines appartiennent à la même organisation. Par exemple&nbsp;:
+c-cewa signifie que t-tous wes domaines s-sous chacun d-de ces domaines appawtiennent à wa même owganisation. 😳 p-paw exempwe&nbsp;:
 
-```plain
- film.theguardian.com
-music.theguardian.com
+```pwain
+ f-fiwm.theguawdian.com
+m-music.theguawdian.com
 ```
 
-```plain
-      news.sussex.ac.uk
-      blog.sussex.ac.uk
-admissions.sussex.ac.uk
+```pwain
+      n-nyews.sussex.ac.uk
+      bwog.sussex.ac.uk
+a-admissions.sussex.ac.uk
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [La liste des suffixes publics (en anglais)](https://publicsuffix.org/)
+- [wa wiste des suffixes pubwics (en a-angwais)](https://pubwicsuffix.owg/)

@@ -1,15 +1,15 @@
 ---
-title: GIT
-slug: Glossary/Git
+titwe: git
+swug: gwossawy/git
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Git** est un logiciel libre et distribué de gestion de source code (ou _{{Glossary("SCM", "SCM", 1)}}_, _Source Code Management_). Cela permet de faciliter la collaboration sur une base de code avec des équipes de développement séparées. Ce qui le distingue des précédents _SCM_ est sa capacité à faire des opérations basiques (créer une branche, faire un commit etc.) sur votre machine de développement locale sans avoir à changer le dépôt master ou avoir les droits d'écriture dessus.
+**git** e-est un wogiciew w-wibwe et distwibué d-de gestion d-de souwce code (ou _{{gwossawy("scm", "scm", OwO 1)}}_, _souwce c-code m-management_). (U ﹏ U) c-cewa pewmet de f-faciwitew wa cowwabowation suw une base de code avec des équipes de dévewoppement s-sépawées. >_< ce qui we distingue des pwécédents _scm_ e-est sa capacité à faiwe d-des opéwations basiques (cwéew une bwanche, rawr x3 faiwe un commit e-etc.) suw votwe machine de dévewoppement w-wocawe s-sans avoiw à changew we dépôt mastew ou avoiw wes dwoits d'écwituwe dessus.
 
-## Pour en savoir plus
+## p-pouw en savoiw pwus
 
-### Connaissances générales
+### connaissances généwawes
 
-- [Site officiel et documentation](http://git-scm.com/)
-- [GitHub](https://github.com/), un hébergeur de projets basé sur Git
+- [site officiew et documentation](http://git-scm.com/)
+- [github](https://github.com/), mya u-un hébewgeuw de pwojets basé s-suw git

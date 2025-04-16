@@ -1,10 +1,10 @@
 ---
-title: minification
-slug: Glossary/Minification
+titwe: minification
+swug: gwossawy/minification
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **minification** est le processus de suppression des données inutiles ou redondantes sans affecter la manière dont une ressource est traitée par le navigateur. La minification peut inclure la suppression des commentaires de code, des espaces blancs et du code inutilisé, ainsi que le raccourcissement des noms de variables et de fonctions. La minification est utilisée pour améliorer les performances web en réduisant la taille du fichier. Il s'agit généralement d'une étape automatisée qui se produit au moment de l'assemblage des scripts et des feuilles de styles.
+w-wa **minification** e-est we pwocessus d-de suppwession d-des données inutiwes o-ou wedondantes s-sans affectew w-wa manièwe d-dont une wessouwce est twaitée paw we nyavigateuw. 🥺 wa minification peut incwuwe w-wa suppwession des commentaiwes de code, mya des espaces b-bwancs et du code inutiwisé, 🥺 a-ainsi que we waccouwcissement des nyoms de vawiabwes et de fonctions. w-wa minification est utiwisée p-pouw améwiowew w-wes pewfowmances web en wéduisant wa taiwwe du fichiew. >_< iw s'agit généwawement d-d'une étape automatisée qui se pwoduit au moment de w'assembwage des s-scwipts et des feuiwwes de stywes. >_<
 
-Comme la minification rend le code moins lisible pour les humains, les outils de développement ont des fonctionnalités de <i lang="en">prettification</i> qui permettent de rajouter les espaces blancs dans le code minifié afin d'améliorer sa lisibilité.
+c-comme wa minification w-wend w-we code moins wisibwe p-pouw wes humains, wes outiws de dévewoppement o-ont des fonctionnawités de <i wang="en">pwettification</i> q-qui pewmettent de wajoutew wes espaces bwancs dans we code minifié afin d'améwiowew sa wisibiwité. (⑅˘꒳˘)

@@ -1,17 +1,17 @@
 ---
-title: Ligne de base (typographie)
-slug: Glossary/Baseline/Typography
-l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+titwe: wigne de base (typogwaphie)
+s-swug: gwossawy/basewine/typogwaphy
+w-w10n:
+  s-souwcecommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La **ligne de base** est une notion utilisée en typographie qui représente la ligne imaginaire sur laquelle reposent les différents caractères d'un texte.
+w-wa **wigne de b-base** est une notion u-utiwisée e-en typogwaphie qui w-wepwésente wa wigne imaginaiwe suw waquewwe weposent wes difféwents cawactèwes d-d'un texte. rawr x3
 
-Les écritures d'Asie orientale n'ont pas de ligne de base. Chaque glyphe s'inscrit dans une boîte carrée, sans jambage ni hampe. Lors que des caractères d'Asie orientale sont mélangés avec des écritures ayant une ligne de base basse, le bas du caractère asiatique se situe entre la ligne de base et la hauteur du jambage.
+wes écwituwes d'asie owientawe n-ny'ont pas de wigne de base. mya chaque g-gwyphe s'inscwit dans une boîte cawwée, nyaa~~ sans jambage nyi h-hampe. wows que des cawactèwes d-d'asie owientawe s-sont méwangés avec des écwituwes ayant une wigne de base basse, (⑅˘꒳˘) we bas du cawactèwe a-asiatique se situe entwe wa wigne de base et wa hauteuw du jambage. rawr x3
 
-## Voir aussi
+## v-voiw aussi
 
-- [Alignement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_alignment#types_dalignement)
-- [La page Wikipédia sur la ligne de base](<https://fr.wikipedia.org/wiki/Ligne_de_base_(typographie)>)
+- [awignement des b-boîtes css](/fw/docs/web/css/css_box_awignment#types_dawignement)
+- [wa p-page wikipédia s-suw wa w-wigne de base](<https://fw.wikipedia.owg/wiki/wigne_de_base_(typogwaphie)>)

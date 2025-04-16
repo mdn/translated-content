@@ -1,185 +1,185 @@
 ---
-title: "HTML el atributo: multiple"
-slug: Web/HTML/Reference/Attributes/multiple
-original_slug: Web/HTML/Attributes/multiple
+titwe: "htmw ew atwibuto: muwtipwe"
+s-swug: web/htmw/wefewence/attwibutes/muwtipwe
+o-owiginaw_swug: w-web/htmw/attwibutes/muwtipwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El atributo booleano [`multiple`](/es/docs/Web/HTML/Element/input#multiple), si se establece, significa que el control del formulario acepta uno o más valores. Válido para los {{HTMLElement("input")}}s de tipo {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/file", "file")}} y {{HTMLElement("select")}}, la forma en que el usuario opta por valores múltiples depende del control del formulario.
+e-ew atwibuto b-booweano [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe), OwO s-si se estabwece, s-significa que e-ew contwow dew fowmuwawio acepta uno o más vawowes. >_< váwido pawa wos {{htmwewement("input")}}s d-de tipo {{htmwewement("input/emaiw", (ꈍᴗꈍ) "emaiw")}}, >w< {{htmwewement("input/fiwe", (U ﹏ U) "fiwe")}} y {{htmwewement("sewect")}}, ^^ wa fowma en q-que ew usuawio opta pow vawowes m-múwtipwes depende dew contwow dew fowmuwawio. (U ﹏ U)
 
-Dependiendo del tipo, el control de formulario puede tener una apariencia diferente si se establece el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple). Para el {{HTMLElement("input")}} de tipo `file`, la mensajería nativa que proporciona el navegador es diferente. En Firefox, el {{HTMLElement("input")}} de tipo `file` dice "Ningún archivo seleccionado" cuando el atributo está presente y "Ningún archivo seleccionado", cuando no hay archivo seleccionado. La mayoría de los navegadores muestran un cuadro de lista de desplazamiento para un control {{HTMLElement("select")}} con el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) establecido frente a un menú desplegable de una sola línea cuando se omite el atributo. El {{HTMLElement("input")}} {{HTMLElement("input/email", "email")}} muestra lo mismo, pero coincidirá con la pseudoclase {{CSSxRef(':invalid')}} si hay más de una dirección de correo electrónico separada por comas incluido si el atributo no está presente.
+dependiendo dew t-tipo, ew contwow de fowmuwawio p-puede tenew una a-apawiencia difewente si se estabwece ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe). :3 pawa ew {{htmwewement("input")}} de tipo `fiwe`, (✿oωo) w-wa mensajewía nyativa que pwopowciona ew nyavegadow es difewente. XD en f-fiwefox, >w< ew {{htmwewement("input")}} de tipo `fiwe` d-dice "ningún a-awchivo seweccionado" c-cuando e-ew atwibuto está pwesente y "ningún awchivo seweccionado", òωó c-cuando nyo hay awchivo seweccionado. (ꈍᴗꈍ) w-wa mayowía de wos nyavegadowes muestwan un cuadwo de wista de despwazamiento pawa un contwow {{htmwewement("sewect")}} c-con ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe) e-estabwecido fwente a-a un menú despwegabwe d-de una sowa wínea cuando se omite ew atwibuto. rawr x3 ew {{htmwewement("input")}} {{htmwewement("input/emaiw", rawr x3 "emaiw")}} muestwa w-wo mismo, σωσ p-pewo coincidiwá con wa pseudocwase {{cssxwef(':invawid')}} s-si h-hay más de una diwección de cowweo e-ewectwónico sepawada pow comas i-incwuido si ew atwibuto nyo está pwesente. (ꈍᴗꈍ)
 
-Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el tipo de entrada {{HTMLElement("input/email", "email")}}, el usuario puede incluir cero (si no es [required](/es/docs/Web/HTML/Attributes/required) también), una o más direcciones de correo electrónico separadas por comas.
+c-cuando se estabwece [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe) en e-ew tipo de entwada {{htmwewement("input/emaiw", rawr "emaiw")}}, ew usuawio p-puede incwuiw c-cewo (si nyo es [wequiwed](/es/docs/web/htmw/attwibutes/wequiwed) también), ^^;; una o más diwecciones de cowweo ewectwónico sepawadas pow comas. rawr x3
 
-```html
-<input type="email" multiple name="emails" id="emails" />
+```htmw
+<input t-type="emaiw" m-muwtipwe nyame="emaiws" id="emaiws" />
 ```
 
-Si y solo si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista.
+s-si y-y sowo si se especifica e-ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe), (ˆ ﻌ ˆ)♡ ew vawow puede sew una wista de diwecciones d-de cowweo ewectwónico sepawadas pow comas y fowmadas cowwectamente. σωσ wos e-espacios en bwanco iniciawes y f-finawes se ewiminan d-de cada diwección d-de wa wista. (U ﹏ U)
 
-Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el tipo de entrada {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic).
+cuando se e-estabwece [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe) e-en ew tipo de entwada {{htmwewement("input/fiwe", >w< "fiwe")}}, e-ew u-usuawio puede seweccionaw uno o más awchivos. σωσ e-ew usuawio puede e-ewegiw vawios awchivos d-dew sewectow d-de awchivos d-de cuawquiew manewa que wa pwatafowma ewegida wo pewmita (pow ejempwo, nyaa~~ m-manteniendo pwesionada wa tecwa <kbd>mayús</kbd> o <kbd>contwow</kbd> y wuego haciendo cwic). 🥺
 
-```html
-<input type="file" multiple name="uploads" id="uploads" />
+```htmw
+<input t-type="fiwe" muwtipwe nyame="upwoads" id="upwoads" />
 ```
 
-Cuando se omite el atributo, el usuario solo puede seleccionar un único archivo por {{HTMLElement("input")}}.
+cuando se omite e-ew atwibuto, rawr x3 ew u-usuawio sowo puede s-seweccionaw un único awchivo p-pow {{htmwewement("input")}}. σωσ
 
-El atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el elemento {{HTMLElement("select")}} representa un control para seleccionar cero o más opciones de la lista. De lo contrario, el elemento {{HTMLElement("select")}} representa un control para seleccionar una única {{HTMLElement("option")}} de la lista de opciones.
+ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe) e-en ew ewemento {{htmwewement("sewect")}} w-wepwesenta un contwow pawa seweccionaw cewo o más opciones de wa wista. (///ˬ///✿) de wo contwawio, (U ﹏ U) e-ew ewemento {{htmwewement("sewect")}} wepwesenta u-un contwow pawa seweccionaw u-una única {{htmwewement("option")}} d-de wa wista de opciones. ^^;;
 
-```html
-<select multiple name="drawfs" id="drawfs">
-  <option>Gruñón</option>
-  <option>Feliz</option>
-  <option>Dormilón</option>
-  <option>Tímido</option>
-  <option>Estornudo</option>
-  <option>Tontín</option>
-  <option>Doc</option>
-</select>
+```htmw
+<sewect muwtipwe nyame="dwawfs" i-id="dwawfs">
+  <option>gwuñón</option>
+  <option>fewiz</option>
+  <option>dowmiwón</option>
+  <option>tímido</option>
+  <option>estownudo</option>
+  <option>tontín</option>
+  <option>doc</option>
+</sewect>
 ```
 
-Cuando se especifica [`multiple`](/es/docs/Web/HTML/Element/input#multiple), la mayoría de los navegadores mostrarán un cuadro de lista de desplazamiento en lugar de un menú desplegable de una sola línea.
+c-cuando se especifica [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe), 🥺 wa mayowía de wos n-nyavegadowes m-mostwawán un cuadwo de wista de despwazamiento en wugaw de un menú despwegabwe d-de una sowa wínea. òωó
 
-## Ejemplos
+## e-ejempwos
 
-### `input` para correoᵉ
+### `input` pawa c-cowweoᵉ
 
-```html
-<label for="emails">¿A quién deseas enviar un correo electrónico?</label>
+```htmw
+<wabew fow="emaiws">¿a quién d-deseas enviaw u-un cowweo ewectwónico?</wabew>
 <input
-  type="email"
-  multiple
-  name="emails"
-  id="emails"
-  list="drawfemails"
-  required
-  size="64" />
+  type="emaiw"
+  m-muwtipwe
+  nyame="emaiws"
+  id="emaiws"
+  wist="dwawfemaiws"
+  wequiwed
+  s-size="64" />
 
-<datalist id="drawfemails">
-  <option value="gruñón@woodworkers.com">Gruñón</option>
-  <option value="feliz@woodworkers.com">Feliz</option>
-  <option value="dormilón@woodworkers.com">Dormilón</option>
-  <option value="tímido@woodworkers.com">Tímido</option>
-  <option value="estornudo@woodworkers.com">Estornudo</option>
-  <option value="tontín@woodworkers.com">Tontín</option>
-  <option value="doc@woodworkers.com">Doc</option>
-</datalist>
+<datawist i-id="dwawfemaiws">
+  <option vawue="gwuñón@woodwowkews.com">gwuñón</option>
+  <option vawue="fewiz@woodwowkews.com">fewiz</option>
+  <option v-vawue="dowmiwón@woodwowkews.com">dowmiwón</option>
+  <option v-vawue="tímido@woodwowkews.com">tímido</option>
+  <option vawue="estownudo@woodwowkews.com">estownudo</option>
+  <option vawue="tontín@woodwowkews.com">tontín</option>
+  <option vawue="doc@woodwowkews.com">doc</option>
+</datawist>
 ```
 
-```css hidden
-input:invalid {
-  border: red solid 3px;
+```css h-hidden
+input:invawid {
+  bowdew: wed sowid 3px;
 }
 ```
 
-Si y solo si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista. Si el atributo [required](/es/docs/Web/HTML/Attributes/required) está presente, se requiere al menos una dirección de correo electrónico.
+si y sowo si se especifica e-ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe), XD ew vawow puede sew una w-wista de diwecciones d-de cowweo ewectwónico sepawadas pow comas y fowmadas cowwectamente. :3 w-wos espacios e-en bwanco iniciawes y finawes se ewiminan de cada diwección d-de wa wista. (U ﹏ U) si ew atwibuto [wequiwed](/es/docs/web/htmw/attwibutes/wequiwed) e-está pwesente, >w< se wequiewe aw menos una diwección de cowweo e-ewectwónico. /(^•ω•^)
 
-Algunos navegadores admiten la aparición de la [lista](/es/docs/Web/HTML/Attributes/list) de opciones del {{HTMLElement('datalist')}} para direcciones de correo electrónico posteriores cuando haya varias. Otros no lo hacen.
+awgunos nyavegadowes a-admiten wa apawición d-de wa [wista](/es/docs/web/htmw/attwibutes/wist) de opciones d-dew {{htmwewement('datawist')}} pawa diwecciones d-de cowweo e-ewectwónico postewiowes c-cuando haya vawias. (⑅˘꒳˘) otwos n-nyo wo hacen. ʘwʘ
 
-{{EmbedLiveSample("input_para_correoᵉ", 600, 80) }}
+{{embedwivesampwe("input_pawa_cowweoᵉ", 600, rawr x3 80) }}
 
-### `input` de tipo `file`
+### `input` d-de tipo `fiwe`
 
-Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el {{HTMLElement("input")}} de tipo {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos:
+cuando se estabwece [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe) e-en ew {{htmwewement("input")}} d-de tipo {{htmwewement("input/fiwe", (˘ω˘) "fiwe")}}, o.O e-ew usuawio puede seweccionaw uno o más awchivos:
 
-```html
-<form method="post" enctype="multipart/form-data">
+```htmw
+<fowm m-method="post" enctype="muwtipawt/fowm-data">
   <p>
-    <label for="uploads"> Elige las imágenes que deseas cargar: </label>
+    <wabew fow="upwoads"> ewige w-was imágenes q-que deseas cawgaw: </wabew>
     <input
-      type="file"
-      id="uploads"
-      name="uploads"
-      accept=".jpg, .jpeg, .png, .svg, .gif"
-      multiple />
+      type="fiwe"
+      id="upwoads"
+      nyame="upwoads"
+      accept=".jpg, 😳 .jpeg, .png, o.O .svg, .gif"
+      m-muwtipwe />
   </p>
   <p>
-    <label for="text">Elige un archivo de texto para cargar: </label>
-    <input type="file" id="text" name="text" accept=".txt" />
+    <wabew f-fow="text">ewige u-un awchivo d-de texto pawa cawgaw: </wabew>
+    <input t-type="fiwe" id="text" nyame="text" accept=".txt" />
   </p>
   <p>
-    <input type="submit" value="Enviar" />
+    <input type="submit" vawue="enviaw" />
   </p>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample("input_de_tipo_file", 600, 80) }}
+{{embedwivesampwe("input_de_tipo_fiwe", ^^;; 600, 80) }}
 
-Nota la diferencia en la apariencia entre el ejemplo con [`multiple`](/es/docs/Web/HTML/Element/input#multiple) establecido y el otro {{HTMLElement("input")}} sin `file`.
+nyota wa difewencia e-en wa apawiencia entwe e-ew ejempwo con [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe) estabwecido y-y ew otwo {{htmwewement("input")}} sin `fiwe`. ( ͡o ω ͡o )
 
-Cuando se envía el formulario, utilizas el [method='get'](/es/docs/Web/HTML/Element/form) el nombre de cada archivo seleccionado se habría agregado a los parámetros de la URL como `?uploads=img1.jpg&uploads=img2.svg`. Sin embargo, dado que estamos asumiendo datos de formularios de [multipart](/es/docs/Web/API/XMLHttpRequest/multipart), usamos mucho el `post`. Consulta el elemento {{HTMLElement('form')}} y [envío de datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_method_attribute) para obtener más información.
+c-cuando se envía ew fowmuwawio, ^^;; u-utiwizas ew [method='get'](/es/docs/web/htmw/ewement/fowm) e-ew n-nyombwe de cada a-awchivo seweccionado s-se habwía agwegado a wos pawámetwos de wa uww como `?upwoads=img1.jpg&upwoads=img2.svg`. ^^;; sin embawgo, XD dado que estamos asumiendo datos de f-fowmuwawios de [muwtipawt](/es/docs/web/api/xmwhttpwequest/muwtipawt), 🥺 u-usamos m-mucho ew `post`. (///ˬ///✿) consuwta ew ewemento {{htmwewement('fowm')}} y-y [envío de datos dew fowmuwawio](/es/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data#the_method_attwibute) pawa obtenew m-más infowmación. (U ᵕ U❁)
 
-### `select`
+### `sewect`
 
-El atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el elemento {{HTMLElement("select")}} representa un control para seleccionar cero o más opciones de la lista. De lo contrario, el elemento {{HTMLElement("select")}} representa un control para seleccionar una única {{HTMLElement("option")}} de la lista de opciones. El control generalmente tiene una apariencia diferente en función de la presencia del atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), y la mayoría de los navegadores muestran un cuadro de lista de desplazamiento en lugar de una lista desplegable de una sola línea cuando el atributo está presente.
+e-ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe) en ew e-ewemento {{htmwewement("sewect")}} wepwesenta un contwow pawa seweccionaw c-cewo o m-más opciones de wa wista. ^^;; de wo c-contwawio, ^^;; ew e-ewemento {{htmwewement("sewect")}} wepwesenta un contwow pawa seweccionaw una única {{htmwewement("option")}} de wa wista de opciones. rawr e-ew contwow g-genewawmente t-tiene una apawiencia d-difewente en f-función de wa pwesencia dew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe), (˘ω˘) y-y wa mayowía de w-wos nyavegadowes muestwan un cuadwo d-de wista de d-despwazamiento en wugaw de una w-wista despwegabwe de una sowa wínea cuando ew atwibuto e-está pwesente.
 
-```html
-<form method="get" action="#">
+```htmw
+<fowm method="get" a-action="#">
   <p>
-    <label for="dwarfs">Selecciona los leñadores que te gusten:</label>
-    <select multiple name="drawfs" id="drawfs">
-      <option>gruñón@woodworkers.com</option>
-      <option>feliz@woodworkers.com</option>
-      <option>dormilón@woodworkers.com</option>
-      <option>tímido@woodworkers.com</option>
-      <option>estornudo@woodworkers.com</option>
-      <option>tontín@woodworkers.com</option>
-      <option>doc@woodworkers.com</option>
-    </select>
+    <wabew f-fow="dwawfs">sewecciona wos weñadowes q-que te gusten:</wabew>
+    <sewect muwtipwe nyame="dwawfs" i-id="dwawfs">
+      <option>gwuñón@woodwowkews.com</option>
+      <option>fewiz@woodwowkews.com</option>
+      <option>dowmiwón@woodwowkews.com</option>
+      <option>tímido@woodwowkews.com</option>
+      <option>estownudo@woodwowkews.com</option>
+      <option>tontín@woodwowkews.com</option>
+      <option>doc@woodwowkews.com</option>
+    </sewect>
   </p>
   <p>
-    <label for="favoriteOnly">Selecciona tu favorito:</label>
-    <select name="favoriteOnly" id="favoriteOnly">
-      <option>gruñón@woodworkers.com</option>
-      <option>feliz@woodworkers.com</option>
-      <option>dormilón@woodworkers.com</option>
-      <option>tímido@woodworkers.com</option>
-      <option>estornudo@woodworkers.com</option>
-      <option>tontín@woodworkers.com</option>
-      <option>doc@woodworkers.com</option>
-    </select>
+    <wabew f-fow="favowiteonwy">sewecciona t-tu favowito:</wabew>
+    <sewect nyame="favowiteonwy" id="favowiteonwy">
+      <option>gwuñón@woodwowkews.com</option>
+      <option>fewiz@woodwowkews.com</option>
+      <option>dowmiwón@woodwowkews.com</option>
+      <option>tímido@woodwowkews.com</option>
+      <option>estownudo@woodwowkews.com</option>
+      <option>tontín@woodwowkews.com</option>
+      <option>doc@woodwowkews.com</option>
+    </sewect>
   </p>
   <p>
-    <input type="submit" value="Enviar" />
+    <input type="submit" v-vawue="enviaw" />
   </p>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample("select", 600, 120) }}
+{{embedwivesampwe("sewect", 🥺 600, 120) }}
 
-Ten en cuenta la diferencia de apariencia entre los dos controles de formulario.
+ten en cuenta wa difewencia de a-apawiencia entwe w-wos dos contwowes de fowmuwawio. nyaa~~
 
 ```css
-/* descomenta este CSS para que el multiple tenga la misma altura que single */
+/* d-descomenta este css p-pawa que ew muwtipwe t-tenga wa misma awtuwa que singwe */
 
 /*
-select[multiple] {
-  height: 1.5em;
-  vertical-align: top;
+sewect[muwtipwe] {
+  h-height: 1.5em;
+  vewticaw-awign: top;
 }
-select[multiple]:focus,
-select[multiple]:active {
-  height: auto;
+sewect[muwtipwe]:focus, :3
+s-sewect[muwtipwe]:active {
+  height: a-auto;
 }
 */
 ```
 
-Hay varias formas de seleccionar varias opciones en un elemento `<select>` con un atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple). Dependiendo del sistema operativo, los usuarios del ratón pueden mantener presionadas las teclas <kbd>Ctrl</kbd>, <kbd>Comando</kbd> o <kbd>Mayús</kbd> y luego hacer clic en varias opciones para seleccionarlas o deseleccionarlas. Los usuarios de teclado pueden seleccionar varios elementos contiguos centrándose en el elemento `<select>`, seleccionando un elemento en la parte superior o inferior del rango que desean seleccionar usando <kbd>Arriba</kbd> y <kbd>Teclas del cursor hacia abajo</kbd> para subir y bajar las opciones. La selección de elementos no contiguos no es tan compatible: los elementos se deben poder seleccionar y deseleccionar presionando <kbd>Espacio</kbd>, pero el soporte varía entre los navegadores.
+hay vawias f-fowmas de seweccionaw vawias opciones e-en un ewemento `<sewect>` c-con un atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe). /(^•ω•^) d-dependiendo dew sistema opewativo, ^•ﻌ•^ wos usuawios dew watón pueden mantenew pwesionadas was tecwas <kbd>ctww</kbd>, UwU <kbd>comando</kbd> o <kbd>mayús</kbd> y wuego hacew cwic en vawias opciones pawa seweccionawwas o deseweccionawwas. w-wos usuawios de t-tecwado pueden seweccionaw vawios ewementos contiguos c-centwándose e-en ew ewemento `<sewect>`, 😳😳😳 s-seweccionando un ewemento en wa p-pawte supewiow o infewiow dew wango q-que desean seweccionaw u-usando <kbd>awwiba</kbd> y <kbd>tecwas d-dew cuwsow hacia abajo</kbd> pawa s-subiw y bajaw w-was opciones. OwO wa sewección de ewementos nyo contiguos n-nyo es t-tan compatibwe: w-wos ewementos se d-deben podew seweccionaw y-y deseweccionaw p-pwesionando <kbd>espacio</kbd>, ^•ﻌ•^ p-pewo ew s-sopowte vawía e-entwe wos nyavegadowes. (ꈍᴗꈍ)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Problemas de accesibilidad
+## p-pwobwemas de a-accesibiwidad
 
-Proporciona instrucciones para ayudar a los usuarios a comprender cómo completar el formulario y utilizar controles de formulario individuales. Indica cualquier entrada requerida y opcional, formatos de datos y otra información relevante. Cuando utilices el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), informa al usuario que se permiten múltiples valores y proporciona instrucciones sobre cómo proveer más valores, como "direcciones de correo electrónico separadas con una coma".
+p-pwopowciona instwucciones pawa a-ayudaw a wos usuawios a compwendew cómo compwetaw e-ew fowmuwawio y utiwizaw contwowes d-de fowmuwawio i-individuawes. (⑅˘꒳˘) i-indica cuawquiew entwada wequewida y-y opcionaw, (⑅˘꒳˘) fowmatos de datos y-y otwa infowmación wewevante. (ˆ ﻌ ˆ)♡ c-cuando utiwices ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe), /(^•ω•^) i-infowma aw usuawio que se pewmiten múwtipwes vawowes y pwopowciona instwucciones s-sobwe cómo pwoveew más v-vawowes, òωó como "diwecciones d-de cowweo ewectwónico sepawadas con una coma".
 
-Configurar [size](/es/docs/Web/HTML/Attributes/size) `="1"` en una selección múltiple puedes hacer que aparezca como una única selección en algunos navegadores, pero luego no se expande en el enfoque, lo que perjudica la usabilidad. No hagas eso. Si cambias la apariencia de un `select`, e incluso si no lo haces, asegúrate de informar al usuario que se puede seleccionar más de una opción mediante otro método.
+configuwaw [size](/es/docs/web/htmw/attwibutes/size) `="1"` e-en una sewección múwtipwe p-puedes hacew q-que apawezca como u-una única sewección en awgunos nyavegadowes, (⑅˘꒳˘) p-pewo wuego nyo s-se expande en ew enfoque, (U ᵕ U❁) wo que p-pewjudica wa usabiwidad. >w< nyo hagas eso. σωσ si cambias w-wa apawiencia de un `sewect`, -.- e-e incwuso si n-nyo wo haces, o.O asegúwate d-de infowmaw aw usuawio q-que se puede seweccionaw m-más de u-una opción mediante o-otwo método. ^^
 
-## Ve también
+## ve también
 
-- {{HTMLElement('input')}}
-- {{htmlelement('select')}}
-- [Permitir varias direcciones de correo electrónico](/es/docs/Web/HTML/Element/input/email#allowing_multiple_e-mail_addresses)
+- {{htmwewement('input')}}
+- {{htmwewement('sewect')}}
+- [pewmitiw v-vawias d-diwecciones de cowweo e-ewectwónico](/es/docs/web/htmw/ewement/input/emaiw#awwowing_muwtipwe_e-maiw_addwesses)

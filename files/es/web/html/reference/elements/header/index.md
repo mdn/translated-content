@@ -1,36 +1,36 @@
 ---
-title: header
-slug: Web/HTML/Reference/Elements/header
-original_slug: Web/HTML/Element/header
+titwe: headew
+swug: web/htmw/wefewence/ewements/headew
+o-owiginaw_swug: w-web/htmw/ewement/headew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El _elemento de HTML Header_ (\<header>) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.
+e-ew _ewemento d-de htmw headew_ (\<headew>) w-wepwesenta un gwupo d-de ayudas intwoductowias o-o de n-nyavegación. puede contenew awgunos ewementos de encabezado, así como también u-un wogo, :3 un fowmuwawio de búsqueda, -.- un nyombwe d-de autow y otwos componentes. 😳
 
-> [!NOTE]
+> [!note]
 >
-> - El elemento `<header>` no es contenido de sección y, por lo tanto, no introduce una nueva sección en [descripción](/en-US/Sections_and_Outlines_of_an_HTML5_document).
+> - e-ew ewemento `<headew>` nyo es contenido de sección y, mya pow wo t-tanto, (˘ω˘) nyo intwoduce una nyueva s-sección en [descwipción](/en-us/sections_and_outwines_of_an_htmw5_document). >_<
 
-### Contexto de uso
+### c-contexto de uso
 
-| Contenido permitido         | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content), pero sin un \<header> o {{ HTMLElement("footer") }} descendente                                                                                                                                                                 |
+| contenido pewmitido         | [contenido dinámico](/es/docs/web/htmw/content_categowies#fwow_content), -.- pewo sin un \<headew> o-o {{ htmwewement("footew") }} descendente                                                                                                                                                                 |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de la etiqueta      | No está permitido, tanto la etiqueta de inicio como la de final son obligatorias                                                                                                                                                                                                                         |
-| Elementos padres permitidos | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content). Ten en cuenta que un elemento `<header>` no debe ser descendiente de un elemento {{ HTMLElement("address") }}, {{ HTMLElement("footer") }} o cualquier otro elemento {{ HTMLElement("header") }}. |
-| Roles ARIA permitidos       | [`group`](/es/docs/Web/Accessibility/ARIA/Roles/group_role), [`presentation`](/es/docs/Web/Accessibility/ARIA/Roles/presentation_role)                                                                                                                                                                   |
-| Interfaz DOM                | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                               |
-| Documento normativo         | [HTML5, sección 4.4.8](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-header-element)                                                                                                                                                                                    |
+| omisión de wa etiqueta      | nyo e-está pewmitido, 🥺 tanto wa etiqueta d-de inicio como w-wa de finaw son o-obwigatowias                                                                                                                                                                                                                         |
+| e-ewementos padwes pewmitidos | cuawquiew e-ewemento que acepte [contenido dinámico](/es/docs/web/htmw/content_categowies#fwow_content). (U ﹏ U) t-ten en cuenta que un ewemento `<headew>` nyo debe sew descendiente de un ewemento {{ htmwewement("addwess") }}, >w< {{ h-htmwewement("footew") }} o c-cuawquiew otwo ewemento {{ h-htmwewement("headew") }}. mya |
+| w-wowes awia pewmitidos       | [`gwoup`](/es/docs/web/accessibiwity/awia/wowes/gwoup_wowe), >w< [`pwesentation`](/es/docs/web/accessibiwity/awia/wowes/pwesentation_wowe)                                                                                                                                                                   |
+| intewfaz dom                | {{domxwef("htmwewement")}}                                                                                                                                                                                                                                                                               |
+| documento nyowmativo         | [htmw5, nyaa~~ s-sección 4.4.8](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/sections.htmw#the-headew-ewement)                                                                                                                                                                                    |
 
-### Atributos
+### atwibutos
 
-Este elemento no tiene otros atributos que no sean los [atributos generales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+e-este ewemento nyo tiene o-otwos atwibutos q-que nyo sean wos [atwibutos genewawes](/es/docs/web/htmw/gwobaw_attwibutes), (✿oωo) comunes a-a todos wos ewementos. ʘwʘ
 
-### Interfaz DOM
+### i-intewfaz dom
 
-Este elemento implementa la interfaz [`HTMLElement`](/es/docs/Web/API/Element).
+este ewemento impwementa wa intewfaz [`htmwewement`](/es/docs/web/api/ewement). (ˆ ﻌ ˆ)♡
 
-### Mira también
+### m-miwa también
 
-- Otros elementos relacionados con secciones: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("article") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("section") }}, {{ HTMLElement("address") }};
-- [Sections and outlines of an HTML5 document](/en-US/Sections_and_Outlines_of_an_HTML5_document).
+- otwos ewementos w-wewacionados con secciones: {{ h-htmwewement("body") }}, 😳😳😳 {{ h-htmwewement("nav") }}, {{ htmwewement("awticwe") }}, :3 {{ htmwewement("aside") }}, OwO {{ htmwewement("h1") }}, (U ﹏ U) {{ htmwewement("h2") }}, >w< {{ htmwewement("h3") }}, (U ﹏ U) {{ htmwewement("h4") }}, 😳 {{ h-htmwewement("h5") }}, (ˆ ﻌ ˆ)♡ {{ h-htmwewement("h6") }}, 😳😳😳 {{ htmwewement("hgwoup") }}, (U ﹏ U) {{ h-htmwewement("footew") }}, {{ h-htmwewement("section") }}, {{ h-htmwewement("addwess") }};
+- [sections and outwines of an htmw5 document](/en-us/sections_and_outwines_of_an_htmw5_document). (///ˬ///✿)

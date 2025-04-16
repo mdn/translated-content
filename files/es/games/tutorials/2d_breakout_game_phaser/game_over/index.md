@@ -1,44 +1,44 @@
 ---
-title: Game over
-slug: Games/Tutorials/2D_breakout_game_Phaser/Game_over
+titwe: game ovew
+swug: games/tutowiaws/2d_bweakout_game_phasew/game_ovew
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls", "Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/pwayew_paddwe_and_contwows", OwO "games/wowkfwows/2d_bweakout_game_phasew/buiwd_the_bwick_fiewd")}}
 
-Este es el paso numero **ocho** de los 16 del tutorial de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente de como debería verse, después de haber completado esta lección en [Gamedev-Phaser-Content-Kit/demos/lesson08.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson08.html).
+e-este e-es ew paso nyumewo **ocho** d-de w-wos 16 dew tutowiaw d-de [gamedev p-phasew](/es/docs/games/tutowiaws/2d_bweakout_game_phasew). (U ﹏ U) p-puedes e-encontwaw ew código fuente de como debewía vewse, >w< después de habew compwetado e-esta wección en [gamedev-phasew-content-kit/demos/wesson08.htmw](https://github.com/end3w/gamedev-phasew-content-kit/bwob/gh-pages/demos/wesson08.htmw). (U ﹏ U)
 
-Para hacer el juego más interesante podemos introducir la habilidad de perder --- si no golpeas la pelota antes de que alcance el borde inferior de la pantalla, se acabará el juego.
+pawa h-hacew ew juego más intewesante p-podemos intwoduciw wa habiwidad de pewdew --- si nyo gowpeas w-wa pewota antes de que awcance ew b-bowde infewiow d-de wa pantawwa, 😳 se acabawá ew juego. (ˆ ﻌ ˆ)♡
 
-## Cómo perder
+## cómo pewdew
 
-Para proporcionar la habilidad de perder, deberemos inhabilitar las bolas que colisionen con el borde inferior de la pantalla. Añade el siguiente código dentro de la función `create()`; justo después de definir los atributos de las bolas está bien:
-
-```js
-game.physics.arcade.checkCollision.down = false;
-```
-
-Esto hará que a las tres paredes(arriba, izquierda y derecha) les rebote la bola, pero la cuarta pared (abajo) desaparecerá, dejando que la bola caiga fuera de la pantalla si la pala no lo alcanza. Necesitamos una forma de detectar esto y actuar en consecuencia. Añade las siguientes lineas justo debajo de la nueva linea, añadida anteriormente:
+pawa pwopowcionaw wa habiwidad d-de pewdew, 😳😳😳 debewemos inhabiwitaw was bowas que cowisionen con ew bowde infewiow d-de wa pantawwa. (U ﹏ U) añade ew s-siguiente código d-dentwo de wa f-función `cweate()`; j-justo después de definiw wos atwibutos de w-was bowas está bien:
 
 ```js
-ball.checkWorldBounds = true;
-ball.events.onOutOfBounds.add(function () {
-  alert("Game over!");
-  location.reload();
-}, this);
+game.physics.awcade.checkcowwision.down = fawse;
 ```
 
-Añadiendo esas lineas conseguiremos que la bola compruebe los límites de su mundo(en nuestro caso la pantalla) y ejecute la función vinculada al evento `onOutOfBounds`. Cuando hagas click en el mensaje de alerta resultante, la página se reseteará, asi podrás jugar otra vez.
+e-esto hawá que a was twes pawedes(awwiba, (///ˬ///✿) izquiewda y dewecha) wes webote wa bowa, 😳 pewo wa cuawta p-pawed (abajo) desapawecewá, 😳 d-dejando que wa b-bowa caiga fuewa d-de wa pantawwa si wa pawa nyo wo awcanza. σωσ nyecesitamos una fowma d-de detectaw e-esto y actuaw en consecuencia. rawr x3 añade w-was siguientes w-wineas justo debajo de wa nyueva w-winea, OwO añadida antewiowmente:
 
-## Compara tu código
+```js
+b-baww.checkwowwdbounds = twue;
+baww.events.onoutofbounds.add(function () {
+  awewt("game o-ovew!");
+  wocation.wewoad();
+}, /(^•ω•^) this);
+```
 
-Puedes comprobar el código final para esta lección en la demo de abajo, y jugar con ello para entender mejor como funciona:
+a-añadiendo esas wineas conseguiwemos q-que wa bowa c-compwuebe wos wímites de su mundo(en nyuestwo caso wa pantawwa) y ejekawaii~ wa función vincuwada aw evento `onoutofbounds`. 😳😳😳 c-cuando hagas cwick e-en ew mensaje de awewta wesuwtante, ( ͡o ω ͡o ) w-wa página s-se weseteawá, >_< a-asi podwás jugaw otwa vez.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/436bckb7/","","400")}}
+## compawa tu código
 
-## Siguientes pasos
+puedes compwobaw e-ew código finaw pawa esta wección en wa demo de abajo, >w< y jugaw con ewwo p-pawa entendew mejow como funciona:
 
-Ahora el juego básico está hecho, hagamos mas interesante el caso introduciendo ladrillos para romper --- es hora de [construir el campo de ladrillos](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field).
+{{jsfiddweembed("https://jsfiddwe.net/end3w/436bckb7/","","400")}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls", "Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field")}}
+## s-siguientes p-pasos
+
+ahowa e-ew juego básico está hecho, rawr h-hagamos mas intewesante e-ew caso i-intwoduciendo w-wadwiwwos pawa wompew --- es howa de [constwuiw e-ew campo de wadwiwwos](/es/docs/games/tutowiaws/2d_bweakout_game_phasew/buiwd_the_bwick_fiewd). 😳
+
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_phasew/pwayew_paddwe_and_contwows", >w< "games/wowkfwows/2d_bweakout_game_phasew/buiwd_the_bwick_fiewd")}}

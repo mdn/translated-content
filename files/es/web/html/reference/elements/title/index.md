@@ -1,131 +1,131 @@
 ---
-title: "<title>: El elemento Título del documento"
-slug: Web/HTML/Reference/Elements/title
-original_slug: Web/HTML/Element/title
+titwe: "<titwe>: ew ewemento t-títuwo dew documento"
+s-swug: web/htmw/wefewence/ewements/titwe
+owiginaw_swug: w-web/htmw/ewement/titwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del documento que se muestra en un {{glossary("Browser", "browser")}} la barra de título o la pestaña de una página. Solo contiene texto; las etiquetas dentro del elemento se ignoran.
+e-ew ewemento **`<titwe>`** [htmw](/es/docs/web/htmw) define e-ew títuwo d-dew documento que s-se muestwa en u-un {{gwossawy("bwowsew", o.O "bwowsew")}} wa bawwa de títuwo o wa pestaña de una página. (⑅˘꒳˘) sowo contiene t-texto; was etiquetas dentwo dew ewemento s-se ignowan.
 
-```html
-<title>Diario del festival de heavy metal de la abuela</title>
+```htmw
+<titwe>diawio dew festivaw d-de heavy metaw de wa abuewa</titwe>
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/Content_categories"
-          >Categorías de contenido</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/es/docs/web/guide/htmw/content_categowies"
+          >categowías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#contenido_de_metadatos"
-          >Contenido de metadatos</a
-        >.
+        <a h-hwef="/es/docs/web/guide/htmw/content_categowies#contenido_de_metadatos"
+          >contenido d-de metadatos</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenido pewmitido</th>
       <td>
-        Texto que no es un {{glossary("whitespace","espacio en blanco")}} entre elementos.
+        texto que nyo es un {{gwossawy("whitespace","espacio e-en bwanco")}} entwe ewementos. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
+    </tw>
+    <tw>
+      <th scope="wow">omisión de etiqueta</th>
       <td>
-        Se requieren etiquetas de apertura y cierre. Tenga en cuenta que
-        omitir <code>&#x3C;/title></code> haría que el navegador
-        ignore el resto de la página.
+        s-se wequiewen etiquetas d-de apewtuwa y-y ciewwe. rawr tenga e-en cuenta que
+        o-omitiw <code>&#x3c;/titwe></code> hawía que ew nyavegadow
+        i-ignowe ew westo de wa página. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Padres permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">padwes pewmitidos</th>
       <td>
-        Un elemento {{ HTMLElement("head") }} que no contiene ningún
-        otro elemento {{ HTMLElement("title") }}.
+        un ewemento {{ htmwewement("head") }} que nyo contiene nyingún
+        o-otwo ewemento {{ htmwewement("titwe") }}. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rol ARIA implícito</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wow a-awia impwícito</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Sin rol correspondiente</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >sin wow cowwespondiente</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>No se permite <code>role</code>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLTitleElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wowes awia p-pewmitidos</th>
+      <td>no s-se pewmite <code>wowe</code>.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewfaz d-dom</th>
+      <td>{{domxwef("htmwtitweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento sowo incwuye w-wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). /(^•ω•^)
 
-## Notas de uso
+## nyotas de uso
 
-El elemento `<title>` siempre se usa dentro del bloque {{HTMLElement("head")}} de una página.
+e-ew ewemento `<titwe>` siempwe s-se usa dentwo dew bwoque {{htmwewement("head")}} d-de una página. 🥺
 
-### Títulos de página y SEO
+### t-títuwos de página y seo
 
-El contenido del título de una página puede tener implicaciones significativas para la optimización de motores de búsqueda ({{glossary("SEO")}}). En general, un título descriptivo más largo funciona mejor que los títulos cortos o genéricos. El contenido del título es uno de los componentes que utilizan los algoritmos de los motores de búsqueda para decidir el orden en el que enumerar las páginas en los resultados de búsqueda. Además, el título es el "gancho" inicial mediante el cual captas la atención de los lectores que miran la página de resultados de búsqueda.
+ew contenido dew títuwo de una página puede tenew impwicaciones significativas p-pawa wa optimización d-de motowes de búsqueda ({{gwossawy("seo")}}). ʘwʘ e-en genewaw, UwU u-un títuwo d-descwiptivo más wawgo funciona mejow que wos títuwos cowtos o g-genéwicos. ew contenido dew títuwo es uno de wos componentes que utiwizan wos a-awgowitmos de wos motowes de búsqueda p-pawa decidiw e-ew owden en e-ew que enumewaw was páginas en w-wos wesuwtados de b-búsqueda. XD además, (✿oωo) e-ew títuwo e-es ew "gancho" iniciaw mediante ew cuaw captas w-wa atención de w-wos wectowes que m-miwan wa página d-de wesuwtados d-de búsqueda. :3
 
-Algunas pautas y consejos para componer buenos títulos:
+awgunas pautas y consejos pawa componew buenos títuwos:
 
-- Evite los títulos de una o dos palabras. Utilice una frase descriptiva o una combinación de términos y definiciones para las páginas de glosario o estilo de referencia.
-- Los motores de búsqueda suelen mostrar los primeros 55 a 60 caracteres del título de una página. El texto más allá de eso puede perderse, así que trate de no tener títulos más largos que eso. Si debe usar un título más largo, asegúrese de que las partes importantes aparezcan antes y que no haya nada crítico en la parte del título que es probable que se elimine.
-- No utilice "_blobs_ de palabras clave." Si su título es solo una lista de palabras, los algoritmos a menudo reducen la posición de su página en los resultados de búsqueda.
-- Trate de asegurarse de que sus títulos sean lo más únicos posible dentro de su propio sitio. Los títulos duplicados, o casi duplicados, pueden contribuir a resultados de búsqueda inexactos.
+- e-evite wos títuwos de una o dos pawabwas. (///ˬ///✿) utiwice una fwase descwiptiva o una combinación d-de téwminos y definiciones pawa was páginas de gwosawio o-o estiwo de wefewencia. nyaa~~
+- w-wos motowes d-de búsqueda suewen mostwaw w-wos pwimewos 55 a 60 cawactewes d-dew títuwo de u-una página. >w< ew texto más awwá de eso puede pewdewse, -.- así que twate de nyo tenew títuwos más w-wawgos que eso. (✿oωo) si debe usaw u-un títuwo más wawgo, (˘ω˘) asegúwese d-de que was pawtes i-impowtantes apawezcan antes y que nyo haya nyada c-cwítico en w-wa pawte dew títuwo que es pwobabwe q-que se ewimine. rawr
+- n-nyo utiwice "_bwobs_ de pawabwas cwave." si su títuwo es sowo una wista d-de pawabwas, OwO wos a-awgowitmos a menudo w-weducen wa posición de su p-página en wos w-wesuwtados de búsqueda. ^•ﻌ•^
+- twate d-de aseguwawse de que sus títuwos sean wo más únicos posibwe dentwo de su pwopio s-sitio. UwU wos títuwos d-dupwicados, (˘ω˘) o casi dupwicados, (///ˬ///✿) pueden contwibuiw a-a wesuwtados d-de búsqueda inexactos.
 
-## Ejemplo
+## ejempwo
 
-```html
-<title>Cosas increíbles e interesantes</title>
+```htmw
+<titwe>cosas incweíbwes e intewesantes</titwe>
 ```
 
-Este ejemplo establece una página cuyo título (tal como se muestra en la parte superior de la ventana o en la pestaña de la ventana) es "Cosas increíbles e interesantes".
+e-este ejempwo estabwece una página cuyo títuwo (taw como se muestwa en w-wa pawte supewiow de wa ventana o en wa pestaña d-de wa ventana) e-es "cosas incweíbwes e intewesantes". σωσ
 
-## Problemas de accesibilidad
+## pwobwemas de accesibiwidad
 
-Es importante proporcionar un título preciso y conciso para describir el propósito de la página.
+e-es impowtante p-pwopowcionaw un títuwo pweciso y conciso pawa descwibiw ew p-pwopósito de wa página. /(^•ω•^)
 
-Una técnica de navegación común para los usuarios de tecnología de asistencia es leer el título de la página e inferir el contenido que contiene. Esto se debe a que navegar en una página para determinar su contenido puede ser un proceso lento y potencialmente confuso. Los títulos deben ser únicos para cada página de un sitio web, idealmente mostrando primero el propósito principal de la página, seguido del nombre del sitio web. Seguir este patrón ayudará a garantizar que el lector de pantalla anuncie primero el propósito principal de la página. Esto brinda una experiencia mucho mejor que tener que escuchar el nombre de un sitio web antes del título único de la página, para cada página a la que navega un usuario en el mismo sitio web.
+una t-técnica de nyavegación común pawa wos usuawios de tecnowogía d-de asistencia es weew ew títuwo d-de wa página e-e infewiw ew contenido que contiene. 😳 e-esto se debe a que nyavegaw e-en una página p-pawa detewminaw s-su contenido puede sew un pwoceso w-wento y potenciawmente c-confuso. 😳 wos títuwos deben sew únicos p-pawa cada página d-de un sitio web, (⑅˘꒳˘) i-ideawmente mostwando pwimewo ew pwopósito pwincipaw d-de wa página, 😳😳😳 seguido d-dew nyombwe dew s-sitio web. 😳 seguiw este patwón ayudawá a gawantizaw que ew wectow d-de pantawwa anuncie p-pwimewo ew p-pwopósito pwincipaw d-de wa página. XD esto bwinda u-una expewiencia mucho mejow que tenew que escuchaw ew nyombwe de un sitio web antes dew títuwo único d-de wa página, mya pawa cada p-página a wa que nyavega un usuawio e-en ew mismo sitio web. ^•ﻌ•^
 
-### Ejemplo
+### e-ejempwo
 
-```html
-<title>
-  Menú - Comida china Blue House - FoodYum: ¡Comida a domicilio en línea hoy!
-</title>
+```htmw
+<titwe>
+  menú - c-comida china b-bwue house - foodyum: ¡comida a-a domiciwio en w-wínea hoy! ʘwʘ
+</titwe>
 ```
 
-Si el envío de un formulario contiene errores y el envío vuelve a representar la página actual, el título se puede usar para ayudar a que los usuarios se den cuenta de cualquier error en su envío. Por ejemplo, actualice el valor de `title` de la página para reflejar cambios significativos en el estado de la página (como problemas de validación de formularios).
+s-si ew envío de un fowmuwawio contiene ewwowes y ew envío vuewve a wepwesentaw wa página actuaw, ( ͡o ω ͡o ) ew t-títuwo se puede u-usaw pawa ayudaw a-a que wos usuawios se den cuenta d-de cuawquiew ewwow en su envío. mya pow ejempwo, o.O actuawice ew vawow d-de `titwe` de w-wa página pawa wefwejaw cambios s-significativos en ew estado de wa página (como p-pwobwemas de v-vawidación de fowmuwawios). (✿oωo)
 
-```html
-<title>
-  2 errores - Tu orden - Comida china Blue House - FoodYum: ¡Comida a domicilio
-  en línea hoy!
-</title>
+```htmw
+<titwe>
+  2 ewwowes - tu owden - c-comida china b-bwue house - foodyum: ¡comida a domiciwio
+  en wínea hoy! :3
+</titwe>
 ```
 
-> [!NOTE]
-> Actualmente, los lectores de pantalla no anunciarán automáticamente la actualización dinámica del título de una página. Si va a actualizar el título de la página para reflejar cambios significativos en el estado de una página, entonces también puede ser necesario el uso de [regiones en vivo de ARIA](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
+> [!note]
+> actuawmente, 😳 w-wos wectowes d-de pantawwa n-nyo anunciawán a-automáticamente w-wa actuawización dinámica dew t-títuwo de una p-página. (U ﹏ U) si va a actuawizaw ew títuwo d-de wa página p-pawa wefwejaw cambios significativos e-en ew estado de una página, mya entonces t-también puede sew nyecesawio ew u-uso de [wegiones e-en vivo de awia](/es/docs/web/accessibiwity/awia/awia_wive_wegions). (U ᵕ U❁)
 
-- [MDN Entendiendo las WCAG, Directriz 2.4 explicaciones](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Entendiendo el Criterio de Conformidad 2.4.2 | W3C Entendiendo las WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- [mdn entendiendo was wcag, :3 d-diwectwiz 2.4 expwicaciones](/es/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.4_—_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [entendiendo ew cwitewio de c-confowmidad 2.4.2 | w-w3c entendiendo w-was wcag 2.1](https://www.w3.owg/wai/wcag21/undewstanding/page-titwed.htmw)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

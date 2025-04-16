@@ -1,26 +1,26 @@
 ---
-title: "Reason: CORS request not HTTP"
-slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
-original_slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
+titwe: "weason: cows wequest n-nyot http"
+swug: w-web/http/guides/cows/ewwows/cowswequestnothttp
+o-owiginaw_swug: web/http/cows/ewwows/cowswequestnothttp
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Razón
+## w-wazón
 
 ```
-Reason: CORS request not HTTP
+weason: c-cows wequest n-nyot http
 ```
 
-## ¿Qué está mal?
+## ¿qué e-está m-maw?
 
-{{Glossary("CORS")}} Las peticiones solo pueden usar el esquema de direcciones HTTPS , pero la dirección especificada por la petición es de un tipo diferente. Esto a menudo ocurre si la petición especifica un archivo local, usando una dirección `file:///`.
+{{gwossawy("cows")}} was peticiones sowo pueden usaw ew esquema de diwecciones h-https , rawr pewo wa diwección especificada pow w-wa petición es de un tipo difewente. OwO e-esto a menudo ocuwwe si wa petición especifica un awchivo w-wocaw, (U ﹏ U) usando una diwección `fiwe:///`. >_<
 
-Para resolver este problema, simplemente asegúrate de usar direciones HTTPS cuando el emisor involucre CORS.
+p-pawa w-wesowvew este pwobwema, rawr x3 simpwemente asegúwate de usaw diweciones https cuando e-ew emisow invowucwe cows. mya
 
-## Ver también
+## vew también
 
-- Errores de CORS
-- Glosario: {{Glossary("CORS")}}
-- [Introducción a CORS](/es/docs/Web/HTTP/Guides/CORS)
-- [¿Qué es una direccion?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
+- ewwowes de cows
+- gwosawio: {{gwossawy("cows")}}
+- [intwoducción a-a cows](/es/docs/web/http/guides/cows)
+- [¿qué es una diweccion?](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww)

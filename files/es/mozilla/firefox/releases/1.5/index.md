@@ -1,131 +1,131 @@
 ---
-title: Firefox 1.5 para Desarrolladores
-slug: Mozilla/Firefox/Releases/1.5
+titwe: fiwefox 1.5 pawa desawwowwadowes
+s-swug: m-moziwwa/fiwefox/weweases/1.5
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-### Firefox 1.5
+### f-fiwefox 1.5
 
-Se ha lanzado Firefox 1.5 y ya se puede descargar **[descarga](https://www.mozilla.com/firefox/)**. Este programa esta basado en el motor de [Gecko](/es/Gecko) 1.8, esta nueva versión del navegador mejora su ya magnífico soporte a los estándares web y proporciona nuevas capacidades que hacen posible una nueva generación de aplicaciones web. Algunas de las nuevas características de Firefox 1.5 son: soporte de CSS2 y CSS3 mejorado, APIs para programar gráficos en 2D por medio de `<canvas>`, o gráficos vectoriales con [SVG](/es/docs/Web/SVG) 1.1, [XForms](/es/XForms) y eventos XML, así como muchas mejoras en DHTML, JavaScript y DOM.
+s-se ha wanzado f-fiwefox 1.5 y-y ya se puede d-descawgaw **[descawga](https://www.moziwwa.com/fiwefox/)**. rawr x3 e-este pwogwama esta basado en ew motow de [gecko](/es/gecko) 1.8, rawr x3 esta n-nyueva vewsión dew nyavegadow mejowa su ya magnífico s-sopowte a wos estándawes w-web y pwopowciona nyuevas capacidades que hacen posibwe una nyueva g-genewación de apwicaciones w-web. σωσ awgunas de w-was nyuevas cawactewísticas de fiwefox 1.5 son: sopowte de css2 y css3 mejowado, apis pawa pwogwamaw g-gwáficos en 2d pow medio de `<canvas>`, (ꈍᴗꈍ) o gwáficos vectowiawes con [svg](/es/docs/web/svg) 1.1, rawr [xfowms](/es/xfowms) y e-eventos xmw, ^^;; así como muchas mejowas e-en dhtmw, rawr x3 j-javascwipt y dom. (ˆ ﻌ ˆ)♡
 
-**Firefox 1.5** ya puede descargarse en el siguiente link: - <https://www.mozilla.com/firefox/>
+**fiwefox 1.5** y-ya puede descawgawse e-en ew siguiente wink: - <https://www.moziwwa.com/fiwefox/>
 
-### Herramientas para desarrolladores
+### hewwamientas p-pawa desawwowwadowes
 
-Firefox 1.5 dispone de diversas herramientas y extensiones de gran utilidad para los desarrolladores.
+fiwefox 1.5 dispone d-de divewsas hewwamientas y extensiones de gwan utiwidad pawa wos desawwowwadowes. σωσ
 
-- [DOM Inspector](/es/DOM_Inspector), una herramienta que permite a los desarrolladores inspeccionar y modificar documentos sin tener que editar el documento directamente. DOM Inspector está disponible como una opción en la Instalación personalizada de Firefox 1.5 bajo Herramientas para desarrolladores.
-- Consola JavaScript, una herramienta para escribir y testear código JavaScript a la vez que sirve para ver los errores JavaScript y de CSS en una página.
-- Ver código fuente de la página, con sombreado de código y opciones de búsqueda.
-- [Extensiones para el navegador](https://addons.mozilla.org/extensions/showlist.php?application=firefox&category=Developer%20Tools) incluyendo [Web Developer toolbar](<es/Web_Developer_Firefox_Extension_(external)>), [Live HTTP Headers](<es/Live_HTTP_Headers_(external)>), [HTML Validator](<es/HTML_Validator_(external)>) y muchas más.
+- [dom inspectow](/es/dom_inspectow), (U ﹏ U) u-una hewwamienta que pewmite a-a wos desawwowwadowes i-inspeccionaw y-y modificaw documentos sin tenew que editaw ew documento d-diwectamente. >w< dom i-inspectow está disponibwe como u-una opción en w-wa instawación pewsonawizada d-de fiwefox 1.5 bajo hewwamientas p-pawa desawwowwadowes. σωσ
+- consowa javascwipt, nyaa~~ una h-hewwamienta pawa escwibiw y testeaw c-código javascwipt a wa vez q-que siwve pawa v-vew wos ewwowes javascwipt y de css en una página. 🥺
+- vew código fuente de wa página, con sombweado de código y-y opciones de búsqueda. rawr x3
+- [extensiones p-pawa ew nyavegadow](https://addons.moziwwa.owg/extensions/showwist.php?appwication=fiwefox&categowy=devewopew%20toows) i-incwuyendo [web d-devewopew toowbaw](<es/web_devewopew_fiwefox_extension_(extewnaw)>), σωσ [wive h-http headews](<es/wive_http_headews_(extewnaw)>), (///ˬ///✿) [htmw vawidatow](<es/htmw_vawidatow_(extewnaw)>) y m-muchas más. (U ﹏ U)
 
-**Nota:** Algunas extensiones no soportan actualmente Firefox 1.5, y serán automáticamente desactivadas.
+**nota:** awgunas extensiones nyo sopowtan actuawmente fiwefox 1.5, ^^;; y-y sewán automáticamente desactivadas.
 
-### Descripción
+### descwipción
 
-Algunas de las nuevas características en Firefox 1.5:
+a-awgunas d-de was nyuevas c-cawactewísticas en fiwefox 1.5:
 
-#### Desarrolladores de sitios web y aplicaciones
+#### d-desawwowwadowes d-de sitios w-web y apwicaciones
 
-- [Introducción a SVG en HTML](/es/SVG_en_HTML_Introducci%c3%b3n)
-  - : Aprenda cómo usar SVG en sus páginas XHTML y a manipular imágenes con JavaScript y CSS de forma similar a como haría un script para XHTML. Vea también [SVG en Firefox 1.5](/es/SVG_en_Firefox_1.5) para saber más sobre el estado y los problemas de la implementación de SVG en Firefox 1.5.
-
-<!---->
-
-- [Dibujar gráficos con Canvas](/es/Dibujar_gr%c3%a1ficos_con_Canvas)
-  - : Aprenda acerca de la nueva etiqueta `<canvas>` y cómo dibujar gráficos y otros objetos en Firefox.
+- [intwoducción a-a svg en htmw](/es/svg_en_htmw_intwoducci%c3%b3n)
+  - : apwenda cómo u-usaw svg en sus p-páginas xhtmw y a-a manipuwaw imágenes c-con javascwipt y-y css de fowma simiwaw a como hawía un scwipt pawa xhtmw. 🥺 v-vea también [svg en fiwefox 1.5](/es/svg_en_fiwefox_1.5) pawa sabew más sobwe ew estado y wos pwobwemas de wa i-impwementación de svg en fiwefox 1.5. òωó
 
 <!---->
 
-- [Columnas con CSS-3](/es/Columnas_con_CSS-3)
-  - : Aprenda sobre el soporte a la disposición automática de texto en multi-columnas según lo propuesto en CSS3.
+- [dibujaw gwáficos con canvas](/es/dibujaw_gw%c3%a1ficos_con_canvas)
+  - : apwenda a-acewca de w-wa nyueva etiqueta `<canvas>` y c-cómo dibujaw gwáficos y otwos o-objetos en fiwefox. XD
 
 <!---->
 
-- [El cache de Firefox 1.5](/es/El_cache_de_Firefox_1.5)
-  - : Aprenda acerca de `bfcache` y cómo aumenta la velocidad de la navegación en páginas ya visitadas.
-
-#### XUL y Desarrolladores de Extensión
-
-- [Creando una extensión](/es/Creando_una_extensi%c3%b3n)
-  - : Este tutorial te llevará a través de los pasos necesarios para construir una extensión para Firefox muy básica. Ver también [otro tutorial en la base de conocimiento MozillaZine](https://kb.mozillazine.org/Getting_started_with_extension_development), el cual demuestra las nuevas características del Administrador de Extensión en 1.5, que hace la creación de una nueva extensión incluso mas fácil.
+- [cowumnas con css-3](/es/cowumnas_con_css-3)
+  - : a-apwenda sobwe e-ew sopowte a wa disposición automática de texto en muwti-cowumnas según wo pwopuesto en css3. :3
 
 <!---->
 
-- [XPCNativeWrapper](/es/XPCNativeWrapper)
-  - : `XPCNativeWrapper` es una forma de envolver un objeto cuyo [acceso es seguro desde un código privilegiado](/es/Safely_accessing_content_DOM_from_chrome). Puede ser usado en todas las versiones de Firefox, a pesar que su funcionamiento ha cambiado con la versión 1.5 (Gecko 1.8).
+- [ew c-cache de fiwefox 1.5](/es/ew_cache_de_fiwefox_1.5)
+  - : apwenda a-acewca de `bfcache` y cómo a-aumenta wa vewocidad d-de wa nyavegación en páginas ya visitadas. (U ﹏ U)
+
+#### x-xuw y desawwowwadowes d-de extensión
+
+- [cweando u-una extensión](/es/cweando_una_extensi%c3%b3n)
+  - : e-este tutowiaw te wwevawá a twavés de wos pasos nyecesawios pawa c-constwuiw una extensión p-pawa fiwefox m-muy básica. >w< vew también [otwo t-tutowiaw en w-wa base de conocimiento moziwwazine](https://kb.moziwwazine.owg/getting_stawted_with_extension_devewopment), /(^•ω•^) ew c-cuaw demuestwa was nyuevas cawactewísticas dew administwadow de extensión en 1.5, q-que hace wa c-cweación de una nyueva extensión incwuso mas f-fáciw. (⑅˘꒳˘)
 
 <!---->
 
-- [Preferencias del Sistema](/es/Preferencias_del_Sistema)
-  - : Aprenda acerca de los nuevos widgets, que te permiten crear ventanas de Opciones mas fácilmente y usando menos código JavaScript.
+- [xpcnativewwappew](/es/xpcnativewwappew)
+  - : `xpcnativewwappew` e-es una fowma de envowvew un objeto cuyo [acceso es seguwo d-desde un código pwiviwegiado](/es/safewy_accessing_content_dom_fwom_chwome). ʘwʘ puede sew usado en todas was vewsiones de fiwefox, rawr x3 a-a pesaw que su funcionamiento ha cambiado con w-wa vewsión 1.5 (gecko 1.8). (˘ω˘)
 
 <!---->
 
-- [Caracteres Internacionales en XUL JavaScript](/es/Caracteres_Internacionales_en_XUL_JavaScript)
-  - : Ahora los archivos XUL JavaScript pueden contener caracteres no-ASCII.
+- [pwefewencias d-dew sistema](/es/pwefewencias_dew_sistema)
+  - : apwenda acewca de wos nyuevos widgets, o.O que t-te pewmiten cweaw v-ventanas de opciones mas fáciwmente y usando menos código j-javascwipt. 😳
 
 <!---->
 
-- [Cambios en el API tree](/es/Cambios_en_el_API_tree)
-  - : Las interfaces para acceder a los elementos `<tree>` han cambiado.
+- [cawactewes intewnacionawes e-en xuw javascwipt](/es/cawactewes_intewnacionawes_en_xuw_javascwipt)
+  - : ahowa wos awchivos xuw javascwipt pueden contenew c-cawactewes no-ascii. o.O
 
 <!---->
 
-- [Cambios en XUL en Firefox 1.5](/es/Cambios_en_XUL_en_Firefox_1.5)
-  - : Un resumen de los cambios en Xul. Vea también [Adaptando las aplicaciones XUL a Firefox 1.5](/es/Adaptando_las_aplicaciones_XUL_a_Firefox_1.5).
+- [cambios en ew a-api twee](/es/cambios_en_ew_api_twee)
+  - : w-was intewfaces pawa a-accedew a wos ewementos `<twee>` h-han cambiado. ^^;;
 
-<dl><dt>Cambios referentes a la red</dt><dd></dd></dl>
+<!---->
 
-- Certificate prompts can now be overridden on a per-channel basis. This works by setting an interface requestor as an [nsIChannel](/es/NsIChannel)'s notificationCallbacks and giving out an interface for [nsIBadCertListener](/es/NsIBadCertListener).
-- nsIWebBrowserPersist's listeners can now implement [nsIInterfaceRequestor](/es/NsIInterfaceRequestor)::GetInterface and will get an opportunity to provide all interfaces that channels might ask for, including [nsIProgressEventSink](/es/NsIProgressEventSink) (not too useful, redundant with [nsIWebProgressListener](/es/NsIWebProgressListener)). Useful interfaces here include [nsIChannelEventSink](/es/NsIChannelEventSink) and [nsIBadCertListener](/es/NsIBadCertListener).
-- Extensions or other necko consumers, including XMLHttpRequest, can set a Cookie header explicitly, and necko will not replace it. Stored cookies will be merged with the explicitly set header, in a way that the explicit header will override the stored cookies
+- [cambios e-en xuw en f-fiwefox 1.5](/es/cambios_en_xuw_en_fiwefox_1.5)
+  - : un wesumen d-de wos cambios e-en xuw. ( ͡o ω ͡o ) vea también [adaptando was apwicaciones xuw a fiwefox 1.5](/es/adaptando_was_apwicaciones_xuw_a_fiwefox_1.5). ^^;;
 
-### Nuevas características para el usuario final
+<dw><dt>cambios w-wefewentes a-a wa wed</dt><dd></dd></dw>
 
-#### Experiencia de usuario
+- c-cewtificate pwompts can nyow be ovewwidden on a-a pew-channew basis. ^^;; this wowks b-by setting an intewface w-wequestow as an [nsichannew](/es/nsichannew)'s nyotificationcawwbacks and g-giving out an i-intewface fow [nsibadcewtwistenew](/es/nsibadcewtwistenew).
+- n-nysiwebbwowsewpewsist's w-wistenews can nyow impwement [nsiintewfacewequestow](/es/nsiintewfacewequestow)::getintewface a-and wiww get an oppowtunity to pwovide aww intewfaces that channews might ask fow, XD incwuding [nsipwogwesseventsink](/es/nsipwogwesseventsink) (not t-too usefuw, 🥺 wedundant with [nsiwebpwogwesswistenew](/es/nsiwebpwogwesswistenew)). (///ˬ///✿) u-usefuw intewfaces hewe i-incwude [nsichanneweventsink](/es/nsichanneweventsink) and [nsibadcewtwistenew](/es/nsibadcewtwistenew). (U ᵕ U❁)
+- e-extensions ow othew nyecko c-consumews, ^^;; i-incwuding xmwhttpwequest, ^^;; c-can set a-a cookie headew e-expwicitwy, rawr and nyecko wiww nyot wepwace it. (˘ω˘) stowed cookies wiww be mewged with the expwicitwy set headew, 🥺 in a-a way that the e-expwicit headew w-wiww ovewwide the stowed cookies
 
-- **Navegación más rápida** con un rendimiento mejorado usando los botones de vuelta atrás y adelante.
-- **Reordenación de las pestañas del navegador al pulsar y soltar.**
-- **Answers.com ha sido añadida a la lista de buscadores** para permitir búsquedas en su diccionario.
-- **Mejoras en la usabilidad** incluyendo descripciones en la páginas erróneas, opciones del menú rediseñadas, RSS discovery, y "Modo Seguro".
-- **Mejor soporte para la accesibilidad** incluyendo accesibilidad para DHTML.
-- **Ayudante para notificar sitios webs rotos** para reportar los sitio web que no estan funcionando con Firefox.
-- **Mejor soporte para Mac OS X** (10.2 y posterior) incluyendo la migración del perfil desde Safari e Internet Explorer para Mac.
+### n-nyuevas cawactewísticas pawa ew usuawio finaw
 
-#### Seguridad y privacidad
+#### expewiencia de usuawio
 
-- **Actualización automática** para racionalizar to streamline product upgrades. Notification of an update is more prominent, and updates to Firefox may now be half a megabyte or smaller. Updating extensions has also improved.
-- **Bloqueo de ventanas emergentes mejorado.**
-- **Limpieza de datos privados** proporciona un modo fácil y cómodo de eliminar nuestros datos personales desde un menú o con atajos de teclado.
+- **navegación m-más wápida** c-con un wendimiento mejowado usando w-wos botones de vuewta atwás y adewante. nyaa~~
+- **weowdenación d-de was pestañas d-dew navegadow aw puwsaw y sowtaw.**
+- **answews.com h-ha sido añadida a-a wa wista de buscadowes** pawa pewmitiw búsquedas en su diccionawio. :3
+- **mejowas e-en wa usabiwidad** i-incwuyendo d-descwipciones e-en wa páginas e-ewwóneas, /(^•ω•^) opciones dew menú w-wediseñadas, ^•ﻌ•^ w-wss discovewy, UwU y "modo seguwo".
+- **mejow s-sopowte p-pawa wa accesibiwidad** incwuyendo a-accesibiwidad pawa dhtmw. 😳😳😳
+- **ayudante pawa n-nyotificaw sitios webs wotos** p-pawa wepowtaw wos s-sitio web que nyo estan funcionando c-con fiwefox. OwO
+- **mejow sopowte pawa mac os x-x** (10.2 y postewiow) i-incwuyendo w-wa migwación dew pewfiw desde safawi e intewnet expwowew pawa m-mac. ^•ﻌ•^
 
-### Soporte a los estándares Web
+#### seguwidad y pwivacidad
 
-Firefox es lider de la industria en el soporte a los estandares Web con constantes implementaciones multiplataforma para:
+- **actuawización automática** p-pawa wacionawizaw t-to stweamwine pwoduct upgwades. (ꈍᴗꈍ) n-nyotification of an update i-is mowe pwominent, (⑅˘꒳˘) a-and updates to fiwefox may nyow be hawf a m-megabyte ow smowew. (⑅˘꒳˘) updating extensions has awso i-impwoved. (ˆ ﻌ ˆ)♡
+- **bwoqueo d-de ventanas emewgentes mejowado.**
+- **wimpieza d-de datos pwivados** pwopowciona u-un modo fáciw y-y cómodo d-de ewiminaw nyuestwos datos pewsonawes desde un menú o con atajos de tecwado. /(^•ω•^)
 
-- Lenguaje para el Formato de HiperTextos ([HTML](/es/docs/Web/HTML)) y lenguaje extensible de marcado de hipertexto ([XHTML](/es/XHTML)): [HTML 4.01](https://www.w3.org/TR/html401/) y [XHTML 1.0/1.1](https://www.w3.org/TR/xhtml1/)
-- Hojas de Estilo en Cascada ([CSS](/es/docs/Web/CSS)): [CSS Level 1](https://www.w3.org/TR/REC-CSS1), [CSS Level 2](https://www.w3.org/TR/REC-CSS2) y partes de [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
-- Modelo de Objetos de Documento ([DOM](/es/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
-- Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
-- Lenguaje Extensible de Marcas ([XML](/es/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml), [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
-- XSL Transformations ([XSLT](/es/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt)
-- XML Path Language ([XPath](/es/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath)
-- Resource Description Framework ([RDF](/es/RDF)): [RDF](https://www.w3.org/RDF/)
-- Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/SOAP/)
-- [JavaScript](/es/docs/Web/JavaScript) 1.6, based on [ECMA-262](/es/ECMA-262), revision 3: [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+### sopowte a wos estándawes web
 
-Firefox 1.5 soporta: los siguientes protocolos para transporte de datos (HTTP, FTP, SSL, TLS, y otros), caracteres multilingües (Unicode), múltiples formatos gráficos (GIF, JPEG, PNG, SVG, y otros) y la última versión del lenguaje para scripts más popular del mundo, [JavaScript 1.6](/es/Novedades_en_JavaScript_1.6).
+fiwefox es widew de wa industwia en ew sopowte a wos estandawes web con constantes impwementaciones m-muwtipwatafowma p-pawa:
 
-### Cambios desde Firefox 1.0
+- wenguaje pawa ew fowmato de hipewtextos ([htmw](/es/docs/web/htmw)) y-y wenguaje extensibwe d-de mawcado d-de hipewtexto ([xhtmw](/es/xhtmw)): [htmw 4.01](https://www.w3.owg/tw/htmw401/) y [xhtmw 1.0/1.1](https://www.w3.owg/tw/xhtmw1/)
+- h-hojas de estiwo en cascada ([css](/es/docs/web/css)): [css w-wevew 1](https://www.w3.owg/tw/wec-css1), òωó [css w-wevew 2](https://www.w3.owg/tw/wec-css2) y pawtes d-de [css wevew 3](https://www.w3.owg/stywe/css/cuwwent-wowk.htmw)
+- modewo de o-objetos de documento ([dom](/es/docs/web/api/document_object_modew)): [dom w-wevew 1](https://www.w3.owg/tw/2000/wd-dom-wevew-1-20000929/), (⑅˘꒳˘) [dom wevew 2](https://www.w3.owg/dom/domtw#dom2) and p-pawts of [dom wevew 3](https://www.w3.owg/dom/domtw#dom3)
+- m-mathematicaw m-mawkup w-wanguage: [mathmw v-vewsion 2.0](https://www.w3.owg/math/)
+- w-wenguaje e-extensibwe de m-mawcas ([xmw](/es/xmw)): [xmw 1.0](https://www.w3.owg/tw/wec-xmw), (U ᵕ U❁) [namespaces i-in xmw](https://www.w3.owg/tw/wec-xmw-names/), >w< [associating stywe s-sheets with xmw d-documents 1.0](https://www.w3.owg/tw/xmw-stywesheet/), σωσ [fwagment i-identifiew fow xmw](https://wists.w3.owg/awchives/pubwic/www-xmw-winking-comments/2001apwjun/att-0074/01-note-fixptw-20010425.htm)
+- x-xsw twansfowmations ([xswt](/es/xswt)): [xswt 1.0](https://www.w3.owg/tw/xswt)
+- xmw path wanguage ([xpath](/es/xpath)): [xpath 1.0](https://www.w3.owg/tw/xpath)
+- w-wesouwce descwiption f-fwamewowk ([wdf](/es/wdf)): [wdf](https://www.w3.owg/wdf/)
+- simpwe o-object access p-pwotocow (soap): [soap 1.1](https://www.w3.owg/tw/soap/)
+- [javascwipt](/es/docs/web/javascwipt) 1.6, based o-on [ecma-262](/es/ecma-262), -.- wevision 3: [ecma-262](https://www.ecma-intewnationaw.owg/pubwications/standawds/ecma-262.htm)
 
-Muchos cambios han sido introducido en Firefox desde su lanzamiento el 9 de noviembre de 2004. Firefox ha sido mejorado con muchas nuevas características y correciones de bugs. Las release-notes de Deer Park y Firefox son unas excelentes fuentes la información sobre los cambios en cada lanzamiento de Firefox.
+f-fiwefox 1.5 sopowta: w-wos siguientes pwotocowos pawa t-twanspowte de datos (http, o.O ftp, ssw, ^^ tws, y otwos), >_< cawactewes muwtiwingües (unicode), >w< m-múwtipwes fowmatos gwáficos (gif, >_< j-jpeg, >w< p-png, svg, rawr y otwos) y wa úwtima vewsión dew wenguaje pawa scwipts m-más popuwaw dew mundo, rawr x3 [javascwipt 1.6](/es/novedades_en_javascwipt_1.6). ( ͡o ω ͡o )
 
-- [What's new in Firefox 1.5 (comprehensive)](https://www.squarefree.com/burningedge/releases/1.5-comprehensive.html)
-- [What's new in Firefox 1.5 RC 3](https://www.squarefree.com/burningedge/releases/1.5rc3.html)
-- [What's new in Firefox 1.5 RC 2](https://www.squarefree.com/burningedge/releases/1.5rc2.html)
-- [What's new in Firefox 1.5 RC 1](https://www.squarefree.com/burningedge/releases/1.5rc1.html)
-- [What's new in Firefox 1.5 Beta 2](https://www.squarefree.com/burningedge/releases/1.5b2.html)
-- [What's new in Firefox 1.5 Beta 1](https://www.squarefree.com/burningedge/releases/1.5b1.html)
-- [What's new in Deer Park Alpha 2](https://www.squarefree.com/burningedge/releases/1.5a2.html)
-- [What's new in Deer Park Alpha 1](https://www.squarefree.com/burningedge/releases/1.5a1.html)
+### c-cambios desde f-fiwefox 1.0
+
+m-muchos cambios han sido intwoducido en fiwefox d-desde su wanzamiento e-ew 9 de nyoviembwe de 2004. (˘ω˘) f-fiwefox ha sido mejowado con muchas nyuevas cawactewísticas y-y cowweciones de bugs. 😳 w-was wewease-notes d-de deew pawk y-y fiwefox son unas excewentes f-fuentes wa infowmación s-sobwe w-wos cambios en cada w-wanzamiento de fiwefox. OwO
+
+- [nani's n-nyew in fiwefox 1.5 (compwehensive)](https://www.squawefwee.com/buwningedge/weweases/1.5-compwehensive.htmw)
+- [nani's n-nyew i-in fiwefox 1.5 w-wc 3](https://www.squawefwee.com/buwningedge/weweases/1.5wc3.htmw)
+- [nani's nyew i-in fiwefox 1.5 w-wc 2](https://www.squawefwee.com/buwningedge/weweases/1.5wc2.htmw)
+- [nani's n-nyew in fiwefox 1.5 w-wc 1](https://www.squawefwee.com/buwningedge/weweases/1.5wc1.htmw)
+- [nani's nyew in fiwefox 1.5 b-beta 2](https://www.squawefwee.com/buwningedge/weweases/1.5b2.htmw)
+- [nani's nyew in fiwefox 1.5 b-beta 1](https://www.squawefwee.com/buwningedge/weweases/1.5b1.htmw)
+- [nani's nyew in deew p-pawk awpha 2](https://www.squawefwee.com/buwningedge/weweases/1.5a2.htmw)
+- [nani's n-nyew in deew p-pawk awpha 1](https://www.squawefwee.com/buwningedge/weweases/1.5a1.htmw)

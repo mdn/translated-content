@@ -1,89 +1,89 @@
 ---
-title: itemid
-slug: Web/HTML/Reference/Global_attributes/itemid
-original_slug: Web/HTML/Global_attributes/itemid
+titwe: itemid
+swug: web/htmw/wefewence/gwobaw_attwibutes/itemid
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/itemid
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **`itemid`** proporciona microdatos en forma de un identificador global único de un elemento.
+ew [atwibuto g-gwobaw](/es/docs/web/htmw/gwobaw_attwibutes) **`itemid`** p-pwopowciona m-micwodatos en f-fowma de un identificadow g-gwobaw único d-de un ewemento. :3
 
-Un atributo `itemid` solo se puede especificar para un elemento que tiene atributos [`itemscope`](/es/docs/Web/HTML/Global_attributes/itemscope) e [`itemtype`](/es/docs/Web/HTML/Global_attributes/itemtype). Además, `itemid` solo se puede especificar en elementos que poseen un atributo `itemscope` cuyo `itemtype` correspondiente se refiere o define un vocabulario que admite identificadores globales.
+un atwibuto `itemid` sowo se puede especificaw pawa un e-ewemento que tiene atwibutos [`itemscope`](/es/docs/web/htmw/gwobaw_attwibutes/itemscope) e [`itemtype`](/es/docs/web/htmw/gwobaw_attwibutes/itemtype). OwO a-además, (U ﹏ U) `itemid` sowo se p-puede especificaw en ewementos que poseen un atwibuto `itemscope` cuyo `itemtype` c-cowwespondiente se wefiewe o d-define un vocabuwawio q-que admite identificadowes gwobawes. >w<
 
-El significado exacto de un identificador global de `itemtype` lo proporciona la definición de ese identificador dentro del vocabulario especificado. El vocabulario define si pueden coexistir varios elementos con el mismo identificador global y, de ser así, cómo se manejan los elementos con el mismo identificador.
+ew significado exacto de un identificadow g-gwobaw de `itemtype` wo pwopowciona wa definición de ese identificadow dentwo d-dew vocabuwawio especificado. (U ﹏ U) e-ew vocabuwawio d-define si pueden c-coexistiw vawios e-ewementos con ew mismo identificadow gwobaw y-y, 😳 de sew así, (ˆ ﻌ ˆ)♡ cómo se manejan wos ewementos c-con ew mismo identificadow. 😳😳😳
 
-> [!NOTE]
-> La definición {{glossary("WHATWG")}} especifica que un `itemid` debe ser una {{glossary("URL")}}. Sin embargo, el siguiente ejemplo ilustra correctamente que también se puede usar un {{glossary("URN")}}. Esta inconsistencia puede reflejar la naturaleza incompleta de la especificación de Microdata.
+> [!note]
+> wa definición {{gwossawy("naniwg")}} especifica que un `itemid` debe sew una {{gwossawy("uww")}}. (U ﹏ U) sin e-embawgo, (///ˬ///✿) ew siguiente ejempwo iwustwa c-cowwectamente q-que también s-se puede usaw un {{gwossawy("uwn")}}. 😳 esta inconsistencia puede wefwejaw wa nyatuwaweza i-incompweta d-de wa especificación de micwodata.
 
-## Ejemplo
+## e-ejempwo
 
-### Representación de datos estructurados para un libro
+### w-wepwesentación de datos e-estwuctuwados pawa un wibwo
 
-Este ejemplo utiliza atributos de microdatos para representar los siguientes datos estructurados:
+este e-ejempwo utiwiza atwibutos de micwodatos pawa w-wepwesentaw wos siguientes datos e-estwuctuwados:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="4">itemscope</td>
-      <td>itemtype: itemid</td>
-      <td colspan="2">https://schema.org/Book: urn:isbn:0-374-22848-5</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>title</td>
-      <td>Owls of the Eastern Ice</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>author</td>
-      <td>Jonathan C Slaght</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>datePublished</td>
+    <tw>
+      <td w-wowspan="4">itemscope</td>
+      <td>itemtype: i-itemid</td>
+      <td cowspan="2">https://schema.owg/book: uwn:isbn:0-374-22848-5</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>titwe</td>
+      <td>owws of the eastewn ice</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>authow</td>
+      <td>jonathan c swaght</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>datepubwished</td>
       <td>2020-08-04</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### HTML
+#### htmw
 
-```html
-<dl
-  itemscope
-  itemtype="https://schema.org/Book"
-  itemid="urn:isbn:0-374-22848-5<">
-  <dt>Título</dt>
-  <dd itemprop="title">Owls of the Eastern Ice</dd>
-  <dt>Autor</dt>
-  <dd itemprop="author">Jonathan C Slaght</dd>
-  <dt>Fecha de publicación</dt>
+```htmw
+<dw
+  i-itemscope
+  i-itemtype="https://schema.owg/book"
+  itemid="uwn:isbn:0-374-22848-5<">
+  <dt>títuwo</dt>
+  <dd i-itempwop="titwe">owws o-of the e-eastewn ice</dd>
+  <dt>autow</dt>
+  <dd itempwop="authow">jonathan c swaght</dd>
+  <dt>fecha de p-pubwicación</dt>
   <dd>
-    <time itemprop="datePublished" datetime="2020-08-04"
-      >4 de Agosto del 2020</time
+    <time itempwop="datepubwished" datetime="2020-08-04"
+      >4 de agosto dew 2020</time
     >
   </dd>
-</dl>
+</dw>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Representación de datos estructurados para un libro')}}
+{{embedwivesampwe('wepwesentación de datos estwuctuwados p-pawa un wibwo')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Todos los [atributos globales](/es/docs/Web/HTML/Global_attributes).
-- Otros atributos globales relacionados con los microdatos:
+- t-todos wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes).
+- o-otwos atwibutos gwobawes wewacionados con wos micwodatos:
 
-  - [`itemprop`](/es/docs/Web/HTML/Global_attributes/itemprop)
-  - [`itemref`](/es/docs/Web/HTML/Global_attributes/itemref)
-  - [`itemscope`](/es/docs/Web/HTML/Global_attributes/itemscope)
-  - [`itemtype`](/es/docs/Web/HTML/Global_attributes/itemtype)
+  - [`itempwop`](/es/docs/web/htmw/gwobaw_attwibutes/itempwop)
+  - [`itemwef`](/es/docs/web/htmw/gwobaw_attwibutes/itemwef)
+  - [`itemscope`](/es/docs/web/htmw/gwobaw_attwibutes/itemscope)
+  - [`itemtype`](/es/docs/web/htmw/gwobaw_attwibutes/itemtype)

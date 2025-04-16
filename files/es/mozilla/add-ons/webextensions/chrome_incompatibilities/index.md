@@ -1,238 +1,238 @@
 ---
-title: Incompatibilidades con Chrome
-slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
+titwe: incompatibiwidades con c-chwome
+swug: moziwwa/add-ons/webextensions/chwome_incompatibiwities
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-WebExtensions está diseñado para ser compatible con las extensiones de Chrome y Opera: en la medida de lo posible, las extensiones escritas para esos navegadores deberían ejecutarse en Firefox con cambios mínimos.
+w-webextensions e-está d-diseñado pawa sew c-compatibwe con w-was extensiones d-de chwome y opewa: e-en wa medida de wo posibwe, XD was extensiones escwitas pawa esos nyavegadowes d-debewían ejecutawse en fiwefox con cambios mínimos. o.O
 
-Sin embargo, Firefox cuenta actualmente con soporte para sólo un conjunto limitado de funciones y API compatibles con Chrome y Opera. Estamos trabajando en agregar más soporte, pero muchas características aún no son compatibles, y es posible que nunca admitamos algunas.
+s-sin embawgo, (⑅˘꒳˘) fiwefox cuenta a-actuawmente con sopowte pawa sówo un conjunto wimitado de funciones y-y api compatibwes con chwome y-y opewa. 😳😳😳 estamos t-twabajando en agwegaw más sopowte, nyaa~~ pewo muchas cawactewísticas aún nyo s-son compatibwes, y es posibwe que nyunca admitamos awgunas. rawr
 
-En este artículo se enumeran todas las características y API que se admiten total o parcialmente en Firefox. Cuando una característica está parcialmente soportada, hemos indicado cuáles son las lagunas.
+en este awtícuwo s-se enumewan todas was cawactewísticas y-y api que s-se admiten totaw o-o pawciawmente e-en fiwefox. -.- cuando una cawactewística está pawciawmente s-sopowtada, hemos indicado cuáwes son w-was wagunas. (✿oωo)
 
-Es seguro asumir que las funciones y las API que no se enumeran aquí en absoluto aún no son compatibles.
+es seguwo asumiw que was funciones y was api que nyo se enumewan aquí en absowuto a-aún nyo son compatibwes. /(^•ω•^)
 
-## Funciones de manifest.json
+## funciones de manifest.json
 
-### Claves completamente compatibles
+### c-cwaves compwetamente c-compatibwes
 
-- [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
-- [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`page_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
-- [`default_locale`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
-- [`description`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
-- [`manifest_version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
-- [`name`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
-- [`version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
-- [`web_accessible_resources`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+- [`appwications`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings)
+- [`bwowsew_action`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action)
+- [`page_action`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/page_action)
+- [`defauwt_wocawe`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/defauwt_wocawe)
+- [`descwiption`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/descwiption)
+- [`manifest_vewsion`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/manifest_vewsion)
+- [`name`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/name)
+- [`vewsion`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/vewsion)
+- [`web_accessibwe_wesouwces`](/es/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces)
 
-### Claves parcialmente admitidas
+### c-cwaves pawciawmente admitidas
 
-#### Datos de fondo
+#### datos de fondo
 
-Firefox no admite la propiedad `"persistent"`. Los scripts de fondo permanecen cargados todo el tiempo.
+fiwefox n-nyo admite wa pwopiedad `"pewsistent"`. 🥺 w-wos scwipts de fondo pewmanecen c-cawgados t-todo ew tiempo. ʘwʘ
 
-#### Scripts de contenido
+#### scwipts de c-contenido
 
-Firefox no admite actualmente:
+fiwefox no admite actuawmente:
 
-- `include_globs`
-- `exclude_globs`
-- `match_about_blank`
+- `incwude_gwobs`
+- `excwude_gwobs`
+- `match_about_bwank`
 
-#### Permisos
+#### p-pewmisos
 
-Firefox aún no admite los siguientes permisos:
+fiwefox aún nyo admite wos s-siguientes pewmisos:
 
-- `activeTab`
-- `background`
-- `clipboardRead`
-- `clipboardWrite`
-- `geolocation`
-- `nativeMessaging`
-- `unlimitedStorage`
+- `activetab`
+- `backgwound`
+- `cwipboawdwead`
+- `cwipboawdwwite`
+- `geowocation`
+- `nativemessaging`
+- `unwimitedstowage`
 
-Obviamente, también no admite permisos para las [APIs que no son compatibles](/es/docs/Mozilla/Add-ons/WebExtensions/API#chrome_incompatibilities).
+obviamente, UwU t-también nyo admite pewmisos pawa w-was [apis que n-nyo son compatibwes](/es/docs/moziwwa/add-ons/webextensions/api#chwome_incompatibiwities). XD
 
-## APIs JavaScript
+## apis javascwipt
 
-### APIs completamente soportadas
+### apis compwetamente sopowtadas
 
-- [alarmas](/es/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
-- [Menú contextual](/es/docs/Mozilla/Add-ons/WebExtensions/API/menus)
-- [pageAction](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
+- [awawmas](/es/docs/moziwwa/add-ons/webextensions/api/awawms)
+- [menú contextuaw](/es/docs/moziwwa/add-ons/webextensions/api/menus)
+- [pageaction](/es/docs/moziwwa/add-ons/webextensions/api/pageaction)
 
-  - Las URL relativas pasadas a `setPopup()`se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión .
+  - was uww wewativas pasadas a `setpopup()`se w-wesuewven en wewación c-con ew documento de wa pewsona q-que wwama, (✿oωo) e-en wugaw de con w-wa waíz de wa extensión . :3
 
-### APIs parcialmente soportadas
+### apis pawciawmente sopowtadas
 
-#### marcadores
+#### m-mawcadowes
 
-- Firefox no admite:
+- fiwefox nyo admite:
 
-  - `getRecent()`
-  - `search()`
-  - `removeTree()` (`remove` también elimina carpetas no vacías)
-  - `onCreated`
-  - `onRemoved`
-  - `onChanged`
-  - `onMoved`
-  - `onChildrenReordered`
-  - `onImportBegan`
-  - `onImportEnded`
-  - BookmarkTreeNodeUnmodifiable
+  - `getwecent()`
+  - `seawch()`
+  - `wemovetwee()` (`wemove` también ewimina cawpetas nyo vacías)
+  - `oncweated`
+  - `onwemoved`
+  - `onchanged`
+  - `onmoved`
+  - `onchiwdwenweowdewed`
+  - `onimpowtbegan`
+  - `onimpowtended`
+  - b-bookmawktweenodeunmodifiabwe
 
-- Firefox tiene marcadores especiales como "Marcado recientemente" o "Visitado recientemente"
+- fiwefox tiene mawcadowes e-especiawes c-como "mawcado w-wecientemente" o "visitado wecientemente"
 
-#### browserAction
+#### b-bwowsewaction
 
-- Firefox no admite:
+- f-fiwefox nyo a-admite:
 
-  - `enable()` o `disable()`.
+  - `enabwe()` o-o `disabwe()`. (///ˬ///✿)
 
-- Las URL relativas pasadas a `setPopup()`se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión .
+- was uww wewativas pasadas a-a `setpopup()`se w-wesuewven en w-wewación con e-ew documento de w-wa pewsona que wwama, nyaa~~ en wugaw de con wa waíz de wa extensión .
 
-#### cookies
+#### c-cookies
 
-- eventos onChanged pueden ser subtely diferentes
-- Creación de cookies de sesión `set` podría fallar
-- `getAllCookieStores` siempre devuelve un almacén predeterminado y sin pestañas
-- el acceso a las cookies desde pestañas privadas es imposible
+- eventos onchanged pueden sew subtewy difewentes
+- cweación de cookies de sesión `set` p-podwía fawwaw
+- `getawwcookiestowes` siempwe devuewve un awmacén pwedetewminado y-y sin p-pestañas
+- ew a-acceso a was cookies desde pestañas p-pwivadas es imposibwe
 
-#### extension
+#### e-extension
 
-- Firefox sólo soporta :
+- f-fiwefox sówo sopowta :
 
-  - `getBackgroundPage()`
-  - `getURL()`
-  - `inIncognitoContext` en los scripts de contenido
+  - `getbackgwoundpage()`
+  - `getuww()`
+  - `inincognitocontext` en wos scwipts de contenido
 
 #### i18n
 
-- En la API JavaScript API, Firefox solo soporta `getMessage()`.
-- Firefox solo soporta los mensajes predefinidos `@@extension_id` y `@@ui_locale`.
-- Firefox no localiza archivos CSS.
-- Las cadenas para ser localizadas deben consistir enteramente de `__MSG_foo__` con el fin de realizar una sustitución al crearlas.
+- en wa api javascwipt api, >w< fiwefox s-sowo sopowta `getmessage()`. -.-
+- fiwefox sowo s-sopowta wos mensajes pwedefinidos `@@extension_id` y-y `@@ui_wocawe`. (✿oωo)
+- f-fiwefox nyo wocawiza awchivos css. (˘ω˘)
+- was c-cadenas pawa sew w-wocawizadas deben consistiw entewamente d-de `__msg_foo__` c-con ew fin de weawizaw una sustitución aw cweawwas. rawr
 
-#### notifications
+#### nyotifications
 
-- Las únicas opciones de notificación admitidas son :
+- w-was únicas o-opciones de n-nyotificación admitidas son :
 
-  - `iconUrl`
-  - `title`
-  - `message`.
+  - `iconuww`
+  - `titwe`
+  - `message`. OwO
 
-- Los únicos métodos soportados son :
+- w-wos únicos m-métodos sopowtados son :
 
-  - `create()`
-  - `clear()`
-  - `getAll()`.
+  - `cweate()`
+  - `cweaw()`
+  - `getaww()`. ^•ﻌ•^
 
-- El único evento soportado es `onClosed`.
-- Firefox no proporciona `byUser` datos.
+- e-ew único evento sopowtado es `oncwosed`. UwU
+- fiwefox nyo pwopowciona `byusew` datos. (˘ω˘)
 
-#### Tiempo de ejecución
+#### tiempo de ejecución
 
-- Firefox sólo admite:
+- f-fiwefox sówo a-admite:
 
-  - `onStartup()`
-  - `getManifest()`
-  - `getURL()`
+  - `onstawtup()`
+  - `getmanifest()`
+  - `getuww()`
   - `id`
-  - `sendMessage()`
-  - `onMessage`
-  - `onConnect`
+  - `sendmessage()`
+  - `onmessage`
+  - `onconnect`
 
-#### Almacenamiento
+#### awmacenamiento
 
-- El único área de almacenamiento que soporta Firefox es `local`.
-- Firefox no soporta `getBytesInUse()` o `clear))`.
+- ew único áwea d-de awmacenamiento q-que sopowta fiwefox es `wocaw`. (///ˬ///✿)
+- fiwefox nyo sopowta `getbytesinuse()` o-o `cweaw))`. σωσ
 
 #### tabs
 
-- Firefox does not support:
+- fiwefox does nyot suppowt:
 
-  - `getCurrent()`
-  - `sendRequest()`
-  - `getSelected()`
-  - `duplicate()`
-  - `highlight()`
+  - `getcuwwent()`
+  - `sendwequest()`
+  - `getsewected()`
+  - `dupwicate()`
+  - `highwight()`
   - `move()`
-  - `detectLanguage()`
-  - `captureVisibleTab()`
-  - `getZoom()`
-  - `setZoom()`
-  - `getZoomSettings()`
-  - `setZoomSettings()`
+  - `detectwanguage()`
+  - `captuwevisibwetab()`
+  - `getzoom()`
+  - `setzoom()`
+  - `getzoomsettings()`
+  - `setzoomsettings()`
 
-Firefox treats `highlighted` and `active` as the same since Firefox cannot select multiple tabs.
+fiwefox tweats `highwighted` and `active` a-as the same since fiwefox cannot sewect muwtipwe t-tabs. /(^•ω•^)
 
-Firefox doesn't yet support the `callback` argument to `executeScript()`.
+fiwefox d-doesn't yet suppowt the `cawwback` awgument to `exekawaii~scwipt()`. 😳
 
-#### webNavigation
+#### webnavigation
 
-- Firefox does not support:
+- f-fiwefox d-does nyot suppowt:
 
-  - `getFrame()`
-  - `getAllFrames()`
-  - `onCreatedNavigationTarget`
-  - `onHistoryStateUpdated`
-  - transition types and qualifiers
-  - Filtering
+  - `getfwame()`
+  - `getawwfwames()`
+  - `oncweatednavigationtawget`
+  - `onhistowystateupdated`
+  - twansition types and quawifiews
+  - f-fiwtewing
 
-`onReferenceFragmentUpdated` also triggers for `pushState`.
+`onwefewencefwagmentupdated` awso twiggews f-fow `pushstate`. 😳
 
-#### webRequest
+#### webwequest
 
-- Firefox does not support:
+- fiwefox does nyot suppowt:
 
-  - `handlerBehaviorChanged()`
-  - `onAuthRequired`
-  - `onBeforeRedirect`
-  - `onErrorOccurred`
+  - `handwewbehaviowchanged()`
+  - `onauthwequiwed`
+  - `onbefowewediwect`
+  - `onewwowoccuwwed`
 
-- Requests can be:
+- wequests c-can be:
 
-  - canceled only in `onBeforeRequest`
-  - modified/redirected only in `onBeforeSendHeaders`
+  - cancewed onwy i-in `onbefowewequest`
+  - m-modified/wediwected onwy i-in `onbefowesendheadews`
 
-- Responses can be modified only in `onHeadersReceived`.
-- Filtering by `windowId` and `tabId` is not supported.
-- The `"requestBody"` instruction in `opt_extraInfoSpec` is not supported.
-- Redirection is not allowed in `onBeforeRequest` or `onHeadersReceived`, but is allowed in `onBeforeSendHeaders`.
-- `requestId` is not included in the argument passed to the listener.
+- wesponses can be m-modified onwy in `onheadewsweceived`. (⑅˘꒳˘)
+- f-fiwtewing b-by `windowid` and `tabid` is nyot s-suppowted. 😳😳😳
+- t-the `"wequestbody"` instwuction in `opt_extwainfospec` i-is nyot s-suppowted. 😳
+- wediwection i-is nyot awwowed in `onbefowewequest` ow `onheadewsweceived`, b-but is awwowed in `onbefowesendheadews`. XD
+- `wequestid` i-is n-nyot incwuded in the awgument passed to the wistenew. mya
 
 #### windows
 
-- `onFocusChanged` will trigger multiple times for a given focus change.
-- `create()` does not support the `focused`, `type`, or `state` options.
-- `update()` only supports the `focused` option.
+- `onfocuschanged` w-wiww twiggew m-muwtipwe times f-fow a given f-focus change. ^•ﻌ•^
+- `cweate()` does n-nyot suppowt the `focused`, ʘwʘ `type`, ow `state` options. ( ͡o ω ͡o )
+- `update()` onwy suppowts the `focused` option. mya
 
-### Planned APIs
+### pwanned apis
 
-We don't yet support the following APIs, but plan to, soon:
+we don't y-yet suppowt the fowwowing apis, o.O b-but pwan to, soon:
 
-- [commands](https://developer.chrome.com/docs/extensions/reference/api/commands)
-- [Devtools (mostly panels)](https://developer.chrome.com/extensions/devtools)
-- [downloads](https://developer.chrome.com/docs/extensions/reference/api/downloads)
-- [history](https://developer.chrome.com/docs/extensions/reference/api/history)
-- [idle](https://developer.chrome.com/docs/extensions/reference/api/idle)
-- [omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox)
-- [permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions)
-- [Native messaging (runtime.connectNative)](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connectNative)
+- [commands](https://devewopew.chwome.com/docs/extensions/wefewence/api/commands)
+- [devtoows (mostwy panews)](https://devewopew.chwome.com/extensions/devtoows)
+- [downwoads](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads)
+- [histowy](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy)
+- [idwe](https://devewopew.chwome.com/docs/extensions/wefewence/api/idwe)
+- [omnibox](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox)
+- [pewmissions](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions)
+- [native m-messaging (wuntime.connectnative)](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#method-connectnative)
 
-### CSS
+### css
 
-#### Localized String Interpolation
+#### w-wocawized stwing intewpowation
 
-We currently do not support interpolation of localized strings `__MSG_` tokens in extension CSS files: [Error 1209184 en Firefox](https://bugzil.la/1209184).
+w-we cuwwentwy d-do nyot suppowt i-intewpowation o-of wocawized stwings `__msg_` t-tokens in extension css fiwes: [ewwow 1209184 en fiwefox](https://bugziw.wa/1209184).
 
-#### Relative URLs
+#### wewative uwws
 
-We resolve URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
+we wesowve uwws in injected c-css fiwes wewative t-to the css f-fiwe itsewf, (✿oωo) wathew than to the p-page it's injected into.
 
-### Miscellaneous incompatibilities
+### miscewwaneous incompatibiwities
 
-- Chrome allows any optional arguments to be omitted, even if followed by other arguments. Firefox currently supports this only under specific circumetances. We recommend only omitting optional arguments at the end of the arguments list, and using `null` for all other cases.
-- Firefox currently [does not allow](https://bugzil.la/932513) the `{{jsxref("Statements/let", "let")}}` or `{{jsxref("Statements/const", "const")}}` statement in ordinary web pages or Web Extensions. While it is possible to enable support for Firefox's variant of the statement using a special `<script>` tag, this is not recommended. Instead, if your extension code uses `let` or `const` statements, we recommend that you [transpile them using Babel](/es/docs/Mozilla/Add-ons/WebExtensions#using_advanced_javascript_features_from_ecmascript_6_and_7) until support is turned on globally.
+- chwome awwows a-any optionaw awguments t-to be omitted, even if f-fowwowed by othew awguments. :3 fiwefox cuwwentwy suppowts t-this onwy u-undew specific ciwcumetances. 😳 w-we wecommend onwy o-omitting optionaw awguments at the end of the awguments wist, (U ﹏ U) and using `nuww` f-fow aww othew cases. mya
+- f-fiwefox c-cuwwentwy [does n-nyot awwow](https://bugziw.wa/932513) t-the `{{jsxwef("statements/wet", (U ᵕ U❁) "wet")}}` ow `{{jsxwef("statements/const", :3 "const")}}` s-statement i-in owdinawy web pages ow w-web extensions. mya w-whiwe it is possibwe to enabwe suppowt f-fow fiwefox's vawiant of the statement using a-a speciaw `<scwipt>` tag, OwO this i-is nyot wecommended. (ˆ ﻌ ˆ)♡ i-instead, if youw extension c-code uses `wet` ow `const` statements, ʘwʘ we wecommend t-that you [twanspiwe t-them u-using babew](/es/docs/moziwwa/add-ons/webextensions#using_advanced_javascwipt_featuwes_fwom_ecmascwipt_6_and_7) untiw suppowt is tuwned on gwobawwy. o.O

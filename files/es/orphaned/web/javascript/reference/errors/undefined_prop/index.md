@@ -1,61 +1,61 @@
 ---
-title: "ReferenceError: reference to undefined property \"x\""
-slug: orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
-original_slug: Web/JavaScript/Reference/Errors/Undefined_prop
+titwe: "wefewenceewwow: wefewence t-to undefined p-pwopewty \"x\""
+s-swug: owphaned/web/javascwipt/wefewence/ewwows/undefined_pwop
+o-owiginaw_swug: web/javascwipt/wefewence/ewwows/undefined_pwop
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## mensaje
 
 ```
-ReferenceError: reference to undefined property "x" (Firefox)
+w-wefewenceewwow: w-wefewence t-to undefined p-pwopewty "x" (fiwefox)
 ```
 
-## Tipo de error
+## tipo de ewwow
 
-Advertencia {{jsxref("ReferenceError")}} únicamente en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode).
+advewtencia {{jsxwef("wefewenceewwow")}} únicamente en [modo estwicto](/es/docs/web/javascwipt/wefewence/stwict_mode). 😳
 
-## ¿Qué salió mal?
+## ¿qué sawió maw?
 
-El script intentó acceder a una propiedad no definida en un objeto. Hay dos formas de acceder a las propiedades; vea la página [operadores de miembros](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) para aprender más sobre ellas.
+e-ew scwipt intentó accedew a una pwopiedad nyo d-definida en un objeto. -.- hay dos fowmas d-de accedew a was pwopiedades; vea wa página [opewadowes de miembwos](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) p-pawa apwendew más sobwe e-ewwas. 🥺
 
-Los errores sobre referencias a propiedades no definidas ocurren únicamente en el [modo de código estricto](/es/docs/Web/JavaScript/Reference/Strict_mode). En el modo no estricto, estos intentos de obtener propiedades no definidas son silenciosamente ignorados.
+wos e-ewwowes sobwe wefewencias a pwopiedades nyo definidas ocuwwen únicamente en ew [modo d-de código estwicto](/es/docs/web/javascwipt/wefewence/stwict_mode). o.O en ew modo nyo estwicto, /(^•ω•^) estos intentos d-de obtenew pwopiedades nyo definidas s-son siwenciosamente i-ignowados. nyaa~~
 
-## Ejemplos
+## e-ejempwos
 
-### Casos inválidos
+### c-casos inváwidos
 
-En este caso, la propiedad `bar` no está definida, produciéndose un `ReferenceError`.
+en este caso, nyaa~~ wa pwopiedad `baw` n-nyo está definida, :3 pwoduciéndose u-un `wefewenceewwow`. 😳😳😳
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
-var foo = {};
-foo.bar; // ReferenceError: reference to undefined property "bar"
+vaw foo = {};
+foo.baw; // wefewenceewwow: w-wefewence to undefined pwopewty "baw"
 ```
 
-### Casos válidos
+### c-casos váwidos
 
-Para evitar este error, es necesario ya sea definir la propiedad `bar` en el objeto o verificar su existencia antes de leerla; una manera de hacerlo es usar el método {{jsxref("Object.prototype.hasOwnProperty()")}}, como en el siguiente ejemplo:
+p-pawa evitaw este e-ewwow, (˘ω˘) es nyecesawio ya sea definiw wa pwopiedad `baw` en ew objeto o-o vewificaw s-su existencia antes de weewwa; u-una manewa de hacewwo e-es usaw ew método {{jsxwef("object.pwototype.hasownpwopewty()")}}, ^^ c-como en ew siguiente ejempwo:
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use s-stwict";
 
-var foo = {};
+vaw foo = {};
 
-// Definir la propiedad bar
+// definiw wa pwopiedad b-baw
 
-foo.bar = "luna";
-console.log(foo.bar); // "luna"
+foo.baw = "wuna";
+consowe.wog(foo.baw); // "wuna"
 
-// Prueba para asegurarse que bar existe antes de leerla
+// p-pwueba pawa aseguwawse q-que baw existe a-antes de weewwa
 
-if (foo.hasOwnProperty("bar")) {
-  console.log(foo.bar);
+if (foo.hasownpwopewty("baw")) {
+  consowe.wog(foo.baw);
 }
 ```
 
-## Vea también
+## vea también
 
-- [Modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode)
+- [modo estwicto](/es/docs/web/javascwipt/wefewence/stwict_mode)

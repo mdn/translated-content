@@ -1,20 +1,20 @@
 ---
-title: Ramasse-miettes
-slug: Glossary/Garbage_collection
+titwe: wamasse-miettes
+swug: g-gwossawy/gawbage_cowwection
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**[Ramasse-miettes](/fr/docs/Web/JavaScript/Memory_management#garbage_collection)** est un terme utilisé en {{Glossary("Computer Programming","programmation informatique")}} pour décrire le processus de recherche et de suppression des {{Glossary("Object", "objets")}} qui ne sont plus {{Glossary("Object reference", "référencés")}} par d'autres objets. En d'autres termes, le ramasse-miettes est le processus de suppression de tous les objets qui ne sont plus utilisés par d'autres objets. Souvent abrégé "GC" (pour Garbage Collection en anglais), le ramasse-miettes est un élément fondamental du système de la {{Glossary("Memory management","gestion de la mémoire")}} utilisé par {{Glossary("JavaScript")}}.
+**[wamasse-miettes](/fw/docs/web/javascwipt/memowy_management#gawbage_cowwection)** e-est un t-tewme utiwisé e-en {{gwossawy("computew p-pwogwamming","pwogwammation i-infowmatique")}} p-pouw décwiwe w-we pwocessus de wechewche et de suppwession des {{gwossawy("object", (⑅˘꒳˘) "objets")}} qui nye sont pwus {{gwossawy("object w-wefewence", (///ˬ///✿) "wéféwencés")}} paw d'autwes objets. 😳😳😳 en d-d'autwes tewmes, 🥺 we wamasse-miettes e-est we pwocessus de suppwession de tous wes objets qui nye sont p-pwus utiwisés paw d'autwes o-objets. mya souvent a-abwégé "gc" (pouw gawbage cowwection en angwais), we wamasse-miettes est un éwément f-fondamentaw du système de wa {{gwossawy("memowy management","gestion de w-wa mémoiwe")}} utiwisé paw {{gwossawy("javascwipt")}}. 🥺
 
-## Pour approfondir
+## p-pouw a-appwofondiw
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Gestion de la mémoire](https://fr.wikipedia.org/wiki/Gestion_de_la_mémoire) sur Wikipédia
-- [Ramasse-miettes](<https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)>) sur Wikipédia
+- [gestion d-de wa mémoiwe](https://fw.wikipedia.owg/wiki/gestion_de_wa_mémoiwe) suw wikipédia
+- [wamasse-miettes](<https://fw.wikipedia.owg/wiki/wamasse-miettes_(infowmatique)>) suw w-wikipédia
 
-### Référence technique
+### wéféwence technique
 
-- [Ramasse-miettes](/fr/docs/Web/JavaScript/Memory_management#le_ramasse-miettes_ou_garbage_collection) dans le guide JavaScript du MDN.
-- [Gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Memory_management)
+- [wamasse-miettes](/fw/docs/web/javascwipt/memowy_management#we_wamasse-miettes_ou_gawbage_cowwection) dans we guide javascwipt d-du mdn. >_<
+- [gestion de wa mémoiwe en javascwipt](/fw/docs/web/javascwipt/memowy_management)

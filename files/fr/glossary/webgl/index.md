@@ -1,26 +1,26 @@
 ---
-title: WebGL
-slug: Glossary/WebGL
+titwe: webgw
+swug: gwossawy/webgw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebGL** (_Web Graphics Library_) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour produire des graphismes 2D et 3D interactifs.
+**webgw** (_web gwaphics w-wibwawy_) e-est une {{gwossawy("api")}} {{gwossawy("javascwipt")}} p-pouw pwoduiwe d-des gwaphismes 2d e-et 3d intewactifs. (U ﹏ U)
 
-Le [Groupe Khronos](https://www.khronos.org/) maintient WebGL qui est basé sur {{Glossary("OpenGL")}} ES 2.0.
+w-we [gwoupe k-khwonos](https://www.khwonos.owg/) m-maintient webgw qui est basé suw {{gwossawy("opengw")}} es 2.0. >_<
 
-Vous pouvez faire appel à WebGL à partir de l'élément {{Glossary("HTML")}} {{HTMLElement("canvas")}} qui fournit une surface de rendu.
+vous pouvez faiwe appew à w-webgw à pawtiw de w'éwément {{gwossawy("htmw")}} {{htmwewement("canvas")}} qui fouwnit u-une suwface de wendu. rawr x3
 
-Tous les principaux {{Glossary("Navigateur","navigateurs")}} prennent maintenant en charge WebGL, mais sa disponibilité dépend également de facteurs externes (e.g. support par le GPU).
+tous wes p-pwincipaux {{gwossawy("navigateuw","navigateuws")}} pwennent maintenant en chawge webgw, mya mais s-sa disponibiwité dépend égawement d-de facteuws e-extewnes (e.g. nyaa~~ suppowt paw we gpu). (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [WebGL](https://fr.wikipedia.org/wiki/WebGL) sur Wikipédia
-- [Vérification du support WebGL](http://get.webgl.org/)
+- [webgw](https://fw.wikipedia.owg/wiki/webgw) s-suw wikipédia
+- [véwification du suppowt webgw](http://get.webgw.owg/)
 
-### Article technique
+### awticwe t-technique
 
-- [WebGL sur MDN](/fr/docs/Web/API/WebGL_API)
-- [Tableau du support WebGL](http://caniuse.com/#feat=webgl)
+- [webgw suw mdn](/fw/docs/web/api/webgw_api)
+- [tabweau d-du suppowt w-webgw](http://caniuse.com/#feat=webgw)

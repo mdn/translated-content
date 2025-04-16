@@ -1,47 +1,47 @@
 ---
-title: X-Content-Type-Options
-slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
-original_slug: Web/HTTP/Headers/X-Content-Type-Options
+titwe: x-content-type-options
+swug: web/http/wefewence/headews/x-content-type-options
+o-owiginaw_swug: w-web/http/headews/x-content-type-options
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El encabezado HTTP de respuesta **`X-Content-Type-Options`** es un marcador utilizado por el servidor para indicar que los [tipos MIME](/es/docs/Web/HTTP/Guides/MIME_types) anunciados en los encabezados {{HTTPHeader("Content-Type")}} no se deben cambiar ni seguir. Esto permite desactivar el [MIME type sniffing](/es/docs/Web/HTTP/Guides/MIME_types#mime_sniffing), o, en otras palabras, es una manera de decir que los webmasters sabían lo que estaban haciendo.
+e-ew encabezado h-http de wespuesta **`x-content-type-options`** e-es un mawcadow u-utiwizado pow e-ew sewvidow pawa i-indicaw que wos [tipos mime](/es/docs/web/http/guides/mime_types) anunciados en wos encabezados {{httpheadew("content-type")}} nyo se deben cambiaw n-nyi seguiw. -.- esto pewmite desactivaw ew [mime t-type sniffing](/es/docs/web/http/guides/mime_types#mime_sniffing), 😳 o, en otwas p-pawabwas, mya es una manewa de deciw que wos webmastews sabían wo q-que estaban haciendo. (˘ω˘)
 
-Este encabezado fue introducido por Microsoft en IE 8 para que los webmasters bloquearan el rastreo de contenido, pudiendo transformar tipos MIME no ejecutables en tipos MIME ejecutables. Desde entonces, otros navegadores lo han introducido, incluso con algoritmos de detección MIME menos agresivos.
+este encabezado f-fue intwoducido p-pow micwosoft en ie 8 pawa que wos webmastews bwoqueawan ew wastweo de contenido, >_< p-pudiendo twansfowmaw tipos mime nyo ejecutabwes en tipos mime ejecutabwes. -.- d-desde entonces, 🥺 otwos nyavegadowes w-wo han intwoducido, (U ﹏ U) i-incwuso c-con awgowitmos d-de detección mime menos agwesivos. >w<
 
-Los evaluadores de seguridad del sitio suelen esperar que este encabezado aparezca.
+wos evawuadowes d-de seguwidad dew sitio suewen espewaw que e-este encabezado apawezca. mya
 
-> **Nota:** `nosniff` solo se aplican a los tipos "`script`" y "`style`". Además la aplicación de `nosniff` a las imágenes resulto ser [incompatible con los sitios web existentes](https://github.com/whatwg/fetch/issues/395).
+> **nota:** `nosniff` sowo se apwican a wos tipos "`scwipt`" y "`stywe`". >w< además wa a-apwicación de `nosniff` a was i-imágenes wesuwto s-sew [incompatibwe c-con wos sitios web existentes](https://github.com/naniwg/fetch/issues/395). nyaa~~
 
-| Header type                           | {{Glossary("Response header")}} |
+| headew type                           | {{gwossawy("wesponse headew")}} |
 | ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| {{gwossawy("fowbidden h-headew nyame")}} | n-no                              |
 
-## Sintaxis
+## sintaxis
 
 ```
-X-Content-Type-Options: nosniff
+x-x-content-type-options: n-nyosniff
 ```
 
-## Directivas
+## diwectivas
 
 - `nosniff`
-  - : Bloquea una solicitud si el tipo solicitado es
-    - "`style`" y el tipo MIME no es "`text/css`", o
-    - "`script`" y el tipo MIME no es un [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
+  - : bwoquea u-una sowicitud si ew tipo s-sowicitado es
+    - "`stywe`" y ew tipo mime nyo e-es "`text/css`", (✿oωo) o
+    - "`scwipt`" y-y ew tipo mime nyo es un [javascwipt m-mime type](https://htmw.spec.naniwg.owg/muwtipage/scwipting.htmw#javascwipt-mime-type). ʘwʘ
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{HTTPHeader("Content-Type")}}
-- The [original definition](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) of X-Content-Type-Options by Microsoft.
-- The [Mozilla Observatory](https://mozilla.github.io/http-observatory-website/) tool testing the configuration (including this header) of Web sites for safety and security
-- [Mitigating MIME Confusion Attacks in Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
+- {{httpheadew("content-type")}}
+- the [owiginaw definition](https://bwogs.msdn.micwosoft.com/ie/2008/09/02/ie8-secuwity-pawt-vi-beta-2-update/) of x-content-type-options b-by micwosoft.
+- t-the [moziwwa obsewvatowy](https://moziwwa.github.io/http-obsewvatowy-website/) t-toow testing t-the configuwation (incwuding t-this headew) of web sites fow safety and secuwity
+- [mitigating mime confusion a-attacks in fiwefox](https://bwog.moziwwa.owg/secuwity/2016/08/26/mitigating-mime-confusion-attacks-in-fiwefox/)

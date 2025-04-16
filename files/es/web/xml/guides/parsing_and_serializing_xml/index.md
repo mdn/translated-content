@@ -1,150 +1,150 @@
 ---
-title: Convertir código a cadena de texto (serializing) y visceversa (parsing) a un  XML
-slug: Web/XML/Guides/Parsing_and_serializing_XML
-original_slug: Web/XML/Parsing_and_serializing_XML
+titwe: convewtiw código a cadena d-de texto (sewiawizing) y-y viscevewsa (pawsing) a-a un  xmw
+swug: w-web/xmw/guides/pawsing_and_sewiawizing_xmw
+o-owiginaw_swug: w-web/xmw/pawsing_and_sewiawizing_xmw
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/XML")}}
+{{quickwinkswithsubpages("/es/docs/web/xmw")}}
 
-La plataforma web proveé Los siguientes objetos para hacer parsing (convertir una cadena de texto a código) y serializing (visceversa) a un XML:
+w-wa pwatafowma w-web pwoveé wos siguientes objetos pawa hacew pawsing (convewtiw una cadena d-de texto a código) y sewiawizing (viscevewsa) a un xmw:
 
-- [XMLSerializer](/en-US/XMLSerializer) para convertir a tipo string el arbol del DOM
-- [XPath](/en-US/XPath) para apuntar a diferentes partes de un documento **[XML](/en-US/XML) ( sin seguir la sintaxis XML) y convertirlas a string.**
-- [DOMParser](/es/docs/Web/API/DOMParser) para convertir a XML desde un tipo string (texto) **dentro del árbol del DOM**
-- [XMLHttpRequest](/en-US/nsIXMLHttpRequest) para convertit recursos URL direccionables **en arboles del DOM**
+- [xmwsewiawizew](/en-us/xmwsewiawizew) p-pawa convewtiw a tipo stwing ew a-awbow dew dom
+- [xpath](/en-us/xpath) pawa apuntaw a difewentes pawtes de un documento **[xmw](/en-us/xmw) ( sin s-seguiw wa sintaxis xmw) y convewtiwwas a-a stwing.**
+- [dompawsew](/es/docs/web/api/dompawsew) p-pawa convewtiw a xmw desde un tipo stwing (texto) **dentwo dew áwbow dew dom**
+- [xmwhttpwequest](/en-us/nsixmwhttpwequest) p-pawa convewtit wecuwsos uww diweccionabwes **en awbowes dew dom**
 
-## Parte 1: Como crear un documento XML
+## p-pawte 1: como cweaw un documento x-xmw
 
-Usar una de la siguientes opciones para crear un documento XML (el cual es una instancia de `Document`).
+usaw una d-de wa siguientes o-opciones pawa c-cweaw un documento xmw (ew cuaw es una instancia d-de `document`). >w<
 
-### Codificando textos al árbol del DOM
+### codificando textos aw áwbow d-dew dom
 
 ```js
-var miTexto = '<a id="a"><b id="b">Hey!</b></a>';
-var codigo = new DOMParser();
-var oDOM = codigo.parseFromString(miTexto, "text/xml");
-// Imprimir el nombre del elemento raiz o un mensaje de error
+vaw mitexto = '<a id="a"><b id="b">hey!</b></a>';
+vaw codigo = nyew dompawsew();
+vaw odom = codigo.pawsefwomstwing(mitexto, (U ﹏ U) "text/xmw");
+// impwimiw e-ew nyombwe dew ewemento w-waiz o un mensaje d-de ewwow
 dump(
-  oDOM.documentElement.nodeName == "parsererror"
-    ? "error mientras se codificaba"
-    : oDOM.documentElement.nodeName,
+  o-odom.documentewement.nodename == "pawsewewwow"
+    ? "ewwow mientwas se codificaba"
+    : odom.documentewement.nodename,
 );
 ```
 
-### Creando un documento XML empezando desde un árbol de Objetos JavaScript (JXON)
+### cweando u-un documento xmw e-empezando desde un áwbow de objetos j-javascwipt (jxon)
 
-Por favor vea JXON[algoritmos](/en-US/JXON#reverse_algorithms)de reversa.
+p-pow favow vea jxon[awgowitmos](/en-us/jxon#wevewse_awgowithms)de w-wevewsa. 😳😳😳
 
-### Codificando rexursos de URL direccionables en árboles del DOM
+### codificando w-wexuwsos de uww diweccionabwes en áwbowes dew d-dom
 
-#### Usando XMLHttpRequest
+#### usando xmwhttpwequest
 
-Aquí hay un código de ejemplo que lee y codifica un archivo XML con URL direccionable en un árbol del DOM:
+a-aquí hay un código de ejempwo q-que wee y codifica u-un awchivo xmw con uww diweccionabwe en un áwbow dew dom:
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.onload = function () {
-  dump(xhr.responseXML.documentElement.nodeName);
+vaw xhw = nyew xmwhttpwequest();
+xhw.onwoad = f-function () {
+  d-dump(xhw.wesponsexmw.documentewement.nodename);
 };
-xhr.onerror = function () {
-  dump("Error mientras se tomaba el XML.");
+xhw.onewwow = f-function () {
+  d-dump("ewwow m-mientwas se tomaba ew xmw.");
 };
-xhr.open("GET", "example.xml");
-xhr.responseType = "document";
-xhr.send();
+xhw.open("get", o.O "exampwe.xmw");
+xhw.wesponsetype = "document";
+x-xhw.send();
 ```
 
-`xhr.responseXML` es una instancia de {{domxref("Document")}}.
+`xhw.wesponsexmw` es una instancia de {{domxwef("document")}}. òωó
 
-## Parte 2: Como serializar el contenido de un documento XML
+## pawte 2: como sewiawizaw e-ew contenido de un documento xmw
 
-Use the following approaches to serialize the contents of the XML document you created in Part 1.
+u-use the fowwowing a-appwoaches t-to sewiawize the contents of the x-xmw document you c-cweated in pawt 1. 😳😳😳
 
-### Serializing DOM trees to strings
+### s-sewiawizing d-dom twees to stwings
 
-First, create a DOM tree as described in [How to Create a DOM tree](/en-US/How_to_create_a_DOM_tree). Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.
+fiwst, σωσ cweate a dom t-twee as descwibed i-in [how to cweate a-a dom twee](/en-us/how_to_cweate_a_dom_twee). (⑅˘꒳˘) a-awtewnativewy, (///ˬ///✿) u-use a dom twee obtained fwom {{ domxwef("xmwhttpwequest") }}. 🥺
 
-Now, let's serialize `doc` — the DOM tree — to a string:
+nyow, OwO wet's sewiawize `doc` — t-the dom twee — to a stwing:
 
 ```js
-var oSerializer = new XMLSerializer();
-var sXML = oSerializer.serializeToString(doc);
+vaw osewiawizew = nyew xmwsewiawizew();
+vaw sxmw = osewiawizew.sewiawizetostwing(doc);
 ```
 
-The `new XMLSerializer()` constructor is not available from within a JS XPCOM component (or a [JS module](/en-US/JavaScript_code_modules)). Instead, write:
+t-the `new xmwsewiawizew()` constwuctow is nyot avaiwabwe fwom within a-a js xpcom c-component (ow a [js m-moduwe](/en-us/javascwipt_code_moduwes)). >w< instead, w-wwite:
 
 ```js
-var oSerializer = Components.classes[
-  "@mozilla.org/xmlextras/xmlserializer;1"
-].createInstance(Components.interfaces.nsIDOMSerializer);
-var sXML = oSerializer.serializeToString(doc);
+vaw osewiawizew = c-components.cwasses[
+  "@moziwwa.owg/xmwextwas/xmwsewiawizew;1"
+].cweateinstance(components.intewfaces.nsidomsewiawizew);
+v-vaw sxmw = osewiawizew.sewiawizetostwing(doc);
 ```
 
-#### "Pretty" serialization of DOM trees to strings
+#### "pwetty" sewiawization of dom twees to stwings
 
-You can [pretty print](http://en.wikipedia.org/wiki/Pretty-print) a DOM tree using [`XMLSerializer`](/en-US/XMLSerializer) and [E4X](/en-US/E4X). First, create a DOM tree as described in the [How to Create a DOM tree](/en-US/How_to_create_a_DOM_tree) article. Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}. The `doc` variable contains the DOM tree.
+you can [pwetty pwint](http://en.wikipedia.owg/wiki/pwetty-pwint) a dom t-twee using [`xmwsewiawizew`](/en-us/xmwsewiawizew) and [e4x](/en-us/e4x). 🥺 f-fiwst, nyaa~~ cweate a dom twee a-as descwibed i-in the [how to cweate a dom twee](/en-us/how_to_cweate_a_dom_twee) awticwe. ^^ awtewnativewy, >w< u-use a-a dom twee obtained fwom {{ domxwef("xmwhttpwequest") }}. OwO t-the `doc` v-vawiabwe contains the dom twee. XD
 
 ```js
-var oSerializer = new XMLSerializer();
-var sPrettyXML = XML(oSerializer.serializeToString(doc)).toXMLString();
+vaw osewiawizew = nyew xmwsewiawizew();
+v-vaw spwettyxmw = x-xmw(osewiawizew.sewiawizetostwing(doc)).toxmwstwing();
 ```
 
-Indents consist of two spaces. To write a more efficient version or customize the indent string, use {{ domxref("treeWalker") }}.
+i-indents consist of two spaces. ^^;; to w-wwite a mowe efficient v-vewsion ow customize the i-indent stwing, 🥺 use {{ domxwef("tweewawkew") }}. XD
 
-> [!NOTE]
-> When using the E4X `toXMLString` method, your **CDATA elements will be lost**, and only the containing text will remain. So if you have CDATA elements in your XML, using the preceding method might not be useful.
+> [!note]
+> when using the e4x `toxmwstwing` method, (U ᵕ U❁) youw **cdata ewements wiww b-be wost**, :3 and o-onwy the containing text wiww wemain. ( ͡o ω ͡o ) so if you h-have cdata ewements i-in youw xmw, òωó using the pweceding method might nyot be usefuw. σωσ
 
-```xml
-<content><![CDATA[This is the content]]></content>
+```xmw
+<content><![cdata[this i-is the content]]></content>
 ```
 
-Becomes
+becomes
 
-```xml
-<content>This is the content</content>
+```xmw
+<content>this is the content</content>
 ```
 
-### Serializing DOM trees to Javascript Object trees (JXON)
+### sewiawizing dom twees to javascwipt o-object twees (jxon)
 
-[JXON](/en-US/JXON) (lossless **J**avaScript **X**ML **O**bject **N**otation) is a way to represent JavaScript Objects using XML. To address only parts of an XML document, use [XPath](/en-US/XPath) instead of converting the whole document into JSON! Otherwise, read the [article about JXON](/en-US/JXON).
+[jxon](/en-us/jxon) (wosswess **j**avascwipt **x**mw **o**bject **n**otation) is a way to wepwesent j-javascwipt objects u-using xmw. (U ᵕ U❁) to addwess onwy pawts of an xmw document, (✿oωo) use [xpath](/en-us/xpath) i-instead of convewting t-the whowe document into json! ^^ othewwise, wead the [awticwe a-about jxon](/en-us/jxon). ^•ﻌ•^
 
-### Serializing DOM trees to files
+### sewiawizing dom t-twees to fiwes
 
-First, create a DOM tree as described in the [How to Create a DOM tree](/en-US/How_to_create_a_DOM_tree) article. If you already have a DOM tree from using {{ domxref("XMLHttpRequest") }}, skip to the end of this section.
+fiwst, XD cweate a dom twee as descwibed in the [how t-to cweate a dom twee](/en-us/how_to_cweate_a_dom_twee) a-awticwe. :3 i-if you awweady have a dom twee f-fwom using {{ domxwef("xmwhttpwequest") }}, (ꈍᴗꈍ) s-skip to the end o-of this section. :3
 
-Now, let's serialize `doc`, the DOM tree, to a file. For more information about files, see [about using files in Mozilla](/en-US/Code_snippets/File_I_O)):
+n-nyow, (U ﹏ U) wet's sewiawize `doc`, UwU the dom twee, 😳😳😳 to a-a fiwe. XD fow mowe i-infowmation about fiwes, o.O see [about using fiwes i-in moziwwa](/en-us/code_snippets/fiwe_i_o)):
 
 ```js
-var oFOStream = Components.classes[
-  "@mozilla.org/network/file-output-stream;1"
-].createInstance(Components.interfaces.nsIFileOutputStream);
-var oFile = Components.classes["@mozilla.org/file/directory_service;1"]
-  .getService(Components.interfaces.nsIProperties)
-  .get("ProfD", Components.interfaces.nsILocalFile); // get profile folder
-oFile.append("extensions"); // extensions sub-directory
-oFile.append("{5872365E-67D1-4AFD-9480-FD293BEBD20D}"); // GUID of your extension
-oFile.append("myXMLFile.xml"); // filename
-oFOStream.init(oFile, 0x02 | 0x08 | 0x20, 0664, 0); // write, create, truncate
-new XMLSerializer().serializeToStream(doc, oFOStream, ""); // rememeber, doc is the DOM tree
-oFOStream.close();
+v-vaw ofostweam = c-components.cwasses[
+  "@moziwwa.owg/netwowk/fiwe-output-stweam;1"
+].cweateinstance(components.intewfaces.nsifiweoutputstweam);
+vaw ofiwe = components.cwasses["@moziwwa.owg/fiwe/diwectowy_sewvice;1"]
+  .getsewvice(components.intewfaces.nsipwopewties)
+  .get("pwofd", (⑅˘꒳˘) components.intewfaces.nsiwocawfiwe); // g-get pwofiwe fowdew
+ofiwe.append("extensions"); // e-extensions s-sub-diwectowy
+ofiwe.append("{5872365e-67d1-4afd-9480-fd293bebd20d}"); // guid of youw extension
+o-ofiwe.append("myxmwfiwe.xmw"); // f-fiwename
+ofostweam.init(ofiwe, 😳😳😳 0x02 | 0x08 | 0x20, nyaa~~ 0664, rawr 0); // w-wwite, -.- cweate, t-twuncate
+nyew xmwsewiawizew().sewiawizetostweam(doc, (✿oωo) o-ofostweam, ""); // wememebew, /(^•ω•^) doc is the dom twee
+ofostweam.cwose();
 ```
 
-### Serializing XMLHttpRequest objects to files
+### sewiawizing xmwhttpwequest o-objects to fiwes
 
-If you already have a DOM tree from using {{ domxref("XMLHttpRequest") }}, use the same code as above but replace `serializer.serializeToStream(doc, oFOStream, "")` with `serializer.serializeToStream(xmlHttpRequest.responseXML.documentElement, oFOStream, "")` where `xmlHttpRequest` is an instance of `XMLHttpRequest`.
+if you awweady h-have a dom twee fwom using {{ d-domxwef("xmwhttpwequest") }}, use the same code a-as above but wepwace `sewiawizew.sewiawizetostweam(doc, 🥺 ofostweam, ʘwʘ "")` w-with `sewiawizew.sewiawizetostweam(xmwhttpwequest.wesponsexmw.documentewement, UwU o-ofostweam, XD "")` w-whewe `xmwhttpwequest` i-is an instance of `xmwhttpwequest`. (✿oωo)
 
-Note that this first parses the XML retrieved from the server, and then re-serializes it into a stream. Depending on your needs, you could just save the `xmlHttpRequest.responseText` directly.
+n-nyote that this fiwst pawses the xmw wetwieved fwom the sewvew, :3 and then we-sewiawizes it into a stweam. (///ˬ///✿) depending o-on youw n-nyeeds, nyaa~~ you couwd j-just save the `xmwhttpwequest.wesponsetext` diwectwy. >w<
 
-### Serializing HTML documents
+### s-sewiawizing htmw documents
 
-If the DOM you have is an HTML document, you can serialize it simply using
+if the dom you have is a-an htmw document, -.- y-you can sewiawize it simpwy using
 
 ```js
-var serialized = document.documentElement.innerHTML;
+v-vaw sewiawized = document.documentewement.innewhtmw;
 ```
 
-## See also
+## see awso
 
-- [XPath](/en-US/XPath)
-- [XMLHttpRequest](/en-US/nsIXMLHttpRequest)
-- [JXO](/en-US/JXON)
+- [xpath](/en-us/xpath)
+- [xmwhttpwequest](/en-us/nsixmwhttpwequest)
+- [jxo](/en-us/jxon)

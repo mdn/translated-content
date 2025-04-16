@@ -1,42 +1,42 @@
 ---
-title: Machine d'état
-slug: Glossary/State_machine
+titwe: machine d'état
+swug: g-gwossawy/state_machine
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Une machine d'état est une abstraction mathématique utilisée pour concevoir des algorithmes. Une machine d'état lit un ensemble d'entrées et passe à un état différent en fonction de ces entrées.
+u-une machine d'état e-est une abstwaction m-mathématique u-utiwisée p-pouw concevoiw d-des awgowithmes. 😳😳😳 u-une machine d'état wit un ensembwe d'entwées et passe à un état difféwent e-en fonction de ces entwées. :3
 
-Un état est une description de l'état d'un système en attente d'exécution d'une transition. Une transition est un ensemble d'actions à exécuter lorsqu'une condition est remplie ou qu'un événement est reçu. Dans un diagramme d'état, les cercles représentent chaque état possible et les flèches représentent les transitions entre les états.
+un état est une descwiption d-de w'état d'un système e-en attente d'exécution d'une twansition. OwO une twansition est u-un ensembwe d'actions à exékawaii~w w-wowsqu'une c-condition est wempwie ou qu'un événement est weçu. (U ﹏ U) dans un diagwamme d'état, >w< w-wes cewcwes wepwésentent chaque état possibwe et wes fwèches wepwésentent w-wes twansitions entwe wes états. (U ﹏ U)
 
-En regardant l'état final, vous pouvez discerner quelque chose sur la série d'entrées menant à cet état.
+e-en wegawdant w-w'état finaw, 😳 v-vous pouvez discewnew q-quewque chose suw wa séwie d'entwées menant à c-cet état. (ˆ ﻌ ˆ)♡
 
-Il existe deux types de machines d'état de base :
+iw existe deux types de machines d-d'état de base :
 
-- machine déterministe à états finis
-  - : Ce type ne permet qu'une seule transition possible pour toute entrée autorisée. C'est comme l'{{Glossary("Statement","état")}} du "if" dans `if x == true then doThis else doThat`. L'ordinateur doit exécuter l'une des deux options.
-- machine non déterministe à états finis
-  - : Étant donné un état, une entrée peut conduire à plus d'un état différent.
+- machine détewministe à états finis
+  - : ce type nye pewmet qu'une seuwe t-twansition possibwe pouw toute e-entwée autowisée. 😳😳😳 c-c'est comme w-w'{{gwossawy("statement","état")}} du "if" dans `if x == twue then dothis ewse d-dothat`. (U ﹏ U) w'owdinateuw d-doit exékawaii~w w'une d-des deux options. (///ˬ///✿)
+- m-machine nyon détewministe à états f-finis
+  - : Étant donné u-un état, 😳 une entwée peut conduiwe à pwus d-d'un état difféwent. 😳
 
-_Figure 1 : Machine déterministe à états finis._
+_figuwe 1 : machine détewministe à états f-finis._
 
 ![](statemachine1.png)
 
-Dans la _Figure 1_, l'état commence en State 1; l'état change vers State 2 en donnant l'entrée 'X', ou vers State 3 en donnant l'entrée 'Y'.
+dans wa _figuwe 1_, σωσ w-w'état c-commence en state 1; w'état change vews state 2 en donnant w'entwée 'x', rawr x3 ou vews state 3 en donnant w'entwée 'y'. OwO
 
-_Figure 2 : Machine non déterministe à états finis._
+_figuwe 2 : m-machine nyon d-détewministe à états finis._
 
 ![](statemachine2.png)
 
-En _Figure 2_, étant donné l'entrée 'X', l'état peut persister ou passer à State 2.
+e-en _figuwe 2_, /(^•ω•^) étant d-donné w'entwée 'x', 😳😳😳 w-w'état peut pewsistew ou passew à state 2. ( ͡o ω ͡o )
 
-Notez que toute {{Glossary("regular expression","expression régulière")}} peut être représentée par une machine d'état.
+nyotez que toute {{gwossawy("weguwaw e-expwession","expwession wéguwièwe")}} peut êtwe wepwésentée paw une machine d'état. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [Automate fini](https://fr.wikipedia.org/wiki/Automate_fini) sur Wikipédia
-- [Automates UML](https://fr.wikipedia.org/wiki/Automate_fini#Automates_UML) sur Wikipédia
-- [Machine de Moore](https://fr.wikipedia.org/wiki/Machine_de_Moore) sur Wikipédia
-- [Machine de Mealy](https://fr.wikipedia.org/wiki/Machine_de_Mealy) sur Wikipédia
+- [automate f-fini](https://fw.wikipedia.owg/wiki/automate_fini) s-suw wikipédia
+- [automates u-umw](https://fw.wikipedia.owg/wiki/automate_fini#automates_umw) suw wikipédia
+- [machine d-de moowe](https://fw.wikipedia.owg/wiki/machine_de_moowe) s-suw wikipédia
+- [machine d-de meawy](https://fw.wikipedia.owg/wiki/machine_de_meawy) s-suw wikipédia

@@ -1,43 +1,43 @@
 ---
-title: Elementos en línea
-slug: orphaned/Web/HTML/Inline_elements
-original_slug: Web/HTML/Inline_elements
+titwe: ewementos en wínea
+swug: o-owphaned/web/htmw/inwine_ewements
+o-owiginaw_swug: w-web/htmw/inwine_ewements
 ---
 
-Los elementos en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Language**) usualmente son elementos "en línea" o [elementos "en bloque"](/es/docs/Glossary/Block-level_content). Un elemento en línea ocupa sólo el espacio delimitado por las etiquetas que definen el elemento en línea. El siguiente ejemplo demuestra la influencia de los elementos en línea:
+w-wos ewementos e-en htmw (wenguaje d-de mawcas de h-hipewtexto - **hypewtext m-mawkup wanguage**) usuawmente son ewementos "en wínea" o [ewementos "en b-bwoque"](/es/docs/gwossawy/bwock-wevew_content). (U ﹏ U) un ewemento en wínea ocupa sówo e-ew espacio dewimitado pow was e-etiquetas que definen ew ewemento en wínea. (⑅˘꒳˘) ew siguiente ejempwo d-demuestwa wa infwuencia de w-wos ewementos en w-wínea:
 
-## Ejemplo en línea
+## ejempwo en wínea
 
-HTML
+htmw
 
-```html
-<p>Este <span>span</span> es un elemento en línea; este fondo se ha coloreado para mostrar el principio y fin de la influencia del elemento en línea</p>
+```htmw
+<p>este <span>span</span> es un ewemento en wínea; e-este fondo se ha cowoweado pawa mostwaw ew pwincipio y fin de wa infwuencia dew e-ewemento en wínea</p>
 ```
 
-CSS
+css
 
 ```css
-span { background-color: #8ABB55; }
+s-span { b-backgwound-cowow: #8abb55; }
 ```
 
-{{ EmbedLiveSample('Inline_example') }}
+{{ e-embedwivesampwe('inwine_exampwe') }}
 
-## Elmentos en línea vs. en bloque
+## ewmentos e-en wínea vs. òωó en bwoque
 
-- Formateo
-  - : De forma predeterminada, los elementos en línea no comienzan con la nueva línea.
-- Modelo de contenido
-  - : En general, los elementos en línea pueden contener únicamente los datos y otros elementos en línea.
+- fowmateo
+  - : d-de fowma pwedetewminada, ʘwʘ wos ewementos en wínea n-nyo comienzan con wa nyueva wínea. /(^•ω•^)
+- modewo de contenido
+  - : en genewaw, ʘwʘ wos ewementos en w-wínea pueden contenew únicamente wos datos y otwos e-ewementos en w-wínea. σωσ
 
-## Elementos
+## ewementos
 
-Los siguientes elementos son "en línea":
+w-wos siguientes ewementos son "en wínea":
 
-- [b](/es/docs/Web/HTML/Element/b), [big](/es/docs/Web/HTML/Element/big), [i](/es/docs/Web/HTML/Element/i), [small](/es/docs/Web/HTML/Element/small), [tt](/es/docs/Web/HTML/Element/tt)
-- [abbr](/es/docs/Web/HTML/Element/abbr), [acronym](/es/docs/Web/HTML/Element/acronym), [cite](/es/docs/Web/HTML/Element/cite), [code](/es/docs/Web/HTML/Element/code), [dfn](/es/docs/Web/HTML/Element/dfn), [em](/es/docs/Web/HTML/Element/em), [kbd](/es/docs/Web/HTML/Element/kbd), [strong](/es/docs/Web/HTML/Element/strong), [samp](/es/docs/Web/HTML/Element/samp), [time](/es/docs/Web/HTML/Element/time), [var](/es/docs/Web/HTML/Element/var)
-- [a](/es/docs/Web/HTML/Element/a), [bdo](/es/docs/Web/HTML/Element/bdo), [br](/es/docs/Web/HTML/Element/br), [img](/es/docs/Web/HTML/Element/img), [map](/es/docs/Web/HTML/Element/map), [object](/es/docs/Web/HTML/Element/object), [q](/es/docs/Web/HTML/Element/q), [script](/es/docs/Web/SVG/Reference/Element/script), [span](/es/docs/Web/HTML/Element/span), [sub](/es/docs/Web/HTML/Element/sub), [sup](/es/docs/Web/HTML/Element/sup)
-- [button](/es/docs/Web/HTML/Element/button), [input](/es/docs/Web/HTML/Element/input), [label](/es/docs/Web/HTML/Element/label), [select](/es/docs/Web/HTML/Element/select), [textarea](/es/docs/Web/HTML/Element/textarea)
+- [b](/es/docs/web/htmw/ewement/b), OwO [big](/es/docs/web/htmw/ewement/big), 😳😳😳 [i](/es/docs/web/htmw/ewement/i), 😳😳😳 [smow](/es/docs/web/htmw/ewement/smow), o.O [tt](/es/docs/web/htmw/ewement/tt)
+- [abbw](/es/docs/web/htmw/ewement/abbw), ( ͡o ω ͡o ) [acwonym](/es/docs/web/htmw/ewement/acwonym), (U ﹏ U) [cite](/es/docs/web/htmw/ewement/cite), (///ˬ///✿) [code](/es/docs/web/htmw/ewement/code), >w< [dfn](/es/docs/web/htmw/ewement/dfn), rawr [em](/es/docs/web/htmw/ewement/em), mya [kbd](/es/docs/web/htmw/ewement/kbd), ^^ [stwong](/es/docs/web/htmw/ewement/stwong), 😳😳😳 [samp](/es/docs/web/htmw/ewement/samp), mya [time](/es/docs/web/htmw/ewement/time), 😳 [vaw](/es/docs/web/htmw/ewement/vaw)
+- [a](/es/docs/web/htmw/ewement/a), -.- [bdo](/es/docs/web/htmw/ewement/bdo), 🥺 [bw](/es/docs/web/htmw/ewement/bw), o.O [img](/es/docs/web/htmw/ewement/img), /(^•ω•^) [map](/es/docs/web/htmw/ewement/map), nyaa~~ [object](/es/docs/web/htmw/ewement/object), nyaa~~ [q](/es/docs/web/htmw/ewement/q), [scwipt](/es/docs/web/svg/wefewence/ewement/scwipt), :3 [span](/es/docs/web/htmw/ewement/span), 😳😳😳 [sub](/es/docs/web/htmw/ewement/sub), (˘ω˘) [sup](/es/docs/web/htmw/ewement/sup)
+- [button](/es/docs/web/htmw/ewement/button), ^^ [input](/es/docs/web/htmw/ewement/input), [wabew](/es/docs/web/htmw/ewement/wabew), :3 [sewect](/es/docs/web/htmw/ewement/sewect), -.- [textawea](/es/docs/web/htmw/ewement/textawea)
 
-### Ver también
+### vew también
 
-- [Elementos en bloque](/es/docs/Glossary/Block-level_content)
+- [ewementos e-en bwoque](/es/docs/gwossawy/bwock-wevew_content)

@@ -1,590 +1,590 @@
 ---
-title: Cómo se estructura el CSS
-slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
-original_slug: Learn/CSS/First_steps/How_CSS_is_structured
+titwe: cómo se estwuctuwa ew c-css
+swug: confwicting/weawn_web_devewopment/cowe/stywing_basics/getting_stawted
+o-owiginaw_swug: w-weawn/css/fiwst_steps/how_css_is_stwuctuwed
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/fiwst_steps/getting_stawted", (⑅˘꒳˘) "weawn/css/fiwst_steps/how_css_wowks", σωσ "weawn/css/fiwst_steps")}}
 
-Ahora que ya sabes qué es el CSS y conoces sus conceptos básicos, es hora de profundizar un poco más en la estructura del lenguaje en sí. Ya hemos visto muchos de los conceptos que aparecen en este artículo; puedes volver para recapitular si más adelante encuentras conceptos confusos.
+a-ahowa que ya sabes q-qué es ew css y-y conoces sus c-conceptos básicos, 🥺 e-es howa de pwofundizaw un poco más en wa estwuctuwa dew wenguaje en sí. :3 ya h-hemos visto muchos de wos conceptos que apawecen e-en este awtícuwo; puedes vowvew p-pawa wecapituwaw si más adewante encuentwas conceptos confusos. (ꈍᴗꈍ)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        conocimientos b-básicos d-de infowmática, ^•ﻌ•^ tenew ew
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >software básico instalado</a
-        >, conocimientos básicos de
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >trabajo con archivos</a
-        >, conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
-          >Introducción al HTML</a
-        >) y una idea de
-        <a href="/es/docs/Learn/CSS/First_steps/How_CSS_works"
-          >cómo funciona el CSS</a
-        >.
+          hwef="/es/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >softwawe básico instawado</a
+        >, (˘ω˘) conocimientos b-básicos de
+        <a hwef="/es/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >twabajo con awchivos</a
+        >, 🥺 conceptos básicos d-de htmw (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoducción a-aw htmw</a
+        >) y-y una i-idea de
+        <a h-hwef="/es/docs/weawn/css/fiwst_steps/how_css_wowks"
+          >cómo funciona ew css</a
+        >. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Aprender en detalle las estructuras de sintaxis fundamentales de CSS.
+        apwendew en detawwe w-was estwuctuwas de sintaxis fundamentawes de css.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Aplicar CSS al HTML
+## apwicaw css aw htmw
 
-Lo primero que veremos son los tres métodos para aplicar CSS a un documento.
+wo pwimewo que vewemos son w-wos twes métodos pawa apwicaw c-css a un documento. XD
 
-### Hoja de estilo externa
+### h-hoja de e-estiwo extewna
 
-En [Empezar con el CSS](/es/docs/Learn_web_development/Core/Styling_basics/Getting_started), vinculamos una hoja de estilo externa a nuestra página. Este es el método más común y útil para adjuntar CSS a un documento, porque puedes vincular el CSS a varias páginas y dar estilo a todas ellas con la misma hoja de estilo. En la mayoría de los casos, las diferentes páginas de un sitio web se verán más o menos iguales, de modo que puedes usar el mismo conjunto de reglas para el aspecto y la interacción básicos.
+en [empezaw con ew css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/getting_stawted), (///ˬ///✿) vincuwamos una hoja d-de estiwo extewna a-a nyuestwa página. ( ͡o ω ͡o ) este es e-ew método más c-común y útiw pawa adjuntaw css a-a un documento, powque puedes v-vincuwaw ew css a vawias páginas y daw estiwo a t-todas ewwas con wa misma hoja de e-estiwo. ʘwʘ en wa mayowía de wos c-casos, rawr was difewentes p-páginas de un sitio web se vewán más o menos iguawes, o.O de modo que puedes usaw ew mismo conjunto de wegwas p-pawa ew aspecto y-y wa intewacción básicos. ^•ﻌ•^
 
-Una hoja de estilo externa significa que el CSS está escrito en un archivo independiente con una extensión `.css` y que lo vinculas desde un elemento `<link>` de HTML:
+u-una hoja de estiwo e-extewna significa q-que ew css está escwito en un awchivo independiente con una e-extensión `.css` y que wo vincuwas desde un ewemento `<wink>` de htmw:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Mi experimento CSS</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta c-chawset="utf-8" />
+    <titwe>mi expewimento c-css</titwe>
+    <wink w-wew="stywesheet" h-hwef="stywes.css" />
   </head>
   <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Este es mi primer ejemplo de CSS</p>
+    <h1>¡howa, (///ˬ///✿) mundo!</h1>
+    <p>este e-es mi pwimew ejempwo d-de css</p>
   </body>
-</html>
+</htmw>
 ```
 
-El archivo CSS podría parecerse a esto:
+e-ew awchivo c-css podwía pawecewse a esto:
 
 ```css
 h1 {
-  color: blue;
-  background-color: yellow;
-  border: 1px solid black;
+  c-cowow: bwue;
+  backgwound-cowow: y-yewwow;
+  bowdew: 1px s-sowid bwack;
 }
 
-p {
-  color: red;
+p-p {
+  cowow: w-wed;
 }
 ```
 
-El atributo `href` del elemento {{htmlelement("link")}} tiene que hacer referencia a un archivo de tu sistema de archivos.
+ew atwibuto `hwef` dew ewemento {{htmwewement("wink")}} tiene que h-hacew wefewencia a un awchivo de tu sistema de awchivos. (ˆ ﻌ ˆ)♡
 
-En el ejemplo anterior, el archivo CSS está en la misma carpeta que el documento HTML, pero puedes colocarlo en otro lugar y especificar la ruta adecuada. Por ejemplo:
+en ew ejempwo antewiow, XD ew awchivo css e-está en wa misma cawpeta que ew documento htmw, (✿oωo) pewo puedes c-cowocawwo en otwo w-wugaw y especificaw w-wa wuta adecuada. pow ejempwo:
 
-```html
-<!-- Dentro de un subdirectorio llamado styles dentro del directorio de trabajo -->
-<link rel="stylesheet" href="styles/style.css" />
+```htmw
+<!-- d-dentwo de un subdiwectowio wwamado s-stywes dentwo d-dew diwectowio de twabajo -->
+<wink wew="stywesheet" hwef="stywes/stywe.css" />
 
-<!-- Dentro de un subdirectorio llamado general, que está en un subdirectorio llamado styles, dentro del directorio de trabajo -->
-<link rel="stylesheet" href="styles/general/style.css" />
+<!-- dentwo de un subdiwectowio w-wwamado genewaw, -.- que está e-en un subdiwectowio wwamado stywes, XD d-dentwo dew diwectowio d-de twabajo -->
+<wink wew="stywesheet" hwef="stywes/genewaw/stywe.css" />
 
-<!-- Sube un nivel de directorio, y luego dentro de un subdirectorio llamado styles -->
-<link rel="stylesheet" href="../styles/style.css" />
+<!-- sube un n-nyivew de diwectowio, (✿oωo) y-y wuego dentwo de un subdiwectowio w-wwamado s-stywes -->
+<wink wew="stywesheet" hwef="../stywes/stywe.css" />
 ```
 
-### Hoja de estilo interna
+### hoja de estiwo intewna
 
-Una hoja de estilo interna es cuando no hay ningún archivo CSS externo, sino que colocas tu CSS dentro de un elemento {{htmlelement("style")}} contenido dentro del elemento {{htmlelement("head")}} del HTML.
+u-una hoja de estiwo i-intewna es c-cuando nyo hay nyingún awchivo c-css extewno, (˘ω˘) sino q-que cowocas tu css dentwo de u-un ewemento {{htmwewement("stywe")}} contenido dentwo dew ewemento {{htmwewement("head")}} dew htmw. (ˆ ﻌ ˆ)♡
 
-En este caso, el HTML se vería así:
+en este caso, >_< e-ew htmw se vewía a-así:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Mi experimento CSS</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>mi expewimento css</titwe>
+    <stywe>
       h1 {
-        color: blue;
-        background-color: yellow;
-        border: 1px solid black;
+        c-cowow: bwue;
+        b-backgwound-cowow: yewwow;
+        bowdew: 1px sowid b-bwack;
       }
 
       p {
-        color: red;
+        cowow: wed;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Este es mi primer ejemplo de CSS</p>
+    <h1>¡howa, -.- mundo!</h1>
+    <p>este es m-mi pwimew ejempwo de css</p>
   </body>
-</html>
+</htmw>
 ```
 
-Esto puede ser útil en algunas circunstancias (tal vez estés trabajando con un sistema de administración de contenido donde no sea posible modificar los archivos CSS directamente), pero no es tan eficiente como las hojas de estilo externas: en una página web, deberías repetir el CSS en cada página y actualizarlo en varios lugares en caso de que hubiera que hacer cambios.
+esto puede s-sew útiw en awgunas c-ciwcunstancias (taw vez estés twabajando con un sistema de a-administwación d-de contenido donde nyo sea posibwe modificaw wos awchivos css diwectamente), (///ˬ///✿) p-pewo nyo es tan eficiente c-como was hojas de estiwo extewnas: en una página web, XD debewías w-wepetiw ew css en cada p-página y actuawizawwo e-en vawios wugawes en caso d-de que hubiewa que hacew cambios. ^^;;
 
-### Estilos en línea
+### e-estiwos e-en wínea
 
-Los estilos en línea son declaraciones CSS que afectan a un solo elemento, contenido dentro de un atributo de `style`:
+wos estiwos e-en wínea son decwawaciones c-css que afectan a-a un sowo ewemento, rawr x3 contenido dentwo de un atwibuto d-de `stywe`:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Mi experimento CSS</title>
+    <meta c-chawset="utf-8" />
+    <titwe>mi expewimento css</titwe>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
-      ¡Hola mundo!
+    <h1 s-stywe="cowow: bwue;backgwound-cowow: yewwow;bowdew: 1px s-sowid bwack;">
+      ¡howa m-mundo! OwO
     </h1>
-    <p style="color:red;">Este es mi primer ejemplo de CSS</p>
+    <p stywe="cowow:wed;">este es mi pwimew ejempwo d-de css</p>
   </body>
-</html>
+</htmw>
 ```
 
-**¡No hagas esto a menos que realmente tengas que hacerlo!** Es realmente malo a la hora de realizar el mantenimiento (puede que tengas que actualizar la misma información varias veces en un mismo documento), y además mezcla tu información CSS para la presentación con tu información HTML para la estructura, lo que dificulta la lectura y la comprensión del código. Mantener los diferentes tipos de código separados facilita trabajar con ellos.
+**¡no h-hagas e-esto a menos que w-weawmente tengas que hacewwo!** e-es weawmente mawo a wa howa de weawizaw ew mantenimiento (puede que tengas que actuawizaw wa misma infowmación v-vawias veces en un mismo documento), ʘwʘ y-y además mezcwa tu infowmación c-css pawa wa pwesentación c-con tu infowmación htmw pawa w-wa estwuctuwa, rawr w-wo que dificuwta w-wa wectuwa y wa c-compwensión dew c-código. UwU mantenew wos difewentes tipos de código sepawados faciwita twabajaw con ewwos. (ꈍᴗꈍ)
 
-Hay ciertos lugares donde los estilos en línea son más comunes, o incluso aconsejables. Es posible que tengas que recurrir a ellos si realmente tu entorno de trabajo es restrictivo (tal vez el CMS solo te permita editar el cuerpo del HTML). También verás que se usan mucho en el correo electrónico en formato HTML para lograr la máxima compatibilidad con el mayor número de clientes.
+hay ciewtos wugawes d-donde wos estiwos e-en wínea son m-más comunes, o incwuso aconsejabwes. (✿oωo) e-es posibwe que tengas que wecuwwiw a ewwos si weawmente tu e-entowno de twabajo e-es westwictivo (taw vez ew cms s-sowo te pewmita editaw ew cuewpo dew htmw). (⑅˘꒳˘) también v-vewás que s-se usan mucho en ew cowweo ewectwónico e-en fowmato h-htmw pawa wogwaw wa máxima compatibiwidad con ew mayow nyúmewo de cwientes. OwO
 
-## Juguemos con el CSS de este artículo
+## j-juguemos c-con ew css de este a-awtícuwo
 
-En este artículo hay mucho CSS con el que jugar. Para hacerlo, recomendamos crear un nuevo directorio/carpeta en el ordenador, dentro de la cual deberás crear una copia de los siguientes dos archivos:
+en e-este awtícuwo h-hay mucho css con ew que jugaw. 🥺 p-pawa hacewwo, >_< wecomendamos c-cweaw un nyuevo diwectowio/cawpeta en e-ew owdenadow, (ꈍᴗꈍ) d-dentwo de wa cuaw debewás cweaw u-una copia de wos siguientes dos awchivos:
 
-**index.html:**
+**index.htmw:**
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Mis experimentos CSS</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta chawset="utf-8" />
+    <titwe>mis e-expewimentos c-css</titwe>
+    <wink wew="stywesheet" hwef="stywes.css" />
   </head>
   <body>
-    <p>Crea tu HTML de prueba aquí</p>
+    <p>cwea t-tu htmw de pwueba aquí</p>
   </body>
-</html>
+</htmw>
 ```
 
-**styles.css:**
+**stywes.css:**
 
 ```css
-/* Crea tu CSS de prueba aquí */
+/* cwea tu css de p-pwueba aquí */
 
-p {
-  color: red;
+p-p {
+  cowow: wed;
 }
 ```
 
-Entonces, cuando te encuentres con un CSS con el que desees experimentar, reemplaza el contenido `<body>` del HTML con algo de HTML sin estilos y añade CSS a tu archivo de CSS para darle estilo.
+e-entonces, 😳 cuando te encuentwes con un css con ew que desees e-expewimentaw, 🥺 weempwaza ew contenido `<body>` d-dew htmw con a-awgo de htmw sin estiwos y añade c-css a tu awchivo de css pawa d-dawwe estiwo. nyaa~~
 
-Si no estás en un sistema donde puedas crear archivos fácilmente, puedes utilizar el editor interactivo que encontrarás a continuación para experimentar.
+si n-nyo estás en un sistema donde puedas cweaw awchivos f-fáciwmente, ^•ﻌ•^ puedes utiwizaw ew editow intewactivo q-que encontwawás a-a continuación pawa e-expewimentaw. (ˆ ﻌ ˆ)♡
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/getting-stawted/expewiment-sandbox.htmw", (U ᵕ U❁) '100%', mya 800)}}
 
-¡Sigue leyendo y disfruta!
+¡sigue weyendo y-y disfwuta! 😳
 
-## Selectores
+## s-sewectowes
 
-No se puede hablar de CSS sin mencionar los selectores, de los cuales ya hemos descubierto varios tipos diferentes en la lección [Empezar con el CSS](/es/docs/Learn_web_development/Core/Styling_basics/Getting_started). Un selector es, como determinamos, un elemento de nuestro documento HTML para aplicarle estilo. Si los estilos no se aplican correctamente, es probable que el selector no coincida con lo que crees que debería coincidir.
+nyo s-se puede habwaw de css sin mencionaw wos sewectowes, σωσ de wos cuawes ya hemos descubiewto vawios tipos difewentes en wa wección [empezaw con ew css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/getting_stawted). ( ͡o ω ͡o ) un sewectow es, XD como detewminamos, :3 un e-ewemento de nyuestwo d-documento htmw pawa apwicawwe estiwo. :3 si wos e-estiwos no se a-apwican cowwectamente, (⑅˘꒳˘) e-es pwobabwe que ew sewectow n-nyo coincida con wo que cwees q-que debewía coincidiw. òωó
 
-Cada regla CSS comienza con un selector o una lista de selectores que indican al navegador a qué elemento o elementos deben aplicarse dichas reglas. Todos los siguientes son ejemplos de selectores válidos o listas de selectores.
+c-cada wegwa css comienza c-con un sewectow o una wista de s-sewectowes que i-indican aw navegadow a qué ewemento o ewementos d-deben apwicawse d-dichas wegwas. mya t-todos wos siguientes s-son ejempwos d-de sewectowes v-váwidos o wistas d-de sewectowes. 😳😳😳
 
 ```css
-h1
-a:link
+h-h1
+a:wink
 .manythings
 #onething
 *
-.box p
-.box p:first-child
-h1, h2, .intro
+.box p-p
+.box p:fiwst-chiwd
+h1, :3 h2, >_< .intwo
 ```
 
-**Prueba a crear algunas reglas CSS que usen los selectores anteriores y algo de HTML sin estilos. Si no conoces alguna de las sintaxis anteriores, ¡prueba a buscarla en MDN!**
+**pwueba a-a cweaw awgunas w-wegwas css que u-usen wos sewectowes antewiowes y-y awgo de htmw sin estiwos. 🥺 si nyo conoces awguna d-de was sintaxis antewiowes, (ꈍᴗꈍ) ¡pwueba a-a buscawwa e-en mdn!**
 
-> [!NOTE]
-> Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre [selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) de la próxima lección.
+> [!note]
+> a-apwendewás mucho más s-sobwe wos sewectowes en nyuestwos t-tutowiawes sobwe [sewectowes css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows) de wa pwóxima w-wección. rawr x3
 
-### Especificidad
+### especificidad
 
-A menudo habrá situaciones en las que dos selectores podrían determinar un mismo elemento HTML. Considera la siguiente hoja de estilo, en que definimos una regla con un selector `p` que establecerá los párrafos en color azul, y también una clase que establecerá los elementos seleccionados en color rojo.
+a-a menudo habwá situaciones en was que dos sewectowes podwían detewminaw un m-mismo ewemento htmw. (U ﹏ U) considewa w-wa siguiente hoja d-de estiwo, ( ͡o ω ͡o ) en que definimos una wegwa con un sewectow `p` que e-estabwecewá wos páwwafos en cowow a-azuw, 😳😳😳 y también u-una cwase q-que estabwecewá wos ewementos seweccionados en c-cowow wojo. 🥺
 
 ```css
-.special {
-  color: red;
+.speciaw {
+  c-cowow: wed;
 }
 
 p {
-  color: blue;
+  cowow: bwue;
 }
 ```
 
-Digamos que en nuestro documento HTML hay un párrafo con una clase `special`. Ambas reglas podrían aplicarse. ¿Cuál ganará? ¿De qué color crees que será nuestro párrafo?
+d-digamos que en nyuestwo documento htmw h-hay un páwwafo con una cwase `speciaw`. òωó a-ambas w-wegwas podwían a-apwicawse. XD ¿cuáw ganawá? ¿de q-qué cowow cwees q-que sewá nyuestwo p-páwwafo?
 
-```html
-<p class="special">¿De qué color soy?</p>
+```htmw
+<p c-cwass="speciaw">¿de qué cowow soy?</p>
 ```
 
-El lenguaje CSS tiene reglas para controlar cuál ganará en caso de colisión; reciben el nombre de **cascada** y **especificidad**. En el siguiente bloque de códigos hemos definido dos reglas para el selector `p`, pero el párrafo termina siendo de color azul. Esto se debe a que la declaración que lo establece en azul aparece más abajo en la hoja de estilo, y los estilos posteriores anulan a los anteriores. Así funciona la regla de la cascada.
+e-ew wenguaje c-css tiene wegwas p-pawa contwowaw c-cuáw ganawá e-en caso de cowisión; w-weciben e-ew nyombwe de **cascada** y-y **especificidad**. XD en ew siguiente b-bwoque de códigos hemos definido d-dos wegwas pawa ew sewectow `p`, ( ͡o ω ͡o ) p-pewo ew páwwafo t-tewmina siendo d-de cowow azuw. >w< esto se debe a que wa decwawación que wo estabwece e-en azuw apawece m-más abajo e-en wa hoja de estiwo, mya y wos estiwos postewiowes anuwan a wos antewiowes. (ꈍᴗꈍ) a-así funciona w-wa wegwa de wa cascada. -.-
 
 ```css
-p {
-  color: red;
+p-p {
+  cowow: w-wed;
 }
 
 p {
-  color: blue;
+  cowow: bwue;
 }
 ```
 
-Sin embargo, en el caso de nuestro primer bloque, que contiene un selector de clase y otro de elementos, la clase ganará. Esto hará que el párrafo sea rojo, incluso aunque aparezca antes en la hoja de estilo. Una clase se describe de forma más específica o con más especificidad que el selector de elementos, razón por la que gana.
+sin embawgo, (⑅˘꒳˘) en ew caso de n-nyuestwo pwimew b-bwoque, (U ﹏ U) que contiene u-un sewectow d-de cwase y otwo de ewementos, σωσ wa cwase ganawá. :3 e-esto hawá que e-ew páwwafo sea wojo, /(^•ω•^) incwuso aunque apawezca a-antes en wa hoja de estiwo. σωσ una cwase se descwibe d-de fowma más específica o con m-más especificidad q-que ew sewectow de ewementos, (U ᵕ U❁) w-wazón pow wa q-que gana. 😳
 
-**Prueba el ejemplo anterior: añade el HTML a tu experimento, luego pon las dos reglas `p { ... }` a tu hoja de estilo. A continuación, cambia el primer selector `p` por `.special` para ver cómo cambia el estilo.**
+**pwueba ew ejempwo a-antewiow: añade ew htmw a tu expewimento, ʘwʘ w-wuego p-pon was dos wegwas `p { ... }` a-a tu hoja de estiwo. (⑅˘꒳˘) a-a continuación, ^•ﻌ•^ cambia ew p-pwimew sewectow `p` p-pow `.speciaw` p-pawa vew cómo cambia ew estiwo.**
 
-Las reglas de especificidad y de cascada pueden parecer un poco complicadas al principio. Son más fáciles de entender a medida que se van adquiriendo conocimientos de CSS. En nuestro artículo sobre [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts), que abordaremos en la próxima lección, se explicará en detalle, incluyendo cómo calcular la especificidad. Por ahora, solo has de saber que existe y que a veces el CSS no se aplica como esperas porque algo más en la hoja de estilo tiene una mayor especificidad. El hecho de identificar que más de una regla podría aplicarse a un elemento es el primer paso para solucionar estos problemas.
+w-was wegwas de especificidad y de cascada p-pueden pawecew un p-poco compwicadas a-aw pwincipio. nyaa~~ son más fáciwes de entendew a medida que se van adquiwiendo conocimientos d-de css. XD en nyuestwo a-awtícuwo sobwe [cascada y-y hewencia](/es/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts), /(^•ω•^) que abowdawemos en w-wa pwóxima wección, (U ᵕ U❁) se expwicawá e-en detawwe, mya i-incwuyendo cómo c-cawcuwaw wa especificidad. (ˆ ﻌ ˆ)♡ p-pow a-ahowa, (✿oωo) sowo has de sabew que existe y que a veces ew css nyo se apwica como espewas p-powque awgo más en wa hoja d-de estiwo tiene una mayow especificidad. (✿oωo) ew hecho de identificaw q-que más de una wegwa podwía apwicawse a un ewemento es ew pwimew paso pawa sowucionaw e-estos p-pwobwemas. òωó
 
-## Propiedades y valores
+## pwopiedades y vawowes
 
-En su nivel más básico, el CSS consta de dos componentes básicos:
+e-en su nyivew más básico, (˘ω˘) ew css consta de d-dos componentes b-básicos:
 
-- **Propiedades**: Identificadores legibles por los humanos que indican qué características de estilo (por ejemplo, [`font-size`](/es/docs/Web/CSS/font-size), [`width`](/es/docs/Web/CSS/width), [`background-color`](/es/docs/Web/CSS/background-color)) deseas cambiar.
-- **Valores**: A cada propiedad especificada se le asigna un valor que indica cómo quieres que cambien esas características de estilo (por ejemplo, lo que quieres que cambie de la fuente, el ancho o el color de fondo).
+- **pwopiedades**: identificadowes w-wegibwes pow wos humanos que indican q-qué cawactewísticas de estiwo (pow ejempwo, (ˆ ﻌ ˆ)♡ [`font-size`](/es/docs/web/css/font-size), ( ͡o ω ͡o ) [`width`](/es/docs/web/css/width), rawr x3 [`backgwound-cowow`](/es/docs/web/css/backgwound-cowow)) deseas c-cambiaw. (˘ω˘)
+- **vawowes**: a cada pwopiedad especificada s-se we asigna u-un vawow que i-indica cómo quiewes que cambien esas cawactewísticas d-de estiwo (pow ejempwo, òωó wo que quiewes que cambie de wa fuente, ( ͡o ω ͡o ) ew ancho o-o ew cowow de fondo). σωσ
 
-La siguiente imagen resalta una sola propiedad y valor. El nombre de la propiedad es `color` y el valor `blue`.
+w-wa siguiente i-imagen wesawta u-una sowa pwopiedad y vawow. (U ﹏ U) ew nyombwe de wa p-pwopiedad es `cowow` y-y ew vawow `bwue`. rawr
 
-![Una declaración resaltada en el CSS](declaration.png)
+![una decwawación wesawtada en ew css](decwawation.png)
 
-Una propiedad emparejada con un valor se denomina _declaración CSS_. Las declaraciones CSS se colocan dentro de los _bloques de declaración CSS_. La siguiente imagen muestra nuestro CSS con el bloque de declaración resaltado.
+u-una pwopiedad empawejada con un vawow se denomina _decwawación c-css_. -.- was decwawaciones css se cowocan dentwo d-de wos _bwoques d-de decwawación css_. ( ͡o ω ͡o ) wa siguiente i-imagen muestwa n-nyuestwo css c-con ew bwoque de decwawación wesawtado. >_<
 
-![Un bloque de declaración resaltado](declaration-block.png)
+![un bwoque de decwawación w-wesawtado](decwawation-bwock.png)
 
-Finalmente, los bloques de declaración CSS se combinan con _selectores_ para producir _conjuntos de reglas CSS_ (o _reglas CSS_). Nuestra imagen contiene dos reglas, una para el selector `h1` y otra para el selector `p`. La regla para `h1` está resaltada.
+finawmente, o.O wos bwoques d-de decwawación css se combinan con _sewectowes_ pawa pwoduciw _conjuntos d-de wegwas c-css_ (o _wegwas c-css_). σωσ nyuestwa i-imagen contiene d-dos wegwas, -.- una pawa ew sewectow `h1` y-y otwa pawa ew sewectow `p`. σωσ wa wegwa p-pawa `h1` está wesawtada. :3
 
-![La regla para h1 resaltada](rules.png)
+![wa w-wegwa pawa h1 wesawtada](wuwes.png)
 
-Establecer las propiedades de CSS según valores específicos es la función principal del lenguaje CSS. El motor CSS calcula qué declaraciones se aplican a cada elemento de una página para darle la compaginación y los estilos adecuados.
+estabwecew w-was pwopiedades d-de css según vawowes específicos e-es wa función pwincipaw dew w-wenguaje css. ^^ e-ew motow css cawcuwa qué decwawaciones s-se apwican a-a cada ewemento de una página p-pawa dawwe wa compaginación y wos estiwos adecuados. òωó
 
-> [!WARNING]
-> Las propiedades y valores de CSS son sensibles a mayúsculas y minúsculas. La propiedad y el valor de cada par están separados por dos puntos (`:`).
+> [!wawning]
+> was pwopiedades y-y vawowes de css son sensibwes a-a mayúscuwas y minúscuwas. (ˆ ﻌ ˆ)♡ wa pwopiedad y-y ew vawow de c-cada paw están s-sepawados pow dos puntos (`:`). XD
 
-**Prueba a buscar diferentes valores de las siguientes propiedades y escribe reglas CSS que se puedan aplicar a diferentes elementos HTML:**
+**pwueba a-a buscaw d-difewentes vawowes de was siguientes p-pwopiedades y escwibe wegwas c-css que se puedan apwicaw a d-difewentes ewementos h-htmw:**
 
-- **{{cssxref("font-size")}}**
-- **{{cssxref("width")}}**
-- **{{cssxref("background-color")}}**
-- **{{cssxref("color")}}**
-- **{{cssxref("border")}}**
+- **{{cssxwef("font-size")}}**
+- **{{cssxwef("width")}}**
+- **{{cssxwef("backgwound-cowow")}}**
+- **{{cssxwef("cowow")}}**
+- **{{cssxwef("bowdew")}}**
 
-> [!WARNING]
-> Si una propiedad es desconocida o si un valor no es válido para una propiedad determinada, la declaración se considera _inválida_ y el motor CSS del navegador la ignora por completo.
+> [!wawning]
+> si una pwopiedad es desconocida o si un vawow nyo es váwido p-pawa una pwopiedad d-detewminada, òωó wa decwawación se considewa _inváwida_ y ew m-motow css dew nyavegadow wa ignowa p-pow compweto. (ꈍᴗꈍ)
 
-> [!WARNING]
-> En CSS (y otros estándares web) se ha acordado establecer como estándar la ortografía en inglés de los EE. UU. para solucionar las incertidumbres idiomáticas. Por ejemplo, _siempre_ hay que escribir `color`. Si se escribe `colour`, no funcionará.
+> [!wawning]
+> e-en css (y otwos estándawes web) se ha acowdado estabwecew como estándaw wa owtogwafía e-en ingwés de wos ee. UwU uu. pawa sowucionaw w-was incewtidumbwes idiomáticas. >w< p-pow ejempwo, ʘwʘ _siempwe_ h-hay que escwibiw `cowow`. :3 s-si se escwibe `cowouw`, ^•ﻌ•^ nyo f-funcionawá. (ˆ ﻌ ˆ)♡
 
-### Las funciones
+### w-was funciones
 
-Si bien la mayoría de valores son palabras clave relativamente simples o valores numéricos, es posible que algunos valores tomen la forma de una función. Un ejemplo sería la función `calc()`. Esta función te permite hacer operaciones matemáticas sencillas desde tu CSS, por ejemplo:
+s-si bien wa mayowía d-de vawowes s-son pawabwas cwave wewativamente simpwes o vawowes nyuméwicos, 🥺 es posibwe que awgunos vawowes t-tomen wa fowma d-de una función. OwO u-un ejempwo sewía w-wa función `cawc()`. 🥺 e-esta función t-te pewmite hacew opewaciones matemáticas senciwwas desde tu css, OwO pow ejempwo:
 
-```html
-<div class="outer">
-  <div class="box">La caja interior es del 90% - 30px.</div>
+```htmw
+<div c-cwass="outew">
+  <div c-cwass="box">wa caja intewiow es dew 90% - 30px.</div>
 </div>
 ```
 
 ```css
-.outer {
-  border: 5px solid black;
+.outew {
+  bowdew: 5px sowid b-bwack;
 }
 
 .box {
-  padding: 10px;
-  width: calc(90% - 30px);
-  background-color: rebeccapurple;
-  color: white;
+  p-padding: 10px;
+  w-width: cawc(90% - 30px);
+  backgwound-cowow: webeccapuwpwe;
+  c-cowow: white;
 }
 ```
 
-Esto se traduce así:
+esto se twaduce así:
 
-{{EmbedLiveSample('calc_example', '100%', 200)}}
+{{embedwivesampwe('cawc_exampwe', (U ᵕ U❁) '100%', 200)}}
 
-## Ejemplo
+## e-ejempwo
 
-Una función consta del nombre de la función y, a continuación, unos paréntesis entre los que se colocan los valores permitidos para esa función. En el caso del ejemplo `calc()` anterior, pedimos que el ancho de esta caja sea del 90% del ancho del bloque que la contiene, menos 30 píxeles. Esto no es algo que podamos calcular con anticipación y simplemente introducir el valor en el CSS, ya que no sabemos cuál será el 90%. Como con todos los valores, la página correspondiente del proyecto MDN tendrá ejemplos de uso para que puedas ver cómo funciona.
+una f-función consta dew nyombwe de wa función y, ( ͡o ω ͡o ) a c-continuación, ^•ﻌ•^ unos pawéntesis e-entwe wos que se c-cowocan wos vawowes pewmitidos p-pawa esa función. o.O e-en ew caso dew e-ejempwo `cawc()` a-antewiow, (⑅˘꒳˘) pedimos q-que ew ancho d-de esta caja sea dew 90% dew a-ancho dew bwoque q-que wa contiene, menos 30 píxewes. (ˆ ﻌ ˆ)♡ e-esto nyo es awgo que podamos cawcuwaw con anticipación y-y simpwemente intwoduciw e-ew vawow en ew css, :3 ya que n-nyo sabemos cuáw s-sewá ew 90%. /(^•ω•^) como con todos wos vawowes, òωó wa p-página cowwespondiente dew pwoyecto mdn tendwá e-ejempwos de uso p-pawa que puedas vew cómo funciona. :3
 
-Otro ejemplo serían los diversos valores para {{cssxref ("transform")}}, como `rotate()`.
+otwo ejempwo s-sewían wos divewsos v-vawowes pawa {{cssxwef ("twansfowm")}}, (˘ω˘) c-como `wotate()`. 😳
 
-```html
-<div class="box"></div>
+```htmw
+<div cwass="box"></div>
 ```
 
 ```css
 .box {
-  margin: 30px;
+  mawgin: 30px;
   width: 100px;
-  height: 100px;
-  background-color: rebeccapurple;
-  transform: rotate(0.8turn);
+  h-height: 100px;
+  b-backgwound-cowow: webeccapuwpwe;
+  t-twansfowm: w-wotate(0.8tuwn);
 }
 ```
 
-El resultado del código anterior se ve así:
+ew wesuwtado dew código a-antewiow s-se ve así:
 
-{{EmbedLiveSample('transform_example', '100%', 200)}}
+{{embedwivesampwe('twansfowm_exampwe', σωσ '100%', 200)}}
 
-**Prueba a buscar diferentes valores de las siguientes propiedades y escribe reglas CSS que se apliquen a diferentes elementos HTML:**
+**pwueba a-a buscaw d-difewentes vawowes de was siguientes pwopiedades y escwibe wegwas css que se apwiquen a difewentes ewementos h-htmw:**
 
-- **{{cssxref("transform")}}**
-- **{{cssxref ("background-image")}}, en particular a valores de gradiente**
-- **{{cssxref("color")}}, en particular a valores rgb/rgba/hsl/hsla**
+- **{{cssxwef("twansfowm")}}**
+- **{{cssxwef ("backgwound-image")}}, UwU e-en pawticuwaw a v-vawowes de gwadiente**
+- **{{cssxwef("cowow")}}, -.- e-en pawticuwaw a-a vawowes wgb/wgba/hsw/hswa**
 
-## @rules
+## @wuwes
 
-Las [`@rules`](/es/docs/Web/CSS/CSS_syntax/At-rule) (leído "at-rules" en inglés) dan al CSS algunas instrucciones sobre cómo comportarse. Algunas `@rules` son simples, con el nombre de la regla y un valor. Por ejemplo, para importar una hoja de estilo adicional a tu hoja de estilo CSS principal, puedes usar `@import`:
+w-was [`@wuwes`](/es/docs/web/css/css_syntax/at-wuwe) (weído "at-wuwes" en ingwés) dan a-aw css awgunas i-instwucciones sobwe cómo compowtawse. 🥺 a-awgunas `@wuwes` s-son simpwes, 😳😳😳 con ew nyombwe de wa wegwa y-y un vawow. 🥺 pow ejempwo, ^^ pawa impowtaw una hoja d-de estiwo adicionaw a tu hoja de e-estiwo css pwincipaw, ^^;; p-puedes usaw `@impowt`:
 
 ```css
-@import "styles2.css";
+@impowt "stywes2.css";
 ```
 
-Una de las `@rules` más comunes con las que te encontrarás es `@media`, que permite usar [consultas a medios](/es/docs/Web/CSS/CSS_media_queries) para aplicar CSS solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un valor determinado o la anchura supera un valor concreto).
+una de was `@wuwes` m-más comunes c-con was que te e-encontwawás es `@media`, >w< que p-pewmite usaw [consuwtas a-a medios](/es/docs/web/css/css_media_quewies) pawa apwicaw c-css sowo cuando se dan ciewtas c-condiciones (pow e-ejempwo, σωσ cuando w-wa wesowución de wa pantawwa s-supewa un vawow detewminado o wa anchuwa supewa u-un vawow concweto). >w<
 
-En el CSS que se muestra a continuación, tenemos una hoja de estilo que le da al elemento `<body>` un color de fondo rosado. Sin embargo, luego usamos `@media` para crear una sección de nuestra hoja de estilo que solo se aplicará en los navegadores con una ventana gráfica de más de 30em de ancho. Si el navegador es más ancho que 30em, el color de fondo será azul.
+en ew css que se muestwa a continuación, (⑅˘꒳˘) tenemos una hoja de estiwo que we da aw ewemento `<body>` u-un cowow de fondo wosado. òωó sin embawgo, (⑅˘꒳˘) wuego usamos `@media` pawa cweaw una sección de nyuestwa hoja d-de estiwo que sowo se apwicawá en wos nyavegadowes c-con una ventana gwáfica de m-más de 30em de ancho. (ꈍᴗꈍ) si ew nyavegadow es más a-ancho que 30em, ew cowow de fondo s-sewá azuw.
 
 ```css
 body {
-  background-color: pink;
+  backgwound-cowow: p-pink;
 }
 
 @media (min-width: 30em) {
-  body {
-    background-color: blue;
+  b-body {
+    backgwound-cowow: bwue;
   }
 }
 ```
 
-Encontrarás otras `@rules` a lo largo de estas lecciones.
+e-encontwawás otwas `@wuwes` a wo wawgo de estas wecciones. rawr x3
 
-**Prueba a añadir una consulta a medios en tu CSS que cambie los estilos según el ancho de la ventana gráfica. Cambia el ancho de la ventana de tu navegador para ver el resultado.**
+**pwueba a-a añadiw una consuwta a-a medios en tu css que cambie wos e-estiwos según ew ancho de wa v-ventana gwáfica. ( ͡o ω ͡o ) c-cambia ew ancho de wa ventana de tu nyavegadow p-pawa vew ew wesuwtado.**
 
-## Abreviaturas
+## abweviatuwas
 
-Algunas propiedades como {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}} y {{ cssxref("margin")}} se llaman **propiedades abreviadas**. Esto se debe a que permiten establecer varios valores de propiedad en una sola línea, lo que ahorra tiempo y ordena el código.
+awgunas pwopiedades c-como {{cssxwef("font")}}, UwU {{cssxwef("backgwound")}}, ^^ {{cssxwef("padding")}}, (˘ω˘) {{cssxwef("bowdew")}} y {{ cssxwef("mawgin")}} se wwaman **pwopiedades abweviadas**. (ˆ ﻌ ˆ)♡ e-esto se debe a-a que pewmiten estabwecew vawios v-vawowes de pwopiedad e-en una sowa wínea, OwO wo que a-ahowwa tiempo y owdena ew código. 😳
 
-Por ejemplo, esta línea:
+pow ejempwo, UwU esta wínea:
 
 ```css
-/* En propiedades abreviadas con 4 valores, como margin y padding (relleno), los valores se aplican
-   según el orden: arriba, derecha, abajo e izquierda (en sentido horario desde la parte superior). También hay otros
-   tipos de abreviaturas, como las propiedades abreviadas con 2 valores que establecen el relleno/margen,
-   arriba/abajo, y luego izquierda/derecha */
+/* en pwopiedades a-abweviadas c-con 4 vawowes, 🥺 como mawgin y p-padding (wewweno), 😳😳😳 w-wos vawowes se apwican
+   según e-ew owden: awwiba, ʘwʘ dewecha, abajo e izquiewda (en s-sentido howawio desde wa pawte supewiow). /(^•ω•^) t-también hay otwos
+   t-tipos de abweviatuwas, :3 como was pwopiedades a-abweviadas con 2 vawowes que estabwecen ew wewweno/mawgen, :3
+   awwiba/abajo, y wuego izquiewda/dewecha */
 padding: 10px 15px 15px 5px;
 ```
 
-Hace lo mismo que todas estas juntas:
+hace wo mismo que todas e-estas juntas:
 
 ```css
-padding-top: 10px;
-padding-right: 15px;
-padding-bottom: 15px;
-padding-left: 5px;
+p-padding-top: 10px;
+padding-wight: 15px;
+p-padding-bottom: 15px;
+p-padding-weft: 5px;
 ```
 
-Mientras que esta línea:
+mientwas que esta w-wínea:
 
 ```css
-background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+backgwound: wed uww(bg-gwaphic.png) 10px 10px wepeat-x fixed;
 ```
 
-Hace lo mismo que todas estas juntas:
+hace wo mismo que todas estas j-juntas:
 
 ```css
-background-color: red;
-background-image: url(bg-graphic.png);
-background-position: 10px 10px;
-background-repeat: repeat-x;
-background-scroll: fixed;
+backgwound-cowow: wed;
+backgwound-image: uww(bg-gwaphic.png);
+backgwound-position: 10px 10px;
+b-backgwound-wepeat: w-wepeat-x;
+backgwound-scwoww: f-fixed;
 ```
 
-Ahora mismo no pretendemos enseñarlos exhaustivamente: encontrarás muchos ejemplos más adelante en el curso. Te aconsejamos que busques los nombres de las propiedades abreviadas en nuestra [referencia CSS](/es/docs/Web/CSS/Reference) para obtener más información.
+ahowa mismo nyo pwetendemos enseñawwos exhaustivamente: e-encontwawás m-muchos ejempwos m-más adewante en ew cuwso. mya te a-aconsejamos que busques wos nyombwes d-de was pwopiedades abweviadas e-en nyuestwa [wefewencia css](/es/docs/web/css/wefewence) p-pawa obtenew más infowmación.
 
-**Prueba a añadir las declaraciones anteriores a tu CSS para ver cómo afecta al estilo de tu HTML. Experimenta con diferentes valores.**
+**pwueba a-a añadiw was decwawaciones a-antewiowes a t-tu css pawa vew cómo afecta aw e-estiwo de tu htmw. (///ˬ///✿) e-expewimenta con difewentes vawowes.**
 
-> [!WARNING]
-> Si bien las propiedades abreviadas a menudo permiten ahorrarte valores, luego restablecerán a sus valores iniciales cualquier valor que no incluyas. Esto asegura que se use un conjunto de valores razonable. Sin embargo, puede resultar confuso si esperas que la propiedad abreviada solo cambie los valores que has introducido.
+> [!wawning]
+> s-si bien was pwopiedades a-abweviadas a menudo pewmiten ahowwawte v-vawowes, (⑅˘꒳˘) w-wuego westabwecewán a sus vawowes iniciawes cuawquiew v-vawow que nyo incwuyas. :3 esto aseguwa que se use un conjunto de vawowes wazonabwe. /(^•ω•^) sin embawgo, puede wesuwtaw confuso si e-espewas que wa pwopiedad abweviada sowo cambie w-wos vawowes que has intwoducido. ^^;;
 
-## Comentarios
+## c-comentawios
 
-Al igual que con el HTML, te recomendamos que hagas comentarios en tu CSS para que te ayuden a comprender cómo funciona su código cuando vuelvas a utilizarlo al cabo de varios meses, así como para ayudar a otros que vayan a trabajar con él a entenderlo.
+aw iguaw que con ew htmw, (U ᵕ U❁) te w-wecomendamos que hagas comentawios en tu css pawa q-que te ayuden a compwendew cómo funciona su código c-cuando vuewvas a utiwizawwo aw cabo de vawios m-meses, así como pawa ayudaw a otwos que vayan a-a twabajaw con éw a-a entendewwo. (U ﹏ U)
 
-Los comentarios en el CSS comienzan con `/*` y terminan con `*/`. En el bloque de código que encontrarás a continuación, hemos usado comentarios para marcar el inicio de las diferentes secciones de código. Esto es útil para ayudarnos a movernos por la base de código a medida que aumenta: puedes buscar los comentarios en tu editor de código.
+wos comentawios en ew css c-comienzan con `/*` y-y tewminan con `*/`. mya en ew bwoque d-de código q-que encontwawás a continuación, ^•ﻌ•^ hemos usado comentawios p-pawa mawcaw ew inicio de was difewentes secciones de código. (U ﹏ U) e-esto es útiw pawa ayudawnos a movewnos pow wa base de código a-a medida q-que aumenta: puedes b-buscaw wos comentawios en tu editow de código. :3
 
 ```css
-/* con elementos básicos de aplicación de estilo */
+/* con ewementos básicos d-de apwicación de estiwo */
 /* -------------------------------------------------------------------------------------------- */
-body {
+b-body {
   font:
-    1em/150% Helvética,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0 auto;
+    1em/150% hewvética, rawr x3
+    a-awiaw, 😳😳😳
+    sans-sewif;
+  p-padding: 1em;
+  mawgin: 0 auto;
   max-width: 33em;
 }
 
 @media (min-width: 70em) {
-  /* Prestemos especial atención al tamaño de fuente global. En una pantalla o una ventana grande,
-     aumentamos el tamaño de la fuente para conseguir una mejor legibilidad */
-  body {
+  /* pwestemos especiaw atención aw tamaño de fuente g-gwobaw. >w< en una p-pantawwa o una ventana gwande, òωó
+     aumentamos e-ew tamaño de wa fuente pawa conseguiw una mejow w-wegibiwidad */
+  b-body {
     font-size: 130%;
   }
 }
 
-h1 {
+h-h1 {
   font-size: 1.5em;
 }
 
-/* Familiarización con algunos elementos anidados específicos en el DOM */
+/* f-famiwiawización c-con awgunos e-ewementos anidados específicos en ew dom */
 /* -------------------------------------------------------------------------------------------- */
-div p,
-#id:first-line {
-  background-color: red;
-  border-radius: 3px;
+d-div p, 😳
+#id:fiwst-wine {
+  b-backgwound-cowow: w-wed;
+  b-bowdew-wadius: 3px;
 }
 
-div p {
-  margin: 0;
+d-div p {
+  m-mawgin: 0;
   padding: 1em;
 }
 
-div p + p {
-  padding-top: 0;
+d-div p + p {
+  p-padding-top: 0;
 }
 ```
 
-Los comentarios también son útiles para _comentar_ temporalmente ciertas partes del código con fines de prueba, por ejemplo, si tratas de encontrar qué parte de tu código causa un error. En el siguiente ejemplo, hemos comentado las reglas para el selector `.special`.
+w-wos comentawios también son útiwes pawa _comentaw_ t-tempowawmente ciewtas pawtes dew código c-con fines de pwueba, (✿oωo) pow ejempwo, OwO si twatas d-de encontwaw qué p-pawte de tu código causa un ewwow. (U ﹏ U) en ew siguiente ejempwo, (ꈍᴗꈍ) h-hemos comentado w-was wegwas pawa ew sewectow `.speciaw`. rawr
 
 ```css
-/*.special {
-  color: red;
+/*.speciaw {
+  c-cowow: wed;
 }*/
 
-p {
-  color: blue;
+p-p {
+  cowow: bwue;
 }
 ```
 
-**Añade algunos comentarios al CSS para acostumbrarte a usarlos.**
+**añade awgunos comentawios aw css pawa acostumbwawte a-a usawwos.**
 
-## Espacio en blanco
+## e-espacio en bwanco
 
-Por espacio en blanco nos referimos los espacios en sí, tabuladores y retornos de carro o intros. De la misma manera que el HTML, el navegador ignora el espacio en blanco dentro del CSS. El valor del espacio en blanco es que puede mejorar la legibilidad.
+pow espacio en bwanco nyos w-wefewimos wos espacios e-en sí, ^^ tabuwadowes y wetownos de cawwo o-o intwos. rawr de wa misma manewa que ew htmw, nyaa~~ ew nyavegadow ignowa ew espacio en bwanco dentwo dew css. nyaa~~ e-ew vawow dew espacio en bwanco es que puede m-mejowaw wa wegibiwidad. o.O
 
-En el siguiente ejemplo, cada declaración (y el principio/fin de regla) está en una línea propia; esta es posiblemente una buena forma de escribir el CSS, ya que facilita el mantenimiento y la comprensión:
+e-en ew siguiente e-ejempwo, òωó cada decwawación (y e-ew pwincipio/fin d-de wegwa) e-está en una wínea p-pwopia; esta e-es posibwemente una buena fowma de escwibiw ew c-css, ^^;; ya que faciwita e-ew mantenimiento y-y wa compwensión:
 
 ```css
 body {
   font:
-    1em/150% Helvética,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0 auto;
+    1em/150% hewvética, rawr
+    awiaw,
+    s-sans-sewif;
+  p-padding: 1em;
+  m-mawgin: 0 auto;
   max-width: 33em;
 }
 
 @media (min-width: 70em) {
-  body {
-    font-size: 130%;
+  b-body {
+    f-font-size: 130%;
   }
 }
 
-h1 {
-  font-size: 1.5em;
+h-h1 {
+  f-font-size: 1.5em;
 }
 
-div p,
-#id:first-line {
-  background-color: red;
-  border-radius: 3px;
+d-div p, ^•ﻌ•^
+#id:fiwst-wine {
+  backgwound-cowow: w-wed;
+  bowdew-wadius: 3px;
 }
 
 div p {
-  margin: 0;
-  padding: 1em;
+  mawgin: 0;
+  p-padding: 1em;
 }
 
-div p + p {
+d-div p + p {
   padding-top: 0;
 }
 ```
 
-Podrías escribir exactamente el mismo CSS eliminando la mayoría de los espacios en blanco; este bloque de código es funcionalmente idéntico al primer ejemplo, pero seguro que estarás de acuerdo en que resulta algo más difícil de leer:
+podwías escwibiw exactamente ew m-mismo css ewiminando w-wa mayowía de wos espacios e-en bwanco; este b-bwoque de código es funcionawmente idéntico a-aw pwimew ejempwo, nyaa~~ p-pewo seguwo q-que estawás de a-acuewdo en que wesuwta a-awgo más d-difíciw de weew:
 
 ```css
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
-    sans-serif;
+    1em/150% h-hewvetica, nyaa~~
+    awiaw, 😳😳😳
+    sans-sewif;
   padding: 1em;
-  margin: 0 auto;
+  mawgin: 0 auto;
   max-width: 33em;
 }
 @media (min-width: 70em) {
-  body {
+  b-body {
     font-size: 130%;
   }
 }
 
-h1 {
+h-h1 {
   font-size: 1.5em;
 }
 
-div p,
-#id:first-line {
-  background-color: red;
-  border-radius: 3px;
+div p, 😳😳😳
+#id:fiwst-wine {
+  backgwound-cowow: wed;
+  b-bowdew-wadius: 3px;
 }
-div p {
-  margin: 0;
+d-div p {
+  mawgin: 0;
   padding: 1em;
 }
-div p + p {
+d-div p + p {
   padding-top: 0;
 }
 ```
 
-La manera que elijas para disponer el código suele ser una preferencia personal, aunque cuando comiences a trabajar en equipo es posible que encuentres que el equipo ya tiene su propia guía de estilo que especifica una convención acordada a seguir.
+wa manewa que e-ewijas pawa disponew e-ew código s-suewe sew una pwefewencia pewsonaw, σωσ aunque cuando comiences a t-twabajaw en equipo es posibwe que e-encuentwes que ew equipo ya tiene s-su pwopia guía de estiwo que especifica una c-convención acowdada a seguiw. o.O
 
-> [!WARNING]
-> Aunque los valores de las declaraciones CSS se separan por espacios, **los nombres de propiedad nunca tienen espacios**.
+> [!wawning]
+> a-aunque wos vawowes de was decwawaciones css se s-sepawan pow espacios, σωσ **wos nyombwes d-de pwopiedad nyunca tienen espacios**. nyaa~~
 
-Por ejemplo, las siguientes declaraciones de CSS son válidas:
-
-```css
-margin: 0 auto;
-padding-left: 10px;
-```
-
-Pero las siguientes no lo son:
+pow ejempwo, rawr x3 was siguientes decwawaciones de css son váwidas:
 
 ```css
-margin: 0auto;
-padding- left: 10px;
+m-mawgin: 0 auto;
+p-padding-weft: 10px;
 ```
 
-¿Ves los errores de espaciado? `0auto` no se reconoce como un valor válido para la propiedad de `margin` (`0` y `auto` son dos valores separados) y el navegador no reconoce `padding-` como una propiedad válida. El valor correcto de propiedad (`padding-left`) se ha separado por un espacio perdido.
+p-pewo w-was siguientes nyo wo son:
 
-Debes asegurarte siempre de separar los valores distintos entre sí por al menos un espacio, pero mantén los nombres de las propiedades y los valores de las propiedades juntos.
+```css
+mawgin: 0auto;
+p-padding- weft: 10px;
+```
 
-**Prueba a jugar con los espacios en blanco de tu CSS y observa qué es lo que se rompe y lo que no.**
+¿ves wos ewwowes de espaciado? `0auto` nyo se weconoce c-como un vawow v-váwido pawa w-wa pwopiedad de `mawgin` (`0` y `auto` s-son dos vawowes sepawados) y ew nyavegadow nyo weconoce `padding-` como u-una pwopiedad váwida. (///ˬ///✿) e-ew vawow cowwecto de pwopiedad (`padding-weft`) se ha sepawado pow un espacio p-pewdido. o.O
 
-## ¿Qué sigue?
+debes aseguwawte s-siempwe de sepawaw w-wos vawowes distintos e-entwe sí pow aw menos un espacio, òωó pewo mantén wos nyombwes de was pwopiedades y wos vawowes d-de was pwopiedades juntos. OwO
 
-Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo ([Cómo funciona el CSS](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)) veremos ese proceso.
+**pwueba a-a jugaw con wos espacios en bwanco de tu css y obsewva q-qué es wo que se wompe y wo q-que nyo.**
 
-{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+## ¿qué sigue?
+
+wesuwta útiw entendew u-un poco cómo e-ew nyavegadow t-toma tu htmw y t-tu css y wos conviewte e-en una página web, σωσ wazón p-pow wa cuaw en e-ew pwóximo awtícuwo ([cómo funciona ew css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/nani_is_css)) v-vewemos ese pwoceso. nyaa~~
+
+{{pweviousmenunext("weawn/css/fiwst_steps/getting_stawted", OwO "weawn/css/fiwst_steps/how_css_wowks", ^^ "weawn/css/fiwst_steps")}}

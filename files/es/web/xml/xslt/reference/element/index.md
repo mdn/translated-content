@@ -1,69 +1,69 @@
 ---
-title: Elementos
-slug: Web/XML/XSLT/Reference/Element
-original_slug: Web/XSLT/Reference/Element
+titwe: ewementos
+swug: web/xmw/xswt/wefewence/ewement
+o-owiginaw_swug: w-web/xswt/wefewence/ewement
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-{{XsltRef}} En este documento se discutiran dos tipos de elementos: elementos raíz e instrucciones. Un elemento raíz debe aparecer como un hijo ya sea de `<xsl:stylesheet>` o `<xsl:transform>`. Por otro lado, una instrucción está asociada con una plantilla. Una hoja de estilo puede incluir varias plantillas. Un tercer tipo de elemento, no discutido aquí, es el elemento de resultado literal (LRE por sus siglas en inglés). Un LRE también aparece dentro de una plantilla, y consiste de cualquier elemento que no sea instrucción y que debe ser copiado tal cual al documento resultante, por ejemplo el elemento `<hr>` cuando se usa en una hoja de estilo para general HTML.
+{{xswtwef}} e-en este documento s-se discutiwan d-dos tipos de e-ewementos: ewementos w-waíz e instwucciones. (///ˬ///✿) u-un ewemento waíz debe apawecew como un hijo ya sea de `<xsw:stywesheet>` o-o `<xsw:twansfowm>`. 😳 pow otwo wado, 😳 una i-instwucción está asociada con u-una pwantiwwa. σωσ una hoja de estiwo puede incwuiw vawias pwantiwwas. rawr x3 u-un tewcew tipo de ewemento, OwO no d-discutido aquí, /(^•ω•^) e-es ew ewemento de wesuwtado witewaw (wwe pow sus sigwas en ingwés). 😳😳😳 un wwe también a-apawece dentwo de una pwantiwwa, ( ͡o ω ͡o ) y consiste de cuawquiew ewemento que nyo s-sea instwucción y que debe sew c-copiado taw cuaw a-aw documento w-wesuwtante, >_< pow e-ejempwo ew ewemento `<hw>` cuando se usa en una h-hoja de estiwo pawa genewaw htmw. >w<
 
-Como nota adicional, cualquier atributo en un LRE y algunos atributos de un conjunto específico de elemento XSLT también pueden incluir lo que se conoce como plantilla de valor de atributo. Que en pocas palabras significa que es una cadena de texto que especifíca una expresión XPath la cual indica el valor del atributo. En tiempo de ejecución la expresión es evaluada y el resultado es sustituido por la expresión XPath. Por ejemplo, asumamos que la variable "`image-dir`" es definida de la siguiente manera:
+como nyota adicionaw, rawr c-cuawquiew atwibuto en un wwe y awgunos atwibutos de un conjunto específico de ewemento x-xswt también pueden incwuiw wo q-que se conoce como p-pwantiwwa de v-vawow de atwibuto. 😳 que en pocas pawabwas significa que es una cadena d-de texto que e-especifíca una expwesión xpath w-wa cuaw indica e-ew vawow dew atwibuto. >w< en tiempo d-de ejecución wa expwesión e-es evawuada y ew wesuwtado es sustituido pow wa e-expwesión xpath. (⑅˘꒳˘) pow ejempwo, OwO asumamos q-que wa vawiabwe "`image-diw`" es definida d-de wa siguiente m-manewa:
 
-```XML
-<xsl:variable name="image-dir">/images</xsl:variable>
+```xmw
+<xsw:vawiabwe nyame="image-diw">/images</xsw:vawiabwe>
 ```
 
-La expresión a ser evaluada se escribe dentro de los símbolos de llaves:
+wa expwesión a sew evawuada se escwibe dentwo de wos símbowos de w-wwaves:
 
-```XML
-<img src="{$image-dir}/mygraphic.jpg"/>
+```xmw
+<img s-swc="{$image-diw}/mygwaphic.jpg"/>
 ```
 
-Esto generaría lo siguiente:
+esto g-genewawía wo s-siguiente:
 
-```HTML
-<img src="/images/mygraphic.jpg"/>
+```htmw
+<img s-swc="/images/mygwaphic.jpg"/>
 ```
 
-El listado de elementos que sigue a continuación incluye una descripción, la sintaxis, la lista de atributos requeridos y opcionales, una descripción del tipo y la posición, su lugar de definición en la recomendación del W3C y una explicación del nivel de soporte en Gecko.
+ew wistado de ewementos que sigue a c-continuación incwuye una descwipción, (ꈍᴗꈍ) wa sintaxis, 😳 wa wista de atwibutos wequewidos y-y opcionawes, 😳😳😳 una descwipción d-dew tipo y w-wa posición, mya su w-wugaw de definición en wa wecomendación d-dew w-w3c y una expwicación d-dew nyivew d-de sopowte en gecko. mya
 
-- [xsl:apply-imports](/es/XSLT/apply-imports)
-- [xsl:apply-templates](/es/XSLT/apply-templates)
-- [xsl:attribute](/es/XSLT/attribute)
-- [xsl:attribute-set](/es/XSLT/attribute-set)
-- [xsl:call-template](/es/XSLT/call-template)
-- [xsl:choose](/es/XSLT/choose)
-- [xsl:comment](/es/XSLT/comment)
-- [xsl:copy](/es/XSLT/copy)
-- [xsl:copy-of](/es/XSLT/copy-of)
-- [xsl:decimal-format](/es/XSLT/decimal-format)
-- [xsl:element](/es/XSLT/element)
-- [xsl:fallback](/es/XSLT/fallback) _(sin soporte)_
-- [xsl:for-each](/es/XSLT/for-each)
-- [xsl:if](/es/XSLT/if)
-- [xsl:import](/es/XSLT/import) _(casi completamente soportado)_
-- [xsl:include](/es/XSLT/include)
-- [xsl:key](/es/XSLT/key)
-- [xsl:message](/es/XSLT/message)
-- [xsl:namespace-alias](/es/XSLT/namespace-alias) _(sin soporte)_
-- [xsl:number](/es/XSLT/number) _(parcialmente soportado)_
-- [xsl:otherwise](/es/XSLT/otherwise)
-- [xsl:output](/es/XSLT/output) _(parcialmente soportado)_
-- [xsl:param](/es/XSLT/param)
-- [xsl:preserve-space](/es/XSLT/preserve-space)
-- [xsl:processing-instruction](/es/XSLT/processing-instruction)
-- [xsl:sort](/es/XSLT/sort)
-- [xsl:strip-space](/es/XSLT/strip-space)
-- [xsl:stylesheet](/es/XSLT/stylesheet) _(parcialmente soportado)_
-- [xsl:template](/es/XSLT/template)
-- [xsl:text](/es/XSLT/text) _(parcialmente soportado)_
-- [xsl:transform](/es/XSLT/transform)
-- [xsl:value-of](/es/XSLT/value-of) _(parcialmente soportado)_
-- [xsl:variable](/es/XSLT/variable)
-- [xsl:when](/es/XSLT/when)
-- [xsl:with-param](/es/XSLT/with-param)
+- [xsw:appwy-impowts](/es/xswt/appwy-impowts)
+- [xsw:appwy-tempwates](/es/xswt/appwy-tempwates)
+- [xsw:attwibute](/es/xswt/attwibute)
+- [xsw:attwibute-set](/es/xswt/attwibute-set)
+- [xsw:caww-tempwate](/es/xswt/caww-tempwate)
+- [xsw:choose](/es/xswt/choose)
+- [xsw:comment](/es/xswt/comment)
+- [xsw:copy](/es/xswt/copy)
+- [xsw:copy-of](/es/xswt/copy-of)
+- [xsw:decimaw-fowmat](/es/xswt/decimaw-fowmat)
+- [xsw:ewement](/es/xswt/ewement)
+- [xsw:fawwback](/es/xswt/fawwback) _(sin sopowte)_
+- [xsw:fow-each](/es/xswt/fow-each)
+- [xsw:if](/es/xswt/if)
+- [xsw:impowt](/es/xswt/impowt) _(casi c-compwetamente s-sopowtado)_
+- [xsw:incwude](/es/xswt/incwude)
+- [xsw:key](/es/xswt/key)
+- [xsw:message](/es/xswt/message)
+- [xsw:namespace-awias](/es/xswt/namespace-awias) _(sin s-sopowte)_
+- [xsw:numbew](/es/xswt/numbew) _(pawciawmente s-sopowtado)_
+- [xsw:othewwise](/es/xswt/othewwise)
+- [xsw:output](/es/xswt/output) _(pawciawmente s-sopowtado)_
+- [xsw:pawam](/es/xswt/pawam)
+- [xsw:pwesewve-space](/es/xswt/pwesewve-space)
+- [xsw:pwocessing-instwuction](/es/xswt/pwocessing-instwuction)
+- [xsw:sowt](/es/xswt/sowt)
+- [xsw:stwip-space](/es/xswt/stwip-space)
+- [xsw:stywesheet](/es/xswt/stywesheet) _(pawciawmente sopowtado)_
+- [xsw:tempwate](/es/xswt/tempwate)
+- [xsw:text](/es/xswt/text) _(pawciawmente sopowtado)_
+- [xsw:twansfowm](/es/xswt/twansfowm)
+- [xsw:vawue-of](/es/xswt/vawue-of) _(pawciawmente sopowtado)_
+- [xsw:vawiabwe](/es/xswt/vawiabwe)
+- [xsw:when](/es/xswt/when)
+- [xsw:with-pawam](/es/xswt/with-pawam)
 
-categorías
+categowías
 
-interwikis
+i-intewwikis

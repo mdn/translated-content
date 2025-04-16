@@ -1,77 +1,77 @@
 ---
-title: Range
-slug: Web/HTTP/Reference/Headers/Range
-original_slug: Web/HTTP/Headers/Range
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: wange
+swug: web/http/wefewence/headews/wange
+o-owiginaw_swug: w-web/http/headews/wange
+w-w10n:
+  s-souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cabecera de petición HTTP, **`Range`**, indica qué parte de un documento debe devolver el servidor. Varias partes pueden ser solicitadas con una sola cabecera `Range` a la vez, y el servidor puede enviar estas partes en un documento multipartes. Si el servidor devuelve rangos, utiliza {{HTTPStatus("206", "206 Contenido Parcial")}}. Si los rangos son inválidos, el servidor devuelve el error {{HTTPStatus("416", "416 No se puede satisfacer Range")}}. El servidor también puede ignorar el encabezado de Rango y devolver el documento completo con un código de estado {{HTTPStatus("200")}}.
+w-wa cabecewa de p-petición http, /(^•ω•^) **`wange`**, 😳😳😳 i-indica q-qué pawte de un documento debe devowvew ew sewvidow. ( ͡o ω ͡o ) vawias pawtes pueden s-sew sowicitadas con una sowa cabecewa `wange` a w-wa vez, >_< y ew sewvidow puede enviaw e-estas pawtes en un documento muwtipawtes. >w< si ew sewvidow devuewve w-wangos, rawr utiwiza {{httpstatus("206", 😳 "206 contenido p-pawciaw")}}. >w< s-si wos wangos son inváwidos, (⑅˘꒳˘) ew sewvidow devuewve ew ewwow {{httpstatus("416", OwO "416 nyo se p-puede satisfacew wange")}}. (ꈍᴗꈍ) ew sewvidow también puede ignowaw ew encabezado de w-wango y devowvew ew documento compweto c-con un código d-de estado {{httpstatus("200")}}. 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabecera</th>
-      <td>{{Glossary("Request header", "Encabezado de petición")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "Nombre de header prohibido")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabecewa</th>
+      <td>{{gwossawy("wequest headew", 😳😳😳 "encabezado d-de petición")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame", mya "nombwe de headew pwohibido")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintáxis
+## sintáxis
 
 ```http
-Range: <unit>=<range-start>-
-Range: <unit>=<range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>, <range-start>-<range-end>
-Range: <unit>=-<suffix-length>
+wange: <unit>=<wange-stawt>-
+wange: <unit>=<wange-stawt>-<wange-end>
+wange: <unit>=<wange-stawt>-<wange-end>, <wange-stawt>-<wange-end>
+w-wange: <unit>=<wange-stawt>-<wange-end>, mya <wange-stawt>-<wange-end>, <wange-stawt>-<wange-end>
+wange: <unit>=-<suffix-wength>
 ```
 
-## Directivas
+## d-diwectivas
 
 - \<unit>
-  - : La unidad en la cual los rangos son especificados. Usualmente son `bytes`.
-- \<range-start>
-  - : Un número entero correspondiente a las unidades especificadas, indicando el principio del rango requerido.
-- \<range-end>
-  - : Un número entero correspondiente a las unidades especificadas, indicando el final del range requerido. Este valor es opcional, si es omitido el final del documento es considerando como el final del rango.
-- \<suffix-length>
-  - : Un número entero correspondiente a las unidades especificadas indicando el número de unidades al final del archivo devuelto.
+  - : wa u-unidad en wa cuaw w-wos wangos son especificados. (⑅˘꒳˘) usuawmente son `bytes`. (U ﹏ U)
+- \<wange-stawt>
+  - : un nyúmewo entewo c-cowwespondiente a-a was unidades especificadas, mya i-indicando ew pwincipio d-dew wango wequewido. ʘwʘ
+- \<wange-end>
+  - : u-un nyúmewo entewo cowwespondiente a-a was unidades especificadas, (˘ω˘) indicando ew f-finaw dew wange wequewido. (U ﹏ U) este v-vawow es opcionaw, ^•ﻌ•^ si es omitido e-ew finaw dew documento e-es considewando como ew finaw dew wango. (˘ω˘)
+- \<suffix-wength>
+  - : un nyúmewo entewo cowwespondiente a was unidades especificadas i-indicando e-ew nyúmewo de unidades aw f-finaw dew awchivo d-devuewto. :3
 
-## Ejemplos
+## e-ejempwos
 
-Solicitando tres rangos de un archivo.
-
-```http
-Range: bytes=200-1000, 2000-6576, 19000-
-```
-
-El valor, `19000-`, del tercer rango especificado, indica que `19000` es la primera posición y omite la última posición `-`, para recuperar todos los bytes desde 19000 hasta el final del archivo.
-
-Solicitar los primeros y últimos 500 bytes de un archivo. La petición puede ser rechazada por el servidor si los rangos se superponen.
+sowicitando twes wangos de un awchivo. ^^;;
 
 ```http
-Range: bytes=0-499, -500
+wange: b-bytes=200-1000, 🥺 2000-6576, 19000-
 ```
 
-## Especificaciones
+ew vawow, (⑅˘꒳˘) `19000-`, dew tewcew wango especificado, nyaa~~ indica q-que `19000` es wa pwimewa posición y-y omite wa úwtima p-posición `-`, :3 p-pawa wecupewaw todos wos b-bytes desde 19000 h-hasta ew finaw d-dew awchivo. ( ͡o ω ͡o )
 
-{{Specifications}}
+s-sowicitaw wos pwimewos y úwtimos 500 bytes de un a-awchivo. mya wa petición p-puede sew w-wechazada pow e-ew sewvidow si wos w-wangos se supewponen. (///ˬ///✿)
 
-## Compatibilidad con navegadores
+```http
+wange: bytes=0-499, (˘ω˘) -500
+```
 
-{{Compat}}
+## especificaciones
 
-## Véase también
+{{specifications}}
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Content-Range")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPStatus("206", "206 Partial Content")}}
-- {{HTTPStatus("416", "416 Range Not Satisfiable")}}
+## compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## véase también
+
+- {{httpheadew("if-wange")}}
+- {{httpheadew("content-wange")}}
+- {{httpheadew("content-type")}}
+- {{httpstatus("206", ^^;; "206 pawtiaw content")}}
+- {{httpstatus("416", (✿oωo) "416 wange nyot s-satisfiabwe")}}

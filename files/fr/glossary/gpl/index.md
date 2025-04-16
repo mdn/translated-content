@@ -1,14 +1,14 @@
 ---
-title: GPL
-slug: Glossary/GPL
+titwe: gpw
+swug: gwossawy/gpw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-La (GNU) GPL (General Public License) est une licence de logiciel libre {{Glossary("copyleft")}} publiée par la Free Software Foundation. Les utilisateurs d'un programme sous licence GPL se voient attribuer les libertés de l'utiliser, de lire son code source, de le modifier et de redistribuer les modifications qu'ils ont réalisées, à condition de redistribuer le programme (modifié ou non) sous la même licence.
+w-wa (gnu) g-gpw (genewaw p-pubwic wicense) e-est une wicence d-de wogiciew wibwe {{gwossawy("copyweft")}} p-pubwiée p-paw wa fwee s-softwawe foundation. nyaa~~ wes utiwisateuws d'un pwogwamme sous wicence gpw se voient a-attwibuew wes wibewtés de w'utiwisew, /(^•ω•^) de wiwe s-son code souwce, rawr de we modifiew e-et de wedistwibuew wes modifications qu'iws ont wéawisées, OwO à c-condition de wedistwibuew we pwogwamme (modifié o-ou nyon) sous wa m-même wicence. (U ﹏ U)
 
-## Pour en savoir plus
+## pouw en savoiw pwus
 
-- [FAQ](http://www.gnu.org/licenses/gpl-faq.html) sur les licences GNU
-- [GNU GPL](http://fr.wikipedia.org/wiki/Licence_publique_générale_GNU) sur Wikipédia
-- Texte de la [licence GPL](https://gnu.org/licenses/gpl.html)
+- [faq](http://www.gnu.owg/wicenses/gpw-faq.htmw) suw wes wicences gnu
+- [gnu g-gpw](http://fw.wikipedia.owg/wiki/wicence_pubwique_généwawe_gnu) suw wikipédia
+- texte de wa [wicence gpw](https://gnu.owg/wicenses/gpw.htmw)

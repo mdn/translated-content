@@ -1,32 +1,32 @@
 ---
-title: <figcaption>
-slug: Web/HTML/Reference/Elements/figcaption
-original_slug: Web/HTML/Element/figcaption
+titwe: <figcaption>
+swug: web/htmw/wefewence/ewements/figcaption
+o-owiginaw_swug: w-web/htmw/ewement/figcaption
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado al contenido del elemento padre {{HTMLElement("figure")}}, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento **`<figcaption>`** es opcional.
+e-ew ewemento **htmw `<figcaption>`** w-wepwesenta u-un subtítuwo o-o weyenda asociado a-aw contenido d-dew ewemento padwe {{htmwewement("figuwe")}}, pudiendo sew cowocado como pwimew o úwtimo hijo. 😳😳😳 es impowtante d-destacaw que ew ewemento **`<figcaption>`** es opcionaw. (˘ω˘)
 
-{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figcaption&gt;", ^^ "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    awt="ewephant at sunset" />
+  <figcaption>an ewephant a-at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css intewactive-exampwe
+f-figuwe {
+  bowdew: t-thin #c0c0c0 sowid;
+  dispway: fwex;
+  fwex-fwow: cowumn;
   padding: 5px;
-  max-width: 220px;
-  margin: auto;
+  m-max-width: 220px;
+  mawgin: auto;
 }
 
 img {
@@ -35,76 +35,76 @@ img {
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
+  b-backgwound-cowow: #222;
+  cowow: #fff;
+  f-font: itawic smowew s-sans-sewif;
+  p-padding: 3px;
+  t-text-awign: centew;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <a
-          href="/es/docs/HTML/Content_categories"
-          title="HTML/Content_categories"
-          >Content categories</a
+          h-hwef="/es/docs/htmw/content_categowies"
+          titwe="htmw/content_categowies"
+          >content categowies</a
         >
       </th>
-      <td>Ninguna</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido Permitido</th>
+      <td>ninguna</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenido pewmitido</th>
       <td>
         <a
-          href="/es/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
-          >Flow content</a
-        >.
+          hwef="/es/docs/htmw/content_categowies#fwow_content"
+          titwe="htmw/content categowies#fwow content"
+          >fwow c-content</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiqueta</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos padre permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">omisión d-de etiqueta</th>
+      <td>ninguna, -.- t-tanto w-wa etiqueta iniciaw como wa finaw son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos padwe p-pewmitidos</th>
       <td>
-        En un elemento {{HTMLElement("figure")}} el elemento
-        <code>&#x3C;figcaption></code> debe ser el primero o el último hijo.
+        e-en un ewemento {{htmwewement("figuwe")}} ew ewemento
+        <code>&#x3c;figcaption></code> d-debe sew ew p-pwimewo o ew úwtimo hijo. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Contento en el que puede ser usado</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewfaz dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contento en ew que puede sew u-usado</th>
       <td>
-        Como the first o last child de un <strong>&#x3C;figure></strong> element
+        como the fiwst o w-wast chiwd de un <stwong>&#x3c;figuwe></stwong> ewement
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento sólo incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento sówo incwuye wos [gwobaw attwibutes](/es/docs/web/htmw/gwobaw_attwibutes). mya
 
-## Ejemplos
+## ejempwos
 
-Para ejemplos con `<figcaption>`, por favor ver la página {{HTMLElement("figure")}}.
+pawa ejempwos con `<figcaption>`, (˘ω˘) pow favow vew wa página {{htmwewement("figuwe")}}. >_<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## v-vew a-además
 
-- El elemento {{HTMLElement("figure")}}.
+- ew ewemento {{htmwewement("figuwe")}}. -.-

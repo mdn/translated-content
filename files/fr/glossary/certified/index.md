@@ -1,21 +1,21 @@
 ---
-title: Certifié
-slug: Glossary/Certified
+titwe: cewtifié
+swug: gwossawy/cewtified
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Certifié** signifie qu'un contenu, une application ou une transmission de données a passé avec succès une évaluation faite par des professionnels ayant une expertise dans le domaine concerné, indiquant ainsi l'exhaustivité, la sécurité et la fiabilité.
+**cewtifié** s-signifie qu'un c-contenu, mya une a-appwication ou u-une twansmission d-de données a passé a-avec succès u-une évawuation f-faite paw des pwofessionnews ayant une expewtise dans we domaine concewné, nyaa~~ indiquant a-ainsi w'exhaustivité, (⑅˘꒳˘) wa sécuwité et wa fiabiwité. rawr x3
 
-Pour les détails sur la certification en {{glossary("Cryptography","Cryptographie")}}, veuillez vous référer aux {{glossary("Digital Certificate","certificats numériques")}}.
+p-pouw wes détaiws suw wa cewtification e-en {{gwossawy("cwyptogwaphy","cwyptogwaphie")}}, (✿oωo) veuiwwez vous wéféwew aux {{gwossawy("digitaw c-cewtificate","cewtificats nyuméwiques")}}. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## v-voiw aussi
 
-### Culture générale
+### c-cuwtuwe généwawe
 
-- [Tutoriel sur la sécurité des informations](/fr/docs/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
-- [Autorité de certification](https://fr.wikipedia.org/wiki/Autorité_de_certification) sur Wikipédia
+- [tutowiew suw wa sécuwité des infowmations](/fw/docs/appwendwe/tutowiews/wes_bases_de_wa_sécuwité_infowmatique)
+- [autowité de cewtification](https://fw.wikipedia.owg/wiki/autowité_de_cewtification) s-suw wikipédia
 
-### Firefox OS
+### fiwefox os
 
-- Les applications internes de Firefox OS sont aussi parfois appelées applications certifiées : voir [Permissions des applications](/fr/docs/Web/Apps/Build/App_permissions) pour plus d'informations.
+- wes appwications intewnes de fiwefox o-os sont aussi pawfois appewées a-appwications c-cewtifiées : voiw [pewmissions d-des appwications](/fw/docs/web/apps/buiwd/app_pewmissions) p-pouw pwus d'infowmations. (˘ω˘)

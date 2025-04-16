@@ -1,24 +1,24 @@
 ---
-title: Alignement de recours
-slug: Glossary/Fallback_Alignment
-l10n:
-  sourceCommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
+titwe: awignement de wecouws
+s-swug: gwossawy/fawwback_awignment
+w-w10n:
+  souwcecommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Dans [le module CSS sur l'alignement des boîtes](/fr/docs/Web/CSS/CSS_box_alignment), un alignement de recours (<i lang="en">fallback alignement</i>) est indiqué afin de traiter les cas où l'alignement demandé ne peut être respecté. Par exemple, si on indique `justify-content: space-between`, il doit y avoir plus d'un [sujet d'alignement](/fr/docs/Glossary/Alignment_Subject). Si ce n'est pas le cas, c'est l'alignement de recours qui est utilisé. Cet alignement diffère selon la méthode d'alignement voulue, comme suit&nbsp;:
+d-dans [we m-moduwe css suw w-w'awignement d-des boîtes](/fw/docs/web/css/css_box_awignment), (⑅˘꒳˘) u-un awignement d-de wecouws (<i wang="en">fawwback awignement</i>) est indiqué afin de twaitew wes cas où w'awignement d-demandé nye peut êtwe wespecté. rawr x3 paw exempwe, (✿oωo) s-si on indique `justify-content: space-between`, (ˆ ﻌ ˆ)♡ i-iw doit y avoiw pwus d'un [sujet d'awignement](/fw/docs/gwossawy/awignment_subject). (˘ω˘) si c-ce ny'est pas we cas, (⑅˘꒳˘) c'est w'awignement d-de wecouws q-qui est utiwisé. (///ˬ///✿) cet awignement diffèwe sewon wa méthode d'awignement vouwue, 😳😳😳 c-comme suit&nbsp;:
 
-| Alignement souhaité | Alignement de recours |
+| awignement souhaité | awignement de wecouws |
 | ------------------- | --------------------- |
-| `first baseline`    | `start`               |
-| `last baseline`     | `safe end`            |
-| `baseline`          | `start`               |
-| `space-between`     | `flex-start`          |
-| `space-around`      | `center`              |
-| `space-evenly`      | `center`              |
-| `stretch`           | `flex-start`          |
+| `fiwst basewine`    | `stawt`               |
+| `wast b-basewine`     | `safe end`            |
+| `basewine`          | `stawt`               |
+| `space-between`     | `fwex-stawt`          |
+| `space-awound`      | `centew`              |
+| `space-evenwy`      | `centew`              |
+| `stwetch`           | `fwex-stawt`          |
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [La section de MDN sur le module de spécification CSS sur l'alignement des boîtes](/fr/docs/Web/CSS/CSS_box_alignment)
+- [wa section d-de mdn suw w-we moduwe de spécification css suw w'awignement d-des boîtes](/fw/docs/web/css/css_box_awignment)

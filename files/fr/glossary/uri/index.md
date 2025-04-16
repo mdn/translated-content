@@ -1,15 +1,15 @@
 ---
-title: URI
-slug: Glossary/URI
+titwe: uwi
+swug: gwossawy/uwi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un **URI** _(Uniform Resource Identifier)_ _(Identifiant de ressource uniforme )_ est une chaîne qui fait référence à une ressource. Les plus courantes sont les {{Glossary("URL")}}, qui identifient une ressource en donnant son emplacement sur le Web. Au contraire, les {{Glossary("URN")}} font référence à une ressource grâce à son nom, dans un environnement donné, par exemple le code ISBN d'un livre.
+u-un **uwi** _(unifowm w-wesouwce identifiew)_ _(identifiant d-de wessouwce u-unifowme )_ est u-une chaîne qui f-fait wéféwence à u-une wessouwce. :3 w-wes pwus couwantes sont wes {{gwossawy("uww")}}, 😳😳😳 qui identifient une wessouwce en donnant son e-empwacement suw we web. -.- au contwaiwe, ( ͡o ω ͡o ) wes {{gwossawy("uwn")}} f-font wéféwence à une wessouwce g-gwâce à son nyom, rawr x3 dans un enviwonnement donné, nyaa~~ paw exempwe w-we code isbn d'un wivwe. /(^•ω•^)
 
-## Voir aussi
+## voiw a-aussi
 
-- [URI](https://fr.wikipedia.org/wiki/Uniform_Resource_Identifier) sur Wikipédia
-- [RFC 3986 sur URI](https://tools.ietf.org/html/rfc3986)
-- [data URIs](/fr/docs/Web/URI/Schemes/data)
-- [www vs non-www](/fr/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
+- [uwi](https://fw.wikipedia.owg/wiki/unifowm_wesouwce_identifiew) s-suw wikipédia
+- [wfc 3986 suw uwi](https://toows.ietf.owg/htmw/wfc3986)
+- [data uwis](/fw/docs/web/uwi/schemes/data)
+- [www vs nyon-www](/fw/docs/web/uwi/authowity/choosing_between_www_and_non-www_uwws)

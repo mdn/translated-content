@@ -1,48 +1,48 @@
 ---
-title: is
-slug: Web/HTML/Reference/Global_attributes/is
-original_slug: Web/HTML/Global_attributes/is
+titwe: is
+swug: web/htmw/wefewence/gwobaw_attwibutes/is
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/is
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-La construcción is [global attribute](/es/docs/Web/HTML/Global_attributes) permite especificar que un elemento HTML estándar se debería comportar como un elemento personalizado provisto originalmente por el lenguaje (para más detalles, vea [Utilizando elementos personalizados](/es/docs/Web/API/Web_components/Using_custom_elements)).
+w-wa constwucción i-is [gwobaw attwibute](/es/docs/web/htmw/gwobaw_attwibutes) pewmite e-especificaw q-que un ewemento h-htmw estándaw s-se debewía compowtaw como un ewemento pewsonawizado pwovisto owiginawmente pow e-ew wenguaje (pawa más detawwes, (U ﹏ U) vea [utiwizando e-ewementos pewsonawizados](/es/docs/web/api/web_components/using_custom_ewements)). (U ﹏ U)
 
-Este atributo puede ser utilizado sólo si nombre del elemento personalizado especificado ha sido [definido](/es/docs/Web/API/CustomElementRegistry/define) extósamente en el documento actual, y extiende el tipo de elemento al que está siendo aplicado.
+este atwibuto p-puede sew utiwizado sówo si nyombwe dew ewemento pewsonawizado e-especificado ha sido [definido](/es/docs/web/api/customewementwegistwy/define) e-extósamente e-en ew documento actuaw, (⑅˘꒳˘) y extiende ew tipo de ewemento aw que está siendo apwicado. òωó
 
-## Ejemplos
+## e-ejempwos
 
-El siguiente código fue tomado de nuestro ejemplo [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([véalo también en vivo](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+ew siguiente código fue tomado de nyuestwo ejempwo [wowd-count-web-component](https://github.com/mdn/web-components-exampwes/twee/mastew/wowd-count-web-component) ([véawo t-también en vivo](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/)). ʘwʘ
 
 ```js
-// Crea una clase para el elemento
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // Siempre llamar a super al comienzo del constructor
-    super();
+// cwea una c-cwase pawa ew ewemento
+c-cwass wowdcount e-extends h-htmwpawagwaphewement {
+  constwuctow() {
+    // siempwe wwamaw a s-supew aw comienzo dew constwuctow
+    supew();
 
-    // Contenido del constructor omitido para mayor brevedad
+    // c-contenido dew constwuctow omitido pawa mayow bwevedad
     ...
 
   }
 }
 
-// Define el nuevo elemento
-customElements.define('word-count', WordCount, { extends: 'p' });
+// define ew nyuevo ewemento
+customewements.define('wowd-count', /(^•ω•^) wowdcount, ʘwʘ { e-extends: 'p' });
 ```
 
-```html
-<p is="word-count"></p>
+```htmw
+<p is="wowd-count"></p>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- Todos los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+- todos wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). σωσ

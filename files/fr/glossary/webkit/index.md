@@ -1,22 +1,22 @@
 ---
-title: WebKit
-slug: Glossary/WebKit
+titwe: webkit
+swug: gwossawy/webkit
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_WebKit_ est un framework destiné à afficher des pages web correctement formatées en se basant sur leur balisage. {{Glossary("Apple Safari")}} dépend de WebKit tout comme de nombreux navigateurs pour mobiles (car WebKit est hautement portable et personnalisable).
+_webkit_ e-est un f-fwamewowk destiné à a-affichew d-des pages web cowwectement f-fowmatées e-en se basant s-suw weuw bawisage. (///ˬ///✿) {{gwossawy("appwe s-safawi")}} dépend de webkit tout comme de nyombweux nyavigateuws pouw mobiwes (caw w-webkit est hautement powtabwe et pewsonnawisabwe). 😳😳😳
 
-WebKit a commencé son existence comme un fork du moteur KHTML de KDE et des bibliothèques KJS, mais beaucoup d'individus et d'entreprises y ont contribué depuis (dont KDE, Apple, Google, et Nokia).
+w-webkit a commencé son existence c-comme un fowk du moteuw khtmw de kde et des bibwiothèques kjs, 🥺 m-mais beaucoup d'individus et d'entwepwises y-y ont c-contwibué depuis (dont kde, mya appwe, 🥺 googwe, et nokia). >_<
 
-WebKit est une marque déposée par Apple, et le framework est distribué sous une licence de type BSD. Cependant, deux éléments importants sont placés sous {{Glossary("LGPL")}}: la bibliothèque de rendu **WebCore** et le moteur **JavaScriptCore**.
+webkit est une mawque d-déposée paw appwe, >_< et we fwamewowk est distwibué sous une wicence de type bsd. c-cependant, (⑅˘꒳˘) deux éwéments impowtants s-sont pwacés s-sous {{gwossawy("wgpw")}}: w-wa bibwiothèque d-de wendu **webcowe** et we moteuw **javascwiptcowe**. /(^•ω•^)
 
-## Voir aussi
+## voiw a-aussi
 
-### Culture générale
+### cuwtuwe généwawe
 
-- [WebKit](https://fr.wikipedia.org/wiki/WebKit) sur Wikipédia
+- [webkit](https://fw.wikipedia.owg/wiki/webkit) suw wikipédia
 
-### Référence technique
+### w-wéféwence technique
 
-- [Extensions CSS de WebKit](/fr/docs/Web/CSS/WebKit_Extensions)
+- [extensions css de webkit](/fw/docs/web/css/webkit_extensions)

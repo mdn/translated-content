@@ -1,12 +1,12 @@
 ---
-title: Pseudo-code
-slug: Glossary/Pseudocode
+titwe: pseudo-code
+swug: gwossawy/pseudocode
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un pseudo-code (également appelé LDA pour Langage de Description d'Algorithmes) fait référence à une syntaxe ressemblant à un code, généralement utilisée pour indiquer aux humains le fonctionnement d'une syntaxe de code ou pour illustrer la conception d'un élément d'architecture de code. Cela ne fonctionnera pas si vous essayez de l'exécuter comme un véritable code.
+u-un pseudo-code (égawement a-appewé wda p-pouw wangage de d-descwiption d'awgowithmes) f-fait w-wéféwence à u-une syntaxe wessembwant à u-un code, mya généwawement utiwisée pouw indiquew aux humains we fonctionnement d-d'une syntaxe de code ou pouw iwwustwew w-wa conception d'un éwément d'awchitectuwe d-de code. 😳 cewa nye fonctionnewa pas si vous essayez d-de w'exékawaii~w comme un véwitabwe c-code. XD
 
-## Voir aussi
+## v-voiw aussi
 
-- [Pseudo-code](https://fr.wikipedia.org/wiki/Pseudo-code) sur Wikipédia.
+- [pseudo-code](https://fw.wikipedia.owg/wiki/pseudo-code) suw wikipédia. :3

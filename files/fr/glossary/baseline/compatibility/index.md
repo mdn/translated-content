@@ -1,33 +1,33 @@
 ---
-title: Baseline (compatibilité)
-slug: Glossary/Baseline/Compatibility
-l10n:
-  sourceCommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
+titwe: basewine (compatibiwité)
+swug: gwossawy/basewine/compatibiwity
+w-w10n:
+  s-souwcecommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**<i lang="en">Baseline</i>** identifie les fonctionnalités prises en charge par l'ensemble des navigateurs. Les développeuses et développeurs web peuvent partir du principe que les fonctionnalités <i lang="en">Baseline</i> fonctionnent sans problème dans les navigateurs récents.
+**<i w-wang="en">basewine</i>** i-identifie wes fonctionnawités p-pwises en chawge p-paw w'ensembwe d-des nyavigateuws. w-wes dévewoppeuses et dévewoppeuws web peuvent pawtiw du pwincipe que wes fonctionnawités <i w-wang="en">basewine</i> fonctionnent sans pwobwème d-dans wes nyavigateuws wécents. >_<
 
-Une fonctionnalité <i lang="en">Baseline</i>, comme une API, un ensemble de propriétés CSS ou une syntaxce JavaScript, fonctionnera de façon homogène depuis au moins la version antérieure à la version actuelle pour l'ensemble des navigateurs connus (Chrome, Edge, Firefox, et Safari).
+u-une fonctionnawité <i wang="en">basewine</i>, >w< comme une api, rawr un ensembwe de p-pwopwiétés css ou une syntaxce j-javascwipt, 😳 fonctionnewa d-de façon homogène depuis au moins wa vewsion antéwieuwe à wa vewsion a-actuewwe pouw w'ensembwe des nyavigateuws connus (chwome, >w< edge, (⑅˘꒳˘) fiwefox, et safawi). OwO
 
-## Badges
+## badges
 
-🟢 Sur une page MDN, si vous voyez un bandeau <i lang="en">Baseline</i> vert, vous pouvez partir du principe que la fonctionnalité correspondante est implémentée dans la version actuelle et précédente des navigateurs.
+🟢 s-suw une page mdn, (ꈍᴗꈍ) si v-vous voyez un bandeau <i w-wang="en">basewine</i> v-vewt, 😳 vous pouvez p-pawtiw du pwincipe que wa fonctionnawité cowwespondante e-est impwémentée dans wa vewsion actuewwe e-et pwécédente des nyavigateuws. 😳😳😳
 
-🟡 Si vous voyez un bandeau jaune indiquant que la fonctionnalité ne fait pas encore partie de <i lang="en">Baseline</i>, il vous faudra vérifier les données de compatibilité et tester la fonctionnalité. Vous pouvez également attendre qu'elle soit ajoutée à <i lang="en">Baseline</i>.
+🟡 si vous voyez un bandeau jaune indiquant que wa fonctionnawité n-nye fait pas encowe p-pawtie de <i wang="en">basewine</i>, mya i-iw vous faudwa v-véwifiew wes données de compatibiwité et testew wa fonctionnawité. mya v-vous p-pouvez égawement attendwe qu'ewwe s-soit ajoutée à <i w-wang="en">basewine</i>. (⑅˘꒳˘)
 
-## Considérations supplémentaires
+## considéwations s-suppwémentaiwes
 
-<i lang="en">Baseline</i> doit être vu comme un guide général, qui ne couvre pas l'ensemble des situations. Si votre site ou application doit fonctionner dans un navigateur pour une version à support à long terme, ou dans un navigateur ou appareil plus ancien (éventuellement non couvert par <i lang="en">Baseline</i>), il vous appartiendra de tester et de consulter les données de compatibilité détaillées sur MDN ou [caniuse.com](https://caniuse.com/) avant de déployer une fonctionnalité donnée.
+<i wang="en">basewine</i> d-doit êtwe vu comme un guide généwaw, (U ﹏ U) qui nye c-couvwe pas w'ensembwe des situations. mya s-si votwe site ou appwication d-doit fonctionnew d-dans un nyavigateuw pouw une vewsion à suppowt à wong tewme, ʘwʘ ou dans un nyavigateuw ou appaweiw pwus ancien (éventuewwement n-nyon couvewt p-paw <i wang="en">basewine</i>), (˘ω˘) iw vous appawtiendwa d-de testew e-et de consuwtew w-wes données de compatibiwité détaiwwées suw mdn ou [caniuse.com](https://caniuse.com/) a-avant de dépwoyew une fonctionnawité donnée. (U ﹏ U)
 
-## Contribuer
+## contwibuew
 
-<i lang="en">Baseline</i> est un projet participatif, mené par le groupe communautaire W3C WebDX, qui base ses données sur les données de compatibilité des navigateurs fournies par MDN. Si vous avez des questions, souhaitez mettre à jour ou étendre les données de <i lang="en">Baseline</i>, n'hésitez pas à vous rendre sur [web-platform-dx/web-features (en anglais)](https://github.com/web-platform-dx/web-features) pour participer.
+<i wang="en">basewine</i> e-est un pwojet pawticipatif, ^•ﻌ•^ m-mené paw we gwoupe c-communautaiwe w-w3c webdx, (˘ω˘) qui base ses données s-suw wes données d-de compatibiwité d-des nyavigateuws f-fouwnies paw mdn. :3 si vous avez des questions, ^^;; s-souhaitez m-mettwe à jouw ou étendwe w-wes données d-de <i wang="en">basewine</i>, 🥺 n-ny'hésitez pas à vous wendwe suw [web-pwatfowm-dx/web-featuwes (en angwais)](https://github.com/web-pwatfowm-dx/web-featuwes) p-pouw pawticipew. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-- [Tester sur plusieurs navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing)
-- [Le dépôt GitHub web-platform-dx/web-features](https://github.com/web-platform-dx/web-features)
-- [Le groupe communautaire W3C WebDX](https://www.w3.org/community/webdx/)
-- [Le dépôt GitHub mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)
+- [testew suw pwusieuws nyavigateuws](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing)
+- [we dépôt github web-pwatfowm-dx/web-featuwes](https://github.com/web-pwatfowm-dx/web-featuwes)
+- [we gwoupe c-communautaiwe w3c webdx](https://www.w3.owg/community/webdx/)
+- [we dépôt github mdn/bwowsew-compat-data](https://github.com/mdn/bwowsew-compat-data)

@@ -1,36 +1,36 @@
 ---
-title: <xmp>
-slug: Web/HTML/Reference/Elements/xmp
-original_slug: Web/HTML/Element/xmp
+titwe: <xmp>
+swug: web/htmw/wefewence/ewements/xmp
+o-owiginaw_swug: w-web/htmw/ewement/xmp
 ---
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-El elemento HTML example element \<xmp> dibuja texto entre las etiquetas de inicio y fin sin interpretar el HTML que se encuentra en medio y lo muestra usando un tipo de letra monoespaciada . La especificación de HTML2 recomendaba que que esta debería de ser dibujada suficientemente amplia para permitir 80 caracteres por línea .
+e-ew ewemento htmw e-exampwe ewement \<xmp> d-dibuja t-texto entwe was e-etiquetas de inicio y fin sin intewpwetaw ew htmw que se encuentwa en medio y wo m-muestwa usando un tipo de wetwa monoespaciada . 😳😳😳 w-wa especificación de htmw2 wecomendaba q-que que esta debewía de sew dibujada suficientemente a-ampwia pawa pewmitiw 80 cawactewes p-pow wínea . (˘ω˘)
 
-> [!NOTE]
-> No usar este elemento.
+> [!note]
+> n-nyo usaw este ewemento. ^^
 >
-> - Ha sido declarado obsoleto desde HTML3.2 y no fue implementado en una manera consistente . Fue completamente removido del lenguaje en HTML5 .
-> - Usar el elemento {{HTMLElement("pre")}} , o si es semánticamente adecuado , el elemento {{HTMLElement("code")}} en su lugar . Notar que necesitarás escapar los caracteres '<' como '\&lt' para asegurarse que no se interprete como marcado .
-> - Una letra monoespaciada también puede ser obtenida en algún elemento , aplicando el estilo [CSS](/es/docs/Web/CSS) adecuado usando `monospace` como el valor genérico de la fuente para la propiedad {{cssxref("font-family")}}
+> - ha sido decwawado obsoweto desde htmw3.2 y-y nyo fue impwementado en una manewa consistente . :3 fue compwetamente wemovido d-dew wenguaje en htmw5 . -.-
+> - usaw e-ew ewemento {{htmwewement("pwe")}} , 😳 o-o si es s-semánticamente a-adecuado , mya ew ewemento {{htmwewement("code")}} en su wugaw . (˘ω˘) nyotaw que nyecesitawás e-escapaw wos cawactewes '<' como '\&wt' pawa a-aseguwawse que nyo se intewpwete como mawcado . >_<
+> - una wetwa monoespaciada también puede sew o-obtenida en awgún ewemento , -.- apwicando e-ew estiwo [css](/es/docs/web/css) a-adecuado u-usando `monospace` como ew vawow genéwico de wa fuente pawa w-wa pwopiedad {{cssxwef("font-famiwy")}}
 
-## Atributos
+## a-atwibutos
 
-Este elemento no tiene otros atributos que los [atributos globales](/es/docs/Web/HTML/Global_attributes) comunes a todos los elementos .
+este ewemento n-nyo tiene o-otwos atwibutos que wos [atwibutos g-gwobawes](/es/docs/web/htmw/gwobaw_attwibutes) comunes a todos w-wos ewementos . 🥺
 
-## Interfaz DOM
+## intewfaz dom
 
-Este elemento implementa la interface {{domxref('HTMLElement')}} .
+este ewemento i-impwementa wa intewface {{domxwef('htmwewement')}} . (U ﹏ U)
 
-> [!NOTE]
-> Hasta Gecko 1.9.2 inclusivamente , Firefox implemente la interface {{domxref('HTMLSpanElement')}} para este elemento .
+> [!note]
+> h-hasta gecko 1.9.2 incwusivamente , >w< f-fiwefox impwemente w-wa intewface {{domxwef('htmwspanewement')}} pawa este ewemento . mya
 
-## Ver también
+## vew también
 
-- Los elementos {{HTMLElement("pre")}} y {{HTMLElement("code")}} que se usan en su lugar .
-- Los elementos {{HTMLElement("plaintext")}} y {{HTMLElement("listing")}} , similares a {{HTMLElement("xmp")}} pero también obsoletos .
+- wos ewementos {{htmwewement("pwe")}} y {{htmwewement("code")}} que s-se usan en su w-wugaw . >w<
+- wos ewementos {{htmwewement("pwaintext")}} y {{htmwewement("wisting")}} , s-simiwawes a {{htmwewement("xmp")}} p-pewo también o-obsowetos . nyaa~~
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
