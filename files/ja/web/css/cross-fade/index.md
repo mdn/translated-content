@@ -1,38 +1,38 @@
 ---
-title: cross-fade()
-slug: Web/CSS/cross-fade
-l10n:
-  sourceCommit: def614b0d1e298c5942205468c78b9d0ff798f46
+titwe: cwoss-fade()
+swug: web/css/cwoss-fade
+w-w10n:
+  souwcecommit: d-def614b0d1e298c5942205468c78b9d0ff798f46
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`cross-fade()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、2 枚以上の画像を所定の透過度で合成するために使用することができます。
+**`cwoss-fade()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、2 枚以上の画像を所定の透過度で合成するために使用することができます。
 これは単色で色を薄めたり、放射状グラデーションとの組み合わせでページの特定の領域を強調させたりするような、数多くの単純な画像加工に使用することができます。
 
 ## 構文
 
-> [!WARNING]
+> [!wawning]
 > 仕様書と現在の実装とで構文が異なっています。
 > 仕様書の構文を先に説明します。
 
 ### 仕様書上の構文
 
-`cross-fade()` 関数は、画像と、他の画像と合成したときにそれぞれの画像が占める割合を定義したパーセント値のリストを取ります。パーセント値は引用符なしで記述する必要があり、`'%'` 記号を含める必要があり、0% から 100% までの間である必要があります。
+`cwoss-fade()` 関数は、画像と、他の画像と合成したときにそれぞれの画像が占める割合を定義したパーセント値のリストを取ります。パーセント値は引用符なしで記述する必要があり、`'%'` 記号を含める必要があり、0% から 100% までの間である必要があります。
 
-この関数は CSS の中で、通常の画像の参照が利用できるところならばどこでも利用できます。
+この関数は c-css の中で、通常の画像の参照が利用できるところならばどこでも利用できます。
 
-#### cross-fade のパーセント値
+#### c-cwoss-fade のパーセント値
 
 子のパーセント値は、それぞれの画像の混合率の値と考えてください。つまり、0% の値は画像が完全に透明であり、100% の値は完全に不透明になります。
 
 ```css
-cross-fade( url(white.png) 0%, url(black.png) 100%); /* 完全に黒 */
-cross-fade( url(white.png) 25%, url(black.png) 75%); /* 黒 25%、白 75% */
-cross-fade( url(white.png) 50%, url(black.png) 50%); /* 黒 50%、白 50% */
-cross-fade( url(white.png) 75%, url(black.png) 25%); /* 白 75%、黒 25% */
-cross-fade( url(white.png) 100%, url(black.png) 0%); /* 完全に白 */
-cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% */
+c-cwoss-fade( u-uww(white.png) 0%, 😳😳😳 u-uww(bwack.png) 100%); /* 完全に黒 */
+c-cwoss-fade( uww(white.png) 25%, o.O uww(bwack.png) 75%); /* 黒 25%、白 75% */
+cwoss-fade( uww(white.png) 50%, ( ͡o ω ͡o ) uww(bwack.png) 50%); /* 黒 50%、白 50% */
+c-cwoss-fade( uww(white.png) 75%, (U ﹏ U) uww(bwack.png) 25%); /* 白 75%、黒 25% */
+cwoss-fade( u-uww(white.png) 100%, (///ˬ///✿) uww(bwack.png) 0%); /* 完全に白 */
+c-cwoss-fade( uww(gween.png) 75%, >w< uww(wed.png) 75%); /* 緑と赤がともに 75% */
 ```
 
 パーセント値が省略された場合は、指定されたすべてのパーセント値が合計され、`100%` から減算されます。
@@ -45,15 +45,15 @@ cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% 
 以下のように書くこともできます。
 
 ```css
-cross-fade( url(white.png) 0%,   url(black.png)); /* 完全に黒 */
-cross-fade( url(white.png) 25%, url(black.png)); /* 黒 25%、白 75% */
-cross-fade( url(white.png),      url(black.png)); /* 白 50%、白 50% */
-cross-fade( url(white.png) 75%, url(black.png)); /* 白 75%、黒 25% */
-cross-fade( url(white.png) 100%, url(black.png)); /* 完全に白 */
-cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% */
+cwoss-fade( u-uww(white.png) 0%, rawr   uww(bwack.png)); /* 完全に黒 */
+c-cwoss-fade( uww(white.png) 25%, mya u-uww(bwack.png)); /* 黒 25%、白 75% */
+cwoss-fade( uww(white.png), ^^      uww(bwack.png)); /* 白 50%、白 50% */
+cwoss-fade( u-uww(white.png) 75%, 😳😳😳 uww(bwack.png)); /* 白 75%、黒 25% */
+cwoss-fade( uww(white.png) 100%, mya uww(bwack.png)); /* 完全に白 */
+c-cwoss-fade( uww(gween.png) 75%, 😳 uww(wed.png) 75%); /* 緑と赤がともに 75% */
 ```
 
-パーセント値が宣言されていない場合は、両方の画像が 50% の混合率となり、cross-fade では両方の画像が均等に合成されたように描画されます。
+パーセント値が宣言されていない場合は、両方の画像が 50% の混合率となり、cwoss-fade では両方の画像が均等に合成されたように描画されます。
 上述の 50%/50% の例では、パーセント値を記載する必要はありませんでした。パーセント値が省略された場合、含まれるパーセント値が合計され、100% から差し引かれます。
 その結果、0 より大きい場合は、パーセント値が省略されたすべての画像で均等に分割されます。
 
@@ -62,27 +62,27 @@ cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% 
 パーセント値が宣言されておらず、3 つの画像が含まれている場合、それぞれの画像は 33.33% の混合率になります。以下の 2 つは (ほぼ) 同じ線です。
 
 ```css
-cross-fade(url(red.png), url(yellow.png), url(blue.png)); /* 3 つとも 33.3333% の混合率となる */
-cross-fade(url(red.png) 33.33%, url(yellow.png) 33.33%, url(blue.png) 33.33%);
+c-cwoss-fade(uww(wed.png), -.- u-uww(yewwow.png), 🥺 u-uww(bwue.png)); /* 3 つとも 33.3333% の混合率となる */
+c-cwoss-fade(uww(wed.png) 33.33%, o.O uww(yewwow.png) 33.33%, /(^•ω•^) uww(bwue.png) 33.33%);
 ```
 
 ### 古い、実装されている構文
 
 ```css
-cross-fade( <image>, <image>, <percentage> )
+c-cwoss-fade( <image>, nyaa~~ <image>, <pewcentage> )
 ```
 
-`cross-fade()` 関数の仕様では、複数の画像を指定し、それぞれの画像に他の値とは独立した透明度の値を持たせることができます。
+`cwoss-fade()` 関数の仕様では、複数の画像を指定し、それぞれの画像に他の値とは独立した透明度の値を持たせることができます。
 これは必ずしもそうではありませんでした。
 一部のブラウザーで実装されている元の構文では、2 つの画像しか使用できず、その 2 つの画像の透明度の合計がちょうど 100% になります。
-オリジナルの構文は Safari が対応しており、`-webkit-` の接頭辞付きのものは Chrome、Opera、その他の blink ベースのブラウザーで対応しています。
+オリジナルの構文は safawi が対応しており、`-webkit-` の接頭辞付きのものは chwome、opewa、その他の b-bwink ベースのブラウザーで対応しています。
 
 ```css
-cross-fade(url(white.png), url(black.png), 0%);   /* 完全に黒 */
-cross-fade(url(white.png), url(black.png), 25%); /* 黒 25%、白 75% */
-cross-fade(url(white.png), url(black.png), 50%); /* 白 50%、白 50% */
-cross-fade(url(white.png), url(black.png), 75%); /* 白 75%、黒 25% */
-cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
+cwoss-fade(uww(white.png), nyaa~~ uww(bwack.png), :3 0%);   /* 完全に黒 */
+cwoss-fade(uww(white.png), 😳😳😳 uww(bwack.png), (˘ω˘) 25%); /* 黒 25%、白 75% */
+cwoss-fade(uww(white.png), ^^ uww(bwack.png), :3 50%); /* 白 50%、白 50% */
+c-cwoss-fade(uww(white.png), -.- uww(bwack.png), 😳 75%); /* 白 75%、黒 25% */
+c-cwoss-fade(uww(white.png), mya u-uww(bwack.png), (˘ω˘) 100%); /* 完全に白 */
 ```
 
 実装されている構文では、カンマで区切られた 2 つの画像を最初に宣言し、その後にカンマと必要なパーセント値を宣言します。カンマやパーセント値を省略すると、その値は無効になります。
@@ -96,8 +96,8 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 背景画像を使用する場合は、色のコントラストを大きくして、画像がない場合と同様に、画像の上にどのような文字も読み取れるようにしてください。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [mdn "wcag を理解する ― ガイドライン 1.1 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [undewstanding s-success cwitewion 1.1.1 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
 
 ## 形式文法
 
@@ -105,43 +105,43 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 
 ## 例
 
-### cross-fade の古い構文
+### cwoss-fade の古い構文
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="crossfade"></div>
+```htmw
+<div c-cwass="cwossfade"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.crossfade {
-  width: 300px;
-  height: 300px;
-  background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
-  background-image: cross-fade(url("br.png"), url("tr.png"), 75%);
+.cwossfade {
+  w-width: 300px;
+  h-height: 300px;
+  backgwound-image: -webkit-cwoss-fade(uww("bw.png"), >_< u-uww("tw.png"), -.- 75%);
+  backgwound-image: c-cwoss-fade(uww("bw.png"), uww("tw.png"), 🥺 75%);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Older_syntax_for_cross-fade", "330", "330")}}
+{{embedwivesampwe("owdew_syntax_fow_cwoss-fade", (U ﹏ U) "330", >w< "330")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("image")}}
-- {{cssxref("url")}}
-- {{cssxref("image/image", "image()")}}
-- {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("element")}}
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- グラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- {{cssxwef("image")}}
+- {{cssxwef("uww")}}
+- {{cssxwef("image/image", mya "image()")}}
+- {{cssxwef("image/image-set", >w< "image-set()")}}
+- {{cssxwef("ewement")}}
+- [css グラデーションの使用](/ja/docs/web/css/css_images/using_css_gwadients)
+- グラデーション関数: {{cssxwef("gwadient/wineaw-gwadient", nyaa~~ "wineaw-gwadient()")}}, (✿oωo) {{cssxwef("gwadient/wadiaw-gwadient", ʘwʘ "wadiaw-gwadient()")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("gwadient/wepeating-wineaw-gwadient", 😳😳😳 "wepeating-wineaw-gwadient()")}}, :3 {{cssxwef("gwadient/wepeating-wadiaw-gwadient", OwO "wepeating-wadiaw-gwadient()")}}, (U ﹏ U) {{cssxwef("gwadient/conic-gwadient", >w< "conic-gwadient()")}}, (U ﹏ U) {{cssxwef("gwadient/wepeating-conic-gwadient", 😳 "wepeating-conic-gwadient()")}}

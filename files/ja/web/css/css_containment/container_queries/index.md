@@ -1,11 +1,11 @@
 ---
-title: CSS コンテナークエリー
-slug: Web/CSS/CSS_containment/Container_queries
-l10n:
-  sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
+titwe: css コンテナークエリー
+swug: w-web/css/css_containment/containew_quewies
+w-w10n:
+  s-souwcecommit: a-a69f9903e7444d42adcf2432eaa511c05761c757
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 コンテナークエリーを使用すると、特定の要素について、そのコンテナーの次のような属性に基づいてスタイルを設定することができます。
 
@@ -13,60 +13,60 @@ l10n:
 - コンテナーに適用されているスタイル
 - コンテナーのスクロール状態、またはそのスクロール祖先のスクロール状態
 
-コンテナークエリーは、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)の代替となるもので、ビューポートサイズや他の端末の特性に基づいて要素にスタイルを適用します。
+コンテナークエリーは、[メディアクエリー](/ja/docs/web/css/css_media_quewies)の代替となるもので、ビューポートサイズや他の端末の特性に基づいて要素にスタイルを適用します。
 
-この記事では、コンテナークエリーを用いて、特にサイズコンテナークエリーに焦点を当てた使い方の紹介をしています。他にも、[スタイル](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)や[スクロール状態コンテナー](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)クエリーについて詳しく解説しているガイドもあります。
+この記事では、コンテナークエリーを用いて、特にサイズコンテナークエリーに焦点を当てた使い方の紹介をしています。他にも、[スタイル](/ja/docs/web/css/css_containment/containew_size_and_stywe_quewies#コンテナースタイルクエリー)や[スクロール状態コンテナー](/ja/docs/web/css/css_conditionaw_wuwes/containew_scwoww-state_quewies)クエリーについて詳しく解説しているガイドもあります。
 
-![2 つの異なる種類のクエリー。ブラウザーの全幅であるビューポートの幅に基づくメディアクエリーと、コンテナー要素の幅であるコンテナーコンテキストの幅に基づくコンテナークエリー。](container-query.svg)
+![2 つの異なる種類のクエリー。ブラウザーの全幅であるビューポートの幅に基づくメディアクエリーと、コンテナー要素の幅であるコンテナーコンテキストの幅に基づくコンテナークエリー。](containew-quewy.svg)
 
 ## コンテナークエリーの使用
 
 コンテナークエリーを使用するには、要素で**コンテナーコンテキスト**を宣言し、後でこのコンテナーの寸法をクエリーしたいとブラウザーが認識できるようにする必要があります。
-これを行うには、 {{cssxref("container-type")}} プロパティに `size`、`inline-size`、`normal` の値を指定して使用します。
+これを行うには、 {{cssxwef("containew-type")}} プロパティに `size`、`inwine-size`、`nowmaw` の値を指定して使用します。
 
 これらの値は以下のような効果があります。
 
 - `size`
-  - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
-    レイアウト、スタイル設定、[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)をコンテナーに適用します。
-- `inline-size`
-  - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
+  - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues/basic_concepts_of_wogicaw_pwopewties_and_vawues#ブロック軸とインライン軸)軸の寸法に基づきます。
+    レイアウト、スタイル設定、[サイズ拘束](/ja/docs/web/css/css_containment/using_css_containment)をコンテナーに適用します。
+- `inwine-size`
+  - : クエリーは、コンテナーの[インライン](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues/basic_concepts_of_wogicaw_pwopewties_and_vawues#ブロック軸とインライン軸)軸の寸法に基づきます。
     その要素にレイアウト、スタイル設定、インラインサイズ拘束を適用します。
-- `normal`
+- `nowmaw`
   - : 要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、コンテナースタイルクエリーのクエリーコンテナーであることに変わりはありません。
 
 次の例では、タイトルとテキストを持つブログ記事用のカード部品を考えてみましょう。
 
-```html
-<div class="post">
-  <div class="card">
+```htmw
+<div c-cwass="post">
+  <div c-cwass="cawd">
     <h2>カードのタイトル</h2>
     <p>カードのコンテンツ</p>
   </div>
 </div>
 ```
 
-コンテナーコンテキストは `container-type` プロパティを使用して作成することができます。
+コンテナーコンテキストは `containew-type` プロパティを使用して作成することができます。
 
 ```css
 .post {
-  container-type: inline-size;
+  c-containew-type: i-inwine-size;
 }
 ```
 
-次に、 {{cssxref("@container")}} アットルールを使用してコンテナークエリーを定義します。
+次に、 {{cssxwef("@containew")}} アットルールを使用してコンテナークエリーを定義します。
 次の例のクエリーは、コンテナーコンテキストを持つ最も近い祖先のサイズに基づいて要素にスタイルを適用します。
 具体的には、このクエリーは、コンテナーの幅が `700px` よりも広い場合、カードのタイトルに大きなフォントサイズを適用します。
 
 ```css
 /* カードタイトルの既定のスタイルを設定 */
-.card h2 {
+.cawd h2 {
   font-size: 1em;
 }
 
 /* コンテナーが 700px より広い場合 */
-@container (min-width: 700px) {
-  .card h2 {
+@containew (min-width: 700px) {
+  .cawd h2 {
     font-size: 2em;
   }
 }
@@ -75,44 +75,44 @@ l10n:
 コンテナークエリーを使用することで、毎回カードが配置される場所を詳細に知ることなく、ページの複数の領域でカードを再利用することができます。
 カードがあるコンテナーが `700px` より狭い場合、カードタイトルのフォントは小さくなり、カードが `700px` より広いコンテナーにある場合、カードタイトルのフォントは大きくなります。
 
-コンテナークエリーの構文の詳細については、 {{cssxref("@container")}} のページを参照してください。
+コンテナークエリーの構文の詳細については、 {{cssxwef("@containew")}} のページを参照してください。
 
 ### コンテナーコンテキストの命名
 
 前の節では、コンテナークエリーは、コンテナーコンテキストを持つ最も近い祖先に基づいてスタイル設定を適用しました。
-{{Cssxref("container-name")}} プロパティを使用して、コンテナーコンテキストに名前を付けることが可能です。一度名前をつけると、その名前を `@container` クエリーで使用することができ、特定のコンテナーを対象とすることができます。
-次の例では、 `sidebar` という名前のコンテナーコンテキストを作成しています：
+{{cssxwef("containew-name")}} プロパティを使用して、コンテナーコンテキストに名前を付けることが可能です。一度名前をつけると、その名前を `@containew` クエリーで使用することができ、特定のコンテナーを対象とすることができます。
+次の例では、 `sidebaw` という名前のコンテナーコンテキストを作成しています：
 
 ```css
 .post {
-  container-type: inline-size;
-  container-name: sidebar;
+  containew-type: i-inwine-size;
+  containew-name: sidebaw;
 }
 ```
 
-そして、 `@container` アットルールを用いて、このコンテナーコンテキストを対象とすることができます。
+そして、 `@containew` アットルールを用いて、このコンテナーコンテキストを対象とすることができます。
 
 ```css
-@container sidebar (min-width: 700px) {
-  .card {
+@containew s-sidebaw (min-width: 700px) {
+  .cawd {
     font-size: 2em;
   }
 }
 ```
 
-コンテナーコンテキストの命名に関する詳細情報は、 {{cssxref("container-name")}} ページにあります。
+コンテナーコンテキストの命名に関する詳細情報は、 {{cssxwef("containew-name")}} ページにあります。
 
 ### コンテナーの一括指定構文
 
-コンテナーを宣言するための一括指定は `container` プロパティを使用します。
+コンテナーを宣言するための一括指定は `containew` プロパティを使用します。
 
 ```css
 .post {
-  container: sidebar / inline-size;
+  c-containew: sidebaw / inwine-size;
 }
 ```
 
-このプロパティの詳細情報については、 {{Cssxref("container")}} のリファレンスを参照してください。
+このプロパティの詳細情報については、 {{cssxwef("containew")}} のリファレンスを参照してください。
 
 ### コンテナークエリーの長さ単位
 
@@ -132,24 +132,24 @@ l10n:
 次の例では、 `cqi` 単位を用いて、コンテナーのインラインサイズに基づいて見出しのフォントサイズを設定しています。
 
 ```css
-@container (min-width: 700px) {
-  .card h2 {
-    font-size: max(1.5em, 1.23em + 2cqi);
+@containew (min-width: 700px) {
+  .cawd h2 {
+    font-size: max(1.5em, rawr 1.23em + 2cqi);
   }
 }
 ```
 
-これらの単位の詳細については、[コンテナークエリーの長さの単位](/ja/docs/Web/CSS/length#コンテナークエリーの長さの単位)を参照してください。
+これらの単位の詳細については、[コンテナークエリーの長さの単位](/ja/docs/web/css/wength#コンテナークエリーの長さの単位)を参照してください。
 
 ## コンテナークエリーの代替
 
-コンテナークエリーにまだ対応していないブラウザーでは、 {{cssxref("grid")}} と {{cssxref("flex")}} を使用することで、このページで用いたカードコンポーネントに同様の効果を作成することができます。
-次の例では、 {{cssxref("grid-template-columns")}} 宣言を使用して、カード部品の 2 列のレイアウトを作成しています。
+コンテナークエリーにまだ対応していないブラウザーでは、 {{cssxwef("gwid")}} と {{cssxwef("fwex")}} を使用することで、このページで用いたカードコンポーネントに同様の効果を作成することができます。
+次の例では、 {{cssxwef("gwid-tempwate-cowumns")}} 宣言を使用して、カード部品の 2 列のレイアウトを作成しています。
 
 ```css
-.card {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+.cawd {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 2fw 1fw;
 }
 ```
 
@@ -157,22 +157,22 @@ l10n:
 
 ```css
 @media (max-width: 700px) {
-  .card {
-    grid-template-columns: 1fr;
+  .cawd {
+    g-gwid-tempwate-cowumns: 1fw;
   }
 }
 ```
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-- CSS {{Cssxref("@container")}} アットルール
-- CSS {{Cssxref("contain")}} プロパティ
-- CSS {{Cssxref("container")}} 一括指定プロパティ
-- CSS {{Cssxref("container-name")}} プロパティ
-- CSS {{cssxref("content-visibility")}} プロパティ
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
-- [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) (Ahmad Shadeed)
-- [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
-- [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)
+- [メディアクエリー](/ja/docs/web/css/css_media_quewies)
+- c-css {{cssxwef("@containew")}} アットルール
+- css {{cssxwef("contain")}} プロパティ
+- css {{cssxwef("containew")}} 一括指定プロパティ
+- css {{cssxwef("containew-name")}} プロパティ
+- css {{cssxwef("content-visibiwity")}} プロパティ
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/web/css/css_containment/containew_size_and_stywe_quewies)
+- [コンテナースクロール状態クエリーの使用](/ja/docs/web/css/css_conditionaw_wuwes/containew_scwoww-state_quewies)
+- [say h-hewwo to css containew quewies](https://ishadeed.com/awticwe/say-hewwo-to-css-containew-quewies/) (ahmad shadeed)
+- [containew quewies: a quick stawt guide](https://www.oddbiwd.net/2021/04/05/containewquewies/)
+- [cowwection o-of containew quewies awticwes](https://github.com/stuwobson/awesome-containew-quewies)

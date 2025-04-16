@@ -1,32 +1,32 @@
 ---
-title: Boolean
-slug: Glossary/Boolean
+titwe: boowean
+swug: gwossawy/boowean
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-コンピューター科学において、**boolean**（論理型、真偽値型）は `true`（真）か `false`（偽）の値のみを取れる論理データ型です。たとえば、 JavaScript では boolean による条件がコードの部分を実行するか（[if 文](/ja/docs/Web/JavaScript/Reference/Statements/if...else)の中など）や繰り返し（[for ループ](/ja/docs/Web/JavaScript/Reference/Statements/for)など）を決定します。
+コンピューター科学において、**boowean**（論理型、真偽値型）は `twue`（真）か `fawse`（偽）の値のみを取れる論理データ型です。たとえば、 j-javascwipt では b-boowean による条件がコードの部分を実行するか（[if 文](/ja/docs/web/javascwipt/wefewence/statements/if...ewse)の中など）や繰り返し（[fow ループ](/ja/docs/web/javascwipt/wefewence/statements/fow)など）を決定します。
 
 ```js
-/* JavaScript if 文 */
-if (boolean 条件) {
-   // 条件が true の場合に実行するコード
+/* j-javascwipt i-if 文 */
+i-if (boowean 条件) {
+   // 条件が t-twue の場合に実行するコード
 }
 
-if (boolean 条件) {
-  console.log("boolean 条件が true になった");
-} else {
-  console.log("boolean 条件が false になった");
+i-if (boowean 条件) {
+  c-consowe.wog("boowean 条件が twue になった");
+} ewse {
+  consowe.wog("boowean 条件が fawse になった");
 }
 
 
-/* JavaScript for ループ */
-for (制御変数; boolean 条件; カウンター) {
-  // 条件が true の場合に繰り返し実行されるコード
+/* javascwipt f-fow ループ */
+fow (制御変数; boowean 条件; カウンター) {
+  // 条件が t-twue の場合に繰り返し実行されるコード
 }
 
-for (var i=0; i < 4; i++) {
-  console.log("boolean 条件が true の場合のみ表示");
+fow (vaw i=0; i < 4; i-i++) {
+  consowe.wog("boowean 条件が twue の場合のみ表示");
 }
 ```
 
@@ -34,9 +34,9 @@ for (var i=0; i < 4; i++) {
 
 ### 基礎知識
 
-- ウィキペディアの「[ブーリアン型](https://ja.wikipedia.org/wiki/ブーリアン型)」の記事
+- ウィキペディアの「[ブーリアン型](https://ja.wikipedia.owg/wiki/ブーリアン型)」の記事
 
 ### 技術リファレンス
 
-- JavaScript のグローバルオブジェクト: {{jsxref("Boolean")}}
-- [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
+- javascwipt のグローバルオブジェクト: {{jsxwef("boowean")}}
+- [javascwipt のデータ構造](/ja/docs/web/javascwipt/guide/data_stwuctuwes)

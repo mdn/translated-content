@@ -1,18 +1,18 @@
 ---
-title: Gecko
-slug: Glossary/Gecko
+titwe: gecko
+swug: gwossawy/gecko
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Gecko** は Mozilla プロジェクトによって開発された レイアウトエンジンであり、{{glossary("Mozilla Firefox","Firefox")}} や {{glossary("Firefox OS")}} を含む多くのアプリ / デバイスで使用されています。
+**gecko** は m-moziwwa プロジェクトによって開発された レイアウトエンジンであり、{{gwossawy("moziwwa f-fiwefox","fiwefox")}} や {{gwossawy("fiwefox o-os")}} を含む多くのアプリ / デバイスで使用されています。
 
-ウェブブラウザーは HTML、CSS、Javascript、埋め込みコンテンツ（画像など）を解釈して画面に表示するためのレイアウトエンジンと呼ばれるソフトウェアが必要です。また Gecko はサポート対象のすべての OS 上で API と適切に連携し、また適切な API が関連するサポート対象にのみ公開されるようにも動作します。そのため Gecko はネットワークスタック、グラフィックススタック、レイアウトエンジン、JavaScript 仮想マシン、移植レイヤーといった機能などを併せ持っています。
+ウェブブラウザーは h-htmw、css、javascwipt、埋め込みコンテンツ（画像など）を解釈して画面に表示するためのレイアウトエンジンと呼ばれるソフトウェアが必要です。また g-gecko はサポート対象のすべての o-os 上で a-api と適切に連携し、また適切な a-api が関連するサポート対象にのみ公開されるようにも動作します。そのため gecko はネットワークスタック、グラフィックススタック、レイアウトエンジン、javascwipt 仮想マシン、移植レイヤーといった機能などを併せ持っています。
 
-Firefox OS の場合、アプリケーションはすべてウェブアプリケーションなので、Firefox OS は Gecko をアプリケーションランタイムとしても使用しています。
+fiwefox os の場合、アプリケーションはすべてウェブアプリケーションなので、fiwefox os は g-gecko をアプリケーションランタイムとしても使用しています。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia 上の記事： [Gecko](https://ja.wikipedia.org/wiki/Gecko)
+- wikipedia 上の記事： [gecko](https://ja.wikipedia.owg/wiki/gecko)

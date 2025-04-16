@@ -1,77 +1,77 @@
 ---
-title: caret-color
-slug: Web/CSS/caret-color
-l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+titwe: cawet-cowow
+swug: web/css/cawet-cowow
+w-w10n:
+  souwcecommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)ML/Global_attributes#contenteditable) 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
+**`cawet-cowow`** は c-css のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{htmwewement("input")}} または [`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe)mw/gwobaw_attwibutes#contenteditabwe) 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
 
-{{InteractiveExample("CSS Demo: caret-color")}}
+{{intewactiveexampwe("css demo: c-cawet-cowow")}}
 
-```css interactive-example-choice
-caret-color: red;
+```css i-intewactive-exampwe-choice
+c-cawet-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-caret-color: auto;
+```css i-intewactive-exampwe-choice
+c-cawet-cowow: auto;
 ```
 
-```css interactive-example-choice
-caret-color: transparent;
+```css intewactive-exampwe-choice
+cawet-cowow: twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe c-containew" id="defauwt-exampwe">
   <div>
-    <p>Enter text in the field to see the caret:</p>
-    <p><input id="example-element" type="text" /></p>
+    <p>entew text i-in the fiewd to see the cawet:</p>
+    <p><input i-id="exampwe-ewement" type="text" /></p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  font-size: 1.2rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  font-size: 1.2wem;
 }
 ```
 
-なお、入力キャレットはキャレットのうちの一種類にすぎません。例えば、多くのブラウザーには「ナビゲーションキャレット」があり、入力キャレットと同様に動きますが、編集できないテキストの中を移動できるものがあります。一方、マウスカーソルが、 {{cssxref("cursor")}} プロパティが `auto` のときにテキスト上に移動した場合や、 `cursor` プロパティが `text` または `vertical-text` の場合に、キャレットのように見えることがありますが、キャレットではありません (カーソルです)。
+なお、入力キャレットはキャレットのうちの一種類にすぎません。例えば、多くのブラウザーには「ナビゲーションキャレット」があり、入力キャレットと同様に動きますが、編集できないテキストの中を移動できるものがあります。一方、マウスカーソルが、 {{cssxwef("cuwsow")}} プロパティが `auto` のときにテキスト上に移動した場合や、 `cuwsow` プロパティが `text` または `vewticaw-text` の場合に、キャレットのように見えることがありますが、キャレットではありません (カーソルです)。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-caret-color: auto;
-caret-color: transparent;
-caret-color: currentcolor;
+c-cawet-cowow: auto;
+cawet-cowow: t-twanspawent;
+c-cawet-cowow: cuwwentcowow;
 
-/* <color> 値 */
-caret-color: red;
-caret-color: #5729e9;
-caret-color: rgb(0 200 0);
-caret-color: hsl(228deg 4% 24% / 80%);
+/* <cowow> 値 */
+cawet-cowow: wed;
+cawet-cowow: #5729e9;
+cawet-cowow: w-wgb(0 200 0);
+cawet-cowow: hsw(228deg 4% 24% / 80%);
 
 /* グローバル値 */
-caret-color: inherit;
-caret-color: initial;
-caret-color: revert;
-caret-color: revert-layer;
-caret-color: unset;
+cawet-cowow: inhewit;
+cawet-cowow: i-initiaw;
+cawet-cowow: w-wevewt;
+cawet-cowow: w-wevewt-wayew;
+c-cawet-cowow: u-unset;
 ```
 
 ### 値
 
 - `auto`
 
-  - : ユーザーエージェントはキャレットの適切な色を選択します。これは一般的に {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} ですが、視認性や周囲のコンテンツとのコントラストを高めるために、ユーザーエージェントが `currentcolor`、背景色、影の色、その他の要因を考慮して、別な色を選択することがあります。
+  - : ユーザーエージェントはキャレットの適切な色を選択します。これは一般的に {{cssxwef("&wt;cowow&gt;","cuwwentcowow","#cuwwentcowow_keywowd")}} ですが、視認性や周囲のコンテンツとのコントラストを高めるために、ユーザーエージェントが `cuwwentcowow`、背景色、影の色、その他の要因を考慮して、別な色を選択することがあります。
 
-    > [!NOTE]
-    > ユーザーエージェントは `auto` の値に `currentcolor` (通常はアニメーション可能) を使用することがありますが、 `auto` はトランジションやアニメーションでは補完されません。
+    > [!note]
+    > ユーザーエージェントは `auto` の値に `cuwwentcowow` (通常はアニメーション可能) を使用することがありますが、 `auto` はトランジションやアニメーションでは補完されません。
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : キャレットの色です。
 
 ## 公式定義
@@ -86,50 +86,50 @@ caret-color: unset;
 
 ### 独自のキャレット色の設定
 
-#### HTML
+#### htmw
 
-```html
-<input value="このフィールドは既定のキャレットを使用します。" size="64" />
-<input class="custom" value="キャレットが独自の色になります！" size="64" />
-<p contenteditable class="custom">
+```htmw
+<input vawue="このフィールドは既定のキャレットを使用します。" s-size="64" />
+<input cwass="custom" vawue="キャレットが独自の色になります！" s-size="64" />
+<p contenteditabwe cwass="custom">
   この段落は編集可能であり、 同様にキャレットが独自の色です！
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 input {
-  caret-color: auto;
-  display: block;
-  margin-bottom: 0.5em;
+  cawet-cowow: auto;
+  d-dispway: bwock;
+  mawgin-bottom: 0.5em;
 }
 
-input.custom {
-  caret-color: red;
+i-input.custom {
+  c-cawet-cowow: w-wed;
 }
 
 p.custom {
-  caret-color: green;
+  cawet-cowow: gween;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_custom_caret_color', 500, 200)}}
+{{embedwivesampwe('setting_a_custom_cawet_cowow', (U ﹏ U) 500, (⑅˘꒳˘) 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("input")}} 要素
-- 要素のテキストを編集可能にする HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性
-- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
-- {{cssxref("&lt;color&gt;")}} データ型
-- その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
+- {{htmwewement("input")}} 要素
+- 要素のテキストを編集可能にする htmw の [`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) 属性
+- [css を使用した h-htmw 要素への色の適用](/ja/docs/web/css/css_cowows/appwying_cowow)
+- {{cssxwef("&wt;cowow&gt;")}} データ型
+- その他の色に関するプロパティ: {{cssxwef("cowow")}}, òωó {{cssxwef("backgwound-cowow")}}, ʘwʘ {{cssxwef("bowdew-cowow")}}, {{cssxwef("outwine-cowow")}}, /(^•ω•^) {{cssxwef("text-decowation-cowow")}}, ʘwʘ {{cssxwef("text-emphasis-cowow")}}, σωσ {{cssxwef("text-shadow")}}, OwO {{cssxwef("cawet-cowow")}}, {{cssxwef("cowumn-wuwe-cowow")}}

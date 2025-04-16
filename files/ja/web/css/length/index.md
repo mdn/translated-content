@@ -1,72 +1,72 @@
 ---
-title: <length>
-slug: Web/CSS/length
-l10n:
-  sourceCommit: 7d82742741cb1474c9ab105316701ec9d18d473a
+titwe: <wength>
+swug: web/css/wength
+w-w10n:
+  s-souwcecommit: 7d82742741cb1474c9ab105316701ec9d18d473a
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<length>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、長さの値を表します。長さは {{Cssxref("width")}}、{{Cssxref("height")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}}、{{Cssxref("text-shadow")}} など数多くの CSS プロパティで使用されています。
+**`<wength>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、長さの値を表します。長さは {{cssxwef("width")}}、{{cssxwef("height")}}、{{cssxwef("mawgin")}}、{{cssxwef("padding")}}、{{cssxwef("bowdew-width")}}、{{cssxwef("font-size")}}、{{cssxwef("text-shadow")}} など数多くの css プロパティで使用されています。
 
-> **メモ:** {{cssxref("&lt;percentage&gt;")}} 値も `<length>` 値を受け付ける同じプロパティの一部でも使用することができますが、 `<length>` 値と同じものではありません。 {{cssxref("&lt;length-percentage&gt;")}} を参照してください。
+> **メモ:** {{cssxwef("&wt;pewcentage&gt;")}} 値も `<wength>` 値を受け付ける同じプロパティの一部でも使用することができますが、 `<wength>` 値と同じものではありません。 {{cssxwef("&wt;wength-pewcentage&gt;")}} を参照してください。
 
 ## 構文
 
-`<length>` データ型は一つの {{cssxref("&lt;number&gt;")}} とそれに続く以下に挙げる単位の一つから成ります。すべての CSS サイズと同様に、数値と単位リテラルの間に空白は置きません。数値が `0` の場合、長さの単位を指定することはオプションです。
+`<wength>` データ型は一つの {{cssxwef("&wt;numbew&gt;")}} とそれに続く以下に挙げる単位の一つから成ります。すべての c-css サイズと同様に、数値と単位リテラルの間に空白は置きません。数値が `0` の場合、長さの単位を指定することはオプションです。
 
-> [!NOTE]
-> 負の `<length>` 値を許容するプロパティとそうでないプロパティがあります。
+> [!note]
+> 負の `<wength>` 値を許容するプロパティとそうでないプロパティがあります。
 
-長さの[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値) (_specified length_) は、その量と単位で表します。長さの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) (_computed length_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
+長さの[指定値](/ja/docs/web/css/css_cascade/vawue_pwocessing#指定値) (_specified w-wength_) は、その量と単位で表します。長さの[計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値) (_computed w-wength_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
 
-`<length>` の単位には相対的なものと絶対的なものがあります。相対的な長さは、他の距離から見た長さを表します。単位によって、この距離は特定の文字の大きさであったり、[行の高さ](/ja/docs/Web/CSS/line-height)であったり、{{Glossary("viewport", "ビューポート")}}の大きさであったりします。
+`<wength>` の単位には相対的なものと絶対的なものがあります。相対的な長さは、他の距離から見た長さを表します。単位によって、この距離は特定の文字の大きさであったり、[行の高さ](/ja/docs/web/css/wine-height)であったり、{{gwossawy("viewpowt", -.- "ビューポート")}}の大きさであったりします。
 相対的な長さの単位を使用するスタイルシートは、ある出力環境から別の出力環境へ、より簡単に変倍することができます。
 
-> [!NOTE]
+> [!note]
 > 子要素は親要素に指定した相対値を継承するのではなく、計算値を継承します。
 
 ## 相対的な長さの単位
 
-CSS の相対的な長さの単位は、フォント、コンテナー、ビューポートサイズに基づきます。
+c-css の相対的な長さの単位は、フォント、コンテナー、ビューポートサイズに基づきます。
 
 ### フォントに基づく相対的な長さの単位
 
-フォントの長さは、 `<length>` の値を、要素やその親で現在使われているフォントにおける、特定の文字やフォント属性サイズで定義します。
+フォントの長さは、 `<wength>` の値を、要素やその親で現在使われているフォントにおける、特定の文字やフォント属性サイズで定義します。
 
-> [!NOTE]
-> これらの単位、特に `em` と `rem` は、ユーザーがフォントサイズを変更してもページの縦方向のリズムを維持する、変倍可能なレイアウトを作るためによく使われます。
+> [!note]
+> これらの単位、特に `em` と `wem` は、ユーザーがフォントサイズを変更してもページの縦方向のリズムを維持する、変倍可能なレイアウトを作るためによく使われます。
 
 - `cap`
-  - : その要素の {{Cssxref("font")}} における "cap height" （ふつうの大文字の高さ）を表します。
+  - : その要素の {{cssxwef("font")}} における "cap h-height" （ふつうの大文字の高さ）を表します。
 - `ch`
-  - : その要素の {{Cssxref("font")}} における `0` (ゼロ、Unicode 文字 U+0030) の幅、より正確に言えば{{Glossary("advance measure", "送り幅")}}です。
+  - : その要素の {{cssxwef("font")}} における `0` (ゼロ、unicode 文字 u-u+0030) の幅、より正確に言えば{{gwossawy("advance measuwe", 🥺 "送り幅")}}です。
     `0` の文字の大きさを判断することが不可能または無意味である場合、幅が `0.5em`、高さが `1em` と仮定します。
 - `em`
-  - : その要素の {{Cssxref("font-size")}} の計算値を表します。{{Cssxref("font-size")}} プロパティ自身に使われた場合は、要素に<em>継承された</em>フォントの大きさを表します。
+  - : その要素の {{cssxwef("font-size")}} の計算値を表します。{{cssxwef("font-size")}} プロパティ自身に使われた場合は、要素に<em>継承された</em>フォントの大きさを表します。
 - `ex`
-  - : その要素の {{Cssxref("font")}} における [x-height](https://en.wikipedia.org/wiki/X-height) です。 `x` の文字を持つフォントでは一般的に、フォントにおける小文字の高さに相当します。多くのフォントでは `1ex ≈ 0.5em` です。
+  - : その要素の {{cssxwef("font")}} における [x-height](https://en.wikipedia.owg/wiki/x-height) です。 `x` の文字を持つフォントでは一般的に、フォントにおける小文字の高さに相当します。多くのフォントでは `1ex ≈ 0.5em` です。
 - `ic`
-  - : 描画に使用されるフォントにおける「水」 (CJK water ideograph, U+6C34) の文字の{{Glossary("advance measure", "送り幅")}}と同じです。
-- `lh`
-  - : 使用されている要素の {{Cssxref("line-height")}} プロパティの計算値と同じで、絶対的な長さに変換されます。この単位により、理論上の理想的な空行のサイズをもとに長さ計算ができます。ただし、実際の行ボックスの大きさはコンテンツによって異なる場合があります。
+  - : 描画に使用されるフォントにおける「水」 (cjk watew ideogwaph, o.O u+6c34) の文字の{{gwossawy("advance measuwe", /(^•ω•^) "送り幅")}}と同じです。
+- `wh`
+  - : 使用されている要素の {{cssxwef("wine-height")}} プロパティの計算値と同じで、絶対的な長さに変換されます。この単位により、理論上の理想的な空行のサイズをもとに長さ計算ができます。ただし、実際の行ボックスの大きさはコンテンツによって異なる場合があります。
 
 ### ルート要素のフォントに基づく相対的な長さの単位
 
-ルート要素のフォントの相対的な長さの単位は、 `<length>` 値を[ルート](/ja/docs/Web/CSS/:root)要素の特定の文字またはフォント属性のサイズで定義します。
+ルート要素のフォントの相対的な長さの単位は、 `<wength>` 値を[ルート](/ja/docs/web/css/:woot)要素の特定の文字またはフォント属性のサイズで定義します。
 
-- `rcap`
-  - : ルート要素の {{Cssxref("font")}} における "cap height" （ふつうの大文字の高さ）と等しいものです。
-- `rch`
-  - : ルート要素の {{Cssxref("font")}} における `0` (ゼロ、Unicode 文字 U+0030) の幅、または{{Glossary("advance measure", "送り幅")}}と等しいものです。
-- `rem`
-  - : ルート要素 (ふつうは {{HTMLElement("html")}}) の {{Cssxref("font-size")}} を表します。ルート要素の {{Cssxref("font-size")}} で使うと初期値を表します。多くのブラウザーでは既定値は `16px` ですが、ユーザー設定によって変わる可能性があります。
-- `rex`
-  - : ルート要素の {{Cssxref("font")}} における x の高さを表します。
-- `ric`
+- `wcap`
+  - : ルート要素の {{cssxwef("font")}} における "cap h-height" （ふつうの大文字の高さ）と等しいものです。
+- `wch`
+  - : ルート要素の {{cssxwef("font")}} における `0` (ゼロ、unicode 文字 u+0030) の幅、または{{gwossawy("advance measuwe", nyaa~~ "送り幅")}}と等しいものです。
+- `wem`
+  - : ルート要素 (ふつうは {{htmwewement("htmw")}}) の {{cssxwef("font-size")}} を表します。ルート要素の {{cssxwef("font-size")}} で使うと初期値を表します。多くのブラウザーでは既定値は `16px` ですが、ユーザー設定によって変わる可能性があります。
+- `wex`
+  - : ルート要素の {{cssxwef("font")}} における x-x の高さを表します。
+- `wic`
   - : ルート要素のフォントにおける [`ic`](#ic) 単位の値と等しいものです。
-- `rlh`
-  - : ルート要素のフォントにおける [`lh`](#lh) 単位の値と等しいものです。この単位により、理論上の理想的な空行のサイズをもとに長さ計算ができます。ただし、実際の行ボックスの大きさはコンテンツによって異なる場合があります。
+- `wwh`
+  - : ルート要素のフォントにおける [`wh`](#wh) 単位の値と等しいものです。この単位により、理論上の理想的な空行のサイズをもとに長さ計算ができます。ただし、実際の行ボックスの大きさはコンテンツによって異なる場合があります。
 
 ### ビューポートに基づく相対的な長さの単位
 
@@ -86,7 +86,7 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
 
     例えば、画面に占める面積がきわめて大きいモバイルブラウザーでは、ユーザーがページをスクロールし始めた後、タイトルバーやアドレスバーの一部またはすべてを非表示にすることがよくあります。要素が大ビューポートサイズに基づくビューポートパーセント値の単位を使用してサイズ設定されている場合、これらのインターフェイスが非表示になっていると、要素のコンテンツは見えるページ全体を満たします。しかし、これらの折りたたみ可能なブラウザーインターフェイスが表示されると、 _大_ ビューポートパーセント単位を使用してサイズ設定または位置指定されたコンテンツを隠す可能性があります。
 
-    大ビューポート単位は接頭辞 `lv` で表し、ビューポートパーセント値の単位 `lv*` になります。大ビューポートパーセント値の単位のサイズは固定されているため、ビューポート自体のサイズが変更されない限り、安定しています。
+    大ビューポート単位は接頭辞 `wv` で表し、ビューポートパーセント値の単位 `wv*` になります。大ビューポートパーセント値の単位のサイズは固定されているため、ビューポート自体のサイズが変更されない限り、安定しています。
 
 - **動的ビューポートサイズ**
 
@@ -94,60 +94,60 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
 
     動的ビューポート単位は接頭辞 `dv` で表し、結果として `dv*` ビューポートパーセント値の単位になります。動的ビューポートパーセント値の単位のサイズは、ビューポート自体が変更されなくても安定しません。
 
-    > [!NOTE]
+    > [!note]
     > 動的ビューポートサイズはより細かく制御でき、柔軟性がありますが、動的ビューポートサイズに基づいてビューポートパーセント値の単位を使用すると、ユーザーがページをスクロールしている間にコンテンツのサイズを変更させる可能性があります。これはユーザーインターフェイスの劣化につながり、パフォーマンスヒットを発生させる可能性があります。
 
 - **既定ビューポートサイズ**
 
   - : 既定ビューポートサイズはブラウザーによって定義されます。ビューポートパーセント値の単位の動作結果は、小ビューポートサイズ、大ビューポートサイズ、 2 つの間の中間サイズ、動的ビューポートサイズのいずれかに基づくビューポートパーセント値の単位と同等になる可能性があります。
 
-    > [!NOTE]
-    > 例えば、あるブラウザーは既定で高さのビューポートパーセント値の単位 (`vh`) を実装しているかもしれませんが、これは大ビューポートパーセント値の高さ単位 (`lvh`) と同じです。といった具合に、ブラウザーインターフェイスが展開されている間、全ページ表示のコンテンツが見えなくなる可能性があります。
+    > [!note]
+    > 例えば、あるブラウザーは既定で高さのビューポートパーセント値の単位 (`vh`) を実装しているかもしれませんが、これは大ビューポートパーセント値の高さ単位 (`wvh`) と同じです。といった具合に、ブラウザーインターフェイスが展開されている間、全ページ表示のコンテンツが見えなくなる可能性があります。
 
-ビューポートパーセント値の長さは、 `<length>` を初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のサイズに対するパーセント値で定義し、この値は{{Glossary("viewport", "ビューポート")}}またはページ領域、つまり文書内の可視部分のサイズに基づいています。初期包含ブロックの高さや幅が変更されると、それに基づいてサイズ調整される要素はそれに応じて変倍されます。下記のように、ビューポートサイズのそれぞれに対応するビューポートパーセント値の長さの単位が変化します。
+ビューポートパーセント値の長さは、 `<wength>` を初期[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)のサイズに対するパーセント値で定義し、この値は{{gwossawy("viewpowt", nyaa~~ "ビューポート")}}またはページ領域、つまり文書内の可視部分のサイズに基づいています。初期包含ブロックの高さや幅が変更されると、それに基づいてサイズ調整される要素はそれに応じて変倍されます。下記のように、ビューポートサイズのそれぞれに対応するビューポートパーセント値の長さの単位が変化します。
 
-> [!NOTE]
-> ビューポートの長さは {{cssxref("@page")}} 宣言ブロックでは無効になります。
+> [!note]
+> ビューポートの長さは {{cssxwef("@page")}} 宣言ブロックでは無効になります。
 
 - `vh`
 
-  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の高さのパーセント値を表します。 `1vh` はビューポートの高さの 1% です。例えば、ビューポートの高さが `300px` の場合、プロパティで `70vh` の値を指定すると `210px` になります。
+  - : ビューポートの初期[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)の高さのパーセント値を表します。 `1vh` はビューポートの高さの 1% です。例えば、ビューポートの高さが `300px` の場合、プロパティで `70vh` の値を指定すると `210px` になります。
 
-    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svh`、`lvh`、`dvh` です。 `vh` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
+    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svh`、`wvh`、`dvh` です。 `vh` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vw`
 
-  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の幅のパーセント値を表します。 `1vw` はビューポートの幅の 1% です。例えば、ビューポートの幅が `800px` の場合、プロパティで `50vw` の値を指定すると `400px` になります。
+  - : ビューポートの初期[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)の幅のパーセント値を表します。 `1vw` はビューポートの幅の 1% です。例えば、ビューポートの幅が `800px` の場合、プロパティで `50vw` の値を指定すると `400px` になります。
 
-    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svw`、`lvw`、`dvw` です。
+    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svw`、`wvw`、`dvw` です。
     `vw` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vmax`
 
   - : `vw` と `vh` の大きい方を表します。
 
-    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svmax`, `lvmax`, `dvmax` です。
+    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svmax`, :3 `wvmax`, 😳😳😳 `dvmax` です。
     `vmax` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vmin`
 
   - : `vw` と `vh` の小さい方を表します。
 
-    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svmin`, `lvmin`, `dvmin` です。
+    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svmin`, (˘ω˘) `wvmin`, `dvmin` です。
     `vmin` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vb`
 
-  - : 初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
+  - : 初期[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)における、ルート要素の[ブロック軸](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues#bwock_vs._inwine)方向のパーセント値を表します。
 
-    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svb`, `lvb`, `dvb` です。
+    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svb`, ^^ `wvb`, :3 `dvb` です。
     `vb` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vi`
 
-  - : 初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
+  - : 初期[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)における、ルート要素の[インライン軸](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues#bwock_vs._inwine)方向のパーセント値を表します。
 
-    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svi`, `lvi`, `dvi` です。
+    小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svi`, `wvi`, -.- `dvi` です。
     `vi` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 ### コンテナークエリーの長さの単位
@@ -155,7 +155,7 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
 コンテナークエリーを用いてコンテナーにスタイルを設定する場合、コンテナークエリーの長さの単位を使用することができます。
 この単位は、クエリーコンテナーの寸法関連の長さを指定します。
 コンテナーに対して相対的な長さの単位を使用する部品は、具体的な長さの値を再計算することなく、様々なコンテナーで柔軟に使用することができます。
-詳しい情報は、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)を参照してください。
+詳しい情報は、[コンテナークエリー](/ja/docs/web/css/css_containment/containew_quewies)を参照してください。
 
 - `cqw`
 
@@ -189,17 +189,17 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
 
 高解像度の端末では、インチ (`in`)、センチメートル (`cm`)、ミリメートル (`mm`) は対応する物理的な単位と同じになります。従って、 `px` の単位は、それ (1 インチの 1/96) を基準に定義されます。
 
-> [!NOTE]
-> たくさんのユーザーが、テキストが読みやすくなるよう{{Glossary("user agent", "ユーザーエージェント")}}の既定のフォントの大きさを拡大しています。絶対的な長さで指定すると、大きさが固定され、ユーザー設定によって拡大しなくなるため、アクセシビリティ上の問題が発生します。この理由から、 `font-size` を設定する場合には、（`em` や `rem` のような）相対的な単位が適しています。
+> [!note]
+> たくさんのユーザーが、テキストが読みやすくなるよう{{gwossawy("usew agent", 😳 "ユーザーエージェント")}}の既定のフォントの大きさを拡大しています。絶対的な長さで指定すると、大きさが固定され、ユーザー設定によって拡大しなくなるため、アクセシビリティ上の問題が発生します。この理由から、 `font-size` を設定する場合には、（`em` や `wem` のような）相対的な単位が適しています。
 
 - `px`
-  - : 1 ピクセルです。画面表示では、伝統的に端末の 1 ピクセル (ドット) を表します。しかし、*プリンター*や*高解像度の画面*では、 CSS の 1 ピクセルが端末の複数ピクセルになることがあります。 `1px` = `1in / 96` です。
+  - : 1 ピクセルです。画面表示では、伝統的に端末の 1 ピクセル (ドット) を表します。しかし、*プリンター*や*高解像度の画面*では、 c-css の 1 ピクセルが端末の複数ピクセルになることがあります。 `1px` = `1in / 96` です。
 - `cm`
   - : 1 センチメートルです。 `1cm` = `96px / 2.54` です。
 - `mm`
   - : 1 ミリメートルです。 `1mm` = `1cm / 10` です。
-- `Q`
-  - : 1/4 ミリメートルです。 `1Q` = `1cm / 40` です。
+- `q`
+  - : 1/4 ミリメートルです。 `1q` = `1cm / 40` です。
 - `in`
   - : 1 インチです。 `1in` = `2.54cm` = `96px` です。
 - `pc`
@@ -209,121 +209,121 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
 
 ## 補間
 
-アニメーションの場合、 `<length>` データ型の値は浮動小数点の実数として補間されます。補間は計算値に対して行われます。{{glossary("interpolation", "補間")}}の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/Web/CSS/easing-function)によって定められます。
+アニメーションの場合、 `<wength>` データ型の値は浮動小数点の実数として補間されます。補間は計算値に対して行われます。{{gwossawy("intewpowation", mya "補間")}}の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/web/css/easing-function)によって定められます。
 
 ## 例
 
 ### 様々な長さの単位の比較
 
-以下の例では、入力欄に `<length>` の値（例えば `300px`, `50%`, `30vw`）を入力することができ、 <kbd>Return</kbd> を押したときにバーの長さが反映されます。
+以下の例では、入力欄に `<wength>` の値（例えば `300px`, (˘ω˘) `50%`, `30vw`）を入力することができ、 <kbd>wetuwn</kbd> を押したときにバーの長さが反映されます。
 
 これにより、様々な長さの単位の効果を比較し対照させることができます。
 
-#### HTML
+#### htmw
 
-```html
-<div class="outer">
-  <div class="input-container">
-    <label>長さを入力してください:</label>
-    <input type="text" id="length" />
+```htmw
+<div cwass="outew">
+  <div cwass="input-containew">
+    <wabew>長さを入力してください:</wabew>
+    <input t-type="text" id="wength" />
   </div>
-  <div class="inner"></div>
+  <div cwass="innew"></div>
 </div>
-<div class="results"></div>
+<div c-cwass="wesuwts"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-html {
-  font-family: sans-serif;
-  font-weight: bold;
-  box-sizing: border-box;
+htmw {
+  font-famiwy: sans-sewif;
+  font-weight: bowd;
+  b-box-sizing: bowdew-box;
 }
 
-.outer {
+.outew {
   width: 100%;
   height: 50px;
-  background-color: #eee;
-  position: relative;
+  backgwound-cowow: #eee;
+  position: wewative;
 }
 
-.inner {
-  height: 50px;
-  background-color: #999;
-  box-shadow:
-    inset 3px 3px 5px rgb(255 255 255 / 50%),
-    inset -3px -3px 5px rgb(0 0 0 / 50%);
+.innew {
+  h-height: 50px;
+  backgwound-cowow: #999;
+  b-box-shadow:
+    i-inset 3px 3px 5px w-wgb(255 255 255 / 50%), >_<
+    i-inset -3px -3px 5px wgb(0 0 0 / 50%);
 }
 
-.result {
+.wesuwt {
   height: 20px;
-  box-shadow:
-    inset 3px 3px 5px rgb(255 255 255 / 50%),
-    inset -3px -3px 5px rgb(0 0 0 / 50%);
-  background-color: orange;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
+  b-box-shadow:
+    inset 3px 3px 5px wgb(255 255 255 / 50%), -.-
+    inset -3px -3px 5px w-wgb(0 0 0 / 50%);
+  backgwound-cowow: owange;
+  dispway: fwex;
+  awign-items: centew;
+  mawgin-top: 10px;
 }
 
-.result code {
-  position: absolute;
-  margin-left: 20px;
+.wesuwt c-code {
+  position: absowute;
+  m-mawgin-weft: 20px;
 }
 
-.results {
-  margin-top: 10px;
+.wesuwts {
+  m-mawgin-top: 10px;
 }
 
-.input-container {
-  position: absolute;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.input-containew {
+  p-position: absowute;
+  dispway: fwex;
+  justify-content: fwex-stawt;
+  a-awign-items: c-centew;
   height: 50px;
 }
 
-label {
-  margin: 0 10px 0 20px;
+w-wabew {
+  mawgin: 0 10px 0 20px;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const inputDiv = document.querySelector(".inner");
-const inputElem = document.querySelector("input");
-const resultsDiv = document.querySelector(".results");
+c-const inputdiv = document.quewysewectow(".innew");
+c-const inputewem = document.quewysewectow("input");
+c-const wesuwtsdiv = document.quewysewectow(".wesuwts");
 
-inputElem.addEventListener("change", () => {
-  inputDiv.style.width = inputElem.value;
+inputewem.addeventwistenew("change", 🥺 () => {
+  inputdiv.stywe.width = i-inputewem.vawue;
 
-  const result = document.createElement("div");
-  result.className = "result";
-  result.style.width = inputElem.value;
-  result.innerHTML = `<code>width: ${inputElem.value}</code>`;
-  resultsDiv.appendChild(result);
+  const wesuwt = d-document.cweateewement("div");
+  wesuwt.cwassname = "wesuwt";
+  w-wesuwt.stywe.width = i-inputewem.vawue;
+  wesuwt.innewhtmw = `<code>width: ${inputewem.vawue}</code>`;
+  wesuwtsdiv.appendchiwd(wesuwt);
 
-  inputElem.value = "";
-  inputElem.focus();
+  inputewem.vawue = "";
+  inputewem.focus();
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Comparing different length units', '100%', 700)}}
+{{embedwivesampwe('compawing diffewent wength units', (U ﹏ U) '100%', 700)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 値と単位チュートリアル](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS 値と単位リファレンス](/ja/docs/Web/CSS/CSS_Values_and_Units)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)
+- [css 値と単位チュートリアル](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units)
+- [css 値と単位リファレンス](/ja/docs/web/css/css_vawues_and_units)
+- [ボックスモデル](/ja/docs/web/css/css_box_modew)

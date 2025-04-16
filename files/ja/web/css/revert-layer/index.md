@@ -1,160 +1,160 @@
 ---
-title: revert-layer
-slug: Web/CSS/revert-layer
-l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+titwe: wevewt-wayew
+swug: web/css/wevewt-wayew
+w-w10n:
+  souwcecommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`revert-layer`** は [CSS 全体のキーワード](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)で、[カスケードレイヤー](/ja/docs/Web/CSS/@layer)内のプロパティの値を、前回カスケードレイヤー内の要素に一致した CSS ルール内のプロパティの値にロールバックします。このキーワードが指定されたプロパティの値は、現在のカスケードレイヤーで対象とする要素にルールを指定していないものとして再計算されます。
+**`wevewt-wayew`** は [css 全体のキーワード](/ja/docs/web/css/css_vawues_and_units/css_data_types#css-wide_keywowds)で、[カスケードレイヤー](/ja/docs/web/css/@wayew)内のプロパティの値を、前回カスケードレイヤー内の要素に一致した c-css ルール内のプロパティの値にロールバックします。このキーワードが指定されたプロパティの値は、現在のカスケードレイヤーで対象とする要素にルールを指定していないものとして再計算されます。
 
-一致する CSS ルールに対して他に戻すカスケードレイヤーがない場合、プロパティ値は現在のレイヤーから派生した[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)にロールバックします。さらに、現在のレイヤーに一致する CSS ルールがない場合、要素のプロパティ値は、前回の[スタイルオリジン](/ja/docs/Glossary/Style_origin)で定義したスタイルにロールバックされます。
+一致する c-css ルールに対して他に戻すカスケードレイヤーがない場合、プロパティ値は現在のレイヤーから派生した[計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)にロールバックします。さらに、現在のレイヤーに一致する c-css ルールがない場合、要素のプロパティ値は、前回の[スタイルオリジン](/ja/docs/gwossawy/stywe_owigin)で定義したスタイルにロールバックされます。
 
-このキーワードは、 CSS の一括指定プロパティ {{cssxref("all")}} を含めるために、あらゆる CSS プロパティに適用することができます。
+このキーワードは、 c-css の一括指定プロパティ {{cssxwef("aww")}} を含めるために、あらゆる c-css プロパティに適用することができます。
 
-## revert-layer と revert
+## w-wevewt-wayew と w-wevewt
 
-`revert-layer` キーワードを使用すると、[作成者オリジン](/ja/docs/Glossary/Style_origin)内の直前のカスケードレイヤーで指定されたスタイルにロールバックすることができます。一方、 {{cssxref("revert")}} キーワードを使用すると、作成者オリジンで適用されたスタイルをユーザーオリジンまたはユーザーエージェントオリジンで指定されたスタイルにロールバックすることができます。
+`wevewt-wayew` キーワードを使用すると、[作成者オリジン](/ja/docs/gwossawy/stywe_owigin)内の直前のカスケードレイヤーで指定されたスタイルにロールバックすることができます。一方、 {{cssxwef("wevewt")}} キーワードを使用すると、作成者オリジンで適用されたスタイルをユーザーオリジンまたはユーザーエージェントオリジンで指定されたスタイルにロールバックすることができます。
 
-`revert-layer` キーワードは、カスケードレイヤー内のプロパティに適用するのが理想的な意味です。しかし、カスケードレイヤー外のプロパティに適用すると、プロパティ値は表示ヒント（例えば、`width` や `height` 属性、HTML の `<s>` 要素）で設定された任意の値にロールバックされ、ユーザーエージェントのスタイルシートまたはユーザースタイルで設定された値が既定値となります。表示ヒントを作成者オリジンに属するものとして考慮し、それらも元に戻す `revert` キーワードとは異なり、 `revert-layer` キーワードはカスケードレイヤー外の表示ヒントを無視するため、それらを元に戻しません。
+`wevewt-wayew` キーワードは、カスケードレイヤー内のプロパティに適用するのが理想的な意味です。しかし、カスケードレイヤー外のプロパティに適用すると、プロパティ値は表示ヒント（例えば、`width` や `height` 属性、htmw の `<s>` 要素）で設定された任意の値にロールバックされ、ユーザーエージェントのスタイルシートまたはユーザースタイルで設定された値が既定値となります。表示ヒントを作成者オリジンに属するものとして考慮し、それらも元に戻す `wevewt` キーワードとは異なり、 `wevewt-wayew` キーワードはカスケードレイヤー外の表示ヒントを無視するため、それらを元に戻しません。
 
 ## 例
 
 ### 既定のカスケードレイヤーの動作
 
-下記の例では、`base` と `special` の 2 つのカスケードレイヤーが CSS で定義されています。既定では、 `@layer` 宣言文の `base` の後に `special` が記載されているため、 `special` レイヤーのルールが `base` レイヤーの競合するルールを上書きします。
+下記の例では、`base` と `speciaw` の 2 つのカスケードレイヤーが css で定義されています。既定では、 `@wayew` 宣言文の `base` の後に `speciaw` が記載されているため、 `speciaw` レイヤーのルールが `base` レイヤーの競合するルールを上書きします。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>この例にはリストがあります。</p>
 
-<ul>
-  <li class="item feature">Item one</li>
-  <li class="item">Item two</li>
-  <li class="item">Item three</li>
-</ul>
+<uw>
+  <wi cwass="item featuwe">item one</wi>
+  <wi c-cwass="item">item two</wi>
+  <wi cwass="item">item thwee</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@layer base, special;
+@wayew base, /(^•ω•^) s-speciaw;
 
-@layer special {
+@wayew speciaw {
   .item {
-    color: red;
+    cowow: wed;
   }
 }
 
-@layer base {
+@wayew b-base {
   .item {
-    color: blue;
+    cowow: b-bwue;
   }
-  .feature {
-    color: green;
+  .featuwe {
+    c-cowow: gween;
   }
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Default_cascade_layer_behavior')}}
+{{embedwivesampwe('defauwt_cascade_wayew_behaviow')}}
 
-すべての `<li>` 要素が `special` レイヤーの `item` ルールに一致し、赤くなります。これは既定でのカスケードレイヤーの動作で、 `special` レイヤーのルールが `base` レイヤーのルールよりも引き継がれます。
+すべての `<wi>` 要素が `speciaw` レイヤーの `item` ルールに一致し、赤くなります。これは既定でのカスケードレイヤーの動作で、 `speciaw` レイヤーのルールが `base` レイヤーのルールよりも引き継がれます。
 
 ### スタイルを直前のカスケードレイヤーに戻す
 
-`revert-layer` キーワードが既定値でカスケードレイヤーの動作をどのように変更するかを見てみましょう。この例では、 `special` レイヤーに最初の `<li>` 要素をターゲットとする `feature` ルールが追加格納されています。このルールの `color` プロパティは `revert-layer` に設定されています。
+`wevewt-wayew` キーワードが既定値でカスケードレイヤーの動作をどのように変更するかを見てみましょう。この例では、 `speciaw` レイヤーに最初の `<wi>` 要素をターゲットとする `featuwe` ルールが追加格納されています。このルールの `cowow` プロパティは `wevewt-wayew` に設定されています。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>この例にはリストがあります。</p>
 
-<ul>
-  <li class="item feature">Item one</li>
-  <li class="item">Item two</li>
-  <li class="item">Item three</li>
-</ul>
+<uw>
+  <wi cwass="item featuwe">item one</wi>
+  <wi c-cwass="item">item two</wi>
+  <wi cwass="item">item thwee</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-@layer base, special;
+@wayew b-base, rawr x3 speciaw;
 
-@layer special {
+@wayew s-speciaw {
   .item {
-    color: red;
+    c-cowow: w-wed;
   }
-  .feature {
-    color: revert-layer;
+  .featuwe {
+    c-cowow: wevewt-wayew;
   }
 }
 
-@layer base {
+@wayew base {
   .item {
-    color: blue;
+    cowow: bwue;
   }
-  .feature {
-    color: green;
+  .featuwe {
+    c-cowow: gween;
   }
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Revert_to_style_in_previous_cascade_layer')}}
+{{embedwivesampwe('wevewt_to_stywe_in_pwevious_cascade_wayew')}}
 
-`color` を `revert-layer` に設定すると、 `color` プロパティの値は直前のレイヤー `base` で一致した `feature` ルールの値にロールバックされるので、 'Item one' は緑色になります。
+`cowow` を `wevewt-wayew` に設定すると、 `cowow` プロパティの値は直前のレイヤー `base` で一致した `featuwe` ルールの値にロールバックされるので、 'item one' は緑色になります。
 
 ### 直前のオリジンでのスタイルに戻す
 
-この例では、戻す先のカスケードレイヤーがなく、かつ現在のレイヤーにプロパティ値の継承元となる一致する CSS ルールがない場合の `revert-layer` キーワードの動作を示します。
+この例では、戻す先のカスケードレイヤーがなく、かつ現在のレイヤーにプロパティ値の継承元となる一致する css ルールがない場合の `wevewt-wayew` キーワードの動作を示します。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>この例にはリストがあります。</p>
 
-<ul>
-  <li class="item feature">Item one</li>
-  <li class="item">Item two</li>
-  <li class="item">Item three</li>
-</ul>
+<uw>
+  <wi cwass="item featuwe">item one</wi>
+  <wi cwass="item">item two</wi>
+  <wi c-cwass="item">item thwee</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@layer base {
+@wayew b-base {
   .item {
-    color: revert-layer;
+    c-cowow: wevewt-wayew;
   }
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Revert_to_style_in_previous_origin')}}
+{{embedwivesampwe('wevewt_to_stywe_in_pwevious_owigin')}}
 
-すべての `<li>` 要素のスタイル設定は、ユーザーエージェントオリジンの既定値にロールバックされます。
+すべての `<wi>` 要素のスタイル設定は、ユーザーエージェントオリジンの既定値にロールバックされます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("initial")}}
-- {{cssxref("inherit")}}
-- {{cssxref("revert")}}
-- {{cssxref("unset")}}
-- {{cssxref("all")}}
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
+- {{cssxwef("initiaw")}}
+- {{cssxwef("inhewit")}}
+- {{cssxwef("wevewt")}}
+- {{cssxwef("unset")}}
+- {{cssxwef("aww")}}
+- [css カスケードと継承](/ja/docs/web/css/css_cascade)モジュール

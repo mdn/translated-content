@@ -1,15 +1,15 @@
 ---
-title: SGML
-slug: Glossary/SGML
+titwe: sgmw
+swug: gwossawy/sgmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Standard Generalized Markup Language_ (**SGML**) は、宣言型のマークアップ言語を定義するための {{Glossary("ISO")}} 規格です。
+_standawd g-genewawized m-mawkup wanguage_ (**sgmw**) は、宣言型のマークアップ言語を定義するための {{gwossawy("iso")}} 規格です。
 
-ウェブにおいて、{{Glossary("HTML")}} 4、 {{Glossary("XHTML")}}、 {{Glossary("XML")}} は広く普及した SGML ベースの言語です。HTML は、第 5 版からもはや SGML を基にしておらず、独自の構文解析規則をもつ点は注意が必要です。
+ウェブにおいて、{{gwossawy("htmw")}} 4、 {{gwossawy("xhtmw")}}、 {{gwossawy("xmw")}} は広く普及した s-sgmw ベースの言語です。htmw は、第 5 版からもはや s-sgmw を基にしておらず、独自の構文解析規則をもつ点は注意が必要です。
 
 ## 関連情報
 
-- Wikipedia 上の [SGML](https://ja.wikipedia.org/wiki/SGML)
-- [Introduction to SGML](http://www.isgmlug.org/)
+- w-wikipedia 上の [sgmw](https://ja.wikipedia.owg/wiki/sgmw)
+- [intwoduction t-to sgmw](http://www.isgmwug.owg/)

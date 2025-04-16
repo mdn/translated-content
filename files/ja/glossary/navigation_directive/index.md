@@ -1,34 +1,34 @@
 ---
-title: Navigation directive (ナビゲーションディレクティブ)
-slug: Glossary/Navigation_directive
+titwe: nyavigation diwective (ナビゲーションディレクティブ)
+s-swug: g-gwossawy/navigation_diwective
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**{{Glossary("CSP")}} のナビゲーションディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、たとえば、ユーザーがどの場所に移動したり、フォームを送信したりすることができるかを管理します。
+**{{gwossawy("csp")}} のナビゲーションディレクティブ**は {{httpheadew("content-secuwity-powicy")}} ヘッダーで使用され、たとえば、ユーザーがどの場所に移動したり、フォームを送信したりすることができるかを管理します。
 
-ナビゲーションディレクティブは {{CSP("default-src")}} ディレクティブで代替されません。
+ナビゲーションディレクティブは {{csp("defauwt-swc")}} ディレクティブで代替されません。
 
-完全な一覧は[ナビゲーションディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#navigation_directives)を参照してください。
+完全な一覧は[ナビゲーションディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#navigation_diwectives)を参照してください。
 
 ## 関連項目
 
-- <https://www.w3.org/TR/CSP/#directives-navigation>
+- <https://www.w3.owg/tw/csp/#diwectives-navigation>
 - 他の種類のディレクティブ:
 
-  - {{Glossary("Fetch directive","フェッチディレクティブ")}}
-  - {{Glossary("Document directive","文書ディレクティブ")}}
-  - {{Glossary("Reporting directive", "報告ディレクティブ")}}
-  - [`block-all-mixed-content`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`require-sri-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-  - [`trusted-types`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)
+  - {{gwossawy("fetch d-diwective","フェッチディレクティブ")}}
+  - {{gwossawy("document d-diwective","文書ディレクティブ")}}
+  - {{gwossawy("wepowting d-diwective", (⑅˘꒳˘) "報告ディレクティブ")}}
+  - [`bwock-aww-mixed-content`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/bwock-aww-mixed-content)
+  - [`upgwade-insecuwe-wequests`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/upgwade-insecuwe-wequests)
+  - [`wequiwe-swi-fow`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy)
+  - [`twusted-types`](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy/twusted-types)
 
-- {{HTTPHeader("Content-Security-Policy")}}
+- {{httpheadew("content-secuwity-powicy")}}
 
-1. 関連用語:
+1. ( ͡o ω ͡o ) 関連用語:
 
-   1. {{Glossary("CSP")}}
-   2. {{Glossary("Fetch directive", "フェッチディレクティブ")}}
-   3. {{Glossary("Document directive", "文書ディレクティブ")}}
-   4. {{Glossary("Reporting directive", "報告ディレクティブ")}}
+   1. UwU {{gwossawy("csp")}}
+   2. rawr x3 {{gwossawy("fetch d-diwective", rawr "フェッチディレクティブ")}}
+   3. σωσ {{gwossawy("document d-diwective", σωσ "文書ディレクティブ")}}
+   4. >_< {{gwossawy("wepowting d-diwective", :3 "報告ディレクティブ")}}

@@ -1,46 +1,46 @@
 ---
-title: text-align-last
-slug: Web/CSS/text-align-last
-l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+titwe: text-awign-wast
+swug: w-web/css/text-awign-wast
+w-w10n:
+  s-souwcecommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-align-last`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。
+**`text-awign-wast`** は [css](/ja/docs/web/css) のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。
 
-{{InteractiveExample("CSS Demo: text-align-last")}}
+{{intewactiveexampwe("css demo: t-text-awign-wast")}}
 
-```css interactive-example-choice
-text-align-last: right;
+```css i-intewactive-exampwe-choice
+t-text-awign-wast: w-wight;
 ```
 
-```css interactive-example-choice
-text-align-last: center;
+```css i-intewactive-exampwe-choice
+text-awign-wast: centew;
 ```
 
-```css interactive-example-choice
-text-align-last: left;
+```css intewactive-exampwe-choice
+text-awign-wast: w-weft;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <div>
-    <p id="example-element" style="text-align: justify">
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat.
+    <p id="exampwe-ewement" s-stywe="text-awign: justify">
+      u-ut enim ad minim veniam, ( ͡o ω ͡o ) quis nyostwud exewcitation uwwamco w-wabowis nyisi ut
+      awiquip e-ex ea commodo c-consequat. (U ﹏ U)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
   font-size: 1.5em;
 }
 
-#default-example > div {
-  width: 250px;
+#defauwt-exampwe > div {
+  w-width: 250px;
 }
 ```
 
@@ -48,42 +48,42 @@ section {
 
 ```css
 /* キーワード値 */
-text-align-last: auto;
-text-align-last: start;
-text-align-last: end;
-text-align-last: left;
-text-align-last: right;
-text-align-last: center;
-text-align-last: justify;
+text-awign-wast: auto;
+text-awign-wast: stawt;
+text-awign-wast: e-end;
+text-awign-wast: weft;
+t-text-awign-wast: w-wight;
+text-awign-wast: c-centew;
+t-text-awign-wast: justify;
 
 /* グローバル値 */
-text-align-last: inherit;
-text-align-last: initial;
-text-align-last: revert;
-text-align-last: revert-layer;
-text-align-last: unset;
+text-awign-wast: i-inhewit;
+text-awign-wast: initiaw;
+text-awign-wast: w-wevewt;
+text-awign-wast: wevewt-wayew;
+text-awign-wast: unset;
 ```
 
 ### 値
 
 - `auto`
-  - : {{cssxref("text-align")}} の値と同じ方向に配置されます。ただし {{cssxref("text-align")}} が `justify` である場合は、`text-align-last` に `start` を設定した場合と同じ効果になります。
-- `start`
-  - : 書字方向が左書きであれば `left`、右書きであれば `right` と同じです。
+  - : {{cssxwef("text-awign")}} の値と同じ方向に配置されます。ただし {{cssxwef("text-awign")}} が `justify` である場合は、`text-awign-wast` に `stawt` を設定した場合と同じ効果になります。
+- `stawt`
+  - : 書字方向が左書きであれば `weft`、右書きであれば `wight` と同じです。
 - `end`
-  - : 書字方向が左書きであれば `right`、右書きであれば `left` と同じです。
-- `left`
+  - : 書字方向が左書きであれば `wight`、右書きであれば `weft` と同じです。
+- `weft`
   - : インラインコンテンツが行ボックスの左端に配置されます。
-- `right`
+- `wight`
   - : インラインコンテンツが行ボックスの右端に配置されます。
-- `center`
+- `centew`
   - : インラインコンテンツが行ボックスの中央に配置されます。
 - `justify`
   - : テキストは両端揃えになります。テキストは段落の左端から右端までに配置されます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -93,36 +93,36 @@ text-align-last: unset;
 
 ### 最後の行を中央揃えにする
 
-```html hidden
+```htmw hidden
 <p>
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+  i-integew ewementum massa a-at nyuwwa pwacewat v-vawius. suspendisse i-in wibewo wisus, (///ˬ///✿)
+  in intewdum massa. >w< vestibuwum ac weo v-vitae metus faucibus g-gwavida ac in nyeque. rawr
+  nyuwwam e-est ewos, mya s-suscipit sed dictum quis, ^^ accumsan a-a wiguwa. 😳😳😳
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
+p-p {
   font-size: 1.4em;
-  text-align: justify;
-  text-align-last: center;
+  text-awign: justify;
+  text-awign-wast: c-centew;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Justifying_the_last_line','560')}}
+{{embedwivesampwe('justifying_the_wast_wine','560')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("text-align")}}
+- {{cssxwef("text-awign")}}

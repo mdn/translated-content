@@ -1,13 +1,13 @@
 ---
-title: Asynchronous （非同期）
-slug: Glossary/Asynchronous
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: asynchwonous （非同期）
+swug: gwossawy/asynchwonous
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**非同期** (asynchronous) という用語は、 2 つ以上のオブジェクトやイベントが同時に存在しない、または起こらない、すなわち{{glossary("synchronous", "同期")}}していないことを表します。複数の関連のあることが、前回起こったことの完了に依存することなく起こるとき、それらは非同期です。
+**非同期** (asynchwonous) という用語は、 2 つ以上のオブジェクトやイベントが同時に存在しない、または起こらない、すなわち{{gwossawy("synchwonous", OwO "同期")}}していないことを表します。複数の関連のあることが、前回起こったことの完了に依存することなく起こるとき、それらは非同期です。
 
 コンピューターの世界では、「非同期」という言葉は主に 2 つの文脈で使われています。
 
@@ -17,16 +17,16 @@ l10n:
 
 人のやりとりの場合、電子メールは非同期通信の 1 つです。送信者がメールを送信すると、受信者は受信直後ではなく都合の良いタイミングでメッセージを読んで返信します。両者ともに、好きなときに送信や受信を継続でき、お互いにスケジュールを調整する必要はありません。
 
-非同期ソフトウェアでは、サーバーなどにリクエストを行った後、応答を待っている間に他のプロセスがブロックされることはありません。ソフトウェアは他のタスクを実行し続けることができます。例えば[プロミスベースの API](/ja/docs/Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API) では、 {{JSxRef("Promise")}} オブジェクトが長い処理のために作成されます。処理を完全に運営した後、プロミスは処理されます。プロミスがあれば、ソフトウェアは処理の完了を待つ必要がありません。
+非同期ソフトウェアでは、サーバーなどにリクエストを行った後、応答を待っている間に他のプロセスがブロックされることはありません。ソフトウェアは他のタスクを実行し続けることができます。例えば[プロミスベースの a-api](/ja/docs/weawn_web_devewopment/extensions/async_js/impwementing_a_pwomise-based_api) では、 {{jsxwef("pwomise")}} オブジェクトが長い処理のために作成されます。処理を完全に運営した後、プロミスは処理されます。プロミスがあれば、ソフトウェアは処理の完了を待つ必要がありません。
 
 ## ソフトウェア設計
 
 非同期ソフトウェア設計は、元タスク（または複数のタスク）と横に並んだタスクの実行をプログラムに依頼し、タスクの完了を待つことなく実行できるコードを構築することで、この概念を展開させたものです。第 2 のタスクが完了すると、元のタスクは合意されたメカニズムを使って通知され、作業が完了したこと、もしあれば結果が利用できることを知ることができます。
 
-非同期ソフトウェアを実装するプログラミングテクニックは数多くあります。学んでみたければ、[非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS) の記事をご覧下さい。
+非同期ソフトウェアを実装するプログラミングテクニックは数多くあります。学んでみたければ、[非同期 j-javascwipt](/ja/docs/weawn_web_devewopment/extensions/async_js) の記事をご覧下さい。
 
 ## 関連情報
 
-- [サーバーからのデータの取得](/ja/docs/Learn_web_development/Core/Scripting/Network_requests) （学習領域）
+- [サーバーからのデータの取得](/ja/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests) （学習領域）
 - 関連用語:
-  - {{glossary("Synchronous", "同期")}}
+  - {{gwossawy("synchwonous", 🥺 "同期")}}

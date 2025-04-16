@@ -1,12 +1,12 @@
 ---
-title: Parent object (親オブジェクト)
-slug: Glossary/Parent_object
+titwe: pawent object (親オブジェクト)
+s-swug: gwossawy/pawent_object
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-指定された {{glossary("property", "プロパティ")}} や {{glossary("method", "メソッド")}} が所属している {{glossary("object", "オブジェクト")}}。
+指定された {{gwossawy("pwopewty", "プロパティ")}} や {{gwossawy("method", (ꈍᴗꈍ) "メソッド")}} が所属している {{gwossawy("object", ^•ﻌ•^ "オブジェクト")}}。
 
 ## 関連項目
 
-- [JavaScript の継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [javascwipt の継承とプロトタイプチェーン](/ja/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)

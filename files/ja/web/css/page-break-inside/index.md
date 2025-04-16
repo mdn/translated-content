@@ -1,105 +1,105 @@
 ---
-title: page-break-inside
-slug: Web/CSS/page-break-inside
+titwe: page-bweak-inside
+swug: w-web/css/page-bweak-inside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!WARNING]
-> このプロパティは {{cssxref("break-inside")}} プロパティによって置き換えられました。
+> [!wawning]
+> このプロパティは {{cssxwef("bweak-inside")}} プロパティによって置き換えられました。
 
-CSS の **`page-break-inside`** プロパティは、現在の要素の*内側の* 改ページを調整します。
+c-css の **`page-bweak-inside`** プロパティは、現在の要素の*内側の* 改ページを調整します。
 
 ```css
 /* キーワード値 */
-page-break-inside: auto;
-page-break-inside: avoid;
+p-page-bweak-inside: a-auto;
+page-bweak-inside: a-avoid;
 
 /* グローバル値 */
-page-break-inside: inherit;
-page-break-inside: initial;
-page-break-inside: revert;
-page-break-inside: unset;
+page-bweak-inside: i-inhewit;
+page-bweak-inside: i-initiaw;
+p-page-bweak-inside: wevewt;
+page-bweak-inside: unset;
 ```
 
-{{InteractiveExample("CSS Demo: page-break-inside")}}
+{{intewactiveexampwe("css demo: p-page-bweak-inside")}}
 
-```css interactive-example-choice
-page-break-inside: auto;
+```css intewactive-exampwe-choice
+page-bweak-inside: auto;
 ```
 
-```css interactive-example-choice
-page-break-inside: avoid;
+```css intewactive-exampwe-choice
+p-page-bweak-inside: avoid;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <div>
     <p>
-      The effect of this property can be noticed when the document is being
-      printed or a preview of a print is displayed.
+      the effect of this pwopewty c-can be nyoticed when the document i-is being
+      p-pwinted ow a pweview of a pwint is dispwayed. mya
     </p>
-    <button id="print-btn">Show Print Preview</button>
-    <div class="box-container">
-      <div class="box">Content before the property</div>
-      <div class="box" id="example-element">
-        Content with 'page-break-inside'
+    <button id="pwint-btn">show pwint p-pweview</button>
+    <div cwass="box-containew">
+      <div cwass="box">content befowe the pwopewty</div>
+      <div cwass="box" i-id="exampwe-ewement">
+        content with 'page-bweak-inside'
       </div>
-      <div class="box">Content after the property</div>
+      <div c-cwass="box">content a-aftew the pwopewty</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 .box {
-  border: solid #5b6dcd 5px;
-  background-color: #5b6dcd;
-  margin: 10px 0;
-  padding: 5px;
+  b-bowdew: sowid #5b6dcd 5px;
+  backgwound-cowow: #5b6dcd;
+  mawgin: 10px 0;
+  p-padding: 5px;
 }
 
-#example-element {
-  border: solid 5px #ffc129;
-  background-color: #ffc129;
-  color: black;
+#exampwe-ewement {
+  bowdew: sowid 5px #ffc129;
+  backgwound-cowow: #ffc129;
+  c-cowow: bwack;
 }
 
-.hide-element {
-  display: none;
+.hide-ewement {
+  dispway: nyone;
 }
 
-@media print {
-  #example-element {
+@media pwint {
+  #exampwe-ewement {
     height: 25cm;
   }
 }
 ```
 
-```js interactive-example
-const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
+```js intewactive-exampwe
+c-const btn = document.getewementbyid("pwint-btn");
+c-const editowcontainew = d-document.getewementsbycwassname(
+  "css-editow-containew", (˘ω˘)
 )[0];
-const exampleHTMLElement = document.getElementById("default-example");
+c-const exampwehtmwewement = document.getewementbyid("defauwt-exampwe");
 
-const printableSection = document.createElement("div");
-printableSection.setAttribute("id", "printable-section");
-printableSection.classList.add("hide-element");
-document.body.appendChild(printableSection);
+const pwintabwesection = document.cweateewement("div");
+p-pwintabwesection.setattwibute("id", >_< "pwintabwe-section");
+p-pwintabwesection.cwasswist.add("hide-ewement");
+document.body.appendchiwd(pwintabwesection);
 
-btn.addEventListener("click", () => {
-  const exampleContent = exampleHTMLElement.innerHTML;
+b-btn.addeventwistenew("cwick", -.- () => {
+  c-const exampwecontent = exampwehtmwewement.innewhtmw;
 
-  editorContainer.classList.add("hide-element");
-  printableSection.innerHTML = exampleContent;
-  printableSection.classList.remove("hide-element");
+  e-editowcontainew.cwasswist.add("hide-ewement");
+  pwintabwesection.innewhtmw = exampwecontent;
+  p-pwintabwesection.cwasswist.wemove("hide-ewement");
 
-  window.print();
+  window.pwint();
 
-  printableSection.classList.add("hide-element");
-  printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
+  pwintabwesection.cwasswist.add("hide-ewement");
+  p-pwintabwesection.innewhtmw = "";
+  editowcontainew.cwasswist.wemove("hide-ewement");
 });
 ```
 
@@ -114,11 +114,11 @@ btn.addEventListener("click", () => {
 
 ## 改ページの別名
 
-`page-break-inside` プロパティは古いプロパティとなり、 {{cssxref("break-inside")}} によって置き換えられました。
+`page-bweak-inside` プロパティは古いプロパティとなり、 {{cssxwef("bweak-inside")}} によって置き換えられました。
 
-互換性のため、 `page-break-inside` はブラウザーから `break-inside` の別名として扱われます。これにより、 `page-break-inside` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
+互換性のため、 `page-bweak-inside` はブラウザーから `bweak-inside` の別名として扱われます。これにより、 `page-bweak-inside` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
 
-| page-break-inside | break-inside |
+| page-bweak-inside | b-bweak-inside |
 | ----------------- | ------------ |
 | `auto`            | `auto`       |
 | `avoid`           | `avoid`      |
@@ -133,25 +133,25 @@ btn.addEventListener("click", () => {
 
 ## 例
 
-<h3 id="Avoiding_page_breaks_inside_elements">要素の途中の改ページを防ぐ</h3>
+<h3 id="avoiding_page_bweaks_inside_ewements">要素の途中の改ページを防ぐ</h3>
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="page">
+```htmw
+<div c-cwass="page">
   <p>これは最初の段落です。</p>
-  <section class="list">
+  <section cwass="wist">
     <span>リスト</span>
-    <ol>
-      <li>one</li>
-      <!-- <li>two</li> -->
-    </ol>
+    <ow>
+      <wi>one</wi>
+      <!-- <wi>two</wi> -->
+    </ow>
   </section>
-  <ul>
-    <li>one</li>
-    <!-- <li>two</li> -->
-  </ul>
-  <p>Tこれは第二段落です。</p>
+  <uw>
+    <wi>one</wi>
+    <!-- <wi>two</wi> -->
+  </uw>
+  <p>tこれは第二段落です。</p>
   <p>これは第三段落です。文章の量が多くなっています。</p>
   <p>
     これは第四段落です。第三段落よりも、さらにもう少しだけ、文章の量が多くなっています。
@@ -159,55 +159,55 @@ btn.addEventListener("click", () => {
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .page {
-  background-color: #8cffa0;
+  backgwound-cowow: #8cffa0;
   height: 90px;
   width: 200px;
-  columns: 1;
-  column-width: 100px;
+  cowumns: 1;
+  c-cowumn-width: 100px;
 }
 
-.list,
-ol,
-ul,
+.wist, 🥺
+o-ow,
+uw,
 p {
-  break-inside: avoid;
+  bweak-inside: a-avoid;
 }
 
 p {
-  background-color: #8ca0ff;
+  b-backgwound-cowow: #8ca0ff;
 }
 
-ol,
-ul,
-.list {
-  margin: 0.5em 0;
-  display: block;
-  background-color: orange;
+o-ow, (U ﹏ U)
+uw,
+.wist {
+  mawgin: 0.5em 0;
+  dispway: bwock;
+  backgwound-cowow: o-owange;
 }
 
-p:first-child {
-  margin-top: 0;
+p:fiwst-chiwd {
+  mawgin-top: 0;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Avoiding_page_breaks_inside_elements", 400, 160)}}
+{{embedwivesampwe("avoiding_page_bweaks_inside_ewements", >w< 400, 160)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}
-- {{cssxref("page-break-after")}}, {{cssxref("page-break-before")}}
-- {{cssxref("orphans")}}, {{cssxref("widows")}}
+- {{cssxwef("bweak-befowe")}}, mya {{cssxwef("bweak-aftew")}}, >w< {{cssxwef("bweak-inside")}}
+- {{cssxwef("page-bweak-aftew")}}, nyaa~~ {{cssxwef("page-bweak-befowe")}}
+- {{cssxwef("owphans")}}, (✿oωo) {{cssxwef("widows")}}

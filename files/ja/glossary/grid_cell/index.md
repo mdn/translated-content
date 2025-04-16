@@ -1,72 +1,72 @@
 ---
-title: Grid Cell (グリッドセル)
-slug: Glossary/Grid_Cell
-l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+titwe: gwid ceww (グリッドセル)
+swug: gwossawy/gwid_ceww
+w-w10n:
+  souwcecommit: d-d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)における CSS グリッドの最小単位が**グリッドセル**です。 4 つの交差する {{glossary("grid lines", "グリッド線")}} に囲まれた領域のことで、表におけるセルと考え方はほぼ同じです。
+[css グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout)における c-css グリッドの最小単位が**グリッドセル**です。 4 つの交差する {{gwossawy("gwid w-wines", >_< "グリッド線")}} に囲まれた領域のことで、表におけるセルと考え方はほぼ同じです。
 
-![グリッド上の個々のセルを示す図。](1_grid_cell.png)
+![グリッド上の個々のセルを示す図。](1_gwid_ceww.png)
 
-各アイテムのグリッド配置の方法を指定しなければ、グリッドコンテナー直下の子アイテムは自動配置アルゴリズムに従って個別のグリッドセルに一つずつ配置されます。全てのアイテムを保持できるように、行もしくは列 {{glossary("grid tracks", "トラック")}} が自動的に追加されます。
+各アイテムのグリッド配置の方法を指定しなければ、グリッドコンテナー直下の子アイテムは自動配置アルゴリズムに従って個別のグリッドセルに一つずつ配置されます。全てのアイテムを保持できるように、行もしくは列 {{gwossawy("gwid t-twacks", mya "トラック")}} が自動的に追加されます。
 
 ## 例
 
 この例では 3 列のトラックグリッドを作成しています。5 つのアイテムはまず最初の行の 3 つのグリッドセルに配置され、新しい行を作って残りの 2 つのアイテムが配置されます。
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, mya 1fw);
+  gwid-auto-wows: 100px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Example', '300', '280') }}
+{{ embedwivesampwe('exampwe', 😳 '300', XD '280') }}
 
 ## 関連情報
 
 ### プロパティリファレンス
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-columns")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-cowumns")}}
 
 ### 参考資料
 
-- CSS グリッドレイアウトガイド: [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [CSS グリッドレイアウト仕様におけるグリッドセルの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)
+- c-css グリッドレイアウトガイド: [グリッドレイアウトの基本概念](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [css グリッドレイアウト仕様におけるグリッドセルの定義](https://dwafts.csswg.owg/css-gwid/#gwid-twack-concept)

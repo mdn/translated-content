@@ -1,36 +1,36 @@
 ---
-title: mask-border-source
-slug: Web/CSS/mask-border-source
+titwe: mask-bowdew-souwce
+swug: w-web/css/mask-bowdew-souwce
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-border-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)を生成するのに使われる元の画像を設定します。
+**`mask-bowdew-souwce`** は [css](/ja/docs/web/css) のプロパティで、要素の[マスク境界](/ja/docs/web/css/mask-bowdew)を生成するのに使われる元の画像を設定します。
 
-{{cssxref("mask-border-slice")}} プロパティは、元の画像を最終的なマスク境界に動的に適用する上で、複数の領域に分割するために使用されます。
+{{cssxwef("mask-bowdew-swice")}} プロパティは、元の画像を最終的なマスク境界に動的に適用する上で、複数の領域に分割するために使用されます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-mask-border-source: none;
+m-mask-bowdew-souwce: n-nyone;
 
 /* <image> 値 */
-mask-border-source: url(image.jpg);
-mask-border-source: linear-gradient(to top, red, yellow);
+m-mask-bowdew-souwce: u-uww(image.jpg);
+m-mask-bowdew-souwce: w-wineaw-gwadient(to t-top, wed, (⑅˘꒳˘) yewwow);
 
 /* グローバル値 */
-mask-border-source: inherit;
-mask-border-source: initial;
-mask-border-source: revert;
-mask-border-source: unset;
+mask-bowdew-souwce: inhewit;
+mask-bowdew-souwce: i-initiaw;
+mask-bowdew-souwce: wevewt;
+mask-bowdew-souwce: u-unset;
 ```
 
 ### 値
 
 - `none`
   - : マスク境界は使用されません。
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
   - : マスク境界に使用する画像への参照です。
 
 ## 公式定義
@@ -48,29 +48,29 @@ mask-border-source: unset;
 このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクのソースを定義する役割を果たすことになります。
 
 ```css
-mask-border-source: url(image.jpg);
+mask-bowdew-souwce: u-uww(image.jpg);
 ```
 
-Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-source` — に接頭辞つきで対応しています。
+chwomium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-souwce` — に接頭辞つきで対応しています。
 
 ```css
--webkit-mask-box-image-source: url(image.jpg);
+-webkit-mask-box-image-souwce: uww(image.jpg);
 ```
 
-> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> **メモ:** [`mask-bowdew`](/ja/docs/web/css/mask-bowdew) ページでは動作する例を (chwomium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("mask-border")}}
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-width")}}
+- {{cssxwef("mask-bowdew")}}
+- {{cssxwef("mask-bowdew-mode")}}
+- {{cssxwef("mask-bowdew-outset")}}
+- {{cssxwef("mask-bowdew-wepeat")}}
+- {{cssxwef("mask-bowdew-width")}}

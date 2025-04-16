@@ -1,41 +1,41 @@
 ---
-title: :-moz-broken
-slug: Web/CSS/:-moz-broken
+titwe: :-moz-bwoken
+swug: web/css/:-moz-bwoken
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`:-moz-broken`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) であり、壊れた画像リンクを表している要素に一致します。
+**`:-moz-bwoken`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions) であり、壊れた画像リンクを表している要素に一致します。
 
-> [!NOTE]
+> [!note]
 > このセレクターは、主にテーマ開発者が使用することを意図しているものです。
 
 ## 構文
 
 ```css
-:-moz-broken;
+:-moz-bwoken;
 ```
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<img src="broken.jpg" alt="This image is broken. :-(" />
+```htmw
+<img s-swc="bwoken.jpg" a-awt="this i-image is b-bwoken. (⑅˘꒳˘) :-(" />
 ```
 
-### CSS
+### c-css
 
 ```css
-:-moz-broken {
-  background: bisque;
+:-moz-bwoken {
+  b-backgwound: b-bisque;
   padding: 8px;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
@@ -43,9 +43,9 @@ slug: Web/CSS/:-moz-broken
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
-- [Firefox バグ 11011](https://bugzil.la/11011)
+- {{cssxwef(":-moz-woading")}}, ( ͡o ω ͡o ) {{cssxwef(":-moz-suppwessed")}}, UwU {{cssxwef(":-moz-usew-disabwed")}}
+- [fiwefox バグ 11011](https://bugziw.wa/11011)

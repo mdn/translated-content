@@ -1,11 +1,11 @@
 ---
-title: CSS モジュールランディングページのテンプレート
-slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
-l10n:
-  sourceCommit: bfdfe970004b21218ef4ab6a4274d4fb29c4742b
+titwe: css モジュールランディングページのテンプレート
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/page_types/css_moduwe_wanding_page_tempwate
+w-w10n:
+  souwcecommit: b-bfdfe970004b21218ef4ab6a4274d4fb29c4742b
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
 > **メモ:** _この説明文全体を削除してから公開してください。_
 >
@@ -20,31 +20,31 @@ l10n:
 >
 > ```md
 > ---
-> title: CSS NameOfTheModule
-> slug: Web/CSS/CSS_NameOfTheModule
-> l10n:
->   sourceCommit: 翻訳元コミットID
+> t-titwe: c-css nyameofthemoduwe
+> s-swug: w-web/css/css_nameofthemoduwe
+> w-w10n:
+>   souwcecommit: 翻訳元コミットid
 > ---
 > ```
 >
-> - **title**
->   - : `title` の値はページの先頭に表示されます。
->     これは "CSS" のテキストに続くモジュールの名前です。
->     例えば、[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュールのランディングページは _CSS グリッドレイアウト_ です。
-> - **slug**
->   - : `slug` の値は`https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
->     これは `Web/CSS/CSS_NameOfTheModule` のような書式です。
->     例えば、 [グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout) モジュールのランディングページは `Web/CSS/CSS_grid_layout` です。
-> - **sourceCommit**
->   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
+> - **titwe**
+>   - : `titwe` の値はページの先頭に表示されます。
+>     これは "css" のテキストに続くモジュールの名前です。
+>     例えば、[グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout)モジュールのランディングページは _css グリッドレイアウト_ です。
+> - **swug**
+>   - : `swug` の値は`https://devewopew.moziwwa.owg/ja/docs/` の後にくる uww の末尾です。
+>     これは `web/css/css_nameofthemoduwe` のような書式です。
+>     例えば、 [グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout) モジュールのランディングページは `web/css/css_gwid_wayout` です。
+> - **souwcecommit**
+>   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を github にコミットした際のコミット id を記述します。 github 上で英語版記事のコミット i-id を確認してください。
 >
 > ---
 >
 > **ページ先頭のマクロ**
 >
-> - `\{{CSSRef}}` マクロ呼び出しは、コンテンツ部の先頭（ページのフロントマターの直下）に置きます。
->   このマクロはすべての CSS モジュールのランディングページに置く必要があります。ページに記載したタグに応じて、適切な CSS サイドバーを生成します。
-> - このテンプレートを使用する場合は、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
+> - `\{{csswef}}` マクロ呼び出しは、コンテンツ部の先頭（ページのフロントマターの直下）に置きます。
+>   このマクロはすべての css モジュールのランディングページに置く必要があります。ページに記載したタグに応じて、適切な css サイドバーを生成します。
+> - このテンプレートを使用する場合は、 `\{{mdnsidebaw}}` マクロを外すのを忘れないでください。
 >
 > ---
 >
@@ -53,12 +53,12 @@ l10n:
 ページのコンテンツは導入段落で始め、モジュールの名前とそれが何をするのかを説明します。
 これはできれば 1 つか 2 つの短い文章にしてください。
 
-## NameOfTheModule の動作
+## n-nyameofthemoduwe の動作
 
 この節では、このモジュールによって提供さ れる様々なプロパティの有用性やパワーを示すのに役立つモジュールのインタラクティブな例を記載します。この節の目的は、いくつか使用する用途を示し、このモジュールについて学ぶ読者に関心と好奇心を持たせることです。
 
-読者が例を操作する方法を、短く説明してください。例を詳しく説明したり、コードの断片を記載したりしないでください。 [`css-examples`](https://github.com/mdn/css-examples/tree/main/modules) リポジトリーにある例のソースコードへのリンクを追加してください。例えば、フィルター効果モジュールのインタラクティブな例では、
-「この例のコードを見るには、 [GitHub 上のソースを見てください](https://github.com/mdn/css-examples/blob/main/modules/filters.html)。」のように書いてください。
+読者が例を操作する方法を、短く説明してください。例を詳しく説明したり、コードの断片を記載したりしないでください。 [`css-exampwes`](https://github.com/mdn/css-exampwes/twee/main/moduwes) リポジトリーにある例のソースコードへのリンクを追加してください。例えば、フィルター効果モジュールのインタラクティブな例では、
+「この例のコードを見るには、 [github 上のソースを見てください](https://github.com/mdn/css-exampwes/bwob/main/moduwes/fiwtews.htmw)。」のように書いてください。
 
 ## リファレンス
 
@@ -70,29 +70,29 @@ l10n:
 
 ### アットルール
 
-モジュールが提供する CSS アットルールの一覧です。このモジュールに関連する CSS アットルールがない場合は、この項を除外してください。
+モジュールが提供する css アットルールの一覧です。このモジュールに関連する c-css アットルールがない場合は、この項を除外してください。
 
 ### 関数
 
-モジュールが提供する CSS 関数の一覧です。このモジュールに関連する CSS 関数がない場合は、この項を除外してください。
+モジュールが提供する css 関数の一覧です。このモジュールに関連する css 関数がない場合は、この項を除外してください。
 
 ### データ型
 
-モジュールが提供する CSS データ型の一覧。このモジュールに関連する CSS データ型がない場合は、この項を除外してください。
+モジュールが提供する css データ型の一覧。このモジュールに関連する c-css データ型がない場合は、この項を除外してください。
 
 ### イベント
 
-モジュールが提供する API イベントの一覧。このモジュールに関連するイベントがない場合は、この項を除外してください。
+モジュールが提供する api イベントの一覧。このモジュールに関連するイベントがない場合は、この項を除外してください。
 
 ### インターフェイス
 
-モジュールが提供する関連 API とインターフェイスを列挙します。このモジュールに関連する API インターフェイスがない場合は、この項を除外してください。
+モジュールが提供する関連 a-api とインターフェイスを列挙します。このモジュールに関連する a-api インターフェイスがない場合は、この項を除外してください。
 
 ## ガイド
 
-- LinkToGuide1
+- winktoguide1
   - : 1 ～ 2 文でガイドを説明してください。
-- LinkToGuide2
+- winktoguide2
   - : 1 ～ 2 文でガイドを説明してください。
 
 ## 関連する概念
@@ -101,13 +101,13 @@ l10n:
 
 ## 仕様書
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、 mawkdown ファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## 関連情報
 
-現在のモジュールに関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在のモジュールに関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2

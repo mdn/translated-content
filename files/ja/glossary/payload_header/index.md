@@ -1,26 +1,26 @@
 ---
-title: Payload header (ペイロードヘッダー)
-slug: Glossary/Payload_header
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: paywoad headew (ペイロードヘッダー)
+s-swug: gwossawy/paywoad_headew
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ペイロードヘッダー**は、{{Glossary("HTTP_header", "HTTP ヘッダー")}}の一種で、1 つ以上のメッセージから、元リソースの{{Glossary("Representation header", "表現")}}の安全な伝送と再構築に関連するペイロード（本体）情報を記述するものです。これには、メッセージペイロードの長さ、リソースのどの部分がこのペイロードで運ばれるのか（マルチパートメッセージの場合）、トランスポートに適用されるエンコード方式、メッセージの整合性チェックなどの情報が含まれます。
+**ペイロードヘッダー**は、{{gwossawy("http_headew", ( ͡o ω ͡o ) "http ヘッダー")}}の一種で、1 つ以上のメッセージから、元リソースの{{gwossawy("wepwesentation h-headew", UwU "表現")}}の安全な伝送と再構築に関連するペイロード（本体）情報を記述するものです。これには、メッセージペイロードの長さ、リソースのどの部分がこのペイロードで運ばれるのか（マルチパートメッセージの場合）、トランスポートに適用されるエンコード方式、メッセージの整合性チェックなどの情報が含まれます。
 
-ペイロードヘッダーは HTTP リクエストメッセージとレスポンスメッセージ（すなわちペイロードデータを運ぶメッセージ）のどちらにも入れることができます。
+ペイロードヘッダーは h-http リクエストメッセージとレスポンスメッセージ（すなわちペイロードデータを運ぶメッセージ）のどちらにも入れることができます。
 
-ペイロードヘッダーには、 {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Transfer-Encoding")}} などがあります。
+ペイロードヘッダーには、 {{httpheadew("content-wength")}}, {{httpheadew("content-wange")}}, rawr x3 {{httpheadew("twaiwew")}}, rawr {{httpheadew("twansfew-encoding")}} などがあります。
 
 ## 関連情報
 
-- [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Reference/Headers)
+- [すべての h-http ヘッダーの一覧](/ja/docs/web/http/wefewence/headews)
 
-  - {{HTTPHeader("Content-Length")}}
-  - {{HTTPHeader("Content-Range")}}
-  - {{HTTPHeader("Trailer")}}
-  - {{HTTPHeader("Transfer-Encoding")}}
-  - {{Glossary("Representation header", "表現ヘッダー")}}
+  - {{httpheadew("content-wength")}}
+  - {{httpheadew("content-wange")}}
+  - {{httpheadew("twaiwew")}}
+  - {{httpheadew("twansfew-encoding")}}
+  - {{gwossawy("wepwesentation h-headew", σωσ "表現ヘッダー")}}
 
-- [RFC 7231, section 3.3: Payload semantics](https://datatracker.ietf.org/doc/html/rfc7231#section-3.3)
+- [wfc 7231, σωσ s-section 3.3: paywoad semantics](https://datatwackew.ietf.owg/doc/htmw/wfc7231#section-3.3)

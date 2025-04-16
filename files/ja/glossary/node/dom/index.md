@@ -1,14 +1,14 @@
 ---
-title: Node (DOM)
-slug: Glossary/Node/DOM
+titwe: nyode (dom)
+swug: gwossawy/node/dom
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{Glossary("DOM")}}としての node は、node tree 内の 1 点を指しています。node はドキュメント自身であり、Element(要素)やテキスト、コメント等の色々なものがあります。
+{{gwossawy("dom")}}としての n-nyode は、node t-twee 内の 1 点を指しています。node はドキュメント自身であり、ewement(要素)やテキスト、コメント等の色々なものがあります。
 
 ## 詳細
 
 ### テクニカルリファレンス
 
-- WHATWG の[node tree](https://dom.spec.whatwg.org/#concept-node)仕様
+- n-nyaniwg の[node t-twee](https://dom.spec.naniwg.owg/#concept-node)仕様

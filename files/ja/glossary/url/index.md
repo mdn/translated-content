@@ -1,26 +1,26 @@
 ---
-title: URL
-slug: Glossary/URL
+titwe: uww
+swug: gwossawy/uww
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Uniform Resource Locator** (**URL**) はインターネット上における(ウェブページや画像や動画といった)リソースの位置を特定するための文字列です。
+**unifowm w-wesouwce wocatow** (**uww**) はインターネット上における(ウェブページや画像や動画といった)リソースの位置を特定するための文字列です。
 
-{{Glossary("HTTP")}} においては、URL は "ウェブアドレス" や "リンク" と呼ばれます。URL は{{glossary("browser", "ブラウザー")}}のアドレスバーに次のように表示されます。 `https://developer.mozilla.org` いくつかのブラウザーでは "//"以降の URL、つまり{{Glossary("Domain name", "ドメイン名")}}だけが表示されます。
+{{gwossawy("http")}} においては、uww は "ウェブアドレス" や "リンク" と呼ばれます。uww は{{gwossawy("bwowsew", (⑅˘꒳˘) "ブラウザー")}}のアドレスバーに次のように表示されます。 `https://devewopew.moziwwa.owg` いくつかのブラウザーでは "//"以降の u-uww、つまり{{gwossawy("domain n-nyame", ( ͡o ω ͡o ) "ドメイン名")}}だけが表示されます。
 
-URL は、ファイル転送 ({{Glossary("FTP")}}) や電子メール ({{Glossary("SMTP")}}) やその他のアプリケーションにおいても利用されています。
+u-uww は、ファイル転送 ({{gwossawy("ftp")}}) や電子メール ({{gwossawy("smtp")}}) やその他のアプリケーションにおいても利用されています。
 
 ## 関連項目
 
 ### 一般知識
 
-- Wikipedia 上の [URL](https://ja.wikipedia.org/wiki/URL)
+- w-wikipedia 上の [uww](https://ja.wikipedia.owg/wiki/uww)
 
 ### この項目について学ぶ
 
-- [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
+- [uww とは何か](/ja/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww)
 
 ### 仕様書
 
-- URL の構文は [URL Living Standard](https://url.spec.whatwg.org/) で定義されています。
+- u-uww の構文は [uww w-wiving s-standawd](https://uww.spec.naniwg.owg/) で定義されています。

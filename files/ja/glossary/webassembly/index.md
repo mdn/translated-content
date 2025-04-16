@@ -1,16 +1,16 @@
 ---
-title: WebAssembly
-slug: Glossary/WebAssembly
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: webassembwy
+swug: gwossawy/webassembwy
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebAssembly** （略して _Wasm_）は、オープンな{{Glossary("binary", "バイナリー")}}プログラミング形式です。最近のウェブ{{Glossary("Browser", "ブラウザー")}}で動作します。パフォーマンスを高めたり、ウェブページのための新しい機能を提供したりします。
+**webassembwy** （略して _wasm_）は、オープンな{{gwossawy("binawy", OwO "バイナリー")}}プログラミング形式です。最近のウェブ{{gwossawy("bwowsew", 🥺 "ブラウザー")}}で動作します。パフォーマンスを高めたり、ウェブページのための新しい機能を提供したりします。
 
 ## 関連情報
 
-- [WebAssembly](https://ja.wikipedia.org/wiki/WebAssembly) （ウィキペディア）
-- [Official website](https://webassembly.org/)
-- [WebAssembly](/ja/docs/WebAssembly) (MDN)
+- [webassembwy](https://ja.wikipedia.owg/wiki/webassembwy) （ウィキペディア）
+- [officiaw w-website](https://webassembwy.owg/)
+- [webassembwy](/ja/docs/webassembwy) (mdn)

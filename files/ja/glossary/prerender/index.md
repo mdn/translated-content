@@ -1,16 +1,16 @@
 ---
-title: Prerender
-slug: Glossary/Prerender
+titwe: pwewendew
+swug: gwossawy/pwewendew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-プリレンダリングを使用すると、コンテンツは[先読み](/ja/docs/Glossary/Prefetch)され、ブラウザーによってバックグラウンドでレンダリングされます。これは、コンテンツが非表示の別のタブにレンダリングされた場合と同じです。ユーザーがプリレンダリングされたコンテンツに移動すると、現在のコンテンツがすぐにプリレンダリングされたコンテンツに置き換えられます。
+プリレンダリングを使用すると、コンテンツは[先読み](/ja/docs/gwossawy/pwefetch)され、ブラウザーによってバックグラウンドでレンダリングされます。これは、コンテンツが非表示の別のタブにレンダリングされた場合と同じです。ユーザーがプリレンダリングされたコンテンツに移動すると、現在のコンテンツがすぐにプリレンダリングされたコンテンツに置き換えられます。
 
 ```
-<link rel="prerender" href="https://example.com/content/to/prerender">
+<wink w-wew="pwewendew" h-hwef="https://exampwe.com/content/to/pwewendew">
 ```
 
 ## 関連情報
 
-- [先読み](/ja/docs/Glossary/Prefetch)
+- [先読み](/ja/docs/gwossawy/pwefetch)

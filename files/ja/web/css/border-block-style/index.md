@@ -1,75 +1,75 @@
 ---
-title: border-block-style
-slug: Web/CSS/border-block-style
+titwe: bowdew-bwock-stywe
+swug: w-web/css/bowdew-bwock-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-block-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}} と {{cssxref("border-bottom-style")}}、または {{cssxref("border-left-style")}} と {{cssxref("border-right-style")}} のどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`bowdew-bwock-stywe`** は [css](/ja/docs/web/css) のプロパティで、要素の論理的なブロック方向の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxwef("bowdew-top-stywe")}} と {{cssxwef("bowdew-bottom-stywe")}}、または {{cssxwef("bowdew-weft-stywe")}} と {{cssxwef("bowdew-wight-stywe")}} のどちらかに対応し、どちらに対応するかは {{cssxwef("wwiting-mode")}}, rawr x3 {{cssxwef("diwection")}}, (U ﹏ U) {{cssxwef("text-owientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: border-block-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-bwock-stywe")}}
 
-```css interactive-example-choice
-border-block-style: dotted;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-stywe: d-dotted;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-style: dotted;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-stywe: dotted;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-style: groove;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+bowdew-bwock-stywe: g-gwoove;
+wwiting-mode: howizontaw-tb;
+diwection: w-wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a-a box with a bowdew awound it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
-  unicode-bidi: bidi-override;
+  h-height: 100px;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-他の方向の境界については、 {{cssxref("border-inline-style")}} によって、 {{cssxref("border-inline-start-style")}} と {{cssxref("border-inline-end-style")}} の両方を設定することができます。
+他の方向の境界については、 {{cssxwef("bowdew-inwine-stywe")}} によって、 {{cssxwef("bowdew-inwine-stawt-stywe")}} と {{cssxwef("bowdew-inwine-end-stywe")}} の両方を設定することができます。
 
 ## 構文
 
 ```css
-/* <'border-style'> 値 */
-border-block-style: dashed;
-border-block-style: dotted;
-border-block-style: groove;
+/* <'bowdew-stywe'> 値 */
+bowdew-bwock-stywe: dashed;
+bowdew-bwock-stywe: d-dotted;
+bowdew-bwock-stywe: g-gwoove;
 
 /* グローバル値 */
-border-block-style: inherit;
-border-block-style: initial;
-border-block-style: revert;
-border-block-style: unset;
+b-bowdew-bwock-stywe: i-inhewit;
+bowdew-bwock-stywe: i-initiaw;
+bowdew-bwock-stywe: wevewt;
+b-bowdew-bwock-stywe: unset;
 ```
 
 ### 値
 
-- `<'border-style'>`
-  - : 境界のスタイルです。 {{cssxref("border-style")}} を参照してください。
+- `<'bowdew-stywe'>`
+  - : 境界のスタイルです。 {{cssxwef("bowdew-stywe")}} を参照してください。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -77,45 +77,45 @@ border-block-style: unset;
 
 ## 例
 
-<h3 id="Dashed_border_with_vertical_text">縦書きでの破線の境界</h3>
+<h3 id="dashed_bowdew_with_vewticaw_text">縦書きでの破線の境界</h3>
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 5px solid blue;
-  border-block-style: dashed;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  b-bowdew: 5px s-sowid bwue;
+  bowdew-bwock-stywe: dashed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Dashed_border_with_vertical_text", 140, 140)}}
+{{embedwivesampwe("dashed_bowdew_with_vewticaw_text", (⑅˘꒳˘) 140, òωó 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} のうちの 1 つに対応します
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- このプロパティは {{cssxwef("bowdew-top-stywe")}}, ʘwʘ {{cssxwef("bowdew-wight-stywe")}}, /(^•ω•^) {{cssxwef("bowdew-bottom-stywe")}}, ʘwʘ {{cssxwef("bowdew-weft-stywe")}} のうちの 1 つに対応します
+- {{cssxwef("wwiting-mode")}}, σωσ {{cssxwef("diwection")}}, OwO {{cssxwef("text-owientation")}}

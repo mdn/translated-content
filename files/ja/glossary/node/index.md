@@ -1,14 +1,14 @@
 ---
-title: Node
-slug: Glossary/Node
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: nyode
+swug: gwossawy/node
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **node** という用語は文脈によっていくつかの意味を持ちます。下記の用語を指しているかもしれません。
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
-この用語は {{Glossary("Node.js")}} について話すときにも使われます。
+この用語は {{gwossawy("node.js")}} について話すときにも使われます。

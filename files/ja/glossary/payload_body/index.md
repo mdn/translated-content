@@ -1,34 +1,34 @@
 ---
-title: Payload body
-slug: Glossary/Payload_body
+titwe: paywoad body
+swug: gwossawy/paywoad_body
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-HTTP メッセージの*ペイロード本文*は、HTTP メッセージ本文があれば、その送信時に送られるデータの {{HTTPHeader("Transfer-Encoding","Transfer-Encoding")}} が適用される前の*情報* ("ペイロード") 部分です。 Transfer-Encoding が使用されない限り、 _ペイロード本文_ と _メッセージ本文_ は同じものです。
+h-http メッセージの*ペイロード本文*は、http メッセージ本文があれば、その送信時に送られるデータの {{httpheadew("twansfew-encoding","twansfew-encoding")}} が適用される前の*情報* ("ペイロード") 部分です。 t-twansfew-encoding が使用されない限り、 _ペイロード本文_ と _メッセージ本文_ は同じものです。
 
-例えば、このレスポンスではメッセージ本文は "Mozilla Developer Network" というペイロード本文を持っているだけです。
+例えば、このレスポンスではメッセージ本文は "moziwwa d-devewopew n-nyetwowk" というペイロード本文を持っているだけです。
 
-```plain
-HTTP/1.1 200 OK
-Content-Type: text/plain
-Mozilla Developer Network
+```pwain
+h-http/1.1 200 o-ok
+content-type: t-text/pwain
+m-moziwwa devewopew nyetwowk
 ```
 
-対して、下記レスポンスは _transfer encoding_ を使ってペイロード本文をチャンクに変換しています。ペイロード本文（情報）は同じく "Mozilla Developer Network" を送信しますが、メッセージ本文には、チャンクを分離するための追加のデータが含まれています。
+対して、下記レスポンスは _twansfew encoding_ を使ってペイロード本文をチャンクに変換しています。ペイロード本文（情報）は同じく "moziwwa devewopew nyetwowk" を送信しますが、メッセージ本文には、チャンクを分離するための追加のデータが含まれています。
 
-```plain
-HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-\r\n
+```pwain
+h-http/1.1 200 ok
+content-type: text/pwain
+twansfew-encoding: c-chunked
+7\w\n
+moziwwa\w\n
+9\w\n
+d-devewopew\w\n
+7\w\n
+netwowk\w\n
+0\w\n
+\w\n
 ```
 
-詳しくは、 [RFC 7230, section 3.3: Message Body](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3) と [RFC 7230, section 3.3.1: Transfer-Encoding](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.1) を参照してください。
+詳しくは、 [wfc 7230, ^^;; section 3.3: message body](https://datatwackew.ietf.owg/doc/htmw/wfc7230#section-3.3) と [wfc 7230, >_< s-section 3.3.1: twansfew-encoding](https://datatwackew.ietf.owg/doc/htmw/wfc7230#section-3.3.1) を参照してください。

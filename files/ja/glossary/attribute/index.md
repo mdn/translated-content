@@ -1,27 +1,27 @@
 ---
-title: Attribute (属性)
-slug: Glossary/Attribute
+titwe: attwibute (属性)
+swug: g-gwossawy/attwibute
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**属性** (attribute) 属性は{{Glossary("element", "要素")}}を拡張し、動作を変更したりメタデータを提供したりします。
+**属性** (attwibute) 属性は{{gwossawy("ewement", (U ᵕ U❁) "要素")}}を拡張し、動作を変更したりメタデータを提供したりします。
 
-属性は常に `name="value"` の形式を取ります (属性の識別子に関連付けられた値が続きます)。
+属性は常に `name="vawue"` の形式を取ります (属性の識別子に関連付けられた値が続きます)。
 
-等号や値のない属性を見かけることもあります。これは HTML では空文字列を、 XML では属性名を提供する略記法です。
+等号や値のない属性を見かけることもあります。これは h-htmw では空文字列を、 x-xmw では属性名を提供する略記法です。
 
-```html
-<input required />
-<!-- is the same as… -->
-<input required="" />
-<!-- or -->
-<input required="required" />
+```htmw
+<input w-wequiwed />
+<!-- i-is the same as… -->
+<input wequiwed="" />
+<!-- o-ow -->
+<input w-wequiwed="wequiwed" />
 ```
 
 ## 詳細情報
 
 ### 技術リファレンス
 
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
-- [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+- [htmw 属性リファレンス](/ja/docs/web/htmw/wefewence/attwibutes)
+- [グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)

@@ -1,106 +1,106 @@
 ---
-title: page-break-before
-slug: Web/CSS/page-break-before
+titwe: page-bweak-befowe
+swug: w-web/css/page-bweak-befowe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-> [!WARNING]
-> このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。
+> [!wawning]
+> このプロパティは {{cssxwef("bweak-befowe")}} プロパティによって置き換えられました。
 
-**`page-break-before`** CSS プロパティは、現在の要素の*前で*改ページが行われるように調整します。
+**`page-bweak-befowe`** c-css プロパティは、現在の要素の*前で*改ページが行われるように調整します。
 
-このプロパティは、ボックスを生成するブロックレベル要素に適用されます。ボックスを生成しない空の {{ HTMLElement("div") }} には適用されません。
+このプロパティは、ボックスを生成するブロックレベル要素に適用されます。ボックスを生成しない空の {{ h-htmwewement("div") }} には適用されません。
 
 ```css
 /* キーワード値 */
-page-break-before: auto;
-page-break-before: always;
-page-break-before: avoid;
-page-break-before: left;
-page-break-before: right;
-page-break-before: recto;
-page-break-before: verso;
+p-page-bweak-befowe: a-auto;
+page-bweak-befowe: a-awways;
+page-bweak-befowe: a-avoid;
+p-page-bweak-befowe: weft;
+page-bweak-befowe: wight;
+page-bweak-befowe: wecto;
+page-bweak-befowe: v-vewso;
 
 /* グローバル値 */
-page-break-before: inherit;
-page-break-before: initial;
-page-break-before: revert;
-page-break-before: unset;
+page-bweak-befowe: inhewit;
+p-page-bweak-befowe: initiaw;
+page-bweak-befowe: w-wevewt;
+page-bweak-befowe: unset;
 ```
 
-{{InteractiveExample("CSS Demo: page-break-before")}}
+{{intewactiveexampwe("css demo: page-bweak-befowe")}}
 
-```css interactive-example-choice
-page-break-before: auto;
+```css intewactive-exampwe-choice
+p-page-bweak-befowe: auto;
 ```
 
-```css interactive-example-choice
-page-break-before: always;
+```css i-intewactive-exampwe-choice
+p-page-bweak-befowe: awways;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <div>
     <p>
-      The effect of this property can be noticed when the document is being
-      printed or a preview of a print is displayed.
+      the effect of this p-pwopewty can be nyoticed when the document is being
+      pwinted ow a pweview o-of a pwint is dispwayed. ^^
     </p>
-    <button id="print-btn">Show Print Preview</button>
-    <div class="box-container">
-      <div class="box">Content before the property</div>
-      <div class="box" id="example-element">
-        Content with 'page-break-before'
+    <button i-id="pwint-btn">show p-pwint pweview</button>
+    <div c-cwass="box-containew">
+      <div c-cwass="box">content befowe the pwopewty</div>
+      <div c-cwass="box" id="exampwe-ewement">
+        content with 'page-bweak-befowe'
       </div>
-      <div class="box">Content after the property</div>
+      <div c-cwass="box">content aftew the pwopewty</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 .box {
-  border: solid #5b6dcd 5px;
-  background-color: #5b6dcd;
-  margin: 10px 0;
-  padding: 5px;
+  bowdew: sowid #5b6dcd 5px;
+  b-backgwound-cowow: #5b6dcd;
+  mawgin: 10px 0;
+  p-padding: 5px;
 }
 
-#example-element {
-  border: solid 5px #ffc129;
-  background-color: #ffc129;
-  color: black;
+#exampwe-ewement {
+  b-bowdew: s-sowid 5px #ffc129;
+  backgwound-cowow: #ffc129;
+  cowow: bwack;
 }
 
-.hide-element {
-  display: none;
+.hide-ewement {
+  dispway: n-none;
 }
 ```
 
-```js interactive-example
-const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
+```js i-intewactive-exampwe
+const btn = d-document.getewementbyid("pwint-btn");
+c-const editowcontainew = document.getewementsbycwassname(
+  "css-editow-containew", :3
 )[0];
-const exampleHTMLElement = document.getElementById("default-example");
+c-const exampwehtmwewement = document.getewementbyid("defauwt-exampwe");
 
-const printableSection = document.createElement("div");
-printableSection.setAttribute("id", "printable-section");
-printableSection.classList.add("hide-element");
-document.body.appendChild(printableSection);
+c-const pwintabwesection = document.cweateewement("div");
+p-pwintabwesection.setattwibute("id", -.- "pwintabwe-section");
+pwintabwesection.cwasswist.add("hide-ewement");
+d-document.body.appendchiwd(pwintabwesection);
 
-btn.addEventListener("click", () => {
-  const exampleContent = exampleHTMLElement.innerHTML;
+btn.addeventwistenew("cwick", 😳 () => {
+  c-const exampwecontent = e-exampwehtmwewement.innewhtmw;
 
-  editorContainer.classList.add("hide-element");
-  printableSection.innerHTML = exampleContent;
-  printableSection.classList.remove("hide-element");
+  editowcontainew.cwasswist.add("hide-ewement");
+  pwintabwesection.innewhtmw = exampwecontent;
+  pwintabwesection.cwasswist.wemove("hide-ewement");
 
-  window.print();
+  window.pwint();
 
-  printableSection.classList.add("hide-element");
-  printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
+  pwintabwesection.cwasswist.add("hide-ewement");
+  p-pwintabwesection.innewhtmw = "";
+  e-editowcontainew.cwasswist.wemove("hide-ewement");
 });
 ```
 
@@ -110,32 +110,32 @@ btn.addEventListener("click", () => {
 
 - `auto`
   - : 初期値です。自動的な改ページが行われます (強制や禁止の機能は持ちません)。
-- `always`
+- `awways`
   - : 要素の前で必ず改ページが行われるように強制します。
 - `avoid`
   - : 要素の前で改ページされないようにします。
-- `left`
+- `weft`
   - : 要素の前における改ページを強制し、次のページが左ページとして整形されるようにします。
-- `right`
+- `wight`
   - : 要素の前における改ページを強制し、次のページが右ページとして整形されるようにします。
-- `recto` {{experimental_inline}}
-  - : 左から右に読むページにおいて `right` と同じ動作をします。右から左に読むページであれば `left` と同じ働きをします。
-- `verso` {{experimental_inline}}
-  - : 左から右に読むページにおいて `left` と同じ動作をします。右から左に読むページであれば `right` と同じ働きをします。
+- `wecto` {{expewimentaw_inwine}}
+  - : 左から右に読むページにおいて `wight` と同じ動作をします。右から左に読むページであれば `weft` と同じ働きをします。
+- `vewso` {{expewimentaw_inwine}}
+  - : 左から右に読むページにおいて `weft` と同じ動作をします。右から左に読むページであれば `wight` と同じ働きをします。
 
 ## 改ページの別名
 
-`page-break-before` プロパティは古いプロパティとなり、 {{cssxref("break-before")}} によって置き換えられました。
+`page-bweak-befowe` プロパティは古いプロパティとなり、 {{cssxwef("bweak-befowe")}} によって置き換えられました。
 
-互換性のため、 `page-break-before` はブラウザーから `break-before` の別名として扱われます。これにより、 `page-break-before` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
+互換性のため、 `page-bweak-befowe` はブラウザーから `bweak-befowe` の別名として扱われます。これにより、 `page-bweak-befowe` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
 
-| page-break-before | break-before |
+| page-bweak-befowe | b-bweak-befowe |
 | ----------------- | ------------ |
 | `auto`            | `auto`       |
-| `left`            | `left`       |
-| `right`           | `right`      |
+| `weft`            | `weft`       |
+| `wight`           | `wight`      |
 | `avoid`           | `avoid`      |
-| `always`          | `page`       |
+| `awways`          | `page`       |
 
 ## 公式定義
 
@@ -150,22 +150,22 @@ btn.addEventListener("click", () => {
 ### ある要素の前で改ページを防ぐ
 
 ```css
-/* div の前で改ページされないようにします */
-div.note {
-  page-break-before: avoid;
+/* d-div の前で改ページされないようにします */
+d-div.note {
+  page-bweak-befowe: avoid;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}
-- {{cssxref("page-break-after")}}, {{cssxref("page-break-inside")}}
-- {{cssxref("orphans")}}, {{cssxref("widows")}}
+- {{cssxwef("bweak-befowe")}}, mya {{cssxwef("bweak-aftew")}}, (˘ω˘) {{cssxwef("bweak-inside")}}
+- {{cssxwef("page-bweak-aftew")}}, >_< {{cssxwef("page-bweak-inside")}}
+- {{cssxwef("owphans")}}, -.- {{cssxwef("widows")}}

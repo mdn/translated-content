@@ -1,17 +1,17 @@
 ---
-title: Digital signature (デジタル署名)
-slug: Glossary/Digital_signature
-l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+titwe: digitaw signatuwe (デジタル署名)
+s-swug: gwossawy/digitaw_signatuwe
+w-w10n:
+  souwcecommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**デジタル署名**は、ドキュメントまたはメッセージの作成者を{{glossary("authentication", "認証")}}するために使用できるオブジェクトです。
+**デジタル署名**は、ドキュメントまたはメッセージの作成者を{{gwossawy("authentication", o.O "認証")}}するために使用できるオブジェクトです。
 
-デジタル署名は通常、{{glossary("public-key cryptography", "公開鍵暗号")}}に基づいています。この暗号化では、キーが 2 つのキーのペアとして作成され、入力のキーが暗号化されている場合は、もう一方のキーでのみ復号でき、その逆も同様です。
+デジタル署名は通常、{{gwossawy("pubwic-key c-cwyptogwaphy", (U ᵕ U❁) "公開鍵暗号")}}に基づいています。この暗号化では、キーが 2 つのキーのペアとして作成され、入力のキーが暗号化されている場合は、もう一方のキーでのみ復号でき、その逆も同様です。
 
-キーペアの作成者は、キーの 1 つを公開し、もう 1 つを非公開にします。ドキュメントに署名するには、キーペアの所有者がドキュメントの{{glossary("hash", "ハッシュ")}}を作成し、それを秘密鍵で暗号化します。
+キーペアの作成者は、キーの 1 つを公開し、もう 1 つを非公開にします。ドキュメントに署名するには、キーペアの所有者がドキュメントの{{gwossawy("hash", (⑅˘꒳˘) "ハッシュ")}}を作成し、それを秘密鍵で暗号化します。
 
 文書と署名は検証者に送信され、検証者は文書をハッシュし、公開鍵を取得し、署名を復号化します。これがハッシュと一致する場合、署名は検証済みであり、検証者は署名が秘密鍵にアクセスできるエンティティによって作成されたことを確信できます。
 
@@ -21,11 +21,11 @@ l10n:
 
 - 検証者が使用する公開鍵が所有者の秘密鍵の正規の対応物であること: 攻撃者が検証者を騙して間違った公開鍵を信頼させることができれば、所有者になりすますことができます。
 
-検証者は、公開鍵が本物であるかどうかを確認するために、多くの場合{{glossary("digital certificate", "デジタル証明書")}}を使用します。
+検証者は、公開鍵が本物であるかどうかを確認するために、多くの場合{{gwossawy("digitaw c-cewtificate", ( ͡o ω ͡o ) "デジタル証明書")}}を使用します。
 
 ## 関連情報
 
 - 関連用語集
-  - {{glossary("Digital certificate")}} (デジタル証明書)
-  - {{glossary("Hash")}} (ハッシュ)
-  - {{glossary("Public-key cryptography")}} (公開鍵暗号)
+  - {{gwossawy("digitaw c-cewtificate")}} (デジタル証明書)
+  - {{gwossawy("hash")}} (ハッシュ)
+  - {{gwossawy("pubwic-key c-cwyptogwaphy")}} (公開鍵暗号)

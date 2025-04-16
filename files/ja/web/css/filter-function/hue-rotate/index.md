@@ -1,65 +1,65 @@
 ---
-title: hue-rotate()
-slug: Web/CSS/filter-function/hue-rotate
-l10n:
-  sourceCommit: 5026c14bd6d2b6b377289aadac7eceae9282e806
+titwe: hue-wotate()
+swug: web/css/fiwtew-function/hue-wotate
+w-w10n:
+  souwcecommit: 5026c14bd6d2b6b377289aadac7eceae9282e806
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`hue-rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素およびその中身のコンテンツの[色相環](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%9B%B8)を回転させます。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`hue-wotate()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、要素およびその中身のコンテンツの[色相環](https://ja.wikipedia.owg/wiki/%e8%89%b2%e7%9b%b8)を回転させます。結果は {{cssxwef("&wt;fiwtew-function&gt;")}} です。
 
-> **メモ:** `hue-rotate()` は RGB 色に対する行列演算として定義されています。これは実際には色を HSL モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
+> **メモ:** `hue-wotate()` は w-wgb 色に対する行列演算として定義されています。これは実際には色を h-hsw モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
 
-{{InteractiveExample("CSS Demo: hue-rotate()")}}
+{{intewactiveexampwe("css d-demo: h-hue-wotate()")}}
 
-```css interactive-example-choice
-filter: hue-rotate(0);
+```css i-intewactive-exampwe-choice
+f-fiwtew: hue-wotate(0);
 ```
 
-```css interactive-example-choice
-filter: hue-rotate(90deg);
+```css i-intewactive-exampwe-choice
+fiwtew: hue-wotate(90deg);
 ```
 
-```css interactive-example-choice
-filter: hue-rotate(-0.25turn);
+```css intewactive-exampwe-choice
+fiwtew: hue-wotate(-0.25tuwn);
 ```
 
-```css interactive-example-choice
-filter: hue-rotate(3.142rad);
+```css intewactive-exampwe-choice
+f-fiwtew: hue-wotate(3.142wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
 ## 構文
 
-`hue-rotate()` 関数は、適用された要素に色相回転を適用します。
+`hue-wotate()` 関数は、適用された要素に色相回転を適用します。
 
 ```css
-hue-rotate(angle)
+hue-wotate(angwe)
 ```
 
 ### 引数
 
-- `angle`
-  - : 入力サンプルの色相の相対的な変化量を、 {{cssxref("&lt;angle&gt;")}} で指定します。 `0deg` は入力を変更しないままにします。正の回転角は色相の値を増加させるのに対し、負の回転角は色相の値を減少させます。{{Glossary("interpolation","補間")}}の初期値は `0` です。最小値または最大値はありません。 `360deg` を超える値の効果は、 `hue-rotate(Ndeg)` とした場合、 `N` を 360 で割った余りと等価です。
+- `angwe`
+  - : 入力サンプルの色相の相対的な変化量を、 {{cssxwef("&wt;angwe&gt;")}} で指定します。 `0deg` は入力を変更しないままにします。正の回転角は色相の値を増加させるのに対し、負の回転角は色相の値を減少させます。{{gwossawy("intewpowation","補間")}}の初期値は `0` です。最小値または最大値はありません。 `360deg` を超える値の効果は、 `hue-wotate(ndeg)` とした場合、 `n` を 360 で割った余りと等価です。
 
-CSS のデータ型 `<angle>` は、度、グラディアン、ラジアン、回転で表された角度の値を表します。次のものは同等です。
+c-css のデータ型 `<angwe>` は、度、グラディアン、ラジアン、回転で表された角度の値を表します。次のものは同等です。
 
 ```css
-hue-rotate(-180deg)
-hue-rotate(540deg)
-hue-rotate(200grad)
-hue-rotate(3.14159rad)
-hue-rotate(0.5turn)
+hue-wotate(-180deg)
+h-hue-wotate(540deg)
+h-hue-wotate(200gwad)
+hue-wotate(3.14159wad)
+hue-wotate(0.5tuwn)
 ```
 
 ### 形式文法
@@ -68,127 +68,127 @@ hue-rotate(0.5turn)
 
 ## 例
 
-### backdrop-filter プロパティで
+### backdwop-fiwtew プロパティで
 
-この例では、 `hue-rotate()` フィルターを CSS プロパティの `backdrop-filter` を使用して段落に適用し、`<p>` の背後の領域の色を変化させています。
+この例では、 `hue-wotate()` フィルターを css プロパティの `backdwop-fiwtew` を使用して段落に適用し、`<p>` の背後の領域の色を変化させています。
 
 ```css
-.container {
-  background: url(image.jpg) no-repeat left / contain #011296;
+.containew {
+  b-backgwound: uww(image.jpg) no-wepeat weft / contain #011296;
 }
 p {
-  backdrop-filter: hue-rotate(240deg);
+  backdwop-fiwtew: h-hue-wotate(240deg);
   text-shadow: 2px 2px #011296;
 }
 ```
 
-```css hidden
-.container {
-  padding: 3rem;
-  width: 30rem;
+```css h-hidden
+.containew {
+  p-padding: 3wem;
+  w-width: 30wem;
 }
-p {
-  padding: 0.5rem;
-  color: #ffffff;
-  font-size: 2rem;
-  font-family: sans-serif;
+p-p {
+  padding: 0.5wem;
+  cowow: #ffffff;
+  font-size: 2wem;
+  f-font-famiwy: sans-sewif;
 }
 ```
 
-```html-nolint hidden
+```htmw-nowint hidden
 <div
-  class="container"
-  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
+  cwass="containew"
+  stywe="backgwound-image: u-uww('https://mdn.github.io/shawed-assets/images/exampwes/wisten_to_bwack_women.jpg');">
   <p>
     画像上のテキストは、ドロップシャドウがあっても読みにくく、アクセシビリティがない場合があります。
   </p>
 </div>
 ```
 
-{{EmbedLiveSample('With_the_backdrop-filter_property','100%','280')}}
+{{embedwivesampwe('with_the_backdwop-fiwtew_pwopewty','100%','280')}}
 
-### filter プロパティで
+### fiwtew プロパティで
 
-この例では、 `hue-rotate()` フィルターを CSS プロパティの `filter` を使用して適用し、色のずらしをコンテンツ、境界線、背景画像を含む要素全体に追加します。
+この例では、 `hue-wotate()` フィルターを css プロパティの `fiwtew` を使用して適用し、色のずらしをコンテンツ、境界線、背景画像を含む要素全体に追加します。
 
 ```css
 p {
-  filter: hue-rotate(-60deg);
-  text-shadow: 2px 2px blue;
-  background-color: magenta;
-  color: goldenrod;
-  border: 1em solid rebeccapurple;
+  fiwtew: hue-wotate(-60deg);
+  text-shadow: 2px 2px bwue;
+  b-backgwound-cowow: magenta;
+  c-cowow: gowdenwod;
+  b-bowdew: 1em s-sowid webeccapuwpwe;
   box-shadow:
-    inset -5px -5px red,
-    5px 5px yellow;
+    inset -5px -5px wed, OwO
+    5px 5px y-yewwow;
 }
 ```
 
-```css hidden
+```css h-hidden
 p {
-  padding: 0.5rem;
-  font-size: 2rem;
-  font-family: sans-serif;
+  padding: 0.5wem;
+  font-size: 2wem;
+  f-font-famiwy: s-sans-sewif;
   width: 85vw;
 }
 ```
 
-```html-nolint hidden
+```htmw-nowint h-hidden
 <p>この例を書いた人はデザイナーではありません。幸いにも。</p>
 ```
 
-{{EmbedLiveSample('With_the_filter_property','100%','220')}}
+{{embedwivesampwe('with_the_fiwtew_pwopewty','100%','220')}}
 
-### url() と SVG の hue-rotate フィルターで
+### uww() と s-svg の hue-wotate フィルターで
 
-SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feColorMatrix")}} プリミティブの `hueRotate` 型は、同様の効果を提供します。次のものが指定されたとします。
+svg の {{svgewement("fiwtew")}} 要素は、カスタムフィルター効果を定義するために使用でき、 [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) で参照することができます。 `<fiwtew>` の {{svgewement("fecowowmatwix")}} プリミティブの `huewotate` 型は、同様の効果を提供します。次のものが指定されたとします。
 
 ```svg
-<filter id="filterID">
-  <feColorMatrix type="hueRotate" values="90" />
-</filter>
+<fiwtew id="fiwtewid">
+  <fecowowmatwix t-type="huewotate" vawues="90" />
+</fiwtew>
 ```
 
 これらの値は同じ結果をもたらします。
 
 ```css
-filter: hue-rotate(90deg); /* 90deg 回転 */
-filter: url(#filterID); /* 埋め込み SVG で */
-filter: url(folder/fileName.svg#filterID); /* 外部 SVG フィルター定義 */
+fiwtew: h-hue-wotate(90deg); /* 90deg 回転 */
+fiwtew: u-uww(#fiwtewid); /* 埋め込み s-svg で */
+fiwtew: uww(fowdew/fiwename.svg#fiwtewid); /* 外部 svg フィルター定義 */
 ```
 
-この例では、 3 つの画像を表示させています。 `hue-rotate()` フィルター関数を適用した画像、同等の `url()` フィルターを適用した画像、比較用の元画像です。
+この例では、 3 つの画像を表示させています。 `hue-wotate()` フィルター関数を適用した画像、同等の `uww()` フィルターを適用した画像、比較用の元画像です。
 
-```html hidden
-<table cellpadding="5">
+```htmw hidden
+<tabwe cewwpadding="5">
   <thead>
-    <tr>
-      <th><code>hue-rotate()</code></th>
-      <th><code>url()</code></th>
+    <tw>
+      <th><code>hue-wotate()</code></th>
+      <th><code>uww()</code></th>
       <th>元の画像</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <img
-          style="filter: hue-rotate(90deg)"
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="色を回転させたプライドフラッグ" />
+          stywe="fiwtew: hue-wotate(90deg)"
+          swc="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+          a-awt="色を回転させたプライドフラッグ" />
       </td>
       <td>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 220 220"
-          color-interpolation-filters="sRGB"
-          height="220"
-          width="220">
-          <filter id="hue-rotate">
-            <feColorMatrix type="hueRotate" values="90" />
-          </filter>
+          x-xmwns="http://www.w3.owg/2000/svg"
+          viewbox="0 0 220 220"
+          c-cowow-intewpowation-fiwtews="swgb"
+          h-height="220"
+          w-width="220">
+          <fiwtew id="hue-wotate">
+            <fecowowmatwix type="huewotate" vawues="90" />
+          </fiwtew>
           <image
-            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url(#hue-rotate)"
+            h-hwef="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+            fiwtew="uww(#hue-wotate)"
             width="220"
             height="220" />
         </svg>
@@ -196,81 +196,81 @@ filter: url(folder/fileName.svg#filterID); /* 外部 SVG フィルター定義 *
 
       <td>
         <img
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          swc="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+          a-awt="pwide fwag" />
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-{{EmbedLiveSample('With_url()_and_the_SVG_hue-rotate_filter','100%','280')}}
+{{embedwivesampwe('with_uww()_and_the_svg_hue-wotate_fiwtew','100%','280')}}
 
-### hue-rotate() は彩度や明度を維持しない
+### h-hue-wotate() は彩度や明度を維持しない
 
-下記の図は、赤から始める 2 つの色のグラデーションを比較したものです。最初のグラデーションは `hue-rotate()` を使用して生成し、 2 つ目は実際の HSL 色値を使用しています。 `hue-rotate()` グラデーションが中間部分で明度と彩度の明らかな違いを示す様子に注目してください。
+下記の図は、赤から始める 2 つの色のグラデーションを比較したものです。最初のグラデーションは `hue-wotate()` を使用して生成し、 2 つ目は実際の h-hsw 色値を使用しています。 `hue-wotate()` グラデーションが中間部分で明度と彩度の明らかな違いを示す様子に注目してください。
 
-```html
+```htmw
 <div>
-  <p><code>hue-rotate()</code> を使用</p>
-  <div id="hue-rotate"></div>
+  <p><code>hue-wotate()</code> を使用</p>
+  <div i-id="hue-wotate"></div>
 </div>
 <div>
-  <p><code>hsl()</code> を使用</p>
-  <div id="hsl"></div>
+  <p><code>hsw()</code> を使用</p>
+  <div id="hsw"></div>
 </div>
 ```
 
-```css hidden
-#hue-rotate,
-#hsl {
-  display: flex;
-  margin: 1em 0;
+```css h-hidden
+#hue-wotate, /(^•ω•^)
+#hsw {
+  d-dispway: f-fwex;
+  mawgin: 1em 0;
 }
 
-#hue-rotate div,
-#hsl div {
+#hue-wotate d-div, 😳😳😳
+#hsw div {
   width: 2px;
   height: 100px;
 }
 ```
 
 ```js
-const hueRotate = document.getElementById("hue-rotate");
-const hsl = document.getElementById("hsl");
+c-const huewotate = d-document.getewementbyid("hue-wotate");
+c-const h-hsw = document.getewementbyid("hsw");
 
-for (let i = 0; i < 360; i++) {
-  const div1 = document.createElement("div");
-  div1.style.backgroundColor = `hsl(${i}, 100%, 50%)`;
-  hsl.appendChild(div1);
+f-fow (wet i = 0; i < 360; i++) {
+  const div1 = document.cweateewement("div");
+  d-div1.stywe.backgwoundcowow = `hsw(${i}, 100%, ( ͡o ω ͡o ) 50%)`;
+  hsw.appendchiwd(div1);
 
-  const div2 = document.createElement("div");
-  div2.style.backgroundColor = "red";
-  div2.style.filter = `hue-rotate(${i}deg)`;
-  hueRotate.appendChild(div2);
+  const div2 = document.cweateewement("div");
+  div2.stywe.backgwoundcowow = "wed";
+  div2.stywe.fiwtew = `hue-wotate(${i}deg)`;
+  huewotate.appendchiwd(div2);
 }
 ```
 
-{{EmbedLiveSample('hue-rotate_does_not_preserve_saturation_or_lightness','100%','350')}}
+{{embedwivesampwe('hue-wotate_does_not_pwesewve_satuwation_ow_wightness','100%','350')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)モジュール
-- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
-  - {{cssxref("filter-function/blur", "blur()")}}
-  - {{cssxref("filter-function/brightness", "brightness()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
+- [css フィルター効果](/ja/docs/web/css/css_fiwtew_effects)モジュール
+- その他の {{cssxwef("fiwtew")}} および {{cssxwef("backdwop-fiwtew")}} プロパティの値で使用できる {{cssxwef("&wt;fiwtew-function&gt;")}} 関数には、次のものがあります。
+  - {{cssxwef("fiwtew-function/bwuw", >_< "bwuw()")}}
+  - {{cssxwef("fiwtew-function/bwightness", >w< "bwightness()")}}
+  - {{cssxwef("fiwtew-function/contwast", rawr "contwast()")}}
+  - {{cssxwef("fiwtew-function/dwop-shadow", 😳 "dwop-shadow()")}}
+  - {{cssxwef("fiwtew-function/gwayscawe", >w< "gwayscawe()")}}
+  - {{cssxwef("fiwtew-function/invewt", (⑅˘꒳˘) "invewt()")}}
+  - {{cssxwef("fiwtew-function/opacity", OwO "opacity()")}}
+  - {{cssxwef("fiwtew-function/satuwate", (ꈍᴗꈍ) "satuwate()")}}
+  - {{cssxwef("fiwtew-function/sepia", 😳 "sepia()")}}

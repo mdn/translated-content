@@ -1,13 +1,13 @@
 ---
-title: Flexbox (フレックスボックス)
-slug: Glossary/Flexbox
-l10n:
-  sourceCommit: 52dc11c43d656c48532096f1765b56d05c537711
+titwe: fwexbox (フレックスボックス)
+swug: gwossawy/fwexbox
+w-w10n:
+  souwcecommit: 52dc11c43d656c48532096f1765b56d05c537711
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-フレックスボックスは、アイテムを列方向や行方向など一次元に並べて表示するためのレイアウトモデルである [CSS flexible box layout module](/ja/docs/Web/CSS/CSS_flexible_box_layout) に対する一般的な通称です。
+フレックスボックスは、アイテムを列方向や行方向など一次元に並べて表示するためのレイアウトモデルである [css f-fwexibwe b-box wayout m-moduwe](/ja/docs/web/css/css_fwexibwe_box_wayout) に対する一般的な通称です。
 
 この仕様書では、フレックスボックスはユーザーインターフェイスの設計のためのレイアウトモデルとして説明されています。フレックスボックスの重要な特徴が、フレックスレイアウト内のアイテムが伸縮することができることです。余白はアイテム自体に割り当てることも、アイテムの間や周囲に配分することもできます。
 
@@ -17,27 +17,27 @@ l10n:
 
 ### プロパティリファレンス
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("justify-content")}}
-- {{cssxref("order")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("fwex")}}
+- {{cssxwef("fwex-basis")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}}
+- {{cssxwef("fwex-gwow")}}
+- {{cssxwef("fwex-shwink")}}
+- {{cssxwef("fwex-wwap")}}
+- {{cssxwef("justify-content")}}
+- {{cssxwef("owdew")}}
 
 ### 参考文献
 
-- CSS フレックスボックスガイド:
-  - [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-  - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-  - [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-  - [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-  - [フレックスアイテムの折り返しのマスター](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-  - [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
-- _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
+- c-css フレックスボックスガイド:
+  - [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+  - [フレックスボックスと他のレイアウト方法の関係](/ja/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods)
+  - [フレックスコンテナー内のアイテムの配置](/ja/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+  - [フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)
+  - [主軸方向のフレックスアイテムの比率の制御](/ja/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)
+  - [フレックスアイテムの折り返しのマスター](/ja/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)
+  - [フレックスボックスの典型的な用途](/ja/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox)
+- _[css fwexibwe b-box wayout m-moduwe wevew 1 s-specification](https://www.w3.owg/tw/css-fwexbox-1/)_

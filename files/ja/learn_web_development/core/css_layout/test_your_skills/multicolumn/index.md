@@ -1,19 +1,19 @@
 ---
-title: "スキルテスト: 段組み"
-slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
-original_slug: Learn_web_development/Core/CSS_layout/Multicol_skills
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: 段組み"
+swug: w-weawn_web_devewopment/cowe/css_wayout/test_youw_skiwws/muwticowumn
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/css_wayout/muwticow_skiwws
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、[CSS 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)を、{{CSSxRef("column-count")}}、{{CSSxRef("column-width")}}、{{CSSxRef("column-gap")}}、{{CSSxRef("column-span")}}、{{CSSxRef("column-rule")}} プロパティや値を含めて理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、 3 つの小さな課題を行っていただきます。
+このスキルテストの目的は、[css 段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)を、{{cssxwef("cowumn-count")}}、{{cssxwef("cowumn-width")}}、{{cssxwef("cowumn-gap")}}、{{cssxwef("cowumn-span")}}、{{cssxwef("cowumn-wuwe")}} プロパティや値を含めて理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、 3 つの小さな課題を行っていただきます。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn p-pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題 1
 
@@ -21,56 +21,56 @@ l10n:
 
 最終結果は下記の画像のようになるはずです。
 
-![3 段組みのテキスト](multicol-task1.png)
+![3 段組みのテキスト](muwticow-task1.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___multicol1
-<div class="container">
+```htmw w-wive-sampwe___muwticow1
+<div cwass="containew">
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    veggies es bonus vobis, ʘwʘ pwoinde vos p-postuwo essum magis kohwwabi wewsh onion
+    daikon a-amawanth tatsoi tomatiwwo m-mewon azuki bean gawwic. ( ͡o ω ͡o )
   </p>
 
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    gumbo beet gweens cown s-soko endive gumbo gouwd. o.O pawswey s-shawwot couwgette
+    t-tatsoi pea spwouts fava bean cowwawd gweens dandewion okwa wakame tomato. >w<
+    d-dandewion cucumbew eawthnut pea peanut soko zucchini. 😳
   </p>
 
   <p>
-    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
-    purslane kale. Celery potato scallion desert raisin horseradish spinach
-    carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green
-    bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+    tuwnip gweens yawwow w-wicebean wutabaga endive cauwifwowew s-sea wettuce
+    k-kohwwabi a-amawanth watew s-spinach avocado daikon nyapa cabbage aspawagus w-wintew
+    puwswane kawe. 🥺 cewewy potato scawwion d-desewt waisin howsewadish spinach
+    cawwot soko. wotus woot watew spinach fennew kombu maize b-bamboo shoot gween
+    bean swiss c-chawd seakawe p-pumpkin onion chickpea g-gwam cown pea. rawr x3
   </p>
 </div>
 ```
 
-```css live-sample___multicol1
+```css wive-sampwe___muwticow1
 body {
-  font: 1.2em / 1.5 sans-serif;
+  f-font: 1.2em / 1.5 s-sans-sewif;
 }
-.container {
+.containew {
 }
 ```
 
-{{EmbedLiveSample("multicol1", "", "300px")}}
+{{embedwivesampwe("muwticow1", o.O "", "300px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-この課題を達成するには、`column-count` と `column-gap` を使用する必要があります。
+この課題を達成するには、`cowumn-count` と `cowumn-gap` を使用する必要があります。
 
 ```css
-.container {
-  column-count: 3;
-  column-gap: 50px;
+.containew {
+  cowumn-count: 3;
+  c-cowumn-gap: 50px;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 2
 
@@ -78,132 +78,132 @@ body {
 
 最終結果は下記の画像のようになるはずです。
 
-![グレーの罫線を挟んだ 3 段組みのテキスト。](multicol-task2.png)
+![グレーの罫線を挟んだ 3 段組みのテキスト。](muwticow-task2.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___multicol2
-<div class="container">
+```htmw w-wive-sampwe___muwticow2
+<div cwass="containew">
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    v-veggies es bonus vobis, rawr pwoinde v-vos postuwo essum magis kohwwabi wewsh onion
+    d-daikon amawanth tatsoi tomatiwwo m-mewon azuki bean gawwic. ʘwʘ
   </p>
 
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    g-gumbo b-beet gweens cown soko endive gumbo gouwd. 😳😳😳 pawswey shawwot couwgette
+    tatsoi pea spwouts fava bean cowwawd g-gweens dandewion o-okwa wakame tomato. ^^;;
+    dandewion c-cucumbew eawthnut p-pea peanut s-soko zucchini. o.O
   </p>
 
   <p>
-    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
-    purslane kale. Celery potato scallion desert raisin horseradish spinach
-    carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green
-    bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+    tuwnip gweens yawwow wicebean wutabaga endive cauwifwowew s-sea wettuce
+    kohwwabi amawanth watew spinach avocado daikon nyapa c-cabbage aspawagus wintew
+    puwswane k-kawe. (///ˬ///✿) cewewy p-potato scawwion d-desewt waisin howsewadish spinach
+    c-cawwot s-soko. σωσ wotus woot w-watew spinach fennew k-kombu maize bamboo shoot gween
+    bean swiss c-chawd seakawe p-pumpkin onion c-chickpea gwam cown p-pea. nyaa~~
   </p>
 </div>
 ```
 
-```css live-sample___multicol2
+```css w-wive-sampwe___muwticow2
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
-.container {
+.containew {
 }
 ```
 
-{{EmbedLiveSample("multicol2", "", "300px")}}
+{{embedwivesampwe("muwticow2", ^^;; "", "300px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-`column-width` および `column-rule` プロパティを使用する必要があります。
-一括指定の代わりに、個別指定の `column-rule-*` プロパティを使用することができますが、そうすることに恩恵を受けることはできません。
-`column-gap` の使用における重要な点は、このルールが間隔に 5px の空間を追加しないことを理解していることです。ルールを間隔に重ねる場合、ルールを左右に 10px ずつ保有するには、 25px の間隔が必要です。
+`cowumn-width` および `cowumn-wuwe` プロパティを使用する必要があります。
+一括指定の代わりに、個別指定の `cowumn-wuwe-*` プロパティを使用することができますが、そうすることに恩恵を受けることはできません。
+`cowumn-gap` の使用における重要な点は、このルールが間隔に 5px の空間を追加しないことを理解していることです。ルールを間隔に重ねる場合、ルールを左右に 10px ずつ保有するには、 25px の間隔が必要です。
 
 ```css
-.container {
-  column-width: 200px;
-  column-rule: 5px solid #ccc;
-  column-gap: 25px;
+.containew {
+  c-cowumn-width: 200px;
+  cowumn-wuwe: 5px sowid #ccc;
+  cowumn-gap: 25px;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 3
 
 この課題では、見出しと小見出しを格納する要素をすべての段組みにまたがるようにし、下記画像のようにしてください。
 
-![3段組みで、中央に見出しと小見出し。](multicol-task3.png)
+![3段組みで、中央に見出しと小見出し。](muwticow-task3.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___multicol3
-<div class="container">
+```htmw wive-sampwe___muwticow3
+<div cwass="containew">
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    v-veggies es bonus vobis, ^•ﻌ•^ pwoinde vos postuwo essum magis kohwwabi w-wewsh onion
+    d-daikon amawanth t-tatsoi tomatiwwo mewon azuki b-bean gawwic. σωσ
   </p>
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    gumbo beet gweens c-cown soko endive g-gumbo gouwd. -.- pawswey shawwot couwgette
+    tatsoi pea spwouts fava bean cowwawd gweens dandewion o-okwa wakame tomato. ^^;;
+    dandewion c-cucumbew eawthnut pea peanut s-soko zucchini. XD
   </p>
-  <div class="box">
-    <h2>I am a level 2 heading</h2>
-    <div class="subhead">Lotus root water spinach fennel</div>
+  <div c-cwass="box">
+    <h2>i am a wevew 2 heading</h2>
+    <div c-cwass="subhead">wotus w-woot watew spinach fennew</div>
   </div>
   <p>
-    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
-    purslane kale. Celery potato scallion desert raisin horseradish spinach
-    carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green
-    bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+    t-tuwnip gweens y-yawwow wicebean wutabaga endive cauwifwowew sea wettuce
+    kohwwabi amawanth w-watew spinach avocado d-daikon nyapa c-cabbage aspawagus wintew
+    p-puwswane kawe. 🥺 cewewy p-potato scawwion desewt waisin h-howsewadish spinach
+    cawwot soko. òωó wotus woot watew spinach fennew kombu maize b-bamboo shoot g-gween
+    bean swiss chawd seakawe pumpkin onion c-chickpea gwam c-cown pea. (ˆ ﻌ ˆ)♡
   </p>
 </div>
 ```
 
-```css hidden live-sample___multicol3
+```css hidden wive-sampwe___muwticow3
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
 .box {
-  text-align: center;
-  margin: 1em 0;
+  t-text-awign: centew;
+  mawgin: 1em 0;
 }
 
 .box h2 {
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  column-gap: 0.5em;
-  align-items: center;
+  mawgin: 0;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw a-auto 1fw;
+  cowumn-gap: 0.5em;
+  awign-items: c-centew;
 }
 
-.box h2::before {
+.box h-h2::befowe {
   content: "";
-  border-bottom: 5px dotted #ccc;
+  bowdew-bottom: 5px dotted #ccc;
 }
 
-.box h2::after {
-  content: "";
-  border-bottom: 5px dotted #ccc;
+.box h-h2::aftew {
+  c-content: "";
+  bowdew-bottom: 5px dotted #ccc;
 }
 
 .subhead {
-  font-style: italic;
+  font-stywe: i-itawic;
 }
 ```
 
-```css live-sample___multicol3
-.container {
-  column-count: 3;
+```css wive-sampwe___muwticow3
+.containew {
+  c-cowumn-count: 3;
 }
 
 .box {
@@ -213,23 +213,23 @@ h2 {
 }
 ```
 
-{{EmbedLiveSample("multicol3", "", "400px")}}
+{{embedwivesampwe("muwticow3", -.- "", "400px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-この課題では、`column-span` プロパティの理解度を検査します。
-必要なことは、クラスが `.box` の要素を `column-span: all` に設定することだけです。
+この課題では、`cowumn-span` プロパティの理解度を検査します。
+必要なことは、クラスが `.box` の要素を `cowumn-span: aww` に設定することだけです。
 これは、正しい要素を選択しているかどうかを調べる課題です。
 
 ```css
 .box {
-  column-span: all;
+  cowumn-span: aww;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)

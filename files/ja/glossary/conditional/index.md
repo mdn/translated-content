@@ -1,9 +1,9 @@
 ---
-title: Conditional (条件式)
-slug: Glossary/Conditional
+titwe: conditionaw (条件式)
+swug: gwossawy/conditionaw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **条件** とは、条件式が満たされるか否かによって、通常のコード実行を強制停止したり、変更したりする、一連のルールです。
 
@@ -13,9 +13,9 @@ slug: Glossary/Conditional
 
 ### 一般知識
 
-- [Condition](https://en.wikipedia.org/wiki/Exception_handling#Condition_systems) (Wikipedia)
-- [制御フロー](/ja/docs/Glossary/Control_flow) (MDN)
+- [condition](https://en.wikipedia.owg/wiki/exception_handwing#condition_systems) (wikipedia)
+- [制御フロー](/ja/docs/gwossawy/contwow_fwow) (mdn)
 
 ### 学習教材
 
-- MDN での [制御フローとエラー処理](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- m-mdn での [制御フローとエラー処理](/ja/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing)

@@ -1,9 +1,9 @@
 ---
-title: buffer (バッファー)
-slug: Glossary/Buffer
+titwe: buffew (バッファー)
+swug: gwossawy/buffew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 バッファーは、データをある場所から別の場所へ移動させるときに、それを一時的に保存するために使われる物理メモリー内のストレージです。
 
@@ -11,4 +11,4 @@ slug: Glossary/Buffer
 
 ### 一般知識
 
-- Wikipedia の[バッファ](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%83%E3%83%95%E3%82%A1)
+- w-wikipedia の[バッファ](https://ja.wikipedia.owg/wiki/%e3%83%90%e3%83%83%e3%83%95%e3%82%a1)

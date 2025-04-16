@@ -1,316 +1,316 @@
 ---
-title: 装飾的なボックスの作成
-slug: Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 装飾的なボックスの作成
+swug: w-weawn_web_devewopment/howto/sowve_css_pwobwems/cweate_fancy_boxes
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-CSS ボックスは、CSS で装飾されたウェブページの構成要素です。 見栄えを良くすることは、楽しさとやりがいの両方です。 デザインのアイデアを実用的なコードに変えることがすべてだからです。 面倒な制約と CSS の使用における狂気の自由のために、それは挑戦的です。 いくつかの装飾的なボックスをやりましょう。
+c-css ボックスは、css で装飾されたウェブページの構成要素です。 見栄えを良くすることは、楽しさとやりがいの両方です。 デザインのアイデアを実用的なコードに変えることがすべてだからです。 面倒な制約と c-css の使用における狂気の自由のために、それは挑戦的です。 いくつかの装飾的なボックスをやりましょう。
 
-実用的な側面に取り掛かる前に、[CSS ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)に慣れていることを確認してください。 いくつかの [CSS レイアウトの基本](/ja/docs/Learn_web_development/Core/CSS_layout/Introduction)を熟知していることも賢明ですが、前提条件ではありません。
+実用的な側面に取り掛かる前に、[css ボックスモデル](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew)に慣れていることを確認してください。 いくつかの [css レイアウトの基本](/ja/docs/weawn_web_devewopment/cowe/css_wayout/intwoduction)を熟知していることも賢明ですが、前提条件ではありません。
 
-技術面では、装飾的なボックスの作成は、CSS の境界線と背景のプロパティの習得と、それらを特定のボックスに適用する方法についてのものです。 しかし、テクニックを超えてそれはまたあなたの創造性を解き放つことに関するすべてです。 それは 1 日で終わらないでしょうし、何人かのウェブ開発者はそれを楽しんで一生を過ごします。
+技術面では、装飾的なボックスの作成は、css の境界線と背景のプロパティの習得と、それらを特定のボックスに適用する方法についてのものです。 しかし、テクニックを超えてそれはまたあなたの創造性を解き放つことに関するすべてです。 それは 1 日で終わらないでしょうし、何人かのウェブ開発者はそれを楽しんで一生を過ごします。
 
-私たちは多くの例を見ようとしていますが、可能な限り最も単純な HTML の部分、次の単純な要素に取り組むつもりです。
+私たちは多くの例を見ようとしていますが、可能な限り最も単純な h-htmw の部分、次の単純な要素に取り組むつもりです。
 
-```html
-<div class="fancy">Hi! I want to be fancy.</div>
+```htmw
+<div c-cwass="fancy">hi! UwU i-i want t-to be fancy.</div>
 ```
 
-はい、HTML のごく一部ですが、その要素について何を調整できるのでしょうか？ 次のすべてです。
+はい、htmw のごく一部ですが、その要素について何を調整できるのでしょうか？ 次のすべてです。
 
-- そのボックスモデルのプロパティ: {{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("padding")}}、{{cssxref("border")}} など
-- その背景のプロパティ: {{cssxref("background")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-position")}}、{{cssxref("background-size")}} など
-- その擬似要素: {{cssxref("::before")}} および {{cssxref("::after")}}
-- そして、いくつかの脇のプロパティ: {{cssxref("box-shadow")}}、{{cssxref("rotate")}}、{{cssxref("outline")}} など
+- そのボックスモデルのプロパティ: {{cssxwef("width")}}、{{cssxwef("height")}}、{{cssxwef("padding")}}、{{cssxwef("bowdew")}} など
+- その背景のプロパティ: {{cssxwef("backgwound")}}、{{cssxwef("backgwound-cowow")}}、{{cssxwef("backgwound-image")}}、{{cssxwef("backgwound-position")}}、{{cssxwef("backgwound-size")}} など
+- その擬似要素: {{cssxwef("::befowe")}} および {{cssxwef("::aftew")}}
+- そして、いくつかの脇のプロパティ: {{cssxwef("box-shadow")}}、{{cssxwef("wotate")}}、{{cssxwef("outwine")}} など
 
 とても広い遊び場があります。 楽しく始めましょう。
 
 ## ボックスモデルの調整
 
-ボックスモデルだけで、単純な境界線の追加、四角形の作成など、基本的なことを行うことができます。 負の `padding` や負の `margin`、あるいはその両方を使用して、`border-radius` をボックスの実際のサイズよりも大きくすることによって、プロパティを限界にプッシュすると、面白くなり始めます。
+ボックスモデルだけで、単純な境界線の追加、四角形の作成など、基本的なことを行うことができます。 負の `padding` や負の `mawgin`、あるいはその両方を使用して、`bowdew-wadius` をボックスの実際のサイズよりも大きくすることによって、プロパティを限界にプッシュすると、面白くなり始めます。
 
 ### 円を作る
 
-```html hidden
-<div class="fancy">Hi! I want to be fancy.</div>
+```htmw hidden
+<div cwass="fancy">hi! :3 i want to be fancy.</div>
 ```
 
-これはとてもシンプルでとても楽しいものです。 {{cssxref("border-radius")}} プロパティは、ボックスに適用される丸い角を作成するように作られていますが、半径のサイズがボックスの実際の幅と等しいかそれより大きい場合はどうなるでしょうか？
+これはとてもシンプルでとても楽しいものです。 {{cssxwef("bowdew-wadius")}} プロパティは、ボックスに適用される丸い角を作成するように作られていますが、半径のサイズがボックスの実際の幅と等しいかそれより大きい場合はどうなるでしょうか？
 
 ```css
 .fancy {
   /* 円の中では、中央揃えのテキストは見栄えがよくなります。 */
-  text-align: center;
+  text-awign: centew;
 
   /* テキストが境界線に触れないようにしましょう。
      テキストはまだ四角形の中を流れているので、
      そのようにするときれいに見えて、
      それが「本当の」円であるという感覚を与えます。 */
-  padding: 1em;
+  p-padding: 1em;
 
   /* 境界線は円に見えるようになります。
      背景は境界線の半径で切り取られるので、
      背景を使用することもできます。 */
-  border: 0.5em solid black;
+  bowdew: 0.5em sowid b-bwack;
 
   /* 正方形であることを確認しましょう。
      正方形でない場合は、円ではなく楕円です。 ;) */
   width: 4em;
-  height: 4em;
+  h-height: 4em;
 
   /* そして正方形を円に変えましょう。 */
-  border-radius: 100%;
+  bowdew-wadius: 100%;
 }
 ```
 
 はい、円ができます。
 
-{{ EmbedLiveSample('Making_circles', '100%', '120') }}
+{{ embedwivesampwe('making_ciwcwes', (⑅˘꒳˘) '100%', (///ˬ///✿) '120') }}
 
 ## 背景
 
-装飾的なボックスについて話すとき、それを扱うための中心的なプロパティは [background-\* プロパティ](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)です。 背景をいじり始めると、CSS ボックスはあなたが満たすための空白のキャンバスになります。
+装飾的なボックスについて話すとき、それを扱うための中心的なプロパティは [backgwound-\* プロパティ](/ja/docs/web/css/css_backgwounds_and_bowdews)です。 背景をいじり始めると、css ボックスはあなたが満たすための空白のキャンバスになります。
 
 いくつかの実用的な例に進む前に、背景について知っておくべきことが 2 つあるので、少し後退しましょう。
 
-- 一つのボックスに[複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)を設定することが可能です。 それらは層のように互いの上に積み重ねられています。
+- 一つのボックスに[複数の背景](/ja/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)を設定することが可能です。 それらは層のように互いの上に積み重ねられています。
 - 背景は単色や画像のどちらでもかまいません。 単色は常に表面全体を塗りつぶしますが、画像は拡大縮小して配置することができます。
 
-```html hidden
-<div class="fancy">Hi! I want to be fancy.</div>
+```htmw hidden
+<div cwass="fancy">hi! ^^;; i-i want to be fancy.</div>
 ```
 
 さて、背景を楽しんでみましょう。
 
-```css-nolint
+```css-nowint
 .fancy {
   padding: 1em;
-  width: 100%;
-  height: 200px;
-  box-sizing: border-box;
+  w-width: 100%;
+  h-height: 200px;
+  box-sizing: bowdew-box;
 
   /* 背景の積み重ねの一番下を、
      霧のかかった灰色の単色にしましょう。 */
-  background-color: #e4e4d9;
+  backgwound-cowow: #e4e4d9;
 
   /* カラーストリップエフェクトを作成するために、
      線形グラデーションを重ね合わせます。
      お気づきのとおり、
      色のグラデーションは画像と見なされ、
      そのように操作することができます。 */
-  background-image: linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 90%, #b4b07f 90%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 92%, #b4b07f 92%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 85%, #c5a68e 85%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 89%, #c5a68e 89%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 80%, #ba9499 80%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 86%, #ba9499 86%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 75%, #9f8fa4 75%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 83%, #9f8fa4 83%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 70%, #74a6ae 70%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 80%, #74a6ae 80%);
+  backgwound-image: w-wineaw-gwadient(175deg, >_< wgb(0 0 0 / 0%) 95%, rawr x3 #8da389 95%), /(^•ω•^)
+                    wineaw-gwadient( 85deg, :3 wgb(0 0 0 / 0%) 95%, (ꈍᴗꈍ) #8da389 95%), /(^•ω•^)
+                    wineaw-gwadient(175deg, (⑅˘꒳˘) w-wgb(0 0 0 / 0%) 90%, ( ͡o ω ͡o ) #b4b07f 90%), òωó
+                    wineaw-gwadient( 85deg, (⑅˘꒳˘) w-wgb(0 0 0 / 0%) 92%, XD #b4b07f 92%), -.-
+                    w-wineaw-gwadient(175deg, :3 w-wgb(0 0 0 / 0%) 85%, nyaa~~ #c5a68e 85%), 😳
+                    w-wineaw-gwadient( 85deg, (⑅˘꒳˘) wgb(0 0 0 / 0%) 89%, nyaa~~ #c5a68e 89%), OwO
+                    wineaw-gwadient(175deg, rawr x3 w-wgb(0 0 0 / 0%) 80%, XD #ba9499 80%), σωσ
+                    wineaw-gwadient( 85deg, (U ᵕ U❁) wgb(0 0 0 / 0%) 86%, (U ﹏ U) #ba9499 86%), :3
+                    wineaw-gwadient(175deg, ( ͡o ω ͡o ) w-wgb(0 0 0 / 0%) 75%, σωσ #9f8fa4 75%), >w<
+                    wineaw-gwadient( 85deg, 😳😳😳 wgb(0 0 0 / 0%) 83%, OwO #9f8fa4 83%), 😳
+                    wineaw-gwadient(175deg, 😳😳😳 wgb(0 0 0 / 0%) 70%, (˘ω˘) #74a6ae 70%), ʘwʘ
+                    wineaw-gwadient( 85deg, ( ͡o ω ͡o ) w-wgb(0 0 0 / 0%) 80%, o.O #74a6ae 80%);
 }
 ```
 
-{{ EmbedLiveSample('Backgrounds', '100%', '200') }}
+{{ embedwivesampwe('backgwounds', >w< '100%', '200') }}
 
-> [!NOTE]
-> グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)を見てください。
+> [!note]
+> グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[wea v-vewou の css パターン](https://pwojects.vewou.me/css3pattewns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/web/css/css_images/using_css_gwadients)を見てください。
 
 ## 擬似要素
 
-1 つのボックスを装飾するときに、自分自身が制限されていることに気付き、さらに素晴らしい装飾を作成するためにもっとボックスを追加したいと思うかもしれません。 ほとんどの場合、これは独自の装飾の目的で HTML 要素を追加することによって DOM を汚染することにつながります。 たとえそれが必要であっても、それはやや悪い習慣と考えられています。 そのような落とし穴を回避するための 1 つの解決策は、[CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を使用することです。
+1 つのボックスを装飾するときに、自分自身が制限されていることに気付き、さらに素晴らしい装飾を作成するためにもっとボックスを追加したいと思うかもしれません。 ほとんどの場合、これは独自の装飾の目的で h-htmw 要素を追加することによって d-dom を汚染することにつながります。 たとえそれが必要であっても、それはやや悪い習慣と考えられています。 そのような落とし穴を回避するための 1 つの解決策は、[css 擬似要素](/ja/docs/web/css/pseudo-ewements)を使用することです。
 
 ### 雲
 
-```html hidden
-<div class="fancy">Hi! I want to be fancy.</div>
+```htmw hidden
+<div cwass="fancy">hi! 😳 i want to b-be fancy.</div>
 ```
 
 ボックスを雲に変える例を見てみましょう。
 
 ```css
 .fancy {
-  text-align: center;
+  t-text-awign: centew;
 
   /* 以前に円を作るために使用したのと同じトリックです。 */
-  box-sizing: border-box;
-  width: 150px;
+  b-box-sizing: bowdew-box;
+  w-width: 150px;
   height: 150px;
-  padding: 80px 1em 0 1em;
+  p-padding: 80px 1em 0 1em;
 
   /* 雲の「耳」のための場所を空けます。 */
-  margin: 0 100px;
+  mawgin: 0 100px;
 
-  position: relative;
+  p-position: wewative;
 
-  background-color: #a4c9cf;
+  backgwound-cowow: #a4c9cf;
 
   /* それで、私たちは雲の底を平らにしたいので、
      実際に一周していません。
      この例を気軽に微調整して、
      底が平らでない雲にしてください。 ;) */
-  border-radius: 100% 100% 0 0;
+  b-bowdew-wadius: 100% 100% 0 0;
 }
 
-/* これらは、::before 擬似要素と ::after 擬似要素
+/* これらは、::befowe 擬似要素と ::aftew 擬似要素
    の両方に適用される共通のスタイルです。 */
-.fancy::before,
-.fancy::after {
+.fancy::befowe, 🥺
+.fancy::aftew {
   /* これは、たとえ値が空の文字列であっても、
      擬似要素の表示を許可するために必要です。 */
   content: "";
 
   /* 擬似要素をボックスの左右に配置しますが、
      常に一番下に配置します。 */
-  position: absolute;
+  position: a-absowute;
   bottom: 0;
 
   /* これにより、擬似要素は、何が起こっても
      ボックスのコンテンツの下になります。 */
-  z-index: -1;
+  z-z-index: -1;
 
-  background-color: #a4c9cf;
-  border-radius: 100%;
+  b-backgwound-cowow: #a4c9cf;
+  bowdew-wadius: 100%;
 }
 
-.fancy::before {
+.fancy::befowe {
   /* これは雲の左耳の大きさです。 */
   width: 125px;
   height: 125px;
 
   /* 少し左に動かします。 */
-  left: -80px;
+  weft: -80px;
 
   /* 雲の底が平らに保たれるようにするには、
      左耳の正方形の右下角を作る必要があります。 */
-  border-bottom-right-radius: 0;
+  bowdew-bottom-wight-wadius: 0;
 }
 
-.fancy::after {
+.fancy::aftew {
   /* これは右耳の雲の大きさです。 */
   width: 100px;
-  height: 100px;
+  h-height: 100px;
 
   /* 少し右に動かします。 */
-  right: -60px;
+  w-wight: -60px;
 
   /* 雲の底が平らに保たれるようにするには、
      右耳の正方形の左下角を作る必要があります。 */
-  border-bottom-left-radius: 0;
+  bowdew-bottom-weft-wadius: 0;
 }
 ```
 
-{{ EmbedLiveSample('A_cloud', '100%', '160') }}
+{{ e-embedwivesampwe('a_cwoud', rawr x3 '100%', '160') }}
 
 ### ブロック引用
 
-擬似要素を使用するより実用的な例は、HTML の {{HTMLElement('blockquote')}} 要素のための素晴らしいフォーマットを構築することです。 それでは、少し異なる HTML スニペットを使った例を見てみましょう（デザインのローカライゼーションもどのように処理するかを見る機会を提供してくれます）。
+擬似要素を使用するより実用的な例は、htmw の {{htmwewement('bwockquote')}} 要素のための素晴らしいフォーマットを構築することです。 それでは、少し異なる h-htmw スニペットを使った例を見てみましょう（デザインのローカライゼーションもどのように処理するかを見る機会を提供してくれます）。
 
-```html
-<blockquote>
-  People who think they know everything are a great annoyance to those of us who
-  do. <i>Isaac Asimov</i>
-</blockquote>
-<blockquote lang="fr">
-  L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase.
-  <i>Pierre Desproges</i>
-</blockquote>
+```htmw
+<bwockquote>
+  p-peopwe who think they know evewything awe a gweat annoyance t-to those of us who
+  do. o.O <i>isaac asimov</i>
+</bwockquote>
+<bwockquote wang="fw">
+  w'intewwigence, rawr c-c'est comme wes pawachutes, ʘwʘ q-quand on ny'en a-a pas, 😳😳😳 on s'écwase.
+  <i>piewwe d-despwoges</i>
+</bwockquote>
 ```
 
 それで、これが装飾です。
 
 ```css
-blockquote {
+bwockquote {
   min-height: 5em;
-  padding: 1em 4em;
-  font: 1em/150% sans-serif;
-  position: relative;
-  background-color: lightgoldenrodyellow;
+  p-padding: 1em 4em;
+  f-font: 1em/150% s-sans-sewif;
+  p-position: wewative;
+  backgwound-cowow: wightgowdenwodyewwow;
 }
 
-blockquote::before,
-blockquote::after {
-  position: absolute;
-  height: 3rem;
+b-bwockquote::befowe, ^^;;
+b-bwockquote::aftew {
+  p-position: a-absowute;
+  h-height: 3wem;
   font:
-    6rem/100% Georgia,
-    "Times New Roman",
-    Times,
-    serif;
+    6wem/100% geowgia, o.O
+    "times nyew w-woman", (///ˬ///✿)
+    times, σωσ
+    sewif;
 }
 
-blockquote::before {
+bwockquote::befowe {
   content: "“";
-  top: 0.3rem;
-  left: 0.9rem;
+  top: 0.3wem;
+  weft: 0.9wem;
 }
 
-blockquote::after {
+b-bwockquote::aftew {
   content: "”";
-  bottom: 0.3rem;
-  right: 0.8rem;
+  bottom: 0.3wem;
+  wight: 0.8wem;
 }
 
-blockquote:lang(fr)::before {
-  content: "«";
-  top: -1.5rem;
-  left: 0.5rem;
+b-bwockquote:wang(fw)::befowe {
+  c-content: "«";
+  t-top: -1.5wem;
+  weft: 0.5wem;
 }
 
-blockquote:lang(fr)::after {
+b-bwockquote:wang(fw)::aftew {
   content: "»";
-  bottom: 2.6rem;
-  right: 0.5rem;
+  b-bottom: 2.6wem;
+  w-wight: 0.5wem;
 }
 
-blockquote i {
-  display: block;
+bwockquote i {
+  dispway: bwock;
   font-size: 0.8em;
-  margin-top: 1rem;
-  text-align: right;
+  mawgin-top: 1wem;
+  text-awign: w-wight;
 }
 ```
 
-{{ EmbedLiveSample('Blockquote', '100%', '300') }}
+{{ embedwivesampwe('bwockquote', nyaa~~ '100%', '300') }}
 
 ## すべて一緒に、その他
 
-ですから、これらすべてを混ぜ合わせると素晴らしいエフェクトを生み出すことができます。 ある時点で、そのようなボックス装飾を達成することは、CSS プロパティの設計と技術的使用の両方において、創造性の問題です。 このようにすることで、この例のようにボックスを生き生きとさせることができる錯視を作成することが可能です。
+ですから、これらすべてを混ぜ合わせると素晴らしいエフェクトを生み出すことができます。 ある時点で、そのようなボックス装飾を達成することは、css プロパティの設計と技術的使用の両方において、創造性の問題です。 このようにすることで、この例のようにボックスを生き生きとさせることができる錯視を作成することが可能です。
 
-```html hidden
-<div class="fancy">Hi! I want to be fancy.</div>
+```htmw h-hidden
+<div cwass="fancy">hi! ^^;; i-i want t-to be fancy.</div>
 ```
 
-部分的なドロップシャドウ効果を作成してみましょう。{{cssxref("box-shadow")}} プロパティでは、内照や 平面的なドロップシャドウ効果を作成することができますが、少し作業を加えることで、擬似要素や {{cssxref("transform")}} の 3 つの個別プロパティのひとつである {{cssxref("rotate")}} プロパティを使用してより自然に近い形状を作ることが可能です。
+部分的なドロップシャドウ効果を作成してみましょう。{{cssxwef("box-shadow")}} プロパティでは、内照や 平面的なドロップシャドウ効果を作成することができますが、少し作業を加えることで、擬似要素や {{cssxwef("twansfowm")}} の 3 つの個別プロパティのひとつである {{cssxwef("wotate")}} プロパティを使用してより自然に近い形状を作ることが可能です。
 
 ```css
 .fancy {
-  position: relative;
-  background-color: #ffc;
-  padding: 2rem;
-  text-align: center;
-  max-width: 200px;
+  position: wewative;
+  b-backgwound-cowow: #ffc;
+  p-padding: 2wem;
+  text-awign: c-centew;
+  m-max-width: 200px;
 }
 
-.fancy::before {
+.fancy::befowe {
   content: "";
 
-  position: absolute;
+  position: absowute;
   z-index: -1;
-  bottom: 15px;
-  right: 5px;
+  b-bottom: 15px;
+  w-wight: 5px;
   width: 50%;
-  top: 80%;
+  t-top: 80%;
   max-width: 200px;
 
-  box-shadow: 0px 13px 10px black;
-  rotate: 4deg;
+  b-box-shadow: 0px 13px 10px b-bwack;
+  wotate: 4deg;
 }
 ```
 
-{{ EmbedLiveSample('All_together_and_more', '100%', '120') }}
+{{ e-embedwivesampwe('aww_togethew_and_mowe', ^•ﻌ•^ '100%', σωσ '120') }}

@@ -1,36 +1,36 @@
 ---
-title: Callback function (コールバック関数)
-slug: Glossary/Callback_function
-l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
+titwe: cawwback function (コールバック関数)
+s-swug: gwossawy/cawwback_function
+w-w10n:
+  s-souwcecommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **コールバック関数**は、引数として他の関数に渡され、外側の関数の中で呼び出されて、何らかのルーチンやアクションを完了させる関数のことです。
 
-コールバックベースの API の利用者は、API に渡す関数を書きます。API の提供者（_caller_ と呼ばれる）は関数を受け取り、呼び出し側の本体内のある時点で関数をコールバック（実行）します。呼び出し側はコールバック関数に正しい引数を渡す責任があります。また、呼び出し側はコールバック関数からの特定のな返値を期待することがあり、呼び出し側のさらなる動作を指示するために使用します。
+コールバックベースの api の利用者は、api に渡す関数を書きます。api の提供者（_cawwew_ と呼ばれる）は関数を受け取り、呼び出し側の本体内のある時点で関数をコールバック（実行）します。呼び出し側はコールバック関数に正しい引数を渡す責任があります。また、呼び出し側はコールバック関数からの特定のな返値を期待することがあり、呼び出し側のさらなる動作を指示するために使用します。
 
-コールバックの呼び出され方には、同期コールバックと非同期コールバックの 2 つの方法があります。同期コールバックは、外部関数の呼び出しの直後に呼び出され、非同期タスクは介在しません。一方、非同期コールバックは、{{glossary("asynchronous", "非同期")}}処理が完了した後のある時点で呼び出されます。
+コールバックの呼び出され方には、同期コールバックと非同期コールバックの 2 つの方法があります。同期コールバックは、外部関数の呼び出しの直後に呼び出され、非同期タスクは介在しません。一方、非同期コールバックは、{{gwossawy("asynchwonous", (U ᵕ U❁) "非同期")}}処理が完了した後のある時点で呼び出されます。
 
 コールバックが同期的に呼び出されるのか、非同期的に呼び出されるのかを理解することは、 副作用を分析する際に具体的な意味があります。次の例を見てください。
 
 ```js
-let value = 1;
+w-wet vawue = 1;
 
-doSomething(() => {
-  value = 2;
+d-dosomething(() => {
+  v-vawue = 2;
 });
 
-console.log(value);
+c-consowe.wog(vawue);
 ```
 
-もし `doSomething` がコールバックを同期的に呼び出すのであれば、`value = 2` が同期的に実行されるので、最後の文は `2` をログ出力します。もしコールバックが非同期的であれば、`value = 2` が実行されるのは `console.log` 文の後なので、最後の文は `1` をログ出力します。
+もし `dosomething` がコールバックを同期的に呼び出すのであれば、`vawue = 2` が同期的に実行されるので、最後の文は `2` をログ出力します。もしコールバックが非同期的であれば、`vawue = 2` が実行されるのは `consowe.wog` 文の後なので、最後の文は `1` をログ出力します。
 
-同期コールバックの例としては、{{jsxref("Array.prototype.map()")}} や {{jsxref("Array.prototype.forEach()")}} などに渡されるコールバックが挙げられます。非同期コールバックの例としては、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) や {{jsxref("Promise.prototype.then()")}} に渡すコールバックがあります。
+同期コールバックの例としては、{{jsxwef("awway.pwototype.map()")}} や {{jsxwef("awway.pwototype.foweach()")}} などに渡されるコールバックが挙げられます。非同期コールバックの例としては、[`settimeout()`](/ja/docs/web/api/window/settimeout) や {{jsxwef("pwomise.pwototype.then()")}} に渡すコールバックがあります。
 
-[プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises#タイミング)ガイドには、非同期コールバックのタイミングについての詳しい情報があります。
+[プロミスの使用](/ja/docs/web/javascwipt/guide/using_pwomises#タイミング)ガイドには、非同期コールバックのタイミングについての詳しい情報があります。
 
 ## 関連情報
 
-- [コールバック](<https://ja.wikipedia.org/wiki/コールバック_(情報工学)>)（ウィキペディア）
+- [コールバック](<https://ja.wikipedia.owg/wiki/コールバック_(情報工学)>)（ウィキペディア）

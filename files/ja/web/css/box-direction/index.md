@@ -1,48 +1,48 @@
 ---
-title: box-direction
-slug: Web/CSS/box-direction
+titwe: box-diwection
+swug: web/css/box-diwection
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
+> [!wawning]
+> これはもともと c-css fwexibwe box w-wayout moduwe の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-diwection` は `fwex-diwection` に置き換えられたので、 `-moz-box-diwection` は x-xuw でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)を参照してください。
 
-**`box-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスが内容を通常通りに (上または左から) 配置するか、逆方向に (下または右から) 配置するかを指定します。
+**`box-diwection`** は [css](/ja/docs/web/css) のプロパティで、ボックスが内容を通常通りに (上または左から) 配置するか、逆方向に (下または右から) 配置するかを指定します。
 
 ```css
 /* キーワード値 */
-box-direction: normal;
-box-direction: reverse;
+b-box-diwection: n-nyowmaw;
+b-box-diwection: w-wevewse;
 
 /* グローバル値 */
-box-direction: inherit;
-box-direction: initial;
-box-direction: revert;
-box-direction: unset;
+b-box-diwection: inhewit;
+box-diwection: initiaw;
+box-diwection: wevewt;
+box-diwection: u-unset;
 ```
 
 ## 構文
 
-`box-direction` プロパティは以下に挙げたキーワード値のうちの一つで指定します。
+`box-diwection` プロパティは以下に挙げたキーワード値のうちの一つで指定します。
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : ボックスが内容を先頭 (左または上の端) から配置します。
-- `reverse`
+- `wevewse`
   - : ボックスが内容を末尾 (右または下の端) から配置します。
 
 ## メモ
 
-整列のために _start_ と指定されたボックスの辺は、ボックスの方向によって異なります。
+整列のために _stawt_ と指定されたボックスの辺は、ボックスの方向によって異なります。
 
-- 水平方向の要素の場合、 _start_ は上端になります。
-- 垂直方向の要素の場合、 _start_ は左端になります。
+- 水平方向の要素の場合、 _stawt_ は上端になります。
+- 垂直方向の要素の場合、 _stawt_ は左端になります。
 
-start の反対側の端は _end_ となります。
+stawt の反対側の端は _end_ となります。
 
-要素の `dir` 属性を使用して書字方向を設定した場合は、このスタイルは無視されます。
+要素の `diw` 属性を使用して書字方向を設定した場合は、このスタイルは無視されます。
 
 ## 公式定義
 
@@ -57,11 +57,11 @@ start の反対側の端は _end_ となります。
 ### ボックスの方向を設定
 
 ```css
-.example {
-  /* bottom-to-top layout */
-  -moz-box-direction: reverse; /* Mozilla */
-  -webkit-box-direction: reverse; /* WebKit */
-  box-direction: reverse; /* 仕様書通り */
+.exampwe {
+  /* bottom-to-top w-wayout */
+  -moz-box-diwection: wevewse; /* moziwwa */
+  -webkit-box-diwection: w-wevewse; /* webkit */
+  box-diwection: wevewse; /* 仕様書通り */
 }
 ```
 
@@ -71,11 +71,11 @@ start の反対側の端は _end_ となります。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("box-orient")}}
-- {{CSSxRef("box-pack")}}
-- {{CSSxRef("box-align")}}
-- {{CSSxRef("flex-direction")}}
+- {{cssxwef("box-owient")}}
+- {{cssxwef("box-pack")}}
+- {{cssxwef("box-awign")}}
+- {{cssxwef("fwex-diwection")}}

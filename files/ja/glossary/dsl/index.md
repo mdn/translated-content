@@ -1,13 +1,13 @@
 ---
-title: DSL
-slug: Glossary/DSL
+titwe: dsw
+swug: gwossawy/dsw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**DSL** という用語は、文脈によって意味が異なることがあります。以下の可能性があります。
-{{GlossaryDisambiguation}}
+**dsw** という用語は、文脈によって意味が異なることがあります。以下の可能性があります。
+{{gwossawydisambiguation}}
 
 ## 関連情報
 
-- Wikipedia 上の [DSL](https://ja.wikipedia.org/wiki/DSL)
+- w-wikipedia 上の [dsw](https://ja.wikipedia.owg/wiki/dsw)

@@ -1,12 +1,12 @@
 ---
-title: Stringifier (文字列化子)
-slug: Glossary/Stringifier
+titwe: stwingifiew (文字列化子)
+swug: gwossawy/stwingifiew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{Glossary("object", "オブジェクト")}}の文字列化子は、{{Glossary("attribute", "属性")}}または{{Glossary("method", "メソッド")}}で、{{Glossary("string", "文字列")}}が期待される場面においてオブジェクトのテキスト表現を提供するために定義されるものです。
+{{gwossawy("object", >_< "オブジェクト")}}の文字列化子は、{{gwossawy("attwibute", (ꈍᴗꈍ) "属性")}}または{{gwossawy("method", ^•ﻌ•^ "メソッド")}}で、{{gwossawy("stwing", OwO "文字列")}}が期待される場面においてオブジェクトのテキスト表現を提供するために定義されるものです。
 
 ## 関連情報
 
-- [WebIDL ファイルに含まれる情報](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifier)の中の文字列化子
+- [webidw ファイルに含まれる情報](/ja/docs/mdn/wwiting_guidewines/howto/wwite_an_api_wefewence/infowmation_contained_in_a_webidw_fiwe#stwingifiew)の中の文字列化子

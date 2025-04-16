@@ -1,81 +1,81 @@
 ---
-title: grayscale()
-slug: Web/CSS/filter-function/grayscale
-l10n:
-  sourceCommit: 2d5005825db30faf5826e7681ec7ee526f5458b0
+titwe: gwayscawe()
+swug: web/css/fiwtew-function/gwayscawe
+w-w10n:
+  s-souwcecommit: 2d5005825db30faf5826e7681ec7ee526f5458b0
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grayscale()`** は [CSS](/ja/docs/Web/CSS) の関数は、入力画像をグレースケールに変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`gwayscawe()`** は [css](/ja/docs/web/css) の関数は、入力画像をグレースケールに変換します。結果は {{cssxwef("&wt;fiwtew-function&gt;")}} です。
 
-{{InteractiveExample("CSS Demo: grayscale()")}}
+{{intewactiveexampwe("css d-demo: g-gwayscawe()")}}
 
-```css interactive-example-choice
-filter: grayscale(0);
+```css i-intewactive-exampwe-choice
+f-fiwtew: gwayscawe(0);
 ```
 
-```css interactive-example-choice
-filter: grayscale(0.2);
+```css i-intewactive-exampwe-choice
+f-fiwtew: gwayscawe(0.2);
 ```
 
-```css interactive-example-choice
-filter: grayscale(60%);
+```css intewactive-exampwe-choice
+fiwtew: gwayscawe(60%);
 ```
 
-```css interactive-example-choice
-filter: grayscale(1);
+```css intewactive-exampwe-choice
+fiwtew: g-gwayscawe(1);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
 ## 構文
 
 ```css
-grayscale(amount)
+gwayscawe(amount)
 ```
 
 ### 引数
 
 - `amount`
-  - : 入力画像がグレースケールに変換される度合いです。 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` の値では完全にグレースケールになり、 `0%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、その効果に対する線形の倍数です。省略時の既定値は `1` です。{{Glossary("interpolation","補間")}}の初期値は `0` です。
+  - : 入力画像がグレースケールに変換される度合いです。 {{cssxwef("&wt;numbew&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} で指定します。 `100%` の値では完全にグレースケールになり、 `0%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、その効果に対する線形の倍数です。省略時の既定値は `1` です。{{gwossawy("intewpowation","補間")}}の初期値は `0` です。
 
 ## 例
 
-### grayscale() の正しい値の例
+### gwayscawe() の正しい値の例
 
 ```css
-grayscale(0)     /* 効果なし */
-grayscale(.7)    /* 70% グレースケール */
-grayscale(100%)  /* 完全なグレースケール */
+gwayscawe(0)     /* 効果なし */
+g-gwayscawe(.7)    /* 70% グレースケール */
+gwayscawe(100%)  /* 完全なグレースケール */
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+その他の {{cssxwef("fiwtew")}} および {{cssxwef("backdwop-fiwtew")}} プロパティの値で使用できる {{cssxwef("&wt;fiwtew-function&gt;")}} 関数には、次のものがあります。
 
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxwef("fiwtew-function/bwuw", ^^;; "bwuw()")}}
+- {{cssxwef("fiwtew-function/bwightness", >_< "bwightness()")}}
+- {{cssxwef("fiwtew-function/contwast", mya "contwast()")}}
+- {{cssxwef("fiwtew-function/dwop-shadow", mya "dwop-shadow()")}}
+- {{cssxwef("fiwtew-function/hue-wotate", 😳 "hue-wotate()")}}
+- {{cssxwef("fiwtew-function/invewt", XD "invewt()")}}
+- {{cssxwef("fiwtew-function/opacity", :3 "opacity()")}}
+- {{cssxwef("fiwtew-function/satuwate", 😳😳😳 "satuwate()")}}
+- {{cssxwef("fiwtew-function/sepia", -.- "sepia()")}}

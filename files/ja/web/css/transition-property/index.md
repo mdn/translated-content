@@ -1,98 +1,98 @@
 ---
-title: transition-property
-slug: Web/CSS/transition-property
-l10n:
-  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
+titwe: twansition-pwopewty
+swug: w-web/css/twansition-pwopewty
+w-w10n:
+  souwcecommit: b-bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)を適用する CSS プロパティを指定します。
+**`twansition-pwopewty`** は [css](/ja/docs/web/css) のプロパティで、[トランジション効果](/ja/docs/web/css/css_twansitions/using_css_twansitions)を適用する c-css プロパティを指定します。
 
-{{InteractiveExample("CSS Demo: transition-property")}}
+{{intewactiveexampwe("css d-demo: twansition-pwopewty")}}
 
-```css interactive-example-choice
-transition-property: margin-right;
+```css i-intewactive-exampwe-choice
+t-twansition-pwopewty: m-mawgin-wight;
 ```
 
-```css interactive-example-choice
-transition-property: margin-right, color;
+```css intewactive-exampwe-choice
+twansition-pwopewty: mawgin-wight, 😳😳😳 cowow;
 ```
 
-```css interactive-example-choice
-transition-property: all;
+```css i-intewactive-exampwe-choice
+twansition-pwopewty: aww;
 ```
 
-```css interactive-example-choice
-transition-property: none;
+```css i-intewactive-exampwe-choice
+twansition-pwopewty: n-nyone;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew t-to see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  font: 1em monospace;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #e4f0f5;
+  cowow: #000;
+  padding: 1wem;
+  bowdew-wadius: 0.5wem;
+  font: 1em m-monospace;
   width: 100%;
-  transition: margin-right 2s;
+  twansition: mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  backgwound-cowow: #909;
+  cowow: #fff;
+  m-mawgin-wight: 40%;
 }
 ```
 
-一括指定プロパティ（例えば {{cssxref("background")}}）を指定すると、その個別指定のサブプロパティすべてをアニメーションさせることができます。
+一括指定プロパティ（例えば {{cssxwef("backgwound")}}）を指定すると、その個別指定のサブプロパティすべてをアニメーションさせることができます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-transition-property: none;
-transition-property: all;
+twansition-pwopewty: n-nyone;
+twansition-pwopewty: a-aww;
 
 /* <custom-ident> 値 */
-transition-property: test_05;
-transition-property: -specific;
-transition-property: sliding-vertically;
+t-twansition-pwopewty: t-test_05;
+twansition-pwopewty: -specific;
+twansition-pwopewty: s-swiding-vewticawwy;
 
 /* 複数の値 */
-transition-property: test1, animation4;
-transition-property: all, height, color;
-transition-property:
-  all,
-  -moz-specific,
-  sliding;
+twansition-pwopewty: test1, o.O animation4;
+t-twansition-pwopewty: aww, ( ͡o ω ͡o ) height, (U ﹏ U) cowow;
+twansition-pwopewty:
+  aww, (///ˬ///✿)
+  -moz-specific, >w<
+  swiding;
 
 /* グローバル値 */
-transition-property: inherit;
-transition-property: initial;
-transition-property: revert;
-transition-property: revert-layer;
-transition-property: unset;
+twansition-pwopewty: i-inhewit;
+twansition-pwopewty: initiaw;
+twansition-pwopewty: w-wevewt;
+twansition-pwopewty: wevewt-wayew;
+t-twansition-pwopewty: u-unset;
 ```
 
 ### 値
 
 - `none`
   - : どのプロパティもトランジションを行いません。
-- `all`
+- `aww`
   - : トランジションが可能なすべてのプロパティで、トランジションを行います。
-- {{cssxref("&lt;custom-ident&gt;")}}
+- {{cssxwef("&wt;custom-ident&gt;")}}
   - : 値が変更されたとき、トランジション効果を適用するプロパティを識別する文字列です。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -102,60 +102,60 @@ transition-property: unset;
 
 ### 基本的な例
 
-ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `transition-property` は [`background-color`](/ja/docs/Web/CSS/background-color) です。
+ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `twansition-pwopewty` は [`backgwound-cowow`](/ja/docs/web/css/backgwound-cowow) です。
 
-#### HTML
+#### htmw
 
-```html
-<button class="target">フォーカスしてください</button>
+```htmw
+<button cwass="tawget">フォーカスしてください</button>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-html {
+h-htmw {
   height: 100vh;
 }
 
-button {
-  font-size: 1.4rem;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  outline: none;
+b-button {
+  font-size: 1.4wem;
+  p-padding: 10px 20px;
+  b-bowdew: 1px sowid #ccc;
+  bowdew-wadius: 10px;
+  o-outwine: nyone;
 }
 ```
 
 ```css
-.target {
-  transition-property: background-color;
-  transition-duration: 1s;
-  background-color: #ccc;
+.tawget {
+  twansition-pwopewty: backgwound-cowow;
+  t-twansition-duwation: 1s;
+  backgwound-cowow: #ccc;
 }
 
-.target:hover,
-.target:focus {
-  background-color: #eee;
+.tawget:hovew, rawr
+.tawget:focus {
+  backgwound-cowow: #eee;
 }
 ```
 
-{{EmbedLiveSample('Basic_example', 600, 100)}}
+{{embedwivesampwe('basic_exampwe', mya 600, 100)}}
 
-`transition-property` のその他の例については、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)ガイドを参照してください。
+`twansition-pwopewty` のその他の例については、 [css トランジション](/ja/docs/web/css/css_twansitions/using_css_twansitions)ガイドを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{cssxref('transition')}}
-- {{cssxref('transition-duration')}}
-- {{cssxref('transition-timing-function')}}
-- {{cssxref('transition-delay')}}
-- {{domxref("TransitionEvent")}}
+- [css トランジションの使用](/ja/docs/web/css/css_twansitions/using_css_twansitions)
+- {{cssxwef('twansition')}}
+- {{cssxwef('twansition-duwation')}}
+- {{cssxwef('twansition-timing-function')}}
+- {{cssxwef('twansition-deway')}}
+- {{domxwef("twansitionevent")}}

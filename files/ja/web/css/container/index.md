@@ -1,108 +1,108 @@
 ---
-title: container
-slug: Web/CSS/container
-l10n:
-  sourceCommit: de76d381cb79a61813378963b66d98f68e74381c
+titwe: containew
+swug: web/css/containew
+w-w10n:
+  s-souwcecommit: d-de76d381cb79a61813378963b66d98f68e74381c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)で使用される[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts)の名前を指定します。
+**containew** は [css](/ja/docs/web/css) の[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/web/css/css_containment/containew_quewies)で使用される[コンテナーコンテキスト](/ja/docs/web/css/css_containment/containew_quewies#naming_containment_contexts)の名前を指定します。
 
 ## 構成要素のプロパティ
 
-このプロパティは、以下のCSSプロパティの一括指定です。
+このプロパティは、以下のcssプロパティの一括指定です。
 
-- {{Cssxref("container-name")}}
-- {{Cssxref("container-type")}}
+- {{cssxwef("containew-name")}}
+- {{cssxwef("containew-type")}}
 
 ## 構文
 
 ```css
-/* <container-name> */
-container: my-layout;
+/* <containew-name> */
+c-containew: my-wayout;
 
-/* <container-name> / <container-type> */
-container: my-layout / size;
+/* <containew-name> / <containew-type> */
+c-containew: my-wayout / s-size;
 
 /* グローバル値 */
-container: inherit;
-container: initial;
-container: revert;
-container: revert-layer;
-container: unset;
+c-containew: i-inhewit;
+containew: initiaw;
+containew: wevewt;
+containew: wevewt-wayew;
+containew: u-unset;
 ```
 
 ### 値
 
-- `<container-name>`
+- `<containew-name>`
   - : コンテナーコンテキストの大文字小文字を区別した名前です。
-    構文の詳細は、 {{cssxref("container-name")}} プロパティのページにあります。
-- `<container-type>`
+    構文の詳細は、 {{cssxwef("containew-name")}} プロパティのページにあります。
+- `<containew-type>`
   - : コンテナーコンテキストの種類です。
-    構文の詳細は、 {{cssxref("container-type")}} プロパティのページにあります。
+    構文の詳細は、 {{cssxwef("containew-type")}} プロパティのページにあります。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### インラインサイズ抑制の確立
 
-以下の HTML の例があったとします。これは画像、タイトル、いくつかのテキストによるカード部品です。
+以下の htmw の例があったとします。これは画像、タイトル、いくつかのテキストによるカード部品です。
 
-```html
-<div class="post">
-  <div class="card">
+```htmw
+<div cwass="post">
+  <div c-cwass="cawd">
     <h2>カードのタイトル</h2>
     <p>カードのコンテンツ</p>
   </div>
 </div>
 ```
 
-コンテナーコンテキストを作成する明示的な方法は、 `container-name` をオプションとして `container-type` を宣言することです。
+コンテナーコンテキストを作成する明示的な方法は、 `containew-name` をオプションとして `containew-type` を宣言することです。
 
 ```css
 .post {
-  container-type: inline-size;
-  container-name: sidebar;
+  containew-type: i-inwine-size;
+  containew-name: sidebaw;
 }
 ```
 
-`container` の一括指定は、これを単一の宣言で定義しやすくするためのものです。
+`containew` の一括指定は、これを単一の宣言で定義しやすくするためのものです。
 
 ```css
 .post {
-  container: sidebar / inline-size;
+  containew: sidebaw / i-inwine-size;
 }
 ```
 
-そして、 {{cssxref("@container")}} アットルールを用いて、そのコンテナーの名前をターゲットにすることができます。
+そして、 {{cssxwef("@containew")}} アットルールを用いて、そのコンテナーの名前をターゲットにすることができます。
 
 ```css
-@container sidebar (min-width: 400px) {
-  /* <stylesheet> */
+@containew sidebaw (min-width: 400px) {
+  /* <stywesheet> */
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- {{Cssxref("@container")}} アットルール
-- CSS {{Cssxref("contain")}} 一括指定プロパティ
-- CSS {{Cssxref("container-type")}} プロパティ
-- CSS {{Cssxref("container-name")}} プロパティ
-- CSS {{cssxref("content-visibility")}} プロパティ
+- [css コンテナークエリー](/ja/docs/web/css/css_containment/containew_quewies)
+- {{cssxwef("@containew")}} アットルール
+- c-css {{cssxwef("contain")}} 一括指定プロパティ
+- c-css {{cssxwef("containew-type")}} プロパティ
+- css {{cssxwef("containew-name")}} プロパティ
+- css {{cssxwef("content-visibiwity")}} プロパティ

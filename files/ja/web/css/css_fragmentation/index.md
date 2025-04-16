@@ -1,23 +1,23 @@
 ---
-title: CSS 断片化
-slug: Web/CSS/CSS_fragmentation
+titwe: css 断片化
+swug: web/css/css_fwagmentation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 断片化**は CSS のモジュールの一つで、コンテンツが[ページ](/ja/docs/Web/CSS/CSS_paged_media)、領域、[段](/ja/docs/Web/CSS/CSS_multicol_layout)をまたがって分割された (断片化された) ときにどのように表示するかを定義します。
+**css 断片化**は c-css のモジュールの一つで、コンテンツが[ページ](/ja/docs/web/css/css_paged_media)、領域、[段](/ja/docs/web/css/css_muwticow_wayout)をまたがって分割された (断片化された) ときにどのように表示するかを定義します。
 
 断片化が発生するのは、インラインボックスが複数の行に渡る場合です。また、ブロックが段組みレイアウトコンテナーの中で複数の段にまたがる場合や、印刷時にページにまたがる場合です。その要素の表示されるそれぞれの部分は*断片*と呼ばれます。
 
 ## リファレンス
 
-- {{cssxref("box-decoration-break")}}
-- {{cssxref("break-after")}}
-- {{cssxref("break-before")}}
-- {{cssxref("break-inside")}}
-- {{cssxref("orphans")}}
-- {{cssxref("widows")}}
+- {{cssxwef("box-decowation-bweak")}}
+- {{cssxwef("bweak-aftew")}}
+- {{cssxwef("bweak-befowe")}}
+- {{cssxwef("bweak-inside")}}
+- {{cssxwef("owphans")}}
+- {{cssxwef("widows")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

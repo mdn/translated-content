@@ -1,26 +1,26 @@
 ---
-title: WebGL
-slug: Glossary/WebGL
+titwe: webgw
+swug: gwossawy/webgw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebGL** (_Web グラフィックライブラリー_) は、インタラクティブな 2D/3D グラフィックを描画する {{Glossary("JavaScript")}} {{Glossary("API")}} です。
+**webgw** (_web グラフィックライブラリー_) は、インタラクティブな 2d/3d グラフィックを描画する {{gwossawy("javascwipt")}} {{gwossawy("api")}} です。
 
-[Khronos グループ](https://www.khronos.org/) が WebGL をメンテナンスしていて、これは {{Glossary("OpenGL")}} ES 2.0 を元にしています。
+[khwonos グループ](https://www.khwonos.owg/) が webgw をメンテナンスしていて、これは {{gwossawy("opengw")}} e-es 2.0 を元にしています。
 
-{{Glossary("HTML")}} {{HTMLElement("canvas")}} 要素内で WebGL を実行できて、これがレンダリングサーフェスを提供します。
+{{gwossawy("htmw")}} {{htmwewement("canvas")}} 要素内で w-webgw を実行できて、これがレンダリングサーフェスを提供します。
 
-全ての主要{{Glossary("Browser","ブラウザー")}}は現在 WebGL をサポートしていますが、利用性は他の要素 (例 GPU サポート) にも依存します。
+全ての主要{{gwossawy("bwowsew","ブラウザー")}}は現在 w-webgw をサポートしていますが、利用性は他の要素 (例 g-gpu サポート) にも依存します。
 
 ## 詳細
 
 ### 一般情報
 
-- Wikipedia の [WebGL](https://ja.wikipedia.org/wiki/WebGL)
-- [Check for WebGL support](http://get.webgl.org/)
+- w-wikipedia の [webgw](https://ja.wikipedia.owg/wiki/webgw)
+- [check fow w-webgw suppowt](http://get.webgw.owg/)
 
 ### 技術記事
 
-- [MDN の WebGL](/ja/docs/Web/API/WebGL_API)
-- [WebGL のサポート表](http://caniuse.com/#feat=webgl)
+- [mdn の w-webgw](/ja/docs/web/api/webgw_api)
+- [webgw のサポート表](http://caniuse.com/#feat=webgw)

@@ -1,11 +1,11 @@
 ---
-title: CSS セレクターページのテンプレート
-slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
-l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+titwe: css セレクターページのテンプレート
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/page_types/css_sewectow_page_tempwate
+w10n:
+  s-souwcecommit: c-cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
 > **メモ:** _この説明文全体を削除してから公開してください。_
 >
@@ -20,21 +20,21 @@ l10n:
 >
 > ```md
 > ---
-> title: :NameOfTheSelector
-> slug: Web/CSS/:NameOfTheSelector
-> l10n:
->   sourceCommit: 翻訳元コミットID
+> t-titwe: :nameofthesewectow
+> s-swug: web/css/:nameofthesewectow
+> w-w10n:
+>   souwcecommit: 翻訳元コミットid
 > ---
 > ```
 >
-> - **title**
->   - : タイトルの見出しで、ページの先頭に表示されます。書式は _:NameOfTheSelector_ です。
->     例えば、 [`:hover`](/ja/docs/Web/CSS/:hover) セレクターのタイトルは _:hover_ です。
-> - **slug**
->   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/:NameOfTheSelector` のような書式です。
->     例えば、 [`:hover`](/ja/docs/Web/CSS/:hover) セレクターのスラッグは `Web/CSS/:hover` です。
-> - **sourceCommit**
->   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
+> - **titwe**
+>   - : タイトルの見出しで、ページの先頭に表示されます。書式は _:nameofthesewectow_ です。
+>     例えば、 [`:hovew`](/ja/docs/web/css/:hovew) セレクターのタイトルは _:hovew_ です。
+> - **swug**
+>   - : `https://devewopew.moziwwa.owg/ja/docs/` の後にくる u-uww の末尾です。 これは `web/css/:nameofthesewectow` のような書式です。
+>     例えば、 [`:hovew`](/ja/docs/web/css/:hovew) セレクターのスラッグは `web/css/:hovew` です。
+> - **souwcecommit**
+>   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を g-github にコミットした際のコミット id を記述します。 github 上で英語版記事のコミット id を確認してください。
 >
 > ---
 >
@@ -43,15 +43,15 @@ l10n:
 > コンテンツ部の上部（ページのフロントマターのすぐ下）には、いくつかのマクロ呼び出しが現れます。
 > **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 >
-> - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
->   実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのためのエントリーを記入する必要があります。
-> - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
-> - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
+> - `\{{seecompattabwe}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#実験的)であることを示します。
+>   実験的なもので、その技術が fiwefox の設定で隠されている場合は、 [fiwefox での実験的な機能](/ja/docs/moziwwa/fiwefox/expewimentaw_featuwes) ページにもそのためのエントリーを記入する必要があります。
+> - `\{{depwecated_headew}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#非推奨)であることを示します。
+> - `\{{non-standawd_headew}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
 > 下記のアドバイスに従って、以下のマクロを更新または削除してください。
 >
-> - `\{{CSSRef}}`: このマクロはすべての CSS モジュールのランディングページに置く必要があります。ページに記載したタグに応じて、適切な CSS サイドバーを生成します。
-> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
+> - `\{{csswef}}`: このマクロはすべての css モジュールのランディングページに置く必要があります。ページに記載したタグに応じて、適切な c-css サイドバーを生成します。
+> - このページをコピーする際には、 `\{{mdnsidebaw}}` マクロを外すのを忘れないでください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
@@ -59,15 +59,15 @@ l10n:
 >
 > ---
 >
-> **構文の節 (`\{{CSSSyntax}}`)**
+> **構文の節 (`\{{csssyntax}}`)**
 >
-> 構文の節の内容は `\{{CSSSyntax}}` マクロを使用して生成します。
-> これらを表示するには、 [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) データファイルでセレクターの項目が確実に記入されていることを確認する必要があります。
-> 詳しくは [selectors.md](https://github.com/mdn/data/blob/main/css/selectors.md) を参照してください。
+> 構文の節の内容は `\{{csssyntax}}` マクロを使用して生成します。
+> これらを表示するには、 [sewectows.json](https://github.com/mdn/data/bwob/main/css/sewectows.json) データファイルでセレクターの項目が確実に記入されていることを確認する必要があります。
+> 詳しくは [sewectows.md](https://github.com/mdn/data/bwob/main/css/sewectows.md) を参照してください。
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{csswef}}{{seecompattabwe}}{{depwecated_headew}}{{non-standawd_headew}}
 
 概要段落 - 始めに、セレクターの名前とそれが何をするのかを説明してください。これはできれば 1 つか 2 つの短い文章にしてください。
 
@@ -77,33 +77,33 @@ l10n:
 
 ## 構文
 
-`\{{CSSSyntax}}`
+`\{{csssyntax}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、 mawkdown ファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## 例
 
-英語版では、ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用していることに留意してください。
+英語版では、ページ内に例が 1 つしかない場合でも、複数形の "exampwes" を使用していることに留意してください。
 
 ### 説明的な見出し
 
-それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
+それぞれの例には、その例を説明する h3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
 
-詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
+詳しくは、[サンプルコード](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes)を追加する方法のガイドをご覧ください。
 
-> [!NOTE]
+> [!note]
 > 他のページで紹介されている例にリンクしたい場合もあるでしょう。
 >
 > **シナリオ 1:** このページにいくつかの例があり、別のページにさらにいくつかの例がある場合。
 >
-> このページのそれぞれの例に H3 見出し (`###`) を記載し、最後に H3 見出し (`###`) に「その他の例」というテキストを入れ、その下に他のページの例へのリンクを貼ることができます。例えば次のようにします。
+> このページのそれぞれの例に h-h3 見出し (`###`) を記載し、最後に h3 見出し (`###`) に「その他の例」というテキストを入れ、その下に他のページの例へのリンクを貼ることができます。例えば次のようにします。
 >
 > ```md
 > ## 例
 >
-> ### Fetch API の使用
+> ### f-fetch api の使用
 >
-> Fetch の例
+> fetch の例
 >
 > ### その他の例
 >
@@ -112,12 +112,12 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
-> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+> h3 の見出しは追加せず、 h2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> この a-api の例については、[fetch() のページ](https://exampwe.owg)を参照してください。
 > ```
 
 ## アクセシビリティの考慮
@@ -127,19 +127,19 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 
 ## 仕様書
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、 mawkdown ファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## ブラウザーの互換性
 
-`\{{Compat}}`
+`\{{compat}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、 m-mawkdown ファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## 関連情報
 
-現在のセレクターに関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在のセレクターに関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2

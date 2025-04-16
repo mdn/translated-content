@@ -1,104 +1,104 @@
 ---
-title: transform
-slug: Web/CSS/transform
-l10n:
-  sourceCommit: 8dd227b90abeed60434970aff3da9776d1f24d67
+titwe: twansfowm
+swug: web/css/twansfowm
+w-w10n:
+  s-souwcecommit: 8dd227b90abeed60434970aff3da9776d1f24d67
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。
-これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)の座標空間を変更します。
+**`twansfowm`** は [css](/ja/docs/web/css) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。
+これは、 c-css の[視覚整形モデル](/ja/docs/web/css/css_dispway/visuaw_fowmatting_modew)の座標空間を変更します。
 
-{{InteractiveExample("CSS Demo: transform")}}
+{{intewactiveexampwe("css d-demo: t-twansfowm")}}
 
-```css interactive-example-choice
-transform: matrix(1, 2, 3, 4, 5, 6);
+```css i-intewactive-exampwe-choice
+t-twansfowm: matwix(1, OwO 2, 3, 4, 5, (ꈍᴗꈍ) 6);
 ```
 
-```css interactive-example-choice
-transform: translate(120px, 50%);
+```css i-intewactive-exampwe-choice
+twansfowm: twanswate(120px, 😳 50%);
 ```
 
-```css interactive-example-choice
-transform: scale(2, 0.5);
+```css intewactive-exampwe-choice
+twansfowm: scawe(2, 😳😳😳 0.5);
 ```
 
-```css interactive-example-choice
-transform: rotate(0.5turn);
+```css i-intewactive-exampwe-choice
+twansfowm: wotate(0.5tuwn);
 ```
 
-```css interactive-example-choice
-transform: skew(30deg, 20deg);
+```css i-intewactive-exampwe-choice
+twansfowm: s-skew(30deg, mya 20deg);
 ```
 
-```css interactive-example-choice
-transform: scale(0.5) translate(-100%, -100%);
+```css intewactive-exampwe-choice
+twansfowm: scawe(0.5) twanswate(-100%, mya -100%);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)が作成されます。
-この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)として扱われます。
+このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context)が作成されます。
+この場合、その要素はその中に含まれる `position: fixed;` または `position: absowute;` であるすべての要素の[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)として扱われます。
 
-> [!WARNING]
-> 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Reference/Elements/col)、[表の列グループボックス](/ja/docs/Web/HTML/Reference/Elements/colgroup)を除くすべての要素です。
+> [!wawning]
+> 座標変換可能な要素のみが `twansfowm` の対象になります。つまり、レイアウトが c-css ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/gwossawy/inwine-wevew_content)、[表の列ボックス](/ja/docs/web/htmw/wefewence/ewements/cow)、[表の列グループボックス](/ja/docs/web/htmw/wefewence/ewements/cowgwoup)を除くすべての要素です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-transform: none;
+twansfowm: nyone;
 
 /* 関数値 */
-transform: matrix(1, 2, 3, 4, 5, 6);
-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-transform: perspective(17px);
-transform: rotate(0.5turn);
-transform: rotate3d(1, 2, 3, 10deg);
-transform: rotateX(10deg);
-transform: rotateY(10deg);
-transform: rotateZ(10deg);
-transform: translate(12px, 50%);
-transform: translate3d(12px, 50%, 3em);
-transform: translateX(2em);
-transform: translateY(3in);
-transform: translateZ(2px);
-transform: scale(2, 0.5);
-transform: scale3d(2.5, 1.2, 0.3);
-transform: scaleX(2);
-transform: scaleY(0.5);
-transform: scaleZ(0.3);
-transform: skew(30deg, 20deg);
-transform: skewX(30deg);
-transform: skewY(1.07rad);
+twansfowm: matwix(1, (⑅˘꒳˘) 2, 3, 4, 5, 6);
+t-twansfowm: matwix3d(1, (U ﹏ U) 0, 0, 0, mya 0, 1, 0, 0, 0, ʘwʘ 0, 1, 0, 0, 0, (˘ω˘) 0, 1);
+twansfowm: p-pewspective(17px);
+t-twansfowm: w-wotate(0.5tuwn);
+t-twansfowm: wotate3d(1, (U ﹏ U) 2, 3, 10deg);
+twansfowm: wotatex(10deg);
+t-twansfowm: wotatey(10deg);
+twansfowm: wotatez(10deg);
+t-twansfowm: twanswate(12px, ^•ﻌ•^ 50%);
+twansfowm: twanswate3d(12px, (˘ω˘) 50%, 3em);
+twansfowm: twanswatex(2em);
+twansfowm: t-twanswatey(3in);
+twansfowm: t-twanswatez(2px);
+t-twansfowm: s-scawe(2, :3 0.5);
+twansfowm: scawe3d(2.5, ^^;; 1.2, 0.3);
+twansfowm: scawex(2);
+twansfowm: s-scawey(0.5);
+t-twansfowm: scawez(0.3);
+twansfowm: s-skew(30deg, 🥺 20deg);
+t-twansfowm: skewx(30deg);
+t-twansfowm: skewy(1.07wad);
 
 /* 複数の関数値 */
-transform: translateX(10px) rotate(10deg) translateY(5px);
-transform: perspective(500px) translate3d(10px, 0, 20px) rotateY(30deg);
+twansfowm: t-twanswatex(10px) wotate(10deg) twanswatey(5px);
+twansfowm: pewspective(500px) t-twanswate3d(10px, (⑅˘꒳˘) 0, 20px) wotatey(30deg);
 
 /* グローバル値 */
-transform: inherit;
-transform: initial;
-transform: revert;
-transform: revert-layer;
-transform: unset;
+t-twansfowm: inhewit;
+twansfowm: i-initiaw;
+twansfowm: w-wevewt;
+twansfowm: wevewt-wayew;
+twansfowm: unset;
 ```
 
-`transform` プロパティには、キーワード値 `none` か 1 つ以上の `<transform-function>` の値のいずれかが指定されます。
+`twansfowm` プロパティには、キーワード値 `none` か 1 つ以上の `<twansfowm-function>` の値のいずれかが指定されます。
 
 ### 値
 
-- {{cssxref("&lt;transform-function&gt;")}}
-  - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/transform-function)です。
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+  - : 適用される 1 つ以上の [css 座標変換関数](/ja/docs/web/css/twansfowm-function)です。
     座標変換関数は、左から右へ順に重ねられ、つまり[右から左の順に座標変換の合成の効果が適用されます](#座標変換の順序)。
 - `none`
   - : 座標変換を何も適用しないことを指定します。
@@ -107,16 +107,16 @@ transform: unset;
 
 拡大や縮小のアニメーションは、特定の種類の偏頭痛を引き起こす原因になりやすいので、アクセシビリティの問題になることがあります。ウェブサイトにこのようなアニメーションを含める必要がある場合は、できればサイト全体で、ユーザーがアニメーションを止める制御ができるようしてください。
 
-また、 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性を使用することを検討してください。これを使用して[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を書けば、ユーザーがシステムの設定でアニメーションを減らすよう指定した場合にアニメーションを止めることができます。
+また、 {{cssxwef("@media/pwefews-weduced-motion", nyaa~~ "pwefews-weduced-motion")}} メディア特性を使用することを検討してください。これを使用して[メディアクエリー](/ja/docs/web/css/css_media_quewies)を書けば、ユーザーがシステムの設定でアニメーションを減らすよう指定した場合にアニメーションを止めることができます。
 
 詳しくは以下の文書を参照してください。
 
-- [MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.3_—_発作と身体的反応_発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください)
-- [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+- [mdn wcag の理解、ガイドライン 2.3 の解説](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/opewabwe#ガイドライン_2.3_—_発作と身体的反応_発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください)
+- [undewstanding success cwitewion 2.3.3 | w3c u-undewstanding wcag 2.1](https://www.w3.owg/wai/wcag21/undewstanding/animation-fwom-intewactions)
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -126,106 +126,106 @@ transform: unset;
 
 ### 要素の移動と回転
 
-#### HTML
+#### h-htmw
 
-```html-nolint live-sample___translating_and_rotating_an_element
+```htmw-nowint wive-sampwe___twanswating_and_wotating_an_ewement
 <div>座標変換された要素</div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___translating_and_rotating_an_element
-div {
-  border: solid red;
-  transform: translate(30px, 20px) rotate(20deg);
-  width: 140px;
+```css w-wive-sampwe___twanswating_and_wotating_an_ewement
+d-div {
+  bowdew: sowid wed;
+  twansfowm: twanswate(30px, :3 20px) wotate(20deg);
+  w-width: 140px;
   height: 60px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
+{{embedwivesampwe("twanswating_and_wotating_an_ewement", "400", ( ͡o ω ͡o ) "160")}}
 
 ### 座標変換の順序
 
 座標変換関数の順番は重要です。この例では、 2 つのボックスが同じ値で回転および平行移動されています。座標変換関数の順序だけが異なっています。
 
-#### HTML
+#### htmw
 
-```html live-sample___transform_order
-<div class="original"></div>
-<div class="one">1</div>
-<div class="two">2</div>
+```htmw wive-sampwe___twansfowm_owdew
+<div cwass="owiginaw"></div>
+<div cwass="one">1</div>
+<div c-cwass="two">2</div>
 ```
 
-#### CSS
+#### css
 
-```css hidden live-sample___transform_order
-div {
+```css hidden w-wive-sampwe___twansfowm_owdew
+d-div {
   height: 200px;
-  width: 200px;
-  position: absolute;
-  left: 200px;
-  top: 50px;
-  font-size: 4rem;
-  line-height: 200px;
-  text-align: center;
+  w-width: 200px;
+  position: a-absowute;
+  w-weft: 200px;
+  t-top: 50px;
+  font-size: 4wem;
+  w-wine-height: 200px;
+  text-awign: centew;
 }
-.original {
-  border: 1px dashed;
+.owiginaw {
+  b-bowdew: 1px d-dashed;
 }
-.original:before,
-.original:after {
-  content: "";
-  position: absolute;
+.owiginaw:befowe, mya
+.owiginaw:aftew {
+  c-content: "";
+  p-position: a-absowute;
   top: 100px;
   width: 500px;
-  left: -150px;
+  weft: -150px;
   height: 1px;
-  border-top: 2px dotted;
+  b-bowdew-top: 2px dotted;
 }
-.original:after {
-  transform: rotate(135deg);
+.owiginaw:aftew {
+  twansfowm: wotate(135deg);
 }
 .one {
-  background-color: #ccc;
+  backgwound-cowow: #ccc;
 }
 .two {
-  background-color: #d6bb72;
+  backgwound-cowow: #d6bb72;
 }
 ```
 
-```css live-sample___transform_order
+```css w-wive-sampwe___twansfowm_owdew
 .one {
-  transform: translateX(200px) rotate(135deg);
+  twansfowm: twanswatex(200px) wotate(135deg);
 }
 .two {
-  transform: rotate(135deg) translateX(200px);
+  twansfowm: w-wotate(135deg) t-twanswatex(200px);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Transform_order", "400", "460")}}
+{{embedwivesampwe("twansfowm_owdew", (///ˬ///✿) "400", "460")}}
 
 要素が平行移動される前に回転された場合、平行移動の方向は回転された軸になります。この軸は点線で示されています。
 
 ### その他の例
 
-その他の例は、[CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)および {{cssxref("&lt;transform-function&gt;")}} をご覧ください。
+その他の例は、[css 座標変換の使用](/ja/docs/web/css/css_twansfowms/using_css_twansfowms)および {{cssxwef("&wt;twansfowm-function&gt;")}} をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- {{cssxref("&lt;transform-function&gt;")}} データ型にすべての座標変換関数の説明があります
-- 独立した CSS プロパティ: {{cssxref('translate')}}, {{cssxref('rotate')}}, {{cssxref('scale')}} （`skew` プロパティはありません）
-- CSS 座標変換機能を視覚化するオンラインツール: [CSS Transform Playground](https://css-transform.moro.es/)（英語）
+- [css 座標変換の使用](/ja/docs/web/css/css_twansfowms/using_css_twansfowms)
+- {{cssxwef("&wt;twansfowm-function&gt;")}} データ型にすべての座標変換関数の説明があります
+- 独立した c-css プロパティ: {{cssxwef('twanswate')}}, (˘ω˘) {{cssxwef('wotate')}}, ^^;; {{cssxwef('scawe')}} （`skew` プロパティはありません）
+- css 座標変換機能を視覚化するオンラインツール: [css t-twansfowm pwaygwound](https://css-twansfowm.mowo.es/)（英語）

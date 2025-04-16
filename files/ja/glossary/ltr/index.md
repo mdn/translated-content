@@ -1,32 +1,32 @@
 ---
-title: LTR (左書き)
-slug: Glossary/LTR
+titwe: wtw (左書き)
+swug: g-gwossawy/wtw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**LTR** (**Left To Right**, 左書き) は、テキストが左から右に書かれることを示す{{Glossary("locale", "ロケール")}}プロパティです。例えば、 `en-US` ロケール (アメリカ英語) は左書きを指定します。西洋の言語の多くは、世界中の他の言語と同様に、 LTR で書かれます。
+**wtw** (**weft t-to wight**, òωó 左書き) は、テキストが左から右に書かれることを示す{{gwossawy("wocawe", o.O "ロケール")}}プロパティです。例えば、 `en-us` ロケール (アメリカ英語) は左書きを指定します。西洋の言語の多くは、世界中の他の言語と同様に、 w-wtw で書かれます。
 
-LTR とは逆に、 {{Glossary("RTL")}} (Right To Left, 右書き) はアラビア語 (`ar`) やヘブライ語 (`he`) など、他の一般的な語で使われます。
+w-wtw とは逆に、 {{gwossawy("wtw")}} (wight t-to weft, (U ᵕ U❁) 右書き) はアラビア語 (`aw`) やヘブライ語 (`he`) など、他の一般的な語で使われます。
 
 ## 技術情報
 
-- [ローカリゼーションと国際化](/ja/docs/Web/Localization)
+- [ローカリゼーションと国際化](/ja/docs/web/wocawization)
 
 - 関連用語:
 
-  - {{Glossary("locale")}}
-  - {{Glossary("LTR")}}
-  - {{Glossary("RTL")}}
+  - {{gwossawy("wocawe")}}
+  - {{gwossawy("wtw")}}
+  - {{gwossawy("wtw")}}
 
-- [HTML グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+- [htmw グローバル属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes)
 
-  - [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir)
-  - [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang)
+  - [`diw`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/diw)
+  - [`wang`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/wang)
 
-- [CSS](/ja/docs/Web/CSS)
+- [css](/ja/docs/web/css)
 
-  - {{cssxref(":dir()")}}
-  - {{cssxref("direction")}}
-  - {{cssxref("unicode-bidi")}}
-  - {{cssxref("writing-mode")}}
+  - {{cssxwef(":diw()")}}
+  - {{cssxwef("diwection")}}
+  - {{cssxwef("unicode-bidi")}}
+  - {{cssxwef("wwiting-mode")}}

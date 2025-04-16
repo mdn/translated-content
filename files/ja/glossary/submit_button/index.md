@@ -1,17 +1,17 @@
 ---
-title: Submit button (送信ボタン)
-slug: Glossary/Submit_button
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: submit button (送信ボタン)
+s-swug: g-gwossawy/submit_button
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**送信ボタン** (submit button) は HTML の{{Glossary("element", "要素")}}で、 {{HTMLElement("form")}} を送信するために使用することができるものです。ネイティブの送信ボタン要素は次の通りです。
+**送信ボタン** (submit b-button) は h-htmw の{{gwossawy("ewement", rawr "要素")}}で、 {{htmwewement("fowm")}} を送信するために使用することができるものです。ネイティブの送信ボタン要素は次の通りです。
 
-- {{HtmlElement("button")}}（既定の `type` は `"submit"`）
-- `{{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}`
-- `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`
+- {{htmwewement("button")}}（既定の `type` は `"submit"`）
+- `{{htmwewement('input/submit', σωσ '&wt;input t-type="submit"&gt;')}}`
+- `{{htmwewement('input/image', σωσ '&wt;input t-type="image"&gt;')}}`
 
 フォームを送信するだけでなく、送信ボタンはフォームの動作や送信されるデータに影響を与えることができます。
 
@@ -19,19 +19,19 @@ l10n:
 
 送信ボタンは、さまざまな属性によってフォームを送信する動作を上書きすることができます。
 
-- `{{HtmlElement("button#attr-formaction", "formaction")}}`: フォームの [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性を上書きします。
-- `{{HtmlElement("button#attr-formenctype", "formenctype")}}`: フォームの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性を上書きします。
-- `{{HtmlElement("button#attr-formmethod", "formmethod")}}`: フォームの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性を上書きします。
-- `{{HtmlElement("button#attr-formnovalidate", "formnovalidate")}}`: フォームの [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性を上書きします。
-- `{{HtmlElement("button#attr-formtarget", "formtarget")}}`: フォームの [`target`](/ja/docs/Web/HTML/Reference/Elements/form#target) 属性を上書きします。
+- `{{htmwewement("button#attw-fowmaction", >_< "fowmaction")}}`: フォームの [`action`](/ja/docs/web/htmw/wefewence/ewements/fowm#action) 属性を上書きします。
+- `{{htmwewement("button#attw-fowmenctype", :3 "fowmenctype")}}`: フォームの [`enctype`](/ja/docs/web/htmw/wefewence/ewements/fowm#enctype) 属性を上書きします。
+- `{{htmwewement("button#attw-fowmmethod", (U ﹏ U) "fowmmethod")}}`: フォームの [`method`](/ja/docs/web/htmw/wefewence/ewements/fowm#method) 属性を上書きします。
+- `{{htmwewement("button#attw-fowmnovawidate", -.- "fowmnovawidate")}}`: フォームの [`novawidate`](/ja/docs/web/htmw/wefewence/ewements/fowm#novawidate) 属性を上書きします。
+- `{{htmwewement("button#attw-fowmtawget", (ˆ ﻌ ˆ)♡ "fowmtawget")}}`: フォームの [`tawget`](/ja/docs/web/htmw/wefewence/ewements/fowm#tawget) 属性を上書きします。
 
 ## フォームデータ項目
 
-送信ボタンが {{HtmlElement("button")}} または `{{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}` であり `name` 属性がある場合、フォームデータにはその `name` と `value` の項目が含まれます。
+送信ボタンが {{htmwewement("button")}} または `{{htmwewement('input/submit', (⑅˘꒳˘) '&wt;input type="submit"&gt;')}}` であり `name` 属性がある場合、フォームデータにはその `name` と `vawue` の項目が含まれます。
 
-送信ボタンが `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}` である場合、フォームデータはユーザーがクリックした X および Y 座標の項目が入ります（例えば `x=100&y=200` または `buttonName.x=123&buttonName.y=234`）。
+送信ボタンが `{{htmwewement('input/image', (U ᵕ U❁) '&wt;input type="image"&gt;')}}` である場合、フォームデータはユーザーがクリックした x および y 座標の項目が入ります（例えば `x=100&y=200` または `buttonname.x=123&buttonname.y=234`）。
 
 ## 関連情報
 
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [基本的なネイティブフォームコントロール](/ja/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows)
+- [フォームデータの送信](/ja/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data)

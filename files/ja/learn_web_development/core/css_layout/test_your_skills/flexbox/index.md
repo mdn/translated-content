@@ -1,19 +1,19 @@
 ---
-title: "スキルテスト: フレックスボックス"
-slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
-original_slug: Learn_web_development/Core/CSS_layout/Flexbox_skills
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: フレックスボックス"
+swug: w-weawn_web_devewopment/cowe/css_wayout/test_youw_skiwws/fwexbox
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/css_wayout/fwexbox_skiwws
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、[フレックスボックスとフレックスアイテム](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)がどのように動作するか理解しているかどうかを評価することです。以下にフレックスボックスを使用して作成する 4 つの一般的なデザインパターンを示します。課題はそれらを構築することです。
+このスキルテストの目的は、[フレックスボックスとフレックスアイテム](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)がどのように動作するか理解しているかどうかを評価することです。以下にフレックスボックスを使用して作成する 4 つの一般的なデザインパターンを示します。課題はそれらを構築することです。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題 1
 
@@ -21,63 +21,63 @@ l10n:
 
 最終結果は下記の画像のようになるはずです。
 
-![空間を空けて並べられたフレックスアイテム。](flex-task1.png)
+![空間を空けて並べられたフレックスアイテム。](fwex-task1.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___flexbox1
+```htmw w-wive-sampwe___fwexbox1
 <nav>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About Us</a></li>
-    <li><a href="/products">Our Products</a></li>
-    <li><a href="/contact">Contact Us</a></li>
-  </ul>
+  <uw>
+    <wi><a h-hwef="/">home</a></wi>
+    <wi><a h-hwef="/about">about us</a></wi>
+    <wi><a hwef="/pwoducts">ouw pwoducts</a></wi>
+    <wi><a hwef="/contact">contact u-us</a></wi>
+  </uw>
 </nav>
 ```
 
-```css hidden live-sample___flexbox1
+```css hidden wive-sampwe___fwexbox1
 body {
-  font: 1.2em / 1.5 sans-serif;
+  f-font: 1.2em / 1.5 sans-sewif;
 }
-nav ul {
+n-nyav uw {
   max-width: 700px;
-  list-style: none;
+  wist-stywe: nyone;
   padding: 0;
-  margin: 0;
+  m-mawgin: 0;
 }
-nav a:link,
-nav a:visited {
-  background-color: #4d7298;
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  color: #fff;
+nyav a:wink, ( ͡o ω ͡o )
+n-nyav a:visited {
+  b-backgwound-cowow: #4d7298;
+  bowdew: 2px sowid #77a6b6;
+  bowdew-wadius: 0.5em;
+  cowow: #fff;
   padding: 0.5em;
-  display: inline-block;
-  text-decoration: none;
+  d-dispway: inwine-bwock;
+  text-decowation: none;
 }
 ```
 
-```css live-sample___flexbox1
-nav ul {
+```css wive-sampwe___fwexbox1
+n-nyav uw {
 }
 ```
 
-{{EmbedLiveSample("flexbox1", "", "240px")}}
+{{embedwivesampwe("fwexbox1", >_< "", >w< "240px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-`display: flex` を適用すると、`justify-content` プロパティを使用して空間を制御することができます。
+`dispway: f-fwex` を適用すると、`justify-content` プロパティを使用して空間を制御することができます。
 
 ```css
-nav ul {
-  display: flex;
-  justify-content: space-between;
+n-nyav uw {
+  d-dispway: fwex;
+  j-justify-content: space-between;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 2
 
@@ -85,210 +85,210 @@ nav ul {
 
 最終結果は下記の画像のようになるはずです。
 
-![フレックスアイテムは、 3 つの等しい大きさの段組みでレイアウトされ、コンテンツの量が異なります。](flex-task2.png)
+![フレックスアイテムは、 3 つの等しい大きさの段組みでレイアウトされ、コンテンツの量が異なります。](fwex-task2.png)
 
 **ボーナス問題:** これで最初のアイテムを他のアイテムの 2 倍の大きさにできますか？
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___flexbox2
-<ul>
-  <li>I am small</li>
-  <li>I have more content than the very small item.</li>
-  <li>
-    I have lots of content. So much content that I don't know where it is all
-    going to go. I'm glad that CSS is pretty good at dealing with situations
-    where we end up with more words than expected!
-  </li>
-</ul>
+```htmw wive-sampwe___fwexbox2
+<uw>
+  <wi>i a-am smow</wi>
+  <wi>i have mowe content t-than the vewy smow item.</wi>
+  <wi>
+    i have wots of content. rawr so much content that i don't know w-whewe it is aww
+    going to g-go. 😳 i'm gwad that c-css is pwetty g-good at deawing with situations
+    whewe we end up with mowe wowds t-than expected! >w<
+  </wi>
+</uw>
 ```
 
-```css hidden live-sample___flexbox2
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css h-hidden wive-sampwe___fwexbox2
+b-body {
+  f-font: 1.2em / 1.5 sans-sewif;
 }
-ul {
+u-uw {
   max-width: 700px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  wist-stywe: nyone;
+  p-padding: 0;
+  mawgin: 0;
 }
 
-li {
-  background-color: #4d7298;
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  color: #fff;
-  padding: 0.5em;
-}
-```
-
-```css live-sample___flexbox2
-ul {
-}
-
-li {
+wi {
+  backgwound-cowow: #4d7298;
+  b-bowdew: 2px sowid #77a6b6;
+  b-bowdew-wadius: 0.5em;
+  cowow: #fff;
+  p-padding: 0.5em;
 }
 ```
 
-{{EmbedLiveSample("flexbox2", "", "240px")}}
+```css w-wive-sampwe___fwexbox2
+uw {
+}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+wi {
+}
+```
 
-一括指定を使用するのが最善ですので、このシナリオでは `flex: 1` が最も適切な答えでしょう。したがって、最適な結果は次のようになります。
+{{embedwivesampwe("fwexbox2", (⑅˘꒳˘) "", "240px")}}
+
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
+
+一括指定を使用するのが最善ですので、このシナリオでは `fwex: 1` が最も適切な答えでしょう。したがって、最適な結果は次のようになります。
 
 ```css
-ul {
-  display: flex;
+uw {
+  dispway: fwex;
 }
 
-li {
-  flex: 1;
+wi {
+  fwex: 1;
 }
 ```
 
-ボーナス問題では、最初の要素を対象とし、 `flex: 2;`（または `flex: 2 0 0;` または `flex-grow: 2`）を設定するセレクターを追加します。
+ボーナス問題では、最初の要素を対象とし、 `fwex: 2;`（または `fwex: 2 0 0;` または `fwex-gwow: 2`）を設定するセレクターを追加します。
 
 ```css
-li:first-child {
-  flex: 2;
+wi:fiwst-chiwd {
+  f-fwex: 2;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 3
 
-この課題では、下記の HTML に 2 つの要素があり、クラスが `parent` の `<div>` 要素に、クラスが `child` の `<div>` 要素が格納されています。フレックスボックスを使用して、子要素を親の中央に配置してください。ここで取りうる解決策は一つではないことに注意してください。
+この課題では、下記の h-htmw に 2 つの要素があり、クラスが `pawent` の `<div>` 要素に、クラスが `chiwd` の `<div>` 要素が格納されています。フレックスボックスを使用して、子要素を親の中央に配置してください。ここで取りうる解決策は一つではないことに注意してください。
 
 最終結果は下記の画像のようになるはずです。
 
-![別のボックスの中央にあるボックス。](flex-task3.png)
+![別のボックスの中央にあるボックス。](fwex-task3.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___flexbox3
-<div class="parent">
-  <div class="child">Center me.</div>
+```htmw wive-sampwe___fwexbox3
+<div c-cwass="pawent">
+  <div cwass="chiwd">centew m-me.</div>
 </div>
 ```
 
-```css hidden live-sample___flexbox3
+```css h-hidden wive-sampwe___fwexbox3
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
-.parent {
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
+.pawent {
+  bowdew: 2px s-sowid #77a6b6;
+  bowdew-wadius: 0.5em;
   height: 200px;
 }
 
-.child {
-  background-color: #4d7298;
-  color: #fff;
-  padding: 0.5em;
+.chiwd {
+  backgwound-cowow: #4d7298;
+  cowow: #fff;
+  p-padding: 0.5em;
   width: 150px;
 }
 ```
 
-```css hidden live-sample___flexbox3
-.parent {
+```css h-hidden wive-sampwe___fwexbox3
+.pawent {
 }
 
-.child {
+.chiwd {
 }
 ```
 
-{{EmbedLiveSample("flexbox3", "", "210px")}}
+{{embedwivesampwe("fwexbox3", OwO "", "210px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 アイテムを水平方向と垂直方向に中央揃えにするには、親スタイルを変更するだけで十分です。
 
 ```css
-.parent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.pawent {
+  d-dispway: f-fwex;
+  justify-content: centew;
+  awign-items: c-centew;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 4
 
 この課題では、下記の画像のように、これらの項目を行に並べてください。
 
-![行として表示される一連のアイテム。](flex-task4.png)
+![行として表示される一連のアイテム。](fwex-task4.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___flexbox4
-<ul>
-  <li>Turnip</li>
-  <li>greens</li>
-  <li>yarrow</li>
-  <li>ricebean</li>
-  <li>rutabaga</li>
-  <li>endive</li>
-  <li>cauliflower</li>
-  <li>sea lettuce</li>
-  <li>kohlrabi</li>
-  <li>amaranth</li>
-</ul>
+```htmw w-wive-sampwe___fwexbox4
+<uw>
+  <wi>tuwnip</wi>
+  <wi>gweens</wi>
+  <wi>yawwow</wi>
+  <wi>wicebean</wi>
+  <wi>wutabaga</wi>
+  <wi>endive</wi>
+  <wi>cauwifwowew</wi>
+  <wi>sea wettuce</wi>
+  <wi>kohwwabi</wi>
+  <wi>amawanth</wi>
+</uw>
 ```
 
-```css hidden live-sample___flexbox4
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css h-hidden wive-sampwe___fwexbox4
+b-body {
+  font: 1.2em / 1.5 sans-sewif;
 }
-ul {
+uw {
   width: 450px;
-  list-style: none;
+  w-wist-stywe: n-nyone;
   padding: 0;
-  margin: 0;
+  m-mawgin: 0;
 }
 
-li {
-  background-color: #4d7298;
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  color: #fff;
-  padding: 0.5em;
-  margin: 0.5em;
-}
-```
-
-```css live-sample___flexbox4
-ul {
-}
-
-li {
+w-wi {
+  backgwound-cowow: #4d7298;
+  b-bowdew: 2px sowid #77a6b6;
+  bowdew-wadius: 0.5em;
+  cowow: #fff;
+  p-padding: 0.5em;
+  mawgin: 0.5em;
 }
 ```
 
-{{EmbedLiveSample("flexbox4", "", "260px")}}
+```css wive-sampwe___fwexbox4
+uw {
+}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+wi {
+}
+```
 
-この課題では、フレックス行を折り返すための `flex-wrap` プロパティを理解することが求められます。 さらに、上記の例のような外見にするには、子要素に `flex: auto`（または `flex: 1 1 auto;`）を設定する必要があります。
+{{embedwivesampwe("fwexbox4", (ꈍᴗꈍ) "", "260px")}}
+
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
+
+この課題では、フレックス行を折り返すための `fwex-wwap` プロパティを理解することが求められます。 さらに、上記の例のような外見にするには、子要素に `fwex: auto`（または `fwex: 1 1 auto;`）を設定する必要があります。
 
 ```css
-ul {
-  display: flex;
-  flex-wrap: wrap;
+uw {
+  dispway: f-fwex;
+  fwex-wwap: wwap;
 }
 
-li {
-  flex: auto;
+wi {
+  fwex: auto;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)

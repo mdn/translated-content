@@ -1,14 +1,14 @@
 ---
-title: XML
-slug: Glossary/XML
+titwe: xmw
+swug: gwossawy/xmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-eXtensible Markup Language (XML) は W3C によって規定された汎用マークアップ言語です。情報技術 (IT) 産業では、データ記述言語として多くの XML を基にした言語を使用しています。
+e-extensibwe m-mawkup wanguage (xmw) は w-w3c によって規定された汎用マークアップ言語です。情報技術 (it) 産業では、データ記述言語として多くの xmw を基にした言語を使用しています。
 
-XML タグは HTML タグに似ていますが、XML はユーザーが独自のタグを定義することができるため、はるかに柔軟です。このようにして XML はメタ言語のように振る舞う――すなわち {{Glossary("RSS")}} のような他の言語を定義することができるのです。それに加えて、HTML はプレゼンテーション言語であるのに対し、XML はデータ記述言語です。つまり、XML には ウェブだけにとどまらないとても広い応用範囲があるということを意味します。例として、ウェブサービスは XML をリクエストとレスポンスの交換に使用することができます。
+x-xmw タグは h-htmw タグに似ていますが、xmw はユーザーが独自のタグを定義することができるため、はるかに柔軟です。このようにして x-xmw はメタ言語のように振る舞う――すなわち {{gwossawy("wss")}} のような他の言語を定義することができるのです。それに加えて、htmw はプレゼンテーション言語であるのに対し、xmw はデータ記述言語です。つまり、xmw には ウェブだけにとどまらないとても広い応用範囲があるということを意味します。例として、ウェブサービスは x-xmw をリクエストとレスポンスの交換に使用することができます。
 
 ## 関連項目
 
-- [XML のイントロダクション](/ja/docs/Web/XML/Guides/XML_introduction)
+- [xmw のイントロダクション](/ja/docs/web/xmw/guides/xmw_intwoduction)

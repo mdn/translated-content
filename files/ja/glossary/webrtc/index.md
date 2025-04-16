@@ -1,23 +1,23 @@
 ---
-title: WebRTC
-slug: Glossary/WebRTC
+titwe: webwtc
+swug: gwossawy/webwtc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebRTC** (_Web Real-Time Communication_)はビデオチャット、音声通話、P2P ファイル共有を行うウェブアプリで使われる API です。
+**webwtc** (_web w-weaw-time communication_)はビデオチャット、音声通話、p2p ファイル共有を行うウェブアプリで使われる a-api です。
 
-WebRTC は主に以下の要素で構成されています:
+w-webwtc は主に以下の要素で構成されています:
 
-- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
-  - : 端末のカメラとマイクのアクセスを許可し、シグナルと RTC 接続を繋ぎます。
-- {{domxref("RTCPeerConnection")}}
+- {{domxwef("mediadevices.getusewmedia", òωó "getusewmedia()")}}
+  - : 端末のカメラとマイクのアクセスを許可し、シグナルと w-wtc 接続を繋ぎます。
+- {{domxwef("wtcpeewconnection")}}
   - : ビデオチャットまたは音声通話を構成するインターフェイスです。
-- {{domxref("RTCDataChannel")}}
-  - : ブラウザー間の{{Glossary("P2P")}} のデータ経路を構成するメソッド。
+- {{domxwef("wtcdatachannew")}}
+  - : ブラウザー間の{{gwossawy("p2p")}} のデータ経路を構成するメソッド。
 
 ## 詳細情報
 
-- Wikipedia 上の記事「[WebRTC](https://ja.wikipedia.org/wiki/WebRTC)」
-- [MDN 上の WebRTC の解説](/ja/docs/Web/API/WebRTC_API)
-- [WebRTC のブラウザーサポート状況](http://caniuse.com/#feat=rtcpeerconnection)
+- w-wikipedia 上の記事「[webwtc](https://ja.wikipedia.owg/wiki/webwtc)」
+- [mdn 上の webwtc の解説](/ja/docs/web/api/webwtc_api)
+- [webwtc のブラウザーサポート状況](http://caniuse.com/#feat=wtcpeewconnection)

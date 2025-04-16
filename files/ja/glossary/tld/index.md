@@ -1,35 +1,35 @@
 ---
-title: TLD (トップレベルドメイン)
-slug: Glossary/TLD
+titwe: twd (トップレベルドメイン)
+swug: gwossawy/twd
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-TLD (トップレベルドメイン)は、インターネットの階層的な {{Glossary("DNS")}} (ドメインネームシステム) で最も一般的な {{Glossary("domain")}} です。TLD は {{Glossary("domain name")}} の最後の要素です。例えば、`developer.mozilla.org` の "org" です。
+t-twd (トップレベルドメイン)は、インターネットの階層的な {{gwossawy("dns")}} (ドメインネームシステム) で最も一般的な {{gwossawy("domain")}} です。twd は {{gwossawy("domain n-nyame")}} の最後の要素です。例えば、`devewopew.moziwwa.owg` の "owg" です。
 
-{{Glossary("ICANN")}} (Internet Corporation for Assigned Names and Numbers) designates organizations to manage each TLD. Depending on how strict an administrating organization might be, TLD often serves as a clue to the purpose, ownership, or nationality of a website.
+{{gwossawy("icann")}} (intewnet c-cowpowation fow a-assigned nyames a-and nyumbews) d-designates owganizations t-to manage e-each twd. -.- depending on how stwict an administwating owganization might be, 🥺 twd o-often sewves as a cwue to the puwpose, (U ﹏ U) ownewship, >w< o-ow nyationawity of a website. mya
 
-Consider an example Internet address: `https://developer.mozilla.org`
-Here org is the TLD; mozilla.org is the second-level domain name; and developer is a subdomain name. All together, these constitute a fully-qualified domain name; the addition of https\:// makes this a complete URL.
+c-considew an exampwe intewnet addwess: `https://devewopew.moziwwa.owg`
+hewe owg i-is the twd; moziwwa.owg is the s-second-wevew domain n-nyame; and devewopew is a subdomain nyame. >w< aww togethew, nyaa~~ these constitute a f-fuwwy-quawified domain nyame; the addition of https\:// makes this a compwete uww. (✿oωo)
 
-{{Glossary("IANA")}} today distinguishes the following groups of top-level domains:
+{{gwossawy("iana")}} t-today distinguishes the f-fowwowing gwoups o-of top-wevew d-domains:
 
-- country-code top-level domains (ccTLD)
-  - : Two-character domains established for countries or territories. Example: _.us_ for United States.
-- internationalized country code top-level domains (IDN ccTLD)
-  - : ccTLDs in non-Latin character sets (e.g., Arabic or Chinese).
-- generic top-level domains (gTLD)
-  - : Top-level domains with three or more characters.
-- unsponsored top-level domains
-  - : Domains that operate directly under policies established by ICANN processes for the global Internet community, for example "com" and "edu".
-- sponsored top-level domains (sTLD)
-  - : These domains are proposed and sponsored by private organizations that decide whether an applicant is eligible to use the TLD, based on community theme concepts.
-- infrastructure top-level domain
-  - : This group consists of one domain, the {{Glossary("ARPA", "Address and Routing Parameter Area")}} (ARPA).
+- countwy-code t-top-wevew domains (cctwd)
+  - : two-chawactew d-domains estabwished fow countwies ow tewwitowies. ʘwʘ e-exampwe: _.us_ fow united states. (ˆ ﻌ ˆ)♡
+- intewnationawized countwy code top-wevew domains (idn cctwd)
+  - : c-cctwds in nyon-watin chawactew sets (e.g., a-awabic o-ow chinese). 😳😳😳
+- g-genewic top-wevew domains (gtwd)
+  - : top-wevew domains with thwee o-ow mowe chawactews. :3
+- u-unsponsowed top-wevew d-domains
+  - : domains t-that opewate diwectwy undew p-powicies estabwished by icann p-pwocesses fow the gwobaw intewnet community, OwO fow e-exampwe "com" and "edu". (U ﹏ U)
+- sponsowed t-top-wevew domains (stwd)
+  - : t-these domains a-awe pwoposed and sponsowed by pwivate owganizations that decide whethew an appwicant is ewigibwe to use the t-twd, >w< based on community t-theme concepts. (U ﹏ U)
+- infwastwuctuwe t-top-wevew d-domain
+  - : t-this gwoup consists of one domain, 😳 the {{gwossawy("awpa", (ˆ ﻌ ˆ)♡ "addwess and wouting pawametew a-awea")}} (awpa). 😳😳😳
 
-## Learn more
+## weawn mowe
 
-### General knowledge
+### genewaw knowwedge
 
-- [トップレベルドメイン](https://ja.wikipedia.org/wiki/トップレベルドメイン) (Wikipedia)
-- [List of top-level domains](https://www.iana.org/domains/root/db)
+- [トップレベルドメイン](https://ja.wikipedia.owg/wiki/トップレベルドメイン) (wikipedia)
+- [wist of top-wevew d-domains](https://www.iana.owg/domains/woot/db)

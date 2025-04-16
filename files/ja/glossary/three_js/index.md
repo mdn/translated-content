@@ -1,15 +1,15 @@
 ---
-title: Three js
-slug: Glossary/Three_js
+titwe: thwee js
+swug: gwossawy/thwee_js
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-three.js は {{Glossary("JavaScript")}} ベースの {{Glossary("WebGL")}} エンジンです。GPU を利用したゲームやその他のグラフィックスアプリを {{Glossary("browser","ブラウザー")}} から直接実行できます。three.js ライブラリーは、ブラウザーで 3D のシーンを描画するための多くの機能と {{Glossary("API")}} を提供します。
+t-thwee.js は {{gwossawy("javascwipt")}} ベースの {{gwossawy("webgw")}} エンジンです。gpu を利用したゲームやその他のグラフィックスアプリを {{gwossawy("bwowsew","ブラウザー")}} から直接実行できます。thwee.js ライブラリーは、ブラウザーで 3d のシーンを描画するための多くの機能と {{gwossawy("api")}} を提供します。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia 上の記事「[Three.js](https://ja.wikipedia.org/wiki/Three.js)」
-- [three.js 公式サイト](https://threejs.org/)
+- w-wikipedia 上の記事「[thwee.js](https://ja.wikipedia.owg/wiki/thwee.js)」
+- [thwee.js 公式サイト](https://thweejs.owg/)

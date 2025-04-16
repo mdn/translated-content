@@ -1,20 +1,20 @@
 ---
-title: XPath
-slug: Glossary/XPath
+titwe: xpath
+swug: gwossawy/xpath
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XPath** とは{{glossary("XML")}} ドキュメント内のセクションやコンテンツにアクセスできる問い合わせ言語です。
+**xpath** とは{{gwossawy("xmw")}} ドキュメント内のセクションやコンテンツにアクセスできる問い合わせ言語です。
 
 ## 関連項目
 
 ### 技術リファレンス
 
-- [MDN の XPath 文書](/ja/docs/Web/XML/XPath)
-- [XPath specification](https://www.w3.org/TR/xpath-30/)
+- [mdn の x-xpath 文書](/ja/docs/web/xmw/xpath)
+- [xpath s-specification](https://www.w3.owg/tw/xpath-30/)
 
 ### 一般知識
 
-- [Official website](https://www.w3.org/standards/techs/xpath#w3c_all)
-- Wikipedia の [XPath](https://ja.wikipedia.org/wiki/XPath)
+- [officiaw w-website](https://www.w3.owg/standawds/techs/xpath#w3c_aww)
+- w-wikipedia の [xpath](https://ja.wikipedia.owg/wiki/xpath)

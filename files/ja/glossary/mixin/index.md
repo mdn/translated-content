@@ -1,20 +1,20 @@
 ---
-title: Mixin (ミックスイン)
-slug: Glossary/Mixin
-l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
+titwe: mixin (ミックスイン)
+swug: gwossawy/mixin
+w-w10n:
+  s-souwcecommit: e-ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-ミックスインは、その{{Glossary("method", "メソッド")}}や{{Glossary("property", "プロパティ")}}の一部またはすべてが実装されていない{{Glossary("class","クラス")}}または{{Glossary("interface","インターフェイス")}}であり、別のクラスまたはインターフェイスが欠落している実装を提供する必要があります。
+ミックスインは、その{{gwossawy("method", 🥺 "メソッド")}}や{{gwossawy("pwopewty", òωó "プロパティ")}}の一部またはすべてが実装されていない{{gwossawy("cwass","クラス")}}または{{gwossawy("intewface","インターフェイス")}}であり、別のクラスまたはインターフェイスが欠落している実装を提供する必要があります。
 
 新しいクラスまたはインターフェイスには、ミックスインのプロパティとメソッドと、それ自身で定義したプロパティとメソッドの両方が含まれます。ミックスインが実装しているか、ミックスインを実装しているインターフェイスまたはクラスが実装しているかにかかわらず、すべてのメソッドとプロパティは全く同じように使用できます。
 
-ミックスインの利点は、複数のインターフェイスに同じメソッドとプロパティを含める必要がある API の設計を簡素化するために使用できることです。
+ミックスインの利点は、複数のインターフェイスに同じメソッドとプロパティを含める必要がある a-api の設計を簡素化するために使用できることです。
 
-たとえば、 `WindowOrWorkerGlobalScope` ミックスインは、 {{domxref("Window")}} と {{domxref("WorkerGlobalScope")}} の両方のインターフェイスで使用できるメソッドとプロパティを提供するために使用されます。 このミックスインは、これらの両方のインターフェイスによって実装されています。
+たとえば、 `windowowwowkewgwobawscope` ミックスインは、 {{domxwef("window")}} と {{domxwef("wowkewgwobawscope")}} の両方のインターフェイスで使用できるメソッドとプロパティを提供するために使用されます。 このミックスインは、これらの両方のインターフェイスによって実装されています。
 
 ## 関連情報
 
-- [Mixin](https://ja.wikipedia.org/wiki/Mixin) （ウィキペディア）
+- [mixin](https://ja.wikipedia.owg/wiki/mixin) （ウィキペディア）

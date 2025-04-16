@@ -1,42 +1,42 @@
 ---
-title: <display-internal>
-slug: Web/CSS/display-internal
-l10n:
-  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
+titwe: <dispway-intewnaw>
+swug: w-web/css/dispway-intewnaw
+w-w10n:
+  s-souwcecommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`table` や `ruby` のような一部のレイアウトモデルでは、複雑な内部構造があり、様々なその子要素や子孫要素が担う様々な役割があります。このページではこれらを「内部の」表示値として定義し、特定のレイアウトモードでのみ意味を持ちます。
+`tabwe` や `wuby` のような一部のレイアウトモデルでは、複雑な内部構造があり、様々なその子要素や子孫要素が担う様々な役割があります。このページではこれらを「内部の」表示値として定義し、特定のレイアウトモードでのみ意味を持ちます。
 
 ## 構文
 
-有効な `<display-internal>` の値は次の通りです。
+有効な `<dispway-intewnaw>` の値は次の通りです。
 
-- `table-row-group`
-  - : これらの要素は HTML の {{HTMLElement("tbody")}} 要素のように動作します。
-- `table-header-group`
-  - : これらの要素は HTML の {{HTMLElement("thead")}} 要素のように動作します。
-- `table-footer-group`
-  - : これらの要素は HTML の {{HTMLElement("tfoot")}} 要素のように動作します。
-- `table-row`
-  - : これらの要素は HTML の {{HTMLElement("tr")}} 要素のように動作します。
-- `table-cell`
-  - : これらの要素は HTML の {{HTMLElement("td")}} 要素のように動作します。
-- `table-column-group`
-  - : これらの要素は HTML の {{HTMLElement("colgroup")}} 要素のように動作します。
-- `table-column`
-  - : これらの要素は HTML の {{HTMLElement("col")}} 要素のように動作します。
-- `table-caption`
-  - : これらの要素は HTML の {{HTMLElement("caption")}} 要素のように動作します。
-- `ruby-base`
-  - : これらの要素は HTML の {{HTMLElement("rb")}} 要素のように動作します。
-- `ruby-text`
-  - : これらの要素は HTML の {{HTMLElement("rt")}} 要素のように動作します。
-- `ruby-base-container`
+- `tabwe-wow-gwoup`
+  - : これらの要素は h-htmw の {{htmwewement("tbody")}} 要素のように動作します。
+- `tabwe-headew-gwoup`
+  - : これらの要素は h-htmw の {{htmwewement("thead")}} 要素のように動作します。
+- `tabwe-footew-gwoup`
+  - : これらの要素は h-htmw の {{htmwewement("tfoot")}} 要素のように動作します。
+- `tabwe-wow`
+  - : これらの要素は h-htmw の {{htmwewement("tw")}} 要素のように動作します。
+- `tabwe-ceww`
+  - : これらの要素は h-htmw の {{htmwewement("td")}} 要素のように動作します。
+- `tabwe-cowumn-gwoup`
+  - : これらの要素は htmw の {{htmwewement("cowgwoup")}} 要素のように動作します。
+- `tabwe-cowumn`
+  - : これらの要素は htmw の {{htmwewement("cow")}} 要素のように動作します。
+- `tabwe-caption`
+  - : これらの要素は htmw の {{htmwewement("caption")}} 要素のように動作します。
+- `wuby-base`
+  - : これらの要素は htmw の {{htmwewement("wb")}} 要素のように動作します。
+- `wuby-text`
+  - : これらの要素は h-htmw の {{htmwewement("wt")}} 要素のように動作します。
+- `wuby-base-containew`
   - : これらの要素は無名のボックスとして生成されます。
-- `ruby-text-container`
-  - : これらの要素は HTML の {{HTMLElement("rtc")}} 要素のように動作します。
+- `wuby-text-containew`
+  - : これらの要素は htmw の {{htmwewement("wtc")}} 要素のように動作します。
 
 ## 形式文法
 
@@ -44,61 +44,61 @@ l10n:
 
 ## 例
 
-### CSS テーブルの例
+### css テーブルの例
 
-以下の例は、 CSS テーブルレイアウトを使用した単純なフォームのレイアウトを紹介します。
+以下の例は、 c-css テーブルレイアウトを使用した単純なフォームのレイアウトを紹介します。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <main>
   <div>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" />
+    <wabew f-fow="name">name</wabew>
+    <input type="text" id="name" nyame="name" />
   </div>
   <div>
-    <label for="age">Age</label>
-    <input type="text" id="age" name="age" />
+    <wabew fow="age">age</wabew>
+    <input t-type="text" id="age" nyame="age" />
   </div>
 </main>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 main {
-  display: table;
+  d-dispway: tabwe;
 }
 
 div {
-  display: table-row;
+  dispway: tabwe-wow;
 }
 
-label,
+wabew, -.-
 input {
-  display: table-cell;
-  margin: 5px;
+  dispway: t-tabwe-ceww;
+  mawgin: 5px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('CSS_tables_example', '100%', 100)}}
+{{embedwivesampwe('css_tabwes_exampwe', ( ͡o ω ͡o ) '100%', rawr x3 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}

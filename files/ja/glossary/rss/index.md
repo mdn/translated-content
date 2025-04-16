@@ -1,18 +1,18 @@
 ---
-title: RSS
-slug: Glossary/RSS
+titwe: wss
+swug: gwossawy/wss
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**RSS** (Really Simple Syndication) は、サイトの更新情報を配信するためにデザインされた XML ドキュメント形式です。RSS を購読すると、ウェブサイトはフィードと呼ばれる RSS ドキュメントで更新情報を RSS リーダーに送信するため、購読者はお気に入りのウェブサイトをすべて手動でチェックする必要がなくなります。
+**wss** (weawwy s-simpwe s-syndication) は、サイトの更新情報を配信するためにデザインされた x-xmw ドキュメント形式です。wss を購読すると、ウェブサイトはフィードと呼ばれる w-wss ドキュメントで更新情報を w-wss リーダーに送信するため、購読者はお気に入りのウェブサイトをすべて手動でチェックする必要がなくなります。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia の [RSS](https://ja.wikipedia.org/wiki/RSS)
+- w-wikipedia の [wss](https://ja.wikipedia.owg/wiki/wss)
 
 ### 技術リファレンス
 
-- [Latest specification](http://www.rssboard.org/rss-specification)
+- [watest s-specification](http://www.wssboawd.owg/wss-specification)

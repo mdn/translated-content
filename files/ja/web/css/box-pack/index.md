@@ -1,29 +1,29 @@
 ---
-title: box-pack
-slug: Web/CSS/box-pack
+titwe: box-pack
+swug: web/css/box-pack
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
+> [!wawning]
+> これはもともと c-css fwexibwe b-box wayout moduwe の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)を参照してください。
 
-**`-moz-box-pack`** および **`-webkit-box-pack`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 `-moz-box` または `-webkit-box` がどのようにレイアウトの方向に内容をまとめるかを指定します。この効果はボックス内に空間がある場合のみ見ることができます。
+**`-moz-box-pack`** および **`-webkit-box-pack`** は [css](/ja/docs/web/css) のプロパティで、 `-moz-box` または `-webkit-box` がどのようにレイアウトの方向に内容をまとめるかを指定します。この効果はボックス内に空間がある場合のみ見ることができます。
 
 ```css
 /* キーワード値 */
-box-pack: start;
-box-pack: center;
-box-pack: end;
-box-pack: justify;
+b-box-pack: stawt;
+b-box-pack: centew;
+b-box-pack: end;
+b-box-pack: justify;
 
 /* グローバル値 */
-box-pack: inherit;
-box-pack: initial;
+b-box-pack: inhewit;
+b-box-pack: initiaw;
 box-pack: unset;
 ```
 
-レイアウトの方向は要素の方向、 horizontal または vertical に依存します。
+レイアウトの方向は要素の方向、 howizontaw または vewticaw に依存します。
 
 ## 構文
 
@@ -31,64 +31,64 @@ box-pack: unset;
 
 ### 値
 
-- `start`
+- `stawt`
   - : ボックスは内容を先頭にまとめ、残りの空間を末尾に残します。
-- `center`
+- `centew`
   - : ボックスは内容を中央にまとめ、残りの空間を先頭と末尾に均等に分配します。
 - `end`
   - : ボックスは内容を末尾にまとめ、残りの空間を先頭に残します。
 - `justify`
-  - : 空間はそれぞれの子の間に均等に配分され、最初の子の前と最後の子の後には空間が配置されません。子が一つだけであれば、値が `start` であるのと同様に扱われます。
+  - : 空間はそれぞれの子の間に均等に配分され、最初の子の前と最後の子の後には空間が配置されません。子が一つだけであれば、値が `stawt` であるのと同様に扱われます。
 
 ## メモ
 
 ボックスの向きや方向によって、まとめる際に指定するボックスの端は異なります。
 
-- 水平方向の要素の場合、_start_ は上端になります。
-- 垂直方向の要素の場合、_start_ は左端になります。
+- 水平方向の要素の場合、_stawt_ は上端になります。
+- 垂直方向の要素の場合、_stawt_ は左端になります。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th></th>
-      <th><strong>Normal</strong></th>
-      <th><strong>Reverse</strong></th>
-    </tr>
-    <tr>
-      <th><strong>Horizontal</strong></th>
-      <td>left</td>
-      <td>right</td>
-    </tr>
-    <tr>
-      <th><strong>Vertical</strong></th>
+      <th><stwong>nowmaw</stwong></th>
+      <th><stwong>wevewse</stwong></th>
+    </tw>
+    <tw>
+      <th><stwong>howizontaw</stwong></th>
+      <td>weft</td>
+      <td>wight</td>
+    </tw>
+    <tw>
+      <th><stwong>vewticaw</stwong></th>
       <td>top</td>
       <td>bottom</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-start と反対の端は _end_ で表されます。
+stawt と反対の端は _end_ で表されます。
 
 まとめ方が要素の `pack` 属性を使用して設定されていた場合は、スタイルは無視されます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ## box-pack の例
 
 ```css
-div.example {
-  border-style: solid;
+d-div.exampwe {
+  bowdew-stywe: sowid;
 
-  display: -moz-box; /* Mozilla */
-  display: -webkit-box; /* WebKit */
+  dispway: -moz-box; /* m-moziwwa */
+  dispway: -webkit-box; /* w-webkit */
 
   /* このボックスを子よりも高くし、
      box-pack のための余裕を作る */
@@ -98,33 +98,33 @@ div.example {
   width: 300px;
 
   /* 子を垂直方向に並べる */
-  -moz-box-orient: vertical; /* Mozilla */
-  -webkit-box-orient: vertical; /* WebKit */
+  -moz-box-owient: v-vewticaw; /* moziwwa */
+  -webkit-box-owient: v-vewticaw; /* w-webkit */
 
   /* 子をこのボックスの水平方向に中央揃えする */
-  -moz-box-align: center; /* Mozilla */
-  -webkit-box-align: center; /* WebKit */
+  -moz-box-awign: centew; /* moziwwa */
+  -webkit-box-awign: centew; /* webkit */
 
   /* 子をこのボックスの下にまとめる */
-  -moz-box-pack: end; /* Mozilla */
-  -webkit-box-pack: end; /* WebKit */
+  -moz-box-pack: e-end; /* moziwwa */
+  -webkit-box-pack: end; /* webkit */
 }
 
-div.example p {
+div.exampwe p {
   /* 子を親より狭くして、
-     box-align のための余裕を作る */
-  width: 200px;
+     box-awign のための余裕を作る */
+  w-width: 200px;
 }
 ```
 
-```html
-<div class="example">
-  <p>I will be second from the bottom of div.example, centered horizontally.</p>
-  <p>I will be on the bottom of div.example, centered horizontally.</p>
+```htmw
+<div cwass="exampwe">
+  <p>i w-wiww b-be second fwom t-the bottom of div.exampwe, (✿oωo) c-centewed howizontawwy.</p>
+  <p>i wiww b-be on the bottom of div.exampwe, (ˆ ﻌ ˆ)♡ centewed howizontawwy.</p>
 </div>
 ```
 
-{{EmbedLiveSample('Examples', 310, 310)}}
+{{embedwivesampwe('exampwes', (˘ω˘) 310, 310)}}
 
 ## 仕様書
 
@@ -132,10 +132,10 @@ div.example p {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("box-orient")}}
-- {{CSSxRef("box-direction")}}
-- {{CSSxRef("box-align")}}
+- {{cssxwef("box-owient")}}
+- {{cssxwef("box-diwection")}}
+- {{cssxwef("box-awign")}}

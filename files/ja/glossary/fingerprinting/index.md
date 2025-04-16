@@ -1,11 +1,11 @@
 ---
-title: Fingerprinting (フィンガープリンティング)
-slug: Glossary/Fingerprinting
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: fingewpwinting (フィンガープリンティング)
+swug: gwossawy/fingewpwinting
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **フィンガープリンティング**は、ウェブサイトがブラウザーや基盤となるオペレーティングシステムを判別できる特性を収集し、組み合わせることにより、特定のブラウザー（ひいては特定のユーザー）を識別する手法です。フィンガープリントの要素は、例えば次のようなものです。
 
@@ -16,11 +16,11 @@ l10n:
 - ブラウザーの設定の状態
 - コンピューターの画面サイズや解像度
 
-ウェブサイトは、端末上で JavaScript や CSS を実行することでこのような情報を取得することができ、このデータを組み合わせることで、ブラウザー固有のフィンガープリントを作成し、ウェブ全体でユーザーを追跡するために使用することができます。
+ウェブサイトは、端末上で j-javascwipt や c-css を実行することでこのような情報を取得することができ、このデータを組み合わせることで、ブラウザー固有のフィンガープリントを作成し、ウェブ全体でユーザーを追跡するために使用することができます。
 
 ウェブ標準は、ウェブサイトが識別情報を収集する能力を最小限に抑えるように設計されており、ブラウザーは通常、独自の保護機能も追加しています。
 
 ## 関連情報
 
-- [Cover Your Tracks](https://coveryourtracks.eff.org): ウェブサイトがブラウザーにフィンガープリントを使用することができるデータを示すツールです。
-- [Mitigating Browser Fingerprinting in Web Specifications](https://www.w3.org/TR/fingerprinting-guidance/): フィンガープリンティングを防ぐための仕様作成者向けのベストプラクティス。
+- [covew y-youw twacks](https://covewyouwtwacks.eff.owg): ウェブサイトがブラウザーにフィンガープリントを使用することができるデータを示すツールです。
+- [mitigating b-bwowsew f-fingewpwinting in web specifications](https://www.w3.owg/tw/fingewpwinting-guidance/): フィンガープリンティングを防ぐための仕様作成者向けのベストプラクティス。

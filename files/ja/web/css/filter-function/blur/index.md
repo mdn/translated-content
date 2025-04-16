@@ -1,165 +1,165 @@
 ---
-title: blur()
-slug: Web/CSS/filter-function/blur
-l10n:
-  sourceCommit: c0f1aecaed48d75652c6dd97f30c7febd07e5cde
+titwe: bwuw()
+swug: web/css/fiwtew-function/bwuw
+w-w10n:
+  souwcecommit: c-c0f1aecaed48d75652c6dd97f30c7febd07e5cde
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`blur()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に[ガウシアンぼかし](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B7%E3%82%A2%E3%83%B3%E3%81%BC%E3%81%8B%E3%81%97)を適用します。返値は {{cssxref("&lt;filter-function&gt;")}} です。
+**`bwuw()`** は [css](/ja/docs/web/css) の関数で、入力画像に[ガウシアンぼかし](https://ja.wikipedia.owg/wiki/%e3%82%ac%e3%82%a6%e3%82%b7%e3%82%a2%e3%83%b3%e3%81%bc%e3%81%8b%e3%81%97)を適用します。返値は {{cssxwef("&wt;fiwtew-function&gt;")}} です。
 
-{{InteractiveExample("CSS Demo: blur()")}}
+{{intewactiveexampwe("css d-demo: bwuw()")}}
 
-```css interactive-example-choice
-filter: blur(0);
+```css i-intewactive-exampwe-choice
+f-fiwtew: b-bwuw(0);
 ```
 
-```css interactive-example-choice
-filter: blur(4px);
+```css i-intewactive-exampwe-choice
+f-fiwtew: bwuw(4px);
 ```
 
-```css interactive-example-choice
-filter: blur(1.5rem);
+```css intewactive-exampwe-choice
+fiwtew: bwuw(1.5wem);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
 ## 構文
 
-`blur()` 関数は、適用された要素にガウスぼかしを適用します。
+`bwuw()` 関数は、適用された要素にガウスぼかしを適用します。
 
 ```css
-blur(radius)
+bwuw(wadius)
 ```
 
 ### 引数
 
-- `radius`
-  - : ぼかしの半径で、 {{cssxref("&lt;length&gt;")}} で指定します。ガウス関数の標準偏差の値を定義します。つまり、画面上のピクセルをいくつ互いに混合するかということです。すなわち、大きい値になるほどよりぼかしが入ります。 `0` の値は入力を変更しません。{{Glossary("interpolation","補間")}}時の欠損値は `0` です。
+- `wadius`
+  - : ぼかしの半径で、 {{cssxwef("&wt;wength&gt;")}} で指定します。ガウス関数の標準偏差の値を定義します。つまり、画面上のピクセルをいくつ互いに混合するかということです。すなわち、大きい値になるほどよりぼかしが入ります。 `0` の値は入力を変更しません。{{gwossawy("intewpowation","補間")}}時の欠損値は `0` です。
 
-### ピクセル数と rem を用いた blur の設定
+### ピクセル数と w-wem を用いた bwuw の設定
 
 ```css
-blur(0)        /* 効果なし */
-blur(8px)      /* 半径 8px でぼかす */
-blur(1.17rem)  /* 半径 1.17rem でぼかす */
+bwuw(0)        /* 効果なし */
+bwuw(8px)      /* 半径 8px でぼかす */
+bwuw(1.17wem)  /* 半径 1.17wem でぼかす */
 ```
 
-## SVG フィルター
+## s-svg フィルター
 
-SVG の {{SVGElement("feGaussianBlur")}} フィルター要素もコンテンツをぼかすために使用することができます。このフィルターの {{SVGAttr("stdDeviation")}} 属性は最大 2 つの値を受け入れ、より複雑なぼかし値を作成することができます。同等のぼかしを作成するには、 `stdDeviation` に 1 つの値を記載します。この SVG 効果は ID で参照することができます。
+svg の {{svgewement("fegaussianbwuw")}} フィルター要素もコンテンツをぼかすために使用することができます。このフィルターの {{svgattw("stddeviation")}} 属性は最大 2 つの値を受け入れ、より複雑なぼかし値を作成することができます。同等のぼかしを作成するには、 `stddeviation` に 1 つの値を記載します。この s-svg 効果は i-id で参照することができます。
 
-```html
-<svg role="none">
-  <filter id="blur11">
-    <feGaussianBlur stdDeviation="1.1" edgeMode="duplicate" />
-  </filter>
+```htmw
+<svg wowe="none">
+  <fiwtew id="bwuw11">
+    <fegaussianbwuw stddeviation="1.1" edgemode="dupwicate" />
+  </fiwtew>
 </svg>
 ```
 
 次の宣言は同じ効果をもたらします。
 
 ```css
-filter: blur(1.1px);
-filter: url(#blur11); /* 埋め込み SVG による */
-filter: url(folder/fileName.svg#blur11); /* 外部の SVG フィルター定義 */
+f-fiwtew: bwuw(1.1px);
+fiwtew: uww(#bwuw11); /* 埋め込み svg による */
+fiwtew: uww(fowdew/fiwename.svg#bwuw11); /* 外部の s-svg フィルター定義 */
 ```
 
 ## 例
 
-この例では、 3 つの画像を表示させています。 `blur()` フィルター関数を適用した画像、同等の SVG blur 関数を適用した画像、そして比較用の元画像です。
+この例では、 3 つの画像を表示させています。 `bwuw()` フィルター関数を適用した画像、同等の svg bwuw 関数を適用した画像、そして比較用の元画像です。
 
 ```css
-.filter {
-  filter: blur(3.5px);
+.fiwtew {
+  f-fiwtew: bwuw(3.5px);
 }
 ```
 
-```html
-<svg role="img" aria-label="Flag">
-  <filter id="blur">
-    <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
-  </filter>
+```htmw
+<svg w-wowe="img" a-awia-wabew="fwag">
+  <fiwtew i-id="bwuw">
+    <fegaussianbwuw stddeviation="3.5" edgemode="dupwicate" />
+  </fiwtew>
   <image
-    href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-    xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-    filter="url(#blur)" />
+    h-hwef="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+    xwink:hwef="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+    fiwtew="uww(#bwuw)" />
 </svg>
 ```
 
-```css hidden
+```css h-hidden
 svg:not([height]) {
-  display: none;
+  dispway: nyone;
 }
 ```
 
-```html hidden
-<table cellpadding="5">
+```htmw hidden
+<tabwe cewwpadding="5">
   <thead>
-    <tr>
+    <tw>
       <th>ライブサンプル</th>
-      <th>同等の SVG</th>
+      <th>同等の svg</th>
       <th>元画像</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <img
-          class="filter"
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          cwass="fiwtew"
+          swc="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+          a-awt="pwide fwag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" style="overflow: visible">
-          <filter id="svgBlur">
-            <feGaussianBlur stdDeviation="3.5" />
-          </filter>
+        <svg i-id="svg" height="220" w-width="220" s-stywe="ovewfwow: visibwe">
+          <fiwtew id="svgbwuw">
+            <fegaussianbwuw stddeviation="3.5" />
+          </fiwtew>
           <image
-            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url(#svgBlur)" />
+            h-hwef="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+            x-xwink:hwef="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+            fiwtew="uww(#svgbwuw)" />
         </svg>
       </td>
       <td>
         <img
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          swc="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+          a-awt="pwide f-fwag" />
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-{{EmbedLiveSample('blur','100%','280')}}
+{{embedwivesampwe('bwuw','100%','280')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)モジュール
-- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
-  - {{cssxref("filter-function/brightness", "brightness()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
+- [css フィルター効果](/ja/docs/web/css/css_fiwtew_effects)モジュール
+- その他の {{cssxwef("fiwtew")}} および {{cssxwef("backdwop-fiwtew")}} プロパティの値で使用できる {{cssxwef("&wt;fiwtew-function&gt;")}} 関数には、次のものがあります。
+  - {{cssxwef("fiwtew-function/bwightness", /(^•ω•^) "bwightness()")}}
+  - {{cssxwef("fiwtew-function/contwast", ʘwʘ "contwast()")}}
+  - {{cssxwef("fiwtew-function/dwop-shadow", σωσ "dwop-shadow()")}}
+  - {{cssxwef("fiwtew-function/gwayscawe", OwO "gwayscawe()")}}
+  - {{cssxwef("fiwtew-function/hue-wotate", "hue-wotate()")}}
+  - {{cssxwef("fiwtew-function/invewt", 😳😳😳 "invewt()")}}
+  - {{cssxwef("fiwtew-function/opacity", 😳😳😳 "opacity()")}}
+  - {{cssxwef("fiwtew-function/satuwate", o.O "satuwate()")}}
+  - {{cssxwef("fiwtew-function/sepia", ( ͡o ω ͡o ) "sepia()")}}

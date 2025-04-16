@@ -1,81 +1,81 @@
 ---
-title: inline-size
-slug: Web/CSS/inline-size
+titwe: inwine-size
+swug: web/css/inwine-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxref("width")}} または {{cssxref("height")}} プロパティに相当し、 {{cssxref("writing-mode")}} の値によって変わります。
+**`inwine-size`** は [css](/ja/docs/web/css) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxwef("width")}} または {{cssxwef("height")}} プロパティに相当し、 {{cssxwef("wwiting-mode")}} の値によって変わります。
 
-書字方向が垂直方向であった場合、 `inline-size` の値は要素の高さに対応し、水平方向であった場合は要素の幅に対応します。関連プロパティの {{cssxref("block-size")}} が要素のもう一方の寸法を定義します。
+書字方向が垂直方向であった場合、 `inwine-size` の値は要素の高さに対応し、水平方向であった場合は要素の幅に対応します。関連プロパティの {{cssxwef("bwock-size")}} が要素のもう一方の寸法を定義します。
 
-{{InteractiveExample("CSS Demo: inline-size")}}
+{{intewactiveexampwe("css d-demo: i-inwine-size")}}
 
-```css interactive-example-choice
-inline-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+i-inwine-size: 150px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-inline-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+i-inwine-size: 150px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-inline-size: auto;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+inwine-size: auto;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-inline-size: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+inwine-size: a-auto;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the inline-size.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a b-box whewe you can c-change the inwine-size. /(^•ω•^)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  height: 80%;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  h-height: 80%;
+  justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-inline-size: 300px;
-inline-size: 25em;
+/* <wength> 値 */
+inwine-size: 300px;
+i-inwine-size: 25em;
 
-/* <percentage> 値 */
-inline-size: 75%;
+/* <pewcentage> 値 */
+inwine-size: 75%;
 
 /* キーワード値 */
-inline-size: max-content;
-inline-size: min-content;
-inline-size: fit-content(20em);
-inline-size: auto;
+i-inwine-size: m-max-content;
+i-inwine-size: m-min-content;
+inwine-size: fit-content(20em);
+inwine-size: auto;
 
 /* グローバル値 */
-inline-size: inherit;
-inline-size: initial;
-inline-size: revert;
-inline-size: unset;
+i-inwine-size: inhewit;
+inwine-size: i-initiaw;
+inwine-size: wevewt;
+inwine-size: unset;
 ```
 
 ### 値
 
-`inline-size` プロパティは、{{cssxref("width")}} や {{cssxref("height")}} プロパティと同じ値を取ります。
+`inwine-size` プロパティは、{{cssxwef("width")}} や {{cssxwef("height")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -87,37 +87,37 @@ inline-size: unset;
 
 ## 例
 
-<h3 id="Setting_inline_size_in_pixels">インライン方向の寸法をピクセル単位で設定</h3>
+<h3 id="setting_inwine_size_in_pixews">インライン方向の寸法をピクセル単位で設定</h3>
 
-#### HTML
+#### htmw
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p cwass="exampwetext">exampwe t-text</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  inline-size: 110px;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  inwine-size: 110px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_size_in_pixels")}}
+{{embedwivesampwe("setting_inwine_size_in_pixews")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 対応付けされる物理的プロパティ: {{cssxref("width")}} および {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- 対応付けされる物理的プロパティ: {{cssxwef("width")}} および {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

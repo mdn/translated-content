@@ -1,94 +1,94 @@
 ---
-title: border-right-style
-slug: Web/CSS/border-right-style
-l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+titwe: bowdew-wight-stywe
+swug: w-web/css/bowdew-wight-stywe
+w-w10n:
+  s-souwcecommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
+**`bowdew-wight-stywe`** は [css](/ja/docs/web/css) のプロパティで、要素の右側の境界線 ({{cssxwef("bowdew")}}) のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: border-right-style")}}
+{{intewactiveexampwe("css demo: b-bowdew-wight-stywe")}}
 
-```css interactive-example-choice
-border-right-style: none;
+```css i-intewactive-exampwe-choice
+bowdew-wight-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-right-style: dotted;
+```css i-intewactive-exampwe-choice
+b-bowdew-wight-stywe: dotted;
 ```
 
-```css interactive-example-choice
-border-right-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-wight-stywe: dashed;
 ```
 
-```css interactive-example-choice
-border-right-style: solid;
+```css i-intewactive-exampwe-choice
+bowdew-wight-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-right-style: groove;
+```css i-intewactive-exampwe-choice
+bowdew-wight-stywe: g-gwoove;
 ```
 
-```css interactive-example-choice
-border-right-style: inset;
+```css intewactive-exampwe-choice
+bowdew-wight-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a bowdew awound it. mya
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  c-cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 
 body {
-  background-color: #fff;
+  backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
+> [!note]
 > 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-border-right-style: none;
-border-right-style: hidden;
-border-right-style: dotted;
-border-right-style: dashed;
-border-right-style: solid;
-border-right-style: double;
-border-right-style: groove;
-border-right-style: ridge;
-border-right-style: inset;
-border-right-style: outset;
+b-bowdew-wight-stywe: n-nyone;
+b-bowdew-wight-stywe: h-hidden;
+bowdew-wight-stywe: dotted;
+bowdew-wight-stywe: d-dashed;
+bowdew-wight-stywe: sowid;
+bowdew-wight-stywe: d-doubwe;
+bowdew-wight-stywe: gwoove;
+bowdew-wight-stywe: widge;
+bowdew-wight-stywe: inset;
+bowdew-wight-stywe: outset;
 
 /* グローバル値 */
-border-right-style: inherit;
-border-right-style: initial;
-border-right-style: revert;
-border-right-style: revert-layer;
-border-right-style: unset;
+b-bowdew-wight-stywe: inhewit;
+b-bowdew-wight-stywe: i-initiaw;
+b-bowdew-wight-stywe: wevewt;
+bowdew-wight-stywe: wevewt-wayew;
+bowdew-wight-stywe: unset;
 ```
 
-`border-right-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
+`bowdew-wight-stywe` プロパティは、単一の {{cssxwef("wine-stywe")}} キーワード値で指定します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -98,88 +98,88 @@ border-right-style: unset;
 
 ### 境界のスタイル
 
-#### HTML
+#### h-htmw
 
-```html live-sample___border_styles
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw w-wive-sampwe___bowdew_stywes
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td c-cwass="b2">hidden</td>
+    <td c-cwass="b3">dotted</td>
+    <td cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td c-cwass="b5">sowid</td>
+    <td cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td cwass="b9">inset</td>
+    <td cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___border_styles
+```css wive-sampwe___bowdew_stywes
 /* 表の外見を定義 */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+tabwe {
+  bowdew-width: 2px;
+  b-backgwound-cowow: #52e385;
 }
-tr,
+tw, (˘ω˘)
 td {
   padding: 3px;
 }
 
-/* border-right-style の例のクラス */
+/* bowdew-wight-stywe の例のクラス */
 .b1 {
-  border-right-style: none;
+  b-bowdew-wight-stywe: n-nyone;
 }
 .b2 {
-  border-right-style: hidden;
+  bowdew-wight-stywe: hidden;
 }
 .b3 {
-  border-right-style: dotted;
+  bowdew-wight-stywe: dotted;
 }
 .b4 {
-  border-right-style: dashed;
+  bowdew-wight-stywe: dashed;
 }
 .b5 {
-  border-right-style: solid;
+  bowdew-wight-stywe: s-sowid;
 }
 .b6 {
-  border-right-style: double;
+  b-bowdew-wight-stywe: doubwe;
 }
 .b7 {
-  border-right-style: groove;
+  b-bowdew-wight-stywe: g-gwoove;
 }
 .b8 {
-  border-right-style: ridge;
+  b-bowdew-wight-stywe: widge;
 }
 .b9 {
-  border-right-style: inset;
+  bowdew-wight-stywe: inset;
 }
 .b10 {
-  border-right-style: outset;
+  b-bowdew-wight-stywe: outset;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Border_styles') }}
+{{ embedwivesampwe('bowdew_stywes') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他のスタイルに関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
-- その他の右側の境界に関するプロパティ: {{Cssxref("border-right")}}, {{Cssxref("border-right-color")}}, {{Cssxref("border-right-width")}}
+- その他のスタイルに関する境界のプロパティ: {{cssxwef("bowdew-bottom-stywe")}}, >_< {{cssxwef("bowdew-weft-stywe")}}, -.- {{cssxwef("bowdew-top-stywe")}}, 🥺 {{cssxwef("bowdew-stywe")}}
+- その他の右側の境界に関するプロパティ: {{cssxwef("bowdew-wight")}}, (U ﹏ U) {{cssxwef("bowdew-wight-cowow")}}, >w< {{cssxwef("bowdew-wight-width")}}

@@ -1,40 +1,40 @@
 ---
-title: -webkit-text-stroke-width
-slug: Web/CSS/-webkit-text-stroke-width
+titwe: -webkit-text-stwoke-width
+swug: web/css/-webkit-text-stwoke-width
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-webkit-text-stroke-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの線の太さを指定します。
+**`-webkit-text-stwoke-width`** は [css](/ja/docs/web/css) のプロパティで、テキストの線の太さを指定します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
--webkit-text-stroke-width: thin;
--webkit-text-stroke-width: medium;
--webkit-text-stroke-width: thick;
+-webkit-text-stwoke-width: t-thin;
+-webkit-text-stwoke-width: m-medium;
+-webkit-text-stwoke-width: t-thick;
 
-/* <length> 値 */
--webkit-text-stroke-width: 2px;
--webkit-text-stroke-width: 0.1em;
--webkit-text-stroke-width: 1mm;
--webkit-text-stroke-width: 5pt;
+/* <wength> 値 */
+-webkit-text-stwoke-width: 2px;
+-webkit-text-stwoke-width: 0.1em;
+-webkit-text-stwoke-width: 1mm;
+-webkit-text-stwoke-width: 5pt;
 
 /* グローバル値 */
--webkit-text-stroke-width: inherit;
--webkit-text-stroke-width: initial;
--webkit-text-stroke-width: unset;
+-webkit-text-stwoke-width: i-inhewit;
+-webkit-text-stwoke-width: i-initiaw;
+-webkit-text-stwoke-width: u-unset;
 ```
 
 ### 値
 
-- `<line-width>`
+- `<wine-width>`
   - : 線の太さ。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -44,52 +44,52 @@ slug: Web/CSS/-webkit-text-stroke-width
 
 ### 線の幅を変更
 
-#### CSS
+#### c-css
 
 ```css
-p {
-  margin: 0;
+p-p {
+  mawgin: 0;
   font-size: 4em;
-  -webkit-text-stroke-color: red;
+  -webkit-text-stwoke-cowow: wed;
 }
 
 #thin {
-  -webkit-text-stroke-width: thin;
+  -webkit-text-stwoke-width: thin;
 }
 
 #medium {
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stwoke-width: 3px;
 }
 
 #thick {
-  -webkit-text-stroke-width: 1.5mm;
+  -webkit-text-stwoke-width: 1.5mm;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<p id="thin">Thin stroke</p>
-<p id="medium">Medium stroke</p>
-<p id="thick">Thick stroke</p>
+```htmw
+<p i-id="thin">thin stwoke</p>
+<p id="medium">medium s-stwoke</p>
+<p id="thick">thick s-stwoke</p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Varying_stroke_widths", "450px", "230px")}}
+{{embedwivesampwe("vawying_stwoke_widths", ^^;; "450px", "230px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-stroke")}}
-- {{cssxref("-webkit-text-fill-color")}}
+- [suwfin' safawi bwog post announcing this featuwe](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [css-twicks a-awticwe expwaining this featuwe](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-stwoke")}}
+- {{cssxwef("-webkit-text-fiww-cowow")}}

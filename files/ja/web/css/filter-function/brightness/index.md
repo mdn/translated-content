@@ -1,67 +1,67 @@
 ---
-title: brightness()
-slug: Web/CSS/filter-function/brightness
-l10n:
-  sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
+titwe: bwightness()
+swug: web/css/fiwtew-function/bwightness
+w-w10n:
+  souwcecommit: 92447fec056cc89b7f28445851bea0c981fcbc12
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`brightness()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。その結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`bwightness()`** は [css](/ja/docs/web/css) の関数で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。その結果は {{cssxwef("&wt;fiwtew-function&gt;")}} です。
 
-{{InteractiveExample("CSS Demo: brightness()")}}
+{{intewactiveexampwe("css d-demo: bwightness()")}}
 
-```css interactive-example-choice
-filter: brightness(1);
+```css i-intewactive-exampwe-choice
+f-fiwtew: b-bwightness(1);
 ```
 
-```css interactive-example-choice
-filter: brightness(1.75);
+```css i-intewactive-exampwe-choice
+f-fiwtew: b-bwightness(1.75);
 ```
 
-```css interactive-example-choice
-filter: brightness(50%);
+```css intewactive-exampwe-choice
+fiwtew: bwightness(50%);
 ```
 
-```css interactive-example-choice
-filter: brightness(0);
+```css intewactive-exampwe-choice
+fiwtew: bwightness(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
 ## 構文
 
 ```css
-brightness(amount)
+bwightness(amount)
 ```
 
 ### 引数
 
 - `amount`
-  - : 明るさで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。値が `100%` 未満の場合は入力画像または要素が暗くなり、 `100%` を超える場合は明るくなります。値が `0%` の場合は完全に黒い画像または要素が作成され、 `100%` の場合は入力が変更されません。 `0%` から `100%` までの他の値は、線形の乗算効果があります。 `100%` を超える値も許可されており、明るい結果を提供します。{{Glossary("interpolation","補間")}}の初期値は `1` です。負の値は許可されていません。何も指定しない場合の既定値は `1` です。
+  - : 明るさで、 {{cssxwef("&wt;numbew&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} で指定します。値が `100%` 未満の場合は入力画像または要素が暗くなり、 `100%` を超える場合は明るくなります。値が `0%` の場合は完全に黒い画像または要素が作成され、 `100%` の場合は入力が変更されません。 `0%` から `100%` までの他の値は、線形の乗算効果があります。 `100%` を超える値も許可されており、明るい結果を提供します。{{gwossawy("intewpowation","補間")}}の初期値は `1` です。負の値は許可されていません。何も指定しない場合の既定値は `1` です。
 
 以下は、等価な値のペアです。
 
 ```css
-brightness(0) /* 輝度がゼロに縮小されるため、入力が黒くなる */
-brightness(0%)
+bwightness(0) /* 輝度がゼロに縮小されるため、入力が黒くなる */
+bwightness(0%)
 
-brightness(0.4) /* 入力の明るさが40%に縮小されるため、入力は60%暗くなる */
-brightness(40%)
+b-bwightness(0.4) /* 入力の明るさが40%に縮小されるため、入力は60%暗くなる */
+bwightness(40%)
 
-brightness(1) /* 入力の明るさは変更されない */
-brightness(100%)
+b-bwightness(1) /* 入力の明るさは変更されない */
+b-bwightness(100%)
 
-brightness(2) /* 入力の明るさが 2 倍に */
-brightness(200%)
+bwightness(2) /* 入力の明るさが 2 倍に */
+bwightness(200%)
 ```
 
 ### 形式文法
@@ -70,37 +70,37 @@ brightness(200%)
 
 ## 例
 
-### backdrop-filter プロパティを用いた brightness の適用
+### backdwop-fiwtew プロパティを用いた bwightness の適用
 
-この例は、段落に `brightness()` フィルターを、 [`backdrop-filter`](/ja/docs/Web/CSS/backdrop-filter) プロパティを介して適用する方法を示します。
+この例は、段落に `bwightness()` フィルターを、 [`backdwop-fiwtew`](/ja/docs/web/css/backdwop-fiwtew) プロパティを介して適用する方法を示します。
 
-#### CSS
+#### css
 
 ```css
-.container {
-  background: url(image.jpg) no-repeat right / contain #d4d5b2;
+.containew {
+  b-backgwound: uww(image.jpg) nyo-wepeat wight / contain #d4d5b2;
 }
 p {
-  backdrop-filter: brightness(150%);
-  text-shadow: 2px 2px #ffffff;
+  b-backdwop-fiwtew: bwightness(150%);
+  t-text-shadow: 2px 2px #ffffff;
 }
 ```
 
-```css hidden
-.container {
-  padding: 5rem 3rem 1rem;
-  width: 30rem;
+```css h-hidden
+.containew {
+  p-padding: 5wem 3wem 1wem;
+  w-width: 30wem;
 }
 p {
-  padding: 0.5rem;
-  color: #000000;
-  font-size: 2rem;
-  font-family: sans-serif;
+  padding: 0.5wem;
+  cowow: #000000;
+  f-font-size: 2wem;
+  font-famiwy: sans-sewif;
 }
 ```
 
-```html hidden
-<div class="container" style="background-image: url(be_fierce.jpg);">
+```htmw hidden
+<div c-cwass="containew" stywe="backgwound-image: uww(be_fiewce.jpg);">
   <p>
     画像上のテキストは、ドロップシャドウがあっても読みにくく、アクセシビリティに欠ける場合があります。
   </p>
@@ -109,139 +109,139 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample('Applying_brightness_using_the_backdrop_filter_property', '100%', '280')}}
+{{embedwivesampwe('appwying_bwightness_using_the_backdwop_fiwtew_pwopewty', 😳😳😳 '100%', :3 '280')}}
 
-この例では、`<p>` 要素の背後の領域の色が直線的に変化します。 `backdrop-filter` プロパティが `brightness(0%)` に設定されていた場合、`<p>` 要素を含む `<div>` 領域は黒色となり、背後の画像を隠します。 `brightness(100%)` では、`<div>` 領域の色は入力の `#d4d5b2` と同じになり、背景の画像は完全に透明になります。 この例のように明るさを `150%` に設定すると、背景の画像の色は `<div>` 要素の明るさによって隠されます。
+この例では、`<p>` 要素の背後の領域の色が直線的に変化します。 `backdwop-fiwtew` プロパティが `bwightness(0%)` に設定されていた場合、`<p>` 要素を含む `<div>` 領域は黒色となり、背後の画像を隠します。 `bwightness(100%)` では、`<div>` 領域の色は入力の `#d4d5b2` と同じになり、背景の画像は完全に透明になります。 この例のように明るさを `150%` に設定すると、背景の画像の色は `<div>` 要素の明るさによって隠されます。
 
-### 数値とパーセント値を用いた brightness の設定
+### 数値とパーセント値を用いた bwightness の設定
 
-例えば、 `brightness()` フィルターが、 [`filter`](/ja/docs/Web/CSS/filter) プロパティを介して、コンテンツ、境界線、背景画像を含め、要素全体に適用されます。その結果、異なる明るさの値の 3 つのバリエーションが表示されます。
+例えば、 `bwightness()` フィルターが、 [`fiwtew`](/ja/docs/web/css/fiwtew) プロパティを介して、コンテンツ、境界線、背景画像を含め、要素全体に適用されます。その結果、異なる明るさの値の 3 つのバリエーションが表示されます。
 
 ```css
-p:first-of-type {
-  filter: brightness(50%);
+p:fiwst-of-type {
+  fiwtew: bwightness(50%);
 }
-p:last-of-type {
-  filter: brightness(200%);
+p-p:wast-of-type {
+  fiwtew: bwightness(200%);
 }
 ```
 
 ```css hidden
-p {
-  text-shadow: 2px 2px blue;
-  background-color: magenta;
-  color: palegoldenrod;
-  border: 1em solid rebeccapurple;
-  box-shadow:
-    inset -5px -5px red,
-    5px 5px yellow;
-  padding: 0.25rem;
-  font-size: 1.25rem;
-  font-family: sans-serif;
-  width: 85vw;
+p-p {
+  text-shadow: 2px 2px b-bwue;
+  backgwound-cowow: m-magenta;
+  cowow: pawegowdenwod;
+  bowdew: 1em sowid w-webeccapuwpwe;
+  b-box-shadow:
+    inset -5px -5px w-wed,
+    5px 5px y-yewwow;
+  padding: 0.25wem;
+  font-size: 1.25wem;
+  f-font-famiwy: sans-sewif;
+  w-width: 85vw;
 }
 ```
 
-```html hidden
+```htmw hidden
 <p>この段落は明るさを抑えています。</p>
 <p>この段落は通常の明るさです。</p>
 <p>この段落は明るさを増してあります。</p>
 ```
 
-{{EmbedLiveSample('Applying_brightness_using_the_filter_property','100%','280')}}
+{{embedwivesampwe('appwying_bwightness_using_the_fiwtew_pwopewty','100%','280')}}
 
-### url() と SVG の brightness フィルターを用いた brightness の適用
+### uww() と svg の b-bwightness フィルターを用いた bwightness の適用
 
-SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、その後、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` 要素の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。
+s-svg の {{svgewement("fiwtew")}} 要素は、カスタムフィルター効果を定義するために使用でき、その後、 [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) で参照することができます。 `<fiwtew>` 要素の {{svgewement("fecomponenttwansfew")}} プリミティブは、ピクセルレベルでの色変換を可能にします。
 
-例えば、適用したコンテンツを 25% （つまり、元の明るさの 75%）暗くするフィルターを作成するには、 `slope` 属性を `0.75` に設定します。次に、 `id` でフィルターを参照します。
+例えば、適用したコンテンツを 25% （つまり、元の明るさの 75%）暗くするフィルターを作成するには、 `swope` 属性を `0.75` に設定します。次に、 `id` でフィルターを参照します。
 
 次のコードがあったとします。
 
 ```css hidden
-.filter {
-  filter: brightness(0.75);
+.fiwtew {
+  fiwtew: b-bwightness(0.75);
 }
-svg {
-  position: absolute;
+s-svg {
+  position: absowute;
 }
 ```
 
-```html
-<svg role="none">
-  <filter id="darken25" color-interpolation-filters="sRGB">
-    <feComponentTransfer>
-      <feFuncR type="linear" slope="0.75" />
-      <feFuncG type="linear" slope="0.75" />
-      <feFuncB type="linear" slope="0.75" />
-    </feComponentTransfer>
-  </filter>
+```htmw
+<svg wowe="none">
+  <fiwtew id="dawken25" cowow-intewpowation-fiwtews="swgb">
+    <fecomponenttwansfew>
+      <fefuncw type="wineaw" swope="0.75" />
+      <fefuncg t-type="wineaw" s-swope="0.75" />
+      <fefuncb type="wineaw" s-swope="0.75" />
+    </fecomponenttwansfew>
+  </fiwtew>
 </svg>
 ```
 
 次の宣言は同様の効果をもたらします。
 
 ```css
-filter: brightness(75%);
-filter: url(#darken25); /* 埋め込み SVG による */
-filter: url(folder/fileName.svg#darken25); /* 外部 SVG フィルター定義 */
+f-fiwtew: bwightness(75%);
+f-fiwtew: uww(#dawken25); /* 埋め込み svg による */
+fiwtew: uww(fowdew/fiwename.svg#dawken25); /* 外部 s-svg フィルター定義 */
 ```
 
-下記の画像では、最初の画像は `brightness()` フィルター機能が適用され、 2 つ目の画像は同様の SVG 明るさ機能が適用され、 3 つ目は比較用の元画像です。
+下記の画像では、最初の画像は `bwightness()` フィルター機能が適用され、 2 つ目の画像は同様の svg 明るさ機能が適用され、 3 つ目は比較用の元画像です。
 
-```html hidden
-<table cellpadding="5">
+```htmw hidden
+<tabwe cewwpadding="5">
   <thead>
-    <tr>
+    <tw>
       <th>ライブサンプル</th>
-      <th>同等の SVG</th>
+      <th>同等の svg</th>
       <th>元画像</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <img
-          class="filter"
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="darkened pride flag" />
+          c-cwass="fiwtew"
+          swc="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+          a-awt="dawkened p-pwide fwag" />
       </td>
       <td>
         <img
-          style="filter: url(#darken25)"
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="darkened pride flag" />
+          s-stywe="fiwtew: uww(#dawken25)"
+          swc="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+          a-awt="dawkened p-pwide fwag" />
       </td>
       <td>
         <img
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          s-swc="https://mdn.github.io/shawed-assets/images/exampwes/pwogwess-pwide-fwag.jpg"
+          a-awt="pwide fwag" />
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-{{EmbedLiveSample('blur','100%','280')}}
+{{embedwivesampwe('bwuw','100%','280')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)モジュール
-- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
-  - {{cssxref("filter-function/blur", "blur()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
+- [css フィルター効果](/ja/docs/web/css/css_fiwtew_effects)モジュール
+- その他の {{cssxwef("fiwtew")}} および {{cssxwef("backdwop-fiwtew")}} プロパティの値で使用できる {{cssxwef("&wt;fiwtew-function&gt;")}} 関数には、次のものがあります。
+  - {{cssxwef("fiwtew-function/bwuw", OwO "bwuw()")}}
+  - {{cssxwef("fiwtew-function/contwast", (U ﹏ U) "contwast()")}}
+  - {{cssxwef("fiwtew-function/dwop-shadow", >w< "dwop-shadow()")}}
+  - {{cssxwef("fiwtew-function/gwayscawe", "gwayscawe()")}}
+  - {{cssxwef("fiwtew-function/hue-wotate", (U ﹏ U) "hue-wotate()")}}
+  - {{cssxwef("fiwtew-function/invewt", 😳 "invewt()")}}
+  - {{cssxwef("fiwtew-function/opacity", (ˆ ﻌ ˆ)♡ "opacity()")}}
+  - {{cssxwef("fiwtew-function/satuwate", 😳😳😳 "satuwate()")}}
+  - {{cssxwef("fiwtew-function/sepia", (U ﹏ U) "sepia()")}}

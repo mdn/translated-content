@@ -1,18 +1,18 @@
 ---
-title: NNTP
-slug: Glossary/NNTP
+titwe: nyntp
+swug: gwossawy/nntp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**NNTP** (Network News Transfer Protocol) は、{{Glossary("Usenet")}} のメッセージをクライアントからサーバー、またはサーバー間で転送するために使用される{{Glossary("protocol","プロトコル")}}です。
+**nntp** (netwowk n-news twansfew pwotocow) は、{{gwossawy("usenet")}} のメッセージをクライアントからサーバー、またはサーバー間で転送するために使用される{{gwossawy("pwotocow","プロトコル")}}です。
 
 ## 関連項目
 
 ### 一般知識
 
-- Wikipedia の[NNTP](https://ja.wikipedia.org/wiki/Network_News_Transfer_Protocol)
+- w-wikipedia の[nntp](https://ja.wikipedia.owg/wiki/netwowk_news_twansfew_pwotocow)
 
 ### 技術リファレンス
 
-- IETF より: [RFC 3977 about NNTP](https://tools.ietf.org/html/rfc3977) (2006)
+- i-ietf より: [wfc 3977 a-about nyntp](https://toows.ietf.owg/htmw/wfc3977) (2006)

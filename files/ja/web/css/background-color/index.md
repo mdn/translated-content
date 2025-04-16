@@ -1,48 +1,48 @@
 ---
-title: background-color
-slug: Web/CSS/background-color
-l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+titwe: backgwound-cowow
+swug: w-web/css/backgwound-cowow
+w-w10n:
+  s-souwcecommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`background-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景色を設定します。
+**`backgwound-cowow`** は [css](/ja/docs/web/css) のプロパティで、要素の背景色を設定します。
 
-{{InteractiveExample("CSS Demo: background-color")}}
+{{intewactiveexampwe("css d-demo: backgwound-cowow")}}
 
-```css interactive-example-choice
-background-color: brown;
+```css i-intewactive-exampwe-choice
+b-backgwound-cowow: b-bwown;
 ```
 
-```css interactive-example-choice
-background-color: #74992e;
+```css i-intewactive-exampwe-choice
+backgwound-cowow: #74992e;
 ```
 
-```css interactive-example-choice
-background-color: rgb(255, 255, 128);
+```css intewactive-exampwe-choice
+backgwound-cowow: wgb(255, >_< 255, 128);
 ```
 
-```css interactive-example-choice
-background-color: rgba(255, 255, 128, 0.5);
+```css i-intewactive-exampwe-choice
+backgwound-cowow: wgba(255, >w< 255, 128, 0.5);
 ```
 
-```css interactive-example-choice
-background-color: hsl(50, 33%, 25%);
+```css i-intewactive-exampwe-choice
+backgwound-cowow: h-hsw(50, rawr 33%, 25%);
 ```
 
-```css interactive-example-choice
-background-color: hsla(50, 33%, 25%, 0.75);
+```css intewactive-exampwe-choice
+backgwound-cowow: hswa(50, 😳 33%, 25%, 0.75);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
   padding: 10%;
@@ -53,53 +53,53 @@ background-color: hsla(50, 33%, 25%, 0.75);
 
 ```css
 /* キーワード値 */
-background-color: red;
-background-color: indigo;
+b-backgwound-cowow: wed;
+backgwound-cowow: indigo;
 
 /* 16 進の値 */
-background-color: #bbff00; /* 完全不透過 */
-background-color: #bf0; /* 完全不透過の短縮形 */
-background-color: #11ffee00; /* 完全透過 */
-background-color: #1fe0; /* 完全透過の短縮形 */
-background-color: #11ffeeff; /* 完全不透過 */
-background-color: #1fef; /* 完全不透過の短縮形 */
+backgwound-cowow: #bbff00; /* 完全不透過 */
+backgwound-cowow: #bf0; /* 完全不透過の短縮形 */
+b-backgwound-cowow: #11ffee00; /* 完全透過 */
+backgwound-cowow: #1fe0; /* 完全透過の短縮形 */
+b-backgwound-cowow: #11ffeeff; /* 完全不透過 */
+b-backgwound-cowow: #1fef; /* 完全不透過の短縮形 */
 
-/* RGB 値 */
-background-color: rgb(255 255 128); /* 不透過 */
-background-color: rgba(117 190 218 / 50%); /* 50% 不透過 */
+/* w-wgb 値 */
+b-backgwound-cowow: wgb(255 255 128); /* 不透過 */
+backgwound-cowow: w-wgba(117 190 218 / 50%); /* 50% 不透過 */
 
-/* HSL 値 */
-background-color: hsl(50 33% 25%); /* 不透過 */
-background-color: hsl(50 33% 25% / 75%); /* 75% 不透過、すなわち 25% 透過 */
+/* hsw 値 */
+backgwound-cowow: h-hsw(50 33% 25%); /* 不透過 */
+backgwound-cowow: hsw(50 33% 25% / 75%); /* 75% 不透過、すなわち 25% 透過 */
 
 /* 特殊なキーワード値 */
-background-color: currentcolor;
-background-color: transparent;
+backgwound-cowow: cuwwentcowow;
+backgwound-cowow: t-twanspawent;
 
 /* グローバル値 */
-background-color: inherit;
-background-color: initial;
-background-color: revert;
-background-color: revert-layer;
-background-color: unset;
+backgwound-cowow: i-inhewit;
+backgwound-cowow: i-initiaw;
+b-backgwound-cowow: wevewt;
+backgwound-cowow: wevewt-wayew;
+backgwound-cowow: unset;
 ```
 
-`background-color` プロパティは単一の `<color>` 値で指定します。
+`backgwound-cowow` プロパティは単一の `<cowow>` 値で指定します。
 
 ### 値
 
-- {{cssxref("&lt;color&gt;")}}
-  - : 背景の単一色 (uniform color) を表します。指定されていれば {{cssxref("background-image")}} の背後に描画されますが、画像に透明な部分があれば色が見えます。
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 背景の単一色 (unifowm c-cowow) を表します。指定されていれば {{cssxwef("backgwound-image")}} の背後に描画されますが、画像に透明な部分があれば色が見えます。
 
 ## アクセシビリティ
 
 背景色とその上に配置されたテキストの色のコントラスト比が、弱視の人がページのコンテンツを読むことができる程度の高さであることを確認することが重要です。
 
-色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/Web/CSS/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
+色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (web c-content accessibiwity guidewines, >w< w-wcag)](https://www.w3.owg/wai/standawds-guidewines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/web/css/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
 
-- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: c-cowow contwast checkew](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn "wcag を理解する ― ガイドライン 1.4 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [undewstanding s-success cwitewion 1.4.3 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
 ## 公式定義
 
@@ -113,106 +113,106 @@ background-color: unset;
 
 ### ボックスへの色付け
 
-この例では、さまざまな CSS の {{cssxref("color_value", "&lt;color&gt;")}} 値を使用して、 HTML の {{HTMLelement("div")}} 要素に `background-color` を適用する方法を示しています。
+この例では、さまざまな css の {{cssxwef("cowow_vawue", (⑅˘꒳˘) "&wt;cowow&gt;")}} 値を使用して、 h-htmw の {{htmwewement("div")}} 要素に `backgwound-cowow` を適用する方法を示しています。
 
-#### HTML
+#### htmw
 
-```html live-sample___colorize_boxes
-<div class="example-one">Lorem ipsum dolor sit amet, consectetuer</div>
+```htmw w-wive-sampwe___cowowize_boxes
+<div cwass="exampwe-one">wowem i-ipsum d-dowow sit amet, OwO consectetuew</div>
 
-<div class="example-two">Lorem ipsum dolor sit amet, consectetuer</div>
+<div cwass="exampwe-two">wowem ipsum dowow sit amet, (ꈍᴗꈍ) consectetuew</div>
 
-<div class="example-three">Lorem ipsum dolor sit amet, consectetuer</div>
+<div cwass="exampwe-thwee">wowem ipsum dowow sit a-amet, 😳 consectetuew</div>
 ```
 
-### CSS
+### c-css
 
-```css live-sample___colorize_boxes
-.example-one {
-  background-color: transparent;
+```css wive-sampwe___cowowize_boxes
+.exampwe-one {
+  b-backgwound-cowow: t-twanspawent;
 }
 
-.example-two {
-  background-color: rgb(153 102 153);
-  color: rgb(255 255 204);
+.exampwe-two {
+  b-backgwound-cowow: wgb(153 102 153);
+  cowow: wgb(255 255 204);
 }
 
-.example-three {
-  background-color: #777799;
-  color: #ffffff;
+.exampwe-thwee {
+  backgwound-cowow: #777799;
+  c-cowow: #ffffff;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Colorize boxes", 200, 150)}}
+{{embedwivesampwe("cowowize boxes", 😳😳😳 200, mya 150)}}
 
 ### 表への色付け
 
-この例では、 `background-color` を HTML の {{HTMLelement("table")}} 要素（{{HTMLelement("tr")}} の行や {{HTMLelement("td")}} のセルを含む）に使用する方法を示しています。
+この例では、 `backgwound-cowow` を htmw の {{htmwewement("tabwe")}} 要素（{{htmwewement("tw")}} の行や {{htmwewement("td")}} のセルを含む）に使用する方法を示しています。
 
-#### HTML
+#### htmw
 
-```html live-sample___colorize_tables
-<table>
-  <tr id="r1">
+```htmw wive-sampwe___cowowize_tabwes
+<tabwe>
+  <tw i-id="w1">
     <td id="c11">11</td>
     <td id="c12">12</td>
-    <td id="c13">13</td>
-  </tr>
-  <tr id="r2">
-    <td id="c21">21</td>
+    <td i-id="c13">13</td>
+  </tw>
+  <tw i-id="w2">
+    <td i-id="c21">21</td>
     <td id="c22">22</td>
-    <td id="c23">23</td>
-  </tr>
-  <tr id="r3">
-    <td id="c31">31</td>
-    <td id="c32">32</td>
+    <td i-id="c23">23</td>
+  </tw>
+  <tw i-id="w3">
+    <td i-id="c31">31</td>
+    <td i-id="c32">32</td>
     <td id="c33">33</td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___colorize_tables
-table {
-  border-collapse: collapse;
-  border: solid black 1px;
+```css wive-sampwe___cowowize_tabwes
+t-tabwe {
+  b-bowdew-cowwapse: c-cowwapse;
+  b-bowdew: sowid b-bwack 1px;
   width: 250px;
   height: 150px;
 }
 td {
-  border: solid 1px black;
+  bowdew: sowid 1px b-bwack;
 }
-#r1 {
-  background-color: lightblue;
+#w1 {
+  backgwound-cowow: wightbwue;
 }
 #c12 {
-  background-color: cyan;
+  backgwound-cowow: cyan;
 }
-#r2 {
-  background-color: grey;
+#w2 {
+  backgwound-cowow: g-gwey;
 }
-#r3 {
-  background-color: olive;
+#w3 {
+  backgwound-cowow: owive;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Colorize tables', "100%", "100%")}}
+{{embedwivesampwe('cowowize tabwes', mya "100%", "100%")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- {{cssxref("&lt;color&gt;")}} データ型
-- その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
+- [複数の背景](/ja/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+- {{cssxwef("&wt;cowow&gt;")}} データ型
+- その他の色に関するプロパティ: {{cssxwef("cowow")}}, (⑅˘꒳˘) {{cssxwef("bowdew-cowow")}}, (U ﹏ U) {{cssxwef("outwine-cowow")}}, mya {{cssxwef("text-decowation-cowow")}}, ʘwʘ {{cssxwef("text-emphasis-cowow")}}, (˘ω˘) {{cssxwef("text-shadow")}}, (U ﹏ U) {{cssxwef("cawet-cowow")}}, ^•ﻌ•^ {{cssxwef("cowumn-wuwe-cowow")}}

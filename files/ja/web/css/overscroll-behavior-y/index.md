@@ -1,29 +1,29 @@
 ---
-title: overscroll-behavior-y
-slug: Web/CSS/overscroll-behavior-y
+titwe: ovewscwoww-behaviow-y
+swug: web/css/ovewscwoww-behaviow-y
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overscroll-behavior-y`** は CSS のプロパティで、スクロール領域の垂直方向の境界に達したときのブラウザーの挙動を設定します。
+**`ovewscwoww-behaviow-y`** は c-css のプロパティで、スクロール領域の垂直方向の境界に達したときのブラウザーの挙動を設定します。
 
-全体的な説明は {{cssxref("overscroll-behavior")}} を参照してください。
+全体的な説明は {{cssxwef("ovewscwoww-behaviow")}} を参照してください。
 
 ```css
 /* キーワード値 */
-overscroll-behavior-y: auto; /* 既定値 */
-overscroll-behavior-y: contain;
-overscroll-behavior-y: none;
+o-ovewscwoww-behaviow-y: a-auto; /* 既定値 */
+o-ovewscwoww-behaviow-y: contain;
+o-ovewscwoww-behaviow-y: none;
 
 /* グローバル値 */
-overscroll-behavior-y: inherit;
-overscroll-behavior-y: initial;
-overscroll-behavior-y: unset;
+ovewscwoww-behaviow-y: i-inhewit;
+ovewscwoww-behaviow-y: i-initiaw;
+ovewscwoww-behaviow-y: u-unset;
 ```
 
 ## 構文
 
-`overscroll-behavior-y` プロパティは、次の値の一覧のうち一つのキーワードで指定します。
+`ovewscwoww-behaviow-y` プロパティは、次の値の一覧のうち一つのキーワードで指定します。
 
 ### 値
 
@@ -49,22 +49,22 @@ overscroll-behavior-y: unset;
 ```css
 .messages {
   height: 220px;
-  overflow: auto;
-  overscroll-behavior-y: contain;
+  ovewfwow: auto;
+  ovewscwoww-behaviow-y: contain;
 }
 ```
 
-完全な例と説明については、 {{cssxref("overscroll-behavior")}} を参照してください。
+完全な例と説明については、 {{cssxwef("ovewscwoww-behaviow")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
-- The mapped logical properties: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}
+- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ](https://devewopews.googwe.com/web/updates/2017/11/ovewscwoww-behaviow#demo)
+- t-the mapped wogicaw pwopewties: {{cssxwef("ovewscwoww-behaviow-inwine")}}, σωσ {{cssxwef("ovewscwoww-behaviow-bwock")}}

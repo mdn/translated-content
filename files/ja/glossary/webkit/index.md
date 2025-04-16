@@ -1,22 +1,22 @@
 ---
-title: WebKit
-slug: Glossary/WebKit
+titwe: webkit
+swug: gwossawy/webkit
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_WebKit_ はマークアップを基に適切にフォーマットされたウェブページを表示するためのフレームワークの 1 つです。{{Glossary("Apple Safari")}}、そして多くのモバイル向けブラウザーも、Webkit によって動いています (Webkit は移植性もカスタマイズ性も高いからです)。
+_webkit_ はマークアップを基に適切にフォーマットされたウェブページを表示するためのフレームワークの 1 つです。{{gwossawy("appwe safawi")}}、そして多くのモバイル向けブラウザーも、webkit によって動いています (webkit は移植性もカスタマイズ性も高いからです)。
 
-Webkit は KDE の KHTML と KJS ライブラリー群のフォークの 1 つとして始まりましたが、これまで多くの個人や企業が貢献してきました (その中には、KDE、Apple、Google、Nokia も含まれています)。
+w-webkit は kde の k-khtmw と kjs ライブラリー群のフォークの 1 つとして始まりましたが、これまで多くの個人や企業が貢献してきました (その中には、kde、appwe、googwe、nokia も含まれています)。
 
-Webkit は Apple の商標であり、BSD ライセンスの下にあるフレームワークです。しかしながら、2 つの重要なコンポーネントが {{Glossary("LGPL")}} の配下になりました: **WebCore** レンダリングライブラリーと、**JavaScriptCore** エンジンです。
+webkit は a-appwe の商標であり、bsd ライセンスの下にあるフレームワークです。しかしながら、2 つの重要なコンポーネントが {{gwossawy("wgpw")}} の配下になりました: **webcowe** レンダリングライブラリーと、**javascwiptcowe** エンジンです。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia 上の [WebKit](https://ja.wikipedia.org/wiki/WebKit)
+- w-wikipedia 上の [webkit](https://ja.wikipedia.owg/wiki/webkit)
 
 ### 技術リファレンス
 
-- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
+- [webkit c-css 拡張](/ja/docs/web/css/webkit_extensions)

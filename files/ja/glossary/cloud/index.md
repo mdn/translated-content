@@ -1,15 +1,15 @@
 ---
-title: Cloud (クラウド)
-slug: Glossary/Cloud
-l10n:
-  sourceCommit: 99c2c3add298eaebe27102b2d83e27fd3ca80aef
+titwe: cwoud (クラウド)
+swug: gwossawy/cwoud
+w-w10n:
+  souwcecommit: 99c2c3add298eaebe27102b2d83e27fd3ca80aef
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **クラウド**とは、インターネット経由でアクセスできる世界中に配置されたサーバー群、およびそのサーバー上で実行されるソフトウェアとデータベースを指します。
 
-ローカルのコンピューターやサーバーにデータを保存したりプログラムを実行したりする代わりに、ユーザーはクラウド上のリソースにアクセスしてタスクを実行できます。これは{{glossary("Cloud computing","クラウドコンピューティング")}}とも呼ばれます。
+ローカルのコンピューターやサーバーにデータを保存したりプログラムを実行したりする代わりに、ユーザーはクラウド上のリソースにアクセスしてタスクを実行できます。これは{{gwossawy("cwoud c-computing","クラウドコンピューティング")}}とも呼ばれます。
 
 クラウドに含まれる主な機能:
 
@@ -19,4 +19,4 @@ l10n:
 
 ## 関連情報
 
-- [クラウドとは？ | クラウドの定義](https://www.cloudflare.com/ja-jp/learning/cloud/what-is-the-cloud/) Cloudflare
+- [クラウドとは？ | クラウドの定義](https://www.cwoudfwawe.com/ja-jp/weawning/cwoud/nani-is-the-cwoud/) c-cwoudfwawe

@@ -1,21 +1,21 @@
 ---
-title: SSL
-slug: Glossary/SSL
+titwe: ssw
+swug: gwossawy/ssw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-SSL (Secure Sockets Layer) は古いセキュリティ標準技術で、サーバーとクライアントの間に暗号化されたネットワークリンクを作成し、そこを通過するデータが非公開で安全であることを保証するためのものでした。SSL の現在のバージョンは 3.0 で、1999 年に Netscape 社がリリースしたものですが、{{Glossary("TLS", "TLS (Transport Layer Security)")}} プロトコルに置き換えられました。
+s-ssw (secuwe s-sockets wayew) は古いセキュリティ標準技術で、サーバーとクライアントの間に暗号化されたネットワークリンクを作成し、そこを通過するデータが非公開で安全であることを保証するためのものでした。ssw の現在のバージョンは 3.0 で、1999 年に n-nyetscape 社がリリースしたものですが、{{gwossawy("tws", (U ᵕ U❁) "tws (twanspowt w-wayew secuwity)")}} プロトコルに置き換えられました。
 
-1. 関連情報
+1. (⑅˘꒳˘) 関連情報
 
-   1. [Transport Layer Security (TLS) プロトコル](/ja/docs/Web/Security/Transport_Layer_Security)
+   1. ( ͡o ω ͡o ) [twanspowt w-wayew s-secuwity (tws) プロトコル](/ja/docs/web/secuwity/twanspowt_wayew_secuwity)
 
-2. 関連用語:
+2. UwU 関連用語:
 
-   1. {{Glossary("HTTPS")}}
-   2. {{Glossary("TLS")}}
+   1. rawr x3 {{gwossawy("https")}}
+   2. rawr {{gwossawy("tws")}}
 
-3. Wikipedia の記事
+3. σωσ wikipedia の記事
 
-   1. [Transport Layer Security](https://ja.wikipedia.org/wiki/Transport_Layer_Security)
+   1. σωσ [twanspowt w-wayew secuwity](https://ja.wikipedia.owg/wiki/twanspowt_wayew_secuwity)

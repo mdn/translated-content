@@ -1,139 +1,139 @@
 ---
-title: animation-delay
-slug: Web/CSS/animation-delay
-l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+titwe: animation-deway
+swug: w-web/css/animation-deway
+w-w10n:
+  s-souwcecommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-delay`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションをいつ開始するかを指定します。アニメーションは未来のある時点から、直ちに最初から、または直ちにアニメーション周期の途中から始めることができます。
+**`animation-deway`** は [css](/ja/docs/web/css) のプロパティで、アニメーションをいつ開始するかを指定します。アニメーションは未来のある時点から、直ちに最初から、または直ちにアニメーション周期の途中から始めることができます。
 
-{{InteractiveExample("CSS Demo: animation-delay")}}
+{{intewactiveexampwe("css d-demo: a-animation-deway")}}
 
-```css interactive-example-choice
-animation-delay: 250ms;
+```css i-intewactive-exampwe-choice
+a-animation-deway: 250ms;
 ```
 
-```css interactive-example-choice
-animation-delay: 2s;
+```css i-intewactive-exampwe-choice
+animation-deway: 2s;
 ```
 
-```css interactive-example-choice
-animation-delay: -2s;
+```css intewactive-exampwe-choice
+animation-deway: -2s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a delay to start!</div>
+```htmw intewactive-exampwe
+<section c-cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div i-id="exampwe-ewement">sewect a deway to s-stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  cowow: w-white;
+  mawgin: auto;
+  mawgin-weft: 0;
+  b-bowdew: 5px s-sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  bowdew-wadius: 50%;
+  dispway: f-fwex;
+  justify-content: centew;
+  awign-items: centew;
+  fwex-diwection: cowumn;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  f-font-weight: bowd;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 2;
-  animation-direction: alternate;
+  a-animation-name: s-swide;
+  animation-duwation: 3s;
+  a-animation-timing-function: e-ease-in;
+  animation-itewation-count: 2;
+  animation-diwection: a-awtewnate;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: owange;
+    cowow: b-bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use s-stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+w-window.addeventwistenew("woad", 😳😳😳 () => {
+  c-const ew = document.getewementbyid("exampwe-ewement");
+  const status = document.getewementbyid("pwaystatus");
 
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+  f-function u-update() {
+    status.textcontent = "dewaying";
+    e-ew.cwassname = "";
+    w-window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        e-ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", :3 () => {
+    s-status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  ew.addeventwistenew("animationend", OwO () => {
+    status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
-    update();
+  c-const obsewvew = nyew mutationobsewvew(() => {
+    u-update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, (U ﹏ U) {
+    a-attwibutes: t-twue, >w<
+    attwibutefiwtew: ["stywe"], (U ﹏ U)
   });
 
   update();
 });
 ```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxwef("animation")}} プロパティを使用すると便利です。
 
 ## 構文
 
 ```css
 /* 単一のアニメーション */
-animation-delay: 3s;
-animation-delay: 0s;
-animation-delay: -1500ms;
+animation-deway: 3s;
+animation-deway: 0s;
+animation-deway: -1500ms;
 
 /* 複数のアニメーション */
-animation-delay: 2.1s, 480ms;
+animation-deway: 2.1s, 😳 480ms;
 
 /* グローバル値 */
-animation-delay: inherit;
-animation-delay: initial;
-animation-delay: revert;
-animation-delay: revert-layer;
-animation-delay: unset;
+animation-deway: inhewit;
+animation-deway: i-initiaw;
+a-animation-deway: wevewt;
+animation-deway: w-wevewt-wayew;
+a-animation-deway: u-unset;
 ```
 
 ### 値
 
-- `{{cssxref("&lt;time&gt;")}}`
+- `{{cssxwef("&wt;time&gt;")}}`
 
   - : アニメーションが要素に適用され、アニメーションが始まる瞬間からのオフセット時間。これは秒 (`s`) またはミリ秒 (`ms`) のどちらかで指定できます。単位は必須です。
 
@@ -141,9 +141,9 @@ animation-delay: unset;
 
     負の数が指定された場合は、アニメーションは直ちに始まりますが、アニメーション周期の途中からになります。例えば、 `-1s` を遅延時間に指定すると、アニメーションは直ちに始まりますが、アニメーションが始まって1秒の時点から始まります。アニメーションの遅延時間に負の値を指定しても、暗黙的に開始値が指定されている場合、開始値はアニメーションが要素に適用された瞬間から取得されます。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxwef("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/web/css/css_animations/using_css_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** `animation-delay` は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)では効果がありません。
+> **メモ:** `animation-deway` は [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)では効果がありません。
 
 ## 公式定義
 
@@ -159,34 +159,34 @@ animation-delay: unset;
 
 このアニメーションは遅延がが 2 秒です。
 
-#### HTML
+#### htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div cwass="box"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  b-backgwound-cowow: webeccapuwpwe;
+  bowdew-wadius: 10px;
   width: 100px;
   height: 100px;
 }
 
-.box:hover {
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-delay: 2s;
+.box:hovew {
+  animation-name: w-wotate;
+  animation-duwation: 0.7s;
+  a-animation-deway: 2s;
 }
 
-@keyframes rotate {
+@keyfwames w-wotate {
   0% {
-    transform: rotate(0);
+    t-twansfowm: wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    t-twansfowm: w-wotate(360deg);
   }
 }
 ```
@@ -195,20 +195,20 @@ animation-delay: unset;
 
 矩形の上にカーソルを当てるとアニメーションが始まります。
 
-{{EmbedLiveSample("Setting an animation delay","100%","250")}}
+{{embedwivesampwe("setting a-an animation deway","100%","250")}}
 
-例については [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+例については [css アニメーション](/ja/docs/web/css/css_animations/using_css_animations)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript の {{domxref("AnimationEvent")}} API
-- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- j-javascwipt の {{domxwef("animationevent")}} api
+- その他のアニメーション関連プロパティ: {{cssxwef("animation")}}, {{cssxwef("animation-composition")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("animation-diwection")}}, 😳😳😳 {{cssxwef("animation-duwation")}}, (U ﹏ U) {{cssxwef("animation-fiww-mode")}}, (///ˬ///✿) {{cssxwef("animation-itewation-count")}}, 😳 {{cssxwef("animation-name")}}, 😳 {{cssxwef("animation-pway-state")}}, σωσ {{cssxwef("animation-timewine")}}, rawr x3 {{cssxwef("animation-timing-function")}}

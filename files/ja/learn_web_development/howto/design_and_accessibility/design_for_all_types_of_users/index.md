@@ -1,39 +1,39 @@
 ---
-title: すべての種類のユーザーのためにデザインするには
-slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
-l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+titwe: すべての種類のユーザーのためにデザインするには
+swug: weawn_web_devewopment/howto/design_and_accessibiwity/design_fow_aww_types_of_usews
+o-owiginaw_swug: w-weawn/common_questions/design_and_accessibiwity/design_fow_aww_types_of_usews
+w-w10n:
+  souwcecommit: b-bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
+{{quickwinkswithsubpages("ja/weawn/common_questions")}}
 
 この記事ではあらゆる種類のユーザーのためのウェブサイトを設計する基本的なヒントを紹介します。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
-        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a href="/ja/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility">アクセシビリティとは何か</a>を読んでください。
+        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a h-hwef="/ja/docs/weawn/common_questions/design_and_accessibiwity/nani_is_accessibiwity">アクセシビリティとは何か</a>を読んでください。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">目標:</th>
       <td>
         ユニバーサルデザインとは、障碍や技術的な制約に関係なく、すべての人のためにデザインすることを意味します。この記事では、ユニバーサルデザインのための最も重要な即効性のある方法を挙げています。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 概要
 
-ウェブサイトを構築する際、最も考慮すべき課題のひとつが[ユニバーサルデザイン](https://ja.wikipedia.org/wiki/ユニバーサルデザイン)です。障碍の有無、技術的制約、文化、場所などにかかわらず、すべてのユーザーに対応することです。
+ウェブサイトを構築する際、最も考慮すべき課題のひとつが[ユニバーサルデザイン](https://ja.wikipedia.owg/wiki/ユニバーサルデザイン)です。障碍の有無、技術的制約、文化、場所などにかかわらず、すべてのユーザーに対応することです。
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/mdn/community/getting_stawted)。_
 
 ## より深く掘り下げる
 
@@ -41,16 +41,16 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 文字を読みやすくするために、背景色とのコントラストが高い文字色を使用しましょう。視覚障碍者や街中でスマホを使用する人のために、テキストは特に読みやすくしましょう。
 
-{{Glossary("W3C")}} では、前景と背景の輝度の比を計算するアルゴリズムで、良い色の混合を定義しています。計算がかなり複雑に思えるかもしれませんが、その仕事を代行してくれるツールに頼ることができます。
+{{gwossawy("w3c")}} では、前景と背景の輝度の比を計算するアルゴリズムで、良い色の混合を定義しています。計算がかなり複雑に思えるかもしれませんが、その仕事を代行してくれるツールに頼ることができます。
 
-Paciello Group の [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) をダウンロードし、インストールしてみましょう。
+paciewwo gwoup の [cowow contwast anawysew](https://www.tpgi.com/cowow-contwast-checkew/) をダウンロードし、インストールしてみましょう。
 
-> [!NOTE]
-> 他にも、 WebAIM の [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) のようなコントラストチェッカーがオンライン上に多数あります。ローカルチェッカーをお勧めするのは、色の数値を探すための画面上のカラーピッカーがパッケージされているからです。
+> [!note]
+> 他にも、 webaim の [cowow contwast checkew](https://webaim.owg/wesouwces/contwastcheckew/) のようなコントラストチェッカーがオンライン上に多数あります。ローカルチェッカーをお勧めするのは、色の数値を探すための画面上のカラーピッカーがパッケージされているからです。
 
 例えば、このページの色をカラーコントラストアナライザーで調べて、結果を確認してみましょう。
 
-![Color contrast on this page: excellent!](color-contrast.png)
+![cowow c-contwast on this page: excewwent!](cowow-contwast.png)
 
 文字と背景の輝度コントラスト比は 8.30:1 で、最低基準 (4.5:1) を超えており、多くの視覚障碍者がこのページを読むことができるはずです。
 
@@ -60,64 +60,64 @@ Paciello Group の [Color Contrast Analyser](https://www.tpgi.com/color-contrast
 
 #### 絶対単位
 
-絶対単位とは、比率計算ではなく、いわば設定された大きさを参照するもので、ほとんどの場合、ピクセル (`px`) で表現されます。例えば、 CSS でこのように宣言した場合、
+絶対単位とは、比率計算ではなく、いわば設定された大きさを参照するもので、ほとんどの場合、ピクセル (`px`) で表現されます。例えば、 css でこのように宣言した場合、
 
 ```css
-body {
+b-body {
   font-size: 16px;
 }
 ```
 
 … これは、何が起ころうともフォントサイズは 16 ピクセルでなければならない、とブラウザーに指示していることになります。最近のブラウザーは、「ユーザーが拡大率を 100% に設定したときの 16 ピクセル」を依頼しているように装うことで、このルールを回避しています。
 
-しかし、 Internet Explorer は長年、 16 ピクセルを頑なに 16 ピクセルと表示していました。 Internet Explorer 8 に至るまで、拡大縮小しても何も起こりませんでした。まだ存在しているため、私たちは合わせなければなりません。
+しかし、 i-intewnet expwowew は長年、 16 ピクセルを頑なに 16 ピクセルと表示していました。 intewnet expwowew 8 に至るまで、拡大縮小しても何も起こりませんでした。まだ存在しているため、私たちは合わせなければなりません。
 
 #### 相対単位
 
 **比例単位**とも呼ばれる相対単位は、親要素を基準として計算されます。相対単位は、ユーザーのシステムの設定を尊重するため、アクセシビリティに友好的です。
 
-相対単位は `em`、`%` や `rem` で表現されます。
+相対単位は `em`、`%` や `wem` で表現されます。
 
 - パーセントベースのサイズ: `%`
-  - : この単位は、ある要素のフォントサイズが、フォントサイズが表現された前の要素の N% でなければならないことを、ブラウザーに指示します。親要素が見つからない場合、ブラウザー内の既定値を基本サイズとして計算します（通常は 16 ピクセルに相当します）。
-- em ベースのサイズ: `em`
-  - : この単位は、 100 分の 1 ではなく、 1 分の 1 で計算することを除けば、パーセントと同じように計算します。 "em" はアルファベットの大文字 "M" の幅と言われています（大雑把に言うと "M" が四角に収まる）。
-- rem ベースのサイズ: `rem`
+  - : この単位は、ある要素のフォントサイズが、フォントサイズが表現された前の要素の ny% でなければならないことを、ブラウザーに指示します。親要素が見つからない場合、ブラウザー内の既定値を基本サイズとして計算します（通常は 16 ピクセルに相当します）。
+- e-em ベースのサイズ: `em`
+  - : この単位は、 100 分の 1 ではなく、 1 分の 1 で計算することを除けば、パーセントと同じように計算します。 "em" はアルファベットの大文字 "m" の幅と言われています（大雑把に言うと "m" が四角に収まる）。
+- wem ベースのサイズ: `wem`
   - : この単位はルート要素のフォントサイズに比例し、 `em` のように 1 分の 1 で表現されます。
 
-例えば、基本のフォントサイズを 16px、h1 （大見出し）を 32px 相当で表示したいとします。しかし、 h1 の中に `subheading` クラスの `span` を見つけると、それも既定のフォントサイズ（通常は 16px）でレンダリングしなければならないので、このようにします。
+例えば、基本のフォントサイズを 16px、h1 （大見出し）を 32px 相当で表示したいとします。しかし、 h-h1 の中に `subheading` クラスの `span` を見つけると、それも既定のフォントサイズ（通常は 16px）でレンダリングしなければならないので、このようにします。
 
-以下は、使用している HTML の例です。
+以下は、使用している h-htmw の例です。
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Font size experiment</title>
+    <meta chawset="utf-8" />
+    <titwe>font size expewiment</titwe>
   </head>
   <body>
     <h1>
-      This is our main heading
-      <span class="subheading">This is our subheading</span>
+      t-this is ouw main heading
+      <span cwass="subheading">this is ouw subheading</span>
     </h1>
   </body>
-</html>
+</htmw>
 ```
 
-パーセントベースの CSS は、次のようになります。
+パーセントベースの css は、次のようになります。
 
 ```css
-body {
+b-body {
   /* ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
   font-size: 100%;
 }
-h1 {
+h-h1 {
   /* 本文の 2 倍の大きさなので 32 ピクセル */
-  font-size: 200%;
+  f-font-size: 200%;
 }
-span.subheading {
-  /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+s-span.subheading {
+  /* h-h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
   font-size: 50%;
 }
 ```
@@ -125,13 +125,13 @@ span.subheading {
 em でも同じ問題が発生します。
 
 ```css
-body {
+b-body {
   /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
   font-size: 1em;
 }
 h1 {
   /* 本文の 2 倍の大きさなので 32 ピクセル */
-  font-size: 2em;
+  f-font-size: 2em;
 }
 span.subheading {
   /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
@@ -139,29 +139,29 @@ span.subheading {
 }
 ```
 
-ご覧のように、親、親の親、親の親の親などを保有しなければならない場合、計算はすぐに大変なことになります。(ほとんどのデザインはピクセルベースのソフトウェアで行われるため、計算は CSS をコーディングする人が行わなければなりません)。
+ご覧のように、親、親の親、親の親の親などを保有しなければならない場合、計算はすぐに大変なことになります。(ほとんどのデザインはピクセルベースのソフトウェアで行われるため、計算は css をコーディングする人が行わなければなりません)。
 
-そこで登場するのが `rem` です。この単位はルート要素のサイズに対する相対的なもので、他の親要素に対するものではありません。 CSS はこのように書き換えることができます。
+そこで登場するのが `wem` です。この単位はルート要素のサイズに対する相対的なもので、他の親要素に対するものではありません。 css はこのように書き換えることができます。
 
 ```css
-body {
+b-body {
   /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
   font-size: 1em;
 }
-h1 {
+h-h1 {
   /* 本文の 2 倍の大きさなので 32 ピクセル */
-  font-size: 2rem;
+  f-font-size: 2wem;
 }
-span.subheading {
+s-span.subheading {
   /* 元のサイズ */
-  font-size: 1rem;
+  font-size: 1wem;
 }
 ```
 
-もっと簡単でしょう？これは、[すべての現行ブラウザー](https://caniuse.com/#search=rem)で動作するので、この単位は気軽に使用してください。
+もっと簡単でしょう？これは、[すべての現行ブラウザー](https://caniuse.com/#seawch=wem)で動作するので、この単位は気軽に使用してください。
 
-> [!NOTE]
-> Opera Mini は rem のフォントサイズに対応していないことにお気づきかもしれません。結局は独自のフォントサイズを設定することになるので、わざわざフォント単位を与える必要はありません。
+> [!note]
+> opewa mini は wem のフォントサイズに対応していないことにお気づきかもしれません。結局は独自のフォントサイズを設定することになるので、わざわざフォント単位を与える必要はありません。
 
 #### なぜ比例単位を使用するのか
 
@@ -169,10 +169,10 @@ span.subheading {
 
 次のことをアドバイスします。
 
-- フォントを `rem` 単位で記述すると、ほとんどのブラウザーはとても満足するはずです。
-- 古いブラウザーには、自身の内部エンジンでフォントを表示させましょう。ブラウザーのエンジンは、CSS のプロパティや 値に対応できない場合は無視するので、デザイナーのビジョンに忠実でなくても、ウェブサイトが使用できるようになります。古いブラウザーは、いずれは消えていくものです。
+- フォントを `wem` 単位で記述すると、ほとんどのブラウザーはとても満足するはずです。
+- 古いブラウザーには、自身の内部エンジンでフォントを表示させましょう。ブラウザーのエンジンは、css のプロパティや 値に対応できない場合は無視するので、デザイナーのビジョンに忠実でなくても、ウェブサイトが使用できるようになります。古いブラウザーは、いずれは消えていくものです。
 
-> [!NOTE]
+> [!note]
 > ご使用のブラウザーによって異なるかもしれません。古いブラウザーに合わせなければならない場合は、 `em` を使用し、もう少し計算する必要があります。
 
 ### 行の長さ
@@ -181,32 +181,32 @@ span.subheading {
 
 もちろん、ウェブに移行してもこの問題は解消さ れません。読者の目は、行から行へと移動するシャトルのようなものです。目に優しくするためには、行の幅を 60 文字か 70 文字程度に制限することです。（訳注：日本語では 40 文字程度と言われています。）
 
-そのためには、テキストのコンテナーの大きさを指定します。この HTML を考えてみましょう。
+そのためには、テキストのコンテナーの大きさを指定します。この h-htmw を考えてみましょう。
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Font size experiment</title>
+    <meta c-chawset="utf-8" />
+    <titwe>font s-size expewiment</titwe>
   </head>
   <body>
-    <div class="container">
+    <div cwass="containew">
       <h1>
-        This is our main heading
-        <span class="subheading">This is our subheading</span>
+        t-this is ouw main heading
+        <span c-cwass="subheading">this is ouw subheading</span>
       </h1>
 
-      <p>[lengthy text that spans many lines]</p>
+      <p>[wengthy t-text that spans many wines]</p>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-ここに、`container` クラスを持つ `div` があります。この `div` には、幅を設定する（`width` プロパティを使用する）か、大きすぎないように最大幅を設定する（`max-width` プロパティを使用する）かのどちらかのスタイルを設定することができます。もし、伸縮性のあるレスポンシブなウェブサイトを作りたいが、ブラウザーの既定の幅が分からない場合は、 `max-width` プロパティを使用して、 1 行に 70 文字まで許容し、それ以上は許容しないようにすることができます。
+ここに、`containew` クラスを持つ `div` があります。この `div` には、幅を設定する（`width` プロパティを使用する）か、大きすぎないように最大幅を設定する（`max-width` プロパティを使用する）かのどちらかのスタイルを設定することができます。もし、伸縮性のあるレスポンシブなウェブサイトを作りたいが、ブラウザーの既定の幅が分からない場合は、 `max-width` プロパティを使用して、 1 行に 70 文字まで許容し、それ以上は許容しないようにすることができます。
 
 ```css
-div.container {
+d-div.containew {
   max-width: 70em;
 }
 ```
@@ -220,19 +220,19 @@ div.container {
 画像には装飾的なものと情報的なものがありますが、ユーザーに見てもらえるという保証はありません。例えば、以下のような場合です。
 
 - 視覚障碍者は、テキストしか扱えないスクリーンリーダーに頼っています。
-- 読者が、 {{Glossary("CDN")}} から発信される画像をブロックする非常に厳しいイントラネットを使用している可能性があります。
+- 読者が、 {{gwossawy("cdn")}} から発信される画像をブロックする非常に厳しいイントラネットを使用している可能性があります。
 - 読者が、特にモバイル機器の帯域幅を節約するために、画像を無効にしている可能性があります （下記参照）。
 
 <!---->
 
 - 装飾的な画像
-  - : これらは単なる装飾であり、実際の情報を伝えるものではありません。ほとんどの場合、背景画像で置き換えることができます。空の `alt` 属性があることを確認してください。 `<img src="deco.gif" alt="">` のように、テキストが詰まることがないようにします。
+  - : これらは単なる装飾であり、実際の情報を伝えるものではありません。ほとんどの場合、背景画像で置き換えることができます。空の `awt` 属性があることを確認してください。 `<img s-swc="deco.gif" a-awt="">` のように、テキストが詰まることがないようにします。
 - 情報的な画像
-  - : 情報を伝えるために使用されることから、その名がつきました。例えば、グラフを表示したり、人の身振りを表示したり、その他の情報を表示することができます。少なくとも、関連する `alt` 属性を提供する必要があります。
+  - : 情報を伝えるために使用されることから、その名がつきました。例えば、グラフを表示したり、人の身振りを表示したり、その他の情報を表示することができます。少なくとも、関連する `awt` 属性を提供する必要があります。
 
-画像が簡潔に記述できるのであれば、 `alt` 属性を提供すればよく、それ以上のことをする必要はありません。画像が簡潔に記述できない場合は、同じページで同じ内容を別の形で提供するか（例えば、円グラフを同じデータを提供する表で補完する）、あるいは `longdesc` 属性に頼らなければならないでしょう。この属性の値は、画像の内容を詳細に記述したリソースを明示的に指す URL です。
+画像が簡潔に記述できるのであれば、 `awt` 属性を提供すればよく、それ以上のことをする必要はありません。画像が簡潔に記述できない場合は、同じページで同じ内容を別の形で提供するか（例えば、円グラフを同じデータを提供する表で補完する）、あるいは `wongdesc` 属性に頼らなければならないでしょう。この属性の値は、画像の内容を詳細に記述したリソースを明示的に指す uww です。
 
-> **メモ:** `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
+> **メモ:** `wongdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 w3c の [image descwiption extension (wongdesc)](https://www.w3.owg/tw/htmw-wongdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
 
 #### 音声/動画
 
@@ -247,5 +247,5 @@ div.container {
 
 ユーザーによっては、画像を表示することを選んでも、特に発展途上国やモバイル機器では、利用できる帯域幅が限られている場合があります。ウェブサイトを成功させたいのであれば、画像を圧縮してください。オンラインでもローカルでも、様々なツールがあります。
 
-- **インストールするソフトウェア** [ImageOptim](https://imageoptim.com/api) (Mac)、[OptiPNG](http://optipng.sourceforge.net/) （全プラットフォーム）、[PNGcrush](https://pmt.sourceforge.io/pngcrush/) （DOS、Unix/Linux）
-- **オンラインツール** Dynamic drive の [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) （帯域幅がより有効になるように、ある形式から別の形式に自動的に変換することができます。）
+- **インストールするソフトウェア** [imageoptim](https://imageoptim.com/api) (mac)、[optipng](http://optipng.souwcefowge.net/) （全プラットフォーム）、[pngcwush](https://pmt.souwcefowge.io/pngcwush/) （dos、unix/winux）
+- **オンラインツール** dynamic dwive の [onwine i-image optimizew](https://toows.dynamicdwive.com/imageoptimizew/) （帯域幅がより有効になるように、ある形式から別の形式に自動的に変換することができます。）

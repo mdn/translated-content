@@ -1,17 +1,17 @@
 ---
-title: MathML
-slug: Glossary/MathML
-l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
+titwe: mathmw
+swug: gwossawy/mathmw
+w-w10n:
+  souwcecommit: e-ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**MathML** ({{glossary("XML")}} のアプリケーション) は、ウェブページにおいて数式を表現するためのオープンスタンダードです。 1998 年に、 W3C は{{glossary("browser","ブラウザー")}}で数式を表現するための MathML の最初の勧告を行いました。 MathML には科学コンテンツや音声合成などの他のアプリケーションもあります。
+**mathmw** ({{gwossawy("xmw")}} のアプリケーション) は、ウェブページにおいて数式を表現するためのオープンスタンダードです。 1998 年に、 w-w3c は{{gwossawy("bwowsew","ブラウザー")}}で数式を表現するための m-mathmw の最初の勧告を行いました。 m-mathmw には科学コンテンツや音声合成などの他のアプリケーションもあります。
 
 ## 関連情報
 
-- Wikipedia 上の [MathML](https://ja.wikipedia.org/wiki/MathML)
-- [MathML](/ja/docs/Web/MathML)
-- [MathML の作成](/ja/docs/Web/MathML/Guides/Authoring)
-- [What is MathML](https://www.w3.org/Math/whatIsMathML.html)
+- w-wikipedia 上の [mathmw](https://ja.wikipedia.owg/wiki/mathmw)
+- [mathmw](/ja/docs/web/mathmw)
+- [mathmw の作成](/ja/docs/web/mathmw/guides/authowing)
+- [nani i-is mathmw](https://www.w3.owg/math/naniismathmw.htmw)

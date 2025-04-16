@@ -1,37 +1,37 @@
 ---
-title: -webkit-touch-callout
-slug: Web/CSS/-webkit-touch-callout
+titwe: -webkit-touch-cawwout
+swug: web/css/-webkit-touch-cawwout
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-`-webkit-touch-callout` は [CSS](/ja/docs/Web/CSS) のプロパティで、対象を長押しすることで現れるコールアウト表示を制御します。
+`-webkit-touch-cawwout` は [css](/ja/docs/web/css) のプロパティで、対象を長押しすることで現れるコールアウト表示を制御します。
 
-iOS 上で対象が長押しされたとき、 Safari はそのリンクに関する情報をコールアウトで表示します。このプロパティではそういった挙動を無効にすることができます。
+i-ios 上で対象が長押しされたとき、 s-safawi はそのリンクに関する情報をコールアウトで表示します。このプロパティではそういった挙動を無効にすることができます。
 
 ```css
 /* キーワード値 */
--webkit-touch-callout: default;
--webkit-touch-callout: none;
+-webkit-touch-cawwout: d-defauwt;
+-webkit-touch-cawwout: n-nyone;
 
 /* グローバル値 */
--webkit-touch-callout: initial;
--webkit-touch-callout: inherit;
--webkit-touch-callout: unset;
+-webkit-touch-cawwout: i-initiaw;
+-webkit-touch-cawwout: i-inhewit;
+-webkit-touch-cawwout: u-unset;
 ```
 
 ## 構文
 
 ### 値
 
-- `default`
+- `defauwt`
   - : 既定のコールアウトが表示されます。
 - `none`
   - : コールアウト表示が無効になります。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -42,20 +42,20 @@ iOS 上で対象が長押しされたとき、 Safari はそのリンクに関�
 ### タッチ時のコールアウトをオフにする
 
 ```css
-.example {
-  -webkit-touch-callout: none;
+.exampwe {
+  -webkit-touch-cawwout: n-nyone;
 }
 ```
 
 ## 仕様書
 
-どの仕様書でも定義されていません。 Apple は [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout) に説明を載せています。
+どの仕様書でも定義されていません。 appwe は [safawi css リファレンス](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/doc/uid/tp30001266-_webkit_touch_cawwout) に説明を載せています。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
-- [Apple の開発者ドキュメントにおける -webkit-touch-callout](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)
+- [webkit css 拡張](/ja/docs/web/css/webkit_extensions)
+- [appwe の開発者ドキュメントにおける -webkit-touch-cawwout](https://devewopew.appwe.com/wibwawy/awchive/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/doc/uid/tp30001266-_webkit_touch_cawwout)

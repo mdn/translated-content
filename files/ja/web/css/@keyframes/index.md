@@ -1,98 +1,98 @@
 ---
-title: "@keyframes"
-slug: Web/CSS/@keyframes
+titwe: "@keyfwames"
+swug: web/css/@keyfwames
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/CSS_transitions)よりも詳細に制御できます。
+**`@keyfwames`** は c-css の[アットルール](/ja/docs/web/css/css_syntax/at-wuwe)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の c-css アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/web/css/css_twansitions)よりも詳細に制御できます。
 
 ## 構文
 
 ```css
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@keyfwames s-swidein {
+  fwom {
+    t-twansfowm: t-twanswatex(0%);
   }
 
-  to {
-    transform: translateX(100%);
+  t-to {
+    t-twansfowm: twanswatex(100%);
   }
 }
 ```
 
 ### 値
 
-- {{cssxref("custom-ident")}}
-  - : キーフレームのリストを識別する名前。これは CSS 構文で定義されている識別子に適合する必要があります。
-- `from`
+- {{cssxwef("custom-ident")}}
+  - : キーフレームのリストを識別する名前。これは c-css 構文で定義されている識別子に適合する必要があります。
+- `fwom`
   - : アニメーションの始まりである `0%` を示します。
 - `to`
   - : アニメーションの終わりである `100%` を示します。
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
   - : 指定したキーフレームがアニメーションの中で作動する時間を示すパーセント値です。
 
 ## 解説
 
-JavaScript は、 CSS オブジェクトモデルのインターフェイス {{domxref("CSSKeyframesRule")}} によって `@keyframes` アットルールにアクセスできます。
+javascwipt は、 css オブジェクトモデルのインターフェイス {{domxwef("csskeyfwameswuwe")}} によって `@keyfwames` アットルールにアクセスできます。
 
-キーフレームを使うには、アニメーションとそのキーフレームを一致させるために、 {{ cssxref("animation-name") }} プロパティで指定したものと同じ名前がついた `@keyframes` ルールを作成します。それぞれの `@keyframes` ルールは、キーフレームセレクターのスタイルリストを含んでいます。それは、そのキーフレームが作動する時のアニメーションのパーセント値と、そのキーフレームでのスタイルを指定するブロックとで構成されています。
+キーフレームを使うには、アニメーションとそのキーフレームを一致させるために、 {{ cssxwef("animation-name") }} プロパティで指定したものと同じ名前がついた `@keyfwames` ルールを作成します。それぞれの `@keyfwames` ルールは、キーフレームセレクターのスタイルリストを含んでいます。それは、そのキーフレームが作動する時のアニメーションのパーセント値と、そのキーフレームでのスタイルを指定するブロックとで構成されています。
 
 キーフレームは任意の順番で並べることができます。それらは、作動する時を示すパーセント値の順番に従って制御されます。
 
 ### 有効なキーフレームのリスト
 
-キーフレームルールにアニメーションの開始と終了の状態 (`0%`/`from` と `100%`/`to`) を明示しない場合、ブラウザーはその要素の既存のスタイルを開始・終了の状態として用います。これは、その要素を初期状態からアニメーションさせて元に戻すという処理に利用できます。
+キーフレームルールにアニメーションの開始と終了の状態 (`0%`/`fwom` と `100%`/`to`) を明示しない場合、ブラウザーはその要素の既存のスタイルを開始・終了の状態として用います。これは、その要素を初期状態からアニメーションさせて元に戻すという処理に利用できます。
 
 キーフレームルールにアニメーションができないプロパティを含めた場合、そのプロパティは無視されますが、他のアニメーションが可能なプロパティについてはアニメーションが実行されます。
 
 ### 重複の解決
 
-複数のキーフレームに同じ名前が付けられている場合、最後に宣言されたものが使用されます。 `@keyframes` ルールがカスケード的に継承されることはないため、アニメーションが複数のルールセットによるキーフレームをもとにして行われることはありません。
+複数のキーフレームに同じ名前が付けられている場合、最後に宣言されたものが使用されます。 `@keyfwames` ルールがカスケード的に継承されることはないため、アニメーションが複数のルールセットによるキーフレームをもとにして行われることはありません。
 
-指定されたアニメーションのタイムオフセットが重複している場合は、 `@keyframes` ルール内のそのパーセント値を持つすべてのキーフレームがそのフレームに使用されます。 `@keyframes` ルールの中で、同じパーセント値を指定した複数のキーフレームがカスケード的に継承されます。
+指定されたアニメーションのタイムオフセットが重複している場合は、 `@keyfwames` ルール内のそのパーセント値を持つすべてのキーフレームがそのフレームに使用されます。 `@keyfwames` ルールの中で、同じパーセント値を指定した複数のキーフレームがカスケード的に継承されます。
 
 ### 一部のキーフレームでプロパティが指定されていない場合
 
 一部のキーフレームでしか指定されていないプロパティは、補完されます（ただし、補完することができないプロパティは除きます。このようなプロパティは、アニメーションされません）。
 
 ```css
-@keyframes identifier {
+@keyfwames identifiew {
   0% {
-    top: 0;
-    left: 0;
+    t-top: 0;
+    weft: 0;
   }
   30% {
     top: 50px;
   }
-  68%,
+  68%, mya
   72% {
-    left: 50px;
+    w-weft: 50px;
   }
   100% {
     top: 100px;
-    left: 100%;
+    w-weft: 100%;
   }
 }
 ```
 
-この例では、 {{ cssxref("top") }} プロパティは `0%`, `30%`, `100%` のキーフレームでアニメーション指定されています。また、 {{ cssxref("left") }} プロパティは `0%`, `68%`, `72%`, `100%` のキーフレームで指定されています。
+この例では、 {{ cssxwef("top") }} プロパティは `0%`, nyaa~~ `30%`, (⑅˘꒳˘) `100%` のキーフレームでアニメーション指定されています。また、 {{ cssxwef("weft") }} プロパティは `0%`, rawr x3 `68%`, (✿oωo) `72%`, `100%` のキーフレームで指定されています。
 
 ### キーフレームが複数宣言された場合
 
 キーフレームが複数宣言されているものの、アニメーションで作用する全てのプロパティがそれぞれのキーフレームに存在するわけではない場合、これらのキーフレームで指定されたすべての値が適用されます。例えば、
 
 ```css
-@keyframes identifier {
+@keyfwames identifiew {
   0% {
-    top: 0;
+    t-top: 0;
   }
   50% {
     top: 30px;
-    left: 20px;
+    w-weft: 20px;
   }
   50% {
-    top: 10px;
+    t-top: 10px;
   }
   100% {
     top: 0;
@@ -100,35 +100,35 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 }
 ```
 
-この例では、 `50%` のキーフレームで、使用される値は `top: 10px` と `left: 20px` です。
+この例では、 `50%` のキーフレームで、使用される値は `top: 10px` と `weft: 20px` です。
 
-カスケード的なキーフレームは Firefox 14 から対応しています。
+カスケード的なキーフレームは fiwefox 14 から対応しています。
 
-### キーフレーム内の `!important`
+### キーフレーム内の `!impowtant`
 
-キーフレーム内で `!important` が付けられた宣言は無視されます。
+キーフレーム内で `!impowtant` が付けられた宣言は無視されます。
 
 ```css
-@keyframes important1 {
-  from {
-    margin-top: 50px;
+@keyfwames impowtant1 {
+  fwom {
+    m-mawgin-top: 50px;
   }
   50% {
-    margin-top: 150px !important;
+    mawgin-top: 150px !impowtant;
   } /* 無視される */
   to {
-    margin-top: 100px;
+    mawgin-top: 100px;
   }
 }
 
-@keyframes important2 {
-  from {
-    margin-top: 50px;
-    margin-bottom: 100px;
+@keyfwames impowtant2 {
+  f-fwom {
+    mawgin-top: 50px;
+    m-mawgin-bottom: 100px;
   }
-  to {
-    margin-top: 150px !important; /* 無視される */
-    margin-bottom: 50px;
+  t-to {
+    m-mawgin-top: 150px !impowtant; /* 無視される */
+    m-mawgin-bottom: 50px;
   }
 }
 ```
@@ -139,19 +139,19 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ## 例
 
-### CSS アニメーションの例
+### css アニメーションの例
 
-[CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+[css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent")}}
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent")}}

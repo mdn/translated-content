@@ -1,98 +1,98 @@
 ---
-title: flex-flow
-slug: Web/CSS/flex-flow
-l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+titwe: fwex-fwow
+swug: web/css/fwex-fwow
+w-w10n:
+  s-souwcecommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
+**`fwex-fwow`** は [css](/ja/docs/web/css) の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
 
-{{InteractiveExample("CSS Demo: flex-flow")}}
+{{intewactiveexampwe("css d-demo: f-fwex-fwow")}}
 
-```css interactive-example-choice
-flex-flow: row wrap;
+```css i-intewactive-exampwe-choice
+f-fwex-fwow: wow w-wwap;
 ```
 
-```css interactive-example-choice
-flex-flow: row-reverse nowrap;
+```css i-intewactive-exampwe-choice
+fwex-fwow: wow-wevewse nyowwap;
 ```
 
-```css interactive-example-choice
-flex-flow: column wrap-reverse;
+```css intewactive-exampwe-choice
+f-fwex-fwow: cowumn wwap-wevewse;
 ```
 
-```css interactive-example-choice
-flex-flow: column wrap;
+```css intewactive-exampwe-choice
+f-fwex-fwow: cowumn wwap;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
-    <div>Item Four</div>
-    <div>Item Five</div>
-    <div>Item Six</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div>item one</div>
+    <div>item t-two</div>
+    <div>item t-thwee</div>
+    <div>item fouw</div>
+    <div>item five</div>
+    <div>item six</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
   width: 80%;
   max-height: 300px;
-  display: flex;
+  dispway: f-fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: w-wgba(0, ^^ 0, 255, 0.2);
+  b-bowdew: 3px sowid b-bwue;
   width: 60px;
-  margin: 10px;
+  m-mawgin: 10px;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`flex-direction`](/ja/docs/Web/CSS/flex-direction)
-- [`flex-wrap`](/ja/docs/Web/CSS/flex-wrap)
+- [`fwex-diwection`](/ja/docs/web/css/fwex-diwection)
+- [`fwex-wwap`](/ja/docs/web/css/fwex-wwap)
 
 ## 構文
 
 ```css
-/* flex-flow: <'flex-direction'> */
-flex-flow: row;
-flex-flow: row-reverse;
-flex-flow: column;
-flex-flow: column-reverse;
+/* fwex-fwow: <'fwex-diwection'> */
+f-fwex-fwow: wow;
+fwex-fwow: wow-wevewse;
+f-fwex-fwow: cowumn;
+fwex-fwow: cowumn-wevewse;
 
-/* flex-flow: <'flex-wrap'> */
-flex-flow: nowrap;
-flex-flow: wrap;
-flex-flow: wrap-reverse;
+/* fwex-fwow: <'fwex-wwap'> */
+fwex-fwow: nyowwap;
+fwex-fwow: w-wwap;
+fwex-fwow: wwap-wevewse;
 
-/* flex-flow: <'flex-direction'> および <'flex-wrap'> */
-flex-flow: row nowrap;
-flex-flow: column wrap;
-flex-flow: column-reverse wrap-reverse;
+/* f-fwex-fwow: <'fwex-diwection'> および <'fwex-wwap'> */
+f-fwex-fwow: w-wow nyowwap;
+fwex-fwow: cowumn wwap;
+fwex-fwow: cowumn-wevewse w-wwap-wevewse;
 
 /* グローバル値 */
-flex-flow: inherit;
-flex-flow: initial;
-flex-flow: revert;
-flex-flow: revert-layer;
-flex-flow: unset;
+fwex-fwow: i-inhewit;
+fwex-fwow: initiaw;
+f-fwex-fwow: w-wevewt;
+fwex-fwow: wevewt-wayew;
+f-fwex-fwow: unset;
 ```
 
 ### 値
 
-値に関して詳しくは、 {{cssxref("flex-direction")}} および {{cssxref("flex-wrap")}} をご覧ください。
+値に関して詳しくは、 {{cssxwef("fwex-diwection")}} および {{cssxwef("fwex-wwap")}} をご覧ください。
 
 ## 公式定義
 
@@ -104,24 +104,24 @@ flex-flow: unset;
 
 ## 例
 
-### column-reverse と wrap の設定
+### cowumn-wevewse と w-wwap の設定
 
 ```css
-element {
-  /* main-axis は block 方向で、 main-start と main-end を逆にします。フレックスアイテムは複数行にレイアウトされます */
-  flex-flow: column-reverse wrap;
+ewement {
+  /* main-axis は bwock 方向で、 m-main-stawt と main-end を逆にします。フレックスアイテムは複数行にレイアウトされます */
+  f-fwex-fwow: cowumn-wevewse w-wwap;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- c-css フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_

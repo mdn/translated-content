@@ -1,54 +1,54 @@
 ---
-title: animation
-slug: Web/CSS/animation
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: animation
+swug: web/css/animation
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
+**`animation`** は [css](/ja/docs/web/css) の[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxwef("animation-name")}}, nyaa~~ {{cssxwef("animation-duwation")}}, 😳 {{cssxwef("animation-timing-function")}}, (⑅˘꒳˘) {{cssxwef("animation-deway")}}, nyaa~~ {{cssxwef("animation-itewation-count")}}, OwO {{cssxwef("animation-diwection")}}, rawr x3 {{cssxwef("animation-fiww-mode")}}, XD {{cssxwef("animation-pway-state")}} の一括指定です。
 
-{{InteractiveExample("CSS Demo: animation")}}
+{{intewactiveexampwe("css d-demo: animation")}}
 
-```css interactive-example-choice
-animation: 3s ease-in 1s infinite reverse both running slidein;
+```css i-intewactive-exampwe-choice
+a-animation: 3s e-ease-in 1s i-infinite wevewse both wunning swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite running slidein;
+```css intewactive-exampwe-choice
+animation: 3s wineaw 1s i-infinite wunning swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+a-animation: 3s wineaw 1s infinite a-awtewnate swidein;
 ```
 
-```css interactive-example-choice
-animation: 0.5s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+animation: 0.5s w-wineaw 1s infinite awtewnate swidein;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section c-cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  margin: 20px;
-  border: 5px solid #333;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  mawgin: 20px;
+  b-bowdew: 5px sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  bowdew-wadius: 50%;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: -20%;
+@keyfwames s-swidein {
+  fwom {
+    m-mawgin-weft: -20%;
   }
-  to {
-    margin-left: 100%;
+  t-to {
+    m-mawgin-weft: 100%;
   }
 }
 ```
@@ -57,84 +57,84 @@ animation: 0.5s linear 1s infinite alternate slidein;
 
 このプロパティは以下のプロパティの一括指定です。
 
-- [`animation-delay`](/ja/docs/Web/CSS/animation-delay)
-- [`animation-direction`](/ja/docs/Web/CSS/animation-direction)
-- [`animation-duration`](/ja/docs/Web/CSS/animation-duration)
-- [`animation-fill-mode`](/ja/docs/Web/CSS/animation-fill-mode)
-- [`animation-iteration-count`](/ja/docs/Web/CSS/animation-iteration-count)
-- [`animation-name`](/ja/docs/Web/CSS/animation-name)
-- [`animation-play-state`](/ja/docs/Web/CSS/animation-play-state)
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`animation-timing-function`](/ja/docs/Web/CSS/animation-timing-function)
+- [`animation-deway`](/ja/docs/web/css/animation-deway)
+- [`animation-diwection`](/ja/docs/web/css/animation-diwection)
+- [`animation-duwation`](/ja/docs/web/css/animation-duwation)
+- [`animation-fiww-mode`](/ja/docs/web/css/animation-fiww-mode)
+- [`animation-itewation-count`](/ja/docs/web/css/animation-itewation-count)
+- [`animation-name`](/ja/docs/web/css/animation-name)
+- [`animation-pway-state`](/ja/docs/web/css/animation-pway-state)
+- [`animation-timewine`](/ja/docs/web/css/animation-timewine)
+- [`animation-timing-function`](/ja/docs/web/css/animation-timing-function)
 
 ## 構文
 
 ```css
-/* @keyframes duration | easing-function | delay |
-iteration-count | direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
+/* @keyfwames d-duwation | easing-function | deway |
+itewation-count | diwection | f-fiww-mode | pway-state | nyame */
+animation: 3s e-ease-in 1s 2 wevewse both paused swidein;
 
-/* @keyframes duration | easing-function | delay | name */
-animation: 3s linear 1s slidein;
+/* @keyfwames duwation | easing-function | deway | n-nyame */
+animation: 3s wineaw 1s s-swidein;
 
 /* 2 つのアニメーション */
-animation:
-  3s linear slidein,
-  3s ease-out 5s slideout;
+a-animation:
+  3s w-wineaw swidein, σωσ
+  3s ease-out 5s swideout;
 ```
 
 `animation` プロパティは 1 つまたはカンマで区切った複数のアニメーションとして指定します。
 
 それぞれ個別のアニメーションは以下のように定義されます。
 
-- 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値
+- 0 ～ 2 個の {{cssxwef("&wt;time&gt;")}} の値
 
 - 以下の値は 0 ～ 1 回出現します。
 
-  - {{cssxref("animation", "&lt;single-easing-function&gt;", "#single-easing-function")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
-  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
-  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#single-animation-fill-mode")}}
-  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}
+  - {{cssxwef("animation", (U ᵕ U❁) "&wt;singwe-easing-function&gt;", (U ﹏ U) "#singwe-easing-function")}}
+  - {{cssxwef("animation", :3 "&wt;singwe-animation-itewation-count&gt;", ( ͡o ω ͡o ) "#singwe-animation-itewation-count")}}
+  - {{cssxwef("animation", σωσ "&wt;singwe-animation-diwection&gt;", >w< "#singwe-animation-diwection")}}
+  - {{cssxwef("animation", 😳😳😳 "&wt;singwe-animation-fiww-mode&gt;", OwO "#singwe-animation-fiww-mode")}}
+  - {{cssxwef("animation", 😳 "&wt;singwe-animation-pway-state&gt;", "#singwe-animation-pway-state")}}
 
-- アニメーションの名前は任意で、 `none`, {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}} のいずれかになります。
+- アニメーションの名前は任意で、 `none`, 😳😳😳 {{cssxwef("&wt;custom-ident&gt;")}}, {{cssxwef("&wt;stwing&gt;")}} のいずれかになります。
 
-> **メモ:** {{cssxref("animation-timeline")}}、{{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}} は、現在の実装ではリセットのみであるため、現在のところこのリストには掲載されていません。つまり、 `animation` があると、それ以前に宣言した `animation-timeline` の値は `auto` に、それ以前に宣言した `animation-range-start` と `animation-range-end` の値は `normal` にリセットされますが、これらのプロパティを `animation` で設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成する場合、 `animation` の一括指定を宣言した後に、これらのプロパティを宣言しなければ効果を得ることはできません。
+> **メモ:** {{cssxwef("animation-timewine")}}、{{cssxwef("animation-wange-stawt")}}、{{cssxwef("animation-wange-end")}} は、現在の実装ではリセットのみであるため、現在のところこのリストには掲載されていません。つまり、 `animation` があると、それ以前に宣言した `animation-timewine` の値は `auto` に、それ以前に宣言した `animation-wange-stawt` と `animation-wange-end` の値は `nowmaw` にリセットされますが、これらのプロパティを `animation` で設定することはできません。 [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations) を作成する場合、 `animation` の一括指定を宣言した後に、これらのプロパティを宣言しなければ効果を得ることはできません。
 
 ### 値
 
-- `<single-easing-function>`
-  - : 推移の形式を決定します。値は {{cssxref("easing-function")}} で利用できる値のいずれかでなければなりません。
-- `<single-animation-iteration-count>`
-  - : アニメーションが実行される回数です。 {{cssxref("animation-iteration-count")}} で利用できる値の一つでなければなりません。
-- `<single-animation-direction>`
-  - : アニメーションが実行される方向です。 {{cssxref("animation-direction")}} で利用できる値の一つでなければなりません。
-- `<single-animation-fill-mode>`
-  - : アニメーションの実行の前後にどのようにスタイルが適用されるかを定めます。 {{cssxref("animation-fill-mode")}} で利用できる値の一つでなければなりません。
-- `<single-animation-play-state>`
-  - : アニメーションが実行中かどうかを定めます。 {{cssxref("animation-play-state")}} で利用できる値の一つでなければなりません。
+- `<singwe-easing-function>`
+  - : 推移の形式を決定します。値は {{cssxwef("easing-function")}} で利用できる値のいずれかでなければなりません。
+- `<singwe-animation-itewation-count>`
+  - : アニメーションが実行される回数です。 {{cssxwef("animation-itewation-count")}} で利用できる値の一つでなければなりません。
+- `<singwe-animation-diwection>`
+  - : アニメーションが実行される方向です。 {{cssxwef("animation-diwection")}} で利用できる値の一つでなければなりません。
+- `<singwe-animation-fiww-mode>`
+  - : アニメーションの実行の前後にどのようにスタイルが適用されるかを定めます。 {{cssxwef("animation-fiww-mode")}} で利用できる値の一つでなければなりません。
+- `<singwe-animation-pway-state>`
+  - : アニメーションが実行中かどうかを定めます。 {{cssxwef("animation-pway-state")}} で利用できる値の一つでなければなりません。
 
 ## 解説
 
-それぞれのアニメーションの定義の中での順序は重要です。 {{cssxref("&lt;time&gt;")}} として解釈される最初の値は {{cssxref("animation-duration")}} に、そして 2 番目の値は、{{cssxref("animation-delay")}} に割り当てられます。
+それぞれのアニメーションの定義の中での順序は重要です。 {{cssxwef("&wt;time&gt;")}} として解釈される最初の値は {{cssxwef("animation-duwation")}} に、そして 2 番目の値は、{{cssxwef("animation-deway")}} に割り当てられます。
 
-それぞれのアニメーション定義内の他の値の順序も、 {{cssxref("animation-name")}} 値と他の値を判別するために重要です。もし `animation` の一括指定の値が `animation-name` 以外のアニメーションプロパティの値として解釈できる場合、その値は最初のプロパティに適用され、 `animation-name` には適用されません。このため、 `animation` 一括指定を使用する場合は、値のリストの最後の値として `animation-name` の値を指定することをお勧めします。これは、`animation` 一括指定を使用してカンマで区切られた複数のアニメーションを指定する場合でも同様です。
+それぞれのアニメーション定義内の他の値の順序も、 {{cssxwef("animation-name")}} 値と他の値を判別するために重要です。もし `animation` の一括指定の値が `animation-name` 以外のアニメーションプロパティの値として解釈できる場合、その値は最初のプロパティに適用され、 `animation-name` には適用されません。このため、 `animation` 一括指定を使用する場合は、値のリストの最後の値として `animation-name` の値を指定することをお勧めします。これは、`animation` 一括指定を使用してカンマで区切られた複数のアニメーションを指定する場合でも同様です。
 
 アニメーションを適用するにはアニメーション名を設定する必要がありますが、`animation` 一括指定の値はすべてオプションで、それぞれの個別指定の `animation` 成分の既定値が設定されます。 `animation-name` の初期値は `none` です。つまり、`animation` 一括指定のプロパティで `animation-name` の値が宣言されていない場合、どのプロパティにもアニメーションは適用されません。
 
-`animation-duration` 値が `animation` 一括指定プロパティにおいて除外された場合、このプロパティの値は `0s` が既定値となります。この場合、アニメーションは発生しますが（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントは発行されますが）、アニメーションは表示されません。
+`animation-duwation` 値が `animation` 一括指定プロパティにおいて除外された場合、このプロパティの値は `0s` が既定値となります。この場合、アニメーションは発生しますが（[`animationstawt`](/ja/docs/web/api/ewement/animationstawt_event) と [`animationend`](/ja/docs/web/api/ewement/animationend_event) イベントは発行されますが）、アニメーションは表示されません。
 
 ## アクセシビリティの考慮
 
-点滅を伴うアニメーションは、注意欠陥障害 (ADHD) のような認知障害を持つ人々に問題を起こす可能性があります。加えて、特定の種類の動きが、前庭障害、てんかん、片頭痛、痙攣感受性などの引き金になることもあります。
+点滅を伴うアニメーションは、注意欠陥障害 (adhd) のような認知障害を持つ人々に問題を起こす可能性があります。加えて、特定の種類の動きが、前庭障害、てんかん、片頭痛、痙攣感受性などの引き金になることもあります。
 
-アニメーションを停止したり無効にしたりする仕組みを、できれば[動きを縮小するメディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)を使用して、アニメーションを削減した操作の設定を表明したユーザーの希望を叶えるように作成することができます。
+アニメーションを停止したり無効にしたりする仕組みを、できれば[動きを縮小するメディアクエリー](/ja/docs/web/css/@media/pwefews-weduced-motion)を使用して、アニメーションを削減した操作の設定を表明したユーザーの希望を叶えるように作成することができます。
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN WCAG を理解する、ガイドライン 2.2 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [designing safew w-web animation fow m-motion sensitivity · an a wist a-apawt awticwe](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity/)
+- [an i-intwoduction to the w-weduced motion media quewy | css-twicks](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [wesponsive d-design fow motion | webkit](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [mdn wcag を理解する、ガイドライン 2.2 の説明](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/opewabwe#guidewine_2.2_%e2%80%94_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [undewstanding s-success cwitewion 2.2.2 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
 ## 公式定義
 
@@ -146,199 +146,199 @@ animation:
 
 ## 例
 
-> **メモ:** [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。
+> **メモ:** [css ボックスモデル](/ja/docs/web/css/css_box_modew) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に cpu に負荷がかかります。
 
 ### 日の出
 
 ここでは、水色の空を昇る黄色い太陽をアニメーション化しています。太陽は
 ビューポートの中心まで上昇してから、下落して見えなくなります。
 
-```html
-<div class="sun"></div>
+```htmw
+<div c-cwass="sun"></div>
 ```
 
 ```css
-:root {
-  overflow: hidden; /* 地平線下の部分の太陽を隠す */
-  background-color: lightblue;
-  display: flex;
-  justify-content: center; /* 太陽を背景の中心に配置する */
+:woot {
+  o-ovewfwow: hidden; /* 地平線下の部分の太陽を隠す */
+  backgwound-cowow: wightbwue;
+  dispway: fwex;
+  justify-content: centew; /* 太陽を背景の中心に配置する */
 }
 
 .sun {
-  background-color: yellow;
-  border-radius: 50%; /* 丸い背景を作成 */
+  backgwound-cowow: y-yewwow;
+  b-bowdew-wadius: 50%; /* 丸い背景を作成 */
   height: 100vh; /* 太陽をビューポートの大きさにする */
-  aspect-ratio: 1 / 1;
-  animation: 4s linear 0s infinite alternate sun-rise;
+  a-aspect-watio: 1 / 1;
+  a-animation: 4s w-wineaw 0s infinite awtewnate sun-wise;
 }
 
-@keyframes sun-rise {
-  from {
+@keyfwames sun-wise {
+  fwom {
     /* ビューポートを通過して太陽を下に押し下げる */
-    transform: translateY(110vh);
+    t-twansfowm: twanswatey(110vh);
   }
   to {
     /* 太陽を既定の位置に戻す */
-    transform: translateY(0);
+    twansfowm: twanswatey(0);
   }
 }
 ```
 
-{{EmbedLiveSample('Sun_Rise')}}
+{{embedwivesampwe('sun_wise')}}
 
 ### 複数のプロパティのアニメーション
 
 前回の例の太陽のアニメーションに追加して、太陽が昇ったり沈んだりするときの色を変える 2 つ目のアニメーションを追加します。太陽が地平線の下にあるときは暗い赤色から始まり、上に近づくにつれて明るいオレンジ色に変わります。
 
-```html
-<div class="sun"></div>
+```htmw
+<div cwass="sun"></div>
 ```
 
 ```css
-:root {
-  overflow: hidden;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
+:woot {
+  o-ovewfwow: hidden;
+  backgwound-cowow: wightbwue;
+  d-dispway: f-fwex;
+  justify-content: c-centew;
 }
 
 .sun {
-  background-color: yellow;
-  border-radius: 50%;
-  height: 100vh;
-  aspect-ratio: 1 / 1;
-  animation: 4s linear 0s infinite alternate animating-multiple-properties;
+  backgwound-cowow: y-yewwow;
+  bowdew-wadius: 50%;
+  h-height: 100vh;
+  a-aspect-watio: 1 / 1;
+  a-animation: 4s wineaw 0s infinite awtewnate a-animating-muwtipwe-pwopewties;
 }
 
 /* 単一のアニメーションで複数のプロパティをアニメーションさせることができる */
-@keyframes animating-multiple-properties {
-  from {
-    transform: translateY(110vh);
-    background-color: red;
-    filter: brightness(75%);
+@keyfwames a-animating-muwtipwe-pwopewties {
+  f-fwom {
+    t-twansfowm: twanswatey(110vh);
+    b-backgwound-cowow: wed;
+    fiwtew: bwightness(75%);
   }
   to {
-    transform: translateY(0);
-    background-color: orange;
-    /* 設定されていないプロパティ、つまり 'filter' は既定値に戻る */
+    twansfowm: t-twanswatey(0);
+    backgwound-cowow: owange;
+    /* 設定されていないプロパティ、つまり 'fiwtew' は既定値に戻る */
   }
 }
 ```
 
-{{EmbedLiveSample('Animating Multiple Properties')}}
+{{embedwivesampwe('animating muwtipwe pwopewties')}}
 
 ### 複数のアニメーションの適用
 
 水色の背景に昇ったり沈んだりする太陽。太陽は徐々に虹色に回転します。太陽の位置と色のタイミングは独立しています。
 
-```html
-<div class="sun"></div>
+```htmw
+<div cwass="sun"></div>
 ```
 
 ```css
-:root {
-  overflow: hidden;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
+:woot {
+  ovewfwow: h-hidden;
+  backgwound-cowow: wightbwue;
+  dispway: fwex;
+  j-justify-content: c-centew;
 }
 
 .sun {
-  background-color: yellow;
-  border-radius: 50%;
+  b-backgwound-cowow: yewwow;
+  b-bowdew-wadius: 50%;
   height: 100vh;
-  aspect-ratio: 1 / 1;
+  a-aspect-watio: 1 / 1;
   /* 複数のアニメーションをカンマで区切り、各アニメーションの引数を個別に設定 */
-  animation:
-    4s linear 0s infinite alternate rise,
-    24s linear 0s infinite psychedelic;
+  a-animation:
+    4s wineaw 0s infinite awtewnate wise, (˘ω˘)
+    24s wineaw 0s infinite psychedewic;
 }
 
-@keyframes rise {
-  from {
-    transform: translateY(110vh);
+@keyfwames wise {
+  f-fwom {
+    twansfowm: twanswatey(110vh);
   }
-  to {
-    transform: translateY(0);
+  t-to {
+    twansfowm: twanswatey(0);
   }
 }
 
-@keyframes psychedelic {
-  from {
-    filter: hue-rotate(0deg);
+@keyfwames p-psychedewic {
+  f-fwom {
+    fiwtew: hue-wotate(0deg);
   }
   to {
-    filter: hue-rotate(360deg);
+    f-fiwtew: hue-wotate(360deg);
   }
 }
 ```
 
-{{EmbedLiveSample('Applying Multiple Animations')}}
+{{embedwivesampwe('appwying m-muwtipwe animations')}}
 
 ### 複数のアニメーションのカスケード
 
 ここでは、水色の背景に黄色の太陽があります。太陽はビューポートの左側と右側の間で跳ね返ります。上昇アニメーションを定義しても、太陽はビューポートに残ります。上昇アニメーションの座標変換プロパティは、跳ね返るアニメーションによって「上書き」されます。
 
-```html
-<div class="sun"></div>
+```htmw
+<div cwass="sun"></div>
 ```
 
 ```css
-:root {
-  overflow: hidden;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
+:woot {
+  o-ovewfwow: h-hidden;
+  backgwound-cowow: wightbwue;
+  dispway: fwex;
+  justify-content: c-centew;
 }
 
 .sun {
-  background-color: yellow;
-  border-radius: 50%;
-  height: 100vh;
-  aspect-ratio: 1 / 1;
+  b-backgwound-cowow: y-yewwow;
+  bowdew-wadius: 50%;
+  h-height: 100vh;
+  a-aspect-watio: 1 / 1;
   /*
     カスケードの後半で宣言されたアニメーションは、
     それ以前に宣言されたアニメーションのプロパティを上書きする
   */
   /* 跳ね返りは上昇の座標変換を「上書き」するため、太陽は水平方向にしか移動しない */
   animation:
-    4s linear 0s infinite alternate rise,
-    4s linear 0s infinite alternate bounce;
+    4s w-wineaw 0s infinite awtewnate wise, ʘwʘ
+    4s wineaw 0s infinite awtewnate b-bounce;
 }
 
-@keyframes rise {
-  from {
-    transform: translateY(110vh);
+@keyfwames w-wise {
+  fwom {
+    twansfowm: twanswatey(110vh);
   }
-  to {
-    transform: translateY(0);
+  t-to {
+    twansfowm: t-twanswatey(0);
   }
 }
 
-@keyframes bounce {
-  from {
-    transform: translateX(-50vw);
+@keyfwames bounce {
+  fwom {
+    twansfowm: twanswatex(-50vw);
   }
-  to {
-    transform: translateX(50vw);
+  t-to {
+    twansfowm: twanswatex(50vw);
   }
 }
 ```
 
-{{EmbedLiveSample('Cascading Multiple Animations')}}
+{{embedwivesampwe('cascading muwtipwe animations')}}
 
-これ以外の例は [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+これ以外の例は [css アニメーション](/ja/docs/web/css/css_animations/using_css_animations)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript の {{domxref("AnimationEvent")}} API
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- javascwipt の {{domxwef("animationevent")}} api

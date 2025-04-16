@@ -1,11 +1,11 @@
 ---
-title: Robots.txt
-slug: Glossary/Robots.txt
+titwe: wobots.txt
+swug: gwossawy/wobots.txt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Robots.txt は通常、ウェブサイトのルートに配置されているファイルです。このファイルは、{{Glossary("crawler", "クローラー")}} からウェブサイトへのアクセスを許可するか、禁止するかを決定します。
+w-wobots.txt は通常、ウェブサイトのルートに配置されているファイルです。このファイルは、{{gwossawy("cwawwew", ^•ﻌ•^ "クローラー")}} からウェブサイトへのアクセスを許可するか、禁止するかを決定します。
 
 例えば、サイト管理者はクローラーが特定のフォルダー（とそこに含まれるすべてのファイル）にアクセスしたり、特定ファイルをクロールするのを禁止でき、通常はこれらのファイルが他の検索エンジンによってインデックスされることを防ぐために使われます。
 
@@ -13,7 +13,7 @@ Robots.txt は通常、ウェブサイトのルートに配置されているフ
 
 ### 一般的な知識
 
-- Wikipedia 上の [Robots.txt](https://ja.wikipedia.org/wiki/Robots.txt)
-- <https://developers.google.com/search/reference/robots_txt>
-- 標準ドラフト仕様: [https://tools.ietf.org/html/draft-rep-wg-topic](https://tools.ietf.org/html/draft-rep-wg-topic-00)
-- <https://www.robotstxt.org/>
+- w-wikipedia 上の [wobots.txt](https://ja.wikipedia.owg/wiki/wobots.txt)
+- <https://devewopews.googwe.com/seawch/wefewence/wobots_txt>
+- 標準ドラフト仕様: [https://toows.ietf.owg/htmw/dwaft-wep-wg-topic](https://toows.ietf.owg/htmw/dwaft-wep-wg-topic-00)
+- <https://www.wobotstxt.owg/>

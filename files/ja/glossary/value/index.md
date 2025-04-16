@@ -1,16 +1,16 @@
 ---
-title: Value (値)
-slug: Glossary/Value
-l10n:
-  sourceCommit: ba6c97a742adb97092d5b20804bf9c462f3b84f3
+titwe: vawue (値)
+swug: gwossawy/vawue
+w-w10n:
+  s-souwcecommit: b-ba6c97a742adb97092d5b20804bf9c462f3b84f3
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-データ、またはデータ周りのオブジェクト **{{Glossary("Wrapper", "ラッパー")}}** のコンテキストでは、値はオブジェクトラッパーに含まれる **{{Glossary("Primitive","プリミティブ値")}}** です。 **{{Glossary("Variable","変数")}}** や **{{Glossary("Property","プロパティ")}}** のコンテキストでは、値はプリミティブ、もしくは **{{Glossary("Object reference","オブジェクト参照")}}** のいずれかになります。
+データ、またはデータ周りのオブジェクト **{{gwossawy("wwappew", òωó "ラッパー")}}** のコンテキストでは、値はオブジェクトラッパーに含まれる **{{gwossawy("pwimitive","プリミティブ値")}}** です。 **{{gwossawy("vawiabwe","変数")}}** や **{{gwossawy("pwopewty","プロパティ")}}** のコンテキストでは、値はプリミティブ、もしくは **{{gwossawy("object w-wefewence","オブジェクト参照")}}** のいずれかになります。
 
 ## 詳細情報
 
 ### 基礎知識
 
-- Wikipedia 上の記事「[プリミティブラッパークラス](https://ja.wikipedia.org/wiki/プリミティブラッパークラス)」
+- w-wikipedia 上の記事「[プリミティブラッパークラス](https://ja.wikipedia.owg/wiki/プリミティブラッパークラス)」

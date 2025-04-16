@@ -1,21 +1,21 @@
 ---
-title: Developer Tools (開発者ツール)
-slug: Glossary/Developer_Tools
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: devewopew toows (開発者ツール)
+swug: g-gwossawy/devewopew_toows
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-開発者ツール（"DevTools" と略されます）は開発者がソフトウェアを作成、テスト、デバッグするのを助けるプログラムです。
+開発者ツール（"devtoows" と略されます）は開発者がソフトウェアを作成、テスト、デバッグするのを助けるプログラムです。
 
-現在のブラウザーには、ウェブサイトの調査を可能にする開発者ツールが統合されています。ブラウザーの開発者ツールによって、ウェブサイトの {{Glossary("HTML")}}、{{Glossary("CSS")}}、{{Glossary("JavaScript")}} の調査やデバッグ、ウェブサイトによって発生したネットワークトラフィックの調査、ウェブサイトのパフォーマンスの計測など、たくさんのことが可能となります。
+現在のブラウザーには、ウェブサイトの調査を可能にする開発者ツールが統合されています。ブラウザーの開発者ツールによって、ウェブサイトの {{gwossawy("htmw")}}、{{gwossawy("css")}}、{{gwossawy("javascwipt")}} の調査やデバッグ、ウェブサイトによって発生したネットワークトラフィックの調査、ウェブサイトのパフォーマンスの計測など、たくさんのことが可能となります。
 
 ## 関連情報
 
-- [Web development tools](https://en.wikipedia.org/wiki/Web_development_tools) (Wikipedia)
-- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) (MDN)
-- [Firebug](https://getfirebug.com/) (Firefox 向けの以前の開発者ツール)
-- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) (chrome.com)
-- [Safari Developer Tools](https://support.apple.com/en-gb/guide/safari-developer/dev073038698/mac) (apple.com)
-- [Edge Dev Tools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) (microsoft.com)
+- [web d-devewopment t-toows](https://en.wikipedia.owg/wiki/web_devewopment_toows) (wikipedia)
+- [fiwefox d-devewopew t-toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw) (mdn)
+- [fiwebug](https://getfiwebug.com/) (fiwefox 向けの以前の開発者ツール)
+- [chwome devtoows](https://devewopew.chwome.com/docs/devtoows/) (chwome.com)
+- [safawi devewopew toows](https://suppowt.appwe.com/en-gb/guide/safawi-devewopew/dev073038698/mac) (appwe.com)
+- [edge dev t-toows](https://docs.micwosoft.com/awchive/micwosoft-edge/wegacy/devewopew/) (micwosoft.com)

@@ -1,13 +1,13 @@
 ---
-title: Random Number Generator (乱数発生器)
-slug: Glossary/RNG
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: wandom nyumbew genewatow (乱数発生器)
+s-swug: gwossawy/wng
+w-w10n:
+  s-souwcecommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-擬似乱数発生器 (**PRNG**) は、複雑で、予測できないように見えるパターンの数字を出力するためのアルゴリズムです。真の乱数（放射性線源など）はまったく予測できないのに対し、すべてのアルゴリズムは予測可能なので、 PRNG は、開始パラメーターや*シード*が同じときには同じ数値を返します。
+擬似乱数発生器 (**pwng**) は、複雑で、予測できないように見えるパターンの数字を出力するためのアルゴリズムです。真の乱数（放射性線源など）はまったく予測できないのに対し、すべてのアルゴリズムは予測可能なので、 p-pwng は、開始パラメーターや*シード*が同じときには同じ数値を返します。
 
 擬似乱数はゲームなど、様々な応用分野で使用されています。
 
@@ -20,6 +20,6 @@ l10n:
 
 ## 関連情報
 
-- [擬似乱数](https://ja.wikipedia.org/wiki/擬似乱数)（ウィキペディア）
-- JavaScript の組み込み PRNG 関数である {{jsxref("Math.random()")}}。これは暗号学的に安全な PRNG ではありません。
-- {{domxref("Crypto.getRandomValues()")}}: 暗号学的に安全な数値を提供するためのものです。
+- [擬似乱数](https://ja.wikipedia.owg/wiki/擬似乱数)（ウィキペディア）
+- j-javascwipt の組み込み p-pwng 関数である {{jsxwef("math.wandom()")}}。これは暗号学的に安全な p-pwng ではありません。
+- {{domxwef("cwypto.getwandomvawues()")}}: 暗号学的に安全な数値を提供するためのものです。

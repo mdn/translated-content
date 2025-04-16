@@ -1,44 +1,44 @@
 ---
-title: CORS-safelisted response header (CORS セーフリストレスポンスヘッダー)
-slug: Glossary/CORS-safelisted_response_header
+titwe: cows-safewisted wesponse h-headew (cows セーフリストレスポンスヘッダー)
+swug: g-gwossawy/cows-safewisted_wesponse_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/HTTP/Guides/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
+_cows セーフリストレスポンスヘッダー_ は、[cows](/ja/docs/web/http/guides/cows) レスポンスに含まれる [http ヘッダー](/ja/docs/web/http/wefewence/headews)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
 
 既定では以下のレスポンスヘッダーがセーフリストに含まれます。
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Content-Language")}}
-- {{HTTPHeader("Content-Length")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("Pragma")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("content-wanguage")}}
+- {{httpheadew("content-wength")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("expiwes")}}
+- {{httpheadew("wast-modified")}}
+- {{httpheadew("pwagma")}}
 
-{{HTTPHeader("Access-Control-Expose-Headers")}} ヘッダーを使用して追加のヘッダーをセーフリストに追加することができます。
+{{httpheadew("access-contwow-expose-headews")}} ヘッダーを使用して追加のヘッダーをセーフリストに追加することができます。
 
-> **メモ:** {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
+> **メモ:** {{httpheadew("content-wength")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/naniwg/fetch/puww/626)]
 
 ## 例
 
 ### セーフリストの拡張
 
-{{HTTPHeader("Access-Control-Expose-Headers")}} ヘッダーを使用して、CORS セーフリストレスポンスヘッダーのリストを拡張することができます。
+{{httpheadew("access-contwow-expose-headews")}} ヘッダーを使用して、cows セーフリストレスポンスヘッダーのリストを拡張することができます。
 
-```plain
-Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
+```pwain
+a-access-contwow-expose-headews: x-x-custom-headew, ( ͡o ω ͡o ) c-content-encoding
 ```
 
 ## 関連情報
 
-- [HTTP](/ja/docs/Web/HTTP)
-- [HTTP headers](/ja/docs/Web/HTTP/Reference/Headers)
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- [http](/ja/docs/web/http)
+- [http h-headews](/ja/docs/web/http/wefewence/headews)
+- {{httpheadew("access-contwow-expose-headews")}}
 - 関連用語:
 
-  - {{Glossary("CORS")}}
-  - {{Glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}
-  - {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
-  - {{Glossary("Request header", "リクエストヘッダー")}}
+  - {{gwossawy("cows")}}
+  - {{gwossawy("cows-safewisted_wequest_headew", UwU "cows セーフリストリクエストヘッダー")}}
+  - {{gwossawy("fowbidden h-headew n-nyame", rawr x3 "禁止ヘッダー名")}}
+  - {{gwossawy("wequest headew", rawr "リクエストヘッダー")}}

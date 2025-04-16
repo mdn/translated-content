@@ -1,23 +1,23 @@
 ---
-title: CSS 表
-slug: Web/CSS/CSS_table
+titwe: css 表
+swug: web/css/css_tabwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 表** (CSS Table) は CSS のモジュールの一つで、表データをレイアウトする方法を定義します。
+**css 表** (css t-tabwe) は c-css のモジュールの一つで、表データをレイアウトする方法を定義します。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("border-collapse")}}
-- {{cssxref("border-spacing")}}
-- {{cssxref("caption-side")}}
-- {{cssxref("empty-cells")}}
-- {{cssxref("table-layout")}}
-- {{cssxref("vertical-align")}}
+- {{cssxwef("bowdew-cowwapse")}}
+- {{cssxwef("bowdew-spacing")}}
+- {{cssxwef("caption-side")}}
+- {{cssxwef("empty-cewws")}}
+- {{cssxwef("tabwe-wayout")}}
+- {{cssxwef("vewticaw-awign")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

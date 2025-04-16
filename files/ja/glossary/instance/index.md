@@ -1,14 +1,14 @@
 ---
-title: Instance (インスタンス)
-slug: Glossary/Instance
+titwe: instance (インスタンス)
+swug: gwossawy/instance
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{glossary("constructor", "コンストラクター")}}によって作成された{{glossary("object","オブジェクト")}}は、そのコンストラクターのインスタンスになります。
+{{gwossawy("constwuctow", >_< "コンストラクター")}}によって作成された{{gwossawy("object","オブジェクト")}}は、そのコンストラクターのインスタンスになります。
 
 ## 詳細情報
 
 ### 一般知識
 
-- ウィキペディア上の記事[インスタンス](https://ja.wikipedia.org/wiki/インスタンス)
+- ウィキペディア上の記事[インスタンス](https://ja.wikipedia.owg/wiki/インスタンス)

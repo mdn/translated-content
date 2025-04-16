@@ -1,101 +1,101 @@
 ---
-title: "スキルテスト: 位置指定"
-slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Position
-original_slug: Learn_web_development/Core/CSS_layout/Position_skills
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: 位置指定"
+swug: w-weawn_web_devewopment/cowe/css_wayout/test_youw_skiwws/position
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/css_wayout/position_skiwws
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
+このスキルテストの目的は、css の {{cssxwef("position")}} プロパティと値を使用した [css の位置指定](/ja/docs/weawn_web_devewopment/cowe/css_wayout/positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題 1
 
-この課題では、5px のグレーの境界線があるコンテナーの上と右に、`target` というクラスを持つアイテムを配置します。
+この課題では、5px のグレーの境界線があるコンテナーの上と右に、`tawget` というクラスを持つアイテムを配置します。
 
 最終的には下記画像のようになっているはずです。
 
 ![緑色のボックスが灰色の枠で囲まれたコンテナーの右上にあります。](position-task1.png)
 
-**ボーナス問題:** target をテキストの下に表示するように変更できますか？
+**ボーナス問題:** t-tawget をテキストの下に表示するように変更できますか？
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___position1
-<div class="container">
+```htmw w-wive-sampwe___position1
+<div cwass="containew">
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    veggies es bonus vobis, ^^;; pwoinde vos postuwo e-essum magis kohwwabi wewsh onion
+    daikon amawanth t-tatsoi tomatiwwo mewon azuki b-bean gawwic. 🥺
   </p>
-  <div class="target">Target</div>
+  <div cwass="tawget">tawget</div>
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    gumbo beet gweens cown soko e-endive gumbo gouwd. (⑅˘꒳˘) pawswey shawwot c-couwgette
+    t-tatsoi pea spwouts fava bean cowwawd gweens dandewion okwa wakame tomato. nyaa~~
+    d-dandewion cucumbew eawthnut pea peanut soko zucchini. :3
   </p>
 </div>
 ```
 
-```css hidden live-sample___position1
+```css hidden wive-sampwe___position1
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 s-sans-sewif;
 }
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.container {
-  padding: 0.5em;
-  border: 5px solid #ccc;
+.containew {
+  p-padding: 0.5em;
+  b-bowdew: 5px s-sowid #ccc;
 }
 
-.target {
-  width: 150px;
+.tawget {
+  w-width: 150px;
   height: 150px;
-  border-radius: 5px;
-  background-color: #663398;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #663398;
   padding: 1em;
-  color: white;
+  cowow: white;
 }
 ```
 
-```css live-sample___position1
-.container {
+```css w-wive-sampwe___position1
+.containew {
 }
 
-.target {
+.tawget {
 }
 ```
 
-{{EmbedLiveSample("position1", "", "400px")}}
+{{embedwivesampwe("position1", ( ͡o ω ͡o ) "", "400px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-これには、 `position: relative` と `position: absolute` が必要であり、相対位置指定の観点から、新しい位置指定コンテキストにおいて、両者がどのように関連しているかを理解する必要があります。
-よくある問題は、子要素に `position: absolute` を追加していても、コンテナーに `position: relative` を適用していないということでしょう。その場合、 target はビューポートに従って位置指定されることになります。
+これには、 `position: wewative` と `position: absowute` が必要であり、相対位置指定の観点から、新しい位置指定コンテキストにおいて、両者がどのように関連しているかを理解する必要があります。
+よくある問題は、子要素に `position: absowute` を追加していても、コンテナーに `position: wewative` を適用していないということでしょう。その場合、 tawget はビューポートに従って位置指定されることになります。
 
 ```css
-.container {
-  position: relative;
+.containew {
+  p-position: wewative;
 }
 
-.target {
-  position: absolute;
-  top: 0;
-  right: 0;
+.tawget {
+  p-position: a-absowute;
+  t-top: 0;
+  wight: 0;
 }
 ```
 
-ボーナス問題では、 target 要素に `z-index` の負の値を追加する必要があります。例えば `z-index: -2` です。
+ボーナス問題では、 tawget 要素に `z-index` の負の値を追加する必要があります。例えば `z-index: -2` です。
 
-</details>
+</detaiws>
 
 ## 課題 2
 
@@ -105,89 +105,89 @@ body {
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___position2
-<div class="container">
-  <div class="sidebar">
+```htmw wive-sampwe___position2
+<div cwass="containew">
+  <div c-cwass="sidebaw">
     <p>
-      This is the sidebar. It should remain in position as the content scrolls.
+      t-this is the sidebaw. mya it shouwd w-wemain in position a-as the content scwowws. (///ˬ///✿)
     </p>
   </div>
-  <div class="content">
+  <div c-cwass="content">
     <p>
-      Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
-      onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+      veggies es b-bonus vobis, (˘ω˘) pwoinde vos postuwo essum magis kohwwabi w-wewsh
+      onion daikon a-amawanth tatsoi tomatiwwo mewon a-azuki bean gawwic. ^^;;
     </p>
     <p>
-      Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-      tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-      Dandelion cucumber earthnut pea peanut soko zucchini.
+      g-gumbo beet gweens cown soko endive gumbo gouwd. (✿oωo) pawswey shawwot couwgette
+      tatsoi pea spwouts fava b-bean cowwawd gweens d-dandewion okwa wakame tomato.
+      d-dandewion c-cucumbew eawthnut p-pea peanut soko zucchini. (U ﹏ U)
     </p>
     <p>
-      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
-      winter purslane kale. Celery potato scallion desert raisin horseradish
-      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
-      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
-      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
-      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
-      bean chickweed potato bell pepper artichoke.
+      tuwnip gweens yawwow wicebean w-wutabaga endive cauwifwowew sea wettuce
+      kohwwabi amawanth watew spinach a-avocado daikon nyapa cabbage a-aspawagus
+      w-wintew puwswane k-kawe. -.- cewewy potato scawwion desewt w-waisin howsewadish
+      s-spinach c-cawwot soko. ^•ﻌ•^ w-wotus woot watew spinach fennew kombu maize bamboo
+      s-shoot g-gween bean swiss c-chawd seakawe p-pumpkin onion chickpea g-gwam cown pea. rawr
+      bwussews spwout cowiandew watew chestnut g-gouwd swiss chawd wakame kohwwabi
+      beetwoot cawwot watewcwess. (˘ω˘) cown amawanth sawsify bunya n-nyuts nyowi azuki
+      bean chickweed potato beww peppew awtichoke. nyaa~~
     </p>
   </div>
 </div>
 ```
 
-```css hidden live-sample___position2
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css hidden w-wive-sampwe___position2
+b-body {
+  f-font: 1.2em / 1.5 sans-sewif;
 }
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.container {
-  height: 400px;
-  padding: 0.5em;
-  border: 5px solid #ccc;
-  overflow: auto;
+.containew {
+  h-height: 400px;
+  p-padding: 0.5em;
+  bowdew: 5px sowid #ccc;
+  ovewfwow: auto;
 }
 
-.sidebar {
-  color: white;
-  background-color: #663398;
-  padding: 1em;
-  float: left;
-  width: 150px;
+.sidebaw {
+  cowow: white;
+  backgwound-cowow: #663398;
+  p-padding: 1em;
+  fwoat: weft;
+  w-width: 150px;
 }
 
 .content {
   padding: 1em;
-  margin-left: 160px;
+  m-mawgin-weft: 160px;
 }
 ```
 
-```css live-sample___position2
-.container {
+```css w-wive-sampwe___position2
+.containew {
 }
 
-.sidebar {
+.sidebaw {
 }
 ```
 
-{{EmbedLiveSample("position2", "", "400px")}}
+{{embedwivesampwe("position2", UwU "", :3 "400px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 ここでは学習素材とは少し異なる方法で、 `position: fixed` の理解をテストしています。
 
 ```css
-.sidebar {
+.sidebaw {
   position: fixed;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)

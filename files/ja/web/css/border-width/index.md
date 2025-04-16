@@ -1,49 +1,49 @@
 ---
-title: border-width
-slug: Web/CSS/border-width
-l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+titwe: bowdew-width
+swug: web/css/bowdew-width
+w-w10n:
+  souwcecommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-width`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
+**`bowdew-width`** は[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)の [css](/ja/docs/web/css) のプロパティで、要素の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-width")}}
 
-```css interactive-example-choice
-border-width: thick;
+```css i-intewactive-exampwe-choice
+b-bowdew-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-width: 1em;
+```css i-intewactive-exampwe-choice
+b-bowdew-width: 1em;
 ```
 
-```css interactive-example-choice
-border-width: 4px 1.25em;
+```css i-intewactive-exampwe-choice
+bowdew-width: 4px 1.25em;
 ```
 
-```css interactive-example-choice
-border-width: 2ex 1.25ex 0.5ex;
+```css intewactive-exampwe-choice
+bowdew-width: 2ex 1.25ex 0.5ex;
 ```
 
-```css interactive-example-choice
-border-width: 0 4px 8px 12px;
+```css intewactive-exampwe-choice
+b-bowdew-width: 0 4px 8px 12px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. o.O
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: pawegween;
+  c-cowow: #000;
+  b-bowdew: 0 sowid cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -52,43 +52,43 @@ border-width: 0 4px 8px 12px;
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`border-bottom-width`](/ja/docs/Web/CSS/border-bottom-width)
-- [`border-left-width`](/ja/docs/Web/CSS/border-left-width)
-- [`border-right-width`](/ja/docs/Web/CSS/border-right-width)
-- [`border-top-width`](/ja/docs/Web/CSS/border-top-width)
+- [`bowdew-bottom-width`](/ja/docs/web/css/bowdew-bottom-width)
+- [`bowdew-weft-width`](/ja/docs/web/css/bowdew-weft-width)
+- [`bowdew-wight-width`](/ja/docs/web/css/bowdew-wight-width)
+- [`bowdew-top-width`](/ja/docs/web/css/bowdew-top-width)
 
 ## 構文
 
 ```css
 /* キーワード値 */
-border-width: thin;
-border-width: medium;
-border-width: thick;
+bowdew-width: thin;
+bowdew-width: medium;
+bowdew-width: t-thick;
 
-/* <length> 値 */
-border-width: 4px;
-border-width: 1.2rem;
+/* <wength> 値 */
+bowdew-width: 4px;
+b-bowdew-width: 1.2wem;
 
 /* 上下 | 左右 */
-border-width: 2px 1.5em;
+b-bowdew-width: 2px 1.5em;
 
 /* 上 | 左右 | 下 */
-border-width: 1px 2em 1.5cm;
+b-bowdew-width: 1px 2em 1.5cm;
 
 /* 上 | 右 | 下 | 左 */
-border-width: 1px 2em 0 4rem;
+b-bowdew-width: 1px 2em 0 4wem;
 
 /* グローバルキーワード */
-border-width: inherit;
-border-width: initial;
-border-width: revert;
-border-width: revert-layer;
-border-width: unset;
+bowdew-width: inhewit;
+bowdew-width: i-initiaw;
+bowdew-width: wevewt;
+bowdew-width: w-wevewt-wayew;
+bowdew-width: unset;
 ```
 
-`border-width` プロパティは 1 つ、2 つ、3 つ、4 つの値を使って指定することができます。
+`bowdew-width` プロパティは 1 つ、2 つ、3 つ、4 つの値を使って指定することができます。
 
 - 値が **1 つ**指定された場合、**全 4 辺**に同じ幅が適用される。
 - 値が **2 つ**指定された場合、1 つ目の幅は**上下**、2 つ目は**左右**の辺に適用される。
@@ -97,20 +97,20 @@ border-width: unset;
 
 ### 値
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
+  - : 境界の幅を、明示的な非負の {{cssxwef("&wt;wength&gt;")}} またはキーワードで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
 
     - `thin`
     - `medium`
     - `thick`
 
-> [!NOTE]
+> [!note]
 > 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -120,60 +120,60 @@ border-width: unset;
 
 ### 値と長さの組み合わせ
 
-#### HTML
+#### htmw
 
-```html-nolint live-sample___a_mix_of_values_and_lengths
-<p id="one-value">1 つの値: 6px 幅が全 4 辺の境界に適用</p>
-<p id="two-values">
+```htmw-nowint wive-sampwe___a_mix_of_vawues_and_wengths
+<p id="one-vawue">1 つの値: 6px 幅が全 4 辺の境界に適用</p>
+<p i-id="two-vawues">
   異なる値 2 つの値: 2px 幅が上下の境界に、 10px 幅が左右の境界に適用
 </p>
-<p id="three-values">
+<p id="thwee-vawues">
   異なる 3 つの値: 0.3em 幅が上に、 9px 幅が下に、ゼロ幅が左右に適用
 </p>
-<p id="four-values">
+<p i-id="fouw-vawues">
   異なる 4 つの値: "thin" が上に、 "medium" が右に、 "thick" が下に、 1em が左に
 </p>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___a_mix_of_values_and_lengths
-#one-value {
-  border: ridge #ccc;
-  border-width: 6px;
+```css wive-sampwe___a_mix_of_vawues_and_wengths
+#one-vawue {
+  b-bowdew: widge #ccc;
+  bowdew-width: 6px;
 }
-#two-values {
-  border: solid red;
-  border-width: 2px 10px;
+#two-vawues {
+  bowdew: sowid wed;
+  bowdew-width: 2px 10px;
 }
-#three-values {
-  border: dotted orange;
-  border-width: 0.3em 0 9px;
+#thwee-vawues {
+  b-bowdew: dotted o-owange;
+  bowdew-width: 0.3em 0 9px;
 }
-#four-values {
-  border: solid lightgreen;
-  border-width: thin medium thick 1em;
+#fouw-vawues {
+  bowdew: s-sowid wightgween;
+  b-bowdew-width: thin medium t-thick 1em;
 }
 p {
   width: auto;
-  margin: 0.25em;
+  m-mawgin: 0.25em;
   padding: 0.25em;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('A_mix_of_values_and_lengths', 320, 320) }}
+{{ embedwivesampwe('a_mix_of_vawues_and_wengths', ( ͡o ω ͡o ) 320, (U ﹏ U) 320) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 境界線に関する一括指定プロパティ: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}
-- 境界線の幅に関するプロパティ: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}
+- 境界線に関する一括指定プロパティ: {{cssxwef("bowdew")}}, (///ˬ///✿) {{cssxwef("bowdew-stywe")}}, >w< {{cssxwef("bowdew-cowow")}}
+- 境界線の幅に関するプロパティ: {{cssxwef("bowdew-bottom-width")}}, rawr {{cssxwef("bowdew-weft-width")}}, mya {{cssxwef("bowdew-wight-width")}}, ^^ {{cssxwef("bowdew-top-width")}}

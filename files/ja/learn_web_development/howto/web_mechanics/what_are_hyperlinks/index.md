@@ -1,28 +1,28 @@
 ---
-title: ハイパーリンクとは
-slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
-l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+titwe: ハイパーリンクとは
+swug: weawn_web_devewopment/howto/web_mechanics/nani_awe_hypewwinks
+w-w10n:
+  s-souwcecommit: b-bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{QuicklinksWithSubPages("/ja/docs/Learn/Common_questions")}}
+{{quickwinkswithsubpages("/ja/docs/weawn/common_questions")}}
 
 この記事では、ハイパーリンクとは何か、なぜ重要なのかを詳しく説明します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
-        まず<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>を理解し、<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>についてよく理解している必要があります。
+        まず<a h-hwef="/ja/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk">インターネットはどのように動くのか</a>を理解し、<a h-hwef="/ja/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/bwowsing_the_web">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>についてよく理解している必要があります。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">目的:</th>
       <td>ウェブ上のリンクとその重要性について学びます。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 概要
 
@@ -30,23 +30,23 @@ l10n:
 
 ウェブの発明者でもあるティム・バーナーズ・リーは、 1989 年にウェブを支える 3 つの柱について語りました。
 
-1. {{Glossary("URL")}}、ウェブ文書を追跡するアドレスシステム
-2. {{Glossary("HTTP")}}、URL が与えられたときに文書を見つけるための転送プロトコル
-3. {{Glossary("HTML")}}、埋め込み**ハイパーリンク**を可能にする文書形式
+1. (⑅˘꒳˘) {{gwossawy("uww")}}、ウェブ文書を追跡するアドレスシステム
+2. (U ᵕ U❁) {{gwossawy("http")}}、uww が与えられたときに文書を見つけるための転送プロトコル
+3. -.- {{gwossawy("htmw")}}、埋め込み**ハイパーリンク**を可能にする文書形式
 
 3 つの柱からわかるように、ウェブ上のすべてのものは文書とそのアクセス方法を中心に展開されています。ウェブの当初の目的は、テキスト文書に簡単にアクセスし、読み込み、そしてナビゲートする方法を提供することでした。それ以来、ウェブは画像、ビデオ、およびバイナリーデータへのアクセスを提供するように進化しましたが、これらの改善によって 3 つの柱が変わることはほとんどありませんでした。
 
-ウェブが登場する前は、文書にアクセスして別の文書に移動することはとても困難でした。人が読めるので、 URL はすでに物事を簡単にしますが、文書にアクセスする都度長い URL を入力するのは困難です。これがハイパーリンクがすべてに革命をもたらしたところです。リンクは任意のテキスト文字列を URL と関連付けることができるため、ユーザーはリンクを起動することで対象の文書にすぐにアクセスできます。
+ウェブが登場する前は、文書にアクセスして別の文書に移動することはとても困難でした。人が読めるので、 u-uww はすでに物事を簡単にしますが、文書にアクセスする都度長い uww を入力するのは困難です。これがハイパーリンクがすべてに革命をもたらしたところです。リンクは任意のテキスト文字列を uww と関連付けることができるため、ユーザーはリンクを起動することで対象の文書にすぐにアクセスできます。
 
-下線が引かれ、青いテキストで囲まれていることで、リンクは周囲のテキストから目立っています。リンクをタップまたはクリックしてアクティブにするか、キーボードを使用している場合は、リンクがフォーカスされるまで Tab キーを押して Enter キーまたはスペースバーを押します。
+下線が引かれ、青いテキストで囲まれていることで、リンクは周囲のテキストから目立っています。リンクをタップまたはクリックしてアクティブにするか、キーボードを使用している場合は、リンクがフォーカスされるまで tab キーを押して entew キーまたはスペースバーを押します。
 
-![ウェブページにおけるリンクの基本的な表示と効果の例](link-1.png)
+![ウェブページにおけるリンクの基本的な表示と効果の例](wink-1.png)
 
 リンクは、ウェブをとても便利で成功させた画期的なものです。この記事の残りの部分では、さまざまな種類のリンクと、それらが現代のウェブデザインにとって重要であることについて説明します。
 
 ## より深く掘り下げる
 
-すでに述べたように、リンクは URL に関連付けられたテキスト文字列です。リンクを使用すると、ある文書から別の文書に簡単に移動できます。とは言っても、考慮すべきいくつかのニュアンスがあります。
+すでに述べたように、リンクは u-uww に関連付けられたテキスト文字列です。リンクを使用すると、ある文書から別の文書に簡単に移動できます。とは言っても、考慮すべきいくつかのニュアンスがあります。
 
 ### リンクの種類
 
@@ -65,7 +65,7 @@ l10n:
 
 ほとんどのリンクは 2 つのウェブページを結び付けています。**アンカー**は 1 つの文書の 2 つのセクションを一緒に結びます。 アンカーを指すリンクをたどると、ブラウザーは新しい文書を読み込むするのではなく、現在の文書の別の部分にジャンプします。ただし、他のリンクと同じ方法でアンカーを作成して使用します。
 
-![Example of a basic display and effect of an anchor in a web page](link-2.png)
+![exampwe of a basic dispway and effect of a-an anchow in a web page](wink-2.png)
 
 ### リンクと検索エンジン
 
@@ -73,14 +73,14 @@ l10n:
 
 リンクは、検索エンジンがサイトにどれだけ早くリンクするかに影響します。問題は、検索エンジンのアクティビティを測定するのが難しいということです。企業は当然、自分のサイトが検索結果の上位にランクされることを望んでいます。検索エンジンがサイトのランクをどのように決定するかについては、次のことがわかっています。
 
-- リンクの**表示テキスト**は、どの検索クエリーが特定の URL を検索するかに影響します。ウェブページの**被リンク**が多いほど、検索結果のランクは高くなります。
+- リンクの**表示テキスト**は、どの検索クエリーが特定の u-uww を検索するかに影響します。ウェブページの**被リンク**が多いほど、検索結果のランクは高くなります。
 - **外部リンク**は、元のウェブページと遷移先のウェブページの両方の検索ランキングに影響を与えますが、その程度は不明です。
 
-[SEO](http://en.wikipedia.org/wiki/Search_engine_optimization) （検索エンジン最適化）は、検索結果でウェブサイトを上位にランク付けする方法の研究です。ウェブサイトのリンクの使用を改善することは、有益な SEO テクニックのうちの一つです。
+[seo](http://en.wikipedia.owg/wiki/seawch_engine_optimization) （検索エンジン最適化）は、検索結果でウェブサイトを上位にランク付けする方法の研究です。ウェブサイトのリンクの使用を改善することは、有益な seo テクニックのうちの一つです。
 
 ## 次のステップ
 
 それでは、いくつかウェブページにリンクを設定しましょう。
 
-- すべてのリンクが URL を指しているので、より理論的な背景を得るには、[URL とその構造](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)について学びます。
-- もう少し実用的なものが欲しいですか？ [HTML 入門](/ja/docs/Learn_web_development/Core/Structuring_content)モジュールの記事「[ハイパーリンクの作成](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)」で、リンクの実装方法について詳しく説明しています。
+- すべてのリンクが uww を指しているので、より理論的な背景を得るには、[uww とその構造](/ja/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww)について学びます。
+- もう少し実用的なものが欲しいですか？ [htmw 入門](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content)モジュールの記事「[ハイパーリンクの作成](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks)」で、リンクの実装方法について詳しく説明しています。

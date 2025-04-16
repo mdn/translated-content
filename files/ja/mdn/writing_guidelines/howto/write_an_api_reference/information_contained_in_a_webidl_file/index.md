@@ -1,270 +1,270 @@
 ---
-title: WebIDL ファイルに含まれる情報
-slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
+titwe: webidw ファイルに含まれる情報
+swug: mdn/wwiting_guidewines/howto/wwite_an_api_wefewence/infowmation_contained_in_a_webidw_fiwe
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-API についての記事を書くとき、情報源はたくさんあります。仕様書にはモデルと同様に何が実装されるべきかが記述され、実装には実際にブラウザーに置かれたものが記述されています。 WebIDL ファイルは、 API に関する情報のすべてではありませんが、多くの情報を提供する非常に凝縮された方法です。この記事では、 WebIDL 構文を理解するためのリファレンスを提供します。
+a-api についての記事を書くとき、情報源はたくさんあります。仕様書にはモデルと同様に何が実装されるべきかが記述され、実装には実際にブラウザーに置かれたものが記述されています。 w-webidw ファイルは、 a-api に関する情報のすべてではありませんが、多くの情報を提供する非常に凝縮された方法です。この記事では、 w-webidw 構文を理解するためのリファレンスを提供します。
 
-IDL は **_Interface Definition Language_** の略で、 API を記述するために設計されています。広いコンピューターの世界では、 IDL はいくつかの種類に分かれています。ブラウザーの世界では、私たちが使っている IDL は _WebIDL_ と呼ばれています。 WebIDL には、 WebIDL 仕様書で規定されているものと、ブラウザーに実装されているものの 2 種類があります。仕様書は標準的なリファレンスで、ブラウザーの WebIDL は特定のブラウザーで実際に実装されているものを記述し、アノテーション、非標準の要素に関する情報、 IDL 仕様に対するブラウザー固有の拡張などの追加事項を含んでいます。
+i-idw は **_intewface d-definition w-wanguage_** の略で、 a-api を記述するために設計されています。広いコンピューターの世界では、 idw はいくつかの種類に分かれています。ブラウザーの世界では、私たちが使っている idw は _webidw_ と呼ばれています。 webidw には、 webidw 仕様書で規定されているものと、ブラウザーに実装されているものの 2 種類があります。仕様書は標準的なリファレンスで、ブラウザーの w-webidw は特定のブラウザーで実際に実装されているものを記述し、アノテーション、非標準の要素に関する情報、 idw 仕様に対するブラウザー固有の拡張などの追加事項を含んでいます。
 
-## WebIDL ファイルの場所
+## webidw ファイルの場所
 
-WebIDL は複数の場所で見つけることができます。
+w-webidw は複数の場所で見つけることができます。
 
-- それぞれの仕様書には、本文の中に WebIDL が含まれています：これは、正確な定義を伝えるのにとても便利な方法です。これらは、API の構文を記述しています。正規のリファレンスではありますが、実際の実装とは異なる可能性があることを念頭に置いておく必要があります。 MDN では、実用的でありたいと考えており、ウェブプラットフォームが実際にどうであるか、理想的にどうあるべきかを文書化するものではありません。ですから、そこにあるものを実装でダブルチェックしてください（そして、矛盾を発見したら遠慮なくバグを報告してください）。
+- それぞれの仕様書には、本文の中に webidw が含まれています：これは、正確な定義を伝えるのにとても便利な方法です。これらは、api の構文を記述しています。正規のリファレンスではありますが、実際の実装とは異なる可能性があることを念頭に置いておく必要があります。 m-mdn では、実用的でありたいと考えており、ウェブプラットフォームが実際にどうであるか、理想的にどうあるべきかを文書化するものではありません。ですから、そこにあるものを実装でダブルチェックしてください（そして、矛盾を発見したら遠慮なくバグを報告してください）。
 
-- 3 つのブラウザーエンジンが、ツールチェーンの一部として（修正された） WebIDL を使用しています。 Gecko、Chromium/Blink、そして WebCore/WebKit です。 Chromium 以前の Edge では内部的に WebIDL を使用していましたが、残念ながらこれらは公開されていません。
+- 3 つのブラウザーエンジンが、ツールチェーンの一部として（修正された） webidw を使用しています。 gecko、chwomium/bwink、そして webcowe/webkit です。 c-chwomium 以前の edge では内部的に w-webidw を使用していましたが、残念ながらこれらは公開されていません。
 
-  - Gecko では、すべての WebIDL ファイルは 1 つのディレクトリー <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/> にまとめられています。拡張子は `.webidl` です。Gecko のソースツリーには他にも `*.idl` ファイルがありますが、それらは WebIDL ではないので無視してかまいません。古いバージョンの Gecko には WebIDL が散在しており、 WebIDL の代わりに Mozilla の IDL を使ってウェブインターフェイスを記述しているものもありますが、最近の Gecko のコードでは問題ありません。
-  - Chromium では、ソースコードの [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) ディレクトリーのサブツリーである [`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) と [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/) の 2 ヶ所に配置されます。 Chromium のソースコードには、他の場所にも IDL ファイルがありますが、これらはテストシステムの一部であり、API の実装には関係ありません。
-  - WebCore の場合は、ソースコードのあちこちに散らばっているので、もう少し掘り下げる必要があります。例：<https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
+  - g-gecko では、すべての webidw ファイルは 1 つのディレクトリー <https://dxw.moziwwa.owg/moziwwa-centwaw/souwce/dom/webidw/> にまとめられています。拡張子は `.webidw` です。gecko のソースツリーには他にも `*.idw` ファイルがありますが、それらは webidw ではないので無視してかまいません。古いバージョンの gecko には webidw が散在しており、 w-webidw の代わりに moziwwa の idw を使ってウェブインターフェイスを記述しているものもありますが、最近の gecko のコードでは問題ありません。
+  - chwomium では、ソースコードの [`wendewew/`](https://souwce.chwomium.owg/chwomium/chwomium/swc/+/mastew:thiwd_pawty/bwink/wendewew/) ディレクトリーのサブツリーである [`cowe/`](https://souwce.chwomium.owg/chwomium/chwomium/swc/+/mastew:thiwd_pawty/bwink/wendewew/cowe/) と [`moduwes/`](https://souwce.chwomium.owg/chwomium/chwomium/swc/+/mastew:thiwd_pawty/bwink/wendewew/moduwes/) の 2 ヶ所に配置されます。 c-chwomium のソースコードには、他の場所にも idw ファイルがありますが、これらはテストシステムの一部であり、api の実装には関係ありません。
+  - w-webcowe の場合は、ソースコードのあちこちに散らばっているので、もう少し掘り下げる必要があります。例：<https://github.com/webkit/webkit/bwob/main/souwce/webcowe/htmw/domtokenwist.idw>
 
-## WebIDL のさまざまな方言
+## w-webidw のさまざまな方言
 
-WebIDL は[その仕様書](https://webidl.spec.whatwg.org/)で定義されています。しかし、より多くの情報を伝えるために拡張できるように設計されており、 ブラウザーのベンダーはそれを行っています。
+w-webidw は[その仕様書](https://webidw.spec.naniwg.owg/)で定義されています。しかし、より多くの情報を伝えるために拡張できるように設計されており、 ブラウザーのベンダーはそれを行っています。
 
-- Gecko については、 Mozilla がその方言である WebIDL の[ドキュメント](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) を作成しました。
-- Chromium については、 Google もその拡張機能を説明する[ドキュメント](https://www.chromium.org/blink/webidl/)を作成しました。
-- WebCore については、Apple もその方言に関する[ページ](https://trac.webkit.org/wiki/WebKitIDL)を公開しています。
+- g-gecko については、 moziwwa がその方言である webidw の[ドキュメント](https://fiwefox-souwce-docs.moziwwa.owg/dom/webidwbindings/index.htmw) を作成しました。
+- c-chwomium については、 googwe もその拡張機能を説明する[ドキュメント](https://www.chwomium.owg/bwink/webidw/)を作成しました。
+- webcowe については、appwe もその方言に関する[ページ](https://twac.webkit.owg/wiki/webkitidw)を公開しています。
 
-> [!NOTE]
-> ここでは、記事を書くときに最も役に立つ WebIDL のサブセットのみを説明します。実装者にとって便利なアノテーションは他にもたくさんあります。完全な概要を知るには、上記のリンク先の 4 つの記事を参照してください。
+> [!note]
+> ここでは、記事を書くときに最も役に立つ webidw のサブセットのみを説明します。実装者にとって便利なアノテーションは他にもたくさんあります。完全な概要を知るには、上記のリンク先の 4 つの記事を参照してください。
 
 ## インターフェイス
 
-ここでは、 API 全体の機能を記述する WebIDL 構文について説明します。
+ここでは、 a-api 全体の機能を記述する webidw 構文について説明します。
 
 ### インターフェイスの名前
 
-インターフェイス名は、キーワード `interface` の後、次の開き括弧 (`'{'`) またはコロン (`':'`) の前に表示される文字列です。
+インターフェイス名は、キーワード `intewface` の後、次の開き括弧 (`'{'`) またはコロン (`':'`) の前に表示される文字列です。
 
-```webidl
-interface URL {};
+```webidw
+intewface uww {};
 ```
 
-WebIDL インターフェイスは、真のインターフェイスであれ、ミックスインであれ、それぞれ独自のページをドキュメントに持ち、そのインターフェイスで定義されているすべてのコンストラクター、プロパティ、メソッドを掲載します。
+webidw インターフェイスは、真のインターフェイスであれ、ミックスインであれ、それぞれ独自のページをドキュメントに持ち、そのインターフェイスで定義されているすべてのコンストラクター、プロパティ、メソッドを掲載します。
 
 ### インターフェイスチェーン
 
 あるインターフェイスの親がある場合は、インターフェイス名の後にコロン (`':'`) をつけて定義します。 1 つのインターフェイスにつき、親は 1 つだけ存在することができます。
 
-```webidl
-interface HTMLMediaElement : HTMLElement {…}
+```webidw
+intewface h-htmwmediaewement : htmwewement {…}
 ```
 
-継承チェーンはサイドバーに自動的に掲載されます（\\{{APIRef}} マクロを使用）。また、 SVG 画像としてマクロの \\{{InheritanceDiagram}} を使って追加することもできます。
+継承チェーンはサイドバーに自動的に掲載されます（\\{{apiwef}} マクロを使用）。また、 s-svg 画像としてマクロの \\{{inhewitancediagwam}} を使って追加することもできます。
 
 ### ミックスイン
 
-いくつかのプロパティやメソッドは、複数のインターフェイスで利用できます。再定義を防ぐために、それらは*ミックスイン*と呼ばれる特別な WebIDL インターフェイスで定義されています。
+いくつかのプロパティやメソッドは、複数のインターフェイスで利用できます。再定義を防ぐために、それらは*ミックスイン*と呼ばれる特別な w-webidw インターフェイスで定義されています。
 
-2019 年 9 月に、ミックスインの構文が更新されています。新しい構文では、 `interface mixin` を使用して、ミックスインのインターフェイスを以下のように定義します。
+2019 年 9 月に、ミックスインの構文が更新されています。新しい構文では、 `intewface m-mixin` を使用して、ミックスインのインターフェイスを以下のように定義します。
 
-```webidl
-interface MyInterface {};
+```webidw
+intewface myintewface {};
 
-interface mixin MyMixin {
-  void somethingMixedIn();
+intewface mixin mymixin {
+  v-void somethingmixedin();
 }
 ```
 
-そして、 `includes` キーワードを使用して、ミックスインの内部で定義されたプロパティがインターフェイス上で利用可能であることを表明します。
+そして、 `incwudes` キーワードを使用して、ミックスインの内部で定義されたプロパティがインターフェイス上で利用可能であることを表明します。
 
-```webidl
-MyInterface includes MyMixin;
+```webidw
+m-myintewface incwudes m-mymixin;
 ```
 
 ミックスインは継承をせず、他のミックスインを取り込むことはできません。しかし、パーシャルをサポートしているので、次のようにすることができます。
 
-```webidl
-interface MyInterface {};
-interface mixin MyMixin {};
+```webidw
+i-intewface myintewface {};
+intewface m-mixin mymixin {};
 
-partial interface mixin MyMixin {
-  void somethingMixedIn();
+pawtiaw intewface m-mixin mymixin {
+  void somethingmixedin();
 };
 
-MyInterface includes MyMixin;
+m-myintewface incwudes mymixin;
 ```
 
-MDN では、ドキュメント作成にあたって、ミックスインを非表示にしています。これらは抽象的で仕様のみの構成要素です。
+m-mdn では、ドキュメント作成にあたって、ミックスインを非表示にしています。これらは抽象的で仕様のみの構成要素です。
 ブラウザーのコンソールで見ることはできませんし、メソッドやプロパティが実際のどのインターフェイスで実装されているかを知る方がより有用です。
 
-IDL で [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links.html#htmlhyperlinkelementutils) のようなミックスインに遭遇した場合、そのミックスインを実装しているインターフェイスを探してください。
-[HTMLAnchorElement](https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement) のように、ミックスインを実装するインターフェイスを探し、それらのインターフェイス上で直接ミックスインのメンバーを文書化します。
+idw で [htmwhypewwinkewementutiws](https://htmw.spec.naniwg.owg/muwtipage/winks.htmw#htmwhypewwinkewementutiws) のようなミックスインに遭遇した場合、そのミックスインを実装しているインターフェイスを探してください。
+[htmwanchowewement](https://htmw.spec.naniwg.owg/muwtipage/text-wevew-semantics.htmw#htmwanchowewement) のように、ミックスインを実装するインターフェイスを探し、それらのインターフェイス上で直接ミックスインのメンバーを文書化します。
 
-実際には、 `HTMLHyperlinkElementUtils` を文書化するのではなく、 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) や [`HTMLAreaElement`](/ja/docs/Web/API/HTMLAreaElement) のような具体的なインターフェイスにドキュメントが追加されます。
+実際には、 `htmwhypewwinkewementutiws` を文書化するのではなく、 [`htmwanchowewement`](/ja/docs/web/api/htmwanchowewement) や [`htmwaweaewement`](/ja/docs/web/api/htmwaweaewement) のような具体的なインターフェイスにドキュメントが追加されます。
 
-`HTMLHyperlinkElementUtils.hash` を適切に説明する以下の 2 ページを参照してください。
+`htmwhypewwinkewementutiws.hash` を適切に説明する以下の 2 ページを参照してください。
 
-- [`HTMLAnchorElement.hash`](/ja/docs/Web/API/HTMLAnchorElement/hash)
-- [`HTMLAreaElement.hash`](/ja/docs/Web/API/HTMLAreaElement/hash)
+- [`htmwanchowewement.hash`](/ja/docs/web/api/htmwanchowewement/hash)
+- [`htmwaweaewement.hash`](/ja/docs/web/api/htmwaweaewement/hash)
 
-互換性データについては、 [BCD におけるミックスインのデータガイドライン](https://github.com/mdn/browser-compat-data/blob/main/docs/index.md)を参照してください。
+互換性データについては、 [bcd におけるミックスインのデータガイドライン](https://github.com/mdn/bwowsew-compat-data/bwob/main/docs/index.md)を参照してください。
 
 ### 古いミックスインの構文
 
-古いスタイルの WebIDL ミックスインの構文では、まだいくつかの場所で見かけるかもしれませんが、ミックスインは `[NoInterfaceObject]` という注釈で接頭辞を付けます。
+古いスタイルの w-webidw ミックスインの構文では、まだいくつかの場所で見かけるかもしれませんが、ミックスインは `[nointewfaceobject]` という注釈で接頭辞を付けます。
 
-```webidl
-[NoInterfaceObject]
-   interface MyMixin {…}
+```webidw
+[nointewfaceobject]
+   i-intewface mymixin {…}
 ```
 
-旧来の構文では、インターフェイスに実装されたミックスインは `implements` キーワードで定義します。
+旧来の構文では、インターフェイスに実装されたミックスインは `impwements` キーワードで定義します。
 
-```webidl
-MyInterface implements MyMixin;
+```webidw
+myintewface impwements mymixin;
 ```
 
 ### ウィンドウとワーカーでの可用性
 
-ウェブワーカー（任意の型）および Window スコープでの可用性は、注釈 `[Exposed=(Window,Worker)]` を使用して定義します。この注釈は一緒に掲載されている部分インターフェイスに適用されます。
+ウェブワーカー（任意の型）および window スコープでの可用性は、注釈 `[exposed=(window,wowkew)]` を使用して定義します。この注釈は一緒に掲載されている部分インターフェイスに適用されます。
 
-```webidl
-[Exposed=(Window,Worker)]
-interface Performance {
-   [DependsOn=DeviceState, Affects=Nothing]
-   DOMHighResTimeStamp now();
+```webidw
+[exposed=(window,wowkew)]
+intewface pewfowmance {
+   [dependson=devicestate, rawr x3 affects=nothing]
+   domhighwestimestamp n-nyow();
 };
 
-[Exposed=Window]
-partial interface Performance {
-   [Constant]
-   readonly attribute PerformanceTiming timing;
-   [Constant]
-   readonly attribute PerformanceNavigation navigation;
+[exposed=window]
+p-pawtiaw intewface pewfowmance {
+   [constant]
+   w-weadonwy a-attwibute pewfowmancetiming timing;
+   [constant]
+   w-weadonwy attwibute pewfowmancenavigation nyavigation;
 
-   jsonifier;
+   jsonifiew;
 };
 ```
 
-この場合、 `Performance.now()` は `Window` スコープと任意のワーカーで利用できますが、 `Performance.timing`、`Performance.navigation`、`Performance.toJSON()` はウェブワーカーで利用できません。
+この場合、 `pewfowmance.now()` は `window` スコープと任意のワーカーで利用できますが、 `pewfowmance.timing`、`pewfowmance.navigation`、`pewfowmance.tojson()` はウェブワーカーで利用できません。
 
-`[Exposed]` の最も一般的な値は次のとおりです。
+`[exposed]` の最も一般的な値は次のとおりです。
 
-- `Window`
-  - : この部分インターフェイスは {{domxref('Window')}} グローバルスコープで利用可能です。
-- `Worker`
-  - : この部分インターフェイスは、グローバルスコープが {{domxref('WorkerGlobalScope')}} - {{domxref('DedicatedWorkerGlobalScope')}}、{{domxref('SharedWorkerGlobalScope')}}、{{domxref('ServiceWorkerGlobalScope')}} の子孫であれば、どんな種類のワーカーでも利用可能です（`ChromeWorker` にもありますが、ウェブ上では見えず、 Firefox の内部であるため文書化されていません.）。
-- `DedicatedWorker`
-  - : この部分インターフェイスは {{domxref('DedicatedWorkerGlobalScope')}} のみで利用可能です。
-- `SharedWorker`
-  - : この部分インターフェイスは {{domxref('SharedWorkerGlobalScope')}} のみで利用可能です。
-- `ServiceWorker`
-  - : この部分インターフェイスは {{domxref('ServiceWorkerGlobalScope')}} のみで利用可能です。
+- `window`
+  - : この部分インターフェイスは {{domxwef('window')}} グローバルスコープで利用可能です。
+- `wowkew`
+  - : この部分インターフェイスは、グローバルスコープが {{domxwef('wowkewgwobawscope')}} - {{domxwef('dedicatedwowkewgwobawscope')}}、{{domxwef('shawedwowkewgwobawscope')}}、{{domxwef('sewvicewowkewgwobawscope')}} の子孫であれば、どんな種類のワーカーでも利用可能です（`chwomewowkew` にもありますが、ウェブ上では見えず、 f-fiwefox の内部であるため文書化されていません.）。
+- `dedicatedwowkew`
+  - : この部分インターフェイスは {{domxwef('dedicatedwowkewgwobawscope')}} のみで利用可能です。
+- `shawedwowkew`
+  - : この部分インターフェイスは {{domxwef('shawedwowkewgwobawscope')}} のみで利用可能です。
+- `sewvicewowkew`
+  - : この部分インターフェイスは {{domxwef('sewvicewowkewgwobawscope')}} のみで利用可能です。
 
-`System` のような別の値も可能ですが、これには[特別な意味](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html#custom-extended-attributes)があり、文書化する必要はありません。
+`system` のような別の値も可能ですが、これには[特別な意味](https://fiwefox-souwce-docs.moziwwa.owg/dom/webidwbindings/index.htmw#custom-extended-attwibutes)があり、文書化する必要はありません。
 
-これらの可能な値は、それ自体が WebIDL ファイルで定義されていることに注意してください。インターフェイスは `[Global=xyz]` という注釈を持つことができます。これは、このタイプのオブジェクトがグローバルスコープとして使用される場合、 `[Exposed]` の値が `xyz` である インターフェイス、プロパティ、メソッドがすべて利用可能になることを意味します。
+これらの可能な値は、それ自体が webidw ファイルで定義されていることに注意してください。インターフェイスは `[gwobaw=xyz]` という注釈を持つことができます。これは、このタイプのオブジェクトがグローバルスコープとして使用される場合、 `[exposed]` の値が `xyz` である インターフェイス、プロパティ、メソッドがすべて利用可能になることを意味します。
 
-```webidl
-[Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
-interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
+```webidw
+[gwobaw=(wowkew,dedicatedwowkew), (///ˬ///✿) exposed=dedicatedwowkew]
+intewface dedicatedwowkewgwobawscope : wowkewgwobawscope {…}
 ```
 
-ここでは、グローバルスコープが `DedicatedWorkerGlobalScope` 型の場合、つまり、専用ワーカーにいる場合は、 `Worker` または `DedicatedWorker` に `[Exposed]` 注釈を用いて公開したインターフェイス、プロパティ、メソッドを利用できると定義しています。
+ここでは、グローバルスコープが `dedicatedwowkewgwobawscope` 型の場合、つまり、専用ワーカーにいる場合は、 `wowkew` または `dedicatedwowkew` に `[exposed]` 注釈を用いて公開したインターフェイス、プロパティ、メソッドを利用できると定義しています。
 
 ### 設定
 
-> [!NOTE]
-> この情報は Gecko 固有のものであり、ブラウザー互換性 の節でのみ使用されるべきものです。
+> [!note]
+> この情報は g-gecko 固有のものであり、ブラウザー互換性 の節でのみ使用されるべきものです。
 
-Gecko では、コンストラクター、プロパティ、メソッドを含む部分インターフェイスの可用性は、プリファレンス（通常 "pref" と呼ばれます）によって制御されることがあります。これは WebIDL でもマークされています。
+gecko では、コンストラクター、プロパティ、メソッドを含む部分インターフェイスの可用性は、プリファレンス（通常 "pwef" と呼ばれます）によって制御されることがあります。これは webidw でもマークされています。
 
-```webidl
-[Pref="media.webspeech.synth.enabled"]
-interface SpeechSynthesis {
-   readonly attribute boolean pending;
-   readonly attribute boolean speaking;
-   readonly attribute boolean paused;
+```webidw
+[pwef="media.webspeech.synth.enabwed"]
+i-intewface s-speechsynthesis {
+   w-weadonwy attwibute boowean p-pending;
+   weadonwy a-attwibute boowean s-speaking;
+   w-weadonwy attwibute boowean paused;
 };
 ```
 
-ここでは `media.webspeech.synth.enabled` が `SpeechSynthesis` インターフェイスとそのプロパティを制御します（完全なリストは 3 つだけではありません）。
+ここでは `media.webspeech.synth.enabwed` が `speechsynthesis` インターフェイスとそのプロパティを制御します（完全なリストは 3 つだけではありません）。
 
-> **注意:** 環境設定の既定値は、 WebIDL で直接利用できません（Gecko を使用している製品ごとに異なる場合があります）。
+> **注意:** 環境設定の既定値は、 webidw で直接利用できません（gecko を使用している製品ごとに異なる場合があります）。
 
 ### システムコードでのみ使用可能なもの
 
-インターフェイスによっては、ブラウザー内部システムコード、またはクロームコードでのみ利用可能な機能がある場合があります。これを示すために、 Gecko では \[ChromeOnly] を使用します。例えば、次の例の propName プロパティは、クロームコード経由でのみ呼び出せます。
+インターフェイスによっては、ブラウザー内部システムコード、またはクロームコードでのみ利用可能な機能がある場合があります。これを示すために、 g-gecko では \[chwomeonwy] を使用します。例えば、次の例の p-pwopname プロパティは、クロームコード経由でのみ呼び出せます。
 
-```webidl
-interface MyInterface {
-  [ChromeOnly]
-  readonly attribute PropValue propName;
+```webidw
+intewface m-myintewface {
+  [chwomeonwy]
+  w-weadonwy a-attwibute pwopvawue pwopname;
 };
 ```
 
 ## プロパティ
 
-プロパティの定義は、 `attribute` キーワードの存在によって認識することができます。
+プロパティの定義は、 `attwibute` キーワードの存在によって認識することができます。
 
 ### プロパティの名前
 
-```webidl
-readonly attribute MediaError? error;
+```webidw
+weadonwy attwibute mediaewwow? e-ewwow;
 ```
 
-上記の例では、プロパティの名前は `error` です。ドキュメントでは、このプロパティは `HTMLMediaElement` インターフェイスに属するため、 `HTMLMediaElement.error` と表記します。ページへのリンクは、インターフェイスの接頭辞を付けるために \\{{domxref('HTMLMediaElement.error')}} を使用したり、コンテキストが明白で曖昧でない場合には、接頭辞を付け**ない**ように \\{{domxref('HTMLMediaElement.error', 'error')}} を使用したりします。
+上記の例では、プロパティの名前は `ewwow` です。ドキュメントでは、このプロパティは `htmwmediaewement` インターフェイスに属するため、 `htmwmediaewement.ewwow` と表記します。ページへのリンクは、インターフェイスの接頭辞を付けるために \\{{domxwef('htmwmediaewement.ewwow')}} を使用したり、コンテキストが明白で曖昧でない場合には、接頭辞を付け**ない**ように \\{{domxwef('htmwmediaewement.ewwow', 🥺 'ewwow')}} を使用したりします。
 
 ### プロパティの型
 
-```webidl
-readonly attribute MediaError? error;
+```webidw
+weadonwy attwibute mediaewwow? ewwow;
 ```
 
-このプロパティの値は `MediaError` 型のオブジェクトです。疑問符 (`'?'`) は `null` の値を取ることができることを示し、ドキュメントでは*いつ*これが発生するかを説明する必要があります。疑問符がない場合、 `error` プロパティを `null` にすることはできません。
+このプロパティの値は `mediaewwow` 型のオブジェクトです。疑問符 (`'?'`) は `nuww` の値を取ることができることを示し、ドキュメントでは*いつ*これが発生するかを説明する必要があります。疑問符がない場合、 `ewwow` プロパティを `nuww` にすることはできません。
 
 ### プロパティへの書き込み権限
 
-```webidl
-readonly attribute MediaError? error;
+```webidw
+weadonwy attwibute mediaewwow? e-ewwow;
 ```
 
-キーワード `readonly` が存在する場合、そのプロパティを変更することはできません。読み取り専用としてマークする必要があります。
+キーワード `weadonwy` が存在する場合、そのプロパティを変更することはできません。読み取り専用としてマークする必要があります。
 
-- インターフェイスでは、その定義用語の横に \{{ReadOnlyInline}} マクロを追加してください。
-- そのページの最初の文章で、説明を次のように始めてください。 _**HTMLMediaElement.error`** プロパティは読み取り専用で..._。
+- インターフェイスでは、その定義用語の横に \{{weadonwyinwine}} マクロを追加してください。
+- そのページの最初の文章で、説明を次のように始めてください。 _**htmwmediaewement.ewwow`** プロパティは読み取り専用で..._。
 - インターフェイスページの説明を _...を返します_ で始めてください。
 
-> [!NOTE]
+> [!note]
 > 値を「返す」と表現できるのは、読み取り専用のプロパティのみです。読み取り専用でないプロパティは、値を設定するために使用することもできます。
 
 ### 例外の発生
 
-```webidl
-[SetterThrows]
-            attribute DOMString src;
+```webidw
+[settewthwows]
+            attwibute domstwing swc;
 ```
 
-ある値が不正である場合など、新しい値を設定すると例外が発生することがあります。これは `[SetterThrows]` の注釈でマークします。このような場合、プロパティページの構文の節に、例外の項がなければなりません。例外のリストとそれが発生する条件は、その API の仕様にテキスト情報として記載されています。
+ある値が不正である場合など、新しい値を設定すると例外が発生することがあります。これは `[settewthwows]` の注釈でマークします。このような場合、プロパティページの構文の節に、例外の項がなければなりません。例外のリストとそれが発生する条件は、その api の仕様にテキスト情報として記載されています。
 
-例外の中には、明示的にマークされていないものの、JavaScript のバインディングによって定義されているものがあることに注意してください。（JavaScript の文字列にマッピングされている）[不正な列挙値を設定しようとした場合](https://webidl.spec.whatwg.org/#es-enumeration)は {{jsxref('TypeError')}} 例外が発生します。これは文書化しなければなりませんが、WebIDL 文書では暗黙のうちにマークされているだけです。
+例外の中には、明示的にマークされていないものの、javascwipt のバインディングによって定義されているものがあることに注意してください。（javascwipt の文字列にマッピングされている）[不正な列挙値を設定しようとした場合](https://webidw.spec.naniwg.owg/#es-enumewation)は {{jsxwef('typeewwow')}} 例外が発生します。これは文書化しなければなりませんが、webidw 文書では暗黙のうちにマークされているだけです。
 
-ゲッターが例外を発生させるのは珍しいことですが、発生する場合がいくつかあります。この場合、 `[GetterThrows]` 注釈が使用されます。ここでも、プロパティページの構文の節に、例外の項がなければなりません。
+ゲッターが例外を発生させるのは珍しいことですが、発生する場合がいくつかあります。この場合、 `[gettewthwows]` 注釈が使用されます。ここでも、プロパティページの構文の節に、例外の項がなければなりません。
 
-```webidl
-partial interface Blob {
-  [GetterThrows]
-  readonly attribute unsigned long long size;
+```webidw
+p-pawtiaw intewface b-bwob {
+  [gettewthwows]
+  w-weadonwy attwibute u-unsigned wong wong size;
 };
 ```
 
 ### 例外を発生させない
 
-Webidl の意味論に従わない場合、`[SetterThrows]` や `[GetterThrows]` が設定されていなくても、例外が発生することがよくあります。例えば、厳格モードにおいて、読み取り専用のプロパティを新しい値に設定しようとすると、つまり、その暗黙のセッターを呼び出そうとすると、読み取り専用のプロパティは厳格モードで例外を発生します。
+w-webidw の意味論に従わない場合、`[settewthwows]` や `[gettewthwows]` が設定されていなくても、例外が発生することがよくあります。例えば、厳格モードにおいて、読み取り専用のプロパティを新しい値に設定しようとすると、つまり、その暗黙のセッターを呼び出そうとすると、読み取り専用のプロパティは厳格モードで例外を発生します。
 
-大抵は互換性のためですが、この動作は時に煩わしいものです。これを防ぐために、無操作なセッターを作る（つまり、プロパティを新しい値に設定しようとする試みを黙って無視する）ために、 `[LenientSetter]` 注釈を使用することができます。
+大抵は互換性のためですが、この動作は時に煩わしいものです。これを防ぐために、無操作なセッターを作る（つまり、プロパティを新しい値に設定しようとする試みを黙って無視する）ために、 `[wenientsettew]` 注釈を使用することができます。
 
-```webidl
-partial interface Document {
-  [LenientSetter]
-  readonly attribute boolean fullscreen;
-  [LenientSetter]
-  readonly attribute boolean fullscreenEnabled;
+```webidw
+p-pawtiaw intewface document {
+  [wenientsettew]
+  weadonwy attwibute boowean fuwwscween;
+  [wenientsettew]
+  weadonwy attwibute b-boowean fuwwscweenenabwed;
 };
 ```
 
@@ -276,58 +276,58 @@ _このプロパティは読み取り専用ですが、変更されても（厳�
 
 プロパティの返値は、内部オブジェクトのコピー、新しく生成された合成オブジェクト、または内部オブジェクトへの参照のいずれかになります。
 
-{{jsxref("String")}}（IDL `DOMString` など）、{{jsxref("Number")}}（IDL `byte`, `octet`, `unsigned int` など）、 {{jsxref("Boolean")}} といった型の基本オブジェクトは常にコピーされるので特に注意すべき点はありません（これは JavaScript 開発者が求める当然の挙動です）。
+{{jsxwef("stwing")}}（idw `domstwing` など）、{{jsxwef("numbew")}}（idw `byte`, >_< `octet`, `unsigned i-int` など）、 {{jsxwef("boowean")}} といった型の基本オブジェクトは常にコピーされるので特に注意すべき点はありません（これは javascwipt 開発者が求める当然の挙動です）。
 
 インターフェイスオブジェクトの場合、既定では、内部オブジェクトへの参照を返すことになっています。このことは、インターフェイスページの短い説明と、特定のサブページの説明の両方で言及しなければなりません。
 
-> [!NOTE]
-> オブジェクトを返すプロパティで使われるキーワード `readonly` は、参照に適用されるものです（内部のオブジェクトは変更できません）。返されたオブジェクトのプロパティは、関連するインターフェイスで読み取り専用とされていても、変更することができます。
+> [!note]
+> オブジェクトを返すプロパティで使われるキーワード `weadonwy` は、参照に適用されるものです（内部のオブジェクトは変更できません）。返されたオブジェクトのプロパティは、関連するインターフェイスで読み取り専用とされていても、変更することができます。
 
-API は時として、*新しい*オブジェクト、あるいは内部のオブジェクトの*コピー*を返さなければなりません。このような場合、 WebIDL では `[NewObject]` 注釈を使用します。
+a-api は時として、*新しい*オブジェクト、あるいは内部のオブジェクトの*コピー*を返さなければなりません。このような場合、 w-webidw では `[newobject]` 注釈を使用します。
 
-```webidl
-[NewObject]
-   readonly attribute TimeRanges buffered;
+```webidw
+[newobject]
+   weadonwy attwibute t-timewanges buffewed;
 ```
 
-この場合、 `buffered` を呼び出すたびに異なるオブジェクトが返されます。これを変更しても内部の値は変化せず、内部の値が変化しても各オブジェクトのインスタンスには影響がありません。ドキュメントでは、オブジェクトの隣に*新しい*という形容詞を使ってマークすることにします。
+この場合、 `buffewed` を呼び出すたびに異なるオブジェクトが返されます。これを変更しても内部の値は変化せず、内部の値が変化しても各オブジェクトのインスタンスには影響がありません。ドキュメントでは、オブジェクトの隣に*新しい*という形容詞を使ってマークすることにします。
 
-_**`HTMLMediaElement.buffered`** プロパティは読み取り専用で、新しい \\{{domxref("TimeRanges")}} オブジェクトを返します…_
+_**`htmwmediaewement.buffewed`** プロパティは読み取り専用で、新しい \\{{domxwef("timewanges")}} オブジェクトを返します…_
 
 および
 
-- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{ReadOnlyInline}}_
-  - : _新しい \\{{domxref("TimeRanges")}} オブジェクトを返します …_
+- _\\{{domxwef("htmwmediaewement.buffewed")}}\\{{weadonwyinwine}}_
+  - : _新しい \\{{domxwef("timewanges")}} オブジェクトを返します …_
 
-コレクションオブジェクトへの参照（`HTMLCollection`, `HTMLFormElementsCollection`, `HTMLOptionsCollection` など、常に `[NewObject]` を含まない）の場合、そのオブジェクトへの変更が、返された参照を通して利用できることを明確にします。このことを示すために、インターフェイスの説明とサブページの両方で、コレクションを**生きた** `HTMLCollection` （または `HTMLFormElementsCollections` や `HTMLOptionsCollection`）として修飾しています。
+コレクションオブジェクトへの参照（`htmwcowwection`, UwU `htmwfowmewementscowwection`, >_< `htmwoptionscowwection` など、常に `[newobject]` を含まない）の場合、そのオブジェクトへの変更が、返された参照を通して利用できることを明確にします。このことを示すために、インターフェイスの説明とサブページの両方で、コレクションを**生きた** `htmwcowwection` （または `htmwfowmewementscowwections` や `htmwoptionscowwection`）として修飾しています。
 
 例えば、
 
-- \\{{domxref("HTMLFormElement.elements")}}\\{{ReadOnlyInline}}
-  - : 生きた \\{{domxref("HTMLFormControlsCollection")}} を返します…
+- \\{{domxwef("htmwfowmewement.ewements")}}\\{{weadonwyinwine}}
+  - : 生きた \\{{domxwef("htmwfowmcontwowscowwection")}} を返します…
 
 ### ワーカーでの使用可否
 
-ワーカーにおける個々のプロパティの使用可否は WebIDL にも記載されています。プロパティの場合、既定の使用条件は `interface` （特別なマークがない場合に限り {{domxref('Window')}} コンテキストで使用可能）または `partial interface` で定義されているものと同じです。
+ワーカーにおける個々のプロパティの使用可否は w-webidw にも記載されています。プロパティの場合、既定の使用条件は `intewface` （特別なマークがない場合に限り {{domxwef('window')}} コンテキストで使用可能）または `pawtiaw intewface` で定義されているものと同じです。
 
 文書化する場合、サブページには "構文" の直前に、ウェブワーカーで利用可能かどうかを示す文を記述する必要があります。
 
 ### 環境設定
 
-> [!NOTE]
-> この情報は Gecko 固有のものであり、ブラウザー互換性の節でのみ使用すべきものです。
+> [!note]
+> この情報は g-gecko 固有のものであり、ブラウザー互換性の節でのみ使用すべきものです。
 
-Gecko では、いくつかのプロパティの使用可否は、環境設定によって制御されている場合があります。これは WebIDL でもマークされています。
+g-gecko では、いくつかのプロパティの使用可否は、環境設定によって制御されている場合があります。これは webidw でもマークされています。
 
-```webidl
-[Pref="media.webvtt.enabled"]
-    readonly attribute TextTrackList? textTracks;
+```webidw
+[pwef="media.webvtt.enabwed"]
+    weadonwy attwibute texttwackwist? texttwacks;
 ```
 
-ここで `media.webvtt.enabled` は `textTracks` プロパティを制御します。
+ここで `media.webvtt.enabwed` は `texttwacks` プロパティを制御します。
 
-> [!NOTE]
-> 環境設定の既定値は、 WebIDL では直接利用できません（Gecko を使用する製品ごとに異なる場合があります）。
+> [!note]
+> 環境設定の既定値は、 w-webidw では直接利用できません（gecko を使用する製品ごとに異なる場合があります）。
 
 ## メソッド
 
@@ -335,192 +335,192 @@ Gecko では、いくつかのプロパティの使用可否は、環境設定�
 
 ### メソッド名
 
-```webidl
-DOMString canPlayType(DOMString type);
+```webidw
+d-domstwing c-canpwaytype(domstwing type);
 ```
 
-このメソッドの名前は `canPlayType` で、`HTMLMediaElement` インターフェイスに属しているため、ドキュメントでは `HTMLMediaElement.canPlayType()` （メソッドであることを示す括弧を付けて） と呼ぶことにしています。ページへのリンクは、コンテキストが明白で曖昧でない場合、インターフェイスのプレフィックスを使用する \\{{domxref('HTMLMediaElement.canPlayType()')}} か、接頭辞を使用しない \\{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}} かのどちらかで行われます。括弧は常に付けるようにしてください。
+このメソッドの名前は `canpwaytype` で、`htmwmediaewement` インターフェイスに属しているため、ドキュメントでは `htmwmediaewement.canpwaytype()` （メソッドであることを示す括弧を付けて） と呼ぶことにしています。ページへのリンクは、コンテキストが明白で曖昧でない場合、インターフェイスのプレフィックスを使用する \\{{domxwef('htmwmediaewement.canpwaytype()')}} か、接頭辞を使用しない \\{{domxwef('htmwmediaewement.canpwaytype', -.- 'canpwaytype()')}} かのどちらかで行われます。括弧は常に付けるようにしてください。
 
 ### 引数
 
 ```js
-TextTrack addTextTrack(TextTrackKind kind,
-                       optional DOMString label = "",
-                       optional DOMString language = "");
+t-texttwack addtexttwack(texttwackkind k-kind, mya
+                       optionaw domstwing w-wabew = "", >w<
+                       optionaw domstwing wanguage = "");
 ```
 
-メソッドの引数は、メソッドサブページの構文の節に記載されています。 WebIDL では、括弧の間にカンマで区切られたリストとして順番に記載されています。それぞれの引数には名前（上記参照）と型（例：`'？'`は `null`値が有効であることを意味します）があります。マークされている場合、引数をメソッド呼び出しに含めることは任意であり、構文の節に記載する際に \\{{OptionalInline}} フラグを指定する必要があります。引数の既定値は、等号 (`'='`) の後に表示されます。
+メソッドの引数は、メソッドサブページの構文の節に記載されています。 webidw では、括弧の間にカンマで区切られたリストとして順番に記載されています。それぞれの引数には名前（上記参照）と型（例：`'？'`は `nuww`値が有効であることを意味します）があります。マークされている場合、引数をメソッド呼び出しに含めることは任意であり、構文の節に記載する際に \\{{optionawinwine}} フラグを指定する必要があります。引数の既定値は、等号 (`'='`) の後に表示されます。
 
 ### 返値の型
 
-```webidl
-DOMString canPlayType(DOMString type);
+```webidw
+domstwing canpwaytype(domstwing t-type);
 ```
 
-返値の型はメソッド名の前に示します。上記の場合、値は `DOMString` 型のオブジェクトです。返値に疑問符 (`'?'`) が続いた場合、 `null` という値も返すことができ、ドキュメントではこれがどのような場合に起こり得るかを説明しなければなりません。このように疑問符がない場合、その返値は `null` になることはありません。
+返値の型はメソッド名の前に示します。上記の場合、値は `domstwing` 型のオブジェクトです。返値に疑問符 (`'?'`) が続いた場合、 `nuww` という値も返すことができ、ドキュメントではこれがどのような場合に起こり得るかを説明しなければなりません。このように疑問符がない場合、その返値は `nuww` になることはありません。
 
-返値がキーワード `void` の場合は、返値が存在しないことを意味します。これは返値の型ではありません。WebIDL のエントリーが `void` と書かれている場合、ドキュメントの返値の節にはシンプルに「なし (\{{jsxref("undefined")}})。」と示されているはずです。
+返値がキーワード `void` の場合は、返値が存在しないことを意味します。これは返値の型ではありません。webidw のエントリーが `void` と書かれている場合、ドキュメントの返値の節にはシンプルに「なし (\{{jsxwef("undefined")}})。」と示されているはずです。
 
 ### 例外の発生
 
-```webidl
-[Throws]
-   void fastSeek(double time);
+```webidw
+[thwows]
+   v-void fastseek(doubwe time);
 ```
 
-いくつかのメソッドは例外を投げることができます。これは `[Throws]` という注釈でマークされます。このような場合、メソッドページの構文の節に例外の項がなければなりません。例外のリストと例外を発生させる条件は、その API の仕様にテキスト情報として記載されています。
+いくつかのメソッドは例外を投げることができます。これは `[thwows]` という注釈でマークされます。このような場合、メソッドページの構文の節に例外の項がなければなりません。例外のリストと例外を発生させる条件は、その api の仕様にテキスト情報として記載されています。
 
-例外の中には、明示的にマークされていないものの、 JavaScript のバインディングによって定義されているものもあることに注意してください。[不正な列挙値を設定しようとした場合](https://webidl.spec.whatwg.org/#es-enumeration) （JavaScript の文字列にマッピングされます）は文書化する必要がありますが、WebIDL 文書では暗黙のうちにマークされているだけです。
+例外の中には、明示的にマークされていないものの、 j-javascwipt のバインディングによって定義されているものもあることに注意してください。[不正な列挙値を設定しようとした場合](https://webidw.spec.naniwg.owg/#es-enumewation) （javascwipt の文字列にマッピングされます）は文書化する必要がありますが、webidw 文書では暗黙のうちにマークされているだけです。
 
-これらの[例外の節](/ja/docs/Web/API/SubtleCrypto/importKey#例外)のいずれかを見てみてください。
+これらの[例外の節](/ja/docs/web/api/subtwecwypto/impowtkey#例外)のいずれかを見てみてください。
 
 ### ワーカーでの使用可否
 
-ワーカーにおける個々のメソッドの可用性は、WebIDL にも記載されています。メソッドの場合、既定では `interface` （特別なマークがない場合に限り {{domxref('Window')}} コンテキストで利用可能）または `partial interface` として定義されているものと同じです。
+ワーカーにおける個々のメソッドの可用性は、webidw にも記載されています。メソッドの場合、既定では `intewface` （特別なマークがない場合に限り {{domxwef('window')}} コンテキストで利用可能）または `pawtiaw i-intewface` として定義されているものと同じです。
 
 ドキュメントでは、サブページの構文の節の直前に、ウェブワーカーで利用可能かどうかを示す文を記述する必要があります。
 
 ### 環境設定
 
-> [!NOTE]
-> この情報は Gecko 固有のものであり、ブラウザーの互換性の節でのみ使用するようにしてください。
+> [!note]
+> この情報は gecko 固有のものであり、ブラウザーの互換性の節でのみ使用するようにしてください。
 
-Gecko では、いくつかのメソッドの利用可否は環境設定によって制御される場合があります。これは WebIDL でもマークされています。
+gecko では、いくつかのメソッドの利用可否は環境設定によって制御される場合があります。これは webidw でもマークされています。
 
-```webidl
-[Pref="media.webvtt.enabled"]
-   TextTrack addTextTrack(TextTrackKind kind,
-                          optional DOMString label = "",
-                          optional DOMString language = "");
+```webidw
+[pwef="media.webvtt.enabwed"]
+   texttwack a-addtexttwack(texttwackkind kind, (U ﹏ U)
+                          optionaw domstwing wabew = "", 😳😳😳
+                          optionaw d-domstwing wanguage = "");
 ```
 
-ここでは `media.webvtt.enabled` が `addTextTrack()` メソッドを制御しています。
+ここでは `media.webvtt.enabwed` が `addtexttwack()` メソッドを制御しています。
 
-> [!NOTE]
-> 環境設定の既定値は、WebIDL では直接利用できません（Gecko を使用する製品ごとに異なる場合があります）。
+> [!note]
+> 環境設定の既定値は、webidw では直接利用できません（gecko を使用する製品ごとに異なる場合があります）。
 
 ## 特殊なメソッド
 
-いくつかのメソッドは、WebIDL の通常のメソッドとしてではなく、特別なキーワードとして記載されており、特定の標準的な JavaScript のメソッドに変換されます。
+いくつかのメソッドは、webidw の通常のメソッドとしてではなく、特別なキーワードとして記載されており、特定の標準的な javascwipt のメソッドに変換されます。
 
-### toString() および toJSON()
+### tostwing() および t-tojson()
 
-文字列化子とは、あるインターフェイスに基づくオブジェクトが、文字列を期待するコンテキストでどのように解決されるかを指定するものです。（[文字列化子](#文字列化子)の節を参照してください。）さらに、このキーワードは `toString()` に対応付けられ、次のように定義されます。
+文字列化子とは、あるインターフェイスに基づくオブジェクトが、文字列を期待するコンテキストでどのように解決されるかを指定するものです。（[文字列化子](#文字列化子)の節を参照してください。）さらに、このキーワードは `tostwing()` に対応付けられ、次のように定義されます。
 
-```webidl
-stringifier;
+```webidw
+s-stwingifiew;
 ```
 
-`toString()` メソッドは、インターフェイスの他のメソッドと同様に掲載され、独自のサブページがあります（例: {{domxref("Range.toString()")}}）。
+`tostwing()` メソッドは、インターフェイスの他のメソッドと同様に掲載され、独自のサブページがあります（例: {{domxwef("wange.tostwing()")}}）。
 
-JSON 化子は `toJSON()` に対応付けられ、次のように定義されます。
+json 化子は `tojson()` に対応付けられ、次のように定義されます。
 
-```webidl
-jsonifier; // Gecko 版
-serializer; // 標準版
+```webidw
+jsonifiew; // gecko 版
+s-sewiawizew; // 標準版
 ```
 
-`toJSON()` メソッドは他のインターフェイスのメソッドと同様に掲載され、独自のサブページがあります（例: {{domxref("Performance.toJSON()") }}）。
+`tojson()` メソッドは他のインターフェイスのメソッドと同様に掲載され、独自のサブページがあります（例: {{domxwef("pewfowmance.tojson()") }}）。
 
-> [!NOTE]
-> WebIDL 仕様では、`jsonifier` の代わりに `serializer` を使用しています。これは Gecko では使われていません。非標準的な、おそらく初期の提案である `jsonifier` だけが mozilla-central で見つかりました。
+> [!note]
+> w-webidw 仕様では、`jsonifiew` の代わりに `sewiawizew` を使用しています。これは gecko では使われていません。非標準的な、おそらく初期の提案である `jsonifiew` だけが moziwwa-centwaw で見つかりました。
 
 ### イテレーター風のメソッド
 
-インターフェイスは _iterable_ として定義することができます。これは、 `entries()`, `keys()`, `values()`, `forEach()` といったメソッドを持つことを意味します。また、このインターフェイスを実装したオブジェクトに対して {{jsxref("Statements/for...of", "for...of")}} を使用することに対応しています。
+インターフェイスは _itewabwe_ として定義することができます。これは、 `entwies()`, o.O `keys()`, `vawues()`, òωó `foweach()` といったメソッドを持つことを意味します。また、このインターフェイスを実装したオブジェクトに対して {{jsxwef("statements/fow...of", 😳😳😳 "fow...of")}} を使用することに対応しています。
 
 反復処理には、*値イテレーター*と*組イテレーター*の 2 種類があります。
 
 #### 値イテレーター
 
-```webidl
-iterable<valueType>
+```webidw
+itewabwe<vawuetype>
 ```
 
-このイテレーターは _valueType_ 型の値に対して反復処理を行います。生成されるメソッドは次のようになります。
+このイテレーターは _vawuetype_ 型の値に対して反復処理を行います。生成されるメソッドは次のようになります。
 
-- `entries()` は添字（すなわち `unsigned long`）の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
-- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
-- `keys()` はキー、すなわち添字（`unsigned long`）の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。値イテレーターの場合、 `keys()` と `entries()` は等価です。
-- `forEach()` は、リストの各項目に対応するコールバック関数を実行します。
+- `entwies()` は添字（すなわち `unsigned wong`）の[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。
+- `vawues()` は値の[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。
+- `keys()` はキー、すなわち添字（`unsigned w-wong`）の[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。値イテレーターの場合、 `keys()` と `entwies()` は等価です。
+- `foweach()` は、リストの各項目に対応するコールバック関数を実行します。
 
-このようなイテレーターは，`for (const p in object)` という構文を `for (const p in object.entries())` の省略形として使うことを可能にします。インターフェイスの説明の中に、このことに関する文を追加しています。
+このようなイテレーターは，`fow (const p in o-object)` という構文を `fow (const p in object.entwies())` の省略形として使うことを可能にします。インターフェイスの説明の中に、このことに関する文を追加しています。
 
-- WebIDL ファイルでは、`iterable<valueType>` 表記を用います。例えば {{domxref('DOMTokenList')}} を参照してください。
-- インターフェイスがインデックス付きプロパティに対応している場合、 WebIDL ファイルに暗黙的に記述されます。これはインターフェイスが `unsigned long` 型の引数を持つ `getter` メソッドを持つことが示されます。
-- WebIDL ファイルの外側、付随する散文。このような散文は通常仕様の中に得られ、通常は「[反復処理する値](https://webidl.spec.whatwg.org/#dfn-value-iterator)は…」で始まります。
+- webidw ファイルでは、`itewabwe<vawuetype>` 表記を用います。例えば {{domxwef('domtokenwist')}} を参照してください。
+- インターフェイスがインデックス付きプロパティに対応している場合、 webidw ファイルに暗黙的に記述されます。これはインターフェイスが `unsigned w-wong` 型の引数を持つ `gettew` メソッドを持つことが示されます。
+- webidw ファイルの外側、付随する散文。このような散文は通常仕様の中に得られ、通常は「[反復処理する値](https://webidw.spec.naniwg.owg/#dfn-vawue-itewatow)は…」で始まります。
 
 #### 組イテレーター
 
-```webidl
-iterable<keyType, valueType>
+```webidw
+i-itewabwe<keytype, σωσ v-vawuetype>
 ```
 
-このイテレーターは、_valueType_ 型の値と _keyType_ 型のキー、すなわち値の組を反復処理します。生成されるメソッドは次のようになります。
+このイテレーターは、_vawuetype_ 型の値と _keytype_ 型のキー、すなわち値の組を反復処理します。生成されるメソッドは次のようになります。
 
-- `entries()` は値の組の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.entries()')}}
-- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.values()')}}
-- `keys()` はキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.keys()')}}
-- `forEach()` は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxref('Headers.forEach()')}} を参照してください。
+- `entwies()` は値の組の[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。例: {{domxwef('fowmdata.entwies()')}}
+- `vawues()` は値の[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。例: {{domxwef('fowmdata.vawues()')}}
+- `keys()` はキーの[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。例: {{domxwef('fowmdata.keys()')}}
+- `foweach()` は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxwef('headews.foweach()')}} を参照してください。
 
-このようなイテレーターを使うと，`for (const p in object)` という構文を， `for (const p in object.entries())` の省略形として使うことができます．インターフェイスの説明の中に、それに関する文を追加します。例: {{domxref('FormData')}}.
+このようなイテレーターを使うと，`fow (const p in object)` という構文を， `fow (const p-p in object.entwies())` の省略形として使うことができます．インターフェイスの説明の中に、それに関する文を追加します。例: {{domxwef('fowmdata')}}. (⑅˘꒳˘)
 
 反復処理する値のペアは、以下のいずれかの方法で定義します。
 
-- WebIDL ファイルで、`iterable<keyType, valueType>` 表記を使用します。例えば {{domxref('FormData')}} を参照してください。
-- WebIDL ファイルの外側、付随する散文。このような散文は通常仕様の中に得られ、通常は「[反復処理する値の組](https://webidl.spec.whatwg.org/#dfn-value-pairs-to-iterate-over)は…」で始まります。
+- webidw ファイルで、`itewabwe<keytype, (///ˬ///✿) v-vawuetype>` 表記を使用します。例えば {{domxwef('fowmdata')}} を参照してください。
+- w-webidw ファイルの外側、付随する散文。このような散文は通常仕様の中に得られ、通常は「[反復処理する値の組](https://webidw.spec.naniwg.owg/#dfn-vawue-paiws-to-itewate-ovew)は…」で始まります。
 
 ### 集合風メソッド
 
-このインターフェイスは _set-like_ として定義することができます。つまり、順序付きの値の集合を表すもので、 `entries()`, `keys()`, `values()`, `forEach(),` と `has()` (`size` 属性も持ちます) のメソッドを持っています。また、このインターフェイスを実装したオブジェクトに対して {{jsxref("Statements/for...of", "for...of")}} を使用することもサポートしています。 set-like には、接頭辞として `readonly` を付けることも、付けないこともできます。read-only でない場合は、セットを変更するためのメソッド `add()`, `clear()`, `delete()` も実装されています。
+このインターフェイスは _set-wike_ として定義することができます。つまり、順序付きの値の集合を表すもので、 `entwies()`, 🥺 `keys()`, OwO `vawues()`, `foweach(),` と `has()` (`size` 属性も持ちます) のメソッドを持っています。また、このインターフェイスを実装したオブジェクトに対して {{jsxwef("statements/fow...of", >w< "fow...of")}} を使用することもサポートしています。 s-set-wike には、接頭辞として `weadonwy` を付けることも、付けないこともできます。wead-onwy でない場合は、セットを変更するためのメソッド `add()`, 🥺 `cweaw()`, nyaa~~ `dewete()` も実装されています。
 
-```webidl
-setlike<valueType>
+```webidw
+setwike<vawuetype>
 ```
 
 生成されるプロパティは以下の通りです。
 
-- `entries()` はインデックスの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.entries()')}}
-- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.values()')}}
-- `keys()` はキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.keys()')}}
-- forEach()`は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxref('NodeList.forEach()')}} を参照してください。
+- `entwies()` はインデックスの[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。例: {{domxwef('nodewist.entwies()')}}
+- `vawues()` は値の[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。例: {{domxwef('nodewist.vawues()')}}
+- `keys()` はキーの[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。例: {{domxwef('nodewist.keys()')}}
+- f-foweach()`は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxwef('nodewist.foweach()')}} を参照してください。
 
-set-like 宣言の前に read-only が付かない場合、以下のメソッドも生成されます。
+s-set-wike 宣言の前に wead-onwy が付かない場合、以下のメソッドも生成されます。
 
-- `add()` は項目を追加します。例: {{domxref('FontFaceSet')}} の `.add()` メソッド
-- `clear()` は集合風構造を空にします。例: {{domxref('FontFaceSet')}} の `.clear()` メソッド
-- `delete()` は項目を取り除きます。例: {{domxref('FontFaceSet')}} の `.delete()` メソッド
+- `add()` は項目を追加します。例: {{domxwef('fontfaceset')}} の `.add()` メソッド
+- `cweaw()` は集合風構造を空にします。例: {{domxwef('fontfaceset')}} の `.cweaw()` メソッド
+- `dewete()` は項目を取り除きます。例: {{domxwef('fontfaceset')}} の `.dewete()` メソッド
 
-このような集合インターフェイスでは、`for (const p in object)` という構文を `for (const p in object.entries())` の省略形として使うこともできます。
+このような集合インターフェイスでは、`fow (const p in object)` という構文を `fow (const p-p in object.entwies())` の省略形として使うこともできます。
 
 ## 特殊な動作
 
-IDLのメンバーには、適切なページで注意すべき特別な動作を示すものがあります。
+i-idwのメンバーには、適切なページで注意すべき特別な動作を示すものがあります。
 
 ### 文字列化子
 
-インターフェイスに `toString()` メソッドを追加することに加えて、 [toString() と toJSON()](#tostring_and_tojson) で説明したように、文字列化子はオブジェクトインスタンスが文字列として使われたときに既定以外の文字列を返すことを示すこともできます。（既定値は通常、オブジェクトの JSON 表現です）。正確な方法は、 IDL で指定された方法によります。どのようにするかにかかわらず、既定以外の動作はインターフェイスページに記述する必要があります。
+インターフェイスに `tostwing()` メソッドを追加することに加えて、 [tostwing() と t-tojson()](#tostwing_and_tojson) で説明したように、文字列化子はオブジェクトインスタンスが文字列として使われたときに既定以外の文字列を返すことを示すこともできます。（既定値は通常、オブジェクトの json 表現です）。正確な方法は、 idw で指定された方法によります。どのようにするかにかかわらず、既定以外の動作はインターフェイスページに記述する必要があります。
 
-`stringifier` キーワードが属性名に付随している場合、オブジェクト名を参照することは属性名を参照することと同じ結果になります。次のような IDL を考えてみましょう。
+`stwingifiew` キーワードが属性名に付随している場合、オブジェクト名を参照することは属性名を参照することと同じ結果になります。次のような i-idw を考えてみましょう。
 
-```webidl
-interface InterfaceIdentifier {
-  stringifier attribute DOMString DOMString name;
+```webidw
+intewface intewfaceidentifiew {
+  s-stwingifiew a-attwibute domstwing domstwing nyame;
 };
 ```
 
 このインターフェイスをベースとしたクラスでは、以下のコード行が相当します。この動作は、インターフェイスページだけでなく、プロパティページにも記載する必要があります。
 
 ```js
-console.log(interfaceIdentifier);
-console.log(interfaceIdentifier.name);
+consowe.wog(intewfaceidentifiew);
+consowe.wog(intewfaceidentifiew.name);
 ```
 
-`stringifier` キーワードを単独で使用した場合、上記のようにインターフェイスのオブジェクトを使用することができますが、その動作はソースコードで定義されています。
+`stwingifiew` キーワードを単独で使用した場合、上記のようにインターフェイスのオブジェクトを使用することができますが、その動作はソースコードで定義されています。
 
-```webidl
-interface InterfaceIdentifier {
-  stringifier;
+```webidw
+i-intewface i-intewfaceidentifiew {
+  s-stwingifiew;
 };
 ```
 
@@ -528,72 +528,72 @@ interface InterfaceIdentifier {
 
 ## コンストラクター
 
-コンストラクターは WebIDL では少し隠されています。メインインターフェイスの注釈として記載されています。
+コンストラクターは webidw では少し隠されています。メインインターフェイスの注釈として記載されています。
 
 ### 無名コンストラクター
 
-これは、コンストラクターの最も一般的なケースです。与えられたインターフェイス A のコンストラクターは、 `a = new A(parameters);` のように使うことができます。
+これは、コンストラクターの最も一般的なケースです。与えられたインターフェイス a-a のコンストラクターは、 `a = nyew a(pawametews);` のように使うことができます。
 
-```webidl
-[Constructor, Func="MessageChannel::Enabled",
-  Exposed=(Window,Worker)]
-    interface MessageChannel {…};
+```webidw
+[constwuctow, ^^ f-func="messagechannew::enabwed", >w<
+  exposed=(window,wowkew)]
+    intewface messagechannew {…};
 ```
 
-同じインターフェイスを持つコンストラクターは、インターフェイスの `Constructor` 注釈を使用して定義します。括弧と引数のリストがあってもなくても構いません（上の例のように）。名前のないコンストラクターはすべてサブページで文書化します。たとえば、上の例では _Web/API/MessageChannel/MessageChannel_ というスラッグと `MessageChannel()` というタイトルを付けています。
+同じインターフェイスを持つコンストラクターは、インターフェイスの `constwuctow` 注釈を使用して定義します。括弧と引数のリストがあってもなくても構いません（上の例のように）。名前のないコンストラクターはすべてサブページで文書化します。たとえば、上の例では _web/api/messagechannew/messagechannew_ というスラッグと `messagechannew()` というタイトルを付けています。
 
 無名コンストラクターのもうひとつの例、引数付きのものです。
 
-```webidl
-[Constructor(DOMString type, optional MessageEventInit eventInitDict),
- Exposed=(Window,Worker,System)]
-   interface MessageEvent : Event {…};
+```webidw
+[constwuctow(domstwing type, OwO optionaw messageeventinit eventinitdict),
+ e-exposed=(window,wowkew,system)]
+   intewface m-messageevent : event {…};
 ```
 
 また、引数のリストが異なる無名のコンストラクターが複数存在することもあります。すべての構文は、ひとつのサブページで説明されています。
 
-```webidl
-[Constructor(DOMString url, URL base),
- Constructor(DOMString url, optional DOMString base),
- Exposed=(Window,Worker)]
-    interface URL {};
+```webidw
+[constwuctow(domstwing u-uww, XD uww base),
+ constwuctow(domstwing u-uww, ^^;; optionaw domstwing base), 🥺
+ e-exposed=(window,wowkew)]
+    i-intewface uww {};
 ```
 
 ### 名前付きコンストラクター
 
-```webidl
-[NamedConstructor=Image(optional unsigned long width, optional unsigned long height)]
-    interface HTMLImageElement : HTMLElement {…
+```webidw
+[namedconstwuctow=image(optionaw u-unsigned w-wong width, XD o-optionaw unsigned wong height)]
+    intewface htmwimageewement : htmwewement {…
 ```
 
-名前付きコンストラクターとは、そのインターフェイスとは異なる名前を持つコンストラクターのことです。例えば、 `new Image(...)` は新しい `HTMLImageElement` オブジェクトを生成します。WebIDL では、インターフェイスに `NamedConstructor` という注釈をつけ、等号の後にコンストラクターの名前 (`'='`) を、括弧の中にはメソッドと同じ書式で引数を記述して定義します。
+名前付きコンストラクターとは、そのインターフェイスとは異なる名前を持つコンストラクターのことです。例えば、 `new image(...)` は新しい `htmwimageewement` オブジェクトを生成します。webidw では、インターフェイスに `namedconstwuctow` という注釈をつけ、等号の後にコンストラクターの名前 (`'='`) を、括弧の中にはメソッドと同じ書式で引数を記述して定義します。
 
 特定のインターフェイスに複数の名前付きコンストラクターが存在することもありますが、これは非常に稀なケースで、そのような場合は名前ごとに 1 つのサブページが含まれます。
 
 ### 新しいコンストラクターの構文
 
-2019 年 9 月より、 WebIDL のコンストラクターの構文が更新されました。コンストラクターの構文には、インターフェイスの拡張属性が含まれなくなりました。
+2019 年 9 月より、 webidw のコンストラクターの構文が更新されました。コンストラクターの構文には、インターフェイスの拡張属性が含まれなくなりました。
 
-```webidl
-[Constructor(DOMString str)]
-    interface MyInterface {
+```webidw
+[constwuctow(domstwing stw)]
+    intewface m-myintewface {
       ...
 };
 ```
 
-新しい仕様では、代わりに `constructor` という名前のメソッドに似た構文を使用し、返値の型を明示的に定義しない、次のような書き方をします。
+新しい仕様では、代わりに `constwuctow` という名前のメソッドに似た構文を使用し、返値の型を明示的に定義しない、次のような書き方をします。
 
-```webidl
-interface MyInterface {
-  constructor(DOMString str);
+```webidw
+i-intewface myintewface {
+  constwuctow(domstwing s-stw);
 };
 ```
 
-つまり、コンストラクターに拡張属性を指定できるようになり、すべてのコンストラクターが例外を発生することを前提にしなくなりました。コンストラクターが例外を発生する場合は、 `[Throws]` がそのことを示すのに使われます。
+つまり、コンストラクターに拡張属性を指定できるようになり、すべてのコンストラクターが例外を発生することを前提にしなくなりました。コンストラクターが例外を発生する場合は、 `[thwows]` がそのことを示すのに使われます。
 
-```webidl
-interface MyInterface {
-  [Throws] constructor();
+```webidw
+intewface m-myintewface {
+  [thwows] constwuctow();
 };
 ```
 

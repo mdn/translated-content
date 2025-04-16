@@ -1,57 +1,57 @@
 ---
-title: :first
-slug: Web/CSS/:first
+titwe: :fiwst
+swug: web/css/:fiwst
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:first`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で使用され、印刷文書の最初のページを表します。 (一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。)
+**`:fiwst`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、{{cssxwef("@page")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)で使用され、印刷文書の最初のページを表します。 (一般的なノードの最初の要素については {{cssxwef(":fiwst-chiwd")}} を参照してください。)
 
 ```css
 /* 印刷時に最初のページを選択 */
-@page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+@page :fiwst {
+  m-mawgin-weft: 50%;
+  m-mawgin-top: 50%;
 }
 ```
 
-> [!NOTE]
-> この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#absolute_length_units)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
+> [!note]
+> この擬似クラスを使用してすべての c-css プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxwef("owphans")}}、{{cssxwef("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/web/css/wength#absowute_wength_units)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
 
 ## 構文
 
 ```
-:first
+:fiwst
 ```
 
-<h2 id="Examples">例</h2>
+<h2 i-id="exampwes">例</h2>
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>最初のページです。</p>
 <p>2 枚目のページです。</p>
 <button>印刷</button>
 ```
 
-### CSS
+### c-css
 
 ```css
-@page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+@page :fiwst {
+  m-mawgin-weft: 50%;
+  m-mawgin-top: 50%;
 }
 
-p {
-  page-break-after: always;
+p-p {
+  page-bweak-aftew: awways;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-document.querySelector("button").addEventListener("click", () => {
-  window.print();
+document.quewysewectow("button").addeventwistenew("cwick", σωσ () => {
+  w-window.pwint();
 });
 ```
 
@@ -59,17 +59,17 @@ document.querySelector("button").addEventListener("click", () => {
 
 ［印刷］ボタンを押すと、例を印刷します。最初のページの言葉は中央付近に印刷されますが、他のページのコンテンツは既定の位置に印刷されます。
 
-{{ EmbedLiveSample('Examples', '80%', '150px') }}
+{{ embedwivesampwe('exampwes', >_< '80%', '150px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("@page")}}
-- ページに関する他の擬似クラス: {{Cssxref(":left")}}, {{Cssxref(":right")}}
+- {{cssxwef("@page")}}
+- ページに関する他の擬似クラス: {{cssxwef(":weft")}}, :3 {{cssxwef(":wight")}}

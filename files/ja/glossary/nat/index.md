@@ -1,15 +1,15 @@
 ---
-title: NAT
-slug: Glossary/NAT
+titwe: nyat
+swug: gwossawy/nat
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**NAT** (Network Address Translation: ネットワークアドレス変換) は、複数のコンピューターで IP アドレスを共有するための技術です。NAT は一意のアドレスをローカルネットワーク上のコンピューターへ割り当て、正しい場所へデータを届けるために、ネットワークトラフィックを調整します。
+**nat** (netwowk a-addwess t-twanswation: ネットワークアドレス変換) は、複数のコンピューターで i-ip アドレスを共有するための技術です。nat は一意のアドレスをローカルネットワーク上のコンピューターへ割り当て、正しい場所へデータを届けるために、ネットワークトラフィックを調整します。
 
 ## 詳細情報
 
 ### 一般知識
 
-- [WebRTC プロトコル](/ja/docs/Web/API/WebRTC_API/Protocols)
-- Wikipedia 上の「[NAT](https://ja.wikipedia.org/wiki/ネットワークアドレス変換)」の記事
+- [webwtc プロトコル](/ja/docs/web/api/webwtc_api/pwotocows)
+- w-wikipedia 上の「[nat](https://ja.wikipedia.owg/wiki/ネットワークアドレス変換)」の記事

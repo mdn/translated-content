@@ -1,35 +1,35 @@
 ---
-title: "スキルテスト: HTML アクセシビリティ"
-slug: Learn_web_development/Core/Accessibility/Test_your_skills/HTML
-original_slug: Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: htmw アクセシビリティ"
+swug: w-weawn_web_devewopment/cowe/accessibiwity/test_youw_skiwws/htmw
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/accessibiwity/test_youw_skiwws:_htmw_accessibiwity
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、 [HTML: アクセシビリティの良き基本](/ja/docs/Learn_web_development/Core/Accessibility/HTML)の記事を理解したかどうかを評価することです。
+このスキルテストの目的は、 [htmw: アクセシビリティの良き基本](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/htmw)の記事を理解したかどうかを評価することです。
 
-> [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!note]
+> このページのインタラクティブエディターや、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
-## HTML アクセシビリティ 1
+## h-htmw アクセシビリティ 1
 
-この課題では、テキストの意味付けと、なぜそれがアクセシビリティによいのかについての理解をテストします。指定されたテキストはアクションボタン付きの単純な情報パネルですが、 HTML は実にひどいものです。
+この課題では、テキストの意味付けと、なぜそれがアクセシビリティによいのかについての理解をテストします。指定されたテキストはアクションボタン付きの単純な情報パネルですが、 h-htmw は実にひどいものです。
 
-適切な意味づけを使用した HTML に更新してください。テキストの意味付けさえしっかりしていれば、全く同じ見てくれを再現したり、テキストのサイズを変更したりすることについて、あまり心配する必要はありません。
+適切な意味づけを使用した h-htmw に更新してください。テキストの意味付けさえしっかりしていれば、全く同じ見てくれを再現したり、テキストのサイズを変更したりすることについて、あまり心配する必要はありません。
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/html/html-a11y1.html", '100%', 1100)}}
+{{embedghwivesampwe("weawning-awea/accessibiwity/tasks/htmw-css/htmw/htmw-a11y1.htmw", σωσ '100%', >_< 1100)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y1-download.html)しましょう。
+> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/tasks/htmw-css/htmw/htmw-a11y1-downwoad.htmw)しましょう。
 
-## HTML アクセシビリティ 2
+## h-htmw アクセシビリティ 2
 
 2 つ目の課題では、 3 つの入力フィールドを含むフォームがあります。必要なことは次の通りです。
 
@@ -39,39 +39,39 @@ l10n:
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/html/html-a11y2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/accessibiwity/tasks/htmw-css/htmw/htmw-a11y2.htmw", :3 '100%', 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y2-download.html)しましょう。
+> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/tasks/htmw-css/htmw/htmw-a11y2-downwoad.htmw)しましょう。
 
-## HTML アクセシビリティ 3
+## htmw アクセシビリティ 3
 
 この課題では、段落内の情報リンクをすべてアクセシビリティのある良いリンクに変えてください。
 
 - 最初の 2 つのリンクは、通常のウェブページへのリンクです。
-- 3 つ目は PDF へのリンクで、 8MB と大きいものです。
-- 4 番目のリンクは Word 文書に飛ぶので、ユーザーはそれを処理する何らかのアプリケーションをインストールする必要があります。
+- 3 つ目は pdf へのリンクで、 8mb と大きいものです。
+- 4 番目のリンクは wowd 文書に飛ぶので、ユーザーはそれを処理する何らかのアプリケーションをインストールする必要があります。
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/html/html-a11y3.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/accessibiwity/tasks/htmw-css/htmw/htmw-a11y3.htmw", (U ﹏ U) '100%', 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y3-download.html)しましょう。
+> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/tasks/htmw-css/htmw/htmw-a11y3-downwoad.htmw)しましょう。
 
-## HTML アクセシビリティ 4
+## htmw アクセシビリティ 4
 
-最後の HTML アクセシビリティ課題では、アクセシビリティ上の問題がある単純な画像ギャラリーがあります。修正することができますか？
+最後の h-htmw アクセシビリティ課題では、アクセシビリティ上の問題がある単純な画像ギャラリーがあります。修正することができますか？
 
 - ヘッダー画像はアクセシビリティの課題があり、ギャラリー画像も同様です。
-- ヘッダー画像をさらに改善させ、 CSS を使用して実装することで、間違いなくアクセシビリティを向上させることができます。なぜその方が良いのでしょうか？また、その解決策はどのようなものでしょうか？
+- ヘッダー画像をさらに改善させ、 css を使用して実装することで、間違いなくアクセシビリティを向上させることができます。なぜその方が良いのでしょうか？また、その解決策はどのようなものでしょうか？
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/html/html-a11y4.html", '100%', 1100)}}
+{{embedghwivesampwe("weawning-awea/accessibiwity/tasks/htmw-css/htmw/htmw-a11y4.htmw", -.- '100%', (ˆ ﻌ ˆ)♡ 1100)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y4-download.html)しましょう。
+> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/tasks/htmw-css/htmw/htmw-a11y4-downwoad.htmw)しましょう。

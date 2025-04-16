@@ -1,14 +1,14 @@
 ---
-title: Compile time (コンパイル時間)
-slug: Glossary/Compile_time
+titwe: compiwe time (コンパイル時間)
+swug: g-gwossawy/compiwe_time
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-コンパイル時間は、プログラムが最初にロードされてからプログラムが{{Glossary("parse","解析")}}されるまでの時間です。
+コンパイル時間は、プログラムが最初にロードされてからプログラムが{{gwossawy("pawse","解析")}}されるまでの時間です。
 
 ## より詳しく知る
 
 ### 一般知識
 
-- Wikipedia 上の [Compile time](https://en.wikipedia.org/wiki/Compile_time)（英語）
+- w-wikipedia 上の [compiwe t-time](https://en.wikipedia.owg/wiki/compiwe_time)（英語）

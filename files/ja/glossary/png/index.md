@@ -1,14 +1,14 @@
 ---
-title: PNG
-slug: Glossary/PNG
+titwe: png
+swug: gwossawy/png
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**PNG** (_Portable Network Graphics_) は、可逆データ圧縮をサポートする画像ファイル形式です。
+**png** (_powtabwe n-nyetwowk g-gwaphics_) は、可逆データ圧縮をサポートする画像ファイル形式です。
 
 ## 関連項目
 
 ### 一般知識
 
-- Wikipedia 上の [PNG](https://ja.wikipedia.org/wiki/Portable_Network_Graphics)
+- w-wikipedia 上の [png](https://ja.wikipedia.owg/wiki/powtabwe_netwowk_gwaphics)

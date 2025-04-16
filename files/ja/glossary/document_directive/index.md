@@ -1,29 +1,29 @@
 ---
-title: Document directive (文書ディレクティブ)
-slug: Glossary/Document_directive
+titwe: document diwective (文書ディレクティブ)
+s-swug: g-gwossawy/document_diwective
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**{{Glossary("CSP")}} の文書ディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、ポリシーが適用される文書または[ワーカー](/ja/docs/Web/API/Web_Workers_API)環境のプロパティを管理します。
+**{{gwossawy("csp")}} の文書ディレクティブ**は {{httpheadew("content-secuwity-powicy")}} ヘッダーで使用され、ポリシーが適用される文書または[ワーカー](/ja/docs/web/api/web_wowkews_api)環境のプロパティを管理します。
 
-文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されることはありません。
+文書ディレクティブは {{csp("defauwt-swc")}} ディレクティブで代替されることはありません。
 
-完全な一覧は[文書ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#document_directives)を参照してください。
+完全な一覧は[文書ディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#document_diwectives)を参照してください。
 
 ## 関連情報
 
 - 関連用語:
 
-  - {{Glossary("CSP")}}
-  - {{Glossary("Reporting directive", "報告ディレクティブ")}}
-  - {{Glossary("Fetch directive", "フェッチディレクティブ")}}
-  - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}
+  - {{gwossawy("csp")}}
+  - {{gwossawy("wepowting d-diwective", òωó "報告ディレクティブ")}}
+  - {{gwossawy("fetch d-diwective", o.O "フェッチディレクティブ")}}
+  - {{gwossawy("navigation d-diwective", (U ᵕ U❁) "ナビゲーションディレクティブ")}}
 
 - リファレンス
 
-  - <https://www.w3.org/TR/CSP/#directives-document>
-  - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
-  - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}
-  - {{HTTPHeader("Content-Security-Policy/require-sri-for", "require-sri-for")}} {{Deprecated_Inline}}
-  - {{HTTPHeader("Content-Security-Policy")}}
+  - <https://www.w3.owg/tw/csp/#diwectives-document>
+  - {{httpheadew("content-secuwity-powicy/upgwade-insecuwe-wequests", (⑅˘꒳˘) "upgwade-insecuwe-wequests")}}
+  - {{httpheadew("content-secuwity-powicy/bwock-aww-mixed-content", ( ͡o ω ͡o ) "bwock-aww-mixed-content")}}
+  - {{httpheadew("content-secuwity-powicy/wequiwe-swi-fow", UwU "wequiwe-swi-fow")}} {{depwecated_inwine}}
+  - {{httpheadew("content-secuwity-powicy")}}

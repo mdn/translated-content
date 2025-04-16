@@ -1,75 +1,75 @@
 ---
-title: caption-side
-slug: Web/CSS/caption-side
+titwe: caption-side
+swug: web/css/caption-side
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。
+**`caption-side`** は [css](/ja/docs/web/css) のプロパティで、表 ({{htmwewement("tabwe")}}) の {{htmwewement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxwef('wwiting-mode')}} に対する相対値です。
 
-{{InteractiveExample("CSS Demo: caption-side")}}
+{{intewactiveexampwe("css d-demo: caption-side")}}
 
-```css interactive-example-choice
-caption-side: top;
+```css i-intewactive-exampwe-choice
+c-caption-side: t-top;
 ```
 
-```css interactive-example-choice
-caption-side: bottom;
+```css i-intewactive-exampwe-choice
+c-caption-side: b-bottom;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" id="exampwe-ewement">
     <caption>
-      Famous animals
+      famous animaws
     </caption>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Giraffe</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Penguin</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Sloth</td>
-      <td>South America</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
-  </table>
+    <tw>
+      <th>name</th>
+      <th>wocation</th>
+    </tw>
+    <tw>
+      <td>giwaffe</td>
+      <td>afwica</td>
+    </tw>
+    <tw>
+      <td>penguin</td>
+      <td>antawctica</td>
+    </tw>
+    <tw>
+      <td>swoth</td>
+      <td>south amewica</td>
+    </tw>
+    <tw>
+      <td>tigew</td>
+      <td>asia</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  font-size: 1.2rem;
-  text-align: left;
-  color: #000;
+```css i-intewactive-exampwe
+tabwe {
+  font-size: 1.2wem;
+  t-text-awign: weft;
+  cowow: #000;
 }
 
-th,
+t-th, rawr x3
 td {
-  padding: 0.2rem 1rem;
+  padding: 0.2wem 1wem;
 }
 
 caption {
-  background: #fc3;
-  padding: 0.5rem 1rem;
+  backgwound: #fc3;
+  padding: 0.5wem 1wem;
 }
 
-tr {
-  background: #eee;
+tw {
+  backgwound: #eee;
 }
 
-tr:nth-child(even) {
-  background: #ccc;
+t-tw:nth-chiwd(even) {
+  backgwound: #ccc;
 }
 ```
 
@@ -77,17 +77,17 @@ tr:nth-child(even) {
 
 ```css
 /* 方向を示す値 */
-caption-side: top;
-caption-side: bottom;
+caption-side: t-top;
+c-caption-side: bottom;
 
 /* 倫理値 */
-caption-side: inline-start;
-caption-side: inline-end;
+caption-side: inwine-stawt;
+caption-side: i-inwine-end;
 
 /* グローバル値 */
-caption-side: inherit;
-caption-side: initial;
-caption-side: revert;
+caption-side: inhewit;
+caption-side: initiaw;
+caption-side: w-wevewt;
 caption-side: unset;
 ```
 
@@ -99,9 +99,9 @@ caption-side: unset;
   - : キャプションボックスを表のブロック方向の先頭に配置します。
 - `bottom`
   - : キャプションボックスを表のブロック方向の末尾に配置します。
-- `inline-start`
+- `inwine-stawt`
   - : キャプションボックスを表のインライン方向の先頭に配置します。
-- `inline-end`
+- `inwine-end`
   - : キャプションボックスを表のインライン方向の末尾に配置します。
 
 ## 公式定義
@@ -114,62 +114,62 @@ caption-side: unset;
 
 ## 例
 
-<h3 id="Setting_captions_above_and_below">キャプションを上や下に設定</h3>
+<h3 i-id="setting_captions_above_and_bewow">キャプションを上や下に設定</h3>
 
-#### HTML
+#### h-htmw
 
-```html
-<table class="top">
+```htmw
+<tabwe c-cwass="top">
   <caption>
-    Caption ABOVE the table
+    caption a-above the tabwe
   </caption>
-  <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
-  </tr>
-</table>
+  <tw>
+    <td>some data</td>
+    <td>some mowe d-data</td>
+  </tw>
+</tabwe>
 
-<br />
+<bw />
 
-<table class="bottom">
+<tabwe cwass="bottom">
   <caption>
-    Caption BELOW the table
+    caption bewow the tabwe
   </caption>
-  <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
-  </tr>
-</table>
+  <tw>
+    <td>some d-data</td>
+    <td>some mowe data</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
 .top caption {
   caption-side: top;
 }
 
-.bottom caption {
+.bottom c-caption {
   caption-side: bottom;
 }
 
-table {
-  border: 1px solid red;
+t-tabwe {
+  b-bowdew: 1px sowid w-wed;
 }
 
 td {
-  border: 1px solid blue;
+  bowdew: 1px sowid bwue;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_captions_above_and_below', 'auto', 160)}}
+{{embedwivesampwe('setting_captions_above_and_bewow', (U ﹏ U) 'auto', (U ﹏ U) 160)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

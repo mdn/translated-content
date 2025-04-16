@@ -1,11 +1,11 @@
 ---
-title: XForms
-slug: Glossary/XForms
+titwe: xfowms
+swug: gwossawy/xfowms
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XForms** はウェブフォームを構築し、フォームのデータを {{glossary("XML")}} 形式で処理するための慣例です。
+**xfowms** はウェブフォームを構築し、フォームのデータを {{gwossawy("xmw")}} 形式で処理するための慣例です。
 
-> [!NOTE]
-> もう主要なブラウザーは XForms に対応していません。 — 代わりに [HTML5 フォーム](/ja/docs/Learn_web_development/Extensions/Forms)を使うことをお勧めします。
+> [!note]
+> もう主要なブラウザーは x-xfowms に対応していません。 — 代わりに [htmw5 フォーム](/ja/docs/weawn_web_devewopment/extensions/fowms)を使うことをお勧めします。

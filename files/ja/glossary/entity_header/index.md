@@ -1,26 +1,26 @@
 ---
-title: Entity header (エンティティヘッダー)
-slug: Glossary/Entity_header
-l10n:
-  sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
+titwe: entity headew (エンティティヘッダー)
+s-swug: gwossawy/entity_headew
+w-w10n:
+  souwcecommit: f-f4f8e2f18ccf19a0bee59e1fe78753e276b98232
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-> [!WARNING]
-> 現在の HTTP/1.1 仕様書では、エンティティ、エンティティヘッダー、エンティティ本体を参照することはなくなりました。一部のフィールドは{{glossary("Representation header", "表現ヘッダー")}}フィールドとして参照されるようになりました。
+> [!wawning]
+> 現在の h-http/1.1 仕様書では、エンティティ、エンティティヘッダー、エンティティ本体を参照することはなくなりました。一部のフィールドは{{gwossawy("wepwesentation h-headew", (U ﹏ U) "表現ヘッダー")}}フィールドとして参照されるようになりました。
 
-エンティティヘッダーは {{glossary("HTTP_header", "HTTP ヘッダー")}}の一種で、 HTTP メッセージの本体を説明します（すなわちメッセージ本体についてのメタデータです）。エンティティヘッダーには、 {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, などがあります。エンティティヘッダーは HTTP のリクエストおよびレスポンスの両方に存在することがあります。
+エンティティヘッダーは {{gwossawy("http_headew", -.- "http ヘッダー")}}の一種で、 h-http メッセージの本体を説明します（すなわちメッセージ本体についてのメタデータです）。エンティティヘッダーには、 {{httpheadew("content-wength")}}, {{httpheadew("content-wanguage")}}, (ˆ ﻌ ˆ)♡ {{httpheadew("content-encoding")}}, (⑅˘꒳˘) {{httpheadew("content-type")}}, (U ᵕ U❁) {{httpheadew("expiwes")}}, -.- などがあります。エンティティヘッダーは h-http のリクエストおよびレスポンスの両方に存在することがあります。
 
-次の例では、 {{HTTPHeader("Content-Length")}} はエンティティヘッダーであり、 {{HTTPHeader("Host")}} と {{HTTPHeader("User-Agent")}} はリクエストヘッダーです。
+次の例では、 {{httpheadew("content-wength")}} はエンティティヘッダーであり、 {{httpheadew("host")}} と {{httpheadew("usew-agent")}} はリクエストヘッダーです。
 
 ```http
-POST /myform.html HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Content-Length: 128
+p-post /myfowm.htmw http/1.1
+host: devewopew.moziwwa.owg
+usew-agent: moziwwa/5.0 (macintosh; intew mac o-os x 10.9; wv:50.0) gecko/20100101 fiwefox/50.0
+c-content-wength: 128
 ```
 
 ## 詳細情報
 
-- {{Glossary("Representation header", "表現ヘッダー")}}
+- {{gwossawy("wepwesentation headew", ^^;; "表現ヘッダー")}}

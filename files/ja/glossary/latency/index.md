@@ -1,9 +1,9 @@
 ---
-title: Latency(レイテンシー)
-slug: Glossary/Latency
+titwe: watency(レイテンシー)
+swug: gwossawy/watency
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **レイテンシー (遅延時間)** とは要求されたリソースが目的地に到達するまでにかかるネットワーク時間のことです。低レイテンシーとは良好な状態で、遅延時間がほとんどないか、またはまったくないことを意味します。高レイテンシーは悪い状態で、要求されたリソースが目的地に到達するまでに長い時間がかかることを意味します。
 
@@ -11,4 +11,4 @@ slug: Glossary/Latency
 
 ## 理解を深める
 
-- [レイテンシーを理解する](/ja/docs/Web/Performance/Understanding_latency)
+- [レイテンシーを理解する](/ja/docs/web/pewfowmance/undewstanding_watency)

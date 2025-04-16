@@ -1,10 +1,10 @@
 ---
-title: IRC
-slug: Glossary/IRC
+titwe: iwc
+swug: gwossawy/iwc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**IRC** (_Internet Relay Chat_) は、インターネット接続と IRC サーバーを介してメッセージを送受信する IRC クライアントを必要とする世界的なチャットシステムです。
+**iwc** (_intewnet w-weway c-chat_) は、インターネット接続と i-iwc サーバーを介してメッセージを送受信する i-iwc クライアントを必要とする世界的なチャットシステムです。
 
-1980 年代後半に Jarrko Oikarinen によって設計された IRC は、{{glossary("TCP")}} を使用し、オープンプロトコルです。 IRC サーバーは、多数の IRC チャネル（各自が独自の ID を持つ）の 1 つに接続されているすべての人にメッセージをブロードキャストします。
+1980 年代後半に j-jawwko o-oikawinen によって設計された i-iwc は、{{gwossawy("tcp")}} を使用し、オープンプロトコルです。 i-iwc サーバーは、多数の iwc チャネル（各自が独自の id を持つ）の 1 つに接続されているすべての人にメッセージをブロードキャストします。

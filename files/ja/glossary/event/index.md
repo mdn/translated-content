@@ -1,19 +1,19 @@
 ---
-title: Event (イベント)
-slug: Glossary/Event
+titwe: event (イベント)
+swug: gwossawy/event
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Events は [DOM](/ja/docs/Glossary/DOM) 要素によって生成される資産であり、Javascript コードから操作できます。
+e-events は [dom](/ja/docs/gwossawy/dom) 要素によって生成される資産であり、javascwipt コードから操作できます。
 
 ## 関連項目
 
 ### 技術リファレンス
 
-- [MDN の Event 文書](/ja/docs/Web/API/Event)
+- [mdn の e-event 文書](/ja/docs/web/api/event)
 
 ### 一般知識
 
-- [Official website](https://www.w3.org/TR/DOM-Level-2-Events/events.html)
-- Wikipedia の [DOM events](https://en.wikipedia.org/wiki/DOM_events)
+- [officiaw w-website](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw)
+- w-wikipedia の [dom e-events](https://en.wikipedia.owg/wiki/dom_events)

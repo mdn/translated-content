@@ -1,13 +1,13 @@
 ---
-title: Scroll container (スクロールコンテナー)
-slug: Glossary/Scroll_container
-l10n:
-  sourceCommit: 2b112aef57df0649462db5d9f47d782a7aa1f25c
+titwe: scwoww containew (スクロールコンテナー)
+s-swug: g-gwossawy/scwoww_containew
+w-w10n:
+  s-souwcecommit: 2b112aef57df0649462db5d9f47d782a7aa1f25c
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**スクロールコンテナー** (scroll container) は、スクロールバーが存在するかどうかにかかわらず、コンテンツをスクロールすることができる要素ボックスです。ユーザーエージェントは、CSS の {{cssxref("overflow")}} プロパティが `scroll` に設定されている場合、または `overflow` が `auto` に設定されていてコンテンツがコンテナーからあふれた場合に、要素ボックスにスクロールバーを追加してスクロールコンテナーにします。
+**スクロールコンテナー** (scwoww c-containew) は、スクロールバーが存在するかどうかにかかわらず、コンテンツをスクロールすることができる要素ボックスです。ユーザーエージェントは、css の {{cssxwef("ovewfwow")}} プロパティが `scwoww` に設定されている場合、または `ovewfwow` が `auto` に設定されていてコンテンツがコンテナーからあふれた場合に、要素ボックスにスクロールバーを追加してスクロールコンテナーにします。
 
 要素ボックスのコンテンツがその境界ボックスをあふれた場合、ユーザーはスクロールバーを使用して、表示されない切り取られたコンテンツをスクロールすることができます。
 
@@ -19,8 +19,8 @@ l10n:
 
 ## 関連情報
 
-- [CSS 構成要素: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
-- [スクロールスナップ](/ja/docs/Glossary/Scroll_snap)、[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#scroll_snap_container)を含む
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
+- [css 構成要素: コンテンツのオーバーフロー](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/ovewfwow)
+- [スクロールスナップ](/ja/docs/gwossawy/scwoww_snap)、[スクロールスナップコンテナー](/ja/docs/gwossawy/scwoww_snap#scwoww_snap_containew)を含む
+- [css オーバーフロー](/ja/docs/web/css/css_ovewfwow)モジュール
+- [css オーバースクロール動作](/ja/docs/web/css/css_ovewscwoww_behaviow)モジュール
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)モジュール

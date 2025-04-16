@@ -1,44 +1,44 @@
 ---
-title: ::-moz-list-bullet
-slug: Web/CSS/::-moz-list-bullet
+titwe: ::-moz-wist-buwwet
+swug: w-web/css/::-moz-wist-buwwet
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-moz-list-bullet`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、順序なしリスト ({{htmlelement("ul")}}) のリスト項目 ({{htmlelement("li")}}) のマーカー（通常は点）を表します。
+**`::-moz-wist-buwwet`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)であり、順序なしリスト ({{htmwewement("uw")}}) のリスト項目 ({{htmwewement("wi")}}) のマーカー（通常は点）を表します。
 
 ## 構文
 
 ```css
-li::-moz-list-bullet
+w-wi::-moz-wist-buwwet
 ```
 
 ## 例
 
 ### リスト項目のマーカーのスタイル設定
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>item 3</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-::-moz-list-bullet {
-  color: red;
-  font-size: 1.5em;
+::-moz-wist-buwwet {
+  c-cowow: wed;
+  f-font-size: 1.5em;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Styling list item markers') }}
+{{ e-embedwivesampwe('stywing w-wist item mawkews') }}
 
 ## 仕様書
 
@@ -46,5 +46,5 @@ li::-moz-list-bullet
 
 ## 関連情報
 
-- {{cssxref(":-moz-list-number")}}
-- {{cssxref("::marker")}}
+- {{cssxwef(":-moz-wist-numbew")}}
+- {{cssxwef("::mawkew")}}

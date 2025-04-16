@@ -1,52 +1,52 @@
 ---
-title: "スキルテスト: WAI-ARIA"
-slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: wai-awia"
+swug: weawn_web_devewopment/cowe/accessibiwity/wai-awia_basics/test_youw_skiwws:_wai-awia
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、あなたが[WAI-ARIA の基本](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)の記事を理解したかどうかを評価することです。
+このスキルテストの目的は、あなたが[wai-awia の基本](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/wai-awia_basics)の記事を理解したかどうかを評価することです。
 
-> [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!note]
+> このページのインタラクティブエディターや、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
-## WAI-ARIA 1
+## w-wai-awia 1
 
-最初の ARIA の課題では、明らかにリストであることを意味している、意味づけされていないマークアップの節を表示します。使用する要素を変更することができないと想定して、スクリーンリーダーのユーザーにこれをリストとして認識させるにはどうすればよいでしょうか。
+最初の a-awia の課題では、明らかにリストであることを意味している、意味づけされていないマークアップの節を表示します。使用する要素を変更することができないと想定して、スクリーンリーダーのユーザーにこれをリストとして認識させるにはどうすればよいでしょうか。
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/aria/aria1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/accessibiwity/tasks/htmw-css/awia/awia1.htmw", rawr x3 '100%', rawr 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/aria/aria1-download.html)しましょう。
+> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/tasks/htmw-css/awia/awia1-downwoad.htmw)しましょう。
 
-## WAI-ARIA 2
+## w-wai-awia 2
 
-2 つ目の WAI-ARIA の課題では、単純な検索形式を表示していますが、アクセシビリティを改善するためにいくつかの WAI-ARIA の機能を追加してください。
+2 つ目の w-wai-awia の課題では、単純な検索形式を表示していますが、アクセシビリティを改善するためにいくつかの w-wai-awia の機能を追加してください。
 
-1. 検索フォームをスクリーンリーダーによってページに別個のランドマークとして呼び出されるようにし、簡単に見つけられるようにするにはどうすればよいでしょうか。
-2. DOM に目に見えるテキストラベルを明示的に追加することなく、検索入力に適切なラベルを付けるにはどうすればよいでしょうか。
+1. σωσ 検索フォームをスクリーンリーダーによってページに別個のランドマークとして呼び出されるようにし、簡単に見つけられるようにするにはどうすればよいでしょうか。
+2. σωσ d-dom に目に見えるテキストラベルを明示的に追加することなく、検索入力に適切なラベルを付けるにはどうすればよいでしょうか。
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/accessibility/tasks/html-css/aria/aria2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/accessibiwity/tasks/htmw-css/awia/awia2.htmw", >_< '100%', 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/aria/aria2-download.html)しましょう。
+> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/tasks/htmw-css/awia/awia2-downwoad.htmw)しましょう。
 
-## WAI-ARIA 3
+## w-wai-awia 3
 
-最後の WAI-ARIA の課題では、前回の [CSS と JavaScript のスキルテスト](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility)で見た例を返します。前回と同様に、動物の名前のリストを表示する単純なアプリがあります。動物の名前を 1 つクリックすると、その動物の詳細な説明がリスト以下のボックスに現れます。ここでは、マウスとキーボードでアクセスできるバージョンから始めています。
+最後の wai-awia の課題では、前回の [css と javascwipt のスキルテスト](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/css_and_javascwipt/test_youw_skiwws:_css_and_javascwipt_accessibiwity)で見た例を返します。前回と同様に、動物の名前のリストを表示する単純なアプリがあります。動物の名前を 1 つクリックすると、その動物の詳細な説明がリスト以下のボックスに現れます。ここでは、マウスとキーボードでアクセスできるバージョンから始めています。
 
-ここでの問題は、 DOM が新しい説明を表示させるために変更されたとき、スクリーンリーダーは何が変更されたのかわからないということです。説明の変更がスクリーンリーダーによってアナウンスされるように更新することはできますか。
+ここでの問題は、 dom が新しい説明を表示させるために変更されたとき、スクリーンリーダーは何が変更されたのかわからないということです。説明の変更がスクリーンリーダーによってアナウンスされるように更新することはできますか。
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/js/aria/aria-js1-download.html)しましょう。
+> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/tasks/js/awia/awia-js1-downwoad.htmw)しましょう。

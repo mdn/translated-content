@@ -1,9 +1,9 @@
 ---
-title: Localization (ローカライゼーション)
-slug: Glossary/Localization
+titwe: wocawization (ローカライゼーション)
+swug: gwossawy/wocawization
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **ローカライゼーション**（ローカライズ）とは、ソフトウェアのユーザーインターフェイスを特定の文化に適合させるプロセスです。
 
@@ -13,7 +13,7 @@ slug: Glossary/Localization
 - 計測単位（例えば、ヨーロッパではキロメートル、アメリカではマイル）
 - 文字の方向（例えば、ヨーロッパ言語では左から右へ、アラビア語では右から左へ）
 - アルファベットの大文字・小文字（例えば、英語では週に大文字を使い、スペイン語では小文字を使う）
-- ことわざの対応（例えば、 "raining cats and dogs" は直訳すると意味不明になる）
+- ことわざの対応（例えば、 "waining c-cats and dogs" は直訳すると意味不明になる）
 - 言葉遣いの使用（例えば、日本語では敬語は常体と異なる）
 - 数値形式（例えば、ドイツでは 10 000,00 がアメリカでは 10,000.00）
 - 日付形式
@@ -29,5 +29,5 @@ slug: Glossary/Localization
 
 ### 一般知識
 
-- ウィキペディアの[ローカライゼーション](https://ja.wikipedia.org/wiki/ローカライゼーション)
-- ウィキペディアの[国際化と地域化](https://ja.wikipedia.org/wiki/国際化と地域化)
+- ウィキペディアの[ローカライゼーション](https://ja.wikipedia.owg/wiki/ローカライゼーション)
+- ウィキペディアの[国際化と地域化](https://ja.wikipedia.owg/wiki/国際化と地域化)

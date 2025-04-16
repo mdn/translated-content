@@ -1,221 +1,221 @@
 ---
-title: counters()
-slug: Web/CSS/counters
-l10n:
-  sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
+titwe: countews()
+swug: web/css/countews
+w-w10n:
+  s-souwcecommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`counters()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)により、カウンターが入れ子になっている場合にマーカーを組み合わせることができます。この関数は、指定された文字列と、存在する場合は名前付きで入れ子になったカウンターの現在の値を連結した文字列を返します。 3 番目はオプションの引数で、リストのスタイルを定義することができます。
+**`countews()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)により、カウンターが入れ子になっている場合にマーカーを組み合わせることができます。この関数は、指定された文字列と、存在する場合は名前付きで入れ子になったカウンターの現在の値を連結した文字列を返します。 3 番目はオプションの引数で、リストのスタイルを定義することができます。
 
-`counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/string) に対応するすべての箇所で用いることができます。
+`countew()` 関数は、ふつうは[擬似要素](/ja/docs/web/css/pseudo-ewements)の中の {{cssxwef("content")}} で用いることが多いものの、理論的には [`<stwing>`](/ja/docs/web/css/stwing) に対応するすべての箇所で用いることができます。
 
-`counters()` 関数には `counters(<name>, <string>)` と `counters(<name>, <string>, <style>)` の 2 つの形があります。生成されるテキストは、 `<name>` で指定された名前のすべてのカウンターの値を、最も外側から内側に向けて並べ、指定された `<string>` で区切ったものです。カウンターは指定された `<style>` でレンダリングされ、`<style>` が指定されていない場合は `decimal` が既定値となります。
+`countews()` 関数には `countews(<name>, (U ﹏ U) <stwing>)` と `countews(<name>, <stwing>, (⑅˘꒳˘) <stywe>)` の 2 つの形があります。生成されるテキストは、 `<name>` で指定された名前のすべてのカウンターの値を、最も外側から内側に向けて並べ、指定された `<stwing>` で区切ったものです。カウンターは指定された `<stywe>` でレンダリングされ、`<stywe>` が指定されていない場合は `decimaw` が既定値となります。
 
-{{InteractiveExample("CSS Demo: counters()", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: countews()", òωó "tabbed-standawd")}}
 
-```css interactive-example
-ol {
-  counter-reset: index;
-  list-style-type: none;
+```css i-intewactive-exampwe
+o-ow {
+  countew-weset: i-index;
+  w-wist-stywe-type: n-nyone;
 }
 
-li::before {
-  counter-increment: index;
-  content: counters(index, ".", decimal) " ";
+wi::befowe {
+  countew-incwement: index;
+  content: countews(index, ʘwʘ ".", decimaw) " ";
 }
 ```
 
-```html interactive-example
-<ol>
-  <li>Mars</li>
-  <li>
-    Saturn
-    <ol>
-      <li>Mimas</li>
-      <li>Enceladus</li>
-      <li>
-        <ol>
-          <li>Voyager</li>
-          <li>Cassini</li>
-        </ol>
-      </li>
-      <li>Tethys</li>
-    </ol>
-  </li>
-  <li>
-    Uranus
-    <ol>
-      <li>Titania</li>
-    </ol>
-  </li>
-</ol>
+```htmw i-intewactive-exampwe
+<ow>
+  <wi>maws</wi>
+  <wi>
+    satuwn
+    <ow>
+      <wi>mimas</wi>
+      <wi>encewadus</wi>
+      <wi>
+        <ow>
+          <wi>voyagew</wi>
+          <wi>cassini</wi>
+        </ow>
+      </wi>
+      <wi>tethys</wi>
+    </ow>
+  </wi>
+  <wi>
+    uwanus
+    <ow>
+      <wi>titania</wi>
+    </ow>
+  </wi>
+</ow>
 ```
 
 ## 構文
 
 ```css
-/* 単純な使用法 - スタイルは既定で decimal */
-counters(counter-name, '.');
+/* 単純な使用法 - スタイルは既定で d-decimaw */
+countews(countew-name, /(^•ω•^) '.');
 
 /* カウンターの表示の変更 */
-counters(counter-name, '-', upper-roman)
+c-countews(countew-name, ʘwʘ '-', uppew-woman)
 ```
 
-[カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)自身には視覚的効果が何もありません。 `counters()` 関数（および {{cssxref("counter", "counter()")}} 関数）は開発者が定義したコンテンツを返すことで利用価値が生まれます。
+[カウンター](/ja/docs/web/css/css_countew_stywes/using_css_countews)自身には視覚的効果が何もありません。 `countews()` 関数（および {{cssxwef("countew", σωσ "countew()")}} 関数）は開発者が定義したコンテンツを返すことで利用価値が生まれます。
 
 ### 値
 
-`counters()` 関数は 2 つまたは 3 つの引数を受け付けます。最初の引数は `<counter-name>` です。 2 番目の引数は接続する `<string>` です。 3 番目の引数はオプションで、 `<counter-style>` です。
+`countews()` 関数は 2 つまたは 3 つの引数を受け付けます。最初の引数は `<countew-name>` です。 2 番目の引数は接続する `<stwing>` です。 3 番目の引数はオプションで、 `<countew-stywe>` です。
 
-- `<counter-name>`
-  - : カウンターを識別する {{cssxref("&lt;custom-ident&gt;")}} であり、{{cssxref("counter-reset")}} および {{cssxref("counter-increment")}} に用いた名前と同じもので、大文字小文字を区別します。カウンター名は名前をダッシュ 2 つで始めることはできず、また `none`, `unset`, `initial`, `inherit` という名前にすることはできません。また、インラインの単一利用のカウンターでは、 {{cssxref("symbols")}} 関数を名前付きカウンターの代わりに利用することができます（[`symbols()` に対応しているブラウザーの場合](/ja/docs/Web/CSS/symbols#ブラウザーの互換性)）。
-- {{cssxref("&lt;string&gt;")}}
-  - : 任意の数のテキスト文字です。ラテン文字以外は Unicode エスケープシーケンスでエンコードする必要があります。例えば `\000A9` は著作権記号を表します。
-- `<counter-style>`
-  - : カウンタースタイル名または [`symbols()`](/ja/docs/Web/CSS/symbols) 関数です。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの単純な定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)があります。省略された場合は、既定で `decimal` になります。
+- `<countew-name>`
+  - : カウンターを識別する {{cssxwef("&wt;custom-ident&gt;")}} であり、{{cssxwef("countew-weset")}} および {{cssxwef("countew-incwement")}} に用いた名前と同じもので、大文字小文字を区別します。カウンター名は名前をダッシュ 2 つで始めることはできず、また `none`, OwO `unset`, 😳😳😳 `initiaw`, `inhewit` という名前にすることはできません。また、インラインの単一利用のカウンターでは、 {{cssxwef("symbows")}} 関数を名前付きカウンターの代わりに利用することができます（[`symbows()` に対応しているブラウザーの場合](/ja/docs/web/css/symbows#ブラウザーの互換性)）。
+- {{cssxwef("&wt;stwing&gt;")}}
+  - : 任意の数のテキスト文字です。ラテン文字以外は unicode エスケープシーケンスでエンコードする必要があります。例えば `\000a9` は著作権記号を表します。
+- `<countew-stywe>`
+  - : カウンタースタイル名または [`symbows()`](/ja/docs/web/css/symbows) 関数です。カウンタースタイル名には `numewic`, 😳😳😳 `awphabetic`, `symbowic` などの単純な定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/web/css/css_countew_stywes)があります。省略された場合は、既定で `decimaw` になります。
 
-返値は、その要素の `<counter-name>` という名前の CSS カウンターセット内にあるすべてのカウンターの値を、 `<counter-style>` で定義されたカウンタースタイル（省略した場合は `decimal`）で含む文字列です。返される文字列は、最も外側から内側に向けて並べ、指定された `<string>` で区切ったものです。
+返値は、その要素の `<countew-name>` という名前の css カウンターセット内にあるすべてのカウンターの値を、 `<countew-stywe>` で定義されたカウンタースタイル（省略した場合は `decimaw`）で含む文字列です。返される文字列は、最も外側から内側に向けて並べ、指定された `<stwing>` で区切ったものです。
 
-> [!NOTE]
-> 結合前のカウンターについての情報は、 {{cssxref("counter", "counter()")}} 関数を参照してください。こちらは `<string>` を引数として取りません。
+> [!note]
+> 結合前のカウンターについての情報は、 {{cssxwef("countew", o.O "countew()")}} 関数を参照してください。こちらは `<stwing>` を引数として取りません。
 
 ### 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### 既定のカウンター値と大文字のローマ数字との比較
 
-この例には、 2 種類の `counters()` 関数が含まれます。 1 つは `<counter-style>` を設定しており、もう 1 つは既定値の `decimal` になります。
+この例には、 2 種類の `countews()` 関数が含まれます。 1 つは `<countew-stywe>` を設定しており、もう 1 つは既定値の `decimaw` になります。
 
-#### HTML
+#### h-htmw
 
-```html
-<ol>
-  <li>
-    <ol>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ol>
-  </li>
-  <li></li>
-  <li></li>
-  <li>
-    <ol>
-      <li></li>
-      <li>
-        <ol>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
+```htmw
+<ow>
+  <wi>
+    <ow>
+      <wi></wi>
+      <wi></wi>
+      <wi></wi>
+    </ow>
+  </wi>
+  <wi></wi>
+  <wi></wi>
+  <wi>
+    <ow>
+      <wi></wi>
+      <wi>
+        <ow>
+          <wi></wi>
+          <wi></wi>
+          <wi></wi>
+        </ow>
+      </wi>
+    </ow>
+  </wi>
+</ow>
 ```
 
-#### CSS
+#### css
 
-```css-nolint
-ol {
-  counter-reset: listCounter;
+```css-nowint
+o-ow {
+  countew-weset: w-wistcountew;
 }
-li {
-  counter-increment: listCounter;
+wi {
+  countew-incwement: wistcountew;
 }
-li::marker {
+wi::mawkew {
+  c-content:
+    countews(wistcountew, ( ͡o ω ͡o ) ".", uppew-woman) ") ";
+}
+wi::befowe {
   content:
-    counters(listCounter, ".", upper-roman) ") ";
-}
-li::before {
-  content:
-    counters(listCounter, ".") " == "
-    counters(listCounter, ".", lower-roman);
-}
-```
-
-#### 結果
-
-{{EmbedLiveSample("Comparing default counter value to uppercase roman numerals", "100%", 270)}}
-
-### decimal-leading-zero と lower-alpha との比較
-
-この例には、それぞれ異なる `<string>` および `<counter-style>` 値を持つ 3 つの `counters()` 関数が含まれます。
-
-#### HTML
-
-```html
-<ol>
-  <li>
-    <ol>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ol>
-  </li>
-  <li></li>
-  <li></li>
-  <li>
-    <ol>
-      <li></li>
-      <li>
-        <ol>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
-```
-
-#### CSS
-
-```css-nolint
-ol {
-  counter-reset: count;
-}
-li {
-  counter-increment: count;
-}
-li::marker {
-  content:
-    counters(count, "-", decimal-leading-zero) ") ";
-}
-li::before {
-  content:
-    counters(count, "～", upper-alpha) " == "
-    counters(count,  "*", lower-alpha);
+    countews(wistcountew, (U ﹏ U) ".") " == "
+    countews(wistcountew, (///ˬ///✿) ".", w-wowew-woman);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Comparing decimal-leading-zero counter value to lowercase letters", "100%", 270)}}
+{{embedwivesampwe("compawing defauwt c-countew vawue t-to uppewcase woman n-nyumewaws", >w< "100%", 270)}}
+
+### d-decimaw-weading-zewo と wowew-awpha との比較
+
+この例には、それぞれ異なる `<stwing>` および `<countew-stywe>` 値を持つ 3 つの `countews()` 関数が含まれます。
+
+#### htmw
+
+```htmw
+<ow>
+  <wi>
+    <ow>
+      <wi></wi>
+      <wi></wi>
+      <wi></wi>
+    </ow>
+  </wi>
+  <wi></wi>
+  <wi></wi>
+  <wi>
+    <ow>
+      <wi></wi>
+      <wi>
+        <ow>
+          <wi></wi>
+          <wi></wi>
+          <wi></wi>
+        </ow>
+      </wi>
+    </ow>
+  </wi>
+</ow>
+```
+
+#### c-css
+
+```css-nowint
+ow {
+  countew-weset: c-count;
+}
+wi {
+  countew-incwement: count;
+}
+wi::mawkew {
+  content:
+    countews(count, rawr "-", decimaw-weading-zewo) ") ";
+}
+w-wi::befowe {
+  content:
+    c-countews(count, mya "～", uppew-awpha) " == "
+    c-countews(count, ^^  "*", w-wowew-awpha);
+}
+```
+
+#### 結果
+
+{{embedwivesampwe("compawing decimaw-weading-zewo countew vawue to wowewcase wettews", 😳😳😳 "100%", mya 270)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-- {{cssxref("counter-set")}} プロパティ
-- {{cssxref("counter-reset")}} プロパティ
-- {{cssxref("counter-increment")}} プロパティ
-- {{cssxref("@counter-style")}} アットルール
-- CSS の [`counter()`](/ja/docs/Web/CSS/counter) 関数
-- {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
+- [css カウンターの使用](/ja/docs/web/css/css_countew_stywes/using_css_countews)
+- {{cssxwef("countew-set")}} プロパティ
+- {{cssxwef("countew-weset")}} プロパティ
+- {{cssxwef("countew-incwement")}} プロパティ
+- {{cssxwef("@countew-stywe")}} アットルール
+- c-css の [`countew()`](/ja/docs/web/css/countew) 関数
+- {{cssxwef("::mawkew")}} 擬似要素
+- [css リストとカウンター](/ja/docs/web/css/css_wists)モジュール
+- [css カウンタースタイル](/ja/docs/web/css/css_countew_stywes)モジュール
+- [css 生成コンテンツ](/ja/docs/web/css/css_genewated_content)モジュール

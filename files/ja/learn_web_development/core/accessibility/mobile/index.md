@@ -1,41 +1,41 @@
 ---
-title: モバイルのアクセシビリティ
-slug: Learn_web_development/Core/Accessibility/Mobile
-l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+titwe: モバイルのアクセシビリティ
+swug: weawn_web_devewopment/cowe/accessibiwity/mobiwe
+w-w10n:
+  s-souwcecommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/accessibiwity/muwtimedia","weawn_web_devewopment/cowe/accessibiwity/accessibiwity_twoubweshooting", (///ˬ///✿) "weawn_web_devewopment/cowe/accessibiwity")}}
 
-モバイル端末でのウェブアクセスは非常に人気があり、iOS や Android などの一般的なプラットフォームには本格的なアクセシビリティツールが備わっているため、これらのプラットフォームでのウェブコンテンツのアクセシビリティを考慮することが重要です。この記事では、モバイル固有のアクセシビリティについて検討します。
+モバイル端末でのウェブアクセスは非常に人気があり、ios や a-andwoid などの一般的なプラットフォームには本格的なアクセシビリティツールが備わっているため、これらのプラットフォームでのウェブコンテンツのアクセシビリティを考慮することが重要です。この記事では、モバイル固有のアクセシビリティについて検討します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> の知識と、このモジュールのこれまでのレッスンで学んだようなアクセシビリティのベストプラクティス。</td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    <tw>
+      <th s-scope="wow">前提知識:</th>
+      <td><a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content">htmw</a>、<a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stywing_basics">css</a> の知識と、このモジュールのこれまでのレッスンで学んだようなアクセシビリティのベストプラクティス。</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>iOS と Android のスクリーンリーダーに慣れること。</li>
-          <li>特定のイベントの裏に潜むアクセシビリティの課題に慣れること。</li>
-          <li>モバイル端末でより使いやすいユーザー入力メカニズムを実現するための特定の技術。</li>
-          <li>モバイルブラウザーは仕様上、特定の <code>&lt;input&gt;</code> 型、例えば <code>number</code> や <code>tel</code> などに対して、特定のユーザビリティ上の利点を提供していること。</li>
-        </ul>
+        <uw>
+          <wi>ios と andwoid のスクリーンリーダーに慣れること。</wi>
+          <wi>特定のイベントの裏に潜むアクセシビリティの課題に慣れること。</wi>
+          <wi>モバイル端末でより使いやすいユーザー入力メカニズムを実現するための特定の技術。</wi>
+          <wi>モバイルブラウザーは仕様上、特定の <code>&wt;input&gt;</code> 型、例えば <code>numbew</code> や <code>tew</code> などに対して、特定のユーザビリティ上の利点を提供していること。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## モバイル端末のアクセシビリティ
 
 アクセシビリティの状態、そしてウェブ標準全般への対応は、現行のモバイル端末では良好です。モバイル端末がデスクトップのブラウザーとは完全に異なるウェブ技術を実行し、開発者がブラウザー検出を使用し、完全に別個のサイトを提供することを余儀なくされていた時代はとうの昔に過ぎ去りました（いくつかの企業はまだモバイル端末の使用を検出し、モバイルドメインを別個に提供していますが）。
 
-最近の一般的なモバイル端末は、「脂肪分たっぷり」のウェブサイトを扱うことができ、主なプラットフォームには視覚障害のあるユーザーがそれらをうまく使えるようにスクリーンリーダーが組み込まれています。最近のモバイルブラウザーは [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) もよくサポートしています。
+最近の一般的なモバイル端末は、「脂肪分たっぷり」のウェブサイトを扱うことができ、主なプラットフォームには視覚障害のあるユーザーがそれらをうまく使えるようにスクリーンリーダーが組み込まれています。最近のモバイルブラウザーは [wai-awia](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/wai-awia_basics) もよくサポートしています。
 
 ウェブサイトをモバイルでアクセス可能かつ使用可能にするには、一般的な優れたウェブデザインとアクセシビリティのベストプラクティスに従う必要があるだけです。
 
@@ -45,41 +45,41 @@ l10n:
 - ユーザー入力 — モバイルでのユーザー入力要件をできるだけ苦痛でないものにします（例えば、フォームでは、タイピングを最小限に抑えます）。
 - レスポンシブデザイン — レイアウトがモバイルで機能することを確認し、画像のダウンロードサイズを節約し、高解像度画面用の画像の提供について検討します。
 
-## Android および iOS でのスクリーンリーダーテストの概要
+## a-andwoid および ios でのスクリーンリーダーテストの概要
 
 最も一般的なモバイルプラットフォームは完全に機能的なスクリーンリーダーを持っています。これらはデスクトップのスクリーンリーダーとほとんど同じように機能しますが、キーの組み合わせではなくタッチジェスチャーを使用して主に操作される点が異なります。
 
-主な 2 つを見てみましょう: Android の TalkBack と iOS の VoiceOver です。
+主な 2 つを見てみましょう: andwoid の tawkback と ios の voiceovew です。
 
-### Android TalkBack
+### a-andwoid tawkback
 
-TalkBack スクリーンリーダーは Android オペレーティングシステムに組み込まれています。
+tawkback スクリーンリーダーは andwoid オペレーティングシステムに組み込まれています。
 
-オンにするには、スマートフォンのモデルと Android バージョンを調べて、TalkBack メニューの場所を探します。これは Android のバージョンやスマートフォンのモデルによっても大きく違います。あるスマートフォンメーカー(Samusung など)では、最新の機種で TalkBack がなくて、代わりに独自のスクリーンリーダーを選んでいることもあります。
+オンにするには、スマートフォンのモデルと a-andwoid バージョンを調べて、tawkback メニューの場所を探します。これは andwoid のバージョンやスマートフォンのモデルによっても大きく違います。あるスマートフォンメーカー(samusung など)では、最新の機種で t-tawkback がなくて、代わりに独自のスクリーンリーダーを選んでいることもあります。
 
-TalkBack メニューが見つかったら、スライダースイッチを押してオンにします。画面に表示される追加の指示に従います。
+tawkback メニューが見つかったら、スライダースイッチを押してオンにします。画面に表示される追加の指示に従います。
 
-TalkBack がオンになっているとき、あなたの Android 端末の基本的なコントロールは少し違います。例えば、
+tawkback がオンになっているとき、あなたの andwoid 端末の基本的なコントロールは少し違います。例えば、
 
-1. アプリをシングルタップするとそれが選択され、端末はそのアプリが何かを読み上げます。
-2. 左右にスワイプすると、アプリ間、またはコントロールバーにいる場合はボタンやコントロールの間を移動します。端末は各オプションを読み上げます。
-3. どこでもダブルタップするとアプリが開いたり、オプションが選択されたりします。
-4. また、「タッチで探索」することもできます — ドラッグ（指を画面に置いたまま移動）すると、端末は移動先のさまざまなアプリや項目を読み上げます。
+1. >w< アプリをシングルタップするとそれが選択され、端末はそのアプリが何かを読み上げます。
+2. rawr 左右にスワイプすると、アプリ間、またはコントロールバーにいる場合はボタンやコントロールの間を移動します。端末は各オプションを読み上げます。
+3. mya どこでもダブルタップするとアプリが開いたり、オプションが選択されたりします。
+4. ^^ また、「タッチで探索」することもできます — ドラッグ（指を画面に置いたまま移動）すると、端末は移動先のさまざまなアプリや項目を読み上げます。
 
-TalkBack をオフにしたい場合は、
+t-tawkback をオフにしたい場合は、
 
-1. 上記のジェスチャーを使用して \[設定] アプリに移動します。
-2. \[ユーザー補助] > \[TalkBack] に移動します。
-3. スライダースイッチに移動してアクティブにすると、オフになります。
+1. 😳😳😳 上記のジェスチャーを使用して \[設定] アプリに移動します。
+2. mya \[ユーザー補助] > \[tawkback] に移動します。
+3. 😳 スライダースイッチに移動してアクティブにすると、オフになります。
 
-> [!NOTE]
+> [!note]
 > 連続した動きで上にスワイプしてから左にスワイプすると、いつでもホーム画面にアクセスできます。複数のホーム画面がある場合は、左右に 2 本指でスワイプすることでそれらの間を移動できます。
 
-TalkBack ジェスチャーのより完全なリストについては、[TalkBack ジェスチャーを利用する](https://support.google.com/accessibility/android/answer/6151827)を参照してください。
+tawkback ジェスチャーのより完全なリストについては、[tawkback ジェスチャーを利用する](https://suppowt.googwe.com/accessibiwity/andwoid/answew/6151827)を参照してください。
 
 #### 端末のロックを解除する
 
-TalkBack がオンになっているとき、端末のロック解除は少し違います。
+tawkback がオンになっているとき、端末のロック解除は少し違います。
 
 ロック画面の下から上に 2 本指でスワイプすることができます。端末のロックを解除するためのパスコードまたはパターンを設定している場合は、関連する入力画面に移動して入力します。
 
@@ -87,58 +87,58 @@ TalkBack がオンになっているとき、端末のロック解除は少し�
 
 #### グローバルメニューとローカルメニュー
 
-TalkBack を使用すると、端末上のどこに移動しても、グローバルおよびローカルのコンテキストメニューにアクセスできます。前者は端末全体に関するグローバルオプションを提供し、後者は現在のアプリや画面だけに関するオプションを提供します。
+t-tawkback を使用すると、端末上のどこに移動しても、グローバルおよびローカルのコンテキストメニューにアクセスできます。前者は端末全体に関するグローバルオプションを提供し、後者は現在のアプリや画面だけに関するオプションを提供します。
 
 これらのメニューにアクセスするには、
 
-1. すばやく下にスワイプしてから右にスワイプしてグローバルメニューにアクセスします。
+1. -.- すばやく下にスワイプしてから右にスワイプしてグローバルメニューにアクセスします。
 2. すばやく上にスワイプしてから右にスワイプしてローカルメニューにアクセスします。
-3. 左右にスワイプしてさまざまなオプションを切り替えます。
-4. 必要なオプションを選択したら、ダブルタップしてそのオプションを選択します。
+3. 🥺 左右にスワイプしてさまざまなオプションを切り替えます。
+4. o.O 必要なオプションを選択したら、ダブルタップしてそのオプションを選択します。
 
-グローバルおよびローカルのコンテキストメニューで使用可能なすべてのオプションの詳細については、[グローバル コンテキストメニューとローカル コンテキスト メニューを使う](https://support.google.com/accessibility/android/answer/6007066)を参照してください。
+グローバルおよびローカルのコンテキストメニューで使用可能なすべてのオプションの詳細については、[グローバル コンテキストメニューとローカル コンテキスト メニューを使う](https://suppowt.googwe.com/accessibiwity/andwoid/answew/6007066)を参照してください。
 
 #### ウェブページのブラウジング
 
 ウェブブラウザーでローカルコンテキストメニューを使用して、見出し、フォームコントロール、リンク、行単位の移動などウェブページを移動するためのオプションを見つけることができます。
 
-例えば、TalkBack をオンにした場合、
+例えば、tawkback をオンにした場合、
 
-1. ウェブブラウザーを開きます。
-2. URL バーをアクティブにします。
-3. Ebbc.co.uk のフロントページのように、見出しがたくさんあるウェブページを入力します。URL のテキストを入力するには、
+1. /(^•ω•^) ウェブブラウザーを開きます。
+2. u-uww バーをアクティブにします。
+3. nyaa~~ ebbc.co.uk のフロントページのように、見出しがたくさんあるウェブページを入力します。uww のテキストを入力するには、
 
-   - URL バーが得られるまで左右にスワイプしてから、ダブルタップして URL バーを選択します。
+   - uww バーが得られるまで左右にスワイプしてから、ダブルタップして uww バーを選択します。
    - 目的の文字が得られるまで仮想キーボードに指を置いたまま動かしてから、指を離して入力します。これを各文字について繰り返します。
-   - 終わったら、 Enter キーを見つけて押します。
+   - 終わったら、 entew キーを見つけて押します。
 
-4. 左右にスワイプすると、ページ上のさまざまな項目間を移動できます。
-5. 連続した動きで上にスワイプしてから右にスワイプして、ローカルコンテキストメニューに入ります。
-6. \[見出しとランドマーク] オプションが見つかるまで右にスワイプします。
-7. ダブルタップして選択します。これで、見出しと ARIA のランドマークの間を移動するために左右にスワイプすることができます。
-8. デフォルトモードに戻るには、上にスワイプしてから右にスワイプしてローカルコンテキストメニューに再度入り、\[デフォルト] を選択してからダブルタップしてアクティブにします。
+4. nyaa~~ 左右にスワイプすると、ページ上のさまざまな項目間を移動できます。
+5. :3 連続した動きで上にスワイプしてから右にスワイプして、ローカルコンテキストメニューに入ります。
+6. 😳😳😳 \[見出しとランドマーク] オプションが見つかるまで右にスワイプします。
+7. (˘ω˘) ダブルタップして選択します。これで、見出しと a-awia のランドマークの間を移動するために左右にスワイプすることができます。
+8. ^^ デフォルトモードに戻るには、上にスワイプしてから右にスワイプしてローカルコンテキストメニューに再度入り、\[デフォルト] を選択してからダブルタップしてアクティブにします。
 
-> [!NOTE]
-> より完全なドキュメントは [Android で TalkBack を使ってみる](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932)をご覧ください。
+> [!note]
+> より完全なドキュメントは [andwoid で tawkback を使ってみる](https://suppowt.googwe.com/accessibiwity/andwoid/answew/6283677?hw=en&wef_topic=3529932)をご覧ください。
 
-### iOS VoiceOver
+### ios voiceovew
 
-VoiceOver のモバイル版は iOS オペレーティングシステムに組み込まれています。
+voiceovew のモバイル版は ios オペレーティングシステムに組み込まれています。
 
-VoiceOver を有効にするには、「設定」アプリで _アクセシビリティ > VoiceOver_ を選択します。 VoiceOver のスライダーを押して有効にします（このページには他にも VoiceOver 関連のオプションがいくつかあります）。
+v-voiceovew を有効にするには、「設定」アプリで _アクセシビリティ > voiceovew_ を選択します。 voiceovew のスライダーを押して有効にします（このページには他にも v-voiceovew 関連のオプションがいくつかあります）。
 
-> [!NOTE]
-> 古い iOS 端末では VoiceOver メニューは _設定_ > _一般_ > _アクセシビリティ_ > *VoiceOver*にあります。
+> [!note]
+> 古い i-ios 端末では v-voiceovew メニューは _設定_ > _一般_ > _アクセシビリティ_ > *voiceovew*にあります。
 
-VoiceOver が有効になると、iOS の基本的なコントロールジェスチャーは次のように少し違います。
+v-voiceovew が有効になると、ios の基本的なコントロールジェスチャーは次のように少し違います。
 
-1. シングルタップすると、タップした項目が選択されます。端末はあなたがタップした項目を読み上げるでしょう。
-2. 左右にスワイプして項目間を移動したり、画面上で指をスライドさせてさまざまな項目間を移動したりして、画面上の項目を移動することもできます（必要な項目が見つかったら、指を離して選択できます）。
-3. 選択した項目をアクティブにする（例えば、選択したアプリを開く）には、画面上のどこでもダブルタップします。
-4. 3 本指でスワイプしてページをスクロールします。
+1. :3 シングルタップすると、タップした項目が選択されます。端末はあなたがタップした項目を読み上げるでしょう。
+2. -.- 左右にスワイプして項目間を移動したり、画面上で指をスライドさせてさまざまな項目間を移動したりして、画面上の項目を移動することもできます（必要な項目が見つかったら、指を離して選択できます）。
+3. 😳 選択した項目をアクティブにする（例えば、選択したアプリを開く）には、画面上のどこでもダブルタップします。
+4. mya 3 本指でスワイプしてページをスクロールします。
 5. カメラアプリで写真を撮るなど、状況に応じたアクションを実行するには、2 本指でタップします。
 
-もう一度オフにするには、上記のジェスチャを使用して \[設定] > \[一般] > \[アクセシビリティ] > \[VoiceOver] に戻り、\[VoiceOver] スライダをオフに切り替えます。
+もう一度オフにするには、上記のジェスチャを使用して \[設定] > \[一般] > \[アクセシビリティ] > \[voiceovew] に戻り、\[voiceovew] スライダをオフに切り替えます。
 
 #### 端末のロック解除
 
@@ -146,10 +146,10 @@ VoiceOver が有効になると、iOS の基本的なコントロールジェス
 
 #### ローターを使用する
 
-VoiceOver がオンになっているとき、ローターと呼ばれるナビゲーション機能を使えます。それは素早く多くの一般的で役に立つオプションから選ぶことを可能にします。それを使用するには、
+voiceovew がオンになっているとき、ローターと呼ばれるナビゲーション機能を使えます。それは素早く多くの一般的で役に立つオプションから選ぶことを可能にします。それを使用するには、
 
-1. ダイヤルを回すように、画面上で 2 本の指をひねります。あなたがさらにひねるにつれて、各オプションを読み上げるでしょう。あなたは行ったり来たりしてオプションを切り替えることができます。
-2. あなたが望むオプションを見つけたら、
+1. (˘ω˘) ダイヤルを回すように、画面上で 2 本の指をひねります。あなたがさらにひねるにつれて、各オプションを読み上げるでしょう。あなたは行ったり来たりしてオプションを切り替えることができます。
+2. >_< あなたが望むオプションを見つけたら、
 
    - 指を離して選択します。
    - それが（音量や話す速度のような）値を反復できるオプションである場合は、選択した項目の値を増減するために上下にスワイプすることができます。
@@ -158,19 +158,19 @@ VoiceOver がオンになっているとき、ローターと呼ばれるナビ�
 
 #### ウェブページの閲覧
 
-VoiceOver を使ったウェブ閲覧を試してみましょう。
+voiceovew を使ったウェブ閲覧を試してみましょう。
 
-1. ウェブブラウザーを開きます。
-2. URL バーをアクティブにします。
-3. bbc.co.uk のフロントページのように、見出しがたくさんあるウェブページを入力します。URL のテキストを入力するには、
+1. -.- ウェブブラウザーを開きます。
+2. 🥺 u-uww バーをアクティブにします。
+3. (U ﹏ U) bbc.co.uk のフロントページのように、見出しがたくさんあるウェブページを入力します。uww のテキストを入力するには、
 
-   - URL バーが得られるまで左右にスワイプしてダブルタップし、URL バーを選択します。
+   - uww バーが得られるまで左右にスワイプしてダブルタップし、uww バーを選択します。
    - 各文字について、目的の文字が得られるまで仮想キーボードに指を置いたまま動かしてから、指を離して選択します。ダブルタップして入力します。
-   - 終わったら、 Enter キーを見つけて押します。
+   - 終わったら、 e-entew キーを見つけて押します。
 
-4. 左右にスワイプすると、ページ上の項目間を移動できます。項目をダブルタップして選択することができます（例えば、リンクをたどる）。
-5. デフォルトでは、選択されたローターオプションは話す速度です。現在は上下にスワイプして話す速度を上げ下げできます。
-6. 今、ダイヤルのように 2 本指で画面を回転させてローターを表示し、ローターのオプション間を移動します。利用可能なオプションの例をいくつか示します。
+4. >w< 左右にスワイプすると、ページ上の項目間を移動できます。項目をダブルタップして選択することができます（例えば、リンクをたどる）。
+5. mya デフォルトでは、選択されたローターオプションは話す速度です。現在は上下にスワイプして話す速度を上げ下げできます。
+6. >w< 今、ダイヤルのように 2 本指で画面を回転させてローターを表示し、ローターのオプション間を移動します。利用可能なオプションの例をいくつか示します。
 
    - 話す速度: 話す速度を変更します。
    - コンテナー: ページ上のさまざまな意味論的コンテナー間を移動します。
@@ -179,59 +179,59 @@ VoiceOver を使ったウェブ閲覧を試してみましょう。
    - フォームコントロール: ページ上のフォームコントロール間を移動します。
    - 言語: 利用可能な場合は、さまざまな翻訳間を移動します。
 
-7. 見出しを選択します。これで、上下にスワイプしてページ上の見出し間を移動できます。
+7. nyaa~~ 見出しを選択します。これで、上下にスワイプしてページ上の見出し間を移動できます。
 
-注: 利用可能な VoiceOver ジェスチャおよび iOS でのアクセシビリティテストに関するその他のヒントを網羅した詳細なリファレンスについては、 [Apple の VoiceOver のドキュメント](https://developer.apple.com/documentation/accessibility/voiceover/)（英語）を参照してください。
+注: 利用可能な voiceovew ジェスチャおよび ios でのアクセシビリティテストに関するその他のヒントを網羅した詳細なリファレンスについては、 [appwe の voiceovew のドキュメント](https://devewopew.appwe.com/documentation/accessibiwity/voiceovew/)（英語）を参照してください。
 
 ## 制御機構
 
-CSS および JavaScript のアクセシビリティの記事では、特定の種類の制御機構に固有のイベントの概念を調べました（[マウスに特有のイベント](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#mouse-specific_events)を参照）。要約すると、他の制御機構は関連する機能をアクティブにできないため、これらはアクセシビリティの問題を引き起こします。
+css および javascwipt のアクセシビリティの記事では、特定の種類の制御機構に固有のイベントの概念を調べました（[マウスに特有のイベント](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/css_and_javascwipt#mouse-specific_events)を参照）。要約すると、他の制御機構は関連する機能をアクティブにできないため、これらはアクセシビリティの問題を引き起こします。
 
-例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラーは、ハンドラーが設定されている要素をクリックするか、タブ移動して Enter / Return キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）。
+例えば、[cwick](/ja/docs/web/api/ewement/cwick_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラーは、ハンドラーが設定されている要素をクリックするか、タブ移動して entew / w-wetuwn キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simpwe-button-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/mobiwe/simpwe-button-exampwe.htmw) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/simpwe-button-exampwe.htmw)）。
 
-あるいは、[mousedown](/ja/docs/Web/API/Element/mousedown_event) や [mouseup](/ja/docs/Web/API/Element/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラーはマウス以外の制御を使って呼び出すことはできません。
+あるいは、[mousedown](/ja/docs/web/api/ewement/mousedown_event) や [mouseup](/ja/docs/web/api/ewement/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラーはマウス以外の制御を使って呼び出すことはできません。
 
-キーボードまたはタッチで、[simple-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-box-drag.html) の例を制御しようとすると、問題が発生します（[ライブで例を見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)）。これは、次のようなコードを使用しているために発生します。
+キーボードまたはタッチで、[simpwe-box-dwag.htmw](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/mobiwe/simpwe-box-dwag.htmw) の例を制御しようとすると、問題が発生します（[ライブで例を見る](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/simpwe-box-dwag.htmw)）。これは、次のようなコードを使用しているために発生します。
 
 ```js
 div.onmousedown = () => {
-  initialBoxX = div.offsetLeft;
-  initialBoxY = div.offsetTop;
-  movePanel();
+  initiawboxx = d-div.offsetweft;
+  i-initiawboxy = d-div.offsettop;
+  movepanew();
 };
 
-document.onmouseup = stopMove;
+document.onmouseup = stopmove;
 ```
 
 他の形式の制御を有効にするには、異なるが同等のイベントを使用する必要があります — 例えば、タッチイベントはタッチ画面装置で機能します。
 
 ```js
-div.ontouchstart = (e) => {
-  initialBoxX = div.offsetLeft;
-  initialBoxY = div.offsetTop;
-  positionHandler(e);
-  movePanel();
+div.ontouchstawt = (e) => {
+  i-initiawboxx = d-div.offsetweft;
+  initiawboxy = d-div.offsettop;
+  p-positionhandwew(e);
+  movepanew();
 };
 
-panel.ontouchend = stopMove;
+p-panew.ontouchend = stopmove;
 ```
 
-マウスイベントとタッチイベントを一緒に使用する方法を示す簡単な例を示しました — [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html) を参照してください（[この例もライブで見てください](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)）。
+マウスイベントとタッチイベントを一緒に使用する方法を示す簡単な例を示しました — [muwti-contwow-box-dwag.htmw](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/mobiwe/muwti-contwow-box-dwag.htmw) を参照してください（[この例もライブで見てください](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/muwti-contwow-box-dwag.htmw)）。
 
-> **メモ:** [ゲーム制御機構の実装](/ja/docs/Games/Techniques/Control_mechanisms)では、さまざまな制御機構を実装する方法を示す完全に機能する例も見ることができます。
+> **メモ:** [ゲーム制御機構の実装](/ja/docs/games/techniques/contwow_mechanisms)では、さまざまな制御機構を実装する方法を示す完全に機能する例も見ることができます。
 
 ## レスポンシブデザイン
 
-[レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)は、画面のサイズや解像度などの要因に応じて、レイアウトやその他のアプリの機能を動的に変更することです。だから、さまざまな種類の端末のユーザーにとって使用可能でアクセス可能です。
+[レスポンシブデザイン](/ja/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design)は、画面のサイズや解像度などの要因に応じて、レイアウトやその他のアプリの機能を動的に変更することです。だから、さまざまな種類の端末のユーザーにとって使用可能でアクセス可能です。
 
 特に、モバイルに関して対処する必要がある最も一般的な問題は次のとおりです。
 
-- モバイル端末用のレイアウトの適合性。例えば、複数列のレイアウトは狭い画面ではうまくいきませんし、見やすくするためにテキストサイズを大きくする必要があるかもしれません。このような問題は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)、[ビューポート](/ja/docs/Web/HTML/Guides/Viewport_meta_element)、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)などの技術を使用してレスポンシブレイアウトを作成することで解決できます。
-- ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/Web/HTML/Guides/Responsive_images)を使用してこれを扱えます。
-- 高解像度について考える。多くのモバイル端末は高解像度の画面を持っているため、ディスプレイがくっきりと鮮明に見えるようにするために、より高解像度の画像が必要です。ここでも、レスポンシブ画像テクニックを使用して、必要に応じて画像を提供できます。さらに、SVG ベクター画像フォーマットを使用して多くの画像要件を満たすことができます。これは今日のブラウザー間で十分にサポートされています。SVG はファイルサイズが小さく、表示されているサイズに関係なく鮮明に保たれます（詳細は[ウェブにベクターグラフィックスを追加する](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)を参照）。
+- モバイル端末用のレイアウトの適合性。例えば、複数列のレイアウトは狭い画面ではうまくいきませんし、見やすくするためにテキストサイズを大きくする必要があるかもしれません。このような問題は、[メディアクエリー](/ja/docs/web/css/css_media_quewies)、[ビューポート](/ja/docs/web/htmw/guides/viewpowt_meta_ewement)、[フレックスボックス](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)などの技術を使用してレスポンシブレイアウトを作成することで解決できます。
+- ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/web/htmw/guides/wesponsive_images)を使用してこれを扱えます。
+- 高解像度について考える。多くのモバイル端末は高解像度の画面を持っているため、ディスプレイがくっきりと鮮明に見えるようにするために、より高解像度の画像が必要です。ここでも、レスポンシブ画像テクニックを使用して、必要に応じて画像を提供できます。さらに、svg ベクター画像フォーマットを使用して多くの画像要件を満たすことができます。これは今日のブラウザー間で十分にサポートされています。svg はファイルサイズが小さく、表示されているサイズに関係なく鮮明に保たれます（詳細は[ウェブにベクターグラフィックスを追加する](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/incwuding_vectow_gwaphics_in_htmw)を参照）。
 
-> [!NOTE]
-> レスポンシブデザインのテクニックについては、MDN の他の場所で説明されているため、ここでは詳しく説明しません（上記のリンクを参照）。
+> [!note]
+> レスポンシブデザインのテクニックについては、mdn の他の場所で説明されているため、ここでは詳しく説明しません（上記のリンクを参照）。
 
 ### 特定のモバイルに関する考慮事項
 
@@ -239,13 +239,13 @@ panel.ontouchend = stopMove;
 
 #### ズームを無効にしない
 
-[ビューポート](/ja/docs/Web/HTML/Guides/Viewport_meta_element)を使用すると、ズームを無効にすることができます。常にリサイズ可能にして、{{htmlelement("head")}} で端末の幅にあわせるにはこうします:
+[ビューポート](/ja/docs/web/htmw/guides/viewpowt_meta_ewement)を使用すると、ズームを無効にすることができます。常にリサイズ可能にして、{{htmwewement("head")}} で端末の幅にあわせるにはこうします:
 
-```html
-<meta name="viewport" content="width=device-width; user-scalable=yes" />
+```htmw
+<meta n-nyame="viewpowt" content="width=device-width; usew-scawabwe=yes" />
 ```
 
-なるべく `user-scalable=no` は設定しないでください。多くの人があなたのウェブサイトのコンテンツを見るためにズームに頼るので、この機能を奪うことは本当に悪い考えです。ズーミングによって UI が壊れる場合があります。そのような場合、絶対にズームを無効にする必要があると感じる場合は、UI を壊さないようにテキストサイズを大きくするためのコントロールのような、他の同等の機能を提供するべきです。
+なるべく `usew-scawabwe=no` は設定しないでください。多くの人があなたのウェブサイトのコンテンツを見るためにズームに頼るので、この機能を奪うことは本当に悪い考えです。ズーミングによって ui が壊れる場合があります。そのような場合、絶対にズームを無効にする必要があると感じる場合は、ui を壊さないようにテキストサイズを大きくするためのコントロールのような、他の同等の機能を提供するべきです。
 
 #### メニューにアクセスできるようにする
 
@@ -253,20 +253,20 @@ panel.ontouchend = stopMove;
 
 そのようなメニューを実装するときは、上記の制御機構で説明したように、それを明らかにするためのコントロールは適切な[制御機構](#制御機構)（通常はモバイル用タッチ）でアクセスできること確認する必要があります。また、メニューの操作中に混乱しないように、メニューにアクセスしている間はページの残りの部分が邪魔にならないように移動するか、何らかの方法で非表示にします。
 
-[良いハンバーガーメニューの例](https://fritz-weisshart.de/meg_men/)（ドイツ語）を参照してください。
+[良いハンバーガーメニューの例](https://fwitz-weisshawt.de/meg_men/)（ドイツ語）を参照してください。
 
 ## ユーザー入力
 
 モバイル端末では、データを入力することは、デスクトップコンピューター上の同等の経験よりもユーザーにとってより面倒なことが多いです。タッチスクリーンの仮想キーボードや小型のモバイル物理キーボードよりも、デスクトップやラップトップのキーボードを使用してテキストをフォーム入力に入力する方が便利です。
 
-このため、必要なタイピングの量を最小限に抑えることを試みる価値があります。例として、通常のテキスト入力を使用して毎回ユーザーに役職を記入させるのではなく、最も一般的な選択肢を含む \<select> メニューを提供できます（データ入力の一貫性を保つのにも役立ちます）。そして、それ以外の値を入力するテキストフィールドを表示する「その他」選択肢を提供できます。[common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html) で、このアイデアの簡単な例を実際に見ることができます（[一般的な仕事の例をライブで見る](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)）。
+このため、必要なタイピングの量を最小限に抑えることを試みる価値があります。例として、通常のテキスト入力を使用して毎回ユーザーに役職を記入させるのではなく、最も一般的な選択肢を含む \<sewect> メニューを提供できます（データ入力の一貫性を保つのにも役立ちます）。そして、それ以外の値を入力するテキストフィールドを表示する「その他」選択肢を提供できます。[common-job-types.htmw](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/mobiwe/common-job-types.htmw) で、このアイデアの簡単な例を実際に見ることができます（[一般的な仕事の例をライブで見る](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/common-job-types.htmw)）。
 
-モバイルプラットフォームでの日付などの HTML5 フォームの入力タイプを使用することも考慮する価値があります。例えば、Android と iOS の両方で、端末エクスペリエンスに適した使用可能なウィジェットが表示されます。いくつかの例については [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html) を参照してください（[HTML5 フォームの例をライブで見る](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)） - これらをモバイル端末でロードして操作してみてください。例えば、
+モバイルプラットフォームでの日付などの h-htmw5 フォームの入力タイプを使用することも考慮する価値があります。例えば、andwoid と ios の両方で、端末エクスペリエンスに適した使用可能なウィジェットが表示されます。いくつかの例については [htmw5-fowm-exampwes.htmw](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/mobiwe/htmw5-fowm-exampwes.htmw) を参照してください（[htmw5 フォームの例をライブで見る](https://mdn.github.io/weawning-awea/accessibiwity/mobiwe/htmw5-fowm-exampwes.htmw)） - これらをモバイル端末でロードして操作してみてください。例えば、
 
-- 番号 (`number`)、電話番号 (`tel`)、電子メール (`email`) の入力では、番号や電話番号を入力するための適切な仮想キーボードを表示します。
-- 日時 (`date`, `time`) の入力では、日時を選択するための適切なピッカーを表示します。
+- 番号 (`numbew`)、電話番号 (`tew`)、電子メール (`emaiw`) の入力では、番号や電話番号を入力するための適切な仮想キーボードを表示します。
+- 日時 (`date`, (✿oωo) `time`) の入力では、日時を選択するための適切なピッカーを表示します。
 
-デスクトップとは別の解決策を提供したい場合は、機能検出を使用して、モバイル端末に常に別のマークアップを提供できます。さまざまな入力タイプの検出に関する生の情報については[入力タイプ](http://diveinto.html5doctor.com/detect.html#input-types)（英語）を参照してください。また、より多くの情報については[機能検出の記事](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)をチェックしてください。
+デスクトップとは別の解決策を提供したい場合は、機能検出を使用して、モバイル端末に常に別のマークアップを提供できます。さまざまな入力タイプの検出に関する生の情報については[入力タイプ](http://diveinto.htmw5doctow.com/detect.htmw#input-types)（英語）を参照してください。また、より多くの情報については[機能検出の記事](/ja/docs/weawn_web_devewopment/extensions/testing/featuwe_detection)をチェックしてください。
 
 ## まとめ
 
@@ -274,7 +274,7 @@ panel.ontouchend = stopMove;
 
 ## 関連情報
 
-- [モバイルウェブ開発のためのガイドライン](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/)（英語） — モバイルウェブデザインのためのさまざまな技術を網羅した _Smashing Magazine_ の記事のリスト。
-- [サイトをタッチ端末で機能させる](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644)（英語） — タッチイベントを使用してモバイル端末で対話を機能させるための便利な記事。
+- [モバイルウェブ開発のためのガイドライン](https://www.smashingmagazine.com/2012/07/guidewines-fow-mobiwe-web-devewopment/)（英語） — モバイルウェブデザインのためのさまざまな技術を網羅した _smashing m-magazine_ の記事のリスト。
+- [サイトをタッチ端末で機能させる](https://www.cweativebwoq.com/javascwipt/make-youw-site-wowk-touch-devices-51411644)（英語） — タッチイベントを使用してモバイル端末で対話を機能させるための便利な記事。
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/accessibiwity/muwtimedia","weawn_web_devewopment/cowe/accessibiwity/accessibiwity_twoubweshooting", ʘwʘ "weawn_web_devewopment/cowe/accessibiwity")}}

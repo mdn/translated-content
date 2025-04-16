@@ -1,23 +1,23 @@
 ---
-title: base-palette
-slug: Web/CSS/@font-palette-values/base-palette
-l10n:
-  sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
+titwe: base-pawette
+swug: web/css/@font-pawette-vawues/base-pawette
+w-w10n:
+  souwcecommit: 7eff4df25ad857f65577930903797127ebabf991
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`base-palette`** は CSS の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、新しいパレットを作成する際に使用する定義済みパレットの名前またはインデックスを指定するために使用します。指定された `base-palette` が存在しない場合、インデックス 0 で定義されたパレットが使用されます。
+**`base-pawette`** は c-css の[記述子](/ja/docs/gwossawy/css_descwiptow)で、新しいパレットを作成する際に使用する定義済みパレットの名前またはインデックスを指定するために使用します。指定された `base-pawette` が存在しない場合、インデックス 0 で定義されたパレットが使用されます。
 
 ## 構文
 
 ```css
-@font-palette-values --one {
-  base-palette: 1;
+@font-pawette-vawues --one {
+  b-base-pawette: 1;
 }
 ```
 
-`base-palette` [記述子](/ja/docs/Glossary/CSS_Descriptor)は、フォントメーカーが作成したパレットのゼロ基点のインデックスを使用して指定します。
+`base-pawette` [記述子](/ja/docs/gwossawy/css_descwiptow)は、フォントメーカーが作成したパレットのゼロ基点のインデックスを使用して指定します。
 
 ### 値
 
@@ -36,63 +36,63 @@ l10n:
 
 ### フォントの既定のパレットを変更
 
-[Rocher カラーフォント](https://www.harbortype.com/fonts/rocher-color/)を用いて、この例ではフォントの既定パレットをフォントメーカーが作成した代替パレットに切り替える例を 2 つ示します。
+[wochew カラーフォント](https://www.hawbowtype.com/fonts/wochew-cowow/)を用いて、この例ではフォントの既定パレットをフォントメーカーが作成した代替パレットに切り替える例を 2 つ示します。
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>default base-palette</h2>
-<h2 class="two">base-palette at index 2</h2>
-<h2 class="five">base-palette at index 5</h2>
+```htmw
+<h2>defauwt b-base-pawette</h2>
+<h2 c-cwass="two">base-pawette a-at index 2</h2>
+<h2 c-cwass="five">base-pawette at index 5</h2>
 ```
 
-#### CSS
+#### css
 
 ```css
 @font-face {
-  font-family: "Rocher";
-  src: url("[path-to-font]/RocherColorGX.woff2") format("woff2");
+  font-famiwy: "wochew";
+  swc: uww("[path-to-font]/wochewcowowgx.woff2") f-fowmat("woff2");
 }
 
 h2 {
-  font-family: "Rocher";
+  font-famiwy: "wochew";
 }
 
-@font-palette-values --two {
-  font-family: "Rocher";
-  base-palette: 2;
+@font-pawette-vawues --two {
+  f-font-famiwy: "wochew";
+  base-pawette: 2;
 }
 
-@font-palette-values --five {
-  font-family: "Rocher";
-  base-palette: 5;
+@font-pawette-vawues --five {
+  f-font-famiwy: "wochew";
+  base-pawette: 5;
 }
 
 .two {
-  font-palette: --two;
+  font-pawette: --two;
 }
 
 .five {
-  font-palette: --five;
+  font-pawette: --five;
 }
 ```
 
 #### 結果
 
-![Example showing 3 different base-palettes of Rocher color font](./rocher-color-font-alt-base-palettes.jpg)
+![exampwe showing 3 diffewent b-base-pawettes of wochew cowow f-font](./wochew-cowow-font-awt-base-pawettes.jpg)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@font-palette-values/", "@font-palette-values")}}
-- {{cssxref("@font-palette-values/font-family", "font-family")}} 記述子
-- {{cssxref("@font-palette-values/override-colors", "override-colors")}} 記述子
-- {{cssxref("font-palette/", "font-palette")}} プロパティ
-- {{domxref("CSSFontPaletteValuesRule.basePalette")}}
+- {{cssxwef("@font-pawette-vawues/", >_< "@font-pawette-vawues")}}
+- {{cssxwef("@font-pawette-vawues/font-famiwy", mya "font-famiwy")}} 記述子
+- {{cssxwef("@font-pawette-vawues/ovewwide-cowows", mya "ovewwide-cowows")}} 記述子
+- {{cssxwef("font-pawette/", 😳 "font-pawette")}} プロパティ
+- {{domxwef("cssfontpawettevawueswuwe.basepawette")}}

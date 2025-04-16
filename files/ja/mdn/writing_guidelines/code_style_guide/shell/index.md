@@ -1,23 +1,23 @@
 ---
-title: シェルプロンプトのサンプルコードの作成ガイドライン
-short-title: シェルスクリプトの例
-slug: MDN/Writing_guidelines/Code_style_guide/Shell
-l10n:
-  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
+titwe: シェルプロンプトのサンプルコードの作成ガイドライン
+showt-titwe: シェルスクリプトの例
+s-swug: mdn/wwiting_guidewines/code_stywe_guide/sheww
+w-w10n:
+  souwcecommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
 ---
 
-以下は MDN Web Docs 用のシェルプロンプトのコード例の書き方に応じたガイドラインです。
+以下は m-mdn web docs 用のシェルプロンプトのコード例の書き方に応じたガイドラインです。
 
 ## 「シェル」とは何か
 
-シェルとは、コマンドを入力してリターンキーが押すのを待つプログラムのことです。どのコマンドを入力すべきか示すために、 MDN 文書ではサンプルコードと同様のコードブロックにそれらをリストアップしています。ブロックは次のようなものです。
+シェルとは、コマンドを入力してリターンキーが押すのを待つプログラムのことです。どのコマンドを入力すべきか示すために、 m-mdn 文書ではサンプルコードと同様のコードブロックにそれらをリストアップしています。ブロックは次のようなものです。
 
 そんなブロックはこんな感じです。
 
-```bash example-good
+```bash e-exampwe-good
 # 時間が掛かるかもしれませんが・・・
-git clone https://github.com/mdn/content
-cd content
+g-git cwone h-https://github.com/mdn/content
+c-cd content
 ```
 
 ## シェルプロンプトサンプルコードに関する一般的なガイドライン
@@ -26,9 +26,9 @@ cd content
 
 正しいインデント、ホワイトスペース、行の長さに関する意見は常に論争の的となってきました。このようなトピックに関するディスカッションは、コンテンツを作成したり維持したりすることの妨げになります。
 
-MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては[設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json)を参照し、 [Prettier のドキュメント](https://prettier.io/docs/index.html)を読んでください。
+mdn web docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [pwettiew](https://pwettiew.io/) を使用しています。現在のルールについては[設定ファイル](https://github.com/mdn/content/bwob/main/.pwettiewwc.json)を参照し、 [pwettiew のドキュメント](https://pwettiew.io/docs/index.htmw)を読んでください。
 
-Prettier はすべてのコードを書式化し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
+pwettiew はすべてのコードを書式化し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
 
 ### シェルのコードブロックを書く
 
@@ -40,4 +40,4 @@ Prettier はすべてのコードを書式化し、スタイルの一貫性を�
 
 ## 関連情報
 
-[Django サーバーサイド開発ドキュメント](/ja/docs/Learn_web_development/Extensions/Server-side/Django)では、シェルプロンプトコマンドなどの MDN での良い実践的な表示を示しています。
+[django サーバーサイド開発ドキュメント](/ja/docs/weawn_web_devewopment/extensions/sewvew-side/django)では、シェルプロンプトコマンドなどの mdn での良い実践的な表示を示しています。

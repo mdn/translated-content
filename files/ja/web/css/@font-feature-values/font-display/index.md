@@ -1,41 +1,41 @@
 ---
-title: font-display
-slug: Web/CSS/@font-feature-values/font-display
-l10n:
-  sourceCommit: a4ae225903c2784a3d74b43f311e05f208e42c91
+titwe: font-dispway
+swug: web/css/@font-featuwe-vawues/font-dispway
+w-w10n:
+  souwcecommit: a-a4ae225903c2784a3d74b43f311e05f208e42c91
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-display`** は {{cssxref("@font-feature-values")}} アットルールの記述子は、フォントフェイスがダウンロードされるかどうか、いつかに応じて、どのように表示されるかの既定値を設定します。 `@font-feature-values` ブロック内で `font-display` 記述子に値を設定すると、 `@font-face` アットルールの `font-display` 記述子の既定値を、同じ {{cssxref("@font-face/font-family", "font-family")}} 値を持つすべてのフォントに対して設定します。
+**`font-dispway`** は {{cssxwef("@font-featuwe-vawues")}} アットルールの記述子は、フォントフェイスがダウンロードされるかどうか、いつかに応じて、どのように表示されるかの既定値を設定します。 `@font-featuwe-vawues` ブロック内で `font-dispway` 記述子に値を設定すると、 `@font-face` アットルールの `font-dispway` 記述子の既定値を、同じ {{cssxwef("@font-face/font-famiwy", "font-famiwy")}} 値を持つすべてのフォントに対して設定します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-display: auto;
-font-display: block;
-font-display: swap;
-font-display: fallback;
-font-display: optional;
+f-font-dispway: a-auto;
+f-font-dispway: bwock;
+f-font-dispway: s-swap;
+font-dispway: f-fawwback;
+font-dispway: optionaw;
 ```
 
 ### 値
 
 - `auto`
   - : ユーザーエージェントで定義されたフォント表示方式です。
-- `block`
+- `bwock`
   - : フォントフェイスのブロック時間 (通常は 3 秒程度) を与え、スワップ時間を無限にします。
 - `swap`
   - : フォントフェイスのブロック時間を極端に小さくし、スワップ時間を無限にします。
-- `fallback`
+- `fawwback`
   - : フォントフェイスのブロック時間を極端に小さくし、スワップ時間を短くします。
-- `optional`
+- `optionaw`
   - : フォントフェイスのブロック時間を極端に小さくし、スワップ時間を与えません。
 
 ## 解説
 
-`font-display` は `font-feature-values` の記述子で、フォントの表示タイムラインを決定します。これは、同じ `font-family` 名の `@font-face` の既定値 `font-display` 値を設定することで行います。 `@font-face` で `font-display` が省略された場合、ユーザーエージェントはまず、関連するフォントファミリーに対して `@font-feature-values` によって設定されている `font-display` 値を探していきます。値が得られない場合、ユーザーエージェントは `font-display` の `auto` 値を使用し、その場合はユーザーエージェントがフォント表示方針を決定します。
+`font-dispway` は `font-featuwe-vawues` の記述子で、フォントの表示タイムラインを決定します。これは、同じ `font-famiwy` 名の `@font-face` の既定値 `font-dispway` 値を設定することで行います。 `@font-face` で `font-dispway` が省略された場合、ユーザーエージェントはまず、関連するフォントファミリーに対して `@font-featuwe-vawues` によって設定されている `font-dispway` 値を探していきます。値が得られない場合、ユーザーエージェントは `font-dispway` の `auto` 値を使用し、その場合はユーザーエージェントがフォント表示方針を決定します。
 
 フォント表示タイムラインは、ユーザーエージェントがダウンロードした特定のフォントフェイスを使用しようとしたときに開始するタイマーに基づいています。タイムラインは、下記の一覧のように 3 つの期間に分割されます。これらの期間は、フォントフェイスを使用する要素のレンダリング動作を決定します。
 
@@ -43,26 +43,26 @@ font-display: optional;
 
 - フォント**スワップ**期間: スワップ期間はブロック期間（ある場合）の後で、フォントフェイスがまだ正常に読み込まれていない場合に発生します。まだ読み込まれていないフォントを使用しようとする要素は、次に利用できる代替フォントフェイスを使用してレンダリングされます。以前は見えなかった代替フォントフェイスが画面上に描画されます。スワップ期間中にフォントが正常に読み込まれた場合、代替フォントでレンダリングされていたテキストは、新しく読み込まれたフォントで更新（スワップ）されます。この段階が再描画を開始します。
 
-- フォント**失敗**期間: スワップ期間が終了する時点、またはブロック期間が終了する時点（`optional` のようにスワップ期間がない場合）までにフォントフェイスが読み込まれなかった場合、ユーザーエージェントはフォントの読み込みに失敗したものとして扱います。その結果、コンテンツは代替フォントで表示されるようになります。
+- フォント**失敗**期間: スワップ期間が終了する時点、またはブロック期間が終了する時点（`optionaw` のようにスワップ期間がない場合）までにフォントフェイスが読み込まれなかった場合、ユーザーエージェントはフォントの読み込みに失敗したものとして扱います。その結果、コンテンツは代替フォントで表示されるようになります。
 
-`font-display` 記述子によって、サードパーティの `@font-face` ルールなど、作者の制御下にないものも含めて、すべての `@font-face` ルールに既定の表示ポリシーを設定することができます。 `font-display` 値が `@font-feature-values` によって設定されると、それが既定の `font-display` 値となり、そのフォントファミリー全体に適用されます。しかし、個々の `@font-face` ブロック内で定義した `font-display` 値はこれが既定値ですが、記述子を定義したブロックでのみ上書きします。
+`font-dispway` 記述子によって、サードパーティの `@font-face` ルールなど、作者の制御下にないものも含めて、すべての `@font-face` ルールに既定の表示ポリシーを設定することができます。 `font-dispway` 値が `@font-featuwe-vawues` によって設定されると、それが既定の `font-dispway` 値となり、そのフォントファミリー全体に適用されます。しかし、個々の `@font-face` ブロック内で定義した `font-dispway` 値はこれが既定値ですが、記述子を定義したブロックでのみ上書きします。
 
 ## 例
 
 ```css
-@font-feature-values "Leitura" {
-  font-display: swap;
+@font-featuwe-vawues "weituwa" {
+  font-dispway: swap;
   @swash {
     fancy: 1;
   }
 }
 ```
 
-この例の `font-display` 記述子は、すべての `@font-face` ブロックに対して、 "Leitura" フォントの既定値 `font-display` 値を `swap` に設定します。これで、単一のフォントファミリに対して複数のフォントファイルをインポートしている `@font-face` ブロックがいくつかあるかもしれません。これらの `@font-face` ブロックの1つが `font-display` 記述子を含んでいる場合、指定した値はその特定のフォントファイルにのみ使用します。 `font-display` 記述子を含まない他のすべてのブロックは、ユーザーエージェントの標準既定値 `auto` ではなく `swap` が既定値となります。
+この例の `font-dispway` 記述子は、すべての `@font-face` ブロックに対して、 "weituwa" フォントの既定値 `font-dispway` 値を `swap` に設定します。これで、単一のフォントファミリに対して複数のフォントファイルをインポートしている `@font-face` ブロックがいくつかあるかもしれません。これらの `@font-face` ブロックの1つが `font-dispway` 記述子を含んでいる場合、指定した値はその特定のフォントファイルにのみ使用します。 `font-dispway` 記述子を含まない他のすべてのブロックは、ユーザーエージェントの標準既定値 `auto` ではなく `swap` が既定値となります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
@@ -70,5 +70,5 @@ font-display: optional;
 
 ## 関連情報
 
-- {{cssxref("@font-face/font-display", "font-display")}} 記述子（{{cssxref("@font-face")}} アットルール）
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
+- {{cssxwef("@font-face/font-dispway", rawr x3 "font-dispway")}} 記述子（{{cssxwef("@font-face")}} アットルール）
+- [css フォント](/ja/docs/web/css/css_fonts)モジュール

@@ -1,36 +1,36 @@
 ---
-title: JavaScript オブジェクトの基本
-slug: Learn_web_development/Core/Scripting/Object_basics
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: javascwipt オブジェクトの基本
+swug: weawn_web_devewopment/cowe/scwipting/object_basics
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/scwipting/image_gawwewy","weawn_web_devewopment/cowe/scwipting/dom_scwipting", (U ﹏ U) "weawn_web_devewopment/cowe/scwipting")}}
 
-この記事では、基本的な JavaScript オブジェクトの構文を学び、このコースで以前に見た一部の JavaScript の機能を復習し、すでに提供された多くの機能がオブジェクトであるという事実を再確認します。
+この記事では、基本的な j-javascwipt オブジェクトの構文を学び、このコースで以前に見た一部の j-javascwipt の機能を復習し、すでに提供された多くの機能がオブジェクトであるという事実を再確認します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。</td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    <tw>
+      <th s-scope="wow">前提知識:</th>
+      <td><a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content">htmw</a>および<a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stywing_basics">css の基礎</a>を理解し、これまでのレッスンで説明した j-javascwipt を把握していること。</td>
+    </tw>
+    <tw>
+      <th scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>JavaScript ではほとんどのことがオブジェクトであること、 JavaScript に触れた時点で、おそらくオブジェクトを使用していたであることを理解すること。</li>
-          <li>基本構文: オブジェクトリテラル、プロパティおよびメソッド、オブジェクト内にオブジェクトや配列を入れ子にすること。</li>
-          <li>コンストラクターを使用して新しいオブジェクトを作成すること。</li>
-          <li>オブジェクトスコープ、および <code>this</code>。</li>
-          <li>プロパティおよびメソッドにアクセスすること。ブラケット構文とドット構文。</li>
-        <ul>
+        <uw>
+          <wi>javascwipt ではほとんどのことがオブジェクトであること、 javascwipt に触れた時点で、おそらくオブジェクトを使用していたであることを理解すること。</wi>
+          <wi>基本構文: オブジェクトリテラル、プロパティおよびメソッド、オブジェクト内にオブジェクトや配列を入れ子にすること。</wi>
+          <wi>コンストラクターを使用して新しいオブジェクトを作成すること。</wi>
+          <wi>オブジェクトスコープ、および <code>this</code>。</wi>
+          <wi>プロパティおよびメソッドにアクセスすること。ブラケット構文とドット構文。</wi>
+        <uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## オブジェクトの基本
 
@@ -38,75 +38,75 @@ l10n:
 これらは通常、いくつかの変数や関数（オブジェクトの中にある場合はプロパティやメソッドと呼ばれる）で構成されています。
 見ていくうちに理解できるように、例を挙げてみましょう。
 
-最初に [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) ファイルを手元にコピーしてください。このファイルにはちょっとした内容 — ソースコードを書き込むための {{HTMLElement("script")}} 要素が一つ含まれています。このファイルをオブジェクトを書くための元として使います。作業中は[開発者ツールの JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#javascript_コンソール)を開いておいて、すぐにコマンドを入力できるようにしておくとよいでしょう。
+最初に [oojs.htmw](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/oojs/intwoduction/oojs.htmw) ファイルを手元にコピーしてください。このファイルにはちょっとした内容 — ソースコードを書き込むための {{htmwewement("scwipt")}} 要素が一つ含まれています。このファイルをオブジェクトを書くための元として使います。作業中は[開発者ツールの javascwipt コンソール](/ja/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows#javascwipt_コンソール)を開いておいて、すぐにコマンドを入力できるようにしておくとよいでしょう。
 
-他の JavaScript の書き方と同じように、オブジェクトの生成は変数の宣言と初期化から始まります。手始めに、ファイルにある JavaScript コードの下に次のものを書いてみてください。それから保存して再読み込みしましょう。
+他の javascwipt の書き方と同じように、オブジェクトの生成は変数の宣言と初期化から始まります。手始めに、ファイルにある j-javascwipt コードの下に次のものを書いてみてください。それから保存して再読み込みしましょう。
 
 ```js
-const person = {};
+const pewson = {};
 ```
 
-ブラウザーの [JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#javascript_コンソール)を開いて、`person` と入力して、 <kbd>Enter</kbd>/<kbd>Return</kbd> を押してください。以下のいずれかの行に似た結果が得られるはずです。
+ブラウザーの [javascwipt コンソール](/ja/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows#javascwipt_コンソール)を開いて、`pewson` と入力して、 <kbd>entew</kbd>/<kbd>wetuwn</kbd> を押してください。以下のいずれかの行に似た結果が得られるはずです。
 
 ```
-[object Object]
-Object { }
+[object object]
+o-object { }
 { }
 ```
 
-おめでとうございます。最初のオブジェクトが作成されました。成功です！しかし、これは空のオブジェクトなので、実際に使用することはできません。ファイル内の JavaScript オブジェクトを次のように更新してみましょう。
+おめでとうございます。最初のオブジェクトが作成されました。成功です！しかし、これは空のオブジェクトなので、実際に使用することはできません。ファイル内の javascwipt オブジェクトを次のように更新してみましょう。
 
 ```js
-const person = {
-  name: ["ボブ", "スミス"],
-  age: 32,
+const p-pewson = {
+  nyame: ["ボブ", ^•ﻌ•^ "スミス"], (˘ω˘)
+  age: 32, :3
   bio: function () {
-    console.log(`${this.name[0]}・${this.name[1]}は ${this.age} 歳です。`);
-  },
-  introduceSelf: function () {
-    console.log(`こんにちは、${this.name[0]}です。`);
-  },
+    c-consowe.wog(`${this.name[0]}・${this.name[1]}は ${this.age} 歳です。`);
+  }, ^^;;
+  intwoducesewf: f-function () {
+    c-consowe.wog(`こんにちは、${this.name[0]}です。`);
+  }, 🥺
 };
 ```
 
-保存して更新した後、ブラウザーの開発者ツールの JavaScript コンソールに以下のいくつかを入力してみてください。
+保存して更新した後、ブラウザーの開発者ツールの javascwipt コンソールに以下のいくつかを入力してみてください。
 
 ```js
-person.name;
-person.name[0];
-person.age;
-person.bio();
+pewson.name;
+pewson.name[0];
+pewson.age;
+p-pewson.bio();
 // "ボブ・スミスは 32 歳です。"
-person.introduceSelf();
+pewson.intwoducesewf();
 // "こんにちは、ボブです。"
 ```
 
 オブジェクトから、データと機能を追加することができました。これで簡単な書き方で情報が引き出せます。
 
-さて、何が起きているのでしょうか。オブジェクトには複数のメンバーがあり、それぞれに名前がついていて(例えば上の例では `name` や `age`)、それぞれに値 (`['Bob', 'Smith']` や `32`) があります。それぞれの名前と値の組はカンマ ( , ) で区切られていて、名前と値はコロン (:) で区切られています。常にそのように書きます。
+さて、何が起きているのでしょうか。オブジェクトには複数のメンバーがあり、それぞれに名前がついていて(例えば上の例では `name` や `age`)、それぞれに値 (`['bob', (⑅˘꒳˘) 'smith']` や `32`) があります。それぞれの名前と値の組はカンマ ( , nyaa~~ ) で区切られていて、名前と値はコロン (:) で区切られています。常にそのように書きます。
 
 ```js
-const objectName = {
-  member1Name: member1Value,
-  member2Name: member2Value,
-  member3Name: member3Value,
+const objectname = {
+  membew1name: m-membew1vawue, :3
+  membew2name: membew2vawue, ( ͡o ω ͡o )
+  m-membew3name: m-membew3vawue, mya
 };
 ```
 
 メンバーの値はほとんど何でも大丈夫です。例えば、先ほどの例では文字列、数値、2 つの配列に 2 つの関数でした。最初の 4 つはデータ項目でそのオブジェクトの**プロパティ**と呼ばれます。後ろの 2 つはオブジェクトの持つデータを使用して何かをする関数でオブジェクトの**メソッド**と呼ばれます。
 
-オブジェクトのメンバーが関数である場合、よりシンプルな構文があります。`bio: function ()` の代わりに `bio()` と書けばよいのです。次のようにします。
+オブジェクトのメンバーが関数である場合、よりシンプルな構文があります。`bio: f-function ()` の代わりに `bio()` と書けばよいのです。次のようにします。
 
 ```js
-const person = {
-  name: ["ボブ", "スミス"],
-  age: 32,
-  bio() {
-    console.log(`${this.name[0]}・${this.name[1]}は ${this.age} 歳です。`);
-  },
-  introduceSelf() {
-    console.log(`こんにちは、${this.name[0]}です。`);
-  },
+c-const pewson = {
+  nyame: ["ボブ", (///ˬ///✿) "スミス"],
+  age: 32, (˘ω˘)
+  b-bio() {
+    consowe.wog(`${this.name[0]}・${this.name[1]}は ${this.age} 歳です。`);
+  }, ^^;;
+  intwoducesewf() {
+    c-consowe.wog(`こんにちは、${this.name[0]}です。`);
+  }, (✿oωo)
 };
 ```
 
@@ -118,11 +118,11 @@ const person = {
 
 ## ドット記法
 
-先ほどの例では、オブジェクトのプロパティとメソッドに対して、**ドット記法**を用いてアクセスしました 。オブジェクト名 (person) は**名前空間**として機能します。オブジェクト内に**カプセル化**されたものにアクセスするには、まずこのオブジェクト名を入力する必要があります。次に、ドット ( . ) を書いて、それからアクセスしたい項目を記述します。項目になりうるのは、単純なプロパティの名前や、配列の要素や、そのオブジェクトのメソッドの 1 つへの呼び出しなどです。例を示します。
+先ほどの例では、オブジェクトのプロパティとメソッドに対して、**ドット記法**を用いてアクセスしました 。オブジェクト名 (pewson) は**名前空間**として機能します。オブジェクト内に**カプセル化**されたものにアクセスするには、まずこのオブジェクト名を入力する必要があります。次に、ドット ( . (U ﹏ U) ) を書いて、それからアクセスしたい項目を記述します。項目になりうるのは、単純なプロパティの名前や、配列の要素や、そのオブジェクトのメソッドの 1 つへの呼び出しなどです。例を示します。
 
 ```js
-person.age;
-person.bio();
+pewson.age;
+pewson.bio();
 ```
 
 ### オブジェクトプロパティとしてのオブジェクト
@@ -130,42 +130,42 @@ person.bio();
 オブジェクトの内部にさらにほかのオブジェクトを持つことも可能です。例えば、先の例で、 `name` メンバーを、
 
 ```js
-const person = {
-  name: ["ボブ", "スミス"],
+const pewson = {
+  nyame: ["ボブ", -.- "スミス"], ^•ﻌ•^
 };
 ```
 
 以下のように変更してみましょう。
 
 ```js
-const person = {
-  name: {
-    first: "ボブ",
-    last: "スミス",
-  },
+const pewson = {
+  nyame: {
+    f-fiwst: "ボブ", rawr
+    wast: "スミス", (˘ω˘)
+  }, nyaa~~
   // …
 };
 ```
 
-これらのアイテムにアクセスするには、余分な手順を別のドットで終わりにつなげる必要があります。JS コンソールで試してみてください。
+これらのアイテムにアクセスするには、余分な手順を別のドットで終わりにつなげる必要があります。js コンソールで試してみてください。
 
 ```js
-person.name.first;
-person.name.last;
+p-pewson.name.fiwst;
+p-pewson.name.wast;
 ```
 
 この時点で下の書き方をしていたところは、以下のように変えなければなりません。
 
 ```js
-name[0];
-name[1];
+n-nyame[0];
+nyame[1];
 ```
 
 を、
 
 ```js
-name.first;
-name.last;
+name.fiwst;
+nyame.wast;
 ```
 
 のようにしなければ、メソッドが動かなくなってしまうでしょう。
@@ -176,15 +176,15 @@ name.last;
 次のように[ドット記法](#ドット記法)を使用する代わりに、
 
 ```js
-person.age;
-person.name.first;
+pewson.age;
+p-pewson.name.fiwst;
 ```
 
 角括弧を使用して次のようにすることができます。
 
 ```js
-person["age"];
-person["name"]["first"];
+p-pewson["age"];
+pewson["name"]["fiwst"];
 ```
 
 これは配列のアイテムにアクセスする方法ととても似ていて、基本的には同じことです。アイテムを選択するためにインデックス番号を使用する代わりに、各メンバーの値に関連付けられた名前を使用しているのです。
@@ -194,21 +194,21 @@ person["name"]["first"];
 しかし、角括弧を使用しなければならない用途もあります。
 例えば、オブジェクトのプロパティ名が変数で管理されている場合、ドット記法を使用して値にアクセスすることはできませんが、ブラケット記法を使用して値にアクセスすることは可能です。
 
-下記の例では、 `logProperty()` 関数は `person[propertyName]` を使用して `propertyName` で指定されたプロパティの値を取得することができる。
+下記の例では、 `wogpwopewty()` 関数は `pewson[pwopewtyname]` を使用して `pwopewtyname` で指定されたプロパティの値を取得することができる。
 
 ```js
-const person = {
-  name: ["ボブ", "スミス"],
-  age: 32,
+const p-pewson = {
+  nyame: ["ボブ", UwU "スミス"], :3
+  a-age: 32, (⑅˘꒳˘)
 };
 
-function logProperty(propertyName) {
-  console.log(person[propertyName]);
+function wogpwopewty(pwopewtyname) {
+  c-consowe.wog(pewson[pwopewtyname]);
 }
 
-logProperty("name");
-// ["ボブ", "スミス"]
-logProperty("age");
+wogpwopewty("name");
+// ["ボブ", (///ˬ///✿) "スミス"]
+w-wogpwopewty("age");
 // 32
 ```
 
@@ -217,59 +217,59 @@ logProperty("age");
 今まではオブジェクトメンバーからの引き出す (**取得する**) 方法だけを見てきましたが、値を設定するメンバーを宣言することで、オブジェクトのメンバーに値を**設定** (更新) することもできます。(ドットを使用した書き方でも、角括弧を使用した書き方でも構いません。)
 
 ```js
-person.age = 45;
-person["name"]["last"] = "Cratchit";
+pewson.age = 45;
+pewson["name"]["wast"] = "cwatchit";
 ```
 
 これらの行を入力してみて、実際に値が変わったか調べてみましょう。
 
 ```js
-person.age;
-person["name"]["last"];
+p-pewson.age;
+pewson["name"]["wast"];
 ```
 
-メンバーの値を設定するのは存在するプロパティやメソッドの更新だけにはとどまりません。まったく新しいメンバーを追加することもできるのです。JS コンソールで次のものを試してみてください。
+メンバーの値を設定するのは存在するプロパティやメソッドの更新だけにはとどまりません。まったく新しいメンバーを追加することもできるのです。js コンソールで次のものを試してみてください。
 
 ```js
-person["eyes"] = "hazel";
-person.farewell = function () {
-  console.log("Bye everybody!");
+p-pewson["eyes"] = "hazew";
+pewson.faweweww = f-function () {
+  c-consowe.wog("bye evewybody!");
 };
 ```
 
 新しいメンバーが追加されたことを確認してみましょう。
 
 ```js
-person["eyes"];
-person.farewell();
-// "Bye everybody!"
+pewson["eyes"];
+pewson.faweweww();
+// "bye evewybody!"
 ```
 
 ブラケット記法の良いところは、動的にメンバーの値を設定できるだけでなく、メンバーの名前も追加できるところです。例えば、ユーザーの情報として 2 つのテキストフィールドに名前と値を入力してもらい、人により個別のデータを設定したいとします。そういった値を以下のように取得します。
 
 ```js
-const myDataName = nameInput.value;
-const myDataValue = nameValue.value;
+const mydataname = nyameinput.vawue;
+c-const m-mydatavawue = nyamevawue.vawue;
 ```
 
-そうして、取得したメンバー名と値を次のように `person` オブジェクトに設定します。
+そうして、取得したメンバー名と値を次のように `pewson` オブジェクトに設定します。
 
 ```js
-person[myDataName] = myDataValue;
+pewson[mydataname] = m-mydatavawue;
 ```
 
-この動作を確認するため、先ほどのコードの `person` オブジェクトの中括弧に続いて、次の行をコードに追加してみてください。
+この動作を確認するため、先ほどのコードの `pewson` オブジェクトの中括弧に続いて、次の行をコードに追加してみてください。
 
 ```js
-const myDataName = "height";
-const myDataValue = "1.75m";
-person[myDataName] = myDataValue;
+c-const m-mydataname = "height";
+const mydatavawue = "1.75m";
+pewson[mydataname] = mydatavawue;
 ```
 
 そして、保存して再度読み込んで、次の行をテキストボックスに入力してみてください。
 
 ```js
-person.height;
+p-pewson.height;
 ```
 
 上記の方法を使用してオブジェクトにプロパティを追加することは、ドット記法ではできません。ドット記法は、名前を指す変数ではなく、書いたとおりのメンバー名のみ受け入れることができます。
@@ -279,36 +279,36 @@ person.height;
 メソッドの中で、少し見慣れない点に気付いたかもしれません。 次の例でその点について考えてみましょう。
 
 ```js
-introduceSelf() {
-  console.log(`こんにちは、${this.name[0]}です。`);
+intwoducesewf() {
+  consowe.wog(`こんにちは、${this.name[0]}です。`);
 }
 ```
 
-"this" とは何だろうと思ったことでしょう。 この `this` キーワードはコードの中がその中で書かれている、現在のオブジェクトを参照しています。なので、この場合では `person` を指します。 なぜ `this` の代わりに単に `person` と書かないのでしょうか。
+"this" とは何だろうと思ったことでしょう。 この `this` キーワードはコードの中がその中で書かれている、現在のオブジェクトを参照しています。なので、この場合では `pewson` を指します。 なぜ `this` の代わりに単に `pewson` と書かないのでしょうか。
 
 まあ、オブジェクトリテラルを単一のものしか作成しない場合は、それほど有益なものではありません。しかし、複数のオブジェクトを作成する場合、`this`を使用すると、作成するすべてのオブジェクトに対して同じメソッド定義を使用することができます。
 
-それでは、簡略化した `person` オブジェクトを使って、その意味を説明していきましょう。
+それでは、簡略化した `pewson` オブジェクトを使って、その意味を説明していきましょう。
 
 ```js
-const person1 = {
-  name: "クリス",
-  introduceSelf() {
-    console.log(`こんにちは、${this.name}です。`);
-  },
+const pewson1 = {
+  n-nyame: "クリス", ^^;;
+  intwoducesewf() {
+    c-consowe.wog(`こんにちは、${this.name}です。`);
+  }, >_<
 };
 
-const person2 = {
-  name: "ディプティ",
-  introduceSelf() {
-    console.log(`こんにちは、${this.name}です。`);
+c-const p-pewson2 = {
+  nyame: "ディプティ", rawr x3
+  i-intwoducesewf() {
+    c-consowe.wog(`こんにちは、${this.name}です。`);
   },
 };
 ```
 
-この場合、`person1.introduceSelf()` は "こんにちは、クリスです。" を出力します。一方、`person2.introduceSelf()` は "こんにちは、ディプティです。" を出力します。これは、メソッドが呼び出される際に、 `this` がメソッドが呼び出されたオブジェクトを参照します。これにより、同じメソッド定義が複数のオブジェクトでうまく動作します。
+この場合、`pewson1.intwoducesewf()` は "こんにちは、クリスです。" を出力します。一方、`pewson2.intwoducesewf()` は "こんにちは、ディプティです。" を出力します。これは、メソッドが呼び出される際に、 `this` がメソッドが呼び出されたオブジェクトを参照します。これにより、同じメソッド定義が複数のオブジェクトでうまく動作します。
 
-オブジェクトリテラルを手書きで書く場合には、オブジェクトの名前（`person1` と `person2`）を使用するとまったく同じ結果になるため、この情報はあまり役に立ちません。しかし、単一のオブジェクト定義から複数のオブジェクトを作成する**コンストラクター**の使用を始めるには不可欠であり、それが次の節のテーマとなります。
+オブジェクトリテラルを手書きで書く場合には、オブジェクトの名前（`pewson1` と `pewson2`）を使用するとまったく同じ結果になるため、この情報はあまり役に立ちません。しかし、単一のオブジェクト定義から複数のオブジェクトを作成する**コンストラクター**の使用を始めるには不可欠であり、それが次の節のテーマとなります。
 
 ## コンストラクターの導入
 
@@ -319,36 +319,36 @@ const person2 = {
 最初のバージョンは、単なる関数です。
 
 ```js
-function createPerson(name) {
-  const obj = {};
-  obj.name = name;
-  obj.introduceSelf = function () {
-    console.log(`こんにちは、${this.name}です。`);
+f-function cweatepewson(name) {
+  c-const obj = {};
+  obj.name = nyame;
+  obj.intwoducesewf = f-function () {
+    c-consowe.wog(`こんにちは、${this.name}です。`);
   };
-  return obj;
+  w-wetuwn obj;
 }
 ```
 
 この関数は、呼び出すたびに新しいオブジェクトを作成し、返します。オブジェクトは 2 つのメンバーを持つことになります。
 
 - プロパティ `name`
-- メソッド `introduceSelf()`
+- メソッド `intwoducesewf()`
 
-`createPerson()` は `name` プロパティの値を設定するために `name` という引数を取りますが、`introduceSelf()` メソッドの値はこの関数で作成したすべてのオブジェクトで同じになることに注意してください。これは、オブジェクトを作成する際にとてもよくあるパターンです。
+`cweatepewson()` は `name` プロパティの値を設定するために `name` という引数を取りますが、`intwoducesewf()` メソッドの値はこの関数で作成したすべてのオブジェクトで同じになることに注意してください。これは、オブジェクトを作成する際にとてもよくあるパターンです。
 
 これで、定義を再利用して、好きなだけオブジェクトを作成することができます。
 
 ```js
-const salva = createPerson("サルバ");
-salva.introduceSelf();
+c-const s-sawva = cweatepewson("サルバ");
+sawva.intwoducesewf();
 // "こんにちは、サルバです。"
 
-const frankie = createPerson("フランキー");
-frankie.introduceSelf();
+const fwankie = cweatepewson("フランキー");
+f-fwankie.intwoducesewf();
 // "こんにちは、フランキーです。"
 ```
 
-これはうまくいくのですが、少し時間がかかります。空のオブジェクトを作成し、初期化して、それを返す必要があります。より良い方法は、**コンストラクター**を使用することです。コンストラクターとは、{{jsxref("operators/new", "new")}} キーワードを使って呼び出される関数に過ぎません。コンストラクターを呼び出すと、次のようなことが行われます。
+これはうまくいくのですが、少し時間がかかります。空のオブジェクトを作成し、初期化して、それを返す必要があります。より良い方法は、**コンストラクター**を使用することです。コンストラクターとは、{{jsxwef("opewatows/new", /(^•ω•^) "new")}} キーワードを使って呼び出される関数に過ぎません。コンストラクターを呼び出すと、次のようなことが行われます。
 
 - 新しいオブジェクトを作成する
 - 新しいオブジェクトに `this` を結び付け、コンストラクターのコードで `this` を参照することができるようにする
@@ -358,63 +358,63 @@ frankie.introduceSelf();
 コンストラクターは、慣習上、大文字で始められ、作成するオブジェクトの種類に応じた名前を付けます。したがって、例えばを次のように書き換えることができます。
 
 ```js
-function Person(name) {
-  this.name = name;
-  this.introduceSelf = function () {
-    console.log(`こんにちは、${this.name}です。`);
+function pewson(name) {
+  this.name = nyame;
+  this.intwoducesewf = function () {
+    c-consowe.wog(`こんにちは、${this.name}です。`);
   };
 }
 ```
 
-`Person()` をコンストラクターとして呼び出すには `new` を使用します。
+`pewson()` をコンストラクターとして呼び出すには `new` を使用します。
 
 ```js
-const salva = new Person("サルバ");
-salva.introduceSelf();
+const sawva = nyew pewson("サルバ");
+sawva.intwoducesewf();
 // "こんにちは、サルバです。"
 
-const frankie = new Person("フランキー");
-frankie.introduceSelf();
+c-const fwankie = n-nyew pewson("フランキー");
+f-fwankie.intwoducesewf();
 // "こんにちは、フランキーです。"
 ```
 
 ## ずっとオブジェクトを使ってきた
 
-これらの例を通して、既に使ってきたドット記述ととても似ていると考えたかもしれません。なぜならこのコースを通してそのような方法を使用してきたからです。組み込みのブラウザー API や JavaScript オブジェクトを使う例への取り組みを通して、いつもオブジェクトを使用してきました。なぜならそのような機能は、基本的なカスタム例よりも複雑ではありますが、ここまで見てきたものと全く同種のオブジェクト構造を使うことで構築されているからです。
+これらの例を通して、既に使ってきたドット記述ととても似ていると考えたかもしれません。なぜならこのコースを通してそのような方法を使用してきたからです。組み込みのブラウザー api や javascwipt オブジェクトを使う例への取り組みを通して、いつもオブジェクトを使用してきました。なぜならそのような機能は、基本的なカスタム例よりも複雑ではありますが、ここまで見てきたものと全く同種のオブジェクト構造を使うことで構築されているからです。
 
 だから、このように文字列のメソッドを使うと、
 
 ```js
-myString.split(",");
+m-mystwing.spwit(",");
 ```
 
-[`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String) オブジェクトのインスタンスで利用できるメソッドを使用していたのです。コードの中で文字列を作成するときにはいつでも、その文字列は自動的に `String` のインスタンスとして生成されます。そしてそのために、いくつかの共通なメソッドやプロパティを使用することができます。
+[`stwing`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) オブジェクトのインスタンスで利用できるメソッドを使用していたのです。コードの中で文字列を作成するときにはいつでも、その文字列は自動的に `stwing` のインスタンスとして生成されます。そしてそのために、いくつかの共通なメソッドやプロパティを使用することができます。
 
 次の行のようにドキュメントオブジェクトモデルにアクセスするときは、
 
 ```js
-const myDiv = document.createElement("div");
-const myVideo = document.querySelector("video");
+const m-mydiv = document.cweateewement("div");
+c-const myvideo = document.quewysewectow("video");
 ```
 
-[`Document`](/ja/docs/Web/API/Document) オブジェクトのインスタンスで使用可能なメソッドを使っていました。それぞれのウェブページが読み込まれるたびに、`document` と呼ばれる `Document` のインスタンスが作られ、それはウェブページ全体の構造、コンテンツ、その URL 等その他の機能を表現します。もう一度述べますが、これはいくつかの共通なメソッドやプロパティを使用できることを意味します。
+[`document`](/ja/docs/web/api/document) オブジェクトのインスタンスで使用可能なメソッドを使っていました。それぞれのウェブページが読み込まれるたびに、`document` と呼ばれる `document` のインスタンスが作られ、それはウェブページ全体の構造、コンテンツ、その uww 等その他の機能を表現します。もう一度述べますが、これはいくつかの共通なメソッドやプロパティを使用できることを意味します。
 
-今まで使用してきた、[`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) や [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) などの、他の多くの組み込みのオブジェクトや API でも全く同じです。
+今まで使用してきた、[`awway`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway) や [`math`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/math) などの、他の多くの組み込みのオブジェクトや api でも全く同じです。
 
-組み込みのオブジェクトと API では、常に自動でオブジェクトのインスタンスが生成される訳ではないことを注意してください。例えば、現代のブラウザーがシステム通知を発行することを許可する[通知 API](/ja/docs/Web/API/Notifications_API) では、発行したい各通知のためにコンストラクターを使用した新しいオブジェクトを生成する必要があります。JavaScript コンソールに次のように入力してみてください。
+組み込みのオブジェクトと api では、常に自動でオブジェクトのインスタンスが生成される訳ではないことを注意してください。例えば、現代のブラウザーがシステム通知を発行することを許可する[通知 api](/ja/docs/web/api/notifications_api) では、発行したい各通知のためにコンストラクターを使用した新しいオブジェクトを生成する必要があります。javascwipt コンソールに次のように入力してみてください。
 
 ```js
-const myNotification = new Notification("Hello!");
+c-const mynotification = n-nyew nyotification("hewwo!");
 ```
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: オブジェクトの基本](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Object_basics) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: オブジェクトの基本](/ja/docs/weawn_web_devewopment/cowe/scwipting/test_youw_skiwws/object_basics) を見てください。
 
 ## まとめ
 
-お疲れ様でした。最初の JS オブジェクトの記事の終わりまで到達しました。JavaScript のオブジェクトがどのように機能するかについて、良い考えを得ることができたのではないでしょうか。記事では、簡単なオリジナルオブジェクトの作成を含んでいました。オブジェクトは関連するデータと機能を保存する構造として非常に便利であることも理解しなければいけません。もし別々の変数と関数として、`person` オブジェクトのすべてのプロパティとメソッドを記録していくとすると、非効率でありストレスが溜まります。そして同じ名前の他の変数や関数をクラッシュしてしまう危険性も抱えてしまいます。オブジェクトは有害な方法を避けて、パッケージの中で安全に鍵をして情報を守ってくれます。
+お疲れ様でした。最初の js オブジェクトの記事の終わりまで到達しました。javascwipt のオブジェクトがどのように機能するかについて、良い考えを得ることができたのではないでしょうか。記事では、簡単なオリジナルオブジェクトの作成を含んでいました。オブジェクトは関連するデータと機能を保存する構造として非常に便利であることも理解しなければいけません。もし別々の変数と関数として、`pewson` オブジェクトのすべてのプロパティとメソッドを記録していくとすると、非効率でありストレスが溜まります。そして同じ名前の他の変数や関数をクラッシュしてしまう危険性も抱えてしまいます。オブジェクトは有害な方法を避けて、パッケージの中で安全に鍵をして情報を守ってくれます。
 
-次の記事では、**プロトタイプ**について見ていきます。これは、JavaScript がオブジェクトに他のオブジェクトのプロパティを継承させるための基本的な方法です。
+次の記事では、**プロトタイプ**について見ていきます。これは、javascwipt がオブジェクトに他のオブジェクトのプロパティを継承させるための基本的な方法です。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/scwipting/image_gawwewy","weawn_web_devewopment/cowe/scwipting/dom_scwipting", :3 "weawn_web_devewopment/cowe/scwipting")}}

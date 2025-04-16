@@ -1,30 +1,30 @@
 ---
-title: "評価: アクセシビリティのトラブルシューティング"
-slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "評価: アクセシビリティのトラブルシューティング"
+swug: weawn_web_devewopment/cowe/accessibiwity/accessibiwity_twoubweshooting
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/accessibiwity/mobiwe","weawn_web_devewopment/cowe/design_fow_devewopews", rawr x3 "weawn_web_devewopment/cowe/accessibiwity")}}
 
 このモジュールの評価では、あなたが診断、修正するべきいくつかのアクセシビリティの問題を持った簡単なサイトを表示します。
 
 ## 出発点
 
-評価を始めるために、[例を含むファイルの ZIP](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip) を取得してください。コンピューターのいずれかのディレクトリーにそのコンテンツを展開してください。
+評価を始めるために、[例を含むファイルの z-zip](https://waw.githubusewcontent.com/mdn/weawning-awea/main/accessibiwity/assessment-stawt/assessment-fiwes.zip) を取得してください。コンピューターのいずれかのディレクトリーにそのコンテンツを展開してください。
 
-それ以外に、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターを使用することもできます。
+それ以外に、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/)などのオンラインエディターを使用することもできます。
 
 展開が完了した評価サイトは次のように見えるはずです。
 
 ![完了した評価サイトのスクリーンショット。検索入力にはプレースホルダーテキストと送信するボタンがありますが、ラベル付けはされていません。](assessment-site-finished.png)
 
-この評価の開始時点であなたがサイトを表示したとき、いくつかの違いや問題を見つけることでしょう。これは主にマークアップ中の違いが原因であり、CSS が正しく適用されずにスタイリングの問題を引き起こしています。心配しないでください。以降の節でそれらの問題を修正します！
+この評価の開始時点であなたがサイトを表示したとき、いくつかの違いや問題を見つけることでしょう。これは主にマークアップ中の違いが原因であり、css が正しく適用されずにスタイリングの問題を引き起こしています。心配しないでください。以降の節でそれらの問題を修正します！
 
-> [!NOTE]
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## プロジェクトの概要
 
@@ -34,14 +34,14 @@ l10n:
 
 テキストは現在のカラースキームのせいで読みづらくなっています。現状のカラーコントラスト (テキスト/背景) をテストして、テストの結果を報告し、割り当てられた色を変更して修正できますか？
 
-### HTML の意味づけ
+### h-htmw の意味づけ
 
-1. コンテンツはまだあまりアクセシブルではありません。スクリーンリーダーを使ってナビゲートしようとしたとき、何が起こるか報告してください。
-2. スクリーンリーダーのユーザーがナビゲートしやすいように、記事のテキストを変更できますか？
-3. サイトのナビゲーションメニュー (`<div class="nav"></div>` で囲まれた部分) は正しい HTML 意味づけ要素の中に入れることでよりアクセシブルになったかもしれません。どれを変更する必要がありますか？変更してください。
+1. rawr コンテンツはまだあまりアクセシブルではありません。スクリーンリーダーを使ってナビゲートしようとしたとき、何が起こるか報告してください。
+2. σωσ スクリーンリーダーのユーザーがナビゲートしやすいように、記事のテキストを変更できますか？
+3. サイトのナビゲーションメニュー (`<div c-cwass="nav"></div>` で囲まれた部分) は正しい h-htmw 意味づけ要素の中に入れることでよりアクセシブルになったかもしれません。どれを変更する必要がありますか？変更してください。
 
-> [!NOTE]
-> タグをスタイル付けする CSS ルールセレクターは、意味づけされた見出しのために適切に変更する必要があります。段落要素を加えると、スタイルもより良く見えることに気がつくでしょう。
+> [!note]
+> タグをスタイル付けする c-css ルールセレクターは、意味づけされた見出しのために適切に変更する必要があります。段落要素を加えると、スタイルもより良く見えることに気がつくでしょう。
 
 ### 画像
 
@@ -49,13 +49,13 @@ l10n:
 
 ### 音声プレイヤー
 
-1. `<audio>` プレイヤーは聴覚障害者にとってアクセシブルではありません。それらのユーザーのために何らかのアクセシブルな代替手段を加えることができますか？
-2. `<audio>` プレイヤーは、HTML で音声に対応していない古いブラウザーを使用しているユーザーにとってアクセシブルではありません。彼らに対してどのように音声にアクセスさせることができますか？
+1. σωσ `<audio>` プレイヤーは聴覚障害者にとってアクセシブルではありません。それらのユーザーのために何らかのアクセシブルな代替手段を加えることができますか？
+2. `<audio>` プレイヤーは、htmw で音声に対応していない古いブラウザーを使用しているユーザーにとってアクセシブルではありません。彼らに対してどのように音声にアクセスさせることができますか？
 
 ### フォーム
 
-1. トップにある検索フォームの `<input>` 要素はラベルとともに使用できるかもしれませんが、表示されるテキストを追加するとデザインを悪化させる可能性がありますし、視覚に問題のないユーザーにとってはあまり必要ありません。スクリーンリーダーにのみアクセシブルなラベルをどうやって追加すればいいでしょう？
-2. コメントフォームの中の 2 つの `<input>` 要素は表示されるテキストラベルを含んでいますが、それらのラベルと明確に関連付けられていません。どのように関連付けますか？いくつかの CSS ルールも修正しなければいけない点に注意してください。
+1. >_< トップにある検索フォームの `<input>` 要素はラベルとともに使用できるかもしれませんが、表示されるテキストを追加するとデザインを悪化させる可能性がありますし、視覚に問題のないユーザーにとってはあまり必要ありません。スクリーンリーダーにのみアクセシブルなラベルをどうやって追加すればいいでしょう？
+2. :3 コメントフォームの中の 2 つの `<input>` 要素は表示されるテキストラベルを含んでいますが、それらのラベルと明確に関連付けられていません。どのように関連付けますか？いくつかの c-css ルールも修正しなければいけない点に注意してください。
 
 ### コメント show/hide 制御
 
@@ -63,10 +63,10 @@ l10n:
 
 ### テーブル
 
-現状のデータテーブルはあまりアクセシブルではありません。スクリーンリーダーのユーザーにとって行と列を関連付けることは難しく、またテーブルが何を示しているのかを明確にする概要もありません。この問題を解決するために何らかの機能を HTML に追加することはできますか？
+現状のデータテーブルはあまりアクセシブルではありません。スクリーンリーダーのユーザーにとって行と列を関連付けることは難しく、またテーブルが何を示しているのかを明確にする概要もありません。この問題を解決するために何らかの機能を htmw に追加することはできますか？
 
 ### 他には？
 
 このウェブサイトをよりアクセシブルにする 2 つ以上の改善アイデアを挙げることができますか？
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/accessibiwity/mobiwe","weawn_web_devewopment/cowe/design_fow_devewopews", (U ﹏ U) "weawn_web_devewopment/cowe/accessibiwity")}}

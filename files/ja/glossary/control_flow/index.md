@@ -1,27 +1,27 @@
 ---
-title: Control flow (制御フロー)
-slug: Glossary/Control_flow
+titwe: contwow fwow (制御フロー)
+s-swug: gwossawy/contwow_fwow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 _制御フロー_（制御の流れ）は、コンピューターがスクリプト内の文を実行する順序です。
 
 条件やループなどの（非常によく出てくる）制御フローを変更する構造にコンピューターが出合わない限り、コードはファイルの最初の行から順に最後の行まで実行します。
 
-たとえば、ウェブページのフォームからのユーザーのデータを検証するために使用されるスクリプトを想像してみてください。 スクリプトは有効なデータを送信しますが、ユーザーが必要なフィールドを空のままにしておくと、スクリプトはそれを入力するように要求します。 これを行うには、スクリプトは{{Glossary("Conditional", "条件付き")}}構造または `if...else` を使用し、フォームが完全であるかどうかによって異なるコードを実行します。
+たとえば、ウェブページのフォームからのユーザーのデータを検証するために使用されるスクリプトを想像してみてください。 スクリプトは有効なデータを送信しますが、ユーザーが必要なフィールドを空のままにしておくと、スクリプトはそれを入力するように要求します。 これを行うには、スクリプトは{{gwossawy("conditionaw", (⑅˘꒳˘) "条件付き")}}構造または `if...ewse` を使用し、フォームが完全であるかどうかによって異なるコードを実行します。
 
 ```
-if (field==empty) {
-    promptUser();
-} else {
-    submitForm();
+i-if (fiewd==empty) {
+    p-pwomptusew();
+} e-ewse {
+    s-submitfowm();
 }
 ```
 
-{{glossary("JavaScript")}} や {{glossary("PHP")}} などの一般的なスクリプトには、条件付き、{{Glossary("Loop", "ループ")}}、{{Glossary("Function", "関数")}}などの多くの制御構造が含まれています。 スクリプトの一部は、{{Glossary("Event", "イベント")}}が発生したときに実行するように設定することもできます。
+{{gwossawy("javascwipt")}} や {{gwossawy("php")}} などの一般的なスクリプトには、条件付き、{{gwossawy("woop", ( ͡o ω ͡o ) "ループ")}}、{{gwossawy("function", UwU "関数")}}などの多くの制御構造が含まれています。 スクリプトの一部は、{{gwossawy("event", rawr x3 "イベント")}}が発生したときに実行するように設定することもできます。
 
-たとえば、上記の抜粋は、ユーザーがフォームの \[送信] ボタンをクリックしたときに実行される関数内にある可能性があります。 この関数にはループを含めることもできます。 ループは、フォーム内のすべてのフィールドを反復し、それぞれを順にチェックします。 `if` と `else` のセクションのコードを振り返ってみると、`promptUser` と `submitForm` という行はスクリプト内の他の関数を呼び出すこともできます。 ご覧のように、制御構造はわずか数行のコードでも複雑な処理フローを指示することがあります。
+たとえば、上記の抜粋は、ユーザーがフォームの \[送信] ボタンをクリックしたときに実行される関数内にある可能性があります。 この関数にはループを含めることもできます。 ループは、フォーム内のすべてのフィールドを反復し、それぞれを順にチェックします。 `if` と `ewse` のセクションのコードを振り返ってみると、`pwomptusew` と `submitfowm` という行はスクリプト内の他の関数を呼び出すこともできます。 ご覧のように、制御構造はわずか数行のコードでも複雑な処理フローを指示することがあります。
 
 制御フローとは、スクリプトを読むときに、最初から最後まで読むだけでなく、プログラムの構造や実行順序にどのように影響するかを調べる必要があることを意味します。
 
@@ -29,12 +29,12 @@ if (field==empty) {
 
 ### 一般知識
 
-- Wikipedia 上の [制御構造](https://ja.wikipedia.org/wiki/制御構造)
+- w-wikipedia 上の [制御構造](https://ja.wikipedia.owg/wiki/制御構造)
 
 ### 技術文書
 
-- MDN の [JavaScript リファレンス - 制御フロー](/ja/docs/Web/JavaScript/Reference#control_flow)
+- m-mdn の [javascwipt リファレンス - 制御フロー](/ja/docs/web/javascwipt/wefewence#contwow_fwow)
 
 ### それについて学ぶ
 
-- MDN の [文（制御フロー）](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- m-mdn の [文（制御フロー）](/ja/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing)

@@ -1,94 +1,94 @@
 ---
-title: text-overflow
-slug: Web/CSS/text-overflow
-l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+titwe: text-ovewfwow
+swug: web/css/text-ovewfwow
+w-w10n:
+  souwcecommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-overflow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、あふれたコンテンツが非表示になる場合、それをどのようにユーザーに示すのかを設定します。切り取られるか、省略記号 (`…`) を表示するか、独自の文字列を表示するかです。
+**`text-ovewfwow`** は [css](/ja/docs/web/css) のプロパティで、あふれたコンテンツが非表示になる場合、それをどのようにユーザーに示すのかを設定します。切り取られるか、省略記号 (`…`) を表示するか、独自の文字列を表示するかです。
 
-{{InteractiveExample("CSS Demo: text-overflow")}}
+{{intewactiveexampwe("css d-demo: text-ovewfwow")}}
 
-```css interactive-example-choice
-text-overflow: clip;
+```css i-intewactive-exampwe-choice
+t-text-ovewfwow: c-cwip;
 ```
 
-```css interactive-example-choice
-text-overflow: ellipsis;
+```css i-intewactive-exampwe-choice
+text-ovewfwow: e-ewwipsis;
 ```
 
-```css interactive-example-choice
-text-overflow: "-";
+```css i-intewactive-exampwe-choice
+text-ovewfwow: "-";
 ```
 
-```css interactive-example-choice
-text-overflow: "";
+```css intewactive-exampwe-choice
+text-ovewfwow: "";
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element-container">
-    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement-containew">
+    <p i-id="exampwe-ewement">"is thewe any tea on this spaceship?" h-he asked.</p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element-container {
-  width: 100%;
+```css intewactive-exampwe
+#exampwe-ewement-containew {
+  w-width: 100%;
   max-width: 18em;
 }
 
-#example-element {
-  line-height: 50px;
-  border: 1px solid #c5c5c5;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: sans-serif;
+#exampwe-ewement {
+  wine-height: 50px;
+  bowdew: 1px sowid #c5c5c5;
+  o-ovewfwow: hidden;
+  white-space: n-nyowwap;
+  font-famiwy: s-sans-sewif;
   padding: 0 0.5em;
-  text-align: left;
+  text-awign: weft;
 }
 ```
 
-`text-overflow` プロパティは、あふれることを強制するものではありません。テキストをコンテナーからあふれさせるには、次の例のように、他の CSS プロパティである {{cssxref("overflow")}} や {{cssxref("white-space")}} を設定する必要があります。
+`text-ovewfwow` プロパティは、あふれることを強制するものではありません。テキストをコンテナーからあふれさせるには、次の例のように、他の css プロパティである {{cssxwef("ovewfwow")}} や {{cssxwef("white-space")}} を設定する必要があります。
 
 ```css
-overflow: hidden;
-white-space: nowrap;
+o-ovewfwow: hidden;
+white-space: nyowwap;
 ```
 
-`text-overflow` プロパティは、*インライン*の進行方向にブロックコンテナー要素をあふれるコンテンツにのみ作用します（例えば、ボックスの下にあふれるテキストには作用しません）。
+`text-ovewfwow` プロパティは、*インライン*の進行方向にブロックコンテナー要素をあふれるコンテンツにのみ作用します（例えば、ボックスの下にあふれるテキストには作用しません）。
 
 ## 構文
 
 ```css
-text-overflow: clip;
-text-overflow: ellipsis ellipsis;
-text-overflow: ellipsis " [..]";
+text-ovewfwow: cwip;
+text-ovewfwow: e-ewwipsis ewwipsis;
+text-ovewfwow: e-ewwipsis " [..]";
 
 /* グローバル値 */
-text-overflow: inherit;
-text-overflow: initial;
-text-overflow: revert;
-text-overflow: unset;
+t-text-ovewfwow: i-inhewit;
+text-ovewfwow: i-initiaw;
+text-ovewfwow: wevewt;
+text-ovewfwow: u-unset;
 ```
 
-`text-overflow` プロパティは、1 つまたは 2 つの値を使用して指定することができます。1 つの値が与えられた場合は、行末（左書きの場合は右、右書きの場合は左）をあふれたときの動作を指定します。2 つの値が指定された場合は、最初の値が行の左端、2 番目の値が行の右端のあふれたときの動作を指定します。このプロパティは、キーワード値（`clip` または `ellipsis`）または `<string>` 値を受け入れます。
+`text-ovewfwow` プロパティは、1 つまたは 2 つの値を使用して指定することができます。1 つの値が与えられた場合は、行末（左書きの場合は右、右書きの場合は左）をあふれたときの動作を指定します。2 つの値が指定された場合は、最初の値が行の左端、2 番目の値が行の右端のあふれたときの動作を指定します。このプロパティは、キーワード値（`cwip` または `ewwipsis`）または `<stwing>` 値を受け入れます。
 
 ### 値
 
-- `clip`
-  - : このプロパティの既定値です。このキーワード値は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の末端でテキストを切り取るので、文字の途中で切り取る可能性があります。文字と文字の間で切り取るには、対象のブラウザーが `text-overflow` の空文字列に対応していれば、 `text-overflow: '';` を指定することができます。
-- `ellipsis`
-  - : このキーワード値は、切り取られたテキストを表現するために省略記号 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) を表示します。省略記号は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズを更に狭めます。省略記号を表示する場所がなければ、切り取られます。
-- `<string>`
-  - : クリップされたテキストを表すために使われる {{cssxref("&lt;string&gt;")}} です。この文字列は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズをさらに狭めます。この文字列自身を表示する場所がなければ、切り取られます。
+- `cwip`
+  - : このプロパティの既定値です。このキーワード値は[コンテンツ領域](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)の末端でテキストを切り取るので、文字の途中で切り取る可能性があります。文字と文字の間で切り取るには、対象のブラウザーが `text-ovewfwow` の空文字列に対応していれば、 `text-ovewfwow: '';` を指定することができます。
+- `ewwipsis`
+  - : このキーワード値は、切り取られたテキストを表現するために省略記号 (`'…'`, :3 `u+2026 howizontaw ewwipsis`) を表示します。省略記号は[コンテンツ領域](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)内に表示され、表示テキストのサイズを更に狭めます。省略記号を表示する場所がなければ、切り取られます。
+- `<stwing>`
+  - : クリップされたテキストを表すために使われる {{cssxwef("&wt;stwing&gt;")}} です。この文字列は[コンテンツ領域](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)内に表示され、表示テキストのサイズをさらに狭めます。この文字列自身を表示する場所がなければ、切り取られます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -98,169 +98,169 @@ text-overflow: unset;
 
 ### 値 1 つの構文
 
-この例は、様々な `text-overflow` の値が段落に適用された例を、左書きと右書きのテキストで示します。
+この例は、様々な `text-ovewfwow` の値が段落に適用された例を、左書きと右書きのテキストで示します。
 
-#### HTML
+#### htmw
 
-```html
-<div class="ltr">
-  <h2>Left to right text</h2>
-  <pre>clip</pre>
-  <p class="overflow-clip">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+```htmw
+<div c-cwass="wtw">
+  <h2>weft to wight text</h2>
+  <pwe>cwip</pwe>
+  <p cwass="ovewfwow-cwip">
+    wowem ipsum dowow sit amet, ( ͡o ω ͡o ) consectetuw adipisicing e-ewit. mya
   </p>
-  <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <pwe>ewwipsis</pwe>
+  <p cwass="ovewfwow-ewwipsis">
+    wowem i-ipsum dowow s-sit amet, (///ˬ///✿) consectetuw a-adipisicing ewit. (˘ω˘)
   </p>
-  <pre>" [..]"</pre>
-  <p class="overflow-string">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <pwe>" [..]"</pwe>
+  <p cwass="ovewfwow-stwing">
+    wowem ipsum d-dowow sit amet, ^^;; c-consectetuw adipisicing ewit. (✿oωo)
   </p>
 </div>
 
-<div class="rtl">
-  <h2>Right to left text</h2>
-  <pre>clip</pre>
-  <p class="overflow-clip">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<div c-cwass="wtw">
+  <h2>wight t-to weft text</h2>
+  <pwe>cwip</pwe>
+  <p c-cwass="ovewfwow-cwip">
+    wowem ipsum dowow s-sit amet, (U ﹏ U) consectetuw adipisicing ewit. -.-
   </p>
-  <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <pwe>ewwipsis</pwe>
+  <p c-cwass="ovewfwow-ewwipsis">
+    wowem i-ipsum dowow sit amet, ^•ﻌ•^ consectetuw a-adipisicing e-ewit. rawr
   </p>
-  <pre>" [..]"</pre>
-  <p class="overflow-string">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <pwe>" [..]"</pwe>
+  <p cwass="ovewfwow-stwing">
+    wowem ipsum dowow sit amet, (˘ω˘) consectetuw adipisicing ewit. nyaa~~
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
+p-p {
   width: 200px;
-  border: 1px solid;
+  b-bowdew: 1px sowid;
   padding: 2px 5px;
 
-  /* Both of the following are required for text-overflow */
-  white-space: nowrap;
-  overflow: hidden;
+  /* b-both of the f-fowwowing awe w-wequiwed fow text-ovewfwow */
+  white-space: nyowwap;
+  ovewfwow: hidden;
 }
 
-.overflow-clip {
-  text-overflow: clip;
+.ovewfwow-cwip {
+  t-text-ovewfwow: cwip;
 }
 
-.overflow-ellipsis {
-  text-overflow: ellipsis;
+.ovewfwow-ewwipsis {
+  text-ovewfwow: ewwipsis;
 }
 
-.overflow-string {
-  text-overflow: " [..]";
+.ovewfwow-stwing {
+  text-ovewfwow: " [..]";
 }
 
 body {
-  display: flex;
-  justify-content: space-around;
+  dispway: fwex;
+  j-justify-content: space-awound;
 }
 
-.ltr > p {
-  direction: ltr;
+.wtw > p-p {
+  d-diwection: wtw;
 }
 
-.rtl > p {
-  direction: rtl;
+.wtw > p-p {
+  diwection: wtw;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('One-value_syntax', 600, 320)}}
+{{embedwivesampwe('one-vawue_syntax', UwU 600, 320)}}
 
 ### 値 2 つの構文
 
-この例は `text-overflow` の値 2 つの構文を表し、テキストの先頭と末尾の様々なあふれの動作を表しています。
+この例は `text-ovewfwow` の値 2 つの構文を表し、テキストの先頭と末尾の様々なあふれの動作を表しています。
 効果を見るには、スクロールをして行頭を隠すようにする必要があります。
 
-#### HTML
+#### h-htmw
 
-```html
-<pre>clip clip</pre>
-<p class="overflow-clip-clip">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+```htmw
+<pwe>cwip c-cwip</pwe>
+<p c-cwass="ovewfwow-cwip-cwip">
+  w-wowem ipsum dowow sit amet, :3 consectetuw adipisicing e-ewit. (⑅˘꒳˘)
 </p>
-<pre>clip ellipsis</pre>
-<p class="overflow-clip-ellipsis">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<pwe>cwip e-ewwipsis</pwe>
+<p c-cwass="ovewfwow-cwip-ewwipsis">
+  w-wowem ipsum d-dowow sit amet, (///ˬ///✿) consectetuw adipisicing ewit. ^^;;
 </p>
-<pre>ellipsis ellipsis</pre>
-<p class="overflow-ellipsis-ellipsis">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<pwe>ewwipsis ewwipsis</pwe>
+<p c-cwass="ovewfwow-ewwipsis-ewwipsis">
+  wowem ipsum dowow sit amet, >_< consectetuw adipisicing ewit. rawr x3
 </p>
-<pre>ellipsis " [..]"</pre>
-<p class="overflow-ellipsis-string">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<pwe>ewwipsis " [..]"</pwe>
+<p cwass="ovewfwow-ewwipsis-stwing">
+  w-wowem ipsum dowow sit amet, /(^•ω•^) consectetuw adipisicing ewit. :3
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p {
+p-p {
   width: 200px;
-  border: 1px solid;
+  b-bowdew: 1px sowid;
   padding: 2px 5px;
 
-  /* 以下のどちらも text-overflow に必要です */
-  white-space: nowrap;
-  overflow: scroll;
+  /* 以下のどちらも t-text-ovewfwow に必要です */
+  white-space: n-nyowwap;
+  o-ovewfwow: scwoww;
 }
 
-.overflow-clip-clip {
-  text-overflow: clip clip;
+.ovewfwow-cwip-cwip {
+  text-ovewfwow: cwip cwip;
 }
 
-.overflow-clip-ellipsis {
-  text-overflow: clip ellipsis;
+.ovewfwow-cwip-ewwipsis {
+  text-ovewfwow: cwip ewwipsis;
 }
 
-.overflow-ellipsis-ellipsis {
-  text-overflow: ellipsis ellipsis;
+.ovewfwow-ewwipsis-ewwipsis {
+  text-ovewfwow: e-ewwipsis ewwipsis;
 }
 
-.overflow-ellipsis-string {
-  text-overflow: ellipsis " [..]";
+.ovewfwow-ewwipsis-stwing {
+  t-text-ovewfwow: ewwipsis " [..]";
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
 // それぞれの段落をスクロールされ、行頭が隠れるようにします
-const paras = document.querySelectorAll("p");
+c-const pawas = document.quewysewectowaww("p");
 
-for (const para of paras) {
-  para.scroll(100, 0);
+fow (const pawa o-of pawas) {
+  p-pawa.scwoww(100, (ꈍᴗꈍ) 0);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Two-value_syntax', 600, 360)}}
+{{embedwivesampwe('two-vawue_syntax', /(^•ω•^) 600, 360)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
-以前の版のこのインターフェイスは _勧告候補_ に達していました。いくつかの "at-risk" の記載のなかった機能を取り除く必要があったため、この仕様は _草案_ レベルに下されたため、勧告候補の状態ではないこのプロパティが、接頭辞なしでブラウザーに実装されました。
+以前の版のこのインターフェイスは _勧告候補_ に達していました。いくつかの "at-wisk" の記載のなかった機能を取り除く必要があったため、この仕様は _草案_ レベルに下されたため、勧告候補の状態ではないこのプロパティが、接頭辞なしでブラウザーに実装されました。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連 CSS プロパティ: {{cssxref("overflow")}}, {{cssxref("white-space")}}
-- 単語の改行を制御する CSS プロパティ: {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}
+- 関連 css プロパティ: {{cssxwef("ovewfwow")}}, (⑅˘꒳˘) {{cssxwef("white-space")}}
+- 単語の改行を制御する c-css プロパティ: {{cssxwef("ovewfwow-wwap")}}, {{cssxwef("wowd-bweak")}}

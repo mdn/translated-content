@@ -1,37 +1,37 @@
 ---
-title: Constructor (コンストラクター)
-slug: Glossary/Constructor
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: constwuctow (コンストラクター)
+swug: gwossawy/constwuctow
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**コンストラクター**は、インスタンス化された特定のクラス{{glossary("object","オブジェクト")}}に属しています。コンストラクターは、そのオブジェクトを初期化し、オブジェクトの非公開の情報にアクセスできるようにします。コンストラクターの概念は、ほとんどの{{glossary("OOP","オブジェクト指向プログラミング")}}言語にあります。本質的に、{{glossary("JavaScript")}} のコンストラクターは{{glossary("class","クラス")}}のインスタンスで宣言します。
+**コンストラクター**は、インスタンス化された特定のクラス{{gwossawy("object","オブジェクト")}}に属しています。コンストラクターは、そのオブジェクトを初期化し、オブジェクトの非公開の情報にアクセスできるようにします。コンストラクターの概念は、ほとんどの{{gwossawy("oop","オブジェクト指向プログラミング")}}言語にあります。本質的に、{{gwossawy("javascwipt")}} のコンストラクターは{{gwossawy("cwass","クラス")}}のインスタンスで宣言します。
 
 ## 構文
 
 ```js
-// これは Default クラスの既定のコンストラクターです
-function Default() {}
+// これは d-defauwt クラスの既定のコンストラクターです
+f-function defauwt() {}
 
-// これは Overloaded クラスでオーバーロードされた
+// これは o-ovewwoaded クラスでオーバーロードされた
 // 引数付きのコンストラクターです。
-function Overloaded(arg1, arg2, /* …, */ argN) {}
+f-function ovewwoaded(awg1, >_< a-awg2, :3 /* …, */ awgn) {}
 ```
 
-JavaScript でクラスのコンストラクターを呼び出すには、`new` 演算子を使用して新しい{{glossary("object reference","オブジェクトへの参照")}}を{{glossary("variable","変数")}}に割り当てます。
+j-javascwipt でクラスのコンストラクターを呼び出すには、`new` 演算子を使用して新しい{{gwossawy("object wefewence","オブジェクトへの参照")}}を{{gwossawy("vawiabwe","変数")}}に割り当てます。
 
 ```js
-function Default() {}
+function defauwt() {}
 
-// Default オブジェクトの新しい参照が、ローカル変数の
-// defaultReference に割り当てられます
-const defaultReference = new Default();
+// defauwt オブジェクトの新しい参照が、ローカル変数の
+// defauwtwefewence に割り当てられます
+c-const defauwtwefewence = nyew defauwt();
 ```
 
 ## 関連情報
 
-- [JavaScript のクラスとコンストラクター](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#クラスとコンストラクター)
-- [JavaScript の `new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)
-- [コンストラクタ](https://ja.wikipedia.org/wiki/コンストラクタ)（ウィキペディア）
+- [javascwipt のクラスとコンストラクター](/ja/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt#クラスとコンストラクター)
+- [javascwipt の `new` 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/new)
+- [コンストラクタ](https://ja.wikipedia.owg/wiki/コンストラクタ)（ウィキペディア）

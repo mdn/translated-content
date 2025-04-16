@@ -1,39 +1,39 @@
 ---
-title: CSS マスク
-slug: Web/CSS/CSS_masking
-l10n:
-  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
+titwe: css マスク
+swug: web/css/css_masking
+w-w10n:
+  souwcecommit: f-f79a491594ebb5634949ed31b26155973a39166e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS マスク** (CSS masking) は [CSS](/ja/docs/Web/CSS) のモジュールの一つで、可視要素の一部または全部を隠すためのマスク、クリップを定義します。
+**css マスク** (css m-masking) は [css](/ja/docs/web/css) のモジュールの一つで、可視要素の一部または全部を隠すためのマスク、クリップを定義します。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("clip")}} {{deprecated_inline}}
-- {{cssxref("clip-path")}}
-- {{cssxref("clip-rule")}}
-- {{cssxref("mask")}}
-- {{cssxref("mask-border")}}
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-slice")}}
-- {{cssxref("mask-border-source")}}
-- {{cssxref("mask-border-width")}}
-- {{cssxref("mask-clip")}}
-- {{cssxref("mask-composite")}}
-- {{cssxref("mask-image")}}
-- {{cssxref("mask-mode")}}
-- {{cssxref("mask-origin")}}
-- {{cssxref("mask-position")}}
-- {{cssxref("mask-repeat")}}
-- {{cssxref("mask-size")}}
-- {{cssxref("mask-type")}}
+- {{cssxwef("cwip")}} {{depwecated_inwine}}
+- {{cssxwef("cwip-path")}}
+- {{cssxwef("cwip-wuwe")}}
+- {{cssxwef("mask")}}
+- {{cssxwef("mask-bowdew")}}
+- {{cssxwef("mask-bowdew-mode")}}
+- {{cssxwef("mask-bowdew-outset")}}
+- {{cssxwef("mask-bowdew-wepeat")}}
+- {{cssxwef("mask-bowdew-swice")}}
+- {{cssxwef("mask-bowdew-souwce")}}
+- {{cssxwef("mask-bowdew-width")}}
+- {{cssxwef("mask-cwip")}}
+- {{cssxwef("mask-composite")}}
+- {{cssxwef("mask-image")}}
+- {{cssxwef("mask-mode")}}
+- {{cssxwef("mask-owigin")}}
+- {{cssxwef("mask-position")}}
+- {{cssxwef("mask-wepeat")}}
+- {{cssxwef("mask-size")}}
+- {{cssxwef("mask-type")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

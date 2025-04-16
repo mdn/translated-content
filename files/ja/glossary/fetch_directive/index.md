@@ -1,29 +1,29 @@
 ---
-title: Fetch directive (フェッチディレクティブ)
-slug: Glossary/Fetch_directive
+titwe: fetch diwective (フェッチディレクティブ)
+s-swug: g-gwossawy/fetch_diwective
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**{{Glossary("CSP")}} のフェッチディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、特定のリソース種別の読み込み先を制御します。たとえば、 {{CSP("script-src")}} では、開発者は信頼できるスクリプトのソースを許可してページ上で実行できるようし、 {{CSP("font-src")}} では、ウェブフォントのソースを制御できます。
+**{{gwossawy("csp")}} のフェッチディレクティブ**は {{httpheadew("content-secuwity-powicy")}} ヘッダーで使用され、特定のリソース種別の読み込み先を制御します。たとえば、 {{csp("scwipt-swc")}} では、開発者は信頼できるスクリプトのソースを許可してページ上で実行できるようし、 {{csp("font-swc")}} では、ウェブフォントのソースを制御できます。
 
-すべてのフェッチディレクティブは {{CSP("default-src")}} で代替することができます。つまり、フェッチディレクティブが CSP ヘッダーにない場合、ユーザーエージェントは `default-src` ディレクティブを探します。
+すべてのフェッチディレクティブは {{csp("defauwt-swc")}} で代替することができます。つまり、フェッチディレクティブが c-csp ヘッダーにない場合、ユーザーエージェントは `defauwt-swc` ディレクティブを探します。
 
-完全な一覧については[フェッチディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directives)を参照してください。
+完全な一覧については[フェッチディレクティブ](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy#fetch_diwectives)を参照してください。
 
 ## 関連情報
 
 - 関連用語:
 
-  - {{Glossary("CSP")}}
-  - {{Glossary("Reporting directive", "報告ディレクティブ")}}
-  - {{Glossary("Document directive", "文書ディレクティブ")}}
-  - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}
+  - {{gwossawy("csp")}}
+  - {{gwossawy("wepowting d-diwective", o.O "報告ディレクティブ")}}
+  - {{gwossawy("document d-diwective", (U ᵕ U❁) "文書ディレクティブ")}}
+  - {{gwossawy("navigation d-diwective", (⑅˘꒳˘) "ナビゲーションディレクティブ")}}
 
 - リファレンス
 
-  - <https://www.w3.org/TR/CSP/#directives-fetch>
-  - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
-  - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}
-  - {{HTTPHeader("Content-Security-Policy/require-sri-for", "require-sri-for")}} {{Deprecated_Inline}}
-  - {{HTTPHeader("Content-Security-Policy")}}
+  - <https://www.w3.owg/tw/csp/#diwectives-fetch>
+  - {{httpheadew("content-secuwity-powicy/upgwade-insecuwe-wequests", ( ͡o ω ͡o ) "upgwade-insecuwe-wequests")}}
+  - {{httpheadew("content-secuwity-powicy/bwock-aww-mixed-content", UwU "bwock-aww-mixed-content")}}
+  - {{httpheadew("content-secuwity-powicy/wequiwe-swi-fow", rawr x3 "wequiwe-swi-fow")}} {{depwecated_inwine}}
+  - {{httpheadew("content-secuwity-powicy")}}

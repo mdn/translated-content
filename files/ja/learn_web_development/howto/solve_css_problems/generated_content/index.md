@@ -1,18 +1,18 @@
 ---
-title: CSS 生成コンテンツの使用
-slug: Learn_web_development/Howto/Solve_CSS_problems/Generated_content
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: css 生成コンテンツの使用
+swug: w-weawn_web_devewopment/howto/sowve_css_pwobwems/genewated_content
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-この記事では、文書を表示するときに CSS を使用してコンテンツを追加する方法をいくつか説明します。スタイルシートを変更することで、テキストコンテンツや画像を追加することができます。
+この記事では、文書を表示するときに c-css を使用してコンテンツを追加する方法をいくつか説明します。スタイルシートを変更することで、テキストコンテンツや画像を追加することができます。
 
-CSS の重要な利点の一つが、文書のスタイルをそのコンテンツから分離しやすくすることです。しかし、あるコンテンツを文書の一部としてではなく、スタイルシートの一部として指定することが理にかなっている場合もあります。テキストや画像の内容が文書の構造に密接に関連している場合は、スタイルシートの中で指定することができます。
+c-css の重要な利点の一つが、文書のスタイルをそのコンテンツから分離しやすくすることです。しかし、あるコンテンツを文書の一部としてではなく、スタイルシートの一部として指定することが理にかなっている場合もあります。テキストや画像の内容が文書の構造に密接に関連している場合は、スタイルシートの中で指定することができます。
 
-> [!NOTE]
-> スタイルシート内で記述されたコンテンツは、 DOM の一部にはなりません。
+> [!note]
+> スタイルシート内で記述されたコンテンツは、 d-dom の一部にはなりません。
 
 スタイルシートでコンテンツを指定すると、厄介な問題が発生することがあります。例えば、スタイルシートが複数の言語の文書で共有されていることがあります。スタイルシートの中で翻訳が必要なコンテンツを指定する場合は、スタイルシートのその部分を別なファイルに置き、適切な言語版の文書にリンクするようにする必要があります。
 
@@ -22,50 +22,50 @@ CSS の重要な利点の一つが、文書のスタイルをそのコンテン�
 
 ### テキストコンテンツ
 
-CSS では、要素の前後にテキストコンテンツを挿入したり、 {{HTMLElement('li')}} やその他の要素に {{cssxref("display", "display: list-item;") }} をつけて、リスト項目のマーカー（丸印や数字など）の内容を変更することができます。これを指定するには、ルールを作り、セレクターに {{ cssxref("::before") }}、{{ cssxref("::after") }}、{{cssxref("::marker")}} のいずれかを追加します。宣言では、{{ cssxref("content") }} プロパティを指定し、その値としてテキストコンテンツを指定します。
+c-css では、要素の前後にテキストコンテンツを挿入したり、 {{htmwewement('wi')}} やその他の要素に {{cssxwef("dispway", "dispway: w-wist-item;") }} をつけて、リスト項目のマーカー（丸印や数字など）の内容を変更することができます。これを指定するには、ルールを作り、セレクターに {{ cssxwef("::befowe") }}、{{ c-cssxwef("::aftew") }}、{{cssxwef("::mawkew")}} のいずれかを追加します。宣言では、{{ cssxwef("content") }} プロパティを指定し、その値としてテキストコンテンツを指定します。
 
-#### HTML
+#### htmw
 
-```html
-A text where I need to <span class="ref">something</span>
+```htmw
+a text whewe i nyeed t-to <span cwass="wef">something</span>
 ```
 
-#### CSS
+#### css
 
 ```css
-.ref::before {
-  font-weight: bold;
-  color: navy;
-  content: "Reference ";
+.wef::befowe {
+  font-weight: b-bowd;
+  cowow: nyavy;
+  c-content: "wefewence ";
 }
 ```
 
 #### 出力
 
-{{ EmbedLiveSample('Text_content', 600, 30) }}
+{{ embedwivesampwe('text_content', >_< 600, 30) }}
 
-スタイルシートの文字セットは規定で UTF-8 ですが、リンク、スタイルシート自身の内部、もしくはその他の方法で指定することができます。CSS 仕様書の [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23) をご覧ください。
+スタイルシートの文字セットは規定で utf-8 ですが、リンク、スタイルシート自身の内部、もしくはその他の方法で指定することができます。css 仕様書の [4.4 css stywe sheet w-wepwesentation](https://www.w3.owg/tw/css21/syndata.htmw#q23) をご覧ください。
 
-個々の文字は、バックスラッシュをエスケープ文字として使用して、エスケープ機構を使って記述することもできます。例えば、 "\265B" はチェスの黒クイーン ♛ です。詳しくは CSS 仕様書の [Referring to characters not represented in a character encoding](https://www.w3.org/TR/CSS21/syndata.html#q24) と [Characters and case](https://www.w3.org/TR/CSS21/syndata.html#q6) をご覧ください。
+個々の文字は、バックスラッシュをエスケープ文字として使用して、エスケープ機構を使って記述することもできます。例えば、 "\265b" はチェスの黒クイーン ♛ です。詳しくは css 仕様書の [wefewwing t-to chawactews n-nyot wepwesented in a chawactew encoding](https://www.w3.owg/tw/css21/syndata.htmw#q24) と [chawactews and case](https://www.w3.owg/tw/css21/syndata.htmw#q6) をご覧ください。
 
 ### 画像コンテンツ
 
-要素の前や後ろに画像を追加するには、 {{ cssxref("content") }} プロパティの値として画像ファイルの URL を記述します。
+要素の前や後ろに画像を追加するには、 {{ c-cssxwef("content") }} プロパティの値として画像ファイルの uww を記述します。
 
-このルールは `glossary` を持つすべてのリンクの後ろに、空白とアイコンを追加します。
+このルールは `gwossawy` を持つすべてのリンクの後ろに、空白とアイコンを追加します。
 
-#### HTML
+#### htmw
 
-```html live-sample___image_content
-<a href="developer.mozilla.org" class="glossary">developer.mozilla.org</a>
+```htmw wive-sampwe___image_content
+<a hwef="devewopew.moziwwa.owg" c-cwass="gwossawy">devewopew.moziwwa.owg</a>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___image_content
-a.glossary::after {
-  content: " " url("glossary-icon.gif");
+```css wive-sampwe___image_content
+a-a.gwossawy::aftew {
+  c-content: " " uww("gwossawy-icon.gif");
 }
 ```
 
-{{ EmbedLiveSample('Image_content', 600, 40) }}
+{{ e-embedwivesampwe('image_content', rawr x3 600, 40) }}

@@ -1,14 +1,14 @@
 ---
-title: Local scope (ローカルスコープ)
-slug: Glossary/Local_scope
+titwe: wocaw scope (ローカルスコープ)
+s-swug: gwossawy/wocaw_scope
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-ローカルスコープは {{glossary("variable","変数")}} をローカルにする変数の特性です（つまり、変数名は {{glossary("global scope", "グローバルスコープ")}} ではないスコープ内の {{glossary("value", "値")}} にのみ結び付けられます）。
+ローカルスコープは {{gwossawy("vawiabwe","変数")}} をローカルにする変数の特性です（つまり、変数名は {{gwossawy("gwobaw s-scope", OwO "グローバルスコープ")}} ではないスコープ内の {{gwossawy("vawue", "値")}} にのみ結び付けられます）。
 
 ## 関連項目
 
 ### 一般知識
 
-- Wikipedia の [スコープ](https://ja.wikipedia.org/wiki/スコープ)
+- w-wikipedia の [スコープ](https://ja.wikipedia.owg/wiki/スコープ)

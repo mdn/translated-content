@@ -1,13 +1,13 @@
 ---
-title: font-variation-settings
-slug: Web/CSS/@font-face/font-variation-settings
-l10n:
-  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
+titwe: font-vawiation-settings
+swug: web/css/@font-face/font-vawiation-settings
+w-w10n:
+  souwcecommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variation-settings`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールの中で OpenType または TrueType の低水準のフォントバリエーションを指定することができます。この記述子の値は、グローバルキーワード値を除いて {{cssxref("font-variation-settings")}} と同じです。
+**`font-vawiation-settings`** は c-css の記述子で、 {{cssxwef("@font-face")}} アットルールの中で o-opentype または t-twuetype の低水準のフォントバリエーションを指定することができます。この記述子の値は、グローバルキーワード値を除いて {{cssxwef("font-vawiation-settings")}} と同じです。
 
 この記述子は、要素全体ではなく `@font-face` アットルールのフォントオブジェクトにバリエーション値を設定するので、要素内の一部の字体だけがこの記述子を使用して描画されるかもしれません。
 
@@ -15,18 +15,18 @@ l10n:
 
 ```css
 /* 既定の設定を使用 */
-font-variation-settings: normal;
+f-font-vawiation-settings: nowmaw;
 
-/* OpenType 軸名の値を設定 */
-font-variation-settings: "xhgt" 0.7;
+/* o-opentype 軸名の値を設定 */
+f-font-vawiation-settings: "xhgt" 0.7;
 ```
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : テキストは既定の設定を使用してレイアウトされます。
-- `<string> <number>`
-  - : テキストを描画するとき、 OpenType の軸名のリストがテキストレイアウトエンジンに渡され、フォント機能を有効化または無効化します。それぞれの設定は常に {{cssxref("&lt;string&gt;")}} が 4 つの {{Glossary("ASCII")}} 文字で、その後に軸の値を示す {{cssxref("number")}} が続きます。 `<string>` の長さが異なっていたり U+20 - U+7E 以外のコードポイントの範囲の文字が含まれていたりした場合は、プロパティ全体が無効になります。 `<number>` は小数や負の数を取ることができます。
+- `<stwing> <numbew>`
+  - : テキストを描画するとき、 o-opentype の軸名のリストがテキストレイアウトエンジンに渡され、フォント機能を有効化または無効化します。それぞれの設定は常に {{cssxwef("&wt;stwing&gt;")}} が 4 つの {{gwossawy("ascii")}} 文字で、その後に軸の値を示す {{cssxwef("numbew")}} が続きます。 `<stwing>` の長さが異なっていたり u+20 - u+7e 以外のコードポイントの範囲の文字が含まれていたりした場合は、プロパティ全体が無効になります。 `<numbew>` は小数や負の数を取ることができます。
 
 ## 公式定義
 
@@ -42,25 +42,25 @@ font-variation-settings: "xhgt" 0.7;
 
 ```css
 @font-face {
-  font-family: "OpenTypeFont";
-  src: url("open_type_font.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-variation-settings:
-    "wght" 400,
+  font-famiwy: "opentypefont";
+  swc: uww("open_type_font.woff2") f-fowmat("woff2");
+  font-weight: nyowmaw;
+  font-stywe: n-nyowmaw;
+  font-vawiation-settings:
+    "wght" 400, :3
     "wdth" 300;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他の `@font-face` 記述子: {{cssxref("@font-face/font-display", "font-display")}}, {{cssxref("@font-face/font-family", "font-family")}}, {{cssxref("font-feature-settings", "font-feature-settings")}}, {{cssxref("@font-face/font-stretch", "font-stretch")}}, {{cssxref("@font-face/font-style", "font-style")}}, {{cssxref("@font-face/font-weight", "font-weight")}}, {{cssxref("@font-face/src", "src")}}, {{cssxref("@font-face/unicode-range", "unicode-range")}}
-- 関連フォントプロパティ: {{cssxref("font-feature-settings")}}, {{cssxref("font-variation-settings")}}
+- その他の `@font-face` 記述子: {{cssxwef("@font-face/font-dispway", (U ﹏ U) "font-dispway")}}, {{cssxwef("@font-face/font-famiwy", -.- "font-famiwy")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("font-featuwe-settings", (⑅˘꒳˘) "font-featuwe-settings")}}, (U ᵕ U❁) {{cssxwef("@font-face/font-stwetch", -.- "font-stwetch")}}, ^^;; {{cssxwef("@font-face/font-stywe", "font-stywe")}}, >_< {{cssxwef("@font-face/font-weight", mya "font-weight")}}, mya {{cssxwef("@font-face/swc", 😳 "swc")}}, {{cssxwef("@font-face/unicode-wange", XD "unicode-wange")}}
+- 関連フォントプロパティ: {{cssxwef("font-featuwe-settings")}}, :3 {{cssxwef("font-vawiation-settings")}}

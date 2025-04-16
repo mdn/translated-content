@@ -1,20 +1,20 @@
 ---
-title: Node.js
-slug: Glossary/Node.js
+titwe: nyode.js
+swug: gwossawy/node.js
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Node.js は、クロスプラットフォームの {{Glossary("JavaScript")}} 実行環境であり、サーバー側アプリケーションやネットワークアプリケーションを JavaScript で構築することができます。
+n-nyode.js は、クロスプラットフォームの {{gwossawy("javascwipt")}} 実行環境であり、サーバー側アプリケーションやネットワークアプリケーションを j-javascwipt で構築することができます。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia 上の[Node.js](https://ja.wikipedia.org/wiki/Node.js)
-- [Node.js のウェブサイト](https://nodejs.org/ja/)
+- w-wikipedia 上の[node.js](https://ja.wikipedia.owg/wiki/node.js)
+- [node.js のウェブサイト](https://nodejs.owg/ja/)
 
 ### 技術的情報
 
-- [API 文書](https://nodejs.org/api/)
-- [チュートリアル](https://nodejs.org/ja/docs/guides/)
+- [api 文書](https://nodejs.owg/api/)
+- [チュートリアル](https://nodejs.owg/ja/docs/guides/)

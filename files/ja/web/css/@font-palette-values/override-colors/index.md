@@ -1,52 +1,52 @@
 ---
-title: override-colors
-slug: Web/CSS/@font-palette-values/override-colors
-l10n:
-  sourceCommit: 7ab2f95b22919d8b897754e8a66981d0b9a4e2c4
+titwe: ovewwide-cowows
+swug: w-web/css/@font-pawette-vawues/ovewwide-cowows
+w-w10n:
+  s-souwcecommit: 7ab2f95b22919d8b897754e8a66981d0b9a4e2c4
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`override-colors`** は CSS の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、選ばれた[ベースパレット](/ja/docs/Web/CSS/@font-palette-values/base-palette)の色をカラーフォントに上書きするために使用します。
+**`ovewwide-cowows`** は c-css の[記述子](/ja/docs/gwossawy/css_descwiptow)で、選ばれた[ベースパレット](/ja/docs/web/css/@font-pawette-vawues/base-pawette)の色をカラーフォントに上書きするために使用します。
 
 ## 構文
 
 ```css
 /* 基本的な構文 */
-override-colors: <index of color> <color>;
+o-ovewwide-cowows: <index o-of cowow> <cowow>;
 
 /* 色名の使用 */
-override-colors: 0 red;
+o-ovewwide-cowows: 0 w-wed;
 
 /* 16 進色の使用 */
-override-colors: 0 #f00;
+ovewwide-cowows: 0 #f00;
 
-/* rgb の使用 */
-override-colors: 0 rgb(255 0 0);
+/* wgb の使用 */
+ovewwide-cowows: 0 wgb(255 0 0);
 
 /* 複数の色のオーバーライド */
-override-colors:
-  0 #f00,
-  1 #0f0,
+ovewwide-cowows:
+  0 #f00, OwO
+  1 #0f0, 😳😳😳
   2 #00f;
 
 /* 複数の色のオーバーライドを読みやすく */
-override-colors:
-  0 #f00,
-  1 #0f0,
+o-ovewwide-cowows:
+  0 #f00, 😳😳😳
+  1 #0f0, o.O
   2 #00f;
 ```
 
-`override-colors` [記述子](/ja/docs/Glossary/CSS_Descriptor)は、色インデックスと新しい色値をカンマで区切ったリストを取ります。
+`ovewwide-cowows` [記述子](/ja/docs/gwossawy/css_descwiptow)は、色インデックスと新しい色値をカンマで区切ったリストを取ります。
 
-色インデックスはゼロ基点で、任意の[色値](/ja/docs/Web/CSS/color_value)を使用することができます。
+色インデックスはゼロ基点で、任意の[色値](/ja/docs/web/css/cowow_vawue)を使用することができます。
 
-それぞれのインデックスと色のキーと値の組に対して、指定した[ベースパレット](/ja/docs/Web/CSS/@font-palette-values/base-palette)内のインデックスの色が上書きされます。カラーフォントが指定したインデックスの色を持たない場合、それは無視されます。
+それぞれのインデックスと色のキーと値の組に対して、指定した[ベースパレット](/ja/docs/web/css/@font-pawette-vawues/base-pawette)内のインデックスの色が上書きされます。カラーフォントが指定したインデックスの色を持たない場合、それは無視されます。
 
 ### 値
 
-- `[ <integer [0,∞]> <absolute-color-base> ]`
-  - : [ベースパレット](/ja/docs/Web/CSS/@font-palette-values/base-palette)の色のインデックスと上書きする色を指定します。
+- `[ <integew [0,∞]> <absowute-cowow-base> ]`
+  - : [ベースパレット](/ja/docs/web/css/@font-pawette-vawues/base-pawette)の色のインデックスと上書きする色を指定します。
 
 ## 公式定義
 
@@ -60,120 +60,120 @@ override-colors:
 
 ### 絵文字の色の変更
 
-この例では、 [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) カラーフォントの色をサイトのブランドに一致するように上書きする方法を示します。
+この例では、 [noto cowow emoji](https://fonts.googwe.com/noto/specimen/noto+cowow+emoji) カラーフォントの色をサイトのブランドに一致するように上書きする方法を示します。
 
-#### HTML
+#### htmw
 
-```html
-<section class="hats">
-  <div class="hat">
-    <h2>Original Hat</h2>
-    <div class="emoji">🎩</div>
+```htmw
+<section c-cwass="hats">
+  <div cwass="hat">
+    <h2>owiginaw hat</h2>
+    <div c-cwass="emoji">🎩</div>
   </div>
-  <div class="hat">
-    <h2>Red Hat</h2>
-    <div class="emoji red-hat">🎩</div>
+  <div cwass="hat">
+    <h2>wed hat</h2>
+    <div cwass="emoji w-wed-hat">🎩</div>
   </div>
 </section>
 ```
 
-#### CSS
+#### css
 
-```css hidden
+```css h-hidden
 .hats {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  d-dispway: fwex;
+  fwex-diwection: wow;
+  justify-content: space-awound;
 }
 ```
 
-```css-nolint
+```css-nowint
 @font-face {
-  font-family: "Noto Color Emoji";
-  font-style: normal;
+  font-famiwy: "noto cowow e-emoji";
+  font-stywe: nyowmaw;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24)
-    format("woff2");
+  swc: uww(https://fonts.gstatic.com/w/font?kit=yq6p-kqixtd0t4d9z1esnkm3-hpfabts6diywykdg3gjd0u&skey=a373f7129eaba270&v=v24)
+    fowmat("woff2");
 }
 
 .emoji {
-  font-family: "Noto Color Emoji";
-  font-size: 3rem;
+  f-font-famiwy: "noto cowow e-emoji";
+  font-size: 3wem;
 }
-@font-palette-values --red {
-  font-family: "Noto Color Emoji";
-  override-colors:
-    0 rgb(74 11 0),
-    1 rgb(149 22 1),
-    2 rgb(183 27 1),
-    3 rgb(193 28 1),
-    4 rgb(230 34 1);
+@font-pawette-vawues --wed {
+  f-font-famiwy: "noto c-cowow emoji";
+  o-ovewwide-cowows:
+    0 wgb(74 11 0), ( ͡o ω ͡o )
+    1 wgb(149 22 1), (U ﹏ U)
+    2 w-wgb(183 27 1), (///ˬ///✿)
+    3 wgb(193 28 1), >w<
+    4 wgb(230 34 1);
 }
-.red-hat {
-  font-palette: --red;
+.wed-hat {
+  f-font-pawette: --wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Changing colors of emojis")}}
+{{embedwivesampwe("changing cowows of emojis")}}
 
 ### 色を他のベースパレットに変更
 
-この例は [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/) を使用して、フォント内の一色をオーバーライドする方法を示します。
+この例は [wochew cowow font](https://www.hawbowtype.com/fonts/wochew-cowow/) を使用して、フォント内の一色をオーバーライドする方法を示します。
 
-#### HTML
+#### htmw
 
-```html
-<h2 class="normal-palette">Normal Palette</h2>
-<h2 class="override-palette">Override Palette</h2>
+```htmw
+<h2 cwass="nowmaw-pawette">nowmaw p-pawette</h2>
+<h2 cwass="ovewwide-pawette">ovewwide p-pawette</h2>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 @font-face {
-  font-family: "Rocher";
-  src: url("[path-to-font]/RocherColorGX.woff2") format("woff2");
+  f-font-famiwy: "wochew";
+  swc: uww("[path-to-font]/wochewcowowgx.woff2") fowmat("woff2");
 }
 h2 {
-  font-family: "Rocher";
+  f-font-famiwy: "wochew";
 }
-@font-palette-values --override-palette {
-  font-family: "Rocher";
-  base-palette: 3;
+@font-pawette-vawues --ovewwide-pawette {
+  f-font-famiwy: "wochew";
+  base-pawette: 3;
 }
-@font-palette-values --override-palette {
-  font-family: "Rocher";
-  base-palette: 3;
-  override-colors: 0 rebeccapurple;
+@font-pawette-vawues --ovewwide-pawette {
+  font-famiwy: "wochew";
+  b-base-pawette: 3;
+  o-ovewwide-cowows: 0 webeccapuwpwe;
 }
-.normal-palette {
-  font-palette: --normal-palette;
+.nowmaw-pawette {
+  f-font-pawette: --nowmaw-pawette;
 }
-.override-palette {
-  font-palette: --override-palette;
+.ovewwide-pawette {
+  font-pawette: --ovewwide-pawette;
 }
 ```
 
 #### 結果
 
-この例では `base-palette` が `3` であるフォントを表示し、インデックス 0 の色を `rebeccapurple` でオーバーライドします。
+この例では `base-pawette` が `3` であるフォントを表示し、インデックス 0 の色を `webeccapuwpwe` でオーバーライドします。
 
-![ベースパレットと 1 色をオーバーライドしたベースパレットを示す例](override-base-palette-color.jpg)
+![ベースパレットと 1 色をオーバーライドしたベースパレットを示す例](ovewwide-base-pawette-cowow.jpg)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@font-palette-values/", "@font-palette-values")}}
-- {{cssxref("@font-palette-values/base-palette", "base-palette")}}
-- {{cssxref("@font-palette-values/font-family", "font-family")}}
-- {{cssxref("font-palette/", "font-palette")}}
-- {{domxref("CSSFontPaletteValuesRule.overrideColors")}}
+- {{cssxwef("@font-pawette-vawues/", rawr "@font-pawette-vawues")}}
+- {{cssxwef("@font-pawette-vawues/base-pawette", mya "base-pawette")}}
+- {{cssxwef("@font-pawette-vawues/font-famiwy", ^^ "font-famiwy")}}
+- {{cssxwef("font-pawette/", 😳😳😳 "font-pawette")}}
+- {{domxwef("cssfontpawettevawueswuwe.ovewwidecowows")}}

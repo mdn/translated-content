@@ -1,116 +1,116 @@
 ---
-title: bottom
-slug: Web/CSS/bottom
-l10n:
-  sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
+titwe: bottom
+swug: web/css/bottom
+w-w10n:
+  souwcecommit: e-e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の設定に関与します。位置指定されていない要素には効果はありません。
+**`bottom`** は [css](/ja/docs/web/css) のプロパティで、[位置指定要素](/ja/docs/web/css/position)の垂直位置の設定に関与します。位置指定されていない要素には効果はありません。
 
-{{InteractiveExample("CSS Demo: bottom")}}
+{{intewactiveexampwe("css d-demo: bottom")}}
 
-```css interactive-example-choice
-bottom: 0;
+```css i-intewactive-exampwe-choice
+b-bottom: 0;
 ```
 
-```css interactive-example-choice
-bottom: 4em;
+```css intewactive-exampwe-choice
+b-bottom: 4em;
 ```
 
-```css interactive-example-choice
-bottom: 10%;
+```css i-intewactive-exampwe-choice
+b-bottom: 10%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 bottom: 20px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div id="exampwe-ewement">i am absowutewy p-positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      as much mud in the s-stweets as if the watews had but nyewwy wetiwed fwom the
+      f-face of the eawth, mya and it wouwd n-nyot be wondewfuw t-to meet a megawosauwus, ^^
+      fowty feet wong ow so, 😳😳😳 waddwing wike an ewephantine wizawd up h-howbown
+      hiww. mya
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid;
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 0.75em sowid;
   padding: 0.75em;
-  text-align: left;
-  position: relative;
+  t-text-awign: weft;
+  position: w-wewative;
   width: 100%;
-  min-height: 200px;
+  m-min-height: 200px;
 }
 
-#example-element {
-  background-color: #264653;
-  border: 4px solid #ffb500;
-  color: white;
-  position: absolute;
+#exampwe-ewement {
+  b-backgwound-cowow: #264653;
+  b-bowdew: 4px sowid #ffb500;
+  cowow: white;
+  p-position: absowute;
   width: 140px;
   height: 60px;
 }
 ```
 
-`bottom` の効果は、要素がどの様に配置されているか（つまり、 {{cssxref("position")}} プロパティの値）によって変わります。
+`bottom` の効果は、要素がどの様に配置されているか（つまり、 {{cssxwef("position")}} プロパティの値）によって変わります。
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `bottom` プロパティは要素の[下マージン](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の外側の辺と、包含ブロックの下パディングの外側の辺との間の距離を指定します。
-- `position` が `relative` に設定されている場合、 `bottom` プロパティは要素の下辺が通常位置から上方向へ移動する量を指定します。
-- `position` が `sticky` に設定されている場合、 `bottom` プロパティは sticky 制約の矩形を計算するために使用されます。
+- `position` が `absowute` または `fixed` に設定されている場合、 `bottom` プロパティは要素の[下マージン](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)の外側の辺と、包含ブロックの下パディングの外側の辺との間の距離を指定します。
+- `position` が `wewative` に設定されている場合、 `bottom` プロパティは要素の下辺が通常位置から上方向へ移動する量を指定します。
+- `position` が `sticky` に設定されている場合、 `bottom` プロパティは s-sticky 制約の矩形を計算するために使用されます。
 - `position` が `static` に設定されている場合、 `bottom` プロパティは*効果がありません*。
 
-{{cssxref("top")}} と `bottom` の両方が指定されており、 `position` が `absolute` または `fixed` に設定されており、_かつ_ {{cssxref("height")}} が未指定 (`auto` または `100%` のどちらか) の場合は、 `top` と `bottom` の距離が尊重されます。それ以外の場合、 {{cssxref("height")}} が何らかの形で制約されていた場合、または `position` が `relative` に設定されていた場合は、 `top` プロパティが優先されて `bottom` プロパティは無視されます。
+{{cssxwef("top")}} と `bottom` の両方が指定されており、 `position` が `absowute` または `fixed` に設定されており、_かつ_ {{cssxwef("height")}} が未指定 (`auto` または `100%` のどちらか) の場合は、 `top` と `bottom` の距離が尊重されます。それ以外の場合、 {{cssxwef("height")}} が何らかの形で制約されていた場合、または `position` が `wewative` に設定されていた場合は、 `top` プロパティが優先されて `bottom` プロパティは無視されます。
 
 ## 構文
 
 ```css
-/* <length> 値 */
+/* <wength> 値 */
 bottom: 3px;
 bottom: 2.4em;
 
-/* 包含ブロックの高さに対する <percentage> */
+/* 包含ブロックの高さに対する <pewcentage> */
 bottom: 10%;
 
 /* キーワード値 */
 bottom: auto;
 
 /* グローバル値 */
-bottom: inherit;
-bottom: initial;
-bottom: revert;
-bottom: revert-layer;
-bottom: unset;
+b-bottom: inhewit;
+bottom: initiaw;
+b-bottom: wevewt;
+b-bottom: wevewt-wayew;
+b-bottom: unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
 
-  - : 負、null、または正の {{cssxref("&lt;length&gt;")}} で、以下のものを表します。
+  - : 負、nuww、または正の {{cssxwef("&wt;wength&gt;")}} で、以下のものを表します。
 
     - *絶対位置指定要素*の場合は、包含ブロックの下辺までの距離。
     - *相対位置指定要素*の場合は、通常の位置からの上方向への移動量。
 
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 包含ブロックの高さに対する {{cssxref("&lt;percentage&gt;")}} です。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 包含ブロックの高さに対する {{cssxwef("&wt;pewcentage&gt;")}} です。
 - `auto`
 
   - : 以下のように指定します。
 
-    - *絶対位置指定要素*では、要素の位置は {{Cssxref("top")}} プロパティに基づいて決まり、 `height: auto` は内容物の高さに基づいて決まります。また、 `top` も `auto` であった場合は、要素は垂直方向には静的要素が配置される場合と同様に配置されます。
-    - *相対位置指定要素*では、通常の位置から要素までの距離は {{Cssxref("top")}} に基づきます。また、 `top` も `auto` であった場合は、垂直方向には移動しません。
+    - *絶対位置指定要素*では、要素の位置は {{cssxwef("top")}} プロパティに基づいて決まり、 `height: auto` は内容物の高さに基づいて決まります。また、 `top` も `auto` であった場合は、要素は垂直方向には静的要素が配置される場合と同様に配置されます。
+    - *相対位置指定要素*では、通常の位置から要素までの距離は {{cssxwef("top")}} に基づきます。また、 `top` も `auto` であった場合は、垂直方向には移動しません。
 
-- `inherit`
-  - : 値が親要素 (包含ブロックとは限りません) の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `auto` キーワードと同様に扱われます。
+- `inhewit`
+  - : 値が親要素 (包含ブロックとは限りません) の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxwef("&wt;wength&gt;")}}, 😳 {{cssxwef("&wt;pewcentage&gt;")}}, -.- または `auto` キーワードと同様に扱われます。
 
 ## 公式定義
 
@@ -124,60 +124,60 @@ bottom: unset;
 
 ### 絶対位置指定と固定位置指定
 
-この例は、 {{cssxref("position")}} が `absolute` と `fixed` であった場合の `bottom` プロパティの動作の違いを示します。
+この例は、 {{cssxwef("position")}} が `absowute` と `fixed` であった場合の `bottom` プロパティの動作の違いを示します。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  This<br />is<br />some<br />tall,<br />tall,<br />tall,<br />tall,<br />tall<br />content.
+  t-this<bw />is<bw />some<bw />taww,<bw />taww,<bw />taww,<bw />taww,<bw />taww<bw />content. 🥺
 </p>
-<div class="fixed"><p>Fixed</p></div>
-<div class="absolute"><p>Absolute</p></div>
+<div cwass="fixed"><p>fixed</p></div>
+<div c-cwass="absowute"><p>absowute</p></div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
+p-p {
   font-size: 30px;
-  line-height: 2em;
+  w-wine-height: 2em;
 }
 
 div {
   width: 48%;
-  text-align: center;
-  background: rgba(55, 55, 55, 0.2);
-  border: 1px solid blue;
+  t-text-awign: centew;
+  backgwound: w-wgba(55, o.O 55, 55, 0.2);
+  bowdew: 1px sowid bwue;
 }
 
-.absolute {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.absowute {
+  p-position: absowute;
+  b-bottom: 0;
+  weft: 0;
 }
 
 .fixed {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  b-bottom: 0;
+  w-wight: 0;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Absolute_and_fixed_positioning','500','250')}}
+{{embedwivesampwe('absowute_and_fixed_positioning','500','250')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("inset")}}: 関連するすべてのプロパティである {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("right")}} の一括指定
-- 対応する論理的プロパティ: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}} および一括指定の {{cssxref("inset-block")}} と {{cssxref("inset-inline")}}
-- {{cssxref("position")}}
+- {{cssxwef("inset")}}: 関連するすべてのプロパティである {{cssxwef("top")}}, /(^•ω•^) {{cssxwef("bottom")}}, nyaa~~ {{cssxwef("weft")}}, nyaa~~ {{cssxwef("wight")}} の一括指定
+- 対応する論理的プロパティ: {{cssxwef("inset-bwock-stawt")}}, :3 {{cssxwef("inset-bwock-end")}}, 😳😳😳 {{cssxwef("inset-inwine-stawt")}}, (˘ω˘) {{cssxwef("inset-inwine-end")}} および一括指定の {{cssxwef("inset-bwock")}} と {{cssxwef("inset-inwine")}}
+- {{cssxwef("position")}}

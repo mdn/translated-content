@@ -1,103 +1,103 @@
 ---
-title: :only-of-type
-slug: Web/CSS/:only-of-type
+titwe: :onwy-of-type
+swug: web/css/:onwy-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`:only-of-type`** [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、同じ型の兄弟要素がない要素を表します。
+[css](/ja/docs/web/css) の **`:onwy-of-type`** [擬似クラス](/ja/docs/web/css/pseudo-cwasses)は、同じ型の兄弟要素がない要素を表します。
 
 ```
 /* <p> が親の中にある唯一の <p> 出逢った場合に選択 */
-p:only-of-type {
-  background-color: lime;
+p-p:onwy-of-type {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-{{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :onwy-of-type", rawr "tabbed-showtew")}}
 
-```css interactive-example
-a:only-of-type {
-  color: fuchsia;
+```css i-intewactive-exampwe
+a-a:onwy-of-type {
+  c-cowow: f-fuchsia;
 }
 
-dd:only-of-type {
-  background-color: bisque;
+dd:onwy-of-type {
+  backgwound-cowow: bisque;
 }
 ```
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  To find out more about <b>QUIC</b>, check <a href="#">RFC 9000</a> and
-  <a href="#">RFC 9114</a>.
+  to find out m-mowe about <b>quic</b>, OwO check <a hwef="#">wfc 9000</a> a-and
+  <a hwef="#">wfc 9114</a>. (U ﹏ U)
 </p>
 
-<dl>
-  <dt>Published</dt>
+<dw>
+  <dt>pubwished</dt>
   <dd>2021</dd>
   <dd>2022</dd>
-</dl>
+</dw>
 
-<p>Details about <b>QPACK</b> can be found in <a href="#">RFC 9204</a>.</p>
+<p>detaiws a-about <b>qpack</b> can be found in <a hwef="#">wfc 9204</a>.</p>
 
-<dl>
-  <dt>Published</dt>
+<dw>
+  <dt>pubwished</dt>
   <dd>2022</dd>
-</dl>
+</dw>
 ```
 
-> [!NOTE]
-> 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+> [!note]
+> 最初の定義では、親のある要素のみが選択されていました。 sewectows w-wevew 4 の初期に、これは必要なくなりました。
 
 ## 構文
 
 ```
-:only-of-type
+:onwy-of-type
 ```
 
 ## 例
 
 ### 同じ型の兄弟がない要素をスタイル付け
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <main>
-  <div>I am `div` #1.</div>
-  <p>I am the only `p` among my siblings.</p>
-  <div>I am `div` #2.</div>
+  <div>i a-am `div` #1.</div>
+  <p>i a-am the onwy `p` among my sibwings.</p>
+  <div>i am `div` #2.</div>
   <div>
-    I am `div` #3.
-    <i>I am the only `i` child.</i>
-    <em>I am `em` #1.</em>
-    <em>I am `em` #2.</em>
+    i am `div` #3. >_<
+    <i>i a-am the onwy `i` chiwd.</i>
+    <em>i am `em` #1.</em>
+    <em>i am `em` #2.</em>
   </div>
 </main>
 ```
 
-#### CSS
+#### css
 
 ```css
-main :only-of-type {
-  color: red;
+m-main :onwy-of-type {
+  cowow: wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Styling_elements_with_no_siblings_of_the_same_type','100%',180)}}
+{{embedwivesampwe('stywing_ewements_with_no_sibwings_of_the_same_type','100%',180)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref(":only-child")}}
-- {{Cssxref(":first-of-type")}}
-- {{Cssxref(":last-of-type")}}
-- {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":onwy-chiwd")}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":nth-of-type")}}

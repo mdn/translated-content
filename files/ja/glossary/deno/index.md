@@ -1,21 +1,21 @@
 ---
-title: Deno
-slug: Glossary/Deno
-l10n:
-  sourceCommit: 8005d92738cb5678d9b1e434f02ddebaa15c1eaa
+titwe: deno
+swug: gwossawy/deno
+w-w10n:
+  souwcecommit: 8005d92738cb5678d9b1e434f02ddebaa15c1eaa
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Deno は {{Glossary("JavaScript")}}、{{Glossary("TypeScript")}}、および {{Glossary("WebAssembly")}} のランタイム環境です。
+d-deno は {{gwossawy("javascwipt")}}、{{gwossawy("typescwipt")}}、および {{gwossawy("webassembwy")}} のランタイム環境です。
 
-{{Glossary("Node.js")}} と同様に、Deno は V8 JavaScript エンジンをベースにしており、開発者がブラウザー外で JavaScript を実行することを可能にします。ただし、Node と Deno の間にはいくつかの注目すべき違いがあります。特に、Deno は次のような特徴があります。
+{{gwossawy("node.js")}} と同様に、deno は v-v8 javascwipt エンジンをベースにしており、開発者がブラウザー外で j-javascwipt を実行することを可能にします。ただし、node と deno の間にはいくつかの注目すべき違いがあります。特に、deno は次のような特徴があります。
 
-- ビルトインで TypeScript をサポートをしています。
+- ビルトインで t-typescwipt をサポートをしています。
 - デフォルトでファイルシステムおよびネットワークアクセスを制限します。
-- 多くの Web API の実装を含む大規模な標準ライブラリーが付属しています。
-- 中央集権的なレジストリーに依存せず、代わりにモジュールを URL から読み込むことができます。
+- 多くの w-web api の実装を含む大規模な標準ライブラリーが付属しています。
+- 中央集権的なレジストリーに依存せず、代わりにモジュールを u-uww から読み込むことができます。
 
 ## 関連リンク
 
-- [Deno のウェブサイト](https://deno.com/)
+- [deno のウェブサイト](https://deno.com/)

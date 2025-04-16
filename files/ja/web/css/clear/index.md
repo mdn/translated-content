@@ -1,83 +1,83 @@
 ---
-title: clear
-slug: Web/CSS/clear
-l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+titwe: cweaw
+swug: web/css/cweaw
+w-w10n:
+  souwcecommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
+**`cweaw`** は [css](/ja/docs/web/css) のプロパティで、要素をその前にある[浮動](/ja/docs/web/css/fwoat)要素の下に移動 (cweaw) する必要があるかどうかを設定します。`cweaw` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
 
-{{InteractiveExample("CSS Demo: clear")}}
+{{intewactiveexampwe("css d-demo: cweaw")}}
 
-```css interactive-example-choice
-clear: none;
+```css i-intewactive-exampwe-choice
+c-cweaw: nyone;
 ```
 
-```css interactive-example-choice
-clear: left;
+```css i-intewactive-exampwe-choice
+c-cweaw: w-weft;
 ```
 
-```css interactive-example-choice
-clear: right;
+```css i-intewactive-exampwe-choice
+cweaw: wight;
 ```
 
-```css interactive-example-choice
-clear: both;
+```css intewactive-exampwe-choice
+cweaw: both;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="floated-left">Left</div>
-    <div class="floated-right">Right</div>
-    <div class="transition-all" id="example-element">
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="fwoated-weft">weft</div>
+    <div c-cwass="fwoated-wight">wight</div>
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      as much m-mud in the stweets as if the watews h-had but nyewwy w-wetiwed fwom the
+      face of the eawth, (U ﹏ U) and it wouwd nyot be wondewfuw to m-meet a megawosauwus, :3
+      fowty feet wong ow so, waddwing wike an ewephantine wizawd u-up howbown
+      hiww. ( ͡o ω ͡o )
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  padding: 0.75em;
-  text-align: left;
-  line-height: normal;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px sowid #c5c5c5;
+  p-padding: 0.75em;
+  t-text-awign: weft;
+  wine-height: nyowmaw;
 }
 
-.floated-left {
-  border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
-  padding: 1em;
-  float: left;
+.fwoated-weft {
+  b-bowdew: sowid 10px #ffc129;
+  backgwound-cowow: wgba(81, σωσ 81, 81, 0.6);
+  p-padding: 1em;
+  fwoat: weft;
 }
 
-.floated-right {
-  border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+.fwoated-wight {
+  bowdew: sowid 10px #ffc129;
+  backgwound-cowow: w-wgba(81, >w< 81, 81, 0.6);
   padding: 1em;
-  float: right;
-  height: 150px;
+  f-fwoat: wight;
+  h-height: 150px;
 }
 ```
 
-浮動でないブロックに適用された場合は、その要素の[境界の辺](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area)が、関係するすべての浮動要素の[マージンの辺](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area)より下まで移動します。浮動でないブロックの上マージンは折り畳まれます。
+浮動でないブロックに適用された場合は、その要素の[境界の辺](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#bowdew_awea)が、関係するすべての浮動要素の[マージンの辺](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#mawgin_awea)より下まで移動します。浮動でないブロックの上マージンは折り畳まれます。
 
 一方で、二つの浮動要素の垂直マージンは折り畳まれません。浮動要素に適用された場合、下の要素のマージンの辺が、すべての関連する浮動要素のマージンの辺よりも下に移動します。これは後の浮動要素が前のものよりも高い位置に配置されることがないため、後の浮動要素の位置に影響します。
 
-解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)内の先行する浮動要素です。
+解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/web/css/css_dispway/bwock_fowmatting_context)内の先行する浮動要素です。
 
-> [!NOTE]
-> 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の [`display`](/ja/docs/Web/CSS/display) プロパティの値を [`flow-root`](/ja/docs/Web/CSS/display#flow-root) に設定してください。
+> [!note]
+> 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の [`dispway`](/ja/docs/web/css/dispway) プロパティの値を [`fwow-woot`](/ja/docs/web/css/dispway#fwow-woot) に設定してください。
 >
 > ```css
-> #container {
->   display: flow-root;
+> #containew {
+>   d-dispway: fwow-woot;
 > }
 > ```
 
@@ -85,34 +85,34 @@ clear: both;
 
 ```css
 /* キーワード値 */
-clear: none;
-clear: left;
-clear: right;
-clear: both;
-clear: inline-start;
-clear: inline-end;
+cweaw: nyone;
+cweaw: weft;
+cweaw: w-wight;
+cweaw: b-both;
+cweaw: inwine-stawt;
+cweaw: i-inwine-end;
 
 /* グローバル値 */
-clear: inherit;
-clear: initial;
-clear: revert;
-clear: revert-layer;
-clear: unset;
+c-cweaw: inhewit;
+cweaw: i-initiaw;
+cweaw: wevewt;
+cweaw: w-wevewt-wayew;
+cweaw: unset;
 ```
 
 ### 値
 
 - `none`
   - : 要素は先行する浮動要素と切り離されず、下に移動しません。
-- `left`
+- `weft`
   - : 要素は先行する*左*の浮動要素と切り離され、下に移動します。
-- `right`
+- `wight`
   - : 要素は先行する*右*の浮動要素と切り離され、下に移動します。
 - `both`
   - : 要素は先行する*左右両方*の浮動要素と切り離され、下に移動します。
-- `inline-start`
+- `inwine-stawt`
   - : 要素は、先行する*包含ブロックの先頭側*の浮動要素の下に移動することを示すキーワードです。これは左書きでは*左側*、右書きでは*右側*の浮動要素です。
-- `inline-end`
+- `inwine-end`
   - : 要素は、先行する*包含ブロックの末尾側*の浮動要素の下に移動することを示すキーワードです。これは左書きでは*右側*、右書きでは*左側*の浮動要素です。
 
 ## 公式定義
@@ -125,139 +125,139 @@ clear: unset;
 
 ## 例
 
-### clear: left
+### cweaw: w-weft
 
-#### HTML
+#### htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+```htmw
+<div c-cwass="wwappew">
+  <p cwass="bwack">
+    w-wowem i-ipsum dowow sit amet, consectetuew adipiscing ewit. 😳😳😳 phasewwus sit amet
+    diam. OwO duis mattis vawius dui. 😳 suspendisse e-eget dowow. 😳😳😳
   </p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="left">This paragraph clears left.</p>
+  <p cwass="wed">wowem i-ipsum dowow sit amet, (˘ω˘) consectetuew a-adipiscing ewit.</p>
+  <p c-cwass="weft">this p-pawagwaph cweaws weft.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  bowdew: 1px s-sowid bwack;
   padding: 10px;
 }
-.left {
-  border: 1px solid black;
-  clear: left;
+.weft {
+  bowdew: 1px sowid bwack;
+  cweaw: weft;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
-  width: 20%;
+.bwack {
+  f-fwoat: weft;
+  mawgin: 0;
+  backgwound-cowow: b-bwack;
+  c-cowow: #fff;
+  w-width: 20%;
 }
-.red {
-  float: left;
-  margin: 0;
-  background-color: pink;
-  width: 20%;
+.wed {
+  fwoat: w-weft;
+  mawgin: 0;
+  b-backgwound-cowow: p-pink;
+  w-width: 20%;
 }
 p {
   width: 50%;
 }
 ```
 
-{{ EmbedLiveSample('clear_left','100%','250') }}
+{{ embedwivesampwe('cweaw_weft','100%','250') }}
 
-### clear: right
+### c-cweaw: wight
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+```htmw
+<div c-cwass="wwappew">
+  <p c-cwass="bwack">
+    wowem i-ipsum dowow sit amet, ʘwʘ consectetuew adipiscing ewit. ( ͡o ω ͡o ) phasewwus s-sit amet
+    diam. o.O duis mattis vawius dui. >w< suspendisse eget dowow. 😳
   </p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="right">This paragraph clears right.</p>
+  <p cwass="wed">wowem ipsum dowow s-sit amet, 🥺 consectetuew adipiscing ewit.</p>
+  <p cwass="wight">this p-pawagwaph cweaws w-wight.</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  bowdew: 1px s-sowid bwack;
   padding: 10px;
 }
-.right {
-  border: 1px solid black;
-  clear: right;
+.wight {
+  b-bowdew: 1px sowid b-bwack;
+  cweaw: wight;
 }
-.black {
-  float: right;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: wight;
+  mawgin: 0;
+  backgwound-cowow: bwack;
+  cowow: #fff;
+  w-width: 20%;
+}
+.wed {
+  fwoat: wight;
+  m-mawgin: 0;
+  backgwound-cowow: p-pink;
   width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: pink;
-  width: 20%;
-}
-p {
+p-p {
   width: 50%;
 }
 ```
 
-{{ EmbedLiveSample('clear_right','100%','250') }}
+{{ embedwivesampwe('cweaw_wight','100%','250') }}
 
-### clear: both
+### c-cweaw: b-both
 
-#### HTML
+#### htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
-    ac dui.
+```htmw
+<div cwass="wwappew">
+  <p cwass="bwack">
+    w-wowem ipsum d-dowow sit amet, rawr x3 consectetuew adipiscing ewit. phasewwus sit amet
+    diam. o.O duis m-mattis vawius d-dui. rawr suspendisse e-eget dowow. ʘwʘ fusce puwvinaw wacus
+    a-ac dui. 😳😳😳
   </p>
-  <p class="red">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
-    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  <p c-cwass="wed">
+    wowem i-ipsum dowow sit amet, ^^;; consectetuew adipiscing ewit. o.O phasewwus sit amet
+    diam. (///ˬ///✿) d-duis mattis v-vawius dui. σωσ suspendisse eget dowow. nyaa~~
   </p>
-  <p class="both">This paragraph clears both.</p>
+  <p cwass="both">this p-pawagwaph cweaws b-both.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
-  padding: 10px;
+.wwappew {
+  bowdew: 1px sowid bwack;
+  p-padding: 10px;
 }
 .both {
-  border: 1px solid black;
-  clear: both;
+  bowdew: 1px sowid bwack;
+  cweaw: both;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: weft;
+  m-mawgin: 0;
+  backgwound-cowow: bwack;
+  cowow: #fff;
   width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: pink;
+.wed {
+  fwoat: w-wight;
+  mawgin: 0;
+  b-backgwound-cowow: pink;
   width: 20%;
 }
 p {
@@ -265,16 +265,16 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('clear_both','100%','300') }}
+{{ e-embedwivesampwe('cweaw_both','100%','300') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [css 基本ボックスモデル](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

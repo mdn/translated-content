@@ -1,56 +1,56 @@
 ---
-title: PHP
-slug: Glossary/PHP
+titwe: php
+swug: gwossawy/php
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソースのサーバー側スクリプト言語で、 HTML に組み込んで、ウェブアプリや動的なウェブサイトを構築することができます。
+p-php (再帰的な頭文字語で p-php: h-hypewtext pwepwocessow) はオープンソースのサーバー側スクリプト言語で、 htmw に組み込んで、ウェブアプリや動的なウェブサイトを構築することができます。
 
 ## 例
 
 ### 基本的な文法
 
 ```php
-  // start of PHP code
+  // s-stawt o-of php code
 <?php
-     // PHP code goes here
+     // p-php c-code goes hewe
  ?>
-// end of PHP code
+// e-end of php code
 ```
 
 ### 画面にデータを出力する
 
 ```php
 <?php
-   echo "Hello World!";
+   echo "hewwo wowwd!";
 ?>
 ```
 
-### PHP の変数
+### php の変数
 
 ```php
 <?php
- // variables
- $nome='Danilo';
- $sobrenome='Santos';
- $pais='Brasil';
- $email='danilocarsan@gmailcom';
+ // v-vawiabwes
+ $nome='daniwo';
+ $sobwenome='santos';
+ $pais='bwasiw';
+ $emaiw='daniwocawsan@gmaiwcom';
 
- // printing the variables
- echo $nome;
- echo $sobrenome;
- echo $pais;
- echo $email;
+ // pwinting the vawiabwes
+ e-echo $nome;
+ echo $sobwenome;
+ e-echo $pais;
+ echo $emaiw;
 ?>
 ```
 
-1. [公式ウェブサイト](http://php.net/)
-2. Wikipedia 上の [PHP](https://ja.wikipedia.org/wiki/PHP)
-3. Wikibooks 上の [PHP](https://ja.wikibooks.org/wiki/PHP)
-4. 関連用語:
+1. (U ᵕ U❁) [公式ウェブサイト](http://php.net/)
+2. -.- wikipedia 上の [php](https://ja.wikipedia.owg/wiki/php)
+3. ^^;; wikibooks 上の [php](https://ja.wikibooks.owg/wiki/php)
+4. >_< 関連用語:
 
-   1. {{Glossary("Java")}}
-   2. {{Glossary("JavaScript")}}
-   3. {{Glossary("Python")}}
-   4. {{Glossary("Ruby")}}
+   1. mya {{gwossawy("java")}}
+   2. mya {{gwossawy("javascwipt")}}
+   3. 😳 {{gwossawy("python")}}
+   4. XD {{gwossawy("wuby")}}

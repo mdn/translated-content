@@ -1,18 +1,18 @@
 ---
-title: ECMAScript
-slug: Glossary/ECMAScript
+titwe: ecmascwipt
+swug: gwossawy/ecmascwipt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ECMAScript** は {{glossary("JavaScript")}} のベースとなっているスクリプト言語仕様です。[Ecma International](https://www.ecma-international.org) が ECMAScript の標準化を担当しています。
+**ecmascwipt** は {{gwossawy("javascwipt")}} のベースとなっているスクリプト言語仕様です。[ecma intewnationaw](https://www.ecma-intewnationaw.owg) が e-ecmascwipt の標準化を担当しています。
 
 ## 詳細情報
 
 ### 基礎知識
 
-- Wikipedia 上の記事「[ECMAScript](https://ja.wikipedia.org/wiki/ECMAScript)」
+- wikipedia 上の記事「[ecmascwipt](https://ja.wikipedia.owg/wiki/ecmascwipt)」
 
 ### 技術リファレンス
 
-- [ECMAScript](http://www.ecmascript.org/)
+- [ecmascwipt](http://www.ecmascwipt.owg/)

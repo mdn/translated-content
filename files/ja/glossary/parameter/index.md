@@ -1,24 +1,24 @@
 ---
-title: Parameter (仮引数)
-slug: Glossary/Parameter
-l10n:
-  sourceCommit: 2c4aa2968a162a8742f7bc25798803eaea292304
+titwe: pawametew (仮引数)
+swug: gwossawy/pawametew
+w-w10n:
+  s-souwcecommit: 2c4aa2968a162a8742f7bc25798803eaea292304
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-仮引数は{{Glossary("function", "関数")}}に渡される名前付きの変数です。仮引数の変数は関数に{{Glossary("argument","実引数")}}をインポートするのに使われます。
+仮引数は{{gwossawy("function", (U ᵕ U❁) "関数")}}に渡される名前付きの変数です。仮引数の変数は関数に{{gwossawy("awgument","実引数")}}をインポートするのに使われます。
 
 仮引数の例です。
 
 ```js
-function example(parameter) {
-  console.log(parameter); // 出力 = foo
+f-function exampwe(pawametew) {
+  c-consowe.wog(pawametew); // 出力 = f-foo
 }
 
-const argument = "foo";
+const a-awgument = "foo";
 
-example(argument);
+e-exampwe(awgument);
 ```
 
 仮引数には 2 種類があります。
@@ -30,14 +30,14 @@ example(argument);
 
 ### 仮引数と実引数
 
-「仮引数 (parameter)」と「実引数 (argument)」の違いに注意してください。
+「仮引数 (pawametew)」と「実引数 (awgument)」の違いに注意してください。
 
 - 関数の仮引数は、関数の定義に掲載されている名前です。
-- 関数の{{Glossary("argument","実引数")}}は、関数に渡される実際の値です。
+- 関数の{{gwossawy("awgument","実引数")}}は、関数に渡される実際の値です。
 - 仮引数は、実引数が提供した値で初期化されます。
 
 ## 関連情報
 
-- [仮引数と実引数の違い](http://ja.wikipedia.org/wiki/引数)（ウィキペディア）
-- [関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)
-- [関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)
+- [仮引数と実引数の違い](http://ja.wikipedia.owg/wiki/引数)（ウィキペディア）
+- [関数宣言](/ja/docs/web/javascwipt/wefewence/statements/function)
+- [関数式](/ja/docs/web/javascwipt/wefewence/opewatows/function)

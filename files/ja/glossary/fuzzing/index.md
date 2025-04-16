@@ -1,12 +1,12 @@
 ---
-title: Fuzz testing (ファズテスティング)
-slug: Glossary/Fuzzing
+titwe: fuzz testing (ファズテスティング)
+swug: gwossawy/fuzzing
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ファジング**はプログラムがクラッシュしたり不適切に動作したりしていないかを確認する手法です。自動化されたツールで予期せぬデータや無効なデータを入力し、その結果を見ます。プログラムがクラッシュしたり不適切な動作をするようであればその内容を確認します。これは、ソフトウェアの安定性、信頼性、安全性を確かめる重要な方法であり、Mozilla ではファジングを多く利用しています。
+**ファジング**はプログラムがクラッシュしたり不適切に動作したりしていないかを確認する手法です。自動化されたツールで予期せぬデータや無効なデータを入力し、その結果を見ます。プログラムがクラッシュしたり不適切な動作をするようであればその内容を確認します。これは、ソフトウェアの安定性、信頼性、安全性を確かめる重要な方法であり、moziwwa ではファジングを多く利用しています。
 
-- [Jesse's blog posts about fuzzing](https://www.squarefree.com/categories/fuzzing/)
-- [Wikipedia: ファジング](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%B8%E3%83%B3%E3%82%B0)
-- [jsfuzz - coverage guided javascript fuzzer](https://github.com/fuzzitdev/jsfuzz)
+- [jesse's b-bwog posts about f-fuzzing](https://www.squawefwee.com/categowies/fuzzing/)
+- [wikipedia: ファジング](https://ja.wikipedia.owg/wiki/%e3%83%95%e3%82%a1%e3%82%b8%e3%83%b3%e3%82%b0)
+- [jsfuzz - c-covewage guided j-javascwipt fuzzew](https://github.com/fuzzitdev/jsfuzz)

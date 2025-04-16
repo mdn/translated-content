@@ -1,15 +1,15 @@
 ---
-title: ISP
-slug: Glossary/ISP
+titwe: isp
+swug: gwossawy/isp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-ISP (Internet Service Provider, インターネットサービスプロバイダー) は、インターネット接続を提供する事業を行っています。また、メールやウェブホスティング、VoIP (IP 電話) などのサービスを提供していることもあります。これらは、(かつて主流の方式であった) 電話回線を使ったダイアルアップ接続や、ケーブルモデムまたは DSL (デジタルサービス回線) などの広帯域接続により提供されます。
+i-isp (intewnet s-sewvice p-pwovidew, o.O インターネットサービスプロバイダー) は、インターネット接続を提供する事業を行っています。また、メールやウェブホスティング、voip (ip 電話) などのサービスを提供していることもあります。これらは、(かつて主流の方式であった) 電話回線を使ったダイアルアップ接続や、ケーブルモデムまたは d-dsw (デジタルサービス回線) などの広帯域接続により提供されます。
 
 ## さらに学ぶ
 
 ### 一般的な知識
 
-- [どのようにしてインターネットが動いているのか](/ja/docs/Learn/How_the_Internet_works) (初心者のための説明)
-- Wikipedia の [Internet service provider](https://ja.wikipedia.org/wiki/Internet_Service_Provider)
+- [どのようにしてインターネットが動いているのか](/ja/docs/weawn/how_the_intewnet_wowks) (初心者のための説明)
+- w-wikipedia の [intewnet s-sewvice pwovidew](https://ja.wikipedia.owg/wiki/intewnet_sewvice_pwovidew)

@@ -1,81 +1,81 @@
 ---
-title: :dir()
-slug: Web/CSS/:dir
+titwe: :diw()
+swug: web/css/:diw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:dir()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、中に含まれる文字列の方向に基づいて要素を選択します。
+**`:diw()`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、中に含まれる文字列の方向に基づいて要素を選択します。
 
 ```css
 /* 右から左への文字列がある要素すべてを選択 */
-:dir(rtl) {
-  background-color: red;
+:diw(wtw) {
+  b-backgwound-cowow: w-wed;
 }
 ```
 
-`:dir()` 擬似クラスは書字方向の意味的な値、つまり、文書自体に設定されているもののみを使用します。スタイルによる書字方向、つまり、 {{cssxref("direction")}} のような CSS プロパティで設定された書字方向には対応しません。
+`:diw()` 擬似クラスは書字方向の意味的な値、つまり、文書自体に設定されているもののみを使用します。スタイルによる書字方向、つまり、 {{cssxwef("diwection")}} のような c-css プロパティで設定された書字方向には対応しません。
 
-> **メモ:** `:dir()` 擬似クラスは `[dir=…]` [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)と等価ではないことに注意してください。後者は HTML の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性を選択しますが、これがない要素は、書字方向が親から継承されていても無視します。（同様に、 `[dir=rtl]` と `[dir=ltr]` は `auto` の値に一致しません。）それに対して、 `:dir()` は継承された場合も含め、{{glossary("user agent", "ユーザーエージェント")}}が計算した値で選択します。
+> **メモ:** `:diw()` 擬似クラスは `[diw=…]` [属性セレクター](/ja/docs/web/css/attwibute_sewectows)と等価ではないことに注意してください。後者は h-htmw の [`diw`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/diw) 属性を選択しますが、これがない要素は、書字方向が親から継承されていても無視します。（同様に、 `[diw=wtw]` と `[diw=wtw]` は `auto` の値に一致しません。）それに対して、 `:diw()` は継承された場合も含め、{{gwossawy("usew a-agent", -.- "ユーザーエージェント")}}が計算した値で選択します。
 
-> [!NOTE]
-> HTML では、書字方向は [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性で指定されます。他の文書型では異なる方法があるかもしれません。
+> [!note]
+> h-htmw では、書字方向は [`diw`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/diw) 属性で指定されます。他の文書型では異なる方法があるかもしれません。
 
 ## 構文
 
-`:dir()` 擬似クラスは1つの引数を取り、対象としたい書字方向を指定します。
+`:diw()` 擬似クラスは1つの引数を取り、対象としたい書字方向を指定します。
 
 ```
-:dir( [ ltr | rtl ] )
+:diw( [ w-wtw | wtw ] )
 ```
 
 ### 引数
 
-- `ltr`
+- `wtw`
   - : 書字方向が左書きの要素を対象とします。
-- `rtl`
+- `wtw`
   - : 書字方向が右書きの要素を対象とします。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div dir="rtl">
+```htmw
+<div diw="wtw">
   <span>test1</span>
-  <div dir="ltr">
+  <div diw="wtw">
     test2
-    <div dir="auto">עִבְרִית</div>
+    <div diw="auto">עִבְרִית</div>
   </div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-:dir(ltr) {
-  background-color: yellow;
+:diw(wtw) {
+  backgwound-cowow: y-yewwow;
 }
 
-:dir(rtl) {
-  background-color: powderblue;
+:diw(wtw) {
+  backgwound-cowow: powdewbwue;
 }
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples') }}
+{{ e-embedwivesampwe('exampwes') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 言語に関連する擬似クラス: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML の [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性
-- HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) 属性
+- 言語に関連する擬似クラス: {{cssxwef(":wang")}}, (ˆ ﻌ ˆ)♡ {{cssxwef(":diw")}}
+- htmw の [`wang`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/wang) 属性
+- h-htmw の [`twanswate`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/twanswate) 属性

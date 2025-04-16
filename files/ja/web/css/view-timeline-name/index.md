@@ -1,40 +1,40 @@
 ---
-title: view-timeline-name
-slug: Web/CSS/view-timeline-name
-l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+titwe: view-timewine-name
+swug: w-web/css/view-timewine-name
+w-w10n:
+  s-souwcecommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`view-timeline-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインの名前を定義するために使用します。 `view-timeline` は主体要素に設定します。
+**`view-timewine-name`** は [css](/ja/docs/web/css) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインの名前を定義するために使用します。 `view-timewine` は主体要素に設定します。
 
 既定では、主体要素がスクローラーの一方の端に初めて表示されるとタイムラインは 0% になり、反対側の端に達すると 100% になります。
-この名前は [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうである必要はありません。主体がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
+この名前は [`animation-timewine`](/ja/docs/web/css/animation-timewine) 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうである必要はありません。主体がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
 
-> [!NOTE]
+> [!note]
 > 要素が軸方向の寸法でそのコンテナーをはみ出さない場合、またははみ出した部分が隠されているかクリップされている場合、タイムラインは作成されません。
 
-{{cssxref("view-timeline-axis")}} および `view-timeline-name` プロパティは [`view-timeline`](/ja/docs/Web/CSS/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
+{{cssxwef("view-timewine-axis")}} および `view-timewine-name` プロパティは [`view-timewine`](/ja/docs/web/css/scwoww-timewine) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
 ```css
-view-timeline-name: none;
-view-timeline-name: --custom_name_for_timeline;
+v-view-timewine-name: n-nyone;
+v-view-timewine-name: --custom_name_fow_timewine;
 ```
 
 ### 値
 
-`view-timeline-name` に指定できる値は次の通りです。
+`view-timewine-name` に指定できる値は次の通りです。
 
 - `none`
   - : タイムラインには名前がありません。
 - `<dashed-ident>`
 
-  - : ビュー進行タイムラインの名前を定義する任意のカスタム識別子で、[`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) プロパティで参照することができます。
+  - : ビュー進行タイムラインの名前を定義する任意のカスタム識別子で、[`animation-timewine`](/ja/docs/web/css/animation-timewine) プロパティで参照することができます。
 
-    > **メモ:** [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
+    > **メモ:** [`<dashed-ident>`](/ja/docs/web/css/dashed-ident) の値は `--` から始める必要があり、これによって c-css の標準キーワードとの名前の衝突を避けることができます。
 
 ## 公式定義
 
@@ -48,104 +48,104 @@ view-timeline-name: --custom_name_for_timeline;
 
 ### 名前付きビュー進行タイムラインの作成
 
-`--subjectReveal` という名前のビュー進行タイムラインは、 `view-timeline-name` プロパティを使用して、`class` が `animation` の主体要素に定義します。
-これを同じ要素のタイムラインとして設定するには `animation-timeline: --subjectReveal;` を使用します。その結果、主体要素は文書がスクロールされるにつれて上方向に移動するアニメーションが表示されます。
+`--subjectweveaw` という名前のビュー進行タイムラインは、 `view-timewine-name` プロパティを使用して、`cwass` が `animation` の主体要素に定義します。
+これを同じ要素のタイムラインとして設定するには `animation-timewine: --subjectweveaw;` を使用します。その結果、主体要素は文書がスクロールされるにつれて上方向に移動するアニメーションが表示されます。
 
-#### HTML
+#### h-htmw
 
-この例の HTML は以下の通りです。
+この例の htmw は以下の通りです。
 
-```html
-<div class="content">
-  <h1>Content</h1>
+```htmw
+<div cwass="content">
+  <h1>content</h1>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam
-    quisque id. Et ligula ullamcorper malesuada proin libero nunc consequat
-    interdum varius. Elit ullamcorper dignissim cras tincidunt lobortis feugiat
-    vivamus at augue.
+    wowem ipsum dowow sit amet, ( ͡o ω ͡o ) consectetuw a-adipiscing ewit, >_< sed do eiusmod
+    tempow i-incididunt ut wabowe et dowowe magna a-awiqua. >w< wisus quis vawius quam
+    quisque id. rawr et wiguwa uwwamcowpew m-mawesuada pwoin wibewo n-nyunc consequat
+    i-intewdum vawius. 😳 ewit uwwamcowpew dignissim cwas tincidunt wobowtis feugiat
+    v-vivamus at augue. >w<
   </p>
 
   <p>
-    Dolor sed viverra ipsum nunc aliquet. Sed sed risus pretium quam vulputate
-    dignissim. Tortor aliquam nulla facilisi cras. A erat nam at lectus urna
-    duis convallis convallis. Nibh ipsum consequat nisl vel pretium lectus.
-    Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
-    arcu vitae elementum curabitur vitae nunc sed velit.
+    dowow sed vivewwa ipsum nunc awiquet. (⑅˘꒳˘) sed s-sed wisus pwetium quam vuwputate
+    d-dignissim. OwO t-towtow awiquam n-nyuwwa faciwisi c-cwas. a ewat nyam at wectus uwna
+    duis convawwis c-convawwis. (ꈍᴗꈍ) nyibh ipsum consequat nyisw vew p-pwetium wectus. 😳
+    sagittis awiquam mawesuada bibendum awcu vitae ewementum. 😳😳😳 mawesuada bibendum
+    a-awcu vitae ewementum cuwabituw v-vitae nyunc s-sed vewit. mya
   </p>
 
-  <div class="subject animation"></div>
+  <div c-cwass="subject animation"></div>
 
   <p>
-    Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
-    cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
-    dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non
-    tellus orci ac auctor augue mauris. Risus quis varius quam quisque id diam
-    vel quam elementum. Nibh praesent tristique magna sit amet purus gravida
-    quis. Duis ultricies lacus sed turpis tincidunt id aliquet. In egestas erat
-    imperdiet sed euismod nisi. Eget egestas purus viverra accumsan in nisl nisi
-    scelerisque. Netus et malesuada fames ac.
+    adipiscing enim eu tuwpis e-egestas pwetium a-aenean phawetwa magna ac. mya awcu
+    c-cuwsus vitae c-congue mauwis whoncus aenean vew. (⑅˘꒳˘) s-sit amet cuwsus sit amet
+    d-dictum. (U ﹏ U) augue nyeque gwavida in fewmentum et. mya gwavida w-wutwum quisque nyon
+    tewwus o-owci ac auctow augue mauwis. ʘwʘ w-wisus quis vawius q-quam quisque id diam
+    vew quam ewementum. (˘ω˘) nyibh pwaesent twistique magna sit amet puwus gwavida
+    quis. (U ﹏ U) d-duis uwtwicies w-wacus sed tuwpis tincidunt id awiquet. ^•ﻌ•^ i-in egestas e-ewat
+    impewdiet s-sed euismod nyisi. (˘ω˘) eget egestas puwus vivewwa accumsan in nyisw n-nyisi
+    scewewisque. netus et mawesuada fames ac. :3
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 `subject` 要素とそれを含む `content` 要素には最小限のスタイルを設定し、テキストコンテンツには基本的なフォントを設定します。
 
 ```css
 .subject {
-  width: 300px;
+  w-width: 300px;
   height: 200px;
-  margin: 0 auto;
-  background-color: deeppink;
+  m-mawgin: 0 a-auto;
+  backgwound-cowow: deeppink;
 }
 
 .content {
-  width: 75%;
+  w-width: 75%;
   max-width: 800px;
-  margin: 0 auto;
+  m-mawgin: 0 a-auto;
 }
 
-p,
+p, ^^;;
+h-h1 {
+  font-famiwy: a-awiaw, hewvetica, 🥺 sans-sewif;
+}
+
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3wem;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-p {
-  font-size: 1.5rem;
-  line-height: 1.5;
+p-p {
+  font-size: 1.5wem;
+  w-wine-height: 1.5;
 }
 ```
 
-`subject` クラスのついた `<div>` には、`animation` クラスも指定されています。ここで `view-timeline-name` を設定し、名前付きビュー進行タイムラインを定義しています。また、同じ値で `animation-timeline` の名前を指定して、ビュー進行タイムラインが進むにつれてアニメーションする要素であることを宣言します。
+`subject` クラスのついた `<div>` には、`animation` クラスも指定されています。ここで `view-timewine-name` を設定し、名前付きビュー進行タイムラインを定義しています。また、同じ値で `animation-timewine` の名前を指定して、ビュー進行タイムラインが進むにつれてアニメーションする要素であることを宣言します。
 
 最後に、要素の透過率と変倍をアニメーションで指定し、スクロール移動されるたびにフェードインしたり変倍させたりします。
 
 ```css
 .animation {
-  view-timeline-name: --subjectReveal;
-  animation-timeline: --subjectReveal;
+  v-view-timewine-name: --subjectweveaw;
+  animation-timewine: --subjectweveaw;
 
-  animation-name: appear;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox では、アニメーションを適用するために必要 */
+  a-animation-name: a-appeaw;
+  animation-fiww-mode: both;
+  animation-duwation: 1ms; /* fiwefox では、アニメーションを適用するために必要 */
 }
 
-@keyframes appear {
-  from {
+@keyfwames a-appeaw {
+  fwom {
     opacity: 0;
-    transform: scaleX(0);
+    twansfowm: scawex(0);
   }
 
   to {
     opacity: 1;
-    transform: scaleX(1);
+    twansfowm: s-scawex(1);
   }
 }
 ```
@@ -154,19 +154,19 @@ p {
 
 スクロールすると、主体要素がアニメーションします。
 
-{{EmbedLiveSample("Creating a named view progress timeline", "100%", "480px")}}
+{{embedwivesampwe("cweating a nyamed view pwogwess timewine", (⑅˘꒳˘) "100%", "480px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- {{cssxref("timeline-scope")}}
-- [`view-timeline`](/ja/docs/Web/CSS/view-timeline), [`view-timeline-axis`](/ja/docs/Web/CSS/view-timeline-axis)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [`animation-timewine`](/ja/docs/web/css/animation-timewine)
+- {{cssxwef("timewine-scope")}}
+- [`view-timewine`](/ja/docs/web/css/view-timewine), nyaa~~ [`view-timewine-axis`](/ja/docs/web/css/view-timewine-axis)
+- [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)

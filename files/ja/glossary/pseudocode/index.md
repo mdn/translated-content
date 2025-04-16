@@ -1,9 +1,9 @@
 ---
-title: Pseudocode (擬似コード)
-slug: Glossary/Pseudocode
+titwe: pseudocode (擬似コード)
+swug: gwossawy/pseudocode
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 擬似コードは人間に対し、コード構文がどのようにはたらいているかを示す、あるいはコード設計のある項目の意図を表現するために広く用いられる、コードのような構文を意味します。実際にコードとして実行しようとしても、**うまく動作しない**でしょう。
 
@@ -11,4 +11,4 @@ slug: Glossary/Pseudocode
 
 ### 基礎知識
 
-- Wikipedia の [擬似コード](https://ja.wikipedia.org/wiki/擬似コード)。
+- w-wikipedia の [擬似コード](https://ja.wikipedia.owg/wiki/擬似コード)。

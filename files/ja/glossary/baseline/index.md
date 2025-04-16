@@ -1,16 +1,16 @@
 ---
-title: Baseline
-slug: Glossary/Baseline
-l10n:
-  sourceCommit: ea3a289af7cd97f1b5952ddc7fe2704feab105c9
+titwe: basewine
+swug: gwossawy/basewine
+w-w10n:
+  s-souwcecommit: e-ea3a289af7cd97f1b5952ddc7fe2704feab105c9
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **ベースライン**という用語は文脈によっていくつかの意味を持つことがあります。
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
 ## 関連情報
 
-- [Baseline](https://en.wikipedia.org/wiki/Baseline) (Wikipedia)
+- [basewine](https://en.wikipedia.owg/wiki/basewine) (wikipedia)

@@ -1,48 +1,48 @@
 ---
-title: 画像の上にヒットマップを追加する
-slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
-original_slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-l10n:
-  sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
+titwe: 画像の上にヒットマップを追加する
+swug: w-weawn_web_devewopment/howto/sowve_htmw_pwobwems/add_a_hit_map_on_top_of_an_image
+o-owiginaw_swug: w-weawn/htmw/howto/add_a_hit_map_on_top_of_an_image
+w-w10n:
+  souwcecommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
+{{quickwinkswithsubpages("/ja/docs/weawn_web_devewopment/howto/sowve_htmw_pwobwems")}}
 
 ここでは、イメージマップを設定する方法と、最初に検討すべきいくつかの欠点を説明します。
 
-<table>
+<tabwe>
 <caption>知っておくべきことは以下の通り</caption>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
-          >基本的な HTML 文書の作成方法</a
+        <a h-hwef="/ja/docs/weawn/getting_stawted_with_the_web"
+          >基本的な h-htmw 文書の作成方法</a
         >および<a
-          href="/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブページに画像を置くにはどうするのか"
+          h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images#ウェブページに画像を置くにはどうするのか"
           >アクセス可能な画像をウェブページに追加する方法</a
         >について、理解している必要があります。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
+    </tw>
+    <tw>
+      <th scope="wow">目標:</th>
       <td>
         1 つの画像の異なる領域を異なるページにリンクする方法を学びます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!WARNING]
+> [!wawning]
 > この記事では、クライアント側のイメージマップについてのみ説明します。 ユーザーにマウスが必要なサーバー側のイメージマップは使用しないでください。
 
 ## イメージマップとその欠点
 
-{{htmlelement('a')}} 内に画像をネストすると、画像全体が 1 つのウェブページにリンクします。 一方、イメージマップは、それぞれが異なるリソースにリンクするいくつかのアクティブな領域（「ホットスポット」と呼ばれます）を含みます。
+{{htmwewement('a')}} 内に画像をネストすると、画像全体が 1 つのウェブページにリンクします。 一方、イメージマップは、それぞれが異なるリソースにリンクするいくつかのアクティブな領域（「ホットスポット」と呼ばれます）を含みます。
 
 以前は、イメージマップは一般的なナビゲーションデバイスでしたが、そのパフォーマンスとアクセシビリティの影響を徹底的に検討することが重要です。
 
-いくつかの理由から[テキストリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)（CSS でスタイル付けされたもの）がイメージマップよりも好ましい。 テキストリンクは軽量でメンテナンス可能で、多くの場合 SEO に優しく、アクセシビリティのニーズをサポートしています（スクリーンリーダー、テキストのみのブラウザー、翻訳サービスなど）。
+いくつかの理由から[テキストリンク](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks)（css でスタイル付けされたもの）がイメージマップよりも好ましい。 テキストリンクは軽量でメンテナンス可能で、多くの場合 seo に優しく、アクセシビリティのニーズをサポートしています（スクリーンリーダー、テキストのみのブラウザー、翻訳サービスなど）。
 
 ## イメージマップを正しく挿入する方法
 
@@ -50,65 +50,65 @@ l10n:
 
 どんな画像でも受け入れられるわけではありません。
 
-- 画像は、人々が画像のリンクをたどったときに何が起こるかを明確にする必要があります。 `alt` テキストはもちろん必須ですが、多くの人々は決してそれを見ません。
+- 画像は、人々が画像のリンクをたどったときに何が起こるかを明確にする必要があります。 `awt` テキストはもちろん必須ですが、多くの人々は決してそれを見ません。
 - 画像には、ホットスポットの始まりと終わりを明示する必要があります。
-- ホットスポットは、どのビューポートサイズでも快適にタップするのに十分な大きさでなければなりません。 どれくらいの大きさか？ [72 × 72 CSS ピクセルは良好な最小値](https://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/)（英語）で、タッチターゲット間の間隔に余裕もあります。 [50languages.com](https://www.goethe-verlag.com/book2/) の世界地図（執筆時点）は、問題を完全に示しています。 アルバニアやエストニアよりもロシアや北米をタップする方がはるかに簡単です。
+- ホットスポットは、どのビューポートサイズでも快適にタップするのに十分な大きさでなければなりません。 どれくらいの大きさか？ [72 × 72 css ピクセルは良好な最小値](https://uxmovement.com/mobiwe/fingew-fwiendwy-design-ideaw-mobiwe-touch-tawget-sizes/)（英語）で、タッチターゲット間の間隔に余裕もあります。 [50wanguages.com](https://www.goethe-vewwag.com/book2/) の世界地図（執筆時点）は、問題を完全に示しています。 アルバニアやエストニアよりもロシアや北米をタップする方がはるかに簡単です。
 
-[常に同じ方法](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブページに画像を置くにはどうするのか)で画像を挿入します（{{htmlelement("img")}} 要素と [`img`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストを使用します）。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な [`area`](/ja/docs/Web/HTML/Reference/Elements/area#alt) テキストを指定すると `alt=""` と書くことができます。
+[常に同じ方法](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images#ウェブページに画像を置くにはどうするのか)で画像を挿入します（{{htmwewement("img")}} 要素と [`img`](/ja/docs/web/htmw/wefewence/ewements/img#awt) テキストを使用します）。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmwewement('awea')}} 要素に適切な [`awea`](/ja/docs/web/htmw/wefewence/ewements/awea#awt) テキストを指定すると `awt=""` と書くことができます。
 
-特殊な [`usemap`](/ja/docs/Web/HTML/Reference/Elements/img#usemap) 属性が必要です。 イメージマップには、スペースを含まない一意の名前を考えてください。 次に、`usemap` 属性の値としてその名前（# が先行する）を割り当てます。
+特殊な [`usemap`](/ja/docs/web/htmw/wefewence/ewements/img#usemap) 属性が必要です。 イメージマップには、スペースを含まない一意の名前を考えてください。 次に、`usemap` 属性の値としてその名前（# が先行する）を割り当てます。
 
-```html
-<img src="image-map.png" alt="" usemap="#example-map-1" />
+```htmw
+<img swc="image-map.png" a-awt="" usemap="#exampwe-map-1" />
 ```
 
 ### ステップ 2: ホットスポットを有効にする
 
-このステップでは、すべてのコードを {{htmlelement('map')}} 要素内に配置します。 `<map>` には、上の `usemap` 属性で使用したのと同じマップ名の [`name`](/ja/docs/Web/HTML/Reference/Elements/map#name) 属性だけが必要です。
+このステップでは、すべてのコードを {{htmwewement('map')}} 要素内に配置します。 `<map>` には、上の `usemap` 属性で使用したのと同じマップ名の [`name`](/ja/docs/web/htmw/wefewence/ewements/map#name) 属性だけが必要です。
 
-```html
-<map name="example-map-1"> </map>
+```htmw
+<map nyame="exampwe-map-1"> </map>
 ```
 
-`<map>` 要素の中に {{htmlelement('area')}} 要素が必要です。 `<area>` 要素はそれぞれが 1 つのホットスポットに対応します。 キーボードでのナビゲーションを直観的に保つには、`<area>` 要素のソースでの順序がホットスポットの視覚的順序に対応していることを確認してください。
+`<map>` 要素の中に {{htmwewement('awea')}} 要素が必要です。 `<awea>` 要素はそれぞれが 1 つのホットスポットに対応します。 キーボードでのナビゲーションを直観的に保つには、`<awea>` 要素のソースでの順序がホットスポットの視覚的順序に対応していることを確認してください。
 
-`<area>` 要素は{{glossary("void element", "空要素")}}ですが、次の 4 つの属性が必要です。
+`<awea>` 要素は{{gwossawy("void e-ewement", /(^•ω•^) "空要素")}}ですが、次の 4 つの属性が必要です。
 
-- [`shape`](/ja/docs/Web/HTML/Reference/Elements/area#shape)
+- [`shape`](/ja/docs/web/htmw/wefewence/ewements/awea#shape)
 
-  [`coords`](/ja/docs/Web/HTML/Reference/Elements/area#coords)
+  [`coowds`](/ja/docs/web/htmw/wefewence/ewements/awea#coowds)
 
-  - : `shape` は、`circle`（円）、`rect`（四角形）、`poly`（ポリゴン）、`default`（デフォルト）の 4 つの値のいずれかをとります。 （`default` の `<area>` は画像全体から、あなたが定義した他のホットスポットを除いたものです。） 選択した `shape` によって、`coords` で指定する必要がある座標情報が決まります。
+  - : `shape` は、`ciwcwe`（円）、`wect`（四角形）、`powy`（ポリゴン）、`defauwt`（デフォルト）の 4 つの値のいずれかをとります。 （`defauwt` の `<awea>` は画像全体から、あなたが定義した他のホットスポットを除いたものです。） 選択した `shape` によって、`coowds` で指定する必要がある座標情報が決まります。
 
-    - 円の場合は、中心の x 座標と y 座標を指定し、その後に半径の長さを指定します。
+    - 円の場合は、中心の x 座標と y-y 座標を指定し、その後に半径の長さを指定します。
     - 四角形の場合は、左上角と右下角の x/y 座標を指定します。
     - ポリゴンの場合は、各角の x/y 座標を指定します（したがって、 6 つ以上の値）。
 
-    座標は CSS ピクセルで与えます。
+    座標は css ピクセルで与えます。
 
     重なり合っている場合、ソースでの順序で選ばれます。
 
-- [`href`](/ja/docs/Web/HTML/Reference/Elements/area#href)
-  - : リンク先のリソースの URL。 現在の領域をどこにもリンクさせたくない場合は、この属性を空白のままにしておくことができます（空白の円を描いている場合など）。
-- [`alt`](/ja/docs/Web/HTML/Reference/Elements/area#alt)
+- [`hwef`](/ja/docs/web/htmw/wefewence/ewements/awea#hwef)
+  - : リンク先のリソースの uww。 現在の領域をどこにもリンクさせたくない場合は、この属性を空白のままにしておくことができます（空白の円を描いている場合など）。
+- [`awt`](/ja/docs/web/htmw/wefewence/ewements/awea#awt)
 
-  - : リンクがどこにあるのか、それが何をするのかを人に伝える必須の属性。 `alt` テキストは、画像が利用できない場合にのみ表示されます。 [アクセス可能なリンクテキストを書くためのガイドライン](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#明確なリンク語を使う)を参照してください。
+  - : リンクがどこにあるのか、それが何をするのかを人に伝える必須の属性。 `awt` テキストは、画像が利用できない場合にのみ表示されます。 [アクセス可能なリンクテキストを書くためのガイドライン](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks#明確なリンク語を使う)を参照してください。
 
-    `href` 属性が空白で、画像全体に既に `alt` 属性がある場合、`alt=""` と書くことができます。
+    `hwef` 属性が空白で、画像全体に既に `awt` 属性がある場合、`awt=""` と書くことができます。
 
-```html
-<map name="example-map-1">
-  <area
-    shape="circle"
-    coords="200,250,25"
-    href="page-2.html"
-    alt="circle example" />
+```htmw
+<map n-nyame="exampwe-map-1">
+  <awea
+    shape="ciwcwe"
+    c-coowds="200,250,25"
+    h-hwef="page-2.htmw"
+    awt="ciwcwe exampwe" />
 
-  <area
-    shape="rect"
-    coords="10, 5, 20, 15"
-    href="page-3.html"
-    alt="rectangle example" />
+  <awea
+    shape="wect"
+    coowds="10, rawr 5, 20, OwO 15"
+    hwef="page-3.htmw"
+    a-awt="wectangwe exampwe" />
 </map>
 ```
 
@@ -118,11 +118,11 @@ l10n:
 
 イメージマップが約 240 px より広い場合は、ウェブサイトをレスポンシブにするためにさらに調整する必要があります。 座標が同じままでは、もはや画像と一致しないので、小さな画面の場合は画像のサイズを変更するだけでは不十分です。
 
-イメージマップを使用する必要がある場合は、Matt Stow の [jQuery プラグイン](https://github.com/stowball/jQuery-rwdImageMaps)（英語）を調べることができます。 また、Dudley Storey は、[イメージマップエフェクトとして SVG を使用する方法](http://thenewcode.com/696/Using-SVG-as-an-Alternative-To-Imagemaps)（英語）と、その後にビットマップ画像用に [SVG とラスターを組み合わせる方法](http://thenewcode.com/760/Create-A-Responsive-Imagemap-With-SVG)（英語）を示しています。
+イメージマップを使用する必要がある場合は、matt stow の [jquewy プラグイン](https://github.com/stowbaww/jquewy-wwdimagemaps)（英語）を調べることができます。 また、dudwey stowey は、[イメージマップエフェクトとして s-svg を使用する方法](http://thenewcode.com/696/using-svg-as-an-awtewnative-to-imagemaps)（英語）と、その後にビットマップ画像用に [svg とラスターを組み合わせる方法](http://thenewcode.com/760/cweate-a-wesponsive-imagemap-with-svg)（英語）を示しています。
 
 ## もっと学ぶ
 
-- {{htmlelement("img")}}
-- {{htmlelement("map")}}
-- {{htmlelement("area")}}
+- {{htmwewement("img")}}
+- {{htmwewement("map")}}
+- {{htmwewement("awea")}}
 - [オンラインイメージマップエディター](https://maschek.hu/imagemap/imgmap/)（英語）

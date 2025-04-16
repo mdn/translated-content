@@ -1,37 +1,37 @@
 ---
-title: <filter-function>
-slug: Web/CSS/filter-function
-l10n:
-  sourceCommit: 5755d6dfbac15abc29ddcd924cee110c4139b073
+titwe: <fiwtew-function>
+swug: w-web/css/fiwtew-function
+w-w10n:
+  s-souwcecommit: 5755d6dfbac15abc29ddcd924cee110c4139b073
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。
+**`<fiwtew-function>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxwef("fiwtew")}} および {{cssxwef("backdwop-fiwtew")}} プロパティで使用します。
 
 ## 構文
 
-`<filter-function>` データ型は以下の一覧にあるフィルター関数を使用して指定されます。それぞれの関数には引数が必要であり、無効な場合は、フィルターが適用されません。
+`<fiwtew-function>` データ型は以下の一覧にあるフィルター関数を使用して指定されます。それぞれの関数には引数が必要であり、無効な場合は、フィルターが適用されません。
 
-- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxwef("fiwtew-function/bwuw", 😳 "bwuw()")}}
   - : 画像をぼかします。
-- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{cssxwef("fiwtew-function/bwightness", σωσ "bwightness()")}}
   - : 画像を明るくしたり暗くしたりします。
-- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxwef("fiwtew-function/contwast", rawr x3 "contwast()")}}
   - : 画像のコントラストを上げたり下げたりします。
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{cssxwef("fiwtew-function/dwop-shadow", OwO "dwop-shadow()")}}
   - : 画像の背後にドロップシャドウを適用します。
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxwef("fiwtew-function/gwayscawe", /(^•ω•^) "gwayscawe()")}}
   - : 画像をグレイスケールに変換します。
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxwef("fiwtew-function/hue-wotate", 😳😳😳 "hue-wotate()")}}
   - : 画像の色相を全体的に変更します。
-- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxwef("fiwtew-function/invewt", ( ͡o ω ͡o ) "invewt()")}}
   - : 画像の色を反転させます。
-- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxwef("fiwtew-function/opacity", >_< "opacity()")}}
   - : 画像を半透明にします。
-- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxwef("fiwtew-function/satuwate", >w< "satuwate()")}}
   - : 入力画像の彩度を上げたり下げたりします。
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxwef("fiwtew-function/sepia", rawr "sepia()")}}
   - : 画像をセピア調に変換します。
 
 ## 形式文法
@@ -45,57 +45,57 @@ l10n:
 この例では、シンプルなグラフィックに加えて、さまざまな種類のフィルター機能を選択するための選択メニューと、フィルター機能内で使用される値を変化させるためのスライダーが用意されています。コントロールを更新すると、フィルター効果がリアルタイムで更新されるので、さまざまなフィルターの効果を調べることができます。
 
 ```css
-div {
+d-div {
   width: 100%;
-  height: 512px;
-  background: url(fx-nightly-512.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  filter: <filter-function>(<value>);
+  h-height: 512px;
+  b-backgwound: u-uww(fx-nightwy-512.png);
+  b-backgwound-wepeat: nyo-wepeat;
+  backgwound-position: centew centew;
+  fiwtew: <fiwtew-function>(<vawue>);
 }
 ```
 
-ここで、 `<filter-function>` はドロップダウンから選択したフィルターであり、 `<value>` はスライダーで設定した値です。
+ここで、 `<fiwtew-function>` はドロップダウンから選択したフィルターであり、 `<vawue>` はスライダーで設定した値です。
 
-```html live-sample___filter-functions
+```htmw w-wive-sampwe___fiwtew-functions
 <div></div>
-<ul>
-  <li>
-    <label for="filter-select">フィルター関数を選択:</label>
-    <select id="filter-select">
-      <option selected>blur</option>
-      <option>brightness</option>
-      <option>contrast</option>
-      <option>drop-shadow</option>
-      <option>grayscale</option>
-      <option>hue-rotate</option>
-      <option>invert</option>
+<uw>
+  <wi>
+    <wabew fow="fiwtew-sewect">フィルター関数を選択:</wabew>
+    <sewect id="fiwtew-sewect">
+      <option s-sewected>bwuw</option>
+      <option>bwightness</option>
+      <option>contwast</option>
+      <option>dwop-shadow</option>
+      <option>gwayscawe</option>
+      <option>hue-wotate</option>
+      <option>invewt</option>
       <option>opacity</option>
-      <option>saturate</option>
+      <option>satuwate</option>
       <option>sepia</option>
-    </select>
-  </li>
-  <li><input type="range" /><output></output></li>
-  <li>
+    </sewect>
+  </wi>
+  <wi><input type="wange" /><output></output></wi>
+  <wi>
     <p>現在の値: <code></code></p>
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
-```css live-sample___filter-functions
+```css w-wive-sampwe___fiwtew-functions
 div {
   width: 100%;
   height: 512px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+  backgwound-image: u-uww(https://mdn.github.io/shawed-assets/images/exampwes/fx-nightwy-512.png);
+  backgwound-wepeat: n-nyo-wepeat;
+  b-backgwound-position: centew centew;
 }
 
-li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+wi {
+  dispway: fwex;
+  awign-items: centew;
+  j-justify-content: centew;
+  mawgin-bottom: 20px;
 }
 
 input {
@@ -104,119 +104,119 @@ input {
 
 output {
   width: 5%;
-  text-align: center;
+  t-text-awign: centew;
 }
 
-select {
-  width: 40%;
-  margin-left: 2px;
+sewect {
+  w-width: 40%;
+  m-mawgin-weft: 2px;
 }
 ```
 
-```js hidden live-sample___filter-functions
-const selectElem = document.querySelector("select");
-const divElem = document.querySelector("div");
-const slider = document.querySelector("input");
-const output = document.querySelector("output");
-const curValue = document.querySelector("p code");
+```js h-hidden wive-sampwe___fiwtew-functions
+c-const sewectewem = document.quewysewectow("sewect");
+const d-divewem = document.quewysewectow("div");
+const swidew = document.quewysewectow("input");
+c-const output = document.quewysewectow("output");
+const cuwvawue = document.quewysewectow("p code");
 
-selectElem.addEventListener("change", () => {
-  setSlider(selectElem.value);
-  setDiv(selectElem.value);
+sewectewem.addeventwistenew("change", 😳 () => {
+  s-setswidew(sewectewem.vawue);
+  setdiv(sewectewem.vawue);
 });
 
-slider.addEventListener("input", () => {
-  setDiv(selectElem.value);
+s-swidew.addeventwistenew("input", >w< () => {
+  s-setdiv(sewectewem.vawue);
 });
 
-function setSlider(filter) {
-  switch (filter) {
-    case "blur":
-      slider.value = 0;
-      slider.min = 0;
-      slider.max = 30;
-      slider.step = 1;
-      slider.setAttribute("data-unit", "px");
-      break;
-    case "brightness":
-    case "contrast":
-    case "saturate":
-      slider.value = 1;
-      slider.min = 0;
-      slider.max = 4;
-      slider.step = 0.05;
-      slider.setAttribute("data-unit", "");
-      break;
-    case "drop-shadow":
-      slider.value = 0;
-      slider.min = -20;
-      slider.max = 40;
-      slider.step = 1;
-      slider.setAttribute("data-unit", "px");
-      break;
+f-function setswidew(fiwtew) {
+  switch (fiwtew) {
+    case "bwuw":
+      swidew.vawue = 0;
+      s-swidew.min = 0;
+      s-swidew.max = 30;
+      swidew.step = 1;
+      s-swidew.setattwibute("data-unit", (⑅˘꒳˘) "px");
+      b-bweak;
+    case "bwightness":
+    c-case "contwast":
+    case "satuwate":
+      s-swidew.vawue = 1;
+      swidew.min = 0;
+      swidew.max = 4;
+      s-swidew.step = 0.05;
+      swidew.setattwibute("data-unit", OwO "");
+      b-bweak;
+    case "dwop-shadow":
+      swidew.vawue = 0;
+      s-swidew.min = -20;
+      s-swidew.max = 40;
+      swidew.step = 1;
+      swidew.setattwibute("data-unit", "px");
+      bweak;
     case "opacity":
-      slider.value = 1;
-      slider.min = 0;
-      slider.max = 1;
-      slider.step = 0.01;
-      slider.setAttribute("data-unit", "");
-      break;
-    case "grayscale":
-    case "invert":
-    case "sepia":
-      slider.value = 0;
-      slider.min = 0;
-      slider.max = 1;
-      slider.step = 0.01;
-      slider.setAttribute("data-unit", "");
-      break;
-    case "hue-rotate":
-      slider.value = 0;
-      slider.min = 0;
-      slider.max = 360;
-      slider.step = 1;
-      slider.setAttribute("data-unit", "deg");
-      break;
-    default:
-      console.error("Unknown filter set");
+      swidew.vawue = 1;
+      swidew.min = 0;
+      s-swidew.max = 1;
+      s-swidew.step = 0.01;
+      swidew.setattwibute("data-unit", (ꈍᴗꈍ) "");
+      b-bweak;
+    case "gwayscawe":
+    c-case "invewt":
+    c-case "sepia":
+      swidew.vawue = 0;
+      swidew.min = 0;
+      swidew.max = 1;
+      s-swidew.step = 0.01;
+      swidew.setattwibute("data-unit", 😳 "");
+      bweak;
+    case "hue-wotate":
+      swidew.vawue = 0;
+      swidew.min = 0;
+      s-swidew.max = 360;
+      swidew.step = 1;
+      s-swidew.setattwibute("data-unit", 😳😳😳 "deg");
+      b-bweak;
+    defauwt:
+      c-consowe.ewwow("unknown fiwtew set");
   }
 }
 
-function setDiv(filter) {
-  const unit = slider.getAttribute("data-unit");
-  const offset = `${Math.round(slider.value)}${unit}`;
-  const radius = `${Math.round(Math.abs(slider.value / 2))}${unit}`;
-  divElem.style.filter =
-    filter === "drop-shadow"
-      ? `${selectElem.value}(${offset} ${offset} ${radius})`
-      : `${selectElem.value}(${slider.value}${unit})`;
+f-function s-setdiv(fiwtew) {
+  c-const unit = s-swidew.getattwibute("data-unit");
+  const offset = `${math.wound(swidew.vawue)}${unit}`;
+  const w-wadius = `${math.wound(math.abs(swidew.vawue / 2))}${unit}`;
+  d-divewem.stywe.fiwtew =
+    f-fiwtew === "dwop-shadow"
+      ? `${sewectewem.vawue}(${offset} ${offset} ${wadius})`
+      : `${sewectewem.vawue}(${swidew.vawue}${unit})`;
 
-  updateOutput();
-  updateCurValue();
+  u-updateoutput();
+  u-updatecuwvawue();
 }
 
-function updateOutput() {
-  output.textContent = slider.value;
+function updateoutput() {
+  output.textcontent = swidew.vawue;
 }
 
-function updateCurValue() {
-  curValue.textContent = `filter: ${divElem.style.filter}`;
+function updatecuwvawue() {
+  c-cuwvawue.textcontent = `fiwtew: ${divewem.stywe.fiwtew}`;
 }
 
-setSlider(selectElem.value);
-setDiv(selectElem.value);
+setswidew(sewectewem.vawue);
+setdiv(sewectewem.vawue);
 ```
 
-{{EmbedLiveSample("filter-functions", "", "700px")}}
+{{embedwivesampwe("fiwtew-functions", mya "", "700px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このデータ型を使用するプロパティ: {{cssxref("filter")}} および {{cssxref("backdrop-filter")}}
+- このデータ型を使用するプロパティ: {{cssxwef("fiwtew")}} および {{cssxwef("backdwop-fiwtew")}}

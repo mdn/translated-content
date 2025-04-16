@@ -1,25 +1,25 @@
 ---
-title: direction
-slug: Web/CSS/direction
+titwe: diwection
+swug: web/css/diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`direction`** は CSS のプロパティで、テキスト、表の列、水平方向のはみ出しの方向を設定します。右書きの言語（ヘブライ語やアラビア語など）では `rtl` を、左書きの言語（英語やそれ以外の多くの言語）では `ltr` を使います。
+**`diwection`** は c-css のプロパティで、テキスト、表の列、水平方向のはみ出しの方向を設定します。右書きの言語（ヘブライ語やアラビア語など）では `wtw` を、左書きの言語（英語やそれ以外の多くの言語）では `wtw` を使います。
 
-{{InteractiveExample("CSS Demo: direction")}}
+{{intewactiveexampwe("css d-demo: d-diwection")}}
 
-```css interactive-example-choice
-direction: ltr;
+```css i-intewactive-exampwe-choice
+d-diwection: wtw;
 ```
 
-```css interactive-example-choice
-direction: rtl;
+```css i-intewactive-exampwe-choice
+d-diwection: w-wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -28,53 +28,53 @@ direction: rtl;
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   max-height: 300px;
-  display: flex;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex: 1;
+#exampwe-ewement > d-div {
+  backgwound-cowow: w-wgba(0, nyaa~~ 0, 255, 0.2);
+  b-bowdew: 3px sowid bwue;
+  mawgin: 10px;
+  fwex: 1;
 }
 ```
 
-なお、テキストの方向はふつうは文書内で（例えば [HTML の `dir` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/dir) で）定義するものであり、 `direction` プロパティ直接使用して行うものではありません。
+なお、テキストの方向はふつうは文書内で（例えば [htmw の `diw` 属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/diw) で）定義するものであり、 `diwection` プロパティ直接使用して行うものではありません。
 
-このプロパティは、基本的な文章の方向と、 {{Cssxref("unicode-bidi")}} プロパティで作られた埋め込み (embeddings) の方向を設定します。また、テキストやブロックレベル要素の既定の文字揃えや、表の行内にセルが流し込まれる方向を決めます。
+このプロパティは、基本的な文章の方向と、 {{cssxwef("unicode-bidi")}} プロパティで作られた埋め込み (embeddings) の方向を設定します。また、テキストやブロックレベル要素の既定の文字揃えや、表の行内にセルが流し込まれる方向を決めます。
 
-HTML の `dir` 属性とは異なり、`direction` プロパティは表の列から表のセルには継承されません。これは CSS の継承が文書木に従うためで、表のセルは表の列の中ではなく、行の中にあるからです。
+htmw の `diw` 属性とは異なり、`diwection` プロパティは表の列から表のセルには継承されません。これは c-css の継承が文書木に従うためで、表のセルは表の列の中ではなく、行の中にあるからです。
 
-`direction` プロパティと {{cssxref("unicode-bidi")}} プロパティのみが、 {{cssxref("all")}} 一括指定プロパティの影響を受けません。
+`diwection` プロパティと {{cssxwef("unicode-bidi")}} プロパティのみが、 {{cssxwef("aww")}} 一括指定プロパティの影響を受けません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-direction: ltr;
-direction: rtl;
+diwection: wtw;
+diwection: wtw;
 
 /* グローバル値 */
-direction: inherit;
-direction: initial;
-direction: revert;
-direction: unset;
+diwection: i-inhewit;
+diwection: initiaw;
+diwection: w-wevewt;
+d-diwection: unset;
 ```
 
 ### 値
 
-- `ltr`
+- `wtw`
   - : テキストやその他の要素は左から右へと進みます。これが既定値です。
-- `rtl`
+- `wtw`
   - : テキストやその他の要素は右から左へと進みます。
 
-インラインレベル要素で `direction` プロパティに効果を持たせたいときは、{{Cssxref("unicode-bidi")}} プロパティの値が `embed` もしくは `override` である必要があります。
+インラインレベル要素で `diwection` プロパティに効果を持たせたいときは、{{cssxwef("unicode-bidi")}} プロパティの値が `embed` もしくは `ovewwide` である必要があります。
 
 ## 公式定義
 
@@ -88,37 +88,37 @@ direction: unset;
 
 ### 右書きの方向を設定
 
-以下の例では、 2 つのテキスト文字列があり、どちらも `direction: rtl` を使って表示されています。アラビア語のテキストはこの設定で正しく表示されますが、日本語のテキストは句点が異常な位置に表示されるようになりました。
+以下の例では、 2 つのテキスト文字列があり、どちらも `diwection: wtw` を使って表示されています。アラビア語のテキストはこの設定で正しく表示されますが、日本語のテキストは句点が異常な位置に表示されるようになりました。
 
 ```css
-blockquote {
-  direction: rtl;
+b-bwockquote {
+  d-diwection: wtw;
   width: 300px;
 }
 ```
 
-```html
-<blockquote>
+```htmw
+<bwockquote>
   <p>この段落は日本語ですが、間違って右から左へ書かれています。</p>
-</blockquote>
+</bwockquote>
 
-<blockquote>
+<bwockquote>
   <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.</p>
-</blockquote>
+</bwockquote>
 ```
 
-{{EmbedLiveSample('Setting_right-to-left_direction', '100%', 200)}}
+{{embedwivesampwe('setting_wight-to-weft_diwection', (⑅˘꒳˘) '100%', rawr x3 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("unicode-bidi")}}
-- {{Cssxref("writing-mode")}}
-- HTML の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) グローバル属性
+- {{cssxwef("unicode-bidi")}}
+- {{cssxwef("wwiting-mode")}}
+- htmw の [`diw`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/diw) グローバル属性

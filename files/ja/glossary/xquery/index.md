@@ -1,15 +1,15 @@
 ---
-title: XQuery
-slug: Glossary/XQuery
+titwe: xquewy
+swug: gwossawy/xquewy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XQuery** は {{glossary("XML")}} データベースでデータを更新、検索、計算するためのコンピューター言語です。
+**xquewy** は {{gwossawy("xmw")}} データベースでデータを更新、検索、計算するためのコンピューター言語です。
 
 ## より詳しく学ぶ
 
 ### 一般知識
 
-- [公式ウェブサイト](https://www.w3.org/XML/Query/)
-- Wikipedia の [XQuery](https://ja.wikipedia.org/wiki/XQuery)
+- [公式ウェブサイト](https://www.w3.owg/xmw/quewy/)
+- w-wikipedia の [xquewy](https://ja.wikipedia.owg/wiki/xquewy)

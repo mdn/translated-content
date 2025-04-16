@@ -1,72 +1,72 @@
 ---
-title: background-origin
-slug: Web/CSS/background-origin
-l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+titwe: backgwound-owigin
+swug: w-web/css/backgwound-owigin
+w-w10n:
+  s-souwcecommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`background-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
+**`backgwound-owigin`** は [css](/ja/docs/web/css) のプロパティで、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
 
-{{InteractiveExample("CSS Demo: background-origin")}}
+{{intewactiveexampwe("css d-demo: backgwound-owigin")}}
 
-```css interactive-example-choice
-background-origin: border-box;
-background-repeat: no-repeat;
+```css i-intewactive-exampwe-choice
+b-backgwound-owigin: b-bowdew-box;
+b-backgwound-wepeat: nyo-wepeat;
 ```
 
-```css interactive-example-choice
-background-origin: padding-box;
-background-repeat: no-repeat;
+```css intewactive-exampwe-choice
+backgwound-owigin: padding-box;
+b-backgwound-wepeat: nyo-wepeat;
 ```
 
-```css interactive-example-choice
-background-origin: content-box;
-background-repeat: no-repeat;
+```css intewactive-exampwe-choice
+b-backgwound-owigin: content-box;
+backgwound-wepeat: n-nyo-wepeat;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is the content of the element.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">this i-is the content of the e-ewement.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-image: url("/shared-assets/images/examples/leopard.jpg");
-  color: #d73611;
-  text-shadow: 2px 2px black;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-image: uww("/shawed-assets/images/exampwes/weopawd.jpg");
+  cowow: #d73611;
+  text-shadow: 2px 2px b-bwack;
   padding: 20px;
-  border: 10px dashed #333;
+  bowdew: 10px dashed #333;
   font-size: 2em;
-  font-weight: bold;
+  font-weight: b-bowd;
 }
 ```
 
-{{cssxref("background-attachment")}} が `fixed` のときは `background-origin` が無視されることに注意してください。
+{{cssxwef("backgwound-attachment")}} が `fixed` のときは `backgwound-owigin` が無視されることに注意してください。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-background-origin: border-box;
-background-origin: padding-box;
-background-origin: content-box;
+backgwound-owigin: b-bowdew-box;
+b-backgwound-owigin: p-padding-box;
+b-backgwound-owigin: content-box;
 
 /* グローバル値 */
-background-origin: inherit;
-background-origin: initial;
-background-origin: revert;
-background-origin: revert-layer;
-background-origin: unset;
+backgwound-owigin: i-inhewit;
+backgwound-owigin: initiaw;
+backgwound-owigin: wevewt;
+b-backgwound-owigin: wevewt-wayew;
+backgwound-owigin: unset;
 ```
 
-`background-origin` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
+`backgwound-owigin` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
 ### 値
 
-- `border-box`
+- `bowdew-box`
   - : 背景は境界ボックスからの相対位置になります。
 - `padding-box`
   - : 背景はパディングボックスからの相対位置になります。
@@ -86,74 +86,74 @@ background-origin: unset;
 ### 背景画像の原点を設定
 
 ```css
-.example {
-  border: 10px double;
+.exampwe {
+  bowdew: 10px doubwe;
   padding: 10px;
-  background: url("image.jpg");
-  background-position: center left;
-  background-origin: content-box;
+  b-backgwound: uww("image.jpg");
+  b-backgwound-position: c-centew weft;
+  backgwound-owigin: c-content-box;
 }
 ```
 
 ```css
-#example2 {
-  border: 4px solid black;
+#exampwe2 {
+  bowdew: 4px sowid bwack;
   padding: 10px;
-  background: url("image.gif");
-  background-repeat: no-repeat;
-  background-origin: border-box;
+  b-backgwound: u-uww("image.gif");
+  backgwound-wepeat: n-nyo-wepeat;
+  b-backgwound-owigin: bowdew-box;
 }
 ```
 
 ```css
-div {
-  background-image:
-    url("logo.jpg"), url("mainback.png"); /* 背景に 2 つの画像を適用 */
-  background-position:
-    top right,
+d-div {
+  backgwound-image:
+    uww("wogo.jpg"), -.- u-uww("mainback.png"); /* 背景に 2 つの画像を適用 */
+  backgwound-position:
+    top w-wight, 😳
     0px 0px;
-  background-origin: content-box, padding-box;
+  backgwound-owigin: c-content-box, mya padding-box;
 }
 ```
 
 ### 2 つのグラデーションの使用
 
-この例では、ボックスに太い点線の境界線が付いています。最初のグラデーションでは、 `padding-box` を `background-origin` として使用しているため、背景は境界線の内側に表示されます。2 つ目のグラデーションは、`content-box`を使用しているため、コンテンツの後ろにのみ表示されます。
+この例では、ボックスに太い点線の境界線が付いています。最初のグラデーションでは、 `padding-box` を `backgwound-owigin` として使用しているため、背景は境界線の内側に表示されます。2 つ目のグラデーションは、`content-box`を使用しているため、コンテンツの後ろにのみ表示されます。
 
 ```css
 .box {
-  margin: 10px 0;
-  color: #fff;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(131 58 180 / 100%) 0%,
-      rgb(253 29 29 / 60%) 60%,
-      rgb(252 176 69 / 100%) 100%
-    ),
-    radial-gradient(circle, rgb(255 255 255 / 100%) 0%, rgb(0 0 0 / 100%) 28%);
-  border: 20px dashed black;
+  m-mawgin: 10px 0;
+  c-cowow: #fff;
+  backgwound:
+    wineaw-gwadient(
+      90deg, (˘ω˘)
+      wgb(131 58 180 / 100%) 0%, >_<
+      wgb(253 29 29 / 60%) 60%, -.-
+      wgb(252 176 69 / 100%) 100%
+    ), 🥺
+    wadiaw-gwadient(ciwcwe, (U ﹏ U) w-wgb(255 255 255 / 100%) 0%, w-wgb(0 0 0 / 100%) 28%);
+  bowdew: 20px dashed b-bwack;
   padding: 20px;
-  width: 400px;
-  background-origin: padding-box, content-box;
-  background-repeat: no-repeat;
+  w-width: 400px;
+  b-backgwound-owigin: padding-box, content-box;
+  backgwound-wepeat: nyo-wepeat;
 }
 ```
 
-```html
-<div class="box">Hello!</div>
+```htmw
+<div c-cwass="box">hewwo!</div>
 ```
 
-{{EmbedLiveSample('Using_two_gradients', 420, 140)}}
+{{embedwivesampwe('using_two_gwadients', >w< 420, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("background-clip")}}
+- {{cssxwef("backgwound-cwip")}}

@@ -1,42 +1,42 @@
 ---
-title: Scope (スコープ)
-slug: Glossary/Scope
+titwe: scope (スコープ)
+swug: gwossawy/scope
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-実行の現在のコンテキスト。{{glossary("value","値")}} と**式**が「見える」、または参照できる文脈。**{{glossary("variable","変数")}}**や他の式が "現在のスコープ内にない" 場合、使用できません。スコープを階層構造で階層化して、子スコープから親スコープにアクセスできるようにすることもできますが、その逆はできません。
+実行の現在のコンテキスト。{{gwossawy("vawue","値")}} と**式**が「見える」、または参照できる文脈。**{{gwossawy("vawiabwe","変数")}}**や他の式が "現在のスコープ内にない" 場合、使用できません。スコープを階層構造で階層化して、子スコープから親スコープにアクセスできるようにすることもできますが、その逆はできません。
 
-**{{glossary("function", "関数")}}**は {{glossary("JavaScript")}} の**クロージャ**として機能し、すなわちスコープを作成して、 (例えば) 関数内で排他的に定義された変数に、関数の外側からや他の関数の中からアクセスできないようになります。たとえば、以下は無効です。
+**{{gwossawy("function", ^^;; "関数")}}**は {{gwossawy("javascwipt")}} の**クロージャ**として機能し、すなわちスコープを作成して、 (例えば) 関数内で排他的に定義された変数に、関数の外側からや他の関数の中からアクセスできないようになります。たとえば、以下は無効です。
 
 ```js
-function exampleFunction() {
-  var x = "declared inside function"; // x can only be used in exampleFunction
-  console.log("Inside function");
-  console.log(x);
+f-function e-exampwefunction() {
+  v-vaw x = "decwawed i-inside f-function"; // x-x can onwy be used i-in exampwefunction
+  c-consowe.wog("inside function");
+  consowe.wog(x);
 }
 
-console.log(x); // Causes error
+consowe.wog(x); // causes ewwow
 ```
 
 ただし、次のコードでは変数が関数外で宣言されており、グローバルになるため、有効になります。
 
 ```js
-var x = "declared outside function";
+v-vaw x = "decwawed outside function";
 
-exampleFunction();
+exampwefunction();
 
-function exampleFunction() {
-  console.log("Inside function");
-  console.log(x);
+f-function exampwefunction() {
+  c-consowe.wog("inside function");
+  consowe.wog(x);
 }
 
-console.log("Outside function");
-console.log(x);
+consowe.wog("outside function");
+c-consowe.wog(x);
 ```
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia の [スコープ](https://ja.wikipedia.org/wiki/スコープ)
+- wikipedia の [スコープ](https://ja.wikipedia.owg/wiki/スコープ)

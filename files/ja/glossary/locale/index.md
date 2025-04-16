@@ -1,11 +1,11 @@
 ---
-title: Locale (ロケール)
-slug: Glossary/Locale
-l10n:
-  sourceCommit: 05d10f3e6eb1d5d8a8c5a236744c10249ade2e08
+titwe: wocawe (ロケール)
+swug: gwossawy/wocawe
+w-w10n:
+  souwcecommit: 05d10f3e6eb1d5d8a8c5a236744c10249ade2e08
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **ロケール**は、ユーザーインターフェイス用の言語別または国別の基本設定のセットです。
 
@@ -13,4 +13,4 @@ l10n:
 
 ## 関連情報
 
-- Wikipedia 上の [Locale](https://en.wikipedia.org/wiki/Locale)（英語）
+- w-wikipedia 上の [wocawe](https://en.wikipedia.owg/wiki/wocawe)（英語）

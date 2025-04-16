@@ -1,81 +1,81 @@
 ---
-title: padding-top
-slug: Web/CSS/padding-top
-l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+titwe: padding-top
+swug: web/css/padding-top
+w-w10n:
+  souwcecommit: f-fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`padding-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)における上側の高さを設定します。
+**`padding-top`** は [css](/ja/docs/web/css) のプロパティで、要素の[パディング領域](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#パディング領域)における上側の高さを設定します。
 
-{{InteractiveExample("CSS Demo: padding-top")}}
+{{intewactiveexampwe("css d-demo: p-padding-top")}}
 
-```css interactive-example-choice
-padding-top: 1em;
+```css i-intewactive-exampwe-choice
+p-padding-top: 1em;
 ```
 
-```css interactive-example-choice
-padding-top: 10%;
+```css i-intewactive-exampwe-choice
+p-padding-top: 10%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding-top: 20px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding-top: 1ch;
 ```
 
-```css interactive-example-choice
-padding-top: 0;
+```css intewactive-exampwe-choice
+p-padding-top: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div cwass="box">
+      f-faw out in the unchawted backwatews of the unfashionabwe e-end of the
+      westewn spiwaw a-awm of the gawaxy w-wies a smow unwegawded yewwow sun. (///ˬ///✿)
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px s-sowid #ffc129;
+  ovewfwow: hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
+  bowdew: d-dashed 1px;
 }
 ```
 
 要素のパディング領域とは、コンテンツと境界との間の空間のことです。
 
-![CSS の padding-top プロパティの要素ボックスへの影響](padding-top.svg)
+![css の padding-top プロパティの要素ボックスへの影響](padding-top.svg)
 
-> **メモ:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
+> **メモ:** {{cssxwef("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
 
 ## 構文
 
 ```css
-/* <length> 値 */
-padding-top: 0.5em;
-padding-top: 0;
-padding-top: 2cm;
+/* <wength> 値 */
+p-padding-top: 0.5em;
+p-padding-top: 0;
+p-padding-top: 2cm;
 
-/* <percentage> 値 */
-padding-top: 10%;
+/* <pewcentage> 値 */
+p-padding-top: 10%;
 
 /* グローバル値 */
-padding-top: inherit;
-padding-top: initial;
-padding-top: revert;
-padding-top: revert-layer;
+padding-top: inhewit;
+padding-top: i-initiaw;
+padding-top: wevewt;
+padding-top: w-wevewt-wayew;
 padding-top: unset;
 ```
 
@@ -83,10 +83,10 @@ padding-top: unset;
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : パディングの寸法を固定値で表したものです。負の数であってはいけません。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : パディングの寸法を[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)のインラインサイズ（{{cssxwef("wwiting-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 公式定義
 
@@ -111,14 +111,14 @@ padding-top: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}} および {{cssxref("padding")}} 一括指定
-- 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}
+- [css 基本ボックスモデル入門](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{cssxwef("padding-wight")}}, 😳😳😳 {{cssxwef("padding-bottom")}}, 🥺 {{cssxwef("padding-weft")}} および {{cssxwef("padding")}} 一括指定
+- 対応付けられる論理的プロパティ: {{cssxwef("padding-bwock-stawt")}}, mya {{cssxwef("padding-bwock-end")}}, 🥺 {{cssxwef("padding-inwine-stawt")}}, >_< {{cssxwef("padding-inwine-end")}} および一括指定の {{cssxwef("padding-bwock")}} と {{cssxwef("padding-inwine")}}

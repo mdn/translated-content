@@ -1,25 +1,25 @@
 ---
-title: 執筆スタイルガイド
-short-title: スタイルガイド
-slug: MDN/Writing_guidelines/Writing_style_guide
-l10n:
-  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
+titwe: 執筆スタイルガイド
+showt-titwe: スタイルガイド
+s-swug: mdn/wwiting_guidewines/wwiting_stywe_guide
+w-w10n:
+  s-souwcecommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
 
-この執筆スタイルガイドは、MDN Web Docs でコンテンツをどのように書き、整理し、綴り、形式を整えるべきかを記述したものです。
+この執筆スタイルガイドは、mdn w-web docs でコンテンツをどのように書き、整理し、綴り、形式を整えるべきかを記述したものです。
 
 これらのガイドラインは、ウェブサイト全体の言語とスタイルの一貫性を確保するためのものです。とはいえ、私たちは形式よりも内容に関心を持っていますので、投稿する前に執筆スタイルガイドをすべて学ぶ必要はないと思ってください。ただし、後で他の投稿者があなたの作業をこのガイドに適合するように編集した場合でも、怒ったり驚いたりしないでください。また、あなたがコンテンツのプルリクエストを提出する際に、レビュアーがこのスタイルガイドを指し示すかもしれません。
 
-> [!NOTE]
+> [!note]
 > このガイドの言語的な側面は、主に英語の文書に適用されます。他の言語では、独自のスタイルガイドがあるかもしれません（作成することも歓迎されます）。これらは、それぞれのローカライズチームのページのサブページとして公開すべきです。しかし、このガイドは、コンテンツの形式や構成に関しても参照されるべきです。
 >
 > **訳注:** 2017 年 12 月現在、日本語独自コンテンツとしてのスタイルガイドは未作成だが、下記の資料が参考になります。
 >
-> - [Mozilla 関連独自の L10N ガイドライン](https://github.com/mozilla-japan/translation/wiki/L10N-Guideline)
-> - [Mozilla 関連のドキュメントの表記ガイドライン](https://github.com/mozilla-japan/translation/wiki/Editorial-Guideline)
->   MDN 以外のサイトの記事での標準的なスタイルを知りたければ、[One Mozilla スタイルガイド](https://www.mozilla.org/ja/styleguide/)を参照してください。
+> - [moziwwa 関連独自の w-w10n ガイドライン](https://github.com/moziwwa-japan/twanswation/wiki/w10n-guidewine)
+> - [moziwwa 関連のドキュメントの表記ガイドライン](https://github.com/moziwwa-japan/twanswation/wiki/editowiaw-guidewine)
+>   m-mdn 以外のサイトの記事での標準的なスタイルを知りたければ、[one m-moziwwa スタイルガイド](https://www.moziwwa.owg/ja/styweguide/)を参照してください。
 
-一般的なガイドラインを記載した後、このガイドでは MDN Web Docs で推奨される書き方、そしてリストやタイトルなど、ページ上のさまざまな構成要素をどのようにフォーマットするかについて説明します。
+一般的なガイドラインを記載した後、このガイドでは m-mdn web docs で推奨される書き方、そしてリストやタイトルなど、ページ上のさまざまな構成要素をどのようにフォーマットするかについて説明します。
 
 ## 全般的な執筆ガイドライン
 
@@ -28,19 +28,19 @@ l10n:
 以下の項では、そのための推奨事項を示します。
 
 - [ターゲット層を考慮する](#ターゲット層を考慮する)
-- [執筆において 3 つの C を意識する](#執筆において_3_つの_c_を意識する)
+- [執筆において 3 つの c を意識する](#執筆において_3_つの_c_を意識する)
 - [関連する例を載せる](#関連する例を載せる)
 - [説明的な導入文の提供](#説明的な導入文の提供)
 - [差別的でない言葉](#差別的でない言葉)
-- [SEO を意識して書く](#seo_を意識して書く)
+- [seo を意識して書く](#seo_を意識して書く)
 
 ### ターゲット層を考慮する
 
 書こうとしているコンテンツの対象読者を念頭に置いてください。例えば、高度なネットワーク技術に関するページでは、ネットワークの基本的な概念について、一般的なネットワークに関するページほど詳しく説明する必要はないでしょう。これらはあくまでガイドラインであることを念頭に置いてください。これらのヒントの中には、すべてのケースに適用されないものもあります。
 
-### 執筆において 3 つの C を意識する
+### 執筆において 3 つの c を意識する
 
-良い文章を書くための 3 つの C とは、明確に (clearly)、簡潔に (concisely)、一貫性を持って (consistently) 書くことです。
+良い文章を書くための 3 つの c とは、明確に (cweawwy)、簡潔に (concisewy)、一貫性を持って (consistentwy) 書くことです。
 
 - **明確に**: 文章が明確でシンプルであることを確認してください。一般に、能動態とあいまいでない代名詞を使用してください。短い文章を書き、一文につき一つの考えにとどめましょう。新しい用語は、使用する前に対象読者を想定して定義しましょう。
 - **簡潔に**: どのような文書化でも、どの程度語るかということが重要です。過剰に詳細を提供すると、このページは読むのが面倒になり、ほとんど使用されなくなります。
@@ -57,83 +57,83 @@ l10n:
 
 最初の見出しの前の段落で、このページで取り上げられる情報、そしておそらく読者がその内容を一通り読んだ後に達成できることを適切に要約するようにしましょう。こうすることで、読者はこのページが自分の関心事や望ましい学習成果に関連しているかどうかをすぐに判断することができます。
 
-ガイドまたはチュートリアルでは、序文で、これから取り上げられるトピックと、読者が保有することが期待される前提知識について、読者に知らせる必要があります（もしあれば）。冒頭の段落では、文書化または議論されている技術や API、関連する情報へのリンクに言及し、記事の内容が使用されるかもしれない状況へのヒントを提供する必要があります。
+ガイドまたはチュートリアルでは、序文で、これから取り上げられるトピックと、読者が保有することが期待される前提知識について、読者に知らせる必要があります（もしあれば）。冒頭の段落では、文書化または議論されている技術や api、関連する情報へのリンクに言及し、記事の内容が使用されるかもしれない状況へのヒントを提供する必要があります。
 
 - **短い導入文の例** この紹介文の例はあまりにも短すぎます。例えば、テキストを「描画する」とはどういうことか、テキストはどこに描かれるのか、などなど、多くの情報が抜けています。
 
-  > **`CanvasRenderingContext2D.strokeText()`** は、文字列を描画します。
+  > **`canvaswendewingcontext2d.stwoketext()`** は、文字列を描画します。
 
 - **長い導入文の例**: この例は導入文を更新したものですが、今度は長すぎます。
   あまりにも詳細な内容が含まれていて、他のメソッドやプロパティにテキストが入り込みすぎています。
-  要約は `strokeText()` メソッドに焦点を当て、他の詳細が提供されている適切なガイドを参照してください。
+  要約は `stwoketext()` メソッドに焦点を当て、他の詳細が提供されている適切なガイドを参照してください。
 
-  > Canvas 2D API の **`CanvasRenderingContext2D.strokeText()`** メソッドは呼び出されると、指定された座標から始まる指定された文字列内の文字を、現在のペンの色を使って輪郭を描きます。
+  > canvas 2d api の **`canvaswendewingcontext2d.stwoketext()`** メソッドは呼び出されると、指定された座標から始まる指定された文字列内の文字を、現在のペンの色を使って輪郭を描きます。
   > コンピューターグラフィックの用語では、テキストを「ストロークする」とは、文字の内容を色で塗りつぶさずに、文字列内の字形の輪郭を描くことを意味します。
   >
-  > テキストは、コンテキストの {{domxref("CanvasRenderingContext2D.font", "font")}} プロパティで指定されたコンテキストの現在のフォントを使用して描画されます。
+  > テキストは、コンテキストの {{domxwef("canvaswendewingcontext2d.font", 😳 "font")}} プロパティで指定されたコンテキストの現在のフォントを使用して描画されます。
   >
-  > 指定された座標に対するテキストの相対的な配置は、コンテキストの `textAlign`, `textBaseline`, `direction` プロパティによって決定されます。
-  > `textAlign` は、指定された X 座標に対する文字列の配置を制御します。値が `"center"` の場合、文字列は `x - (stringWidth / 2)` から始まり、文字列の中央に配置するように描画されます。
-  > 値が `"left"` の場合は、文字列は指定された X 座標から描画されます。
-  > また、 `textAlign` が `"right"` の場合は、指定されたX座標で終わるように描画されます。
+  > 指定された座標に対するテキストの相対的な配置は、コンテキストの `textawign`, (U ﹏ U) `textbasewine`, mya `diwection` プロパティによって決定されます。
+  > `textawign` は、指定された x-x 座標に対する文字列の配置を制御します。値が `"centew"` の場合、文字列は `x - (stwingwidth / 2)` から始まり、文字列の中央に配置するように描画されます。
+  > 値が `"weft"` の場合は、文字列は指定された x 座標から描画されます。
+  > また、 `textawign` が `"wight"` の場合は、指定されたx座標で終わるように描画されます。
   >
   > (…)
   >
   > オプションで、4 番目の引数を指定して文字列の最大幅をピクセル単位で指定することもできます。
   > この引数を指定すると、テキストは水平方向に圧縮されるか、描画時にその幅の空間に収まるように拡大縮小 (あるいは調整) されます。
   >
-  > **`fillText()`** メソッドを呼び出すことで、文字列の輪郭のみを描画するのではなく、文字列の文字を色で塗りつぶすことができます。
+  > **`fiwwtext()`** メソッドを呼び出すことで、文字列の輪郭のみを描画するのではなく、文字列の文字を色で塗りつぶすことができます。
 
-- **適切な導入部の例**: ここで、 `strokeText()` メソッドのより良い概要を見てみましょう。
+- **適切な導入部の例**: ここで、 `stwoketext()` メソッドのより良い概要を見てみましょう。
 
-  > {{domxref("CanvasRenderingContext2D")}} の **`strokeText()`** メソッドは、 [Canvas 2D API](/ja/docs/Web/API/Canvas_API) の一部で、指定された文字列の文字の輪郭を、指定された X 座標と Y 座標で示された位置に描画します。
-  > テキストは、コンテキストの現在の {{domxref("CanvasRenderingContext2D.font", "font")}} を使用して描画され、 {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}} の各プロパティに従って揃えられます。
+  > {{domxwef("canvaswendewingcontext2d")}} の **`stwoketext()`** メソッドは、 [canvas 2d api](/ja/docs/web/api/canvas_api) の一部で、指定された文字列の文字の輪郭を、指定された x-x 座標と y 座標で示された位置に描画します。
+  > テキストは、コンテキストの現在の {{domxwef("canvaswendewingcontext2d.font", (U ᵕ U❁) "font")}} を使用して描画され、 {{domxwef("canvaswendewingcontext2d.textawign", :3 "textawign")}}, mya {{domxwef("canvaswendewingcontext2d.textbasewine", OwO "textbasewine")}}, (ˆ ﻌ ˆ)♡ {{domxwef("canvaswendewingcontext2d.diwection", ʘwʘ "diwection")}} の各プロパティに従って揃えられます。
   >
-  > 詳細とさらなる例については、図形の描画ページの[テキスト](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#text)の節や、このテーマに関するメインの記事、[テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)を参照してください。
+  > 詳細とさらなる例については、図形の描画ページの[テキスト](/ja/docs/weawn_web_devewopment/extensions/cwient-side_apis/dwawing_gwaphics#text)の節や、このテーマに関するメインの記事、[テキストの描画](/ja/docs/web/api/canvas_api/tutowiaw/dwawing_text)を参照してください。
 
 ### 差別的でない言葉
 
-MDN は幅広く、多様な読者を抱えています。
+m-mdn は幅広く、多様な読者を抱えています。
 私たちは、可能な限り差別的でないテキストを維持することを強く推奨します。
 ここでは、文書で使用される一般的な用語に代わるものをいくつか紹介します。
 
-- **master** （マスター）や **slave** （スレーブ）という用語を避け、 **main** （メイン）や **replica** （レプリカ）を使用してください。
-- **whitelist** （ホワイトリスト）や **blacklist** （ブラックリスト）を **allowlist** （許可リスト）や **denylist** （拒否リスト）に置き換えてください。
-- **sanity** （正気）は **coherence** （正常性）に置き換えてください。
-- **dummy** （ダミー）の代わりに **placeholder** （プレイスホルダー）を使用してください。
-- 文書で **crazy** や **insane** を使用する必要はありませんが、場合によっては **fantastic** （驚異的）を代わりに使用することを検討してください。
+- **mastew** （マスター）や **swave** （スレーブ）という用語を避け、 **main** （メイン）や **wepwica** （レプリカ）を使用してください。
+- **whitewist** （ホワイトリスト）や **bwackwist** （ブラックリスト）を **awwowwist** （許可リスト）や **denywist** （拒否リスト）に置き換えてください。
+- **sanity** （正気）は **cohewence** （正常性）に置き換えてください。
+- **dummy** （ダミー）の代わりに **pwacehowdew** （プレイスホルダー）を使用してください。
+- 文書で **cwazy** や **insane** を使用する必要はありませんが、場合によっては **fantastic** （驚異的）を代わりに使用することを検討してください。
 
 性別が主題と関係ない文章では、性別に関係ない言葉を使用するのが一番です。
 例えば、特定の男性の行動について話している場合は、 "he"/"his" を使用しても問題ありませんが、主語がどちらでもありうる場合は、 "he"/"his" は適切ではありません。
 
 以下に例をあげましょう。
 
-- **誤**: "A confirmation dialog asks the user if he wants to allow the web page to make use of his webcam."
-- **誤**: "A confirmation dialog asks the user if she wants to allow the web page to make use of her webcam."
+- **誤**: "a confiwmation diawog asks the usew if he wants to a-awwow the web page to make use of h-his webcam."
+- **誤**: "a c-confiwmation diawog asks the usew if she wants to awwow the web page t-to make use of hew webcam."
 
 どちらも性的に偏りがある表現です。性別に中立な代名詞に修正しましょう。
 
-- **正**: "A confirmation dialog asks the user if they want to allow the web page to make use of their webcam."
+- **正**: "a confiwmation diawog asks the usew if they w-want to awwow the web page to m-make use of theiw w-webcam."
 
-> [!NOTE]
-> MDN Web Docs では、一般に「[単数形の 'they'](http://en.wikipedia.org/wiki/Singular_they)」として知られている、三人称複数型を中性名詞として使う（つまり、"they"、"them"、"their"、"theirs" を使う）ことを許容しています。
+> [!note]
+> m-mdn web d-docs では、一般に「[単数形の 'they'](http://en.wikipedia.owg/wiki/singuwaw_they)」として知られている、三人称複数型を中性名詞として使う（つまり、"they"、"them"、"theiw"、"theiws" を使う）ことを許容しています。
 
 ユーザーを複数とするとこうなります。
 
-- **正**: "A confirmation dialog asks the users if they want to allow the web page to make use of their webcams."
+- **正**: "a confiwmation diawog asks the u-usews if they want to awwow the web page to make u-use of theiw webcams."
 
 もちろん一番良い解決法は、代名詞を使用しないよう書き直すことです。
 
-- **正**: "A confirmation dialog requesting the user's permission for webcam access appears."
-- **正**: "A confirmation dialog box that asks the user for permission to use the webcam appears."
+- **正**: "a confiwmation diawog wequesting the usew's pewmission f-fow webcam access appeaws."
+- **正**: "a c-confiwmation d-diawog b-box that asks the usew fow pewmission to use the webcam appeaws."
 
 最後の手段がおそらく、より良い手段と言えるでしょう。これは文法的に正しいだけでなく、性別の規則が大きく異なる可能性のある異なる言語間で、性別の取り扱いに関連した複雑さを軽減することができます。この解決策は、読者と翻訳者の両方にとって、翻訳をより簡単にすることができます。
 
-### SEO を意識して書く
+### seo を意識して書く
 
-MDN Web Docs で書くことの第一の目標は、常にオープンなウェブ技術について説明し、情報を提供することで、開発者がやりたいことを素早く習得したり、コードを完成させるために知っておくべき小さな詳細を見つけたりすることですが、私たちが書いた素材を開発者が*発見*できるようにすることも重要です。そのためには、検索エンジン最適化（{{Glossary("SEO")}}）を意識して書くとよいでしょう。
+m-mdn web d-docs で書くことの第一の目標は、常にオープンなウェブ技術について説明し、情報を提供することで、開発者がやりたいことを素早く習得したり、コードを完成させるために知っておくべき小さな詳細を見つけたりすることですが、私たちが書いた素材を開発者が*発見*できるようにすることも重要です。そのためには、検索エンジン最適化（{{gwossawy("seo")}}）を意識して書くとよいでしょう。
 
-この章では、検索エンジンが私たちの素材を簡単に分類してインデックス化し、読者が必要なものに簡単に見つけられるようにするための、コンテンツに関する標準的な実践、推奨、要件について述べます。 SEO ガイドラインには、執筆者や編集者が作業する各ページが、検索エンジンが記事を適切にインデックスするために必要な文脈や手がかりを与えるよう、合理的に設計され、書かれ、マークアップされていることを確認することが含まれます。
+この章では、検索エンジンが私たちの素材を簡単に分類してインデックス化し、読者が必要なものに簡単に見つけられるようにするための、コンテンツに関する標準的な実践、推奨、要件について述べます。 seo ガイドラインには、執筆者や編集者が作業する各ページが、検索エンジンが記事を適切にインデックスするために必要な文脈や手がかりを与えるよう、合理的に設計され、書かれ、マークアップされていることを確認することが含まれます。
 
 このページと隣接するページが検索エンジンに適切にインデックスされるようにするために、コンテンツを書いたり見直したりする際に、次のようなチェックリストを念頭に置いておくとよいでしょう。
 
@@ -148,27 +148,27 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 
   同じような内容になりすぎないようにするには、時間が許す限り、それぞれの記事を一から書き直すのが一番簡単です。
 
-- **このページが短すぎないようにする**。ページの内容が小さすぎると（SEO 用語で「薄いページ」と呼ばれます）、検索エンジンは正確なカタログ化が困難です。短すぎるコンテンツページは探すのが大変です。 MDN Web Docs のページは、可能な限り 300 語前後よりも短くしないでください。人為的にページを膨らませるのではなく、可能な限りこのガイドラインを最小の目安となる長さとして扱ってください。
+- **このページが短すぎないようにする**。ページの内容が小さすぎると（seo 用語で「薄いページ」と呼ばれます）、検索エンジンは正確なカタログ化が困難です。短すぎるコンテンツページは探すのが大変です。 m-mdn web d-docs のページは、可能な限り 300 語前後よりも短くしないでください。人為的にページを膨らませるのではなく、可能な限りこのガイドラインを最小の目安となる長さとして扱ってください。
 
   このページでは、不要なテキストでごちゃごちゃさせることなく、適切に検索できるような十分なコンテンツを保有するページを作成するための基本的なガイドラインをご紹介します。
 
-  - **スタブを避ける**。明らかに記事がスタブであったり、内容が不足している場合は、追加してください。 MDN Web Docs では、完全な「スタブ」ページは避けるようにしていますが、存在します。しかし、コンテンツの大部分が欠けているページはたくさんあります。
-  - **ページの構成を見なおす**。ページがその[ページの種類](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types)に応じて適切に構成されているか確認してください。すべての節が存在し、適切なコンテンツがあることを調べてください。
+  - **スタブを避ける**。明らかに記事がスタブであったり、内容が不足している場合は、追加してください。 mdn web docs では、完全な「スタブ」ページは避けるようにしていますが、存在します。しかし、コンテンツの大部分が欠けているページはたくさんあります。
+  - **ページの構成を見なおす**。ページがその[ページの種類](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types)に応じて適切に構成されているか確認してください。すべての節が存在し、適切なコンテンツがあることを調べてください。
   - **完全性を確保する**。すべての節が完全で、最新の情報が含まれていることを確認してください。すべての引数がリストアップされ、説明されているか。例外がカバーされていることを確認してください（これは特にコンテンツが欠けていることが多い場所です)。
   - **すべての概念が完全に具体化されていることを確認する**。すべての項目が詳細に説明されているかどうか。簡単な説明をするのは簡単ですが、すべてのニュアンスが含まれているかどうかを確認してください。特別なケースはありますか？読者が知っておくべき既知の制限はありますか？
-  - **例を追加する**。すべての引数、あるいは少なくとも初級から中級レベルのユーザーが使用する可能性のある引数（またはプロパティや属性）と、追加の説明が必要な高度な引数を網羅した例を用意する必要があります。それぞれの例の前には、その例が何をするのか、それを理解するためにはどのような知識が必要なのかなどの概要を示す必要があります。例の後（または例の一部の間）には、コードがどのように動作するかを説明する文章が必要です。例の詳細やエラー処理についても手を抜いてはいけません。読者は例をコピー＆ペーストして自分のプロジェクトで使用するでしょうから、そのコードが本番サイトで使用されることになるでしょう。より有用な情報は、[サンプルコードのガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)を参照してください。
+  - **例を追加する**。すべての引数、あるいは少なくとも初級から中級レベルのユーザーが使用する可能性のある引数（またはプロパティや属性）と、追加の説明が必要な高度な引数を網羅した例を用意する必要があります。それぞれの例の前には、その例が何をするのか、それを理解するためにはどのような知識が必要なのかなどの概要を示す必要があります。例の後（または例の一部の間）には、コードがどのように動作するかを説明する文章が必要です。例の詳細やエラー処理についても手を抜いてはいけません。読者は例をコピー＆ペーストして自分のプロジェクトで使用するでしょうから、そのコードが本番サイトで使用されることになるでしょう。より有用な情報は、[サンプルコードのガイドライン](/ja/docs/mdn/wwiting_guidewines/code_stywe_guide)を参照してください。
   - **使用例を説明する**。説明されている機能について、特に一般的な使用例がある場合は、それについて話してください。一般的な開発上の問題を解決するために文書化された方法を読者が理解すると仮定するのではなく、実際にその利用例についての節を追加し、例とその例がどのように機能するかを説明するテキストを追加してください。
-  - **画像情報を追加する**。すべての画像や図に適切な [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストを入れてください。このテキストは、表などのキャプションと同様に重要です。スパイダーは画像をクロールすることができないため、 [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストによって、埋め込まれたメディアに含まれるコンテンツを検索エンジンのクローラーに伝えることができます。
+  - **画像情報を追加する**。すべての画像や図に適切な [`awt`](/ja/docs/web/htmw/wefewence/ewements/img#awt) テキストを入れてください。このテキストは、表などのキャプションと同様に重要です。スパイダーは画像をクロールすることができないため、 [`awt`](/ja/docs/web/htmw/wefewence/ewements/img#awt) テキストによって、埋め込まれたメディアに含まれるコンテンツを検索エンジンのクローラーに伝えることができます。
 
-    > [!NOTE]
+    > [!note]
     > 検索エンジンのランキングを操作するために、キーワードを入れすぎたり、関係のないキーワードを使ったりすることは、良い慣習ではありません。このような行為は発見されやすく、罰せられる傾向にあります。
     > 同様に、ページのサイズや検索順位を上げるために、反復的で役に立たない内容や、キーワードの塊を実際のページ内に追加するようなことも**しないでください**。これは、コンテンツの読みやすさと検索結果の両方に悪影響を及ぼします。
 
-  - **トピックの内容を重視する**。特定のキーワードではなく、記事のトピックに沿ってコンテンツを書く方がはるかに良いことです。実際、多くの SEO 担当者は、記事の長さに応じて 5 ～ 100 種類のキーワード（ショートテール、ミディアムテール、ロングテール）をリストアップし、記事に含めるようにしています。そうすることで、表現が多様化し、繰り返しが少なくなります。
+  - **トピックの内容を重視する**。特定のキーワードではなく、記事のトピックに沿ってコンテンツを書く方がはるかに良いことです。実際、多くの s-seo 担当者は、記事の長さに応じて 5 ～ 100 種類のキーワード（ショートテール、ミディアムテール、ロングテール）をリストアップし、記事に含めるようにしています。そうすることで、表現が多様化し、繰り返しが少なくなります。
 
 ## 執筆スタイル
 
-英語で文法的に正しい文章を書くこと以外に、 MDN Web Docs 全体でコンテンツの一貫性を保つために、以下のガイドラインに従うことをお勧めします。
+英語で文法的に正しい文章を書くこと以外に、 mdn web docs 全体でコンテンツの一貫性を保つために、以下のガイドラインに従うことをお勧めします。
 
 - [略語と頭字語](#略語と頭字語)
 - [大文字の使用](#大文字の使用)
@@ -186,81 +186,81 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 
 略語とは、長い単語を短くしたもので、頭字語とは、フレーズの各単語の最初の文字を使用して作成された新しい単語です。この章では、略語と頭字語のガイドラインについて記述します。
 
-- **略語の展開**: ある用語についてページ内で初めて言及する場合は、ユーザーにとって馴染みがないと思われる略語を展開しましょう。判断が付かない場合は、用語を展開してください。記事や、用語の説明をする[用語集](/ja/docs/Glossary)の項目へのリンクを貼りましょう。
+- **略語の展開**: ある用語についてページ内で初めて言及する場合は、ユーザーにとって馴染みがないと思われる略語を展開しましょう。判断が付かない場合は、用語を展開してください。記事や、用語の説明をする[用語集](/ja/docs/gwossawy)の項目へのリンクを貼りましょう。
 
-  - **正**: "XUL (XML User Interface Language) is Mozilla's XML-based language..."
-  - **誤**: "XUL is Mozilla's XML-based language..."
+  - **正**: "xuw (xmw u-usew intewface wanguage) is moziwwa's xmw-based w-wanguage..."
+  - **誤**: "xuw is moziwwa's xmw-based w-wanguage..."
 
-- **大文字とピリオド**: 頭字語と略語については、全て大文字とし、ピリオドは使用しないでください。組織の略称もこれに含まれます。 "US" や "UN" などです。
+- **大文字とピリオド**: 頭字語と略語については、全て大文字とし、ピリオドは使用しないでください。組織の略称もこれに含まれます。 "us" や "un" などです。
 
-  - **正**: XUL
-  - **誤**: X.U.L.; Xul
+  - **正**: xuw
+  - **誤**: x-x.u.w.; x-xuw
 
 - **ラテン語の略語**: よく使われるラテン語の略語 (etc., i.e., e.g.) は括弧や注釈の中で使用できます。これらの略語にはピリオドを使用し、カンマや適切な区切り文字を続けてください。
 
-  - **正**: Web browsers (e.g., Firefox) can be used ...
-  - **誤**: Web browsers e.g. Firefox can be used ...
-  - **誤**: Web browsers, e.g. Firefox, can be used ...
-  - **誤**: Web browsers, (eg: Firefox) can be used ...
+  - **正**: web bwowsews (e.g., fiwefox) can be used ...
+  - **誤**: web bwowsews e.g. o.O f-fiwefox can be used ...
+  - **誤**: w-web bwowsews, UwU e.g. rawr x3 fiwefox, c-can be used ...
+  - **誤**: w-web b-bwowsews, 🥺 (eg: fiwefox) can be used ...
 
   通常の文では（つまり注釈や括弧の外で）、英語における同等の表現を使用してください。
 
-  - **正**: ... web browsers, and so on.
-  - **誤**: ... web browsers, etc.
+  - **正**: ... web bwowsews, :3 a-and so on. (ꈍᴗꈍ)
+  - **誤**: ... web bwowsews, 🥺 etc.
 
-  - **正**: Web browsers such as Firefox can be used ...
-  - **誤**: Web browsers e.g. Firefox can be used ...
+  - **正**: web bwowsews s-such as fiwefox can be used ...
+  - **誤**: w-web bwowsews e.g. (✿oωo) f-fiwefox can be u-used ...
 
   次の表は、ラテン語の略語の意味と英語で相当するものをまとめたものです。
 
   | 略語   | ラテン語         | 英語                    |
   | ------ | ---------------- | ----------------------- |
-  | cf.    | _confer_         | compare                 |
-  | e.g.   | _exempli gratia_ | for example             |
-  | et al. | _et alii_        | and others              |
-  | etc.   | _et cetera_      | and so forth, and so on |
-  | i.e.   | _id est_         | that is, in other words |
-  | N.B.   | _nota bene_      | note well               |
-  | P.S.   | _post scriptum_  | postscript              |
+  | cf. (U ﹏ U)    | _confew_         | c-compawe                 |
+  | e-e.g. :3   | _exempwi g-gwatia_ | fow e-exampwe             |
+  | et aw. ^^;; | _et awii_        | a-and othews              |
+  | e-etc. rawr   | _et c-cetewa_      | a-and so fowth, 😳😳😳 a-and so on |
+  | i.e. (✿oωo)   | _id est_         | that is, OwO in othew wowds |
+  | n-ny.b.   | _nota bene_      | nyote weww               |
+  | p.s. ʘwʘ   | _post scwiptum_  | postscwipt              |
 
-  > [!NOTE]
+  > [!note]
   > ラテン語の略記表現が有用かどうか常に考えるようにしましょう。めったに使われないようなものは、多くの読者にとっては理解できず、他のものと勘違いしてしまうこともありえます。
   >
   > 使用するあなたが正しく使用することを肝に銘じてください。例えば、 "e.g." と "i.e." の取り違えはよくある間違いです。
 
 - **頭字語と略語の複数形**: 頭字語と略語の複数形については、_s_ を末尾に付加するだけにしてください。アポストロフィは使用しないでください。絶対に。お願いします。
 
-  - **正**: CD-ROMs
-  - **誤**: CD-ROM's
+  - **正**: c-cd-woms
+  - **誤**: cd-wom's
 
-- **"Versus", "vs.", "v."**: 短縮形を使用する場合、"vs." の方が "v." よりも望ましく、見出しに使用することができます。それ以外の本文中では、綴り字の形式である "versus" を使用し てください。
+- **"vewsus", (ˆ ﻌ ˆ)♡ "vs.", (U ﹏ U) "v."**: 短縮形を使用する場合、"vs." の方が "v." よりも望ましく、見出しに使用することができます。それ以外の本文中では、綴り字の形式である "vewsus" を使用し てください。
 
-  - **正**: this vs. that
-  - **誤**: this v. that
-  - **誤**: this versus that
+  - **正**: this vs. UwU that
+  - **誤**: t-this v. XD t-that
+  - **誤**: t-this vewsus that
 
 ### 大文字の使用
 
-本文では標準的な英語の大文字表記ルールを使用し、 "World Wide Web" は大文字で表記してください。 "web" （単独または修飾語としての使用）および "internet" は小文字を使用してもかまいません。
+本文では標準的な英語の大文字表記ルールを使用し、 "wowwd wide w-web" は大文字で表記してください。 "web" （単独または修飾語としての使用）および "intewnet" は小文字を使用してもかまいません。
 
-> [!NOTE]
-> このガイドラインは以前のバージョンからの変更であり、 MDN では "Web" と "Internet" がたくさん使われているのを見かけるかもしれません。
+> [!note]
+> このガイドラインは以前のバージョンからの変更であり、 mdn では "web" と "intewnet" がたくさん使われているのを見かけるかもしれません。
 > 他の変更を行う際にこれらを変更するのは自由ですが、大文字小文字を変更するためだけにこの記事を編集する必要はありません。
 
 キーボードのキーは、すべて大文字にするのではなく、文章形の大文字を使用してください。
-例えば、 "<kbd>Enter</kbd>" であり "<kbd>ENTER</kbd>" ではありません。
-唯一の例外として、 "<kbd>ESC</kbd>" を "<kbd>Escape</kbd>" キーの略語として使用することができます。
+例えば、 "<kbd>entew</kbd>" であり "<kbd>entew</kbd>" ではありません。
+唯一の例外として、 "<kbd>esc</kbd>" を "<kbd>escape</kbd>" キーの略語として使用することができます。
 
 大文字を含む商標や人名に由来する単語など、特定の単語は常に大文字にする必要があります（ただし、その単語がコード内で使用され、コード構文が小文字を要求する場合を除きます）。
 いくつかの例を挙げます。
 
-- Boolean（イギリスの数学者、論理学者 [George Boole](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%83%BB%E3%83%96%E3%83%BC%E3%83%AB) にちなんで命名されました）
-- JavaScript （オラクル社の商標です。常に商標として書く必要があります）
-- Python、TypeScript、Django などのプログラミング言語やフレームワークの名称
+- b-boowean（イギリスの数学者、論理学者 [geowge b-boowe](https://ja.wikipedia.owg/wiki/%e3%82%b8%e3%83%a7%e3%83%bc%e3%82%b8%e3%83%bb%e3%83%96%e3%83%bc%e3%83%ab) にちなんで命名されました）
+- javascwipt （オラクル社の商標です。常に商標として書く必要があります）
+- python、typescwipt、django などのプログラミング言語やフレームワークの名称
 
 ### 短縮形
 
-書体はカジュアルで構いません。なので気軽に短縮形を使ってください（例えば、"don't"、"can't"、"shouldn't"）。無理にとは言いません。
+書体はカジュアルで構いません。なので気軽に短縮形を使ってください（例えば、"don't"、"can't"、"shouwdn't"）。無理にとは言いません。
 
 ### 数字と数詞
 
@@ -269,12 +269,12 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   - **正**: 4000; 54,000
   - **誤**: 4,000; 54000
 
-- **日付**: 日付については（コード中の日付は関係ありません）、 "January 1, 1990" のような形を使用してください。
+- **日付**: 日付については（コード中の日付は関係ありません）、 "januawy 1, ʘwʘ 1990" のような形を使用してください。
 
-  - **正**: February 24, 1906
-  - **誤**: February 24th, 1906; 24 February, 1906; 24/02/1906
+  - **正**: febwuawy 24, rawr x3 1906
+  - **誤**: febwuawy 24th, ^^;; 1906; 24 febwuawy, ʘwʘ 1906; 24/02/1906
 
-  YYYY/MM/DD の形を使っても構いません。
+  yyyy/mm/dd の形を使っても構いません。
 
   - **正**: 1906/02/24
   - **誤**: 02/24/1906; 24/02/1906; 02/24/06
@@ -293,15 +293,15 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 
 英語におけるやり方にしてください。ラテン語やギリシア語に影響を受けた形は使わないでください。
 
-- **正**: syllabuses, octopuses
-- **誤**: syllabi, octopi
+- **正**: s-sywwabuses, (U ﹏ U) octopuses
+- **誤**: sywwabi, (˘ω˘) octopi
 
 ### アポストロフィと疑問符
 
-「曲がった」引用符と疑問符を使用しないでください。 MDN では、直線の引用符とアポストロフィのみを使用してください。これは、一貫性のために一方を選択しなければならないからです。曲がった引用符やアポストロフィがコードスニペットの中に入ってくると、インラインのものであっても、読み手はそれらをコピーして貼り付け、動作することを期待してしまうかもしれません（動作しないでしょう）。
+「曲がった」引用符と疑問符を使用しないでください。 m-mdn では、直線の引用符とアポストロフィのみを使用してください。これは、一貫性のために一方を選択しなければならないからです。曲がった引用符やアポストロフィがコードスニペットの中に入ってくると、インラインのものであっても、読み手はそれらをコピーして貼り付け、動作することを期待してしまうかもしれません（動作しないでしょう）。
 
-- **正**: Please don't use "curly quotes."
-- **誤**: Please don&rsquo;t use &ldquo;curly quotes.&rdquo;
+- **正**: pwease don't u-use "cuwwy quotes."
+- **誤**: pwease d-don&wsquo;t use &wdquo;cuwwy quotes.&wdquo;
 
 ### カンマ
 
@@ -310,105 +310,105 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 - **導入節の後**: 導入節は従属節で、通常、文頭に現れます。導入節の後にカンマを使用し、次の独立節と区切ってください。
 
   - 例 1:
-    - **正**: "In this example, you will see how to use a comma."
-    - **誤**: "In this example you will see how to use a comma."
+    - **正**: "in t-this exampwe, (ꈍᴗꈍ) y-you wiww see how to use a comma."
+    - **誤**: "in t-this exampwe y-you wiww see how to use a comma."
   - 例 2:
-    - **正**: "If you are looking for guidelines, you have come to the right place."
-    - **誤**: "If you are looking for guidelines you have come to the right place."
+    - **正**: "if you awe wooking fow guidewines, /(^•ω•^) y-you have come t-to the wight p-pwace."
+    - **誤**: "if you a-awe wooking fow g-guidewines you have come to the w-wight pwace."
   - 例 3:
-    - **正**: "On mobile platforms, you tend to get a numeric keypad for entering data."
-    - **誤**: "On mobile platforms you tend to get a numeric keypad for entering data."
+    - **正**: "on mobiwe pwatfowms, >_< you tend to get a nyumewic keypad f-fow entewing data."
+    - **誤**: "on m-mobiwe pwatfowms you tend to get a nyumewic k-keypad fow entewing d-data."
 
-- **接続詞の前**: シリアルカンマ（「オックスフォードカンマ」とも呼ばれる）は、 3 つ以上の項目が連続する場合に、接続詞の前に現れるカンマのことです。MDN Web Docs では、シリアルカンマを使用してください。また、リストの各項目はカンマで区切ってください。
+- **接続詞の前**: シリアルカンマ（「オックスフォードカンマ」とも呼ばれる）は、 3 つ以上の項目が連続する場合に、接続詞の前に現れるカンマのことです。mdn web docs では、シリアルカンマを使用してください。また、リストの各項目はカンマで区切ってください。
 
-  - **正**: "I will travel on trains, planes, and automobiles."
-  - **誤**: "I will travel on trains, planes and automobiles."
+  - **正**: "i wiww twavew on twains, σωσ p-pwanes, and automobiwes."
+  - **誤**: "i wiww twavew on twains, ^^;; pwanes and automobiwes."
 
-  項目が 2 つだけのリストでは、 "and" と "or" の前にカンマを使用しないでください。
+  項目が 2 つだけのリストでは、 "and" と "ow" の前にカンマを使用しないでください。
 
-  - **正**: "My dog is cute and smart."
-  - **誤**: "My dog is cute, and smart."
+  - **正**: "my dog is kawaii~ and s-smawt."
+  - **誤**: "my dog is kawaii~, 😳 and s-smawt."
 
-  接続詞 "and", "but", "or" が独立した 2 つの節をつなぐ場合は、その前にカンマを使用してください。ただし、接続詞によって文が非常に長くなったり、複雑になったりする場合は、 2 つの文として書き直すことを検討してください。
+  接続詞 "and", >_< "but", "ow" が独立した 2 つの節をつなぐ場合は、その前にカンマを使用してください。ただし、接続詞によって文が非常に長くなったり、複雑になったりする場合は、 2 つの文として書き直すことを検討してください。
 
   - 例 1:
-    - **正**: "You can perform this step, but you need to pay attention to the file setting."
-    - **誤**: "You can perform this step but you need to pay attention to the file setting."
+    - **正**: "you c-can pewfowm this step, -.- but you nyeed to pay attention to the fiwe s-setting."
+    - **誤**: "you c-can pewfowm this step but you nyeed to pay attention to the fiwe s-setting."
   - 例 2:
-    - **正**: "My father is strict but loving."
-    - **誤**: "My father is strict, but loving."
+    - **正**: "my fathew i-is stwict but woving."
+    - **誤**: "my fathew is stwict, UwU but woving."
 
-- **"that" と "which" の前**: 制限節は文の意味にとって不可欠であり、残りの文から設定するためのカンマは必要ありません。制限節は通常 that で始まり、カンマを入れる必要はありません。
+- **"that" と "which" の前**: 制限節は文の意味にとって不可欠であり、残りの文から設定するためのカンマは必要ありません。制限節は通常 t-that で始まり、カンマを入れる必要はありません。
 
-  - **正**: "We have put together a course that includes all the essential information you need to work towards your goal."
-  - **誤**: "We have put together a course, that includes all the essential information you need to work towards your goal."
+  - **正**: "we have put t-togethew a couwse t-that incwudes aww the essentiaw i-infowmation you nyeed to wowk t-towawds youw goaw."
+  - **誤**: "we h-have put t-togethew a couwse, :3 that incwudes a-aww the essentiaw i-infowmation you nyeed to wowk towawds youw goaw."
 
-  非制限節は追加情報を提供するもので、文の意味にとって不可欠なものではありません。非制限節は通常 which で始まり、その前にカンマが必要です。
+  非制限節は追加情報を提供するもので、文の意味にとって不可欠なものではありません。非制限節は通常 w-which で始まり、その前にカンマが必要です。
 
-  - **正**: "You write a policy, which is an allowed list of origins for each feature."
-  - **誤**: "You write a policy which is an allowed list of origins for each feature."
+  - **正**: "you w-wwite a powicy, σωσ w-which is an awwowed wist of owigins fow each f-featuwe."
+  - **誤**: "you wwite a powicy which i-is an awwowed w-wist of owigins fow each featuwe."
 
-- **"such as" の前**: "such as" が非制限節の一部で、残りの文が独立節の場合、"such as" の前にカンマを使用してください。
+- **"such as" の前**: "such as" が非制限節の一部で、残りの文が独立節の場合、"such a-as" の前にカンマを使用してください。
 
-  - **正**: "The Array object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them."
-  - **誤**: "The Array object has methods for manipulating arrays in various ways such as joining, reversing, and sorting them."
+  - **正**: "the a-awway object h-has methods f-fow manipuwating awways in vawious w-ways, >w< such as joining, (ˆ ﻌ ˆ)♡ wevewsing, and sowting them."
+  - **誤**: "the awway object has methods f-fow manipuwating awways in vawious w-ways such as joining, ʘwʘ wevewsing, :3 a-and sowting them."
 
-  以下の例では、"such as" にカンマを使用しない場合について説明しています。ここでは、"such as" を含む節が文の意味にとって不可欠となっています。
+  以下の例では、"such a-as" にカンマを使用しない場合について説明しています。ここでは、"such as" を含む節が文の意味にとって不可欠となっています。
 
-  - **正**: "Web applications are becoming more powerful by adding features such as audio and video manipulation and allowing access to raw data using WebSockets."
-  - **誤**: "Web applications are becoming more powerful by adding features, such as audio and video manipulation, and allowing access to raw data using WebSockets."
+  - **正**: "web a-appwications a-awe becoming m-mowe powewfuw b-by adding featuwes s-such as audio and video manipuwation and awwowing access to waw data using websockets."
+  - **誤**: "web appwications awe b-becoming mowe powewfuw b-by adding f-featuwes, (˘ω˘) such as audio and video m-manipuwation, 😳😳😳 and awwowing access to waw data using websockets."
 
 ### ハイフン
 
 ハイフンを使った複合語は、接頭辞の最後の文字が母音で、かつルートの最初の文字と同じ場合に使用してください。
 
-- **正**: re-elect, co-op, email
-- **誤**: reelect, coop, e&#45;mail
+- **正**: w-we-ewect, rawr x3 co-op, e-emaiw
+- **誤**: weewect, (✿oωo) coop, e-e&#45;maiw
 
 ### 綴り
 
 アメリカ英語の綴りを使用してください。
 
-一般的には、 [Dictionary.com](https://www.dictionary.com/) の最初の項目を使用しますが、その項目が変種の綴りとして記載されていたり、主にアメリカ以外の英語の形で使用されている場合を除きます。
-例えば、 ["behaviour" を検索](https://www.dictionary.com/browse/behaviour)すると、 "Chiefly British" という言葉の後に、アメリカの標準形である ["behavior"](https://www.dictionary.com/browse/behavior) へのリンクが表示されます。変形スペルは使わないようにしましょう。
+一般的には、 [dictionawy.com](https://www.dictionawy.com/) の最初の項目を使用しますが、その項目が変種の綴りとして記載されていたり、主にアメリカ以外の英語の形で使用されている場合を除きます。
+例えば、 ["behaviouw" を検索](https://www.dictionawy.com/bwowse/behaviouw)すると、 "chiefwy bwitish" という言葉の後に、アメリカの標準形である ["behaviow"](https://www.dictionawy.com/bwowse/behaviow) へのリンクが表示されます。変形スペルは使わないようにしましょう。
 
-<!-- cSpell:ignore localise behaviour colour -->
+<!-- cspeww:ignowe w-wocawise b-behaviouw cowouw -->
 
-- **正**: localize, behavior, color
-- **誤**: localise, behaviour, colour
+- **正**: wocawize, (ˆ ﻌ ˆ)♡ behaviow, :3 c-cowow
+- **誤**: w-wocawise, (U ᵕ U❁) behaviouw, cowouw
 
-スペルミスを検出するために [cSpell](https://cspell.org/) がインストールされています。これは毎週実行され、リポジトリー内の[スペルミスのレポート](https://github.com/mdn/content/issues?q=Weekly+spelling+check+is%3Aissue+in%3Atitle)を作成します。次のコマンドで、ローカルで実行することもできます。
+スペルミスを検出するために [cspeww](https://cspeww.owg/) がインストールされています。これは毎週実行され、リポジトリー内の[スペルミスのレポート](https://github.com/mdn/content/issues?q=weekwy+spewwing+check+is%3aissue+in%3atitwe)を作成します。次のコマンドで、ローカルで実行することもできます。
 
 ```bash
-npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
+nypx cspeww --no-pwogwess --gitignowe --config .vscode/cspeww.json "**/*.md"
 ```
 
-[`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries) リポジトリーでは、既定の辞書には含まれない承認済みの単語をコンテナーに格納した複数の単語リストを管理しています。 これらのリストには、有効であるものの、スペルチェッカーによって報告された単語を追加できます。 [`.vscode/cspell.json`](https://github.com/mdn/content/blob/main/.vscode/cspell.json) を参照すると、各辞書に何が含まれているか、およびスペルチェック構成の詳細がわかります。
+[`.vscode/dictionawies`](https://github.com/mdn/content/twee/main/.vscode/dictionawies) リポジトリーでは、既定の辞書には含まれない承認済みの単語をコンテナーに格納した複数の単語リストを管理しています。 これらのリストには、有効であるものの、スペルチェッカーによって報告された単語を追加できます。 [`.vscode/cspeww.json`](https://github.com/mdn/content/bwob/main/.vscode/cspeww.json) を参照すると、各辞書に何が含まれているか、およびスペルチェック構成の詳細がわかります。
 
 ### 用語
 
 以下は、特定の専門用語を使用する際の推奨事項です。
 
-- **HTML 要素**: HTML や XML の要素を参照する場合は、「タグ」ではなく「要素」という用語を使用してください。さらに、要素は角括弧 "<>" で囲み、逆引用符 ( \`) を使用してスタイル設定してください。例えば、逆引用符の中で \<input\> を使用すると、期待通りの `<input>` としてスタイル設定されます。
+- **htmw 要素**: htmw や xmw の要素を参照する場合は、「タグ」ではなく「要素」という用語を使用してください。さらに、要素は角括弧 "<>" で囲み、逆引用符 ( \`) を使用してスタイル設定してください。例えば、逆引用符の中で \<input\> を使用すると、期待通りの `<input>` としてスタイル設定されます。
 
   - **正**: `<span>` 要素
-  - **語**: span タグ
+  - **語**: s-span タグ
 
-  MDN では、 HTML 要素を示すのに [`HTMLElement` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references)を使うこともできます。これは、要素のスタイル設定、角括弧 "<>"、参照ページへのリンクを追加します。
+  m-mdn では、 h-htmw 要素を示すのに [`htmwewement` マクロ](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos#winking_to_pages_in_wefewences)を使うこともできます。これは、要素のスタイル設定、角括弧 "<>"、参照ページへのリンクを追加します。
 
   - **逆引用符の使用**: `<span>`
-  - **マクロの使用**: {{HTMLElement("span")}} （Markdown 内のソース: `\{{HTMLElement("span")}}`）
+  - **マクロの使用**: {{htmwewement("span")}} （mawkdown 内のソース: `\{{htmwewement("span")}}`）
 
-- **parameter と argument**: MDN で推奨する用語は **parameter** です。一貫性のためにできるだけ "argument" の用語は使用しないでください。
+- **pawametew と awgument**: m-mdn で推奨する用語は **pawametew** です。一貫性のためにできるだけ "awgument" の用語は使用しないでください。
 
 - **ユーザーインターフェイス操作**: 一連の作業を記述する際には、命令調でインターフェイスでの操作を指示してください。ユーザーインターフェイスの要素をラベルと種類ではっきりと指定してください。
 
-  - **正**: "Click the Edit button."
-  - **誤**: "Click Edit."
+  - **正**: "cwick t-the edit button."
+  - **誤**: "cwick e-edit."
 
 ### 能動態と受動態
 
-能動態が一般的には好ましいですが、MDN の堅苦しくない雰囲気から考えると受動態も問題ありません。
+能動態が一般的には好ましいですが、mdn の堅苦しくない雰囲気から考えると受動態も問題ありません。
 ただし、整合を取るようにしてください。
 
 ## ページの構成要素
@@ -418,7 +418,7 @@ npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
 - [サンプルコード](#サンプルコード)
 - [相互参照（リンク）](#相互参照（リンク）)
 - [外部リンク](#外部リンク)
-- [短縮 URL](#短縮_url)
+- [短縮 u-uww](#短縮_uww)
 - [見出しレベル](#見出しレベル)
 - [画像やその他のメディア](#画像やその他のメディア)
 - [リスト](#リスト)
@@ -429,93 +429,93 @@ npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
 
 ### サンプルコード
 
-MDN Web Docs のページには、1 つ以上のサンプルコードを含めることができます。MDN Web Docs のサンプルコードを書く際に、以下の一覧にあるようなことを推奨します。
+mdn web docs のページには、1 つ以上のサンプルコードを含めることができます。mdn web d-docs のサンプルコードを書く際に、以下の一覧にあるようなことを推奨します。
 
 - それぞれのサンプルコードには、以下を載せてください。
-  - **見出し**: サンプルコードで示されるシナリオを記述するための短い `###` (`<H3>`) の見出し。例：「オフセット印刷の使用」、「前のレイヤーのスタイルに戻す」。
-  - **説明**: サンプルコードの前に、読者の注意を喚起するために例の仕様を記述する短い説明文。例えば、「以下の例では、CSS で `base` と `special` という 2 つのカスケードレイヤーが定義されています。」
+  - **見出し**: サンプルコードで示されるシナリオを記述するための短い `###` (`<h3>`) の見出し。例：「オフセット印刷の使用」、「前のレイヤーのスタイルに戻す」。
+  - **説明**: サンプルコードの前に、読者の注意を喚起するために例の仕様を記述する短い説明文。例えば、「以下の例では、css で `base` と `speciaw` という 2 つのカスケードレイヤーが定義されています。」
   - **結果の説明**: サンプルコードの後に、結果やこのサンプルコードがどのように動作するかを記述する説明。
 - 一般的に、サンプルコードはその機能の構文や使用方法を示すだけでなく、ウェブ開発者がその機能を使用したい、または使用する必要があるような目的や状況に光を当てる必要があります。
 - 大きなサンプルコードを作成している場合、それを小さな論理的な部分に分割して、個別に記述できるようにすることが理にかなっている場合があります。
-- [ライブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples)を追加する際、サンプルを含む領域の {{HTMLElement("pre")}} ブロックは、サンプルを実行する前にすべて連結されることを知っておくと役に立ちます。 HTML、CSS、JavaScript の一部または全部を複数の部分に分割し、それぞれに説明や見出しなどを任意に設定することができます。これにより、コードの文書化が非常に強力かつ柔軟になります。
+- [ライブサンプル](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes)を追加する際、サンプルを含む領域の {{htmwewement("pwe")}} ブロックは、サンプルを実行する前にすべて連結されることを知っておくと役に立ちます。 h-htmw、css、javascwipt の一部または全部を複数の部分に分割し、それぞれに説明や見出しなどを任意に設定することができます。これにより、コードの文書化が非常に強力かつ柔軟になります。
 
-MDN Web Docs のサンプルコードをどのようにスタイルまたは整形するかについては、[サンプルコードのスタイル設定のガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)を参照してください。<!--リンク修正予定-->
+mdn web d-docs のサンプルコードをどのようにスタイルまたは整形するかについては、[サンプルコードのスタイル設定のガイドライン](/ja/docs/mdn/wwiting_guidewines/code_stywe_guide)を参照してください。<!--リンク修正予定-->
 
 ### 相互参照（リンク）
 
-MDN で他のページやページの節のタイトルで参照する場合、リンクテキストでは文章の大文字小文字表記に従ってください（ページや節ののタイトルと同じです）。リンク先のページタイトルや節のタイトルと異なっていても、リンクテキストでは文章の大文字小文字表記を使用してください（ページタイトルや節タイトルで使用している大文字小文字表記が間違っている可能性があります）。リンクテキストに引用符を使用しないでください。 MDN でページをタイトルで参照するには、以下のスタイル設定を使用してください。
+mdn で他のページやページの節のタイトルで参照する場合、リンクテキストでは文章の大文字小文字表記に従ってください（ページや節ののタイトルと同じです）。リンク先のページタイトルや節のタイトルと異なっていても、リンクテキストでは文章の大文字小文字表記を使用してください（ページタイトルや節タイトルで使用している大文字小文字表記が間違っている可能性があります）。リンクテキストに引用符を使用しないでください。 mdn でページをタイトルで参照するには、以下のスタイル設定を使用してください。
 
-- **正**: [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)ガイドを参照してください。
-- **語**: 「[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)」ガイドを参照してください。
+- **正**: [フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)ガイドを参照してください。
+- **語**: 「[フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)」ガイドを参照してください。
 
 次のように、ページの節にリンクする場合も同様のスタイル設定を行ってください。
 
-- **正**: 詳しくは、_メモリー管理_ ページの [JavaScript での割り当て](/ja/docs/Web/JavaScript/Guide/Memory_management#javascript_での割り当て)の節を参照してください。
+- **正**: 詳しくは、_メモリー管理_ ページの [javascwipt での割り当て](/ja/docs/web/javascwipt/guide/memowy_management#javascwipt_での割り当て)の節を参照してください。
 
-リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (below) の言葉を用いて、その節の場所を示唆することができます。
+リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (bewow) の言葉を用いて、その節の場所を示唆することができます。
 
-- **正**: この概念は下記の[アクセシビリティ](/ja/docs/Web/CSS/gradient/repeating-conic-gradient#アクセシビリティ)の節で詳しく説明しています。
+- **正**: この概念は下記の[アクセシビリティ](/ja/docs/web/css/gwadient/wepeating-conic-gwadient#アクセシビリティ)の節で詳しく説明しています。
 
 文章の一部を記事や記事の節にリンクすることができます。リンクテキストとして説明的な語句を使用し、リンクされているページに十分なコンテキストを提供するように注意してください。
 
-- **正**: 詳しくは[フレックスアイテムの並べ替え](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)を参照してください。
-- **語**: 詳しくは[こちら](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)をクリックしてください。
-- **語**: 詳しくは[この記事](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)を読んでください。
+- **正**: 詳しくは[フレックスアイテムの並べ替え](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)を参照してください。
+- **語**: 詳しくは[こちら](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)をクリックしてください。
+- **語**: 詳しくは[この記事](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)を読んでください。
 
-MDN で、リファレンスページにリンクするもう一つの方法はマクロを使用することです。これらのマクロは[よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)ページに記述されています。例えば、 HTML 要素のリファレンスページにリンクするには `HTMLElement` マクロを使用し、 CSS プロパティのリファレンスページにリンクするには `CSSxRef` マクロを使用します。
+mdn で、リファレンスページにリンクするもう一つの方法はマクロを使用することです。これらのマクロは[よく使われるマクロ](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos#リファレンスのページへのリンク)ページに記述されています。例えば、 h-htmw 要素のリファレンスページにリンクするには `htmwewement` マクロを使用し、 css プロパティのリファレンスページにリンクするには `cssxwef` マクロを使用します。
 
 リファレンスページ、用語集ページ、ガイドの終わりにある[関連情報](#関連情報)の節でも、同様の相互参照ガイドラインに従っています。
 
 ### 外部リンク
 
-MDN Web Docs では、特定の状況下において外部リンクを許可しています。MDN Web Docs で外部リンクを載せてよいかどうか判断するには、この節で記述されているガイドラインを使用してください。外部リンクを追加するためのプルリクエストは、ここで記述するガイドラインを満たしていない場合、拒否されます。
+m-mdn web d-docs では、特定の状況下において外部リンクを許可しています。mdn web docs で外部リンクを載せてよいかどうか判断するには、この節で記述されているガイドラインを使用してください。外部リンクを追加するためのプルリクエストは、ここで記述するガイドラインを満たしていない場合、拒否されます。
 
-MDN の[ウェブ開発の学習](/ja/docs/Learn_web_development)コンテンツに外部リンクを追加することを検討している場合は、[ウェブ開発の学習の執筆ガイドライン > 外部リンクと埋め込み](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)も併せてお読みください。
+m-mdn の[ウェブ開発の学習](/ja/docs/weawn_web_devewopment)コンテンツに外部リンクを追加することを検討している場合は、[ウェブ開発の学習の執筆ガイドライン > 外部リンクと埋め込み](/ja/docs/mdn/wwiting_guidewines/weawning_content#外部リンクと埋め込み)も併せてお読みください。
 
 一般的に、外部リンクを追加することを検討している場合、以下のようなリスクが最小限であることを確認する必要があります。
 
 - リンク切れまたは古くなったリンク
 - 推奨しているように見えること（特に商用製品またはサービスについて）
-- MDN Web Docs を使用してスパムを広めようとすること。
+- mdn web docs を使用してスパムを広めようとすること。
 - リンクの宛先を難読化するショートリンク
 
-> [!NOTE]
-> 外部リンクを追加する前に、MDN Web Docs 内のコンテンツを相互参照することを検討してください。内部リンクはメンテナンスが簡単で、MDN Web Docs の全体が読者にとってより価値のあるものになります。
+> [!note]
+> 外部リンクを追加する前に、mdn w-web docs 内のコンテンツを相互参照することを検討してください。内部リンクはメンテナンスが簡単で、mdn w-web docs の全体が読者にとってより価値のあるものになります。
 
 - **良質な外部リンク**: 良い外部リンクは、関連性があり、持続性があり、広く信頼されているリソースに読者を連れて行きます。以下のような外部コンテンツへのリンクを設定することをお勧めします。
 
-  - 固有の、または不可欠なもの（例: IETF の RFC など）
+  - 固有の、または不可欠なもの（例: i-ietf の wfc など）
   - 帰属表示、引用、謝辞のために必要なもの（例: クリエイティブ・コモンズの帰属表示の一部など）
-  - MDN Web Docs 自体にそのようなコンテンツを組み込むよりも、トピックのために保守される可能性が高い（例: ベンダーのリリースノート）
-  - MDN Web Docs 自体のように、オープンソースまたはコミュニティ主導であること。
+  - mdn web docs 自体にそのようなコンテンツを組み込むよりも、トピックのために保守される可能性が高い（例: ベンダーのリリースノート）
+  - mdn web docs 自体のように、オープンソースまたはコミュニティ主導であること。
 
 - **不適切な外部リンク**: 関連性、保守性、アクセシビリティに欠け、読者にとって障害となるようなリンクは避けましょう。以下のような外部コンテンツへのリンクは避けてください。
 
   - 一般的なもの、固有性がないもの（例: 関連文書ではなく、ベンダーのホームページなど）
   - 一時的なもの、またはメンテナンスされていないもの（例: 一度限りのお知らせなど）
-  - 自分へのリンクまたは自己宣伝（例: MDN Web Docs から作者自身の作品を削除した場合）
+  - 自分へのリンクまたは自己宣伝（例: m-mdn web docs から作者自身の作品を削除した場合）
   - 有料（例: 趣味や学生、低所得国の読者には手が届かない高額なコースなど）
   - アクセシビリティのないもの（例: キャプションのない動画など）
 
-- **自己宣伝やスパム行為に該当するリンク**: 個人的なブログ記事、カンファレンスでの講演、GitHub リポジトリーには価値がありますが、自身のリソースへのリンクは利益相反があるように見えてしまう可能性があります。ビジネスや個人的なつながりがあるリソースにリンクする前に、よく考えてください。
+- **自己宣伝やスパム行為に該当するリンク**: 個人的なブログ記事、カンファレンスでの講演、github リポジトリーには価値がありますが、自身のリソースへのリンクは利益相反があるように見えてしまう可能性があります。ビジネスや個人的なつながりがあるリソースにリンクする前に、よく考えてください。
 
-  > [!NOTE]
-  > リンク先とビジネスや個人的な関係がある場合は、プルリクエストでその関係を開示する必要があります。そうしないと、MDN Web Docs への継続的な参加が危ぶまれる可能性があります。
+  > [!note]
+  > リンク先とビジネスや個人的な関係がある場合は、プルリクエストでその関係を開示する必要があります。そうしないと、mdn web docs への継続的な参加が危ぶまれる可能性があります。
 
 そのようなリンクが適切である場合もあります。例えば、あなたがある仕様書の編集者で、その仕様書に関連する文書化に貢献している場合、その仕様書へのリンクは期待されるものであり、許容されるものです。しかし、あなたはあなたとリンクの関係を明らかにしなければなりません。
 
-### 短縮 URL
+### 短縮 u-uww
 
-URL 短縮ツール（TinyURL や Bitly など）は、長いリンクを小さくて覚えやすい URL （「ショートリンク」とも呼ばれます）に短縮するのに最適です。しかし、これらは URL の宛先が分かりにくくなります。さらに、一部の短縮ツールでは、作成後に出力先を変更することができ、その機能を悪意のある目的に利用することができます。
+uww 短縮ツール（tinyuww や b-bitwy など）は、長いリンクを小さくて覚えやすい uww （「ショートリンク」とも呼ばれます）に短縮するのに最適です。しかし、これらは u-uww の宛先が分かりにくくなります。さらに、一部の短縮ツールでは、作成後に出力先を変更することができ、その機能を悪意のある目的に利用することができます。
 
-サードパーティー（ユーザー生成）の URL 短縮ツールで作成したリンクは使用しないでください。例えば、 `https://myshort.link/foobar` がランダムなユーザーによって生成された短い URL で、 `https://example.com/somelongURL/details/show?page_id=foobar` にリダイレクトする場合は、長い `example.com` URL の方を使用してください。
+サードパーティー（ユーザー生成）の uww 短縮ツールで作成したリンクは使用しないでください。例えば、 `https://myshowt.wink/foobaw` がランダムなユーザーによって生成された短い u-uww で、 `https://exampwe.com/somewonguww/detaiws/show?page_id=foobaw` にリダイレクトする場合は、長い `exampwe.com` u-uww の方を使用してください。
 
-一方で、リンク先の URL を管理している組織によって管理されている短縮ツールは推奨されます。 `https://bugzil.la` は Mozilla が自分自身で運営しており、同じく Mozilla が所有するドメインである `https://bugzilla.mozilla.org/` にリダイレクトする URL 短縮ツールです。この用途では短い方の URL を使用してください。例えば、 `https://bugzil.la/1682349` を `https://bugzilla.mozilla.org/show_bug.cgi?id=1682349` の代わりに使用してください。
+一方で、リンク先の uww を管理している組織によって管理されている短縮ツールは推奨されます。 `https://bugziw.wa` は moziwwa が自分自身で運営しており、同じく m-moziwwa が所有するドメインである `https://bugziwwa.moziwwa.owg/` にリダイレクトする uww 短縮ツールです。この用途では短い方の uww を使用してください。例えば、 `https://bugziw.wa/1682349` を `https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1682349` の代わりに使用してください。
 
 ### 見出しレベル
 
 新しい段落で新しい節を開始するとき、ヘッダーを追加する必要があります。
-markdown の見出しレベルをスキップすることなく、小さい順に使用してください。 `##`, 次に `###`, そして次に `###` という具合にです。これらはそれぞれ [HTML 見出しタグ](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)の `<h2>`、`<h3>`、`<h4>` タグに翻訳されます。
+mawkdown の見出しレベルをスキップすることなく、小さい順に使用してください。 `##`, ^^;; 次に `###`, mya そして次に `###` という具合にです。これらはそれぞれ [htmw 見出しタグ](/ja/docs/web/htmw/wefewence/ewements/heading_ewements)の `<h2>`、`<h3>`、`<h4>` タグに翻訳されます。
 
 `#` はページタイトルとして予約されているため、`##` が許可される最も高いレベルです。
 3 レベルより上のヘッダーを追加しないことをお勧めします。もし、4 レベル目のヘッダーを追加する必要性を感じたら、この記事をいくつかの小さな記事に分割し、ランディングページを設けることを検討してください。あるいは、4 レベル目のヘッダーレベルを避けるために、情報を箇条書きで表示することができないか確認してください。
@@ -524,18 +524,18 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
 - **単一のサブセクションを作らないでください。** トピックを 1 つのサブトピックに分割しないでください。
   2 つ以上のサブ見出しを用意するか、まったくないかのどちらかです。
-- **見出しの中でインラインスタイル、クラス、マクロを使わないでください。** ただし、コード用語を示すためにバッククオートを使用することはできます（例: "Using `FooBar` interface" など）。
-- **"bumping heads" を作らないようにしましょう**。これらは、見出しの後にすぐに小見出しが続き、その間にコンテンツテキストがない状態です。
+- **見出しの中でインラインスタイル、クラス、マクロを使わないでください。** ただし、コード用語を示すためにバッククオートを使用することはできます（例: "using `foobaw` i-intewface" など）。
+- **"bumping h-heads" を作らないようにしましょう**。これらは、見出しの後にすぐに小見出しが続き、その間にコンテンツテキストがない状態です。
   これは見栄えが悪く、読者には外側の節の最初に何の説明もないままになってしまいます。
 
 ### 画像やその他のメディア
 
 ページ内に画像やその他のメディアを載せる場合は、以下のガイドラインに従ってください。
 
-- メディアのライセンスが使用することを許可していることを確認してください。 [CC0](https://creativecommons.org/public-domain/cc0/) のようなとても寛容なライセンスを有するメディア、または少なくとも私たちの一般的なコンテンツライセンス - [クリエイティブ・コモンズ - 表示・継承ライセンス](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA) と互換性のあるものを使用するようにしましょう。
+- メディアのライセンスが使用することを許可していることを確認してください。 [cc0](https://cweativecommons.owg/pubwic-domain/cc0/) のようなとても寛容なライセンスを有するメディア、または少なくとも私たちの一般的なコンテンツライセンス - [クリエイティブ・コモンズ - 表示・継承ライセンス](https://cweativecommons.owg/wicenses/by-sa/2.5/) (cc-by-sa) と互換性のあるものを使用するようにしましょう。
 - 画像の場合、<https://tinypng.com> または <https://imageoptim.com> を通すとページが軽量化されます。
-- `SVG` の場合は、 [SVGOMG](https://jakearchibald.github.io/svgomg/) を通してコードを実行し、 `SVG` ファイルの最後に空行があることを確認してください。
-- すべての画像に[説明的な `alt` テキストを入れる](/ja/docs/MDN/Writing_guidelines/Howto/Images_media#画像に代替テキストを追加)必要があります。
+- `svg` の場合は、 [svgomg](https://jakeawchibawd.github.io/svgomg/) を通してコードを実行し、 `svg` ファイルの最後に空行があることを確認してください。
+- すべての画像に[説明的な `awt` テキストを入れる](/ja/docs/mdn/wwiting_guidewines/howto/images_media#画像に代替テキストを追加)必要があります。
 
 ### リスト
 
@@ -560,8 +560,8 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
   > このシナリオでは、以下の色関連のプロパティが役立ちます。
   >
-  > - propertyA: 背景色を設定
-  > - propertyB: テキストに影を追加
+  > - pwopewtya: 背景色を設定
+  > - p-pwopewtyb: テキストに影を追加
 
   リストアイテムが3語以下の場合でも、1つ以上のリストアイテムが完全に文である場合は、すべてのリストアイテムの後にピリオドを使用 してください。しかし、可能な限り、リスト内のすべてのアイテムについて同じ構造に従ってください。すべてのリストアイテムが完全な文または句であることを確認してください。
 
@@ -571,10 +571,10 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
   > 番号付きリストを正しく構成するには、次のようにします。
   >
-  > 1. 冒頭に見出しや簡単な段落を設け、説明文を紹介します。説明を始める前に、ユーザーにコンテキストを提供することが重要です。
-  > 2. 手順の作成を開始し、各ステップを独自の番号付きアイテムで管理します。
+  > 1. 😳😳😳 冒頭に見出しや簡単な段落を設け、説明文を紹介します。説明を始める前に、ユーザーにコンテキストを提供することが重要です。
+  > 2. OwO 手順の作成を開始し、各ステップを独自の番号付きアイテムで管理します。
   >    手順の作成に取り掛かり、各手順に番号を振ってください。手順がかなり広範囲に及ぶ可能性があるため、句読点を正しく使用して明確に記述することが重要です。
-  > 3. 手順が終わったら、番号のついたリストの後に、完了時に期待される結果について、簡単な要約や説明を書きます。
+  > 3. rawr 手順が終わったら、番号のついたリストの後に、完了時に期待される結果について、簡単な要約や説明を書きます。
 
   これは、締めくくりの説明の書き方の例です。
 
@@ -584,40 +584,40 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
 ### 関連情報の節
 
-MDN Web Docs のほとんどのガイド、リファレンスページ、そして用語集ページには、記事の終わりに _関連情報_ 節があります。この節には MDN 内の関連トピックへの [相互参照](#相互参照（リンク）)があり、時には関連する外部記事へのリンクもあります。例えば、この例は `@layer` ページの[関連情報の節](/ja/docs/Web/CSS/@layer#関連情報)です。
+mdn web docs のほとんどのガイド、リファレンスページ、そして用語集ページには、記事の終わりに _関連情報_ 節があります。この節には m-mdn 内の関連トピックへの [相互参照](#相互参照（リンク）)があり、時には関連する外部記事へのリンクもあります。例えば、この例は `@wayew` ページの[関連情報の節](/ja/docs/web/css/@wayew#関連情報)です。
 
-一般的に、関連情報の節のリンクは[箇条書きリスト](#リスト)形式で、リストの各アイテムを句として表示します。しかし、 MDN の[ウェブ開発を学習する](/ja/docs/Learn_web_development)の章では、関連情報の節は[定義リスト](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定義リスト)形式に従います。
+一般的に、関連情報の節のリンクは[箇条書きリスト](#リスト)形式で、リストの各アイテムを句として表示します。しかし、 m-mdn の[ウェブ開発を学習する](/ja/docs/weawn_web_devewopment)の章では、関連情報の節は[定義リスト](/ja/docs/mdn/wwiting_guidewines/howto/mawkdown_in_mdn#定義リスト)形式に従います。
 
-MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加または更新する際は、以下のガイドラインに注意してください。
+m-mdn web docs 全体の一貫性を保つため、関連情報の節を追加または更新する際は、以下のガイドラインに注意してください。
 
 #### リンクテキスト
 
-- リンクテキストはリンク先のページや節のタイトルと同じでなければなりません。例えば、この [ARIA](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes) ページのページタイトル「ARIA の状態とプロパティ」へのリンクテキストは次のようになります。
-  - **正**: [ARIA の状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)
-- リンクテキストは大文字小文字は、リンク先のページタイトルやセクションタイトルと異なっていても、文の大文字小文字を使用してください。ページや節のタイトルで使用している用途が正しくない可能性があります。例えば、 [Quirks Mode](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) ページへのリンクテキストを正しい大文字小文字で書くと、次のようになります。
-  - **正**: [Quirks mode](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
-- 外部リンクの場合も、対象とする記事ページのケーシングが異なっていても、文の大文字小文字を使用してください。これは MDN Web Docs 全体の一貫性を確実に保持するためです。書籍名等は例外です。
-- MDN では、[リファレンスページへのリンク](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)の節で説明されているように、オプションでマクロを使用することができます。マクロを使用すると、次の例に示すように、リンクテキストのキーワードにコード形式が追加されます。
-- リンクリストアイテムの先頭に冠詞 ("A", "An", "The") は必要ありません。リストアイテムの終わりには句読点は要求されません。
-  - **正**: [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
-  - **語**: The [`revert-layer`](/ja/docs/Web/CSS/revert-layer) keyword.
-  - **正**: [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API)
-  - **語**: The [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API)
-- 上の例で示したように、ページタイトルや節タイトルでは書式を使用しない場合でも、リンクテキストのキーワードやリテラルの部分にバックティック (\`) を使用してコード書式化を追加してください。例えば、 "Array() constructor" というページタイトルの場合、リンクテキストは [`Array()` constructor](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) となります。
+- リンクテキストはリンク先のページや節のタイトルと同じでなければなりません。例えば、この [awia](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes) ページのページタイトル「awia の状態とプロパティ」へのリンクテキストは次のようになります。
+  - **正**: [awia の状態とプロパティ](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes)
+- リンクテキストは大文字小文字は、リンク先のページタイトルやセクションタイトルと異なっていても、文の大文字小文字を使用してください。ページや節のタイトルで使用している用途が正しくない可能性があります。例えば、 [quiwks mode](/ja/docs/web/htmw/guides/quiwks_mode_and_standawds_mode) ページへのリンクテキストを正しい大文字小文字で書くと、次のようになります。
+  - **正**: [quiwks mode](/ja/docs/web/htmw/guides/quiwks_mode_and_standawds_mode)
+- 外部リンクの場合も、対象とする記事ページのケーシングが異なっていても、文の大文字小文字を使用してください。これは mdn web docs 全体の一貫性を確実に保持するためです。書籍名等は例外です。
+- mdn では、[リファレンスページへのリンク](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos#リファレンスのページへのリンク)の節で説明されているように、オプションでマクロを使用することができます。マクロを使用すると、次の例に示すように、リンクテキストのキーワードにコード形式が追加されます。
+- リンクリストアイテムの先頭に冠詞 ("a", XD "an", "the") は必要ありません。リストアイテムの終わりには句読点は要求されません。
+  - **正**: [`wevewt-wayew`](/ja/docs/web/css/wevewt-wayew)
+  - **語**: the [`wevewt-wayew`](/ja/docs/web/css/wevewt-wayew) keywowd. (U ﹏ U)
+  - **正**: [htmw dom api](/ja/docs/web/api/htmw_dom_api)
+  - **語**: the [htmw dom api](/ja/docs/web/api/htmw_dom_api)
+- 上の例で示したように、ページタイトルや節タイトルでは書式を使用しない場合でも、リンクテキストのキーワードやリテラルの部分にバックティック (\`) を使用してコード書式化を追加してください。例えば、 "awway() constwuctow" というページタイトルの場合、リンクテキストは [`awway()` constwuctow](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/awway) となります。
 
 #### 説明的なテキスト
 
 - リンクを囲む説明文は最小限にしてください。説明文がある場合は、リンクテキストとコロンの後に追加します。説明文は語尾に句読点をつけず、句として記述してください。リンクのリストを拾いやすくするため、リンクテキストはすべて先頭に記述してください。
-  - **正**: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: チェックボックスをスタイル設定するための CSS セレクター
+  - **正**: {{cssxwef(":checked")}}, (˘ω˘) {{cssxwef(":indetewminate")}}: チェックボックスをスタイル設定するための css セレクター
 - 一連のアイテムの最後の前に接続詞 "and" を使用しないでください。
-  - **正**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: その他の色に関するプロパティ
-- 外部リンクについては、可能かつ適切な限り、ウェブサイトと発行年または最終更新年（括弧内）を指定することを目指しましょう。この情報を前もって提供することで、読者はリンクをクリックしたときにたどり着く先について明確な考えを持つことができます。発行日または最終更新日は、読者がリンク先の記事の関連性を評価する際のガイドになりますし、 MDN 管理者が長い間更新されていない記事へのリンクをレビューする際にも役立ちます。例えばウィキペディアの記事へのリンクを指定する場合、公開・更新日は無視してもかまいません。次のリストアイテムは、外部記事の [Top-level await](https://v8.dev/features/top-level-await) へのリンクを関連情報セクションに、出典と年の情報とともに追加する例です。
-  - **正**: [Top-level await](https://v8.dev/features/top-level-await) (v8.dev, 2019)
-- 書籍への外部リンクの場合、著者名を提供することもできます。この例は、下記の[Further reading](#言語、文法、綴り)節にいくつかあります。ブログ記事や GitHub リポジトリーへのリンクの場合は、著者名を追加するのは控えましょう。
+  - **正**: {{cssxwef("backgwound-cowow")}}, UwU {{cssxwef("bowdew-cowow")}}, >_< {{cssxwef("cowow")}}, σωσ {{cssxwef("cawet-cowow")}}, 🥺 {{cssxwef("cowumn-wuwe-cowow")}}, 🥺 {{cssxwef("outwine-cowow")}}, ʘwʘ {{cssxwef("text-decowation-cowow")}}, :3 {{cssxwef("text-emphasis-cowow")}}, (U ﹏ U) {{cssxwef("text-shadow")}}: その他の色に関するプロパティ
+- 外部リンクについては、可能かつ適切な限り、ウェブサイトと発行年または最終更新年（括弧内）を指定することを目指しましょう。この情報を前もって提供することで、読者はリンクをクリックしたときにたどり着く先について明確な考えを持つことができます。発行日または最終更新日は、読者がリンク先の記事の関連性を評価する際のガイドになりますし、 m-mdn 管理者が長い間更新されていない記事へのリンクをレビューする際にも役立ちます。例えばウィキペディアの記事へのリンクを指定する場合、公開・更新日は無視してもかまいません。次のリストアイテムは、外部記事の [top-wevew await](https://v8.dev/featuwes/top-wevew-await) へのリンクを関連情報セクションに、出典と年の情報とともに追加する例です。
+  - **正**: [top-wevew a-await](https://v8.dev/featuwes/top-wevew-await) (v8.dev, (U ﹏ U) 2019)
+- 書籍への外部リンクの場合、著者名を提供することもできます。この例は、下記の[fuwthew weading](#言語、文法、綴り)節にいくつかあります。ブログ記事や github リポジトリーへのリンクの場合は、著者名を追加するのは控えましょう。
 
 #### リンクの順序
 
-- MDNページへのリンクはリファレンスページを最初に、関連ガイドやチュートリアルページへのリンクを後に並べます。この推奨されている順序は、主にリスト内のアイテムを見つけやすくするためです。
+- m-mdnページへのリンクはリファレンスページを最初に、関連ガイドやチュートリアルページへのリンクを後に並べます。この推奨されている順序は、主にリスト内のアイテムを見つけやすくするためです。
 - 内部リンクと外部リンクが混在している場合は、内部リンクを最初に掲載し、次に外部リンクを掲載します。
 - 内部リンクと外部リンクの各グループの中では、アルファベット順か単純から高度な順のいずれかに従ってください。
 
@@ -627,22 +627,22 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 ランディングページの冒頭には、トピックや技術を記述する 1 つまたは 2 つの段落を設け、次に、各ページの説明を含むサブページのリストを提供する必要があります。
 いくつかのマクロを使用すると、リストへのページの挿入を自動化することができます。
 
-例えば、[JavaScript](/ja/docs/Web/JavaScript) ガイド を見てみましょう。以下のような構造になっています。
+例えば、[javascwipt](/ja/docs/web/javascwipt) ガイド を見てみましょう。以下のような構造になっています。
 
-- [JavaScript/Guide](/ja/docs/Web/JavaScript/Guide) – メインの目次となるページ
-- [JavaScript/Guide/JavaScript Overview](/ja/docs/Web/JavaScript/Guide/Introduction)
-- [JavaScript/Guide/Functions](/ja/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [javascwipt/guide](/ja/docs/web/javascwipt/guide) – メインの目次となるページ
+- [javascwipt/guide/javascwipt o-ovewview](/ja/docs/web/javascwipt/guide/intwoduction)
+- [javascwipt/guide/functions](/ja/docs/web/javascwipt/guide/functions)
+- [javascwipt/guide/detaiws of t-the object modew](/ja/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)
 
 記事を階層の一番上に置くと、サイトの動作が遅くなり、検索やサイトのナビゲーションが効かなくなるので、なるべく避けましょう。
 
 ### スラッグ
 
-ページの上部に表示されるページタイトルは、ページの URL の `<locale>/docs/` に続く部分であるページの「スラッグ」と異なるものにすることができます。スラッグを定義する際には、以下のガイドラインを念頭に置いてください。
+ページの上部に表示されるページタイトルは、ページの uww の `<wocawe>/docs/` に続く部分であるページの「スラッグ」と異なるものにすることができます。スラッグを定義する際には、以下のガイドラインを念頭に置いてください。
 
 - スラッグは短くしましょう。新しいレベルの階層を作成する場合、スラッグの中の新しいレベルの成分は 1 語か 2 語だけにします。
-- スラッグでは、複数の単語からなる成分にはアンダースコアを使用してください。例えば、 `Basic_HTML_syntax` が`/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax` で使用されています。
-- スラッグでも、それぞれの成分の大文字小文字を使い分けるにあたって、前述の例の `Basic_HTML_syntax` のように文スタイルの大文字化を使用してください。
+- スラッグでは、複数の単語からなる成分にはアンダースコアを使用してください。例えば、 `basic_htmw_syntax` が`/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax` で使用されています。
+- スラッグでも、それぞれの成分の大文字小文字を使い分けるにあたって、前述の例の `basic_htmw_syntax` のように文スタイルの大文字化を使用してください。
 
 ### タイトル
 
@@ -652,8 +652,8 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 
 - **タイトルの大文字小文字の使用**: ページタイトルセクションの見出しには、文スタイルの大文字化（文頭と固有名詞の始めの 1 字だけを大文字にする）を用いてください。一般的な見出しスタイルの大文字化は用いません。
 
-  - **正**: "A new method for creating JavaScript rollovers"
-  - **誤**: "A New Method for Creating JavaScript Rollovers"
+  - **正**: "a nyew m-method fow cweating j-javascwipt wowwuvws"
+  - **誤**: "a n-nyew method f-fow cweating j-javascwipt wowwuvws"
 
   この表記ルールが確立するより前の古い記事が多くあります。必要により気軽に書き換えてください。少しずつ対応していきます。
 
@@ -664,34 +664,34 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
   - **高いところから低いところへ**。[見出しレベル](#見出しレベル)の節で述べたように、レベルを飛ばすことなく、上位の `##` から下位の `##` へと進んでください。より広い入門的なタイトルにはより高いレベルの見出しを使用し、より低いレベルの見出しに進むにつれて、より具体的なタイトルを使用するようにしてください。
   - **論理的にグループ化する**。関連するすべての項が、より高いレベルの見出しの下に論理的にまとめられていることを確認してください。この作業では、各セクションのタイトルに名前を付けると便利です。
   - **タイトルを短くする**。タイトルを短くすると、テキストや目次で拾いやすくなります。
-  - **タイトルは具体的なものにする**。タイトルは、この章で使用される具体的な情報を伝えるために使用します。例えば、 HTML 要素を紹介する部分では、「導入」や「概要」ではなく、「HTML 要素」というタイトルを使用してください。
+  - **タイトルは具体的なものにする**。タイトルは、この章で使用される具体的な情報を伝えるために使用します。例えば、 h-htmw 要素を紹介する部分では、「導入」や「概要」ではなく、「htmw 要素」というタイトルを使用してください。
   - **タイトルは焦点を絞る**。タイトルは、 1 つの目的、この部分に応じた 1 つのアイデアや概念を伝えるために使用します。そのため、タイトルにはできるだけ、接続詞の「および」を使用しないようにしましょう。
-  - **並列構造を使用する**。 同じ見出しレベルのタイトルには類似した言葉を使用してください。例えば、 `###` 見出しレベルのタイトルが "Installing" のように "-ing" で終わる単語、つまり動名詞を使用している場合、その見出しレベルのタイトルはすべて動名詞を使用して書くようにしてください。タイトルが "Use", "Configure" などの命令形動詞で始まる場合は、その見出しレベルのタイトルはすべて命令形動詞で始まるように書いてください。
+  - **並列構造を使用する**。 同じ見出しレベルのタイトルには類似した言葉を使用してください。例えば、 `###` 見出しレベルのタイトルが "instawwing" のように "-ing" で終わる単語、つまり動名詞を使用している場合、その見出しレベルのタイトルはすべて動名詞を使用して書くようにしてください。タイトルが "use", mya "configuwe" などの命令形動詞で始まる場合は、その見出しレベルのタイトルはすべて命令形動詞で始まるように書いてください。
   - **下層部の見出しに共通する語を使わない**: 上位の見出しのテキストを下位の見出しで繰り返さない。例えば、「カンマ」というタイトルのコーナーでは、サブセクションのタイトルを「導入句の後のカンマ」ではなく、「導入句の後」と名付けてください。
   - **冠詞で始めない**。 タイトルを冠詞「a」、「an」、「the」で始めるのは避けてください。
   - **導入情報を追加する**。タイトルの後で、この部分で取り上げられる内容を説明するために、いくつかの導入テキストを追加してください。
 
 ## 関連情報
 
-- [サンプルコードを書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)
-- [HTML コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
-- [CSS コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
-- [JavaScript コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
-- [シェルプロンプトコードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
+- [サンプルコードを書くガイドライン](/ja/docs/mdn/wwiting_guidewines/code_stywe_guide)
+- [htmw コードの例を書くガイドライン](/ja/docs/mdn/wwiting_guidewines/code_stywe_guide/htmw)
+- [css コードの例を書くガイドライン](/ja/docs/mdn/wwiting_guidewines/code_stywe_guide/css)
+- [javascwipt コードの例を書くガイドライン](/ja/docs/mdn/wwiting_guidewines/code_stywe_guide/javascwipt)
+- [シェルプロンプトコードの例を書くガイドライン](/ja/docs/mdn/wwiting_guidewines/code_stywe_guide/sheww)
 
 ## その他の情報
 
 ### おすすめのスタイルガイド
 
-ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing Style Guide](https://learn.microsoft.com/ja/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.chicagomanualofstyle.org) を参照してください。
+ここで取り扱われていない用法とスタイルについて疑問があれば、 [micwosoft w-wwiting stywe guide](https://weawn.micwosoft.com/ja/stywe-guide/wewcome/) を、それでもダメなら [chicago m-manuaw of stywe](https://www.chicagomanuawofstywe.owg) を参照してください。
 
 ### 言語、文法、綴り
 
 記事の執筆と編集スキルを磨きたければ、以下のリソースが役立つことでしょう。（英語の情報）
 
-- [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
-- [English grammar FAQ](https://websites.umich.edu/~jlawler/aue.html) on alt-usage-english.org
-- [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
-- [Merriam-Webster's Concise Dictionary of English Usage](https://books.google.com/books?id=UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
-- [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)
-- [Style: Lessons in Clarity and Grace](https://books.google.com/books?id=QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)
+- [common ewwows in engwish usage](https://bwians.wsu.edu/common-ewwows-in-engwish-usage/) on bwians.wsu.edu
+- [engwish gwammaw faq](https://websites.umich.edu/~jwawwew/aue.htmw) o-on awt-usage-engwish.owg
+- [engwish wanguage and usage](https://engwish.stackexchange.com/) o-on engwish.stackexchange.com: question a-and answew site fow engwish wanguage usage
+- [mewwiam-webstew's concise dictionawy o-of engwish usage](https://books.googwe.com/books?id=udijaqaaiaaj) o-on googwe.com/books (pubwished 2002): s-schowawwy but usew-fwiendwy, nyaa~~ evidence-based advice; vewy good fow n-nyon-native speakews, (⑅˘꒳˘) especiawwy fow pweposition usage
+- [on wwiting weww](https://www.hawpewcowwins.com/pwoducts/on-wwiting-weww-wiwwiam-zinssew) b-by wiwwiam zinssew on hawpewcowwins.com (pubwished 2016)
+- [stywe: w-wessons in c-cwawity and gwace](https://books.googwe.com/books?id=qjskvgeacaaj) b-by joseph wiwwiams a-and gwegowy cowomb on googwe.com/books (pubwished 2019)

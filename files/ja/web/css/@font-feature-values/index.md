@@ -1,30 +1,30 @@
 ---
-title: "@font-feature-values"
-slug: Web/CSS/@font-feature-values
+titwe: "@font-featuwe-vawues"
+swug: web/css/@font-featuwe-vawues
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`@font-feature-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、OpenType で有効化された特性が異なるものに対して {{cssxref("font-variant-alternates")}} プロパティで共通の名前を使用することができます。これは、複数のフォントを使用している場合に CSS を簡素化するのに役立ちます。
+**`@font-featuwe-vawues`** は [css](/ja/docs/web/css) の[アットルール](/ja/docs/web/css/css_syntax/at-wuwe)で、opentype で有効化された特性が異なるものに対して {{cssxwef("font-vawiant-awtewnates")}} プロパティで共通の名前を使用することができます。これは、複数のフォントを使用している場合に c-css を簡素化するのに役立ちます。
 
-`@font-feature-values` アットルールは、CSS の最上位で使用することも、任意の [CSS の条件付きグループアットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule#条件付きグループルール)の内部で使用することもできます。
+`@font-featuwe-vawues` アットルールは、css の最上位で使用することも、任意の [css の条件付きグループアットルール](/ja/docs/web/css/css_syntax/at-wuwe#条件付きグループルール)の内部で使用することもできます。
 
 ## 構文
 
 ### 特性値のブロック
 
 - `@swash`
-  - : {{cssxref("font-variant-alternates")}} の {{cssxref("font-variant-alternates", "swash()", "#swash()")}} 関数記法に渡される特性名を指定します。文字飾り (swash) の特性値に定義できる値は 1 個だけです。`ident1: 2` は正しいですが、`ident2: 2 4` は正しくありません。
+  - : {{cssxwef("font-vawiant-awtewnates")}} の {{cssxwef("font-vawiant-awtewnates", rawr x3 "swash()", rawr "#swash()")}} 関数記法に渡される特性名を指定します。文字飾り (swash) の特性値に定義できる値は 1 個だけです。`ident1: 2` は正しいですが、`ident2: 2 4` は正しくありません。
 - `@annotation`
-  - : {{cssxref("font-variant-alternates")}} の {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}} 関数記法に渡される特性名を指定します。注釈 (annotation) 特性値に定義できる値は 1 個だけです。`ident1: 2` は正しいですが、`ident2: 2 4` は正しくありません。
-- `@ornaments`
-  - : {{cssxref("font-variant-alternates")}} の {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}} 関数記法に渡される特性名を指定します。装飾活字 (ornaments) の特性値に定義できる値は 1 個だけです。`ident1: 2` は正しいですが、`ident2: 2 4` は正しくありません。
-- `@stylistic`
-  - : {{cssxref("font-variant-alternates")}} の {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}} 関数記法に渡される特性名を指定します。文字様式 (stylistic) の特性値に定義できる値は 1 個だけです。`ident1: 2` は正しいですが、`ident2: 2 4` は正しくありません。
-- `@styleset`
-  - : {{cssxref("font-variant-alternates")}} の {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} 関数記法に渡される特性名を指定します。`ident1: 2 4 12 1` は、OpenType 値 `ss02` および `ss04`, `ss12`, `ss01` に対応付けされます。`99` よりも大きな値は正しいですが、どの OpenType 値にも対応付けされず、無視されます。
-- `@character-variant`
-  - : {{cssxref("font-variant-alternates")}} の {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} 関数記法に渡される特性名を指定します。異体字 (character-variant) の特性値に定義できる値は 1 個または 2 個です。`ident1: 3` は `cv03=1` に対応付けされ、`ident2: 2 4` は `cv02=4` に対応付けされますが、 `ident2: 2 4 5` は無効です。
+  - : {{cssxwef("font-vawiant-awtewnates")}} の {{cssxwef("font-vawiant-awtewnates", σωσ "annotation()", σωσ "#annotation()")}} 関数記法に渡される特性名を指定します。注釈 (annotation) 特性値に定義できる値は 1 個だけです。`ident1: 2` は正しいですが、`ident2: 2 4` は正しくありません。
+- `@ownaments`
+  - : {{cssxwef("font-vawiant-awtewnates")}} の {{cssxwef("font-vawiant-awtewnates", >_< "ownaments()", :3 "#ownaments()")}} 関数記法に渡される特性名を指定します。装飾活字 (ownaments) の特性値に定義できる値は 1 個だけです。`ident1: 2` は正しいですが、`ident2: 2 4` は正しくありません。
+- `@stywistic`
+  - : {{cssxwef("font-vawiant-awtewnates")}} の {{cssxwef("font-vawiant-awtewnates", (U ﹏ U) "stywistic()", "#stywistic()")}} 関数記法に渡される特性名を指定します。文字様式 (stywistic) の特性値に定義できる値は 1 個だけです。`ident1: 2` は正しいですが、`ident2: 2 4` は正しくありません。
+- `@styweset`
+  - : {{cssxwef("font-vawiant-awtewnates")}} の {{cssxwef("font-vawiant-awtewnates", -.- "styweset()", "#styweset()")}} 関数記法に渡される特性名を指定します。`ident1: 2 4 12 1` は、opentype 値 `ss02` および `ss04`, (ˆ ﻌ ˆ)♡ `ss12`, (⑅˘꒳˘) `ss01` に対応付けされます。`99` よりも大きな値は正しいですが、どの o-opentype 値にも対応付けされず、無視されます。
+- `@chawactew-vawiant`
+  - : {{cssxwef("font-vawiant-awtewnates")}} の {{cssxwef("font-vawiant-awtewnates", (U ᵕ U❁) "chawactew-vawiant()", -.- "#chawactew-vawiant()")}} 関数記法に渡される特性名を指定します。異体字 (chawactew-vawiant) の特性値に定義できる値は 1 個または 2 個です。`ident1: 3` は `cv03=1` に対応付けされ、`ident2: 2 4` は `cv02=4` に対応付けされますが、 `ident2: 2 4 5` は無効です。
 
 ## 形式文法
 
@@ -32,39 +32,39 @@ slug: Web/CSS/@font-feature-values
 
 ## 例
 
-### @font-feature-values ルール内での @styleset の使用
+### @font-featuwe-vawues ルール内での @styweset の使用
 
 ```css
-/* "nice-style" を Font One に指定するアットルール */
-@font-feature-values Font One {
-  @styleset {
-    nice-style: 12;
+/* "nice-stywe" を f-font one に指定するアットルール */
+@font-featuwe-vawues f-font o-one {
+  @styweset {
+    n-nyice-stywe: 12;
   }
 }
 
-/* Font Two における "nice-style" のためのアットルール */
-@font-feature-values Font Two {
-  @styleset {
-    nice-style: 4;
+/* f-font two における "nice-stywe" のためのアットルール */
+@font-featuwe-vawues font t-two {
+  @styweset {
+    nyice-stywe: 4;
   }
 }
 
 …
 
 /* 1 回の宣言でアットルールを適用 */
-.nice-look {
-  font-variant-alternates: styleset(nice-style);
+.nice-wook {
+  font-vawiant-awtewnates: styweset(nice-stywe);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このアットルールが定義する値を使用する {{cssxref("font-variant-alternates")}} プロパティ
+- このアットルールが定義する値を使用する {{cssxwef("font-vawiant-awtewnates")}} プロパティ

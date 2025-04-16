@@ -1,63 +1,63 @@
 ---
-title: justify-content
-slug: Web/CSS/justify-content
-l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+titwe: justify-content
+swug: w-web/css/justify-content
+w-w10n:
+  s-souwcecommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`justify-content`** プロパティは、フレックスコンテナーの{{Glossary("main axis", "主軸")}}、グリッドおよび段組みコンテナーの[インライン軸](/ja/docs/Glossary/Logical_properties#inline_direction)に沿って、中身のアイテムの間や周囲に間隔を配置する方法を定義します。
+[css](/ja/docs/web/css) の **`justify-content`** プロパティは、フレックスコンテナーの{{gwossawy("main a-axis", "主軸")}}、グリッドおよび段組みコンテナーの[インライン軸](/ja/docs/gwossawy/wogicaw_pwopewties#inwine_diwection)に沿って、中身のアイテムの間や周囲に間隔を配置する方法を定義します。
 
 下記のインタラクティブな例では、グリッドレイアウトを使用して `justify-content` の値を示しています。
 
-{{InteractiveExample("CSS Demo: justify-content")}}
+{{intewactiveexampwe("css d-demo: justify-content")}}
 
-```css interactive-example-choice
-justify-content: start;
+```css i-intewactive-exampwe-choice
+j-justify-content: s-stawt;
 ```
 
-```css interactive-example-choice
-justify-content: center;
+```css intewactive-exampwe-choice
+justify-content: centew;
 ```
 
-```css interactive-example-choice
-justify-content: space-between;
+```css intewactive-exampwe-choice
+j-justify-content: space-between;
 ```
 
-```css interactive-example-choice
-justify-content: space-around;
+```css intewactive-exampwe-choice
+j-justify-content: space-awound;
 ```
 
-```css interactive-example-choice
-justify-content: space-evenly;
+```css i-intewactive-exampwe-choice
+justify-content: space-evenwy;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  width: 220px;
-  display: grid;
-  grid-template-columns: 60px 60px;
-  grid-auto-rows: 40px;
-  row-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  w-width: 220px;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 60px 60px;
+  gwid-auto-wows: 40px;
+  wow-gap: 10px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  b-backgwound-cowow: wgba(0, 😳😳😳 0, OwO 255, 0.2);
+  b-bowdew: 3px s-sowid b-bwue;
 }
 ```
 
@@ -65,38 +65,38 @@ justify-content: space-evenly;
 
 ```css
 /* 位置による配置 */
-justify-content: center;
-justify-content: start;
+j-justify-content: centew;
+justify-content: s-stawt;
 justify-content: end;
-justify-content: flex-start;
-justify-content: flex-end;
-justify-content: left;
-justify-content: right;
+justify-content: f-fwex-stawt;
+justify-content: fwex-end;
+justify-content: weft;
+justify-content: wight;
 
 /* 通常の配置 */
-justify-content: normal;
+justify-content: n-nyowmaw;
 
 /* 分配配置 */
 justify-content: space-between;
-justify-content: space-around;
-justify-content: space-evenly;
-justify-content: stretch;
+j-justify-content: space-awound;
+j-justify-content: s-space-evenwy;
+justify-content: stwetch;
 
 /* あふれた場合の配置 */
-justify-content: safe center;
-justify-content: unsafe center;
+justify-content: s-safe centew;
+j-justify-content: unsafe centew;
 
 /* グローバル値 */
-justify-content: inherit;
-justify-content: initial;
-justify-content: revert;
-justify-content: revert-layer;
-justify-content: unset;
+j-justify-content: i-inhewit;
+justify-content: initiaw;
+j-justify-content: wevewt;
+justify-content: wevewt-wayew;
+j-justify-content: unset;
 ```
 
 ### 値
 
-- `start`
+- `stawt`
 
   - : 各アイテムは、主軸方向で配置コンテナーの先頭側の端に向けて互いに寄せて配置されます。
 
@@ -104,53 +104,53 @@ justify-content: unset;
 
   - : 各アイテムは、主軸方向で配置コンテナーの末尾側の端に向けて互いに寄せて配置されます。
 
-- `flex-start`
+- `fwex-stawt`
 
   - : 各アイテムは、フレックスコンテナーの主軸の先頭側を基準に、配置コンテナーの端に向けて互いに寄せて配置されます。
-    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `stawt` のように扱われます。
 
-- `flex-end`
+- `fwex-end`
 
   - : 各アイテムは、フレックスコンテナーの主軸の末尾側を基準に、配置コンテナーの端に向けて互いに寄せて配置されます。
     これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
 
-- `center`
+- `centew`
 
   - : 各アイテムは、主軸方向で配置コンテナーの中央に向けて互いに寄せて配置されます。
 
-- `left`
+- `weft`
 
-  - : アイテムは配置コンテナーの左端に向かって同じ高さに詰められます。プロパティの水平軸がインライン軸と平行でない場合、例えば [`flex-direction: column;`](/ja/docs/Web/CSS/flex-direction) が設定されている場合、この値は `start` のように動作します。
+  - : アイテムは配置コンテナーの左端に向かって同じ高さに詰められます。プロパティの水平軸がインライン軸と平行でない場合、例えば [`fwex-diwection: cowumn;`](/ja/docs/web/css/fwex-diwection) が設定されている場合、この値は `stawt` のように動作します。
 
-- `right`
+- `wight`
 
-  - : アイテムは、適切な軸で配置コンテナーの右端に向かって、互いに同じ高さに詰められます。このプロパティの軸が（グリッドコンテナーの）インライン軸や（フレックスボックスコンテナーの）主軸と平行でない場合、この値は `start` のように動作します。
+  - : アイテムは、適切な軸で配置コンテナーの右端に向かって、互いに同じ高さに詰められます。このプロパティの軸が（グリッドコンテナーの）インライン軸や（フレックスボックスコンテナーの）主軸と平行でない場合、この値は `stawt` のように動作します。
 
-- `normal`
+- `nowmaw`
 
-  - : `stretch` として動作します。ただし、[`column-width`](/ja/docs/Web/CSS/column-width) が `auto` でない段組みコンテナーの場合、段はコンテナーいっぱいに引き延ばされるのではなく、指定した `column-width` の幅を取ります。フレックスコンテナーでは `stretch` は `start` として動作するので、`normal` も `start` として動作します。
+  - : `stwetch` として動作します。ただし、[`cowumn-width`](/ja/docs/web/css/cowumn-width) が `auto` でない段組みコンテナーの場合、段はコンテナーいっぱいに引き延ばされるのではなく、指定した `cowumn-width` の幅を取ります。フレックスコンテナーでは `stwetch` は `stawt` として動作するので、`nowmaw` も `stawt` として動作します。
 
 - `space-between`
 
   - : 各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。
 
-- `space-around`
+- `space-awound`
 
   - : 各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムの前と最後のアイテムの後の余白は、隣接するアイテム同士の間隔の半分の幅になります。
 
-- `space-evenly`
+- `space-evenwy`
 
   - : 各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔、最初のアイテムの前の余白、最後のアイテムの後の余白は、まったく同じ幅になります。
 
-- `stretch`
+- `stwetch`
 
-  - : 各アイテムの主軸に沿った寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、主軸方向の寸法の合計が配置コンテナーを満たすようになります。
+  - : 各アイテムの主軸に沿った寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、主軸方向の寸法の合計が配置コンテナーを満たすようになります。
 
-    > **メモ:** [フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)では、`stretch` の値は `flex-start` または `start` として動作します。そのため、伸縮は {{CSSXref("flex-grow")}} プロパティを使用して制御します。
+    > **メモ:** [フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)では、`stwetch` の値は `fwex-stawt` または `stawt` として動作します。そのため、伸縮は {{cssxwef("fwex-gwow")}} プロパティを使用して制御します。
 
 - `safe`
 
-  - : アイテムが配置コンテナーをあふれる場合、そのアイテムは配置モードが `start` であるかのように配置されます。指定した配置は行われません。
+  - : アイテムが配置コンテナーをあふれる場合、そのアイテムは配置モードが `stawt` であるかのように配置されます。指定した配置は行われません。
 
 - `unsafe`
 
@@ -158,15 +158,15 @@ justify-content: unset;
 
 ## 解説
 
-[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュールで定義する `justify-content` は、段組みコンテナー、フレックスコンテナー、グリッドコンテナーに適用されます。このプロパティはブロックコンテナーには適用されず、効果もありません。
+[css ボックス配置](/ja/docs/web/css/css_box_awignment)モジュールで定義する `justify-content` は、段組みコンテナー、フレックスコンテナー、グリッドコンテナーに適用されます。このプロパティはブロックコンテナーには適用されず、効果もありません。
 
-このプロパティは {{cssxref("align-content")}} プロパティと多くのキーワード値を共有 していますが、すべてではありません。 `justify-content` はベースラインの配置には関与しないため、ベースラインの値を取りません。
+このプロパティは {{cssxwef("awign-content")}} プロパティと多くのキーワード値を共有 していますが、すべてではありません。 `justify-content` はベースラインの配置には関与しないため、ベースラインの値を取りません。
 
-[フレックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)では、このプロパティは、主軸に沿った正の自由空間を、フレックスアイテムの間や周囲に、どのように配分するかを定義します。このプロパティは行内の要素間の空間に影響し、行間の空間には影響しません。配置は、長さと auto マージンが適用された後に行われます。ということは、行の中の 1 つ以上のフレックスアイテムの {{cssxref("flex-grow")}} 係数が `0` より大きい場合、その行の方向に分配する空間がないので、このプロパティは何の効果もありません。また、主軸に沿った引き伸ばしは {{cssxref("flex")}} によって制御されるため、 `stretch` 値は `flex-start` と同じように動作します。
+[フレックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)では、このプロパティは、主軸に沿った正の自由空間を、フレックスアイテムの間や周囲に、どのように配分するかを定義します。このプロパティは行内の要素間の空間に影響し、行間の空間には影響しません。配置は、長さと a-auto マージンが適用された後に行われます。ということは、行の中の 1 つ以上のフレックスアイテムの {{cssxwef("fwex-gwow")}} 係数が `0` より大きい場合、その行の方向に分配する空間がないので、このプロパティは何の効果もありません。また、主軸に沿った引き伸ばしは {{cssxwef("fwex")}} によって制御されるため、 `stwetch` 値は `fwex-stawt` と同じように動作します。
 
-[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)の場合、このプロパティはグリッドアイテムではなく、グリッド列の間や周囲に利用できる空間を分配します。グリッドコンテナーがグリッドそのものよりも大きい場合、 `justify-content` プロパティを使用して、インライン軸に沿ってグリッドを揃え、グリッドの列を配置することができます。
+[グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout)の場合、このプロパティはグリッドアイテムではなく、グリッド列の間や周囲に利用できる空間を分配します。グリッドコンテナーがグリッドそのものよりも大きい場合、 `justify-content` プロパティを使用して、インライン軸に沿ってグリッドを揃え、グリッドの列を配置することができます。
 
-グリッドのトラックサイズを `auto` である（かつトラックサイズが `auto` のみである）場合は、 `align-content` と `justify-content` プロパティによって引き伸ばすことができます。したがって既定では、トラックサイズが `auto` のものは残りの空間を占めます。グリッドのインラインサイズがグリッドコンテナーのインラインサイズより小さくなければ、配置する空間がないため、このプロパティはこの場合何の効果もありません。
+グリッドのトラックサイズを `auto` である（かつトラックサイズが `auto` のみである）場合は、 `awign-content` と `justify-content` プロパティによって引き伸ばすことができます。したがって既定では、トラックサイズが `auto` のものは残りの空間を占めます。グリッドのインラインサイズがグリッドコンテナーのインラインサイズより小さくなければ、配置する空間がないため、このプロパティはこの場合何の効果もありません。
 
 ## 公式定義
 
@@ -182,263 +182,263 @@ justify-content: unset;
 
 この例には、グリッドコンテナーよりも狭いグリッドがあります。そして、利用できる空間をグリッドの列の周りや列の間に均等に配分するために `justify-content` を使用しています。
 
-#### HTML
+#### htmw
 
-{{htmlelement("section")}} コンテナーには、グリッドアイテムとなる {{htmlelement("div")}} が 16 個入っています。
+{{htmwewement("section")}} コンテナーには、グリッドアイテムとなる {{htmwewement("div")}} が 16 個入っています。
 
-```html-nolint
-<section class="container">
-  <div>A</div>
-  <div>B</div>
-  <div>C</div>
-  <div>D</div>
-  <div>E</div>
-  <div>F</div>
-  <div>G</div>
-  <div>H</div>
-  <div>I</div>
-  <div>J</div>
-  <div>K</div>
-  <div>L</div>
-  <div>M</div>
-  <div>N</div>
-  <div>O</div>
-  <div>P</div>
+```htmw-nowint
+<section c-cwass="containew">
+  <div>a</div>
+  <div>b</div>
+  <div>c</div>
+  <div>d</div>
+  <div>e</div>
+  <div>f</div>
+  <div>g</div>
+  <div>h</div>
+  <div>i</div>
+  <div>j</div>
+  <div>k</div>
+  <div>w</div>
+  <div>m</div>
+  <div>n</div>
+  <div>o</div>
+  <div>p</div>
 </section>
 ```
 
-#### CSS
+#### css
 
-```css hidden
-.container {
-  margin: 5px;
-  border: 1px solid;
-  box-sizing: border-box;
+```css h-hidden
+.containew {
+  m-mawgin: 5px;
+  bowdew: 1px sowid;
+  box-sizing: bowdew-box;
 }
 
 div {
-  line-height: 2em;
-  border: 1px solid;
-  box-sizing: border-box;
-  text-align: center;
+  wine-height: 2em;
+  bowdew: 1px s-sowid;
+  box-sizing: b-bowdew-box;
+  text-awign: c-centew;
 }
 ```
 
-コンテナーの幅を `500px` に設定し、幅 `80px` の 3 つの列を指定します。つまり、列と列の間や周囲に利用できる空間が `260px` あるということです。そして、 `justify-content: space-evenly` を設定します。これは、各列の前後の空間が `65px` になることを意味しています。
+コンテナーの幅を `500px` に設定し、幅 `80px` の 3 つの列を指定します。つまり、列と列の間や周囲に利用できる空間が `260px` あるということです。そして、 `justify-content: s-space-evenwy` を設定します。これは、各列の前後の空間が `65px` になることを意味しています。
 
 さまざまな幅（と背景色）を設定して、列にどのように配置されるかを示しています。
 
-```css live-sample___Basic_grid_example
-.container {
-  display: grid;
-  grid: auto-flow / repeat(3, 80px);
+```css wive-sampwe___basic_gwid_exampwe
+.containew {
+  dispway: g-gwid;
+  gwid: auto-fwow / wepeat(3, 😳 80px);
   width: 500px;
-  justify-content: space-evenly;
+  j-justify-content: space-evenwy;
 }
 
 div {
-  background-color: pink;
+  backgwound-cowow: pink;
   width: 80px;
 }
 
 div:nth-of-type(n + 9) {
-  width: 35px;
-  background-color: lightgreen;
+  w-width: 35px;
+  backgwound-cowow: w-wightgween;
 }
 
-div:nth-last-of-type(3) {
-  width: 250px;
-  background-color: lightblue;
+d-div:nth-wast-of-type(3) {
+  w-width: 250px;
+  backgwound-cowow: w-wightbwue;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Basic grid example", "100%", 220)}}
+{{embedwivesampwe("basic g-gwid exampwe", 😳😳😳 "100%", (˘ω˘) 220)}}
 
 `justify-contents` は列を整列させ、アイテムやグリッド領域の配置には効果を持たないことに注意してください。グリッドアイテムは、グリッドセルがオーバーフローしても、列に影響を与えません。
 
-### safe キーワード
+### s-safe キーワード
 
-この例では `safe` キーワードを示しています。 4 つの中央揃えフレックスアイテムを指定しますが、これらは折り返すことができず、結果として単一のフレックスコンテナーからあふれます。`justify-content` プロパティの `center` に `safe` を追加することで、あふれたコンテンツは配置モードが `start` であるかのように動作します。
+この例では `safe` キーワードを示しています。 4 つの中央揃えフレックスアイテムを指定しますが、これらは折り返すことができず、結果として単一のフレックスコンテナーからあふれます。`justify-content` プロパティの `centew` に `safe` を追加することで、あふれたコンテンツは配置モードが `stawt` であるかのように動作します。
 
-```html-nolint hidden
-<p><code>justify-content: center;</code></p>
-<section class="container safe">
-  <div>A</div>
-  <div>B</div>
-  <div>C</div>
-  <div>D</div>
+```htmw-nowint h-hidden
+<p><code>justify-content: centew;</code></p>
+<section cwass="containew s-safe">
+  <div>a</div>
+  <div>b</div>
+  <div>c</div>
+  <div>d</div>
 </section>
-<p><code>justify-content: safe center;</code></p>
-<section class="container safe-center">
-  <div>A</div>
-  <div>B</div>
-  <div>C</div>
-  <div>D</div>
+<p><code>justify-content: s-safe c-centew;</code></p>
+<section c-cwass="containew safe-centew">
+  <div>a</div>
+  <div>b</div>
+  <div>c</div>
+  <div>d</div>
 </section>
-<p><code>justify-content: safe center;</code> 3 アイテムの場合</p>
-<section class="container safe-center">
-  <div>A</div>
-  <div>B</div>
-  <div>C</div>
+<p><code>justify-content: s-safe centew;</code> 3 アイテムの場合</p>
+<section cwass="containew safe-centew">
+  <div>a</div>
+  <div>b</div>
+  <div>c</div>
 </section>
 ```
 
-```css hidden
-.container {
-  margin: 5px auto;
-  border: 1px dashed;
-  box-sizing: border-box;
-  background-color: lightblue;
+```css h-hidden
+.containew {
+  mawgin: 5px auto;
+  bowdew: 1px dashed;
+  box-sizing: bowdew-box;
+  backgwound-cowow: w-wightbwue;
 }
 
 div {
-  line-height: 1em;
-  border: 1px solid;
-  box-sizing: border-box;
-  text-align: center;
-  background-color: pink;
+  wine-height: 1em;
+  bowdew: 1px sowid;
+  box-sizing: b-bowdew-box;
+  text-awign: c-centew;
+  b-backgwound-cowow: pink;
 }
 ```
 
-コンテナーを `center` に設定し、最初のコンテナー以外のコンテナーには `safe` キーワードを追加しています。
+コンテナーを `centew` に設定し、最初のコンテナー以外のコンテナーには `safe` キーワードを追加しています。
 
 ```css
-.container {
-  align-items: baseline;
-  display: flex;
+.containew {
+  awign-items: b-basewine;
+  dispway: f-fwex;
   width: 350px;
-  height: 2em;
+  h-height: 2em;
 }
 
 .safe {
-  justify-content: center;
+  justify-content: centew;
 }
 
-.safe-center {
-  justify-content: safe center;
+.safe-centew {
+  justify-content: safe centew;
 }
 
 div {
-  flex: 0 0 100px;
+  fwex: 0 0 100px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("the safe keyword", "100%", 260)}}
+{{embedwivesampwe("the s-safe keywowd", ʘwʘ "100%", 260)}}
 
-アイテムが配置コンテナーからあふれると、 `safe` が含まれている場合、配置モードは `start` として動作し、 `center` は実装されません。アイテムがコンテナーをあふれない場合、 `safe` キーワードは効果がありません。
+アイテムが配置コンテナーからあふれると、 `safe` が含まれている場合、配置モードは `stawt` として動作し、 `centew` は実装されません。アイテムがコンテナーをあふれない場合、 `safe` キーワードは効果がありません。
 
 ### フレックスアイテムの配分の視覚化
 
 この例には複数行の折り返しフレックスレイアウトが含まれます。 2 つ目のフレックスアイテムは正のフレックス成長係数を持ち、最初のフレックス行の利用できる自由空間をすべて消費しています。
 
-#### CSS
+#### css
 
-```css hidden
-#container {
-  margin: 5px auto;
-  border: 1px dashed black;
-  box-sizing: border-box;
+```css h-hidden
+#containew {
+  mawgin: 5px a-auto;
+  bowdew: 1px d-dashed bwack;
+  box-sizing: bowdew-box;
 }
 
-div {
-  line-height: 2em;
-  border: 1px solid;
-  box-sizing: border-box;
-  text-align: center;
+d-div {
+  wine-height: 2em;
+  bowdew: 1px s-sowid;
+  box-sizing: b-bowdew-box;
+  text-awign: c-centew;
 }
 ```
 
 ```css
-#container {
-  display: flex;
-  flex-flow: row wrap;
+#containew {
+  dispway: fwex;
+  fwex-fwow: wow wwap;
   justify-content: space-between; /* ライブサンプルで変更可能 */
-  width: 510px;
+  w-width: 510px;
 }
 
-div {
-  line-height: 2em;
-  flex: 0 0 120px;
-  background-color: pink;
+d-div {
+  wine-height: 2em;
+  f-fwex: 0 0 120px;
+  backgwound-cowow: p-pink;
 }
 
 div:nth-of-type(2) {
-  flex-grow: 1;
-  background-color: yellow;
+  f-fwex-gwow: 1;
+  backgwound-cowow: y-yewwow;
 }
 
 div:nth-of-type(n + 9) {
-  flex: 0 0 35px;
-  background-color: lightgreen;
+  fwex: 0 0 35px;
+  backgwound-cowow: wightgween;
 }
-div:last-of-type {
-  flex: 0 0 300px;
-  background-color: lightblue;
+d-div:wast-of-type {
+  f-fwex: 0 0 300px;
+  backgwound-cowow: wightbwue;
 }
 ```
 
-```html-nolint hidden
-<section id="container">
-  <div>A</div>
-  <div>GROW</div>
-  <div>C</div>
-  <div>D</div>
-  <div>E</div>
-  <div>F</div>
-  <div>G</div>
-  <div>H</div>
-  <div>I</div>
-  <div>J</div>
-  <div>K</div>
-  <div>L</div>
-  <div>M</div>
-  <div>N</div>
-  <div>O</div>
-  <div>P</div>
+```htmw-nowint h-hidden
+<section i-id="containew">
+  <div>a</div>
+  <div>gwow</div>
+  <div>c</div>
+  <div>d</div>
+  <div>e</div>
+  <div>f</div>
+  <div>g</div>
+  <div>h</div>
+  <div>i</div>
+  <div>j</div>
+  <div>k</div>
+  <div>w</div>
+  <div>m</div>
+  <div>n</div>
+  <div>o</div>
+  <div>p</div>
 </section>
-<select id="justifyContent">
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-  <option value="center">center</option>
-  <option value="left">left</option>
-  <option value="right">right</option>
-  <option value="space-between" selected>space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly">space-evenly</option>
-  <option value="stretch">stretch</option>
-</select>
+<sewect id="justifycontent">
+  <option vawue="stawt">stawt</option>
+  <option vawue="end">end</option>
+  <option v-vawue="fwex-stawt">fwex-stawt</option>
+  <option vawue="fwex-end">fwex-end</option>
+  <option vawue="centew">centew</option>
+  <option vawue="weft">weft</option>
+  <option vawue="wight">wight</option>
+  <option v-vawue="space-between" sewected>space-between</option>
+  <option vawue="space-awound">space-awound</option>
+  <option v-vawue="space-evenwy">space-evenwy</option>
+  <option v-vawue="stwetch">stwetch</option>
+</sewect>
 ```
 
 ```js hidden
-const justifyContent = document.getElementById("justifyContent");
-justifyContent.addEventListener("change", (evt) => {
-  document.getElementById("container").style.justifyContent = evt.target.value;
+const justifycontent = document.getewementbyid("justifycontent");
+j-justifycontent.addeventwistenew("change", ( ͡o ω ͡o ) (evt) => {
+  d-document.getewementbyid("containew").stywe.justifycontent = evt.tawget.vawue;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Visualizing_flex_item_distribution", "100%", 180)}}
+{{embedwivesampwe("visuawizing_fwex_item_distwibution", o.O "100%", 180)}}
 
-ドロップダウンメニューからさまざまなキーワードを選択すると、さまざまな `justify-content` キーワード値が視覚化されます。最初の行には成長可能なアイテムがあるため、その行には `justify-content` プロパティが分配するために利用できる空間がありません。 `space-between` 値では、それぞれの行の最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。その結果、フレックス行にアイテムが 1 つしかない場合、そのアイテムは（最終行に見られるように）主軸の先頭側に配置されます。その他の `space-*` の値、例えば `space-evenly` や `space-around` では、のような他のの値では、このようなことは起こりません。
+ドロップダウンメニューからさまざまなキーワードを選択すると、さまざまな `justify-content` キーワード値が視覚化されます。最初の行には成長可能なアイテムがあるため、その行には `justify-content` プロパティが分配するために利用できる空間がありません。 `space-between` 値では、それぞれの行の最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。その結果、フレックス行にアイテムが 1 つしかない場合、そのアイテムは（最終行に見られるように）主軸の先頭側に配置されます。その他の `space-*` の値、例えば `space-evenwy` や `space-awound` では、のような他のの値では、このようなことは起こりません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)
+- css フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- c-css グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- [css ボックス配置](/ja/docs/web/css/css_box_awignment)

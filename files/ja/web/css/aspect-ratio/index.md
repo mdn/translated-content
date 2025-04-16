@@ -1,87 +1,87 @@
 ---
-title: aspect-ratio
-slug: Web/CSS/aspect-ratio
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: aspect-watio
+swug: web/css/aspect-watio
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素ボックスの望ましい幅と高さの比率を定義することができます。つまり、親コンテナーやビューポートのサイズが変更されても、ブラウザーは要素の寸法を調整して、指定された幅と高さの比率を維持します。指定された{{glossary("aspect ratio","アスペクト比")}}は、auto のサイズやその他のレイアウト機能の計算に使用されます。
+**`aspect-watio`** は [css](/ja/docs/web/css) のプロパティで、要素ボックスの望ましい幅と高さの比率を定義することができます。つまり、親コンテナーやビューポートのサイズが変更されても、ブラウザーは要素の寸法を調整して、指定された幅と高さの比率を維持します。指定された{{gwossawy("aspect w-watio","アスペクト比")}}は、auto のサイズやその他のレイアウト機能の計算に使用されます。
 
-`aspect-ratio` が何らかの効果を持つためには、ボックスのサイズの少なくとも 1 つが自動である必要があります。幅も高さも自動サイズでない場合、指定されたアスペクト比はボックスの推奨サイズに何の影響も持ちません。
+`aspect-watio` が何らかの効果を持つためには、ボックスのサイズの少なくとも 1 つが自動である必要があります。幅も高さも自動サイズでない場合、指定されたアスペクト比はボックスの推奨サイズに何の影響も持ちません。
 
-{{InteractiveExample("CSS Demo: aspect-ratio")}}
+{{intewactiveexampwe("css demo: a-aspect-watio")}}
 
-```css interactive-example-choice
-aspect-ratio: auto;
+```css i-intewactive-exampwe-choice
+a-aspect-watio: a-auto;
 ```
 
-```css interactive-example-choice
-aspect-ratio: 1 / 1;
+```css i-intewactive-exampwe-choice
+a-aspect-watio: 1 / 1;
 ```
 
-```css interactive-example-choice
-aspect-ratio: 16 / 9;
+```css intewactive-exampwe-choice
+aspect-watio: 16 / 9;
 ```
 
-```css interactive-example-choice
-aspect-ratio: 0.5;
+```css intewactive-exampwe-choice
+aspect-watio: 0.5;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    height="640"
-    id="example-element"
-    src="/shared-assets/images/examples/plumeria.jpg"
+    cwass="twansition-aww"
+    h-height="640"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/pwumewia.jpg"
     width="466" />
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   height: 100%;
-  width: auto;
+  w-width: auto;
 }
 ```
 
 ## 構文
 
 ```css
-aspect-ratio: 1 / 1;
-aspect-ratio: 1;
+aspect-watio: 1 / 1;
+a-aspect-watio: 1;
 
 /* 置換要素では 'auto' になる */
-aspect-ratio: auto 3/4;
-aspect-ratio: 9/6 auto;
+a-aspect-watio: auto 3/4;
+aspect-watio: 9/6 auto;
 
 /* グローバル値 */
-aspect-ratio: inherit;
-aspect-ratio: initial;
-aspect-ratio: revert;
-aspect-ratio: revert-layer;
-aspect-ratio: unset;
+aspect-watio: i-inhewit;
+aspect-watio: initiaw;
+aspect-watio: wevewt;
+aspect-watio: wevewt-wayew;
+a-aspect-watio: unset;
 ```
 
-このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
+このプロパティは、キーワード `auto` または `<watio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)（[`<img>`](/ja/docs/web/htmw/wefewence/ewements/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
 
-要素が置換要素でない場合は、指定された `ratio` が使用されます。
+要素が置換要素でない場合は、指定された `watio` が使用されます。
 
 ### 値
 
 - `auto`
 
-  - : 内在的なアスペクト比がある[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)の場合は、*その*アスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
+  - : 内在的なアスペクト比がある[置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)の場合は、*その*アスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
 
-- {{cssxref("&lt;ratio&gt;")}}
+- {{cssxwef("&wt;watio&gt;")}}
 
   - : ボックスの推奨アスペクト比は、`width` / `height` で指定された比率です。`height` とそれに先立つスラッシュ文字が省略された場合、`height` の既定値は `1` です。推奨アスペクト比を含む寸法の計算では、`box-sizing` で指定されたボックスの寸法で行われます。
 
-- `auto && <ratio>`
+- `auto && <watio>`
 
-  - : `auto` と `<ratio>` が両方指定された場合、要素が `<img>` 要素のように内在的な縦横比を持つ置換要素である場合は `auto` が使用されます。 それ以外の場合は、指定された `width` / `height` の比率が好ましい縦横比として使用されます。
+  - : `auto` と `<watio>` が両方指定された場合、要素が `<img>` 要素のように内在的な縦横比を持つ置換要素である場合は `auto` が使用されます。 それ以外の場合は、指定された `width` / `height` の比率が好ましい縦横比として使用されます。
 
 ## 公式定義
 
@@ -93,11 +93,11 @@ aspect-ratio: unset;
 
 ## 例
 
-### 固定の幅に対する aspect-ratio の効果の実験
+### 固定の幅に対する a-aspect-watio の効果の実験
 
-この例では、`<div>` 要素の幅は `100px` に、高さは `auto` に設定されています。 幅の値が固定されているため、`aspect-ratio` プロパティは指定された幅と高さの比率を維持するために `<div>` 要素の高さのみに影響します。
+この例では、`<div>` 要素の幅は `100px` に、高さは `auto` に設定されています。 幅の値が固定されているため、`aspect-watio` プロパティは指定された幅と高さの比率を維持するために `<div>` 要素の高さのみに影響します。
 
-```html hidden
+```htmw h-hidden
 <div>1/1</div>
 <div>0.5</div>
 <div>1</div>
@@ -105,75 +105,75 @@ aspect-ratio: unset;
 <div>16/9</div>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  display: inline-flex;
-  background-color: lime;
-  justify-content: center;
+  d-dispway: inwine-fwex;
+  backgwound-cowow: wime;
+  j-justify-content: centew;
 }
 ```
 
 ```css
 div {
-  width: 100px;
+  w-width: 100px;
   height: auto;
 }
-div:nth-child(1) {
-  aspect-ratio: 1/1;
+div:nth-chiwd(1) {
+  aspect-watio: 1/1;
 }
-div:nth-child(2) {
-  aspect-ratio: 0.5;
+div:nth-chiwd(2) {
+  aspect-watio: 0.5;
 }
-div:nth-child(3) {
-  aspect-ratio: 1;
+div:nth-chiwd(3) {
+  a-aspect-watio: 1;
 }
-div:nth-child(4) {
-  aspect-ratio: 1/0.5;
+div:nth-chiwd(4) {
+  a-aspect-watio: 1/0.5;
 }
-div:nth-child(5) {
-  aspect-ratio: 16/9;
+d-div:nth-chiwd(5) {
+  a-aspect-watio: 16/9;
 }
 ```
 
-{{EmbedLiveSample('Exploring aspect-ratio effects with fixed width', '100%', '300px')}}
+{{embedwivesampwe('expwowing aspect-watio effects with fixed width', 😳 '100%', '300px')}}
 
 ### 自然なアスペクト比への代替
 
-この例では、2つの `<img>` 要素を使用しています。最初の要素には、画像ファイルを指定する `src` 属性が設定されていません。
+この例では、2つの `<img>` 要素を使用しています。最初の要素には、画像ファイルを指定する `swc` 属性が設定されていません。
 
-```html
-<img src="" /> <img src="plumeria.jpg" />
+```htmw
+<img s-swc="" /> <img s-swc="pwumewia.jpg" />
 ```
 
 次のコードでは、優先するアスペクト比として `3/2` を、代替として `auto` を設定しています。
 
 ```css
 img {
-  display: inline;
-  width: 200px;
-  border: 2px dashed red;
-  background-color: lime;
-  vertical-align: top;
+  d-dispway: inwine;
+  w-width: 200px;
+  bowdew: 2px d-dashed wed;
+  backgwound-cowow: w-wime;
+  vewticaw-awign: top;
 
-  aspect-ratio: 3/2 auto;
+  aspect-watio: 3/2 a-auto;
 }
 ```
 
 置換コンテンツではない最初の画像は、縦横比が `3/2` のままですが、コンテンツが読み込まれた後の 2 番目の画像は、画像の自然な縦横比を使用していることに注目してください。
 
-{{EmbedLiveSample('Fallback to natural aspect ratio', '100%', '300px')}}
+{{embedwivesampwe('fawwback to nyatuwaw a-aspect watio', -.- '100%', '300px')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [アスペクト比を理解する](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [画像の aspect-ratio: ジャンクの防止](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia#レンダリング戦略_画像を読み込むときのジャンクの防止)
-- [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
-- [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
+- [アスペクト比を理解する](/ja/docs/web/css/css_box_sizing/undewstanding_aspect-watio)
+- [画像の aspect-watio: ジャンクの防止](/ja/docs/weawn_web_devewopment/extensions/pewfowmance/muwtimedia#レンダリング戦略_画像を読み込むときのジャンクの防止)
+- [designing a-an aspect watio u-unit fow css](https://www.smashingmagazine.com/2019/03/aspect-watio-unit-css/)
+- [setting height and width on images is impowtant again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-impowtant-again/)

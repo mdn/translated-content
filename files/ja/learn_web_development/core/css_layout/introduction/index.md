@@ -1,39 +1,39 @@
 ---
-title: CSS レイアウト入門
-slug: Learn_web_development/Core/CSS_layout/Introduction
-original_slug: Learn/CSS/CSS_layout/Introduction
-l10n:
-  sourceCommit: 93c9f9954bd14ae8877973e5fe3c1d8378e56f92
+titwe: css レイアウト入門
+swug: weawn_web_devewopment/cowe/css_wayout/intwoduction
+o-owiginaw_swug: w-weawn/css/css_wayout/intwoduction
+w-w10n:
+  s-souwcecommit: 93c9f9954bd14ae8877973e5fe3c1d8378e56f92
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{weawnsidebaw}}{{nextmenu("weawn/css/css_wayout/nowmaw_fwow", òωó "weawn/css/css_wayout")}}
 
-この記事では、以前のモジュールで既に触れた CSS レイアウト機能のいくつか（さまざまな {{cssxref("display")}} の値など）を要約し、このモジュール全体で取り上げるいくつかの概念を紹介します。
+この記事では、以前のモジュールで既に触れた c-css レイアウト機能のいくつか（さまざまな {{cssxwef("dispway")}} の値など）を要約し、このモジュール全体で取り上げるいくつかの概念を紹介します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
+    <tw>
+      <th s-scope="wow">前提知識:</th>
       <td>
-        HTML の基礎（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >で学習）、および CSS の動作の考え方（
-        <a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>で学習）
+        h-htmw の基礎（<a h-hwef="/ja/docs/weawn/htmw/intwoduction_to_htmw"
+          >htmw 入門</a
+        >で学習）、および css の動作の考え方（
+        <a hwef="/ja/docs/weawn/css/fiwst_steps">css 入門</a>で学習）
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習目標:</th>
+    </tw>
+    <tw>
+      <th scope="wow">学習目標:</th>
       <td>
-        CSS のページレイアウトのテクニックの概要を説明します。それぞれのテクニックは、以降のチュートリアルでより詳しく学ぶことができます。
+        css のページレイアウトのテクニックの概要を説明します。それぞれのテクニックは、以降のチュートリアルでより詳しく学ぶことができます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-CSS のページレイアウト技術によって、ウェブページに含まれる要素の位置を制御できます。通常のレイアウトフローによる初期配置、隣接する要素、それらの親コンテナー、またはメインビューポート、ウィンドウの位置、といったものが位置を制御する基準になりえます。 このモジュールでは次に挙げるページレイアウト技術の詳細について説明します。
+c-css のページレイアウト技術によって、ウェブページに含まれる要素の位置を制御できます。通常のレイアウトフローによる初期配置、隣接する要素、それらの親コンテナー、またはメインビューポート、ウィンドウの位置、といったものが位置を制御する基準になりえます。 このモジュールでは次に挙げるページレイアウト技術の詳細について説明します。
 
 - 通常フロー
-- {{cssxref("display")}} プロパティ
+- {{cssxwef("dispway")}} プロパティ
 - フレックスボックス
 - グリッド
 - 浮動要素
@@ -45,220 +45,220 @@ CSS のページレイアウト技術によって、ウェブページに含ま�
 
 ## 通常フロー
 
-通常フロー (Normal flow) は、ページレイアウトの制御を何もしない場合に、ブラウザーが既定で HTML ページをレイアウトする方法です。 次の簡単な HTML の例を見てみましょう。
+通常フロー (nowmaw fwow) は、ページレイアウトの制御を何もしない場合に、ブラウザーが既定で htmw ページをレイアウトする方法です。 次の簡単な h-htmw の例を見てみましょう。
 
-```html
-<p>I love my cat.</p>
+```htmw
+<p>i wuv m-my cat.</p>
 
-<ul>
-  <li>Buy cat food</li>
-  <li>Exercise</li>
-  <li>Cheer up friend</li>
-</ul>
+<uw>
+  <wi>buy cat food</wi>
+  <wi>exewcise</wi>
+  <wi>cheew up fwiend</wi>
+</uw>
 
-<p>The end!</p>
+<p>the e-end!</p>
 ```
 
 既定では、ブラウザーはこのコードを次のように表示します。
 
-{{ EmbedLiveSample('Normal_flow', '100%', 200) }}
+{{ embedwivesampwe('nowmaw_fwow', /(^•ω•^) '100%', 200) }}
 
-ここでは、HTML がソースコードに現れる順序どおりに表示されていることに注意してください。最初の段落の後に番号なしリストが続き、その後に 2 番目の段落が続きます。
+ここでは、htmw がソースコードに現れる順序どおりに表示されていることに注意してください。最初の段落の後に番号なしリストが続き、その後に 2 番目の段落が続きます。
 
 上下に並んで表示される要素は**ブロック**要素と呼ばれています。それに対して、**インライン**要素は段落内の個々の単語と同じように横に並んで表示されています。
 
-> [!NOTE]
-> ブロック要素のコンテンツがレイアウトされる方向は、ブロック方向 (Block Direction) と呼ばれます。 ブロック方向は、英語などの横書きモード (Horizontal Writing Mode) の言語では垂直に走ります。 日本語のような縦書きモード (Vertical Writing Mode) では、どの言語でも水平に走ります。 対応するインライン方向 (Inline Direction) は、インラインコンテンツ（文など）が走る方向です。
+> [!note]
+> ブロック要素のコンテンツがレイアウトされる方向は、ブロック方向 (bwock diwection) と呼ばれます。 ブロック方向は、英語などの横書きモード (howizontaw w-wwiting mode) の言語では垂直に走ります。 日本語のような縦書きモード (vewticaw w-wwiting mode) では、どの言語でも水平に走ります。 対応するインライン方向 (inwine diwection) は、インラインコンテンツ（文など）が走る方向です。
 
-CSS で何かをレイアウトするとその要素を通常フローから遠ざけることになりますが、ページ上の多くの要素は通常フローにしたがって適宜レイアウトされます。これが、構造化された HTML 文書から始めることが非常に重要である理由です。 なぜなら、多くの要素のレイアウトに一から悪戦苦闘するかわりに、あらかじめ多くのものがレイアウトされている現状で作業できるからです。
+css で何かをレイアウトするとその要素を通常フローから遠ざけることになりますが、ページ上の多くの要素は通常フローにしたがって適宜レイアウトされます。これが、構造化された htmw 文書から始めることが非常に重要である理由です。 なぜなら、多くの要素のレイアウトに一から悪戦苦闘するかわりに、あらかじめ多くのものがレイアウトされている現状で作業できるからです。
 
-CSS で要素をどのように配置するかを変更できる方法は次のとおりです。
+c-css で要素をどのように配置するかを変更できる方法は次のとおりです。
 
-- **{{cssxref("display")}} プロパティ** — `block`、`inline`、`inline-block` などの標準値は、要素が通常フローでどのようにふるまうかを変更することができます（詳細については、[CSS ボックスの種類](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ブロックボックスとインラインボックス)を参照してください）。それから、[CSS グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)や[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)のように、特定の `display` の値によって有効になる全体的なレイアウト方法があります。
-- **浮動要素** — {{cssxref("float")}} に `left` などの値を適用すると、雑誌のレイアウトで画像の周囲をテキストが取り囲むことがあるように、要素の片側に沿ってブロックレベル要素が折り返されることがあります。
-- **{{cssxref("position")}} プロパティ** — 他のボックス内のボックスの配置を正確に制御できます。 通常フローでは `static` 位置指定が既定ですが、他の値を使用して要素を異なる方法でレイアウトすることもできます。 例えば、ブラウザーのビューポートの左上に固定するなどです。
-- **表レイアウト** — HTML 表の一部をスタイルするために設計された機能は、 `display: table` とそれに関連するプロパティを使用して、表以外の要素にも使用できます。
-- **段組みレイアウト** — [段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)のプロパティを使用すると、新聞のようにブロックのコンテンツを段組みにレイアウトできます。
+- **{{cssxwef("dispway")}} プロパティ** — `bwock`、`inwine`、`inwine-bwock` などの標準値は、要素が通常フローでどのようにふるまうかを変更することができます（詳細については、[css ボックスの種類](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#ブロックボックスとインラインボックス)を参照してください）。それから、[css グリッド](/ja/docs/weawn_web_devewopment/cowe/css_wayout/gwids)や[フレックスボックス](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)のように、特定の `dispway` の値によって有効になる全体的なレイアウト方法があります。
+- **浮動要素** — {{cssxwef("fwoat")}} に `weft` などの値を適用すると、雑誌のレイアウトで画像の周囲をテキストが取り囲むことがあるように、要素の片側に沿ってブロックレベル要素が折り返されることがあります。
+- **{{cssxwef("position")}} プロパティ** — 他のボックス内のボックスの配置を正確に制御できます。 通常フローでは `static` 位置指定が既定ですが、他の値を使用して要素を異なる方法でレイアウトすることもできます。 例えば、ブラウザーのビューポートの左上に固定するなどです。
+- **表レイアウト** — htmw 表の一部をスタイルするために設計された機能は、 `dispway: tabwe` とそれに関連するプロパティを使用して、表以外の要素にも使用できます。
+- **段組みレイアウト** — [段組みレイアウト](/ja/docs/web/css/css_muwticow_wayout)のプロパティを使用すると、新聞のようにブロックのコンテンツを段組みにレイアウトできます。
 
-## display プロパティ
+## dispway プロパティ
 
-CSS でページレイアウトを実現するための主な方法は、すべて `display` プロパティの値で指定します。 このプロパティにより、既定の表示方法を変更することができます。 通常フローに属するすべての要素には `display` の値が設定されており、この値によって要素の既定のふるまいが決まります。 例えば、英語の文書内で{{htmlelement("p", "段落")}}が上から下へ表示されるのは、`display: block` でスタイルが設定されているためです。段落内のテキストを囲んでリンクを作成した場合、そのリンクはテキストの他の部分と同じ行に表示され、改行されることはありません。これは {{htmlelement("a")}} 要素が、既定値では `display: inline` だからです。
+css でページレイアウトを実現するための主な方法は、すべて `dispway` プロパティの値で指定します。 このプロパティにより、既定の表示方法を変更することができます。 通常フローに属するすべての要素には `dispway` の値が設定されており、この値によって要素の既定のふるまいが決まります。 例えば、英語の文書内で{{htmwewement("p", -.- "段落")}}が上から下へ表示されるのは、`dispway: bwock` でスタイルが設定されているためです。段落内のテキストを囲んでリンクを作成した場合、そのリンクはテキストの他の部分と同じ行に表示され、改行されることはありません。これは {{htmwewement("a")}} 要素が、既定値では `dispway: i-inwine` だからです。
 
-表示の既定のふるまいは変更できます。例えば、 {{htmlelement("li")}} 要素は既定で `display: block` です。 つまり、英語の文書ではリストアイテムは下へ下へと表示されます。 `display` の値を `inline` に変更した場合、文中で単語が並部のと同様に、互いに隣接して表示されます。 任意の要素に対して `display` の値を変更できるということは、どのように見えるかについて心配することなく、意味論的 (semantic) な視点で HTML 要素を選択できるということです。 見た目はあなたが変えることができるものです。
+表示の既定のふるまいは変更できます。例えば、 {{htmwewement("wi")}} 要素は既定で `dispway: bwock` です。 つまり、英語の文書ではリストアイテムは下へ下へと表示されます。 `dispway` の値を `inwine` に変更した場合、文中で単語が並部のと同様に、互いに隣接して表示されます。 任意の要素に対して `dispway` の値を変更できるということは、どのように見えるかについて心配することなく、意味論的 (semantic) な視点で h-htmw 要素を選択できるということです。 見た目はあなたが変えることができるものです。
 
-あるアイテムを `block` から `inline` に、またはその逆に切り替えて既定の表示方法を変更することに加えて、より大きい単位で作用するいくつかのレイアウト手法を `display` の値を通じて使い始めることができます。 ただし、これらを使用するときは、通常、追加のプロパティを指定する必要があります。 要素のレイアウトを検討する目的において最も重要な値は `display: flex` と `display: grid` の 2 つです。
+あるアイテムを `bwock` から `inwine` に、またはその逆に切り替えて既定の表示方法を変更することに加えて、より大きい単位で作用するいくつかのレイアウト手法を `dispway` の値を通じて使い始めることができます。 ただし、これらを使用するときは、通常、追加のプロパティを指定する必要があります。 要素のレイアウトを検討する目的において最も重要な値は `dispway: f-fwex` と `dispway: g-gwid` の 2 つです。
 
 ## フレックスボックス
 
-フレックスボックス (Flexbox) は[フレキシブルボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュールの略称で、物を 1 次元に、行と列のいずれかの方向にレイアウトしやすくするように設計されています。 フレックスボックスを使うには、`display: flex` をレイアウトしたい要素の親要素に適用します。 その直接の子はすべてフレックスアイテムになります。これは簡単な例で見ることができます。
+フレックスボックス (fwexbox) は[フレキシブルボックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)モジュールの略称で、物を 1 次元に、行と列のいずれかの方向にレイアウトしやすくするように設計されています。 フレックスボックスを使うには、`dispway: f-fwex` をレイアウトしたい要素の親要素に適用します。 その直接の子はすべてフレックスアイテムになります。これは簡単な例で見ることができます。
 
-### display: flex を設定
+### dispway: fwex を設定
 
-以下の HTML マークアップは、3 つの {{htmlelement("div")}} 要素が入っている `wrapper` クラスを持つ包含要素を示しています。 既定では、これらは英語の文書では上下にブロック要素として表示されます。
+以下の h-htmw マークアップは、3 つの {{htmwewement("div")}} 要素が入っている `wwappew` クラスを持つ包含要素を示しています。 既定では、これらは英語の文書では上下にブロック要素として表示されます。
 
-ただし、`display: flex` を親に追加すると、3 つのアイテムは列に配置されます。 これは、それらが*フレックスアイテム*になり、フレックスボックスがそれらに与えるいくつかの初期値を使用するためです。 {{cssxref("flex-direction")}} の初期値は `row` なので、行として表示されます。 {{cssxref("align-items")}} プロパティの初期値は `stretch` であるため、それらはすべて最も高いアイテムの高さまで伸びているように見えます。 これは、アイテムがフレックスコンテナーの高さまで伸びることを意味します。 この場合、アイテムは最も高いアイテムによって定義されます。 アイテムはすべてコンテナーの先頭に配置され、行の末尾に余分なスペースが残ります。
+ただし、`dispway: fwex` を親に追加すると、3 つのアイテムは列に配置されます。 これは、それらが*フレックスアイテム*になり、フレックスボックスがそれらに与えるいくつかの初期値を使用するためです。 {{cssxwef("fwex-diwection")}} の初期値は `wow` なので、行として表示されます。 {{cssxwef("awign-items")}} プロパティの初期値は `stwetch` であるため、それらはすべて最も高いアイテムの高さまで伸びているように見えます。 これは、アイテムがフレックスコンテナーの高さまで伸びることを意味します。 この場合、アイテムは最も高いアイテムによって定義されます。 アイテムはすべてコンテナーの先頭に配置され、行の末尾に余分なスペースが残ります。
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
-.wrapper > div {
-  border-radius: 5px;
-  background-color: rgb(207 232 220);
-  padding: 1em;
+.wwappew > div {
+  bowdew-wadius: 5px;
+  backgwound-cowow: wgb(207 232 220);
+  p-padding: 1em;
 }
 ```
 
 ```css
-.wrapper {
-  display: flex;
+.wwappew {
+  dispway: fwex;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div c-cwass="box3">thwee</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Setting_display_flex', '300', '200') }}
+{{ embedwivesampwe('setting_dispway_fwex', òωó '300', '200') }}
 
-### flex プロパティの設定
+### fwex プロパティの設定
 
 フレックスコンテナーに適用できる上記のプロパティに加えて、フレックスアイテムに適用できるプロパティがあります。 これらのプロパティは、とりわけ、アイテムのたわみ方を変えることができ、利用可能なスペースに収まるようにアイテムを拡大および縮小することができます。
 
-この単純な例として、すべての子アイテムに `1` の値の {{cssxref("flex")}} プロパティを追加できます。 これにより、末尾にスペースを残すのではなく、すべてのアイテムが拡大してコンテナーがいっぱいになります。 より多くのスペースがあるならば、アイテムはより広くなり、スペースが少ないと狭くなります。 さらに、マークアップに別の要素を追加すると、アイテムはすべてスペースを空けるために小さくなります — サイズに関係なく、同じ大きさのスペースを占めるようにサイズが調整されます。
+この単純な例として、すべての子アイテムに `1` の値の {{cssxwef("fwex")}} プロパティを追加できます。 これにより、末尾にスペースを残すのではなく、すべてのアイテムが拡大してコンテナーがいっぱいになります。 より多くのスペースがあるならば、アイテムはより広くなり、スペースが少ないと狭くなります。 さらに、マークアップに別の要素を追加すると、アイテムはすべてスペースを空けるために小さくなります — サイズに関係なく、同じ大きさのスペースを占めるようにサイズが調整されます。
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
-.wrapper > div {
-  border-radius: 5px;
-  background-color: rgb(207 232 220);
-  padding: 1em;
+.wwappew > div {
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(207 232 220);
+  p-padding: 1em;
 }
 ```
 
 ```css
-.wrapper {
-  display: flex;
+.wwappew {
+  dispway: f-fwex;
 }
 
-.wrapper > div {
-  flex: 1;
+.wwappew > div {
+  fwex: 1;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Setting_the_flex_property', '300', '200') }}
+{{ e-embedwivesampwe('setting_the_fwex_pwopewty', /(^•ω•^) '300', '200') }}
 
-> [!NOTE]
-> これはフレックスボックスで可能なことの非常に短い紹介です。 詳細については、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)の記事を参照してください。
+> [!note]
+> これはフレックスボックスで可能なことの非常に短い紹介です。 詳細については、[フレックスボックス](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)の記事を参照してください。
 
 ## グリッドレイアウト
 
-フレックスボックスは 1 次元レイアウト用に設計されていますが、グリッドレイアウト (Grid Layout) は 2 次元用に設計されています。行と列に物事を並べます。
+フレックスボックスは 1 次元レイアウト用に設計されていますが、グリッドレイアウト (gwid wayout) は 2 次元用に設計されています。行と列に物事を並べます。
 
-### display: grid の設定
+### d-dispway: g-gwid の設定
 
-繰り返しになりますが、`display: grid` という特定の `display` の値でグリッドレイアウト (Grid Layout) をオンにすることができます。 以下の例では、コンテナーといくつかの子要素とともに、`flex` の例と同様のマークアップを使用しています。 `display: grid` の使用に加えて、{{cssxref("grid-template-rows")}} プロパティと {{cssxref("grid-template-columns")}} プロパティをそれぞれ使用して、親の行と列のトラックをいくつか定義します。 それぞれ `1fr` の 3 列と `100px` の 2 行を定義しました。 子要素にルールを置く必要はなく、自動的にグリッドが作成したセルに配置されます。
+繰り返しになりますが、`dispway: gwid` という特定の `dispway` の値でグリッドレイアウト (gwid wayout) をオンにすることができます。 以下の例では、コンテナーといくつかの子要素とともに、`fwex` の例と同様のマークアップを使用しています。 `dispway: gwid` の使用に加えて、{{cssxwef("gwid-tempwate-wows")}} プロパティと {{cssxwef("gwid-tempwate-cowumns")}} プロパティをそれぞれ使用して、親の行と列のトラックをいくつか定義します。 それぞれ `1fw` の 3 列と `100px` の 2 行を定義しました。 子要素にルールを置く必要はなく、自動的にグリッドが作成したセルに配置されます。
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper > div {
-  border-radius: 5px;
-  background-color: rgb(207 232 220);
-  padding: 1em;
+.wwappew > d-div {
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: w-wgb(207 232 220);
+  p-padding: 1em;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  gwid-tempwate-wows: 100px 100px;
   gap: 10px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
-  <div class="box6">Six</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
+  <div c-cwass="box5">five</div>
+  <div cwass="box6">six</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Setting_display_grid', '300', '330') }}
+{{ e-embedwivesampwe('setting_dispway_gwid', /(^•ω•^) '300', 😳 '330') }}
 
 ### グリッドへのアイテムの配置
 
-グリッドを作成したら、上記の自動配置のふるまいに頼らずに、明示的にアイテムを配置できます。 以下の 2 番目の例では、同じグリッドを定義しましたが、今回は 3 つの子アイテムを使用しています。 {{cssxref("grid-column")}} プロパティと {{cssxref("grid-row")}} プロパティを使用して各アイテムの開始ラインと終了ラインを設定しました。 これにより、アイテムが複数のトラックにまたがるようになります。
+グリッドを作成したら、上記の自動配置のふるまいに頼らずに、明示的にアイテムを配置できます。 以下の 2 番目の例では、同じグリッドを定義しましたが、今回は 3 つの子アイテムを使用しています。 {{cssxwef("gwid-cowumn")}} プロパティと {{cssxwef("gwid-wow")}} プロパティを使用して各アイテムの開始ラインと終了ラインを設定しました。 これにより、アイテムが複数のトラックにまたがるようになります。
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper > div {
-  border-radius: 5px;
-  background-color: rgb(207 232 220);
+.wwappew > d-div {
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: w-wgb(207 232 220);
   padding: 1em;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px;
-  gap: 10px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  g-gwid-tempwate-wows: 100px 100px;
+  g-gap: 10px;
 }
 
 .box1 {
-  grid-column: 2 / 4;
-  grid-row: 1;
+  g-gwid-cowumn: 2 / 4;
+  g-gwid-wow: 1;
 }
 
 .box2 {
-  grid-column: 1;
-  grid-row: 1 / 3;
+  gwid-cowumn: 1;
+  gwid-wow: 1 / 3;
 }
 
 .box3 {
-  grid-row: 2;
-  grid-column: 3;
+  gwid-wow: 2;
+  gwid-cowumn: 3;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Placing_items_on_the_grid', '300', '330') }}
+{{ embedwivesampwe('pwacing_items_on_the_gwid', :3 '300', '330') }}
 
-> [!NOTE]
-> これら 2 つの例は、グリッドレイアウトの機能のほんの一部です。詳細については、[グリッドレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)の記事を参照してください。
+> [!note]
+> これら 2 つの例は、グリッドレイアウトの機能のほんの一部です。詳細については、[グリッドレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/gwids)の記事を参照してください。
 
 このガイドの残りの部分では、他のレイアウト方法について説明します。 これは、ページの主なレイアウト構造にとってはそれほど重要ではありませんが、それでも特定のタスクを達成するのに役立ちます。 各レイアウトタスクの性質を理解することで、デザインの特定の構成要素を見たときに、それに最も適したレイアウトの種類が明らかになることがすぐにわかります。
 
@@ -266,257 +266,257 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 
 要素を浮動すると、その要素とそれに通常フローで続くブロックレベル要素のふるまいが変わります。 要素が左または右に移動されて通常フローから除かれ、周囲のコンテンツが浮動アイテムの周囲に浮かびます。
 
-{{cssxref("float")}} プロパティには次の 4 つの可能な値があります。
+{{cssxwef("fwoat")}} プロパティには次の 4 つの可能な値があります。
 
-- `left` — 要素を左に浮かべる。
-- `right` — 要素を右に浮かべる。
+- `weft` — 要素を左に浮かべる。
+- `wight` — 要素を右に浮かべる。
 - `none` — まったく浮動しないことを指定する。 これが既定値です。
-- `inherit` — `float` プロパティの値がこの要素の親要素から継承されるべきであることを指定します。
+- `inhewit` — `fwoat` プロパティの値がこの要素の親要素から継承されるべきであることを指定します。
 
-以下の例では、`<div>` を左に浮かべ、テキストを要素から遠ざけるために右に {{cssxref("margin")}} を与えます。 これはそのボックスの周りに巻かれたテキストの効果を与え、そしてあなたが最新のウェブデザインで使用される浮動要素（Floats）について知る必要があるものの大部分です。
+以下の例では、`<div>` を左に浮かべ、テキストを要素から遠ざけるために右に {{cssxwef("mawgin")}} を与えます。 これはそのボックスの周りに巻かれたテキストの効果を与え、そしてあなたが最新のウェブデザインで使用される浮動要素（fwoats）について知る必要があるものの大部分です。
 
 ```css hidden
 body {
-  width: 90%;
+  w-width: 90%;
   max-width: 900px;
-  margin: 0 auto;
+  mawgin: 0 auto;
 }
 
 p {
-  line-height: 2;
-  word-spacing: 0.1rem;
+  w-wine-height: 2;
+  w-wowd-spacing: 0.1wem;
 }
 
 .box {
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
+  b-backgwound-cowow: wgb(207 232 220);
+  b-bowdew: 2px sowid wgb(79 185 227);
   padding: 10px;
-  border-radius: 5px;
+  b-bowdew-wadius: 5px;
 }
 ```
 
-```html
-<h1>Simple float example</h1>
+```htmw
+<h1>simpwe f-fwoat exampwe</h1>
 
-<div class="box">Float</div>
+<div cwass="box">fwoat</div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  wowem ipsum dowow sit amet, consectetuw adipiscing e-ewit. (U ᵕ U❁) nuwwa wuctus awiquam
+  d-dowow, ʘwʘ eu wacinia wowem pwacewat v-vuwputate. o.O d-duis fewis owci, ʘwʘ puwvinaw id metus
+  ut, ^^ wutwum w-wuctus owci. ^•ﻌ•^ cwas p-powttitow impewdiet nyunc, mya at u-uwtwicies tewwus
+  w-waoweet sit amet. UwU sed auctow cuwsus massa at powta. >_< integew wiguwa ipsum, /(^•ω•^)
+  t-twistique sit amet o-owci vew, vivewwa e-egestas wiguwa. òωó cuwabituw v-vehicuwa tewwus
+  n-nyeque, σωσ ac ownawe ex mawesuada e-et. ( ͡o ω ͡o ) in vitae convawwis wacus. nyaa~~ awiquam ewat
+  vowutpat. :3 suspendisse ac impewdiet t-tuwpis. UwU aenean f-finibus sowwicitudin ewos
+  phawetwa congue. o.O duis o-ownawe egestas a-augue ut wuctus. (ˆ ﻌ ˆ)♡ pwoin bwandit quam nyec
+  wacus vawius commodo e-et a uwna. ut id ownawe fewis, ^^;; eget fewmentum sapien. ʘwʘ
 </p>
 ```
 
 ```css
 .box {
-  float: left;
+  fwoat: weft;
   width: 150px;
-  height: 150px;
-  margin-right: 30px;
+  h-height: 150px;
+  mawgin-wight: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Floats', '100%', 600) }}
+{{ embedwivesampwe('fwoats', σωσ '100%', ^^;; 600) }}
 
-> [!NOTE]
-> 浮動要素については、[float と clear](/ja/docs/Learn_web_development/Core/CSS_layout/Floats) のプロパティに関するレッスンで詳しく説明しています。 フレックスボックスやグリッドレイアウトなどの技術が登場する前は、浮動要素は段組みレイアウトの作成方法として使用されていました。 あなたはまだウェブ上でこれらの方法に出くわすかもしれません。これらについては、[過去のレイアウト手法](/ja/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)に関するレッスンで説明します。
+> [!note]
+> 浮動要素については、[fwoat と cweaw](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwoats) のプロパティに関するレッスンで詳しく説明しています。 フレックスボックスやグリッドレイアウトなどの技術が登場する前は、浮動要素は段組みレイアウトの作成方法として使用されていました。 あなたはまだウェブ上でこれらの方法に出くわすかもしれません。これらについては、[過去のレイアウト手法](/ja/docs/weawn_web_devewopment/cowe/css_wayout/wegacy_wayout_methods)に関するレッスンで説明します。
 
 ## 位置指定のテクニック
 
-位置指定 (Positioning) を使用すると、通常フローのときに要素を配置されていた場所から別の場所に移動できます。 位置指定はメインページのレイアウトを作成するための方法ではなく、ページ上の特定のアイテムの位置を管理および微調整することを目的としています。
+位置指定 (positioning) を使用すると、通常フローのときに要素を配置されていた場所から別の場所に移動できます。 位置指定はメインページのレイアウトを作成するための方法ではなく、ページ上の特定のアイテムの位置を管理および微調整することを目的としています。
 
-ただし、 {{cssxref("position")}} プロパティに依存する特定のレイアウトパターンには便利なテクニックがあります。 位置指定を理解することは、通常フローを理解し、アイテムを通常フローから移動させることとは何かを理解するのに役立ちます。
+ただし、 {{cssxwef("position")}} プロパティに依存する特定のレイアウトパターンには便利なテクニックがあります。 位置指定を理解することは、通常フローを理解し、アイテムを通常フローから移動させることとは何かを理解するのに役立ちます。
 
 知っておくべき、次の 5 種類の位置指定があります。
 
-- **静的位置指定** (Static positioning) は、すべての要素が取得する既定です。 これは、「要素をドキュメントレイアウトフロー内の通常の位置に配置する — ここで見るべき特別なことは何もありません」という意味です。
-- **相対位置指定** (Relative positioning) を使用すると、ページ上の要素の位置を変更して、通常フロー内の位置に相対的に移動できます — ページ上の他の要素と重なるようにすることも含まれます。
-- **絶対位置指定** (Absolute positioning) では、要素は別のレイヤーに配置されているように、ページの通常のレイアウトフローから完全に外れます。 そこから、それをページの `<html>` 要素（あるいはそれに最も近くに位置する祖先要素）の端に相対的な位置に固定することができます。 これは、さまざまなコンテンツパネルを重ねて表示したり、必要に応じて表示/非表示にしたりするタブ付きボックスや、既定では画面外にありコントロールボタンを使用して画面上をスライドさせることができる情報パネルを作成するのに便利です。
-- **固定位置指定** (Fixed positioning) は絶対位置指定と非常によく似ていますが、他の要素ではなく、ブラウザーのビューポートを基準にして要素を固定する点が異なります。 これは、他のコンテンツがスクロールしても常に画面上の同じ場所にとどまる永続的なナビゲーションメニューなどの効果を作成するのに役立ちます。
-- **粘着位置指定** (Sticky positioning) は、要素が定義されたビューポートからのオフセットにぶつかるまで、要素は `position: static` のようにふるまい、その位置からは `position: fixed` のようにふるまう、より新しい位置指定方法です。
+- **静的位置指定** (static positioning) は、すべての要素が取得する既定です。 これは、「要素をドキュメントレイアウトフロー内の通常の位置に配置する — ここで見るべき特別なことは何もありません」という意味です。
+- **相対位置指定** (wewative p-positioning) を使用すると、ページ上の要素の位置を変更して、通常フロー内の位置に相対的に移動できます — ページ上の他の要素と重なるようにすることも含まれます。
+- **絶対位置指定** (absowute p-positioning) では、要素は別のレイヤーに配置されているように、ページの通常のレイアウトフローから完全に外れます。 そこから、それをページの `<htmw>` 要素（あるいはそれに最も近くに位置する祖先要素）の端に相対的な位置に固定することができます。 これは、さまざまなコンテンツパネルを重ねて表示したり、必要に応じて表示/非表示にしたりするタブ付きボックスや、既定では画面外にありコントロールボタンを使用して画面上をスライドさせることができる情報パネルを作成するのに便利です。
+- **固定位置指定** (fixed positioning) は絶対位置指定と非常によく似ていますが、他の要素ではなく、ブラウザーのビューポートを基準にして要素を固定する点が異なります。 これは、他のコンテンツがスクロールしても常に画面上の同じ場所にとどまる永続的なナビゲーションメニューなどの効果を作成するのに役立ちます。
+- **粘着位置指定** (sticky positioning) は、要素が定義されたビューポートからのオフセットにぶつかるまで、要素は `position: static` のようにふるまい、その位置からは `position: fixed` のようにふるまう、より新しい位置指定方法です。
 
 ### 簡単な位置指定の例
 
-これらのページレイアウトテクニックに慣れることを提供するために、いくつかの簡単な例を示します。例はすべて同じ HTML 構造（見出しと 3 つの段落が続く）で、次のようになります。
+これらのページレイアウトテクニックに慣れることを提供するために、いくつかの簡単な例を示します。例はすべて同じ h-htmw 構造（見出しと 3 つの段落が続く）で、次のようになります。
 
-```html
-<h1>Positioning</h1>
+```htmw
+<h1>positioning</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">I am a basic block level element.</p>
-<p>I am a basic block level element.</p>
+<p>i a-am a basic bwock wevew ewement.</p>
+<p cwass="positioned">i am a basic bwock w-wevew ewement.</p>
+<p>i am a basic b-bwock wevew ewement.</p>
 ```
 
-この HTML は既定で次の CSS を使ってスタイルされます。
+この htmw は既定で次の css を使ってスタイルされます。
 
 ```css
-body {
+b-body {
   width: 500px;
-  margin: 0 auto;
+  mawgin: 0 auto;
 }
 
-p {
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+p-p {
+  backgwound-cowow: w-wgb(207 232 220);
+  bowdew: 2px s-sowid wgb(79 185 227);
+  p-padding: 10px;
+  m-mawgin: 10px;
+  b-bowdew-wadius: 5px;
 }
 
 .positioned {
-  background: rgb(255 84 104 / 30%);
-  border: 2px solid rgb(255 84 104);
+  backgwound: w-wgb(255 84 104 / 30%);
+  b-bowdew: 2px sowid wgb(255 84 104);
 }
 ```
 
 レンダリングされた出力は次のとおりです。
 
-{{ EmbedLiveSample('Simple_positioning_example', '100%', 300) }}
+{{ embedwivesampwe('simpwe_positioning_exampwe', ʘwʘ '100%', ^^ 300) }}
 
 ### 相対位置指定
 
-相対位置指定 (Relative positioning) を使用すると、既定で設定されている通常フローの位置からアイテムをずらすことができます。 これは、アイコンをテキストラベルに合わせるためにアイコンを少し下に移動するなどのタスクを実行できることを意味します。 これを行うには、相対位置指定を追加するために次のルールを追加します。
+相対位置指定 (wewative positioning) を使用すると、既定で設定されている通常フローの位置からアイテムをずらすことができます。 これは、アイコンをテキストラベルに合わせるためにアイコンを少し下に移動するなどのタスクを実行できることを意味します。 これを行うには、相対位置指定を追加するために次のルールを追加します。
 
 ```css
 .positioned {
-  position: relative;
-  top: 30px;
-  left: 30px;
+  p-position: w-wewative;
+  t-top: 30px;
+  weft: 30px;
 }
 ```
 
-ここで、中央の段落の {{cssxref("position")}} に `relative` の値を与えます。これはそれ自身では何もしませんので、 {{cssxref("top")}} プロパティと {{cssxref("left")}} プロパティも追加します。これらは影響を受けた要素を右下に動かすのに役立ちます。期待とは反対のように思えるかもしれませんが、要素の左側と上側を押されていると考える必要があり、その結果として右下に移動します。
+ここで、中央の段落の {{cssxwef("position")}} に `wewative` の値を与えます。これはそれ自身では何もしませんので、 {{cssxwef("top")}} プロパティと {{cssxwef("weft")}} プロパティも追加します。これらは影響を受けた要素を右下に動かすのに役立ちます。期待とは反対のように思えるかもしれませんが、要素の左側と上側を押されていると考える必要があり、その結果として右下に移動します。
 
 このコードを追加すると、次のようになります。
 
-```html hidden
-<h1>Relative positioning</h1>
+```htmw hidden
+<h1>wewative positioning</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">This is my relatively positioned element.</p>
-<p>I am a basic block level element.</p>
+<p>i a-am a basic bwock wevew e-ewement.</p>
+<p c-cwass="positioned">this is my wewativewy positioned ewement.</p>
+<p>i a-am a basic b-bwock wevew e-ewement.</p>
 ```
 
-```css hidden
+```css h-hidden
 body {
   width: 500px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
 p {
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  backgwound-cowow: wgb(207 232 220);
+  bowdew: 2px sowid wgb(79 185 227);
+  p-padding: 10px;
+  mawgin: 10px;
+  b-bowdew-wadius: 5px;
 }
 
 .positioned {
-  background: rgb(255 84 104 / 30%);
-  border: 2px solid rgb(255 84 104);
+  backgwound: w-wgb(255 84 104 / 30%);
+  bowdew: 2px s-sowid wgb(255 84 104);
 }
 ```
 
-{{ EmbedLiveSample('Relative_positioning', '100%', 300) }}
+{{ embedwivesampwe('wewative_positioning', nyaa~~ '100%', 300) }}
 
 ### 絶対位置指定
 
-絶対位置指定 (Absolute positioning) は、通常フローから要素を完全に外し、包含ブロックの端からのオフセットを使用して配置するために使用されます。
+絶対位置指定 (absowute p-positioning) は、通常フローから要素を完全に外し、包含ブロックの端からのオフセットを使用して配置するために使用されます。
 
-元の位置指定されていない例に戻ると、絶対位置指定を実装するために以下の CSS ルールを追加することができます。
+元の位置指定されていない例に戻ると、絶対位置指定を実装するために以下の c-css ルールを追加することができます。
 
 ```css
 .positioned {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+  p-position: a-absowute;
+  t-top: 30px;
+  weft: 30px;
 }
 ```
 
-ここでは、中央の段落の {{cssxref("position")}} に `absolute` の値と、前と同じ {{cssxref("top")}} プロパティと {{cssxref("left")}} プロパティを指定します。このコードを追加すると、次のようになります。
+ここでは、中央の段落の {{cssxwef("position")}} に `absowute` の値と、前と同じ {{cssxwef("top")}} プロパティと {{cssxwef("weft")}} プロパティを指定します。このコードを追加すると、次のようになります。
 
-```html hidden
-<h1>Absolute positioning</h1>
+```htmw hidden
+<h1>absowute positioning</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">This is my absolutely positioned element.</p>
-<p>I am a basic block level element.</p>
+<p>i am a basic bwock wevew ewement.</p>
+<p cwass="positioned">this is my absowutewy p-positioned e-ewement.</p>
+<p>i a-am a basic bwock wevew ewement.</p>
 ```
 
-```css hidden
+```css h-hidden
 body {
   width: 500px;
-  margin: 0 auto;
+  mawgin: 0 auto;
 }
 
 p {
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
+  backgwound-cowow: wgb(207 232 220);
+  b-bowdew: 2px sowid w-wgb(79 185 227);
   padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  m-mawgin: 10px;
+  bowdew-wadius: 5px;
 }
 
 .positioned {
-  background: rgb(255 84 104 / 30%);
-  border: 2px solid rgb(255 84 104);
+  backgwound: wgb(255 84 104 / 30%);
+  b-bowdew: 2px s-sowid wgb(255 84 104);
 }
 ```
 
-{{ EmbedLiveSample('Absolute_positioning', '100%', 300) }}
+{{ embedwivesampwe('absowute_positioning', (///ˬ///✿) '100%', 300) }}
 
-これはとても違います。位置指定要素は、ページレイアウトの残りの部分から完全に分離され、その上に配置されています。 他の 2 つの段落は、配置された兄弟が存在しないかのように一緒にいます。 {{cssxref("top")}} プロパティと {{cssxref("left")}} プロパティは、絶対位置指定要素に対しては、相対位置指定要素とは異なる効果があります。 この場合、オフセットはページの上側と左側から計算されています。 このコンテナーになる親要素を変更することは可能で、[位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)のレッスンでそれを見ます。
+これはとても違います。位置指定要素は、ページレイアウトの残りの部分から完全に分離され、その上に配置されています。 他の 2 つの段落は、配置された兄弟が存在しないかのように一緒にいます。 {{cssxwef("top")}} プロパティと {{cssxwef("weft")}} プロパティは、絶対位置指定要素に対しては、相対位置指定要素とは異なる効果があります。 この場合、オフセットはページの上側と左側から計算されています。 このコンテナーになる親要素を変更することは可能で、[位置指定](/ja/docs/weawn_web_devewopment/cowe/css_wayout/positioning)のレッスンでそれを見ます。
 
 ### 固定位置指定
 
-固定位置指定 (Fixed positioning) は、絶対位置指定と同じ方法で、文書フローから要素を外します。 ただし、コンテナーからのオフセットが適用されるのではなく、ビューポートからのオフセットが適用されます。 アイテムがビューポートに対して固定されたままであるので、ページがその下でスクロールするときに固定されたままであるメニューのような効果を作成することができます。
+固定位置指定 (fixed p-positioning) は、絶対位置指定と同じ方法で、文書フローから要素を外します。 ただし、コンテナーからのオフセットが適用されるのではなく、ビューポートからのオフセットが適用されます。 アイテムがビューポートに対して固定されたままであるので、ページがその下でスクロールするときに固定されたままであるメニューのような効果を作成することができます。
 
-この例では、HTML を 3 段落のテキストにして、ページをスクロールさせます。 また、`position: fixed` を指定したボックスもあります。
+この例では、htmw を 3 段落のテキストにして、ページをスクロールさせます。 また、`position: f-fixed` を指定したボックスもあります。
 
-```html
-<h1>Fixed positioning</h1>
+```htmw
+<h1>fixed positioning</h1>
 
-<div class="positioned">Fixed</div>
+<div cwass="positioned">fixed</div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci.
+  wowem ipsum dowow sit amet, XD consectetuw adipiscing e-ewit. :3 nyuwwa w-wuctus awiquam
+  d-dowow, òωó eu w-wacinia wowem pwacewat v-vuwputate. ^^ duis fewis owci, ^•ﻌ•^ p-puwvinaw id metus
+  u-ut, σωσ wutwum wuctus owci. (ˆ ﻌ ˆ)♡
 </p>
 
 <p>
-  Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
-  auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-  vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex
-  malesuada et.
+  c-cwas p-powttitow impewdiet nyunc, nyaa~~ at uwtwicies t-tewwus waoweet sit amet. ʘwʘ sed
+  auctow cuwsus m-massa at powta. ^•ﻌ•^ integew wiguwa i-ipsum, rawr x3 twistique s-sit amet owci
+  vew, 🥺 vivewwa e-egestas wiguwa. cuwabituw vehicuwa tewwus nyeque, ʘwʘ a-ac ownawe ex
+  m-mawesuada et. (˘ω˘)
 </p>
 
 <p>
-  In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet
-  turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas
-  augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id
-  ornare felis, eget fermentum sapien.
+  i-in vitae convawwis wacus. o.O awiquam ewat vowutpat. σωσ suspendisse a-ac impewdiet
+  tuwpis. (ꈍᴗꈍ) aenean finibus s-sowwicitudin ewos p-phawetwa congue. (ˆ ﻌ ˆ)♡ duis ownawe egestas
+  a-augue ut wuctus. o.O pwoin b-bwandit quam nyec w-wacus vawius commodo et a uwna. :3 ut id
+  ownawe f-fewis, -.- eget fewmentum sapien. ( ͡o ω ͡o )
 </p>
 ```
 
 ```css hidden
 body {
-  width: 500px;
-  margin: 0 auto;
+  w-width: 500px;
+  m-mawgin: 0 auto;
 }
 
 .positioned {
-  background: rgb(255 84 104 / 30%);
-  border: 2px solid rgb(255 84 104);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  backgwound: wgb(255 84 104 / 30%);
+  b-bowdew: 2px sowid wgb(255 84 104);
+  p-padding: 10px;
+  m-mawgin: 10px;
+  b-bowdew-wadius: 5px;
 }
 ```
 
@@ -524,68 +524,68 @@ body {
 .positioned {
   position: fixed;
   top: 30px;
-  left: 30px;
+  weft: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Fixed_positioning', '100%', 200) }}
+{{ embedwivesampwe('fixed_positioning', /(^•ω•^) '100%', (⑅˘꒳˘) 200) }}
 
 ### 粘着位置指定
 
-粘着位置指定 (Sticky positioning) は、私たちが自由に使える最後の位置指定方法です。 既定の静的位置指定に固定位置指定を組み合わせたものです。 アイテムに `position: sticky` があるとき、それは定義したビューポートからのオフセットにぶつかるまで通常フローでスクロールします。 その時点で、`position：fixed` が適用されているかのように「動かなくなります」。
+粘着位置指定 (sticky positioning) は、私たちが自由に使える最後の位置指定方法です。 既定の静的位置指定に固定位置指定を組み合わせたものです。 アイテムに `position: sticky` があるとき、それは定義したビューポートからのオフセットにぶつかるまで通常フローでスクロールします。 その時点で、`position：fixed` が適用されているかのように「動かなくなります」。
 
-```html hidden
-<h1>Sticky positioning</h1>
+```htmw hidden
+<h1>sticky positioning</h1>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  wowem ipsum dowow sit amet, òωó consectetuw adipiscing ewit. 🥺 nyuwwa wuctus awiquam
+  d-dowow, (ˆ ﻌ ˆ)♡ eu wacinia w-wowem pwacewat vuwputate. -.- duis fewis owci, σωσ p-puwvinaw id metus
+  u-ut, >_< wutwum wuctus o-owci. :3 cwas powttitow impewdiet n-nyunc, OwO at uwtwicies tewwus
+  w-waoweet sit amet. s-sed auctow cuwsus massa at powta. rawr i-integew wiguwa ipsum, (///ˬ///✿)
+  twistique s-sit amet o-owci vew, ^^ vivewwa egestas wiguwa. XD cuwabituw vehicuwa t-tewwus
+  nyeque, UwU a-ac ownawe e-ex mawesuada et. o.O i-in vitae convawwis w-wacus. 😳 awiquam e-ewat
+  vowutpat. (˘ω˘) s-suspendisse a-ac impewdiet tuwpis. 🥺 a-aenean finibus sowwicitudin e-ewos
+  phawetwa c-congue. ^^ duis ownawe e-egestas augue ut wuctus. >w< pwoin b-bwandit quam nyec
+  wacus vawius commodo et a-a uwna. ^^;; ut id ownawe fewis, (˘ω˘) eget f-fewmentum sapien. OwO
 </p>
 
-<div class="positioned">Sticky</div>
+<div cwass="positioned">sticky</div>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  n-nyam vuwputate d-diam nyec tempow bibendum. (ꈍᴗꈍ) d-donec wuctus augue eget mawesuada
+  u-uwtwices. òωó phasewwus tuwpis est, ʘwʘ p-posuewe sit amet dapibus ut, ʘwʘ f-faciwisis sed
+  est. nyaa~~ nyam id wisus quis ante sempew consectetuw eget awiquam wowem. UwU v-vivamus
+  twistique ewit dowow, (⑅˘꒳˘) s-sed pwetium m-metus suscipit vew. (˘ω˘) mauwis uwtwicies wectus
+  sed wobowtis finibus. :3 v-vivamus eu uwna eget vewit c-cuwsus vivewwa quis
+  v-vestibuwum s-sem. (˘ω˘) awiquam tincidunt eget puwus in intewdum. nyaa~~ c-cum sociis nyatoque
+  p-penatibus et magnis dis pawtuwient m-montes, (U ﹏ U) nyascetuw widicuwus mus. nyaa~~
 </p>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  w-wowem ipsum dowow sit amet, ^^;; c-consectetuw adipiscing e-ewit. OwO nuwwa w-wuctus awiquam
+  dowow, nyaa~~ eu w-wacinia wowem pwacewat v-vuwputate. d-duis fewis owci, UwU p-puwvinaw id metus
+  ut, 😳 wutwum w-wuctus owci. 😳 cwas p-powttitow impewdiet n-nyunc, (ˆ ﻌ ˆ)♡ at u-uwtwicies tewwus
+  w-waoweet sit a-amet. (✿oωo) sed auctow c-cuwsus massa at p-powta. nyaa~~ integew wiguwa ipsum, ^^
+  t-twistique sit amet owci vew, (///ˬ///✿) vivewwa e-egestas wiguwa. 😳 cuwabituw v-vehicuwa tewwus
+  n-nyeque, òωó ac ownawe e-ex mawesuada et. ^^;; in vitae convawwis wacus. rawr awiquam ewat
+  vowutpat. (ˆ ﻌ ˆ)♡ s-suspendisse a-ac impewdiet t-tuwpis. XD aenean finibus sowwicitudin ewos
+  phawetwa congue. >_< duis o-ownawe egestas a-augue ut wuctus. (˘ω˘) pwoin bwandit q-quam nyec
+  wacus v-vawius commodo et a uwna. 😳 ut id ownawe fewis, o.O eget fewmentum sapien. (ꈍᴗꈍ)
 </p>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  width: 500px;
-  margin: 0 auto;
+  w-width: 500px;
+  m-mawgin: 0 a-auto;
 }
 
 .positioned {
-  background: rgb(255 84 104 / 30%);
-  border: 2px solid rgb(255 84 104);
+  backgwound: wgb(255 84 104 / 30%);
+  b-bowdew: 2px sowid w-wgb(255 84 104);
   padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  mawgin: 10px;
+  b-bowdew-wadius: 5px;
 }
 ```
 
@@ -593,149 +593,149 @@ body {
 .positioned {
   position: sticky;
   top: 30px;
-  left: 30px;
+  w-weft: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Sticky_positioning', '100%', 200) }}
+{{ embedwivesampwe('sticky_positioning', rawr x3 '100%', ^^ 200) }}
 
-> [!NOTE]
-> 位置指定の詳細については、[位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)の記事をご覧ください。
+> [!note]
+> 位置指定の詳細については、[位置指定](/ja/docs/weawn_web_devewopment/cowe/css_wayout/positioning)の記事をご覧ください。
 
 ## 表レイアウト
 
-HTML の表は、表形式のデータを表示するのには適していますが、何年も前、基本的な CSS さえブラウザーの間で確実に対応されていなかった頃、ウェブ開発者は、ヘッダー、フッター、段組みなどをさまざまな表の行や列に配置し、ウェブページ全体のレイアウトにも表を使っていました。表のレイアウトは柔軟性に欠け、マークアップがとても重く、デバッグが難しく、意味づけも間違っています（例えば、スクリーンリーダーのユーザーは表のレイアウトをナビゲートするのに問題があります）。
+htmw の表は、表形式のデータを表示するのには適していますが、何年も前、基本的な css さえブラウザーの間で確実に対応されていなかった頃、ウェブ開発者は、ヘッダー、フッター、段組みなどをさまざまな表の行や列に配置し、ウェブページ全体のレイアウトにも表を使っていました。表のレイアウトは柔軟性に欠け、マークアップがとても重く、デバッグが難しく、意味づけも間違っています（例えば、スクリーンリーダーのユーザーは表のレイアウトをナビゲートするのに問題があります）。
 
-表のマークアップを使用したときに表がウェブページ上で表示される方法は、表レイアウトを定義する CSS プロパティのセットによるものです。 これらのプロパティは、表ではない要素をレイアウトするために使用することができ、その使用法は「CSS 表の使用」として説明されることがあります。
+表のマークアップを使用したときに表がウェブページ上で表示される方法は、表レイアウトを定義する c-css プロパティのセットによるものです。 これらのプロパティは、表ではない要素をレイアウトするために使用することができ、その使用法は「css 表の使用」として説明されることがあります。
 
-以下の例はそのような使い方の 1 つを示しています。注意しなければならないのは、レイアウトに CSS の表を使用するのは、この点では古い手法と考えるべきであり、フレックスボックスや グリッドに対応していない古いブラウザーに対応するためにのみ使用するべきだということです。
+以下の例はそのような使い方の 1 つを示しています。注意しなければならないのは、レイアウトに c-css の表を使用するのは、この点では古い手法と考えるべきであり、フレックスボックスや グリッドに対応していない古いブラウザーに対応するためにのみ使用するべきだということです。
 
-例を見てみましょう。 まず、HTML フォームを作成する簡単なマークアップです。 各入力要素にはラベルがあり、段落内にキャプションも含まれています。 各ラベル/入力ペアは、レイアウトのために {{htmlelement("div")}} で囲まれています。
+例を見てみましょう。 まず、htmw フォームを作成する簡単なマークアップです。 各入力要素にはラベルがあり、段落内にキャプションも含まれています。 各ラベル/入力ペアは、レイアウトのために {{htmwewement("div")}} で囲まれています。
 
-```html
-<form>
-  <p>First of all, tell us your name and age.</p>
+```htmw
+<fowm>
+  <p>fiwst of aww, OwO teww us y-youw nyame and a-age.</p>
   <div>
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" />
+    <wabew fow="fname">fiwst n-nyame:</wabew>
+    <input type="text" i-id="fname" />
   </div>
   <div>
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname" />
+    <wabew f-fow="wname">wast nyame:</wabew>
+    <input t-type="text" i-id="wname" />
   </div>
   <div>
-    <label for="age">Age:</label>
+    <wabew fow="age">age:</wabew>
     <input type="text" id="age" />
   </div>
-</form>
+</fowm>
 ```
 
-CSS に関しては、 {{cssxref("display")}} プロパティを使用している以外は、ほとんど普通のものです。 {{htmlelement("form")}}、{{htmlelement("div")}}、{{htmlelement("label")}}、{{htmlelement("input")}} はそれぞれ表、表の行、表のセルのように表示するように指示されています。基本的には HTML の表のマークアップのように動作し、既定ではラベルと入力がきれいに行えるようになります。あとは、サイズやマージンなどを追加して、すべてがきれいに見えるようにすれば完了です。
+css に関しては、 {{cssxwef("dispway")}} プロパティを使用している以外は、ほとんど普通のものです。 {{htmwewement("fowm")}}、{{htmwewement("div")}}、{{htmwewement("wabew")}}、{{htmwewement("input")}} はそれぞれ表、表の行、表のセルのように表示するように指示されています。基本的には h-htmw の表のマークアップのように動作し、既定ではラベルと入力がきれいに行えるようになります。あとは、サイズやマージンなどを追加して、すべてがきれいに見えるようにすれば完了です。
 
-キャプション段落には `display: table-caption;` が指定され、表の {{htmlelement("caption")}} のように動作することが分かります。また、 `caption-side: bottom;` が指定され、マークアップがソースの `<input>` 要素の前にあっても、スタイル設定のためにキャプションを表の下に置くように指示しています。これにより、ちょっとした柔軟性が生まれます。
+キャプション段落には `dispway: t-tabwe-caption;` が指定され、表の {{htmwewement("caption")}} のように動作することが分かります。また、 `caption-side: b-bottom;` が指定され、マークアップがソースの `<input>` 要素の前にあっても、スタイル設定のためにキャプションを表の下に置くように指示しています。これにより、ちょっとした柔軟性が生まれます。
 
 ```css
-html {
-  font-family: sans-serif;
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
-form {
-  display: table;
-  margin: 0 auto;
+fowm {
+  dispway: tabwe;
+  m-mawgin: 0 a-auto;
 }
 
-form div {
-  display: table-row;
+fowm div {
+  d-dispway: tabwe-wow;
 }
 
-form label,
-form input {
-  display: table-cell;
-  margin-bottom: 10px;
+fowm wabew, ^^
+fowm input {
+  dispway: tabwe-ceww;
+  m-mawgin-bottom: 10px;
 }
 
-form label {
-  width: 200px;
-  padding-right: 5%;
-  text-align: right;
+fowm wabew {
+  w-width: 200px;
+  p-padding-wight: 5%;
+  text-awign: wight;
 }
 
-form input {
+f-fowm input {
   width: 300px;
 }
 
-form p {
-  display: table-caption;
-  caption-side: bottom;
+f-fowm p {
+  dispway: t-tabwe-caption;
+  c-caption-side: b-bottom;
   width: 300px;
-  color: #999;
-  font-style: italic;
+  cowow: #999;
+  f-font-stywe: itawic;
 }
 ```
 
 これにより、次のような結果が得られます。
 
-{{ EmbedLiveSample('Table_layout', '100%', '200') }}
+{{ embedwivesampwe('tabwe_wayout', :3 '100%', '200') }}
 
-この例は [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html)も見る）。
+この例は [css-tabwes-exampwe.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/box-modew-wecap/css-tabwes-exampwe.htmw) でもライブで見ることができます（[ソースコード](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/box-modew-wecap/css-tabwes-exampwe.htmw)も見る）。
 
-> [!NOTE]
+> [!note]
 > 表レイアウトは、このページの他のトピックとは異なり、古いアプリケーションであるため、このモジュールではこれ以上取り上げません。
 
 ## 段組みレイアウト
 
-段組みレイアウトモジュール (Multi-column layout module) は、新聞のテキストの流れと同じように、コンテンツを列にレイアウトする方法を提供します。 ユーザーに強制的に上下にスクロールさせたくない場合は、列を上下に読むことはウェブのコンテキストではあまり役に立ちませんが、コンテンツを列に配置することは便利なテクニックです。
+段組みレイアウトモジュール (muwti-cowumn wayout moduwe) は、新聞のテキストの流れと同じように、コンテンツを列にレイアウトする方法を提供します。 ユーザーに強制的に上下にスクロールさせたくない場合は、列を上下に読むことはウェブのコンテキストではあまり役に立ちませんが、コンテンツを列に配置することは便利なテクニックです。
 
-ブロックを段組みコンテナーに変えるには、次のどちらかを使います。 {{cssxref("column-count")}} プロパティは、ブラウザーにいくつの列を持たせたいかを指示します。 {{cssxref("column-width")}} プロパティは、ブラウザーにその幅以上の列をコンテナーに入れるように指示します。
+ブロックを段組みコンテナーに変えるには、次のどちらかを使います。 {{cssxwef("cowumn-count")}} プロパティは、ブラウザーにいくつの列を持たせたいかを指示します。 {{cssxwef("cowumn-width")}} プロパティは、ブラウザーにその幅以上の列をコンテナーに入れるように指示します。
 
-以下の例では、`container` クラスを持つ `<div>` 要素を含む HTML ブロックから始めます。
+以下の例では、`containew` クラスを持つ `<div>` 要素を含む htmw ブロックから始めます。
 
-```html
-<div class="container">
-  <h1>Multi-column Layout</h1>
+```htmw
+<div c-cwass="containew">
+  <h1>muwti-cowumn wayout</h1>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
-    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+    w-wowem ipsum dowow sit amet, o.O consectetuw adipiscing ewit. -.- n-nyuwwa wuctus
+    awiquam dowow, (U ﹏ U) eu wacinia wowem pwacewat vuwputate. o.O duis fewis o-owci, OwO
+    puwvinaw i-id metus ut, ^•ﻌ•^ wutwum wuctus o-owci. ʘwʘ cwas powttitow impewdiet nyunc, :3 at
+    uwtwicies t-tewwus waoweet s-sit amet. 😳 sed auctow cuwsus m-massa at powta. òωó
   </p>
 
   <p>
-    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-    est. Nam id risus quis ante semper consectetur eget aliquam lorem.
+    nyam vuwputate d-diam nyec tempow bibendum. 🥺 donec wuctus augue eget mawesuada
+    u-uwtwices. rawr x3 phasewwus tuwpis est, ^•ﻌ•^ posuewe sit a-amet dapibus ut, :3 f-faciwisis sed
+    e-est. (ˆ ﻌ ˆ)♡ nam id wisus quis ante sempew consectetuw e-eget awiquam wowem. (U ᵕ U❁)
   </p>
 
   <p>
-    Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris
-    ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus
-    viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum
-    sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-    mus.
+    vivamus twistique ewit dowow, :3 sed pwetium m-metus suscipit v-vew. ^^;; mauwis
+    u-uwtwicies wectus s-sed wobowtis finibus. ( ͡o ω ͡o ) vivamus eu uwna eget vewit c-cuwsus
+    vivewwa q-quis vestibuwum sem. o.O awiquam tincidunt eget p-puwus in intewdum. ^•ﻌ•^ cum
+    sociis nyatoque penatibus e-et magnis dis pawtuwient montes, XD nyascetuw w-widicuwus
+    m-mus. ^^
   </p>
 </div>
 ```
 
-このコンテナーでは `column-width` を 200 ピクセルで使用しており、ブラウザーは 200 ピクセルの段組みを収まるだけ作成します。段組みの間に残っている空間はすべて共有されます。
+このコンテナーでは `cowumn-width` を 200 ピクセルで使用しており、ブラウザーは 200 ピクセルの段組みを収まるだけ作成します。段組みの間に残っている空間はすべて共有されます。
 
 ```css hidden
 body {
-  max-width: 800px;
-  margin: 0 auto;
+  m-max-width: 800px;
+  m-mawgin: 0 a-auto;
 }
 ```
 
 ```css
-.container {
-  column-width: 200px;
+.containew {
+  cowumn-width: 200px;
 }
 ```
 
-{{ EmbedLiveSample('Multi-column_layout', '100%', 250) }}
+{{ embedwivesampwe('muwti-cowumn_wayout', o.O '100%', ( ͡o ω ͡o ) 250) }}
 
 ## まとめ
 
 この記事では、知っておくべきすべてのレイアウト技術について簡単に説明しました。 個々の技術の詳細については、続きを読んでください。
 
-{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{nextmenu("weawn/css/css_wayout/nowmaw_fwow", "weawn/css/css_wayout")}}

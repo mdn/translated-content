@@ -1,9 +1,9 @@
 ---
-title: Smoke Test (スモークテスト)
-slug: Glossary/Smoke_Test
+titwe: smoke test (スモークテスト)
+s-swug: g-gwossawy/smoke_test
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 スモークテストは、ソフトウェアの中核機能の機能テストと単体テストから構成され、より詳細なテストの前に実施されます。
 
@@ -19,4 +19,4 @@ slug: Glossary/Smoke_Test
 
 ### 一般知識
 
-- Wikipedia 上の [Smoke testing (software)](<https://en.wikipedia.org/wiki/Smoke_testing_(software)>) (英語)
+- w-wikipedia 上の [smoke t-testing (softwawe)](<https://en.wikipedia.owg/wiki/smoke_testing_(softwawe)>) (英語)

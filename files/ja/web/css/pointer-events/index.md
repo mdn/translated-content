@@ -1,49 +1,49 @@
 ---
-title: pointer-events
-slug: Web/CSS/pointer-events
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: pointew-events
+swug: web/css/pointew-events
+w-w10n:
+  souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`pointer-events`** は [CSS](/ja/docs/Web/CSS) のプロパティで、特定のグラフィック要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になる可能性のある環境（存在する場合）を設定します。
+**`pointew-events`** は [css](/ja/docs/web/css) のプロパティで、特定のグラフィック要素がポインターイベントの[対象](/ja/docs/web/api/event/tawget)になる可能性のある環境（存在する場合）を設定します。
 
-{{InteractiveExample("CSS Demo: pointer-events")}}
+{{intewactiveexampwe("css d-demo: pointew-events")}}
 
-```css interactive-example-choice
-pointer-events: auto;
+```css i-intewactive-exampwe-choice
+p-pointew-events: a-auto;
 ```
 
-```css interactive-example-choice
-pointer-events: none;
+```css i-intewactive-exampwe-choice
+p-pointew-events: nyone;
 ```
 
-```css interactive-example-choice
-pointer-events: stroke; /* SVG-only */
+```css intewactive-exampwe-choice
+pointew-events: stwoke; /* s-svg-onwy */
 ```
 
-```css interactive-example-choice
-pointer-events: fill; /* SVG-only */
+```css intewactive-exampwe-choice
+pointew-events: f-fiww; /* svg-onwy */
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element">
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      <a href="#">example link</a>
+      <a h-hwef="#">exampwe wink</a>
     </p>
     <p>
-      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <a xlink:href="#">
-          <circle
+      <svg viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+        <a x-xwink:hwef="#">
+          <ciwcwe
             cx="50"
             cy="50"
-            fill="#3E6E84"
-            r="40"
-            stroke="#ffb500"
-            stroke-width="5"></circle>
-          <text fill="white" text-anchor="middle" x="50" y="55">SVG</text>
+            fiww="#3e6e84"
+            w="40"
+            stwoke="#ffb500"
+            s-stwoke-width="5"></ciwcwe>
+          <text fiww="white" text-anchow="middwe" x="50" y="55">svg</text>
         </a>
       </svg>
     </p>
@@ -51,18 +51,18 @@ pointer-events: fill; /* SVG-only */
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  font-weight: bold;
+```css intewactive-exampwe
+#exampwe-ewement {
+  f-font-weight: bowd;
 }
 
-#example-element a {
-  color: #009e5f;
+#exampwe-ewement a-a {
+  cowow: #009e5f;
 }
 
-#example-element svg {
-  width: 10em;
-  height: 10em;
+#exampwe-ewement s-svg {
+  w-width: 10em;
+  h-height: 10em;
 }
 ```
 
@@ -70,70 +70,70 @@ pointer-events: fill; /* SVG-only */
 
 ```css
 /* キーワード値 */
-pointer-events: auto;
-pointer-events: none;
+pointew-events: auto;
+pointew-events: n-nyone;
 
-/* SVG で使われる値 */
-pointer-events: visiblePainted;
-pointer-events: visibleFill;
-pointer-events: visibleStroke;
-pointer-events: visible;
-pointer-events: painted;
-pointer-events: fill;
-pointer-events: stroke;
-pointer-events: bounding-box;
-pointer-events: all;
+/* svg で使われる値 */
+pointew-events: visibwepainted;
+pointew-events: visibwefiww;
+pointew-events: v-visibwestwoke;
+pointew-events: visibwe;
+pointew-events: painted;
+pointew-events: fiww;
+p-pointew-events: stwoke;
+pointew-events: b-bounding-box;
+p-pointew-events: a-aww;
 
 /* グローバル値 */
-pointer-events: inherit;
-pointer-events: initial;
-pointer-events: revert;
-pointer-events: revert-layer;
-pointer-events: unset;
+pointew-events: inhewit;
+pointew-events: i-initiaw;
+pointew-events: w-wevewt;
+pointew-events: w-wevewt-wayew;
+p-pointew-events: unset;
 ```
 
-`pointer-events` プロパティは、以下の値の一覧から選択した単一のキーワードとして指定します。
+`pointew-events` プロパティは、以下の値の一覧から選択した単一のキーワードとして指定します。
 
 ### 値
 
 - `auto`
-  - : 要素は、 `pointer-events` プロパティが指定されていないときと同様にふるまいます。SVG コンテンツ内では `visiblePainted` を指定したときと同じ効果になります。
+  - : 要素は、 `pointew-events` プロパティが指定されていないときと同様にふるまいます。svg コンテンツ内では `visibwepainted` を指定したときと同じ効果になります。
 - `none`
 
-  - : 要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になることはありません。しかし、子孫要素が `pointer-events` の別の値をセットされていた場合は、その子孫要素自体はポインターイベントのターゲットとなりえます。その場合、ポインターイベントはイベントキャプチャ/[バブリング](/ja/docs/Web/API/Event/bubbles)の過程で必要に応じて親要素のイベントリスナーをトリガーします。
+  - : 要素がポインターイベントの[対象](/ja/docs/web/api/event/tawget)になることはありません。しかし、子孫要素が `pointew-events` の別の値をセットされていた場合は、その子孫要素自体はポインターイベントのターゲットとなりえます。その場合、ポインターイベントはイベントキャプチャ/[バブリング](/ja/docs/web/api/event/bubbwes)の過程で必要に応じて親要素のイベントリスナーをトリガーします。
 
-    > **メモ:** `pointerenter` イベントと `pointerleave` イベントは、ポインティングデバイスが要素またはその子孫の 1 つに移動されたときに発行されます。そのため、 `pointer-events: none` が親要素に設定され、子要素に設定されていない場合でも、ポインターが子要素に移動したり、子要素から離れたりすると、親要素でイベントが発生します。
+    > **メモ:** `pointewentew` イベントと `pointewweave` イベントは、ポインティングデバイスが要素またはその子孫の 1 つに移動されたときに発行されます。そのため、 `pointew-events: n-nyone` が親要素に設定され、子要素に設定されていない場合でも、ポインターが子要素に移動したり、子要素から離れたりすると、親要素でイベントが発生します。
 
-#### SVG のみ（HTML では実験的）
+#### svg のみ（htmw では実験的）
 
-- `visiblePainted`
-  - : SVG の場合のみ（HTML では実験的）の値です。要素の `visibility` プロパティに `visible` が設定されていて、かつ、例えば `fill` プロパティに `none` 以外の値が設定されている時の塗り (`fill`)、もしくは `stroke` プロパティが `none` 以外の時の線 (`stroke`) の上にマウスカーソルがある場合のみ、要素がポインターイベントのターゲットになりえます。
-- `visibleFill`
-  - : SVG の場合のみの値です。 `visibility` プロパティが `visible` にセットされていて、塗り (`fill`) の上にマウスカーソルがある場合にのみ、要素がポインターイベントのターゲットになりえます。 `fill` プロパティの値でイベント処理が変化することはありません。
-- `visibleStroke`
-  - : SVG の場合のみの値です。 `visibility` プロパティが `visible` にセットされていて、線 (`stroke`) の上にマウスカーソルがある場合にのみ、要素がポインターイベントのターゲットになりえます。 `stroke` プロパティの値でイベント処理が変化することはありません。
-- `visible`
-  - : SVG の場合のみ（HTML では実験的）の値です。 `visibility` プロパティが `visible` にセットされていて、塗り (`fill`) か線 (`stroke`) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fill` プロパティや `stroke` プロパティの値でイベント処理が変化することはありません。
+- `visibwepainted`
+  - : svg の場合のみ（htmw では実験的）の値です。要素の `visibiwity` プロパティに `visibwe` が設定されていて、かつ、例えば `fiww` プロパティに `none` 以外の値が設定されている時の塗り (`fiww`)、もしくは `stwoke` プロパティが `none` 以外の時の線 (`stwoke`) の上にマウスカーソルがある場合のみ、要素がポインターイベントのターゲットになりえます。
+- `visibwefiww`
+  - : s-svg の場合のみの値です。 `visibiwity` プロパティが `visibwe` にセットされていて、塗り (`fiww`) の上にマウスカーソルがある場合にのみ、要素がポインターイベントのターゲットになりえます。 `fiww` プロパティの値でイベント処理が変化することはありません。
+- `visibwestwoke`
+  - : svg の場合のみの値です。 `visibiwity` プロパティが `visibwe` にセットされていて、線 (`stwoke`) の上にマウスカーソルがある場合にのみ、要素がポインターイベントのターゲットになりえます。 `stwoke` プロパティの値でイベント処理が変化することはありません。
+- `visibwe`
+  - : svg の場合のみ（htmw では実験的）の値です。 `visibiwity` プロパティが `visibwe` にセットされていて、塗り (`fiww`) か線 (`stwoke`) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fiww` プロパティや `stwoke` プロパティの値でイベント処理が変化することはありません。
 - `painted`
-  - : SVG の場合のみ（HTML では実験的）の値です。 `fill` プロパティが `none` 以外にセットされている塗りの（すなわち `fill` ）要素、もしくは `stroke` のプロパティが `none` 以外にセットされている線の（すなわち `stroke` ）要素の上にマウスカーソルがいる場合にのみ要素がポインターイベントのターゲットになりえます。 `visibility` プロパティの値はイベントプロセスに影響を与えません。
-- `fill`
-  - : SVG の場合のみの値です。塗り (fill) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fill` プロパティや `visibility` プロパティの値でイベント処理が変化することはありません。
-- `stroke`
-  - : SVG の場合のみの値です。線 (stroke) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `stroke` プロパティや `visibility` の値でイベント処理が変化することはありません。
+  - : s-svg の場合のみ（htmw では実験的）の値です。 `fiww` プロパティが `none` 以外にセットされている塗りの（すなわち `fiww` ）要素、もしくは `stwoke` のプロパティが `none` 以外にセットされている線の（すなわち `stwoke` ）要素の上にマウスカーソルがいる場合にのみ要素がポインターイベントのターゲットになりえます。 `visibiwity` プロパティの値はイベントプロセスに影響を与えません。
+- `fiww`
+  - : svg の場合のみの値です。塗り (fiww) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fiww` プロパティや `visibiwity` プロパティの値でイベント処理が変化することはありません。
+- `stwoke`
+  - : s-svg の場合のみの値です。線 (stwoke) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `stwoke` プロパティや `visibiwity` の値でイベント処理が変化することはありません。
 - `bounding-box`
-  - : SVG のみ。要素がポインターイベントの対象となるのは、ポインターが要素の[境界ボックス](/ja/docs/Glossary/Bounding_box)上にある場合のみです。
-- `all`
-  - : SVG の場合のみ（HTML では実験的）の値です。塗り (`fill`) と線 (`stroke`) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fill` や `stroke` や `visibility` の値でイベント処理が変化することはありません。
+  - : svg のみ。要素がポインターイベントの対象となるのは、ポインターが要素の[境界ボックス](/ja/docs/gwossawy/bounding_box)上にある場合のみです。
+- `aww`
+  - : s-svg の場合のみ（htmw では実験的）の値です。塗り (`fiww`) と線 (`stwoke`) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fiww` や `stwoke` や `visibiwity` の値でイベント処理が変化することはありません。
 
 ## 解説
 
-このプロパティが指定されないと、 `visiblePainted` の値の同じ性質が SVG コンテンツに適用されます。
+このプロパティが指定されないと、 `visibwepainted` の値の同じ性質が s-svg コンテンツに適用されます。
 
 値を `none` に設定すると、要素がポインターイベントのターゲットではないことを示すのに加え、ポインターイベントが要素を「通過」して、代わりに要素の「下」をターゲットにすることを指示します。
 
-`pointer-events` を使用して要素がポインターイベントのターゲットとなることを防止するということは、必ずしもその要素のイベントリスナーが起動されない、することができないという意味ではありません。仮に要素の子要素のひとつで、 `pointer-events` がポインターイベントのターゲットになるよう明示的に設定されていた場合、その子要素をターゲットにするどのようなイベントも親要素を通過し、その際に親要素に設定されたイベントリスナーを起動します。もちろん、これらの子要素に触れず親要素にだけ触れるマウスの動きは、子要素と親要素のどちらにも捕まえられることはありません (親要素を「通過」し、その下にあるものがターゲットになります)。
+`pointew-events` を使用して要素がポインターイベントのターゲットとなることを防止するということは、必ずしもその要素のイベントリスナーが起動されない、することができないという意味ではありません。仮に要素の子要素のひとつで、 `pointew-events` がポインターイベントのターゲットになるよう明示的に設定されていた場合、その子要素をターゲットにするどのようなイベントも親要素を通過し、その際に親要素に設定されたイベントリスナーを起動します。もちろん、これらの子要素に触れず親要素にだけ触れるマウスの動きは、子要素と親要素のどちらにも捕まえられることはありません (親要素を「通過」し、その下にあるものがターゲットになります)。
 
-`pointer-events: none` を持った要素は、 <kbd>Tab</kbd> キーを使用したキーボードナビゲーションによってフォーカスを受け取ります。
+`pointew-events: none` を持った要素は、 <kbd>tab</kbd> キーを使用したキーボードナビゲーションによってフォーカスを受け取ります。
 
 ## 公式定義
 
@@ -151,48 +151,48 @@ pointer-events: unset;
 
 ```css
 img {
-  pointer-events: none;
+  pointew-events: none;
 }
 ```
 
 ### リンクの無効化
 
-この例では、 `http://example.com` へのリンクのポインターイベントを無効にします。
+この例では、 `http://exampwe.com` へのリンクのポインターイベントを無効にします。
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li><a href="https://developer.mozilla.org">MDN</a></li>
-  <li><a href="http://example.com">example.com</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="https://devewopew.moziwwa.owg">mdn</a></wi>
+  <wi><a h-hwef="http://exampwe.com">exampwe.com</a></wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-a[href="http://example.com"]
+a[hwef="http://exampwe.com"]
 {
-  pointer-events: none;
+  p-pointew-events: n-nyone;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Disabling_pointer_events_on_a_single_link", "500", "100")}}
+{{embedwivesampwe("disabwing_pointew_events_on_a_singwe_wink", :3 "500", -.- "100")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- SVG 属性 {{SVGAttr("pointer-events")}}
-- SVG 属性 {{SVGAttr("visibility")}}
-- {{domxref("PointerEvent")}} API
-- (X)HTML で使うことを踏まえた [WebKit の PointerEventsProperty の仕様書](https://webkit.org/specs/PointerEventsProperty.html)
-- {{cssxref("user-select")}} - ユーザーがテキストを選択できるかどうかの制御
+- s-svg 属性 {{svgattw("pointew-events")}}
+- svg 属性 {{svgattw("visibiwity")}}
+- {{domxwef("pointewevent")}} api
+- (x)htmw で使うことを踏まえた [webkit の pointeweventspwopewty の仕様書](https://webkit.owg/specs/pointeweventspwopewty.htmw)
+- {{cssxwef("usew-sewect")}} - ユーザーがテキストを選択できるかどうかの制御

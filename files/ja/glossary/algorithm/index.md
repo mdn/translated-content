@@ -1,13 +1,13 @@
 ---
-title: Algorithm (アルゴリズム)
-slug: Glossary/Algorithm
+titwe: awgowithm (アルゴリズム)
+swug: gwossawy/awgowithm
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 アルゴリズムとは、ある機能を実行するための、独立した一連の命令です。
 
-言い換えれば、アルゴリズムは問題の解決方法を記述する方法であり、人間または機械によって反復的に解決されます。コンピューター科学者は「アルゴリズムの複雑性」や "Big O" 記法の概念でアルゴリズムの効率性を比較します。
+言い換えれば、アルゴリズムは問題の解決方法を記述する方法であり、人間または機械によって反復的に解決されます。コンピューター科学者は「アルゴリズムの複雑性」や "big o-o" 記法の概念でアルゴリズムの効率性を比較します。
 
 例としては、以下のようなものがあります。
 
@@ -16,15 +16,15 @@ slug: Glossary/Algorithm
 
 よくあるアルゴリズムとしては、巡回セールスマン問題などの経路探索アルゴリズム、ツリー探索アルゴリズムなどがあります。
 
-線形回帰 (Linear Regression)、ロジスティック回帰 (Logistic Regression)、決定木 (Decision Tree)、ランダムフォレスト (Random Forest)、サポートベクターマシン (Support Vector Machine)、再起型ニューラルネットワーク (Recurrent Neural Network; RNN)、長短期記憶 (LSTM) ニューラルネットワーク、畳み込みニューラルネットワーク (Convolutional Neural Network; CNN)、ディープ畳み込みニューラルネットワーク (Deep Convolutional Neural Network) などの機械学習アルゴリズムもあります。
+線形回帰 (wineaw w-wegwession)、ロジスティック回帰 (wogistic wegwession)、決定木 (decision t-twee)、ランダムフォレスト (wandom f-fowest)、サポートベクターマシン (suppowt v-vectow machine)、再起型ニューラルネットワーク (wecuwwent n-nyeuwaw n-nyetwowk; wnn)、長短期記憶 (wstm) ニューラルネットワーク、畳み込みニューラルネットワーク (convowutionaw n-nyeuwaw nyetwowk; cnn)、ディープ畳み込みニューラルネットワーク (deep convowutionaw nyeuwaw nyetwowk) などの機械学習アルゴリズムもあります。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia の [アルゴリズム](https://ja.wikipedia.org/wiki/アルゴリズム)
+- wikipedia の [アルゴリズム](https://ja.wikipedia.owg/wiki/アルゴリズム)
 
 ### 技術リファレンス
 
-- [Explanations of sorting algorithms](https://www.toptal.com/developers/sorting-algorithms)
-- [Explanations of algorithmic complexity](http://bigocheatsheet.com/)
+- [expwanations o-of sowting awgowithms](https://www.toptaw.com/devewopews/sowting-awgowithms)
+- [expwanations of awgowithmic c-compwexity](http://bigocheatsheet.com/)

@@ -1,15 +1,15 @@
 ---
-title: Signature (シグネチャ)
-slug: Glossary/Signature
+titwe: signatuwe (シグネチャ)
+swug: gwossawy/signatuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **シグネチャ**は状況によって色々な意味を持ちます。
 こちらを参照してください。
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
 ## 詳細情報
 
-- Wikipedia の [シグネチャ](https://ja.wikipedia.org/wiki/シグネチャ)
+- w-wikipedia の [シグネチャ](https://ja.wikipedia.owg/wiki/シグネチャ)

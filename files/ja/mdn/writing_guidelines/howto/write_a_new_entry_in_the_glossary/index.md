@@ -1,19 +1,19 @@
 ---
-title: 用語集の項目を執筆する方法
-slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+titwe: 用語集の項目を執筆する方法
+swug: mdn/wwiting_guidewines/howto/wwite_a_new_entwy_in_the_gwossawy
+w-w10n:
+  souwcecommit: a-aa66311219951396e7305df61eb31831360d2c79
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-> [!CALLOUT]
+> [!cawwout]
 > 訳注:
-> MDN Web Docs では、日本語版の記事を最初から作成するのではなく、まず英語版の記事を作成してから日本語訳するようにしてください。
+> m-mdn web docs では、日本語版の記事を最初から作成するのではなく、まず英語版の記事を作成してから日本語訳するようにしてください。
 
-この記事では、 [MDN Web Docs の用語集](/ja/docs/Glossary)に項目を追加したりリンクしたりする方法について説明します。
+この記事では、 [mdn w-web docs の用語集](/ja/docs/gwossawy)に項目を追加したりリンクしたりする方法について説明します。
 また、用語集の項目のレイアウトと内容に関するガイドラインも提供します。
-用語集には、ウェブやウェブ開発に関する MDN コンテンツを読む際に出くわすであろうすべての用語、専門用語、略語、頭字語の定義が記載されています。
+用語集には、ウェブやウェブ開発に関する m-mdn コンテンツを読む際に出くわすであろうすべての用語、専門用語、略語、頭字語の定義が記載されています。
 
 ウェブは常に変化しているため、用語集が完全ではない可能性があります。
 新しい項目を投稿したり、問題を修正したりすることで、用語集の更新やギャップを埋めることができます。
@@ -25,9 +25,9 @@ l10n:
 ## 項目を執筆する方法
 
 最初に、どのようなトピックの用語集項目を書くかを選びましょう。
-用語集に項目が必要なトピックを探している場合は、[用語集のランディングページ](/ja/docs/Glossary)の最後にあるので確認してください。
+用語集に項目が必要なトピックを探している場合は、[用語集のランディングページ](/ja/docs/gwossawy)の最後にあるので確認してください。
 
-新たなトピックについての考えがあるならば、[新しいページ](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#creating_pages) を [glossary ランディングページ](https://github.com/mdn/content/tree/main/files/en-us/glossary) の直下に作成してください。
+新たなトピックについての考えがあるならば、[新しいページ](/ja/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting#cweating_pages) を [gwossawy ランディングページ](https://github.com/mdn/content/twee/main/fiwes/en-us/gwossawy) の直下に作成してください。
 
 ### 要約を書く
 
@@ -35,15 +35,15 @@ l10n:
 できれば、 2 文以内にしてください。
 説明を読めばどんな人であってもただちに理解できるような説明であるようにしてください。
 
-> [!NOTE]
+> [!note]
 > インターネット上にある他の定義やコンテンツをコピー＆ペーストしないでください。
-> （特にウィキペディアは、ライセンスの版の幅が小さいため、 MDN とは互換性がありません。）用語集の項目は独自の内容にしてください。
+> （特にウィキペディアは、ライセンスの版の幅が小さいため、 m-mdn とは互換性がありません。）用語集の項目は独自の内容にしてください。
 
 #### 良い用語集の項目を書く
 
 必要であれば、いくつかの段落を追加してください。しかし、気がつくと、全体の記事を書いていることがあります。
 記事を書くのは構いませんが、用語集には行わないでください。
-記事をどこに置けばよいかわからない場合は、お気軽に[相談してください](/ja/docs/MDN/Community/Discussions)。
+記事をどこに置けばよいかわからない場合は、お気軽に[相談してください](/ja/docs/mdn/community/discussions)。
 
 より良い用語集の項目を書くために考慮すべき簡単なガイドラインがいくつかあります。
 
@@ -61,9 +61,9 @@ l10n:
 リンクは少なくとも以下の 3 つのグループに分けることをおすすめします。
 
 - 一般知識
-  - : その用語や主題についてのより高水準な情報を提供するリンク群です。例えば、関連する [Wikipedia](https://en.wikipedia.org/) ページへのリンクです。
+  - : その用語や主題についてのより高水準な情報を提供するリンク群です。例えば、関連する [wikipedia](https://en.wikipedia.owg/) ページへのリンクです。
 - 技術情報
-  - : MDN Web Docs もしくは外部サイトにある、より詳細な技術情報へのリンク群です。
+  - : m-mdn w-web docs もしくは外部サイトにある、より詳細な技術情報へのリンク群です。
 - 学習素材
   - : チュートリアル、練習問題、例、その他の読者の学習に役立つコンテンツへのリンクです。
 
@@ -71,11 +71,11 @@ l10n:
 
 言葉によっては、文脈によって複数の意味を持つことがあります。曖昧さを解決するために、以下のガイドラインに従ってください。
 
-- 用語の主ページは、 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) マクロを含む曖昧さを表すページでなければなりません。
+- 用語の主ページは、 [`gwossawydisambiguation`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/gwossawydisambiguation.ejs) マクロを含む曖昧さを表すページでなければなりません。
 - それぞれの文脈に応じた用語を定義する副ページを設置してください。
 
-例を用いて説明します。 _signature_ という用語は、セキュリティ、関数、メールなど 3 種類以上の文脈で異なる意味持ちます。
+例を用いて説明します。 _signatuwe_ という用語は、セキュリティ、関数、メールなど 3 種類以上の文脈で異なる意味持ちます。
 
-1. [Glossary/Signature](/ja/docs/Glossary/Signature) のページは [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) マクロを含む曖昧さを表すページです。
-2. [Glossary/Signature/Security](/ja/docs/Glossary/Signature/Security) ページはセキュリティの文脈における署名を定義しているページです。
-3. [Glossary/Signature/Function](/ja/docs/Glossary/Signature/Function) ページは関数シグネチャを定義しているページです。
+1. (⑅˘꒳˘) [gwossawy/signatuwe](/ja/docs/gwossawy/signatuwe) のページは [`gwossawydisambiguation`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/gwossawydisambiguation.ejs) マクロを含む曖昧さを表すページです。
+2. ( ͡o ω ͡o ) [gwossawy/signatuwe/secuwity](/ja/docs/gwossawy/signatuwe/secuwity) ページはセキュリティの文脈における署名を定義しているページです。
+3. UwU [gwossawy/signatuwe/function](/ja/docs/gwossawy/signatuwe/function) ページは関数シグネチャを定義しているページです。

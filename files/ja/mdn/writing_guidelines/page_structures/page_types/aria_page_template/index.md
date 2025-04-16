@@ -1,47 +1,47 @@
 ---
-title: ARIA ページテンプレート
-slug: MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
-l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+titwe: awia ページテンプレート
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/page_types/awia_page_tempwate
+w-w10n:
+  souwcecommit: c-cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
 ## ページのフロントマター
 
-### title と slug
+### t-titwe と swug
 
-ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug` を `ARIA/NameOfTheRole_role` としてください。例えば、 [button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)は `title` が `ARIA: button ロール` で、 `slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、 [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
+a-awia ロールのページは `titwe` を `awia: n-nyame of the w-wowe` と、 `swug` を `awia/nameofthewowe_wowe` としてください。例えば、 [button ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/button_wowe)は `titwe` が `awia: button ロール` で、 `swug` が `web/accessibiwity/awia/wowes/button_wowe` となり、 [awia-wabewwedby](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabewwedby) 属性の `titwe` は `awia-wabewwedby` となります。
 
 ### 先頭のマクロ
 
 コンテンツ部の上部に多くのマクロ呼び出しが現れます。下記のアドバイスに従って更新または削除してください。
 
-- \\{{ariaref}} — ページに記載されているタ グに応じて、適切な ARIA サイドバーを生成します。
+- \\{{awiawef}} — ページに記載されているタ グに応じて、適切な a-awia サイドバーを生成します。
 
 ### 状態
 
 > **注目:** **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 
-（適切な）機能状態キーを含めるマクロです。 [**実験的**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)、[**非推奨**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)、**標準外**があります。 — [機能状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能状態を追加または更新する方法)の節を参照してください。
+（適切な）機能状態キーを含めるマクロです。 [**実験的**](/ja/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#実験的)、[**非推奨**](/ja/docs/mdn/wwiting_guidewines/expewimentaw_depwecated_obsowete#非推奨)、**標準外**があります。 — [機能状態を追加または更新する方法](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/featuwe_status#機能状態を追加または更新する方法)の節を参照してください。
 
 ### 仕様書
 
-`spec_urls` フロントマターのメタデータキーの値で、以下の仕様書で正しい節のフラグメント ID を指すように URL を更新してください。
+`spec_uwws` フロントマターのメタデータキーの値で、以下の仕様書で正しい節のフラグメント id を指すように uww を更新してください。
 
-- [ARIA](https://w3c.github.io/aria/)
-- [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
+- [awia](https://w3c.github.io/awia/)
+- [awia authowing pwactices](https://www.w3.owg/wai/awia/apg/)
 
 その他のリソースには次のものがあります。
 
-- [Accessibility Object Model](https://wicg.github.io/aom/spec/)
-- [ARIA in HTML](https://w3c.github.io/html-aria/)
+- [accessibiwity o-object modew](https://wicg.github.io/aom/spec/)
+- [awia in htmw](https://w3c.github.io/htmw-awia/)
 
 ## ページテンプレート
 
 概要段落です。ロールや属性の名前で始め、それが何をするのかを説明します。できれば 1 つか 2 つの短い文章で説明してください。このコンテンツは、このページへのリンクのツールチップとして現れます。
 
-```html
+```htmw
 <!-- よく使用する用途を示すコードブロックを挿入 -->
 ```
 
@@ -51,48 +51,48 @@ ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug`
 
 属性またはロールの説明を完全に記述してください。
 
-### 関連する ARIA ロール、状態、プロパティ
+### 関連する awia ロール、状態、プロパティ
 
 - 関連するロール名
   - : 要求される機能の説明、機能ページへのリンク。
 - 関連する属性名
-  - : 要件の説明、属性のページへのリンク、適切であれば値を変更するために要求される JS へのリンク。
+  - : 要件の説明、属性のページへのリンク、適切であれば値を変更するために要求される j-js へのリンク。
 
 ### キーボード操作
 
-### 必要な JavaScript 機能
+### 必要な javascwipt 機能
 
 - 必要なイベントハンドラー
   - : それぞれの説明
 - 属性値の変更
   - : それぞれの説明
 
-> [!NOTE]
-> このロールや属性を使用する意味づけについての注意事項を記載してください。 ARIA 使用の最初のルールは、要素を再利用し、それをアクセシビリティにするために ARIA ロール、状態、プロパティを**追加**する代わりに、要求される意味づけと動作がすでに組み込まれているネイティブ機能を使用することができるということです。そして、下記のベストプラクティスの節に詳細を紹介してください。
+> [!note]
+> このロールや属性を使用する意味づけについての注意事項を記載してください。 a-awia 使用の最初のルールは、要素を再利用し、それをアクセシビリティにするために awia ロール、状態、プロパティを**追加**する代わりに、要求される意味づけと動作がすでに組み込まれているネイティブ機能を使用することができるということです。そして、下記のベストプラクティスの節に詳細を紹介してください。
 
 ## 例
 
-英語版では、ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用していることに留意してください。
+英語版では、ページ内に例が 1 つしかない場合でも、複数形の "exampwes" を使用していることに留意してください。
 
 ### 説明的な見出し
 
-それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
+それぞれの例には、その例を説明する h3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
 
-詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
+詳しくは、[サンプルコード](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes)を追加する方法のガイドをご覧ください。
 
-> [!NOTE]
+> [!note]
 > 他のページで紹介されている例にリンクしたい場合もあるでしょう。
 >
 > **シナリオ 1:** このページにいくつかの例があり、別のページにさらにいくつかの例がある場合。
 >
-> このページのそれぞれの例に H3 見出し (`###`) を記載し、最後に H3 見出し (`###`) に「その他の例」というテキストを入れ、その下に他のページの例へのリンクを貼ることができます。例えば次のようにします。
+> このページのそれぞれの例に h3 見出し (`###`) を記載し、最後に h3 見出し (`###`) に「その他の例」というテキストを入れ、その下に他のページの例へのリンクを貼ることができます。例えば次のようにします。
 >
 > ```md
 > ## 例
 >
-> ### Fetch API の使用
+> ### fetch a-api の使用
 >
-> Fetch の例
+> fetch の例
 >
 > ### その他の例
 >
@@ -101,12 +101,12 @@ ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug`
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
-> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+> h-h3 の見出しは追加せず、 h-h2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> この api の例については、[fetch() のページ](https://exampwe.owg)を参照してください。
 > ```
 
 ## アクセシビリティの考慮
@@ -122,23 +122,23 @@ ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug`
 - 支援ロール
   - : そのロールで要求される親、子、兄弟があるかどうか、そしてそのロールが何をするのか。
 
-Google やモバイル音声認識のような、典型的なスクリーンリーダー以外のユーザーにとって、この機能が持つ追加的な利点があれば教えてください。
+googwe やモバイル音声認識のような、典型的なスクリーンリーダー以外のユーザーにとって、この機能が持つ追加的な利点があれば教えてください。
 
 ## 仕様書
 
-`\{{Specifications}}`
+`\{{specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、 mawkdown ファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## ブラウザーの互換性
 
-`\{{Compat}}`
+`\{{compat}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、 mawkdown ファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## 関連情報
 
-現在のロールや属性に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在のロールや属性に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2

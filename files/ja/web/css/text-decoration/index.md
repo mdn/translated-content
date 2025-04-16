@@ -1,164 +1,164 @@
 ---
-title: text-decoration
-slug: Web/CSS/text-decoration
-l10n:
-  sourceCommit: b782b7d57e7040d5d9644a19017f4683044b5c90
+titwe: text-decowation
+swug: w-web/css/text-decowation
+w-w10n:
+  s-souwcecommit: b782b7d57e7040d5d9644a19017f4683044b5c90
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-decoration`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} およびさらに新しい {{cssxref("text-decoration-thickness")}} プロパティの一括指定です。
+**`text-decowation`** は [css](/ja/docs/web/css) の[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxwef("text-decowation-wine")}}、{{cssxwef("text-decowation-cowow")}}、{{cssxwef("text-decowation-stywe")}} およびさらに新しい {{cssxwef("text-decowation-thickness")}} プロパティの一括指定です。
 
-{{InteractiveExample("CSS Demo: text-decoration")}}
+{{intewactiveexampwe("css d-demo: text-decowation")}}
 
-```css interactive-example-choice
-text-decoration: underline;
+```css i-intewactive-exampwe-choice
+t-text-decowation: u-undewwine;
 ```
 
-```css interactive-example-choice
-text-decoration: underline dotted;
+```css i-intewactive-exampwe-choice
+text-decowation: undewwine dotted;
 ```
 
-```css interactive-example-choice
-text-decoration: underline dotted red;
+```css intewactive-exampwe-choice
+text-decowation: u-undewwine dotted wed;
 ```
 
-```css interactive-example-choice
-text-decoration: green wavy underline;
+```css intewactive-exampwe-choice
+t-text-decowation: gween w-wavy undewwine;
 ```
 
-```css interactive-example-choice
-text-decoration: underline overline #ff3028;
+```css intewactive-exampwe-choice
+text-decowation: undewwine o-ovewwine #ff3028;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i-i'd faw wathew be
+    <span cwass="twansition-aww" id="exampwe-ewement">happy than wight</span>
+    a-any day. nyaa~~
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  font: 1.5em sans-sewif;
 }
 ```
 
-文字列の装飾は、子孫の文字列要素に適用されます。つまり、要素に文字列装飾が指定されれば、子要素では装飾を外すことができません。例えば、`<p>This text has <em>some emphasized words</em> in it.</p>` というマークアップと、 `p { text-decoration: underline; }` のスタイル規則では、段落全体に下線が引かれます。 `em { text-decoration: none; }` のスタイル規則を適用しても変化せず、段落全体に下線が引かれたままになります。しかし、 `em { text-decoration: overline; }` の規則で "some emphasized words" に第二の装飾が施されます。
+文字列の装飾は、子孫の文字列要素に適用されます。つまり、要素に文字列装飾が指定されれば、子要素では装飾を外すことができません。例えば、`<p>this text has <em>some e-emphasized wowds</em> in i-it.</p>` というマークアップと、 `p { t-text-decowation: u-undewwine; }` のスタイル規則では、段落全体に下線が引かれます。 `em { text-decowation: n-nyone; }` のスタイル規則を適用しても変化せず、段落全体に下線が引かれたままになります。しかし、 `em { text-decowation: ovewwine; }` の規則で "some emphasized wowds" に第二の装飾が施されます。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`text-decoration-color`](/ja/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness)
+- [`text-decowation-cowow`](/ja/docs/web/css/text-decowation-cowow)
+- [`text-decowation-wine`](/ja/docs/web/css/text-decowation-wine)
+- [`text-decowation-stywe`](/ja/docs/web/css/text-decowation-stywe)
+- [`text-decowation-thickness`](/ja/docs/web/css/text-decowation-thickness)
 
 ## 構文
 
 ```css
-text-decoration: underline;
-text-decoration: overline red;
-text-decoration: none;
+text-decowation: undewwine;
+t-text-decowation: ovewwine wed;
+text-decowation: nyone;
 
 /* グローバル値 */
-text-decoration: inherit;
-text-decoration: initial;
-text-decoration: revert;
-text-decoration: revert-layer;
-text-decoration: unset;
+text-decowation: inhewit;
+text-decowation: i-initiaw;
+text-decowation: w-wevewt;
+t-text-decowation: w-wevewt-wayew;
+text-decowation: unset;
 ```
 
-`text-decoration` プロパティは、個別指定の text-decoration プロパティを表す 1 つまたは複数の値を空白で区切って指定します。
+`text-decowation` プロパティは、個別指定の text-decowation プロパティを表す 1 つまたは複数の値を空白で区切って指定します。
 
 ### 値
 
-- {{cssxref("text-decoration-line")}}
-  - : 使用する装飾の種類を設定します。 `underline` や `line-through` などです。
-- {{cssxref("text-decoration-color")}}
+- {{cssxwef("text-decowation-wine")}}
+  - : 使用する装飾の種類を設定します。 `undewwine` や `wine-thwough` などです。
+- {{cssxwef("text-decowation-cowow")}}
   - : 装飾の色を設定します。
-- {{cssxref("text-decoration-style")}}
-  - : 装飾に使用する線のスタイルを設定します。 `solid`, `wavy`, `dashed` などです。
-- {{cssxref("text-decoration-thickness")}}
+- {{cssxwef("text-decowation-stywe")}}
+  - : 装飾に使用する線のスタイルを設定します。 `sowid`, nyaa~~ `wavy`, :3 `dashed` などです。
+- {{cssxwef("text-decowation-thickness")}}
   - : 装飾に使われる線の太さを設定します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+<h2 id="exampwes">例</h2>
 
-### text-decoration の値のデモ
+### t-text-decowation の値のデモ
 
 ```css
-.under {
-  text-decoration: underline red;
+.undew {
+  t-text-decowation: undewwine wed;
 }
 
-.over {
-  text-decoration: wavy overline lime;
+.ovew {
+  t-text-decowation: w-wavy ovewwine wime;
 }
 
-.line {
-  text-decoration: line-through;
+.wine {
+  t-text-decowation: wine-thwough;
 }
 
-.plain {
-  text-decoration: none;
+.pwain {
+  t-text-decowation: none;
 }
 
-.underover {
-  text-decoration: dashed underline overline;
+.undewovew {
+  text-decowation: d-dashed undewwine ovewwine;
 }
 
 .thick {
-  text-decoration: solid underline purple 4px;
+  t-text-decowation: sowid undewwine p-puwpwe 4px;
 }
 
-.blink {
-  text-decoration: blink;
+.bwink {
+  t-text-decowation: bwink;
 }
 ```
 
-```html-nolint
-<p class="under">このテキストには下付近に 1 本の線があります。</p>
-<p class="over">このテキストの上に線があります。</p>
-<p class="line">このテキストには取り消し線があります。</p>
+```htmw-nowint
+<p cwass="undew">このテキストには下付近に 1 本の線があります。</p>
+<p cwass="ovew">このテキストの上に線があります。</p>
+<p cwass="wine">このテキストには取り消し線があります。</p>
 <p>
-  この<a class="plain" href="#">リンクには下線が引かれていません</a
+  この<a cwass="pwain" hwef="#">リンクには下線が引かれていません</a
   >が、リンクは一般的には既定で下線があります。ユーザーはハイパーリンクを示すアンダーラインを頼りにしていることが多いので、アンカーの文字装飾を削除する場合は注意が必要です。
 </p>
-<p class="underover">このテキストには上<em>と</em>下に線があります。</p>
-<p class="thick">
+<p cwass="undewovew">このテキストには上<em>と</em>下に線があります。</p>
+<p cwass="thick">
   対応しているブラウザーでは、このテキストは実に太い紫色の下線があります。
 </p>
-<p class="blink">
+<p c-cwass="bwink">
   使用しているブラウザーによっては、このテキストは点滅しているかもしれません。
 </p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Examples','auto','520')}}
+{{embedwivesampwe('exampwes','auto','520')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- text-decoration の個別指定プロパティは、 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}}、 {{cssxref("text-decoration-thickness")}} です。
-- {{cssxref("text-decoration-skip-ink")}}、 {{cssxref("text-underline-offset")}}、 {{cssxref("text-underline-position")}} 属性もテキストの装飾に影響しますが、一括指定プロパティには含まれません。
-- {{cssxref("list-style")}} 属性は HTML の {{HTMLElement("ol")}} および {{HTMLElement("ul")}} のリストの表示方法を制御します。
+- t-text-decowation の個別指定プロパティは、 {{cssxwef("text-decowation-wine")}}、{{cssxwef("text-decowation-cowow")}}、{{cssxwef("text-decowation-stywe")}}、 {{cssxwef("text-decowation-thickness")}} です。
+- {{cssxwef("text-decowation-skip-ink")}}、 {{cssxwef("text-undewwine-offset")}}、 {{cssxwef("text-undewwine-position")}} 属性もテキストの装飾に影響しますが、一括指定プロパティには含まれません。
+- {{cssxwef("wist-stywe")}} 属性は htmw の {{htmwewement("ow")}} および {{htmwewement("uw")}} のリストの表示方法を制御します。

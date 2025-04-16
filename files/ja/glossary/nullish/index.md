@@ -1,8 +1,8 @@
 ---
-title: Nullish value
-slug: Glossary/Nullish
+titwe: nyuwwish vawue
+swug: gwossawy/nuwwish
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[JavaScript](/ja/docs/Glossary/JavaScript) では Nullish value は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{JSxRef("undefined")}} のいずれかの値です。Nullish values は常に [falsy](/ja/docs/Glossary/Falsy) です。
+[javascwipt](/ja/docs/gwossawy/javascwipt) では n-nyuwwish v-vawue は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) または {{jsxwef("undefined")}} のいずれかの値です。nuwwish v-vawues は常に [fawsy](/ja/docs/gwossawy/fawsy) です。

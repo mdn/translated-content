@@ -1,12 +1,12 @@
 ---
-title: Presto
-slug: Glossary/Presto
+titwe: pwesto
+swug: gwossawy/pwesto
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Presto は、バージョン 15 までの {{Glossary("Opera browser")}} を強化する為に使用された独自のブラウザーレイアウトエンジンでした。それ以降の Opera browser は、 {{Glossary('Blink')}} レイアウトエンジンを使用する Chromium をベースにしています。
+p-pwesto は、バージョン 15 までの {{gwossawy("opewa b-bwowsew")}} を強化する為に使用された独自のブラウザーレイアウトエンジンでした。それ以降の o-opewa b-bwowsew は、 {{gwossawy('bwink')}} レイアウトエンジンを使用する c-chwomium をベースにしています。
 
 ## 関連項目
 
-- Wikipedia 上の [Presto layout engine](http://en.wikipedia.org/wiki/Presto_%28layout_engine%29)
+- w-wikipedia 上の [pwesto w-wayout e-engine](http://en.wikipedia.owg/wiki/pwesto_%28wayout_engine%29)

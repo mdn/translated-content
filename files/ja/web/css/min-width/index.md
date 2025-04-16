@@ -1,105 +1,105 @@
 ---
-title: min-width
-slug: Web/CSS/min-width
-l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+titwe: min-width
+swug: web/css/min-width
+w-w10n:
+  s-souwcecommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`min-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)が、`min-width` で指定した値を下回ることを防ぎます。
+**`min-width`** は [css](/ja/docs/web/css) のプロパティで、要素の最小幅を設定します。これは {{cssxwef("width")}} プロパティの[使用値](/ja/docs/web/css/css_cascade/vawue_pwocessing#使用値)が、`min-width` で指定した値を下回ることを防ぎます。
 
-{{InteractiveExample("CSS Demo: min-width")}}
+{{intewactiveexampwe("css d-demo: min-width")}}
 
-```css interactive-example-choice
-min-width: 150px;
+```css i-intewactive-exampwe-choice
+m-min-width: 150px;
 ```
 
-```css interactive-example-choice
-min-width: 20em;
+```css i-intewactive-exampwe-choice
+m-min-width: 20em;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 min-width: 75%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 min-width: 40ch;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Change the minimum width.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    change the minimum w-width. 🥺
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: fwex;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: centew;
+  c-cowow: #ffffff;
 }
 ```
 
-`min-width` の値が {{Cssxref("max-width")}} および {{Cssxref("width")}} の値より大きい場合は、`min-width` の値が要素の幅になります。
+`min-width` の値が {{cssxwef("max-width")}} および {{cssxwef("width")}} の値より大きい場合は、`min-width` の値が要素の幅になります。
 
 ## 構文
 
 ```css
-/* <length> 値 */
-min-width: 3.5em;
-min-width: anchor-size(width);
-min-width: anchor-size(--myAnchor self-inline, 200%);
+/* <wength> 値 */
+m-min-width: 3.5em;
+min-width: anchow-size(width);
+min-width: anchow-size(--myanchow s-sewf-inwine, >_< 200%);
 
-/* <percentage> 値 */
+/* <pewcentage> 値 */
 min-width: 10%;
 
 /* キーワード値 */
 min-width: max-content;
-min-width: min-content;
+min-width: m-min-content;
 min-width: fit-content;
-min-width: fit-content(20em);
-min-width: stretch;
+m-min-width: f-fit-content(20em);
+m-min-width: stwetch;
 
 /* グローバル値 */
-min-width: inherit;
-min-width: initial;
-min-width: revert;
-min-width: revert-layer;
-min-width: unset;
+m-min-width: inhewit;
+min-width: initiaw;
+min-width: w-wevewt;
+min-width: wevewt-wayew;
+min-width: u-unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : `min-width` を絶対的な値で定義します。
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
   - : `min-width` を包含ブロックの幅に対するパーセント値で定義します。
 - `auto`
 
   - : 既定値です。指定した要素の自動値のソースは、その表示値によって異なります。ブロックボックス、インラインボックス、インラインブロック、および表レイアウトボックスすべてでは、`auto` は `0` に解決されます。
 
-    [フレックスアイテム](/ja/docs/Glossary/Flex_Item)およびグリッドアイテムの場合、最小幅の値は、 `width` プロパティの値などの指定された推奨サイズ、または要素にアスペクト比が設定され、高さが確定しているサイズである場合は変換されたサイズ、それ以外は最小コンテンツサイズが使用されます。フレックスアイテムまたはグリッドアイテムが{{glossary("scroll container","スクロールコンテナー")}}である場合、またはグリッドアイテムが複数のフレックスカラムトラックにまたがる場合、自動最小サイズは `0` になります。
+    [フレックスアイテム](/ja/docs/gwossawy/fwex_item)およびグリッドアイテムの場合、最小幅の値は、 `width` プロパティの値などの指定された推奨サイズ、または要素にアスペクト比が設定され、高さが確定しているサイズである場合は変換されたサイズ、それ以外は最小コンテンツサイズが使用されます。フレックスアイテムまたはグリッドアイテムが{{gwossawy("scwoww containew","スクロールコンテナー")}}である場合、またはグリッドアイテムが複数のフレックスカラムトラックにまたがる場合、自動最小サイズは `0` になります。
 
 - `max-content`
   - : 内容物の推奨する `min-width` です。
 - `min-content`
   - : 内容物の最小の `min-width` です。
 - `fit-content`
-  - : 利用できる空間を使用しますが、 [`max-content`](/ja/docs/Web/CSS/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
-- `stretch`
+  - : 利用できる空間を使用しますが、 [`max-content`](/ja/docs/web/css/max-content) を超えないようにします。すなわち、 `min(max-content, >_< max(min-content, (⑅˘꒳˘) stwetch))` です。
+- `fit-content({{cssxwef("&wt;wength-pewcentage&gt;")}})`
+  - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, /(^•ω•^) max(min-content, rawr x3 引数))` です。
+- `stwetch`
 
-  - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の最小の幅を、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)の幅に制限します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
+  - : 要素の[マージンボックス](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#ボックスの構成)の最小の幅を、[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock#包含ブロックの識別)の幅に制限します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/web/css/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
 
-    > [!NOTE]
-    > ブラウザーが `stretch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
+    > [!note]
+    > ブラウザーが `stwetch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
 ## 公式定義
 
@@ -114,29 +114,29 @@ min-width: unset;
 ### 要素の最小幅を設定
 
 ```css
-table {
+tabwe {
   min-width: 75%;
 }
 
-form {
+f-fowm {
   min-width: 0;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("max-width")}}
-- {{Cssxref("width")}}
-- {{cssxref("min-inline-size")}}
-- {{cssxref("min-block-size")}}
-- {{cssxref("box-sizing")}}
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- {{cssxwef("max-width")}}
+- {{cssxwef("width")}}
+- {{cssxwef("min-inwine-size")}}
+- {{cssxwef("min-bwock-size")}}
+- {{cssxwef("box-sizing")}}
+- [css 基本ボックスモデル入門](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- [css ボックスモデル](/ja/docs/web/css/css_box_modew)モジュール

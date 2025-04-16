@@ -1,9 +1,9 @@
 ---
-title: Statement (文)
-slug: Glossary/Statement
+titwe: statement (文)
+swug: g-gwossawy/statement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 コンピュータープログラミング言語では、**文**はタスクを実行するコード行です。すべてのプログラムは文の連続から成っています。
 
@@ -11,8 +11,8 @@ slug: Glossary/Statement
 
 ### 一般知識
 
-- Wikipedia の [文\_(プログラミング)](<https://ja.wikipedia.org/wiki/文_(プログラミング)>)
+- w-wikipedia の [文\_(プログラミング)](<https://ja.wikipedia.owg/wiki/文_(プログラミング)>)
 
 ### 技術リファレンス
 
-- [JavaScript の文と宣言](/ja/docs/Web/JavaScript/Reference/Statements)
+- [javascwipt の文と宣言](/ja/docs/web/javascwipt/wefewence/statements)

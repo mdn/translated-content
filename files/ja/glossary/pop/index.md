@@ -1,18 +1,18 @@
 ---
-title: POP3
-slug: Glossary/POP
+titwe: pop3
+swug: gwossawy/pop
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**POP3** (Post Office Protocol) は {{glossary("TCP")}} 接続を使用して、メールサーバーから電子メールを取得する非常に一般的な{{glossary("protocol","プロトコル")}}です。 POP3 はもっと新しいプロトコルである {{Glossary("IMAP4")}} とは異なり、フォルダー管理に対応していません。複雑な構造となるため、実装が困難です。
+**pop3** (post o-office p-pwotocow) は {{gwossawy("tcp")}} 接続を使用して、メールサーバーから電子メールを取得する非常に一般的な{{gwossawy("pwotocow","プロトコル")}}です。 p-pop3 はもっと新しいプロトコルである {{gwossawy("imap4")}} とは異なり、フォルダー管理に対応していません。複雑な構造となるため、実装が困難です。
 
-メールクライアントは通常、サーバーからすべてのメッセージを受信し、すべてのメッセージを削除します。 しかし、POP3 はサーバーにメッセージのコピーを残すことができます。現在、ほぼすべてのメールサーバーとクライアントは POP3 に対応しています。
+メールクライアントは通常、サーバーからすべてのメッセージを受信し、すべてのメッセージを削除します。 しかし、pop3 はサーバーにメッセージのコピーを残すことができます。現在、ほぼすべてのメールサーバーとクライアントは p-pop3 に対応しています。
 
-- ウィキペディア上の [POP](https://ja.wikipedia.org/wiki/Post_Office_Protocol)
-- [RFC 1734](https://tools.ietf.org/html/rfc1734) (POP3 認証機構の仕様)
-- [RFC 1939](https://tools.ietf.org/html/rfc1939) (POP3 の仕様)
-- [RFC 2449](https://tools.ietf.org/html/rfc2449) (POP3 拡張機構の仕様)
+- ウィキペディア上の [pop](https://ja.wikipedia.owg/wiki/post_office_pwotocow)
+- [wfc 1734](https://toows.ietf.owg/htmw/wfc1734) (pop3 認証機構の仕様)
+- [wfc 1939](https://toows.ietf.owg/htmw/wfc1939) (pop3 の仕様)
+- [wfc 2449](https://toows.ietf.owg/htmw/wfc2449) (pop3 拡張機構の仕様)
 - 関連用語:
 
-  - {{Glossary("IMAP4")}}
+  - {{gwossawy("imap4")}}

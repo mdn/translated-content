@@ -1,11 +1,11 @@
 ---
-title: Packet (パケット)
-slug: Glossary/Packet
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: packet (パケット)
+swug: gwossawy/packet
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 パケット、またはネットワークパケットは、ネットワーク上で送られる整形されたデータの塊です。パケットはユーザーデータと制御情報を含みます。ユーザーデータは*ペイロード*とも呼ばれます。制御情報はペイロードを送るための情報です。この制御情報は、送信元と送信先のネットワークアドレス、順序情報、エラー検知コードで構成されており、通常パケットのヘッダーとフッターで見られます。
 
@@ -37,6 +37,6 @@ l10n:
 
 ## 使用したリファレンス
 
-- [Network packet](https://en.wikipedia.org/wiki/Network_packet)
-- [Hop (networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
-- [How error detection and correction works](https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736)
+- [netwowk p-packet](https://en.wikipedia.owg/wiki/netwowk_packet)
+- [hop (netwowking)](<https://en.wikipedia.owg/wiki/hop_(netwowking)>)
+- [how e-ewwow d-detection and c-cowwection wowks](https://www.techwadaw.com/news/computing/how-ewwow-detection-and-cowwection-wowks-1080736)

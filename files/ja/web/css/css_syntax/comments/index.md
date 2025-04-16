@@ -1,12 +1,12 @@
 ---
-title: コメント
-slug: Web/CSS/CSS_syntax/Comments
-original_slug: Web/CSS/Comments
+titwe: コメント
+swug: web/css/css_syntax/comments
+o-owiginaw_swug: w-web/css/comments
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS の**コメント**は、説明的なメモをコードに追加したり、スタイルシートの特定の部分をブラウザーに解釈させないようにしたりするために使用します。設計上、コメントは文書のレイアウトにおいて効果を持ちません。
+c-css の**コメント**は、説明的なメモをコードに追加したり、スタイルシートの特定の部分をブラウザーに解釈させないようにしたりするために使用します。設計上、コメントは文書のレイアウトにおいて効果を持ちません。
 
 ## 構文
 
@@ -30,8 +30,8 @@ CSS の**コメント**は、説明的なメモをコードに追加したり、
 /* 以下のコメントは、特定の
    スタイルを無効にします。 */
 /*
-span {
-  color: blue;
+s-span {
+  cowow: b-bwue;
   font-size: 1.5em;
 }
 */
@@ -39,28 +39,28 @@ span {
 
 ## メモ
 
-`/* */` のコメント構文は、 1 行のコメントにも複数行のコメントにも使用されます。外部のスタイルシートでコメントを指定する方法は他にありません。しかし、推奨されませんが、 {{htmlelement("style")}} 要素を使用するときは、古いブラウザーから CSS を隠すために `<!-- -->` を使用することができます。 `/* */` のコメント文法を使用する他のプログラミング言語と同様、コメントは入れ子にすることができません。言い換えれば、 `/*` の後で最初に `*/` が出現すると、コメントが終了します。
+`/* */` のコメント構文は、 1 行のコメントにも複数行のコメントにも使用されます。外部のスタイルシートでコメントを指定する方法は他にありません。しかし、推奨されませんが、 {{htmwewement("stywe")}} 要素を使用するときは、古いブラウザーから c-css を隠すために `<!-- -->` を使用することができます。 `/* */` のコメント文法を使用する他のプログラミング言語と同様、コメントは入れ子にすることができません。言い換えれば、 `/*` の後で最初に `*/` が出現すると、コメントが終了します。
 
 ## 仕様書
 
-- [CSS 2.1 Syntax and basic data types #comments](https://www.w3.org/TR/CSS21/syndata.html#comments)
+- [css 2.1 s-syntax and basic d-data types #comments](https://www.w3.owg/tw/css21/syndata.htmw#comments)
 
 ## 関連情報
 
-- CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
-  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- css の主要概念:
+  - [css の構文](/ja/docs/web/css/css_syntax/syntax)
+  - [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)
+  - [詳細度](/ja/docs/web/css/css_cascade/specificity)
+  - [継承](/ja/docs/web/css/css_cascade/inhewitance)
+  - [ボックスモデル](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [レイアウトモード](/ja/docs/gwossawy/wayout_mode)
+  - [視覚整形モデル](/ja/docs/web/css/css_dispway/visuaw_fowmatting_modew)
+  - [マージンの相殺](/ja/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+    - [初期値](/ja/docs/web/css/css_cascade/vawue_pwocessing#初期値)
+    - [計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)
+    - [使用値](/ja/docs/web/css/css_cascade/vawue_pwocessing#使用値)
+    - [実効値](/ja/docs/web/css/css_cascade/vawue_pwocessing#実効値)
+  - [値の定義構文](/ja/docs/web/css/css_vawues_and_units/vawue_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)
+  - [置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)

@@ -1,9 +1,9 @@
 ---
-title: Hypertext (ハイパーテキスト)
-slug: Glossary/Hypertext
+titwe: hypewtext (ハイパーテキスト)
+swug: gwossawy/hypewtext
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 ハイパーテキストは、ほかのテキストへのリンクを含むテキストであり、小説のように単一で線形の流れのものとは対照的なものです。
 
@@ -13,8 +13,8 @@ slug: Glossary/Hypertext
 
 ### 一般知識
 
-- ウィキペディアの[ハイパーテキスト](https://ja.wikipedia.org/wiki/ハイパーテキスト)の記事
+- ウィキペディアの[ハイパーテキスト](https://ja.wikipedia.owg/wiki/ハイパーテキスト)の記事
 
 ### 技術リファレンス
 
-- [Hypertext Information Base](http://www.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/aixuser/aix6kdov/hyperv1aix.htm)
+- [hypewtext i-infowmation b-base](http://www.uawbewta.ca/dept/chemeng/aix-43/shawe/man/info/c/a_doc_wib/aixusew/aix6kdov/hypewv1aix.htm)

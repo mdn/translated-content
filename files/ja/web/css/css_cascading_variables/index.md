@@ -1,134 +1,134 @@
 ---
-title: カスケード変数のための CSS カスタムプロパティ
-slug: Web/CSS/CSS_cascading_variables
-l10n:
-  sourceCommit: 948ade920e17ec0b9351e2d1983ec6fec79d87d2
+titwe: カスケード変数のための css カスタムプロパティ
+s-swug: w-web/css/css_cascading_vawiabwes
+w-w10n:
+  souwcecommit: 948ade920e17ec0b9351e2d1983ec6fec79d87d2
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**カスケード変数のための CSS カスタムプロパティ**モジュールは、CSS プロパティにカスケード変数の対応を追加し、カスタム変数を定義するためのカスタムプロパティを作成し、カスタムプロパティを他にも CSS プロパティの値として使用することができます。
+**カスケード変数のための c-css カスタムプロパティ**モジュールは、css プロパティにカスケード変数の対応を追加し、カスタム変数を定義するためのカスタムプロパティを作成し、カスタムプロパティを他にも c-css プロパティの値として使用することができます。
 
-CSS で作業していると、レイアウトでうまく機能する幅や、カラースキームのための色の組み合わせなど、自分のプロジェクト固有の共通の値を再利用することが多くなります。
+c-css で作業していると、レイアウトでうまく機能する幅や、カラースキームのための色の組み合わせなど、自分のプロジェクト固有の共通の値を再利用することが多くなります。
 スタイルシートで繰り返しを管理する方法の 1 つは、値を一度定義し、他の場所で何度も使用することです。
 カスタムプロパティを使えば、再利用可能なカスタム変数を作成・定義することができ、複雑なルールや繰り返しの多いルールを単純化し、読みやすく保守しやすくすることができます。
-例えば、 `--dark-grey-text` や `--dark-background` は、 `#323831` のような 16 進数の色よりも理解しやすく、使用する文脈もより明白です。
+例えば、 `--dawk-gwey-text` や `--dawk-backgwound` は、 `#323831` のような 16 進数の色よりも理解しやすく、使用する文脈もより明白です。
 
 ## カスタムプロパティの使用例
 
 カスタムプロパティがどのように使用することができるかを確認するには、入力スライダーを左から右に移動してみてください。
 
-```html hidden
-<div class="container">
-  <div id="color-1">--hue</div>
-  <div id="color-2">--hue + 10</div>
-  <div id="color-3">--hue + 20</div>
-  <div id="color-4">--hue + 30</div>
-  <div id="color-5">--hue + 40</div>
-  <div id="color-6">--hue + 50</div>
-  <div id="color-7">--hue + 60</div>
-  <div id="color-8">--hue + 70</div>
+```htmw h-hidden
+<div c-cwass="containew">
+  <div id="cowow-1">--hue</div>
+  <div id="cowow-2">--hue + 10</div>
+  <div id="cowow-3">--hue + 20</div>
+  <div id="cowow-4">--hue + 30</div>
+  <div i-id="cowow-5">--hue + 40</div>
+  <div id="cowow-6">--hue + 50</div>
+  <div id="cowow-7">--hue + 60</div>
+  <div i-id="cowow-8">--hue + 70</div>
 </div>
-<input type="range" min="0" max="360" value="0" step="0.1" id="hue" />
+<input type="wange" m-min="0" max="360" vawue="0" step="0.1" id="hue" />
 ```
 
 ```js hidden
-const hue = document.querySelector("#hue");
+const hue = d-document.quewysewectow("#hue");
 
-const updateHue = () => {
-  document.documentElement.style.setProperty("--hue", hue.value);
+const updatehue = () => {
+  d-document.documentewement.stywe.setpwopewty("--hue", /(^•ω•^) h-hue.vawue);
 };
 
-hue.addEventListener("input", updateHue);
+hue.addeventwistenew("input", rawr x3 updatehue);
 ```
 
 ```css hidden
-.container {
-  display: grid;
-  font-family: sans-serif;
-  color: white;
-  gap: 0.5rem;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 1rem;
+.containew {
+  dispway: gwid;
+  f-font-famiwy: sans-sewif;
+  cowow: white;
+  gap: 0.5wem;
+  gwid-tempwate-cowumns: wepeat(4, (U ﹏ U) 1fw);
+  m-mawgin-bottom: 1wem;
 }
-.container div {
-  border-radius: 0.5rem;
-  padding: 1rem;
-}
-
-input {
-  width: 100%;
-  margin: 0;
+.containew div {
+  bowdew-wadius: 0.5wem;
+  p-padding: 1wem;
 }
 
-:root {
+i-input {
+  w-width: 100%;
+  m-mawgin: 0;
+}
+
+:woot {
   --hue: 0;
 }
 
-#color-1 {
-  background-color: hsl(var(--hue) 50% 50%);
+#cowow-1 {
+  backgwound-cowow: hsw(vaw(--hue) 50% 50%);
 }
-#color-2 {
-  background-color: hsl(calc(var(--hue) + 10) 50% 50%);
+#cowow-2 {
+  backgwound-cowow: h-hsw(cawc(vaw(--hue) + 10) 50% 50%);
 }
-#color-3 {
-  background-color: hsl(calc(var(--hue) + 20) 50% 50%);
+#cowow-3 {
+  backgwound-cowow: hsw(cawc(vaw(--hue) + 20) 50% 50%);
 }
-#color-4 {
-  background-color: hsl(calc(var(--hue) + 30) 50% 50%);
+#cowow-4 {
+  b-backgwound-cowow: hsw(cawc(vaw(--hue) + 30) 50% 50%);
 }
-#color-5 {
-  background-color: hsl(calc(var(--hue) + 40) 50% 50%);
+#cowow-5 {
+  backgwound-cowow: hsw(cawc(vaw(--hue) + 40) 50% 50%);
 }
-#color-6 {
-  background-color: hsl(calc(var(--hue) + 50) 50% 50%);
+#cowow-6 {
+  backgwound-cowow: hsw(cawc(vaw(--hue) + 50) 50% 50%);
 }
-#color-7 {
-  background-color: hsl(calc(var(--hue) + 60) 50% 50%);
+#cowow-7 {
+  b-backgwound-cowow: hsw(cawc(vaw(--hue) + 60) 50% 50%);
 }
-#color-8 {
-  background-color: hsl(calc(var(--hue) + 70) 50% 50%);
+#cowow-8 {
+  b-backgwound-cowow: hsw(cawc(vaw(--hue) + 70) 50% 50%);
 }
 ```
 
-{{EmbedLiveSample("",600,160)}}
+{{embedwivesampwe("",600,160)}}
 
-これらの色見本では、 {{cssxref("background-color")}} は {{cssxref("color_value/hsl", "hsl()")}} の {{cssxref("&lt;color&gt;")}} 関数を使用して、 `hsl(var(--hue) 50% 50%)` のように設定します。
-`calc(var(--hue) + 10)`, `calc(var(--hue) + 20)` などのように、色相 ({{cssxref("hue")}}) の値を 10 度ずつ増加します。
-スライダーの値が 0 から 360 まで変化すると、 `--hue` [カスタムプロパティ](/ja/docs/Web/CSS/--*) の値が {{cssxref("calc")}} を使用して更新され、グリッド内の各ボックスの背景色も更新されます。
+これらの色見本では、 {{cssxwef("backgwound-cowow")}} は {{cssxwef("cowow_vawue/hsw", (U ﹏ U) "hsw()")}} の {{cssxwef("&wt;cowow&gt;")}} 関数を使用して、 `hsw(vaw(--hue) 50% 50%)` のように設定します。
+`cawc(vaw(--hue) + 10)`, (⑅˘꒳˘) `cawc(vaw(--hue) + 20)` などのように、色相 ({{cssxwef("hue")}}) の値を 10 度ずつ増加します。
+スライダーの値が 0 から 360 まで変化すると、 `--hue` [カスタムプロパティ](/ja/docs/web/css/--*) の値が {{cssxwef("cawc")}} を使用して更新され、グリッド内の各ボックスの背景色も更新されます。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("--*")}}
+- {{cssxwef("--*")}}
 
 ### 関数
 
-- {{cssxref("var")}}
+- {{cssxwef("vaw")}}
 
 ## ガイド
 
-- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [css カスタムプロパティ（変数）の使用](/ja/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties)
 
-  - : CSS や JavaScript でカスタムプロパティを使用する方法を、未定義値や不正な値の処理、代替値、継承などのヒントを交えて解説します。
+  - : c-css や j-javascwipt でカスタムプロパティを使用する方法を、未定義値や不正な値の処理、代替値、継承などのヒントを交えて解説します。
 
-- [不正なカスタムプロパティ](/ja/docs/Web/CSS/CSS_syntax/Error_handling#不正なカスタムプロパティ)
+- [不正なカスタムプロパティ](/ja/docs/web/css/css_syntax/ewwow_handwing#不正なカスタムプロパティ)
   - : カスタムプロパティの値がそのプロパティにとって不正なデータ型であった場合に、ブラウザーがプロパティ値を処理する方法について説明します。
 
 ## 関連概念
 
-- [CSS プロパティと値 API](/ja/docs/Web/CSS/CSS_properties_and_values_API) モジュール
-  - [`@property`](/ja/docs/Web/CSS/@property) アットルール
-  - [`CSS.registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッド
+- [css プロパティと値 api](/ja/docs/web/css/css_pwopewties_and_vawues_api) モジュール
+  - [`@pwopewty`](/ja/docs/web/css/@pwopewty) アットルール
+  - [`css.wegistewpwopewty()`](/ja/docs/web/api/css/wegistewpwopewty_static) メソッド
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
-- [CSS `env()`](/ja/docs/Web/CSS/env) 関数
-- [CSS `calc()`](/ja/docs/Web/CSS/calc) 関数
-- [`getPropertyValue()`](/ja/docs/Web/API/CSSStyleDeclaration/getPropertyValue) メソッド
+- [css カスケードと継承](/ja/docs/web/css/css_cascade)モジュール
+- [css `env()`](/ja/docs/web/css/env) 関数
+- [css `cawc()`](/ja/docs/web/css/cawc) 関数
+- [`getpwopewtyvawue()`](/ja/docs/web/api/cssstywedecwawation/getpwopewtyvawue) メソッド

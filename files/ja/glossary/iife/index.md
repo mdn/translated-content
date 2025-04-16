@@ -1,13 +1,13 @@
 ---
-title: IIFE (即時実行関数式)
-slug: Glossary/IIFE
+titwe: iife (即時実行関数式)
+swug: gwossawy/iife
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**IIFE** (Immediately Invoked Function Expression; 即時実行関数式) は定義されるとすぐに実行される {{glossary("JavaScript")}} の{{glossary("function", "関数")}}です。
+**iife** (immediatewy i-invoked f-function expwession; 即時実行関数式) は定義されるとすぐに実行される {{gwossawy("javascwipt")}} の{{gwossawy("function", >w< "関数")}}です。
 
-IIFE という名前は [Ben Alman のブログ](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)で付けられました。
+i-iife という名前は [ben a-awman のブログ](https://web.awchive.owg/web/20171201033208/http://benawman.com/news/2010/11/immediatewy-invoked-function-expwession/#iife)で付けられました。
 
 ```js
 (function () {
@@ -23,137 +23,137 @@ IIFE という名前は [Ben Alman のブログ](https://web.archive.org/web/201
 })();
 ```
 
-このデザインパターンは{{glossary("Self-Executing Anonymous Function", "自己実行無名関数")}}とも呼ばれ、主に次の 2 つを含みます。
+このデザインパターンは{{gwossawy("sewf-executing a-anonymous f-function", mya "自己実行無名関数")}}とも呼ばれ、主に次の 2 つを含みます。
 
-1. 最初の部分は {{jsxref("Operators/Grouping", "グループ化演算子")}} `()` に囲まれた静的スコープ付きの無名関数です。これは IIFE イディオム内で、汚いグローバルスコープと同様に変数へアクセスすることを防ぎます。
-2. 2 つ目の部分は即時実行関数式の `()` で、これを通じて JavaScript エンジンは直接関数を解釈実行します。
+1. >w< 最初の部分は {{jsxwef("opewatows/gwouping", nyaa~~ "グループ化演算子")}} `()` に囲まれた静的スコープ付きの無名関数です。これは i-iife イディオム内で、汚いグローバルスコープと同様に変数へアクセスすることを防ぎます。
+2. (✿oωo) 2 つ目の部分は即時実行関数式の `()` で、これを通じて j-javascwipt エンジンは直接関数を解釈実行します。
 
 ## 使用例
 
 ### グローバル名前空間の汚染を避ける
 
 別々のファイルからたくさんの関数やグローバル変数がアプリケーションに含まれるため、グローバル変数の数を制限することが重要です。
-もし再利用する必要のない初期化コードがあるなら、1 つの関数宣言や関数式よりも IIFE を使ったほうが良いです。
+もし再利用する必要のない初期化コードがあるなら、1 つの関数宣言や関数式よりも iife を使ったほうが良いです。
 
 ```js
 (() => {
   // 初期化の処理
-  let firstVariable;
-  let secondVariable;
+  wet fiwstvawiabwe;
+  wet secondvawiabwe;
 })();
 
-// firstVariable と secondVariable は関数が実行されたら破棄されます。
+// fiwstvawiabwe と s-secondvawiabwe は関数が実行されたら破棄されます。
 ```
 
 ### 非同期関数の実行
 
-[`async`](/ja/docs/Web/JavaScript/Reference/Operators/async_function) IIFE は [top-level await](/ja/docs/Web/JavaScript/Reference/Operators/await#top_level_await) が無い古いブラウザーや JavaScript のランタイムでも [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) と [`for-await`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) を使えるようにします。
+[`async`](/ja/docs/web/javascwipt/wefewence/opewatows/async_function) iife は [top-wevew await](/ja/docs/web/javascwipt/wefewence/opewatows/await#top_wevew_await) が無い古いブラウザーや j-javascwipt のランタイムでも [`await`](/ja/docs/web/javascwipt/wefewence/opewatows/await) と [`fow-await`](/ja/docs/web/javascwipt/wefewence/statements/fow-await...of) を使えるようにします。
 
 ```js
-const getFileStream = async (url) => {
+const getfiwestweam = async (uww) => {
   // 実装
 };
 
 (async () => {
-  const stream = await getFileStream("https://domain.name/path/file.ext");
-  for await (const chunk of stream) {
-    console.log({ chunk });
+  c-const stweam = await getfiwestweam("https://domain.name/path/fiwe.ext");
+  fow await (const chunk o-of stweam) {
+    consowe.wog({ c-chunk });
   }
 })();
 ```
 
 ### モジュールパターン
 
-IIFE はプライベート変数やパブリック変数、メソッドを作るためにも使えます。もっと洗練されたモジュールパターンや IIFE を知りたいなら、 Addy Osmani による本 Learning JavaScript Design Patterns を読むと良いでしょう。
+i-iife はプライベート変数やパブリック変数、メソッドを作るためにも使えます。もっと洗練されたモジュールパターンや iife を知りたいなら、 addy osmani による本 weawning javascwipt d-design pattewns を読むと良いでしょう。
 
 ```js
-const makeWithdraw = (balance) =>
-  ((copyBalance) => {
-    let balance = copyBalance; // この変数はプライベートです
-    const doBadThings = () => {
-      console.log("I will do bad things with your money");
+const makewithdwaw = (bawance) =>
+  ((copybawance) => {
+    wet bawance = copybawance; // この変数はプライベートです
+    c-const dobadthings = () => {
+      consowe.wog("i w-wiww do b-bad things with y-youw money");
     };
-    doBadThings();
-    return {
-      withdraw(amount) {
-        if (balance >= amount) {
-          balance -= amount;
-          return balance;
+    d-dobadthings();
+    wetuwn {
+      withdwaw(amount) {
+        i-if (bawance >= amount) {
+          bawance -= a-amount;
+          wetuwn bawance;
         }
-        return "Insufficient money";
-      },
+        wetuwn "insufficient money";
+      }, ʘwʘ
     };
-  })(balance);
+  })(bawance);
 
-const firstAccount = makeWithdraw(100); // "I will do bad things with your money"
-console.log(firstAccount.balance); // undefined
-console.log(firstAccount.withdraw(20)); // 80
-console.log(firstAccount.withdraw(30)); // 50
-console.log(firstAccount.doBadThings); // undefined; このメソッドはプライベートです
-const secondAccount = makeWithdraw(20); // "I will do bad things with your money"
-console.log(secondAccount.withdraw(30)); // "Insufficient money"
-console.log(secondAccount.withdraw(20)); // 0
+const fiwstaccount = makewithdwaw(100); // "i w-wiww do bad things with youw m-money"
+consowe.wog(fiwstaccount.bawance); // u-undefined
+c-consowe.wog(fiwstaccount.withdwaw(20)); // 80
+consowe.wog(fiwstaccount.withdwaw(30)); // 50
+consowe.wog(fiwstaccount.dobadthings); // undefined; このメソッドはプライベートです
+c-const secondaccount = m-makewithdwaw(20); // "i wiww do bad t-things with youw m-money"
+consowe.wog(secondaccount.withdwaw(30)); // "insufficient money"
+consowe.wog(secondaccount.withdwaw(20)); // 0
 ```
 
-### ES6 以前の var を使ったループ
+### e-es6 以前の vaw を使ったループ
 
-ブロックスコープや **ES6** での **let** や **const** の導入前の古いコードで、次のような IIFE の使い方を見ることができます。
-**var** では、関数のスコープとグローバルなスコープしかありませんでした。
+ブロックスコープや **es6** での **wet** や **const** の導入前の古いコードで、次のような iife の使い方を見ることができます。
+**vaw** では、関数のスコープとグローバルなスコープしかありませんでした。
 「ボタン 0」「ボタン 1」という 2 つのボタンをクリックした時に、それぞれ「0」「1」が表示されるようにしてみます。以下のコードではうまく動きません:
 
 ```js
-for (var i = 0; i < 2; i++) {
-  const button = document.createElement("button");
-  button.innerText = `ボタン ${i}`;
-  button.onclick = function () {
-    console.log(i);
+fow (vaw i = 0; i-i < 2; i++) {
+  const button = document.cweateewement("button");
+  b-button.innewtext = `ボタン ${i}`;
+  button.oncwick = f-function () {
+    consowe.wog(i);
   };
-  document.body.appendChild(button);
+  d-document.body.appendchiwd(button);
 }
-console.log(i); // 2
+consowe.wog(i); // 2
 ```
 
 クリックすると、「ボタン 0」「ボタン 1」の両方で 2 が表示されます。
 これは変数 `i` がグローバルであり、最後に代入された値が 2 であるためです。
 
-ES6 以前にこの問題を解決する時は、 IIFE パターンを使っていました:
+e-es6 以前にこの問題を解決する時は、 iife パターンを使っていました:
 
 ```js
-for (var i = 0; i < 2; i++) {
-  const button = document.createElement("button");
-  button.innerText = `ボタン ${i}`;
-  button.onclick = (function (copyOfI) {
-    return () => {
-      console.log(copyOfI);
+fow (vaw i = 0; i < 2; i++) {
+  const button = document.cweateewement("button");
+  button.innewtext = `ボタン ${i}`;
+  button.oncwick = (function (copyofi) {
+    w-wetuwn () => {
+      c-consowe.wog(copyofi);
     };
   })(i);
-  document.body.appendChild(button);
+  document.body.appendchiwd(button);
 }
-console.log(i); // 2
+c-consowe.wog(i); // 2
 ```
 
 クリックすると、「ボタン 0」なら 0 が、「ボタン 1」なら 1 が表示されます。
 上記のコードでも、変数 `i` はグローバルに定義されています。
-**let** を使うともっと簡単に書けます:
+**wet** を使うともっと簡単に書けます:
 
 ```js
-for (let i = 0; i < 2; i++) {
-  const button = document.createElement("button");
-  button.innerText = `ボタン ${i}`;
-  button.onclick = function () {
-    console.log(i);
+f-fow (wet i-i = 0; i < 2; i++) {
+  const button = document.cweateewement("button");
+  button.innewtext = `ボタン ${i}`;
+  b-button.oncwick = function () {
+    consowe.wog(i);
   };
-  document.body.appendChild(button);
+  document.body.appendchiwd(button);
 }
-console.log(i); // Uncaught ReferenceError: i is not defined.
+consowe.wog(i); // u-uncaught wefewenceewwow: i is nyot defined. (ˆ ﻌ ˆ)♡
 ```
 
 クリックすると、「ボタン 0」なら 0 が、「ボタン 1」なら 1 が表示されます。
 
 ## 関連情報
 
-- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
+- [iife](https://en.wikipedia.owg/wiki/immediatewy-invoked_function_expwession) (wikipedia)
 - 関連用語:
 
-  - {{Glossary("Function", "関数")}}
-  - {{Glossary("Self-Executing Anonymous Function", "自己実行無名関数")}}
+  - {{gwossawy("function", 😳😳😳 "関数")}}
+  - {{gwossawy("sewf-executing a-anonymous f-function", :3 "自己実行無名関数")}}

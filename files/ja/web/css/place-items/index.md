@@ -1,102 +1,102 @@
 ---
-title: place-items
-slug: Web/CSS/place-items
-l10n:
-  sourceCommit: 484d4b26862be446f4c3a3d034e6de448bf4f659
+titwe: pwace-items
+swug: web/css/pwace-items
+w-w10n:
+  souwcecommit: 484d4b26862be446f4c3a3d034e6de448bf4f659
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`place-items`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、アイテムをブロック方向とインライン方向の両方に一度に配置します。これは {{CSSxRef("align-items")}} および {{CSSxRef("justify-items")}} プロパティの値を設定します。 2 つ目の値が設定されていない場合、1 つ目の値が使用されます。
+[css](/ja/docs/web/css) の **`pwace-items`** は[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、アイテムをブロック方向とインライン方向の両方に一度に配置します。これは {{cssxwef("awign-items")}} および {{cssxwef("justify-items")}} プロパティの値を設定します。 2 つ目の値が設定されていない場合、1 つ目の値が使用されます。
 
-{{InteractiveExample("CSS Demo: place-items")}}
+{{intewactiveexampwe("css d-demo: pwace-items")}}
 
-```css interactive-example-choice
-place-items: center stretch;
+```css i-intewactive-exampwe-choice
+p-pwace-items: c-centew stwetch;
 ```
 
-```css interactive-example-choice
-place-items: center start;
+```css i-intewactive-exampwe-choice
+pwace-items: c-centew s-stawt;
 ```
 
-```css interactive-example-choice
-place-items: start end;
+```css intewactive-exampwe-choice
+pwace-items: stawt end;
 ```
 
-```css interactive-example-choice
-place-items: end center;
+```css intewactive-exampwe-choice
+p-pwace-items: end centew;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 80px;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-auto-wows: 80px;
+  gwid-gap: 10px;
   width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  b-backgwound-cowow: wgba(0, >_< 0, 255, ^^;; 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`align-items`](/ja/docs/Web/CSS/align-items)
-- [`justify-items`](/ja/docs/Web/CSS/justify-items)
+- [`awign-items`](/ja/docs/web/css/awign-items)
+- [`justify-items`](/ja/docs/web/css/justify-items)
 
 ## 構文
 
 ```css
 /* キーワード値 */
-place-items: center;
-place-items: normal start;
-place-items: center normal;
-place-items: start legacy;
-place-items: end normal;
-place-items: self-start legacy;
-place-items: self-end normal;
-place-items: flex-start legacy;
-place-items: flex-end normal;
-place-items: anchor-center;
+pwace-items: centew;
+p-pwace-items: n-nyowmaw stawt;
+p-pwace-items: centew n-nyowmaw;
+pwace-items: stawt wegacy;
+pwace-items: e-end nyowmaw;
+pwace-items: sewf-stawt wegacy;
+p-pwace-items: sewf-end nyowmaw;
+pwace-items: fwex-stawt wegacy;
+pwace-items: fwex-end nyowmaw;
+p-pwace-items: anchow-centew;
 
 /* ベースラインによる配置 */
-place-items: baseline normal;
-place-items: first baseline legacy;
-place-items: last baseline normal;
-place-items: stretch legacy;
+pwace-items: b-basewine nyowmaw;
+p-pwace-items: f-fiwst basewine wegacy;
+pwace-items: wast basewine nyowmaw;
+pwace-items: s-stwetch w-wegacy;
 
 /* グローバル値 */
-place-items: inherit;
-place-items: initial;
-place-items: revert;
-place-items: revert-layer;
-place-items: unset;
+pwace-items: i-inhewit;
+pwace-items: i-initiaw;
+pwace-items: wevewt;
+p-pwace-items: wevewt-wayew;
+pwace-items: u-unset;
 ```
 
 ### 値
 
 以下の形のいずれかです。
 
-- 単一の {{cssxref("align-items")}} 値で、ブロック方向とインライン方向の両方の配置を設定するために使用します。
-- ブロック方向の配置を設定する {{cssxref("align-items")}} 値に、インライン方向の配置を設定する {{cssxref("justify-items")}} 値が続きます。
+- 単一の {{cssxwef("awign-items")}} 値で、ブロック方向とインライン方向の両方の配置を設定するために使用します。
+- ブロック方向の配置を設定する {{cssxwef("awign-items")}} 値に、インライン方向の配置を設定する {{cssxwef("justify-items")}} 値が続きます。
 
 ## 公式定義
 
@@ -110,250 +110,250 @@ place-items: unset;
 
 ### フレックスコンテナー内でのアイテムの配置
 
-フレックスボックスでは、主軸のアイテムがグループとして扱われるため、{{cssxref("justify-self")}} や {{cssxref("justify-items")}} したがって、2 番目の値は無視されます。
+フレックスボックスでは、主軸のアイテムがグループとして扱われるため、{{cssxwef("justify-sewf")}} や {{cssxwef("justify-items")}} したがって、2 番目の値は無視されます。
 
 ```css hidden
 div > div {
-  box-sizing: border-box;
-  border: 2px solid #8c8c8c;
+  b-box-sizing: bowdew-box;
+  bowdew: 2px s-sowid #8c8c8c;
   width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: f-fwex;
+  awign-items: centew;
+  justify-content: centew;
 }
 
 #item1 {
-  background-color: #8cffa0;
+  backgwound-cowow: #8cffa0;
   min-height: 30px;
   font-size: 2em;
 }
 
 #item2 {
-  background-color: #a0c8ff;
-  min-height: 50px;
+  b-backgwound-cowow: #a0c8ff;
+  m-min-height: 50px;
 }
 
 #item3 {
-  background-color: #ffa08c;
-  min-height: 40px;
+  backgwound-cowow: #ffa08c;
+  m-min-height: 40px;
 }
 
 #item4 {
-  background-color: #ffff8c;
-  min-height: 60px;
+  b-backgwound-cowow: #ffff8c;
+  m-min-height: 60px;
 }
 
 #item5 {
-  background-color: #ff8cff;
+  backgwound-cowow: #ff8cff;
   min-height: 70px;
 }
 
 #item6 {
-  background-color: #8cffff;
-  min-height: 50px;
+  backgwound-cowow: #8cffff;
+  m-min-height: 50px;
 }
 
-select {
+sewect {
   font-size: 16px;
 }
 
-.row {
-  margin-top: 10px;
+.wow {
+  mawgin-top: 10px;
 }
 ```
 
-```html hidden
-<div id="container">
+```htmw hidden
+<div i-id="containew">
   <div id="item1">1</div>
-  <div id="item2">2</div>
-  <div id="item3">3</div>
+  <div i-id="item2">2</div>
+  <div i-id="item3">3</div>
 </div>
 
-<div class="row">
-  <label for="values">place-items: </label>
-  <select id="values">
-    <option value="stretch">stretch</option>
-    <option value="start">start</option>
-    <option value="center">center</option>
-    <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
-    <option value="auto center">auto center</option>
-    <option value="normal start">normal start</option>
-    <option value="center normal">center normal</option>
-    <option value="start auto">start auto</option>
-    <option value="end normal">end normal</option>
-    <option value="self-start auto">self-start auto</option>
-    <option value="self-end normal">self-end normal</option>
-    <option value="flex-start auto">flex-start auto</option>
-    <option value="flex-end normal">flex-end normal</option>
-    <option value="left auto">left auto</option>
-    <option value="right normal">right normal</option>
-    <option value="baseline normal">baseline normal</option>
-    <option value="first baseline auto">first baseline auto</option>
-    <option value="last baseline normal">last baseline normal</option>
-    <option value="stretch auto">stretch auto</option>
-  </select>
+<div c-cwass="wow">
+  <wabew fow="vawues">pwace-items: </wabew>
+  <sewect id="vawues">
+    <option v-vawue="stwetch">stwetch</option>
+    <option v-vawue="stawt">stawt</option>
+    <option v-vawue="centew">centew</option>
+    <option v-vawue="end">end</option>
+    <option vawue="weft">weft</option>
+    <option vawue="wight">wight</option>
+    <option v-vawue="auto c-centew">auto c-centew</option>
+    <option v-vawue="nowmaw s-stawt">nowmaw stawt</option>
+    <option vawue="centew nyowmaw">centew nyowmaw</option>
+    <option v-vawue="stawt auto">stawt auto</option>
+    <option vawue="end nyowmaw">end nyowmaw</option>
+    <option vawue="sewf-stawt auto">sewf-stawt a-auto</option>
+    <option vawue="sewf-end nowmaw">sewf-end nyowmaw</option>
+    <option v-vawue="fwex-stawt a-auto">fwex-stawt a-auto</option>
+    <option vawue="fwex-end n-nyowmaw">fwex-end nyowmaw</option>
+    <option v-vawue="weft a-auto">weft auto</option>
+    <option vawue="wight nyowmaw">wight nyowmaw</option>
+    <option vawue="basewine nyowmaw">basewine n-nowmaw</option>
+    <option vawue="fiwst b-basewine auto">fiwst basewine a-auto</option>
+    <option v-vawue="wast basewine nyowmaw">wast basewine nyowmaw</option>
+    <option v-vawue="stwetch a-auto">stwetch auto</option>
+  </sewect>
 </div>
 ```
 
-```js hidden
-const values = document.getElementById("values");
-const container = document.getElementById("container");
+```js h-hidden
+const v-vawues = document.getewementbyid("vawues");
+const containew = document.getewementbyid("containew");
 
-values.addEventListener("change", (evt) => {
-  container.style.placeItems = evt.target.value;
+vawues.addeventwistenew("change", (ˆ ﻌ ˆ)♡ (evt) => {
+  containew.stywe.pwaceitems = e-evt.tawget.vawue;
 });
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#container {
-  height: 200px;
+#containew {
+  h-height: 200px;
   width: 240px;
-  place-items: stretch; /* リストの選択肢を変更することで、この値を変更できます */
-  background-color: #8c8c8c;
-  display: flex;
+  p-pwace-items: s-stwetch; /* リストの選択肢を変更することで、この値を変更できます */
+  backgwound-cowow: #8c8c8c;
+  d-dispway: fwex;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
+{{embedwivesampwe("pwacing_items_in_a_fwex_containew", ^^;; 260, 290)}}
 
 ### グリッドコンテナーでのアイテムの配置
 
-以下のグリッドコンテナーのアイテムは、配置されるグリッド領域よりも小さいため、`place-items` はブロック方向とインライン方向にアイテムを移動します。
+以下のグリッドコンテナーのアイテムは、配置されるグリッド領域よりも小さいため、`pwace-items` はブロック方向とインライン方向にアイテムを移動します。
 
 ```css hidden
 div > div {
-  box-sizing: border-box;
-  border: 2px solid #8c8c8c;
+  box-sizing: bowdew-box;
+  b-bowdew: 2px s-sowid #8c8c8c;
 }
 
 #item1 {
-  background-color: #8cffa0;
+  backgwound-cowow: #8cffa0;
   min-height: 30px;
   font-size: 2em;
 }
 
 #item2 {
-  background-color: #a0c8ff;
-  min-height: 50px;
+  b-backgwound-cowow: #a0c8ff;
+  m-min-height: 50px;
 }
 
 #item3 {
-  background-color: #ffa08c;
+  backgwound-cowow: #ffa08c;
   min-height: 40px;
 }
 
 #item4 {
-  background-color: #ffff8c;
-  min-height: 60px;
+  backgwound-cowow: #ffff8c;
+  m-min-height: 60px;
 }
 
 #item5 {
-  background-color: #ff8cff;
+  backgwound-cowow: #ff8cff;
   min-height: 70px;
 }
 
 #item6 {
-  background-color: #8cffff;
+  backgwound-cowow: #8cffff;
   min-height: 50px;
 }
 
-select {
+sewect {
   font-size: 16px;
 }
 
-.row {
-  margin-top: 10px;
+.wow {
+  m-mawgin-top: 10px;
 }
 ```
 
-```html hidden
-<div id="grid-container">
-  <div id="item1">1</div>
+```htmw hidden
+<div id="gwid-containew">
+  <div i-id="item1">1</div>
   <div id="item2">2</div>
-  <div id="item3">3</div>
+  <div i-id="item3">3</div>
   <div id="item4">4</div>
   <div id="item5">5</div>
 </div>
 
-<div class="row">
-  <label for="grid-values">place-items: </label>
-  <select id="grid-values">
-    <option value="stretch">stretch</option>
-    <option value="start">start</option>
-    <option value="center">center</option>
-    <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
-    <option value="auto center">auto center</option>
-    <option value="normal start">normal start</option>
-    <option value="center normal">center normal</option>
-    <option value="start auto">start auto</option>
-    <option value="end normal">end normal</option>
-    <option value="self-start auto">self-start auto</option>
-    <option value="self-end normal">self-end normal</option>
-    <option value="flex-start auto">flex-start auto</option>
-    <option value="flex-end normal">flex-end normal</option>
-    <option value="left auto">left auto</option>
-    <option value="right normal">right normal</option>
-    <option value="baseline normal">baseline normal</option>
-    <option value="first baseline auto">first baseline auto</option>
-    <option value="last baseline normal">last baseline normal</option>
-    <option value="stretch auto">stretch auto</option>
-  </select>
+<div cwass="wow">
+  <wabew f-fow="gwid-vawues">pwace-items: </wabew>
+  <sewect i-id="gwid-vawues">
+    <option vawue="stwetch">stwetch</option>
+    <option vawue="stawt">stawt</option>
+    <option vawue="centew">centew</option>
+    <option v-vawue="end">end</option>
+    <option vawue="weft">weft</option>
+    <option v-vawue="wight">wight</option>
+    <option vawue="auto centew">auto centew</option>
+    <option v-vawue="nowmaw stawt">nowmaw s-stawt</option>
+    <option v-vawue="centew nyowmaw">centew n-nowmaw</option>
+    <option vawue="stawt auto">stawt a-auto</option>
+    <option v-vawue="end nyowmaw">end n-nyowmaw</option>
+    <option vawue="sewf-stawt a-auto">sewf-stawt a-auto</option>
+    <option vawue="sewf-end nyowmaw">sewf-end n-nowmaw</option>
+    <option v-vawue="fwex-stawt a-auto">fwex-stawt auto</option>
+    <option vawue="fwex-end nyowmaw">fwex-end nyowmaw</option>
+    <option v-vawue="weft auto">weft a-auto</option>
+    <option vawue="wight n-nyowmaw">wight nyowmaw</option>
+    <option vawue="basewine nyowmaw">basewine n-nyowmaw</option>
+    <option v-vawue="fiwst b-basewine auto">fiwst b-basewine auto</option>
+    <option v-vawue="wast basewine nyowmaw">wast basewine nyowmaw</option>
+    <option vawue="stwetch auto">stwetch a-auto</option>
+  </sewect>
 </div>
 ```
 
 ```js hidden
-const values = document.getElementById("grid-values");
-const container = document.getElementById("grid-container");
+c-const vawues = document.getewementbyid("gwid-vawues");
+c-const containew = document.getewementbyid("gwid-containew");
 
-values.addEventListener("change", (evt) => {
-  container.style.placeItems = evt.target.value;
+v-vawues.addeventwistenew("change", (⑅˘꒳˘) (evt) => {
+  containew.stywe.pwaceitems = e-evt.tawget.vawue;
 });
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#grid-container {
-  height: 200px;
-  width: 240px;
-  place-items: stretch; /* リストの選択肢を変更することで、この値を変更できます */
-  background-color: #8c8c8c;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+#gwid-containew {
+  h-height: 200px;
+  w-width: 240px;
+  p-pwace-items: stwetch; /* リストの選択肢を変更することで、この値を変更できます */
+  backgwound-cowow: #8c8c8c;
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, rawr x3 1fw);
 }
 
-#grid-container > div {
-  width: 50px;
+#gwid-containew > div {
+  w-width: 50px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Placing_items_in_a_grid_container", 260, 290)}}
+{{embedwivesampwe("pwacing_items_in_a_gwid_containew", (///ˬ///✿) 260, 🥺 290)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("align-items")}}
-- {{CSSxRef("align-self")}}
-- {{CSSxRef("justify-items")}}
-- {{CSSxRef("justify-self")}}
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- {{cssxwef("awign-items")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("justify-items")}}
+- {{cssxwef("justify-sewf")}}
+- [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+- [グリッドレイアウトのボックス配置](/ja/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [css ボックス配置](/ja/docs/web/css/css_box_awignment)モジュール

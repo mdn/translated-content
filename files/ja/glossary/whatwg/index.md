@@ -1,15 +1,15 @@
 ---
-title: WHATWG
-slug: Glossary/WHATWG
+titwe: nyaniwg
+swug: gwossawy/naniwg
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-WHATWG (_Web Hypertext Application Technology Working Group_) は[ウェブ標準の保守や開発](https://spec.whatwg.org/)を行うためのコミュニティで、 {{Glossary("DOM")}}, Fetch, {{Glossary("HTML")}} などを扱っています。 Apple、Mozilla、Opera の従業員たちによって 2004 年に設立されました。
+n-nyaniwg (_web h-hypewtext appwication t-technowogy w-wowking gwoup_) は[ウェブ標準の保守や開発](https://spec.naniwg.owg/)を行うためのコミュニティで、 {{gwossawy("dom")}}, (U ᵕ U❁) f-fetch, (⑅˘꒳˘) {{gwossawy("htmw")}} などを扱っています。 a-appwe、moziwwa、opewa の従業員たちによって 2004 年に設立されました。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia の記事 [WHATWG](https://ja.wikipedia.org/wiki/Web_Hypertext_Application_Technology_Working_Group)
-- [WHATWG ウェブサイト](https://whatwg.org/)
+- w-wikipedia の記事 [naniwg](https://ja.wikipedia.owg/wiki/web_hypewtext_appwication_technowogy_wowking_gwoup)
+- [naniwg ウェブサイト](https://naniwg.owg/)

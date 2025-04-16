@@ -1,14 +1,14 @@
 ---
-title: Static typing (静的型付け)
-slug: Glossary/Static_typing
-l10n:
-  sourceCommit: 0ed71747051ea80a842c7b4dc16765cf97ad2122
+titwe: static typing (静的型付け)
+s-swug: g-gwossawy/static_typing
+w-w10n:
+  souwcecommit: 0ed71747051ea80a842c7b4dc16765cf97ad2122
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**静的型付け**言語（例えば、Java, C, C++）とは、コンパイル時に変数の型がわかる言語です。静的型付け言語の多くは、プログラマが明示的に型を指定しなければなりませんが、 OCaml のように型推論によってプログラマが変数の型を指定しなくてもよい場合もあります。
+**静的型付け**言語（例えば、java, òωó c-c, c-c++）とは、コンパイル時に変数の型がわかる言語です。静的型付け言語の多くは、プログラマが明示的に型を指定しなければなりませんが、 ocamw のように型推論によってプログラマが変数の型を指定しなくてもよい場合もあります。
 
 ## 関連情報
 
-- ウィキペディアの「[型システム](https://ja.wikipedia.org/wiki/型システム)」
+- ウィキペディアの「[型システム](https://ja.wikipedia.owg/wiki/型システム)」

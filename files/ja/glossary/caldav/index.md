@@ -1,19 +1,19 @@
 ---
-title: CalDAV
-slug: Glossary/CalDAV
+titwe: cawdav
+swug: gwossawy/cawdav
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-CalDAV（Calendaring extensions to {{Glossary("WebDAV")}}）は、{{Glossary("IETF")}} によって標準化された{{glossary("protocol","プロトコル")}}であり、{{glossary("server","サーバー")}}からカレンダーデータにリモートアクセスするために使用されます。
+c-cawdav（cawendawing e-extensions t-to {{gwossawy("webdav")}}）は、{{gwossawy("ietf")}} によって標準化された{{gwossawy("pwotocow","プロトコル")}}であり、{{gwossawy("sewvew","サーバー")}}からカレンダーデータにリモートアクセスするために使用されます。
 
 ## より詳しく知る
 
 ### 一般知識
 
-- Wikipedia 上の [CalDAV](https://ja.wikipedia.org/wiki/CalDAV)
+- w-wikipedia 上の [cawdav](https://ja.wikipedia.owg/wiki/cawdav)
 
 ### 技術文書
 
-- [RFC 4791: Calendaring extensions to WebDAV (CalDAV)](https://tools.ietf.org/html/rfc4791)
-- [RFC 6638: Scheduling Extensions to CalDAV](https://tools.ietf.org/html/rfc6638)
+- [wfc 4791: c-cawendawing e-extensions t-to webdav (cawdav)](https://toows.ietf.owg/htmw/wfc4791)
+- [wfc 6638: s-scheduwing extensions to cawdav](https://toows.ietf.owg/htmw/wfc6638)

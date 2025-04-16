@@ -1,16 +1,16 @@
 ---
-title: Slug (スラグ)
-slug: Glossary/Slug
+titwe: swug (スラグ)
+swug: g-gwossawy/swug
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-スラグは、通常は URL の最後にある Web アドレスの固有の識別部分です。
-MDN のコンテキストでは、"\<locale> / docs /" に続く URL の部分です。
+スラグは、通常は u-uww の最後にある w-web アドレスの固有の識別部分です。
+m-mdn のコンテキストでは、"\<wocawe> / d-docs /" に続く u-uww の部分です。
 
 親文書の下に新しい文書が作成されたときの最終的な構成要素でもあります。
-たとえば、このページのスラグは `Glossary/スラグ` です。
+たとえば、このページのスラグは `gwossawy/スラグ` です。
 
 ## 関連情報
 
-- [タイトルとスラグの決め方](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#タイトルとスラグの決め方)
+- [タイトルとスラグの決め方](/ja/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#タイトルとスラグの決め方)

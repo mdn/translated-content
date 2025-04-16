@@ -1,86 +1,86 @@
 ---
-title: column-rule
-slug: Web/CSS/column-rule
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: cowumn-wuwe
+swug: web/css/cowumn-wuwe
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-rule`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さ、スタイル、色を設定します。
+**`cowumn-wuwe`** は[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)を行う [css](/ja/docs/web/css) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さ、スタイル、色を設定します。
 
-{{InteractiveExample("CSS Demo: column-rule")}}
+{{intewactiveexampwe("css d-demo: cowumn-wuwe")}}
 
-```css interactive-example-choice
-column-rule: dotted;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe: d-dotted;
 ```
 
-```css interactive-example-choice
-column-rule: solid 6px;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe: s-sowid 6px;
 ```
 
-```css interactive-example-choice
-column-rule: solid blue;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe: sowid bwue;
 ```
 
-```css interactive-example-choice
-column-rule: thick inset blue;
+```css intewactive-exampwe-choice
+cowumn-wuwe: t-thick inset bwue;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    wondon. 🥺 michaewmas t-tewm watewy ovew, o.O and the wowd chancewwow sitting in
+    wincown's i-inn haww. /(^•ω•^) impwacabwe nyovembew w-weathew. nyaa~~ a-as much mud in the stweets
+    as if the watews had but nyewwy wetiwed fwom the f-face of the eawth, nyaa~~ and it
+    wouwd nyot be wondewfuw to meet a megawosauwus, :3 fowty f-feet wong ow so, 😳😳😳
+    waddwing w-wike an ewephantine w-wizawd up h-howbown hiww. (˘ω˘)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  cowumn-wuwe: s-sowid;
+  text-awign: weft;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは、以下の CSS プロパティの一括指定です。
+このプロパティは、以下の css プロパティの一括指定です。
 
-- {{Cssxref("column-rule-color")}}
-- {{Cssxref("column-rule-style")}}
-- {{Cssxref("column-rule-width")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("cowumn-wuwe-stywe")}}
+- {{cssxwef("cowumn-wuwe-width")}}
 
 ## 構文
 
 ```css
-column-rule: dotted;
-column-rule: solid 8px;
-column-rule: solid blue;
-column-rule: thick inset blue;
+c-cowumn-wuwe: dotted;
+cowumn-wuwe: sowid 8px;
+cowumn-wuwe: sowid bwue;
+cowumn-wuwe: thick inset b-bwue;
 
 /* グローバル値 */
-column-rule: inherit;
-column-rule: initial;
-column-rule: revert;
-column-rule: revert-layer;
-column-rule: unset;
+cowumn-wuwe: i-inhewit;
+cowumn-wuwe: i-initiaw;
+cowumn-wuwe: w-wevewt;
+cowumn-wuwe: wevewt-wayew;
+cowumn-wuwe: unset;
 ```
 
 ### 値
 
-`column-rule` プロパティは、以下に挙げる値のうち 1 ～ 3 個を任意の順序で指定します。
+`cowumn-wuwe` プロパティは、以下に挙げる値のうち 1 ～ 3 個を任意の順序で指定します。
 
-- `<'column-rule-width'>`
-  - : {{cssxref("&lt;length&gt;")}} または 3 つのキーワード、 `thin`、`medium`、`thick` のうちの 1 つです。詳しくは {{cssxref("border-width")}} を参照してください。
-- `<'column-rule-style'>`
-  - : 有効な値と詳細は {{cssxref("border-style")}} を参照してください。
-- `<'column-rule-color'>`
-  - : {{cssxref("&lt;color&gt;")}} 値です。
+- `<'cowumn-wuwe-width'>`
+  - : {{cssxwef("&wt;wength&gt;")}} または 3 つのキーワード、 `thin`、`medium`、`thick` のうちの 1 つです。詳しくは {{cssxwef("bowdew-width")}} を参照してください。
+- `<'cowumn-wuwe-stywe'>`
+  - : 有効な値と詳細は {{cssxwef("bowdew-stywe")}} を参照してください。
+- `<'cowumn-wuwe-cowow'>`
+  - : {{cssxwef("&wt;cowow&gt;")}} 値です。
 
 ## 公式定義
 
@@ -95,62 +95,62 @@ column-rule: unset;
 ### 例 1
 
 ```css
-/* "medium dotted currentcolor" と同じ */
+/* "medium d-dotted c-cuwwentcowow" と同じ */
 p.foo {
-  column-rule: dotted;
+  c-cowumn-wuwe: d-dotted;
 }
 
-/* "medium solid blue" と同じ */
-p.bar {
-  column-rule: solid blue;
+/* "medium sowid b-bwue" と同じ */
+p.baw {
+  cowumn-wuwe: s-sowid bwue;
 }
 
-/* "8px solid currentcolor" と同じ */
-p.baz {
-  column-rule: solid 8px;
+/* "8px sowid cuwwentcowow" と同じ */
+p-p.baz {
+  cowumn-wuwe: sowid 8px;
 }
 
-p.abc {
-  column-rule: thick inset blue;
+p-p.abc {
+  cowumn-wuwe: thick i-inset bwue;
 }
 ```
 
 ### 例 2
 
-#### HTML
+#### h-htmw
 
-```html-nolint
-<p class="content-box">
-  これは 3 つ段に分割されたテキストの束です。 <code>column-rule</code> プロパティは、段と段の間に引かれる線のスタイル、太さ、色を変更するために使用されます。すばらしいと思いませんか？
+```htmw-nowint
+<p cwass="content-box">
+  これは 3 つ段に分割されたテキストの束です。 <code>cowumn-wuwe</code> プロパティは、段と段の間に引かれる線のスタイル、太さ、色を変更するために使用されます。すばらしいと思いませんか？
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .content-box {
   padding: 0.3em;
-  background: #ff7;
-  column-count: 3;
-  column-rule: inset 2px #33f;
+  backgwound: #ff7;
+  cowumn-count: 3;
+  cowumn-wuwe: inset 2px #33f;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Example_2')}}
+{{embedwivesampwe('exampwe_2')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- {{CSSXref("column-rule-style")}}
-- {{CSSXref("column-rule-width")}}
-- {{CSSXref("column-rule-color")}}
+- [学習: 段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)
+- {{cssxwef("cowumn-wuwe-stywe")}}
+- {{cssxwef("cowumn-wuwe-width")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}

@@ -1,71 +1,71 @@
 ---
-title: scroll-padding-top
-slug: Web/CSS/scroll-padding-top
+titwe: scwoww-padding-top
+swug: w-web/css/scwoww-padding-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`scroll-padding-top` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scwoww-padding-top` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-top")}}
+{{intewactiveexampwe("css d-demo: scwoww-padding-top")}}
 
-```css interactive-example-choice
-scroll-padding-top: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-top: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding-top: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-top: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding-top: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-top: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
-  padding: 0.5em 0;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
+  p-padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   height: 250px;
-  width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  w-width: 270px;
+  ovewfwow-y: s-scwoww;
+  dispway: f-fwex;
+  fwex-diwection: cowumn;
+  box-sizing: bowdew-box;
+  bowdew: 1px sowid b-bwack;
+  scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: w-webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
@@ -73,23 +73,23 @@ scroll-padding-top: 2em;
 
 ```css
 /* キーワード値 */
-scroll-padding-top: auto;
+scwoww-padding-top: a-auto;
 
-/* <length> 値 */
-scroll-padding-top: 10px;
-scroll-padding-top: 1em;
-scroll-padding-top: 10%;
+/* <wength> 値 */
+scwoww-padding-top: 10px;
+scwoww-padding-top: 1em;
+scwoww-padding-top: 10%;
 
 /* グローバル値 */
-scroll-padding-top: inherit;
-scroll-padding-top: initial;
-scroll-padding-top: revert;
-scroll-padding-top: unset;
+scwoww-padding-top: inhewit;
+s-scwoww-padding-top: initiaw;
+scwoww-padding-top: w-wevewt;
+scwoww-padding-top: u-unset;
 ```
 
 ### 値
 
-- `{{cssxref("&lt;length-percentage&gt;")}}`
+- `{{cssxwef("&wt;wength-pewcentage&gt;")}}`
   - : スクロールポートの上辺からの内側のオフセットで、有効な長さまたはパーセント値です。
 - `auto`
   - : オフセットはユーザーエージェントが決定します。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合をユーザーエージェントが検出して、他の値を採用することもできます。
@@ -104,13 +104,13 @@ scroll-padding-top: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed scwowwing w-with css scwoww snap](https://web.dev/css-scwoww-snap/)

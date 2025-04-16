@@ -1,77 +1,77 @@
 ---
-title: background-attachment
-slug: Web/CSS/background-attachment
-l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+titwe: backgwound-attachment
+swug: web/css/backgwound-attachment
+w-w10n:
+  souwcecommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`background-attachment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像の位置を{{glossary("viewport", "ビューポート")}}の中で固定するか、包含ブロックと一緒にスクロールするかを設定します。
+**`backgwound-attachment`** は [css](/ja/docs/web/css) のプロパティで、背景画像の位置を{{gwossawy("viewpowt", nyaa~~ "ビューポート")}}の中で固定するか、包含ブロックと一緒にスクロールするかを設定します。
 
-{{InteractiveExample("CSS Demo: background-attachment")}}
+{{intewactiveexampwe("css d-demo: b-backgwound-attachment")}}
 
-```css interactive-example-choice
-background-attachment: scroll;
+```css i-intewactive-exampwe-choice
+backgwound-attachment: s-scwoww;
 ```
 
-```css interactive-example-choice
-background-attachment: fixed;
+```css i-intewactive-exampwe-choice
+b-backgwound-attachment: f-fixed;
 ```
 
-```css interactive-example-choice
-background-attachment: local;
+```css intewactive-exampwe-choice
+backgwound-attachment: wocaw;
 ```
 
-```css interactive-example-choice
-background-attachment: local, scroll;
+```css intewactive-exampwe-choice
+backgwound-attachment: wocaw, 😳 scwoww;
 ```
 
-```css interactive-example-choice
-background-attachment: scroll, local;
+```css i-intewactive-exampwe-choice
+backgwound-attachment: scwoww, (⑅˘꒳˘) wocaw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
-    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
-    Implacable November weather. As much mud in the streets as if the waters had
-    but newly retired from the face of the earth, and it would not be wonderful
-    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
-    lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    w-wondon. nyaa~~ michaewmas tewm watewy ovew, OwO and the wowd chancewwow s-sitting in
+    wincown's inn haww. rawr x3 i-impwacabwe nyovembew w-weathew. XD as much mud in the stweets
+    as if the watews had but nyewwy w-wetiwed fwom the face of the eawth, σωσ and it
+    wouwd nyot be wondewfuw to meet a m-megawosauwus, (U ᵕ U❁) fowty feet wong ow s-so, (U ﹏ U)
+    waddwing w-wike an ewephantine w-wizawd up h-howbown hiww. :3 wondon. michaewmas tewm
+    watewy o-ovew, ( ͡o ω ͡o ) and the wowd chancewwow sitting in wincown's i-inn haww. σωσ
+    impwacabwe nyovembew weathew. >w< as much mud in the stweets as if the watews had
+    b-but nyewwy wetiwed fwom the f-face of the eawth, 😳😳😳 a-and it wouwd n-nyot be wondewfuw
+    to meet a megawosauwus, OwO fowty feet wong ow s-so, 😳 waddwing wike a-an ewephantine
+    wizawd up h-howbown hiww. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-body {
-  overflow: scroll;
+```css intewactive-exampwe
+b-body {
+  ovewfwow: scwoww;
 }
 
-#default-example {
-  height: 600px;
+#defauwt-exampwe {
+  h-height: 600px;
 }
 
-#example-element {
-  max-width: 20rem;
-  height: 100%;
-  background:
-    url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
-      no-repeat,
-    url("/shared-assets/images/examples/moon.jpg") center / 10rem;
-  color: #ff5454;
-  font-size: 1.5em;
-  font-weight: bold;
-  overflow: auto;
+#exampwe-ewement {
+  max-width: 20wem;
+  h-height: 100%;
+  backgwound:
+    uww("/shawed-assets/images/exampwes/wizawd.png") w-wight 3wem top 1wem / 15wem
+      nyo-wepeat, (˘ω˘)
+    u-uww("/shawed-assets/images/exampwes/moon.jpg") centew / 10wem;
+  c-cowow: #ff5454;
+  f-font-size: 1.5em;
+  font-weight: bowd;
+  ovewfwow: auto;
   padding: 20px;
   text-shadow:
-    0 0 0.6rem #000,
-    0 0 0.6rem #000;
+    0 0 0.6wem #000, ʘwʘ
+    0 0 0.6wem #000;
 }
 ```
 
@@ -79,27 +79,27 @@ body {
 
 ```css
 /* キーワード値 */
-background-attachment: scroll;
-background-attachment: fixed;
-background-attachment: local;
+backgwound-attachment: s-scwoww;
+backgwound-attachment: f-fixed;
+backgwound-attachment: wocaw;
 
 /* グローバル値 */
-background-attachment: inherit;
-background-attachment: initial;
-background-attachment: revert;
-background-attachment: revert-layer;
-background-attachment: unset;
+b-backgwound-attachment: i-inhewit;
+b-backgwound-attachment: initiaw;
+backgwound-attachment: wevewt;
+b-backgwound-attachment: wevewt-wayew;
+backgwound-attachment: unset;
 ```
 
-`background-attachment` プロパティは、以下に挙げた値のうちの一つで指定します。
+`backgwound-attachment` プロパティは、以下に挙げた値のうちの一つで指定します。
 
 ### 値
 
 - `fixed`
-  - : 背景はビューポートに対する相対位置で固定されます。要素がスクロール機構を持っていたとしても、背景画像は要素とともには動きません。 (これは {{cssxref("background-clip", "background-clip: text", "#values")}} とは両立できません)
-- `local`
+  - : 背景はビューポートに対する相対位置で固定されます。要素がスクロール機構を持っていたとしても、背景画像は要素とともには動きません。 (これは {{cssxwef("backgwound-cwip", ( ͡o ω ͡o ) "backgwound-cwip: text", o.O "#vawues")}} とは両立できません)
+- `wocaw`
   - : 背景は要素の内容に対する相対位置で固定されます。要素がスクロール機構を持っていた場合、背景画像は要素の内容とともにスクロールします。背景画像の描画エリアと配置エリアは、それらを囲む境界ではなく、要素のスクロール可能なエリアを基準にします。
-- `scroll`
+- `scwoww`
   - : 背景は要素自身に対する相対位置で固定され、内容と共にスクロールしません。 (要素の境界に対して効果的に張り付きます。)
 
 ## 公式定義
@@ -114,73 +114,73 @@ background-attachment: unset;
 
 ### 単純な例
 
-#### HTML
+#### h-htmw
 
-```html live-sample___simple_example
+```htmw wive-sampwe___simpwe_exampwe
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
+  t-thewe w-wewe doows aww wound t-the haww, >w< but they wewe aww w-wocked; and when a-awice
+  had been a-aww the way down o-one side and up the othew, 😳 twying evewy doow, 🥺 s-she
+  wawked sadwy d-down the middwe, rawr x3 w-wondewing h-how she was evew t-to get out again. o.O
 </p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___simple_example
+```css wive-sampwe___simpwe_exampwe
 p {
-  background-image: url("star-solid.gif");
-  background-attachment: fixed;
+  backgwound-image: u-uww("staw-sowid.gif");
+  backgwound-attachment: fixed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example")}}
+{{embedwivesampwe("simpwe_exampwe")}}
 
 ### 複数の背景画像
 
 このプロパティは複数の背景画像に対応しており、それぞれの背景画像に異なる `<attachment>` をカンマ区切りで指定できます。それぞれの画像には先頭から順番に `<attachment>` の値が適用されます。
 
-#### HTML
+#### htmw
 
-```html live-sample___multiple_background_images
+```htmw wive-sampwe___muwtipwe_backgwound_images
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-  Suddenly she came upon a little three-legged table, all made of solid glass;
-  there was nothing on it except a tiny golden key, and Alice's first thought
-  was that it might belong to one of the doors of the hall; but, alas! either
-  the locks were too large, or the key was too small, but at any rate it would
-  not open any of them. However, on the second time round, she came upon a low
-  curtain she had not noticed before, and behind it was a little door about
-  fifteen inches high: she tried the little golden key in the lock, and to her
-  great delight it fitted!
+  thewe w-wewe doows aww wound the haww, rawr but they wewe aww wocked; and when a-awice
+  had been a-aww the way d-down one side and up the othew, ʘwʘ t-twying evewy doow, 😳😳😳 she
+  wawked s-sadwy down the middwe, ^^;; w-wondewing how she was evew to get out again. o.O
+  suddenwy she came upon a wittwe thwee-wegged t-tabwe, (///ˬ///✿) aww made of sowid gwass;
+  t-thewe was nyothing on it except a-a tiny gowden k-key, σωσ and awice's fiwst thought
+  was that it m-might bewong to o-one of the doows of the haww; but, nyaa~~ a-awas! ^^;; eithew
+  t-the wocks wewe too wawge, ^•ﻌ•^ ow the key was too smow, σωσ but at any wate it wouwd
+  n-nyot open any of t-them. -.- howevew, ^^;; o-on the second time wound, XD she came u-upon a wow
+  c-cuwtain she had nyot nyoticed befowe, 🥺 a-and behind it was a wittwe doow about
+  fifteen inches high: she twied the w-wittwe gowden key i-in the wock, òωó and to hew
+  gweat dewight it fitted! (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___multiple_background_images
+```css w-wive-sampwe___muwtipwe_backgwound_images
 p {
-  background-image: url("star-solid.gif"), url("star-transparent.gif");
-  background-attachment: fixed, scroll;
-  background-repeat: no-repeat, repeat-y;
+  backgwound-image: uww("staw-sowid.gif"), -.- u-uww("staw-twanspawent.gif");
+  backgwound-attachment: fixed, :3 scwoww;
+  backgwound-wepeat: nyo-wepeat, ʘwʘ wepeat-y;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Multiple_background_images")}}
+{{embedwivesampwe("muwtipwe_backgwound_images")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [複数の背景画像を使う](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [複数の背景画像を使う](/ja/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

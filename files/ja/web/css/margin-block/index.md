@@ -1,108 +1,108 @@
 ---
-title: margin-block
-slug: Web/CSS/margin-block
-l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+titwe: mawgin-bwock
+swug: web/css/mawgin-bwock
+w-w10n:
+  souwcecommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-The **`margin-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
+t-the **`mawgin-bwock`** は [css](/ja/docs/web/css) の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
 
-{{InteractiveExample("CSS Demo: margin-block")}}
+{{intewactiveexampwe("css d-demo: m-mawgin-bwock")}}
 
-```css interactive-example-choice
-margin-block: 10px 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-mawgin-bwock: 10px 20px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block: 20px 40px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+mawgin-bwock: 20px 40px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-block: 5% 20%;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+mawgin-bwock: 5% 20%;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block: 1rem auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+m-mawgin-bwock: 1wem auto;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row">One</div>
-    <div class="row transition-all" id="example-element">Two</div>
-    <div class="row">Three</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="containew">
+    <div c-cwass="wow">one</div>
+    <div c-cwass="wow twansition-aww" id="exampwe-ewement">two</div>
+    <div cwass="wow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
-  width: 300px;
+```css intewactive-exampwe
+#containew {
+  w-width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  dispway: fwex;
+  awign-content: fwex-stawt;
+  f-fwex-diwection: cowumn;
+  j-justify-content: f-fwex-stawt;
 }
 
-.row {
-  height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: #ffffff;
-  flex-shrink: 0;
+.wow {
+  h-height: 33.33%;
+  d-dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  cowow: #ffffff;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  bowdew: s-sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- {{cssxref("margin-block-start")}}
-- {{cssxref("margin-block-end")}}
+- {{cssxwef("mawgin-bwock-stawt")}}
+- {{cssxwef("mawgin-bwock-end")}}
 
 ## 構文
 
 ```css
-/* <length> 値 */
-margin-block: 10px 20px; /* 絶対的な長さ */
-margin-block: 1em 2em; /* テキストの大きさに対する相対値 */
-margin-block: 5% 2%; /* 直近のブロックコンテナーの大きさに対する相対値 */
-margin-block: 10px; /* 先頭と末尾の両方を設定 */
+/* <wength> 値 */
+mawgin-bwock: 10px 20px; /* 絶対的な長さ */
+mawgin-bwock: 1em 2em; /* テキストの大きさに対する相対値 */
+mawgin-bwock: 5% 2%; /* 直近のブロックコンテナーの大きさに対する相対値 */
+m-mawgin-bwock: 10px; /* 先頭と末尾の両方を設定 */
 
 /* キーワード値 */
-margin-block: auto;
+mawgin-bwock: a-auto;
 
 /* グローバル値 */
-margin-block: inherit;
-margin-block: initial;
-margin-block: revert;
-margin-block: revert-layer;
-margin-block: unset;
+m-mawgin-bwock: i-inhewit;
+mawgin-bwock: initiaw;
+mawgin-bwock: wevewt;
+mawgin-bwock: w-wevewt-wayew;
+m-mawgin-bwock: unset;
 ```
 
-このプロパティは、 {{CSSxRef("margin-top")}} と {{CSSxRef("margin-bottom")}}、または {{CSSxRef("margin-right")}} と {{CSSxRef("margin-left")}} プロパティに、 {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}} で定義された値にしたがって対応します。
+このプロパティは、 {{cssxwef("mawgin-top")}} と {{cssxwef("mawgin-bottom")}}、または {{cssxwef("mawgin-wight")}} と {{cssxwef("mawgin-weft")}} プロパティに、 {{cssxwef("wwiting-mode")}}, 😳😳😳 {{cssxwef("diwection")}}, mya {{cssxwef("text-owientation")}} で定義された値にしたがって対応します。
 
-`margin-block` プロパティは、 1 つまたは 2 つの値を使用して指定します。
+`mawgin-bwock` プロパティは、 1 つまたは 2 つの値を使用して指定します。
 
 - **1 つ**の値が指定された場合は、**先頭と末尾の両方**に同じマージンを適用します。
 - **2 つ**の値が指定された場合は、 1 つ目のマージンが**先頭**に、 2 つ目のマージンが**末尾**に指定されます。
 
 ### 値
 
-`margin-block` プロパティは、 {{CSSxRef("margin", "", "#値")}} プロパティと同じ値を取ります。
+`mawgin-bwock` プロパティは、 {{cssxwef("mawgin", 😳 "", "#値")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -116,52 +116,52 @@ margin-block: unset;
 
 ### ブロック方向の先頭と末尾のマージンを設定
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_block_start_and_end_margins
+```css w-wive-sampwe___setting_bwock_stawt_and_end_mawgins
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: auto;
-  border: 1px solid green;
+  h-height: auto;
+  bowdew: 1px sowid gween;
 }
 
-p {
-  margin: 0;
-  margin-block: 20px 40px;
-  background-color: tan;
+p-p {
+  mawgin: 0;
+  mawgin-bwock: 20px 40px;
+  b-backgwound-cowow: tan;
 }
 
-.verticalExample {
-  writing-mode: vertical-rl;
+.vewticawexampwe {
+  w-wwiting-mode: vewticaw-ww;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_block_start_and_end_margins
+```htmw wive-sampwe___setting_bwock_stawt_and_end_mawgins
 <div>
   <p>テキストの例</p>
 </div>
-<div class="verticalExample">
+<div cwass="vewticawexampwe">
   <p>テキストの例</p>
 </div>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_start_and_end_margins", 140, 200)}}
+{{embedwivesampwe("setting_bwock_stawt_and_end_mawgins", -.- 140, 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- 対応する物理的プロパティ: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, {{CSSxRef("margin-left")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+- [css 論理的プロパティと値](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 対応する物理的プロパティ: {{cssxwef("mawgin-top")}}, 🥺 {{cssxwef("mawgin-wight")}}, o.O {{cssxwef("mawgin-bottom")}}, /(^•ω•^) {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}, nyaa~~ {{cssxwef("diwection")}}, nyaa~~ {{cssxwef("text-owientation")}}

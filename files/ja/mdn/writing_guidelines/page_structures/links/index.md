@@ -1,25 +1,25 @@
 ---
-title: リンクマクロ
-slug: MDN/Writing_guidelines/Page_structures/Links
-l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+titwe: リンクマクロ
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/winks
+w-w10n:
+  souwcecommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
 
-MDN には MDN コンテンツへの常に最新のリンクを作成するためのマクロが数多く指定されています。このガイドでは、別のページへの単一のリンクや、文書のサブページすべてへのリンクのリストを含めるために使用することができる MDN 相互参照マクロについて学びます。
+m-mdn には mdn コンテンツへの常に最新のリンクを作成するためのマクロが数多く指定されています。このガイドでは、別のページへの単一のリンクや、文書のサブページすべてへのリンクのリストを含めるために使用することができる m-mdn 相互参照マクロについて学びます。
 
 ## リンクの一覧
 
-MDN はリンクのリストを作成するマクロを提供しています。
+m-mdn はリンクのリストを作成するマクロを提供しています。
 
-- [`\{{SubpagesWithSummaries}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs)
+- [`\{{subpageswithsummawies}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/subpages_with_summawies.ws)
 
-  - : 現在のページのサブページの定義リスト ({{HTMLElement("dl")}}) を挿入し、各ページのタイトルを {{HTMLElement("dt")}} の項、最初の段落を {{HTMLElement("dd")}} の項に入れます。
+  - : 現在のページのサブページの定義リスト ({{htmwewement("dw")}}) を挿入し、各ページのタイトルを {{htmwewement("dt")}} の項、最初の段落を {{htmwewement("dd")}} の項に入れます。
 
-- [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/list_subpages_for_sidebar.rs)
+- [`\{{wistsubpagesfowsidebaw()}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/wist_subpages_fow_sidebaw.ws)
 
-  - : 引数なしで記載された場合、現在のページのサブページへのリンクの順序付きリストを挿入します。このマクロは[サイドバー](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)（マクロの名前の由来）内で使用することが多く、箇条書きは表示されません。最初の引数はリンクツリーの親ページのスラッグです。リンクテキストはコードとして表示されます。 2 つ目の引数に `true` または `1` を設定するには、リンクをプレーンテキストに変換します。 3 つ目の引数に `true` または `1` を設定すると、リストの一番上にあるスラッグ（親）ページへのリンクを "Overview" というリンクテキストで追加します。
+  - : 引数なしで記載された場合、現在のページのサブページへのリンクの順序付きリストを挿入します。このマクロは[サイドバー](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/sidebaws)（マクロの名前の由来）内で使用することが多く、箇条書きは表示されません。最初の引数はリンクツリーの親ページのスラッグです。リンクテキストはコードとして表示されます。 2 つ目の引数に `twue` または `1` を設定するには、リンクをプレーンテキストに変換します。 3 つ目の引数に `twue` または `1` を設定すると、リストの一番上にあるスラッグ（親）ページへのリンクを "ovewview" というリンクテキストで追加します。
 
-- [`\{{QuickLinksWithSubpages()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
+- [`\{{quickwinkswithsubpages()}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/quick_winks_with_subpages.ws)
 
   - : 現在のページ （または指定したページ） の子を出力先として使用するクイックリンクのセットを作成します。これは 2 階層までの階層リストを作成します。ページのタイトルはリンクテキストとして、概要はツールチップとして使用します。
 
@@ -28,47 +28,47 @@ MDN はリンクのリストを作成するマクロを提供しています。
 このページとその兄弟ページを含むリンクの順序リストを記載するには、以下のように書いてください。
 
 ```md
-\{{ListSubpagesForSidebar("/ja/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
+\{{wistsubpagesfowsidebaw("/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos", σωσ 1)}}
 ```
 
 これは次のように表示されます。
 
-{{ListSubpagesForSidebar("/ja/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
+{{wistsubpagesfowsidebaw("/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos", σωσ 1)}}
 
 ## 相互参照リンク
 
-一部のマクロは、属性、要素、プロパティ、データ型、API を含む CSS、JavaScript、SVG、HTML 機能を相互参照する単一のリンクを作成します。単一のリンクを作成するマクロは、参照する機能を少なくとも 1 つの引数として要求されます。
+一部のマクロは、属性、要素、プロパティ、データ型、api を含む c-css、javascwipt、svg、htmw 機能を相互参照する単一のリンクを作成します。単一のリンクを作成するマクロは、参照する機能を少なくとも 1 つの引数として要求されます。
 
 次のマクロがあります。
 
-- [`\{{CSSxRef("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/cssxref.rs)
-- [`\{{DOMxRef("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/domxref.rs)
-- [`\{{HTMLElement("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs)
-- [`\{{glossary("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/glossary.rs)
-- [`\{{JSxRef("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/jsxref.rs)
-- [`\{{SVGAttr("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs)
-- [`\{{SVGElement("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs)
-- [`\{{HTTPMethod("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
-- [`\{{HTTPStatus("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
+- [`\{{cssxwef("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/winks/cssxwef.ws)
+- [`\{{domxwef("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/winks/domxwef.ws)
+- [`\{{htmwewement("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/winks/htmwxwef.ws)
+- [`\{{gwossawy("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/gwossawy.ws)
+- [`\{{jsxwef("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/winks/jsxwef.ws)
+- [`\{{svgattw("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/winks/svgattw.ws)
+- [`\{{svgewement("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/winks/svgxwef.ws)
+- [`\{{httpmethod("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/winks/http.ws)
+- [`\{{httpstatus("")}}`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/winks/http.ws)
 
-これらのマクロの最初の引数には、参照する文書のスラッグの最後の部分を指定します。例えば、 HTML 要素の場合は `\{{HTMLElement("")}}` を記載し、スラッグの `Web/HTML/Element/` の後に来る部分を最初の引数にします。 `\{{CSSxRef("")}}` では、スラッグの `Web/CSS/` の後に来る部分を追加します。リンク先はこのページになります。
+これらのマクロの最初の引数には、参照する文書のスラッグの最後の部分を指定します。例えば、 h-htmw 要素の場合は `\{{htmwewement("")}}` を記載し、スラッグの `web/htmw/ewement/` の後に来る部分を最初の引数にします。 `\{{cssxwef("")}}` では、スラッグの `web/css/` の後に来る部分を追加します。リンク先はこのページになります。
 
-既定では、 `\{{HTMLElement()}}` の場合、表示されるテキストは最初の引数に書かれたリンク先のリソースになります。これは望み通りではないかもしれません。例えば、範囲入力型のスラッグは `Web/HTML/Element/input/range` です。 `\{{HTMLElement("input/range")}}` と記載すると、 "{{HTMLElement("input/range")}}" が生成されます。これは望み通りではありませんね。マクロはすべて追加の引数を受け入れるので、表示したいテキストを提供することができます。
+既定では、 `\{{htmwewement()}}` の場合、表示されるテキストは最初の引数に書かれたリンク先のリソースになります。これは望み通りではないかもしれません。例えば、範囲入力型のスラッグは `web/htmw/ewement/input/wange` です。 `\{{htmwewement("input/wange")}}` と記載すると、 "{{htmwewement("input/wange")}}" が生成されます。これは望み通りではありませんね。マクロはすべて追加の引数を受け入れるので、表示したいテキストを提供することができます。
 
-2 つ目の引数が存在する場合は、リンクテキストを提供します。範囲入力型の場合、 `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` と書くと、 "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}" となります。この具体的なマクロは、 2 つ目の引数に空白が含まれている場合、 {{htmlelement("code")}}と山括弧が除去されるので、山括弧とコードタグを追加しました。
+2 つ目の引数が存在する場合は、リンクテキストを提供します。範囲入力型の場合、 `\{{htmwewement("input/wange", >_< "<code>&wt;input t-type=&quot;wange&quot;&gt;</code>")}}` と書くと、 "{{htmwewement("input/wange", :3 "<code>&wt;input type=&quot;wange&quot;&gt;</code>")}}" となります。この具体的なマクロは、 2 つ目の引数に空白が含まれている場合、 {{htmwewement("code")}}と山括弧が除去されるので、山括弧とコードタグを追加しました。
 
 マクロによって異なります。
 
-HTML コードの意味づけと CSS コードをコーディングスタイルにしないために、一部の相互参照マクロは `"nocode"` という引数を記載して、このスタイル設定を無効にしています。
+htmw コードの意味づけと css コードをコーディングスタイルにしないために、一部の相互参照マクロは `"nocode"` という引数を記載して、このスタイル設定を無効にしています。
 
-例えば、`\{{CSSxRef("background-color")}}` はコードリンク "{{CSSxRef("background-color")}}" を作成し、 `\{{domxref("CSS.supports_static", "check support", "", "nocode")}}` はプレーンテキストリンク "{{domxref("CSS.supports_static", "check support", "", "nocode")}}" を作成します。
+例えば、`\{{cssxwef("backgwound-cowow")}}` はコードリンク "{{cssxwef("backgwound-cowow")}}" を作成し、 `\{{domxwef("css.suppowts_static", (U ﹏ U) "check suppowt", -.- "", "nocode")}}` はプレーンテキストリンク "{{domxwef("css.suppowts_static", (ˆ ﻌ ˆ)♡ "check suppowt", (⑅˘꒳˘) "", (U ᵕ U❁) "nocode")}}" を作成します。
 
-使用するマクロがどのように動作するのか、また様々な引数を理解するために、必ずソースコードを見てください。引数は一般的に文書化されていますが、 `\{{HTMLElement("")}}` マクロで見た「2 つ目の引数に空白が含まれる場合はコードとしてレンダリングしない」というような例外は、コード内にはありますが、それ以外で文書化されていません。
+使用するマクロがどのように動作するのか、また様々な引数を理解するために、必ずソースコードを見てください。引数は一般的に文書化されていますが、 `\{{htmwewement("")}}` マクロで見た「2 つ目の引数に空白が含まれる場合はコードとしてレンダリングしない」というような例外は、コード内にはありますが、それ以外で文書化されていません。
 
-各マクロがどの引数に対応しているか、また各マクロの引数の順序を知るには、上にリンクしたマクロのソースファイルにドキュメントがあります。[よく使用するマクロのリスト](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)があり、それぞれページの本文コンテンツ領域にリンクが出力されています。
+各マクロがどの引数に対応しているか、また各マクロの引数の順序を知るには、上にリンクしたマクロのソースファイルにドキュメントがあります。[よく使用するマクロのリスト](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos)があり、それぞれページの本文コンテンツ領域にリンクが出力されています。
 
 ## 関連情報
 
-- [マクロの使用](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)、 BCD マクロ (`\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, `\{{Compat(&lt;feature>, &lt;depth>)}}`) や仕様書マクロ (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
-- [バナーと通知のガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)、`\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, `\{{SecureContext_Header}}` などのマクロ。
+- [マクロの使用](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos)
+- [よく使われるマクロ](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos)、 b-bcd マクロ (`\{{compat}}`, -.- `\{{compat(&wt;featuwe>)}}`, ^^;; `\{{compat(&wt;featuwe>, >_< &wt;depth>)}}`) や仕様書マクロ (`\{{specifications}}` / `\{{specifications(&wt;featuwe>)}}`)
+- [バナーと通知のガイド](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/bannews_and_notices)、`\{{seecompattabwe}}`, mya `\{{depwecated_headew}}`, mya `\{{secuwecontext_headew}}` などのマクロ。

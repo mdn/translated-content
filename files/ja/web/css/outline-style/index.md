@@ -1,98 +1,98 @@
 ---
-title: outline-style
-slug: Web/CSS/outline-style
-l10n:
-  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
+titwe: outwine-stywe
+swug: web/css/outwine-stywe
+w-w10n:
+  souwcecommit: a-aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`outline-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線のスタイルを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。
+**`outwine-stywe`** は [css](/ja/docs/web/css) のプロパティで、要素の輪郭線のスタイルを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxwef("bowdew")}} よりも外側です。
 
-{{InteractiveExample("CSS Demo: outline-style")}}
+{{intewactiveexampwe("css d-demo: o-outwine-stywe")}}
 
-```css interactive-example-choice
-outline-style: none;
+```css i-intewactive-exampwe-choice
+o-outwine-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-outline-style: dotted;
+```css i-intewactive-exampwe-choice
+outwine-stywe: dotted;
 ```
 
-```css interactive-example-choice
-outline-style: solid;
+```css intewactive-exampwe-choice
+outwine-stywe: s-sowid;
 ```
 
-```css interactive-example-choice
-outline-style: groove;
+```css intewactive-exampwe-choice
+outwine-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-outline-style: inset;
+```css i-intewactive-exampwe-choice
+outwine-stywe: i-inset;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box w-with an outwine awound it. σωσ
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  outwine: 0.75em sowid;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
-たいていの場合、輪郭線の見た目を定義するときは一括指定プロパティ {{cssxref("outline")}} を使ったほうが便利です。
+たいていの場合、輪郭線の見た目を定義するときは一括指定プロパティ {{cssxwef("outwine")}} を使ったほうが便利です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-outline-style: auto;
-outline-style: none;
-outline-style: dotted;
-outline-style: dashed;
-outline-style: solid;
-outline-style: double;
-outline-style: groove;
-outline-style: ridge;
-outline-style: inset;
-outline-style: outset;
+outwine-stywe: auto;
+outwine-stywe: nyone;
+outwine-stywe: d-dotted;
+outwine-stywe: dashed;
+o-outwine-stywe: s-sowid;
+outwine-stywe: d-doubwe;
+o-outwine-stywe: gwoove;
+outwine-stywe: widge;
+o-outwine-stywe: inset;
+outwine-stywe: outset;
 
 /* グローバル値 */
-outline-style: inherit;
-outline-style: initial;
-outline-style: revert;
-outline-style: revert-layer;
-outline-style: unset;
+o-outwine-stywe: inhewit;
+outwine-stywe: initiaw;
+outwine-stywe: wevewt;
+outwine-stywe: wevewt-wayew;
+o-outwine-stywe: unset;
 ```
 
-`outline-style` プロパティは、以下に挙げた値のうちの一つで指定します。
+`outwine-stywe` プロパティは、以下に挙げた値のうちの一つで指定します。
 
 ### 値
 
 - `auto`
   - : ユーザーエージェントに輪郭線の描画を任せます。
 - `none`
-  - : 輪郭線を描きません。{{cssxref("outline-width")}} は `0` です。
+  - : 輪郭線を描きません。{{cssxwef("outwine-width")}} は `0` です。
 - `dotted`
   - : 点線の輪郭線です。
 - `dashed`
   - : 破線の輪郭線です。
-- `solid`
+- `sowid`
   - : 1 本の実線の輪郭線です。
-- `double`
-  - : 2 本の実線の輪郭線です。{{cssxref("outline-width")}} は 2 本の線とその隙間の合計です。
-- `groove`
+- `doubwe`
+  - : 2 本の実線の輪郭線です。{{cssxwef("outwine-width")}} は 2 本の線とその隙間の合計です。
+- `gwoove`
   - : ページに刻まれたかのように見える輪郭線です。
-- `ridge`
-  - : `groove` の逆で、ページから押し出されたように見える輪郭線です。
+- `widge`
+  - : `gwoove` の逆で、ページから押し出されたように見える輪郭線です。
 - `inset`
   - : 領域がページに埋め込まれたかのように見える輪郭線です。
 - `outset`
@@ -108,178 +108,178 @@ outline-style: unset;
 
 ## 例
 
-### 輪郭線のスタイルを auto に設定
+### 輪郭線のスタイルを a-auto に設定
 
-`auto` の値は、輪郭線のスタイルが独自のものであることを表します。[仕様書](https://www.w3.org/TR/css-ui-3/#outline-style)によれば、「典型的には、プラットフォーム用のユーザーインターフェイスの既定のスタイル、または、CSS で詳細に記述できるスタイルよりも表現豊かなスタイル 、例えば、輝いて見える半透明の外郭を持つ、輪郭の丸い輪郭線」となっています。
+`auto` の値は、輪郭線のスタイルが独自のものであることを表します。[仕様書](https://www.w3.owg/tw/css-ui-3/#outwine-stywe)によれば、「典型的には、プラットフォーム用のユーザーインターフェイスの既定のスタイル、または、css で詳細に記述できるスタイルよりも表現豊かなスタイル 、例えば、輝いて見える半透明の外郭を持つ、輪郭の丸い輪郭線」となっています。
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_outline_style_to_auto
+```htmw w-wive-sampwe___setting_outwine_stywe_to_auto
 <div>
-  <p class="auto">Outline デモ</p>
+  <p cwass="auto">outwine デモ</p>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_outline_style_to_auto
+```css wive-sampwe___setting_outwine_stywe_to_auto
 .auto {
-  outline-style: auto; /* "outline: auto" と同じ */
+  o-outwine-stywe: a-auto; /* "outwine: auto" と同じ */
 }
 
 /* デモを見やすく */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  o-outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_auto') }}
+{{ embedwivesampwe('setting_outwine_stywe_to_auto') }}
 
-### 輪郭線を dashed と dotted に設定
+### 輪郭線を d-dashed と dotted に設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_outline_style_to_dashed_and_dotted
+```htmw w-wive-sampwe___setting_outwine_stywe_to_dashed_and_dotted
 <div>
-  <div class="dotted">
-    <p class="dashed">Outline Demo</p>
+  <div cwass="dotted">
+    <p cwass="dashed">outwine d-demo</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_outline_style_to_dashed_and_dotted
+```css w-wive-sampwe___setting_outwine_stywe_to_dashed_and_dotted
 .dotted {
-  outline-style: dotted; /* "outline: dotted" と同じ */
+  outwine-stywe: d-dotted; /* "outwine: dotted" と同じ */
 }
 .dashed {
-  outline-style: dashed;
+  o-outwine-stywe: dashed;
 }
 
 /* デモを見やすく */
 * {
-  outline-width: 10px;
+  outwine-width: 10px;
   padding: 15px;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_dashed_and_dotted') }}
+{{ embedwivesampwe('setting_outwine_stywe_to_dashed_and_dotted') }}
 
-### 輪郭線のスタイルを solid と double に設定
+### 輪郭線のスタイルを sowid と doubwe に設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_outline_style_to_solid_and_double
+```htmw w-wive-sampwe___setting_outwine_stywe_to_sowid_and_doubwe
 <div>
-  <div class="solid">
-    <p class="double">Outline Demo</p>
+  <div cwass="sowid">
+    <p c-cwass="doubwe">outwine d-demo</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_outline_style_to_solid_and_double
-.solid {
-  outline-style: solid;
+```css wive-sampwe___setting_outwine_stywe_to_sowid_and_doubwe
+.sowid {
+  outwine-stywe: sowid;
 }
-.double {
-  outline-style: double;
+.doubwe {
+  outwine-stywe: doubwe;
 }
 
 /* デモを見やすく */
 * {
-  outline-width: 10px;
+  o-outwine-width: 10px;
   padding: 15px;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_solid_and_double') }}
+{{ embedwivesampwe('setting_outwine_stywe_to_sowid_and_doubwe') }}
 
-### 輪郭線のスタイルを groove と ridge に設定
+### 輪郭線のスタイルを gwoove と widge に設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_outline_style_to_groove_and_ridge
+```htmw w-wive-sampwe___setting_outwine_stywe_to_gwoove_and_widge
 <div>
-  <div class="groove">
-    <p class="ridge">Outline Demo</p>
+  <div cwass="gwoove">
+    <p c-cwass="widge">outwine demo</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_outline_style_to_groove_and_ridge
-.groove {
-  outline-style: groove;
+```css wive-sampwe___setting_outwine_stywe_to_gwoove_and_widge
+.gwoove {
+  o-outwine-stywe: gwoove;
 }
-.ridge {
-  outline-style: ridge;
+.widge {
+  o-outwine-stywe: w-widge;
 }
 
 /* デモを見やすく */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  o-outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_groove_and_ridge') }}
+{{ embedwivesampwe('setting_outwine_stywe_to_gwoove_and_widge') }}
 
 ### 輪郭線のスタイルを inset と outset に設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_outline_style_to_inset_and_outset
+```htmw wive-sampwe___setting_outwine_stywe_to_inset_and_outset
 <div>
-  <div class="inset">
-    <p class="outset">Outline デモ</p>
+  <div c-cwass="inset">
+    <p c-cwass="outset">outwine デモ</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_outline_style_to_inset_and_outset
+```css w-wive-sampwe___setting_outwine_stywe_to_inset_and_outset
 .inset {
-  outline-style: inset;
+  outwine-stywe: inset;
 }
 .outset {
-  outline-style: outset;
+  outwine-stywe: o-outset;
 }
 
 /* デモを見やすく */
 * {
-  outline-width: 10px;
+  outwine-width: 10px;
   padding: 15px;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_inset_and_outset') }}
+{{ embedwivesampwe('setting_outwine_stywe_to_inset_and_outset') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("outline")}}
-- {{cssxref("outline-width")}}
-- {{cssxref("outline-color")}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-width")}}
+- {{cssxwef("outwine-cowow")}}

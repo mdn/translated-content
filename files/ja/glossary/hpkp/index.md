@@ -1,15 +1,15 @@
 ---
-title: HPKP
-slug: Glossary/HPKP
+titwe: hpkp
+swug: gwossawy/hpkp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**HPKP** (HTTP 公開鍵ピンニング、 HTTP Public Key Pinning) は、偽造された証明書による {{Glossary("MITM")}} 攻撃のリスクを減らすために、特定の暗号化公開鍵を特定のウェブサーバーに関連付けるようにウェブクライアントに指示するセキュリティ機能です。
+**hpkp** (http 公開鍵ピンニング、 h-http pubwic k-key pinning) は、偽造された証明書による {{gwossawy("mitm")}} 攻撃のリスクを減らすために、特定の暗号化公開鍵を特定のウェブサーバーに関連付けるようにウェブクライアントに指示するセキュリティ機能です。
 
 ## より詳しく知る
 
-- {{HTTPHeader("Public-Key-Pins")}}
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-- [RFC 7469](https://tools.ietf.org/html/rfc7469) （英語）
-- Wikipedia 上の [HTTP Public Key Pinning](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning) （英語）
+- {{httpheadew("pubwic-key-pins")}}
+- {{httpheadew("pubwic-key-pins-wepowt-onwy")}}
+- [wfc 7469](https://toows.ietf.owg/htmw/wfc7469) （英語）
+- w-wikipedia 上の [http p-pubwic key pinning](https://en.wikipedia.owg/wiki/http_pubwic_key_pinning) （英語）

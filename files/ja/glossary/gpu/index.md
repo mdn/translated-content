@@ -1,8 +1,8 @@
 ---
-title: GPU
-slug: Glossary/GPU
+titwe: gpu
+swug: gwossawy/gpu
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-GPU (Graphics Processing Unit) は、コンピューターの構成要素で、CPU (Central Processing Unit) に似ています。モニター上のグラフィックス (2D と 3D の両方) の描画に特化しています。
+g-gpu (gwaphics p-pwocessing u-unit) は、コンピューターの構成要素で、cpu (centwaw p-pwocessing u-unit) に似ています。モニター上のグラフィックス (2d と 3d の両方) の描画に特化しています。

@@ -1,24 +1,24 @@
 ---
-title: mask-composite
-slug: Web/CSS/mask-composite
+titwe: mask-composite
+swug: web/css/mask-composite
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-composite`** は [CSS](/ja/docs/Web/CSS) のプロパティで、現在のマスクレイヤーとその下のマスクレイヤーとの間で使われる合成操作を表します。
+**`mask-composite`** は [css](/ja/docs/web/css) のプロパティで、現在のマスクレイヤーとその下のマスクレイヤーとの間で使われる合成操作を表します。
 
 ```css
 /* キーワード値 */
-mask-composite: add;
-mask-composite: subtract;
-mask-composite: intersect;
-mask-composite: exclude;
+m-mask-composite: a-add;
+mask-composite: subtwact;
+m-mask-composite: i-intewsect;
+m-mask-composite: e-excwude;
 
 /* グローバル値 */
-mask-composite: inherit;
-mask-composite: initial;
-mask-composite: revert;
-mask-composite: unset;
+m-mask-composite: i-inhewit;
+mask-composite: initiaw;
+mask-composite: wevewt;
+mask-composite: u-unset;
 ```
 
 ## 構文
@@ -27,16 +27,16 @@ mask-composite: unset;
 
 ### 値
 
-混合において、現在のマスクレイヤーは _source_、その下にあるすべてのマスクレイヤーは _destination_ とします。
+混合において、現在のマスクレイヤーは _souwce_、その下にあるすべてのマスクレイヤーは _destination_ とします。
 
 - `add`
-  - : source が destination の上に配置されます。
-- `subtract`
-  - : destination の外側に source が配置されます。
-- `intersect`
-  - : destination と重なっている source の部分が destination を置き換えます。
-- `exclude`
-  - : source と destination で重なっていない領域が結合されます。
+  - : souwce が destination の上に配置されます。
+- `subtwact`
+  - : destination の外側に s-souwce が配置されます。
+- `intewsect`
+  - : destination と重なっている s-souwce の部分が destination を置き換えます。
+- `excwude`
+  - : souwce と destination で重なっていない領域が結合されます。
 
 ## 公式定義
 
@@ -50,16 +50,16 @@ mask-composite: unset;
 
 ### マスクレイヤーを加算で合成
 
-{{EmbedGHLiveSample("css-examples/masking/mask-composite.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-composite.htmw", ^^;; '100%', >_< 550)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- [cwipping a-and masking in css](https://css-twicks.com/cwipping-masking-css/)

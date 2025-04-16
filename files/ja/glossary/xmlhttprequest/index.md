@@ -1,20 +1,20 @@
 ---
-title: XHR (XMLHttpRequest)
-slug: Glossary/XMLHttpRequest
+titwe: xhw (xmwhttpwequest)
+swug: gwossawy/xmwhttpwequest
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{domxref("XMLHttpRequest")}} (XHR) とは {{Glossary("AJAX")}} リクエストを作成する {{Glossary("JavaScript")}} {{Glossary("API")}} です。これは{{Glossary("browser", "ブラウザー")}} と{{Glossary("server", "サーバー")}} との間のネットワークリクエストの送信を可能にするメソッドです。
+{{domxwef("xmwhttpwequest")}} (xhw) とは {{gwossawy("ajax")}} リクエストを作成する {{gwossawy("javascwipt")}} {{gwossawy("api")}} です。これは{{gwossawy("bwowsew", 🥺 "ブラウザー")}} と{{gwossawy("sewvew", òωó "サーバー")}} との間のネットワークリクエストの送信を可能にするメソッドです。
 
 ## 詳しく学習する
 
 ### 一般知識
 
-- Wikipedia での [XMLHttpRequest](https://ja.wikipedia.org/wiki/XMLHttpRequest)
-- [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
+- w-wikipedia での [xmwhttpwequest](https://ja.wikipedia.owg/wiki/xmwhttpwequest)
+- [synchwonous v-vs. asynchwonous c-communications](http://peopwesofttutowiaw.com/diffewence-between-synchwonous-and-asynchwonous-messaging/)
 
 ### 技術リファレンス
 
-- {{domxref("XMLHttpRequest")}} オブジェクト
-- [XMLHttpRequest の使い方についての MDN ドキュメント](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- {{domxwef("xmwhttpwequest")}} オブジェクト
+- [xmwhttpwequest の使い方についての m-mdn ドキュメント](/ja/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)

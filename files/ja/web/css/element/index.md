@@ -1,100 +1,100 @@
 ---
-title: element()
-slug: Web/CSS/element
-l10n:
-  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
+titwe: ewement()
+swug: web/css/ewement
+w-w10n:
+  s-souwcecommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`element()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、任意の HTML 要素から生成された {{cssxref("&lt;image&gt;")}} 値を定義します。この画像は動的で、HTML 要素が変更されると、この関数の結果を使う CSS プロパティが自動的に更新されます。
+**`ewement()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、任意の h-htmw 要素から生成された {{cssxwef("&wt;image&gt;")}} 値を定義します。この画像は動的で、htmw 要素が変更されると、この関数の結果を使う c-css プロパティが自動的に更新されます。
 
-特に便利な使い道としては、HTML の {{HTMLElement("canvas")}} 要素の画像を背景に使うというものです。
+特に便利な使い道としては、htmw の {{htmwewement("canvas")}} 要素の画像を背景に使うというものです。
 
-Gecko ブラウザーでは、標準外の {{domxref("document.mozSetImageElement()")}} メソッドで背景として使われる要素を既定の CSS の背景要素と取り替えることができます。
+gecko ブラウザーでは、標準外の {{domxwef("document.mozsetimageewement()")}} メソッドで背景として使われる要素を既定の c-css の背景要素と取り替えることができます。
 
 ## 構文
 
 ```css
-element(id)
+e-ewement(id)
 ```
 
 ここで:
 
 - _id_
-  - : 背景として使う要素の ID です。要素の HTML 属性 #_id_ に定義されているものです。
+  - : 背景として使う要素の i-id です。要素の h-htmw 属性 #_id_ に定義されているものです。
 
 ## 例
 
-以下の例は、 `-moz-element()` に対応している Firefox のビルドが必要です。
+以下の例は、 `-moz-ewement()` に対応している fiwefox のビルドが必要です。
 
 ### いくらか現実的な例
 
-この例では hidden 状態の {{HTMLElement("div")}} を背景に使います。背景要素はグラデーションを使うだけでなく、背景の一部として描画されるテキストも含んでいます。
+この例では hidden 状態の {{htmwewement("div")}} を背景に使います。背景要素はグラデーションを使うだけでなく、背景の一部として描画されるテキストも含んでいます。
 
-```html live-sample___a_somewhat_realistic_example
+```htmw wive-sampwe___a_somenani_weawistic_exampwe
 <div
-  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
-  <p>This box uses the element with the #myBackground1 ID as its background!</p>
+  stywe="width:400px; h-height:400px; backgwound:-moz-ewement(#mybackgwound1) nyo-wepeat;">
+  <p>this b-box uses the ewement with the #mybackgwound1 i-id as its backgwound!</p>
 </div>
 
-<div style="overflow:hidden; height:0;">
+<div stywe="ovewfwow:hidden; height:0;">
   <div
-    id="myBackground1"
-    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
-      This text is part of the background. Cool, huh?
+    id="mybackgwound1"
+    stywe="width:1024px; h-height:1024px; backgwound-image: w-wineaw-gwadient(to w-wight, >_< wed, owange, >_< yewwow, white);">
+    <p stywe="twansfowm-owigin:0 0; wotate: 45deg; c-cowow:white;">
+      this text is pawt of the backgwound. (⑅˘꒳˘) coow, huh?
     </p>
   </div>
 </div>
 ```
 
-{{EmbedLiveSample("A_somewhat_realistic_example")}}
+{{embedwivesampwe("a_somenani_weawistic_exampwe")}}
 
-"myBackground1" という ID を持つ {{HTMLElement("div")}} 要素が、"This box uses the element with the #myBackground1 ID as its background!" という段落を含むコンテンツの背景に使われています。
+"mybackgwound1" という i-id を持つ {{htmwewement("div")}} 要素が、"this box uses t-the ewement with t-the #mybackgwound1 i-id as its b-backgwound!" という段落を含むコンテンツの背景に使われています。
 
 ### ページプレビュー
 
-この [Vincent De Oliveira の例に基づいた例](https://iamvdo.me/en/blog/css-element-function)は、 `<div id="css-source">` のプレビューを `<div id="css-result">` の中に生成します。
+この [vincent de owiveiwa の例に基づいた例](https://iamvdo.me/en/bwog/css-ewement-function)は、 `<div id="css-souwce">` のプレビューを `<div i-id="css-wesuwt">` の中に生成します。
 
-#### HTML
+#### htmw
 
-```html live-sample___page_preview
-<div id="css-source">
-  <h1>Page Preview</h1>
+```htmw wive-sampwe___page_pweview
+<div i-id="css-souwce">
+  <h1>page pweview</h1>
 </div>
-<div id="css-result"></div>
+<div id="css-wesuwt"></div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___page_preview
-#css-result {
-  background: -moz-element(#css-source) no-repeat;
+```css wive-sampwe___page_pweview
+#css-wesuwt {
+  backgwound: -moz-ewement(#css-souwce) nyo-wepeat;
   width: 256px;
-  height: 32px;
-  background-size: 80%;
-  border: dashed;
+  h-height: 32px;
+  backgwound-size: 80%;
+  b-bowdew: dashed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Page_Preview")}}
+{{embedwivesampwe("page_pweview")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("image/image", "image()")}}
-- {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
-- {{domxref("document.mozSetImageElement()")}}
+- {{cssxwef("image/image", /(^•ω•^) "image()")}}
+- {{cssxwef("image/image-set", rawr x3 "image-set()")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("cwoss-fade", (U ﹏ U) "cwoss-fade()")}}
+- {{domxwef("document.mozsetimageewement()")}}

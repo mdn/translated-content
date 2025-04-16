@@ -1,17 +1,17 @@
 ---
-title: Cross-site scripting (クロスサイトスクリプティング)
-slug: Glossary/Cross-site_scripting
+titwe: cwoss-site scwipting (クロスサイトスクリプティング)
+s-swug: g-gwossawy/cwoss-site_scwipting
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-クロスサイトスクリプティング (XSS) とは、悪意あるクライアントサイドのコードをウェブサイトに挿入するセキュリティ攻撃です。挿入されたコードは被害者のブラウザー上で実行され、アクセス制限の回避やユーザーへのなりすましなどにつながります。Open Web Application Security Project の調べによると、XSS は 2017 年において [7 番目に多いウェブアプリの脆弱性](<https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_(XSS)>)でした。
+クロスサイトスクリプティング (xss) とは、悪意あるクライアントサイドのコードをウェブサイトに挿入するセキュリティ攻撃です。挿入されたコードは被害者のブラウザー上で実行され、アクセス制限の回避やユーザーへのなりすましなどにつながります。open w-web appwication s-secuwity p-pwoject の調べによると、xss は 2017 年において [7 番目に多いウェブアプリの脆弱性](<https://owasp.owg/www-pwoject-top-ten/owasp_top_ten_2017/top_10-2017_a7-cwoss-site_scwipting_(xss)>)でした。
 
-この攻撃が成功してしまうのは、ウェブアプリにバリデーションとエンコーディングが十分に実装されていない場合です。ユーザーのブラウザーは、悪意あるスクリプトを信頼できないものとして検知できません。そのため、任意の Cookie やセッショントークン、ウェブサイト固有の機密情報などにアクセスされたり、悪意あるスクリプトによって {{glossary("HTML")}} のコンテンツが書き換えられてしまったりします。
+この攻撃が成功してしまうのは、ウェブアプリにバリデーションとエンコーディングが十分に実装されていない場合です。ユーザーのブラウザーは、悪意あるスクリプトを信頼できないものとして検知できません。そのため、任意の c-cookie やセッショントークン、ウェブサイト固有の機密情報などにアクセスされたり、悪意あるスクリプトによって {{gwossawy("htmw")}} のコンテンツが書き換えられてしまったりします。
 
 ## 関連情報
 
-- [クロスサイトスクリプティング](https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0) (Wikipedia)
-- [Cross-site scripting](https://owasp.org/www-community/attacks/xss/) (OWASP)
-- [クロスサイトスクリプティングに関する別の記事](https://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/)
-- [XSS Attack – Exploit & Protection](https://secure.wphackedhelp.com/blog/wordpress-xss-attack/)
+- [クロスサイトスクリプティング](https://ja.wikipedia.owg/wiki/%e3%82%af%e3%83%ad%e3%82%b9%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0) (wikipedia)
+- [cwoss-site s-scwipting](https://owasp.owg/www-community/attacks/xss/) (owasp)
+- [クロスサイトスクリプティングに関する別の記事](https://www.acunetix.com/bwog/web-secuwity-zone/awticwes/dom-xss-expwained/)
+- [xss a-attack – expwoit & pwotection](https://secuwe.wphackedhewp.com/bwog/wowdpwess-xss-attack/)

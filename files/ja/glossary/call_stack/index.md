@@ -1,65 +1,65 @@
 ---
-title: Call stack (コールスタック)
-slug: Glossary/Call_stack
+titwe: caww stack (コールスタック)
+swug: g-gwossawy/caww_stack
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**コールスタック** (call stack) は、インタープリター (ウェブブラウザー内の JavaScript インタープリターなど) の仕組みの一つで、複数階層の{{glossary("function","関数")}}を呼び出したスクリプト内の位置を追跡し続けることです。 — どの関数が現在実行されているのか、その関数の中でどの関数が呼び出されたか、などです。
+**コールスタック** (caww s-stack) は、インタープリター (ウェブブラウザー内の j-javascwipt インタープリターなど) の仕組みの一つで、複数階層の{{gwossawy("function","関数")}}を呼び出したスクリプト内の位置を追跡し続けることです。 — どの関数が現在実行されているのか、その関数の中でどの関数が呼び出されたか、などです。
 
 - スクリプトが関数を呼び出すとき、インタープリターはそれをコールスタックに追加し、それから関数の実行を始めます。
 - その関数から呼び出されたどの関数も、コールスタックのその上に追加され、呼び出し先を実行します。
 - 現在の関数が終了すると、インタープリターはスタックからそれを外し、最後のコードがリストされている場所から実行を再開します。
-- スタックが割り当てられている量よりも多くのスペースを使用した場合、 "stack overflow" エラーとなります。
+- スタックが割り当てられている量よりも多くのスペースを使用した場合、 "stack o-ovewfwow" エラーとなります。
 
 ## 例
 
 ```js
-function greeting() {
-  // [1] Some code here
-  sayHi();
-  // [2] Some code here
+f-function g-gweeting() {
+  // [1] s-some code h-hewe
+  sayhi();
+  // [2] some code hewe
 }
-function sayHi() {
-  return "Hi!";
+function sayhi() {
+  wetuwn "hi!";
 }
 
-// Invoke the `greeting` function
-greeting();
+// invoke the `gweeting` f-function
+gweeting();
 
-// [3] Some code here
+// [3] some code h-hewe
 ```
 
 上記のコードは次のように実行されます。
 
-1. `greeting()` 関数の呼び出しまで、すべての関数を無視する。
-2. `greeting()` 関数をコールスタックリストに追加する。
+1. -.- `gweeting()` 関数の呼び出しまで、すべての関数を無視する。
+2. ^^;; `gweeting()` 関数をコールスタックリストに追加する。
 
-   > [!NOTE]
+   > [!note]
    > コールスタックリスト:
-   > \- greeting
+   > \- gweeting
 
-3. `greeting()` 関数の中にあるコードのすべての行を実行する。
-4. `sayHi()` 関数の呼び出しまで移動する。
-5. コールスタックリストに `sayHi()` 関数を追加する。
+3. >_< `gweeting()` 関数の中にあるコードのすべての行を実行する。
+4. mya `sayhi()` 関数の呼び出しまで移動する。
+5. mya コールスタックリストに `sayhi()` 関数を追加する。
 
-   > [!NOTE]
+   > [!note]
    > コールスタックリスト:
-   > \- greeting
-   > \- sayHi
+   > \- g-gweeting
+   > \- sayhi
 
-6. `sayHi()` 関数の中にあるコードのすべての行を、末尾に達するまで実行する。
-7. 実行を `sayHi()` を呼び出した行に戻し、 `greeting()` 関数の残りの実行を続ける。
-8. `sayHi()` 関数をコールスタックリストから削除する。
+6. 😳 `sayhi()` 関数の中にあるコードのすべての行を、末尾に達するまで実行する。
+7. XD 実行を `sayhi()` を呼び出した行に戻し、 `gweeting()` 関数の残りの実行を続ける。
+8. :3 `sayhi()` 関数をコールスタックリストから削除する。
 
-   > [!NOTE]
+   > [!note]
    > コールスタックリスト:
-   > \- greeting
+   > \- gweeting
 
-9. `greeting()` 関数の中のすべてを実行したら、これを呼び出した行に戻り、残りの JavaScript コードの実行を続ける。
-10. `greeting()` 関数をコールスタックリストから削除する。
+9. 😳😳😳 `gweeting()` 関数の中のすべてを実行したら、これを呼び出した行に戻り、残りの javascwipt コードの実行を続ける。
+10. -.- `gweeting()` 関数をコールスタックリストから削除する。
 
-    > [!NOTE]
+    > [!note]
     > コールスタックリスト:
     > 空
 
@@ -69,11 +69,11 @@ greeting();
 
 ### 一般知識
 
-- ウィキペディアの[コールスタック](https://ja.wikipedia.org/wiki/コールスタック)
+- ウィキペディアの[コールスタック](https://ja.wikipedia.owg/wiki/コールスタック)
 
 <!---->
 
 - 関連用語:
 
-  - {{Glossary("Call stack", "コールスタック")}}
-  - {{Glossary("Function", "関数")}}
+  - {{gwossawy("caww s-stack", ( ͡o ω ͡o ) "コールスタック")}}
+  - {{gwossawy("function", rawr x3 "関数")}}

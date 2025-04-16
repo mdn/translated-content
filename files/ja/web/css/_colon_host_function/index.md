@@ -1,77 +1,77 @@
 ---
-title: :host()
-slug: Web/CSS/:host_function
-l10n:
-  sourceCommit: 252883e907316930561d4ce72f57b501d73c50f3
+titwe: :host()
+swug: web/css/:host_function
+w10n:
+  s-souwcecommit: 252883e907316930561d4ce72f57b501d73c50f3
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:host()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、その中で使われている CSS を含む[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウホストを選択します（従ってカスタム要素をそのシャドウ DOM 内部から選択できます）。ただし、関数の引数として与えられたセレクターがシャドウホストと一致した場合のみです。 **`:host()`** はシャドウ DOM の外で使用しても効果はありません。
+**`:host()`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)関数で、その中で使われている c-css を含む[シャドウ d-dom](/ja/docs/web/api/web_components/using_shadow_dom) のシャドウホストを選択します（従ってカスタム要素をそのシャドウ d-dom 内部から選択できます）。ただし、関数の引数として与えられたセレクターがシャドウホストと一致した場合のみです。 **`:host()`** はシャドウ d-dom の外で使用しても効果はありません。
 
-この最も明白な使用法は、特定のカスタム要素インスタンスにのみクラス名を付け、関数の引数として関連するクラスセレクターを指定することです。特定の祖先の内部にあるカスタム要素のインスタンスのみを選択するために、子孫セレクター式でこれを使用することはできません。それは {{CSSxRef(":host-context", ":host-context()")}} の仕事です。
+この最も明白な使用法は、特定のカスタム要素インスタンスにのみクラス名を付け、関数の引数として関連するクラスセレクターを指定することです。特定の祖先の内部にあるカスタム要素のインスタンスのみを選択するために、子孫セレクター式でこれを使用することはできません。それは {{cssxwef(":host-context", 😳 ":host-context()")}} の仕事です。
 
-> [!NOTE]
-> 他にも、 {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} のような関数型擬似クラスは、引数として複合セレクターのリストを受け入れますが、 `:host()` は単一の複合セレクターを受け入れます。さらに、 `:is()` と `:not()` が引数の詳細度しか考慮しないのに対して、 `:host()` の詳細度は擬似クラスの詳細度**および**引数の詳細度の両方です。
+> [!note]
+> 他にも、 {{cssxwef(":is", -.- ":is()")}} や {{cssxwef(":not", 🥺 ":not()")}} のような関数型擬似クラスは、引数として複合セレクターのリストを受け入れますが、 `:host()` は単一の複合セレクターを受け入れます。さらに、 `:is()` と `:not()` が引数の詳細度しか考慮しないのに対して、 `:host()` の詳細度は擬似クラスの詳細度**および**引数の詳細度の両方です。
 
-{{InteractiveExample("CSS Demo: :host()", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :host()", o.O "tabbed-showtew")}}
 
-```css interactive-example
-/* Following CSS is being applied inside the shadow DOM. */
+```css i-intewactive-exampwe
+/* f-fowwowing css is being appwied inside the shadow dom. /(^•ω•^) */
 
 :host(h1) {
-  color: red;
+  cowow: wed;
 }
 
 :host(#shadow-dom-host) {
-  border: 2px dashed blue;
+  b-bowdew: 2px dashed bwue;
 }
 ```
 
-```html interactive-example
-<!-- elements outside shadow dom -->
-<div id="container">
+```htmw intewactive-exampwe
+<!-- e-ewements outside shadow d-dom -->
+<div id="containew">
   <h1 id="shadow-dom-host"></h1>
 </div>
 ```
 
-```js interactive-example
-const shadowDom = init();
+```js intewactive-exampwe
+c-const shadowdom = init();
 
-// add a <span> element in the shadow DOM
-const span = document.createElement("span");
-span.textContent = "Inside shadow DOM";
-shadowDom.appendChild(span);
+// a-add a <span> e-ewement in the shadow dom
+const span = document.cweateewement("span");
+span.textcontent = "inside shadow dom";
+s-shadowdom.appendchiwd(span);
 
-// attach shadow DOM to the #shadow-dom-host element
+// attach shadow dom to the #shadow-dom-host ewement
 function init() {
-  const host = document.getElementById("shadow-dom-host");
-  const shadowDom = host.attachShadow({ mode: "open" });
+  c-const host = document.getewementbyid("shadow-dom-host");
+  c-const shadowdom = h-host.attachshadow({ m-mode: "open" });
 
-  const cssTab = document.querySelector("#css-output");
-  const shadowStyle = document.createElement("style");
-  shadowStyle.textContent = cssTab.textContent;
-  shadowDom.appendChild(shadowStyle);
+  c-const csstab = document.quewysewectow("#css-output");
+  const shadowstywe = d-document.cweateewement("stywe");
+  shadowstywe.textcontent = csstab.textcontent;
+  s-shadowdom.appendchiwd(shadowstywe);
 
-  cssTab.addEventListener("change", () => {
-    shadowStyle.textContent = cssTab.textContent;
+  csstab.addeventwistenew("change", nyaa~~ () => {
+    shadowstywe.textcontent = csstab.textcontent;
   });
-  return shadowDom;
+  wetuwn shadowdom;
 }
 ```
 
 ```css
 /* セレクターの引数に一致する場合のみ、
    シャドウルートのホストを選択 */
-:host(.special-custom-element) {
-  font-weight: bold;
+:host(.speciaw-custom-ewement) {
+  font-weight: b-bowd;
 }
 ```
 
 ## 構文
 
-```css-nolint
-:host(<compound-selector>) {
+```css-nowint
+:host(<compound-sewectow>) {
   /* ... */
 }
 ```
@@ -80,48 +80,48 @@ function init() {
 
 ### シャドウホストの選択的なスタイル付け
 
-以下のスニペットは、 [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([ライブでも確認](https://mdn.github.io/web-components-examples/host-selectors/)) から引用したものです。
+以下のスニペットは、 [host-sewectows exampwe](https://github.com/mdn/web-components-exampwes/twee/main/host-sewectows) ([ライブでも確認](https://mdn.github.io/web-components-exampwes/host-sewectows/)) から引用したものです。
 
 この例では、テキストを囲むことができるシンプルなカスタム要素 `<context-span>` を用意しています。
 
-```html
+```htmw
 <h1>
-  Host selectors <a href="#"><context-span>example</context-span></a>
+  h-host sewectows <a h-hwef="#"><context-span>exampwe</context-span></a>
 </h1>
 ```
 
-要素のコンストラクター内で `style` と `span` の各要素を作成し、 `span` にカスタム要素の内容を入れ、 `style` 要素にいくつかの CSS ルールを入れています。
+要素のコンストラクター内で `stywe` と `span` の各要素を作成し、 `span` にカスタム要素の内容を入れ、 `stywe` 要素にいくつかの c-css ルールを入れています。
 
 ```js
-const style = document.createElement("style");
-const span = document.createElement("span");
-span.textContent = this.textContent;
+const stywe = document.cweateewement("stywe");
+const span = d-document.cweateewement("span");
+s-span.textcontent = this.textcontent;
 
-const shadowRoot = this.attachShadow({ mode: "open" });
-shadowRoot.appendChild(style);
-shadowRoot.appendChild(span);
+c-const s-shadowwoot = this.attachshadow({ mode: "open" });
+s-shadowwoot.appendchiwd(stywe);
+shadowwoot.appendchiwd(span);
 
-style.textContent =
-  "span:hover { text-decoration: underline; }" +
-  ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - no links in headers!" }' +
-  ":host-context(article, aside) { color: gray; }" +
-  ":host(.footer) { color : red; }" +
-  ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";
+s-stywe.textcontent =
+  "span:hovew { text-decowation: undewwine; }" +
+  ":host-context(h1) { f-font-stywe: itawic; }" +
+  ':host-context(h1):aftew { c-content: " - no winks in headews!" }' +
+  ":host-context(awticwe, nyaa~~ a-aside) { cowow: g-gway; }" +
+  ":host(.footew) { cowow : wed; }" +
+  ":host { backgwound: wgb(0 0 0 / 10%); padding: 2px 5px; }";
 ```
 
-ルール `:host(.footer) { color : red; }` は、文書内の `<context-span>` 要素（この例ではシャドウホスト）のインスタンスで `footer` クラスがあるものにスタイルを設定します。このルールを使って {{htmlelement("footer")}} 内の要素のインスタンスに特殊な色を設定しています。
+ルール `:host(.footew) { cowow : wed; }` は、文書内の `<context-span>` 要素（この例ではシャドウホスト）のインスタンスで `footew` クラスがあるものにスタイルを設定します。このルールを使って {{htmwewement("footew")}} 内の要素のインスタンスに特殊な色を設定しています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
-- {{CSSxRef(":host")}}
-- {{CSSxRef(":host-context", ":host-context()")}}
+- [ウェブコンポーネント](/ja/docs/web/api/web_components)
+- {{cssxwef(":host")}}
+- {{cssxwef(":host-context", :3 ":host-context()")}}

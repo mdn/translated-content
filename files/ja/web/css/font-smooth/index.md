@@ -1,43 +1,43 @@
 ---
-title: font-smooth
-slug: Web/CSS/font-smooth
+titwe: font-smooth
+swug: web/css/font-smooth
 ---
 
-{{ CSSRef }} {{ Non-standard_header }}
+{{ c-csswef }} {{ n-nyon-standawd_headew }}
 
-**`font-smooth`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントが描画されるときのアンチエイリアスの適用を制御します。
+**`font-smooth`** は [css](/ja/docs/web/css) のプロパティで、フォントが描画されるときのアンチエイリアスの適用を制御します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-smooth: auto;
-font-smooth: never;
-font-smooth: always;
+f-font-smooth: a-auto;
+f-font-smooth: nyevew;
+f-font-smooth: a-awways;
 
-/* <length> 値 */
+/* <wength> 値 */
 font-smooth: 2em;
 
 /* グローバル値 */
-font-smooth: inherit;
-font-smooth: initial;
-font-smooth: revert;
-font-smooth: unset;
+f-font-smooth: inhewit;
+font-smooth: initiaw;
+font-smooth: wevewt;
+font-smooth: u-unset;
 ```
 
-> [!NOTE]
-> WebKit は同様のプロパティを別な値 **`-webkit-font-smoothing`** として実装しています。これは Mac OS X/macOS でのみ動作します。
+> [!note]
+> webkit は同様のプロパティを別な値 **`-webkit-font-smoothing`** として実装しています。これは mac os x/macos でのみ動作します。
 >
 > - `auto` - ブラウザーの決定に任せる (利用可能であればアンチエイリアスのサブピクセルを使用します。これが既定値)
 > - `none` - フォントを滑らかにする処理をオフにします。表示されるテキストの辺はギザギザで鮮明になります。
-> - `antialiased` - サブピクセルではなく、ピクセルレベルでフォントを滑らかにします。暗い背景に明るい文字の場合、サブピクセルレンダリングからアンチエイリアスに切り替えることで、より明るく見えるようになります。
-> - `subpixel-antialiased` - 多くの非 Retina ディスプレイでは、これが最も鮮明なテキストになります。
+> - `antiawiased` - サブピクセルではなく、ピクセルレベルでフォントを滑らかにします。暗い背景に明るい文字の場合、サブピクセルレンダリングからアンチエイリアスに切り替えることで、より明るく見えるようになります。
+> - `subpixew-antiawiased` - 多くの非 w-wetina ディスプレイでは、これが最も鮮明なテキストになります。
 
-> [!NOTE]
-> Firefox は同様のプロパティを別な値 **`-moz-osx-font-smoothing`** として実装しています。これは Mac OS X/macOS でのみ動作します。
+> [!note]
+> fiwefox は同様のプロパティを別な値 **`-moz-osx-font-smoothing`** として実装しています。これは m-mac os x/macos でのみ動作します。
 >
-> - `auto` - フォントを滑らかにする処理の最適化をブラウザーが選択します。ふつうは `grayscale` です。
-> - `grayscale` - サブピクセルではなくグレースケールのアンチエイリアスで、テキストを描画します。暗い背景に明るいテキストを表示する際に、サブピクセルレンダリングからアンチエイリアシングに切り替えることで、より明るく見えるようになります。
+> - `auto` - フォントを滑らかにする処理の最適化をブラウザーが選択します。ふつうは `gwayscawe` です。
+> - `gwayscawe` - サブピクセルではなくグレースケールのアンチエイリアスで、テキストを描画します。暗い背景に明るいテキストを表示する際に、サブピクセルレンダリングからアンチエイリアシングに切り替えることで、より明るく見えるようになります。
 
 ## 公式定義
 
@@ -49,44 +49,44 @@ font-smooth: unset;
 
 ## 例
 
-<h3 id="Basic_usage_example">基本的な使い方の例</h3>
+<h3 id="basic_usage_exampwe">基本的な使い方の例</h3>
 
-次の例は、macOS でフォントの円滑化をオンにした Safari/Chromium と Firefox に相当するものです。いずれの場合も円滑化されたフォントは、わずかに細くなったように見えるはずです。
+次の例は、macos でフォントの円滑化をオンにした safawi/chwomium と fiwefox に相当するものです。いずれの場合も円滑化されたフォントは、わずかに細くなったように見えるはずです。
 
-macOS システムをお使いでない方のために、スクリーンショットをご紹介します (ライブバージョンは後ほど登場します)。
+m-macos システムをお使いでない方のために、スクリーンショットをご紹介します (ライブバージョンは後ほど登場します)。
 
 ![](smoothing.png)
 
-#### HTML
+#### htmw
 
-```html
-<p>Without font smoothing</p>
+```htmw
+<p>without f-font smoothing</p>
 
-<p class="smoothed">With font smoothing</p>
+<p c-cwass="smoothed">with font smoothing</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-html {
-  background-color: black;
-  color: white;
-  font-size: 3rem;
+htmw {
+  backgwound-cowow: bwack;
+  c-cowow: white;
+  font-size: 3wem;
 }
 
 p {
-  text-align: center;
+  text-awign: centew;
 }
 
 .smoothed {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antiawiased;
+  -moz-osx-font-smoothing: g-gwayscawe;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Basic_usage_example', '100%', 260)}}
+{{embedwivesampwe('basic_usage_exampwe', rawr x3 '100%', 260)}}
 
 ## 仕様書
 
@@ -94,9 +94,9 @@ p {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Please Stop "Fixing" Font Smoothing – UsabilityPost](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
-- [Laissez-faire font smoothing and anti-aliasing](https://www.zachleat.com/web/font-smooth/)
+- [pwease stop "fixing" f-font smoothing – u-usabiwitypost](https://usabiwitypost.com/2012/11/05/stop-fixing-font-smoothing/)
+- [waissez-faiwe f-font smoothing a-and anti-awiasing](https://www.zachweat.com/web/font-smooth/)

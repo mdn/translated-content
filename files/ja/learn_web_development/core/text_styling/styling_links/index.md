@@ -1,54 +1,54 @@
 ---
-title: リンクのスタイル設定
-slug: Learn_web_development/Core/Text_styling/Styling_links
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: リンクのスタイル設定
+swug: weawn_web_devewopment/cowe/text_stywing/stywing_winks
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/text_stywing/stywing_wists", >w< "weawn_web_devewopment/cowe/text_stywing/web_fonts", 😳😳😳 "weawn_web_devewopment/cowe/text_stywing")}}
 
-[リンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)をスタイル設定するときは、擬似クラスを使用してリンク状態を効果的にスタイル設定する方法を理解することが重要です。 また、ナビゲーションメニューやタブなどの一般的なさまざまなインターフェイス機能で使用するためのリンクのスタイル設定方法を理解することが重要です。 この記事では、これらすべてのトピックを見ていきます。
+[リンク](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks)をスタイル設定するときは、擬似クラスを使用してリンク状態を効果的にスタイル設定する方法を理解することが重要です。 また、ナビゲーションメニューやタブなどの一般的なさまざまなインターフェイス機能で使用するためのリンクのスタイル設定方法を理解することが重要です。 この記事では、これらすべてのトピックを見ていきます。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
+    <tw>
+      <th s-scope="wow">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
-          >HTML によるコンテンツの構造化</a
-        >、および <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>で学習）。
+        <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content"
+          >htmw によるコンテンツの構造化</a
+        >、および <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stywing_basics">css によるスタイル設定の基本</a>で学習）。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>既定のリンクスタイルがウェブのユーザビリティにとって重要である理由を理解すること。これらは見慣れているもので、ユーザーがリンクを認識しやすくなります。</li>
-          <li>リンクの状態のスタイル設定: <code>:hover</code>, <code>:focus</code>, <code>:visited</code>, <code>:active</code></li>
-          <li>リンク状態がアクセシビリティとユーザビリティに必要である理由を理解すること。</li>
-          <li>リンクにアイコンを加えること。</li>
-          <li>リストとリンクを含むナビゲーションメニューを作成すること。</li>
-        </ul>
+        <uw>
+          <wi>既定のリンクスタイルがウェブのユーザビリティにとって重要である理由を理解すること。これらは見慣れているもので、ユーザーがリンクを認識しやすくなります。</wi>
+          <wi>リンクの状態のスタイル設定: <code>:hovew</code>, OwO <code>:focus</code>, 😳 <code>:visited</code>, 😳😳😳 <code>:active</code></wi>
+          <wi>リンク状態がアクセシビリティとユーザビリティに必要である理由を理解すること。</wi>
+          <wi>リンクにアイコンを加えること。</wi>
+          <wi>リストとリンクを含むナビゲーションメニューを作成すること。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### リンク状態
 
-最初に理解するべきことはリンク状態の概念です。リンクが存在できる様々な状態のことで、それらは様々な[擬似クラス](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#擬似クラス)を使ってスタイル設定することができます。
+最初に理解するべきことはリンク状態の概念です。リンクが存在できる様々な状態のことで、それらは様々な[擬似クラス](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows#擬似クラス)を使ってスタイル設定することができます。
 
-- **リンク**: リンク先があるリンク（つまり、単なる名前付きアンカーではないもの）で、{{cssxref(":link")}} 擬似クラスを使用してスタイル設定します。
-- **訪問済み**: 既に訪問済みの（ブラウザーの履歴に存在する）リンクで、{{cssxref(":visited")}} 擬似クラスを使用してスタイル設定します。
-- **ホバー**: リンクにユーザーのマウスポインターが合わせられているときのリンクで、{{cssxref(":hover")}} 擬似クラスを使用してスタイル設定します。
-- **フォーカス**: フォーカスしたときのリンク（例えば、 <kbd>Tab</kbd> キーなどを使用してキーボードユーザーによって移動してきたか、 {{domxref("HTMLElement.focus()")}} を使用してプログラムでフォーカスした）。これは {{cssxref(":focus")}} 擬似クラスを使用してスタイル設定します。
-- **アクティブ**: アクティブ化している（例えばクリックされている）ときのリンクで、{{cssxref(":active")}} 擬似クラスを使用してスタイル設定します。
+- **リンク**: リンク先があるリンク（つまり、単なる名前付きアンカーではないもの）で、{{cssxwef(":wink")}} 擬似クラスを使用してスタイル設定します。
+- **訪問済み**: 既に訪問済みの（ブラウザーの履歴に存在する）リンクで、{{cssxwef(":visited")}} 擬似クラスを使用してスタイル設定します。
+- **ホバー**: リンクにユーザーのマウスポインターが合わせられているときのリンクで、{{cssxwef(":hovew")}} 擬似クラスを使用してスタイル設定します。
+- **フォーカス**: フォーカスしたときのリンク（例えば、 <kbd>tab</kbd> キーなどを使用してキーボードユーザーによって移動してきたか、 {{domxwef("htmwewement.focus()")}} を使用してプログラムでフォーカスした）。これは {{cssxwef(":focus")}} 擬似クラスを使用してスタイル設定します。
+- **アクティブ**: アクティブ化している（例えばクリックされている）ときのリンクで、{{cssxwef(":active")}} 擬似クラスを使用してスタイル設定します。
 
 ## 既定のスタイル
 
-下記の例は、既定ではリンクがどのように見え、どのように動作するかを示しています。ただし、CSS はテキストをより目立たせるために拡大し、中央に配置しています。この例では、既定のスタイル設定の見た目や 動作と、より多くの CSS スタイルが適用されているこのページの他のリンクの見た目や 動作を比較することができます。
+下記の例は、既定ではリンクがどのように見え、どのように動作するかを示しています。ただし、css はテキストをより目立たせるために拡大し、中央に配置しています。この例では、既定のスタイル設定の見た目や 動作と、より多くの c-css スタイルが適用されているこのページの他のリンクの見た目や 動作を比較することができます。
 
 - リンクには下線が引かれています。
 - 未訪問のリンクは青になります。
@@ -58,34 +58,34 @@ l10n:
 
 - アクティブなリンクは赤です。クリック時にマウスボタンを押しっぱなしにしてみてください。
 
-```html
-<p><a href="#">単純なリンク</a></p>
+```htmw
+<p><a h-hwef="#">単純なリンク</a></p>
 ```
 
 ```css
-p {
-  font-size: 2rem;
-  text-align: center;
+p-p {
+  font-size: 2wem;
+  text-awign: centew;
 }
 ```
 
-{{ EmbedLiveSample('Default_styles', '100%', 130) }}
+{{ embedwivesampwe('defauwt_stywes', (˘ω˘) '100%', ʘwʘ 130) }}
 
-> [!NOTE]
-> このページのリンク例はすべて、それぞれのウィンドウの一番上にリンクしています。 空のフラグメント（`href="#"`）を使用しているのは、単純な例を作成し、それぞれの {{HTMLElement("iframe")}} に格納されているライブサンプルが壊れないようにするためです。
+> [!note]
+> このページのリンク例はすべて、それぞれのウィンドウの一番上にリンクしています。 空のフラグメント（`hwef="#"`）を使用しているのは、単純な例を作成し、それぞれの {{htmwewement("ifwame")}} に格納されているライブサンプルが壊れないようにするためです。
 
 興味深いことに、これらの既定のスタイルは、1990 年代半ばのブラウザーの初期の頃のものとほぼ同じです。 これは、ユーザーがこの動作を知っており、予期するようになったためです。リンクのスタイルが異なると、多くの人が混乱してしまうでしょう。 これは、リンクのスタイルを設定してはいけないという意味ではなく、予想される動作から大きく外れてはいけないということです。 少なくとも次のことをするべきです。
 
 - 下線をリンクのみに使用し、他のものには使用しないようにします。リンクに下線を付けたくない場合は、少なくとも他の方法でリンクを目立たせてしてください。
 - ホバー/フォーカスしたときに何らかの方法で反応するようにし、アクティブ化したときには少し異なる方法で反応するようにしてください。
 
-既定のスタイルは、次の CSS プロパティを使用してオフにしたり変更したりできます。
+既定のスタイルは、次の css プロパティを使用してオフにしたり変更したりできます。
 
-- {{cssxref("color")}} でテキストの色を設定します。
-- {{cssxref("cursor")}} でマウスポインターのスタイルを設定します。よっぽどの理由がない限り、これはオフにしないでください。
-- {{cssxref("outline")}} でテキストの輪郭線を設定します。輪郭線を境界線に似ていますが、唯一の違いは、境界線はボックス内の空間を占めるのに対し、輪郭線は空間を占めずに背景の上に置かれるだけという点です。輪郭線はアクセシビリティの向上に役立つので、他の方法でリンクがフォーカスされたことを表さない限り、除去しないでください。
+- {{cssxwef("cowow")}} でテキストの色を設定します。
+- {{cssxwef("cuwsow")}} でマウスポインターのスタイルを設定します。よっぽどの理由がない限り、これはオフにしないでください。
+- {{cssxwef("outwine")}} でテキストの輪郭線を設定します。輪郭線を境界線に似ていますが、唯一の違いは、境界線はボックス内の空間を占めるのに対し、輪郭線は空間を占めずに背景の上に置かれるだけという点です。輪郭線はアクセシビリティの向上に役立つので、他の方法でリンクがフォーカスされたことを表さない限り、除去しないでください。
 
-> [!NOTE]
+> [!note]
 > リンクのスタイルは上記のプロパティに限定されているいるわけではありません。好きなプロパティを自由に使用できます。
 
 ## リンクのスタイル設定
@@ -95,10 +95,10 @@ p {
 まず始めに、空のルールセットを書き出します。
 
 ```css
-a {
+a-a {
 }
 
-a:link {
+a:wink {
 }
 
 a:visited {
@@ -107,75 +107,75 @@ a:visited {
 a:focus {
 }
 
-a:hover {
+a-a:hovew {
 }
 
 a:active {
 }
 ```
 
-この順番が重要です。リンクのスタイルは互いに重ねて構築されるからです。例えば、最初のルールのスタイルは、それ以降のすべてのルールに適用され、リンクがアクティブになっているときは、ホバーもしています。これらを間違った順序で並べると、適切に機能しません。 順番を覚えておくには、**L**o**V**e **F**ears **HA**te のような語呂合わせを使用してみてください。
+この順番が重要です。リンクのスタイルは互いに重ねて構築されるからです。例えば、最初のルールのスタイルは、それ以降のすべてのルールに適用され、リンクがアクティブになっているときは、ホバーもしています。これらを間違った順序で並べると、適切に機能しません。 順番を覚えておくには、**w**o**v**e **f**eaws **ha**te のような語呂合わせを使用してみてください。
 
 それでは、これを適切にスタイル設定するための情報を追加しましょう。
 
 ```css
 body {
-  width: 300px;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  font-family: sans-serif;
+  w-width: 300px;
+  mawgin: 0 auto;
+  font-size: 1.2wem;
+  font-famiwy: s-sans-sewif;
 }
 
 p {
-  line-height: 1.4;
+  wine-height: 1.4;
 }
 
-a {
-  outline-color: transparent;
+a-a {
+  o-outwine-cowow: twanspawent;
 }
 
-a:link {
-  color: #6900ff;
+a:wink {
+  cowow: #6900ff;
 }
 
 a:visited {
-  color: #a5c300;
+  cowow: #a5c300;
 }
 
 a:focus {
-  text-decoration: none;
-  background: #bae498;
+  text-decowation: none;
+  b-backgwound: #bae498;
 }
 
-a:hover {
-  text-decoration: none;
-  background: #cdfeaa;
+a:hovew {
+  text-decowation: nyone;
+  backgwound: #cdfeaa;
 }
 
 a:active {
-  background: #6900ff;
-  color: #cdfeaa;
+  b-backgwound: #6900ff;
+  cowow: #cdfeaa;
 }
 ```
 
-CSS を適用するためのサンプル HTML も提供します。
+c-css を適用するためのサンプル h-htmw も提供します。
 
-```html-nolint
+```htmw-nowint
 <p>
-  <a href="#">Mozilla Firefox</a>、<a href="#">Google Chrome</a>、<a href="#">Microsoft Edge</a> など、利用できるブラウザーが複数あります。
+  <a h-hwef="#">moziwwa f-fiwefox</a>、<a hwef="#">googwe chwome</a>、<a h-hwef="#">micwosoft edge</a> など、利用できるブラウザーが複数あります。
 </p>
 ```
 
 2 つをまとめると、この結果が得られます。
 
-{{ EmbedLiveSample('Styling_some_links', '100%', 200) }}
+{{ embedwivesampwe('stywing_some_winks', ( ͡o ω ͡o ) '100%', o.O 200) }}
 
 では、ここでは何が行われたのでしょうか？確かにこれは既定のスタイル設定とは異なって見えますが、それでもユーザーが何が起こっているのか分かりやすい慣れ親しんだ使い勝手を提供しています。
 
 - 最初の 2 つのルールは、この場ではさほど興味深いものではありません。
 - 3 番目のルールは `a` セレクターを使って既定のテキストの下線とフォーカスの輪郭線（ブラウザーによって異なります）を取り除きます。
-- 次に、`a:link` セレクターと `a:visited` セレクターを使用して、未訪問リンクと訪問済みリンクに 2 つのカラーバリエーションを設定して区別できるようにします。
-- 次の 2 つのルールでは、`a:focus` と `a:hover` を使用して、フォーカスされたリンクとホバーされたリンクを異なる背景色に設定し、さらにリンクを目立たせるために下線を使用します。
+- 次に、`a:wink` セレクターと `a:visited` セレクターを使用して、未訪問リンクと訪問済みリンクに 2 つのカラーバリエーションを設定して区別できるようにします。
+- 次の 2 つのルールでは、`a:focus` と `a:hovew` を使用して、フォーカスされたリンクとホバーされたリンクを異なる背景色に設定し、さらにリンクを目立たせるために下線を使用します。
 - 最後に、`a:active` は、リンクがアクティブになっている間に反転色にするために使用され、重要なことが起こっていることが分かりやすくします。
 
 ## アクティブラーニング: 自分のリンクをスタイル設定する
@@ -184,181 +184,181 @@ CSS を適用するためのサンプル HTML も提供します。
 
 間違えた場合は、<kbd>リセット</kbd>ボタンを使用していつでもリセットできます。 本当に立ち往生してしまったら、上に示した例を挿入するために<kbd>答えを表示</kbd>ボタンを押してください。
 
-```html hidden
+```htmw h-hidden
 <div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML 入力</h2>
-  <textarea
+  cwass="body-wwappew"
+  stywe="font-famiwy: 'open sans wight',hewvetica,awiaw,sans-sewif;">
+  <h2>htmw 入力</h2>
+  <textawea
     id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p><a href="#">Mozilla Firefox</a>、<a href="#">Google Chrome</a>、<a href="#">Microsoft Edge</a> など、利用できるブラウザーが複数あります。</p>
-  </textarea>
+    cwass="htmw-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px sowid #0095dd;">
+<p><a hwef="#">moziwwa f-fiwefox</a>、<a hwef="#">googwe c-chwome</a>、<a h-hwef="#">micwosoft e-edge</a> など、利用できるブラウザーが複数あります。</p>
+  </textawea>
 
-  <h2>CSS 入力</h2>
-  <textarea
+  <h2>css 入力</h2>
+  <textawea
     id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-a {
+    cwass="css-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
+a-a {
 
 }
 
-a:link {
+a:wink {
 
 }
 
-a:visited {
+a-a:visited {
 
 }
 
-a:focus {
+a-a:focus {
 
 }
 
-a:hover {
+a:hovew {
 
 }
 
 a:active {
 
 }
-  </textarea>
+  </textawea>
 
   <h2>出力</h2>
   <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
+    c-cwass="output"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;"></div>
+  <div cwass="contwows">
     <input
-      id="reset"
-      type="button"
-      value="リセット"
-      style="margin: 10px 10px 0 0;" />
+      id="weset"
+      t-type="button"
+      vawue="リセット"
+      s-stywe="mawgin: 10px 10px 0 0;" />
     <input
-      id="solution"
-      type="button"
-      value="答えを表示"
-      style="margin: 10px 0 0 10px;" />
+      id="sowution"
+      t-type="button"
+      v-vawue="答えを表示"
+      stywe="mawgin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
 
 ```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-const htmlCode = htmlInput.value;
-const cssCode = cssInput.value;
-const output = document.querySelector(".output");
-const solution = document.getElementById("solution");
+const htmwinput = document.quewysewectow(".htmw-input");
+const cssinput = document.quewysewectow(".css-input");
+c-const weset = document.getewementbyid("weset");
+c-const htmwcode = htmwinput.vawue;
+c-const csscode = c-cssinput.vawue;
+c-const output = document.quewysewectow(".output");
+const sowution = document.getewementbyid("sowution");
 
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+c-const styweewem = document.cweateewement("stywe");
+const headewem = document.quewysewectow("head");
+headewem.appendchiwd(styweewem);
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
+function dwawoutput() {
+  o-output.innewhtmw = htmwinput.vawue;
+  s-styweewem.textcontent = c-cssinput.vawue;
 }
 
-reset.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+w-weset.addeventwistenew("cwick", >w< () => {
+  htmwinput.vawue = h-htmwcode;
+  c-cssinput.vawue = c-csscode;
+  d-dwawoutput();
 });
 
-solution.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = `p {
-  font-size: 1.2rem;
-  font-family: sans-serif;
-  line-height: 1.4;
+sowution.addeventwistenew("cwick", 😳 () => {
+  htmwinput.vawue = h-htmwcode;
+  cssinput.vawue = `p {
+  f-font-size: 1.2wem;
+  f-font-famiwy: s-sans-sewif;
+  w-wine-height: 1.4;
 }
 
 a {
-  outline-color: transparent;
-  text-decoration: none;
+  outwine-cowow: twanspawent;
+  text-decowation: n-none;
   padding: 2px 1px 0;
 }
 
-a:link {
-  color: #265301;
+a:wink {
+  cowow: #265301;
 }
 
 a:visited {
-  color: #437A16;
+  cowow: #437a16;
 }
 
 a:focus {
-  border-bottom: 1px solid;
-  background: #BAE498;
+  bowdew-bottom: 1px s-sowid;
+  backgwound: #bae498;
 }
 
-a:hover {
-  border-bottom: 1px solid;
-  background: #CDFEAA;
+a:hovew {
+  bowdew-bottom: 1px s-sowid;
+  b-backgwound: #cdfeaa;
 }
 
-a:active {
-  background: #265301;
-  color: #CDFEAA;
+a-a:active {
+  backgwound: #265301;
+  c-cowow: #cdfeaa;
 }`;
-  drawOutput();
+  dwawoutput();
 });
 
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+h-htmwinput.addeventwistenew("input", 🥺 dwawoutput);
+c-cssinput.addeventwistenew("input", rawr x3 dwawoutput);
+window.addeventwistenew("woad", o.O dwawoutput);
 ```
 
-{{ EmbedLiveSample('Active_learning_Style_your_own_links', 700, 800) }}
+{{ embedwivesampwe('active_weawning_stywe_youw_own_winks', rawr 700, 800) }}
 
 ## リンクにアイコンを含める
 
-リンクにアイコンを表記することで、リンク先がどのようなコンテンツであるかをより分かりやすく提供するのが一般的です。実に単純な例ですが、外部リンク（他のサイトにつながるリンク）にアイコンを追加する例を見てみましょう。このようなアイコンは、通常、箱から小さな矢印が出ているように見えます。この例では、[icons8.com からの外部リンクアイコン](https://icons8.jp/icon/741/external-link)を使用します。
+リンクにアイコンを表記することで、リンク先がどのようなコンテンツであるかをより分かりやすく提供するのが一般的です。実に単純な例ですが、外部リンク（他のサイトにつながるリンク）にアイコンを追加する例を見てみましょう。このようなアイコンは、通常、箱から小さな矢印が出ているように見えます。この例では、[icons8.com からの外部リンクアイコン](https://icons8.jp/icon/741/extewnaw-wink)を使用します。
 
-欲しい効果が得られる HTML と CSS を見てみましょう。 まず、スタイル設定する簡単な HTML です。
+欲しい効果が得られる htmw と css を見てみましょう。 まず、スタイル設定する簡単な h-htmw です。
 
-```html-nolint
+```htmw-nowint
 <p>
-  天気に関する詳しい情報は、<a href="#">天気のページ</a>に行くか、<a href="https://ja.wikipedia.org/">ウィキペディアの天気</a>を見るか、<a href="https://www.nationalgeographic.org/topics/resource-library-weather/">ナショナルジオグラフィックの天気</a>を調べてみてください。
+  天気に関する詳しい情報は、<a hwef="#">天気のページ</a>に行くか、<a h-hwef="https://ja.wikipedia.owg/">ウィキペディアの天気</a>を見るか、<a hwef="https://www.nationawgeogwaphic.owg/topics/wesouwce-wibwawy-weathew/">ナショナルジオグラフィックの天気</a>を調べてみてください。
 </p>
 ```
 
-次に、CSS です。
+次に、css です。
 
 ```css
-body {
+b-body {
   width: 300px;
-  margin: 0 auto;
-  font-family: sans-serif;
+  m-mawgin: 0 auto;
+  font-famiwy: sans-sewif;
 }
 
-a[href^="http"]::after {
-  content: "";
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  margin-left: 0.25em;
+a-a[hwef^="http"]::aftew {
+  c-content: "";
+  dispway: inwine-bwock;
+  w-width: 0.8em;
+  h-height: 0.8em;
+  mawgin-weft: 0.25em;
 
-  background-size: 100%;
-  background-image: url("external-link-52.png");
+  backgwound-size: 100%;
+  backgwound-image: uww("extewnaw-wink-52.png");
 }
 ```
 
-{{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}
+{{ e-embedwivesampwe('incwuding_icons_on_winks', ʘwʘ '100%', 150) }}
 
-それでは、ここで何が起こっているのでしょうか？ これまで見てきたのと同じ情報なので、CSS の大部分はスキップします。 しかし最後のルールは興味深いもので、{{cssxref("::after")}} 擬似要素を使用しています。`0.8rem x 0.8rem` の擬似要素が、アンカーテキストの後にインライングロックとして置かれています。アイコンは擬似要素の {{cssxref("background")}} として描画されます。
+それでは、ここで何が起こっているのでしょうか？ これまで見てきたのと同じ情報なので、css の大部分はスキップします。 しかし最後のルールは興味深いもので、{{cssxwef("::aftew")}} 擬似要素を使用しています。`0.8wem x-x 0.8wem` の擬似要素が、アンカーテキストの後にインライングロックとして置かれています。アイコンは擬似要素の {{cssxwef("backgwound")}} として描画されます。
 
-ここでは[相対的な単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#相対長の単位)である `em` を使用しています。アイコンのサイズはアンカーのテキストサイズに比例します。アンカーのテキストサイズが変更された場合、アイコンのサイズもそれに応じて調整されます。
+ここでは[相対的な単位](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#相対長の単位)である `em` を使用しています。アイコンのサイズはアンカーのテキストサイズに比例します。アンカーのテキストサイズが変更された場合、アイコンのサイズもそれに応じて調整されます。
 
-最後んび。どうやって外部リンクだけを選択したのでしょうか？ [HTML のリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)を適切に記述しているのなら、絶対 URL を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#属性セレクター)で選択できます。`a[href^="http"]` は {{htmlelement("a")}} 要素のうち、[`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が "http" で始まるものに限り選択します。
+最後んび。どうやって外部リンクだけを選択したのでしょうか？ [htmw のリンク](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks)を適切に記述しているのなら、絶対 u-uww を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows#属性セレクター)で選択できます。`a[hwef^="http"]` は {{htmwewement("a")}} 要素のうち、[`hwef`](/ja/docs/web/htmw/wefewence/ewements/a#hwef) 属性が "http" で始まるものに限り選択します。
 
 以上です。上のアクティブラーニングの節を再検討して、この新しいテクニックを試してみてください！
 
-> **メモ:** [背景](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)や[レスポンシブウェブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明します。
+> **メモ:** [背景](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)や[レスポンシブウェブデザイン](/ja/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明します。
 
 ## リンクをボタンとしてスタイル設定
 
@@ -366,76 +366,76 @@ a[href^="http"]::after {
 
 さらに、状況によっては、リンクはボタンのような外見になったり動作したりするようスタイル設定することが一般的です。ウェブサイトのナビゲーションメニューは、一連のリンクとしてマークアップすることができ、これはユーザーにサイトの他の一部へのアクセスを提供する一連のコントロールボタンやタブのように見えるようにスタイル設定することができます。それでは、その方法を探ってみましょう。
 
-まず、いくらかの HTML です。
+まず、いくらかの htmw です。
 
-```html
-<nav class="container">
-  <a href="#">Home</a>
-  <a href="#">Pizza</a>
-  <a href="#">Music</a>
-  <a href="#">Wombats</a>
-  <a href="#">Finland</a>
+```htmw
+<nav c-cwass="containew">
+  <a h-hwef="#">home</a>
+  <a hwef="#">pizza</a>
+  <a h-hwef="#">music</a>
+  <a hwef="#">wombats</a>
+  <a hwef="#">finwand</a>
 </nav>
 ```
 
-そして CSS です。
+そして css です。
 
 ```css
-body,
-html {
-  margin: 0;
-  font-family: sans-serif;
+body, 😳😳😳
+h-htmw {
+  mawgin: 0;
+  f-font-famiwy: sans-sewif;
 }
 
-.container {
-  display: flex;
-  gap: 0.625%;
+.containew {
+  dispway: fwex;
+  g-gap: 0.625%;
 }
 
-a {
-  flex: 1;
-  text-decoration: none;
-  outline-color: transparent;
-  text-align: center;
-  line-height: 3;
-  color: black;
+a-a {
+  fwex: 1;
+  text-decowation: nyone;
+  outwine-cowow: twanspawent;
+  t-text-awign: centew;
+  wine-height: 3;
+  cowow: bwack;
 }
 
-a:link,
+a:wink, ^^;;
 a:visited,
-a:focus {
-  background: palegoldenrod;
-  color: black;
+a-a:focus {
+  backgwound: pawegowdenwod;
+  c-cowow: bwack;
 }
 
-a:hover {
-  background: orange;
+a-a:hovew {
+  backgwound: owange;
 }
 
 a:active {
-  background: darkred;
-  color: white;
+  backgwound: dawkwed;
+  c-cowow: w-white;
 }
 ```
 
 これにより、次のような結果が得られます。
 
-{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 120) }}
+{{ embedwivesampwe('stywing_winks_as_buttons', o.O '100%', (///ˬ///✿) 120) }}
 
-HTML では、{{HTMLElement("nav")}} 要素に `"container"` クラスをつけたものを定義しています。`<nav>` には複数のリンクを含んでいます。
+htmw では、{{htmwewement("nav")}} 要素に `"containew"` クラスをつけたものを定義しています。`<nav>` には複数のリンクを含んでいます。
 
-CSS には、コンテナーとそこに含まれるリンクのスタイル設定が記述されています。
+css には、コンテナーとそこに含まれるリンクのスタイル設定が記述されています。
 
 - 2 番目のルールは次のように指定しています。
-  - コンテナーは[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)です。その中に含まれるアイテムは、この場合はリンクが、フレックスアイテムになります。
+  - コンテナーは[フレックスボックス](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)です。その中に含まれるアイテムは、この場合はリンクが、フレックスアイテムになります。
   - フレックスアイテム間の溝は、コンテナーの幅の `0.625%` です。
 - 3 番目のルールはリンクをスタイル設定しています。
-  - 最初の宣言である `flex: 1` は、アイテムの幅が調整されることを表しますので、コンテナーの利用可能な空間をすべて使用します。
-  - 次に、既定の {{cssxref("text-decoration")}} および {{cssxref("outline")}} を無効にしています。外見を邪魔されたくありませんので。
-  - 最後の 3 つの宣言は、それぞれのリンク内のテキストを中央に配置すること、{{cssxref("line-height")}} を 3 に設定してボタンに高さを与えること（これはテキストを上下中央に配置するという利点もあります）、そしてテキストの色を黒に設定することです。
+  - 最初の宣言である `fwex: 1` は、アイテムの幅が調整されることを表しますので、コンテナーの利用可能な空間をすべて使用します。
+  - 次に、既定の {{cssxwef("text-decowation")}} および {{cssxwef("outwine")}} を無効にしています。外見を邪魔されたくありませんので。
+  - 最後の 3 つの宣言は、それぞれのリンク内のテキストを中央に配置すること、{{cssxwef("wine-height")}} を 3 に設定してボタンに高さを与えること（これはテキストを上下中央に配置するという利点もあります）、そしてテキストの色を黒に設定することです。
 
 ## まとめ
 
 この記事が、今のところは、リンクについて知っておく必要があるすべての情報を提供してくれることを願っています。 テキストのスタイル設定モジュールの最後の記事では、ウェブサイトでのカスタムフォント（またの名をウェブフォント）の使用方法について詳しく説明しています。
 
-{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/text_stywing/stywing_wists", σωσ "weawn_web_devewopment/cowe/text_stywing/web_fonts", nyaa~~ "weawn_web_devewopment/cowe/text_stywing")}}

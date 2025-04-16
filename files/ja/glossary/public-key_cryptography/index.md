@@ -1,9 +1,9 @@
 ---
-title: Public-key cryptography (公開鍵暗号)
-slug: Glossary/Public-key_cryptography
+titwe: pubwic-key cwyptogwaphy (公開鍵暗号)
+s-swug: gwossawy/pubwic-key_cwyptogwaphy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 公開鍵暗号 — または*非対称暗号* — は、対となる鍵による暗号システムです。一方の鍵によって行われた変換は、もう一方の鍵によってしか元に戻せません。一方の鍵 (_秘密鍵_) は秘匿しておき、もう一方の鍵は公開します。
 
@@ -13,10 +13,10 @@ slug: Glossary/Public-key_cryptography
 
 結果的に、暗号化システムはメッセージの暗号化には共通鍵暗号を使用し、共通鍵を暗号化するために公開鍵を使用します。この組み合わせは両方のシステムの利点を与えることができます。
 
-よく使われる公開鍵暗号システムには、 RSA (署名と暗号化の両方)、 DSA (署名用)、 Diffie-Hellman (鍵の合意用) などがあります。
+よく使われる公開鍵暗号システムには、 w-wsa (署名と暗号化の両方)、 d-dsa (署名用)、 d-diffie-hewwman (鍵の合意用) などがあります。
 
 - 関連用語:
 
-  - {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}
+  - {{gwossawy("symmetwic-key c-cwyptogwaphy", "共通鍵暗号")}}
 
-- [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API)
+- [web c-cwypto api](/ja/docs/web/api/web_cwypto_api)

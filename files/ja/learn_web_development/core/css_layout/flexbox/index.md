@@ -1,48 +1,48 @@
 ---
-title: フレックスボックス
-slug: Learn_web_development/Core/CSS_layout/Flexbox
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: フレックスボックス
+swug: weawn_web_devewopment/cowe/css_wayout/fwexbox
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/css_wayout/positioning", 🥺 "weawn_web_devewopment/cowe/css_wayout/gwids", (U ﹏ U) "weawn_web_devewopment/cowe/css_wayout")}}
 
-[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間に収まったりします。この記事では、すべての基本事項について説明します。
+[フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout) (fwexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間に収まったりします。この記事では、すべての基本事項について説明します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
+    <tw>
+      <th s-scope="wow">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
-          >HTML によるコンテンツの構造化</a
+        <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content"
+          >htmw によるコンテンツの構造化</a
         >、
-        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>、
-        <a href="/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals">基本的なテキストとフォントのスタイル設定</a>、
-        <a href="/ja/docs/Learn_web_development/Core/CSS_layout/Introduction">CSS レイアウトの基本概念</a>の基礎知識。
+        <a hwef="/ja/docs/weawn_web_devewopment/cowe/stywing_basics">css によるスタイル設定の基本</a>、
+        <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws">基本的なテキストとフォントのスタイル設定</a>、
+        <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/css_wayout/intwoduction">css レイアウトの基本概念</a>の基礎知識。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>フレックスボックスの目的。一連のブロック要素やインライン要素を、 1 次元で柔軟にレイアウトすること。</li>
-          <li>フレックスの用語 — フレックスコンテナー、フレックスアイテム、主軸、交差軸。</li>
-          <li>既定で <code>display: flex</code> が何をもたらすかを理解すること。</li>
-          <li>新しい行や列にコンテンツを折り返す方法。</li>
-          <li>フレックスアイテムを柔軟にサイズ変更したり、並べ替えたりすること。</li>
-          <li>コンテンツの位置合わせと配置。</li>
-        </ul>
+        <uw>
+          <wi>フレックスボックスの目的。一連のブロック要素やインライン要素を、 1 次元で柔軟にレイアウトすること。</wi>
+          <wi>フレックスの用語 — フレックスコンテナー、フレックスアイテム、主軸、交差軸。</wi>
+          <wi>既定で <code>dispway: f-fwex</code> が何をもたらすかを理解すること。</wi>
+          <wi>新しい行や列にコンテンツを折り返す方法。</wi>
+          <wi>フレックスアイテムを柔軟にサイズ変更したり、並べ替えたりすること。</wi>
+          <wi>コンテンツの位置合わせと配置。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## なぜフレックスボックスなのか
 
-CSS フレックスボックスレイアウトでは、以下のことができるようになります。
+css フレックスボックスレイアウトでは、以下のことができるようになります。
 
 - コンテンツのブロックを、親コンテンツの中で上下中央に配置すること。
 - 利用できる幅や高さに関係なく、コンテナーのすべての子が利用できる幅や高さを等しくすること。
@@ -52,33 +52,33 @@ CSS フレックスボックスレイアウトでは、以下のことができ�
 
 ## 簡単な例の紹介
 
-この記事では、フレックスボックスがどのように機能するのかを理解するのに役立つ一連の演習を進めていくようにします。 まず始めに、github リポジトリーから最初のスターターファイル [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) のローカルコピーを作成し、最新のブラウザー（Firefox や Chrome など）にロードして、コードエディターでコードを確認してください。 ここでも[ライブで見る](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)ことができます。
+この記事では、フレックスボックスがどのように機能するのかを理解するのに役立つ一連の演習を進めていくようにします。 まず始めに、github リポジトリーから最初のスターターファイル [fwexbox0.htmw](https://github.com/mdn/weawning-awea/bwob/main/css/css-wayout/fwexbox/fwexbox0.htmw) のローカルコピーを作成し、最新のブラウザー（fiwefox や chwome など）にロードして、コードエディターでコードを確認してください。 ここでも[ライブで見る](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/fwexbox0.htmw)ことができます。
 
 ![フレックスボックスチュートリアルのスタート地点を示す画像](bih741v.png)
 
-内部に最上位の見出しを持つ {{htmlelement("header")}} 要素と、 {{htmlelement("section")}} 要素があり、その中に 3 つの {{htmlelement("article")}} を含むます。 これらを使用して、かなり標準的な 3 列のレイアウトを作成しましょう。
+内部に最上位の見出しを持つ {{htmwewement("headew")}} 要素と、 {{htmwewement("section")}} 要素があり、その中に 3 つの {{htmwewement("awticwe")}} を含むます。 これらを使用して、かなり標準的な 3 列のレイアウトを作成しましょう。
 
 ## 柔軟な箱としてレイアウトする要素を指定
 
-まず最初に、どの要素を柔軟な箱 (flexible box) としてレイアウトするかを選択する必要があります。 これを行うために、影響を与えたい要素の親要素に {{cssxref("display")}} の特別な値を設定します。 この場合、 {{htmlelement("article")}} 要素をレイアウトしたいので、これを {{htmlelement("section")}} に設定します。
+まず最初に、どの要素を柔軟な箱 (fwexibwe box) としてレイアウトするかを選択する必要があります。 これを行うために、影響を与えたい要素の親要素に {{cssxwef("dispway")}} の特別な値を設定します。 この場合、 {{htmwewement("awticwe")}} 要素をレイアウトしたいので、これを {{htmwewement("section")}} に設定します。
 
 ```css
 section {
-  display: flex;
+  dispway: fwex;
 }
 ```
 
 これによって、 `<section>` 要素が**フレックスコンテナー**となり、その子は**フレックスアイテム**になります。その結果、以下のような感じになるでしょう。
 
-![1 行目に 1 列、 2 行目に 3 列のレイアウトを含む 2 列のコンテナーで、コンテンツによってウェブページを異なるレイアウトに分割できることを示します。](flexbox-example2.png)
+![1 行目に 1 列、 2 行目に 3 列のレイアウトを含む 2 列のコンテナーで、コンテンツによってウェブページを異なるレイアウトに分割できることを示します。](fwexbox-exampwe2.png)
 
 このたった一つの宣言が必要なものすべてを与えてくれます。信じられないでしょう？ 同じ幅の列を持つ複数列のレイアウトがあり、列の高さはすべて同じです。 これは、フレックスアイテム（フレックスコンテナーの子）に与えられる既定値が、このような一般的な問題を解決するために設定されているためです。 それらについての詳細は後で。
 
-ここで何が起こっているのかを復習しましょう。要素に {{cssxref("display")}} を `flex` の値で追加すると、その要素はフレックスコンテナーになります。コンテナーは、ページの他の部分と相互作用するという点で、[ブロックレベルのコンテンツ](/ja/docs/Glossary/Block-level_content)として表示されます。要素がフレックスコンテナーに変換されると、その子要素はフレックスアイテムに変換されます。
+ここで何が起こっているのかを復習しましょう。要素に {{cssxwef("dispway")}} を `fwex` の値で追加すると、その要素はフレックスコンテナーになります。コンテナーは、ページの他の部分と相互作用するという点で、[ブロックレベルのコンテンツ](/ja/docs/gwossawy/bwock-wevew_content)として表示されます。要素がフレックスコンテナーに変換されると、その子要素はフレックスアイテムに変換されます。
 
-コンテナーをインラインにするには、このコンテナー自体がページ内でどのようにレイアウトされるかを指定する[外側の `display` 値](/ja/docs/Web/CSS/display#outside)（例: `display: inline flex`）を使用することができます。
-古い値である `inline-flex` は、コンテナーをインラインとして表示します。
-このチュートリアルでは、コンテナーの中身がどのように振る舞うかに焦点を当てますが、インラインレイアウトとブロックレイアウトの効果の違いを見たければ、 `display` プロパティページの [値の比較](/ja/docs/Web/CSS/display#display_値の比較)で見ることができます。
+コンテナーをインラインにするには、このコンテナー自体がページ内でどのようにレイアウトされるかを指定する[外側の `dispway` 値](/ja/docs/web/css/dispway#outside)（例: `dispway: i-inwine fwex`）を使用することができます。
+古い値である `inwine-fwex` は、コンテナーをインラインとして表示します。
+このチュートリアルでは、コンテナーの中身がどのように振る舞うかに焦点を当てますが、インラインレイアウトとブロックレイアウトの効果の違いを見たければ、 `dispway` プロパティページの [値の比較](/ja/docs/web/css/dispway#dispway_値の比較)で見ることができます。
 
 次の節では、フレックスアイテムとは何か、フレックスコンテナーの中にすると要素の中で何が起こるかについて詳しく説明します。
 
@@ -86,174 +86,174 @@ section {
 
 要素が柔軟な箱として配置されるとき、それらは次のように 2 つの軸に沿って配置されます。
 
-![左から右に記述された 3 つのフレックスアイテムが、フレックスコンテナーの中に横に並んでいる。主軸（フレックスアイテムが配置される方向のフレックスコンテナーの軸）は水平である。この軸の両端は主始点と主終点と呼ばれ、それぞれ左側と右側にある。交差軸は垂直で、主軸に直交している。交差始点と交差終点はそれぞれ上部と下部にある。主軸に沿ったフレックスアイテムの長さ、この場合は幅を主サイズと呼び、交差軸に沿ったフレックスアイテムの長さ、この場合は高さを交差サイズと呼ぶ。](flex_terms.png)
+![左から右に記述された 3 つのフレックスアイテムが、フレックスコンテナーの中に横に並んでいる。主軸（フレックスアイテムが配置される方向のフレックスコンテナーの軸）は水平である。この軸の両端は主始点と主終点と呼ばれ、それぞれ左側と右側にある。交差軸は垂直で、主軸に直交している。交差始点と交差終点はそれぞれ上部と下部にある。主軸に沿ったフレックスアイテムの長さ、この場合は幅を主サイズと呼び、交差軸に沿ったフレックスアイテムの長さ、この場合は高さを交差サイズと呼ぶ。](fwex_tewms.png)
 
-- 主軸 (**main axis**) は、フレックスアイテムが配置されている方向に走る軸です（例えば、ページを横切る行、またはページを縦に走る列として）。この軸の始点と終点は、主始点 (**main start**) および主終点 (**main end**) と呼ばれます。主始点から主終点までの長さは主軸長 (**main size**) です。
-- 交差軸 (**cross axis**) は、フレックスアイテムが配置されている方向に対して垂直に走る軸です。 この軸の始点と終点は、交差始点 (**cross start**) と交差終点 (**cross end**) と呼ばれます。交差始点から交差終点までの長さは交差長 (**corss size**) と呼ばれます。
-- `display: flex` が設定されている親要素（この例では {{htmlelement("section")}}）は、フレックスコンテナー (**flex container**) と呼ばれます。
-- フレックスコンテナー内の柔軟な箱としてレイアウトされているアイテムは、フレックスアイテム (**flex item**) と呼ばれます（この例では {{htmlelement("article")}} 要素）。
+- 主軸 (**main axis**) は、フレックスアイテムが配置されている方向に走る軸です（例えば、ページを横切る行、またはページを縦に走る列として）。この軸の始点と終点は、主始点 (**main stawt**) および主終点 (**main e-end**) と呼ばれます。主始点から主終点までの長さは主軸長 (**main size**) です。
+- 交差軸 (**cwoss a-axis**) は、フレックスアイテムが配置されている方向に対して垂直に走る軸です。 この軸の始点と終点は、交差始点 (**cwoss stawt**) と交差終点 (**cwoss end**) と呼ばれます。交差始点から交差終点までの長さは交差長 (**cowss size**) と呼ばれます。
+- `dispway: f-fwex` が設定されている親要素（この例では {{htmwewement("section")}}）は、フレックスコンテナー (**fwex containew**) と呼ばれます。
+- フレックスコンテナー内の柔軟な箱としてレイアウトされているアイテムは、フレックスアイテム (**fwex i-item**) と呼ばれます（この例では {{htmwewement("awticwe")}} 要素）。
 
 この後の節を読むときに、この用語を覚えておいてください。使用する用語に迷ったときは、常にこの用語を参照してください。
 
 ## 列か行か
 
-フレックスボックスは {{cssxref("flex-direction")}} というプロパティを提供します。 これは主軸が走る方向（フレックスボックスの子がどの方向にレイアウトされるか）を指定します。既定では `row` に設定されていて、ブラウザーの既定の言語が動作する方向（英語のブラウザーの場合は左から右に）にそれらが横一列にレイアウトされます。
+フレックスボックスは {{cssxwef("fwex-diwection")}} というプロパティを提供します。 これは主軸が走る方向（フレックスボックスの子がどの方向にレイアウトされるか）を指定します。既定では `wow` に設定されていて、ブラウザーの既定の言語が動作する方向（英語のブラウザーの場合は左から右に）にそれらが横一列にレイアウトされます。
 
-次の宣言を {{htmlelement("section")}} のルールに追加してみてください。
+次の宣言を {{htmwewement("section")}} のルールに追加してみてください。
 
 ```css
-flex-direction: column;
+f-fwex-diwection: cowumn;
 ```
 
-これにより、 CSS を追加する前と同じように、アイテムが縦一列のレイアウトに戻されます。 先に進む前に、この宣言を例から削除してください。
+これにより、 css を追加する前と同じように、アイテムが縦一列のレイアウトに戻されます。 先に進む前に、この宣言を例から削除してください。
 
-> **メモ:** `row-reverse` と `column-reverse` の値を使用して、フレックスアイテムを逆方向にレイアウトすることもできます。 これらの値も試してみてください。
+> **メモ:** `wow-wevewse` と `cowumn-wevewse` の値を使用して、フレックスアイテムを逆方向にレイアウトすることもできます。 これらの値も試してみてください。
 
 ## 折り返し
 
-レイアウトの幅や高さが決まっているときに発生する問題の 1 つは、最終的にはフレックスボックスの子がコンテナーをはみ出してレイアウトが壊れることです。 [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox-wrap0.html) の例を見て、それを[ライブで見て](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html)みてください（この例に沿って進めたい場合は、このファイルのローカルコピーを取ってください）。
+レイアウトの幅や高さが決まっているときに発生する問題の 1 つは、最終的にはフレックスボックスの子がコンテナーをはみ出してレイアウトが壊れることです。 [fwexbox-wwap0.htmw](https://github.com/mdn/weawning-awea/bwob/main/css/css-wayout/fwexbox/fwexbox-wwap0.htmw) の例を見て、それを[ライブで見て](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/fwexbox-wwap0.htmw)みてください（この例に沿って進めたい場合は、このファイルのローカルコピーを取ってください）。
 
-![サンプルのフレックスボックスの例では、すべてのフレックスアイテムがフレックスコンテナーの単一の行にレイアウトされています。8 つ目のフレックスアイテムはブラウザーウィンドウからはみ出し、ページには水平方向と垂直方向のスクロールバーが表示されますが、これは前の 7 つのフレックスアイテムがビューポート内で使用できる空間を占めているため、ウィンドウ幅に収まらないためです。](flexbox-example3.png)
+![サンプルのフレックスボックスの例では、すべてのフレックスアイテムがフレックスコンテナーの単一の行にレイアウトされています。8 つ目のフレックスアイテムはブラウザーウィンドウからはみ出し、ページには水平方向と垂直方向のスクロールバーが表示されますが、これは前の 7 つのフレックスアイテムがビューポート内で使用できる空間を占めているため、ウィンドウ幅に収まらないためです。](fwexbox-exampwe3.png)
 
-ここでは、子要素が実際にコンテナーからはみ出してることがわかります。ブラウザーは既定では、`flex-direction` が `row` に設定されている場合はすべてのフレックスアイテムを単一の行に、`flex-direction` が `column` に設定されている場合は単一の列に配置しようとします。これを修正する一つの方法は、{{htmlelement("section")}} ルールに以下のような宣言を追加することです。
+ここでは、子要素が実際にコンテナーからはみ出してることがわかります。ブラウザーは既定では、`fwex-diwection` が `wow` に設定されている場合はすべてのフレックスアイテムを単一の行に、`fwex-diwection` が `cowumn` に設定されている場合は単一の列に配置しようとします。これを修正する一つの方法は、{{htmwewement("section")}} ルールに以下のような宣言を追加することです。
 
 ```css
-flex-wrap: wrap;
+fwex-wwap: wwap;
 ```
 
-また、 {{htmlelement("article")}} のルールに次の宣言を追加してください。
+また、 {{htmwewement("awticwe")}} のルールに次の宣言を追加してください。
 
 ```css
-flex: 200px;
+fwex: 200px;
 ```
 
 試してみてください。 これが含まれていると次のようにレイアウトがはるかに良く見えることがわかります。
 
-![フレックスアイテムは、フレックスコンテナー内に複数列でレイアウトされます。フレックスコンテナーでは flex-wrap プロパティが 'wrap' に設定されており、前の行のフレックスアイテムがフレックスコンテナーからはみ出した場合、新しい行にフレックスアイテムが表示されます。各フレックスアイテムには 200 ピクセルの幅が指定されました。すべての項目は同じ高さになるように伸張され、最も多くの内容を含むフレックス項目の高さと同じになります。](flexbox-example4.png)
+![フレックスアイテムは、フレックスコンテナー内に複数列でレイアウトされます。フレックスコンテナーでは f-fwex-wwap プロパティが 'wwap' に設定されており、前の行のフレックスアイテムがフレックスコンテナーからはみ出した場合、新しい行にフレックスアイテムが表示されます。各フレックスアイテムには 200 ピクセルの幅が指定されました。すべての項目は同じ高さになるように伸張され、最も多くの内容を含むフレックス項目の高さと同じになります。](fwexbox-exampwe4.png)
 
-現在、複数の行があります — 多くのフレックスボックスの子が各行に納められているので、オーバーフローは次のラインに移動します。 `article` に設定した `flex: 200px` の宣言は、それぞれが少なくとも `200px` 幅になることを意味します。 このプロパティについては後で詳しく説明します。 また、最後の行の最後の数個の子がそれぞれ幅広になっているので、依然として行全体がいっぱいになっていることに気付くかもしれません。
+現在、複数の行があります — 多くのフレックスボックスの子が各行に納められているので、オーバーフローは次のラインに移動します。 `awticwe` に設定した `fwex: 200px` の宣言は、それぞれが少なくとも `200px` 幅になることを意味します。 このプロパティについては後で詳しく説明します。 また、最後の行の最後の数個の子がそれぞれ幅広になっているので、依然として行全体がいっぱいになっていることに気付くかもしれません。
 
-しかし、ここでできることは他にもあります。 まず最初に、 {{cssxref("flex-direction")}} プロパティの値を `row-reverse` に変更してみてください。 これで、まだ複数行のレイアウトがあることがわかりますが、ブラウザーウィンドウの反対側の隅から開始して逆方向に流れます。
+しかし、ここでできることは他にもあります。 まず最初に、 {{cssxwef("fwex-diwection")}} プロパティの値を `wow-wevewse` に変更してみてください。 これで、まだ複数行のレイアウトがあることがわかりますが、ブラウザーウィンドウの反対側の隅から開始して逆方向に流れます。
 
-## flex-flow 一括指定
+## fwex-fwow 一括指定
 
-ここで、 {{cssxref("flex-direction")}} と {{cssxref("flex-wrap")}} には {{cssxref("flex-flow")}} という一括指定が存在することに注目する価値があります。 例えば、次のように置き換えることができます。
+ここで、 {{cssxwef("fwex-diwection")}} と {{cssxwef("fwex-wwap")}} には {{cssxwef("fwex-fwow")}} という一括指定が存在することに注目する価値があります。 例えば、次のように置き換えることができます。
 
 ```css
-flex-direction: row;
-flex-wrap: wrap;
+fwex-diwection: wow;
+fwex-wwap: wwap;
 ```
 
 を
 
 ```css
-flex-flow: row wrap;
+f-fwex-fwow: wow wwap;
 ```
 
 ## フレックスアイテムの柔軟なサイズ変更
 
-それでは、最初の例に戻って、フレックスアイテムの占めるスペースの割合を制御する方法を見てみましょう。 ローカルコピーの [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) を開くか、新しい出発点として [flexbox1.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox1.html) のコピーを入手してください（[ライブで見る](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)）。
+それでは、最初の例に戻って、フレックスアイテムの占めるスペースの割合を制御する方法を見てみましょう。 ローカルコピーの [fwexbox0.htmw](https://github.com/mdn/weawning-awea/bwob/main/css/css-wayout/fwexbox/fwexbox0.htmw) を開くか、新しい出発点として [fwexbox1.htmw](https://github.com/mdn/weawning-awea/bwob/main/css/css-wayout/fwexbox/fwexbox1.htmw) のコピーを入手してください（[ライブで見る](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/fwexbox1.htmw)）。
 
-まず、CSS の一番下に次のルールを追加します。
+まず、css の一番下に次のルールを追加します。
 
 ```css
-article {
-  flex: 1;
+awticwe {
+  f-fwex: 1;
 }
 ```
 
-これは、各フレックスアイテムが主軸に沿って使用可能な空間のうちどれだけを占めるかを決定する、無単位の割合値です。 この場合、それぞれの {{htmlelement("article")}} 要素に同じ値（`1` の値）を与えています。 つまり、パディングやマージンなどを設定した後の残りの予備スペースのうちから、すべてが同じ量を占めます。これは割合であり、各フレックスアイテムに `400000` の値を指定してもまったく同じ効果があることを意味します。
+これは、各フレックスアイテムが主軸に沿って使用可能な空間のうちどれだけを占めるかを決定する、無単位の割合値です。 この場合、それぞれの {{htmwewement("awticwe")}} 要素に同じ値（`1` の値）を与えています。 つまり、パディングやマージンなどを設定した後の残りの予備スペースのうちから、すべてが同じ量を占めます。これは割合であり、各フレックスアイテムに `400000` の値を指定してもまったく同じ効果があることを意味します。
 
 それでは、前のルールの下に次のルールを追加します。
 
 ```css
-article:nth-of-type(3) {
-  flex: 2;
+a-awticwe:nth-of-type(3) {
+  f-fwex: 2;
 }
 ```
 
-更新すると、3 番目の {{htmlelement("article")}} が他の 2 つの幅の 2 倍の幅を占めます。 合計で 4 割合単位が使用可能です。 最初の 2 つのフレックスアイテムはそれぞれ 1 単位ずつ持つため、それぞれ使用可能なスペースの 1/4 を占めます。 3 つ目は 2 単位を持っているので、それは使用可能なスペースの 2/4（または 1/2）を占めます。
+更新すると、3 番目の {{htmwewement("awticwe")}} が他の 2 つの幅の 2 倍の幅を占めます。 合計で 4 割合単位が使用可能です。 最初の 2 つのフレックスアイテムはそれぞれ 1 単位ずつ持つため、それぞれ使用可能なスペースの 1/4 を占めます。 3 つ目は 2 単位を持っているので、それは使用可能なスペースの 2/4（または 1/2）を占めます。
 
-`flex` の値内に最小サイズ値を指定することもできます。 既存の `article` のルールを次のように更新してみてください。
+`fwex` の値内に最小サイズ値を指定することもできます。 既存の `awticwe` のルールを次のように更新してみてください。
 
 ```css
-article {
-  flex: 1 200px;
+a-awticwe {
+  fwex: 1 200px;
 }
 
-article:nth-of-type(3) {
-  flex: 2 200px;
+awticwe:nth-of-type(3) {
+  f-fwex: 2 200px;
 }
 ```
 
 これは基本的に「各フレックスアイテムには最初に `200px` の使用可能な空間が与えられます。 その後、残りの使用可能な空間は割合単位に従って共有されます。」と述べています。 更新してみると、空間の共有方法に違いが見られます。
 
-![3 つのフレックスアイテムを持つフレックスコンテナー。3 つ目のフレックスアイテムは最初の 2 つよりも少し大きくなっています。](flexbox-example1.png)
+![3 つのフレックスアイテムを持つフレックスコンテナー。3 つ目のフレックスアイテムは最初の 2 つよりも少し大きくなっています。](fwexbox-exampwe1.png)
 
-すべてのフレックスアイテムの最小幅は 200 ピクセルで、'flex' を使用して設定されています。最初の 2 つのフレックスアイテムの flex の値は 1 で、3 つ目のアイテムは 2 です。これはフレックスコンテナーの残りの空間を 4 等分に分割します。最初の 2 つのフレックスアイテムにはそれぞれ 1 単位、3 つ目のフレックスアイテムには 2 単位が割り当てられており、3 つ目のフレックスアイテムの幅は、同じ幅の他の 2 種類よりも広くなっています。
+すべてのフレックスアイテムの最小幅は 200 ピクセルで、'fwex' を使用して設定されています。最初の 2 つのフレックスアイテムの fwex の値は 1 で、3 つ目のアイテムは 2 です。これはフレックスコンテナーの残りの空間を 4 等分に分割します。最初の 2 つのフレックスアイテムにはそれぞれ 1 単位、3 つ目のフレックスアイテムには 2 単位が割り当てられており、3 つ目のフレックスアイテムの幅は、同じ幅の他の 2 種類よりも広くなっています。
 
-フレックスボックスの真の価値は、その柔軟性/応答性に見ることができます。ブラウザーウィンドウのサイズを変更したり、別の {{htmlelement("article")}} 要素を追加したりしても、レイアウトは問題なく機能します。
+フレックスボックスの真の価値は、その柔軟性/応答性に見ることができます。ブラウザーウィンドウのサイズを変更したり、別の {{htmwewement("awticwe")}} 要素を追加したりしても、レイアウトは問題なく機能します。
 
-## flex: 一括指定対個別指定
+## fwex: 一括指定対個別指定
 
-{{cssxref("flex")}} は、最大 3 つの異なる値を指定できる一括指定プロパティです。
+{{cssxwef("fwex")}} は、最大 3 つの異なる値を指定できる一括指定プロパティです。
 
-- 上記で説明した無単位の割合値。 これは {{cssxref("flex-grow")}} 個別指定プロパティを使用して個別に指定できます。
-- {{cssxref("flex-shrink")}} というフレックスアイテムがコンテナーをオーバーフローしているときに有効になる、2 番目の無単位の割合値。 これは、各フレックスアイテムのサイズからオーバーフローする量を取り除き、それらがコンテナーからオーバーフローするのを防ぐために指定します。 これはかなり高度なフレックスボックスの機能で、この記事ではこれ以上説明しません。
-- 上記で説明した最小サイズ値。 これは、{{cssxref("flex-basis")}} の個別指定値を使用して個別に指定できます。
+- 上記で説明した無単位の割合値。 これは {{cssxwef("fwex-gwow")}} 個別指定プロパティを使用して個別に指定できます。
+- {{cssxwef("fwex-shwink")}} というフレックスアイテムがコンテナーをオーバーフローしているときに有効になる、2 番目の無単位の割合値。 これは、各フレックスアイテムのサイズからオーバーフローする量を取り除き、それらがコンテナーからオーバーフローするのを防ぐために指定します。 これはかなり高度なフレックスボックスの機能で、この記事ではこれ以上説明しません。
+- 上記で説明した最小サイズ値。 これは、{{cssxwef("fwex-basis")}} の個別指定値を使用して個別に指定できます。
 
-本当に必要な場合以外は、個別指定の flex プロパティを使用しないことをお勧めします（例えば、以前に設定したものを上書きする場合など）。 それらは多くの余分なコードが書かれることにつながり、多少混乱するかもしれません。
+本当に必要な場合以外は、個別指定の f-fwex プロパティを使用しないことをお勧めします（例えば、以前に設定したものを上書きする場合など）。 それらは多くの余分なコードが書かれることにつながり、多少混乱するかもしれません。
 
 ## 水平方向と垂直方向の配置
 
-フレックスボックスの機能を使用して、主軸または交差軸に沿ってフレックスアイテムを整列させることもできます。 新しい例である [flex-align0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flex-align0.html) を見て（[ライブも見る](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)）、これを調べてみましょう。 これは、きちんとした柔軟なボタン/ツールバーに変わります。 現時点では、いくつかのボタンが左上隅に詰まった水平のメニューバーが表示されます。
+フレックスボックスの機能を使用して、主軸または交差軸に沿ってフレックスアイテムを整列させることもできます。 新しい例である [fwex-awign0.htmw](https://github.com/mdn/weawning-awea/bwob/main/css/css-wayout/fwexbox/fwex-awign0.htmw) を見て（[ライブも見る](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/fwex-awign0.htmw)）、これを調べてみましょう。 これは、きちんとした柔軟なボタン/ツールバーに変わります。 現時点では、いくつかのボタンが左上隅に詰まった水平のメニューバーが表示されます。
 
-![5 つのボタンが、フレックスコンテナーの中に並んでいます。ボタンは左上にぎっしり詰まっていて、見ていてすっきりしません。](flexbox-example5.png)
+![5 つのボタンが、フレックスコンテナーの中に並んでいます。ボタンは左上にぎっしり詰まっていて、見ていてすっきりしません。](fwexbox-exampwe5.png)
 
 まず、この例のローカルコピーを取ります。
 
-それでは、例の CSS の最後に次のものを追加してください。
+それでは、例の css の最後に次のものを追加してください。
 
 ```css
 div {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: s-space-awound;
 }
 ```
 
-![フレックスコンテナーに 5 つのボタンが並んでいます。フレックスアイテムは上下中央に、左右には等間隔に位置指定されています。](flexbox_center_space-around.png)
+![フレックスコンテナーに 5 つのボタンが並んでいます。フレックスアイテムは上下中央に、左右には等間隔に位置指定されています。](fwexbox_centew_space-awound.png)
 
-ページを更新すると、ボタンが横方向と縦方向に中央揃えになっていることがわかります。 これを 2 つの新しいプロパティを介して行いました。フレックスアイテムは `align-items` プロパティを `center` に設定することで、交差軸の中心に配置されます。`justify-content` プロパティを `space-around` に 設定することで、フレックスアイテムは主軸に沿って等間隔に配置されます。
+ページを更新すると、ボタンが横方向と縦方向に中央揃えになっていることがわかります。 これを 2 つの新しいプロパティを介して行いました。フレックスアイテムは `awign-items` プロパティを `centew` に設定することで、交差軸の中心に配置されます。`justify-content` プロパティを `space-awound` に 設定することで、フレックスアイテムは主軸に沿って等間隔に配置されます。
 
-{{cssxref("align-items")}} プロパティは、フレックスアイテムが交差軸上のどこに配置されるかを制御します。
+{{cssxwef("awign-items")}} プロパティは、フレックスアイテムが交差軸上のどこに配置されるかを制御します。
 
-- 既定では、この値は `normal` であり、フレックスボックスでは `stretch` として動作します。これは、すべてのフレックスアイテムを親を埋めるように交差軸方向に引き伸ばします。 親が交差軸方向に固定サイズを持っていない場合、すべてのフレックスアイテムが最長のフレックスアイテムと同じ長さになります。 これが最初の例が既定で同じ高さの列を得た方法です。
-- 上記のコードで使用した `center` の値により、アイテムは固有の寸法を維持しますが、交差軸の中心に配置されます。 これが、この例のボタンが縦方向に中央揃えされている理由です。これが、最初の例で既定では同じ高さの列になった理由です。
-- `flex-start`、`self-start`、`start`、`flex-end`、`self-end`、`end` のような値を指定することもでき、それぞれすべてのアイテムを交差軸の先頭と末尾に配置します。`baseeline` を指定すると、フレックスアイテムのベースラインを揃えます。基本的に、各フレックスアイテムの交差始点とベースラインの間の距離が最も大きい要素の最初の行の下端に並べられます。詳細は {{cssxref("align-items")}} を参照してください。
+- 既定では、この値は `nowmaw` であり、フレックスボックスでは `stwetch` として動作します。これは、すべてのフレックスアイテムを親を埋めるように交差軸方向に引き伸ばします。 親が交差軸方向に固定サイズを持っていない場合、すべてのフレックスアイテムが最長のフレックスアイテムと同じ長さになります。 これが最初の例が既定で同じ高さの列を得た方法です。
+- 上記のコードで使用した `centew` の値により、アイテムは固有の寸法を維持しますが、交差軸の中心に配置されます。 これが、この例のボタンが縦方向に中央揃えされている理由です。これが、最初の例で既定では同じ高さの列になった理由です。
+- `fwex-stawt`、`sewf-stawt`、`stawt`、`fwex-end`、`sewf-end`、`end` のような値を指定することもでき、それぞれすべてのアイテムを交差軸の先頭と末尾に配置します。`baseewine` を指定すると、フレックスアイテムのベースラインを揃えます。基本的に、各フレックスアイテムの交差始点とベースラインの間の距離が最も大きい要素の最初の行の下端に並べられます。詳細は {{cssxwef("awign-items")}} を参照してください。
 
-個々のフレックスアイテムの {{cssxref("align-items")}} のふるまいは、 {{cssxref("align-self")}} プロパティを適用することで上書きできます。 例えば、 CSS に次のコードを追加してみてください。
+個々のフレックスアイテムの {{cssxwef("awign-items")}} のふるまいは、 {{cssxwef("awign-sewf")}} プロパティを適用することで上書きできます。 例えば、 css に次のコードを追加してみてください。
 
 ```css
-button:first-child {
-  align-self: flex-end;
+b-button:fiwst-chiwd {
+  a-awign-sewf: fwex-end;
 }
 ```
 
-![5 つのボタンが、フレックスコンテナーの中に一列に並べられています。最初のものを除くすべてのフレックスアイテムは、交差軸の中心、つまり上下中央に配置されています。最初のアイテムは、フレックスコンテナーの下端、交差軸の端に詰めて配置されています。フレックスコンテナーのアイテムは、コンテナーの主軸（幅）に沿って等間隔に配置されます。](flexbox_first-child_flex-end.png)
+![5 つのボタンが、フレックスコンテナーの中に一列に並べられています。最初のものを除くすべてのフレックスアイテムは、交差軸の中心、つまり上下中央に配置されています。最初のアイテムは、フレックスコンテナーの下端、交差軸の端に詰めて配置されています。フレックスコンテナーのアイテムは、コンテナーの主軸（幅）に沿って等間隔に配置されます。](fwexbox_fiwst-chiwd_fwex-end.png)
 
 これがどのような影響を与えるのかを見て、終了したらもう一度削除します。
 
-{{cssxref("justify-content")}} は、フレックスアイテムが主軸上のどこに配置されるかを制御します。
+{{cssxwef("justify-content")}} は、フレックスアイテムが主軸上のどこに配置されるかを制御します。
 
-- 既定値は `normal` であり、`start` として動作します。 これにより、すべてのアイテムが主軸の先頭に配置されます。
-- `end` または `flex-end` を使うことで、それらを末尾に配置することができます。
-- `left` および `right` の値は、書字方向に応じて `start` または `end` として動作します。
-- `center` は `justify-content` のための値でもあり、フレックスアイテムを主軸方向の中央に配置します。
-- 上記で使用した値、`space-around` は便利です。 両端に少しの空間を残して、すべてのアイテムを主軸に沿って均等に配置します。
-- もう 1 つの値、`space-between` があります。 これは、両端に空間を残さないという点を除けば、`space-around` にとてもよく似ています。
+- 既定値は `nowmaw` であり、`stawt` として動作します。 これにより、すべてのアイテムが主軸の先頭に配置されます。
+- `end` または `fwex-end` を使うことで、それらを末尾に配置することができます。
+- `weft` および `wight` の値は、書字方向に応じて `stawt` または `end` として動作します。
+- `centew` は `justify-content` のための値でもあり、フレックスアイテムを主軸方向の中央に配置します。
+- 上記で使用した値、`space-awound` は便利です。 両端に少しの空間を残して、すべてのアイテムを主軸に沿って均等に配置します。
+- もう 1 つの値、`space-between` があります。 これは、両端に空間を残さないという点を除けば、`space-awound` にとてもよく似ています。
 
-[`justify-items`](/ja/docs/Web/CSS/justify-items) プロパティはフレックスボックスレイアウトでは無視されます。
+[`justify-items`](/ja/docs/web/css/justify-items) プロパティはフレックスボックスレイアウトでは無視されます。
 
 続ける前に、これらの値を使用してそれらがどのように機能するかを確認することをお勧めします。
 
@@ -261,112 +261,112 @@ button:first-child {
 
 フレックスボックスには、ソース順に影響を与えずにフレックスアイテムのレイアウトの順序を変更する機能もあります。 これも従来のレイアウト方法では不可能なことです。
 
-ボタンバーのサンプルコードに次の CSS を追加してみてください。
+ボタンバーのサンプルコードに次の c-css を追加してみてください。
 
 ```css
-button:first-child {
-  order: 1;
+button:fiwst-chiwd {
+  owdew: 1;
 }
 ```
 
-更新すると、 "Smile" ボタンが主軸の終点に移動したことがわかります。 これがどのように機能するかについてもう少し詳しく説明しましょう。
+更新すると、 "smiwe" ボタンが主軸の終点に移動したことがわかります。 これがどのように機能するかについてもう少し詳しく説明しましょう。
 
-- 既定では、すべてのフレックスアイテムの {{cssxref("order")}} の値は `0` です。
-- 指定された順序の値 (order) が大きいフレックスアイテムの表示順序は、順序の値が小さいアイテムよりも後に表示されます。
+- 既定では、すべてのフレックスアイテムの {{cssxwef("owdew")}} の値は `0` です。
+- 指定された順序の値 (owdew) が大きいフレックスアイテムの表示順序は、順序の値が小さいアイテムよりも後に表示されます。
 - 順序の値が同じフレックスアイテムは、ソース順で表示されます。そのため、4 つのアイテムがあり、順序の値がそれぞれ `2`、`1`、`1`、`0` と設定されていた場合、表示順序は 4 番目、2 番目、3 番目、1 番目となります。
 - 3 番目のアイテムは 2 番目の後に表示されます。 これは、順序の値が同じであり、ソース順でそれより後にあるためです。
 
-順序に負の値を設定すると、`0` が設定されているアイテムよりも早くアイテムを表示することができます。 例えば、次のルールを使用して、"Blush" ボタンを主軸の始点に表示させることができます。
+順序に負の値を設定すると、`0` が設定されているアイテムよりも早くアイテムを表示することができます。 例えば、次のルールを使用して、"bwush" ボタンを主軸の始点に表示させることができます。
 
 ```css
-button:last-child {
-  order: -1;
+button:wast-chiwd {
+  o-owdew: -1;
 }
 ```
 
-`order` を使用して順番を変更することができますが、タブの順番はコード順のままです。フォーカス可能な要素の順序を変更すると、キーボードユーザーのユーザビリティに悪影響を与える可能性があります！
+`owdew` を使用して順番を変更することができますが、タブの順番はコード順のままです。フォーカス可能な要素の順序を変更すると、キーボードユーザーのユーザビリティに悪影響を与える可能性があります！
 
 ## ネストしたフレックスボックス
 
-フレックスボックスを使ってかなり複雑なレイアウトを作成することは可能です。 フレックスアイテムをフレックスコンテナーとしても設定して、その子も柔軟な箱のようにレイアウトできるようにしてもまったく問題ありません。 [complex-flexbox.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html) を見てください（[ライブも見る](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)）。
+フレックスボックスを使ってかなり複雑なレイアウトを作成することは可能です。 フレックスアイテムをフレックスコンテナーとしても設定して、その子も柔軟な箱のようにレイアウトできるようにしてもまったく問題ありません。 [compwex-fwexbox.htmw](https://github.com/mdn/weawning-awea/bwob/main/css/css-wayout/fwexbox/compwex-fwexbox.htmw) を見てください（[ライブも見る](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/compwex-fwexbox.htmw)）。
 
-![サンプルフレックスボックスの例では、 3 つのフレックスアイテムの子を並べて保有しています。最初の 2 人は同じ幅で、3 人目は少し広くなっています。 3 つ目のフレックスアイテムはフレックスコンテナーでもあります。これには、 2 列に並んだボタンのセットと、それに続くテキストがあります。最初の行には 4 つのボタンがあり、一列に並んでいます。ボタンは同じ幅で、コンテナーの幅いっぱいに保有されています。 2 つ目の行には、単一のボタンがあり、それ自体で行の幅をすべて保有しています。](flexbox-example7.png)
+![サンプルフレックスボックスの例では、 3 つのフレックスアイテムの子を並べて保有しています。最初の 2 人は同じ幅で、3 人目は少し広くなっています。 3 つ目のフレックスアイテムはフレックスコンテナーでもあります。これには、 2 列に並んだボタンのセットと、それに続くテキストがあります。最初の行には 4 つのボタンがあり、一列に並んでいます。ボタンは同じ幅で、コンテナーの幅いっぱいに保有されています。 2 つ目の行には、単一のボタンがあり、それ自体で行の幅をすべて保有しています。](fwexbox-exampwe7.png)
 
-このように、フレックスアイテムがいくつかある複雑なレイアウトは、フレックスコンテナーとして扱われます。このための HTML はかなり素直です。 3 つの {{htmlelement("article")}} を含む {{htmlelement("section")}} 要素があります。 3 番目の {{htmlelement("article")}} には 3 つの {{htmlelement("div")}} が含まれています。
+このように、フレックスアイテムがいくつかある複雑なレイアウトは、フレックスコンテナーとして扱われます。このための h-htmw はかなり素直です。 3 つの {{htmwewement("awticwe")}} を含む {{htmwewement("section")}} 要素があります。 3 番目の {{htmwewement("awticwe")}} には 3 つの {{htmwewement("div")}} が含まれています。
 
-```plain
-section - article
-          article
-          article - div - button
-                    div   button
-                    div   button
+```pwain
+section - awticwe
+          a-awticwe
+          a-awticwe - div - button
+                    d-div   button
+                    d-div   button
                           button
-                          button
+                          b-button
 ```
 
 レイアウトに使用したコードを見てみましょう。
 
-まず、{{htmlelement("section")}} の子を柔軟な箱として配置するように設定します。
+まず、{{htmwewement("section")}} の子を柔軟な箱として配置するように設定します。
 
 ```css
 section {
-  display: flex;
+  d-dispway: fwex;
 }
 ```
 
-次に、{{htmlelement("article")}} 自体にいくつかの `flex` の値を設定します。 ここで 2 番目のルールに特に注意してください — 3 番目の {{htmlelement("article")}} は、その子もフレックスアイテムのようにレイアウトするように設定していますが、今回はそれらを `column` のようにレイアウトしています。
+次に、{{htmwewement("awticwe")}} 自体にいくつかの `fwex` の値を設定します。 ここで 2 番目のルールに特に注意してください — 3 番目の {{htmwewement("awticwe")}} は、その子もフレックスアイテムのようにレイアウトするように設定していますが、今回はそれらを `cowumn` のようにレイアウトしています。
 
 ```css
-article {
-  flex: 1 200px;
+awticwe {
+  f-fwex: 1 200px;
 }
 
-article:nth-of-type(3) {
-  flex: 3 200px;
-  display: flex;
-  flex-flow: column;
-}
-```
-
-次に、最初の {{htmlelement("div")}} を選択します。 最初に `flex: 1 100px;` を使用して効果的にそれの最小の高さを `100px` にしてから、その子（{{htmlelement("button")}} 要素）もフレックスアイテムのように配置されるように設定します。 ここでそれらをラッピングする行にレイアウトし、先ほど見た個々のボタンの例で行ったように、それらを使用可能なスペースの中央に配置します。
-
-```css
-article:nth-of-type(3) div:first-child {
-  flex: 1 100px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
+a-awticwe:nth-of-type(3) {
+  fwex: 3 200px;
+  dispway: fwex;
+  fwex-fwow: cowumn;
 }
 ```
 
-最後に、ボタンにサイズを設定します。今回は、 flex 値として `1 auto` を指定しました。これはとても興味深い効果があり、ブラウザーのウィンドウ幅を変更してみるとわかります。ボタンはできるだけ多くの空間を占有しようとします。できる限り同じ行に配置しようとしますが、それを超えると新しい行に移動します。
+次に、最初の {{htmwewement("div")}} を選択します。 最初に `fwex: 1 100px;` を使用して効果的にそれの最小の高さを `100px` にしてから、その子（{{htmwewement("button")}} 要素）もフレックスアイテムのように配置されるように設定します。 ここでそれらをラッピングする行にレイアウトし、先ほど見た個々のボタンの例で行ったように、それらを使用可能なスペースの中央に配置します。
 
 ```css
-button {
-  flex: 1 auto;
-  margin: 5px;
+awticwe:nth-of-type(3) div:fiwst-chiwd {
+  f-fwex: 1 100px;
+  d-dispway: fwex;
+  fwex-fwow: w-wow wwap;
+  a-awign-items: c-centew;
+  justify-content: space-awound;
+}
+```
+
+最後に、ボタンにサイズを設定します。今回は、 fwex 値として `1 auto` を指定しました。これはとても興味深い効果があり、ブラウザーのウィンドウ幅を変更してみるとわかります。ボタンはできるだけ多くの空間を占有しようとします。できる限り同じ行に配置しようとしますが、それを超えると新しい行に移動します。
+
+```css
+b-button {
+  fwex: 1 auto;
+  mawgin: 5px;
   font-size: 18px;
-  line-height: 1.5;
+  wine-height: 1.5;
 }
 ```
 
 ## スキルテスト
 
-この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります。 [スキルテスト: フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox)を見てください。
+この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります。 [スキルテスト: フレックスボックス](/ja/docs/weawn_web_devewopment/cowe/css_wayout/test_youw_skiwws/fwexbox)を見てください。
 
 ## まとめ
 
-以上でフレックスボックスの基本についての解説を終わります。これから学習を進めていく中で、フレックスボックスで楽しく遊んでいただけることを期待しています。次は、CSS レイアウトのもう 1 つの重要な側面を見ていきましょう。[CSS グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)です。
+以上でフレックスボックスの基本についての解説を終わります。これから学習を進めていく中で、フレックスボックスで楽しく遊んでいただけることを期待しています。次は、css レイアウトのもう 1 つの重要な側面を見ていきましょう。[css グリッド](/ja/docs/weawn_web_devewopment/cowe/css_wayout/gwids)です。
 
 ## 関連情報
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS-Tricks guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — フレックスボックスのすべてを視覚的にわかりやすく説明した記事です。
-- [Flexbox Froggy](https://flexboxfroggy.com/) — フレックスボックスの基本を学び、理解を深めるための教育ゲームです。
+- [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+- [フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)
+- [css フレックスボックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)モジュール
+- [css-twicks g-guide to fwexbox](https://css-twicks.com/snippets/css/a-guide-to-fwexbox/) — フレックスボックスのすべてを視覚的にわかりやすく説明した記事です。
+- [fwexbox fwoggy](https://fwexboxfwoggy.com/) — フレックスボックスの基本を学び、理解を深めるための教育ゲームです。
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/css_wayout/positioning", >w< "weawn_web_devewopment/cowe/css_wayout/gwids", mya "weawn_web_devewopment/cowe/css_wayout")}}

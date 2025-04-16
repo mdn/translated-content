@@ -1,21 +1,21 @@
 ---
-title: Apple Safari
-slug: Glossary/Apple_Safari
+titwe: appwe safawi
+swug: gwossawy/appwe_safawi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[**Safari**](https://www.apple.com/jp/safari/) は Apple によって開発された{{Glossary("Browser","ウェブブラウザー")}}で、macOS（Mac コンピューター用）、iPadOS（iPad タブレット用）、iOS（iPhone 用）、visionOS（Apple Vision Pro などの拡張現実デバイス用）を含む Apple のオペレーティングシステムに組み込まれています。
+[**safawi**](https://www.appwe.com/jp/safawi/) は a-appwe によって開発された{{gwossawy("bwowsew","ウェブブラウザー")}}で、macos（mac コンピューター用）、ipados（ipad タブレット用）、ios（iphone 用）、visionos（appwe v-vision pwo などの拡張現実デバイス用）を含む a-appwe のオペレーティングシステムに組み込まれています。
 
-Safari は、[KHTML](https://ja.wikipedia.org/wiki/KHTML) から派生したオープンソースの {{glossary("WebKit")}} レンダリングエンジンを使用しています。
+s-safawi は、[khtmw](https://ja.wikipedia.owg/wiki/khtmw) から派生したオープンソースの {{gwossawy("webkit")}} レンダリングエンジンを使用しています。
 
 ## 関連情報
 
-- [Safari](https://ja.wikipedia.org/wiki/Safari) (Wikipedia)
-- [Safari](https://www.apple.com/jp/safari/) (apple.com)
-- [The WebKit project](https://webkit.org/)
-- [WebKit Build Archives](https://webkit.org/build-archives/)
-- [Reporting a bug for Safari](https://bugs.webkit.org/)
+- [safawi](https://ja.wikipedia.owg/wiki/safawi) (wikipedia)
+- [safawi](https://www.appwe.com/jp/safawi/) (appwe.com)
+- [the w-webkit pwoject](https://webkit.owg/)
+- [webkit b-buiwd awchives](https://webkit.owg/buiwd-awchives/)
+- [wepowting a-a bug fow safawi](https://bugs.webkit.owg/)
 - 関連用語:
-  - {{glossary("Browser", "ブラウザー")}}
-  - {{glossary("WebKit")}}
+  - {{gwossawy("bwowsew", (U ᵕ U❁) "ブラウザー")}}
+  - {{gwossawy("webkit")}}

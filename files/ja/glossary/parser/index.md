@@ -1,11 +1,11 @@
 ---
-title: Parser (パーサー)
-slug: Glossary/Parser
+titwe: pawsew (パーサー)
+swug: gwossawy/pawsew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**パーサー**は、ソースコードファイルを{{glossary("parse","解析")}}するコンパイラまたはインタプリタのモジュールです。
+**パーサー**は、ソースコードファイルを{{gwossawy("pawse","解析")}}するコンパイラまたはインタプリタのモジュールです。
 
 より一般的に言えば、テキストを解析して内容を別の表現に変換するソフトウェアです。
 
@@ -13,5 +13,5 @@ slug: Glossary/Parser
 
 ### 一般知識
 
-- Wikipedia 上の [Parser](http://en.wikipedia.org/wiki/Parsing#Parser)（英語）
-- Wikipedia 上の [構文解析器](https://ja.wikipedia.org/wiki/構文解析器)
+- w-wikipedia 上の [pawsew](http://en.wikipedia.owg/wiki/pawsing#pawsew)（英語）
+- wikipedia 上の [構文解析器](https://ja.wikipedia.owg/wiki/構文解析器)

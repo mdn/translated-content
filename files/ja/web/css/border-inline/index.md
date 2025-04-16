@@ -1,89 +1,89 @@
 ---
-title: border-inline
-slug: Web/CSS/border-inline
+titwe: bowdew-inwine
+swug: web/css/bowdew-inwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+**`bowdew-inwine`** は [css](/ja/docs/web/css) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)です。
 
-{{InteractiveExample("CSS Demo: border-inline")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-inwine")}}
 
-```css interactive-example-choice
-border-inline: solid;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-inwine: s-sowid;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-inline: dashed red;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+b-bowdew-inwine: dashed wed;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-inline: 1rem solid;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+bowdew-inwine: 1wem sowid;
+wwiting-mode: h-howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a b-box with a bowdew awound it. rawr x3
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
-`border-inline` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} に設定された値に応じて対応づけられます。
+`bowdew-inwine` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxwef("bowdew-top")}} と {{cssxwef("bowdew-bottom")}}、または {{cssxwef("bowdew-wight")}} と {{cssxwef("bowdew-weft")}} のどちらかの組み合わせに対して、 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}} に設定された値に応じて対応づけられます。
 
-他の方向の境界については、 {{cssxref("border-block")}} によって、 {{cssxref("border-block-start")}} と {{cssxref("border-block-end")}} の両方を設定することができます。
+他の方向の境界については、 {{cssxwef("bowdew-bwock")}} によって、 {{cssxwef("bowdew-bwock-stawt")}} と {{cssxwef("bowdew-bwock-end")}} の両方を設定することができます。
 
 ## 構成要素のプロパティ
 
-このプロパティは下記の CSS プロパティの一括指定です。
+このプロパティは下記の css プロパティの一括指定です。
 
-- [`border-inline-color`](/ja/docs/Web/CSS/border-inline-color)
-- [`border-inline-style`](/ja/docs/Web/CSS/border-inline-style)
-- [`border-inline-width`](/ja/docs/Web/CSS/border-inline-width)
+- [`bowdew-inwine-cowow`](/ja/docs/web/css/bowdew-inwine-cowow)
+- [`bowdew-inwine-stywe`](/ja/docs/web/css/bowdew-inwine-stywe)
+- [`bowdew-inwine-width`](/ja/docs/web/css/bowdew-inwine-width)
 
 ## 構文
 
 ```css
-border-inline: 1px;
-border-inline: 2px dotted;
-border-inline: medium dashed blue;
+bowdew-inwine: 1px;
+bowdew-inwine: 2px d-dotted;
+bowdew-inwine: m-medium dashed b-bwue;
 
 /* グローバル値 */
-border-inline: inherit;
-border-inline: initial;
-border-inline: revert;
-border-inline: unset;
+b-bowdew-inwine: i-inhewit;
+bowdew-inwine: initiaw;
+bowdew-inwine: w-wevewt;
+bowdew-inwine: unset;
 ```
 
 ### 値
 
-`border-inline` は以下の値のうちの1つ以上を任意の順序で指定します。
+`bowdew-inwine` は以下の値のうちの1つ以上を任意の順序で指定します。
 
-- `<'border-width'>`
-  - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
-- `<'border-style'>`
-  - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- `<'bowdew-width'>`
+  - : 境界の幅です。 {{cssxwef("bowdew-width")}} を参照してください。
+- `<'bowdew-stywe'>`
+  - : 境界線のスタイルです。 {{cssxwef("bowdew-stywe")}} を参照してください。
+- `<'cowow'>`
+  - : 境界の色です。 {{cssxwef("cowow")}} を参照してください。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -91,44 +91,44 @@ border-inline: unset;
 
 ## 例
 
-<h3 id="Border_with_vertical_text">テキストが垂直の場合の境界</h3>
+<h3 id="bowdew_with_vewticaw_text">テキストが垂直の場合の境界</h3>
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
+  backgwound-cowow: yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  border-inline: 5px dashed blue;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  b-bowdew-inwine: 5px dashed bwue;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
+{{embedwivesampwe("bowdew_with_vewticaw_text", (U ﹏ U) 140, (U ﹏ U) 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティは物理的な境界プロパティである {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} の何れかに対応づけられます。
-- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}
+- このプロパティは物理的な境界プロパティである {{cssxwef("bowdew-top")}}、{{cssxwef("bowdew-wight")}}、{{cssxwef("bowdew-bottom")}}、{{cssxwef("bowdew-weft")}} の何れかに対応づけられます。
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

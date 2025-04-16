@@ -1,27 +1,27 @@
 ---
-title: ascent-override
-slug: Web/CSS/@font-face/ascent-override
-l10n:
-  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
+titwe: ascent-ovewwide
+swug: w-web/css/@font-face/ascent-ovewwide
+w-w10n:
+  souwcecommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`ascent-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントのアセンダーの寸法を定義します。アセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの上の高さです。
+**`ascent-ovewwide`** は c-css の {{cssxwef("@font-face")}} アットルールの記述子で、フォントのアセンダーの寸法を定義します。アセンダーの寸法は c-css がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの上の高さです。
 
 ## 構文
 
 ```css
-ascent-override: normal;
-ascent-override: 90%;
+a-ascent-ovewwide: n-nyowmaw;
+a-ascent-ovewwide: 90%;
 ```
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : 既定値です。使用すると、寸法をフォントファイルから取得します。
-- `<percentage>`
-  - : {{cssxref("&lt;percentage&gt;")}} の値です。
+- `<pewcentage>`
+  - : {{cssxwef("&wt;pewcentage&gt;")}} の値です。
 
 ## 公式定義
 
@@ -35,40 +35,40 @@ ascent-override: 90%;
 
 ## 代替フォントの寸法を上書き
 
-`ascent-override` プロパティは、代替フォントの寸法を第一のウェブフォントのものにより一致するように寸法を上書きするのに役立ちます。
+`ascent-ovewwide` プロパティは、代替フォントの寸法を第一のウェブフォントのものにより一致するように寸法を上書きするのに役立ちます。
 
 ```css
 @font-face {
-  font-family: web-font;
-  src: url("https://example.com/font.woff");
+  f-font-famiwy: web-font;
+  swc: uww("https://exampwe.com/font.woff");
 }
 
 @font-face {
-  font-family: local-font;
-  src: local(Local Font);
-  ascent-override: 125%;
+  font-famiwy: wocaw-font;
+  swc: wocaw(wocaw f-font);
+  ascent-ovewwide: 125%;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@font-face/descent-override", "descent-override")}}
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range")}} 記述子
+- {{cssxwef("@font-face/descent-ovewwide", σωσ "descent-ovewwide")}}
+- {{cssxwef("@font-face/font-dispway", σωσ "font-dispway")}}
+- {{cssxwef("@font-face/font-famiwy", >_< "font-famiwy")}}
+- {{cssxwef("@font-face/font-weight", :3 "font-weight")}}
+- {{cssxwef("@font-face/font-stywe", (U ﹏ U) "font-stywe")}}
+- {{cssxwef("@font-face/font-stwetch", -.- "font-stwetch")}}
+- {{cssxwef("font-featuwe-settings", (ˆ ﻌ ˆ)♡ "font-featuwe-settings")}}
+- {{cssxwef("@font-face/font-vawiation-settings", (⑅˘꒳˘) "font-vawiation-settings")}}
+- {{cssxwef("@font-face/wine-gap-ovewwide", (U ᵕ U❁) "wine-gap-ovewwide")}}
+- {{cssxwef("@font-face/swc", -.- "swc")}}
+- {{cssxwef("@font-face/size-adjust", "size-adjust")}}
+- {{cssxwef("@font-face/unicode-wange", ^^;; "unicode-wange")}} 記述子

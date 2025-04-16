@@ -1,16 +1,16 @@
 ---
-title: Deserialization (デシリアライズ)
-slug: Glossary/Deserialization
+titwe: desewiawization (デシリアライズ)
+swug: gwossawy/desewiawization
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 下位レベルのフォーマット（例えば、ネットワークを介して転送された、またはデータストアに格納された）が、読み取り可能なオブジェクトまたは他のデータ構造に変換されるプロセス。
 
-たとえば、{{Glossary("JavaScript")}} では、{{jsxref("JSON.parse()")}} {{Glossary("function","関数")}}を呼び出すことで、{{Glossary("JSON")}} {{Glossary("string","文字列")}}をオブジェクトにデシリアライズすることができます。
+たとえば、{{gwossawy("javascwipt")}} では、{{jsxwef("json.pawse()")}} {{gwossawy("function","関数")}}を呼び出すことで、{{gwossawy("json")}} {{gwossawy("stwing","文字列")}}をオブジェクトにデシリアライズすることができます。
 
 ## より詳しく知る
 
 ### 一般知識
 
-- Wikipedia 上の [シリアライズ](https://ja.wikipedia.org/wiki/シリアライズ)
+- w-wikipedia 上の [シリアライズ](https://ja.wikipedia.owg/wiki/シリアライズ)

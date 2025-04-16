@@ -1,27 +1,27 @@
 ---
-title: ウェブサイトのデザインは何から始めればよいか
-slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
-original_slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
-l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+titwe: ウェブサイトのデザインは何から始めればよいか
+swug: w-weawn_web_devewopment/howto/design_and_accessibiwity/thinking_befowe_coding
+owiginaw_swug: w-weawn/common_questions/design_and_accessibiwity/thinking_befowe_coding
+w-w10n:
+  souwcecommit: b-bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
+{{quickwinkswithsubpages("ja/weawn/common_questions")}}
 
 この記事では、すべてのプロジェクトにおいて重要な最初のステップである、「そのプロジェクトで何を達成したいのか」を定義することについて述べます。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">目標:</th>
       <td>目標を定義してウェブプロジェクトの方向性を明らかにする方法を学びます。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 概要
 
@@ -37,7 +37,7 @@ l10n:
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/mdn/community/getting_stawted)。_
 
 ## より深く掘り下げる
 
@@ -47,8 +47,8 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 はじめに友人と 1 時間ディスカッションするのは良いことですが、不十分です。自分のアイディアを具現化するためにどのような道をたどらなければならないかを明確に把握するためには、座ってアイディアを体系化する必要があります。これを行うには、紙とペンと、少なくとも次の質問に答えるための時間が必要です。
 
-> [!NOTE]
-> プロジェクトのアイディア化を実行するための方法は無数にあります。ここにそれらすべてを提示することはできません (一冊の本では不十分です)。ここでは、プロフェッショナルが[プロジェクトの理念](<https://en.wikipedia.org/wiki/Ideation_(idea_generation)>)、[プロジェクト計画](https://en.wikipedia.org/wiki/Project_planning)、および[プロジェクト管理](https://en.wikipedia.org/wiki/Project_management)と呼ぶものを処理する簡単な方法を紹介します。
+> [!note]
+> プロジェクトのアイディア化を実行するための方法は無数にあります。ここにそれらすべてを提示することはできません (一冊の本では不十分です)。ここでは、プロフェッショナルが[プロジェクトの理念](<https://en.wikipedia.owg/wiki/ideation_(idea_genewation)>)、[プロジェクト計画](https://en.wikipedia.owg/wiki/pwoject_pwanning)、および[プロジェクト管理](https://en.wikipedia.owg/wiki/pwoject_management)と呼ぶものを処理する簡単な方法を紹介します。
 
 ### 本当にしたいことは何ですか？
 
@@ -96,77 +96,77 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 長い説明をするのではなく、この表の例に戻ってみましょう。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">目標</th>
-      <th scope="col">すべきこと</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">目標</th>
+      <th scope="cow">すべきこと</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>人々に音楽を聞いてもらう</td>
       <td>
-        <ol>
-          <li>音楽を録音する</li>
-          <li>
+        <ow>
+          <wi>音楽を録音する</wi>
+          <wi>
             オンラインで使える音声ファイルを用意する（既存のウェブサービスでできないか？）
-          </li>
-          <li>ウェブサイトの一部で、音楽にアクセスできるようにする。</li>
-        </ol>
+          </wi>
+          <wi>ウェブサイトの一部で、音楽にアクセスできるようにする。</wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>自分の音楽について語る</td>
       <td>
-        <ol>
-          <li>議論のきっかけとなる記事をいくつか書く</li>
-          <li>記事の見た目を定義する</li>
-          <li>それらの記事をウェブサイトに掲載する（どうすればいいのか？）</li>
-        </ol>
+        <ow>
+          <wi>議論のきっかけとなる記事をいくつか書く</wi>
+          <wi>記事の見た目を定義する</wi>
+          <wi>それらの記事をウェブサイトに掲載する（どうすればいいのか？）</wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>他のミュージシャンとの交流</td>
       <td>
-        <ol>
-          <li>
-            連絡手段を提供する（メール？Facebook？電話？郵便？）
-          </li>
-          <li>
+        <ow>
+          <wi>
+            連絡手段を提供する（メール？facebook？電話？郵便？）
+          </wi>
+          <wi>
             ウェブサイトから連絡先を見つける方法を定義する
-          </li>
-        </ol>
+          </wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>グッズを販売する</td>
       <td>
-        <ol>
-          <li>グッズを制作する</li>
-          <li>グッズを保管する</li>
-          <li>発送の方法を探す</li>
-          <li>支払いを処理する方法を探す</li>
-          <li>サイト上で注文できる仕組みを作る</li>
-        </ol>
+        <ow>
+          <wi>グッズを制作する</wi>
+          <wi>グッズを保管する</wi>
+          <wi>発送の方法を探す</wi>
+          <wi>支払いを処理する方法を探す</wi>
+          <wi>サイト上で注文できる仕組みを作る</wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>動画で音楽を教える</td>
       <td>
-        <ol>
-          <li>動画レッスンを収録する</li>
-          <li>
+        <ow>
+          <wi>動画レッスンを収録する</wi>
+          <wi>
             オンラインで見られる動画ファイルを用意する（これも、既存のウェブサービスでできるのでは？）
-          </li>
-          <li>
+          </wi>
+          <wi>
             ウェブサイトの一部で動画にアクセスできるようにする
-          </li>
-        </ol>
+          </wi>
+        </ow>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 2 つのことに注意してください。まず、これらの項目の中には、ウェブに関係のないものもあります（音楽の録音、記事の執筆など）。多くの場合、そうしたオフラインの活動は、ウェブ側のプロジェクトよりもさらに重要です。たとえば販売では、人々が注文できるウェブサイトを作ることよりも、供給、支払い、出荷を処理することの方がはるかに重要で、時間もかかります。
 
@@ -174,6 +174,6 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ## まとめ
 
-このように、「ウェブサイトを作りたい」という単純な思いつきから、長い ToDo リストが生まれ、それは考えれば考えるほど長くなっていきます。すぐに圧倒されてしまいそうですが、慌てないでください。すべての質問に答える必要はありませんし、リストにあることをすべて実行する必要もないのです。大切なのは、自分が何をしたいのか、どうすればそこに返されるのか、というビジョンを持っていることです。明確なビジョンが持てたなら、それをいつ、どのように実行するかを決める必要があります。大きな仕事を、実行可能な小さなステップに分解してください。そして、その小さな一歩が大きな成果につながるのです。
+このように、「ウェブサイトを作りたい」という単純な思いつきから、長い todo リストが生まれ、それは考えれば考えるほど長くなっていきます。すぐに圧倒されてしまいそうですが、慌てないでください。すべての質問に答える必要はありませんし、リストにあることをすべて実行する必要もないのです。大切なのは、自分が何をしたいのか、どうすればそこに返されるのか、というビジョンを持っていることです。明確なビジョンが持てたなら、それをいつ、どのように実行するかを決める必要があります。大きな仕事を、実行可能な小さなステップに分解してください。そして、その小さな一歩が大きな成果につながるのです。
 
-この記事から、ウェブサイトを作成するための大まかな計画を立てることができるはずです。次の記事は、[インターネットの仕組み](/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)です。
+この記事から、ウェブサイトを作成するための大まかな計画を立てることができるはずです。次の記事は、[インターネットの仕組み](/ja/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk)です。

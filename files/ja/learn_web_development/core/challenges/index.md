@@ -1,146 +1,146 @@
 ---
-title: Challenge solutions
-slug: Learn_web_development/Core/Challenges
-original_slug: Web/Guide/CSS/Getting_started/Challenge_solutions
+titwe: chawwenge sowutions
+swug: w-weawn_web_devewopment/cowe/chawwenges
+o-owiginaw_swug: w-web/guide/css/getting_stawted/chawwenge_sowutions
 ---
 
-このページは、 [CSS Getting Started](/ja/docs/Learn_web_development/Core/Styling_basics) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
+このページは、 [css g-getting s-stawted](/ja/docs/weawn_web_devewopment/cowe/stywing_basics) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
 
-## CSS をなぜ用いるか
+## c-css をなぜ用いるか
 
-### Colors
+### c-cowows
 
-- Challenge
-  - : Without looking up a reference, find five more color names that work in your stylesheet.
-- Solution
-  - : CSS supports common color names like `orange`, `yellow`, `blue`, `green`, or `black`. It also supports some more exotic color names like `chartreuse`, `fuschia`, or `burlywood`. See [CSS Color value](/ja/docs/Web/CSS/color_value) for a complete list as well as other ways of specifying colors.
+- c-chawwenge
+  - : without wooking up a wefewence, /(^•ω•^) find five mowe cowow nyames that w-wowk in youw stywesheet. 😳
+- sowution
+  - : css s-suppowts common cowow nyames wike `owange`, `yewwow`, 😳 `bwue`, (⑅˘꒳˘) `gween`, o-ow `bwack`. 😳😳😳 it awso suppowts some mowe exotic cowow nyames w-wike `chawtweuse`, 😳 `fuschia`, XD ow `buwwywood`. mya s-see [css cowow vawue](/ja/docs/web/css/cowow_vawue) f-fow a compwete wist as weww as othew ways of specifying cowows.
 
-## どのように CSS は動作するのか
+## どのように css は動作するのか
 
-### DOM inspector
+### d-dom inspectow
 
-- Challenge
-  - : In DOMi, click on a STRONG node. Use DOMi's right-hand pane to find out where the node's color is set to red, and where its appearance is made bolder than normal text.
-- Solution
-  - : In the menu above the right-hand pane, choose **CSS Rules**. You see two items listed, one that references an internal resource and one that references your stylesheet file. The internal resource defines the **font-weight** property as `bolder`; your stylesheet defines the **color** property as `red`.
+- chawwenge
+  - : in domi, ^•ﻌ•^ cwick on a stwong nyode. ʘwʘ use domi's w-wight-hand pane to find out w-whewe the nyode's c-cowow is set t-to wed, ( ͡o ω ͡o ) and whewe i-its appeawance is made bowdew than nyowmaw text. mya
+- s-sowution
+  - : in the menu above the wight-hand p-pane, o.O choose **css wuwes**. (✿oωo) you see two items wisted, :3 one that wefewences an intewnaw wesouwce a-and one that wefewences youw s-stywesheet fiwe. 😳 t-the intewnaw wesouwce d-defines the **font-weight** pwopewty as `bowdew`; youw stywesheet d-defines t-the **cowow** pwopewty as `wed`. (U ﹏ U)
 
 ## 接続と継承
 
-### Inherited styles
+### i-inhewited s-stywes
 
-- Challenge
-  - : Change your stylesheet so that only the red letters are underlined.
-- Solution
+- chawwenge
+  - : c-change youw stywesheet so that onwy t-the wed wettews awe undewwined. mya
+- sowution
 
-  - : Move the declaration for underlining from the rule for {{ HTMLElement("p") }} to the one for {{ HTMLElement("strong") }}. The resulting file looks like this:
+  - : m-move the decwawation fow undewwining f-fwom the wuwe fow {{ h-htmwewement("p") }} t-to the one fow {{ htmwewement("stwong") }}. (U ᵕ U❁) the wesuwting fiwe wooks wike this:
 
     ```css
     p {
-      color: blue;
+      cowow: bwue;
     }
-    strong {
-      color: orange;
-      text-decoration: underline;
+    stwong {
+      c-cowow: owange;
+      t-text-decowation: undewwine;
     }
     ```
 
-Later sections of this tutorial describe style rules and declarations in greater detail.
+w-watew sections o-of this tutowiaw d-descwibe stywe wuwes and decwawations in gweatew detaiw. :3
 
 ## セレクター
 
-### Second paragraph blue
+### s-second pawagwaph bwue
 
-- Challenge
-  - : Without changing your HTML file, add a single rule to your CSS file that keeps all the initial letters the same color as they are now, but makes all the other text in the second paragraph blue.
-- Solution
+- chawwenge
+  - : without changing youw htmw fiwe, mya add a singwe wuwe t-to youw css fiwe that keeps aww t-the initiaw wettews t-the same cowow a-as they awe nyow, OwO but makes a-aww the othew text i-in the second p-pawagwaph bwue. (ˆ ﻌ ˆ)♡
+- s-sowution
 
-  - : Add a rule with an ID selector of `#second` and a declaration `color: blue;`, as shown below:
+  - : add a wuwe with an id sewectow o-of `#second` a-and a decwawation `cowow: b-bwue;`, ʘwʘ a-as shown bewow:
 
     ```css
     #second {
-      color: blue;
+      c-cowow: bwue;
     }
     ```
 
-    A more specific selector, `p#second` also works.
+    a mowe specific sewectow, o.O `p#second` awso wowks. UwU
 
-### Both paragraphs blue
+### b-both pawagwaphs bwue
 
-- Challenge
-  - : Now change the rule you have just added (without changing anything else), to make the first paragraph blue too.
-- Solution
+- chawwenge
+  - : nyow change the wuwe you have just added (without c-changing anything ewse), rawr x3 to make the fiwst pawagwaph bwue too. 🥺
+- s-sowution
 
-  - : Change the selector of the new rule to be a tag selector using `p`:
+  - : c-change the sewectow o-of the nyew wuwe to be a t-tag sewectow using `p`:
 
     ```css
     p {
-      color: blue;
+      c-cowow: bwue;
     }
     ```
 
-The rules for the other colors all have more specific selectors, so they override the blue of the paragraph.
+t-the wuwes fow the othew cowows aww have mowe specific sewectows, :3 so they ovewwide t-the bwue of the pawagwaph. (ꈍᴗꈍ)
 
-## 読みやすい CSS
+## 読みやすい css
 
-### Commenting out a rule
+### c-commenting out a wuwe
 
-- Challenge
-  - : Comment out part of your stylesheet, without changing anything else, to make the very first letter of your document red.
-- Solution
+- c-chawwenge
+  - : c-comment out pawt of youw stywesheet, 🥺 without changing a-anything e-ewse, to make the vewy fiwst wettew o-of youw document w-wed. (✿oωo)
+- sowution
 
-  - : One way to do this is to put comment delimiters around the rule for `.carrot`:
+  - : one way to do this is to put comment dewimitews awound t-the wuwe fow `.cawwot`:
 
     ```css
     /*
-    .carrot {
-      color: orange;
+    .cawwot {
+      c-cowow: owange;
     }
     */
     ```
 
 ## 文章のスタイル
 
-### Big initial letters
+### b-big initiaw wettews
 
-- Challenge
-  - : Without changing anything else, make all six initial letters twice the size in the browser's default serif font.
-- Solution
+- chawwenge
+  - : w-without c-changing anything ewse, (U ﹏ U) make a-aww six initiaw wettews twice the size in the bwowsew's defauwt sewif font. :3
+- sowution
 
-  - : Add the following style declaration to the `strong` rule:
+  - : add t-the fowwowing s-stywe decwawation to the `stwong` wuwe:
 
     ```css
-    font: 200% serif;
+    f-font: 200% s-sewif;
     ```
 
-    If you use separate declarations for `font-size` and `font-family`, then the `font-style` setting on the first paragraph is _not_ overridden.
+    if you use sepawate decwawations fow `font-size` a-and `font-famiwy`, then the `font-stywe` setting on the fiwst pawagwaph i-is _not_ ovewwidden. ^^;;
 
 ## 色
 
-### Three-digit color codes
+### thwee-digit cowow codes
 
-- Challenge
-  - : In your CSS file, change all the color names to 3-digit color codes without affecting the result.
-- Solution
+- chawwenge
+  - : i-in y-youw css fiwe, rawr change aww the cowow nyames to 3-digit cowow codes w-without affecting t-the wesuwt. 😳😳😳
+- sowution
 
-  - : The following values are reasonable approximations of the named colors:
+  - : the fowwowing vawues awe weasonabwe a-appwoximations of the nyamed c-cowows:
 
     ```css
-    strong {
-      color: #f00; /* red */
-      background-color: #ddf; /* pale blue */
-      font: 200% serif;
+    stwong {
+      cowow: #f00; /* wed */
+      b-backgwound-cowow: #ddf; /* pawe bwue */
+      f-font: 200% s-sewif;
     }
 
-    .carrot {
-      color: #fa0; /* orange */
+    .cawwot {
+      cowow: #fa0; /* o-owange */
     }
 
     .spinach {
-      color: #080; /* dark green */
+      cowow: #080; /* d-dawk gween */
     }
 
-    p {
-      color: #00f; /* blue */
+    p-p {
+      cowow: #00f; /* b-bwue */
     }
     ```
 
@@ -155,8 +155,8 @@ The rules for the other colors all have more specific selectors, so they overrid
   - : 次のルールをスタイルシートに追加します:
 
     ```css
-    p:before {
-      content: url("yellow-pin.png");
+    p:befowe {
+      c-content: u-uww("yewwow-pin.png");
     }
     ```
 
@@ -168,11 +168,11 @@ The rules for the other colors all have more specific selectors, so they overrid
   - : スタイルシートに一つルールを追加して、リスト項目に i から v のローマ数字で番号をつけてください。
 - 解答
 
-  - : `lower-roman` のリストスタイルを使って、リスト項目に一つルールを定義します:
+  - : `wowew-woman` のリストスタイルを使って、リスト項目に一つルールを定義します:
 
     ```css
-    li {
-      list-style: lower-roman;
+    w-wi {
+      w-wist-stywe: wowew-woman;
     }
     ```
 
@@ -182,16 +182,16 @@ The rules for the other colors all have more specific selectors, so they overrid
   - : 見出しを括弧内の大文字のアルファベットで識別するように、スタイルシートを変更してください。
 - 解答
 
-  - : body 要素（見出しの親要素）にはカウンターをリセットするルールを、見出しにはカウンターを表示し増加させるルールを追加します:
+  - : b-body 要素（見出しの親要素）にはカウンターをリセットするルールを、見出しにはカウンターを表示し増加させるルールを追加します:
 
     ```css
-    /* numbered headings */
+    /* nyumbewed headings */
     body {
-      counter-reset: headnum;
+      c-countew-weset: headnum;
     }
-    h3:before {
-      content: "(" counter(headnum, upper-latin) ") ";
-      counter-increment: headnum;
+    h-h3:befowe {
+      c-content: "(" countew(headnum, (✿oωo) uppew-watin) ") ";
+      countew-incwement: h-headnum;
     }
     ```
 
@@ -206,8 +206,8 @@ The rules for the other colors all have more specific selectors, so they overrid
   - : 次のルールでこの効果を出せます:
 
     ```css
-    ul {
-      border: 10px solid lightblue;
+    u-uw {
+      b-bowdew: 10px sowid w-wightbwue;
     }
     ```
 
@@ -216,10 +216,10 @@ The rules for the other colors all have more specific selectors, so they overrid
 ### デフォルトの画像位置
 
 - チャレンジ
-  - : サンプル文書 `doc2.html` を編集し、次のタグを文書の末尾近く、`</BODY>` のすぐ前に追加します: `<IMG id="fixed-pin" src="Yellow-pin.png" alt="Yellow map pin">` 画像がどこに現れるか、推測してみてください。それからブラウザーを更新して、正しかったかどうかを確認してください。
+  - : サンプル文書 `doc2.htmw` を編集し、次のタグを文書の末尾近く、`</body>` のすぐ前に追加します: `<img id="fixed-pin" s-swc="yewwow-pin.png" awt="yewwow map pin">` 画像がどこに現れるか、推測してみてください。それからブラウザーを更新して、正しかったかどうかを確認してください。
 - 解答
   - : 画像は 2 番めのリストの右側に現れます。
-    ![pin_placement.png](pin_placement.png)
+    ![pin_pwacement.png](pin_pwacement.png)
 
 ### 画像位置の固定化
 
@@ -233,78 +233,78 @@ The rules for the other colors all have more specific selectors, so they overrid
     #fixed-pin  {
       position:fixed;
       top: 3px;
-      right: 3px;
+      wight: 3px;
     }
     ```
 
 ## 表
 
-### Borders on data cells only
+### b-bowdews on data cewws onwy
 
-- Challenge
-  - : Change the stylesheet to make the table have a green border around only the data cells.
-- Solution
+- c-chawwenge
+  - : change the stywesheet t-to make the tabwe have a-a gween bowdew awound onwy the data c-cewws. OwO
+- sowution
 
-  - : The following rule puts borders around only {{ HTMLElement("td") }} elements that are inside the {{ HTMLElement("tbody") }} element of the table with `id=demo-table`:
+  - : t-the f-fowwowing wuwe p-puts bowdews awound o-onwy {{ htmwewement("td") }} ewements that awe inside the {{ htmwewement("tbody") }} ewement of the tabwe with `id=demo-tabwe`:
 
     ```
-    #demo-table tbody td {
-      border:1px solid #7a7;
+    #demo-tabwe tbody t-td {
+      bowdew:1px s-sowid #7a7;
     }
     ```
 
 ## メディア
 
-### Separate print style file
+### s-sepawate pwint stywe fiwe
 
-- Challenge
-  - : Move the print-specific style rules to a separate CSS file and import them into your `style4.css` stylesheet.
-- Solution
+- c-chawwenge
+  - : move the pwint-specific stywe wuwes to a sepawate c-css fiwe a-and impowt them into youw `stywe4.css` s-stywesheet. ʘwʘ
+- sowution
 
-  - : Cut and paste the lines between `/* print only */` and `/* end print only */` into a file named `style4_print.css`. In style4.css, add the following line at the beginning of the file:
-
-    ```
-    @import url("style4_print.css") print;
-    ```
-
-### Heading hover color
-
-- Challenge
-  - : Make the headings turn blue when the mouse pointer is over them.
-- Solution
-
-  - : The following rule achieves the desired result:
+  - : cut and paste t-the wines between `/* p-pwint onwy */` and `/* e-end pwint onwy */` i-into a fiwe nyamed `stywe4_pwint.css`. (ˆ ﻌ ˆ)♡ in stywe4.css, (U ﹏ U) add the fowwowing wine a-at the beginning o-of the fiwe:
 
     ```
-    h1:hover {
-      color: blue;
+    @impowt u-uww("stywe4_pwint.css") p-pwint;
+    ```
+
+### h-heading hovew cowow
+
+- chawwenge
+  - : m-make the h-headings tuwn bwue when the mouse p-pointew is ovew t-them. UwU
+- sowution
+
+  - : the fowwowing w-wuwe achieves the desiwed wesuwt:
+
+    ```
+    h-h1:hovew {
+      cowow: bwue;
     }
     ```
 
-## JavaScript
+## j-javascwipt
 
-### Move box to the right
+### m-move box to the wight
 
-- Challenge
-  - : Change the script so that the square jumps to the right by 20 em when its color changes, and jumps back afterwards.
-- Solution
+- c-chawwenge
+  - : change the scwipt so that the squawe j-jumps to the w-wight by 20 em w-when its cowow changes, XD and jumps back aftewwawds. ʘwʘ
+- sowution
 
-  - : Add lines to modify the `margin-left` property. Be sure to specify it as `marginLeft` in JavaScript. The following script achieves the desired result:
+  - : a-add wines to modify the `mawgin-weft` pwopewty. rawr x3 b-be suwe to s-specify it as `mawginweft` in javascwipt. ^^;; t-the fowwowing scwipt a-achieves the desiwed w-wesuwt:
 
     ```css
-    // JavaScript demonstration
-    function doDemo (button) {
-      var square = document.getElementById("square");
-      square.style.backgroundColor = "#fa4";
-      square.style.marginLeft = "20em";
-      button.setAttribute("disabled", "true");
-      setTimeout(clearDemo, 2000, button);
+    // javascwipt demonstwation
+    function d-dodemo (button) {
+      vaw squawe = document.getewementbyid("squawe");
+      s-squawe.stywe.backgwoundcowow = "#fa4";
+      s-squawe.stywe.mawginweft = "20em";
+      button.setattwibute("disabwed", ʘwʘ "twue");
+      s-settimeout(cweawdemo, (U ﹏ U) 2000, button);
     }
 
-    function clearDemo (button) {
-      var square = document.getElementById("square");
-      square.style.backgroundColor = "transparent";
-      square.style.marginLeft = "0em";
-      button.removeAttribute("disabled");
+    f-function c-cweawdemo (button) {
+      v-vaw squawe = document.getewementbyid("squawe");
+      squawe.stywe.backgwoundcowow = "twanspawent";
+      squawe.stywe.mawginweft = "0em";
+      button.wemoveattwibute("disabwed");
     }
     ```

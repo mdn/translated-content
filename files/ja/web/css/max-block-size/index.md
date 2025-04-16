@@ -1,113 +1,113 @@
 ---
-title: max-block-size
-slug: Web/CSS/max-block-size
+titwe: max-bwock-size
+swug: web/css/max-bwock-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`max-block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("writing-mode")}} で指定された書字方向とは逆の向きの要素の最大寸法を指定します。すなわち、書字方向が水平 (横書き) であれば、 `max-block-size` は {{cssxref("max-height")}} と等価になります。書字方向が垂直 (縦書き) であれば、 `max-block-size` は {{cssxref("max-width")}} と同じになります。
+**`max-bwock-size`** は [css](/ja/docs/web/css) のプロパティで、 {{cssxwef("wwiting-mode")}} で指定された書字方向とは逆の向きの要素の最大寸法を指定します。すなわち、書字方向が水平 (横書き) であれば、 `max-bwock-size` は {{cssxwef("max-height")}} と等価になります。書字方向が垂直 (縦書き) であれば、 `max-bwock-size` は {{cssxwef("max-width")}} と同じになります。
 
-もう一方の方向の最大長は、 {{cssxref("max-inline-size")}} プロパティを使用して指定します。
+もう一方の方向の最大長は、 {{cssxwef("max-inwine-size")}} プロパティを使用して指定します。
 
 `max-width` は常に水平方向の寸法に使われ、 `max-height` は常に垂直方向の寸法に使われるため、このプロパティはテキストコンテンツの寸法に基づいて寸法を設定する必要がある場合、書字方向を意識して指定する必要がある場合に便利です。
 
-ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す {{cssxref("writing-mode")}} の [例](/ja/docs/Web/CSS/writing-mode#例)をご覧ください。
+ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-bwock-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inwine-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す {{cssxwef("wwiting-mode")}} の [例](/ja/docs/web/css/wwiting-mode#例)をご覧ください。
 
-{{InteractiveExample("CSS Demo: max-block-size")}}
+{{intewactiveexampwe("css d-demo: m-max-bwock-size")}}
 
-```css interactive-example-choice
-max-block-size: 150px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+m-max-bwock-size: 150px;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-max-block-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-max-bwock-size: 150px;
+w-wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-max-block-size: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+max-bwock-size: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-max-block-size: 75%;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+max-bwock-size: 75%;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the maximum block size. <br />This will
-    limit the size in the block dimension, potentially causing an overflow.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box whewe you c-can change the maximum b-bwock size. (U ﹏ U) <bw />this wiww
+    wimit the size in the bwock dimension, (///ˬ///✿) potentiawwy c-causing an ovewfwow. 😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-max-block-size: 300px;
-max-block-size: 25em;
+/* <wength> 値 */
+m-max-bwock-size: 300px;
+m-max-bwock-size: 25em;
 
-/* <percentage> 値 */
-max-block-size: 75%;
+/* <pewcentage> 値 */
+m-max-bwock-size: 75%;
 
 /* キーワード値 */
-max-block-size: none;
-max-block-size: max-content;
-max-block-size: min-content;
-max-block-size: fit-content(20em);
+max-bwock-size: nyone;
+m-max-bwock-size: max-content;
+max-bwock-size: min-content;
+max-bwock-size: f-fit-content(20em);
 
 /* グローバル値 */
-max-block-size: inherit;
-max-block-size: initial;
-max-block-size: revert;
-max-block-size: revert-layer;
-max-block-size: unset;
+max-bwock-size: inhewit;
+max-bwock-size: initiaw;
+max-bwock-size: wevewt;
+m-max-bwock-size: wevewt-wayew;
+m-max-bwock-size: u-unset;
 ```
 
 ### 値
 
-`max-block-size` プロパティの値は、 {{cssxref("max-width")}} および {{cssxref("max-height")}} プロパティで有効なすべての値を取ることができます。
+`max-bwock-size` プロパティの値は、 {{cssxwef("max-width")}} および {{cssxwef("max-height")}} プロパティで有効なすべての値を取ることができます。
 
-- {{cssxref("&lt;length&gt;")}}
-  - : `max-block-size` を絶対的な値で定義します。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : `max-block-size` を包含ブロックの幅に対するパーセント値で定義します。
+- {{cssxwef("&wt;wength&gt;")}}
+  - : `max-bwock-size` を絶対的な値で定義します。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : `max-bwock-size` を包含ブロックの幅に対するパーセント値で定義します。
 - `none`
   - : ボックスの寸法を制限しません。
 - `max-content`
-  - : 内容物が推奨する `max-block-size` です。
+  - : 内容物が推奨する `max-bwock-size` です。
 - `min-content`
-  - : 内容物の最小の `max-block-size` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
+  - : 内容物の最小の `max-bwock-size` です。
+- `fit-content({{cssxwef("&wt;wength-pewcentage&gt;")}})`
+  - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, 😳 m-max(min-content, σωσ 引数))` です。
 
 ### 書字方向が方向にどう影響するのか
 
-`writing-mode` の値は次のように `max-block-size` から `max-width` または `max-height` への対応付けに影響します。
+`wwiting-mode` の値は次のように `max-bwock-size` から `max-width` または `max-height` への対応付けに影響します。
 
-| `writing-mode` の値                                                                                                                                                   | `max-block-size` が等価になるもの |
+| `wwiting-mode` の値                                                                                                                                                   | `max-bwock-size` が等価になるもの |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
+| `howizontaw-tb`, rawr x3 `ww` {{depwecated_inwine}}, OwO `ww-tb` {{depwecated_inwine}}, /(^•ω•^) `ww` {{depwecated_inwine}}, 😳😳😳 `wb` {{depwecated_inwine}}, ( ͡o ω ͡o ) `wb-ww` {{depwecated_inwine}}     | {{cssxwef("max-height")}}         |
+| `vewticaw-ww`, >_< `vewticaw-ww`, >w< `sideways-ww` {{expewimentaw_inwine}}, rawr `sideways-ww` {{expewimentaw_inwine}}, 😳 `tb` {{depwecated_inwine}}, >w< `tb-ww` {{depwecated_inwine}} | {{cssxwef("max-width")}}          |
 
-> **メモ:** `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
+> **メモ:** `wwiting-mode` の値のうち `sideways-ww` および `sideways-ww` は設計プロセスの後期に css 書字方向s wevew 3 仕様書から削除されました。これらは wevew 4 で復活する可能性があります。
 
-> [!NOTE]
-> 書字方向の `lr`, `lr-tb`, `rl`, `rb`, `rb-tl` は {{Glossary("HTML")}} のコンテキストでは許可されなくなりました。 {{Glossary("SVG")}} 1.x コンテキストでのみ利用できる可能性があります。
+> [!note]
+> 書字方向の `ww`, (⑅˘꒳˘) `ww-tb`, `ww`, OwO `wb`, `wb-tw` は {{gwossawy("htmw")}} のコンテキストでは許可されなくなりました。 {{gwossawy("svg")}} 1.x コンテキストでのみ利用できる可能性があります。
 
 ## 公式定義
 
@@ -119,77 +119,77 @@ max-block-size: unset;
 
 ## 例
 
-### 横書きおよび縦書きでの max-block-size の設定
+### 横書きおよび縦書きでの m-max-bwock-size の設定
 
-この例では、同じテキスト ([Herman Melville](https://en.wikipedia.org/wiki/Herman_Melville) の小説 _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_ の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
+この例では、同じテキスト ([hewman m-mewviwwe](https://en.wikipedia.owg/wiki/hewman_mewviwwe) の小説 _[moby-dick](https://en.wikipedia.owg/wiki/moby-dick)_ の冒頭部分) が `howizontaw-tb` および `vewticaw-ww` の両方の書字方向で表示されます。
 
-二つのボックスついてそれ以外の部分はすべて、 {{cssxref("max-block-size")}} に使われている値を含めて同じです。
+二つのボックスついてそれ以外の部分はすべて、 {{cssxwef("max-bwock-size")}} に使われている値を含めて同じです。
 
-#### HTML
+#### htmw
 
-この HTML では、単純に二つの {{HTMLElement("div")}} ブロックを作成し、それぞれの {{cssxref("writing-mode")}} を `horizontal` および `vertical` クラスを用いて設定しています。両方のボックスで `standard-box` クラスを共有しており、こちらで単純に色、パディング、それぞれの `max-block-size` の値を設定しています。
+この h-htmw では、単純に二つの {{htmwewement("div")}} ブロックを作成し、それぞれの {{cssxwef("wwiting-mode")}} を `howizontaw` および `vewticaw` クラスを用いて設定しています。両方のボックスで `standawd-box` クラスを共有しており、こちらで単純に色、パディング、それぞれの `max-bwock-size` の値を設定しています。
 
-```html
-<p>書字方向 <code>horizontal-tb</code> (既定値):</p>
-<div class="standard-box horizontal">
-  Call me Ishmael. Some years ago—never mind how long precisely—having little or
-  no money in my purse, and nothing particular to interest me on shore, I
-  thought I would sail about a little and see the watery part of the world. It
-  is a way I have of driving off the spleen and regulating the circulation.
+```htmw
+<p>書字方向 <code>howizontaw-tb</code> (既定値):</p>
+<div cwass="standawd-box h-howizontaw">
+  caww me ishmaew. (ꈍᴗꈍ) s-some yeaws ago—nevew mind how w-wong pwecisewy—having wittwe ow
+  nyo money i-in my puwse, and nyothing pawticuwaw t-to intewest me on showe, 😳 i
+  t-thought i wouwd s-saiw about a wittwe and see the watewy pawt of the wowwd. 😳😳😳 it
+  is a way i have of dwiving off the spween and w-weguwating the ciwcuwation. mya
 </div>
 
-<p>書字方向 <code>vertical-rl</code>:</p>
-<div class="standard-box vertical">
-  Call me Ishmael. Some years ago—never mind how long precisely—having little or
-  no money in my purse, and nothing particular to interest me on shore, I
-  thought I would sail about a little and see the watery part of the world. It
-  is a way I have of driving off the spleen and regulating the circulation.
+<p>書字方向 <code>vewticaw-ww</code>:</p>
+<div c-cwass="standawd-box vewticaw">
+  c-caww me i-ishmaew. mya some yeaws a-ago—nevew mind how wong pwecisewy—having wittwe ow
+  nyo money in my puwse, (⑅˘꒳˘) a-and nyothing pawticuwaw to intewest me on showe, (U ﹏ U) i
+  thought i wouwd saiw about a-a wittwe and see the watewy p-pawt of the wowwd. mya i-it
+  is a way i-i have of dwiving off the spween a-and weguwating t-the ciwcuwation. ʘwʘ
 </div>
 ```
 
-#### CSS
+#### c-css
 
-この CSS では3つのクラスを定義しています。最初は `standard-box` で、両方のボックスに適用され、上にあるものです。これはブロックの最小および最大の寸法、フォントの大きさ、などを指定します。
+この css では3つのクラスを定義しています。最初は `standawd-box` で、両方のボックスに適用され、上にあるものです。これはブロックの最小および最大の寸法、フォントの大きさ、などを指定します。
 
-その後にくるクラス `horizontal` および `vertical` は、ボックスに {{cssxref("writing-mode")}} プロパティを追加し、値を使われるクラスに応じて `horizontal-tb` または `vertical-rl` に設定します。
+その後にくるクラス `howizontaw` および `vewticaw` は、ボックスに {{cssxwef("wwiting-mode")}} プロパティを追加し、値を使われるクラスに応じて `howizontaw-tb` または `vewticaw-ww` に設定します。
 
 ```css
-.standard-box {
-  padding: 4px;
-  background-color: #abcdef;
-  color: #000;
-  font:
-    16px "Open Sans",
-    "Helvetica",
-    "Arial",
-    sans-serif;
-  max-block-size: 160px;
-  min-block-size: 100px;
+.standawd-box {
+  p-padding: 4px;
+  backgwound-cowow: #abcdef;
+  cowow: #000;
+  f-font:
+    16px "open s-sans", (˘ω˘)
+    "hewvetica", (U ﹏ U)
+    "awiaw", ^•ﻌ•^
+    s-sans-sewif;
+  m-max-bwock-size: 160px;
+  m-min-bwock-size: 100px;
 }
 
-.horizontal {
-  writing-mode: horizontal-tb;
+.howizontaw {
+  wwiting-mode: howizontaw-tb;
 }
 
-.vertical {
-  writing-mode: vertical-rl;
+.vewticaw {
+  wwiting-mode: vewticaw-ww;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_max-block-size_with_horizontal_and_vertical_text", 600, 850)}}
+{{embedwivesampwe("setting_max-bwock-size_with_howizontaw_and_vewticaw_text", (˘ω˘) 600, 850)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 対応する物理的プロパティ: {{cssxref("max-width")}} と {{cssxref("max-height")}}
-- 他の方向の最大寸法の設定: {{cssxref("max-inline-size")}}
-- {{cssxref("writing-mode")}}
+- 対応する物理的プロパティ: {{cssxwef("max-width")}} と {{cssxwef("max-height")}}
+- 他の方向の最大寸法の設定: {{cssxwef("max-inwine-size")}}
+- {{cssxwef("wwiting-mode")}}

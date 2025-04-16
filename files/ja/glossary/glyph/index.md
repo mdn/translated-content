@@ -1,11 +1,11 @@
 ---
-title: Glyph (字体)
-slug: Glossary/Glyph
+titwe: gwyph (字体)
+swug: gwossawy/gwyph
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**字体**は、1 つ以上の{{Glossary("character", "文字")}}を視覚的に表現するためにタイポグラフィで使用される用語です。
+**字体**は、1 つ以上の{{gwossawy("chawactew", ^•ﻌ•^ "文字")}}を視覚的に表現するためにタイポグラフィで使用される用語です。
 
 ウェブサイトで使用されるフォントには、フォントの文字を表すさまざまな字体のセットが含まれています。
 
@@ -13,5 +13,5 @@ slug: Glossary/Glyph
 
 ### 一般知識
 
-- [字体](https://ja.wikipedia.org/wiki/%E5%AD%97%E4%BD%93) (Wikipedia)
-- [Glyph, character and grapheme](https://www.quora.com/Whats-the-difference-between-a-character-a-glyph-and-a-grapheme/answer/Thomas-Phinney) on Quora
+- [字体](https://ja.wikipedia.owg/wiki/%e5%ad%97%e4%bd%93) (wikipedia)
+- [gwyph, c-chawactew and gwapheme](https://www.quowa.com/nanis-the-diffewence-between-a-chawactew-a-gwyph-and-a-gwapheme/answew/thomas-phinney) o-on quowa

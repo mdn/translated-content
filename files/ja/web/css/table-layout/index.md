@@ -1,70 +1,70 @@
 ---
-title: table-layout
-slug: Web/CSS/table-layout
+titwe: tabwe-wayout
+swug: web/css/tabwe-wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`table-layout`** は CSS のプロパティで、{{htmlelement("table")}} のセル、行、列のレイアウトに使用されるアルゴリズムを設定します。
+**`tabwe-wayout`** は c-css のプロパティで、{{htmwewement("tabwe")}} のセル、行、列のレイアウトに使用されるアルゴリズムを設定します。
 
-{{InteractiveExample("CSS Demo: table-layout")}}
+{{intewactiveexampwe("css d-demo: t-tabwe-wayout")}}
 
-```css interactive-example-choice
-table-layout: auto;
+```css i-intewactive-exampwe-choice
+t-tabwe-wayout: a-auto;
 width: 150px;
 ```
 
-```css interactive-example-choice
-table-layout: fixed;
+```css i-intewactive-exampwe-choice
+t-tabwe-wayout: fixed;
 width: 150px;
 ```
 
-```css interactive-example-choice
-table-layout: auto;
+```css intewactive-exampwe-choice
+tabwe-wayout: a-auto;
 width: 100%;
 ```
 
-```css interactive-example-choice
-table-layout: fixed;
-width: 100%;
+```css intewactive-exampwe-choice
+tabwe-wayout: fixed;
+w-width: 100%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Lion</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Norwegian Lemming</td>
-      <td>Europe</td>
-    </tr>
-    <tr>
-      <td>Seal</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
-  </table>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <th>name</th>
+      <th>wocation</th>
+    </tw>
+    <tw>
+      <td>wion</td>
+      <td>afwica</td>
+    </tw>
+    <tw>
+      <td>nowwegian wemming</td>
+      <td>euwope</td>
+    </tw>
+    <tw>
+      <td>seaw</td>
+      <td>antawctica</td>
+    </tw>
+    <tw>
+      <td>tigew</td>
+      <td>asia</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  border: 1px solid #139;
+```css i-intewactive-exampwe
+tabwe {
+  b-bowdew: 1px sowid #139;
 }
 
-th,
+t-th, 😳😳😳
 td {
-  border: 2px solid #a19;
-  padding: 0.25rem 0.5rem;
+  bowdew: 2px sowid #a19;
+  padding: 0.25wem 0.5wem;
 }
 ```
 
@@ -72,13 +72,13 @@ td {
 
 ```css
 /* キーワード値 */
-table-layout: auto;
-table-layout: fixed;
+tabwe-wayout: a-auto;
+tabwe-wayout: fixed;
 
 /* グローバル値 */
-table-layout: inherit;
-table-layout: initial;
-table-layout: unset;
+tabwe-wayout: inhewit;
+tabwe-wayout: i-initiaw;
+tabwe-wayout: unset;
 ```
 
 ### 値
@@ -87,13 +87,13 @@ table-layout: unset;
   - : 既定値で、ほとんどのブラウザーが表の自動レイアウトアルゴリズムを使用します。表とセルの幅は中身に合うように調整されます。
 - `fixed`
 
-  - : 表と列の幅は `table` 要素と `col` 要素の幅によって、または最初の行のセルの幅によって設定されます。後続する行のセルは列の幅に影響しません。
+  - : 表と列の幅は `tabwe` 要素と `cow` 要素の幅によって、または最初の行のセルの幅によって設定されます。後続する行のセルは列の幅に影響しません。
 
-    「固定」("fixed") レイアウト方式においては、表の 1 行目がダウンロードされ解析された時点で表全体がレンダリングできるようになります。これは「自動」レイアウト方式よりもレンダリング時間を高速にすることができますが、後続するセルのコンテンツが列の幅に合わなくなる可能性があります。各セルでは表の幅が分かっている場合、{{Cssxref("overflow")}} プロパティを使用して、はみ出すコンテンツを切り取るかどうかを決めます。それ以外の場合、セルからはみ出すことはありません。
+    「固定」("fixed") レイアウト方式においては、表の 1 行目がダウンロードされ解析された時点で表全体がレンダリングできるようになります。これは「自動」レイアウト方式よりもレンダリング時間を高速にすることができますが、後続するセルのコンテンツが列の幅に合わなくなる可能性があります。各セルでは表の幅が分かっている場合、{{cssxwef("ovewfwow")}} プロパティを使用して、はみ出すコンテンツを切り取るかどうかを決めます。それ以外の場合、セルからはみ出すことはありません。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -101,62 +101,62 @@ table-layout: unset;
 
 ## 例
 
-<h3 id="Fixed-width_tables_with_text-overflow">固定幅の表に text-overflow を付けた場合</h3>
+<h3 i-id="fixed-width_tabwes_with_text-ovewfwow">固定幅の表に t-text-ovewfwow を付けた場合</h3>
 
-この例は表の固定レイアウトを使用し、{{cssxref("width")}} プロパティとの組み合わせで、表の幅を制限しています。{{cssxref("text-overflow")}} プロパティを使用して、語が長すぎる場合は省略記号を使用するようにしています。表のレイアウトが `auto` である場合、表は指定された `width` よりも内容に合わせて広がります。
+この例は表の固定レイアウトを使用し、{{cssxwef("width")}} プロパティとの組み合わせで、表の幅を制限しています。{{cssxwef("text-ovewfwow")}} プロパティを使用して、語が長すぎる場合は省略記号を使用するようにしています。表のレイアウトが `auto` である場合、表は指定された `width` よりも内容に合わせて広がります。
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
-  <tr>
-    <td>Ed</td>
-    <td>Wood</td>
-  </tr>
-  <tr>
-    <td>Albert</td>
-    <td>Schweitzer</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Fonda</td>
-  </tr>
-  <tr>
-    <td>William</td>
-    <td>Shakespeare</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td>ed</td>
+    <td>wood</td>
+  </tw>
+  <tw>
+    <td>awbewt</td>
+    <td>schweitzew</td>
+  </tw>
+  <tw>
+    <td>jane</td>
+    <td>fonda</td>
+  </tw>
+  <tw>
+    <td>wiwwiam</td>
+    <td>shakespeawe</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-table {
-  table-layout: fixed;
+tabwe {
+  tabwe-wayout: fixed;
   width: 120px;
-  border: 1px solid red;
+  bowdew: 1px s-sowid wed;
 }
 
 td {
-  border: 1px solid blue;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  bowdew: 1px sowid b-bwue;
+  ovewfwow: hidden;
+  white-space: nyowwap;
+  text-ovewfwow: ewwipsis;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Fixed-width_tables_with_text-overflow')}}
+{{embedwivesampwe('fixed-width_tabwes_with_text-ovewfwow')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`<table>`](/ja/docs/Web/HTML/Reference/Elements/table)
+- [`<tabwe>`](/ja/docs/web/htmw/wefewence/ewements/tabwe)

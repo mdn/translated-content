@@ -1,14 +1,14 @@
 ---
-title: WebM
-slug: Glossary/WebM
+titwe: webm
+swug: gwossawy/webm
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebM** はロイヤリティフリーでオープンな動画フォーマットです。Mozilla Firefox でも標準でサポートされています。
+**webm** はロイヤリティフリーでオープンな動画フォーマットです。moziwwa fiwefox でも標準でサポートされています。
 
 ## 詳細情報
 
 ### 基礎知識
 
-- ウィキペディアの「[WebM](https://ja.wikipedia.org/wiki/WebM)」の記事
+- ウィキペディアの「[webm](https://ja.wikipedia.owg/wiki/webm)」の記事

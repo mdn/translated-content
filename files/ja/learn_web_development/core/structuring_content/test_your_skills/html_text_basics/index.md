@@ -1,35 +1,35 @@
 ---
-title: "スキルテスト: HTML テキストの基礎"
-slug: Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
-original_slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: htmw テキストの基礎"
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws/htmw_text_basics
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws:_htmw_text_basics
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、あなたが HTML でのテキストのマークアップを行う方法を理解しているかどうかを評価することです。
+このスキルテストの目的は、あなたが h-htmw でのテキストのマークアップを行う方法を理解しているかどうかを評価することです。
 
-> [!NOTE]
-> 以下の対話型エディターで解決に挑戦することができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業することが便利な場合もあります。
+> [!note]
+> 以下の対話型エディターで解決に挑戦することができます。ただし、コードをダウンロードし、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/)などのオンラインツールを使用して作業することが便利な場合もあります。
 >
-> もし行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかから私たちに連絡することができます。
+> もし行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかから私たちに連絡することができます。
 
 ## 課題 1
 
-この課題では、与えられた HTML を意味づけされた見出しと段落要素を使用してマークアップしていただきます。
+この課題では、与えられた h-htmw を意味づけされた見出しと段落要素を使用してマークアップしていただきます。
 
 完成例はこのようになるはずです。
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1-finished.html", '100%', 300)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text1-finished.htmw", o.O '100%', 300)}}
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text1.htmw", (U ᵕ U❁) '100%', 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text1-download.html)しましょう。
+> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text1-downwoad.htmw)しましょう。
 
 ## 課題 2
 
@@ -37,15 +37,15 @@ l10n:
 
 完成例はこのようになるはずです。
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2-finished.html", '100%', 400)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text2-finished.htmw", (⑅˘꒳˘) '100%', ( ͡o ω ͡o ) 400)}}
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text2.htmw", UwU '100%', rawr x3 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text2-download.html)しましょう。
+> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text2-downwoad.htmw)しましょう。
 
 ## 課題 3
 
@@ -53,15 +53,15 @@ l10n:
 
 完成例はこのようになるはずです。
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1-finished.html", '100%', 250)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/advanced-text/advanced-text1-finished.htmw", rawr '100%', 250)}}
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/advanced-text/advanced-text1.htmw", σωσ '100%', 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html)しましょう。
+> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/tasks/advanced-text/advanced-text1-downwoad.htmw)しましょう。
 
 ## 課題 4
 
@@ -69,12 +69,12 @@ l10n:
 
 完成例はこのようになるはずです。
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3-finished.html", '100%', 120)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text3-finished.htmw", σωσ '100%', >_< 120)}}
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text3.htmw", :3 '100%', (U ﹏ U) 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text3-download.html)しましょう。
+> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/tasks/basic-text/basic-text3-downwoad.htmw)しましょう。

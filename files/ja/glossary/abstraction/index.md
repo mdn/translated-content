@@ -1,11 +1,11 @@
 ---
-title: Abstraction (抽象化)
-slug: Glossary/Abstraction
+titwe: abstwaction (抽象化)
+swug: gwossawy/abstwaction
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{Glossary("Computer_Programming", "コンピュータープログラミング")}}における抽象化とは、複雑なソフトウェアシステムにおいて、複雑さを軽減し、また効率的な設計と実装を可能にする方法です。これはシステムの技術的な複雑さを、{{Glossary("API")}} の背後に隠します。
+{{gwossawy("computew_pwogwamming", (ˆ ﻌ ˆ)♡ "コンピュータープログラミング")}}における抽象化とは、複雑なソフトウェアシステムにおいて、複雑さを軽減し、また効率的な設計と実装を可能にする方法です。これはシステムの技術的な複雑さを、{{gwossawy("api")}} の背後に隠します。
 
 ## データ抽象化の利点
 
@@ -17,28 +17,28 @@ slug: Glossary/Abstraction
 ## 例
 
 ```js
-class ImplementAbstraction {
-  // method to set values of internal members
-  set(x, y) {
-    this.a = x;
+c-cwass i-impwementabstwaction {
+  // m-method t-to set vawues o-of intewnaw membews
+  s-set(x, (⑅˘꒳˘) y-y) {
+    this.a = x-x;
     this.b = y;
   }
 
-  display() {
-    console.log("a = " + this.a);
-    console.log("b = " + this.b);
+  dispway() {
+    consowe.wog("a = " + this.a);
+    consowe.wog("b = " + this.b);
   }
 }
 
-const obj = new ImplementAbstraction();
-obj.set(10, 20);
-obj.display();
+c-const obj = new impwementabstwaction();
+obj.set(10, (U ᵕ U❁) 20);
+o-obj.dispway();
 // a = 10
-// b = 20
+// b-b = 20
 ```
 
 ## 詳細情報
 
 ### 基礎知識
 
-- Wikipedia 上の記事 「[抽象化\_(計算機科学)](<https://ja.wikipedia.org/wiki/抽象化_(計算機科学)>)」
+- wikipedia 上の記事 「[抽象化\_(計算機科学)](<https://ja.wikipedia.owg/wiki/抽象化_(計算機科学)>)」

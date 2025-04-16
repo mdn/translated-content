@@ -1,118 +1,118 @@
 ---
-title: "スキルテスト: グリッド"
-slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
-original_slug: Learn_web_development/Core/CSS_layout/Grid_skills
-l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+titwe: "スキルテスト: グリッド"
+swug: w-weawn_web_devewopment/cowe/css_wayout/test_youw_skiwws/gwid
+owiginaw_swug: w-weawn_web_devewopment/cowe/css_wayout/gwid_skiwws
+w-w10n:
+  souwcecommit: a-a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、[グリッドとグリッドアイテム](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)の動作を理解しているかどうかを評価することです。今までに使用した素材のさまざまな要素を使用する、いくつかの小さな課題に取り組んでいただきます。
+このスキルテストの目的は、[グリッドとグリッドアイテム](/ja/docs/weawn_web_devewopment/cowe/css_wayout/gwids)の動作を理解しているかどうかを評価することです。今までに使用した素材のさまざまな要素を使用する、いくつかの小さな課題に取り組んでいただきます。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題 1
 
-この課題では、 4 つの子要素が自動配置されるグリッドを作成しましょう。グリッドは、利用できる空間を均等に共有する 3 つの段組みがあり、列と行のトラックの間には 20 ピクセルの間隔があるはずです。その後、 `grid` クラスを持つ親コンテナーの中にさらに子コンテナーを追加し、既定でどのように動作するかを試してみてください。
+この課題では、 4 つの子要素が自動配置されるグリッドを作成しましょう。グリッドは、利用できる空間を均等に共有する 3 つの段組みがあり、列と行のトラックの間には 20 ピクセルの間隔があるはずです。その後、 `gwid` クラスを持つ親コンテナーの中にさらに子コンテナーを追加し、既定でどのように動作するかを試してみてください。
 
 最終結果は下記の画像のようになるはずです。
 
-![4 つのアイテムが配置された 3 段組み。](grid-task1.png)
+![4 つのアイテムが配置された 3 段組み。](gwid-task1.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___grid1
-<div class="grid">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
+```htmw w-wive-sampwe___gwid1
+<div c-cwass="gwid">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
 </div>
 ```
 
-```css hidden live-sample___grid1
+```css h-hidden wive-sampwe___gwid1
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
-.grid > * {
-  background-color: #4d7298;
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  color: #fff;
-  padding: 0.5em;
-}
-```
-
-```css live-sample___grid1
-.grid {
+.gwid > * {
+  backgwound-cowow: #4d7298;
+  b-bowdew: 2px sowid #77a6b6;
+  bowdew-wadius: 0.5em;
+  cowow: #fff;
+  p-padding: 0.5em;
 }
 ```
 
-{{EmbedLiveSample("grid1", "", "200px")}}
+```css wive-sampwe___gwid1
+.gwid {
+}
+```
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+{{embedwivesampwe("gwid1", mya "", "200px")}}
 
-`display: grid` を使用してグリッドを作成し、 `grid-template-columns` で 3 つの列を使用し、アイテム間に `gap` を設定します。
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
+
+`dispway: g-gwid` を使用してグリッドを作成し、 `gwid-tempwate-cowumns` で 3 つの列を使用し、アイテム間に `gap` を設定します。
 
 ```css
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.gwid {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
   gap: 20px;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 2
 
-この課題では、すでにグリッドを定義してあります。 2 つの子要素の CSS ルールを編集して、それぞれ複数のグリッドトラックにまたがるようにしてください。下記の画像のように、 2 つ目の項目が最初の項目の上に重なるようにしてください。
+この課題では、すでにグリッドを定義してあります。 2 つの子要素の c-css ルールを編集して、それぞれ複数のグリッドトラックにまたがるようにしてください。下記の画像のように、 2 つ目の項目が最初の項目の上に重なるようにしてください。
 
-![内部に 2 つのアイテムがあり、一方がもう一方に重なっているボックス。](grid-task2.png)
+![内部に 2 つのアイテムがあり、一方がもう一方に重なっているボックス。](gwid-task2.png)
 
 **ボーナス課題:** これで、ソースの項目の順番を変えずに、最初の項目が一番上に表示されるようにすることができますか？
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___grid2
-<div class="grid">
-  <div class="item1">One</div>
-  <div class="item2">Two</div>
+```htmw wive-sampwe___gwid2
+<div c-cwass="gwid">
+  <div c-cwass="item1">one</div>
+  <div cwass="item2">two</div>
 </div>
 ```
 
-```css hidden live-sample___grid2
+```css hidden wive-sampwe___gwid2
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 s-sans-sewif;
 }
-.grid > * {
-  border-radius: 0.5em;
-  color: #fff;
+.gwid > * {
+  bowdew-wadius: 0.5em;
+  cowow: #fff;
   padding: 0.5em;
 }
 
 .item1 {
-  background-color: rgb(74 102 112 / 70%);
-  border: 5px solid rgb(74 102 112 / 100%);
+  backgwound-cowow: w-wgb(74 102 112 / 70%);
+  bowdew: 5px s-sowid wgb(74 102 112 / 100%);
 }
 
 .item2 {
-  background-color: rgb(214 162 173 / 70%);
-  border: 5px solid rgb(214 162 173 / 100%);
+  b-backgwound-cowow: w-wgb(214 162 173 / 70%);
+  b-bowdew: 5px sowid wgb(214 162 173 / 100%);
 }
 ```
 
-```css live-sample___grid2
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px 100px;
-  gap: 10px;
+```css wive-sampwe___gwid2
+.gwid {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw 1fw;
+  gwid-tempwate-wows: 100px 100px 100px;
+  g-gap: 10px;
 }
 
 .item1 {
@@ -122,31 +122,31 @@ body {
 }
 ```
 
-{{EmbedLiveSample("grid2", "", "340px")}}
+{{embedwivesampwe("gwid2", (⑅˘꒳˘) "", (U ﹏ U) "340px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 アイテムを同じグリッドセルを占めるように重ねることは可能です。
-選択肢の一つとして、下記のような一括指定を使用することもできますが、例えば `grid-row-start` のような個別指定を使用するのが正しいでしょう。
+選択肢の一つとして、下記のような一括指定を使用することもできますが、例えば `gwid-wow-stawt` のような個別指定を使用するのが正しいでしょう。
 
 ```css
 .item1 {
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 1 / 4;
+  gwid-wow: 1 / 3;
 }
 
 .item2 {
-  grid-column: 2 / 5;
-  grid-row: 2 / 4;
+  gwid-cowumn: 2 / 5;
+  gwid-wow: 2 / 4;
 }
 ```
 
-ボーナス問題では、これを達成する一つの方法として、フレックスボックスのチュートリアルで用いた `order` を使用する方法があります。
+ボーナス問題では、これを達成する一つの方法として、フレックスボックスのチュートリアルで用いた `owdew` を使用する方法があります。
 
 ```css
 .item1 {
-  order: 1;
+  owdew: 1;
 }
 ```
 
@@ -154,211 +154,211 @@ body {
 
 ```css
 .item1 {
-  z-index: 1;
+  z-z-index: 1;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 3
 
-この課題では、このグリッドに 4 つの直接の子があります。この点では、自動配置を使用して表示されています。 grid-area プロパティと grid-template-areas プロパティを使用して、下記の通りアイテムを表示させましょう。
+この課題では、このグリッドに 4 つの直接の子があります。この点では、自動配置を使用して表示されています。 gwid-awea プロパティと g-gwid-tempwate-aweas プロパティを使用して、下記の通りアイテムを表示させましょう。
 
-![グリッド内に表示されている 4 つのアイテム。](grid-task3.png)
+![グリッド内に表示されている 4 つのアイテム。](gwid-task3.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___grid3
-<div class="grid">
-  <div class="one">One</div>
-  <div class="two">Two</div>
-  <div class="three">Three</div>
-  <div class="four">Four</div>
+```htmw w-wive-sampwe___gwid3
+<div c-cwass="gwid">
+  <div cwass="one">one</div>
+  <div cwass="two">two</div>
+  <div cwass="thwee">thwee</div>
+  <div c-cwass="fouw">fouw</div>
 </div>
 ```
 
-```css hidden live-sample___grid3
+```css hidden w-wive-sampwe___gwid3
 body {
-  font: 1.2em / 1.5 sans-serif;
+  f-font: 1.2em / 1.5 s-sans-sewif;
 }
-.grid > * {
-  background-color: #4d7298;
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  color: #fff;
+.gwid > * {
+  backgwound-cowow: #4d7298;
+  b-bowdew: 2px sowid #77a6b6;
+  b-bowdew-wadius: 0.5em;
+  cowow: #fff;
   padding: 0.5em;
 }
 ```
 
-```css live-sample___grid3
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+```css w-wive-sampwe___gwid3
+.gwid {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 2fw;
   gap: 10px;
 }
 ```
 
-{{EmbedLiveSample("grid3", "", "200px")}}
+{{embedwivesampwe("gwid3", mya "", "200px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-レイアウトの各部分には、 `grid-area` プロパティと `grid-template-areas` を使用して名前を付ける必要があります。 混乱が生じる可能性があるのは、セルを空欄にする際に `.` を置く必要があることや、複数のトラックにまたがる要素を発生させるには名前を繰り返す必要があることを理解していない場合です。
+レイアウトの各部分には、 `gwid-awea` プロパティと `gwid-tempwate-aweas` を使用して名前を付ける必要があります。 混乱が生じる可能性があるのは、セルを空欄にする際に `.` を置く必要があることや、複数のトラックにまたがる要素を発生させるには名前を繰り返す必要があることを理解していない場合です。
 
 ```css
-.grid {
-  display: grid;
+.gwid {
+  d-dispway: g-gwid;
   gap: 20px;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas:
+  gwid-tempwate-cowumns: 1fw 2fw;
+  gwid-tempwate-aweas:
     "aa aa"
     "bb cc"
-    ". dd";
+    ". ʘwʘ dd";
 }
 
 .one {
-  grid-area: aa;
+  gwid-awea: aa;
 }
 
 .two {
-  grid-area: bb;
+  gwid-awea: b-bb;
 }
 
-.three {
-  grid-area: cc;
+.thwee {
+  g-gwid-awea: cc;
 }
 
-.four {
-  grid-area: dd;
+.fouw {
+  g-gwid-awea: dd;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 4
 
-この課題では、グリッドレイアウトとフレックスボックスの両方を使用して、下記画像のような例を再現してください。列と行のトラックの間隔は 10px にします。これを実現するために HTML を変更する必要はありません。
+この課題では、グリッドレイアウトとフレックスボックスの両方を使用して、下記画像のような例を再現してください。列と行のトラックの間隔は 10px にします。これを実現するために h-htmw を変更する必要はありません。
 
-![カードが 2 行に並び、それぞれに画像とタグが設定されています。](grid-task4.png)
+![カードが 2 行に並び、それぞれに画像とタグが設定されています。](gwid-task4.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___grid4
-<div class="container">
-  <div class="card">
+```htmw w-wive-sampwe___gwid4
+<div cwass="containew">
+  <div cwass="cawd">
     <img
-      alt="a single red balloon"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons1.jpg" />
-    <ul class="tags">
-      <li>balloon</li>
-      <li>red</li>
-      <li>sky</li>
-      <li>blue</li>
-      <li>Hot air balloon</li>
-    </ul>
+      awt="a singwe wed b-bawwoon"
+      swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons1.jpg" />
+    <uw cwass="tags">
+      <wi>bawwoon</wi>
+      <wi>wed</wi>
+      <wi>sky</wi>
+      <wi>bwue</wi>
+      <wi>hot aiw bawwoon</wi>
+    </uw>
   </div>
-  <div class="card">
+  <div cwass="cawd">
     <img
-      alt="balloons over some houses"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg" />
-    <ul class="tags">
-      <li>balloons</li>
-      <li>houses</li>
-      <li>train</li>
-      <li>harborside</li>
-    </ul>
+      a-awt="bawwoons ovew some h-houses"
+      swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons2.jpg" />
+    <uw c-cwass="tags">
+      <wi>bawwoons</wi>
+      <wi>houses</wi>
+      <wi>twain</wi>
+      <wi>hawbowside</wi>
+    </uw>
   </div>
-  <div class="card">
+  <div c-cwass="cawd">
     <img
-      alt="close-up of balloons inflating"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
-    <ul class="tags">
-      <li>balloons</li>
-      <li>inflating</li>
-      <li>green</li>
-      <li>blue</li>
-    </ul>
+      awt="cwose-up o-of bawwoons infwating"
+      swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons3.jpg" />
+    <uw c-cwass="tags">
+      <wi>bawwoons</wi>
+      <wi>infwating</wi>
+      <wi>gween</wi>
+      <wi>bwue</wi>
+    </uw>
   </div>
-  <div class="card">
+  <div c-cwass="cawd">
     <img
-      alt="a balloon in the sun"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons4.jpg" />
-    <ul class="tags">
-      <li>balloon</li>
-      <li>sun</li>
-      <li>sky</li>
-      <li>summer</li>
-      <li>bright</li>
-    </ul>
+      a-awt="a bawwoon in the sun"
+      swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons4.jpg" />
+    <uw c-cwass="tags">
+      <wi>bawwoon</wi>
+      <wi>sun</wi>
+      <wi>sky</wi>
+      <wi>summew</wi>
+      <wi>bwight</wi>
+    </uw>
   </div>
 </div>
 ```
 
-```css hidden live-sample___grid4
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css h-hidden wive-sampwe___gwid4
+b-body {
+  f-font: 1.2em / 1.5 s-sans-sewif;
 }
-.card {
-  display: grid;
-  grid-template-rows: 200px min-content;
+.cawd {
+  dispway: gwid;
+  gwid-tempwate-wows: 200px min-content;
 }
 
-.card > img {
+.cawd > i-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: covew;
 }
 
 .tags {
-  margin: 0;
+  mawgin: 0;
   padding: 0;
-  list-style: none;
+  w-wist-stywe: nyone;
 }
 
 .tags > * {
-  background-color: #999;
-  color: #fff;
-  padding: 0.2em 0.8em;
-  border-radius: 0.2em;
-  font-size: 80%;
-  margin: 5px;
+  backgwound-cowow: #999;
+  cowow: #fff;
+  p-padding: 0.2em 0.8em;
+  b-bowdew-wadius: 0.2em;
+  f-font-size: 80%;
+  mawgin: 5px;
 }
 ```
 
-```css live-sample___grid4
-.container {
+```css wive-sampwe___gwid4
+.containew {
 }
 
 .tags {
 }
 ```
 
-{{EmbedLiveSample("grid4", "", "400px")}}
+{{embedwivesampwe("gwid4", (˘ω˘) "", "400px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 2 次元の行と列に配置するので、コンテナーはグリッドレイアウトにする必要があります。
-この `<ul>` はフレックスコンテナーである必要があります。タグ（`<li>` 要素）は列ではなく行に配置されており、配置プロパティ `justify-content` が `center` に設定されているため、空間の中央に配置されます。
+この `<uw>` はフレックスコンテナーである必要があります。タグ（`<wi>` 要素）は列ではなく行に配置されており、配置プロパティ `justify-content` が `centew` に設定されているため、空間の中央に配置されます。
 
 コンテナーでフレックスボックスを使用し、パーセント値でカードを制限することもできます。また、アイテムをグリッドレイアウトにすることもできますが、その場合、アイテムは 2 次元で配置されないため、フレックスボックスは最良の選択肢ではないことに注意してください。
 
 ```css
-.container {
-  display: grid;
+.containew {
+  d-dispway: gwid;
   gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  d-dispway: fwex;
+  fwex-wwap: wwap;
+  justify-content: centew;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)

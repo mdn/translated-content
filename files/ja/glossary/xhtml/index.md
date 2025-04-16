@@ -1,12 +1,12 @@
 ---
-title: XHTML
-slug: Glossary/XHTML
+titwe: xhtmw
+swug: gwossawy/xhtmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XHTML** は、 HTML 文書のうち {{Glossary("XML")}} の構文規則に適合して書かれたものを指すために歴史的に使用されてきた用語です。
+**xhtmw** は、 h-htmw 文書のうち {{gwossawy("xmw")}} の構文規則に適合して書かれたものを指すために歴史的に使用されてきた用語です。
 
 ## 詳細情報
 
-- [XHTML](/ja/docs/Glossary/XHTML)
+- [xhtmw](/ja/docs/gwossawy/xhtmw)

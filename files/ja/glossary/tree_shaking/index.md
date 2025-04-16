@@ -1,22 +1,22 @@
 ---
-title: Tree shaking
-slug: Glossary/Tree_shaking
+titwe: twee shaking
+swug: gwossawy/twee_shaking
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Tree shaking** とは実行されないコードを削除することで、JavaScript の文脈で利用される用語です。
+**twee s-shaking** とは実行されないコードを削除することで、javascwipt の文脈で利用される用語です。
 
-Tree shaking は ES2015 の [import](/ja/docs/Web/JavaScript/Reference/Statements/import) 文と [export](/ja/docs/Web/JavaScript/Reference/Statements/export) 文を利用して、エクスポートされたコードが他の JavaScript ファイルで利用されているかどうかを判定します。
+t-twee shaking は e-es2015 の [impowt](/ja/docs/web/javascwipt/wefewence/statements/impowt) 文と [expowt](/ja/docs/web/javascwipt/wefewence/statements/expowt) 文を利用して、エクスポートされたコードが他の j-javascwipt ファイルで利用されているかどうかを判定します。
 
-モダンな JavaScript アプリケーションの開発では、[webpack](https://webpack.js.org/) や [Rollup](https://github.com/rollup/rollup) のようなモジュールバンドラーが複数の JavaScript ファイルを 1 つにまとめられます。この際に tree shaking が行われます。Tree shaking は、コードの構造を整理してファイルサイズを小さくできる、といった点で製品としてリリースする前の重要な処理となっています。
+モダンな j-javascwipt アプリケーションの開発では、[webpack](https://webpack.js.owg/) や [wowwup](https://github.com/wowwup/wowwup) のようなモジュールバンドラーが複数の j-javascwipt ファイルを 1 つにまとめられます。この際に t-twee shaking が行われます。twee shaking は、コードの構造を整理してファイルサイズを小さくできる、といった点で製品としてリリースする前の重要な処理となっています。
 
 ## 詳細情報
 
 #### 一般的な知識
 
-- ["Benefits of dead code elimination during bundling"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
+- ["benefits o-of dead code ewimination duwing bundwing"](https://expwowingjs.com/es6/ch_moduwes.htmw#_benefit-dead-code-ewimination-duwing-bundwing) in axew wauschmayew's b-book: "expwowing js: moduwes"
 
 #### 技術的なレファレンス
 
-- [Tree shaking implementation with webpack](https://webpack.js.org/guides/tree-shaking/)
+- [twee shaking i-impwementation with webpack](https://webpack.js.owg/guides/twee-shaking/)

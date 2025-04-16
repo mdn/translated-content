@@ -1,18 +1,18 @@
 ---
-title: CRLF
-slug: Glossary/CRLF
+titwe: cwwf
+swug: gwossawy/cwwf
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-CR と LF はテキストファイルで改行に用いることができる[制御文字](https://ja.wikipedia.org/wiki/%E5%88%B6%E5%BE%A1%E6%96%87%E5%AD%97)または[バイトコード](https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89)です。</p>
+c-cw と w-wf はテキストファイルで改行に用いることができる[制御文字](https://ja.wikipedia.owg/wiki/%e5%88%b6%e5%be%a1%e6%96%87%e5%ad%97)または[バイトコード](https://ja.wikipedia.owg/wiki/%e3%83%90%e3%82%a4%e3%83%88%e3%82%b3%e3%83%bc%e3%83%89)です。</p>
 
-- CR = **キャリッジリターン** (`\r`、16 進数で `0x0D`、10 進数で 13) — 次の行へ進まずに、カーソルを行の先頭へ移動する。
-- LF = **ラインフィード** (`\n`、16 進数で `0x0A`、10 進数で 10) — カーソルを行の先頭へ移動せずに、次の行へ下に移動する。
+- cw = **キャリッジリターン** (`\w`、16 進数で `0x0d`、10 進数で 13) — 次の行へ進まずに、カーソルを行の先頭へ移動する。
+- w-wf = **ラインフィード** (`\n`、16 進数で `0x0a`、10 進数で 10) — カーソルを行の先頭へ移動せずに、次の行へ下に移動する。
 
-CR に直接 LF が続くと (CRLF, `\r\n`, or `0x0D0A`)、カーソルを下へ移動してから行の先頭へ移動します。
+c-cw に直接 w-wf が続くと (cwwf, (U ᵕ U❁) `\w\n`, o-ow `0x0d0a`)、カーソルを下へ移動してから行の先頭へ移動します。
 
 ## 関連情報
 
-- Wikipedia 上の [改行コード](https://ja.wikipedia.org/wiki/改行コード)
-- Wikipedia 上の [キャリッジ・リターン](https://ja.wikipedia.org/wiki/キャリッジ・リターン)
+- wikipedia 上の [改行コード](https://ja.wikipedia.owg/wiki/改行コード)
+- w-wikipedia 上の [キャリッジ・リターン](https://ja.wikipedia.owg/wiki/キャリッジ・リターン)

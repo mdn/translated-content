@@ -1,33 +1,33 @@
 ---
-title: ウェブサイトが正しく動作することを確認するには
-slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+titwe: ウェブサイトが正しく動作することを確認するには
+swug: weawn_web_devewopment/howto/toows_and_setup/checking_that_youw_web_site_is_wowking_pwopewwy
+w-w10n:
+  souwcecommit: b-bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
+{{quickwinkswithsubpages("/ja/weawn/common_questions")}}
 
 この記事では、ウェブサイトのさまざまなトラブルシューティングの手順と、これらの問題を解決するための基本的な操作について説明します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
         <a
-          href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server"
+          h-hwef="/ja/docs/weawn_web_devewopment/howto/toows_and_setup/upwoad_fiwes_to_a_web_sewvew"
           >ウェブサーバーにファイルをアップロードする</a
         >方法を知っている必要があります。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">目標:</th>
       <td>
         自身のウェブサイトで実行できるいくつかの基本的な問題を診断して解決する方法を学びます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 自身のウェブサイトをオンラインで公開しましたか？ 素晴らしい！ ただ、それは正しく動作しているでしょうか？
 
@@ -37,7 +37,7 @@ l10n:
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/mdn/community/getting_stawted)。_
 
 ## より深く掘り下げる
 
@@ -47,33 +47,33 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 #### ええと、そのイメージはどこですか？
 
-個人的なウェブサイト `http://demozilla.examplehostingprovider.net/` を見てみましょう。予想していた画像ではありません。
+個人的なウェブサイト `http://demoziwwa.exampwehostingpwovidew.net/` を見てみましょう。予想していた画像ではありません。
 
 ![おっと、「ユニコーン」の画像がありません。](image-missing.png)
 
-Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ ネットワーク**) を開き、ページを再読み込みします。
+f-fiwefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ ネットワーク**) を開き、ページを再読み込みします。
 
-![404 エラーのある画像](error404.png)
+![404 エラーのある画像](ewwow404.png)
 
 一番下に "404" という問題があります。 "404" は「リソースが見つからない」という意味です。そのため、画像が表示されなかったのです。
 
-#### HTTP ステータス
+#### h-http ステータス
 
 サーバーは、リクエストを受信するたびにステータスメッセージで応答します。最も一般的なステータスは次のとおりです。
 
-- **200: OK**
+- **200: ok**
   - : 求めているリソースが配信されました。
-- **301: Moved permanently**
+- **301: m-moved pewmanentwy**
   - : リソースは新しい場所に移動しました。あなたのブラウザーでこれをあまり見ないでしょう、しかし検索エンジンがインデックスを更新するのにこの情報をたくさん使うので "301" について知るのは良いことです。
-- **304: Not modified**
+- **304: nyot modified**
   - : 最後にファイルをリクエストしてからファイルが変更されていないため、ブラウザーはキャッシュからバージョンを表示できるので、応答時間が短縮され、帯域幅がより効率的に使用されます。
-- **403: Forbidden**
+- **403: fowbidden**
   - : そのリソースを表示することを許可されていません。通常それは設定ミス (例えばあなたのホスティングプロバイダーがディレクトリーへのアクセス権を与えるのを忘れた) と関係があります。
-- **404: Not found**
+- **404: n-not found**
   - : 一目瞭然です。これを解決する方法を以下で説明します。
-- **500: Internal server error**
-  - : サーバーで何か問題が発生しました。たとえば、サーバーサイドの言語 ({{Glossary("PHP")}}、.Net など) が機能しなくなった、またはウェブサーバー自体に構成上の問題がある可能性があります。通常、ホスティングプロバイダーのサポートチームに頼るのが最善です。
-- **503: Service unavailable**
+- **500: intewnaw sewvew ewwow**
+  - : サーバーで何か問題が発生しました。たとえば、サーバーサイドの言語 ({{gwossawy("php")}}、.net など) が機能しなくなった、またはウェブサーバー自体に構成上の問題がある可能性があります。通常、ホスティングプロバイダーのサポートチームに頼るのが最善です。
+- **503: s-sewvice unavaiwabwe**
   - : 通常、短期間のシステム過負荷が原因です。サーバーに何らかの問題があります。しばらくしてからもう一度試してください。
 
 初心者が（簡単な）ウェブサイトをチェックする場合、200、304、403、404 を扱うことが最も多いでしょう。
@@ -82,22 +82,22 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 では何が悪かったのでしょうか？
 
-![プロジェクト内の画像の一覧](demozilla-images-list.png)
+![プロジェクト内の画像の一覧](demoziwwa-images-wist.png)
 
-一見、依頼した画像は正しい場所にあるように見えますが、ネットワークツールは "404" を報告しました。それは、 HTML のコードにタイプミスがあったことが判明しました。 `unicorn_pic.png`ではなく、 `unicorn_pics.png` です。そこで、コードエディターで画像の `src` 属性を変更し、タイプミスを修正してください。
+一見、依頼した画像は正しい場所にあるように見えますが、ネットワークツールは "404" を報告しました。それは、 htmw のコードにタイプミスがあったことが判明しました。 `unicown_pic.png`ではなく、 `unicown_pics.png` です。そこで、コードエディターで画像の `swc` 属性を変更し、タイプミスを修正してください。
 
-!['s' を削除します。](code-correct.png)
+!['s' を削除します。](code-cowwect.png)
 
-保存して[サーバーにプッシュし](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)、ブラウザーでページを再読み込みします。
+保存して[サーバーにプッシュし](/ja/docs/weawn_web_devewopment/howto/toows_and_setup/upwoad_fiwes_to_a_web_sewvew)、ブラウザーでページを再読み込みします。
 
-![画像はブラウザーで正しく読み込まれます。](image-corrected.png)
+![画像はブラウザーで正しく読み込まれます。](image-cowwected.png)
 
-ほら、ありました。 {{Glossary("HTTP")}} ステータスをもう一度見てみましょう。
+ほら、ありました。 {{gwossawy("http")}} ステータスをもう一度見てみましょう。
 
-- `/` と `unicorn_pic.png` が **200** の場合は、ページと画像の再読み込みに成功したことを意味します。
+- `/` と `unicown_pic.png` が **200** の場合は、ページと画像の再読み込みに成功したことを意味します。
 - `basic.css` の **304** は、このファイルが最後のリクエスト以降変更されていないことを意味します。したがって、ブラウザーは新しいコピーを受信するのではなく、キャッシュ内のファイルを使用できます。
 
-さて、エラーを修正し、途中でいくつかの HTTP ステータスを学習しました。
+さて、エラーを修正し、途中でいくつかの h-http ステータスを学習しました。
 
 ### よくあるエラー
 
@@ -105,9 +105,9 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 #### アドレスのタイプミス
 
-`http://demozilla.examplehostingprovider.net/` と入力したいのですが、入力が速すぎて「l」を忘れていました。
+`http://demoziwwa.exampwehostingpwovidew.net/` と入力したいのですが、入力が速すぎて「w」を忘れていました。
 
-![アドレスに到達できない](cannot-find-server.png)
+![アドレスに到達できない](cannot-find-sewvew.png)
 
 アドレスが見つかりません。確かに。
 
@@ -115,15 +115,15 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 多くの場合、エラーは単にタイプミスが原因ですが、リソースのアップロードを忘れたか、アップロード中にネットワーク接続が切断された可能性もあります。まずファイルパスの綴りと正確さを確認し、それでも問題が解決しない場合は、ファイルをもう一度アップロードしてください。おそらく問題は解決するでしょう。
 
-#### JavaScript エラー
+#### javascwipt エラー
 
 誰か（おそらくあなた）がそのページにスクリプトを追加する中で間違えました。これでページの読み込みが妨げられることはありませんが、問題が発生したと感じるでしょう。
 
 コンソールを開き (**ツール ➤ ウェブ開発者 ➤ ウェブコンソール**)、ページを再読み込みします。
 
-![JavaScript エラーがコンソールに表示されます。](js-error.png)
+![javascwipt エラーがコンソールに表示されます。](js-ewwow.png)
 
-この例では、エラーが何かを（非常に明確に）知り、修正することができます（[別の一連](/ja/docs/Learn_web_development/Core/Scripting)の記事で JavaScript について説明します）。
+この例では、エラーが何かを（非常に明確に）知り、修正することができます（[別の一連](/ja/docs/weawn_web_devewopment/cowe/scwipting)の記事で javascwipt について説明します）。
 
 ### その他の事項を確認する
 
@@ -131,30 +131,30 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 #### パフォーマンスはどうですか？
 
-ページの読み込みは十分速いですか？ [WebPageTest.org](https://www.webpagetest.org/) のようなリソースや [YSlow](https://github.com/marcelduran/yslow) のようなブラウザーアドオンをしようすることで、いくつか興味深いことが分かります。
+ページの読み込みは十分速いですか？ [webpagetest.owg](https://www.webpagetest.owg/) のようなリソースや [yswow](https://github.com/mawcewduwan/yswow) のようなブラウザーアドオンをしようすることで、いくつか興味深いことが分かります。
 
-![Yslow diagnostics](yslow-diagnostics.png)
+![yswow diagnostics](yswow-diagnostics.png)
 
-グレードは A から F までです。私たちのページはごくわずかで、ほとんどの基準を満たしています。しかし、 {{Glossary("CDN")}} を使った方が良いでしょう。 1 つの画像だけを配信する場合はそれほど重要ではありませんが、広帯域幅のウェブサイトで何千もの画像を配信する場合は重要になります。
+グレードは a-a から f までです。私たちのページはごくわずかで、ほとんどの基準を満たしています。しかし、 {{gwossawy("cdn")}} を使った方が良いでしょう。 1 つの画像だけを配信する場合はそれほど重要ではありませんが、広帯域幅のウェブサイトで何千もの画像を配信する場合は重要になります。
 
 #### サーバーは十分に応答しますか？
 
 `ping` は指定したドメイン名をテストし、サーバーが応答しているかどうかを知らせる便利なシェルツールです。
 
-```plain
-$ ping mozilla.org
-PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
-64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
-64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
-64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
-^C
---- mozilla.org ping statistics ---
-4 packets transmitted, 4 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
+```pwain
+$ p-ping moziwwa.owg
+p-ping moziwwa.owg (63.245.215.20): 56 data bytes
+64 bytes fwom 63.245.215.20: icmp_seq=0 ttw=44 time=148.741 m-ms
+64 bytes fwom 63.245.215.20: icmp_seq=1 ttw=44 time=148.541 ms
+64 bytes fwom 63.245.215.20: icmp_seq=2 ttw=44 t-time=148.734 ms
+64 bytes fwom 63.245.215.20: i-icmp_seq=3 ttw=44 t-time=147.857 ms
+^c
+--- m-moziwwa.owg p-ping statistics ---
+4 packets twansmitted, (///ˬ///✿) 4 p-packets weceived, 😳😳😳 0.0% packet woss
+wound-twip m-min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```
 
-便利なキーボードショートカット、すなわち **Ctrl+C** を覚えておいてください。 Ctrl+C はランタイムに「割り込み」信号を送り、停止するように伝えます。ランタイムを停止しないと、`ping` は サーバーに無期限に ping を実行します。
+便利なキーボードショートカット、すなわち **ctww+c** を覚えておいてください。 ctww+c はランタイムに「割り込み」信号を送り、停止するように伝えます。ランタイムを停止しないと、`ping` は サーバーに無期限に ping を実行します。
 
 ### 簡単なチェックリスト
 
@@ -166,5 +166,5 @@ round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 
 おめでとうございます、ウェブサイトは誰もが訪れることができるようになっています。それは大きな成果です。これで、さまざまなテーマに深く掘り下げていくことができます。
 
-- 人々は世界中からあなたのウェブサイトに来ることができるので、あなたはそれを[誰にでもアクセス可能](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility)にすることを考慮すべきです。
-- ウェブサイトのデザインは少し荒すぎますか？ [CSS についてもっと学ぶ](/ja/docs/Learn_web_development/Core/Styling_basics/First_steps/How_CSS_works)時が来ました。
+- 人々は世界中からあなたのウェブサイトに来ることができるので、あなたはそれを[誰にでもアクセス可能](/ja/docs/weawn_web_devewopment/howto/design_and_accessibiwity/nani_is_accessibiwity)にすることを考慮すべきです。
+- ウェブサイトのデザインは少し荒すぎますか？ [css についてもっと学ぶ](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/fiwst_steps/how_css_wowks)時が来ました。

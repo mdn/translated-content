@@ -1,14 +1,14 @@
 ---
-title: Internet (インターネット)
-slug: Glossary/Internet
+titwe: intewnet (インターネット)
+swug: g-gwossawy/intewnet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-インターネットは、インターネット・プロトコル群を使用するネットワークの世界的ネットワークです (最も重要な 2 つの {{glossary("protocol","プロトコル")}} から、 {{glossary("TCP")}}/{{glossary("IPv6","IP")}} とも呼ばれています)。
+インターネットは、インターネット・プロトコル群を使用するネットワークの世界的ネットワークです (最も重要な 2 つの {{gwossawy("pwotocow","プロトコル")}} から、 {{gwossawy("tcp")}}/{{gwossawy("ipv6","ip")}} とも呼ばれています)。
 
 ## 関連情報
 
 ### インターネットについて学ぶ
 
-- [インターネットはどのように動くのか](/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (初心者向けの紹介)
+- [インターネットはどのように動くのか](/ja/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk) (初心者向けの紹介)

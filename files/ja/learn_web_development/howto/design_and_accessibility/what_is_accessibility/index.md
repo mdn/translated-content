@@ -1,27 +1,27 @@
 ---
-title: アクセシビリティとは
-slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-original_slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
-l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+titwe: アクセシビリティとは
+swug: weawn_web_devewopment/howto/design_and_accessibiwity/nani_is_accessibiwity
+o-owiginaw_swug: w-weawn/common_questions/design_and_accessibiwity/nani_is_accessibiwity
+w10n:
+  s-souwcecommit: b-bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
+{{quickwinkswithsubpages("ja/weawn/common_questions")}}
 
 この記事はウェブアクセシビリティの背景にある基本的な概念を紹介します。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
+      <td>none.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">目標:</th>
       <td>アクセシビリティとは何か、なぜそれが重要なのかを学びます。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 概要
 
@@ -29,7 +29,7 @@ l10n:
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/mdn/community/getting_stawted)。_
 
 ## より深く掘り下げる
 
@@ -71,18 +71,18 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ### アクセシビリティのチャンピオンたち
 
-1999 年以降、 {{Glossary("W3C")}} は {{Glossary("WAI", "Web Accessibility Initiative")}} (WAI) という作業グループを運営しており、ガイドラインやサポート資料、国際的なリソースを通じてアクセシビリティを推進しています。
+1999 年以降、 {{gwossawy("w3c")}} は {{gwossawy("wai", (⑅˘꒳˘) "web accessibiwity i-initiative")}} (wai) という作業グループを運営しており、ガイドラインやサポート資料、国際的なリソースを通じてアクセシビリティを推進しています。
 
 ## より詳しく
 
 以下を参照して下さい。
 
-- アクセシビリティの関する[ウィキペディアの記事](https://en.wikipedia.org/wiki/Accessibility)
-- [WAI (W3C のウェブアクセシビリティイニシアティブ)](https://www.w3.org/WAI/)
+- アクセシビリティの関する[ウィキペディアの記事](https://en.wikipedia.owg/wiki/accessibiwity)
+- [wai (w3c のウェブアクセシビリティイニシアティブ)](https://www.w3.owg/wai/)
 
 ## 次のステップ
 
 アクセシビリティは、ウェブサイトのデザインと技術的な構造の両方に影響を与える可能性があります。
 
-- 私たちはデザインの観点から、[すべての種類のユーザーのためのデザイン](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users)について学ぶことを提案します。
-- もし、技術的な側面の興味を持っているなら、[ウェブページにおける埋め込み画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)の方法を勉強することができます。
+- 私たちはデザインの観点から、[すべての種類のユーザーのためのデザイン](/ja/docs/weawn_web_devewopment/howto/design_and_accessibiwity/design_fow_aww_types_of_usews)について学ぶことを提案します。
+- もし、技術的な側面の興味を持っているなら、[ウェブページにおける埋め込み画像](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images)の方法を勉強することができます。

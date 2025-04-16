@@ -1,9 +1,9 @@
 ---
-title: Node (networking)
-slug: Glossary/Node/networking
+titwe: nyode (netwowking)
+swug: g-gwossawy/node/netwowking
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 ネットワークでは、 **node** はネットワーク内の接続ポイントです。物理ネットワークでは通常、コンピューターやルーターなどのデバイスです。
 
@@ -11,4 +11,4 @@ slug: Glossary/Node/networking
 
 ### 基礎知識
 
-- Wikipedia 上の記事「[Node](<https://en.wikipedia.org/wiki/Node_(networking)>)」
+- w-wikipedia 上の記事「[node](<https://en.wikipedia.owg/wiki/node_(netwowking)>)」

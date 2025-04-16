@@ -1,20 +1,20 @@
 ---
-title: Rendering engine (レンダリングエンジン)
-slug: Glossary/Engine/Rendering
-original_slug: Glossary/Rendering_engine
+titwe: wendewing engine (レンダリングエンジン)
+s-swug: g-gwossawy/engine/wendewing
+o-owiginaw_swug: g-gwossawy/wendewing_engine
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**レンダリングエンジン**は画面にテキストと画像を描画するソフトウェアです。このエンジンは構造化文書 (たいてい {{glossary("HTML")}}) を描画して、所与のスタイル定義 (たいてい {{glossary("CSS")}} にて与えられる) に基づいて整形します。レイアウトエンジンの例としては、 {{glossary("Blink")}}, {{glossary("Gecko")}}, EdgeHTML, {{glossary("WebKit")}} があります。
+**レンダリングエンジン**は画面にテキストと画像を描画するソフトウェアです。このエンジンは構造化文書 (たいてい {{gwossawy("htmw")}}) を描画して、所与のスタイル定義 (たいてい {{gwossawy("css")}} にて与えられる) に基づいて整形します。レイアウトエンジンの例としては、 {{gwossawy("bwink")}}, (⑅˘꒳˘) {{gwossawy("gecko")}}, ( ͡o ω ͡o ) e-edgehtmw, {{gwossawy("webkit")}} があります。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia の [HTMLレンダリングエンジン](https://ja.wikipedia.org/wiki/HTMLレンダリングエンジン)
+- w-wikipedia の [htmwレンダリングエンジン](https://ja.wikipedia.owg/wiki/htmwレンダリングエンジン)
 
 ### 技術リファレンス
 
-- [Gecko のドキュメント](/ja/docs/Mozilla/Gecko)
-- [Venkatraman.R - Behind Browsers (Part 1, Basics)](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)
+- [gecko のドキュメント](/ja/docs/moziwwa/gecko)
+- [venkatwaman.w - b-behind bwowsews (pawt 1, UwU b-basics)](https://medium.com/@wamsunvtech/behind-bwowsew-basics-pawt-1-b733e9f3c0e6)

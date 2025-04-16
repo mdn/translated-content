@@ -1,28 +1,28 @@
 ---
-title: MDN のコードサンプル
-short-title: コードサンプル
-slug: MDN/Writing_guidelines/Page_structures/Code_examples
-l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+titwe: mdn のコードサンプル
+showt-titwe: コードサンプル
+s-swug: m-mdn/wwiting_guidewines/page_stwuctuwes/code_exampwes
+w-w10n:
+  souwcecommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
 
-MDN では、私たちが文書化しているウェブプラットフォーム機能の使用方法を示す多数のコード例を見ることができます。
+m-mdn では、私たちが文書化しているウェブプラットフォーム機能の使用方法を示す多数のコード例を見ることができます。
 この記事では、ページにコード例を追加する方法、使用できる種類、使用するタイミングについて説明します。
 
-> [!NOTE]
-> このページでは、 MDN のページにコードを記載する**方法**について説明します。
-> もし、コードを入れる様々な方法ではなく、 MDN の記事に現れるコードのスタイルやゴミ取りについてヒントが欲しいなら、[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Code_style_guide)を参照してください。
+> [!note]
+> このページでは、 m-mdn のページにコードを記載する**方法**について説明します。
+> もし、コードを入れる様々な方法ではなく、 m-mdn の記事に現れるコードのスタイルやゴミ取りについてヒントが欲しいなら、[コードスタイルガイド](/ja/docs/mdn/wwiting_guidewines/code_stywe_guide)を参照してください。
 
 ## 利用できるコードサンプルの種類
 
 4 種類のコードサンプルが利用できます。
 
 - **静的サンプル** — プレーンなコードブロックで、そのようなコードを実行した場合の結果を静的に示すスクリーンショットが付いている場合があります。
-- **ライブサンプル** — ページ内のコードブロック群を取り出し、組み合わせて {{htmlelement("iframe")}} 要素内の文書に動的に配置し、ページに iframe を埋め込んで結果を表示するマクロです。
+- **ライブサンプル** — ページ内のコードブロック群を取り出し、組み合わせて {{htmwewement("ifwame")}} 要素内の文書に動的に配置し、ページに i-ifwame を埋め込んで結果を表示するマクロです。
   公開されたページには、ソースコードブロックと結果が横に並んで表示されます。
 - **インタラクティブサンプル** — ソースコードをページにレンダリングし、ソースの横にあるパネルに結果をレンダリングするマクロです。
   読者はソースコードを編集し、例えばこの例を再実行して、変更の効果を確認することができます。
-- **GitHub 埋め込み** — [MDN 組織](https://github.com/mdn/)内の GitHub リポジトリーにある文書を取り込んで {{htmlelement("iframe")}} 要素の中に入れ、それをページに埋め込んでコードをライブで表示するマクロです。
+- **github 埋め込み** — [mdn 組織](https://github.com/mdn/)内の g-github リポジトリーにある文書を取り込んで {{htmwewement("ifwame")}} 要素の中に入れ、それをページに埋め込んでコードをライブで表示するマクロです。
 
 ## 使うべき場面
 
@@ -30,91 +30,91 @@ MDN では、私たちが文書化しているウェブプラットフォーム�
 
 - **静的サンプル**は、コードを示す必要があり、かつ公開されたページ上でコードの実行結果を提示する必要がない場合や、記事の中で中間段階を示したい場合に便利です。
   読者は、機能の使用方法を示すコードブロックをよく見ていくでしょう。そうすることで、自分のプロジェクトにコピー＆ペーストできる最小限の例を見つけることができます。
-  さらに、 API やライブサンプルとしてうまく動作しない機能を示す静的なコードブロックが必要になる場合もあります。
+  さらに、 api やライブサンプルとしてうまく動作しない機能を示す静的なコードブロックが必要になる場合もあります。
 - **ライブサンプル**は、ソースコードを示し、それを実行している様子を示したい場合に便利です。また、それがスタンドアロンの例であることにそれほどこだわらない場合にも便利です。
   ページ上のコードブロックとライブ結果の両方を横に並んでいるものを更新するには、コードを一度更新するだけでよいので、有益な機能です。
 - **インタラクティブサンプル**は、リファレンスページで使用されています。
   これらは 1 ページにつき 1 回のみの使用に制限されており、また、ページ上の特定の場所（導入部の後）に置く必要があります。
   それらは、その機能が一般的に、または実用的に使用されていることを示すのに有益なものです。
-- **GitHub 埋め込み**は、埋め込みたい既存の例をがあり、そのソースコードを表示させたくない場合、またはその例がスタンドアロンという形で利用できることを確認したい場合に便利です。
+- **github 埋め込み**は、埋め込みたい既存の例をがあり、そのソースコードを表示させたくない場合、またはその例がスタンドアロンという形で利用できることを確認したい場合に便利です。
   オンページコードとソースコードが 2 つの異なる場所に置かれているため、メンテナンスの手間が大きくなります。
 
 ## 一般的なガイドライン
 
-MDN でサンプルを追加・更新する際には、スタイルやコンテンツについても考慮する必要があります。
+mdn でサンプルを追加・更新する際には、スタイルやコンテンツについても考慮する必要があります。
 
-- サンプルをページに掲載する際には、書かれている API や概念のすべての機能やオプションをカバーするようにしてください。
+- サンプルをページに掲載する際には、書かれている api や概念のすべての機能やオプションをカバーするようにしてください。
   少なくとも、最も一般的なオプションやプロパティは提示すべきです。
 - それぞれのサンプルの前で、そのサンプルが何をしているのか、なぜそれが興味深いのか、役に立つのかを説明してください。
 - コードのそれぞれの部分の後には、それが何をするものなのかを説明してください。
-- 可能な限り、大きなサンプルは小さく分割してください。例えば、「ライブサンプル」システムでは、サンプルを実行する前に、すべてのコードを自動的に 1 つにまとめてくれますが、実際には、JavaScript、HTML、CSS をより細かく分割し、それぞれの部分の後に説明文を付けることができます。これは、長いコードや複雑なコードをよりわかりやすく説明するためのよい方法です。
-- APIや技術の各部分がどのように動作するのかを説明するだけに留まらないようにしましょう。 実世界で実現可能な用途を考慮し、それを説明するようにしましょう。
+- 可能な限り、大きなサンプルは小さく分割してください。例えば、「ライブサンプル」システムでは、サンプルを実行する前に、すべてのコードを自動的に 1 つにまとめてくれますが、実際には、javascwipt、htmw、css をより細かく分割し、それぞれの部分の後に説明文を付けることができます。これは、長いコードや複雑なコードをよりわかりやすく説明するためのよい方法です。
+- apiや技術の各部分がどのように動作するのかを説明するだけに留まらないようにしましょう。 実世界で実現可能な用途を考慮し、それを説明するようにしましょう。
 
 ## 静的サンプル
 
 静的サンプルとは、ソースコード上で機能がどのように表示されるかを示すコードブロックです。
-これらは Markdown の「コードフェンス」を使って、[サンプルコードブロック](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#コードブロックの例)で記述されているようにページに配置されます。
+これらは mawkdown の「コードフェンス」を使って、[サンプルコードブロック](/ja/docs/mdn/wwiting_guidewines/howto/mawkdown_in_mdn#コードブロックの例)で記述されているようにページに配置されます。
 ドキュメントページで使用すると、次のようになります。
 
 ```js
-// これは JS の例です
-const test = "Hello";
-console.log(test);
+// これは js の例です
+c-const test = "hewwo";
+consowe.wog(test);
 ```
 
 ## インタラクティブサンプル
 
-[`InteractiveExample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/interactive_example.rs) マクロを使用すると、 MDN のリファレンスページの冒頭に操作可能なサンプルを埋め込むことができます。
+[`intewactiveexampwe`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/embeds/intewactive_exampwe.ws) マクロを使用すると、 m-mdn のリファレンスページの冒頭に操作可能なサンプルを埋め込むことができます。
 例えば、トピックや機能に関する記事全体を読むことなく、サンプルを試してみたい読者向けです。
 
-> [!WARNING]
-> 現在、対応しているのは **JavaScript** の例のみです。
-> 実装の詳細については https://github.com/orgs/mdn/discussions/782 を参照してください。
+> [!wawning]
+> 現在、対応しているのは **javascwipt** の例のみです。
+> 実装の詳細については https://github.com/owgs/mdn/discussions/782 を参照してください。
 
-`InteractiveExample` マクロは、文字列としてサンプルのタイトルをまず受け入れ、次のキーワードでサンプルの高さを指定します。
-サンプルに含めるコードブロックはマクロの呼び出しの後ろに現れ、コードブロックの言語名の後の情報文字列にキーワード `interactive-example` を記載します。
-[JavaScript の `Array.concat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/concat#試してみましょう) の使用法は、このマクロの良くできた例であり、markdown ソースでは次のようになります。
+`intewactiveexampwe` マクロは、文字列としてサンプルのタイトルをまず受け入れ、次のキーワードでサンプルの高さを指定します。
+サンプルに含めるコードブロックはマクロの呼び出しの後ろに現れ、コードブロックの言語名の後の情報文字列にキーワード `intewactive-exampwe` を記載します。
+[javascwipt の `awway.concat()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/concat#試してみましょう) の使用法は、このマクロの良くできた例であり、mawkdown ソースでは次のようになります。
 
 ````md
-\{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+\{{intewactiveexampwe("javascwipt demo: awway.concat()", /(^•ω•^) "showtew")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const array2 = ["d", "e", "f"];
-const array3 = array1.concat(array2);
+```js i-intewactive-exampwe
+const awway1 = ["a", rawr "b", "c"];
+const awway2 = ["d", OwO "e", "f"];
+const awway3 = a-awway1.concat(awway2);
 
-console.log(array3);
-// 期待される出力: Array ["a", "b", "c", "d", "e", "f"]
+consowe.wog(awway3);
+// 期待される出力: awway ["a", (U ﹏ U) "b", "c", "d", >_< "e", "f"]
 ```
 ````
 
 インタラクティブサンプルについては、いくつかの制限事項があります。
 
-- インタラクティブサンプルは、技術ごとに特化しています。 — JavaScript の UI と CSS の UI は異なりますし、 1 つの技術を独立させて説明しているだけです。
-  例えば、特定の HTML/CSS/JS 構造をどのように組み合わせるかを示したい場合には適していません。
-- これは大きなコードサンプルを扱うためのものではありません。 UI は**固定された高さ**の範囲に対応していますが、これが実に動作するのは短い（例えば 10 ～ 15 行）サンプルのみです。
-- MDN のページは、インタラクティブサンプルを 1 つだけ持つことができます。
+- インタラクティブサンプルは、技術ごとに特化しています。 — j-javascwipt の u-ui と css の ui は異なりますし、 1 つの技術を独立させて説明しているだけです。
+  例えば、特定の htmw/css/js 構造をどのように組み合わせるかを示したい場合には適していません。
+- これは大きなコードサンプルを扱うためのものではありません。 ui は**固定された高さ**の範囲に対応していますが、これが実に動作するのは短い（例えば 10 ～ 15 行）サンプルのみです。
+- mdn のページは、インタラクティブサンプルを 1 つだけ持つことができます。
 
 ## ライブサンプル
 
-ライブサンプルは、 [`EmbedLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_live_sample.rs) マクロを使ってページに挿入します。
-\\{{EmbedLiveSample}} マクロはページからコードブロックを取り出し、組み合わせて {{htmlelement("iframe")}} に入れ、ページ内に結果を挿入します。
-詳しくは[ライブサンプルガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples)をご覧ください。
+ライブサンプルは、 [`embedwivesampwe`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/embeds/embed_wive_sampwe.ws) マクロを使ってページに挿入します。
+\\{{embedwivesampwe}} マクロはページからコードブロックを取り出し、組み合わせて {{htmwewement("ifwame")}} に入れ、ページ内に結果を挿入します。
+詳しくは[ライブサンプルガイド](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes)をご覧ください。
 
-## GitHub ライブサンプル
+## g-github ライブサンプル
 
-GitHub ライブサンプルは、 [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) マクロを使ってページに挿入します。 \\{{EmbedGHLiveSample}} を呼び出すと、指定された URL （GitHub の **MDN** のリポジトリーになければなりません）のコンテンツを取得し、ページ内の {{htmlelement("iframe")}} 内に挿入します。
+github ライブサンプルは、 [`embedghwivesampwe`](https://github.com/mdn/wawi/bwob/main/cwates/wawi-doc/swc/tempw/tempws/embeds/embed_gh_wive_sampwe.ws) マクロを使ってページに挿入します。 \\{{embedghwivesampwe}} を呼び出すと、指定された uww （github の **mdn** のリポジトリーになければなりません）のコンテンツを取得し、ページ内の {{htmwewement("ifwame")}} 内に挿入します。
 
 マクロの引数は 3 つあります。
 
-1. 埋め込む文書の URL — これは、 `https://mdn.github.io/` にある最上位のディレクトリーである mdn 組織からの相対 URL です。ですから、この引数には、 `my-subdirectory/example.html` のように、URL の後の部分を含める必要があります。 `index.html` の場合は、ファイル名を省略できます。
-2. `<iframe>` の幅、パーセント値またはピクセル単位で表すことができます。
-3. `<iframe>` の高さ、パーセント値またはピクセル単位で表すことができます。
+1. rawr x3 埋め込む文書の uww — これは、 `https://mdn.github.io/` にある最上位のディレクトリーである mdn 組織からの相対 u-uww です。ですから、この引数には、 `my-subdiwectowy/exampwe.htmw` のように、uww の後の部分を含める必要があります。 `index.htmw` の場合は、ファイル名を省略できます。
+2. mya `<ifwame>` の幅、パーセント値またはピクセル単位で表すことができます。
+3. nyaa~~ `<ifwame>` の高さ、パーセント値またはピクセル単位で表すことができます。
 
-例を見てみましょう。 <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/> のコードを埋め込みたいとします。次のように呼び出すことができます。
+例を見てみましょう。 <https://mdn.github.io/weawning-awea/css/stywing-boxes/backgwounds/> のコードを埋め込みたいとします。次のように呼び出すことができます。
 
-\\{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+\\{{embedghwivesampwe("weawning-awea/css/stywing-boxes/backgwounds/", (⑅˘꒳˘) '100%', rawr x3 100)}}
 
 表示されるときには次のようになります。
 
-{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+{{embedghwivesampwe("weawning-awea/css/stywing-boxes/backgwounds/", (✿oωo) '100%', (ˆ ﻌ ˆ)♡ 100)}}

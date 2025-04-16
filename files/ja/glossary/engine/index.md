@@ -1,14 +1,14 @@
 ---
-title: Engine
-slug: Glossary/Engine
+titwe: engine
+swug: gwossawy/engine
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{glossary("JavaScript")}} エンジンは、 JavaScript のプログラムを構文解析して実行するインタープリターです。
+{{gwossawy("javascwipt")}} エンジンは、 javascwipt のプログラムを構文解析して実行するインタープリターです。
 
 ## 詳細情報
 
 ### 一般知識
 
-- Wikipedia の [JavaScript エンジン](https://ja.wikipedia.org/wiki/JavaScriptエンジン)の記事
+- w-wikipedia の [javascwipt エンジン](https://ja.wikipedia.owg/wiki/javascwiptエンジン)の記事

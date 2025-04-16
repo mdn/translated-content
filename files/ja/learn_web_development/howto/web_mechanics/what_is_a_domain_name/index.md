@@ -1,34 +1,34 @@
 ---
-title: ドメイン名とは
-slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
-l10n:
-  sourceCommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
+titwe: ドメイン名とは
+swug: weawn_web_devewopment/howto/web_mechanics/nani_is_a_domain_name
+w-w10n:
+  souwcecommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
 ---
 
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
+{{quickwinkswithsubpages("/ja/weawn/common_questions")}}
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
+    <tw>
+      <th s-scope="wow">前提知識:</th>
       <td>
-        まず<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>について知り、 <a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL">URL とは何か</a>を理解しておく必要があります。
+        まず<a h-hwef="/ja/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk">インターネットはどのように動くのか</a>について知り、 <a h-hwef="/ja/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww">uww とは何か</a>を理解しておく必要があります。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">目標:</th>
       <td>ドメイン名とはどのようなもので、どのように働くのか、なぜ重要なのかを学びます。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 概要
 
 ドメイン名はインターネット基盤の重要な部分です。インターネット上で利用できるあらゆるウェブサーバーに対して、人間が読めるアドレスを提供します。
 
-インターネットに接続しているコンピューターはすべて、パブリック {{Glossary("IP Address", "IPアドレス")}}、 IPv4 アドレス（例: `192.0.2.172`）または IPv6 アドレス（例: `2001:db8:8b73:0000:0000:8a2e:0370:1337`）でたどり着くことができます。
+インターネットに接続しているコンピューターはすべて、パブリック {{gwossawy("ip a-addwess", o.O "ipアドレス")}}、 i-ipv4 アドレス（例: `192.0.2.172`）または i-ipv6 アドレス（例: `2001:db8:8b73:0000:0000:8a2e:0370:1337`）でたどり着くことができます。
 
-コンピューターはこれらのアドレスを簡単に処理できますが、人間にとってはだれがサーバーを運営しているのか、またはウェブサイトがどのようなサービスを提供しているかを理解するのは困難です。 IP アドレスは覚えにくく、時間の経過とともに変わる可能性があります。
+コンピューターはこれらのアドレスを簡単に処理できますが、人間にとってはだれがサーバーを運営しているのか、またはウェブサイトがどのようなサービスを提供しているかを理解するのは困難です。 ip アドレスは覚えにくく、時間の経過とともに変わる可能性があります。
 
 これらすべての問題を解決するために、ドメイン名と呼ばれる人間が読めるアドレスを使用します。
 
@@ -38,29 +38,29 @@ l10n:
 
 ドメイン名は単純な構造であり、ドットで区切られたいくつかの部分（1 つの部分だけの場合もあれば、2 つ、3 つの場合も……）からできており、**右から左に向かって読まれます**。
 
-![MDN のドメイン名の解剖](structure.png)
+![mdn のドメイン名の解剖](stwuctuwe.png)
 
 これらのそれぞれの部分は、ドメイン名全体に関する特定の情報を提供します。
 
-- {{Glossary("TLD")}} （トップレベルドメイン）
+- {{gwossawy("twd")}} （トップレベルドメイン）
 
-  - : TLD は最も一般的な情報を提供します。 TLD は、ドメイン名の背後にあるサービスの全般的な目的をユーザーに伝えます。多くの一般的な TLD (`.com`, `.org`, `.net`) はウェブサービスが特定の基準を満たしていることを要求しませんが、 TLD によってはより厳密な基準を適用するため、目的がより明確になります。例えば、
+  - : twd は最も一般的な情報を提供します。 twd は、ドメイン名の背後にあるサービスの全般的な目的をユーザーに伝えます。多くの一般的な twd (`.com`, /(^•ω•^) `.owg`, nyaa~~ `.net`) はウェブサービスが特定の基準を満たしていることを要求しませんが、 t-twd によってはより厳密な基準を適用するため、目的がより明確になります。例えば、
 
-    - `.jp`, `.us`, `.fr`, `.se` などのローカル TLD では、サービスを特定の言語で提供しているか、特定の国でホスティングされていることを要求します。これらは、特定の言語や国のリソースであることを示しているとみなされます。
-    - `.gov` や `.go.jp` を含む TLD は、政府機関のみが使用できます。
-    - `.edu` や `.ac.jp` のような TLD は教育・学術機関のみで使用されていると見なされます。
+    - `.jp`, `.us`, nyaa~~ `.fw`, `.se` などのローカル twd では、サービスを特定の言語で提供しているか、特定の国でホスティングされていることを要求します。これらは、特定の言語や国のリソースであることを示しているとみなされます。
+    - `.gov` や `.go.jp` を含む twd は、政府機関のみが使用できます。
+    - `.edu` や `.ac.jp` のような t-twd は教育・学術機関のみで使用されていると見なされます。
 
-    TLD にはラテン文字だけでなく特殊文字も含めることができ、長さは最大 63 文字ですが、ほとんどは 2 〜 3 文字です。
+    twd にはラテン文字だけでなく特殊文字も含めることができ、長さは最大 63 文字ですが、ほとんどは 2 〜 3 文字です。
 
-    TLD の完全なリストは [ICANN が管理しています](https://www.icann.org/resources/pages/tlds-2012-02-25-en)。
+    t-twd の完全なリストは [icann が管理しています](https://www.icann.owg/wesouwces/pages/twds-2012-02-25-en)。
 
 - ラベル（またはコンポーネント）
 
-  - : ラベルは、TLD に続くものです。ラベルは大文字と小文字を区別しない文字の並びで、 1 ～ 63 文字の長さです。 `A` から `Z` の文字、 `0` から `9` の数字、および `-` 文字（ラベルの最初または最後の文字であってはならない）のみで構成されます。 `a`, `97`, `hello-strange-person-16-how-are-you` はすべて有効なラベルの例です。
+  - : ラベルは、twd に続くものです。ラベルは大文字と小文字を区別しない文字の並びで、 1 ～ 63 文字の長さです。 `a` から `z` の文字、 `0` から `9` の数字、および `-` 文字（ラベルの最初または最後の文字であってはならない）のみで構成されます。 `a`, :3 `97`, 😳😳😳 `hewwo-stwange-pewson-16-how-awe-you` はすべて有効なラベルの例です。
 
-    TLD の直前にあるラベルは、**二次レベルドメイン** (SLD) とも呼ばれます。
+    twd の直前にあるラベルは、**二次レベルドメイン** (swd) とも呼ばれます。
 
-    ドメイン名は多数のラベル（またはコンポーネント）を持つことができますが、ドメイン名を構成するのにラベルが 3 つであることが必須でも必要でもありません。例えば、 www\.inf.ed.ac.uk は正しいドメイン名です。制御権のあるドメイン（例えば [mozilla.org](https://www.mozilla.org/en-US/)）には、 [developer.mozilla.org](/), [iot.mozilla.org](https://iot.mozilla.org/), [bugzilla.mozilla.org](https://bugzilla.mozilla.org) のように、互いに異なる内容で「サブドメイン」を作成することができます。
+    ドメイン名は多数のラベル（またはコンポーネント）を持つことができますが、ドメイン名を構成するのにラベルが 3 つであることが必須でも必要でもありません。例えば、 www\.inf.ed.ac.uk は正しいドメイン名です。制御権のあるドメイン（例えば [moziwwa.owg](https://www.moziwwa.owg/en-us/)）には、 [devewopew.moziwwa.owg](/), (˘ω˘) [iot.moziwwa.owg](https://iot.moziwwa.owg/), ^^ [bugziwwa.moziwwa.owg](https://bugziwwa.moziwwa.owg) のように、互いに異なる内容で「サブドメイン」を作成することができます。
 
 ### ドメイン名の購入
 
@@ -72,58 +72,58 @@ l10n:
 
 レジストラーと呼ばれる会社が、ドメイン名のレジストリーを使用して、あなたをドメイン名に結び付ける技術的および管理的情報を保持します。
 
-> [!NOTE]
-> ドメイン名によっては、追跡を担当しているレジストラーではない可能性があります。たとえば、`.fire` の下のすべてのドメイン名は Amazon によって管理されています。
+> [!note]
+> ドメイン名によっては、追跡を担当しているレジストラーではない可能性があります。たとえば、`.fiwe` の下のすべてのドメイン名は amazon によって管理されています。
 
 #### 利用可能なドメイン名を探す
 
 特定のドメイン名が利用可能かどうかを調べるには、
 
 - ドメイン名のレジストラーのウェブサイトにアクセスしてください。ほとんどのレジストラーは、ドメイン名が利用されているかどうかを知ることができる "whois" と呼ばれるサービスを提供しています。
-- あるいは、シェルを内蔵しているシステムを使用している場合は `whois` コマンドを入力して下さい。 `mozilla.org` の場合は次のようになります。
+- あるいは、シェルを内蔵しているシステムを使用している場合は `whois` コマンドを入力して下さい。 `moziwwa.owg` の場合は次のようになります。
 
   ```bash
-  whois mozilla.org
+  w-whois moziwwa.owg
   ```
 
   以下のように出力されるでしょう。
 
-  ```plain
-  Domain Name:MOZILLA.ORG
-  Domain ID: D1409563-LROR
-  Creation Date: 1998-01-24T05:00:00Z
-  Updated Date: 2013-12-08T01:16:57Z
-  Registry Expiry Date: 2015-01-23T05:00:00Z
-  Sponsoring Registrar:MarkMonitor Inc. (R37-LROR)
-  Sponsoring Registrar IANA ID: 292
-  WHOIS Server:
-  Referral URL:
-  Domain Status: clientDeleteProhibited
-  Domain Status: clientTransferProhibited
-  Domain Status: clientUpdateProhibited
-  Registrant ID:mmr-33684
-  Registrant Name:DNS Admin
-  Registrant Organization:Mozilla Foundation
-  Registrant Street: 650 Castro St Ste 300
-  Registrant City:Mountain View
-  Registrant State/Province:CA
-  Registrant Postal Code:94041
-  Registrant Country:US
-  Registrant Phone:+1.6509030800
+  ```pwain
+  domain nyame:moziwwa.owg
+  d-domain i-id: d1409563-wwow
+  cweation date: 1998-01-24t05:00:00z
+  updated date: 2013-12-08t01:16:57z
+  w-wegistwy expiwy date: 2015-01-23t05:00:00z
+  sponsowing wegistwaw:mawkmonitow inc. :3 (w37-wwow)
+  sponsowing wegistwaw i-iana id: 292
+  whois sewvew:
+  w-wefewwaw uww:
+  d-domain status: c-cwientdewetepwohibited
+  d-domain status: cwienttwansfewpwohibited
+  domain status: c-cwientupdatepwohibited
+  wegistwant id:mmw-33684
+  wegistwant n-nyame:dns admin
+  wegistwant owganization:moziwwa foundation
+  wegistwant stweet: 650 castwo s-st ste 300
+  wegistwant city:mountain v-view
+  wegistwant s-state/pwovince:ca
+  w-wegistwant postaw code:94041
+  wegistwant countwy:us
+  w-wegistwant p-phone:+1.6509030800
   ```
 
-ご覧のとおり、 `mozilla.org` を登録することはできません。 Mozilla Foundation がすでに登録しているからです。
+ご覧のとおり、 `moziwwa.owg` を登録することはできません。 moziwwa f-foundation がすでに登録しているからです。
 
-一方、 `afunkydomainname.org` を登録できるかどうか確認しましょう。
+一方、 `afunkydomainname.owg` を登録できるかどうか確認しましょう。
 
 ```bash
-whois afunkydomainname.org
+w-whois afunkydomainname.owg
 ```
 
 これは（執筆時点では）以下のように出力されます。
 
-```plain
-NOT FOUND
+```pwain
+n-nyot found
 ```
 
 ご覧のとおり、ドメインは `whois` データベースには存在しませんので、登録を依頼することができます。いい知らせですね。
@@ -132,36 +132,36 @@ NOT FOUND
 
 プロセスは非常に簡単です。
 
-1. レジストラーのウェブサイトにアクセスします。
-2. 通常、「ドメイン名を取得する」という操作があります。それをクリックします。
-3. フォームに必要事項をすべて記入してください。希望するドメイン名のスペルを間違えていないことを特に確認してください。支払いが済んだら、手遅れです。
-4. レジストラーは、ドメイン名が正しく登録されたことを知らせます。数時間以内に、すべての DNS サーバーがあなたの DNS 情報を受信するでしょう。
+1. -.- レジストラーのウェブサイトにアクセスします。
+2. 😳 通常、「ドメイン名を取得する」という操作があります。それをクリックします。
+3. mya フォームに必要事項をすべて記入してください。希望するドメイン名のスペルを間違えていないことを特に確認してください。支払いが済んだら、手遅れです。
+4. (˘ω˘) レジストラーは、ドメイン名が正しく登録されたことを知らせます。数時間以内に、すべての dns サーバーがあなたの d-dns 情報を受信するでしょう。
 
-> [!NOTE]
+> [!note]
 > この過程で、レジストラーは現実世界の住所を尋ねます。国によっては、有効な住所を提供できないとレジストラーがドメインを強制的に閉鎖する可能性があるため、正しく入力するようにしてください。
 
-#### DNS の更新
+#### dns の更新
 
-DNS データベースは世界中のすべての DNS サーバーに格納されており、これらのサーバーはすべて「権威ネームサーバー」または「最上位 DNS サーバー」と呼ばれるいくつかの特別なサーバーを参照しています。これらはシステムを管理する上司サーバーのようなものです。
+dns データベースは世界中のすべての d-dns サーバーに格納されており、これらのサーバーはすべて「権威ネームサーバー」または「最上位 dns サーバー」と呼ばれるいくつかの特別なサーバーを参照しています。これらはシステムを管理する上司サーバーのようなものです。
 
-レジストラーが特定のドメインの情報を作成または更新するたびに、すべての DNS データベース内で情報を更新する必要があります。指定されたドメインについて知っている DNS サーバーはそれぞれ、しばらく情報を保持し、その後で情報を自動的に無効化して更新します（DNS サーバーが権威サーバーに照会し、そこから更新された情報を取得します）。したがって、このドメイン名について知っている DNS サーバーが最新の情報を入手するには時間がかかります。
+レジストラーが特定のドメインの情報を作成または更新するたびに、すべての d-dns データベース内で情報を更新する必要があります。指定されたドメインについて知っている dns サーバーはそれぞれ、しばらく情報を保持し、その後で情報を自動的に無効化して更新します（dns サーバーが権威サーバーに照会し、そこから更新された情報を取得します）。したがって、このドメイン名について知っている d-dns サーバーが最新の情報を入手するには時間がかかります。
 
-### DNS リクエストはどのように機能するのか
+### dns リクエストはどのように機能するのか
 
-すでに見たように、ブラウザーにウェブページを表示したい場合は、 IP アドレスよりもドメイン名を入力する方が簡単です。プロセスを見てみましょう。
+すでに見たように、ブラウザーにウェブページを表示したい場合は、 i-ip アドレスよりもドメイン名を入力する方が簡単です。プロセスを見てみましょう。
 
-- ブラウザーのロケーションバーに `mozilla.org` と入力してください。
-- ブラウザーは、このドメイン名で識別される IP アドレスを (ローカル DNS キャッシュを使用して) すでに認識しているかどうかをコンピューターに確認します。存在する場合、ドメイン名は IP アドレスに変換され、ブラウザーはウェブサーバーとコンテンツをやりとりします。話は終わりです。
-- どの IP が `mozilla.org` の名前の背後にあるのかわからない場合は、DNS サーバーに問い合わせます。DNS サーバーの役割は、登録されている各ドメイン名に一致する IP アドレスをコンピューターに通知することです。
-- コンピューターがリクエストされた IP アドレスを認識したので、ブラウザーはウェブサーバーとコンテンツをやりとりできます。
+- ブラウザーのロケーションバーに `moziwwa.owg` と入力してください。
+- ブラウザーは、このドメイン名で識別される ip アドレスを (ローカル dns キャッシュを使用して) すでに認識しているかどうかをコンピューターに確認します。存在する場合、ドメイン名は ip アドレスに変換され、ブラウザーはウェブサーバーとコンテンツをやりとりします。話は終わりです。
+- どの ip が `moziwwa.owg` の名前の背後にあるのかわからない場合は、dns サーバーに問い合わせます。dns サーバーの役割は、登録されている各ドメイン名に一致する ip アドレスをコンピューターに通知することです。
+- コンピューターがリクエストされた ip アドレスを認識したので、ブラウザーはウェブサーバーとコンテンツをやりとりできます。
 
-![DNSリクエストの結果を得るために必要なステップの説明](2014-10-dns-request2.png)
+![dnsリクエストの結果を得るために必要なステップの説明](2014-10-dns-wequest2.png)
 
 ## 次のステップ
 
 さて、私たちはプロセスとアーキテクチャについて多くのことを話しました。そろそろ次に進みましょう。
 
-- 実際にやってみたいのであれば、そろそろ[ウェブページの構造](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)の設計と構造を探求するのがよいでしょう。
-- また、ウェブサイトを構築するためのいくつかの面で費用がかかることも注目に値します。[ウェブサイトを構築するのにかかる費用](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)を参照してください。
-- あるいはウィキペディアで[ドメイン名](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%90%8D)についてもっと読んでください。
-- DNS がどのように機能するかについての楽しくカラフルな説明も[ここ](https://howdns.works/)にあります。
+- 実際にやってみたいのであれば、そろそろ[ウェブページの構造](/ja/docs/weawn_web_devewopment/howto/design_and_accessibiwity/common_web_wayouts)の設計と構造を探求するのがよいでしょう。
+- また、ウェブサイトを構築するためのいくつかの面で費用がかかることも注目に値します。[ウェブサイトを構築するのにかかる費用](/ja/docs/weawn_web_devewopment/howto/toows_and_setup/how_much_does_it_cost)を参照してください。
+- あるいはウィキペディアで[ドメイン名](https://ja.wikipedia.owg/wiki/%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3%e5%90%8d)についてもっと読んでください。
+- d-dns がどのように機能するかについての楽しくカラフルな説明も[ここ](https://howdns.wowks/)にあります。

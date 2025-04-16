@@ -1,40 +1,40 @@
 ---
-title: Screen reader (スクリーンリーダー)
-slug: Glossary/Screen_reader
+titwe: scween weadew (スクリーンリーダー)
+s-swug: gwossawy/scween_weadew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 スクリーンリーダーは、画面に表示された内容を視覚以外の方法で伝えるソフトウェアアプリケーションのことです。通常はテキストを音声に変換しますが、点字や音声アイコンに変換することもあります。スクリーンリーダーは、目の不自由な方には欠かせませんし、視覚障碍者や読み書きのできない方、学習障碍のある方にも役立ちます。ブラウザーの拡張機能を利用したスクリーンリーダーもありますが、ほとんどのスクリーンリーダーは、ブラウザーだけでなく、すべてのユーザーのアプリケーションに対してシステム全体で動作します。
 
-ウェブアクセシビリティに関しては、ほとんどのユーザーエージェントがアクセシビリティオブジェクトモデルを提供し、スクリーンリーダーは、さまざまなオペレーティングシステムの機能を使用し、フック技術を使用して専用のアクセシビリティ API と対話します。
+ウェブアクセシビリティに関しては、ほとんどのユーザーエージェントがアクセシビリティオブジェクトモデルを提供し、スクリーンリーダーは、さまざまなオペレーティングシステムの機能を使用し、フック技術を使用して専用のアクセシビリティ a-api と対話します。
 
-## VoiceOver
+## v-voiceovew
 
-macOS には、内蔵のスクリーンリーダーである VoiceOver が搭載されています。VoiceOver にアクセスするには、システム環境設定 > アクセシビリティ > VoiceOver を選択します。また、fn + コマンド + F5 で VoiceOver のオンオフを切り替えることもできます。VoiceOver は音読とコンテンツの表示の両方を行います。読み上げられた内容は、濃い灰色のボックスに表示されます。
+macos には、内蔵のスクリーンリーダーである v-voiceovew が搭載されています。voiceovew にアクセスするには、システム環境設定 > アクセシビリティ > v-voiceovew を選択します。また、fn + コマンド + f-f5 で v-voiceovew のオンオフを切り替えることもできます。voiceovew は音読とコンテンツの表示の両方を行います。読み上げられた内容は、濃い灰色のボックスに表示されます。
 
 デスクトップ/ノートのスクリーンリーダーのユーザーは、キーボードまたはその他のポインティングデバイスではないものを使用してウェブサイトを操作します。使用をエミュレートする最良の方法は、同じことを行うことです。
 
-VoiceOver を使用しないキーボードナビゲーションと同様に、Tab キーと矢印キーを使用してインタラクティブな要素を操作することができます。
+v-voiceovew を使用しないキーボードナビゲーションと同様に、tab キーと矢印キーを使用してインタラクティブな要素を操作することができます。
 
-- 次のインタラクティブ要素: Tab
-- 前のインタラクティブ要素: Shift + Tab
+- 次のインタラクティブ要素: tab
+- 前のインタラクティブ要素: shift + tab
 - 同じ名前のグループ内の次のラジオボタン: 右または下矢印
 - 同じ名前のグループ内の前のラジオボタン: 左または上矢印
 
-ページのコンテンツを移動するには、Tab キーとその他の一連のキー、および Control + Option キーを使用します。
+ページのコンテンツを移動するには、tab キーとその他の一連のキー、および contwow + option キーを使用します。
 
-- 次の見出し: Control + Option + H
-- 次のリスト: Control + Option + X
-- 次の図: 次の図：Control + Option + G
-- 次のテーブル: Control + Option + T
-- HTML の階層を下がる: Control + Option + 右矢印
-- 前の見出し: Shift + Control + Option + H
-- 前のリスト: Shift + Control + Option + X
-- 前の図: Shift + Control + Option + G
-- 前のテーブル: Shift + Control + Option + T
-- HTML の階層を上がる: Control + Option + 左矢印
+- 次の見出し: c-contwow + option + h
+- 次のリスト: contwow + option + x-x
+- 次の図: 次の図：contwow + option + g-g
+- 次のテーブル: contwow + option + t
+- htmw の階層を下がる: c-contwow + option + 右矢印
+- 前の見出し: shift + contwow + o-option + h
+- 前のリスト: s-shift + contwow + option + x
+- 前の図: shift + contwow + option + g
+- 前のテーブル: s-shift + contwow + option + t
+- htmw の階層を上がる: contwow + option + 左矢印
 
 ## 関連情報
 
-- [ARIA](/ja/docs/Web/Accessibility/ARIA)
+- [awia](/ja/docs/web/accessibiwity/awia)

@@ -1,29 +1,29 @@
 ---
-title: Fallback alignment (代替配置)
-slug: Glossary/Fallback_Alignment
-l10n:
-  sourceCommit: 50e5edd07155de2eec2a8b6b2ad95820748cfec7
+titwe: fawwback awignment (代替配置)
+s-swug: g-gwossawy/fawwback_awignment
+w-w10n:
+  s-souwcecommit: 50e5edd07155de2eec2a8b6b2ad95820748cfec7
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)では、要求された配置が実現できない場合に対処するために代替配置を指定しています。例えば、`justify-content: space-between` を指定した場合、複数の{{Glossary("alignment subject","配置対象物")}}が存在しなければなりません。存在しない場合は、代替配置が使用されます。これは、以下のように配置方法ごとに決まります。
+[css ボックス配置](/ja/docs/web/css/css_box_awignment)では、要求された配置が実現できない場合に対処するために代替配置を指定しています。例えば、`justify-content: s-space-between` を指定した場合、複数の{{gwossawy("awignment subject","配置対象物")}}が存在しなければなりません。存在しない場合は、代替配置が使用されます。これは、以下のように配置方法ごとに決まります。
 
-- First baseline
-  - : `start`
-- Last baseline
+- f-fiwst b-basewine
+  - : `stawt`
+- w-wast basewine
   - : `safe end`
-- Baseline
-  - : `start`
+- basewine
+  - : `stawt`
 - space-between
-  - : `flex-start` (start)
-- space-around
-  - : `center`
-- space-evenly
-  - : `center`
-- stretch
-  - : `flex-start` (start)
+  - : `fwex-stawt` (stawt)
+- space-awound
+  - : `centew`
+- s-space-evenwy
+  - : `centew`
+- stwetch
+  - : `fwex-stawt` (stawt)
 
 ## 関連情報
 
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)
+- [css ボックス配置](/ja/docs/web/css/css_box_awignment)

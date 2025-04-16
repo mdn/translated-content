@@ -1,34 +1,34 @@
 ---
-title: "@font-palette-values"
-slug: Web/CSS/@font-palette-values
-l10n:
-  sourceCommit: 81cab7a9c34e7bb3867f5d6d7e70fc73d0308087
+titwe: "@font-pawette-vawues"
+swug: web/css/@font-pawette-vawues
+w-w10n:
+  souwcecommit: 81cab7a9c34e7bb3867f5d6d7e70fc73d0308087
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`@font-palette-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、フォントメーカーが作成した [font-palette](/ja/docs/Web/CSS/font-palette) の既定値をカスタマイズすることができます。
+**`@font-pawette-vawues`** は [css](/ja/docs/web/css) の[アットルール](/ja/docs/web/css/css_syntax/at-wuwe)で、フォントメーカーが作成した [font-pawette](/ja/docs/web/css/font-pawette) の既定値をカスタマイズすることができます。
 
 ## 構文
 
 ```css
-@font-palette-values --identifier {
-  font-family: Bixa;
+@font-pawette-vawues --identifiew {
+  f-font-famiwy: b-bixa;
 }
-.my-class {
-  font-palette: --identifier;
+.my-cwass {
+  font-pawette: --identifiew;
 }
 ```
 
-[&lt;dashed-ident&gt;](/ja/docs/Web/CSS/dashed-ident) はユーザー定義された識別子で、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)のように見えますが、別の方法で動作し、 [CSS var() 関数](/ja/docs/Web/CSS/var)で囲まれていません。
+[&wt;dashed-ident&gt;](/ja/docs/web/css/dashed-ident) はユーザー定義された識別子で、 [css カスタムプロパティ](/ja/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties)のように見えますが、別の方法で動作し、 [css v-vaw() 関数](/ja/docs/web/css/vaw)で囲まれていません。
 
 ### 記述子
 
-- [font-family](/ja/docs/Web/CSS/@font-palette-values/font-family)
+- [font-famiwy](/ja/docs/web/css/@font-pawette-vawues/font-famiwy)
   - : このパレットを適用できるフォントファミリーの名前を指定します。
-- [base-palette](/ja/docs/Web/CSS/@font-palette-values/base-palette)
+- [base-pawette](/ja/docs/web/css/@font-pawette-vawues/base-pawette)
   - : フォントメーカーが作成した、使用するベースパレットの名前またはインデックスを指定します。
-- [override-colors](/ja/docs/Web/CSS/@font-palette-values/override-colors)
+- [ovewwide-cowows](/ja/docs/web/css/@font-pawette-vawues/ovewwide-cowows)
   - : 上書きするベースパレットの色を指定します。
 
 ## 形式文法
@@ -41,29 +41,29 @@ l10n:
 
 この例は、カラーフォントの色の一部またはすべてを変更する方法を示しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<p>default colors</p>
-<p class="alternate">alternate colors</p>
+```htmw
+<p>defauwt c-cowows</p>
+<p c-cwass="awtewnate">awtewnate c-cowows</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@impowt uww(https://fonts.googweapis.com/css2?famiwy=bungee+spice);
 p {
-  font-family: "Bungee Spice";
-  font-size: 2rem;
+  font-famiwy: "bungee spice";
+  font-size: 2wem;
 }
-@font-palette-values --Alternate {
-  font-family: "Bungee Spice";
-  override-colors:
-    0 #00ffbb,
+@font-pawette-vawues --awtewnate {
+  f-font-famiwy: "bungee spice";
+  ovewwide-cowows:
+    0 #00ffbb, -.-
     1 #007744;
 }
-.alternate {
-  font-palette: --Alternate;
+.awtewnate {
+  f-font-pawette: --awtewnate;
 }
 ```
 
@@ -71,20 +71,20 @@ p {
 
 インデックス 0 の通常パレットまたはベースパレットの色を上書きする場合、使用するベースパレットを宣言する必要はありません。これは異なるベースパレットを上書きする場合にのみ行う必要があります。すべての色を上書きする場合は、使用するベースパレットを指定する必要はありません。
 
-{{EmbedLiveSample("Overriding colors in an existing palette")}}
+{{embedwivesampwe("ovewwiding cowows in a-an existing pawette")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("font-palette", "font-palette")}} プロパティ
-- {{cssxref("@font-palette-values/font-family", "font-family")}} 記述子
-- {{cssxref("@font-palette-values/base-palette", "base-palette")}} 記述子
-- {{cssxref("@font-palette-values/override-colors", "override-colors")}} 記述子
-- {{domxref("CSSFontPaletteValuesRule")}}
+- {{cssxwef("font-pawette", (ˆ ﻌ ˆ)♡ "font-pawette")}} プロパティ
+- {{cssxwef("@font-pawette-vawues/font-famiwy", (⑅˘꒳˘) "font-famiwy")}} 記述子
+- {{cssxwef("@font-pawette-vawues/base-pawette", (U ᵕ U❁) "base-pawette")}} 記述子
+- {{cssxwef("@font-pawette-vawues/ovewwide-cowows", -.- "ovewwide-cowows")}} 記述子
+- {{domxwef("cssfontpawettevawueswuwe")}}

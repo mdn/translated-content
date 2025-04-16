@@ -1,51 +1,51 @@
 ---
-title: border-top-width
-slug: Web/CSS/border-top-width
-l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+titwe: bowdew-top-width
+swug: w-web/css/bowdew-top-width
+w-w10n:
+  s-souwcecommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-top-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界の幅を設定します。
+**`bowdew-top-width`** は [css](/ja/docs/web/css) のプロパティで、要素の上側の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-top-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-top-width")}}
 
-```css interactive-example-choice
-border-top-width: thick;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-top-width: 2em;
+```css i-intewactive-exampwe-choice
+bowdew-top-width: 2em;
 ```
 
-```css interactive-example-choice
-border-top-width: 4px;
+```css intewactive-exampwe-choice
+bowdew-top-width: 4px;
 ```
 
-```css interactive-example-choice
-border-top-width: 2ex;
+```css intewactive-exampwe-choice
+b-bowdew-top-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-top-width: 0;
+```css intewactive-exampwe-choice
+bowdew-top-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a-a bowdew awound it.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: pawegween;
+  cowow: #000;
+  bowdew: 0 sowid cwimson;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
@@ -54,39 +54,39 @@ border-top-width: 0;
 
 ```css
 /* キーワード値 */
-border-top-width: thin;
-border-top-width: medium;
-border-top-width: thick;
+bowdew-top-width: thin;
+bowdew-top-width: m-medium;
+bowdew-top-width: thick;
 
-/* <length> 値 */
-border-top-width: 10em;
-border-top-width: 3vmax;
-border-top-width: 6px;
+/* <wength> 値 */
+b-bowdew-top-width: 10em;
+b-bowdew-top-width: 3vmax;
+b-bowdew-top-width: 6px;
 
 /* グローバルキーワード */
-border-top-width: inherit;
-border-top-width: initial;
-border-top-width: revert;
-border-top-width: revert-layer;
-border-top-width: unset;
+b-bowdew-top-width: inhewit;
+bowdew-top-width: i-initiaw;
+bowdew-top-width: wevewt;
+bowdew-top-width: wevewt-wayew;
+b-bowdew-top-width: unset;
 ```
 
 ### 値
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
+  - : 境界の幅を、明示的な非負の {{cssxwef("&wt;wength&gt;")}} またはキーワードで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
 
     - `thin`
     - `medium`
     - `thick`
 
-> [!NOTE]
+> [!note]
 > 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -94,42 +94,42 @@ border-top-width: unset;
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<div>Element 1</div>
-<div>Element 2</div>
+```htmw
+<div>ewement 1</div>
+<div>ewement 2</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  border: 1px solid red;
-  margin: 1em 0;
+  bowdew: 1px s-sowid wed;
+  mawgin: 1em 0;
 }
 
-div:nth-child(1) {
-  border-top-width: thick;
+d-div:nth-chiwd(1) {
+  b-bowdew-top-width: t-thick;
 }
-div:nth-child(2) {
-  border-top-width: 2em;
+div:nth-chiwd(2) {
+  bowdew-top-width: 2em;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', '100%')}}
+{{embedwivesampwe('exampwes', (⑅˘꒳˘) '100%')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他の border-width 関連 CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
-- 他の border-top 関連 CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-top-color")}}
+- 他の bowdew-width 関連 c-css プロパティ: {{cssxwef("bowdew-weft-width")}}, òωó {{cssxwef("bowdew-wight-width")}}, ʘwʘ {{cssxwef("bowdew-bottom-width")}}, /(^•ω•^) {{cssxwef("bowdew-width")}}
+- 他の b-bowdew-top 関連 css プロパティ: {{cssxwef("bowdew")}}, ʘwʘ {{cssxwef("bowdew-top")}}, σωσ {{cssxwef("bowdew-top-stywe")}}, OwO {{cssxwef("bowdew-top-cowow")}}

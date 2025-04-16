@@ -1,106 +1,106 @@
 ---
-title: CSS 構文
-slug: Web/CSS/CSS_syntax
-l10n:
-  sourceCommit: 5affe908f506ccbb79429e40afdbaaac3f2ed575
+titwe: css 構文
+swug: web/css/css_syntax
+w-w10n:
+  s-souwcecommit: 5affe908f506ccbb79429e40afdbaaac3f2ed575
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 構文**モジュールは、一般的な用語として、カスケーディングスタイルシート (CSS) の構造と構文について記述しています。 CSS は、ウェブや他の場所での構造化文書（HTML や XML など）のレンダリングを記述するための言語として定義されています。
+**css 構文**モジュールは、一般的な用語として、カスケーディングスタイルシート (css) の構造と構文について記述しています。 c-css は、ウェブや他の場所での構造化文書（htmw や x-xmw など）のレンダリングを記述するための言語として定義されています。
 
-このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
+このモジュールはプロパティ、[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)、[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)、[アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように css を構文解析すべきかを詳しく説明しています。
 
 ### アットルール
 
 - なし
 
-> [!NOTE]
-> このモジュールは、 {{cssxref("@charset")}} は実際のアットルールではなく、スタイルシートが文法チェックされるときに省略されるべき認識されない古いルールであると明示しています。
+> [!note]
+> このモジュールは、 {{cssxwef("@chawset")}} は実際のアットルールではなく、スタイルシートが文法チェックされるときに省略されるべき認識されない古いルールであると明示しています。
 
 ## リファレンス
 
 ### 主要概念
 
-- {{cssxref("at-rule", "アットルール")}}
-- [文字エスケープ](/ja/docs/Web/CSS/custom-ident#エスケープ文字)
-- [CSS コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
-- [CSS 宣言](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration)
-- [CSS 宣言ブロック](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [CSS 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
-- [無効なもの](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
-- [スタイルルール](/ja/docs/Web/API/CSSStyleRule)
+- {{cssxwef("at-wuwe", σωσ "アットルール")}}
+- [文字エスケープ](/ja/docs/web/css/custom-ident#エスケープ文字)
+- [css コメント](/ja/docs/web/css/css_syntax/comments)
+- [css 宣言](/ja/docs/web/api/css_object_modew/css_decwawation)
+- [css 宣言ブロック](/ja/docs/web/api/css_object_modew/css_decwawation_bwock)
+- [css 関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)
+- [無効なもの](/ja/docs/web/css/css_syntax/ewwow_handwing)
+- [スタイルルール](/ja/docs/web/api/cssstywewuwe)
 
 ### 用語集の用語
 
-- {{glossary("CSS_Descriptor", "CSS 記述子")}}
-- {{glossary("parse", "構文解析")}}
-- {{glossary("stylesheet", "スタイルシート")}}
-- {{glossary("whitespace", "ホワイトスペース")}}
+- {{gwossawy("css_descwiptow", >_< "css 記述子")}}
+- {{gwossawy("pawse", :3 "構文解析")}}
+- {{gwossawy("stywesheet", (U ﹏ U) "スタイルシート")}}
+- {{gwossawy("whitespace", -.- "ホワイトスペース")}}
 
 ## ガイド
 
-- [構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+- [構文](/ja/docs/web/css/css_syntax/syntax)
 
-  - : CSS 宣言、宣言ブロック、ルールセット、文などの CSS 構文の概要です。
+  - : c-css 宣言、宣言ブロック、ルールセット、文などの c-css 構文の概要です。
 
-- [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値の定義構文](/ja/docs/web/css/css_vawues_and_units/vawue_definition_syntax)
 
-  - : CSS プロパティと関数の有効な値を定義するための正式な文法を、意味づけ制約とともに説明します。 CSS の成分値の型、結合子、乗算子を理解するためのガイドです。
+  - : c-css プロパティと関数の有効な値を定義するための正式な文法を、意味づけ制約とともに説明します。 c-css の成分値の型、結合子、乗算子を理解するためのガイドです。
 
-- [CSS 構文のエラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
+- [css 構文のエラー処理](/ja/docs/web/css/css_syntax/ewwow_handwing)
 
-  - : ユーザーエージェントが不正な CSS を処理する方法の概要です。
+  - : ユーザーエージェントが不正な css を処理する方法の概要です。
 
-- [CSS 第一歩の学習: CSS の構文](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文)
+- [css 第一歩の学習: css の構文](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/nani_is_css#css_の構文)
 
-  - : CSS の構文入門を含む CSS 入門ガイドです。
+  - : css の構文入門を含む css 入門ガイドです。
 
 ## 関連概念
 
-[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール:
+[css セレクター](/ja/docs/web/css/css_sewectows)モジュール:
 
-- [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [css 詳細度](/ja/docs/web/css/css_cascade/specificity)
 
-[CSS カスケード](/ja/docs/Web/CSS/CSS_cascade)モジュール:
+[css カスケード](/ja/docs/web/css/css_cascade)モジュール:
 
-- {{cssxref("@import")}} アットルール
-- {{cssxref("important")}} フラグ
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-- [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-- [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
-- [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [CSS 継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-- {{Glossary("Property/CSS", "CSS プロパティ")}}
+- {{cssxwef("@impowt")}} アットルール
+- {{cssxwef("impowtant")}} フラグ
+- [初期値](/ja/docs/web/css/css_cascade/vawue_pwocessing#初期値)
+- [計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)
+- [使用値](/ja/docs/web/css/css_cascade/vawue_pwocessing#使用値)
+- [実効値](/ja/docs/web/css/css_cascade/vawue_pwocessing#実効値)
+- [css 継承](/ja/docs/web/css/css_cascade/inhewitance)
+- {{gwossawy("pwopewty/css", (ˆ ﻌ ˆ)♡ "css プロパティ")}}
 
-[変数のカスケードのための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール:
+[変数のカスケードのための c-css カスタムプロパティ](/ja/docs/web/css/css_cascading_vawiabwes)モジュール:
 
-- [カスタムプロパティ (`--*`)](/ja/docs/Web/CSS/--*)
-- {{cssxref("var")}} 関数
+- [カスタムプロパティ (`--*`)](/ja/docs/web/css/--*)
+- {{cssxwef("vaw")}} 関数
 
-[CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules) モジュール:
+[css 条件付きルール](/ja/docs/web/css/css_conditionaw_wuwes) モジュール:
 
-- {{cssxref("@media")}} アットルール
-- {{cssxref("@supports")}} アットルール
+- {{cssxwef("@media")}} アットルール
+- {{cssxwef("@suppowts")}} アットルール
 
-[CSS オブジェクトモデル (CSSOM)](/ja/docs/Web/API/CSS_Object_Model) API:
+[css オブジェクトモデル (cssom)](/ja/docs/web/api/css_object_modew) api:
 
-- {{domxref("CSSValue.cssText", "cssText")}} プロパティ
-- {{domxref("CSSStyleSheet.insertRule()", "insertRule(rule)")}} メソッド
-- {{domxref("CSSStyleSheet.replace()", "replace(text)")}} メソッド
+- {{domxwef("cssvawue.csstext", (⑅˘꒳˘) "csstext")}} プロパティ
+- {{domxwef("cssstywesheet.insewtwuwe()", (U ᵕ U❁) "insewtwuwe(wuwe)")}} メソッド
+- {{domxwef("cssstywesheet.wepwace()", -.- "wepwace(text)")}} メソッド
 
-[WHATWG](/ja/docs/Glossary/WHATWG) 仕様書:
+[naniwg](/ja/docs/gwossawy/naniwg) 仕様書:
 
-- {{HTMLElement("style")}} 要素
-- {{HTMLElement("link")}} 要素
-- [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性
-- [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel#stylesheet) 属性
+- {{htmwewement("stywe")}} 要素
+- {{htmwewement("wink")}} 要素
+- [`cwass`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) 属性
+- [`wew`](/ja/docs/web/htmw/wefewence/attwibutes/wew#stywesheet) 属性
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
+- [css セレクター](/ja/docs/web/css/css_sewectows)モジュール
+- [css 値と単位](/ja/docs/web/css/css_vawues_and_units)モジュール

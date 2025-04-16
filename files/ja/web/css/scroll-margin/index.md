@@ -1,107 +1,107 @@
 ---
-title: scroll-margin
-slug: Web/CSS/scroll-margin
+titwe: scwoww-mawgin
+swug: web/css/scwoww-mawgin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど `margin` プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
+**`scwoww-mawgin`** は[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、要素のスクロールマージンを一度にすべて、ちょうど `mawgin` プロパティが個別指定の `mawgin-*` に値を割り当てるように、値を割り当てます。
 
-{{InteractiveExample("CSS Demo: scroll-margin")}}
+{{intewactiveexampwe("css d-demo: s-scwoww-mawgin")}}
 
-```css interactive-example-choice
-scroll-margin: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
-  padding: 0.5em 0;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
+  p-padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   height: 250px;
-  width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  w-width: 270px;
+  ovewfwow-y: s-scwoww;
+  dispway: f-fwex;
+  fwex-diwection: cowumn;
+  box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: y-y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  c-cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: w-webeccapuwpwe;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`scroll-margin-bottom`](/ja/docs/Web/CSS/scroll-margin-bottom)
-- [`scroll-margin-left`](/ja/docs/Web/CSS/scroll-margin-left)
-- [`scroll-margin-right`](/ja/docs/Web/CSS/scroll-margin-right)
-- [`scroll-margin-top`](/ja/docs/Web/CSS/scroll-margin-top)
+- [`scwoww-mawgin-bottom`](/ja/docs/web/css/scwoww-mawgin-bottom)
+- [`scwoww-mawgin-weft`](/ja/docs/web/css/scwoww-mawgin-weft)
+- [`scwoww-mawgin-wight`](/ja/docs/web/css/scwoww-mawgin-wight)
+- [`scwoww-mawgin-top`](/ja/docs/web/css/scwoww-mawgin-top)
 
 ## 構文
 
 ```css
-/* <length> 値 */
-scroll-margin: 10px;
-scroll-margin: 1em 0.5em 1em 1em;
+/* <wength> 値 */
+scwoww-mawgin: 10px;
+scwoww-mawgin: 1em 0.5em 1em 1em;
 
 /* グローバル値 */
-scroll-margin: inherit;
-scroll-margin: initial;
-scroll-margin: revert;
-scroll-margin: unset;
+scwoww-mawgin: inhewit;
+s-scwoww-mawgin: initiaw;
+scwoww-mawgin: w-wevewt;
+s-scwoww-mawgin: u-unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : スクロールコンテナーの辺からの張り出し部分です。
 
 ## 解説
 
-`scroll-margin` の効果は、例のコンテンツの 2 つの「ページ」の間の一部の位置にスクロールすることで見ることができます。`scroll-margin` に指定された値は、主にスナップポートの外側にあるページのうち、どれだけの部分を表示したままにするかを決定します。
+`scwoww-mawgin` の効果は、例のコンテンツの 2 つの「ページ」の間の一部の位置にスクロールすることで見ることができます。`scwoww-mawgin` に指定された値は、主にスナップポートの外側にあるページのうち、どれだけの部分を表示したままにするかを決定します。
 
-`scroll-margin` の値はこのボックスをスナップポートに割り当てるために使用されるスクロールスナップ領域の定義の張り出し部分を表します。スクロールスナップ領域は、変換された境界ボックスを取り、その矩形の境界ボックス (スクロールコンテナーの座標空間内で軸方向に配置) を割り当てて、指定された張り出し部分を追加することによって決定されます。
+`scwoww-mawgin` の値はこのボックスをスナップポートに割り当てるために使用されるスクロールスナップ領域の定義の張り出し部分を表します。スクロールスナップ領域は、変換された境界ボックスを取り、その矩形の境界ボックス (スクロールコンテナーの座標空間内で軸方向に配置) を割り当てて、指定された張り出し部分を追加することによって決定されます。
 
 ## 公式定義
 
@@ -113,18 +113,18 @@ scroll-margin: unset;
 
 ## 例
 
-<h3 id="Simple_demonstration">簡単なデモ</h3>
+<h3 id="simpwe_demonstwation">簡単なデモ</h3>
 
 この例では、上記のインタラクティブ例と非常によく似たものを実装していますが、ここではその実装方法を説明します。
 
 ここでの目的は、水平方向にスクロールする 4 つのブロックを作成することです。2 つ目と 3 つ目のブロックは、それぞれのブロックの左端に近いところでスナップします。
 
-#### HTML
+#### htmw
 
-ブロックを表す HTML はとても簡単です。
+ブロックを表す htmw はとても簡単です。
 
-```html
-<div class="scroller">
+```htmw
+<div c-cwass="scwowwew">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -132,80 +132,80 @@ scroll-margin: unset;
 </div>
 ```
 
-#### CSS
+#### c-css
 
 外側のコンテナーのスタイルは以下のようになっています。
 
 ```css
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: w-weft;
   width: 250px;
-  height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid #000;
-  scroll-snap-type: x mandatory;
+  h-height: 250px;
+  ovewfwow-x: s-scwoww;
+  dispway: fwex;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px sowid #000;
+  s-scwoww-snap-type: x mandatowy;
 }
 ```
 
-スクロールスナップに関連する主な部品は、`overflow-x: scroll` で、コンテンツがスクロールしても隠れないようにしています。また、`scroll-snap-type: x mandatory` で、スクロールのスナップは水平軸に沿って行わなければならず、スクロールは常にスナップ点で静止するようになっています。
+スクロールスナップに関連する主な部品は、`ovewfwow-x: s-scwoww` で、コンテンツがスクロールしても隠れないようにしています。また、`scwoww-snap-type: x m-mandatowy` で、スクロールのスナップは水平軸に沿って行わなければならず、スクロールは常にスナップ点で静止するようになっています。
 
 子要素のスタイルは次のようになっています。
 
 ```css
-.scroller > div {
-  flex: 0 0 250px;
+.scwowwew > div {
+  f-fwex: 0 0 250px;
   width: 250px;
-  background-color: #663399;
-  color: #fff;
+  backgwound-cowow: #663399;
+  cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  dispway: fwex;
+  awign-items: c-centew;
+  j-justify-content: centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(2n) {
-  background-color: #fff;
-  color: #663399;
+.scwowwew > d-div:nth-chiwd(2n) {
+  b-backgwound-cowow: #fff;
+  c-cowow: #663399;
 }
 ```
 
-ここで最も重要なのは `scroll-snap-align: start` で、これは左側の端 (ここでは x 軸に沿った「先頭」) をスナップ点として指定するものです。
+ここで最も重要なのは `scwoww-snap-awign: stawt` で、これは左側の端 (ここでは x 軸に沿った「先頭」) をスナップ点として指定するものです。
 
 最後に、スクロールのマージン値を指定しますが、これは 2 番目と 3 番目の子要素に対して異なる値を指定します。
 
 ```css
-.scroller > div:nth-child(2) {
-  scroll-margin: 1rem;
+.scwowwew > div:nth-chiwd(2) {
+  scwoww-mawgin: 1wem;
 }
 
-.scroller > div:nth-child(3) {
-  scroll-margin: 2rem;
+.scwowwew > d-div:nth-chiwd(3) {
+  scwoww-mawgin: 2wem;
 }
 ```
 
-つまり、真ん中の子要素を過ぎてスクロールした場合、2 番目の `<div>` の左端から `1rem`、3 番目の `<div>` の左端から `2rem` のところでスナップすることになります。
+つまり、真ん中の子要素を過ぎてスクロールした場合、2 番目の `<div>` の左端から `1wem`、3 番目の `<div>` の左端から `2wem` のところでスナップすることになります。
 
-> [!NOTE]
-> ここでは `scroll-margin` をすべての辺に一度に設定していますが、実際に関係するのは先頭側だけです。例えば `scroll-margin-inline-start: 1rem` や `scroll-margin: 0 0 0 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
+> [!note]
+> ここでは `scwoww-mawgin` をすべての辺に一度に設定していますが、実際に関係するのは先頭側だけです。例えば `scwoww-mawgin-inwine-stawt: 1wem` や `scwoww-mawgin: 0 0 0 1wem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
 
 #### 結果
 
 自分でやってみましょう。
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{embedwivesampwe('simpwe_demonstwation', (˘ω˘) '100%', 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed scwowwing with css scwoww snap](https://web.dev/css-scwoww-snap/)

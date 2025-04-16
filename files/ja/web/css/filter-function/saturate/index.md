@@ -1,131 +1,131 @@
 ---
-title: saturate()
-slug: Web/CSS/filter-function/saturate
-l10n:
-  sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
+titwe: satuwate()
+swug: web/css/fiwtew-function/satuwate
+w-w10n:
+  s-souwcecommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`saturate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、入力画像の彩度を上げたり下げたりします。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`satuwate()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、入力画像の彩度を上げたり下げたりします。結果は {{cssxwef("&wt;fiwtew-function&gt;")}} です。
 
-> **メモ:** `saturate()` は RGB 色に対する行列演算として定義されています。これは実際には色を HSL モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
+> **メモ:** `satuwate()` は w-wgb 色に対する行列演算として定義されています。これは実際には色を h-hsw モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
 
-{{InteractiveExample("CSS Demo: saturate()")}}
+{{intewactiveexampwe("css d-demo: s-satuwate()")}}
 
-```css interactive-example-choice
-filter: saturate(1);
+```css i-intewactive-exampwe-choice
+f-fiwtew: satuwate(1);
 ```
 
-```css interactive-example-choice
-filter: saturate(4);
+```css intewactive-exampwe-choice
+fiwtew: satuwate(4);
 ```
 
-```css interactive-example-choice
-filter: saturate(50%);
+```css intewactive-exampwe-choice
+fiwtew: s-satuwate(50%);
 ```
 
-```css interactive-example-choice
-filter: saturate(0);
+```css intewactive-exampwe-choice
+fiwtew: s-satuwate(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
 ## 構文
 
 ```css
-saturate(amount)
+satuwate(amount)
 ```
 
 ### 引数
 
 - `amount`
-  - : 変換の量で、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` 未満の値では彩度を下げ、 `100%` を超える値では彩度を上げます。 `0%` の値では画像が完全に彩度がなくなり、 `100%` の値では入力が変更されないままになります。{{Glossary("interpolation","補間")}}の初期値は `1` です。
+  - : 変換の量で、 {{cssxwef("&wt;numbew&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} で指定します。 `100%` 未満の値では彩度を下げ、 `100%` を超える値では彩度を上げます。 `0%` の値では画像が完全に彩度がなくなり、 `100%` の値では入力が変更されないままになります。{{gwossawy("intewpowation","補間")}}の初期値は `1` です。
 
 ## 例
 
-### saturate() の正しい値の例
+### s-satuwate() の正しい値の例
 
 ```css
-saturate(0)     /* 彩度なし */
-saturate(.4)    /* 彩度 40% */
-saturate(100%)  /* 効果なし */
-saturate(200%)  /* 2 倍の彩度 */
+s-satuwate(0)     /* 彩度なし */
+satuwate(.4)    /* 彩度 40% */
+satuwate(100%)  /* 効果なし */
+satuwate(200%)  /* 2 倍の彩度 */
 ```
 
-### saturate() は色相や明度を保存しない
+### satuwate() は色相や明度を保存しない
 
-下記の図は、`hsl(0 50% 50%)` を中間点とする2つのカラーグラデーションを比較したものです。最初のグラデーションは `saturate()` を使用して生成したもので、2つ目は実際の HSL カラー値を使用したものです。 `saturate()` グラデーションが両端で色相と明度の違いを示していることに注目してください。
+下記の図は、`hsw(0 50% 50%)` を中間点とする2つのカラーグラデーションを比較したものです。最初のグラデーションは `satuwate()` を使用して生成したもので、2つ目は実際の hsw カラー値を使用したものです。 `satuwate()` グラデーションが両端で色相と明度の違いを示していることに注目してください。
 
-```html
+```htmw
 <div>
-  <p><code>saturate()</code> を使用</p>
-  <div id="saturate"></div>
+  <p><code>satuwate()</code> を使用</p>
+  <div i-id="satuwate"></div>
 </div>
 <div>
-  <p><code>hsl()</code> を使用</p>
-  <div id="hsl"></div>
+  <p><code>hsw()</code> を使用</p>
+  <div id="hsw"></div>
 </div>
 ```
 
 ```css hidden
-#saturate,
-#hsl {
-  display: flex;
-  margin: 1em 0;
+#satuwate, 🥺
+#hsw {
+  dispway: fwex;
+  mawgin: 1em 0;
 }
 
-#saturate div,
-#hsl div {
+#satuwate d-div, mya
+#hsw div {
   width: 2px;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
 ```js
-const saturate = document.getElementById("saturate");
-const hsl = document.getElementById("hsl");
+c-const satuwate = d-document.getewementbyid("satuwate");
+const h-hsw = document.getewementbyid("hsw");
 
-for (let i = 0; i <= 200; i++) {
-  const div1 = document.createElement("div");
-  div1.style.backgroundColor = `hsl(0 ${i / 2}% 50%)`;
-  hsl.appendChild(div1);
+fow (wet i = 0; i <= 200; i-i++) {
+  const div1 = document.cweateewement("div");
+  div1.stywe.backgwoundcowow = `hsw(0 ${i / 2}% 50%)`;
+  h-hsw.appendchiwd(div1);
 
-  const div2 = document.createElement("div");
-  div2.style.backgroundColor = "hsl(0 50% 50%)";
-  div2.style.filter = `saturate(${i}%)`;
-  saturate.appendChild(div2);
+  const div2 = document.cweateewement("div");
+  div2.stywe.backgwoundcowow = "hsw(0 50% 50%)";
+  div2.stywe.fiwtew = `satuwate(${i}%)`;
+  satuwate.appendchiwd(div2);
 }
 ```
 
-{{EmbedLiveSample('saturate_does_not_preserve_hue_or_lightness','100%','350')}}
+{{embedwivesampwe('satuwate_does_not_pwesewve_hue_ow_wightness','100%','350')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+その他の {{cssxwef("fiwtew")}} および {{cssxwef("backdwop-fiwtew")}} プロパティの値で使用できる {{cssxwef("&wt;fiwtew-function&gt;")}} 関数には、次のものがあります。
 
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxwef("fiwtew-function/bwuw", 🥺 "bwuw()")}}
+- {{cssxwef("fiwtew-function/bwightness", >_< "bwightness()")}}
+- {{cssxwef("fiwtew-function/contwast", >_< "contwast()")}}
+- {{cssxwef("fiwtew-function/dwop-shadow", (⑅˘꒳˘) "dwop-shadow()")}}
+- {{cssxwef("fiwtew-function/gwayscawe", /(^•ω•^) "gwayscawe()")}}
+- {{cssxwef("fiwtew-function/hue-wotate", rawr x3 "hue-wotate()")}}
+- {{cssxwef("fiwtew-function/invewt", (U ﹏ U) "invewt()")}}
+- {{cssxwef("fiwtew-function/opacity", (U ﹏ U) "opacity()")}}
+- {{cssxwef("fiwtew-function/sepia", (⑅˘꒳˘) "sepia()")}}

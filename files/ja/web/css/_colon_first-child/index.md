@@ -1,54 +1,54 @@
 ---
-title: :first-child
-slug: Web/CSS/:first-child
-l10n:
-  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
+titwe: :fiwst-chiwd
+swug: web/css/:fiwst-chiwd
+w-w10n:
+  souwcecommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:first-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最初の要素を表します。
+**`:fiwst-chiwd`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、兄弟要素のグループの中で最初の要素を表します。
 
-{{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :fiwst-chiwd", (✿oωo) "tabbed-showtew")}}
 
-```css interactive-example
-p {
-  font-weight: bold;
+```css i-intewactive-exampwe
+p-p {
+  font-weight: b-bowd;
 }
 
-li:first-child {
-  border: 2px solid orange;
+wi:fiwst-chiwd {
+  b-bowdew: 2px sowid o-owange;
 }
 ```
 
-```html interactive-example
-<p>Track &amp; field champions:</p>
-<ul>
-  <li>Adhemar da Silva</li>
-  <li>Wang Junxia</li>
-  <li>Wilma Rudolph</li>
-  <li>Babe Didrikson-Zaharias</li>
-  <li>Betty Cuthbert</li>
-  <li>Fanny Blankers-Koen</li>
-  <li>Florence Griffith-Joyner</li>
-  <li>Irena Szewinska</li>
-  <li>Jackie Joyner-Kersee</li>
-  <li>Shirley Strickland</li>
-  <li>Carl Lewis</li>
-  <li>Emil Zatopek</li>
-  <li>Haile Gebrselassie</li>
-  <li>Jesse Owens</li>
-  <li>Jim Thorpe</li>
-  <li>Paavo Nurmi</li>
-  <li>Sergei Bubka</li>
-  <li>Usain Bolt</li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>twack &amp; fiewd champions:</p>
+<uw>
+  <wi>adhemaw da siwva</wi>
+  <wi>wang junxia</wi>
+  <wi>wiwma w-wudowph</wi>
+  <wi>babe didwikson-zahawias</wi>
+  <wi>betty cuthbewt</wi>
+  <wi>fanny b-bwankews-koen</wi>
+  <wi>fwowence gwiffith-joynew</wi>
+  <wi>iwena szewinska</wi>
+  <wi>jackie j-joynew-kewsee</wi>
+  <wi>shiwwey stwickwand</wi>
+  <wi>caww wewis</wi>
+  <wi>emiw zatopek</wi>
+  <wi>haiwe g-gebwsewassie</wi>
+  <wi>jesse owens</wi>
+  <wi>jim t-thowpe</wi>
+  <wi>paavo n-nyuwmi</wi>
+  <wi>sewgei bubka</wi>
+  <wi>usain bowt</wi>
+</uw>
 ```
 
 ## 構文
 
 ```css
-:first-child {
+:fiwst-chiwd {
   /* ... */
 }
 ```
@@ -57,9 +57,9 @@ li:first-child {
 
 ### 基本的な例
 
-#### HTML
+#### htmw
 
-```html live-sample___basic_example
+```htmw wive-sampwe___basic_exampwe
 <div>
   <p>このテキストは選択されます。</p>
   <p>このテキストは選択されません。</p>
@@ -71,67 +71,67 @@ li:first-child {
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___basic_example
-p:first-child {
-  color: lime;
-  background-color: black;
-  padding: 5px;
+```css wive-sampwe___basic_exampwe
+p:fiwst-chiwd {
+  cowow: wime;
+  backgwound-cowow: bwack;
+  p-padding: 5px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Basic_example', 500, 200)}}
+{{embedwivesampwe('basic_exampwe', (ˆ ﻌ ˆ)♡ 500, (˘ω˘) 200)}}
 
 ### リストのスタイル設定
 
-#### HTML
+#### htmw
 
-```html live-sample___styling_a_list
-<ul>
-  <li>アイテム 1</li>
-  <li>アイテム 2</li>
-  <li>
+```htmw w-wive-sampwe___stywing_a_wist
+<uw>
+  <wi>アイテム 1</wi>
+  <wi>アイテム 2</wi>
+  <wi>
     アイテム 3
-    <ul>
-      <li>アイテム 3.1</li>
-      <li>アイテム 3.2</li>
-      <li>アイテム 3.3</li>
-    </ul>
-  </li>
-</ul>
+    <uw>
+      <wi>アイテム 3.1</wi>
+      <wi>アイテム 3.2</wi>
+      <wi>アイテム 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___styling_a_list
-ul li {
-  color: blue;
+```css w-wive-sampwe___stywing_a_wist
+u-uw wi {
+  cowow: bwue;
 }
 
-ul li:first-child {
-  color: red;
-  font-weight: bold;
+uw wi:fiwst-chiwd {
+  c-cowow: wed;
+  font-weight: bowd;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Styling_a_list')}}
+{{embedwivesampwe('stywing_a_wist')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-first-node")}}
-- {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{cssxwef(":-moz-fiwst-node")}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd", (⑅˘꒳˘) ":nth-chiwd()")}}

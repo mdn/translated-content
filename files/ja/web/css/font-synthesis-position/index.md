@@ -1,31 +1,31 @@
 ---
-title: font-synthesis-position
-slug: Web/CSS/font-synthesis-position
-l10n:
-  sourceCommit: a6cac9db700637ac004a3608a7b5003c1c0ef8f8
+titwe: font-synthesis-position
+swug: web/css/font-synthesis-position
+w-w10n:
+  s-souwcecommit: a6cac9db700637ac004a3608a7b5003c1c0ef8f8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-synthesis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、下付き文字と上付き文字の「位置」の書体がフォントファミリーになく、 {{cssxref("font-variant-position")}} を使用して位置を設定する場合に、ブラウザーが合成するかどうかを指定することができます。
+**`font-synthesis-position`** は [css](/ja/docs/web/css) のプロパティで、下付き文字と上付き文字の「位置」の書体がフォントファミリーになく、 {{cssxwef("font-vawiant-position")}} を使用して位置を設定する場合に、ブラウザーが合成するかどうかを指定することができます。
 
-**`font-synthesis-position`** プロパティは {{htmlelement("sup")}} および {{htmlelement("sub")}} 要素を使用しているときには効果がありません。
+**`font-synthesis-position`** プロパティは {{htmwewement("sup")}} および {{htmwewement("sub")}} 要素を使用しているときには効果がありません。
 
-すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxref("font-synthesis")}} を使用した方が便利です。
+すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxwef("font-synthesis")}} を使用した方が便利です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-synthesis-position: auto;
-font-synthesis-position: none;
+f-font-synthesis-position: auto;
+f-font-synthesis-position: n-nyone;
 
 /* グローバル値 */
-font-synthesis-position: inherit;
-font-synthesis-position: initial;
-font-synthesis-position: revert;
-font-synthesis-position: revert-layer;
-font-synthesis-position: unset;
+font-synthesis-position: i-inhewit;
+f-font-synthesis-position: i-initiaw;
+font-synthesis-position: wevewt;
+font-synthesis-position: wevewt-wayew;
+f-font-synthesis-position: unset;
 ```
 
 ### 値
@@ -47,57 +47,57 @@ font-synthesis-position: unset;
 
 ### 位置の書体の合成の無効化
 
-この例は、 `Montserrat` フォントでブラウザーによる位置の書体の合成をオフにすることを示しています。
+この例は、 `montsewwat` フォントでブラウザーによる位置の書体の合成をオフにすることを示しています。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  These are the default position <span class="super">superscript</span>,
-  position <span class="sub">subscript</span>, <strong>bold</strong> and
-  <em>oblique</em> typefaces.
+  t-these awe the defauwt position <span c-cwass="supew">supewscwipt</span>, rawr x3
+  position <span cwass="sub">subscwipt</span>, (✿oωo) <stwong>bowd</stwong> and
+  <em>obwique</em> typefaces. (ˆ ﻌ ˆ)♡
 </p>
 
-<p class="no-syn">
-  The positions <span class="super">superscript</span> and
-  <span class="sub">subscript</span> typeface is turned off here but not the
-  <strong>bold</strong> and <em>oblique</em> typefaces (on browsers that support
-  <code>font-synthesis-position</code>).
+<p c-cwass="no-syn">
+  the positions <span c-cwass="supew">supewscwipt</span> a-and
+  <span cwass="sub">subscwipt</span> typeface is tuwned off hewe but nyot t-the
+  <stwong>bowd</stwong> and <em>obwique</em> typefaces (on bwowsews that suppowt
+  <code>font-synthesis-position</code>). (˘ω˘)
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@impowt u-uww("https://fonts.googweapis.com/css2?famiwy=montsewwat&dispway=swap");
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-famiwy: "montsewwat", (⑅˘꒳˘) sans-sewif;
 }
-.super {
-  font-variant-position: super;
+.supew {
+  f-font-vawiant-position: supew;
 }
 .sub {
-  font-variant-position: sub;
+  f-font-vawiant-position: s-sub;
 }
 .no-syn {
-  font-synthesis-position: none;
+  f-font-synthesis-position: nyone;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Disabling synthesis of position typeface', '', '100')}}
+{{embedwivesampwe('disabwing synthesis o-of position typeface', (///ˬ///✿) '', '100')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("font-synthesis")}} 一括指定, {{cssxref("font-synthesis-style")}}, {{cssxref("font-synthesis-weight")}}
-- {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-weight")}}
+- {{cssxwef("font-synthesis")}} 一括指定, 😳😳😳 {{cssxwef("font-synthesis-stywe")}}, 🥺 {{cssxwef("font-synthesis-weight")}}
+- {{cssxwef("font-stywe")}}, mya {{cssxwef("font-vawiant")}}, 🥺 {{cssxwef("font-vawiant-position")}}, >_< {{cssxwef("font-weight")}}

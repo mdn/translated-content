@@ -1,97 +1,97 @@
 ---
-title: margin-top
-slug: Web/CSS/margin-top
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: mawgin-top
+swug: web/css/mawgin-top
+w-w10n:
+  s-souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`margin-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
+**`mawgin-top`** は [css](/ja/docs/web/css) のプロパティで、要素の上側の[マージン領域](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
-{{InteractiveExample("CSS Demo: margin-top")}}
+{{intewactiveexampwe("css d-demo: mawgin-top")}}
 
-```css interactive-example-choice
-margin-top: 1em;
+```css i-intewactive-exampwe-choice
+m-mawgin-top: 1em;
 ```
 
-```css interactive-example-choice
-margin-top: 10%;
+```css i-intewactive-exampwe-choice
+m-mawgin-top: 10%;
 ```
 
-```css interactive-example-choice
-margin-top: 10px;
+```css intewactive-exampwe-choice
+mawgin-top: 10px;
 ```
 
-```css interactive-example-choice
-margin-top: 0;
+```css intewactive-exampwe-choice
+mawgin-top: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow"></div>
+    <div c-cwass="wow twansition-aww" id="exampwe-ewement"></div>
+    <div c-cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  d-dispway: fwex;
+  awign-content: f-fwex-stawt;
+  f-fwex-diwection: cowumn;
+  justify-content: fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+  d-dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  bowdew: sowid 10px #ffbf00;
+  b-backgwound-cowow: #2b3a55;
 }
 ```
 
-このプロパティは、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)ではないインライン要素、例えば {{HTMLElement("span")}} や {{HTMLElement("code")}} には効果がありません。
+このプロパティは、[置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)ではないインライン要素、例えば {{htmwewement("span")}} や {{htmwewement("code")}} には効果がありません。
 
 ## 構文
 
 ```css
-/* <length> 値 */
-margin-top: 10px; /* 絶対的な寸法 */
-margin-top: 1em; /* 文字の寸法からの相対 */
-margin-top: 5%; /* 直近のブロックコンテナーの幅からの相対 */
+/* <wength> 値 */
+mawgin-top: 10px; /* 絶対的な寸法 */
+m-mawgin-top: 1em; /* 文字の寸法からの相対 */
+m-mawgin-top: 5%; /* 直近のブロックコンテナーの幅からの相対 */
 
 /* キーワード値 */
-margin-top: auto;
+m-mawgin-top: a-auto;
 
 /* グローバル値 */
-margin-top: inherit;
-margin-top: initial;
-margin-top: revert;
-margin-top: revert-layer;
-margin-top: unset;
+mawgin-top: inhewit;
+mawgin-top: i-initiaw;
+mawgin-top: wevewt;
+mawgin-top: w-wevewt-wayew;
+mawgin-top: unset;
 ```
 
-`margin-top` プロパティは `auto` キーワード、または `<length>` や `<percentage>` で指定されます。正の数、ゼロ、負の数が指定できます。
+`mawgin-top` プロパティは `auto` キーワード、または `<wength>` や `<pewcentage>` で指定されます。正の数、ゼロ、負の数が指定できます。
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : マージンの寸法を固定値で表したものです。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : マージンの寸法を[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)のインラインサイズ（{{cssxwef("wwiting-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
-  - : ブラウザーが適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
+  - : ブラウザーが適切な値を選択して使用します。 {{cssxwef("mawgin")}} を参照してください。
 
 ## 公式定義
 
@@ -107,31 +107,31 @@ margin-top: unset;
 
 ```css
 .content {
-  margin-top: 5%;
+  mawgin-top: 5%;
 }
 .side-box {
-  margin-top: 10px;
+  mawgin-top: 10px;
 }
-.logo {
-  margin-top: -5px;
+.wogo {
+  mawgin-top: -5px;
 }
-#footer {
-  margin-top: 1em;
+#footew {
+  mawgin-top: 1em;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
-- 一括指定の {{cssxref("margin")}}
-- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
-- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- {{cssxwef("mawgin-wight")}}, 🥺 {{cssxwef("mawgin-bottom")}}, mya {{cssxwef("mawgin-weft")}}
+- 一括指定の {{cssxwef("mawgin")}}
+- {{cssxwef("mawgin-bwock-stawt")}}, 🥺 {{cssxwef("mawgin-bwock-end")}}, >_< {{cssxwef("mawgin-inwine-stawt")}}, >_< {{cssxwef("mawgin-inwine-end")}}
+- 一括指定の {{cssxwef("mawgin-bwock")}} と {{cssxwef("mawgin-inwine")}}
+- [css ボックスモデル](/ja/docs/web/css/css_box_modew)モジュール

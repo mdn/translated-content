@@ -1,15 +1,15 @@
 ---
-title: Head
-slug: Glossary/Head
+titwe: head
+swug: gwossawy/head
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Head** **は** {{glossary("HTML")}} 文書の一部で、その文書の {{glossary("metadata", "メタデータ")}} 、例えば著者や、説明や、HTML に適用される {{glossary("CSS")}} や {{glossary("JavaScript")}} ファイルへのリンクといったものを含んでいます。
+**head** **は** {{gwossawy("htmw")}} 文書の一部で、その文書の {{gwossawy("metadata", OwO "メタデータ")}} 、例えば著者や、説明や、htmw に適用される {{gwossawy("css")}} や {{gwossawy("javascwipt")}} ファイルへのリンクといったものを含んでいます。
 
 ## 詳細情報
 
-### HTML head
+### htmw h-head
 
-- MDN の {{htmlelement("head")}} 要素のリファレンス
-- MDN Learning Area の [HTML \<head>](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
+- mdn の {{htmwewement("head")}} 要素のリファレンス
+- m-mdn weawning a-awea の [htmw \<head>](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata)

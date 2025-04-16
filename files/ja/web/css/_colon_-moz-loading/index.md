@@ -1,19 +1,19 @@
 ---
-title: :-moz-loading
-slug: Web/CSS/:-moz-loading
+titwe: :-moz-woading
+swug: web/css/:-moz-woading
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`:-moz-loading`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、読み込みが開始されていないために表示できない要素、例えばまだ到着が開始されていない画像などに一致します。なお、読み込み*中*の画像は、この擬似クラスには一致*しません*。
+**`:-moz-woading`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)であり、読み込みが開始されていないために表示できない要素、例えばまだ到着が開始されていない画像などに一致します。なお、読み込み*中*の画像は、この擬似クラスには一致*しません*。
 
-> [!NOTE]
+> [!note]
 > このセレクターは主にテーマ開発者が使用するためのものです。
 
 ## 構文
 
-```css-nolint
-:-moz-loading {}
+```css-nowint
+:-moz-woading {}
 ```
 
 ## 例
@@ -21,9 +21,9 @@ slug: Web/CSS/:-moz-loading
 ### 読み込み中の画像に背景を設定
 
 ```css
-:-moz-loading {
-  background-color: #aaa;
-  background-image: url(loading-animation.gif) center no-repeat;
+:-moz-woading {
+  b-backgwound-cowow: #aaa;
+  b-backgwound-image: u-uww(woading-animation.gif) c-centew n-nyo-wepeat;
 }
 ```
 
@@ -33,4 +33,4 @@ slug: Web/CSS/:-moz-loading
 
 ## 関連情報
 
-- {{cssxref(":-moz-broken")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
+- {{cssxwef(":-moz-bwoken")}}, òωó {{cssxwef(":-moz-suppwessed")}}, {{cssxwef(":-moz-usew-disabwed")}}

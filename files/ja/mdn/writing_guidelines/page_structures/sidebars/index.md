@@ -1,38 +1,38 @@
 ---
-title: サイドバー
-slug: MDN/Writing_guidelines/Page_structures/Sidebars
-l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+titwe: サイドバー
+swug: m-mdn/wwiting_guidewines/page_stwuctuwes/sidebaws
+w-w10n:
+  souwcecommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
 
-MDN のページにはすべてサイドバーが設置されています。そのほとんどは、 YAML ファイルでデータ構造を定義し、マクロ呼び出しを使用してページにサイドバーを挿入する標準システムで作成されています。
+m-mdn のページにはすべてサイドバーが設置されています。そのほとんどは、 y-yamw ファイルでデータ構造を定義し、マクロ呼び出しを使用してページにサイドバーを挿入する標準システムで作成されています。
 
 このガイドでは、サイドバーがどのように動作するのかを学び、必要に応じて既存のサイドバーを編集したり、新しいサイドバーを作成したりする方法を習得します。また、標準システムを使用していないものについても詳しく説明します。
 
-> [!NOTE]
-> サイドバーを編集している場合は、書式化とリダイレクトの同期に `yarn tool` コマンドを使用することができます。
-> 詳しくは [Yari の CLI ツール](https://github.com/mdn/yari/blob/main/docs/cli-tool.md)のドキュメントを参照してください。
+> [!note]
+> サイドバーを編集している場合は、書式化とリダイレクトの同期に `yawn t-toow` コマンドを使用することができます。
+> 詳しくは [yawi の c-cwi ツール](https://github.com/mdn/yawi/bwob/main/docs/cwi-toow.md)のドキュメントを参照してください。
 
 ## サイドバーの働き
 
-それぞれのサイドバーには、対応する YAML ファイルが MDN の `content` リポジトリーの [`files/sidebars`](https://github.com/mdn/content/tree/main/files/sidebars) ディレクトリーの中にあります。このファイルでは、サイドバーリンクの階層構造、それぞれのリンクが指し示すべき URL、およびオプションのカスタム見出し/リンクテキストを定義しています。必要に応じて、これらのテキストをさまざまな言語にローカライズすることができます。
+それぞれのサイドバーには、対応する y-yamw ファイルが m-mdn の `content` リポジトリーの [`fiwes/sidebaws`](https://github.com/mdn/content/twee/main/fiwes/sidebaws) ディレクトリーの中にあります。このファイルでは、サイドバーリンクの階層構造、それぞれのリンクが指し示すべき uww、およびオプションのカスタム見出し/リンクテキストを定義しています。必要に応じて、これらのテキストをさまざまな言語にローカライズすることができます。
 
-例として、現在見ているページを例にとると、サイドバーの構造は [`mdnsidebar.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/mdnsidebar.yaml) ファイルで定義されています。
+例として、現在見ているページを例にとると、サイドバーの構造は [`mdnsidebaw.yamw`](https://github.com/mdn/content/bwob/main/fiwes/sidebaws/mdnsidebaw.yamw) ファイルで定義されています。
 
-サイドバーは、対応するマクロ呼び出し `\{{MDNSidebar}}` を[文書のソース](https://raw.githubusercontent.com/mdn/content/refs/heads/main/files/ja/mdn/writing_guidelines/page_structures/sidebars/index.md)内のフロントマターのすぐ下に記載することで、現在のページ（および同じ文書ツリー内のページにも）に表示されます。
+サイドバーは、対応するマクロ呼び出し `\{{mdnsidebaw}}` を[文書のソース](https://waw.githubusewcontent.com/mdn/content/wefs/heads/main/fiwes/ja/mdn/wwiting_guidewines/page_stwuctuwes/sidebaws/index.md)内のフロントマターのすぐ下に記載することで、現在のページ（および同じ文書ツリー内のページにも）に表示されます。
 
 ```md
 ---
-title: サイドバー
-slug: MDN/Writing_guidelines/Page_structures/Sidebars
-l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+titwe: サイドバー
+swug: mdn/wwiting_guidewines/page_stwuctuwes/sidebaws
+w10n:
+  s-souwcecommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
 
-\{{MDNSidebar}}
+\{{mdnsidebaw}}
 ```
 
-フロントマターとは、ダッシュで区切られた間のコンテンツを指します。ソースに `\{{MDNSidebar}}` マクロ呼び出しを記載すると、システムは同じ名前の YAML ファイルを `files/sidebars` ディレクトリー内で探します。ファイルが見つかると、サイドバーのレンダリングと、 1 つまたは複数の順序付きリスト（{{htmlelement("ol")}}要素）としてページ上に配置する処理が自動的に行われます。
+フロントマターとは、ダッシュで区切られた間のコンテンツを指します。ソースに `\{{mdnsidebaw}}` マクロ呼び出しを記載すると、システムは同じ名前の yamw ファイルを `fiwes/sidebaws` ディレクトリー内で探します。ファイルが見つかると、サイドバーのレンダリングと、 1 つまたは複数の順序付きリスト（{{htmwewement("ow")}}要素）としてページ上に配置する処理が自動的に行われます。
 
 このページに戻る前に、サイドバーの周りをナビゲート操作してみてください。 通常、ページをナビゲートすると、現在いる節のリンクリストが展開され、他にも展開される一方で、他にもが折りたたまれ、現在いるページが強調表示されることに気づくでしょう。
 
@@ -40,310 +40,310 @@ l10n:
 
 他にもよく見かける標準的なサイドバーには、次のものがあります。
 
-- `\{{CSSRef}}`
+- `\{{csswef}}`
 
-  - : すべての [CSS](/ja/docs/Web/CSS) ページに存在します。
+  - : すべての [css](/ja/docs/web/css) ページに存在します。
 
-- `\{{GlossarySidebar}}`
+- `\{{gwossawysidebaw}}`
 
-  - : すべての[glossary](/ja/docs/Glossary)ページに存在します。
+  - : すべての[gwossawy](/ja/docs/gwossawy)ページに存在します。
 
-- `\{{LearnSidebar}}`
+- `\{{weawnsidebaw}}`
 
-  - : [ウェブ開発の学習](/ja/docs/Learn_web_development)の中にあるすべてのページに存在します。
+  - : [ウェブ開発の学習](/ja/docs/weawn_web_devewopment)の中にあるすべてのページに存在します。
 
-- `\{{HTMLSidebar}}`
+- `\{{htmwsidebaw}}`
 
-  - : [HTML](/ja/docs/Web/HTML) のドキュメントのためのサイドバーを生成します。
+  - : [htmw](/ja/docs/web/htmw) のドキュメントのためのサイドバーを生成します。
 
-- `\{{HTTPSidebar}}`
+- `\{{httpsidebaw}}`
 
-  - : [HTTP ドキュメント](/ja/docs/Web/HTTP) のためのサイドバーを生成します。
+  - : [http ドキュメント](/ja/docs/web/http) のためのサイドバーを生成します。
 
-- `\{{PWASidebar}}`
+- `\{{pwasidebaw}}`
 
-  - : [プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) のドキュメントのためのサイドバーを生成します。
+  - : [プログレッシブウェブアプリ (pwa)](/ja/docs/web/pwogwessive_web_apps) のドキュメントのためのサイドバーを生成します。
 
-> [!NOTE]
-> 使用する適切なマクロは[ページの種類](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types)に依存します。各ページ種類の[テンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types#ページテンプレート)には、そのページ種類に適したマクロが記載されています。
+> [!note]
+> 使用する適切なマクロは[ページの種類](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types)に依存します。各ページ種類の[テンプレート](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types#ページテンプレート)には、そのページ種類に適したマクロが記載されています。
 
-## サイドバーの YAML の構文の解説
+## サイドバーの yamw の構文の解説
 
-この節では、 MDN のサイドバーに含めることができるさまざまな機能と、それぞれの生成に使用できる YAML 構文について説明します。この文書化を進める中で、[既存のサイドバーの YAML](https://github.com/mdn/content/tree/main/files/sidebars) に対して機能を相互参照してください。
+この節では、 m-mdn のサイドバーに含めることができるさまざまな機能と、それぞれの生成に使用できる yamw 構文について説明します。この文書化を進める中で、[既存のサイドバーの y-yamw](https://github.com/mdn/content/twee/main/fiwes/sidebaws) に対して機能を相互参照してください。
 
 ### 新しいサイドバーの作成
 
-それぞれの YAML サイドバーのデータ定義の始めに `sidebar` キーを使用します。このキーの値は、サイドバーデータを定義するリストです。
+それぞれの yamw サイドバーのデータ定義の始めに `sidebaw` キーを使用します。このキーの値は、サイドバーデータを定義するリストです。
 
-```yaml
-sidebar:
+```yamw
+sidebaw:
   # サイドバー定義の始まり
 ```
 
 ### 基本的な単一のリンク
 
-サイドバーに基本的な単一のリンクを作成するには、 YAML リストアイテムに相対 URL が含めて記述してください。
+サイドバーに基本的な単一のリンクを作成するには、 yamw リストアイテムに相対 u-uww が含めて記述してください。
 
-```yaml
-sidebar:
-  - /MDN/Changelog
+```yamw
+sidebaw:
+  - /mdn/changewog
 ```
 
-この URL は MDN の URL 構造における `docs` ディレクトリーに対する相対パスであるため、例えば `/MDN/Changelog` は https://developer.mozilla.org/ja/docs/MDN/Changelog へのリンクを生成します。システムは自動的にリンク先のページの文書タイトルをリンクテキストとして使用します。
+この u-uww は m-mdn の uww 構造における `docs` ディレクトリーに対する相対パスであるため、例えば `/mdn/changewog` は https://devewopew.moziwwa.owg/ja/docs/mdn/changewog へのリンクを生成します。システムは自動的にリンク先のページの文書タイトルをリンクテキストとして使用します。
 
-独自のリンクテキストを使用したい場合は、リストアイテム内に 2 つのキーを記述する必要があります。 1 つは、独自のリンクテキストを持つ `title`、もう 1 つは、相対 URL を持つ `link` です。次の例では、 MDN Web Docs の変更履歴へのリンクを前回と同様に作成しますが、リンクテキストは独自の "Our changelog" になります。
+独自のリンクテキストを使用したい場合は、リストアイテム内に 2 つのキーを記述する必要があります。 1 つは、独自のリンクテキストを持つ `titwe`、もう 1 つは、相対 uww を持つ `wink` です。次の例では、 mdn web docs の変更履歴へのリンクを前回と同様に作成しますが、リンクテキストは独自の "ouw changewog" になります。
 
-```yaml
-sidebar:
-  - title: Our changelog
-    link: /MDN/Changelog
+```yamw
+s-sidebaw:
+  - titwe: ouw changewog
+    wink: /mdn/changewog
 ```
 
 ### セクションタイトル
 
-セクションタイトルは、通常のサイドバーアイテムよりも大きなフォントサイズで表示されるサイドバーアイテムです。これは一般的に、ドキュメントのセクションのランディングページにリンクするサイドバー上部のタイトルとして、または具体的な大型サイドバーのセクション区切りとして使用されています（ [ウェブ開発の学習の章](/ja/docs/Learn_web_development)を参照）。
+セクションタイトルは、通常のサイドバーアイテムよりも大きなフォントサイズで表示されるサイドバーアイテムです。これは一般的に、ドキュメントのセクションのランディングページにリンクするサイドバー上部のタイトルとして、または具体的な大型サイドバーのセクション区切りとして使用されています（ [ウェブ開発の学習の章](/ja/docs/weawn_web_devewopment)を参照）。
 
 セクションタイトルは、リストアイテムに `type` キーと `section` の値を設定することで定義します。例を示します。
 
-```yaml
-sidebar:
+```yamw
+sidebaw:
   - type: section
-    link: /MDN
+    w-wink: /mdn
 ```
 
 セクションタイトルには、独自のリンクテキストを指定することができます。
 
-```yaml
-sidebar:
-  - type: section
-    title: Yay MDN!
-    link: /MDN
+```yamw
+sidebaw:
+  - t-type: section
+    t-titwe: yay m-mdn! (⑅˘꒳˘)
+    wink: /mdn
 ```
 
-または、リンクを含まないテキストリストアイテムのみを表示するには、 `link` キーを省略できます。
+または、リンクを含まないテキストリストアイテムのみを表示するには、 `wink` キーを省略できます。
 
-```yaml
-sidebar:
+```yamw
+s-sidebaw:
   - type: section
-    title: Yay MDN!
+    titwe: y-yay mdn! XD
 ```
 
 ### 展開/折りたたみができるリンクのリストを作成
 
-展開/折りたたみができるリンクのリストを作成するには、まず通常通りリストアイテムを作成し、 `children` キーを記述します。このキーの値は、親アイテムの下に子アイテムとして表示したいリンクを含むリストです。それぞれの子リストアイテムは、親アイテムと同じ構文を使用します。子リストアイテムには、独自の `children` を含めることができるため、複数の階層レベルを作成することができます。例えば、次のような例があります。
+展開/折りたたみができるリンクのリストを作成するには、まず通常通りリストアイテムを作成し、 `chiwdwen` キーを記述します。このキーの値は、親アイテムの下に子アイテムとして表示したいリンクを含むリストです。それぞれの子リストアイテムは、親アイテムと同じ構文を使用します。子リストアイテムには、独自の `chiwdwen` を含めることができるため、複数の階層レベルを作成することができます。例えば、次のような例があります。
 
-```yaml
-sidebar:
-  - title: community_guidelines
-    details: closed
-    children:
-      - /MDN/Community
-      - title: contributing_to_mdn_web_docs
-        details: closed
-        children:
-          - /MDN/Community
-          - /MDN/Community/Getting_started
-          - /MDN/Community/Our_repositories
-          - /MDN/Community/Translated_content
-          - /MDN/Community/Security_vulnerability_response
-      - /MDN/Community/Open_source_etiquette
-      - /MDN/Community/Communication_channels
-      - /MDN/Community/Discussions
-      - /MDN/Community/Learn_forum
-      - /MDN/Community/Issues
-      - /MDN/Community/Pull_requests
-      - /MDN/Community/Roles_teams
+```yamw
+sidebaw:
+  - titwe: community_guidewines
+    d-detaiws: cwosed
+    chiwdwen:
+      - /mdn/community
+      - titwe: contwibuting_to_mdn_web_docs
+        detaiws: cwosed
+        c-chiwdwen:
+          - /mdn/community
+          - /mdn/community/getting_stawted
+          - /mdn/community/ouw_wepositowies
+          - /mdn/community/twanswated_content
+          - /mdn/community/secuwity_vuwnewabiwity_wesponse
+      - /mdn/community/open_souwce_etiquette
+      - /mdn/community/communication_channews
+      - /mdn/community/discussions
+      - /mdn/community/weawn_fowum
+      - /mdn/community/issues
+      - /mdn/community/puww_wequests
+      - /mdn/community/wowes_teams
 ```
 
-なお、`details` キーにも注意してください。これは、ページが最初に読み込まれた際に、リストアイテムの子リストが閉じられた状態で表示されるか、開かれた状態で表示されるかを制御します。利用可能な値は次の通りです。
+なお、`detaiws` キーにも注意してください。これは、ページが最初に読み込まれた際に、リストアイテムの子リストが閉じられた状態で表示されるか、開かれた状態で表示されるかを制御します。利用可能な値は次の通りです。
 
-- `closed`: 現在のページがいずれかの子ページにリンクされていない限り、子ページは閉じられて表示されます。リンクされている場合は、開いた状態になります。
+- `cwosed`: 現在のページがいずれかの子ページにリンクされていない限り、子ページは閉じられて表示されます。リンクされている場合は、開いた状態になります。
 - `open`: 子は常に開いて表示されます。
 
-リストアイテムに `children` および `details` が指定されている場合、そのアイテムは、{{htmlelement("details")}}/{{htmlelement("summary")}} 要素構造でレンダリングされ、その中に子リストが含まれます。この子リストは、展開/折りたたみボタンをクリックするか、サマリーにフォーカスして <kbd>Enter</kbd>/<kbd>Return</kbd> キーを押すことで展開/折りたたみすることができます。
+リストアイテムに `chiwdwen` および `detaiws` が指定されている場合、そのアイテムは、{{htmwewement("detaiws")}}/{{htmwewement("summawy")}} 要素構造でレンダリングされ、その中に子リストが含まれます。この子リストは、展開/折りたたみボタンをクリックするか、サマリーにフォーカスして <kbd>entew</kbd>/<kbd>wetuwn</kbd> キーを押すことで展開/折りたたみすることができます。
 
 ### サブページのリストの自動的なレンダリング
 
-特定のページのサブページへのリンクを含むリストを作成したい場合は、リストアイテムを指定して、タイプキーの値を `listSubPages`、パスキーの値をリンクを作成したいサブページへのパスとして指定することで、これを作成できます。例えば、 [Glossary](/ja/docs/Glossary) サイドバーの定義全体（[`glossarysidebar.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/glossarysidebar.yaml) を参照）は次のようになります。
+特定のページのサブページへのリンクを含むリストを作成したい場合は、リストアイテムを指定して、タイプキーの値を `wistsubpages`、パスキーの値をリンクを作成したいサブページへのパスとして指定することで、これを作成できます。例えば、 [gwossawy](/ja/docs/gwossawy) サイドバーの定義全体（[`gwossawysidebaw.yamw`](https://github.com/mdn/content/bwob/main/fiwes/sidebaws/gwossawysidebaw.yamw) を参照）は次のようになります。
 
-```yaml
-sidebar:
-  - type: section
-    link: /Glossary
-    title: Glossary
-  - type: listSubPages
-    path: /Glossary
+```yamw
+sidebaw:
+  - t-type: section
+    w-wink: /gwossawy
+    t-titwe: gwossawy
+  - type: wistsubpages
+    path: /gwossawy
 ```
 
 これによって、用語集のランディングページに戻るリンクが含まれたセクションタイトルを伴うサイドバーと、用語集の子ページすべてへのリンクが掲載されている最上位のリストが表示されます。
 
-これを行としてレンダリングし、サブページが展開されたり折りたたまれたりする子リストとして現れるようにしたい場合は、親アイテムに表示するテキストを指定する `title` キーと、`<details>`/`<summary>` 構造の開閉状態を指定する `details` キーを追加で記載する必要があります。
+これを行としてレンダリングし、サブページが展開されたり折りたたまれたりする子リストとして現れるようにしたい場合は、親アイテムに表示するテキストを指定する `titwe` キーと、`<detaiws>`/`<summawy>` 構造の開閉状態を指定する `detaiws` キーを追加で記載する必要があります。
 
-```yaml
-sidebar:
-  - type: listSubPages
-    path: /Glossary
-    title: Glossary
-    details: closed
+```yamw
+s-sidebaw:
+  - t-type: wistsubpages
+    path: /gwossawy
+    titwe: g-gwossawy
+    d-detaiws: cwosed
 ```
 
 #### リストのサブページのグループ化
 
-`listSubPagesGrouped` の `type` 値もあります。 これによって、同じ部分文字列に続いてハイフン（例えば `item-`）で終わるタイトルを持つすべてのサブページが、その部分文字列にハイフンとアスタリスク（例えば `item-*`）を追加したリストアイテムの下のサブリストに記載されます。
+`wistsubpagesgwouped` の `type` 値もあります。 これによって、同じ部分文字列に続いてハイフン（例えば `item-`）で終わるタイトルを持つすべてのサブページが、その部分文字列にハイフンとアスタリスク（例えば `item-*`）を追加したリストアイテムの下のサブリストに記載されます。
 
-例えば、この記事を書いている時点では、 MDN 用語集には CORS 関連のページが 3 つ含まれています。
+例えば、この記事を書いている時点では、 mdn 用語集には cows 関連のページが 3 つ含まれています。
 
-- CORS
-- CORS-safelisted request header
-- CORS-safelisted response header
+- cows
+- c-cows-safewisted wequest headew
+- c-cows-safewisted wesponse headew
 
 用語集サイドバーの定義をこれに更新するとしたら、このようにします。
 
-```yaml
-sidebar:
-  - type: listSubPagesGrouped
-    path: /Glossary
-    title: Glossary
-    details: closed
+```yamw
+s-sidebaw:
+  - type: wistsubpagesgwouped
+    p-path: /gwossawy
+    titwe: gwossawy
+    d-detaiws: c-cwosed
 ```
 
 これらのページへのリンクは、次のような子リスト構造にグループ化されます。
 
-- CORS-\*
-  - CORS
-  - CORS-safelisted request header
-  - CORS-safelisted response header
+- cows-\*
+  - cows
+  - cows-safewisted wequest headew
+  - cows-safewisted wesponse headew
 
-もっと現実的な例は、 [CSS](/ja/docs/Web/CSS) のサイドバー定義（[`cssref.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/cssref.yaml) を参照）にあり、 `listSubPagesGrouped` を使用して、一括指定および個別指定プロパティの関連リンクをグループ化することができます。プロパティのサイドバーメニューを生成するリストアイテムは次のようになります。
+もっと現実的な例は、 [css](/ja/docs/web/css) のサイドバー定義（[`csswef.yamw`](https://github.com/mdn/content/bwob/main/fiwes/sidebaws/csswef.yamw) を参照）にあり、 `wistsubpagesgwouped` を使用して、一括指定および個別指定プロパティの関連リンクをグループ化することができます。プロパティのサイドバーメニューを生成するリストアイテムは次のようになります。
 
-```yaml
-- type: listSubPagesGrouped
-  path: /Web/CSS
-  title: Properties
+```yamw
+- t-type: w-wistsubpagesgwouped
+  path: /web/css
+  t-titwe: p-pwopewties
   tags:
-    - css-property
-    - css-shorthand-property
-  details: closed
+    - c-css-pwopewty
+    - css-showthand-pwopewty
+  detaiws: cwosed
 ```
 
 このリストアイテムの定義には `tags` も含まれており、これは次の節で取り上げるテーマです。
 
 #### リストのサブページの絞り込み
 
-同じディレクトリー内に複数の異なる種類のページ（ページのフロンマター内に指定された `page-type` キーで指定）がある場合、 `listSubPages` および `listSubPagesGrouped` によって生成されたリストアイテムをページ種類別にフィルターすることができます。これを行うには、リストアイテム内に `tags` キーを含めることができます。このキーの値が、生成されたリストアイテムに含める単一のページ種類またはページ種類のリストを示します。 CSS サイドバーには、例えば次のようなものが含まれています。
+同じディレクトリー内に複数の異なる種類のページ（ページのフロンマター内に指定された `page-type` キーで指定）がある場合、 `wistsubpages` および `wistsubpagesgwouped` によって生成されたリストアイテムをページ種類別にフィルターすることができます。これを行うには、リストアイテム内に `tags` キーを含めることができます。このキーの値が、生成されたリストアイテムに含める単一のページ種類またはページ種類のリストを示します。 c-css サイドバーには、例えば次のようなものが含まれています。
 
-```yaml
-- type: listSubPages
-  path: /Web/CSS
-  title: Modules
-  tags: css-module
-  details: closed
-- type: listSubPagesGrouped
-  path: /Web/CSS
-  title: Properties
+```yamw
+- type: wistsubpages
+  path: /web/css
+  titwe: moduwes
+  t-tags: css-moduwe
+  detaiws: c-cwosed
+- type: wistsubpagesgwouped
+  p-path: /web/css
+  t-titwe: pwopewties
   tags:
-    - css-property
-    - css-shorthand-property
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Selectors
-  tags: css-selector
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Combinators
-  tags: css-combinator
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Pseudo-classes
-  tags: css-pseudo-class
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Pseudo-elements
-  tags: css-pseudo-element
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: At-rules
-  tags: css-at-rule
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Functions
+    - c-css-pwopewty
+    - c-css-showthand-pwopewty
+  d-detaiws: cwosed
+- t-type: wistsubpages
+  path: /web/css
+  titwe: s-sewectows
+  tags: c-css-sewectow
+  d-detaiws: cwosed
+- t-type: wistsubpages
+  p-path: /web/css
+  titwe: combinatows
+  tags: css-combinatow
+  d-detaiws: cwosed
+- type: wistsubpages
+  path: /web/css
+  titwe: pseudo-cwasses
+  tags: css-pseudo-cwass
+  detaiws: c-cwosed
+- type: wistsubpages
+  path: /web/css
+  titwe: pseudo-ewements
+  t-tags: css-pseudo-ewement
+  d-detaiws: c-cwosed
+- type: wistsubpages
+  p-path: /web/css
+  titwe: at-wuwes
+  t-tags: css-at-wuwe
+  d-detaiws: cwosed
+- type: wistsubpages
+  path: /web/css
+  titwe: functions
   tags: css-function
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Types
-  tags: css-type
-  details: closed
+  d-detaiws: cwosed
+- type: w-wistsubpages
+  path: /web/css
+  t-titwe: types
+  t-tags: css-type
+  detaiws: cwosed
 ```
 
 ### テキスト文字列のローカライズ
 
-上で説明したように、リンクテキストやセクションタイトルを埋め込むためのカスタムテキストを `title` キーに指定することができます。そのテキストを複数の言語にローカライズしたい場合は、`title` キーにプレースホルダーを含め、 YAML ファイルの末尾にある `l10n` 辞書内に、そのプレースホルダーをそれぞれの言語でどのように定義するかを記載することができます。
+上で説明したように、リンクテキストやセクションタイトルを埋め込むためのカスタムテキストを `titwe` キーに指定することができます。そのテキストを複数の言語にローカライズしたい場合は、`titwe` キーにプレースホルダーを含め、 yamw ファイルの末尾にある `w10n` 辞書内に、そのプレースホルダーをそれぞれの言語でどのように定義するかを記載することができます。
 
-どのようなものか、例を見てみましょう。 [HTML](/ja/docs/Web/HTML) サイドバー（[`htmlsidebar.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/htmlsidebar.yaml) を参照）では、すべての {{htmlelement("input")}} 型のリファレンスページへのリンクのリストを生成するリストアイテムを定義します。親リストアイテムのテキストは、 `title` キーに `Input_types` のプレースホルダーとして定義されます。
+どのようなものか、例を見てみましょう。 [htmw](/ja/docs/web/htmw) サイドバー（[`htmwsidebaw.yamw`](https://github.com/mdn/content/bwob/main/fiwes/sidebaws/htmwsidebaw.yamw) を参照）では、すべての {{htmwewement("input")}} 型のリファレンスページへのリンクのリストを生成するリストアイテムを定義します。親リストアイテムのテキストは、 `titwe` キーに `input_types` のプレースホルダーとして定義されます。
 
-```yaml
-- type: listSubPages
-  path: /Web/HTML/Element/input
-  title: Input_types
-  details: closed
-  code: true
+```yamw
+- t-type: wistsubpages
+  p-path: /web/htmw/ewement/input
+  titwe: i-input_types
+  d-detaiws: cwosed
+  code: twue
 ```
 
-ファイルの一番下では、`l10n` 辞書を定義しています。 `l10n` 内の各キーは、さまざまなロケールを表します。 `en-US`、`fr`、`ja` などです。 これらの各キーの値は、サブ辞書であり、そのキーはリストアイテム定義で定義されているプレースホルダーです。 各キーの値は、それぞれのロケールにおけるそのプレースホルダーの値です。
+ファイルの一番下では、`w10n` 辞書を定義しています。 `w10n` 内の各キーは、さまざまなロケールを表します。 `en-us`、`fw`、`ja` などです。 これらの各キーの値は、サブ辞書であり、そのキーはリストアイテム定義で定義されているプレースホルダーです。 各キーの値は、それぞれのロケールにおけるそのプレースホルダーの値です。
 
 例を示します。
 
-```yaml
-l10n:
-  en-US:
-    Input_types: <code>&lt;input&gt;</code> types
-  fr:
-    Input_types: Types <code>&lt;input&gt;</code>
-  ja:
-    Input_types: <code>&lt;input&gt;</code> 型
-  ko:
-    Input_types: <code>&lt;input&gt;</code> types
-  pt-BR:
-    Input_types: Tipos de <code>&lt;input&gt;</code>
-  ru:
-    Input_types: Типы <code>&lt;input&gt;</code>
-  zh-CN:
-    Input_types: <code>&lt;input&gt;</code> 类型
+```yamw
+w10n:
+  en-us:
+    input_types: <code>&wt;input&gt;</code> types
+  f-fw:
+    input_types: t-types <code>&wt;input&gt;</code>
+  j-ja:
+    input_types: <code>&wt;input&gt;</code> 型
+  k-ko:
+    input_types: <code>&wt;input&gt;</code> t-types
+  pt-bw:
+    input_types: t-tipos de <code>&wt;input&gt;</code>
+  wu:
+    input_types: Типы <code>&wt;input&gt;</code>
+  zh-cn:
+    input_types: <code>&wt;input&gt;</code> 类型
 ```
 
-簡潔にするため、各ロケールには `Input_types` の値のみ含まれます。
+簡潔にするため、各ロケールには `input_types` の値のみ含まれます。
 
-サイドバーがレンダリングされる際、システムは、アクセスしているサイトのどのバージョンのロケールであっても、 `Input_types` テキストを定義した値に置き換えます。例えば、次の例と比較してください。
+サイドバーがレンダリングされる際、システムは、アクセスしているサイトのどのバージョンのロケールであっても、 `input_types` テキストを定義した値に置き換えます。例えば、次の例と比較してください。
 
-- https://developer.mozilla.org/en-US/docs/Web/HTML
-- https://developer.mozilla.org/fr/docs/Web/HTML
-- https://developer.mozilla.org/ja/docs/Web/HTML
+- h-https://devewopew.moziwwa.owg/en-us/docs/web/htmw
+- https://devewopew.moziwwa.owg/fw/docs/web/htmw
+- h-https://devewopew.moziwwa.owg/ja/docs/web/htmw
 
-MDNのロケールにアクセスし、特定のプレースホルダに対して値が定義されていない場合、既定では `en-US` バージョンが使用されます。 `en-US` バージョンが定義されていない場合、リテラルプレースホルダテキストが表示されます（上記の場合、 `Input_types` となります）。
+mdnのロケールにアクセスし、特定のプレースホルダに対して値が定義されていない場合、既定では `en-us` バージョンが使用されます。 `en-us` バージョンが定義されていない場合、リテラルプレースホルダテキストが表示されます（上記の場合、 `input_types` となります）。
 
 ## 標準外のサイドバー
 
-MDN で使用されているサイドバーの中には、上記で説明されている標準システムを使用していないものもあります。これらは複雑な完全に自動化されたマクロであり、変更する必要が頻繁にあるわけではありません。
+mdn で使用されているサイドバーの中には、上記で説明されている標準システムを使用していないものもあります。これらは複雑な完全に自動化されたマクロであり、変更する必要が頻繁にあるわけではありません。
 
-- `\{{APIRef("<API>")}}`
-  - : [API リファレンスページ](/ja/docs/Web/API#インターフェイス)に表示される API サイドバー。それぞれのインターフェイスに対して、マクロはインターフェイスで定義されたメンバー（プロパティ、メソッド、イベントなど）へのリンクを自動生成します。単一の引数は、 [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルで定義された関連する API グループの名前です。サイドバーの下部に表示される関連ページを編集するには、その API の GroupData 項目を編集します。
-- `\{{DefaultAPISidebar("<API>")}}`
-  - : [API ランディングページ](/ja/docs/Web/API#仕様書)に表示される API サイドバー。単一の引数は、 [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルで定義された関連する API グループの名前です。具体的な API のサイドバーにリンクされたガイド、インターフェイスなどを編集するには、その API の GroupData 項目を編集します。
-- `\{{JSRef("<JS_topic>")}}`
-  - : [JavaScript リファレンスページ](/ja/docs/Web/JavaScript/Reference)のサイドバー。単一の引数は、リンクを作成したいディレクトリーです。
+- `\{{apiwef("<api>")}}`
+  - : [api リファレンスページ](/ja/docs/web/api#インターフェイス)に表示される a-api サイドバー。それぞれのインターフェイスに対して、マクロはインターフェイスで定義されたメンバー（プロパティ、メソッド、イベントなど）へのリンクを自動生成します。単一の引数は、 [`gwoupdata.json`](https://github.com/mdn/content/bwob/main/fiwes/jsondata/gwoupdata.json) ファイルで定義された関連する a-api グループの名前です。サイドバーの下部に表示される関連ページを編集するには、その api の gwoupdata 項目を編集します。
+- `\{{defauwtapisidebaw("<api>")}}`
+  - : [api ランディングページ](/ja/docs/web/api#仕様書)に表示される api サイドバー。単一の引数は、 [`gwoupdata.json`](https://github.com/mdn/content/bwob/main/fiwes/jsondata/gwoupdata.json) ファイルで定義された関連する api グループの名前です。具体的な api のサイドバーにリンクされたガイド、インターフェイスなどを編集するには、その a-api の gwoupdata 項目を編集します。
+- `\{{jswef("<js_topic>")}}`
+  - : [javascwipt リファレンスページ](/ja/docs/web/javascwipt/wefewence)のサイドバー。単一の引数は、リンクを作成したいディレクトリーです。
 
-これらのうちの 1 つが更新されるべきであるとお考えの場合は、[通常の方法](/ja/docs/MDN/Community/Communication_channels)で私たちにご連絡ください。
+これらのうちの 1 つが更新されるべきであるとお考えの場合は、[通常の方法](/ja/docs/mdn/community/communication_channews)で私たちにご連絡ください。
 
 ## 関連情報
 
-- [マクロの使用](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [コンテンツリンクマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Links)
-- [ページセクションマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)
-- [バナーと注意のマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
+- [マクロの使用](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos)
+- [コンテンツリンクマクロ](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/winks)
+- [ページセクションマクロ](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/macwos/commonwy_used_macwos)
+- [バナーと注意のマクロ](/ja/docs/mdn/wwiting_guidewines/page_stwuctuwes/bannews_and_notices)

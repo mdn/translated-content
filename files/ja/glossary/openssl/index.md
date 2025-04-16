@@ -1,15 +1,15 @@
 ---
-title: OpenSSL
-slug: Glossary/OpenSSL
+titwe: openssw
+swug: gwossawy/openssw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-OpenSSL は、{{glossary("SSL")}} と {{glossary("TLS")}} のオープンソースの実装です。
+o-openssw は、{{gwossawy("ssw")}} と {{gwossawy("tws")}} のオープンソースの実装です。
 
 ## もっと学ぶ
 
 ### 一般知識
 
-- Wikipedia 上の [OpenSSL](https://ja.wikipedia.org/wiki/OpenSSL)
-- [公式ウェブサイト](http://www.openssl.org/)
+- w-wikipedia 上の [openssw](https://ja.wikipedia.owg/wiki/openssw)
+- [公式ウェブサイト](http://www.openssw.owg/)

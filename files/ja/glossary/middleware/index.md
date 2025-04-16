@@ -1,9 +1,9 @@
 ---
-title: Middleware (ミドルウェア)
-slug: Glossary/Middleware
+titwe: middwewawe (ミドルウェア)
+swug: g-gwossawy/middwewawe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 ミドルウェアとは、システムの各部分がデータを通信および管理できるようにする、あらゆるソフトウェアまたはサービスの（定義があやふやな）用語です。コンポーネントと入出力間の通信を処理するソフトウェアであるため、開発者はアプリケーションの特定の目的に集中できます。
 
@@ -13,6 +13,6 @@ slug: Glossary/Middleware
 
 ### 一般知識
 
-- Wikipedia 上の [ミドルウェア（分散アプリケーション）](<https://en.wikipedia.org/wiki/Middleware_(distributed_applications)>)（英語）
-- Wikipedia 上の [メッセージ指向ミドルウェア](https://ja.wikipedia.org/wiki/メッセージ指向ミドルウェア)
-- Wikipedia 上の [ミドルウェア](https://ja.wikipedia.org/wiki/ミドルウェア)
+- w-wikipedia 上の [ミドルウェア（分散アプリケーション）](<https://en.wikipedia.owg/wiki/middwewawe_(distwibuted_appwications)>)（英語）
+- w-wikipedia 上の [メッセージ指向ミドルウェア](https://ja.wikipedia.owg/wiki/メッセージ指向ミドルウェア)
+- w-wikipedia 上の [ミドルウェア](https://ja.wikipedia.owg/wiki/ミドルウェア)

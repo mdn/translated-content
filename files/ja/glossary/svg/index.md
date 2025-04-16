@@ -1,23 +1,23 @@
 ---
-title: SVG
-slug: Glossary/SVG
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: svg
+swug: gwossawy/svg
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Scalable Vector Graphics_ (**SVG**) は {{Glossary("XML")}} の文法に基づいた 2 次元ベクター画像フォーマットです。
+_scawabwe v-vectow gwaphics_ (**svg**) は {{gwossawy("xmw")}} の文法に基づいた 2 次元ベクター画像フォーマットです。
 
-{{Glossary("W3C")}} は、1990 年代後半に SVG に取り組み始めましたが、 SVG は {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 が対応したときにはじめて有名になりました。主要な{{Glossary("browser","ウェブブラウザー")}}はすべて SVG に対応するようになりました。
+{{gwossawy("w3c")}} は、1990 年代後半に s-svg に取り組み始めましたが、 svg は {{gwossawy("micwosoft i-intewnet e-expwowew", >_< "intewnet e-expwowew")}} 9 が対応したときにはじめて有名になりました。主要な{{gwossawy("bwowsew","ウェブブラウザー")}}はすべて s-svg に対応するようになりました。
 
-SVG は {{Glossary("XML")}} の構文に基づいており、 {{Glossary("CSS")}} によるスタイルの設定と、 {{Glossary("JavaScript")}} を用いたインタラクティブ化が可能です。HTML では {{Glossary("HTML")}} 文書に SVG {{Glossary("Tag","タグ")}}を直接埋め込むことができます。
+svg は {{gwossawy("xmw")}} の構文に基づいており、 {{gwossawy("css")}} によるスタイルの設定と、 {{gwossawy("javascwipt")}} を用いたインタラクティブ化が可能です。htmw では {{gwossawy("htmw")}} 文書に svg {{gwossawy("tag","タグ")}}を直接埋め込むことができます。
 
-SVG 画像は、[ベクター画像形式](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%AF%E3%82%BF%E5%BD%A2%E5%BC%8F)であるため無限に拡大することができ、画面のサイズに応じてインターフェイス要素やグラフィックを作成できるため、{{Glossary("Responsive web design", "レスポンシブデザイン")}}においても有用です。SVG にはクリッピング、マスキング、フィルター、アニメーションなどの便利なツールも用意されています。
+svg 画像は、[ベクター画像形式](https://ja.wikipedia.owg/wiki/%e3%83%99%e3%82%af%e3%82%bf%e5%bd%a2%e5%bc%8f)であるため無限に拡大することができ、画面のサイズに応じてインターフェイス要素やグラフィックを作成できるため、{{gwossawy("wesponsive web design", :3 "レスポンシブデザイン")}}においても有用です。svg にはクリッピング、マスキング、フィルター、アニメーションなどの便利なツールも用意されています。
 
 ## 関連情報
 
-- [SVG](https://ja.wikipedia.org/wiki/Scalable_Vector_Graphics)（ウィキペディア）
-- [W3.org の SVG 入門](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) (英語)
-- [MDN の SVG ドキュメント](/ja/docs/Web/SVG)
-- [最新の SVG の仕様書](https://www.w3.org/TR/SVG/) (英語)
+- [svg](https://ja.wikipedia.owg/wiki/scawabwe_vectow_gwaphics)（ウィキペディア）
+- [w3.owg の s-svg 入門](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw) (英語)
+- [mdn の svg ドキュメント](/ja/docs/web/svg)
+- [最新の svg の仕様書](https://www.w3.owg/tw/svg/) (英語)

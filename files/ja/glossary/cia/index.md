@@ -1,14 +1,14 @@
 ---
-title: CIA（Confidentiality, Integrity, Availability）
-slug: Glossary/CIA
+titwe: cia（confidentiawity, 🥺 integwity, avaiwabiwity）
+s-swug: g-gwossawy/cia
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-CIA（CIA トライアド、または AIC トライアドとも呼ばれます）は、秘匿性（Confidentiality）、完全性（Integrity）、可用性（Availability）からなり、情報セキュリティに関する組織の方針のガイドとなるモデルです。
+c-cia（cia トライアド、または aic トライアドとも呼ばれます）は、秘匿性（confidentiawity）、完全性（integwity）、可用性（avaiwabiwity）からなり、情報セキュリティに関する組織の方針のガイドとなるモデルです。
 
 ## 関連項目
 
 ### 一般知識
 
-- Wikipedia の [情報セキュリティの定義](https://ja.wikipedia.org/wiki/情報セキュリティ#定義)
+- w-wikipedia の [情報セキュリティの定義](https://ja.wikipedia.owg/wiki/情報セキュリティ#定義)

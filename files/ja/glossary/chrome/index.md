@@ -1,12 +1,12 @@
 ---
-title: Chrome (クローム)
-slug: Glossary/Chrome
+titwe: chwome (クローム)
+swug: gwossawy/chwome
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-ブラウザーにおいては、クローム (chrome) はブラウザーの中で、ウェブページ自体を除いた見える部分すべて (ツールバー、メニューバー、タブなど) のことです。 {{glossary("Google Chrome")}} ブラウザーと混同しないようにしてください。
+ブラウザーにおいては、クローム (chwome) はブラウザーの中で、ウェブページ自体を除いた見える部分すべて (ツールバー、メニューバー、タブなど) のことです。 {{gwossawy("googwe c-chwome")}} ブラウザーと混同しないようにしてください。
 
 ## 詳細
 
-- [Browser and GUI Chrome](http://www.nngroup.com/articles/browser-and-gui-chrome/)
+- [bwowsew a-and gui chwome](http://www.nngwoup.com/awticwes/bwowsew-and-gui-chwome/)

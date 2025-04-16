@@ -1,141 +1,141 @@
 ---
-title: font-variant
-slug: Web/CSS/font-variant
-l10n:
-  sourceCommit: 9172a95797019960c7baa9e0916f4e25efcf3f27
+titwe: font-vawiant
+swug: web/css/font-vawiant
+w-w10n:
+  souwcecommit: 9172a95797019960c7baa9e0916f4e25efcf3f27
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、フォントのすべての変化形を設定することができます。
+**`font-vawiant`** は c-css の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、フォントのすべての変化形を設定することができます。
 
-CSS Level 2 (Revision 1) で定義されたにおける `font-variant` の `<font-variant-css2>` 値（つまり、 `normal` や `small-caps`）は、一括指定の [`font`](/ja/docs/Web/CSS/font) を用いて設定することもできます。
+c-css wevew 2 (wevision 1) で定義されたにおける `font-vawiant` の `<font-vawiant-css2>` 値（つまり、 `nowmaw` や `smow-caps`）は、一括指定の [`font`](/ja/docs/web/css/font) を用いて設定することもできます。
 
-{{InteractiveExample("CSS Demo: font-variant")}}
+{{intewactiveexampwe("css d-demo: font-vawiant")}}
 
-```css interactive-example-choice
-font-variant: normal;
+```css i-intewactive-exampwe-choice
+f-font-vawiant: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant: no-common-ligatures proportional-nums;
+```css i-intewactive-exampwe-choice
+font-vawiant: nyo-common-wigatuwes pwopowtionaw-nums;
 ```
 
-```css interactive-example-choice
-font-variant: common-ligatures tabular-nums;
+```css intewactive-exampwe-choice
+font-vawiant: c-common-wigatuwes tabuwaw-nums;
 ```
 
-```css interactive-example-choice
-font-variant: small-caps slashed-zero;
+```css intewactive-exampwe-choice
+f-font-vawiant: smow-caps s-swashed-zewo;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <p>Difficult waffles</p>
-    <table>
-      <tr>
-        <td><span class="tabular">0O</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
-    </table>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <p>difficuwt w-waffwes</p>
+    <tabwe>
+      <tw>
+        <td><span cwass="tabuwaw">0o</span></td>
+      </tw>
+      <tw>
+        <td><span c-cwass="tabuwaw">3.14</span></td>
+      </tw>
+      <tw>
+        <td><span c-cwass="tabuwaw">2.71</span></td>
+      </tw>
+    </tabwe>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-famiwy: "fiwa sans";
+  swc:
+    wocaw("fiwasans-weguwaw"), 😳😳😳
+    u-uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") fowmat("woff2");
+  font-weight: nyowmaw;
+  font-stywe: nyowmaw;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
-  font-size: 1.5em;
+  f-font-famiwy: "fiwa sans", 😳😳😳 s-sans-sewif;
+  m-mawgin-top: 10px;
+  f-font-size: 1.5em;
 }
 
-#example-element table {
-  margin-left: auto;
-  margin-right: auto;
+#exampwe-ewement t-tabwe {
+  mawgin-weft: auto;
+  mawgin-wight: a-auto;
 }
 
-.tabular {
-  border: 1px solid;
+.tabuwaw {
+  bowdew: 1px sowid;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`font-variant-alternates`](/ja/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)
+- [`font-vawiant-awtewnates`](/ja/docs/web/css/font-vawiant-awtewnates)
+- [`font-vawiant-caps`](/ja/docs/web/css/font-vawiant-caps)
+- [`font-vawiant-east-asian`](/ja/docs/web/css/font-vawiant-east-asian)
+- [`font-vawiant-emoji`](/ja/docs/web/css/font-vawiant-emoji)
+- [`font-vawiant-wigatuwes`](/ja/docs/web/css/font-vawiant-wigatuwes)
+- [`font-vawiant-numewic`](/ja/docs/web/css/font-vawiant-numewic)
+- [`font-vawiant-position`](/ja/docs/web/css/font-vawiant-position)
 
 ## 構文
 
 ```css
-font-variant: small-caps;
-font-variant: common-ligatures small-caps;
+font-vawiant: s-smow-caps;
+font-vawiant: common-wigatuwes smow-caps;
 
 /* グローバル値 */
-font-variant: inherit;
-font-variant: initial;
-font-variant: revert;
-font-variant: revert-layer;
-font-variant: unset;
+font-vawiant: inhewit;
+font-vawiant: initiaw;
+f-font-vawiant: wevewt;
+font-vawiant: w-wevewt-wayew;
+f-font-vawiant: u-unset;
 ```
 
 ### 値
 
-- `normal`
+- `nowmaw`
 
-  - : 通常のフォントフェイスを定義します。それぞれの個別指定プロパティは `normal` の初期値になります。
+  - : 通常のフォントフェイスを定義します。それぞれの個別指定プロパティは `nowmaw` の初期値になります。
 
 - `none`
 
-  - : [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures) を `none` に、その他の個別指定プロパティを `normal` に、それぞれの初期値を設定します。
+  - : [`font-vawiant-wigatuwes`](/ja/docs/web/css/font-vawiant-wigatuwes) を `none` に、その他の個別指定プロパティを `nowmaw` に、それぞれの初期値を設定します。
 
-- `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
+- `<common-wig-vawues>`, o.O `<discwetionawy-wig-vawues>`, ( ͡o ω ͡o ) `<histowicaw-wig-vawues>`, (U ﹏ U) `<contextuaw-awt-vawues>`
 
-  - : 個別指定の [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures) プロパティに関するキーワードを指定します。指定可能な値は、 `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual`, `no-contextual` です。
+  - : 個別指定の [`font-vawiant-wigatuwes`](/ja/docs/web/css/font-vawiant-wigatuwes) プロパティに関するキーワードを指定します。指定可能な値は、 `common-wigatuwes`, (///ˬ///✿) `no-common-wigatuwes`, `discwetionawy-wigatuwes`, >w< `no-discwetionawy-wigatuwes`, rawr `histowicaw-wigatuwes`, mya `no-histowicaw-wigatuwes`, ^^ `contextuaw`, 😳😳😳 `no-contextuaw` です。
 
-- `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
+- `stywistic()`, mya `histowicaw-fowms`, 😳 `styweset()`, -.- `chawactew-vawiant()`, 🥺 `swash()`, o.O `ownaments()`, /(^•ω•^) `annotation()`
 
-  - : 個別指定の [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures) プロパティに関するキーワードや特性を指定します。
+  - : 個別指定の [`font-vawiant-wigatuwes`](/ja/docs/web/css/font-vawiant-wigatuwes) プロパティに関するキーワードや特性を指定します。
 
-- `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
+- `smow-caps`, nyaa~~ `aww-smow-caps`, nyaa~~ `petite-caps`, :3 `aww-petite-caps`, 😳😳😳 `unicase`, (˘ω˘) `titwing-caps`
 
-  - : 個別指定の [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps) プロパティに関するキーワードや特性を指定します。 `small-caps` の値は、 {{cssxref("font")}} 一括指定プロパティ内で有効な唯一の `normal` 以外のフォントバリアントです。
+  - : 個別指定の [`font-vawiant-caps`](/ja/docs/web/css/font-vawiant-caps) プロパティに関するキーワードや特性を指定します。 `smow-caps` の値は、 {{cssxwef("font")}} 一括指定プロパティ内で有効な唯一の `nowmaw` 以外のフォントバリアントです。
 
-- `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
+- `<numewic-figuwe-vawues>`, ^^ `<numewic-spacing-vawues>`, :3 `<numewic-fwaction-vawues>`, -.- `owdinaw`, `swashed-zewo`
 
-  - : 個別指定の [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric) プロパティに関するキーワードを指定します。指定可能な値は、 `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, `slashed-zero` です。
+  - : 個別指定の [`font-vawiant-numewic`](/ja/docs/web/css/font-vawiant-numewic) プロパティに関するキーワードを指定します。指定可能な値は、 `wining-nums`, 😳 `owdstywe-nums`, mya `pwopowtionaw-nums`, `tabuwaw-nums`, `diagonaw-fwactions`, (˘ω˘) `stacked-fwactions`, >_< `owdinaw`, -.- `swashed-zewo` です。
 
-- `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
+- `<east-asian-vawiant-vawues>`, 🥺 `<east-asian-width-vawues>`, (U ﹏ U) `wuby`
 
-  - : 個別指定の [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian) プロパティに関するキーワードを指定します。指定可能な値は、 `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, `ruby` です。
+  - : 個別指定の [`font-vawiant-east-asian`](/ja/docs/web/css/font-vawiant-east-asian) プロパティに関するキーワードを指定します。指定可能な値は、 `jis78`, >w< `jis83`, `jis90`, mya `jis04`, `simpwified`, >w< `twaditionaw`, nyaa~~ `fuww-width`, (✿oωo) `pwopowtionaw-width`, ʘwʘ `wuby` です。
 
-- `sub`, `super`
+- `sub`, (ˆ ﻌ ˆ)♡ `supew`
 
-  - : 個別指定の [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position) プロパティに関するキーワードや特性を指定します。
+  - : 個別指定の [`font-vawiant-position`](/ja/docs/web/css/font-vawiant-position) プロパティに関するキーワードや特性を指定します。
 
-- `text`, `emoji`, `unicode`
-  - : 個別指定の [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji) プロパティに関するキーワードや特性を指定します。
+- `text`, 😳😳😳 `emoji`, :3 `unicode`
+  - : 個別指定の [`font-vawiant-emoji`](/ja/docs/web/css/font-vawiant-emoji) プロパティに関するキーワードや特性を指定します。
 
 ## 公式定義
 
@@ -149,38 +149,38 @@ font-variant: unset;
 
 ### スモールキャップのフォント変化形の設定
 
-#### HTML
+#### htmw
 
-```html
-<p class="normal">Firefox rocks!</p>
-<p class="small">Firefox rocks!</p>
+```htmw
+<p cwass="nowmaw">fiwefox wocks!</p>
+<p c-cwass="smow">fiwefox wocks!</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p.normal {
-  font-variant: normal;
+p.nowmaw {
+  font-vawiant: n-nyowmaw;
 }
-p.small {
-  font-variant: small-caps;
+p-p.smow {
+  font-vawiant: smow-caps;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting the small-caps font variant') }}
+{{ e-embedwivesampwe('setting the smow-caps f-font vawiant') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`text-transform`](/ja/docs/Web/CSS/text-transform)
-- [`text-combine-upright`](/ja/docs/Web/CSS/text-combine-upright)
-- [`text-orientation`](/ja/docs/Web/CSS/text-orientation)
+- [`text-twansfowm`](/ja/docs/web/css/text-twansfowm)
+- [`text-combine-upwight`](/ja/docs/web/css/text-combine-upwight)
+- [`text-owientation`](/ja/docs/web/css/text-owientation)
