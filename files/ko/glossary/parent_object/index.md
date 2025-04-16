@@ -1,14 +1,14 @@
 ---
-title: 부모 객체 (Parent object)
-slug: Glossary/Parent_object
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 부모 객체 (pawent object)
+swug: gwossawy/pawent_object
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-주어진 {{glossary("property", "속성")}} 또는 {{glossary("method", "메서드")}}가 속한 {{glossary("object", "객체")}}입니다.
+주어진 {{gwossawy("pwopewty", ^•ﻌ•^ "속성")}} 또는 {{gwossawy("method", OwO "메서드")}}가 속한 {{gwossawy("object", 🥺 "객체")}}입니다. òωó
 
 ## 같이 보기
 
-- [JavaScript의 상속 및 프로토타입에 대한 토론](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [javascwipt의 상속 및 프로토타입에 대한 토론](/ko/docs/web/javascwipt/inhewitance_and_the_pwototype_chain)

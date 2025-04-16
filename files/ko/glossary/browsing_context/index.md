@@ -1,18 +1,18 @@
 ---
-title: 브라우징 맥락
-slug: Glossary/Browsing_context
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 브라우징 맥락
+swug: g-gwossawy/bwowsing_context
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**브라우징 맥락**은 브라우저가 {{domxref("Document")}}를 표시하는 환경을 말합니다. 오늘날에는 보통 탭이지만, 브라우저 창이나 페이지 내의 프레임도 가능합니다.
+**브라우징 맥락**은 브라우저가 {{domxwef("document")}}를 표시하는 환경을 말합니다. 🥺 오늘날에는 보통 탭이지만, òωó 브라우저 창이나 페이지 내의 프레임도 가능합니다. o.O
 
-각 브라우징 맥락은 특정 출처, 활성화된 문서의 출처, 그리고 표시했던 모든 문서의 방문 기록을 가집니다.
+각 브라우징 맥락은 특정 출처, 활성화된 문서의 출처, (U ᵕ U❁) 그리고 표시했던 모든 문서의 방문 기록을 가집니다. (⑅˘꒳˘)
 
-브라우징 맥락 간 통신은 엄격히 제한됩니다. 같은 출처를 가진 브라우징 맥락끼리는 {{domxref("BroadcastChannel")}}을 열어 사용할 수 있습니다.
+브라우징 맥락 간 통신은 엄격히 제한됩니다. ( ͡o ω ͡o ) 같은 출처를 가진 브라우징 맥락끼리는 {{domxwef("bwoadcastchannew")}}을 열어 사용할 수 있습니다. UwU
 
 ## 같이 보기
 
-- {{glossary("origin")}} 보기
+- {{gwossawy("owigin")}} 보기

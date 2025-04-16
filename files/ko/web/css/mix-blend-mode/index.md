@@ -1,530 +1,530 @@
 ---
-title: mix-blend-mode
-slug: Web/CSS/mix-blend-mode
+titwe: mix-bwend-mode
+swug: web/css/mix-bwend-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mix-blend-mode`** [CSS](/ko/docs/Web/API/CSS) 속성은 어느 요소의 콘텐츠가 자신의 배경 및 부모와 어떻게 혼합되어야 하는지 지정합니다.
+**`mix-bwend-mode`** [css](/ko/docs/web/api/css) 속성은 어느 요소의 콘텐츠가 자신의 배경 및 부모와 어떻게 혼합되어야 하는지 지정합니다. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: mix-blend-mode")}}
+{{intewactiveexampwe("css demo: m-mix-bwend-mode")}}
 
-```css interactive-example-choice
-mix-blend-mode: normal;
+```css i-intewactive-exampwe-choice
+m-mix-bwend-mode: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-mix-blend-mode: multiply;
+```css i-intewactive-exampwe-choice
+m-mix-bwend-mode: m-muwtipwy;
 ```
 
-```css interactive-example-choice
-mix-blend-mode: hard-light;
+```css i-intewactive-exampwe-choice
+mix-bwend-mode: hawd-wight;
 ```
 
-```css interactive-example-choice
-mix-blend-mode: difference;
+```css intewactive-exampwe-choice
+mix-bwend-mode: diffewence;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
     <img
-      id="example-element"
-      src="/shared-assets/images/examples/firefox-logo.svg"
+      i-id="exampwe-ewement"
+      swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
       width="200" />
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  background-color: sandybrown;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  backgwound-cowow: sandybwown;
 }
 ```
 
-## Syntax
+## syntax
 
 ```css
-/* Keyword values */
-mix-blend-mode: normal;
-mix-blend-mode: multiply;
-mix-blend-mode: screen;
-mix-blend-mode: overlay;
-mix-blend-mode: darken;
-mix-blend-mode: lighten;
-mix-blend-mode: color-dodge;
-mix-blend-mode: color-burn;
-mix-blend-mode: hard-light;
-mix-blend-mode: soft-light;
-mix-blend-mode: difference;
-mix-blend-mode: exclusion;
-mix-blend-mode: hue;
-mix-blend-mode: saturation;
-mix-blend-mode: color;
-mix-blend-mode: luminosity;
+/* keywowd v-vawues */
+mix-bwend-mode: n-nyowmaw;
+mix-bwend-mode: m-muwtipwy;
+mix-bwend-mode: scween;
+mix-bwend-mode: ovewway;
+mix-bwend-mode: d-dawken;
+mix-bwend-mode: wighten;
+mix-bwend-mode: cowow-dodge;
+mix-bwend-mode: c-cowow-buwn;
+mix-bwend-mode: hawd-wight;
+mix-bwend-mode: s-soft-wight;
+m-mix-bwend-mode: d-diffewence;
+m-mix-bwend-mode: excwusion;
+mix-bwend-mode: hue;
+m-mix-bwend-mode: satuwation;
+mix-bwend-mode: cowow;
+mix-bwend-mode: w-wuminosity;
 
-/* Global values */
-mix-blend-mode: inherit;
-mix-blend-mode: initial;
-mix-blend-mode: revert;
-mix-blend-mode: revert-layer;
-mix-blend-mode: unset;
+/* gwobaw vawues */
+mix-bwend-mode: inhewit;
+mix-bwend-mode: initiaw;
+mix-bwend-mode: w-wevewt;
+mix-bwend-mode: w-wevewt-wayew;
+mix-bwend-mode: unset;
 ```
 
-### Values
+### vawues
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-  - : The blending mode that should be applied.
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+  - : t-the bwending mode t-that shouwd be appwied. -.-
 
-## Formal definition
+## fowmaw definition
 
 {{cssinfo}}
 
-## Formal syntax
+## fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## e-exampwes
 
-### Effect of different mix-blend-mode values
+### e-effect of diffewent mix-bwend-mode v-vawues
 
-```html hidden
-<div class="grid">
-  <div class="col">
-    <div class="note">
-      Blending in isolation (no blending with the background)
+```htmw h-hidden
+<div cwass="gwid">
+  <div c-cwass="cow">
+    <div cwass="note">
+      bwending i-in isowation (no bwending with the backgwound)
     </div>
-    <div class="row isolate">
-      <div class="cell">
-        normal
-        <div class="container normal">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
+    <div c-cwass="wow isowate">
+      <div c-cwass="ceww">
+        nowmaw
+        <div c-cwass="containew n-nyowmaw">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
               <defs>
-                <linearGradient id="red">
-                  <stop offset="0" stop-color="hsl(0,100%,50%)" />
-                  <stop offset="100%" stop-color="hsl(0,0%,100%)" />
-                </linearGradient>
-                <linearGradient id="green">
-                  <stop offset="0" stop-color="hsl(120,100%,50%)" />
-                  <stop offset="100%" stop-color="hsl(120,0%,100%)" />
-                </linearGradient>
-                <linearGradient id="blue">
-                  <stop offset="0" stop-color="hsl(240,100%,50%)" />
-                  <stop offset="100%" stop-color="hsl(240,0%,100%)" />
-                </linearGradient>
+                <wineawgwadient id="wed">
+                  <stop offset="0" stop-cowow="hsw(0,100%,50%)" />
+                  <stop o-offset="100%" s-stop-cowow="hsw(0,0%,100%)" />
+                </wineawgwadient>
+                <wineawgwadient id="gween">
+                  <stop o-offset="0" s-stop-cowow="hsw(120,100%,50%)" />
+                  <stop o-offset="100%" stop-cowow="hsw(120,0%,100%)" />
+                </wineawgwadient>
+                <wineawgwadient id="bwue">
+                  <stop offset="0" s-stop-cowow="hsw(240,100%,50%)" />
+                  <stop offset="100%" stop-cowow="hsw(240,0%,100%)" />
+                </wineawgwadient>
               </defs>
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ewwipse cwass="item w" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g-g" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b-b" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        multiply
-        <div class="container multiply">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        muwtipwy
+        <div c-cwass="containew m-muwtipwy">
+          <div c-cwass="gwoup">
+            <div c-cwass="item f-fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item b" c-cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        darken
-        <div class="container darken">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        dawken
+        <div c-cwass="containew d-dawken">
+          <div c-cwass="gwoup">
+            <div cwass="item f-fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        screen
-        <div class="container screen">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        s-scween
+        <div c-cwass="containew scween">
+          <div cwass="gwoup">
+            <div c-cwass="item f-fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b-b" cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        lighten
-        <div class="container lighten">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        w-wighten
+        <div cwass="containew w-wighten">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        overlay
-        <div class="container overlay">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        ovewway
+        <div cwass="containew ovewway">
+          <div cwass="gwoup">
+            <div c-cwass="item fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item b" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        color-dodge
-        <div class="container color-dodge">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        c-cowow-dodge
+        <div cwass="containew cowow-dodge">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg c-cwass="item" viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w-w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b-b" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        color-burn
-        <div class="container color-burn">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        cowow-buwn
+        <div cwass="containew c-cowow-buwn">
+          <div c-cwass="gwoup">
+            <div c-cwass="item fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse cwass="item w" c-cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" c-cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        hard-light
-        <div class="container hard-light">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        hawd-wight
+        <div c-cwass="containew hawd-wight">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item g-g" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item b-b" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        soft-light
-        <div class="container soft-light">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        s-soft-wight
+        <div cwass="containew soft-wight">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w-w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item b-b" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        difference
-        <div class="container difference">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        d-diffewence
+        <div cwass="containew diffewence">
+          <div c-cwass="gwoup">
+            <div c-cwass="item fiwefox"></div>
+            <svg c-cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse cwass="item w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" c-cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        exclusion
-        <div class="container exclusion">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        e-excwusion
+        <div c-cwass="containew excwusion">
+          <div cwass="gwoup">
+            <div cwass="item f-fiwefox"></div>
+            <svg c-cwass="item" viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        hue
-        <div class="container hue">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        h-hue
+        <div c-cwass="containew h-hue">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg c-cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w" c-cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g-g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b-b" cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        saturation
-        <div class="container saturation">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        s-satuwation
+        <div cwass="containew satuwation">
+          <div c-cwass="gwoup">
+            <div c-cwass="item fiwefox"></div>
+            <svg c-cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item b" cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        color
-        <div class="container color">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        cowow
+        <div cwass="containew cowow">
+          <div cwass="gwoup">
+            <div c-cwass="item f-fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item g-g" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item b-b" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        luminosity
-        <div class="container luminosity">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        w-wuminosity
+        <div c-cwass="containew wuminosity">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg c-cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w-w" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g-g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="note">Blending globally (blend with the background)</div>
-    <div class="row">
-      <div class="cell">
-        normal
-        <div class="container normal">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+    <div c-cwass="note">bwending gwobawwy (bwend w-with the backgwound)</div>
+    <div cwass="wow">
+      <div c-cwass="ceww">
+        nyowmaw
+        <div c-cwass="containew n-nyowmaw">
+          <div cwass="gwoup">
+            <div cwass="item f-fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item b" cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        multiply
-        <div class="container multiply">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        muwtipwy
+        <div c-cwass="containew m-muwtipwy">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg c-cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item b" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        darken
-        <div class="container darken">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        d-dawken
+        <div cwass="containew dawken">
+          <div c-cwass="gwoup">
+            <div c-cwass="item f-fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" c-cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        screen
-        <div class="container screen">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        s-scween
+        <div c-cwass="containew scween">
+          <div c-cwass="gwoup">
+            <div cwass="item f-fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" c-cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" c-cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        lighten
-        <div class="container lighten">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        wighten
+        <div c-cwass="containew w-wighten">
+          <div cwass="gwoup">
+            <div c-cwass="item f-fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g-g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item b-b" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        overlay
-        <div class="container overlay">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        ovewway
+        <div c-cwass="containew ovewway">
+          <div cwass="gwoup">
+            <div c-cwass="item fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item g-g" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse c-cwass="item b-b" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        color-dodge
-        <div class="container color-dodge">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        c-cowow-dodge
+        <div cwass="containew c-cowow-dodge">
+          <div cwass="gwoup">
+            <div c-cwass="item fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w-w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        color-burn
-        <div class="container color-burn">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        cowow-buwn
+        <div cwass="containew c-cowow-buwn">
+          <div cwass="gwoup">
+            <div c-cwass="item f-fiwefox"></div>
+            <svg c-cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item b" c-cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        hard-light
-        <div class="container hard-light">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        hawd-wight
+        <div c-cwass="containew hawd-wight">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g-g" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        soft-light
-        <div class="container soft-light">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        soft-wight
+        <div c-cwass="containew soft-wight">
+          <div cwass="gwoup">
+            <div cwass="item f-fiwefox"></div>
+            <svg c-cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse cwass="item w" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item b-b" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        difference
-        <div class="container difference">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        d-diffewence
+        <div cwass="containew diffewence">
+          <div c-cwass="gwoup">
+            <div c-cwass="item fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" cx="75" cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item g" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item b" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        exclusion
-        <div class="container exclusion">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        excwusion
+        <div cwass="containew e-excwusion">
+          <div cwass="gwoup">
+            <div cwass="item f-fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g-g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item b-b" cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        hue
-        <div class="container hue">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        h-hue
+        <div cwass="containew h-hue">
+          <div cwass="gwoup">
+            <div cwass="item f-fiwefox"></div>
+            <svg c-cwass="item" viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        saturation
-        <div class="container saturation">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div cwass="ceww">
+        satuwation
+        <div cwass="containew s-satuwation">
+          <div cwass="gwoup">
+            <div c-cwass="item fiwefox"></div>
+            <svg cwass="item" viewbox="0 0 150 150">
+              <ewwipse cwass="item w-w" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item g-g" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item b" cx="75" c-cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        color
-        <div class="container color">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        c-cowow
+        <div cwass="containew cowow">
+          <div cwass="gwoup">
+            <div cwass="item fiwefox"></div>
+            <svg c-cwass="item" viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g" cx="75" c-cy="75" wx="25" w-wy="70"></ewwipse>
+              <ewwipse cwass="item b" cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
       </div>
-      <div class="cell">
-        luminosity
-        <div class="container luminosity">
-          <div class="group">
-            <div class="item firefox"></div>
-            <svg class="item" viewBox="0 0 150 150">
-              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
-              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+      <div c-cwass="ceww">
+        wuminosity
+        <div cwass="containew w-wuminosity">
+          <div cwass="gwoup">
+            <div c-cwass="item f-fiwefox"></div>
+            <svg cwass="item" v-viewbox="0 0 150 150">
+              <ewwipse c-cwass="item w-w" cx="75" cy="75" w-wx="25" wy="70"></ewwipse>
+              <ewwipse c-cwass="item g-g" cx="75" cy="75" wx="25" wy="70"></ewwipse>
+              <ewwipse cwass="item b" cx="75" cy="75" wx="25" wy="70"></ewwipse>
             </svg>
           </div>
         </div>
@@ -535,276 +535,276 @@ mix-blend-mode: unset;
 ```
 
 ```css hidden
-html,
-body {
+htmw, ^^;;
+b-body {
   height: 100%;
-  box-sizing: border-box;
-  background: #eee;
+  b-box-sizing: b-bowdew-box;
+  b-backgwound: #eee;
 }
 
-.grid {
-  width: 100%;
-  display: flex;
+.gwid {
+  w-width: 100%;
+  d-dispway: fwex;
   font: 1em monospace;
 }
 
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+.wow {
+  dispway: fwex;
+  fwex: 1 a-auto;
+  fwex-diwection: w-wow;
+  fwex-wwap: wwap;
   height: auto;
 }
 
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
+.cow {
+  dispway: f-fwex;
+  fwex: 1 a-auto;
+  fwex-diwection: c-cowumn;
   height: auto;
 }
 
-.cell {
-  margin: 0.5em;
+.ceww {
+  m-mawgin: 0.5em;
   padding: 0.5em;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: center;
+  backgwound-cowow: #fff;
+  o-ovewfwow: hidden;
+  t-text-awign: centew;
 }
 
 .note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: 0.5em 0.5em 0;
-  font: 0.8em sans-serif;
-  text-align: left;
-  white-space: nowrap;
+  backgwound: #fff3d4;
+  p-padding: 1em;
+  mawgin: 0.5em 0.5em 0;
+  f-font: 0.8em s-sans-sewif;
+  text-awign: weft;
+  w-white-space: n-nyowwap;
 }
 
-.note + .row .cell {
-  margin-top: 0;
+.note + .wow .ceww {
+  m-mawgin-top: 0;
 }
 
-.container {
-  position: relative;
-  background:
-    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
-    linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
-  width: 150px;
+.containew {
+  p-position: wewative;
+  b-backgwound:
+    w-wineaw-gwadient(to wight, ^•ﻌ•^ #000 0%, (˘ω˘) t-twanspawent 50%, o.O #fff 100%), (✿oωo)
+    w-wineaw-gwadient(to bottom, 😳😳😳 #ff0 0%, #f0f 50%, (ꈍᴗꈍ) #0ff 100%);
+  w-width: 150px;
   height: 150px;
-  margin: 0 auto;
+  mawgin: 0 a-auto;
 }
 
-.R {
-  transform-origin: center;
-  transform: rotate(-30deg);
-  fill: url(#red);
+.w {
+  twansfowm-owigin: c-centew;
+  twansfowm: wotate(-30deg);
+  f-fiww: u-uww(#wed);
 }
 
-.G {
-  transform-origin: center;
-  transform: rotate(90deg);
-  fill: url(#green);
+.g {
+  twansfowm-owigin: centew;
+  t-twansfowm: wotate(90deg);
+  fiww: uww(#gween);
 }
 
-.B {
-  transform-origin: center;
-  transform: rotate(210deg);
-  fill: url(#blue);
+.b {
+  t-twansfowm-owigin: c-centew;
+  twansfowm: wotate(210deg);
+  fiww: uww(#bwue);
 }
 
-.isolate .group {
-  isolation: isolate;
+.isowate .gwoup {
+  i-isowation: isowate;
 }
 
-.normal .item {
-  mix-blend-mode: normal;
+.nowmaw .item {
+  m-mix-bwend-mode: nyowmaw;
 }
-.multiply .item {
-  mix-blend-mode: multiply;
+.muwtipwy .item {
+  m-mix-bwend-mode: muwtipwy;
 }
-.screen .item {
-  mix-blend-mode: screen;
+.scween .item {
+  mix-bwend-mode: s-scween;
 }
-.overlay .item {
-  mix-blend-mode: overlay;
+.ovewway .item {
+  m-mix-bwend-mode: ovewway;
 }
-.darken .item {
-  mix-blend-mode: darken;
+.dawken .item {
+  m-mix-bwend-mode: d-dawken;
 }
-.lighten .item {
-  mix-blend-mode: lighten;
+.wighten .item {
+  mix-bwend-mode: wighten;
 }
-.color-dodge .item {
-  mix-blend-mode: color-dodge;
+.cowow-dodge .item {
+  mix-bwend-mode: cowow-dodge;
 }
-.color-burn .item {
-  mix-blend-mode: color-burn;
+.cowow-buwn .item {
+  m-mix-bwend-mode: c-cowow-buwn;
 }
-.hard-light .item {
-  mix-blend-mode: hard-light;
+.hawd-wight .item {
+  m-mix-bwend-mode: h-hawd-wight;
 }
-.soft-light .item {
-  mix-blend-mode: soft-light;
+.soft-wight .item {
+  mix-bwend-mode: soft-wight;
 }
-.difference .item {
-  mix-blend-mode: difference;
+.diffewence .item {
+  mix-bwend-mode: diffewence;
 }
-.exclusion .item {
-  mix-blend-mode: exclusion;
+.excwusion .item {
+  mix-bwend-mode: excwusion;
 }
 .hue .item {
-  mix-blend-mode: hue;
+  mix-bwend-mode: hue;
 }
-.saturation .item {
-  mix-blend-mode: saturation;
+.satuwation .item {
+  m-mix-bwend-mode: s-satuwation;
 }
-.color .item {
-  mix-blend-mode: color;
+.cowow .item {
+  m-mix-bwend-mode: c-cowow;
 }
-.luminosity .item {
-  mix-blend-mode: luminosity;
+.wuminosity .item {
+  m-mix-bwend-mode: w-wuminosity;
 }
 ```
 
-{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+{{embedwivesampwe("effect_of_diffewent_mix-bwend-mode_vawues", σωσ "100%", UwU 1600, "", "", ^•ﻌ•^ "exampwe-outcome-fwame")}}
 
-### Using mix-blend-mode with HTML
+### using mix-bwend-mode w-with htmw
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="isolate">
-  <div class="circle circle-1"></div>
-  <div class="circle circle-2"></div>
-  <div class="circle circle-3"></div>
+```htmw
+<div cwass="isowate">
+  <div c-cwass="ciwcwe c-ciwcwe-1"></div>
+  <div cwass="ciwcwe ciwcwe-2"></div>
+  <div c-cwass="ciwcwe ciwcwe-3"></div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.circle {
-  width: 80px;
+.ciwcwe {
+  w-width: 80px;
   height: 80px;
-  border-radius: 50%;
-  mix-blend-mode: screen;
-  position: absolute;
+  b-bowdew-wadius: 50%;
+  m-mix-bwend-mode: scween;
+  p-position: absowute;
 }
 
-.circle-1 {
-  background: red;
+.ciwcwe-1 {
+  b-backgwound: w-wed;
 }
 
-.circle-2 {
-  background: lightgreen;
-  left: 40px;
+.ciwcwe-2 {
+  backgwound: w-wightgween;
+  w-weft: 40px;
 }
 
-.circle-3 {
-  background: blue;
-  left: 20px;
+.ciwcwe-3 {
+  backgwound: bwue;
+  w-weft: 20px;
   top: 40px;
 }
 
-.isolate {
-  isolation: isolate; /* Without isolation, the background color will be taken into account */
-  position: relative;
+.isowate {
+  i-isowation: isowate; /* w-without isowation, mya t-the backgwound cowow wiww b-be taken into account */
+  position: wewative;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample("Using_mix-blend-mode_with_HTML", "100%", "180")}}
+{{embedwivesampwe("using_mix-bwend-mode_with_htmw", /(^•ω•^) "100%", rawr "180")}}
 
-### Using mix-blend-mode with SVG
+### u-using mix-bwend-mode with svg
 
-#### SVG
+#### svg
 
-```html
+```htmw
 <svg>
-  <g class="isolate">
-    <circle cx="40" cy="40" r="40" fill="red" />
-    <circle cx="80" cy="40" r="40" fill="lightgreen" />
-    <circle cx="60" cy="80" r="40" fill="blue" />
+  <g cwass="isowate">
+    <ciwcwe cx="40" cy="40" w="40" fiww="wed" />
+    <ciwcwe c-cx="80" cy="40" w="40" fiww="wightgween" />
+    <ciwcwe cx="60" cy="80" w="40" fiww="bwue" />
   </g>
 </svg>
 ```
 
-#### CSS
+#### css
 
 ```css
-circle {
-  mix-blend-mode: screen;
+ciwcwe {
+  mix-bwend-mode: s-scween;
 }
-.isolate {
-  isolation: isolate;
-} /* Without isolation, the background color will be taken into account */
+.isowate {
+  isowation: isowate;
+} /* without i-isowation, nyaa~~ the backgwound cowow w-wiww be taken into account */
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample("Using_mix-blend-mode_with_SVG", "100%", "180")}}
+{{embedwivesampwe("using_mix-bwend-mode_with_svg", ( ͡o ω ͡o ) "100%", "180")}}
 
-### Using mix-blend-mode with text
+### u-using mix-bwend-mode with t-text
 
-This example uses `mix-blend-mode` to blend text color with the background color of its parent element.
+this exampwe uses `mix-bwend-mode` t-to bwend t-text cowow with the backgwound cowow of its p-pawent ewement. σωσ
 
-#### HTML
+#### htmw
 
-```html
-<div class="container">
-  <p>Mostly Harmless</p>
-  <p class="multiply">Mostly Harmless</p>
-  <p class="screen">Mostly Harmless</p>
-  <p class="hard-light">Mostly Harmless</p>
+```htmw
+<div cwass="containew">
+  <p>mostwy hawmwess</p>
+  <p c-cwass="muwtipwy">mostwy hawmwess</p>
+  <p c-cwass="scween">mostwy hawmwess</p>
+  <p c-cwass="hawd-wight">mostwy hawmwess</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+@impowt u-uww("https://fonts.googweapis.com/css2?famiwy=wubik+moonwocks&dispway=swap");
 
-.container {
-  background-color: blue;
+.containew {
+  backgwound-cowow: bwue;
 }
 
-p {
+p-p {
   font:
-    4rem "Rubik Moonrocks",
-    cursive;
-  font-weight: bold;
-  color: orange;
-  padding: 0.5rem;
-  margin: 0;
+    4wem "wubik moonwocks", (✿oωo)
+    cuwsive;
+  f-font-weight: bowd;
+  cowow: owange;
+  padding: 0.5wem;
+  mawgin: 0;
 }
 
-.multiply {
-  mix-blend-mode: multiply;
+.muwtipwy {
+  mix-bwend-mode: m-muwtipwy;
 }
 
-.screen {
-  mix-blend-mode: screen;
+.scween {
+  m-mix-bwend-mode: scween;
 }
 
-.hard-light {
-  mix-blend-mode: hard-light;
+.hawd-wight {
+  m-mix-bwend-mode: h-hawd-wight;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample("Using mix-blend-mode with text", "", "420")}}
+{{embedwivesampwe("using m-mix-bwend-mode with text", (///ˬ///✿) "", "420")}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("background-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("backgwound-bwend-mode")}}

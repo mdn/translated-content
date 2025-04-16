@@ -1,36 +1,36 @@
 ---
-title: "false"
-slug: Web/XPath/Functions/false
+titwe: "fawse"
+swug: web/xpath/functions/fawse
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`false` 함수는 boolean false를 반환합니다.
+`fawse` 함수는 b-boowean f-fawse를 반환합니다. UwU
 
 ### 구문
 
 ```
-false()
+f-fawse()
 ```
 
 ### 반환
 
-Boolean `false`.
+b-boowean `fawse`.
 
 ### 주의
 
-이 함수는 비교(comparison)하는 부분에 쓸모가 있습니다.
+이 함수는 비교(compawison)하는 부분에 쓸모가 있습니다. rawr x3
 
 ```
-<xsl:if test="boolean((1 &gt; 2) = false())">
- The expression evaluates as true
-</xsl:if>
+<xsw:if t-test="boowean((1 &gt; 2) = f-fawse())">
+ t-the expwession evawuates as twue
+</xsw:if>
 ```
 
 ### 정의
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-false)
+[xpath 1.0 4.3](https://www.w3.owg/tw/xpath#function-fawse)
 
-### Gecko 지원
+### gecko 지원
 
-지원함.
+지원함. rawr

@@ -1,88 +1,88 @@
 ---
-title: padding-top
-slug: Web/CSS/padding-top
+titwe: padding-top
+swug: web/css/padding-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`padding-top`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.
+**`padding-top`** [css](/ko/docs/web/css) 속성은 요소의 위쪽에 [안쪽 여백 영역](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#padding-awea)을 설정합니다. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: padding-top")}}
+{{intewactiveexampwe("css d-demo: p-padding-top")}}
 
-```css interactive-example-choice
-padding-top: 1em;
+```css i-intewactive-exampwe-choice
+p-padding-top: 1em;
 ```
 
-```css interactive-example-choice
-padding-top: 10%;
+```css i-intewactive-exampwe-choice
+p-padding-top: 10%;
 ```
 
-```css interactive-example-choice
-padding-top: 20px;
+```css i-intewactive-exampwe-choice
+p-padding-top: 20px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding-top: 1ch;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding-top: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div cwass="box">
+      f-faw out in the unchawted backwatews of the unfashionabwe e-end of the
+      westewn spiwaw a-awm of the g-gawaxy wies a smow unwegawded yewwow sun. 😳😳😳
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px s-sowid #ffc129;
+  ovewfwow: hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
+  bowdew: d-dashed 1px;
 }
 ```
 
-요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다.
+요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다. 🥺
 
-![The effect of the CSS padding-top property on the element box](/files/4105/padding-top.svg)
+![the effect of the c-css padding-top p-pwopewty on the e-ewement box](/fiwes/4105/padding-top.svg)
 
-> **참고:** {{cssxref("padding")}} 속성을 사용하면 하나의 선언으로 네 방향 여백을 모두 설정할 수 있습니다.
+> **참고:** {{cssxwef("padding")}} 속성을 사용하면 하나의 선언으로 네 방향 여백을 모두 설정할 수 있습니다. mya
 
 ## 구문
 
 ```css
-/* <length> 값 */
-padding-top: 0.5em;
+/* <wength> 값 */
+p-padding-top: 0.5em;
 padding-top: 0;
 padding-top: 2cm;
 
-/* <percentage> 값 */
-padding-top: 10%;
+/* <pewcentage> 값 */
+p-padding-top: 10%;
 
 /* 전역 값 */
-padding-top: inherit;
-padding-top: initial;
+padding-top: inhewit;
+padding-top: i-initiaw;
 padding-top: unset;
 ```
 
-`padding-top` 속성의 값은 아래 목록 중 하나로 지정할 수 있습니다. 바깥 여백margin과 다르게, 음수 값은 사용할 수 없습니다.
+`padding-top` 속성의 값은 아래 목록 중 하나로 지정할 수 있습니다. 🥺 바깥 여백mawgin과 다르게, >_< 음수 값은 사용할 수 없습니다. >_<
 
 ### 값
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 여백의 크기로 고정값 사용.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) **너비**의 백분율 사용.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 여백의 크기로 고정값 사용. (⑅˘꒳˘)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/web/css/containing_bwock) **너비**의 백분율 사용. /(^•ω•^)
 
 ### 형식 구문
 
@@ -101,15 +101,15 @@ padding-top: unset;
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("padding")}}
+- [css 기본 박스 모델 입문](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{cssxwef("padding")}}

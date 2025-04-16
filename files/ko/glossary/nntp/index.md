@@ -1,15 +1,15 @@
 ---
-title: NNTP
-slug: Glossary/NNTP
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: nyntp
+swug: gwossawy/nntp
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**네트워크 뉴스 전송 프로토콜 (Network News Transfer Protocol, NNTP)** 은 클라이언트에서 서버로 또는 서버 간에 {{Glossary("Usenet", "유즈넷")}} 메시지를 전송하는 데 사용되는 {{Glossary("protocol", "프로토콜")}}입니다.
+**네트워크 뉴스 전송 프로토콜 (netwowk n-news twansfew pwotocow, o.O n-nyntp)** 은 클라이언트에서 서버로 또는 서버 간에 {{gwossawy("usenet", (U ᵕ U❁) "유즈넷")}} 메시지를 전송하는 데 사용되는 {{gwossawy("pwotocow", (⑅˘꒳˘) "프로토콜")}}입니다. ( ͡o ω ͡o )
 
 ## 같이 보기
 
-- 위키백과의 [NNTP](https://en.wikipedia.org/wiki/Network_News_Transfer_Protocol)
-- IETF에서: [NNTP에 관한 RFC 3977](https://datatracker.ietf.org/doc/html/rfc3977) (2006)
+- 위키백과의 [nntp](https://en.wikipedia.owg/wiki/netwowk_news_twansfew_pwotocow)
+- i-ietf에서: [nntp에 관한 w-wfc 3977](https://datatwackew.ietf.owg/doc/htmw/wfc3977) (2006)

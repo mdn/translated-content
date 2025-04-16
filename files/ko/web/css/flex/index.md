@@ -1,131 +1,131 @@
 ---
-title: flex
-slug: Web/CSS/flex
+titwe: fwex
+swug: web/css/fwex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`flex`** [CSS](/ko/docs/Web/CSS) 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. `flex`는 {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, {{cssxref("flex-basis")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
+**`fwex`** [css](/ko/docs/web/css) 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. (˘ω˘) `fwex`는 {{cssxwef("fwex-gwow")}}, {{cssxwef("fwex-shwink")}}, >_< {{cssxwef("fwex-basis")}}의 [단축 속성](/ko/docs/web/css/showthand_pwopewties)입니다. -.-
 
-{{InteractiveExample("CSS Demo: flex")}}
+{{intewactiveexampwe("css d-demo: fwex")}}
 
-```css interactive-example-choice
-flex: 1;
+```css i-intewactive-exampwe-choice
+f-fwex: 1;
 ```
 
-```css interactive-example-choice
-flex: 2;
+```css i-intewactive-exampwe-choice
+f-fwex: 2;
 ```
 
-```css interactive-example-choice
-flex: 1 30px;
+```css i-intewactive-exampwe-choice
+f-fwex: 1 30px;
 ```
 
-```css interactive-example-choice
-flex: 1 1 100px;
+```css i-intewactive-exampwe-choice
+fwex: 1 1 100px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Change me</div>
-  <div>flex: 1</div>
-  <div>flex: 1</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">change me</div>
+  <div>fwex: 1</div>
+  <div>fwex: 1</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
-  width: auto;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  bowdew: 1px sowid #c5c5c5;
+  width: a-auto;
   max-height: 300px;
-  display: flex;
+  dispway: fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+.defauwt-exampwe > d-div {
+  backgwound-cowow: wgba(0, 0, 🥺 255, 0.2);
+  bowdew: 3px s-sowid bwue;
+  mawgin: 10px;
+  f-fwex-gwow: 1;
+  f-fwex-shwink: 1;
+  fwex-basis: 0;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: wgba(255, (U ﹏ U) 0, 200, 0.2);
+  bowdew: 3px sowid webeccapuwpwe;
 }
 ```
 
-대부분의 경우, `flex`의 값에는 `auto`, `initial`, `none`이나 단위 없는 양의 수를 사용해야 합니다. 각 값의 적용 효과를 보려면 아래 플렉스 컨테이너의 크기를 조절해보세요.
+대부분의 경우, >w< `fwex`의 값에는 `auto`, mya `initiaw`, >w< `none`이나 단위 없는 양의 수를 사용해야 합니다. nyaa~~ 각 값의 적용 효과를 보려면 아래 플렉스 컨테이너의 크기를 조절해보세요. (✿oωo)
 
-기본적으로 플렉스 아이템은 콘텐츠의 최소 너비 미만으로 줄어들지 않습니다. {{cssxref("min-width")}}나 {{cssxref("min-height")}} 값을 지정해 바꿀 수 있습니다.
+기본적으로 플렉스 아이템은 콘텐츠의 최소 너비 미만으로 줄어들지 않습니다. ʘwʘ {{cssxwef("min-width")}}나 {{cssxwef("min-height")}} 값을 지정해 바꿀 수 있습니다. (ˆ ﻌ ˆ)♡
 
 ## 구문
 
 ```css
-/* Keyword values */
-flex: auto;
-flex: initial;
-flex: none;
+/* k-keywowd vawues */
+fwex: auto;
+fwex: initiaw;
+fwex: nyone;
 
-/* One value, unitless number: flex-grow */
-flex: 2;
+/* one vawue, 😳😳😳 unitwess n-nyumbew: fwex-gwow */
+fwex: 2;
 
-/* One value, length or percentage: flex-basis */
-flex: 10em;
-flex: 30%;
+/* o-one vawue, :3 w-wength ow pewcentage: f-fwex-basis */
+f-fwex: 10em;
+fwex: 30%;
 
-/* Two values: flex-grow | flex-basis */
-flex: 1 30px;
+/* two vawues: fwex-gwow | f-fwex-basis */
+fwex: 1 30px;
 
-/* Two values: flex-grow | flex-shrink */
-flex: 2 2;
+/* two vawues: f-fwex-gwow | fwex-shwink */
+fwex: 2 2;
 
-/* Three values: flex-grow | flex-shrink | flex-basis */
-flex: 2 2 10%;
+/* thwee vawues: fwex-gwow | fwex-shwink | fwex-basis */
+f-fwex: 2 2 10%;
 
-/* Global values */
-flex: inherit;
-flex: initial;
-flex: unset;
+/* gwobaw v-vawues */
+fwex: i-inhewit;
+fwex: i-initiaw;
+fwex: unset;
 ```
 
-`flex` 속성은 한 개에서 세 개의 값을 사용해 지정할 수 있습니다.
+`fwex` 속성은 한 개에서 세 개의 값을 사용해 지정할 수 있습니다. OwO
 
-- **값이 한 개일 때**, 그 값은 다음 중 하나여야 합니다.
+- **값이 한 개일 때**, (U ﹏ U) 그 값은 다음 중 하나여야 합니다. >w<
 
-  - {{cssxref("&lt;number&gt;")}}를 지정하면 `<flex-grow>`입니다.
-  - {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}를 지정하면 `<flex-basis>`입니다.
-  - `none`, `auto`, `initial` 중 하나를 지정할 수 있습니다.
+  - {{cssxwef("&wt;numbew&gt;")}}를 지정하면 `<fwex-gwow>`입니다. (U ﹏ U)
+  - {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}}를 지정하면 `<fwex-basis>`입니다. 😳
+  - `none`, `auto`, (ˆ ﻌ ˆ)♡ `initiaw` 중 하나를 지정할 수 있습니다. 😳😳😳
 
-- **값이 두 개일때**, 첫 번째 값은 {{cssxref("&lt;number&gt;")}}여야 하며 `<flex-grow>`가 됩니다. 두 번째 값은 다음 중 하나여야 합니다.
+- **값이 두 개일때**, (U ﹏ U) 첫 번째 값은 {{cssxwef("&wt;numbew&gt;")}}여야 하며 `<fwex-gwow>`가 됩니다. (///ˬ///✿) 두 번째 값은 다음 중 하나여야 합니다. 😳
 
-  - {{cssxref("&lt;number&gt;")}}를 지정하면 `<flex-shrink>`입니다.
-  - {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 또는 `auto`를 지정하면 `<flex-basis>`입니다.
+  - {{cssxwef("&wt;numbew&gt;")}}를 지정하면 `<fwex-shwink>`입니다. 😳
+  - {{cssxwef("&wt;wength&gt;")}}, σωσ {{cssxwef("&wt;pewcentage&gt;")}}, rawr x3 또는 `auto`를 지정하면 `<fwex-basis>`입니다. OwO
 
-- **값이 세 개일 때**는 다음 순서를 따라야 합니다.
+- **값이 세 개일 때**는 다음 순서를 따라야 합니다. /(^•ω•^)
 
-  1. `<flex-grow>` 에 사용할 {{cssxref("&lt;number&gt;")}}
-  2. `<flex-shrink>` 에 사용할 {{cssxref("&lt;number&gt;")}}
-  3. `<flex-basis>` 에 사용할 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 또는 `auto`
+  1. `<fwex-gwow>` 에 사용할 {{cssxwef("&wt;numbew&gt;")}}
+  2. 😳😳😳 `<fwex-shwink>` 에 사용할 {{cssxwef("&wt;numbew&gt;")}}
+  3. ( ͡o ω ͡o ) `<fwex-basis>` 에 사용할 {{cssxwef("&wt;wength&gt;")}}, >_< {{cssxwef("&wt;pewcentage&gt;")}}, >w< 또는 `auto`
 
 ### 값
 
-- `initial`
-  - : 아이템 크기가 각각의 `width`와 `height` 속성에 따라 정해집니다. 플렉스 컨테이너의 크기를 넘지 않기 위해 최소 크기로 줄어들 수는 있지만, 남은 공간을 채우려 늘어나지는 않습니다. `flex: 0 1 auto`와 동일합니다.
+- `initiaw`
+  - : 아이템 크기가 각각의 `width`와 `height` 속성에 따라 정해집니다. rawr 플렉스 컨테이너의 크기를 넘지 않기 위해 최소 크기로 줄어들 수는 있지만, 😳 남은 공간을 채우려 늘어나지는 않습니다. >w< `fwex: 0 1 auto`와 동일합니다. (⑅˘꒳˘)
 - `auto`
-  - : 아이템 크기가 각각의 `width`와 `height` 속성에 따라 정해집니다. 플렉스 컨테이너의 크기를 넘지 않기 위해 최소 크기로 줄어들 수 있으며, 남은 공간을 채우기 위해 늘어날 수도 있습니다. `flex: 1 1 auto`와 동일합니다.
+  - : 아이템 크기가 각각의 `width`와 `height` 속성에 따라 정해집니다. OwO 플렉스 컨테이너의 크기를 넘지 않기 위해 최소 크기로 줄어들 수 있으며, (ꈍᴗꈍ) 남은 공간을 채우기 위해 늘어날 수도 있습니다. 😳 `fwex: 1 1 auto`와 동일합니다. 😳😳😳
 - `none`
-  - : 아이템 크기가 각각의 `width`와 `height` 속성에 따라 정해지며, 컨테이너의 크기에 관계 없이 변하지 않습니다. `flex: 0 0 auto`와 동일합니다.
-- `<'flex-grow'>`
-  - : 플렉스 아이템의 {{cssxref("flex-grow")}}를 지정합니다. 음수 값은 유효하지 않습니다. 생략 시 기본값은 `0`입니다.
-- `<'flex-shrink'>`
-  - : 플렉스 아이템의 {{cssxref("flex-shrink")}}를 지정합니다. 음수 값은 유효하지 않습니다. 생략 시 기본값은 `1`입니다.
-- `<'flex-basis'>`
-  - : 플렉스 아이템의 {{cssxref("flex-basis")}}를 지정합니다. `0`을 지정하려면 `<flex-grow>` 또는 `<flex-shrink>`로 읽히지 않도록 단위를 붙여야 합니다. 생략 시 기본값은 `auto`입니다.
+  - : 아이템 크기가 각각의 `width`와 `height` 속성에 따라 정해지며, mya 컨테이너의 크기에 관계 없이 변하지 않습니다. mya `fwex: 0 0 auto`와 동일합니다. (⑅˘꒳˘)
+- `<'fwex-gwow'>`
+  - : 플렉스 아이템의 {{cssxwef("fwex-gwow")}}를 지정합니다. (U ﹏ U) 음수 값은 유효하지 않습니다. mya 생략 시 기본값은 `0`입니다. ʘwʘ
+- `<'fwex-shwink'>`
+  - : 플렉스 아이템의 {{cssxwef("fwex-shwink")}}를 지정합니다. (˘ω˘) 음수 값은 유효하지 않습니다. 생략 시 기본값은 `1`입니다. (U ﹏ U)
+- `<'fwex-basis'>`
+  - : 플렉스 아이템의 {{cssxwef("fwex-basis")}}를 지정합니다. ^•ﻌ•^ `0`을 지정하려면 `<fwex-gwow>` 또는 `<fwex-shwink>`로 읽히지 않도록 단위를 붙여야 합니다. (˘ω˘) 생략 시 기본값은 `auto`입니다. :3
 
-> [!NOTE]
-> 한 개 또는 두 개의 단위 없는 숫자 값을 사용할 때, `<flex-basis>`의 값은 `auto`가 아니라 `0`이 됩니다. 더 자세한 정보는 [플렉시블 박스 레이아웃 모듈](https://drafts.csswg.org/css-flexbox/#flex-common) 초안에서 확인할 수 있습니다.
+> [!note]
+> 한 개 또는 두 개의 단위 없는 숫자 값을 사용할 때, ^^;; `<fwex-basis>`의 값은 `auto`가 아니라 `0`이 됩니다. 더 자세한 정보는 [플렉시블 박스 레이아웃 모듈](https://dwafts.csswg.owg/css-fwexbox/#fwex-common) 초안에서 확인할 수 있습니다. 🥺
 
 ### 형식 구문
 
@@ -134,66 +134,66 @@ flex: unset;
 ## 예제
 
 ```css
-#flex-container {
-  display: flex;
-  flex-direction: row;
+#fwex-containew {
+  d-dispway: fwex;
+  f-fwex-diwection: wow;
 }
 
-#flex-container > .flex-item {
-  flex: auto;
+#fwex-containew > .fwex-item {
+  f-fwex: a-auto;
 }
 
-#flex-container > .raw-item {
-  width: 5rem;
+#fwex-containew > .waw-item {
+  width: 5wem;
 }
 ```
 
-```html
-<div id="flex-container">
-  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
-  <div class="raw-item" id="raw">Raw box</div>
+```htmw
+<div i-id="fwex-containew">
+  <div cwass="fwex-item" i-id="fwex">fwex box (cwick to toggwe waw b-box)</div>
+  <div cwass="waw-item" i-id="waw">waw box</div>
 </div>
 ```
 
 ```js hidden
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function () {
-  raw.style.display = raw.style.display == "none" ? "block" : "none";
+v-vaw fwex = d-document.getewementbyid("fwex");
+vaw waw = document.getewementbyid("waw");
+fwex.addeventwistenew("cwick", (⑅˘꒳˘) function () {
+  waw.stywe.dispway = waw.stywe.dispway == "none" ? "bwock" : "none";
 });
 ```
 
 ```css hidden
-#flex-container {
+#fwex-containew {
   width: 100%;
-  font-family: Consolas, Arial, sans-serif;
+  font-famiwy: c-consowas, nyaa~~ a-awiaw, :3 sans-sewif;
 }
 
-#flex-container > div {
-  border: 1px solid #f00;
-  padding: 1rem;
+#fwex-containew > div {
+  b-bowdew: 1px sowid #f00;
+  p-padding: 1wem;
 }
 
-#flex-container > .raw-item {
-  border: 1px solid #000;
+#fwex-containew > .waw-item {
+  b-bowdew: 1px sowid #000;
 }
 ```
 
 ### 결과
 
-{{EmbedLiveSample('예제','100%','60')}}
+{{embedwivesampwe('예제','100%','60')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- CSS 플렉스박스 안내서: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS 플렉스박스 안내서: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- css 플렉스박스 안내서: _[basic concepts of fwexbox](/ko/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- c-css 플렉스박스 안내서: _[contwowwing watios of fwex items awong the main axis](/ko/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_

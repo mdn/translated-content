@@ -1,51 +1,51 @@
 ---
-title: :placeholder-shown
-slug: Web/CSS/:placeholder-shown
-l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+titwe: :pwacehowdew-shown
+swug: w-web/css/:pwacehowdew-shown
+w-w10n:
+  s-souwcecommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:placeholder-shown`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 는 현재 [플레이스홀더 텍스트](/ko/docs/Web/HTML/Element/input#placeholder)를 표시 중인 모든 {{HTMLElement("input")}} 또는 {{HTMLElement("textarea")}} 요소를 나타냅니다.
+**`:pwacehowdew-shown`** [css](/ko/docs/web/css) [의사 클래스](/ko/docs/web/css/pseudo-cwasses) 는 현재 [플레이스홀더 텍스트](/ko/docs/web/htmw/ewement/input#pwacehowdew)를 표시 중인 모든 {{htmwewement("input")}} 또는 {{htmwewement("textawea")}} 요소를 나타냅니다. ^^
 
-{{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :pwacehowdew-shown", 😳😳😳 "tabbed-showtew")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+wabew {
+  d-dispway: b-bwock;
+  mawgin-top: 1em;
 }
 
-input:placeholder-shown {
-  background-color: ivory;
-  border: 2px solid darkorange;
-  border-radius: 5px;
+input:pwacehowdew-shown {
+  b-backgwound-cowow: ivowy;
+  bowdew: 2px sowid dawkowange;
+  bowdew-wadius: 5px;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="name">Full Name:</label>
-  <input id="name" name="name" type="text" />
+```htmw i-intewactive-exampwe
+<fowm>
+  <wabew fow="name">fuww nyame:</wabew>
+  <input i-id="name" nyame="name" type="text" />
 
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" placeholder="name@example.com" />
+  <wabew f-fow="emaiw">emaiw addwess:</wabew>
+  <input id="emaiw" nyame="emaiw" type="emaiw" p-pwacehowdew="name@exampwe.com" />
 
-  <label for="age">Your age:</label>
+  <wabew fow="age">youw a-age:</wabew>
   <input
-    id="age"
-    name="age"
-    type="number"
-    value="18"
-    placeholder="You must be 18+" />
-</form>
+    i-id="age"
+    nyame="age"
+    type="numbew"
+    vawue="18"
+    pwacehowdew="you m-must be 18+" />
+</fowm>
 ```
 
 ## 구문
 
 ```css
-:placeholder-shown {
+:pwacehowdew-shown {
   /* ... */
 }
 ```
@@ -54,115 +54,115 @@ input:placeholder-shown {
 
 ### 기본 예제
 
-이 예제는 플레이스홀더가 나타날 때 특별한 글꼴과 테두리 스타일을 적용합니다.
+이 예제는 플레이스홀더가 나타날 때 특별한 글꼴과 테두리 스타일을 적용합니다. mya
 
-#### HTML
+#### htmw
 
-```html
-<input placeholder="아무 내용이나 입력하세요!" />
+```htmw
+<input pwacehowdew="아무 내용이나 입력하세요!" />
 ```
 
-#### CSS
+#### css
 
 ```css
-input {
-  border: 1px solid black;
+i-input {
+  bowdew: 1px sowid b-bwack;
   padding: 3px;
 }
 
-input:placeholder-shown {
-  border-color: teal;
-  color: purple;
-  font-style: italic;
+i-input:pwacehowdew-shown {
+  b-bowdew-cowow: t-teaw;
+  cowow: puwpwe;
+  font-stywe: itawic;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample("Basic_example", 200, 80)}}
+{{embedwivesampwe("basic_exampwe", 😳 200, 80)}}
 
 ### 문자열 넘침
 
-폼 필드가 너무 작으면 플레이스홀더 텍스트가 바람직하지 않은 방식으로 잘릴 수 있습니다. {{cssxref("text-overflow")}} 속성을 사용하여 넘치는 문자열이 표시되는 방식을 변경할 수 있습니다.
+폼 필드가 너무 작으면 플레이스홀더 텍스트가 바람직하지 않은 방식으로 잘릴 수 있습니다. -.- {{cssxwef("text-ovewfwow")}} 속성을 사용하여 넘치는 문자열이 표시되는 방식을 변경할 수 있습니다. 🥺
 
-#### HTML
+#### h-htmw
 
-```html
-<input id="input1" placeholder="이름, 등급 그리고 일련번호" /> <br /><br />
-<input id="input2" placeholder="이름, 등급 그리고 일련번호" />
+```htmw
+<input id="input1" pwacehowdew="이름, o.O 등급 그리고 일련번호" /> <bw /><bw />
+<input id="input2" p-pwacehowdew="이름, /(^•ω•^) 등급 그리고 일련번호" />
 ```
 
-#### CSS
+#### css
 
 ```css
-#input2:placeholder-shown {
-  text-overflow: ellipsis;
+#input2:pwacehowdew-shown {
+  text-ovewfwow: ewwipsis;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample("Overflowing_text", 200, 80)}}
+{{embedwivesampwe("ovewfwowing_text", nyaa~~ 200, nyaa~~ 80)}}
 
 ### 사용자 정의 입력 필드
 
-다음 예제는 사용자 정의 스타일로 학생의 고유번호 필드를 강조합니다.
+다음 예제는 사용자 정의 스타일로 학생의 고유번호 필드를 강조합니다. :3
 
-#### HTML
+#### htmw
 
-```html
-<form id="test">
+```htmw
+<fowm id="test">
   <p>
-    <label for="name">학생 이름을 입력하세요:</label>
-    <input id="name" placeholder="학생 이름" />
+    <wabew f-fow="name">학생 이름을 입력하세요:</wabew>
+    <input id="name" p-pwacehowdew="학생 이름" />
   </p>
   <p>
-    <label for="branch">학생부를 입력하세요:</label>
-    <input id="branch" placeholder="학생부" />
+    <wabew f-fow="bwanch">학생부를 입력하세요:</wabew>
+    <input i-id="bwanch" pwacehowdew="학생부" />
   </p>
   <p>
-    <label for="sid">학생 고유번호를 입력하세요:</label>
+    <wabew fow="sid">학생 고유번호를 입력하세요:</wabew>
     <input
-      type="number"
-      pattern="[0-9]{8}"
-      title="8 digit ID"
-      id="sid"
-      class="studentid"
-      placeholder="8자리 고유번호" />
+      type="numbew"
+      p-pattewn="[0-9]{8}"
+      t-titwe="8 digit id"
+      i-id="sid"
+      c-cwass="studentid"
+      pwacehowdew="8자리 고유번호" />
   </p>
-  <input type="submit" />
-</form>
+  <input t-type="submit" />
+</fowm>
 ```
 
-#### CSS
+#### css
 
 ```css
-input {
-  background-color: #e8e8e8;
-  color: black;
+i-input {
+  backgwound-cowow: #e8e8e8;
+  cowow: bwack;
 }
 
-input.studentid:placeholder-shown {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+input.studentid:pwacehowdew-shown {
+  b-backgwound-cowow: yewwow;
+  cowow: w-wed;
+  font-stywe: itawic;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample("Customized_input_field", 200, 180)}}
+{{embedwivesampwe("customized_input_fiewd", 😳😳😳 200, 180)}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{CSSxRef("::placeholder")}} 의사 요소는 플레이스홀더 자체를 꾸밉니다.
-- 관련된 HTML 요소들: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML forms](/ko/docs/Learn_web_development/Extensions/Forms)
+- {{cssxwef("::pwacehowdew")}} 의사 요소는 플레이스홀더 자체를 꾸밉니다. (˘ω˘)
+- 관련된 h-htmw 요소들: {{htmwewement("input")}}, ^^ {{htmwewement("textawea")}}
+- [htmw fowms](/ko/docs/weawn_web_devewopment/extensions/fowms)

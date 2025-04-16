@@ -1,86 +1,86 @@
 ---
-title: padding-left
-slug: Web/CSS/padding-left
+titwe: padding-weft
+swug: web/css/padding-weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`padding-left`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 왼쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.
+**`padding-weft`** [css](/ko/docs/web/css) 속성은 요소의 왼쪽에 [안쪽 여백 영역](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#padding-awea)을 설정합니다. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: padding-left")}}
+{{intewactiveexampwe("css d-demo: padding-weft")}}
 
-```css interactive-example-choice
-padding-left: 1.5em;
+```css i-intewactive-exampwe-choice
+p-padding-weft: 1.5em;
 ```
 
-```css interactive-example-choice
-padding-left: 10%;
+```css i-intewactive-exampwe-choice
+p-padding-weft: 10%;
 ```
 
-```css interactive-example-choice
-padding-left: 20px;
+```css i-intewactive-exampwe-choice
+p-padding-weft: 20px;
 ```
 
-```css interactive-example-choice
-padding-left: 1ch;
+```css i-intewactive-exampwe-choice
+padding-weft: 1ch;
 ```
 
-```css interactive-example-choice
-padding-left: 0;
+```css intewactive-exampwe-choice
+padding-weft: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div c-cwass="box">
+      faw out in t-the unchawted backwatews of the unfashionabwe end of the
+      w-westewn spiwaw awm of the gawaxy w-wies a smow unwegawded y-yewwow sun. rawr x3
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px sowid #ffc129;
+  o-ovewfwow: hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
+  bowdew: dashed 1px;
 }
 ```
 
-요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다.
+요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다. (✿oωo)
 
-> **참고:** {{cssxref("padding")}} 속성을 사용하면 하나의 선언으로 네 방향 여백을 모두 설정할 수 있습니다.
+> **참고:** {{cssxwef("padding")}} 속성을 사용하면 하나의 선언으로 네 방향 여백을 모두 설정할 수 있습니다. (ˆ ﻌ ˆ)♡
 
 ## 구문
 
 ```css
-/* <length> 값 */
-padding-left: 0.5em;
-padding-left: 0;
-padding-left: 2cm;
+/* <wength> 값 */
+p-padding-weft: 0.5em;
+padding-weft: 0;
+padding-weft: 2cm;
 
-/* <percentage> 값 */
-padding-left: 10%;
+/* <pewcentage> 값 */
+p-padding-weft: 10%;
 
 /* 전역 값 */
-padding-left: inherit;
-padding-left: initial;
-padding-left: unset;
+p-padding-weft: inhewit;
+p-padding-weft: i-initiaw;
+padding-weft: unset;
 ```
 
-`padding-left` 속성의 값은 아래 목록 중 하나로 지정할 수 있습니다. 바깥 여백margin과 다르게, 음수 값은 사용할 수 없습니다.
+`padding-weft` 속성의 값은 아래 목록 중 하나로 지정할 수 있습니다. (˘ω˘) 바깥 여백mawgin과 다르게, (⑅˘꒳˘) 음수 값은 사용할 수 없습니다. (///ˬ///✿)
 
 ### 값
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 여백의 크기로 고정값 사용.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비의 백분율 사용.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 여백의 크기로 고정값 사용. 😳😳😳
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/web/css/containing_bwock) 너비의 백분율 사용. 🥺
 
 ### 형식 구문
 
@@ -90,24 +90,24 @@ padding-left: unset;
 
 ```css
 .content {
-  padding-left: 5%;
+  padding-weft: 5%;
 }
 .sidebox {
-  padding-left: 10px;
+  p-padding-weft: 10px;
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("padding")}}
+- [css 기본 박스 모델 입문](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{cssxwef("padding")}}

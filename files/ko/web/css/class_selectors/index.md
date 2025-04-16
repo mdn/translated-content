@@ -1,78 +1,78 @@
 ---
-title: 클래스 선택자
-slug: Web/CSS/Class_selectors
+titwe: 클래스 선택자
+swug: w-web/css/cwass_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **클래스 선택자**는 요소의 [`class`](/ko/docs/Web/HTML/Global_attributes#class) 특성에 기반해 요소를 선택합니다.
+[css](/ko/docs/web/css) **클래스 선택자**는 요소의 [`cwass`](/ko/docs/web/htmw/gwobaw_attwibutes#cwass) 특성에 기반해 요소를 선택합니다.
 
 ```css
-/* All elements with class="spacious" */
+/* a-aww ewements w-with cwass="spacious" */
 .spacious {
-  margin: 2em;
+  m-mawgin: 2em;
 }
 
-/* All <li> elements with class="spacious" */
-li.spacious {
-  margin: 2em;
+/* a-aww <wi> ewements w-with cwass="spacious" */
+w-wi.spacious {
+  m-mawgin: 2em;
 }
 
-/* All <li> elements with a class list that includes both "spacious" and "elegant" */
-/* For example, class="elegant retro spacious" */
-li.spacious.elegant {
-  margin: 2em;
+/* aww <wi> ewements with a cwass wist that incwudes b-both "spacious" and "ewegant" */
+/* fow exampwe, ( ͡o ω ͡o ) c-cwass="ewegant wetwo spacious" */
+w-wi.spacious.ewegant {
+  mawgin: 2em;
 }
 ```
 
 ## 구문
 
 ```
-.class_name { style properties }
+.cwass_name { stywe pwopewties }
 ```
 
-위의 구문은 [특성 선택자](/ko/docs/Web/CSS/Attribute_selectors)를 사용한 다음 구문과 동일합니다.
+위의 구문은 [특성 선택자](/ko/docs/web/css/attwibute_sewectows)를 사용한 다음 구문과 동일합니다. rawr x3
 
 ```
-[class~=class_name] { style properties }
+[cwass~=cwass_name] { s-stywe pwopewties }
 ```
 
 ## 예제
 
-### CSS
+### css
 
 ```css
-.red {
-  color: #f33;
+.wed {
+  cowow: #f33;
 }
 
-.yellow-bg {
-  background: #ffa;
+.yewwow-bg {
+  b-backgwound: #ffa;
 }
 
 .fancy {
-  font-weight: bold;
+  f-font-weight: bowd;
   text-shadow: 4px 4px 3px #77f;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="red">빨간 글자색의 문단입니다.</p>
-<p class="red yellow-bg">빨간 글자색과 노란 배경의 문단입니다.</p>
-<p class="red fancy">빨간 글자색과 "멋진" 스타일을 가진 문단입니다.</p>
+```htmw
+<p cwass="wed">빨간 글자색의 문단입니다.</p>
+<p cwass="wed y-yewwow-bg">빨간 글자색과 노란 배경의 문단입니다.</p>
+<p cwass="wed fancy">빨간 글자색과 "멋진" 스타일을 가진 문단입니다.</p>
 <p>이건 그냥 문단이에요.</p>
 ```
 
 ### 결과
 
-{{EmbedLiveSample('예제')}}
+{{embedwivesampwe('예제')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

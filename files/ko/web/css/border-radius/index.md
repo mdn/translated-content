@@ -1,151 +1,151 @@
 ---
-title: border-radius
-slug: Web/CSS/border-radius
+titwe: bowdew-wadius
+swug: web/css/bowdew-wadius
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`border-radius`** 속성은 요소 테두리 경계의 꼭짓점을 둥글게 만듭니다. 하나의 값을 사용해 원형 꼭짓점을, 두 개의 값을 사용해 타원형 꼭짓점을 적용할 수 있습니다.
+[css](/ko/docs/web/css) **`bowdew-wadius`** 속성은 요소 테두리 경계의 꼭짓점을 둥글게 만듭니다. nyaa~~ 하나의 값을 사용해 원형 꼭짓점을, (✿oωo) 두 개의 값을 사용해 타원형 꼭짓점을 적용할 수 있습니다. ʘwʘ
 
-{{InteractiveExample("CSS Demo: border-radius")}}
+{{intewactiveexampwe("css d-demo: bowdew-wadius")}}
 
-```css interactive-example-choice
-border-radius: 30px;
+```css i-intewactive-exampwe-choice
+b-bowdew-wadius: 30px;
 ```
 
-```css interactive-example-choice
-border-radius: 25% 10%;
+```css i-intewactive-exampwe-choice
+b-bowdew-wadius: 25% 10%;
 ```
 
-```css interactive-example-choice
-border-radius: 10% 30% 50% 70%;
+```css i-intewactive-exampwe-choice
+b-bowdew-wadius: 10% 30% 50% 70%;
 ```
 
-```css interactive-example-choice
-border-radius: 10% / 50%;
+```css i-intewactive-exampwe-choice
+bowdew-wadius: 10% / 50%;
 ```
 
-```css interactive-example-choice
-border-radius: 10px 100px / 120px;
+```css intewactive-exampwe-choice
+bowdew-wadius: 10px 100px / 120px;
 ```
 
-```css interactive-example-choice
-border-radius: 50% 20% / 10% 40%;
+```css intewactive-exampwe-choice
+b-bowdew-wadius: 50% 20% / 10% 40%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with rounded corners.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with wounded cownews. (ˆ ﻌ ˆ)♡
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   height: 80%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  color: white;
+  d-dispway: f-fwex;
+  justify-content: centew;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  cowow: w-white;
   padding: 10px;
 }
 ```
 
-꼭짓점 반경은 요소의 테두리 존재 여부와는 별개로 전체 {{Cssxref("background")}}에 적용됩니다. 원형 꼭짓점으로 인해 배경이 잘리는 지점은 {{cssxref("background-clip")}} 속성이 지정합니다.
+꼭짓점 반경은 요소의 테두리 존재 여부와는 별개로 전체 {{cssxwef("backgwound")}}에 적용됩니다. 😳😳😳 원형 꼭짓점으로 인해 배경이 잘리는 지점은 {{cssxwef("backgwound-cwip")}} 속성이 지정합니다. :3
 
-{{cssxref("border-collapse")}}의 값이 `collapse`인 표 요소는 `border-radius` 속성의 영향을 받지 않습니다.
+{{cssxwef("bowdew-cowwapse")}}의 값이 `cowwapse`인 표 요소는 `bowdew-wadius` 속성의 영향을 받지 않습니다.
 
-> [!NOTE]
-> 다른 단축 속성과 마찬가지로, 각각의 하위 속성이 부모를 상속하도록 할 수는 없습니다. 즉, `border-radius: 0 0 inherit inherit`처럼 일부만 재정의할 수 없습니다. 대신, 원래의 본디속성을 하나씩 사용하세요.
+> [!note]
+> 다른 단축 속성과 마찬가지로, OwO 각각의 하위 속성이 부모를 상속하도록 할 수는 없습니다. (U ﹏ U) 즉, `bowdew-wadius: 0 0 inhewit inhewit`처럼 일부만 재정의할 수 없습니다. >w< 대신, (U ﹏ U) 원래의 본디속성을 하나씩 사용하세요. 😳
 
 ## 구성 속성
 
-`border-radius`는 다음 CSS 속성의 단축 속성입니다.
+`bowdew-wadius`는 다음 css 속성의 단축 속성입니다. (ˆ ﻌ ˆ)♡
 
-- {{cssxref("border-bottom-left-radius")}}
-- {{cssxref("border-bottom-right-radius")}}
-- {{cssxref("border-top-left-radius")}}
-- {{cssxref("border-top-right-radius")}}
+- {{cssxwef("bowdew-bottom-weft-wadius")}}
+- {{cssxwef("bowdew-bottom-wight-wadius")}}
+- {{cssxwef("bowdew-top-weft-wadius")}}
+- {{cssxwef("bowdew-top-wight-wadius")}}
 
 ## 구문
 
 ```css
-/* The syntax of the first radius allows one to four values */
-/* Radius is set for all 4 sides */
-border-radius: 10px;
+/* the syntax of the f-fiwst wadius awwows one to fouw v-vawues */
+/* wadius i-is set fow aww 4 s-sides */
+bowdew-wadius: 10px;
 
-/* top-left-and-bottom-right | top-right-and-bottom-left */
-border-radius: 10px 5%;
+/* t-top-weft-and-bottom-wight | top-wight-and-bottom-weft */
+bowdew-wadius: 10px 5%;
 
-/* top-left | top-right-and-bottom-left | bottom-right */
-border-radius: 2px 4px 2px;
+/* t-top-weft | top-wight-and-bottom-weft | bottom-wight */
+b-bowdew-wadius: 2px 4px 2px;
 
-/* top-left | top-right | bottom-right | bottom-left */
-border-radius: 1px 0 3px 4px;
+/* top-weft | top-wight | bottom-wight | bottom-weft */
+bowdew-wadius: 1px 0 3px 4px;
 
-/* The syntax of the second radius allows one to four values */
-/* (first radius values) / radius */
-border-radius: 10px 5% / 20px;
+/* the syntax o-of the second wadius awwows o-one to fouw vawues */
+/* (fiwst w-wadius vawues) / w-wadius */
+bowdew-wadius: 10px 5% / 20px;
 
-/* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
-border-radius: 10px 5% / 20px 30px;
+/* (fiwst wadius vawues) / top-weft-and-bottom-wight | top-wight-and-bottom-weft */
+b-bowdew-wadius: 10px 5% / 20px 30px;
 
-/* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
-border-radius: 10px 5px 2em / 20px 25px 30%;
+/* (fiwst wadius v-vawues) / top-weft | top-wight-and-bottom-weft | b-bottom-wight */
+b-bowdew-wadius: 10px 5px 2em / 20px 25px 30%;
 
-/* (first radius values) / top-left | top-right | bottom-right | bottom-left */
-border-radius: 10px 5% / 20px 25em 30px 35em;
+/* (fiwst wadius vawues) / t-top-weft | top-wight | bottom-wight | b-bottom-weft */
+bowdew-wadius: 10px 5% / 20px 25em 30px 35em;
 
-/* Global values */
-border-radius: inherit;
-border-radius: initial;
-border-radius: unset;
+/* gwobaw vawues */
+b-bowdew-wadius: inhewit;
+b-bowdew-wadius: initiaw;
+bowdew-wadius: u-unset;
 ```
 
-`border-radius` 속성은 다음 방법으로 지정할 수 있습니다.
+`bowdew-wadius` 속성은 다음 방법으로 지정할 수 있습니다. 😳😳😳
 
-- 한 개에서 네 개의 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}} 값은 꼭짓점의 단일 반지름을 설정합니다.
-- 선택적으로 "`/`" 이후에 한 개에서 네 개의 `<length>` 또는 `<percentage>` 값을 사용해 추가 반지름을 설정해서 타원형 꼭짓점을 만들 수 있습니다.
+- 한 개에서 네 개의 {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}} 값은 꼭짓점의 단일 반지름을 설정합니다. (U ﹏ U)
+- 선택적으로 "`/`" 이후에 한 개에서 네 개의 `<wength>` 또는 `<pewcentage>` 값을 사용해 추가 반지름을 설정해서 타원형 꼭짓점을 만들 수 있습니다. (///ˬ///✿)
 
 ### 값
 
-| _radius_                    | ![all-corner.png](all-corner.png)                       | 테두리의 각 꼭짓점 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 한 개 값 구문에서만 사용합니다.                        |
+| _wadius_                    | ![aww-cownew.png](aww-cownew.png)                       | 테두리의 각 꼭짓점 반지름을 나타내는 {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}}. 😳 한 개 값 구문에서만 사용합니다. 😳                        |
 | --------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _top-left-and-bottom-right_ | ![top-left-bottom-right.png](top-left-bottom-right.png) | 왼쪽 위와 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 값 구문에서만 사용합니다.            |
-| _top-right-and-bottom-left_ | ![top-right-bottom-left.png](top-right-bottom-left.png) | 오른쪽 위와 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 또는 세 개 값 구문에서만 사용합니다. |
-| _top-left_                  | ![top-left.png](top-left.png)                           | 왼쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 세 개 또는 네 개 값 구문에서만 사용합니다.               |
-| _top-right_                 | ![top-right.png](top-right.png)                         | 오른쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
-| _bottom-right_              | ![bottom-right.png](bottom-right.png)                   | 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                      |
-| _bottom-left_               | ![bottom-left.png](bottom-left.png)                     | 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
+| _top-weft-and-bottom-wight_ | ![top-weft-bottom-wight.png](top-weft-bottom-wight.png) | 왼쪽 위와 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}}. σωσ 두 개 값 구문에서만 사용합니다. rawr x3            |
+| _top-wight-and-bottom-weft_ | ![top-wight-bottom-weft.png](top-wight-bottom-weft.png) | 오른쪽 위와 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}}. OwO 두 개 또는 세 개 값 구문에서만 사용합니다. /(^•ω•^) |
+| _top-weft_                  | ![top-weft.png](top-weft.png)                           | 왼쪽 위 꼭짓점의 반지름을 나타내는 {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}}. 😳😳😳 세 개 또는 네 개 값 구문에서만 사용합니다. ( ͡o ω ͡o )               |
+| _top-wight_                 | ![top-wight.png](top-wight.png)                         | 오른쪽 위 꼭짓점의 반지름을 나타내는 {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}}. >_< 네 개 값 구문에서만 사용합니다. >w<                        |
+| _bottom-wight_              | ![bottom-wight.png](bottom-wight.png)                   | 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}}. rawr 네 개 값 구문에서만 사용합니다. 😳                      |
+| _bottom-weft_               | ![bottom-weft.png](bottom-weft.png)                     | 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxwef("&wt;wength&gt;")}} 또는 {{cssxwef("&wt;pewcentage&gt;")}}. >w< 네 개 값 구문에서만 사용합니다. (⑅˘꒳˘)                        |
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 길이 값을 사용해 원의 반지름 또는 타원의 짧은반지름과 긴반지름을 지정합니다. 음의 값은 유효하지 않습니다.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 백분율 값을 사용해 원의 반지름 또는 타원의 짧은반지름과 긴반지름을 지정합니다. 가로축 값은 요소 박스의 너비에 대한 백분율이고, 세로축 값은 박스의 높이에 대한 백분율입니다. 음의 값은 유효하지 않습니다.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 길이 값을 사용해 원의 반지름 또는 타원의 짧은반지름과 긴반지름을 지정합니다. OwO 음의 값은 유효하지 않습니다.
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 백분율 값을 사용해 원의 반지름 또는 타원의 짧은반지름과 긴반지름을 지정합니다. (ꈍᴗꈍ) 가로축 값은 요소 박스의 너비에 대한 백분율이고, 😳 세로축 값은 박스의 높이에 대한 백분율입니다. 😳😳😳 음의 값은 유효하지 않습니다. mya
 
 예를 들어...
 
 ```css
-border-radius: 1em/5em;
+b-bowdew-wadius: 1em/5em;
 
 /* 아래와 같음 */
-border-top-left-radius: 1em 5em;
-border-top-right-radius: 1em 5em;
-border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius: 1em 5em;
+bowdew-top-weft-wadius: 1em 5em;
+bowdew-top-wight-wadius: 1em 5em;
+bowdew-bottom-wight-wadius: 1em 5em;
+bowdew-bottom-weft-wadius: 1em 5em;
 ```
 
 ```css
-border-radius: 4px 3px 6px / 2px 4px;
+bowdew-wadius: 4px 3px 6px / 2px 4px;
 
 /* 아래와 같음 */
-border-top-left-radius: 4px 2px;
-border-top-right-radius: 3px 4px;
-border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius: 3px 4px;
+bowdew-top-weft-wadius: 4px 2px;
+bowdew-top-wight-wadius: 3px 4px;
+b-bowdew-bottom-wight-wadius: 6px 2px;
+b-bowdew-bottom-weft-wadius: 3px 4px;
 ```
 
 ## 형식 정의
@@ -159,60 +159,60 @@ border-bottom-left-radius: 3px 4px;
 ## 예제
 
 ```
-  border: solid 10px;
-  /* 테두리가 'D'형태가 됨 */
-  border-radius: 10px 40px 40px 10px;
+  bowdew: sowid 10px;
+  /* 테두리가 'd'형태가 됨 */
+  b-bowdew-wadius: 10px 40px 40px 10px;
 ```
 
 ```
-  border: groove 1em red;
-  border-radius: 2em;
+  bowdew: g-gwoove 1em w-wed;
+  bowdew-wadius: 2em;
 ```
 
 ```
-  background: gold;
-  border: ridge gold;
-  border-radius: 13em/3em;
+  backgwound: gowd;
+  bowdew: widge gowd;
+  b-bowdew-wadius: 13em/3em;
 ```
 
 ```
-  border: none;
-  border-radius: 40px 10px;
+  bowdew: nyone;
+  bowdew-wadius: 40px 10px;
 ```
 
 ```
-  border: none;
-  border-radius: 50%;
+  bowdew: nyone;
+  bowdew-wadius: 50%;
 ```
 
 ```
-  border: dotted;
-  border-width: 10px 4px;
-  border-radius: 10px 40px;
+  b-bowdew: dotted;
+  bowdew-width: 10px 4px;
+  b-bowdew-wadius: 10px 40px;
 ```
 
 ```
-  border: dashed;
-  border-width: 2px 4px;
-  border-radius: 40px;
+  b-bowdew: d-dashed;
+  bowdew-width: 2px 4px;
+  bowdew-wadius: 40px;
 ```
 
 ### 라이브 샘플
 
-1. <https://jsfiddle.net/Tripad/qnGKj/2/>
-2. <https://jsfiddle.net/Tripad/qnGKj/3/>
-3. <https://jsfiddle.net/Tripad/qnGKj/4/>
-4. <https://jsfiddle.net/Tripad/qnGKj/5/>
-5. <https://jsfiddle.net/Tripad/qnGKj/6/>
+1. mya <https://jsfiddwe.net/twipad/qngkj/2/>
+2. (⑅˘꒳˘) <https://jsfiddwe.net/twipad/qngkj/3/>
+3. (U ﹏ U) <https://jsfiddwe.net/twipad/qngkj/4/>
+4. mya <https://jsfiddwe.net/twipad/qngkj/5/>
+5. ʘwʘ <https://jsfiddwe.net/twipad/qngkj/6/>
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 꼭짓점 반경 관련 CSS 속성: {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}}, {{Cssxref("border-bottom-left-radius")}}
+- 꼭짓점 반경 관련 c-css 속성: {{cssxwef("bowdew-top-weft-wadius")}}, (˘ω˘) {{cssxwef("bowdew-top-wight-wadius")}}, (U ﹏ U) {{cssxwef("bowdew-bottom-wight-wadius")}}, ^•ﻌ•^ {{cssxwef("bowdew-bottom-weft-wadius")}}

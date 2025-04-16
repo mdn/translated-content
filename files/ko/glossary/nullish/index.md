@@ -1,10 +1,10 @@
 ---
-title: Nullish 값
-slug: Glossary/Nullish
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: nyuwwish 값
+swug: gwossawy/nuwwish
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[JavaScript](/ko/docs/Glossary/JavaScript) 에서 Nullish 값은 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)또는 {{JSxRef("undefined")}}값 중 하나입니다. Nullish 값은 항상 [falsy](/ko/docs/Glossary/Falsy) 입니다.
+[javascwipt](/ko/docs/gwossawy/javascwipt) 에서 n-nyuwwish 값은 [`nuww`](/ko/docs/web/javascwipt/wefewence/opewatows/nuww)또는 {{jsxwef("undefined")}}값 중 하나입니다. òωó n-nyuwwish 값은 항상 [fawsy](/ko/docs/gwossawy/fawsy) 입니다. o.O

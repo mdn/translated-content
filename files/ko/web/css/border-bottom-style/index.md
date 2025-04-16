@@ -1,86 +1,86 @@
 ---
-title: border-bottom-style
-slug: Web/CSS/border-bottom-style
+titwe: bowdew-bottom-stywe
+swug: w-web/css/bowdew-bottom-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-bottom-style`** [CSS](/ko/docs/Web/CSS) 속성은 요소 테두리의 아래쪽 스타일을 지정합니다.
+**`bowdew-bottom-stywe`** [css](/ko/docs/web/css) 속성은 요소 테두리의 아래쪽 스타일을 지정합니다. (˘ω˘)
 
-{{InteractiveExample("CSS Demo: border-bottom-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-bottom-stywe")}}
 
-```css interactive-example-choice
-border-bottom-style: none;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-bottom-style: dotted;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-stywe: d-dotted;
 ```
 
-```css interactive-example-choice
-border-bottom-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-bottom-stywe: dashed;
 ```
 
-```css interactive-example-choice
-border-bottom-style: solid;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-bottom-style: groove;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-border-bottom-style: inset;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  c-cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 
 body {
-  background-color: #fff;
+  backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
-> 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다.
+> [!note]
+> 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다. -.-
 
 ## 구문
 
 ```css
 /* 키워드 값 */
-border-bottom-style: none;
-border-bottom-style: hidden;
-border-bottom-style: dotted;
-border-bottom-style: dashed;
-border-bottom-style: solid;
-border-bottom-style: double;
-border-bottom-style: groove;
-border-bottom-style: ridge;
-border-bottom-style: inset;
-border-bottom-style: outset;
+b-bowdew-bottom-stywe: nyone;
+b-bowdew-bottom-stywe: h-hidden;
+b-bowdew-bottom-stywe: d-dotted;
+bowdew-bottom-stywe: dashed;
+bowdew-bottom-stywe: sowid;
+bowdew-bottom-stywe: d-doubwe;
+bowdew-bottom-stywe: gwoove;
+b-bowdew-bottom-stywe: widge;
+bowdew-bottom-stywe: inset;
+bowdew-bottom-stywe: outset;
 
 /* 전역 값 */
-border-bottom-style: inherit;
-border-bottom-style: initial;
-border-bottom-style: unset;
+bowdew-bottom-stywe: inhewit;
+b-bowdew-bottom-stywe: initiaw;
+b-bowdew-bottom-stywe: u-unset;
 ```
 
-`border-bottom-style` 속성은 {{cssxref("border-style")}} 속성에 사용할 수 있는 키워드 중 하나를 사용해 지정할 수 있습니다.
+`bowdew-bottom-stywe` 속성은 {{cssxwef("bowdew-stywe")}} 속성에 사용할 수 있는 키워드 중 하나를 사용해 지정할 수 있습니다. 🥺
 
 ### 형식 구문
 
@@ -88,89 +88,89 @@ border-bottom-style: unset;
 
 ## 예제
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td cwass="b2">hidden</td>
+    <td cwass="b3">dotted</td>
+    <td c-cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td c-cwass="b5">sowid</td>
+    <td cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td c-cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td cwass="b9">inset</td>
+    <td c-cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Define look of the table */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+/* d-define wook of the tabwe */
+tabwe {
+  bowdew-width: 2px;
+  b-backgwound-cowow: #52e385;
 }
-tr,
+tw, (U ﹏ U)
 td {
   padding: 3px;
 }
 
-/* border-bottom-style example classes */
+/* b-bowdew-bottom-stywe exampwe cwasses */
 .b1 {
-  border-bottom-style: none;
+  b-bowdew-bottom-stywe: n-nyone;
 }
 .b2 {
-  border-bottom-style: hidden;
+  bowdew-bottom-stywe: hidden;
 }
 .b3 {
-  border-bottom-style: dotted;
+  bowdew-bottom-stywe: dotted;
 }
 .b4 {
-  border-bottom-style: dashed;
+  bowdew-bottom-stywe: dashed;
 }
 .b5 {
-  border-bottom-style: solid;
+  bowdew-bottom-stywe: s-sowid;
 }
 .b6 {
-  border-bottom-style: double;
+  b-bowdew-bottom-stywe: doubwe;
 }
 .b7 {
-  border-bottom-style: groove;
+  b-bowdew-bottom-stywe: g-gwoove;
 }
 .b8 {
-  border-bottom-style: ridge;
+  b-bowdew-bottom-stywe: widge;
 }
 .b9 {
-  border-bottom-style: inset;
+  bowdew-bottom-stywe: inset;
 }
 .b10 {
-  border-bottom-style: outset;
+  b-bowdew-bottom-stywe: outset;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('예제', 300, 200)}}
+{{embedwivesampwe('예제', >w< 300, 200)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 테두리 스타일 관련 CSS 속성: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-left-style")}}, {{cssxref("border-style")}}.
-- 아래쪽 테두리 관련 CSS 속성: {{cssxref("border-bottom")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-bottom-width")}}.
+- 테두리 스타일 관련 css 속성: {{cssxwef("bowdew-top-stywe")}}, mya {{cssxwef("bowdew-wight-stywe")}}, >w< {{cssxwef("bowdew-weft-stywe")}}, nyaa~~ {{cssxwef("bowdew-stywe")}}. (✿oωo)
+- 아래쪽 테두리 관련 css 속성: {{cssxwef("bowdew-bottom")}}, ʘwʘ {{cssxwef("bowdew-bottom-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bowdew-bottom-width")}}. 😳😳😳

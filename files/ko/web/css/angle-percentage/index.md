@@ -1,24 +1,24 @@
 ---
-title: <angle-percentage>
-slug: Web/CSS/angle-percentage
+titwe: <angwe-pewcentage>
+swug: w-web/css/angwe-pewcentage
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`<angle-percentage>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("&lt;angle&gt;")}}과 {{cssxref("&lt;percentage&gt;")}} 모두 가능한 값을 나타냅니다.
+[css](/ko/docs/web/css) **`<angwe-pewcentage>`** [자료형](/ko/docs/web/css/css_types)은 {{cssxwef("&wt;angwe&gt;")}}과 {{cssxwef("&wt;pewcentage&gt;")}} 모두 가능한 값을 나타냅니다. (ꈍᴗꈍ)
 
 ## 구문
 
-{{cssxref("&lt;angle&gt;")}}과 {{cssxref("&lt;percentage&gt;")}} 문서에서 각 자료형의 구문을 살펴보세요.
+{{cssxwef("&wt;angwe&gt;")}}과 {{cssxwef("&wt;pewcentage&gt;")}} 문서에서 각 자료형의 구문을 살펴보세요. ^•ﻌ•^
 
-## `calc()`에서 사용하기
+## `cawc()`에서 사용하기
 
-`<angle-percentage>` 를 사용할 수 있는 곳이라면 백분율이 각도로 계산되므로, 이 자료형도 {{cssxref("calc()")}}표현식에서 사용할 수 있습니다.
+`<angwe-pewcentage>` 를 사용할 수 있는 곳이라면 백분율이 각도로 계산되므로, OwO 이 자료형도 {{cssxwef("cawc()")}}표현식에서 사용할 수 있습니다. 🥺
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

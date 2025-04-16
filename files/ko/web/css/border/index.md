@@ -1,46 +1,46 @@
 ---
-title: border
-slug: Web/CSS/border
+titwe: bowdew
+swug: web/css/bowdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`border`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 테두리를 설정합니다. {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}의 값을 설정합니다.
+[css](/ko/docs/web/css) **`bowdew`** [단축 속성](/ko/docs/web/css/showthand_pwopewties)은 요소의 테두리를 설정합니다. >_< {{cssxwef("bowdew-width")}}, >_< {{cssxwef("bowdew-stywe")}}, (⑅˘꒳˘) {{cssxwef("bowdew-cowow")}}의 값을 설정합니다. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: border")}}
+{{intewactiveexampwe("css d-demo: b-bowdew")}}
 
-```css interactive-example-choice
-border: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew: s-sowid;
 ```
 
-```css interactive-example-choice
-border: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew: dashed w-wed;
 ```
 
-```css interactive-example-choice
-border: 1rem solid;
+```css intewactive-exampwe-choice
+bowdew: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew: 4mm widge wgba(211, rawr x3 220, (U ﹏ U) 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a-a box with a bowdew awound it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -49,59 +49,59 @@ border: 4mm ridge rgba(211, 220, 50, 0.6);
 
 ## 구성 속성
 
-`border`는 단축 속성으로서 다음의 하위 속성을 포함합니다.
+`bowdew`는 단축 속성으로서 다음의 하위 속성을 포함합니다. (⑅˘꒳˘)
 
-- {{cssxref("border-color")}}
-- {{cssxref("border-style")}}
-- {{cssxref("border-width")}}
+- {{cssxwef("bowdew-cowow")}}
+- {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("bowdew-width")}}
 
 ## 구문
 
 ```css
 /* 스타일 */
-border: solid;
+b-bowdew: sowid;
 
 /* 너비 | 스타일 */
-border: 2px dotted;
+bowdew: 2px dotted;
 
 /* 스타일 | 색 */
-border: outset #f33;
+bowdew: outset #f33;
 
 /* 너비 | 스타일 | 색 */
-border: medium dashed green;
+b-bowdew: medium dashed gween;
 
 /* 전역 값 */
-border: inherit;
-border: initial;
-border: unset;
+b-bowdew: inhewit;
+b-bowdew: initiaw;
+b-bowdew: unset;
 ```
 
-`border` 속성은 다음의 값 중 한 개에서 세 개를 선택해서 지정할 수 있습니다. 순서는 영향을 주지 않습니다.
+`bowdew` 속성은 다음의 값 중 한 개에서 세 개를 선택해서 지정할 수 있습니다. òωó 순서는 영향을 주지 않습니다.
 
-> [!NOTE]
-> 스타일을 지정하지 않으면 기본값인 `none`이 사용돼 테두리가 보이지 않습니다.
+> [!note]
+> 스타일을 지정하지 않으면 기본값인 `none`이 사용돼 테두리가 보이지 않습니다. ʘwʘ
 
 ### 값
 
-- `<line-width>`
-  - : 테두리의 굵기로 기본값은 `medium`입니다. {{Cssxref("border-width")}}를 참고하세요.
-- `<line-style>`
-  - : 테두리의 스타일로 기본값은 `none`입니다. {{Cssxref("border-style")}}을 참고하세요.
-- {{cssxref("&lt;color&gt;")}}
-  - : 테두리의 색상으로 기본값은 `currentcolor`입니다. {{Cssxref("border-color")}}를 참고하세요.
+- `<wine-width>`
+  - : 테두리의 굵기로 기본값은 `medium`입니다. /(^•ω•^) {{cssxwef("bowdew-width")}}를 참고하세요. ʘwʘ
+- `<wine-stywe>`
+  - : 테두리의 스타일로 기본값은 `none`입니다. σωσ {{cssxwef("bowdew-stywe")}}을 참고하세요. OwO
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 테두리의 색상으로 기본값은 `cuwwentcowow`입니다. 😳😳😳 {{cssxwef("bowdew-cowow")}}를 참고하세요. 😳😳😳
 
 ## 설명
 
-다른 단축 속성과 마찬가지로, 생략한 속성은 [초깃값](/ko/docs/Web/CSS/initial_value)으로 설정됩니다. 한 가지 중요한 점은, `border`를 사용해서는 {{cssxref("border-image")}}에 원하는 값을 지정할 수는 없고 대신 초깃값인 `none`이 자동으로 설정됩니다.
+다른 단축 속성과 마찬가지로, o.O 생략한 속성은 [초깃값](/ko/docs/web/css/initiaw_vawue)으로 설정됩니다. ( ͡o ω ͡o ) 한 가지 중요한 점은, (U ﹏ U) `bowdew`를 사용해서는 {{cssxwef("bowdew-image")}}에 원하는 값을 지정할 수는 없고 대신 초깃값인 `none`이 자동으로 설정됩니다. (///ˬ///✿)
 
-`border` 단축 속성은 요소의 테두리를 모두 동일하게 설정하고 싶을 때 특히 유용합니다. 그러나 서로의 테두리를 다르게 하고 싶다면 네 면을 각각 설정할 수 있는 본디 속성 {{Cssxref("border-width")}}, {{Cssxref("border-style")}},{{Cssxref("border-color")}}를 사용하면 됩니다. 아니면 한 면의 테두리를 절대 기준({{Cssxref("border-top")}} 등)이나 상대 기준({{Cssxref("border-block-start")}} 등) 속성을 사용해서 따로 정해줄 수도 있습니다.
+`bowdew` 단축 속성은 요소의 테두리를 모두 동일하게 설정하고 싶을 때 특히 유용합니다. >w< 그러나 서로의 테두리를 다르게 하고 싶다면 네 면을 각각 설정할 수 있는 본디 속성 {{cssxwef("bowdew-width")}}, {{cssxwef("bowdew-stywe")}},{{cssxwef("bowdew-cowow")}}를 사용하면 됩니다. rawr 아니면 한 면의 테두리를 절대 기준({{cssxwef("bowdew-top")}} 등)이나 상대 기준({{cssxwef("bowdew-bwock-stawt")}} 등) 속성을 사용해서 따로 정해줄 수도 있습니다. mya
 
-### 테두리 vs외곽선
+### 테두리 v-vs외곽선
 
-테두리와 [외곽선](/ko/docs/Web/CSS/outline)은 매우 유사하지만, 다음의 두 가지 차이점이 존재합니다.
+테두리와 [외곽선](/ko/docs/web/css/outwine)은 매우 유사하지만, ^^ 다음의 두 가지 차이점이 존재합니다. 😳😳😳
 
-- 외곽선은 요소 콘텐츠의 밖에 그려지며 절대 공간을 차지하지 않습니다.
-- 명세에 따르면 외곽선은 직사각형일 필요가 없습니다. 보통 직사각형으로 그리기는 합니다.
+- 외곽선은 요소 콘텐츠의 밖에 그려지며 절대 공간을 차지하지 않습니다. mya
+- 명세에 따르면 외곽선은 직사각형일 필요가 없습니다. 😳 보통 직사각형으로 그리기는 합니다. -.-
 
 ## 형식 정의
 
@@ -115,43 +115,43 @@ border: unset;
 
 ### 튀어나오는 듯한 분홍색 테두리 추가하기
 
-#### HTML
+#### htmw
 
-```html
-<div>테두리와 외곽선에 더해 그림자까지, 정말 멋지지 않나요?</div>
+```htmw
+<div>테두리와 외곽선에 더해 그림자까지, 🥺 정말 멋지지 않나요?</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  border: 0.5rem outset pink;
-  outline: 0.5rem solid khaki;
-  box-shadow: 0 0 0 2rem skyblue;
-  border-radius: 12px;
-  font: bold 1rem sans-serif;
-  margin: 2rem;
-  padding: 1rem;
-  outline-offset: 0.5rem;
+  b-bowdew: 0.5wem outset pink;
+  outwine: 0.5wem s-sowid khaki;
+  box-shadow: 0 0 0 2wem skybwue;
+  bowdew-wadius: 12px;
+  font: bowd 1wem sans-sewif;
+  m-mawgin: 2wem;
+  padding: 1wem;
+  o-outwine-offset: 0.5wem;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('튀어나오는_듯한_분홍색_테두리_추가하기')}}
+{{embedwivesampwe('튀어나오는_듯한_분홍색_테두리_추가하기')}}
 
 ## 명세
 
-{{Specifications}}{{cssinfo}}
+{{specifications}}{{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{Cssxref("border-width")}}
-- {{Cssxref("border-style")}}
-- {{Cssxref("border-color")}}
-- [배경 및 테두리](/ko/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS 배우기: 배경 및 테두리](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- {{cssxwef("bowdew-width")}}
+- {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("bowdew-cowow")}}
+- [배경 및 테두리](/ko/docs/web/css/css_backgwounds_and_bowdews)
+- [css 배우기: 배경 및 테두리](/ko/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)

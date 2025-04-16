@@ -1,81 +1,81 @@
 ---
-title: 쌓임 맥락 예제2
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
+titwe: 쌓임 맥락 예제2
+swug: web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_2
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-« [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+« [css](/ko/docs/web/css) « [css z-z-index 이해하기](/ko/docs/web/css/css_positioned_wayout/undewstanding_z-index)
 
 ### 쌓임 맥락 예제2
 
-굉장히 간단하지만 *쌓임 맥락*을 이해하는데 도움이 되는 예제를 하나 소개하려 한다. 이전 예제에서 본 4개의 DIV가 있다. 이번에는 두 레벨의 DIV 모두 z-index 속성 값을 지정했다.
+굉장히 간단하지만 *쌓임 맥락*을 이해하는데 도움이 되는 예제를 하나 소개하려 한다. 😳 이전 예제에서 본 4개의 d-div가 있다. 이번에는 두 레벨의 d-div 모두 z-z-index 속성 값을 지정했다. 😳
 
-z-index 속성 값이 2인 DIV #2는 z-index 속성 값이 1인 DIV #3 위에 있다. 왜냐하면 DIV #2와 DIV #3은 같은 쌓임 맥락(루트 엘리먼트)에 속하고 DIV #2의 z-index 값이 더 크기 때문이다.
+z-z-index 속성 값이 2인 d-div #2는 z-index 속성 값이 1인 d-div #3 위에 있다. σωσ 왜냐하면 d-div #2와 div #3은 같은 쌓임 맥락(루트 엘리먼트)에 속하고 div #2의 z-index 값이 더 크기 때문이다. rawr x3
 
-이상한 점은 z-index 속성 값이 2인 DIV #2가 z-index 속성 값이 10인 DIV #4보다 위에 있다는 점이다. 이것은 이 두 DIV가 같은 쌓임 맥락에 속해있지 않기 때문이다. DIV #4는 DIV #3이 만든 쌓임 맥락에 속해있고 DIV #3과 DIV #3의 모든 자식 엘리먼트는 DIV #2보다 아래에 있다.
+이상한 점은 z-index 속성 값이 2인 div #2가 z-index 속성 값이 10인 d-div #4보다 위에 있다는 점이다. OwO 이것은 이 두 div가 같은 쌓임 맥락에 속해있지 않기 때문이다. /(^•ω•^) div #4는 d-div #3이 만든 쌓임 맥락에 속해있고 div #3과 div #3의 모든 자식 엘리먼트는 d-div #2보다 아래에 있다. 😳😳😳
 
-이 상황을 더 잘 이해하기 위해서 쌓임 맥락 계층을 그려보자.
+이 상황을 더 잘 이해하기 위해서 쌓임 맥락 계층을 그려보자. ( ͡o ω ͡o )
 
 - 루트 엘리먼트 쌓임 맥락
 
-  - DIV #2 (z-index 2)
-  - DIV #3 (z-index 1)
+  - div #2 (z-index 2)
+  - div #3 (z-index 1)
 
-    - DIV #4 (z-index 10)
+    - div #4 (z-index 10)
 
-> [!NOTE]
-> 일반적인 HTML 계층 구조가 쌓임 맥락 계층 구조와 다르다는걸 상기하자. 쌓임 맥락을 만들지 않는 엘리먼트들은 쌓임 맥락 계층 구조에서 사라진다.
+> [!note]
+> 일반적인 htmw 계층 구조가 쌓임 맥락 계층 구조와 다르다는걸 상기하자. >_< 쌓임 맥락을 만들지 않는 엘리먼트들은 쌓임 맥락 계층 구조에서 사라진다. >w<
 
 ## 예제
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div id="div1">
-  <br />
-  <span class="bold">DIV #1</span><br />
-  position: relative;
+  <bw />
+  <span c-cwass="bowd">div #1</span><bw />
+  p-position: wewative;
   <div id="div2">
-    <br />
-    <span class="bold">DIV #2</span><br />
-    position: absolute;<br />
+    <bw />
+    <span cwass="bowd">div #2</span><bw />
+    position: a-absowute;<bw />
     z-index: 2;
   </div>
 </div>
 
-<br />
+<bw />
 
 <div id="div3">
-  <br />
-  <span class="bold">DIV #3</span><br />
-  position: relative;<br />
-  z-index: 1;
+  <bw />
+  <span cwass="bowd">div #3</span><bw />
+  position: wewative;<bw />
+  z-z-index: 1;
   <div id="div4">
-    <br />
-    <span class="bold">DIV #4</span><br />
-    position: absolute;<br />
-    z-index: 10;
+    <bw />
+    <span c-cwass="bowd">div #4</span><bw />
+    p-position: absowute;<bw />
+    z-z-index: 10;
   </div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
-  font: 12px Arial;
+  font: 12px awiaw;
 }
 
-span.bold {
-  font-weight: bold;
+span.bowd {
+  f-font-weight: bowd;
 }
 
 #div2 {
   z-index: 2;
 }
 #div3 {
-  z-index: 1;
+  z-z-index: 1;
 }
 #div4 {
   z-index: 10;
@@ -84,53 +84,53 @@ span.bold {
 #div1,
 #div3 {
   height: 80px;
-  position: relative;
-  border: 1px dashed #669966;
-  background-color: #ccffcc;
-  padding-left: 5px;
+  position: wewative;
+  bowdew: 1px d-dashed #669966;
+  backgwound-cowow: #ccffcc;
+  padding-weft: 5px;
 }
 
 #div2 {
   opacity: 0.8;
-  position: absolute;
-  width: 150px;
-  height: 200px;
+  position: a-absowute;
+  w-width: 150px;
+  h-height: 200px;
   top: 20px;
-  left: 170px;
-  border: 1px dashed #990000;
-  background-color: #ffdddd;
-  text-align: center;
+  weft: 170px;
+  bowdew: 1px dashed #990000;
+  b-backgwound-cowow: #ffdddd;
+  t-text-awign: centew;
 }
 
 #div4 {
-  opacity: 0.8;
-  position: absolute;
-  width: 200px;
+  o-opacity: 0.8;
+  p-position: absowute;
+  w-width: 200px;
   height: 70px;
-  top: 65px;
-  left: 50px;
-  border: 1px dashed #000099;
-  background-color: #ddddff;
-  text-align: left;
-  padding-left: 10px;
+  t-top: 65px;
+  weft: 50px;
+  bowdew: 1px dashed #000099;
+  b-backgwound-cowow: #ddddff;
+  text-awign: w-weft;
+  padding-weft: 10px;
 }
 ```
 
 ## 결과
 
-{{ EmbedLiveSample('예제', '352', '270') }}
+{{ embedwivesampwe('예제', rawr '352', '270') }}
 
-### See also
+### s-see awso
 
-- [Stacking without z-index](/en-US/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/en-US/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-- [Adding z-index](/en-US/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-- [The stacking context](/en-US/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/en-US/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 3](/en-US/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [stacking w-without z-index](/en-us/css/undewstanding_z-index/stacking_without_z-index) : defauwt stacking wuwes
+- [stacking and fwoat](/en-us/css/undewstanding_z-index/stacking_and_fwoat) : how fwoating ewements a-awe handwed
+- [adding z-z-index](/en-us/css/undewstanding_z-index/adding_z-index) : using z-index t-to change d-defauwt stacking
+- [the s-stacking context](/en-us/css/undewstanding_z-index/the_stacking_context) : nyotes on the stacking context
+- [stacking c-context exampwe 1](/en-us/css/undewstanding_z-index/stacking_context_exampwe_1) : 2-wevew htmw hiewawchy, 😳 z-index on the wast wevew
+- [stacking c-context exampwe 3](/en-us/css/undewstanding_z-index/stacking_context_exampwe_3) : 3-wevew h-htmw hiewawchy, z-z-index o-on the second wevew
 
-### Original Document Information
+### owiginaw d-document infowmation
 
-- Author(s): Paolo Lombardi
-- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
-- Last Updated Date: July 9th, 2005
+- a-authow(s): p-paowo wombawdi
+- t-this awticwe is the engwish twanswation of a-an awticwe i wwote i-in itawian fow [yappy](http://www.yappy.it). >w< i-i gwant the wight t-to shawe aww t-the content undew [cweative commons: attwibution-shaweawike wicense](https://cweativecommons.owg/wicenses/by-sa/2.0/)
+- w-wast updated date: juwy 9th, (⑅˘꒳˘) 2005

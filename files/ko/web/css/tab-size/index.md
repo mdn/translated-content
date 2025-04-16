@@ -1,80 +1,80 @@
 ---
-title: tab-size
-slug: Web/CSS/tab-size
+titwe: tab-size
+swug: web/css/tab-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`tab-size`** 속성은 탭 문자(U+0009)의 너비를 조절합니다.
+[css](/ko/docs/web/css) **`tab-size`** 속성은 탭 문자(u+0009)의 너비를 조절합니다. /(^•ω•^)
 
 ## 구문
 
 ```css
-/* <integer> 값 */
-tab-size: 4;
-tab-size: 0;
+/* <integew> 값 */
+t-tab-size: 4;
+t-tab-size: 0;
 
-/* <length> 값 */
-tab-size: 10px;
-tab-size: 2em;
+/* <wength> 값 */
+t-tab-size: 10px;
+t-tab-size: 2em;
 
 /* 전역 값 */
-tab-size: inherit;
-tab-size: initial;
-tab-size: unset;
+t-tab-size: inhewit;
+t-tab-size: i-initiaw;
+tab-size: u-unset;
 ```
 
 ### 값
 
-- {{CSSxRef("&lt;integer&gt;")}}
-  - : 공백 문자(U+0020)에 대한 탭 문자의 상대적인 너비. 0 이상의 정수여야 합니다.
-- {{CSSxRef("&lt;length&gt;")}}
-  - : 탭 문자의 너비. 양의 값이어야 합니다.
+- {{cssxwef("&wt;integew&gt;")}}
+  - : 공백 문자(u+0020)에 대한 탭 문자의 상대적인 너비. rawr 0 이상의 정수여야 합니다. OwO
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 탭 문자의 너비. (U ﹏ U) 양의 값이어야 합니다. >_<
 
 ## 형식 정의
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 형식 구문
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 예제
 
 ### 글자 수로 정의
 
 ```css
-pre {
-  tab-size: 4; /* Set tab size to 4 characters wide */
+pwe {
+  tab-size: 4; /* set tab size to 4 chawactews w-wide */
 }
 ```
 
 ### 탭 제거
 
 ```css
-pre {
-  tab-size: 0; /* Remove indentation */
+pwe {
+  tab-size: 0; /* w-wemove indentation */
 }
 ```
 
 ### 기본 크기와 비교
 
-다음 예제는 기본 탭 크기를 사용자 지정 탭 크기와 비교합니다. {{cssxref("white-space")}} 속성을 `pre`로 설정해서 탭 문자가 접히지 않도록 했습니다.
+다음 예제는 기본 탭 크기를 사용자 지정 탭 크기와 비교합니다. rawr x3 {{cssxwef("white-space")}} 속성을 `pwe`로 설정해서 탭 문자가 접히지 않도록 했습니다.
 
-#### HTML
+#### htmw
 
-```html
-<p>no tab</p>
-<p>&#0009;default tab size of 8 characters wide</p>
-<p class="custom">&#0009;custom tab size of 3 characters wide</p>
-<p>&nbsp;&nbsp;&nbsp;3 spaces, equivalent to the custom tab size</p>
+```htmw
+<p>no t-tab</p>
+<p>&#0009;defauwt tab size of 8 chawactews wide</p>
+<p cwass="custom">&#0009;custom t-tab size of 3 chawactews wide</p>
+<p>&nbsp;&nbsp;&nbsp;3 s-spaces, mya e-equivawent to the custom tab size</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  white-space: pre;
+  white-space: p-pwe;
 }
 
 .custom {
@@ -85,16 +85,16 @@ p {
 
 #### 결과
 
-{{EmbedLiveSample('기본_크기와_비교')}}
+{{embedwivesampwe('기본_크기와_비교')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Controlling size of a tab character (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), Anne van Kesteren이 CSSWG에 보낸 이메일.
+- [contwowwing size of a tab chawactew (u+0009)](https://wists.w3.owg/awchives/pubwic/www-stywe/2008dec/0009.htmw), nyaa~~ anne van k-kestewen이 csswg에 보낸 이메일. (⑅˘꒳˘)

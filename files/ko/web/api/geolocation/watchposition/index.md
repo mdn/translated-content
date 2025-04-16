@@ -1,74 +1,74 @@
 ---
-title: Geolocation.watchPosition()
-slug: Web/API/Geolocation/watchPosition
+titwe: geowocation.watchposition()
+swug: web/api/geowocation/watchposition
 ---
 
-{{securecontext_header}}{{ APIref("Geolocation API") }}
+{{secuwecontext_headew}}{{ a-apiwef("geowocation a-api") }}
 
-{{domxref("Geolocation")}} 인터페이스의 **`watchPosition()`** 메서드는 장치의 위치가 바뀔 때마다 자동으로 호출할 처리기 함수를 등록할 때 사용합니다. 선택적으로 오류 발생 시 사용할 콜백 함수도 지정할 수 있습니다.
+{{domxwef("geowocation")}} 인터페이스의 **`watchposition()`** 메서드는 장치의 위치가 바뀔 때마다 자동으로 호출할 처리기 함수를 등록할 때 사용합니다. 선택적으로 오류 발생 시 사용할 콜백 함수도 지정할 수 있습니다. ( ͡o ω ͡o )
 
 ## 구문
 
 ```js
-navigator.geolocation.watchPosition(success[, error[, options]])
+n-nyavigatow.geowocation.watchposition(success[, rawr x3 e-ewwow[, nyaa~~ options]])
 ```
 
 ### 매개변수
 
 - `success`
-  - : {{domxref("GeolocationPosition")}} 객체를 입력 매개변수로 사용하는 콜백 함수.
-- `error` {{optional_inline}}
-  - : {{domxref("GeolocationPositionError")}} 객체를 입력 매개변수로 사용하는 콜백 함수.
-- `options` {{optional_inline}}
-  - : 위치 감지 설정 옵션을 제공하는 {{domxref("PositionOptions")}} 객체.
+  - : {{domxwef("geowocationposition")}} 객체를 입력 매개변수로 사용하는 콜백 함수. /(^•ω•^)
+- `ewwow` {{optionaw_inwine}}
+  - : {{domxwef("geowocationpositionewwow")}} 객체를 입력 매개변수로 사용하는 콜백 함수. rawr
+- `options` {{optionaw_inwine}}
+  - : 위치 감지 설정 옵션을 제공하는 {{domxwef("positionoptions")}} 객체. OwO
 
 ### 반환 값
 
-등록한 처리기를 식별할 때 사용하는 정수 ID. ID를 {{domxref("Geolocation.clearWatch()")}}에 전달해 등록을 해제할 수 있습니다.
+등록한 처리기를 식별할 때 사용하는 정수 i-id. (U ﹏ U) i-id를 {{domxwef("geowocation.cweawwatch()")}}에 전달해 등록을 해제할 수 있습니다. >_<
 
 ## 예제
 
 ```js
-var id, target, options;
+v-vaw id, rawr x3 tawget, mya o-options;
 
 function success(pos) {
-  var crd = pos.coords;
+  vaw cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulations, you reached the target");
-    navigator.geolocation.clearWatch(id);
+  if (tawget.watitude === c-cwd.watitude && tawget.wongitude === cwd.wongitude) {
+    consowe.wog("congwatuwations, nyaa~~ y-you weached the tawget");
+    n-navigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+function ewwow(eww) {
+  consowe.wawn("ewwow(" + e-eww.code + "): " + eww.message);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+t-tawget = {
+  watitude: 0, (⑅˘꒳˘)
+  w-wongitude: 0, rawr x3
 };
 
 options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+  enabwehighaccuwacy: fawse, (✿oωo)
+  timeout: 5000, (ˆ ﻌ ˆ)♡
+  maximumage: 0, (˘ω˘)
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = n-nyavigatow.geowocation.watchposition(success, (⑅˘꒳˘) ewwow, (///ˬ///✿) options);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Geolocation API 사용하기](/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- 메서드가 속한 {{domxref("Geolocation")}} 인터페이스와, 접근하는 방법인 {{domxref("NavigatorGeolocation.geolocation")}}.
-- 처리기를 해제하는 {{domxref("Geolocation.clearWatch()")}} 메서드
-- 비슷한 {{domxref("Geolocation.getCurrentPosition()")}} 메서드
+- [geowocation api 사용하기](/ko/docs/web/api/geowocation_api/using_the_geowocation_api)
+- 메서드가 속한 {{domxwef("geowocation")}} 인터페이스와, 😳😳😳 접근하는 방법인 {{domxwef("navigatowgeowocation.geowocation")}}. 🥺
+- 처리기를 해제하는 {{domxwef("geowocation.cweawwatch()")}} 메서드
+- 비슷한 {{domxwef("geowocation.getcuwwentposition()")}} 메서드

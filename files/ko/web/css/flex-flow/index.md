@@ -1,87 +1,87 @@
 ---
-title: flex-flow
-slug: Web/CSS/flex-flow
+titwe: fwex-fwow
+swug: web/css/fwex-fwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`flex-flow`** [CSS](/ko/docs/Web/CSS) 속성은 {{cssxref("flex-direction")}}, {{cssxref("flex-wrap")}} 속성의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
+**`fwex-fwow`** [css](/ko/docs/web/css) 속성은 {{cssxwef("fwex-diwection")}}, rawr {{cssxwef("fwex-wwap")}} 속성의 [단축 속성](/ko/docs/web/css/showthand_pwopewties)입니다. mya
 
-{{InteractiveExample("CSS Demo: flex-flow")}}
+{{intewactiveexampwe("css d-demo: f-fwex-fwow")}}
 
-```css interactive-example-choice
-flex-flow: row wrap;
+```css i-intewactive-exampwe-choice
+f-fwex-fwow: wow w-wwap;
 ```
 
-```css interactive-example-choice
-flex-flow: row-reverse nowrap;
+```css i-intewactive-exampwe-choice
+f-fwex-fwow: wow-wevewse n-nyowwap;
 ```
 
-```css interactive-example-choice
-flex-flow: column wrap-reverse;
+```css intewactive-exampwe-choice
+fwex-fwow: cowumn wwap-wevewse;
 ```
 
-```css interactive-example-choice
-flex-flow: column wrap;
+```css intewactive-exampwe-choice
+f-fwex-fwow: cowumn wwap;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
-    <div>Item Four</div>
-    <div>Item Five</div>
-    <div>Item Six</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div>item one</div>
+    <div>item t-two</div>
+    <div>item thwee</div>
+    <div>item f-fouw</div>
+    <div>item f-five</div>
+    <div>item six</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
   width: 80%;
-  max-height: 300px;
-  display: flex;
+  m-max-height: 300px;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, ^^ 0, 255, 0.2);
+  bowdew: 3px s-sowid bwue;
   width: 60px;
-  margin: 10px;
+  mawgin: 10px;
 }
 ```
 
 ## 구문
 
 ```css
-/* flex-flow: <'flex-direction'> */
-flex-flow: row;
-flex-flow: row-reverse;
-flex-flow: column;
-flex-flow: column-reverse;
+/* f-fwex-fwow: <'fwex-diwection'> */
+f-fwex-fwow: w-wow;
+fwex-fwow: w-wow-wevewse;
+fwex-fwow: cowumn;
+fwex-fwow: c-cowumn-wevewse;
 
-/* flex-flow: <'flex-wrap'> */
-flex-flow: nowrap;
-flex-flow: wrap;
-flex-flow: wrap-reverse;
+/* fwex-fwow: <'fwex-wwap'> */
+fwex-fwow: nyowwap;
+f-fwex-fwow: wwap;
+fwex-fwow: wwap-wevewse;
 
-/* flex-flow: <'flex-direction'>과 <'flex-wrap'> */
-flex-flow: row nowrap;
-flex-flow: column wrap;
-flex-flow: column-reverse wrap-reverse;
+/* fwex-fwow: <'fwex-diwection'>과 <'fwex-wwap'> */
+fwex-fwow: wow nyowwap;
+fwex-fwow: c-cowumn wwap;
+fwex-fwow: cowumn-wevewse w-wwap-wevewse;
 
 /* 전역 값 */
-flex-flow: inherit;
-flex-flow: initial;
-flex-flow: unset;
+f-fwex-fwow: i-inhewit;
+fwex-fwow: initiaw;
+fwex-fwow: unset;
 ```
 
 ### 값
 
-자세한 내용은 {{cssxref("flex-direction")}}과 {{cssxref("flex-wrap")}} 속성을 참고하세요.
+자세한 내용은 {{cssxwef("fwex-diwection")}}과 {{cssxwef("fwex-wwap")}} 속성을 참고하세요. 😳😳😳
 
 ### 형식 구문
 
@@ -90,9 +90,9 @@ flex-flow: unset;
 ## 예제
 
 ```css
-element {
-  /* Main-axis is the block direction with reversed main-start and main-end. Flex items are laid out in multiple lines */
-  flex-flow: column-reverse wrap;
+e-ewement {
+  /* m-main-axis is the bwock diwection w-with wevewsed m-main-stawt and main-end. mya fwex i-items awe waid out in muwtipwe wines */
+  f-fwex-fwow: cowumn-wevewse wwap;
 }
 ```
 
@@ -102,9 +102,9 @@ element {
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- CSS 플렉스박스 가이드: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS 플렉스박스 가이드: _[Ordering flex items](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- c-css 플렉스박스 가이드: _[basic concepts o-of fwexbox](/ko/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css 플렉스박스 가이드: _[owdewing f-fwex items](/ko/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_

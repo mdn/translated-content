@@ -1,16 +1,16 @@
 ---
-title: Hypertext (하이퍼텍스트)
-slug: Glossary/Hypertext
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: hypewtext (하이퍼텍스트)
+swug: gwossawy/hypewtext
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-하이퍼텍스트는 다른 텍스트에 링크를 포함하는 텍스트로, 소설과 같은 단일 선형 흐름과 반대입니다.
+하이퍼텍스트는 다른 텍스트에 링크를 포함하는 텍스트로, 🥺 소설과 같은 단일 선형 흐름과 반대입니다. òωó
 
-이 용어는 1965년경 Ted Nelson에 의해 만들어졌습니다.
+이 용어는 1965년경 t-ted n-nyewson에 의해 만들어졌습니다. o.O
 
 ## 같이 보기
 
-- 위키페디아의 [하이퍼텍스트](https://en.wikipedia.org/wiki/Hypertext)
+- 위키페디아의 [하이퍼텍스트](https://en.wikipedia.owg/wiki/hypewtext)

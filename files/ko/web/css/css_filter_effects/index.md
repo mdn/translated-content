@@ -1,23 +1,23 @@
 ---
-title: Filter Effects
-slug: Web/CSS/CSS_filter_effects
+titwe: fiwtew effects
+swug: web/css/css_fiwtew_effects
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Filter Effects**는 요소의 렌더링을 문서에 표시하기 전에 전처리하는 방법을 정의하는 CSS 모듈입니다.
+**fiwtew e-effects**는 요소의 렌더링을 문서에 표시하기 전에 전처리하는 방법을 정의하는 c-css 모듈입니다. ^•ﻌ•^
 
 ## 참고서
 
 ### 속성
 
-- {{cssxref("backdrop-filter")}}
-- {{cssxref("filter")}}
+- {{cssxwef("backdwop-fiwtew")}}
+- {{cssxwef("fiwtew")}}
 
 ### 자료형
 
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}

@@ -1,48 +1,48 @@
 ---
-title: border-top-color
-slug: Web/CSS/border-top-color
+titwe: bowdew-top-cowow
+swug: w-web/css/bowdew-top-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-top-color`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽 테두리 색상을 지정합니다. {{cssxref("border-color")}} 또는 {{cssxref("border-top")}} 단축 속성으로도 지정할 수 있습니다.
+**`bowdew-top-cowow`** [css](/ko/docs/web/css) 속성은 요소의 위쪽 테두리 색상을 지정합니다. ʘwʘ {{cssxwef("bowdew-cowow")}} 또는 {{cssxwef("bowdew-top")}} 단축 속성으로도 지정할 수 있습니다. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: border-top-color")}}
+{{intewactiveexampwe("css d-demo: bowdew-top-cowow")}}
 
-```css interactive-example-choice
-border-top-color: red;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-border-top-color: #32a1ce;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-border-top-color: rgb(170, 50, 220, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew-top-cowow: wgb(170, ʘwʘ 50, σωσ 220, 0.6);
 ```
 
-```css interactive-example-choice
-border-top-color: hsl(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+bowdew-top-cowow: h-hsw(60, 90%, OwO 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-top-color: transparent;
+```css intewactive-exampwe-choice
+bowdew-top-cowow: t-twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew a-awound it. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
@@ -51,26 +51,26 @@ border-top-color: transparent;
 ## 구문
 
 ```css
-/* <color> 값 */
-border-top-color: red;
-border-top-color: #ffbb00;
-border-top-color: rgb(255, 0, 0);
-border-top-color: hsla(100%, 50%, 25%, 0.75);
-border-top-color: currentColor;
-border-top-color: transparent;
+/* <cowow> 값 */
+bowdew-top-cowow: wed;
+bowdew-top-cowow: #ffbb00;
+b-bowdew-top-cowow: wgb(255, 😳😳😳 0, 0);
+b-bowdew-top-cowow: h-hswa(100%, o.O 50%, 25%, 0.75);
+b-bowdew-top-cowow: c-cuwwentcowow;
+bowdew-top-cowow: twanspawent;
 
 /* 전역 값 */
-border-top-color: inherit;
-border-top-color: initial;
-border-top-color: unset;
+b-bowdew-top-cowow: inhewit;
+bowdew-top-cowow: initiaw;
+bowdew-top-cowow: u-unset;
 ```
 
-`border-top-color` 속성은 하나의 값을 사용해 지정합니다.
+`bowdew-top-cowow` 속성은 하나의 값을 사용해 지정합니다. ( ͡o ω ͡o )
 
 ### 값
 
-- {{cssxref("&lt;color&gt;")}}
-  - : 위쪽 테두리의 색상.
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 위쪽 테두리의 색상. (U ﹏ U)
 
 ### 형식 구문
 
@@ -80,47 +80,47 @@ border-top-color: unset;
 
 ### 테두리를 가진 간단한 상자
 
-#### HTML
+#### htmw
 
-```html
-<div class="mybox">
+```htmw
+<div cwass="mybox">
   <p>
-    This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    this is a box with a bowdew awound it. (///ˬ///✿) nyote w-which side of the box is
+    <span c-cwass="wedtext">wed</span>.
   </p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .mybox {
-  border: solid 0.3em gold;
-  border-top-color: red;
+  bowdew: s-sowid 0.3em gowd;
+  bowdew-top-cowow: wed;
   width: auto;
 }
 
-.redtext {
-  color: red;
+.wedtext {
+  c-cowow: wed;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('테두리를_가진_간단한_상자')}}
+{{embedwivesampwe('테두리를_가진_간단한_상자')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 테두리 관련 CSS 단축 속성: {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-color")}}.
-- 다른 방향 테두리의 색상 관련 CSS 단축 속성: {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}.
-- 위쪽 테두리 관련 CSS 속성: {{cssxref("border-top-style")}}, {{cssxref("border-top-width")}}.
+- 테두리 관련 c-css 단축 속성: {{cssxwef("bowdew")}}, >w< {{cssxwef("bowdew-top")}}, rawr {{cssxwef("bowdew-cowow")}}.
+- 다른 방향 테두리의 색상 관련 css 단축 속성: {{cssxwef("bowdew-wight-cowow")}}, mya {{cssxwef("bowdew-bottom-cowow")}}, ^^ {{cssxwef("bowdew-weft-cowow")}}. 😳😳😳
+- 위쪽 테두리 관련 c-css 속성: {{cssxwef("bowdew-top-stywe")}}, {{cssxwef("bowdew-top-width")}}. mya

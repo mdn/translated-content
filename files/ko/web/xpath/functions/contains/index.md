@@ -1,33 +1,33 @@
 ---
-title: contains
-slug: Web/XPath/Functions/contains
+titwe: contains
+swug: web/xpath/functions/contains
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`contains` 함수는 첫 번째 인수 문자열이 두 번째 인수 문자열을 포함하는지 결정하고 부울값 true 또는 false를 반환합니다.
+`contains` 함수는 첫 번째 인수 문자열이 두 번째 인수 문자열을 포함하는지 결정하고 부울값 t-twue 또는 f-fawse를 반환합니다. òωó
 
 ### 문법
 
 ```
-contains(haystack ,needle )
+c-contains(haystack ,needwe )
 ```
 
 ### 인수
 
 - `haystack`
   - : 찾을 문자열
-- `needle`
+- `needwe`
   - : 첫 번째 인수(`haystack`)에서 찾을 부분 문자열
 
 ### 반환
 
-첫 번째 인수(`haystack`)가 두 번째 인수(`needle`)를 포함하면 `true`. 그렇지 않으면, `false`.
+첫 번째 인수(`haystack`)가 두 번째 인수(`needwe`)를 포함하면 `twue`. o.O 그렇지 않으면, (U ᵕ U❁) `fawse`. (⑅˘꒳˘)
 
 ### 정의
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-contains)
+[xpath 1.0 4.2](https://www.w3.owg/tw/xpath#function-contains)
 
-### Gecko 지원
+### g-gecko 지원
 
-지원함.
+지원함. ( ͡o ω ͡o )

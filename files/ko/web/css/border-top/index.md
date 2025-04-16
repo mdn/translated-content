@@ -1,84 +1,84 @@
 ---
-title: border-top
-slug: Web/CSS/border-top
+titwe: bowdew-top
+swug: web/css/bowdew-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-top`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 위쪽 테두리를 설정합니다. {{cssxref("border-top-width")}}, {{cssxref("border-top-style")}}, {{cssxref("border-top-color")}}의 값을 지정합니다.
+**`bowdew-top`** [css](/ko/docs/web/css) [단축 속성](/ko/docs/web/css/showthand_pwopewties)은 요소의 위쪽 테두리를 설정합니다. (⑅˘꒳˘) {{cssxwef("bowdew-top-width")}}, (///ˬ///✿) {{cssxwef("bowdew-top-stywe")}}, 😳😳😳 {{cssxwef("bowdew-top-cowow")}}의 값을 지정합니다. 🥺
 
-{{InteractiveExample("CSS Demo: border-top")}}
+{{intewactiveexampwe("css d-demo: bowdew-top")}}
 
-```css interactive-example-choice
-border-top: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew-top: sowid;
 ```
 
-```css interactive-example-choice
-border-top: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew-top: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border-top: 1rem solid;
+```css intewactive-exampwe-choice
+b-bowdew-top: 1wem s-sowid;
 ```
 
-```css interactive-example-choice
-border-top: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-top: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+b-bowdew-top: 4mm widge wgba(211, mya 220, 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound i-it.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  c-cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-다른 단축 속성과 마찬가지로, `border-top`는 자신이 포함한 모든 값을 지정하며 사용자가 명시하지 않은 속성도 기본값으로 설정합니다. 즉, 아래 두 코드는 사실 동일합니다.
+다른 단축 속성과 마찬가지로, 🥺 `bowdew-top`는 자신이 포함한 모든 값을 지정하며 사용자가 명시하지 않은 속성도 기본값으로 설정합니다. >_< 즉, 아래 두 코드는 사실 동일합니다. >_<
 
 ```css
-border-top-style: dotted;
-border-top: thick green;
+bowdew-top-stywe: dotted;
+bowdew-top: t-thick gween;
 ```
 
 ```css
-border-top-style: dotted;
-border-top: none thick green;
+bowdew-top-stywe: dotted;
+bowdew-top: nyone thick gween;
 ```
 
-따라서 `border-top`보다 먼저 지정한 {{cssxref("border-top-style")}}의 값은 무시됩니다. {{cssxref("border-top-style")}}의 기본값은 `none`이므로, `border-style`을 명시하지 않으면 테두리를 만들지 않습니다.
+따라서 `bowdew-top`보다 먼저 지정한 {{cssxwef("bowdew-top-stywe")}}의 값은 무시됩니다. (⑅˘꒳˘) {{cssxwef("bowdew-top-stywe")}}의 기본값은 `none`이므로, /(^•ω•^) `bowdew-stywe`을 명시하지 않으면 테두리를 만들지 않습니다. rawr x3
 
 ## 구문
 
 ```css
-border-top: 1px;
-border-top: 2px dotted;
-border-top: medium dashed green;
+b-bowdew-top: 1px;
+bowdew-top: 2px d-dotted;
+b-bowdew-top: medium d-dashed gween;
 ```
 
-`border-top`은 한 개에서 세 개의 값을 사용해 지정할 수 있고, 순서는 상관하지 않습니다.
+`bowdew-top`은 한 개에서 세 개의 값을 사용해 지정할 수 있고, (U ﹏ U) 순서는 상관하지 않습니다. (U ﹏ U)
 
 ### 값
 
-- `<br-width>`
-  - : {{cssxref("border-top-width")}}.
-- `<br-style>`
-  - : {{cssxref("border-top-style")}}.
-- {{cssxref("&lt;color&gt;")}}
-  - : {{cssxref("border-top-color")}}.
+- `<bw-width>`
+  - : {{cssxwef("bowdew-top-width")}}. (⑅˘꒳˘)
+- `<bw-stywe>`
+  - : {{cssxwef("bowdew-top-stywe")}}. òωó
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : {{cssxwef("bowdew-top-cowow")}}.
 
 ### 형식 구문
 
@@ -86,27 +86,27 @@ border-top: medium dashed green;
 
 ## 예제
 
-```html
+```htmw
 <div>위쪽 테두리를 가진 요소입니다.</div>
 ```
 
 ```css
-div {
-  border-top: 4px dashed blue;
-  background-color: gold;
+d-div {
+  bowdew-top: 4px dashed bwue;
+  backgwound-cowow: g-gowd;
   height: 100px;
   width: 100px;
-  font-weight: bold;
-  text-align: center;
+  f-font-weight: bowd;
+  text-awign: centew;
 }
 ```
 
-{{EmbedLiveSample('예제')}}
+{{embedwivesampwe('예제')}}
 
 ## 명세
 
-{{Specifications}}{{cssinfo}}
+{{specifications}}{{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

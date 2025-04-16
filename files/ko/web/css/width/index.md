@@ -1,95 +1,95 @@
 ---
-title: width
-slug: Web/CSS/width
+titwe: width
+swug: web/css/width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS **`width`** 속성은 요소의 너비를 설정합니다. 기본값은 콘텐츠 영역의 너비이지만, {{cssxref("box-sizing")}}이 `border-box`라면 테두리 영역의 너비를 설정합니다.
+c-css **`width`** 속성은 요소의 너비를 설정합니다. 😳 기본값은 콘텐츠 영역의 너비이지만, mya {{cssxwef("box-sizing")}}이 `bowdew-box`라면 테두리 영역의 너비를 설정합니다. (˘ω˘)
 
-{{InteractiveExample("CSS Demo: width")}}
+{{intewactiveexampwe("css d-demo: width")}}
 
-```css interactive-example-choice
-width: 150px;
+```css i-intewactive-exampwe-choice
+w-width: 150px;
 ```
 
-```css interactive-example-choice
-width: 20em;
+```css i-intewactive-exampwe-choice
+w-width: 20em;
 ```
 
-```css interactive-example-choice
-width: 75%;
+```css i-intewactive-exampwe-choice
+w-width: 75%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 width: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the width.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box whewe y-you can change the width.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  height: 80%;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  f-fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  h-height: 80%;
+  j-justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-{{cssxref("min-width")}}와 {{cssxref("max-width")}} 속성은 `width`를 덮어씁니다.
+{{cssxwef("min-width")}}와 {{cssxwef("max-width")}} 속성은 `width`를 덮어씁니다. >_<
 
 ## 구문
 
 ```css
-/* <length> */
+/* <wength> */
 width: 300px;
 width: 25em;
 
-/* <percentage> */
-width: 75%;
+/* <pewcentage> */
+w-width: 75%;
 
 /* 키워드 */
-width: 25em border-box;
+width: 25em bowdew-box;
 width: 75% content-box;
 width: max-content;
-width: min-content;
-width: available;
-width: fit-content(20em);
-width: auto;
+w-width: min-content;
+width: a-avaiwabwe;
+width: f-fit-content(20em);
+w-width: a-auto;
 
 /* 전역 값 */
-width: inherit;
-width: initial;
-width: unset;
+width: inhewit;
+width: initiaw;
+w-width: unset;
 ```
 
-`width` 속성은 다음과 같이 지정합니다.
+`width` 속성은 다음과 같이 지정합니다. -.-
 
-- [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto) 키워드 중 하나.
-- 하나의 [`<length>`](#length) 또는 [`<percentage>`](#percentage) 값.
+- [`min-content`](#min-content), 🥺 [`max-content`](#max-content), (U ﹏ U) [`fit-content`](#fit-content), >w< [`auto`](#auto) 키워드 중 하나. mya
+- 하나의 [`<wength>`](#wength) 또는 [`<pewcentage>`](#pewcentage) 값. >w<
 
 ### 값
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 너비의 절댓값.
-- {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비의 백분율. 컨테이닝 블록이 요소 너비에 영향을 받는 경우의 결과 레이아웃은 정해지지 않습니다.
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - [: 컨테이닝 블록](/ko/docs/web/css/containing_bwock) 너비의 백분율. nyaa~~ 컨테이닝 블록이 요소 너비에 영향을 받는 경우의 결과 레이아웃은 정해지지 않습니다. (✿oωo)
 - `auto`
-  - : 요소의 너비를 브라우저가 계산해 지정합니다.
+  - : 요소의 너비를 브라우저가 계산해 지정합니다. ʘwʘ
 - `max-content`
-  - : 본질적인 선호 너비.
+  - : 본질적인 선호 너비. (ˆ ﻌ ˆ)♡
 - `min-content`
-  - : 본질적인 최소 너비.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}}`
-  - : `min(max-content, max(min-content, <length-percentage>))`의 결과.
+  - : 본질적인 최소 너비. 😳😳😳
+- `fit-content({{cssxwef("&wt;wength-pewcentage&gt;")}}`
+  - : `min(max-content, max(min-content, :3 <wength-pewcentage>))`의 결과. OwO
 
 ### 형식 구문
 
@@ -100,114 +100,114 @@ width: unset;
 ### 기본 너비
 
 ```css
-p.goldie {
-  background: gold;
+p.gowdie {
+  backgwound: g-gowd;
 }
 ```
 
-```html
-<p class="goldie">
-  Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+```htmw
+<p cwass="gowdie">
+  moziwwa 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다. (U ﹏ U)
 </p>
 ```
 
-{{EmbedLiveSample('기본_너비', '500px', '64px')}}
+{{embedwivesampwe('기본_너비', >w< '500px', '64px')}}
 
 ### `px`과 `em`
 
 ```css
-.px_length {
+.px_wength {
   width: 200px;
-  background-color: red;
-  color: white;
-  border: 1px solid black;
+  backgwound-cowow: wed;
+  cowow: w-white;
+  bowdew: 1px sowid bwack;
 }
 
-.em_length {
-  width: 20em;
-  background-color: white;
-  color: red;
-  border: 1px solid black;
+.em_wength {
+  w-width: 20em;
+  b-backgwound-cowow: w-white;
+  cowow: wed;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-```html
-<div class="px_length">픽셀 너비</div>
-<div class="em_length">em 너비</div>
+```htmw
+<div cwass="px_wength">픽셀 너비</div>
+<div c-cwass="em_wength">em 너비</div>
 ```
 
-{{EmbedLiveSample('px과_em', '500px', '64px')}}
+{{embedwivesampwe('px과_em', '500px', (U ﹏ U) '64px')}}
 
 ### 백분율
 
 ```css
-.percent {
-  width: 20%;
-  background-color: silver;
-  border: 1px solid red;
+.pewcent {
+  w-width: 20%;
+  backgwound-cowow: siwvew;
+  bowdew: 1px s-sowid wed;
 }
 ```
 
-```html
-<div class="percent">백분율 너비</div>
+```htmw
+<div c-cwass="pewcent">백분율 너비</div>
 ```
 
-{{EmbedLiveSample('백분율', '500px', '64px')}}
+{{embedwivesampwe('백분율', 😳 '500px', (ˆ ﻌ ˆ)♡ '64px')}}
 
 ### `max-content`
 
 ```css
-p.maxgreen {
-  background: lightgreen;
-  width: intrinsic; /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content; /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
-  width: max-content;
+p.maxgween {
+  backgwound: w-wightgween;
+  width: intwinsic; /* s-safawi/webkit uses a nyon-standawd n-name */
+  width: -moz-max-content; /* fiwefox/gecko */
+  w-width: -webkit-max-content; /* chwome */
+  w-width: max-content;
 }
 ```
 
-```html
-<p class="maxgreen">
-  Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+```htmw
+<p c-cwass="maxgween">
+  moziwwa 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다. 😳😳😳
 </p>
 ```
 
-{{EmbedLiveSample('max-content_2', '500px', '64px')}}
+{{embedwivesampwe('max-content_2', (U ﹏ U) '500px', '64px')}}
 
 ### `min-content`
 
 ```css
-p.minblue {
-  background: lightblue;
-  width: -moz-min-content; /* Firefox */
-  width: -webkit-min-content; /* Chrome */
-  width: min-content;
+p.minbwue {
+  backgwound: wightbwue;
+  width: -moz-min-content; /* fiwefox */
+  width: -webkit-min-content; /* c-chwome */
+  w-width: min-content;
 }
 ```
 
-```html
-<p class="minblue">
-  Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+```htmw
+<p cwass="minbwue">
+  m-moziwwa 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다. (///ˬ///✿)
 </p>
 ```
 
-{{EmbedLiveSample('min-content_2', '500px', '155px')}}
+{{embedwivesampwe('min-content_2', '500px', 😳 '155px')}}
 
 ## 접근성 고려사항
 
-페이지를 확대하거나 글꼴 크기를 늘렸을 때 `width` 속성을 지정한 요소가 잘리거나 다른 내용을 가리지 않도록 확인하세요.
+페이지를 확대하거나 글꼴 크기를 늘렸을 때 `width` 속성을 지정한 요소가 잘리거나 다른 내용을 가리지 않도록 확인하세요. 😳
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn undewstanding w-wcag, σωσ g-guidewine 1.4 expwanations](/ko/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.4 | u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
 ## 명세
 
-{{Specifications}}{{cssinfo}}
+{{specifications}}{{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [박스 모델](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), rawr x3 {{cssxwef("height")}}, OwO {{cssxwef("box-sizing")}}, /(^•ω•^) {{cssxwef("min-width")}}, 😳😳😳 {{cssxwef("max-width")}}

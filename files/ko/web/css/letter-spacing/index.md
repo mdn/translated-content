@@ -1,50 +1,50 @@
 ---
-title: letter-spacing
-slug: Web/CSS/letter-spacing
+titwe: wettew-spacing
+swug: web/css/wettew-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`letter-spacing`** [CSS](/ko/docs/Web/CSS) 속성은 글자 사이의 간격을 조절합니다.
+**`wettew-spacing`** [css](/ko/docs/web/css) 속성은 글자 사이의 간격을 조절합니다. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: letter-spacing")}}
+{{intewactiveexampwe("css d-demo: wettew-spacing")}}
 
-```css interactive-example-choice
-letter-spacing: normal;
+```css i-intewactive-exampwe-choice
+w-wettew-spacing: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-letter-spacing: 0.2rem;
+```css i-intewactive-exampwe-choice
+w-wettew-spacing: 0.2wem;
 ```
 
-```css interactive-example-choice
-letter-spacing: 1px;
+```css i-intewactive-exampwe-choice
+w-wettew-spacing: 1px;
 ```
 
-```css interactive-example-choice
-letter-spacing: -1px;
+```css intewactive-exampwe-choice
+wettew-spacing: -1px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    a-as much mud in the stweets as if the watews had b-but nyewwy wetiwed fwom the
+    f-face of the eawth, ʘwʘ and it wouwd not be wondewfuw to meet a megawosauwus,
+    f-fowty feet wong ow s-so, σωσ waddwing wike a-an ewephantine wizawd up howbown hiww. OwO
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  swc: u-uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  font-famiwy: amstewvaw;
+  font-stywe: nyowmaw;
 }
 
 section {
-  font-size: 1.2em;
-  font-family: Amstelvar;
+  f-font-size: 1.2em;
+  font-famiwy: a-amstewvaw;
 }
 ```
 
@@ -52,25 +52,25 @@ section {
 
 ```css
 /* 키워드 값 */
-letter-spacing: normal;
+w-wettew-spacing: n-nyowmaw;
 
-/* <length> 값 */
-letter-spacing: 0.3em;
-letter-spacing: 3px;
-letter-spacing: 0.3px;
+/* <wength> 값 */
+w-wettew-spacing: 0.3em;
+wettew-spacing: 3px;
+wettew-spacing: 0.3px;
 
 /* 전역 값 */
-letter-spacing: inherit;
-letter-spacing: initial;
-letter-spacing: unset;
+wettew-spacing: i-inhewit;
+wettew-spacing: initiaw;
+wettew-spacing: unset;
 ```
 
 ### 값
 
-- `normal`
-  - : 현재 글꼴의 기본 간격. `0`과 달리, `auto`는 {{glossary("user agent", "사용자 에이전트")}}가 양쪽 정렬을 위해 간격을 임의로 조절할 수 있습니다.
-- {{cssxref("&lt;length&gt;")}}
-  - : 기본 간격에 **추가**할 글자간 간격. 음수 값을 지정할 수 있지만 구현에 따라 한계가 있을 수 있습니다. 사용자 에이전트가 간격을 줄이거나 늘리지 않습니다.
+- `nowmaw`
+  - : 현재 글꼴의 기본 간격. 😳😳😳 `0`과 달리, 😳😳😳 `auto`는 {{gwossawy("usew agent", o.O "사용자 에이전트")}}가 양쪽 정렬을 위해 간격을 임의로 조절할 수 있습니다. ( ͡o ω ͡o )
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 기본 간격에 **추가**할 글자간 간격. (U ﹏ U) 음수 값을 지정할 수 있지만 구현에 따라 한계가 있을 수 있습니다. (///ˬ///✿) 사용자 에이전트가 간격을 줄이거나 늘리지 않습니다. >w<
 
 ### 형식 구문
 
@@ -78,59 +78,59 @@ letter-spacing: unset;
 
 ## 예제
 
-### HTML
+### h-htmw
 
-```html
-<p class="normal">글자 간격</p>
-<p class="em-wide">글자 간격</p>
-<p class="em-wider">글자 간격</p>
-<p class="em-tight">글자 간격</p>
-<p class="px-wide">글자 간격</p>
+```htmw
+<p cwass="nowmaw">글자 간격</p>
+<p cwass="em-wide">글자 간격</p>
+<p cwass="em-widew">글자 간격</p>
+<p cwass="em-tight">글자 간격</p>
+<p cwass="px-wide">글자 간격</p>
 ```
 
-### CSS
+### css
 
 ```css
-.normal {
-  letter-spacing: normal;
+.nowmaw {
+  w-wettew-spacing: nowmaw;
 }
 .em-wide {
-  letter-spacing: 0.4em;
+  w-wettew-spacing: 0.4em;
 }
-.em-wider {
-  letter-spacing: 1em;
+.em-widew {
+  w-wettew-spacing: 1em;
 }
 .em-tight {
-  letter-spacing: -0.05em;
+  w-wettew-spacing: -0.05em;
 }
 .px-wide {
-  letter-spacing: 6px;
+  wettew-spacing: 6px;
 }
 ```
 
 ### 결과
 
-{{ EmbedLiveSample('예제', 440, 185) }}
+{{ embedwivesampwe('예제', rawr 440, 185) }}
 
 ## 접근성 고려사항
 
-`letter-spacing` 값의 절댓값이 너무 크면 스타일을 적용한 글을 읽기 힘들어집니다. 지나치게 큰 값으로는 글자 간격이 지나치게 넓어져 단어를 이루지 못하고 따로 따로 보입니다. 반대로 지나친 음숫값은 글자가 서로 겹쳐 알아볼 수 없습니다.
+`wettew-spacing` 값의 절댓값이 너무 크면 스타일을 적용한 글을 읽기 힘들어집니다. mya 지나치게 큰 값으로는 글자 간격이 지나치게 넓어져 단어를 이루지 못하고 따로 따로 보입니다. ^^ 반대로 지나친 음숫값은 글자가 서로 겹쳐 알아볼 수 없습니다. 😳😳😳
 
-글꼴마다 문자의 너비가 다르므로 읽기에 용이한 간격은 상황에 따라 다릅니다. 모든 글꼴에 적합한 하나의 값은 존재하지 않습니다.
+글꼴마다 문자의 너비가 다르므로 읽기에 용이한 간격은 상황에 따라 다릅니다. mya 모든 글꼴에 적합한 하나의 값은 존재하지 않습니다. 😳
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn undewstanding w-wcag, -.- guidewine 1.4 e-expwanations](/ko/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.8 | w-w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{cssxref("font-kerning")}}
+- {{cssxwef("font-kewning")}}

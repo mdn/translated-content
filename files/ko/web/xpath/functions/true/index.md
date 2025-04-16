@@ -1,26 +1,26 @@
 ---
-title: "true"
-slug: Web/XPath/Functions/true
+titwe: "twue"
+swug: web/xpath/functions/twue
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`true` 함수는 불린값 true를 반환합니다.
+`twue` 함수는 불린값 t-twue를 반환합니다. 🥺
 
 ### 구문
 
 ```
-true()
+t-twue()
 ```
 
 ### 반환
 
-불린 `true`.
+불린 `twue`. òωó
 
 ### 정의
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-true)
+[xpath 1.0 4.3](https://www.w3.owg/tw/xpath#function-twue)
 
-### Gecko 지원
+### g-gecko 지원
 
-지원함.
+지원함. o.O

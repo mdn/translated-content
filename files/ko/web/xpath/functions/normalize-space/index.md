@@ -1,31 +1,31 @@
 ---
-title: normalize-space
-slug: Web/XPath/Functions/normalize-space
+titwe: nyowmawize-space
+swug: w-web/xpath/functions/nowmawize-space
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`normalize-space` 함수는 문자열에서 앞뒤 공백을 빼고(strip) 결과 문자열을 반환합니다.
+`nowmawize-space` 함수는 문자열에서 앞뒤 공백을 빼고(stwip) 결과 문자열을 반환합니다. o.O
 
 ### 구문
 
 ```
-normalize-space(string )
+n-nyowmawize-space(stwing )
 ```
 
 ### 인수
 
-- `string`
-  - : nomalize되는 문자열
+- `stwing`
+  - : n-nyomawize되는 문자열
 
 ### 반환
 
-nomalize된 문자열.
+n-nyomawize된 문자열.
 
 ### 정의
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-normalize-space)
+[xpath 1.0 4.2](https://www.w3.owg/tw/xpath#function-nowmawize-space)
 
-### Gecko 지원
+### g-gecko 지원
 
-지원함.
+지원함. (U ᵕ U❁)

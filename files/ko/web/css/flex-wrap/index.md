@@ -1,170 +1,170 @@
 ---
-title: flex-wrap
-slug: Web/CSS/flex-wrap
+titwe: fwex-wwap
+swug: web/css/fwex-wwap
 ---
 
-{{ CSSRef}}
+{{ c-csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`flex-wrap`** property는 `flex-item` 요소들이 강제로 한줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정하는 속성입니다. 만약 영역 내에서 벗어나지 못하게 설정한다면, 동시에 요소의 방향 축을 결정할 수 있습니다.
+[css](/ko/docs/web/css) **`fwex-wwap`** p-pwopewty는 `fwex-item` 요소들이 강제로 한줄에 배치되게 할 것인지, >w< 또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정하는 속성입니다. nyaa~~ 만약 영역 내에서 벗어나지 못하게 설정한다면, (✿oωo) 동시에 요소의 방향 축을 결정할 수 있습니다.
 
-{{InteractiveExample("CSS Demo: flex-wrap")}}
+{{intewactiveexampwe("css d-demo: fwex-wwap")}}
 
-```css interactive-example-choice
-flex-wrap: nowrap;
+```css i-intewactive-exampwe-choice
+f-fwex-wwap: n-nyowwap;
 ```
 
-```css interactive-example-choice
-flex-wrap: wrap;
+```css i-intewactive-exampwe-choice
+f-fwex-wwap: wwap;
 ```
 
-```css interactive-example-choice
-flex-wrap: wrap-reverse;
+```css intewactive-exampwe-choice
+fwex-wwap: wwap-wevewse;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
-    <div>Item Four</div>
-    <div>Item Five</div>
-    <div>Item Six</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div>item one</div>
+    <div>item t-two</div>
+    <div>item thwee</div>
+    <div>item fouw</div>
+    <div>item five</div>
+    <div>item s-six</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  width: 80%;
-  display: flex;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  w-width: 80%;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, ʘwʘ 0, 255, 0.2);
+  bowdew: 3px s-sowid bwue;
   width: 60px;
-  margin: 10px;
+  mawgin: 10px;
 }
 ```
 
-여기를 참고하면 관련된 더욱 자세한 정보를 얻을 수 있습니다. [Using CSS flexible boxes](/en-US/CSS/Using_CSS_flexible_boxes)
+여기를 참고하면 관련된 더욱 자세한 정보를 얻을 수 있습니다. (ˆ ﻌ ˆ)♡ [using css fwexibwe boxes](/en-us/css/using_css_fwexibwe_boxes)
 
-## Syntax
+## syntax
 
 ```css
-flex-wrap: nowrap; /* Default value */
-flex-wrap: wrap;
-flex-wrap: wrap-reverse;
+fwex-wwap: n-nyowwap; /* defauwt vawue */
+f-fwex-wwap: wwap;
+f-fwex-wwap: wwap-wevewse;
 
-/* Global values */
-flex-wrap: inherit;
-flex-wrap: initial;
-flex-wrap: unset;
+/* g-gwobaw vawues */
+f-fwex-wwap: inhewit;
+fwex-wwap: initiaw;
+fwex-wwap: u-unset;
 ```
 
-`flex-wrap` 속성의 값으로, 다음 목록 중 하나의 키워드를 선택할 수 있습니다.
+`fwex-wwap` 속성의 값으로, 😳😳😳 다음 목록 중 하나의 키워드를 선택할 수 있습니다. :3
 
-### Values
+### vawues
 
 아래는 사용 가능한 속성값들입니다:
 
-- `nowrap`
-  - : 기본 설정값으로, `flex-container` 부모요소 영역을 벗어나더라도 `flex-item` 요소들을 **한 줄**에 배치합니다. 시작점은 {{cssxref("flex-direction")}} 에 의해 결정된 방향으로 적용됩니다.
-- `wrap`
-  - : `flex-item` 요소들이 내부 로직에 의해 분할되어 여러 행에 걸쳐서 배치됩니다. `nowrap` 속성과 마찬가지로 요소가 배치되는 시작점은 {{cssxref("flex-direction")}} 에 의해 결정됩니다. 일반적으로 위에서 아래로 쌓이는 순서입니다.
-- `wrap-reverse`
-  - : `wrap` 속성값과 동일하지만, 요소가 나열되는 시작점과 끝점의 기준이 반대로 배치됩니다.
+- `nowwap`
+  - : 기본 설정값으로, OwO `fwex-containew` 부모요소 영역을 벗어나더라도 `fwex-item` 요소들을 **한 줄**에 배치합니다. (U ﹏ U) 시작점은 {{cssxwef("fwex-diwection")}} 에 의해 결정된 방향으로 적용됩니다. >w<
+- `wwap`
+  - : `fwex-item` 요소들이 내부 로직에 의해 분할되어 여러 행에 걸쳐서 배치됩니다. (U ﹏ U) `nowwap` 속성과 마찬가지로 요소가 배치되는 시작점은 {{cssxwef("fwex-diwection")}} 에 의해 결정됩니다. 😳 일반적으로 위에서 아래로 쌓이는 순서입니다. (ˆ ﻌ ˆ)♡
+- `wwap-wevewse`
+  - : `wwap` 속성값과 동일하지만, 😳😳😳 요소가 나열되는 시작점과 끝점의 기준이 반대로 배치됩니다. (U ﹏ U)
 
-### Formal syntax
+### fowmaw s-syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-### HTML
+### htmw
 
-```html
-<h4>This is an example for flex-wrap:wrap</h4>
-<div class="content">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+```htmw
+<h4>this is an exampwe fow fwex-wwap:wwap</h4>
+<div cwass="content">
+  <div c-cwass="wed">1</div>
+  <div cwass="gween">2</div>
+  <div c-cwass="bwue">3</div>
 </div>
-<h4>This is an example for flex-wrap:nowrap</h4>
-<div class="content1">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+<h4>this i-is an exampwe f-fow fwex-wwap:nowwap</h4>
+<div cwass="content1">
+  <div cwass="wed">1</div>
+  <div cwass="gween">2</div>
+  <div cwass="bwue">3</div>
 </div>
-<h4>This is an example for flex-wrap:wrap-reverse</h4>
-<div class="content2">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+<h4>this i-is an exampwe f-fow fwex-wwap:wwap-wevewse</h4>
+<div cwass="content2">
+  <div c-cwass="wed">1</div>
+  <div c-cwass="gween">2</div>
+  <div cwass="bwue">3</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-/* Common Styles */
-.content,
-.content1,
+/* common s-stywes */
+.content, (///ˬ///✿)
+.content1, 😳
 .content2 {
-  color: #fff;
-  font: 100 24px/100px sans-serif;
+  cowow: #fff;
+  font: 100 24px/100px s-sans-sewif;
   height: 150px;
-  text-align: center;
+  t-text-awign: centew;
 }
 
-.content div,
-.content1 div,
+.content d-div, 😳
+.content1 d-div,
 .content2 div {
   height: 50%;
   width: 50%;
 }
-.red {
-  background: orangered;
+.wed {
+  backgwound: owangewed;
 }
-.green {
-  background: yellowgreen;
+.gween {
+  backgwound: yewwowgween;
 }
-.blue {
-  background: steelblue;
+.bwue {
+  backgwound: s-steewbwue;
 }
 
-/* Flexbox Styles */
+/* f-fwexbox stywes */
 .content {
-  display: flex;
-  flex-wrap: wrap;
+  dispway: fwex;
+  f-fwex-wwap: w-wwap;
 }
 .content1 {
-  display: flex;
-  flex-wrap: nowrap;
+  d-dispway: fwex;
+  fwex-wwap: nyowwap;
 }
 .content2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
+  dispway: f-fwex;
+  fwex-wwap: wwap-wevewse;
 }
 ```
 
-### Results
+### wesuwts
 
-{{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
+{{ embedwivesampwe('exampwes', σωσ '700px', rawr x3 '700px', '', OwO 'web/css/fwex-wwap') }}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- css fwexbox guide: _[basic c-concepts of fwexbox](/ko/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- c-css fwexbox g-guide: _[mastewing w-wwapping of fwex items](/ko/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)_

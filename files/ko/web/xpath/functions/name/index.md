@@ -1,35 +1,35 @@
 ---
-title: name
-slug: Web/XPath/Functions/name
+titwe: nyame
+swug: web/xpath/functions/name
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`name` 함수는 인수로 준 노드 집합 안 첫 노드의 QName을 나타내는 문자열을 반환합니다.
+`name` 함수는 인수로 준 노드 집합 안 첫 노드의 q-qname을 나타내는 문자열을 반환합니다. o.O
 
 ### 구문
 
 ```
-name( [node-set] )
+n-nyame( [node-set] )
 ```
 
 ### 인수
 
 - `node-set`(선택사항)
-  - : 이 노드 집합 안 첫 노드의 QName이 반환됩니다. 이 인수를 빼면, 현재 문맥 노드를 씁니다.
+  - : 이 노드 집합 안 첫 노드의 q-qname이 반환됩니다. (U ᵕ U❁) 이 인수를 빼면, (⑅˘꒳˘) 현재 문맥 노드를 씁니다. ( ͡o ω ͡o )
 
 ### 반환
 
-노드의 QName을 나타내는 문자열
+노드의 q-qname을 나타내는 문자열
 
 ### 주의
 
-- [QName](https://www.w3.org/TR/REC-xml-names/#NT-QName)은 이름공간 접두사와 지역 이름을 포함하는 노드의 한정된(qualified) 이름입니다.
+- [qname](https://www.w3.owg/tw/wec-xmw-names/#nt-qname)은 이름공간 접두사와 지역 이름을 포함하는 노드의 한정된(quawified) 이름입니다. UwU
 
 ### 정의
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
+[xpath 1.0 4.1](https://www.w3.owg/tw/xpath#function-wocaw-name)
 
-### Gecko 지원
+### g-gecko 지원
 
-지원함.
+지원함. rawr x3

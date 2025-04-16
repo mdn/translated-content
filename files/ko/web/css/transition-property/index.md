@@ -1,98 +1,98 @@
 ---
-title: transition-property
-slug: Web/CSS/transition-property
-l10n:
-  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
+titwe: twansition-pwopewty
+swug: w-web/css/twansition-pwopewty
+w-w10n:
+  souwcecommit: b-bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`transition-property`** [CSS](/ko/docs/Web/CSS) 속성은 [transition effect](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 을 적용해야 하는 CSS 속성을 명시합니다.
+**`twansition-pwopewty`** [css](/ko/docs/web/css) 속성은 [twansition e-effect](/ko/docs/web/css/css_twansitions/using_css_twansitions) 을 적용해야 하는 c-css 속성을 명시합니다. nyaa~~
 
-{{InteractiveExample("CSS Demo: transition-property")}}
+{{intewactiveexampwe("css d-demo: t-twansition-pwopewty")}}
 
-```css interactive-example-choice
-transition-property: margin-right;
+```css i-intewactive-exampwe-choice
+twansition-pwopewty: mawgin-wight;
 ```
 
-```css interactive-example-choice
-transition-property: margin-right, color;
+```css intewactive-exampwe-choice
+twansition-pwopewty: m-mawgin-wight, nyaa~~ cowow;
 ```
 
-```css interactive-example-choice
-transition-property: all;
+```css intewactive-exampwe-choice
+t-twansition-pwopewty: aww;
 ```
 
-```css interactive-example-choice
-transition-property: none;
+```css i-intewactive-exampwe-choice
+twansition-pwopewty: nyone;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew t-to see<bw />the t-twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #e4f0f5;
+  cowow: #000;
+  padding: 1wem;
+  b-bowdew-wadius: 0.5wem;
   font: 1em monospace;
   width: 100%;
-  transition: margin-right 2s;
+  twansition: mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  b-backgwound-cowow: #909;
+  cowow: #fff;
+  m-mawgin-wight: 40%;
 }
 ```
 
-단축 속성을 지정하면 (e.g., {{cssxref("background")}}), 애니메이션 가능한 모든 세부 속성이 지정됩니다.
+단축 속성을 지정하면 (e.g., {{cssxwef("backgwound")}}), :3 애니메이션 가능한 모든 세부 속성이 지정됩니다. 😳😳😳
 
 ## 구문
 
 ```css
-/* Keyword values */
-transition-property: none;
-transition-property: all;
+/* k-keywowd v-vawues */
+t-twansition-pwopewty: nyone;
+twansition-pwopewty: aww;
 
-/* <custom-ident> values */
-transition-property: test_05;
-transition-property: -specific;
-transition-property: sliding-vertically;
+/* <custom-ident> v-vawues */
+twansition-pwopewty: test_05;
+t-twansition-pwopewty: -specific;
+twansition-pwopewty: swiding-vewticawwy;
 
-/* Multiple values */
-transition-property: test1, animation4;
-transition-property: all, height, color;
-transition-property:
-  all,
-  -moz-specific,
-  sliding;
+/* muwtipwe vawues */
+twansition-pwopewty: t-test1, (˘ω˘) animation4;
+twansition-pwopewty: a-aww, ^^ h-height, cowow;
+t-twansition-pwopewty:
+  aww, :3
+  -moz-specific, -.-
+  swiding;
 
-/* Global values */
-transition-property: inherit;
-transition-property: initial;
-transition-property: revert;
-transition-property: revert-layer;
-transition-property: unset;
+/* gwobaw vawues */
+twansition-pwopewty: i-inhewit;
+twansition-pwopewty: i-initiaw;
+twansition-pwopewty: wevewt;
+twansition-pwopewty: w-wevewt-wayew;
+t-twansition-pwopewty: unset;
 ```
 
 ### 값
 
 - `none`
-  - : 어떤 속성도 트랜지션되지 않습니다.
-- `all`
-  - : 트랜지션 가능한 모든 속성은 트랜지션됩니다.
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : 값이 변경될 때 트랜지션 효과를 적용할 속성을 식별하는 문자열입니다.
+  - : 어떤 속성도 트랜지션되지 않습니다. 😳
+- `aww`
+  - : 트랜지션 가능한 모든 속성은 트랜지션됩니다. mya
+- {{cssxwef("&wt;custom-ident&gt;")}}
+  - : 값이 변경될 때 트랜지션 효과를 적용할 속성을 식별하는 문자열입니다. (˘ω˘)
 
 ## 형식 정의
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 형식 구문
 
@@ -102,60 +102,60 @@ transition-property: unset;
 
 ### 기본 예제
 
-버튼을 호버하거나 포커싱하면, 1초 동안 색상이 트랜지션됩니다. 여기서 `transition-property`는 [`background-color`](/ko/docs/Web/CSS/background-color)입니다.
+버튼을 호버하거나 포커싱하면, >_< 1초 동안 색상이 트랜지션됩니다. -.- 여기서 `twansition-pwopewty`는 [`backgwound-cowow`](/ko/docs/web/css/backgwound-cowow)입니다. 🥺
 
-#### HTML
+#### h-htmw
 
-```html
-<button class="target">Focus me!</button>
+```htmw
+<button cwass="tawget">focus m-me!</button>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-html {
-  height: 100vh;
+htmw {
+  h-height: 100vh;
 }
 
 button {
-  font-size: 1.4rem;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  outline: none;
+  font-size: 1.4wem;
+  p-padding: 10px 20px;
+  bowdew: 1px s-sowid #ccc;
+  b-bowdew-wadius: 10px;
+  outwine: nyone;
 }
 ```
 
 ```css
-.target {
-  transition-property: background-color;
-  transition-duration: 1s;
-  background-color: #ccc;
+.tawget {
+  twansition-pwopewty: backgwound-cowow;
+  twansition-duwation: 1s;
+  backgwound-cowow: #ccc;
 }
 
-.target:hover,
-.target:focus {
-  background-color: #eee;
+.tawget:hovew, (U ﹏ U)
+.tawget:focus {
+  b-backgwound-cowow: #eee;
 }
 ```
 
-{{EmbedLiveSample('Basic_example', 600, 100)}}
+{{embedwivesampwe('basic_exampwe', >w< 600, mya 100)}}
 
-더 많은 `transition-property` 예제는 [Using CSS transitions](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)에서 확인할 수 있습니다.
+더 많은 `twansition-pwopewty` 예제는 [using c-css twansitions](/ko/docs/web/css/css_twansitions/using_css_twansitions)에서 확인할 수 있습니다. >w<
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Using CSS transitions](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{cssxref('transition')}}
-- {{cssxref('transition-duration')}}
-- {{cssxref('transition-timing-function')}}
-- {{cssxref('transition-delay')}}
-- {{domxref("TransitionEvent")}}
+- [using css twansitions](/ko/docs/web/css/css_twansitions/using_css_twansitions)
+- {{cssxwef('twansition')}}
+- {{cssxwef('twansition-duwation')}}
+- {{cssxwef('twansition-timing-function')}}
+- {{cssxwef('twansition-deway')}}
+- {{domxwef("twansitionevent")}}

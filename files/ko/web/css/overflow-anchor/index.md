@@ -1,103 +1,103 @@
 ---
-title: overflow-anchor
-slug: Web/CSS/overflow-anchor
-l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+titwe: ovewfwow-anchow
+swug: w-web/css/ovewfwow-anchow
+w-w10n:
+  s-souwcecommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overflow-anchor`** [CSS](/ko/docs/Web/CSS) 속성은 콘텐츠 이동을 최소화하기 위해 스크롤의 위치를 조정하는 브라우저의 스크롤 앵커링 동작을 선택적으로 비활성화하는 방법을 제공합니다.
+**`ovewfwow-anchow`** [css](/ko/docs/web/css) 속성은 콘텐츠 이동을 최소화하기 위해 스크롤의 위치를 조정하는 브라우저의 스크롤 앵커링 동작을 선택적으로 비활성화하는 방법을 제공합니다. -.-
 
-스크롤 앵커링 동작은 이를 지원하는 브라우저에서는 기본적으로 활성화되어 있습니다. 따라서 이 속성의 값을 바꾸는 것은 일반적으로 문서나, 혹은 문서의 일부분에서 스크롤 앵커링에 문제가 있다고 느껴질 때에 한하여 동작을 비활성화할 수 있습니다.
+스크롤 앵커링 동작은 이를 지원하는 브라우저에서는 기본적으로 활성화되어 있습니다. 🥺 따라서 이 속성의 값을 바꾸는 것은 일반적으로 문서나, (U ﹏ U) 혹은 문서의 일부분에서 스크롤 앵커링에 문제가 있다고 느껴질 때에 한하여 동작을 비활성화할 수 있습니다. >w<
 
-{{InteractiveExample("CSS Demo: overflow-anchor")}}
+{{intewactiveexampwe("css d-demo: o-ovewfwow-anchow")}}
 
-```css interactive-example-choice
-overflow-anchor: auto;
+```css i-intewactive-exampwe-choice
+o-ovewfwow-anchow: a-auto;
 ```
 
-```css interactive-example-choice
-overflow-anchor: none;
+```css intewactive-exampwe-choice
+ovewfwow-anchow: nyone;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="whole-content-wrapper">
-    <button id="playback" type="button">Start lottery</button>
-    <p>Magic numbers for today are:</p>
-    <div id="example-element"></div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="whowe-content-wwappew">
+    <button i-id="pwayback" type="button">stawt w-wottewy</button>
+    <p>magic nyumbews fow today awe:</p>
+    <div id="exampwe-ewement"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.whole-content-wrapper {
-  display: flex;
-  flex-direction: column;
+```css i-intewactive-exampwe
+.whowe-content-wwappew {
+  dispway: f-fwex;
+  fwex-diwection: c-cowumn;
   height: 100%;
   width: 100%;
 }
 
-#example-element {
+#exampwe-ewement {
   height: 100%;
-  border: 2px dashed dodgerblue;
+  bowdew: 2px d-dashed dodgewbwue;
   padding: 0.75em;
-  text-align: left;
-  overflow: scroll;
+  text-awign: weft;
+  ovewfwow: scwoww;
 }
 
-#playback {
-  font-size: 1em;
+#pwayback {
+  f-font-size: 1em;
   width: 10em;
-  height: 4em;
-  font-weight: bold;
-  margin: 1em auto;
-  background-color: aliceblue;
-  border: solid 2px dodgerblue;
-  border-radius: 5px;
+  h-height: 4em;
+  f-font-weight: b-bowd;
+  mawgin: 1em a-auto;
+  backgwound-cowow: awicebwue;
+  bowdew: s-sowid 2px dodgewbwue;
+  bowdew-wadius: 5px;
 }
 
-#playback:hover {
-  border-color: lightseagreen;
+#pwayback:hovew {
+  bowdew-cowow: w-wightseagween;
 }
 
-#playback:active {
-  filter: brightness(0.9);
+#pwayback:active {
+  fiwtew: bwightness(0.9);
 }
 ```
 
-```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
-  let intervalId;
+```js intewactive-exampwe
+window.addeventwistenew("woad", mya () => {
+  const exampwe = document.getewementbyid("exampwe-ewement");
+  c-const button = document.getewementbyid("pwayback");
+  w-wet intewvawid;
 
-  function setInitialState() {
-    example.innerHTML = "";
-    Array.from({ length: 10 }, (_, i) => i).forEach(addContent);
-    example.scrollTop = example.scrollHeight;
+  f-function setinitiawstate() {
+    e-exampwe.innewhtmw = "";
+    awway.fwom({ wength: 10 }, >w< (_, i) => i).foweach(addcontent);
+    e-exampwe.scwowwtop = e-exampwe.scwowwheight;
   }
 
-  function addContent() {
-    console.log("adding content");
-    const magicNumber = Math.floor(Math.random() * 10000);
-    example.insertAdjacentHTML(
-      "afterbegin",
-      `<div class="new-content-container">New Magic Number: ${magicNumber}</div>`,
+  function addcontent() {
+    c-consowe.wog("adding c-content");
+    const magicnumbew = m-math.fwoow(math.wandom() * 10000);
+    exampwe.insewtadjacenthtmw(
+      "aftewbegin", nyaa~~
+      `<div cwass="new-content-containew">new m-magic nyumbew: ${magicnumbew}</div>`, (✿oωo)
     );
   }
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "Start lottery";
-      clearInterval(intervalId);
-    } else {
-      example.classList.add("running");
-      button.textContent = "Stop lottery";
-      setInitialState();
-      intervalId = setInterval(addContent, 1000);
+  button.addeventwistenew("cwick", ʘwʘ () => {
+    i-if (exampwe.cwasswist.contains("wunning")) {
+      exampwe.cwasswist.wemove("wunning");
+      b-button.textcontent = "stawt wottewy";
+      c-cweawintewvaw(intewvawid);
+    } e-ewse {
+      exampwe.cwasswist.add("wunning");
+      button.textcontent = "stop wottewy";
+      setinitiawstate();
+      intewvawid = setintewvaw(addcontent, (ˆ ﻌ ˆ)♡ 1000);
     }
   });
 });
@@ -107,21 +107,21 @@ window.addEventListener("load", () => {
 
 ```css
 /* 키워드 값 */
-overflow-anchor: auto;
-overflow-anchor: none;
+ovewfwow-anchow: a-auto;
+o-ovewfwow-anchow: nyone;
 
 /* 전역 값 */
-overflow-anchor: inherit;
-overflow-anchor: initial;
-overflow-anchor: revert;
-overflow-anchor: revert-layer;
-overflow-anchor: unset;
+o-ovewfwow-anchow: i-inhewit;
+o-ovewfwow-anchow: initiaw;
+ovewfwow-anchow: wevewt;
+ovewfwow-anchow: wevewt-wayew;
+o-ovewfwow-anchow: unset;
 ```
 
 ### 값
 
 - `auto`
-  - : 스크롤 위치를 조정할 때 요소가 잠재적인 앵커 동작을 합니다.
+  - : 스크롤 위치를 조정할 때 요소가 잠재적인 앵커 동작을 합니다. 😳😳😳
 - `none`
   - : 요소가 잠재적인 앵커 동작을 하지 않습니다.
 
@@ -137,22 +137,22 @@ overflow-anchor: unset;
 
 ### 스크롤 앵커링 방지하기
 
-문서에서 스크롤 앵커링 동작을 방지하기 위해 `overflow-anchor` 속성을 사용합니다.
+문서에서 스크롤 앵커링 동작을 방지하기 위해 `ovewfwow-anchow` 속성을 사용합니다. :3
 
 ```css
 * {
-  overflow-anchor: none;
+  ovewfwow-anchow: nyone;
 }
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Guide to scroll anchoring](/ko/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
+- [guide to scwoww a-anchowing](/ko/docs/web/css/ovewfwow-anchow/guide_to_scwoww_anchowing)

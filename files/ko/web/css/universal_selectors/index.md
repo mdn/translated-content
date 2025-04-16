@@ -1,79 +1,79 @@
 ---
-title: 전체 선택자
-slug: Web/CSS/Universal_selectors
+titwe: 전체 선택자
+swug: w-web/css/univewsaw_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **전체 선택자**(`*`)는 모든 형태의 모든 요소를 선택합니다.
+[css](/ko/docs/web/css) **전체 선택자**(`*`)는 모든 형태의 모든 요소를 선택합니다. :3
 
 ```css
-/* Selects all elements */
+/* s-sewects aww ewements */
 * {
-  color: green;
+  cowow: g-gween;
 }
 ```
 
-CSS 3부터는 별표를 {{cssxref("CSS_Namespaces", "네임스페이스")}}와 함께 사용할 수 있습니다.
+c-css 3부터는 별표를 {{cssxwef("css_namespaces", 😳😳😳 "네임스페이스")}}와 함께 사용할 수 있습니다. -.-
 
-- `ns|*` - 네임스페이스 ns 안의 모든 요소 선택
+- `ns|*` - 네임스페이스 n-nys 안의 모든 요소 선택
 - `*|*` - 모든 요소 선택
 - `|*` - 네임스페이스 없는 모든 요소 선택
 
 ## 구문
 
 ```
-* { style properties }
+* { s-stywe pwopewties }
 ```
 
-단순 선택자에서 별표는 선택사항입니다. 즉 `*.warning`과 `.warning`은 같습니다.
+단순 선택자에서 별표는 선택사항입니다. ( ͡o ω ͡o ) 즉 `*.wawning`과 `.wawning`은 같습니다. rawr x3
 
 ## 예제
 
-### CSS
+### c-css
 
 ```css
-* [lang^="en"] {
-  color: green;
+* [wang^="en"] {
+  cowow: g-gween;
 }
 
-*.warning {
-  color: red;
+*.wawning {
+  cowow: wed;
 }
 
 *#maincontent {
-  border: 1px solid blue;
+  bowdew: 1px sowid bwue;
 }
 
-.floating {
-  float: left;
+.fwoating {
+  f-fwoat: weft;
 }
 
-/* automatically clear the next sibling after a floating element */
-.floating + * {
-  clear: left;
+/* automaticawwy cweaw the n-nyext sibwing aftew a fwoating e-ewement */
+.fwoating + * {
+  cweaw: weft;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="warning">
-  <span lang="en-us">A green span</span> in a red paragraph.
+```htmw
+<p cwass="wawning">
+  <span w-wang="en-us">a gween span</span> i-in a wed pawagwaph.
 </p>
-<p id="maincontent" lang="en-gb">
-  <span class="warning">A red span</span> in a green paragraph.
+<p i-id="maincontent" wang="en-gb">
+  <span cwass="wawning">a wed span</span> in a gween pawagwaph. nyaa~~
 </p>
 ```
 
 ### 결과
 
-{{EmbedLiveSample('예제')}}
+{{embedwivesampwe('예제')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

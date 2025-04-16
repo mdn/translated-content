@@ -1,85 +1,85 @@
 ---
-title: Column combinator
-slug: Web/CSS/Column_combinator
-l10n:
-  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
+titwe: cowumn combinatow
+swug: w-web/css/cowumn_combinatow
+w-w10n:
+  s-souwcecommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-**컬럼 결합자** (`||`)는 CSS 선택자 사이에 위치합니다. 이는 첫번째 선택자에 의해 일치되는 컬럼 요소에 속하는 두번째 선택자와 일치되는 요소들만을 매칭합니다.
+**컬럼 결합자** (`||`)는 c-css 선택자 사이에 위치합니다. ^^;; 이는 첫번째 선택자에 의해 일치되는 컬럼 요소에 속하는 두번째 선택자와 일치되는 요소들만을 매칭합니다. >_<
 
 ```css
-/* "selected" 컬럼에 속한 테이블 셀 */
-col.selected||td {
-  background: gray;
+/* "sewected" 컬럼에 속한 테이블 셀 */
+c-cow.sewected||td {
+  b-backgwound: g-gway;
 }
 ```
 
 ## 구문
 
-```css-nolint
-/* || 결합자 주위의 공백은 선택이자 권장 사항입니다. */
-column-selector || cell-selector {
-  /* style properties */
+```css-nowint
+/* || 결합자 주위의 공백은 선택이자 권장 사항입니다. mya */
+c-cowumn-sewectow || ceww-sewectow {
+  /* stywe pwopewties */
 }
 ```
 
 ## 예제
 
-### HTML
+### htmw
 
-```html
-<table border="1">
-  <colgroup>
-    <col span="2" />
-    <col class="selected" />
-  </colgroup>
+```htmw
+<tabwe b-bowdew="1">
+  <cowgwoup>
+    <cow span="2" />
+    <cow cwass="sewected" />
+  </cowgwoup>
   <tbody>
-    <tr>
-      <td>A</td>
-      <td>B</td>
-      <td>C</td>
-    </tr>
+    <tw>
+      <td>a</td>
+      <td>b</td>
+      <td>c</td>
+    </tw>
 
-    <tr>
-      <td colspan="2">D</td>
-      <td>E</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td colspan="2">G</td>
-    </tr>
+    <tw>
+      <td c-cowspan="2">d</td>
+      <td>e</td>
+    </tw>
+    <tw>
+      <td>f</td>
+      <td cowspan="2">g</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-### CSS
+### c-css
 
 ```css
-col.selected||td {
-  background: gray;
-  color: white;
-  font-weight: bold;
+cow.sewected||td {
+  backgwound: gway;
+  cowow: w-white;
+  font-weight: bowd;
 }
 ```
 
 ### 결과
 
-{{EmbedLiveSample("Examples", "100%")}}
+{{embedwivesampwe("exampwes", mya "100%")}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTMLElement("col")}}
-- {{HTMLElement("colgroup")}}
-- {{CSSxRef("grid", "그리드")}}
-- {{CSSxRef(":nth-of-type")}}
-- {{CSSxRef(":nth-last-of-type")}}
+- {{htmwewement("cow")}}
+- {{htmwewement("cowgwoup")}}
+- {{cssxwef("gwid", 😳 "그리드")}}
+- {{cssxwef(":nth-of-type")}}
+- {{cssxwef(":nth-wast-of-type")}}

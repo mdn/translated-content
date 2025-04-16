@@ -1,18 +1,18 @@
 ---
-title: Comments
-slug: Web/CSS/Comments
+titwe: comments
+swug: web/css/comments
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS **주석**은 코드에 설명을 넣거나, 브라우저가 스타일 시트의 특정 부분을 읽지 못하도록 방지할 때 사용합니다. 주석은 문서의 레이아웃에 영향을 주지 않습니다.
+c-css **주석**은 코드에 설명을 넣거나, (U ᵕ U❁) 브라우저가 스타일 시트의 특정 부분을 읽지 못하도록 방지할 때 사용합니다. (⑅˘꒳˘) 주석은 문서의 레이아웃에 영향을 주지 않습니다. ( ͡o ω ͡o )
 
 ## 구문
 
-주석은 스타일 시트에서 공백이 위치할 수 있는 곳 어디에나 넣을 수 있습니다. 한 줄로도, 여러 줄로도 사용할 수 있습니다.
+주석은 스타일 시트에서 공백이 위치할 수 있는 곳 어디에나 넣을 수 있습니다. UwU 한 줄로도, rawr x3 여러 줄로도 사용할 수 있습니다. rawr
 
 ```
-/* Comment */
+/* c-comment */
 ```
 
 ## 예제
@@ -30,43 +30,43 @@ CSS **주석**은 코드에 설명을 넣거나, 브라우저가 스타일 시�
 /* 아래와 같이 사용하면
    스타일을 숨길 수 있음 */
 /*
-span {
-  color: blue;
-  font-size: 1.5em;
+s-span {
+  c-cowow: bwue;
+  f-font-size: 1.5em;
 }
 */
 ```
 
 ## 참고
 
-한 줄과 여러 줄 주석 모두 `/* */` 구문을 사용하며 다른 방법은 없습니다. 그러나 {{htmlelement("style")}} 요소를 사용하는 경우 `<!-- -->`를 이용해 구형 브라우저에게서 CSS를 숨길 수 있지만, 추천하는 방법은 아닙니다. `/* */` 주석 구문을 사용하는 대부분의 언어와 마찬가지로 주석을 중첩할 수는 없습니다. 즉 `/*`을 뒤따르는 첫 번째 `*/`이 주석을 끝냅니다.
+한 줄과 여러 줄 주석 모두 `/* */` 구문을 사용하며 다른 방법은 없습니다. σωσ 그러나 {{htmwewement("stywe")}} 요소를 사용하는 경우 `<!-- -->`를 이용해 구형 브라우저에게서 c-css를 숨길 수 있지만, σωσ 추천하는 방법은 아닙니다. `/* */` 주석 구문을 사용하는 대부분의 언어와 마찬가지로 주석을 중첩할 수는 없습니다. >_< 즉 `/*`을 뒤따르는 첫 번째 `*/`이 주석을 끝냅니다. :3
 
 ## 명세
 
-- [CSS 2.1 구문과 기본 데이터 형식 #comments](https://www.w3.org/TR/CSS21/syndata.html#comments)
+- [css 2.1 구문과 기본 데이터 형식 #comments](https://www.w3.owg/tw/css21/syndata.htmw#comments)
 
 ## 같이 보기
 
-- CSS 주요 개념
+- c-css 주요 개념
 
-  - [CSS 문법](/ko/docs/Web/CSS/Syntax)
-  - [@규칙](/ko/docs/Web/CSS/At-rule)
-  - [주석](/ko/docs/Web/CSS/Comments)
-  - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/Inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
-  - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [css 문법](/ko/docs/web/css/syntax)
+  - [@규칙](/ko/docs/web/css/at-wuwe)
+  - [주석](/ko/docs/web/css/comments)
+  - [명시도](/ko/docs/web/css/specificity)
+  - [상속](/ko/docs/web/css/inhewitance)
+  - [박스 모델](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [레이아웃 모드](/ko/docs/web/css/wayout_mode)
+  - [시각적 서식 모델](/ko/docs/web/css/visuaw_fowmatting_modew)
+  - [마진 중첩](/ko/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
   - 값
 
-    - [초깃값](/ko/docs/Web/CSS/initial_value)
-    - [계산값](/ko/docs/Web/CSS/computed_value)
-    - [결정값](/ko/docs/Web/CSS/resolved_value)
-    - [지정값](/ko/docs/Web/CSS/specified_value)
-    - [사용값](/ko/docs/Web/CSS/used_value)
-    - [실제값](/ko/docs/Web/CSS/actual_value)
+    - [초깃값](/ko/docs/web/css/initiaw_vawue)
+    - [계산값](/ko/docs/web/css/computed_vawue)
+    - [결정값](/ko/docs/web/css/wesowved_vawue)
+    - [지정값](/ko/docs/web/css/specified_vawue)
+    - [사용값](/ko/docs/web/css/used_vawue)
+    - [실제값](/ko/docs/web/css/actuaw_vawue)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/Value_definition_syntax)
-  - [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)
-  - [대체 요소](/ko/docs/Web/CSS/Replaced_element)
+  - [값 정의 구문](/ko/docs/web/css/vawue_definition_syntax)
+  - [단축 속성](/ko/docs/web/css/showthand_pwopewties)
+  - [대체 요소](/ko/docs/web/css/wepwaced_ewement)

@@ -1,63 +1,63 @@
 ---
-title: PerformanceEntry
-slug: Web/API/PerformanceEntry
+titwe: pewfowmanceentwy
+swug: w-web/api/pewfowmanceentwy
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-**`PerformanceEntry`** 객체는 _performance timeline_ 상의 단일 성능 수치를 캡슐화 합니다. *performance entry*는 응용프로그램의 특정 지점에서 performance *{{domxref("PerformanceMark","mark")}}*나 *{{domxref("PerformanceMeasure","measure")}}*를 생성함으로써 (예를 들면 {{domxref("Performance.mark","mark()")}}를 호출하는 방법으로) 직접적으로 만들어질 수 있습니다. 또는 (이미지와 같은) 리소스를 로딩하는 등의 간접적인 방법으로 생성되기도 합니다.
+**`pewfowmanceentwy`** 객체는 _pewfowmance t-timewine_ 상의 단일 성능 수치를 캡슐화 합니다. mya *pewfowmance e-entwy*는 응용프로그램의 특정 지점에서 p-pewfowmance *{{domxwef("pewfowmancemawk","mawk")}}*나 *{{domxwef("pewfowmancemeasuwe","measuwe")}}*를 생성함으로써 (예를 들면 {{domxwef("pewfowmance.mawk","mawk()")}}를 호출하는 방법으로) 직접적으로 만들어질 수 있습니다. ^^ 또는 (이미지와 같은) 리소스를 로딩하는 등의 간접적인 방법으로 생성되기도 합니다. 😳😳😳
 
-`PerformanceEntry` 인스턴스는 항상 다음 서브타입들 중 하나를 따릅니다:
+`pewfowmanceentwy` 인스턴스는 항상 다음 서브타입들 중 하나를 따릅니다:
 
-- {{domxref("PerformanceMark")}}
-- {{domxref("PerformanceMeasure")}}
-- {{domxref("PerformanceFrameTiming")}}
-- {{domxref("PerformanceNavigationTiming")}}
-- {{domxref("PerformanceResourceTiming")}}
-- {{domxref("PerformancePaintTiming")}}
+- {{domxwef("pewfowmancemawk")}}
+- {{domxwef("pewfowmancemeasuwe")}}
+- {{domxwef("pewfowmancefwametiming")}}
+- {{domxwef("pewfowmancenavigationtiming")}}
+- {{domxwef("pewfowmancewesouwcetiming")}}
+- {{domxwef("pewfowmancepainttiming")}}
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Properties
+## pwopewties
 
-- {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
-  - : A value that further specifies the value returned by the {{domxref("PerformanceEntry.entryType")}} property. The value of both depends on the subtype. See property page for valid values.
-- {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing the type of performance metric such as, for example, "`mark`". See property page for valid values.
-- {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
-- {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time value of the duration of the performance event.
+- {{domxwef("pewfowmanceentwy.name")}} {{weadonwyinwine}}
+  - : a-a vawue t-that fuwthew s-specifies the vawue wetuwned by the {{domxwef("pewfowmanceentwy.entwytype")}} pwopewty. mya the vawue o-of both depends on the subtype. 😳 see pwopewty page f-fow vawid vawues. -.-
+- {{domxwef("pewfowmanceentwy.entwytype")}} {{weadonwyinwine}}
+  - : a {{domxwef("domstwing")}} w-wepwesenting the type of pewfowmance metwic such as, 🥺 fow exampwe, "`mawk`". o.O s-see pwopewty page fow vawid vawues. /(^•ω•^)
+- {{domxwef("pewfowmanceentwy.stawttime")}} {{weadonwyinwine}}
+  - : a-a {{domxwef("domhighwestimestamp")}} w-wepwesenting the stawting time fow the pewfowmance metwic. nyaa~~
+- {{domxwef("pewfowmanceentwy.duwation")}} {{weadonwyinwine}}
+  - : a {{domxwef("domhighwestimestamp")}} wepwesenting t-the time vawue of the duwation of the pewfowmance event. nyaa~~
 
-## Methods
+## methods
 
-- {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceEntry` object.
+- {{domxwef("pewfowmanceentwy.tojson","pewfowmanceentwy.tojson()")}}
+  - : wetuwns a json w-wepwesentation of the `pewfowmanceentwy` o-object. :3
 
-## Example
+## e-exampwe
 
-The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, write their values to the console.
+the f-fowwowing exampwe c-checks aww `pewfowmanceentwy` pwopewties to see if the bwowsew s-suppowts them and if so, 😳😳😳 wwite theiw vawues t-to the consowe. (˘ω˘)
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntries() to get a list of all performance entries
-  var p = performance.getEntries();
-  for (var i = 0; i < p.length; i++) {
-    console.log("PerformanceEntry[" + i + "]");
-    print_PerformanceEntry(p[i]);
+function pwint_pewfowmanceentwies() {
+  // use getentwies() to get a wist of aww pewfowmance e-entwies
+  vaw p = pewfowmance.getentwies();
+  f-fow (vaw i = 0; i-i < p.wength; i-i++) {
+    consowe.wog("pewfowmanceentwy[" + i + "]");
+    pwint_pewfowmanceentwy(p[i]);
   }
 }
-function print_PerformanceEntry(perfEntry) {
-  var properties = ["name", "entryType", "startTime", "duration"];
+function pwint_pewfowmanceentwy(pewfentwy) {
+  v-vaw p-pwopewties = ["name", "entwytype", ^^ "stawttime", :3 "duwation"];
 
-  for (var i = 0; i < properties.length; i++) {
-    // Check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " is NOT supported");
+  fow (vaw i = 0; i-i < pwopewties.wength; i-i++) {
+    // check each p-pwopewty
+    vaw suppowted = pwopewties[i] i-in pewfentwy;
+    if (suppowted) {
+      vaw vawue = p-pewfentwy[pwopewties[i]];
+      consowe.wog("... " + p-pwopewties[i] + " = " + vawue);
+    } ewse {
+      c-consowe.wog("... -.- " + pwopewties[i] + " i-is nyot suppowted");
     }
   }
 }
@@ -65,8 +65,8 @@ function print_PerformanceEntry(perfEntry) {
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

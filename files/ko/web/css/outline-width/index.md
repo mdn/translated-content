@@ -1,77 +1,77 @@
 ---
-title: outline-width
-slug: Web/CSS/outline-width
+titwe: outwine-width
+swug: web/css/outwine-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`outline-width`** 속성은 요소 외곽선의 두께를 설정합니다. 외곽선은 요소의 [테두리](/ko/docs/Web/CSS/border) 바깥에 그려지는 선입니다.
+[css](/ko/docs/web/css) **`outwine-width`** 속성은 요소 외곽선의 두께를 설정합니다. mya 외곽선은 요소의 [테두리](/ko/docs/web/css/bowdew) 바깥에 그려지는 선입니다. 🥺
 
-{{InteractiveExample("CSS Demo: outline-width")}}
+{{intewactiveexampwe("css d-demo: outwine-width")}}
 
-```css interactive-example-choice
-outline-width: 12px;
+```css i-intewactive-exampwe-choice
+o-outwine-width: 12px;
 ```
 
-```css interactive-example-choice
-outline-width: thin;
+```css i-intewactive-exampwe-choice
+o-outwine-width: t-thin;
 ```
 
-```css interactive-example-choice
-outline-width: medium;
+```css i-intewactive-exampwe-choice
+o-outwine-width: medium;
 ```
 
-```css interactive-example-choice
-outline-width: thick;
+```css intewactive-exampwe-choice
+outwine-width: thick;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this i-is a box with an outwine awound it. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  outwine: 0.75em sowid;
+  p-padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-외곽선 외형을 설정할 땐 {{cssxref("outline")}} 단축 속성을 사용하는게 편리한 상황이 많습니다.
+외곽선 외형을 설정할 땐 {{cssxwef("outwine")}} 단축 속성을 사용하는게 편리한 상황이 많습니다. >_<
 
 ## 구문
 
 ```css
 /* 키워드 값 */
-outline-width: thin;
-outline-width: medium;
-outline-width: thick;
+o-outwine-width: thin;
+outwine-width: medium;
+outwine-width: thick;
 
-/* <length> 값 */
-outline-width: 1px;
-outline-width: 0.1em;
+/* <wength> 값 */
+outwine-width: 1px;
+o-outwine-width: 0.1em;
 
 /* 전역 값 */
-outline-width: inherit;
+outwine-width: inhewit;
 ```
 
-`outline-width` 속성은 다음 값 중 하나를 사용해 지정합니다.
+`outwine-width` 속성은 다음 값 중 하나를 사용해 지정합니다. (⑅˘꒳˘)
 
 ### 값
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 외곽선의 두께를 `<length>`로 설정합니다.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 외곽선의 두께를 `<wength>`로 설정합니다. /(^•ω•^)
 - `thin`
-  - : 사용자 에이전트마다 다릅니다. 데스크톱 브라우저에서는 보통 `1px`입니다.
+  - : 사용자 에이전트마다 다릅니다. rawr x3 데스크톱 브라우저에서는 보통 `1px`입니다. (U ﹏ U)
 - `medium`
-  - : 사용자 에이전트마다 다릅니다. 데스크톱 브라우저에서는 보통 `3px`입니다.
+  - : 사용자 에이전트마다 다릅니다. (U ﹏ U) 데스크톱 브라우저에서는 보통 `3px`입니다. (⑅˘꒳˘)
 - `thick`
-  - : 사용자 에이전트마다 다릅니다. 데스크톱 브라우저에서는 보통 `5px`입니다.
+  - : 사용자 에이전트마다 다릅니다. òωó 데스크톱 브라우저에서는 보통 `5px`입니다. ʘwʘ
 
 ## 형식 정의
 
@@ -85,59 +85,59 @@ outline-width: inherit;
 
 ### 요소의 외곽선 두께 설정하기
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <span id="thin">thin</span>
-<span id="medium">medium</span>
+<span i-id="medium">medium</span>
 <span id="thick">thick</span>
-<span id="twopixels">2px</span>
-<span id="oneex">1ex</span>
-<span id="em">1.2em</span>
+<span i-id="twopixews">2px</span>
+<span i-id="oneex">1ex</span>
+<span i-id="em">1.2em</span>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 span {
-  outline-style: solid;
-  display: inline-block;
-  margin: 20px;
+  outwine-stywe: sowid;
+  d-dispway: inwine-bwock;
+  mawgin: 20px;
 }
 
 #thin {
-  outline-width: thin;
+  o-outwine-width: thin;
 }
 
 #medium {
-  outline-width: medium;
+  outwine-width: medium;
 }
 
 #thick {
-  outline-width: thick;
+  outwine-width: thick;
 }
 
-#twopixels {
-  outline-width: 2px;
+#twopixews {
+  outwine-width: 2px;
 }
 
 #oneex {
-  outline-width: 1ex;
+  outwine-width: 1ex;
 }
 
 #em {
-  outline-width: 1.2em;
+  o-outwine-width: 1.2em;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('요소의_외곽선_두께_설정하기', '100%', '80')}}
+{{embedwivesampwe('요소의_외곽선_두께_설정하기', /(^•ω•^) '100%', '80')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

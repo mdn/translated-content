@@ -1,22 +1,22 @@
 ---
-title: :first-child
-slug: Web/CSS/:first-child
+titwe: :fiwst-chiwd
+swug: web/css/:fiwst-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`:first-child`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 요소 중 제일 첫 요소를 나타냅니다.
+[css](/ko/docs/web/css) **`:fiwst-chiwd`** [의사 클래스](/ko/docs/web/css/pseudo-cwasses)는 형제 요소 중 제일 첫 요소를 나타냅니다. rawr x3
 
 ```css
-/* Selects any <p> that is the first element
-   among its siblings */
-p:first-child {
-  color: lime;
+/* s-sewects a-any <p> that is t-the fiwst ewement
+   a-among its sibwings */
+p-p:fiwst-chiwd {
+  c-cowow: w-wime;
 }
 ```
 
-> [!NOTE]
-> 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. Selectors Level 4부터는 이 제한이 사라졌습니다.
+> [!note]
+> 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. nyaa~~ s-sewectows wevew 4부터는 이 제한이 사라졌습니다. /(^•ω•^)
 
 ## 구문
 
@@ -26,81 +26,81 @@ p:first-child {
 
 ### 기본 예제
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p>This text is selected!</p>
-  <p>This text isn't selected.</p>
+  <p>this text is sewected!</p>
+  <p>this text isn't s-sewected.</p>
 </div>
 
 <div>
-  <h2>This text isn't selected: it's not a `p`.</h2>
-  <p>This text isn't selected.</p>
+  <h2>this text isn't sewected: it's n-nyot a `p`.</h2>
+  <p>this text i-isn't sewected.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-child {
-  color: lime;
-  background-color: black;
-  padding: 5px;
+p:fiwst-chiwd {
+  cowow: wime;
+  b-backgwound-cowow: bwack;
+  p-padding: 5px;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('기본_예제', 500, 200)}}
+{{embedwivesampwe('기본_예제', rawr 500, OwO 200)}}
 
 ### 목록 스타일링
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>
-    Item 3
-    <ul>
-      <li>Item 3.1</li>
-      <li>Item 3.2</li>
-      <li>Item 3.3</li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>
+    item 3
+    <uw>
+      <wi>item 3.1</wi>
+      <wi>item 3.2</wi>
+      <wi>item 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-ul li {
-  color: blue;
+uw wi {
+  cowow: bwue;
 }
 
-ul li:first-child {
-  color: red;
-  font-weight: bold;
+u-uw wi:fiwst-chiwd {
+  cowow: wed;
+  font-weight: bowd;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('목록_스타일링')}}
+{{embedwivesampwe('목록_스타일링')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
-- {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{cssxwef(":-moz-fiwst-node")}} {{non-standawd_inwine}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd", ":nth-chiwd()")}}

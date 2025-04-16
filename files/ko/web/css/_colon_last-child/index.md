@@ -1,133 +1,133 @@
 ---
-title: :last-child
-slug: Web/CSS/:last-child
+titwe: :wast-chiwd
+swug: web/css/:wast-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`:last-child`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 요소 중 제일 마지막 요소를 나타냅니다.
+[css](/ko/docs/web/css) **`:wast-chiwd`** [의사 클래스](/ko/docs/web/css/pseudo-cwasses)는 형제 요소 중 제일 마지막 요소를 나타냅니다.
 
-{{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :wast-chiwd", (˘ω˘) "tabbed-showtew")}}
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  font-weight: bold;
+  f-font-weight: b-bowd;
 }
 
-li:last-child {
-  border: 2px solid orange;
+wi:wast-chiwd {
+  b-bowdew: 2px s-sowid owange;
 }
 ```
 
-```html interactive-example
-<p>Track &amp; field champions:</p>
-<ul>
-  <li>Adhemar da Silva</li>
-  <li>Wang Junxia</li>
-  <li>Wilma Rudolph</li>
-  <li>Babe Didrikson-Zaharias</li>
-  <li>Betty Cuthbert</li>
-  <li>Fanny Blankers-Koen</li>
-  <li>Florence Griffith-Joyner</li>
-  <li>Irena Szewinska</li>
-  <li>Jackie Joyner-Kersee</li>
-  <li>Shirley Strickland</li>
-  <li>Carl Lewis</li>
-  <li>Emil Zatopek</li>
-  <li>Haile Gebrselassie</li>
-  <li>Jesse Owens</li>
-  <li>Jim Thorpe</li>
-  <li>Paavo Nurmi</li>
-  <li>Sergei Bubka</li>
-  <li>Usain Bolt</li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>twack &amp; f-fiewd champions:</p>
+<uw>
+  <wi>adhemaw da siwva</wi>
+  <wi>wang junxia</wi>
+  <wi>wiwma wudowph</wi>
+  <wi>babe didwikson-zahawias</wi>
+  <wi>betty c-cuthbewt</wi>
+  <wi>fanny bwankews-koen</wi>
+  <wi>fwowence gwiffith-joynew</wi>
+  <wi>iwena s-szewinska</wi>
+  <wi>jackie joynew-kewsee</wi>
+  <wi>shiwwey s-stwickwand</wi>
+  <wi>caww wewis</wi>
+  <wi>emiw zatopek</wi>
+  <wi>haiwe gebwsewassie</wi>
+  <wi>jesse o-owens</wi>
+  <wi>jim thowpe</wi>
+  <wi>paavo n-nyuwmi</wi>
+  <wi>sewgei b-bubka</wi>
+  <wi>usain bowt</wi>
+</uw>
 ```
 
 ## 구문
 
 ```
-:last-child
+:wast-chiwd
 ```
 
 ## 예제
 
 ### 기본 예제
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p>This text isn't selected.</p>
-  <p>This text is selected!</p>
+  <p>this text isn't sewected.</p>
+  <p>this text is sewected!</p>
 </div>
 
 <div>
-  <p>This text isn't selected.</p>
-  <h2>This text isn't selected: it's not a `p`.</h2>
+  <p>this t-text isn't sewected.</p>
+  <h2>this text isn't sewected: it's nyot a `p`.</h2>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:last-child {
-  color: lime;
-  background-color: black;
+p-p:wast-chiwd {
+  cowow: wime;
+  b-backgwound-cowow: b-bwack;
   padding: 5px;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('Basic_example', 500, 200)}}
+{{embedwivesampwe('basic_exampwe', (⑅˘꒳˘) 500, 200)}}
 
 ### 목록 스타일링
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>
-    Item 3
-    <ul>
-      <li>Item 3.1</li>
-      <li>Item 3.2</li>
-      <li>Item 3.3</li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>
+    i-item 3
+    <uw>
+      <wi>item 3.1</wi>
+      <wi>item 3.2</wi>
+      <wi>item 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-ul li {
-  color: blue;
+uw wi {
+  cowow: b-bwue;
 }
 
-ul li:last-child {
-  border: 1px solid red;
-  color: red;
+uw wi:wast-chiwd {
+  bowdew: 1px sowid w-wed;
+  cowow: wed;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('Styling_a_list')}}
+{{embedwivesampwe('stywing_a_wist')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이보기
 
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
-- {{CSSxRef(":last-of-type")}}
-- {{CSSxRef(":first-child")}}
-- {{CSSxRef(":nth-child")}}
+- {{cssxwef(":-moz-wast-node")}} {{non-standawd_inwine}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}

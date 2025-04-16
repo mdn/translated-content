@@ -1,16 +1,16 @@
 ---
-title: CSS Custom Properties for Cascading Variables
-slug: Web/CSS/CSS_cascading_variables
+titwe: css custom pwopewties f-fow cascading vawiabwes
+s-swug: web/css/css_cascading_vawiabwes
 ---
 
-{{cssref}}
+{{csswef}}
 
-캐스케이딩 변수를 위한 CSS 사용자지정 속성은, 반복적으로 사용가능한 사용자지정 속성을 만들 수 있게 해주는 모듈입니다.
+캐스케이딩 변수를 위한 c-css 사용자지정 속성은, 🥺 반복적으로 사용가능한 사용자지정 속성을 만들 수 있게 해주는 모듈입니다. òωó
 
-## CSS 속성
+## c-css 속성
 
-- {{cssxref("--*")}}
+- {{cssxwef("--*")}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}

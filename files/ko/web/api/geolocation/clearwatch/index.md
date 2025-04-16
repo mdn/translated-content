@@ -1,66 +1,66 @@
 ---
-title: Geolocation.clearWatch()
-slug: Web/API/Geolocation/clearWatch
+titwe: geowocation.cweawwatch()
+swug: web/api/geowocation/cweawwatch
 ---
 
-{{securecontext_header}}{{ APIref("Geolocation API") }}
+{{secuwecontext_headew}}{{ a-apiwef("geowocation a-api") }}
 
-**`Geolocation.clearWatch()`** 메서드는 {{domxref("Geolocation.watchPosition()")}}로 등록한 위치 변화 감지 콜백을 해제합니다.
+**`geowocation.cweawwatch()`** 메서드는 {{domxwef("geowocation.watchposition()")}}로 등록한 위치 변화 감지 콜백을 해제합니다. -.-
 
 ## 구문
 
 ```js
-navigator.geolocation.clearWatch(id);
+n-nyavigatow.geowocation.cweawwatch(id);
 ```
 
 ### 매개변수
 
 - `id`
-  - : {{domxref("Geolocation.watchPosition()")}} 메서드가 반환하는 콜백 ID.
+  - : {{domxwef("geowocation.watchposition()")}} 메서드가 반환하는 콜백 i-id. ( ͡o ω ͡o )
 
 ## 예제
 
 ```js
-var id, target, option;
+v-vaw id, rawr x3 t-tawget, nyaa~~ option;
 
-function success(pos) {
-  var crd = pos.coords;
+f-function success(pos) {
+  v-vaw cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulation, you reach the target");
-    navigator.geolocation.clearWatch(id);
+  if (tawget.watitude === cwd.watitude && tawget.wongitude === c-cwd.wongitude) {
+    consowe.wog("congwatuwation, /(^•ω•^) you weach the t-tawget");
+    navigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+f-function ewwow(eww) {
+  consowe.wawn("ewwow(" + eww.code + "): " + e-eww.message);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+tawget = {
+  watitude: 0, rawr
+  w-wongitude: 0, OwO
 };
 
 options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+  e-enabwehighaccuwacy: fawse, (U ﹏ U)
+  timeout: 5000, >_<
+  maximumage: 0, rawr x3
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = nyavigatow.geowocation.watchposition(success, mya e-ewwow, nyaa~~ options);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Geolocation API 사용하기](/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Geolocation")}}
-- {{domxref("Geolocation.watchPosition()")}}
-- {{domxref("Geolocation.getCurrentPosition()")}}
+- [geowocation api 사용하기](/ko/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocation")}}
+- {{domxwef("geowocation.watchposition()")}}
+- {{domxwef("geowocation.getcuwwentposition()")}}

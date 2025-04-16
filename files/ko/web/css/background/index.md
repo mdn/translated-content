@@ -1,46 +1,46 @@
 ---
-title: background
-slug: Web/CSS/background
+titwe: backgwound
+swug: web/css/backgwound
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/API/CSS) **`background`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다.
+[css](/ko/docs/web/api/css) **`backgwound`** [단축 속성](/ko/docs/web/css/showthand_pwopewties)은 색상, >_< 이미지, >_< 원점, (⑅˘꒳˘) 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: background")}}
+{{intewactiveexampwe("css d-demo: backgwound")}}
 
-```css interactive-example-choice
-background: green;
+```css i-intewactive-exampwe-choice
+b-backgwound: g-gween;
 ```
 
-```css interactive-example-choice
-background: content-box radial-gradient(crimson, skyblue);
+```css i-intewactive-exampwe-choice
+b-backgwound: c-content-box w-wadiaw-gwadient(cwimson, rawr x3 skybwue);
 ```
 
-```css interactive-example-choice
-background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound: nyo-wepeat uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```css interactive-example-choice
-background: left 5% / 15% 60% repeat-x
-  url("/shared-assets/images/examples/star.png");
+```css intewactive-exampwe-choice
+b-backgwound: weft 5% / 15% 60% wepeat-x
+  u-uww("/shawed-assets/images/exampwes/staw.png");
 ```
 
-```css interactive-example-choice
-background:
-  center / contain no-repeat
-    url("/shared-assets/images/examples/firefox-logo.svg"),
-  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound:
+  c-centew / contain nyo-wepeat
+    uww("/shawed-assets/images/exampwes/fiwefox-wogo.svg"), (U ﹏ U)
+  #eee 35% uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
   padding: 10%;
@@ -49,72 +49,72 @@ background:
 
 ## 구성 속성
 
-`background`는 단축 속성으로서 다음의 하위 속성을 포함합니다.
+`backgwound`는 단축 속성으로서 다음의 하위 속성을 포함합니다. (U ﹏ U)
 
-- {{cssxref("background-attachment")}}
-- {{cssxref("background-clip")}}
-- {{cssxref("background-color")}}
-- {{cssxref("background-image")}}
-- {{cssxref("background-origin")}}
-- {{cssxref("background-position")}}
-- {{cssxref("background-repeat")}}
-- {{cssxref("background-size")}}
+- {{cssxwef("backgwound-attachment")}}
+- {{cssxwef("backgwound-cwip")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("backgwound-image")}}
+- {{cssxwef("backgwound-owigin")}}
+- {{cssxwef("backgwound-position")}}
+- {{cssxwef("backgwound-wepeat")}}
+- {{cssxwef("backgwound-size")}}
 
 ## 구문
 
 ```css
-/* <background-color> 사용 */
-background: green;
+/* <backgwound-cowow> 사용 */
+backgwound: g-gween;
 
-/* <bg-image>와 <repeat-style> 사용 */
-background: url("test.jpg") repeat-y;
+/* <bg-image>와 <wepeat-stywe> 사용 */
+backgwound: uww("test.jpg") wepeat-y;
 
-/* <box>와 <background-color> 사용 */
-background: border-box red;
+/* <box>와 <backgwound-cowow> 사용 */
+backgwound: b-bowdew-box wed;
 
-/* 단일 이미지, 중앙 배치 및 크기 조절 */
-background: no-repeat center/80% url("../img/image.png");
+/* 단일 이미지, (⑅˘꒳˘) 중앙 배치 및 크기 조절 */
+b-backgwound: nyo-wepeat c-centew/80% u-uww("../img/image.png");
 ```
 
-`background` 속성을 쉼표로 구분해서 배경 레이어를 여러 개 지정할 수 있습니다.
+`backgwound` 속성을 쉼표로 구분해서 배경 레이어를 여러 개 지정할 수 있습니다. òωó
 
-각 레이어의 구문은 다음과 같습니다.
+각 레이어의 구문은 다음과 같습니다. ʘwʘ
 
-- 각 레이어는 다음 값을 가지거나 가지지 않을 수 있습니다.
+- 각 레이어는 다음 값을 가지거나 가지지 않을 수 있습니다. /(^•ω•^)
 
   - [`<attachment>`](#attachment)
   - [`<bg-image>`](#bg-image)
   - [`<position>`](#position)
   - [`<bg-size>`](#bg-size)
-  - [`<repeat-style>`](#repeat-style)
+  - [`<wepeat-stywe>`](#wepeat-stywe)
 
-- [`<bg-size>`](#bg-size) 값은 [`<position>`](#position) 바로 뒤에만 위치할 수 있으며 '/' 문자로 구분해야 합니다. 예를 들면 "`center/80%`" 처럼 사용합니다.
-- [`<box>`](#box) 값은 2개까지 가지거나 가지지 않을 수 있습니다. 1개 가진다면 {{cssxref("background-origin")}}과 {{cssxref("background-clip")}}을 모두 설정합니다. 2개 가진다면 처음 값은 {{cssxref("background-origin")}}, 두 번째 값은 {{cssxref("background-clip")}}을 설정합니다.
-- [`<background-color>`](#background-color) 값은 마지막 레이어만 가질 수 있습니다.
+- [`<bg-size>`](#bg-size) 값은 [`<position>`](#position) 바로 뒤에만 위치할 수 있으며 '/' 문자로 구분해야 합니다. ʘwʘ 예를 들면 "`centew/80%`" 처럼 사용합니다. σωσ
+- [`<box>`](#box) 값은 2개까지 가지거나 가지지 않을 수 있습니다. OwO 1개 가진다면 {{cssxwef("backgwound-owigin")}}과 {{cssxwef("backgwound-cwip")}}을 모두 설정합니다. 😳😳😳 2개 가진다면 처음 값은 {{cssxwef("backgwound-owigin")}}, 😳😳😳 두 번째 값은 {{cssxwef("backgwound-cwip")}}을 설정합니다. o.O
+- [`<backgwound-cowow>`](#backgwound-cowow) 값은 마지막 레이어만 가질 수 있습니다. ( ͡o ω ͡o )
 
 ### 값
 
 - `<attachment>`
-  - : {{cssxref("background-attachment")}}
+  - : {{cssxwef("backgwound-attachment")}}
 - `<box>`
-  - : {{cssxref("background-clip")}}, {{cssxref("background-origin")}}
-- `<background-color>`
-  - : {{cssxref("background-color")}}
+  - : {{cssxwef("backgwound-cwip")}}, (U ﹏ U) {{cssxwef("backgwound-owigin")}}
+- `<backgwound-cowow>`
+  - : {{cssxwef("backgwound-cowow")}}
 - `<bg-image>`
-  - : {{Cssxref("background-image")}}
+  - : {{cssxwef("backgwound-image")}}
 - `<position>`
-  - : {{cssxref("background-position")}}
-- `<repeat-style>`
-  - : {{cssxref("background-repeat")}}
+  - : {{cssxwef("backgwound-position")}}
+- `<wepeat-stywe>`
+  - : {{cssxwef("backgwound-wepeat")}}
 - `<bg-size>`
-  - : {{cssxref("background-size")}}
+  - : {{cssxwef("backgwound-size")}}
 
 ## 접근성 고려사항
 
-브라우저는 배경 이미지에 대한 어떠한 추가 정보도 접근성 보조 기술에 제공하지 않습니다. 특히 스크린 리더의 경우 배경 이미지의 존재 유무조차 알려주지 않습니다. 이미지가 페이지 목적의 이해에 필수적인 정보를 갖고 있다면 문서에서 구조적으로 설명하는 편이 좋습니다.
+브라우저는 배경 이미지에 대한 어떠한 추가 정보도 접근성 보조 기술에 제공하지 않습니다. (///ˬ///✿) 특히 스크린 리더의 경우 배경 이미지의 존재 유무조차 알려주지 않습니다. >w< 이미지가 페이지 목적의 이해에 필수적인 정보를 갖고 있다면 문서에서 구조적으로 설명하는 편이 좋습니다. rawr
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [mdn u-undewstanding wcag, mya guidewine 1.1 expwanations](/ko/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_%e2%80%94_pwoviding_text_awtewnatives_fow_non-text_content)
+- [undewstanding s-success cwitewion 1.1.1 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
 
 ## 형식 정의
 
@@ -128,44 +128,44 @@ background: no-repeat center/80% url("../img/image.png");
 
 ### 색상 키워드와 이미지를 사용한 배경
 
-#### HTML
+#### htmw
 
-```html
-<p class="topbanner">
-  작은 별<br />
-  반짝 반짝<br />
+```htmw
+<p cwass="topbannew">
+  작은 별<bw />
+  반짝 반짝<bw />
   작은 별
 </p>
-<p class="warning">문단 하나</p>
+<p cwass="wawning">문단 하나</p>
 <p></p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.warning {
-  background: pink;
+.wawning {
+  backgwound: pink;
 }
 
-.topbanner {
-  background: url("star-solid.gif") #99f repeat-y fixed;
+.topbannew {
+  b-backgwound: uww("staw-sowid.gif") #99f w-wepeat-y fixed;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample("색상_키워드와_이미지를_사용한_배경")}}
+{{embedwivesampwe("색상_키워드와_이미지를_사용한_배경")}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{cssxref("box-decoration-break")}}
-- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- {{cssxwef("box-decowation-bweak")}}
+- [css 그레이디언트 사용하기](/ko/docs/web/css/css_images/using_css_gwadients)
+- [한 번에 여러 배경 사용하기](/ko/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

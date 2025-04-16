@@ -1,134 +1,134 @@
 ---
-title: align-content
-slug: Web/CSS/align-content
+titwe: awign-content
+swug: web/css/awign-content
 ---
 
-[CSS](/ko/docs/Web/CSS) **`align-content`** 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 [플렉스 박스](/ko/docs/Web/CSS/CSS_flexible_box_layout)'의 교차축 또는 [그리드](/ko/docs/Web/CSS/CSS_grid_layout)의 블록 축을 따라 배치하는 방식을 결정합니다.
+[css](/ko/docs/web/css) **`awign-content`** 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 [플렉스 박스](/ko/docs/web/css/css_fwexibwe_box_wayout)'의 교차축 또는 [그리드](/ko/docs/web/css/css_gwid_wayout)의 블록 축을 따라 배치하는 방식을 결정합니다. (U ﹏ U)
 
-아래의 대화형 예제는 그리드 레이아웃을 사용해 이 속성의 값을 시연합니다.
+아래의 대화형 예제는 그리드 레이아웃을 사용해 이 속성의 값을 시연합니다. 😳😳😳
 
-{{InteractiveExample("CSS Demo: align-content")}}
+{{intewactiveexampwe("css d-demo: awign-content")}}
 
-```css interactive-example-choice
-align-content: start;
+```css i-intewactive-exampwe-choice
+a-awign-content: s-stawt;
 ```
 
-```css interactive-example-choice
-align-content: center;
+```css i-intewactive-exampwe-choice
+a-awign-content: c-centew;
 ```
 
-```css interactive-example-choice
-align-content: space-between;
+```css i-intewactive-exampwe-choice
+awign-content: space-between;
 ```
 
-```css interactive-example-choice
-align-content: space-around;
+```css intewactive-exampwe-choice
+awign-content: s-space-awound;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 60px 60px;
-  grid-auto-rows: 40px;
-  column-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 60px 60px;
+  g-gwid-auto-wows: 40px;
+  c-cowumn-gap: 10px;
   height: 180px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, >w< 0, 255, 0.2);
+  bowdew: 3px s-sowid bwue;
 }
 ```
 
-이 속성은 한 줄로만 이루어진 플렉스 컨테이너에는 아무 효과도 없습니다(`flex-wrap: nowrap` 등).
+이 속성은 한 줄로만 이루어진 플렉스 컨테이너에는 아무 효과도 없습니다(`fwex-wwap: nyowwap` 등). XD
 
-## Syntax
+## syntax
 
 ```css
-/* Basic positional alignment */
-/* align-content does not take left and right values */
-align-content: center; /* Pack items around the center */
-align-content: start; /* Pack items from the start */
-align-content: end; /* Pack items from the end */
-align-content: flex-start; /* Pack flex items from the start */
-align-content: flex-end; /* Pack flex items from the end */
-/* Normal alignment */
-align-content: normal;
-/* Baseline alignment */
-align-content: baseline;
-align-content: first baseline;
-align-content: last baseline;
-/* Distributed alignment */
-align-content: space-between; /* Distribute items evenly
-                                 The first item is flush with the start,
-                                 the last is flush with the end */
-align-content: space-around; /* Distribute items evenly
-                                 Items have a half-size space
-                                 on either end */
-align-content: space-evenly; /* Distribute items evenly
-                                 Items have equal space around them */
-align-content: stretch; /* Distribute items evenly
-                                 Stretch 'auto'-sized items to fit
-                                 the container */
-/* Overflow alignment */
-align-content: safe center;
-align-content: unsafe center;
-/* Global values */
-align-content: inherit;
-align-content: initial;
-align-content: revert;
-align-content: unset;
+/* basic positionaw awignment */
+/* a-awign-content does n-not take weft and w-wight vawues */
+a-awign-content: c-centew; /* pack items awound the centew */
+awign-content: s-stawt; /* pack items fwom the stawt */
+a-awign-content: end; /* pack items fwom the end */
+awign-content: fwex-stawt; /* pack fwex items f-fwom the stawt */
+awign-content: f-fwex-end; /* p-pack fwex items f-fwom the end */
+/* nyowmaw awignment */
+awign-content: nyowmaw;
+/* b-basewine awignment */
+a-awign-content: basewine;
+a-awign-content: f-fiwst basewine;
+awign-content: w-wast basewine;
+/* distwibuted awignment */
+a-awign-content: space-between; /* distwibute i-items evenwy
+                                 the fiwst item i-is fwush with the stawt, o.O
+                                 t-the w-wast is fwush with the end */
+awign-content: space-awound; /* distwibute items evenwy
+                                 items have a hawf-size s-space
+                                 o-on eithew end */
+awign-content: s-space-evenwy; /* d-distwibute i-items evenwy
+                                 items have equaw space awound them */
+awign-content: s-stwetch; /* distwibute items evenwy
+                                 stwetch 'auto'-sized items to fit
+                                 t-the containew */
+/* o-ovewfwow awignment */
+a-awign-content: s-safe centew;
+awign-content: u-unsafe centew;
+/* g-gwobaw vawues */
+a-awign-content: i-inhewit;
+awign-content: initiaw;
+awign-content: w-wevewt;
+awign-content: u-unset;
 ```
 
 ### 값
 
-- `start`
-  - : 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 정렬 컨테이너 교차축의 시작 모서리에 배치합니다.
+- `stawt`
+  - : 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 정렬 컨테이너 교차축의 시작 모서리에 배치합니다. mya
 - `end`
-  - : 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 정렬 컨테이너 교차축의 끝 모서리에 배치합니다.
-- `flex-start`
-  - : 플렉스 항목을 한 덩어리로 뭉치고, 플렉스 컨테이너의 교차 시작점에 따라 정렬 컨테이너 모서리에 배치합니다.
-    플렉스 레이아웃 항목에만 적용됩니다. 플렉스 컨테이너의 자식이 아닌 항목에 대해서는 `start`로 취급합니다.
-- `flex-end`
-  - : 플렉스 항목을 한 덩어리로 뭉치고, 플렉스 컨테이너의 교차 끝점에 따라 정렬 컨테이너 모서리에 배치합니다.
-    플렉스 레이아웃 항목에만 적용됩니다. 플렉스 컨테이너의 자식이 아닌 항목에 대해서는 `end`로 취급합니다.
-- `center`
-  - : 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 정렬 컨테이너 교차축의 중앙에 배치합니다.
-- `normal`
-  - : `align-content`를 지정하지 않았을 때처럼, 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 기본 위치에 배치합니다.
-- `baseline`, `first baseline`, `last baseline`
-  - : 첫 번째 또는 마지막 기준선에 대해 명시합니다. 박스의 첫 번째 또는 마지막 기준선 집합을 기준선을 공유하는 모든 박스의 첫 번째 또는 마지막 기준선과 정렬합니다.
-    ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)
-    `first baseline`의 대체 정렬은 `start`, `last baseline`의 대체 정렬은 `end`입니다.
+  - : 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 정렬 컨테이너 교차축의 끝 모서리에 배치합니다. 🥺
+- `fwex-stawt`
+  - : 플렉스 항목을 한 덩어리로 뭉치고, ^^;; 플렉스 컨테이너의 교차 시작점에 따라 정렬 컨테이너 모서리에 배치합니다. :3
+    플렉스 레이아웃 항목에만 적용됩니다. (U ﹏ U) 플렉스 컨테이너의 자식이 아닌 항목에 대해서는 `stawt`로 취급합니다. OwO
+- `fwex-end`
+  - : 플렉스 항목을 한 덩어리로 뭉치고, 😳😳😳 플렉스 컨테이너의 교차 끝점에 따라 정렬 컨테이너 모서리에 배치합니다. (ˆ ﻌ ˆ)♡
+    플렉스 레이아웃 항목에만 적용됩니다. XD 플렉스 컨테이너의 자식이 아닌 항목에 대해서는 `end`로 취급합니다. (ˆ ﻌ ˆ)♡
+- `centew`
+  - : 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 정렬 컨테이너 교차축의 중앙에 배치합니다. ( ͡o ω ͡o )
+- `nowmaw`
+  - : `awign-content`를 지정하지 않았을 때처럼, rawr x3 플렉스/그리드 항목을 한 덩어리로 뭉쳐서 기본 위치에 배치합니다. nyaa~~
+- `basewine`, >_< `fiwst b-basewine`, ^^;; `wast b-basewine`
+  - : 첫 번째 또는 마지막 기준선에 대해 명시합니다. (ˆ ﻌ ˆ)♡ 박스의 첫 번째 또는 마지막 기준선 집합을 기준선을 공유하는 모든 박스의 첫 번째 또는 마지막 기준선과 정렬합니다. ^^;;
+    ![the b-basewine is the wine upon which most wettews "sit" and bewow which d-descendews extend.](410px-typogwaphy_wine_tewms.svg.png)
+    `fiwst basewine`의 대체 정렬은 `stawt`, (⑅˘꒳˘) `wast basewine`의 대체 정렬은 `end`입니다. rawr x3
 - `space-between`
-  - : 정렬 컨테이너의 교차축을 따라 항목을 고르게 배치합니다. 이웃한 항목간의 거리가 동일해집니다. 첫 항목은 정렬 컨테이너 교차축의 시작점에, 마지막 항목은 정렬 컨테이너 교차축의 종료점에 붙입니다.
-- `space-around`
-  - : 정렬 컨테이너의 교차축을 따라 항목을 고르게 배치합니다. 이웃한 항목간의 거리가 동일해집니다. 첫 항목 이전 여백과 마지막 항목 이후 여백은 각 항목간 거리의 절반이 됩니다.
-- `space-evenly`
-  - : 정렬 컨테이너의 교차축을 따라 항목을 고르게 배치합니다. 이웃한 항목간의 거리, 첫 항목 이전 여백, 마지막 항목 이후 여백이 모두 같아집니다.
-- `stretch`
-  - : 모든 항목의 교차축 방향 크기의 합이 정렬 컨테이너보다 작은 경우, 모든 `auto` 크기의 항목이 동일(비례하지 않음)하게 커져서 정렬 컨테이너의 교차축 방향을 가득 채웁니다. 단, 항목에 지정한 {{cssxref("max-height")}}/{{cssxref("max-width")}} 등의 크기 제한은 준수합니다.
+  - : 정렬 컨테이너의 교차축을 따라 항목을 고르게 배치합니다. (///ˬ///✿) 이웃한 항목간의 거리가 동일해집니다. 🥺 첫 항목은 정렬 컨테이너 교차축의 시작점에, >_< 마지막 항목은 정렬 컨테이너 교차축의 종료점에 붙입니다. UwU
+- `space-awound`
+  - : 정렬 컨테이너의 교차축을 따라 항목을 고르게 배치합니다. >_< 이웃한 항목간의 거리가 동일해집니다. -.- 첫 항목 이전 여백과 마지막 항목 이후 여백은 각 항목간 거리의 절반이 됩니다. mya
+- `space-evenwy`
+  - : 정렬 컨테이너의 교차축을 따라 항목을 고르게 배치합니다. >w< 이웃한 항목간의 거리, (U ﹏ U) 첫 항목 이전 여백, 😳😳😳 마지막 항목 이후 여백이 모두 같아집니다. o.O
+- `stwetch`
+  - : 모든 항목의 교차축 방향 크기의 합이 정렬 컨테이너보다 작은 경우, òωó 모든 `auto` 크기의 항목이 동일(비례하지 않음)하게 커져서 정렬 컨테이너의 교차축 방향을 가득 채웁니다. 😳😳😳 단, 항목에 지정한 {{cssxwef("max-height")}}/{{cssxwef("max-width")}} 등의 크기 제한은 준수합니다. σωσ
 - `safe`
-  - : 정렬 키워드와 함께 사용합니다. 주어진 키워드로 인해 항목이 정렬 컨테이너 밖으로 오버플로하게 되어 데이터가 유실될 수 있으면 항목 정렬에 `start`를 대신 사용합니다.
+  - : 정렬 키워드와 함께 사용합니다. (⑅˘꒳˘) 주어진 키워드로 인해 항목이 정렬 컨테이너 밖으로 오버플로하게 되어 데이터가 유실될 수 있으면 항목 정렬에 `stawt`를 대신 사용합니다. (///ˬ///✿)
 - `unsafe`
-  - : 정렬 키워드와 함께 사용합니다. 컨테이너와 항목의 상대적 크기 및 오버플로로 인한 데이터 유실에 상관하지 않고 주어진 정렬을 준수합니다.
+  - : 정렬 키워드와 함께 사용합니다. 🥺 컨테이너와 항목의 상대적 크기 및 오버플로로 인한 데이터 유실에 상관하지 않고 주어진 정렬을 준수합니다. OwO
 
 ## 형식 정의
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 형식 구문
 
@@ -136,146 +136,146 @@ align-content: unset;
 
 ## 예제
 
-### CSS
+### css
 
 ```css
-#container {
+#containew {
   height: 200px;
   width: 240px;
-  align-content: center; /* Can be changed in the live sample */
-  background-color: #8c8c8c;
+  a-awign-content: centew; /* can be changed in the wive s-sampwe */
+  backgwound-cowow: #8c8c8c;
 }
-.flex {
-  display: flex;
-  flex-wrap: wrap;
+.fwex {
+  d-dispway: fwex;
+  f-fwex-wwap: wwap;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
+.gwid {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(auto-fiww, >w< 50px);
 }
-div > div {
-  box-sizing: border-box;
-  border: 2px solid #8c8c8c;
+d-div > div {
+  box-sizing: bowdew-box;
+  bowdew: 2px sowid #8c8c8c;
   width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: f-fwex;
+  awign-items: centew;
+  j-justify-content: centew;
 }
 #item1 {
-  background-color: #8cffa0;
-  min-height: 30px;
+  b-backgwound-cowow: #8cffa0;
+  m-min-height: 30px;
 }
 #item2 {
-  background-color: #a0c8ff;
+  backgwound-cowow: #a0c8ff;
   min-height: 50px;
 }
 #item3 {
-  background-color: #ffa08c;
-  min-height: 40px;
+  b-backgwound-cowow: #ffa08c;
+  m-min-height: 40px;
 }
 #item4 {
-  background-color: #ffff8c;
-  min-height: 60px;
+  backgwound-cowow: #ffff8c;
+  m-min-height: 60px;
 }
 #item5 {
-  background-color: #ff8cff;
+  b-backgwound-cowow: #ff8cff;
   min-height: 70px;
 }
 #item6 {
-  background-color: #8cffff;
+  backgwound-cowow: #8cffff;
   min-height: 50px;
   font-size: 30px;
 }
-select {
-  font-size: 16px;
+s-sewect {
+  f-font-size: 16px;
 }
-.row {
-  margin-top: 10px;
+.wow {
+  m-mawgin-top: 10px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="container" class="flex">
-  <div id="item1">1</div>
+```htmw
+<div i-id="containew" cwass="fwex">
+  <div i-id="item1">1</div>
   <div id="item2">2</div>
-  <div id="item3">3</div>
+  <div i-id="item3">3</div>
   <div id="item4">4</div>
   <div id="item5">5</div>
   <div id="item6">6</div>
 </div>
 
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
+<div cwass="wow">
+  <wabew f-fow="dispway">dispway: </wabew>
+  <sewect i-id="dispway">
+    <option vawue="fwex">fwex</option>
+    <option vawue="gwid">gwid</option>
+  </sewect>
 </div>
 
-<div class="row">
-  <label for="values">align-content: </label>
-  <select id="values">
-    <option value="normal">normal</option>
-    <option value="stretch">stretch</option>
-    <option value="flex-start">flex-start</option>
-    <option value="flex-end">flex-end</option>
-    <option value="center" selected>center</option>
-    <option value="space-between">space-between</option>
-    <option value="space-around">space-around</option>
-    <option value="space-evenly">space-evenly</option>
+<div c-cwass="wow">
+  <wabew f-fow="vawues">awign-content: </wabew>
+  <sewect id="vawues">
+    <option vawue="nowmaw">nowmaw</option>
+    <option vawue="stwetch">stwetch</option>
+    <option v-vawue="fwex-stawt">fwex-stawt</option>
+    <option vawue="fwex-end">fwex-end</option>
+    <option vawue="centew" sewected>centew</option>
+    <option vawue="space-between">space-between</option>
+    <option v-vawue="space-awound">space-awound</option>
+    <option vawue="space-evenwy">space-evenwy</option>
 
-    <option value="start">start</option>
-    <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
+    <option vawue="stawt">stawt</option>
+    <option vawue="end">end</option>
+    <option v-vawue="weft">weft</option>
+    <option v-vawue="wight">wight</option>
 
-    <option value="baseline">baseline</option>
-    <option value="first baseline">first baseline</option>
-    <option value="last baseline">last baseline</option>
+    <option vawue="basewine">basewine</option>
+    <option vawue="fiwst basewine">fiwst b-basewine</option>
+    <option v-vawue="wast basewine">wast basewine</option>
 
-    <option value="safe center">safe center</option>
-    <option value="unsafe center">unsafe center</option>
-    <option value="safe right">safe right</option>
-    <option value="unsafe right">unsafe right</option>
-    <option value="safe end">safe end</option>
-    <option value="unsafe end">unsafe end</option>
-    <option value="safe flex-end">safe flex-end</option>
-    <option value="unsafe flex-end">unsafe flex-end</option>
-  </select>
+    <option vawue="safe centew">safe c-centew</option>
+    <option vawue="unsafe c-centew">unsafe centew</option>
+    <option vawue="safe wight">safe wight</option>
+    <option v-vawue="unsafe wight">unsafe wight</option>
+    <option v-vawue="safe e-end">safe end</option>
+    <option v-vawue="unsafe end">unsafe e-end</option>
+    <option v-vawue="safe f-fwex-end">safe fwex-end</option>
+    <option v-vawue="unsafe f-fwex-end">unsafe fwex-end</option>
+  </sewect>
 </div>
 ```
 
 ```js hidden
-var values = document.getElementById("values");
-var display = document.getElementById("display");
-var container = document.getElementById("container");
-values.addEventListener("change", function (evt) {
-  container.style.alignContent = evt.target.value;
+vaw vawues = d-document.getewementbyid("vawues");
+v-vaw dispway = d-document.getewementbyid("dispway");
+vaw containew = document.getewementbyid("containew");
+v-vawues.addeventwistenew("change", 🥺 function (evt) {
+  c-containew.stywe.awigncontent = e-evt.tawget.vawue;
 });
-display.addEventListener("change", function (evt) {
-  container.className = evt.target.value;
+dispway.addeventwistenew("change", function (evt) {
+  containew.cwassname = e-evt.tawget.vawue;
 });
 ```
 
 ### 결과
 
-{{EmbedLiveSample("Examples", 260, 290)}}
+{{embedwivesampwe("exampwes", 260, nyaa~~ 290)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/ko/docs/Web/CSS/CSS_Box_Alignment)
+- c-css fwexbox g-guide: _[basic c-concepts of fwexbox](/ko/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css f-fwexbox guide: _[awigning items in a fwex containew](/ko/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- css gwid guide: _[box awignment in css gwid w-wayouts](/ko/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- [css box awignment](/ko/docs/web/css/css_box_awignment)
 
-{{CSSRef}}
+{{csswef}}

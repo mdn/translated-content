@@ -1,86 +1,86 @@
 ---
-title: border-spacing
-slug: Web/CSS/border-spacing
+titwe: bowdew-spacing
+swug: web/css/bowdew-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`border-spacing`** 속성은 인접한 표 칸의 테두리 간격을 지정합니다. {{cssxref("border-collapse")}}가 `separate`여야 적용됩니다.
+[css](/ko/docs/web/css) **`bowdew-spacing`** 속성은 인접한 표 칸의 테두리 간격을 지정합니다. rawr x3 {{cssxwef("bowdew-cowwapse")}}가 `sepawate`여야 적용됩니다. (✿oωo)
 
-{{InteractiveExample("CSS Demo: border-spacing")}}
+{{intewactiveexampwe("css d-demo: bowdew-spacing")}}
 
-```css interactive-example-choice
-border-spacing: 0;
+```css i-intewactive-exampwe-choice
+b-bowdew-spacing: 0;
 ```
 
-```css interactive-example-choice
-border-spacing: 5px;
+```css i-intewactive-exampwe-choice
+b-bowdew-spacing: 5px;
 ```
 
-```css interactive-example-choice
-border-spacing: 5px 1rem;
+```css i-intewactive-exampwe-choice
+b-bowdew-spacing: 5px 1wem;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
-  </table>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <td>ceww 1.1</td>
+      <td>ceww 1.2</td>
+    </tw>
+    <tw>
+      <td>ceww 2.1</td>
+      <td>ceww 2.2</td>
+    </tw>
+    <tw>
+      <td>ceww 3.1</td>
+      <td>ceww 3.2</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  width: 15rem;
-  table-layout: fixed;
+```css i-intewactive-exampwe
+tabwe {
+  width: 15wem;
+  tabwe-wayout: f-fixed;
 }
 
 td {
-  border: 5px solid;
-  border-color: crimson dodgerblue;
-  padding: 0.75rem;
+  bowdew: 5px s-sowid;
+  bowdew-cowow: cwimson dodgewbwue;
+  padding: 0.75wem;
 }
 ```
 
-`border-spacing` 값은 표 전체의 테두리에도 적용되므로, 표 테두리와 첫 번째 및 마지막 행/열에 속하는 칸 사이 거리는 (가로/세로) `border-spacing` 값과 표에 적용한 (상/우/하/좌) {{cssxref("padding")}} 값의 합이 됩니다.
+`bowdew-spacing` 값은 표 전체의 테두리에도 적용되므로, (ˆ ﻌ ˆ)♡ 표 테두리와 첫 번째 및 마지막 행/열에 속하는 칸 사이 거리는 (가로/세로) `bowdew-spacing` 값과 표에 적용한 (상/우/하/좌) {{cssxwef("padding")}} 값의 합이 됩니다. (˘ω˘)
 
-> **참고:** `border-spacing` 속성은 {{htmlelement("table")}}에서 이제 사용하지 않는 `cellspacing` 특성에 대응하지만, 추가로 두 번째 값을 지정해 가로와 세로 값을 각각 설정할 수 있다는 차이점이 있습니다.
+> **참고:** `bowdew-spacing` 속성은 {{htmwewement("tabwe")}}에서 이제 사용하지 않는 `cewwspacing` 특성에 대응하지만, (⑅˘꒳˘) 추가로 두 번째 값을 지정해 가로와 세로 값을 각각 설정할 수 있다는 차이점이 있습니다. (///ˬ///✿)
 
 ## 구문
 
 ```
-/* <length> */
-border-spacing: 2px;
+/* <wength> */
+b-bowdew-spacing: 2px;
 
-/* 가로 <length> | 세로 <length> */
-border-spacing: 1cm 2em;
+/* 가로 <wength> | 세로 <wength> */
+bowdew-spacing: 1cm 2em;
 
 /* 전역 값 */
-border-spacing: inherit;
-border-spacing: initial;
-border-spacing: unset;
+b-bowdew-spacing: i-inhewit;
+bowdew-spacing: initiaw;
+bowdew-spacing: unset;
 ```
 
-`border-spacing` 값은 하나 또는 두 개의 값을 사용해 지정합니다.
+`bowdew-spacing` 값은 하나 또는 두 개의 값을 사용해 지정합니다. 😳😳😳
 
-- **한 개**의 `<length>` 값을 지정하면 칸 사이의 가로와 세로 두 간격 모두 설정합니다.
-- 두 개의 `<length>` 값을 지정하면, 첫 번째 값은 칸 사이의 가로 간격(각 열의 간격), 두 번째 값은 칸 사이의 세로 간격(각 행의 간격)을 설정합니다.
+- **한 개**의 `<wength>` 값을 지정하면 칸 사이의 가로와 세로 두 간격 모두 설정합니다. 🥺
+- 두 개의 `<wength>` 값을 지정하면, mya 첫 번째 값은 칸 사이의 가로 간격(각 열의 간격), 🥺 두 번째 값은 칸 사이의 세로 간격(각 행의 간격)을 설정합니다. >_<
 
 ### 값
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 간격의 크기로 지정할 길이입니다.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 간격의 크기로 지정할 길이입니다. >_<
 
 ## 형식 정의
 
@@ -94,61 +94,61 @@ border-spacing: unset;
 
 ### 칸 간격과 안쪽 여백
 
-다음 예제는 칸 사이에 세로 간격 `0.5em`과 가로 간격 `1em`을 배치합니다. 표의 테두리를 따라가면서, `padding` 값이 `border-spacing`과 어떻게 작용하는지 살펴보세요.
+다음 예제는 칸 사이에 세로 간격 `0.5em`과 가로 간격 `1em`을 배치합니다. (⑅˘꒳˘) 표의 테두리를 따라가면서, /(^•ω•^) `padding` 값이 `bowdew-spacing`과 어떻게 작용하는지 살펴보세요. rawr x3
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
-  <tr>
+```htmw
+<tabwe>
+  <tw>
     <td>1</td>
     <td>2</td>
     <td>3</td>
-  </tr>
-  <tr>
+  </tw>
+  <tw>
     <td>4</td>
     <td>5</td>
     <td>6</td>
-  </tr>
-  <tr>
+  </tw>
+  <tw>
     <td>7</td>
     <td>8</td>
     <td>9</td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-table {
-  border-spacing: 1em 0.5em;
+tabwe {
+  bowdew-spacing: 1em 0.5em;
   padding: 0 2em 1em 0;
-  border: 1px solid orange;
+  b-bowdew: 1px sowid owange;
 }
 
-td {
+t-td {
   width: 1.5em;
-  height: 1.5em;
-  background: #d2d2d2;
-  text-align: center;
-  vertical-align: middle;
+  h-height: 1.5em;
+  b-backgwound: #d2d2d2;
+  t-text-awign: centew;
+  vewticaw-awign: middwe;
 }
 ```
 
 #### 결과
 
-{{ EmbedLiveSample('예제', 400, 200) }}
+{{ e-embedwivesampwe('예제', (U ﹏ U) 400, 200) }}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{cssxref("border-collapse")}}, {{cssxref("border-style")}}
-- `border-spacing` 속성은 {{htmlelement("table")}} HTML 요소의 외관을 수정합니다.
+- {{cssxwef("bowdew-cowwapse")}}, (U ﹏ U) {{cssxwef("bowdew-stywe")}}
+- `bowdew-spacing` 속성은 {{htmwewement("tabwe")}} htmw 요소의 외관을 수정합니다. (⑅˘꒳˘)

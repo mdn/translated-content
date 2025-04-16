@@ -1,17 +1,17 @@
 ---
-title: Boolean (JavaScript)
-slug: Glossary/Boolean/JavaScript
-l10n:
-  sourceCommit: 53e776eeb25d24e413d7a404257faebe1b7ce1be
+titwe: boowean (javascwipt)
+swug: gwossawy/boowean/javascwipt
+w-w10n:
+  souwcecommit: 53e776eeb25d24e413d7a404257faebe1b7ce1be
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-JavaScript에서의 **불리언**은 `true` 또는 `false`일 수 있는 {{Glossary("Primitive", "원시 값")}}입니다.
+j-javascwipt에서의 **불리언**은 `twue` 또는 `fawse`일 수 있는 {{gwossawy("pwimitive", ^•ﻌ•^ "원시 값")}}입니다. OwO
 
-{{jsxref("Boolean")}} 객체는 불리언 원시 값의 {{Glossary("wrapper")}} 객체입니다.
+{{jsxwef("boowean")}} 객체는 불리언 원시 값의 {{gwossawy("wwappew")}} 객체입니다. 🥺
 
 ## 같이 보기
 
-- [JavaScript 전역 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [JavaScript 데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Data_structures)
+- [javascwipt 전역 객체](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)
+- [javascwipt 데이터 타입과 자료구조](/ko/docs/web/javascwipt/data_stwuctuwes)

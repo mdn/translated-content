@@ -1,60 +1,60 @@
 ---
-title: padding
-slug: Web/CSS/padding
+titwe: padding
+swug: web/css/padding
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`padding`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 네 방향 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다. {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}의 단축 속성입니다.
+**`padding`** [css](/ko/docs/web/css) 속성은 요소의 네 방향 [안쪽 여백 영역](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#padding-awea)을 설정합니다. 🥺 {{cssxwef("padding-top")}}, mya {{cssxwef("padding-wight")}}, 🥺 {{cssxwef("padding-bottom")}}, >_< {{cssxwef("padding-weft")}}의 단축 속성입니다. >_<
 
-{{InteractiveExample("CSS Demo: padding")}}
+{{intewactiveexampwe("css d-demo: padding")}}
 
-```css interactive-example-choice
-padding: 1em;
+```css i-intewactive-exampwe-choice
+p-padding: 1em;
 ```
 
-```css interactive-example-choice
-padding: 10% 0;
+```css i-intewactive-exampwe-choice
+p-padding: 10% 0;
 ```
 
-```css interactive-example-choice
-padding: 10px 50px 20px;
+```css i-intewactive-exampwe-choice
+p-padding: 10px 50px 20px;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 padding: 10px 50px 30px 0;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 padding: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="box">
+      faw out in the u-unchawted backwatews of the unfashionabwe e-end of the
+      westewn spiwaw awm of the gawaxy wies a-a smow unwegawded yewwow sun. (⑅˘꒳˘)
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 10px sowid #ffc129;
+  ovewfwow: hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
+  b-bowdew: dashed 1px;
 }
 ```
 
-요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다.
+요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다. /(^•ω•^)
 
-> **참고:** `padding`은 요소의 내부에 빈 공간을 추가합니다. 반면 {{cssxref("margin")}}은 요소의 **주위**에 빈 공간을 만듭니다.
+> **참고:** `padding`은 요소의 내부에 빈 공간을 추가합니다. 반면 {{cssxwef("mawgin")}}은 요소의 **주위**에 빈 공간을 만듭니다. rawr x3
 
 ## 구문
 
@@ -72,24 +72,24 @@ padding: 1em 2em 2em;
 padding: 5px 1em 0 2em;
 
 /* 전역 값 */
-padding: inherit;
-padding: initial;
-padding: unset;
+p-padding: inhewit;
+padding: initiaw;
+p-padding: u-unset;
 ```
 
-padding 속성은 한 개, 두 개, 세 개, 혹은 네 개의 값으로 지정할 수 있습니다. 각 값은 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} 중 하나로, 음수 값은 유효하지 않습니다.
+padding 속성은 한 개, (U ﹏ U) 두 개, (U ﹏ U) 세 개, 혹은 네 개의 값으로 지정할 수 있습니다. (⑅˘꒳˘) 각 값은 {{cssxwef("&wt;wength&gt;")}}, òωó {{cssxwef("&wt;pewcentage&gt;")}} 중 하나로, 음수 값은 유효하지 않습니다. ʘwʘ
 
-- **한 개의 값**은 모든 네 면의 여백을 설정합니다.
-- **두 개의 값**을 지정하면 첫 번째는 **위와 아래**, 두 번째는 **왼쪽과 오른쪽** 여백을 설정합니다.
-- **세 개의 값**을 지정하면 첫 번째는 **위**, 두 번째는 **왼쪽과 오른쪽,** 세 번째 값은 **아래** 여백을 설정합니다.
-- **네 개의 값**을 지정하면 각각 **상, 우, 하, 좌** 순서로 여백을 지정합니다. (시계방향)
+- **한 개의 값**은 모든 네 면의 여백을 설정합니다. /(^•ω•^)
+- **두 개의 값**을 지정하면 첫 번째는 **위와 아래**, ʘwʘ 두 번째는 **왼쪽과 오른쪽** 여백을 설정합니다. σωσ
+- **세 개의 값**을 지정하면 첫 번째는 **위**, OwO 두 번째는 **왼쪽과 오른쪽,** 세 번째 값은 **아래** 여백을 설정합니다. 😳😳😳
+- **네 개의 값**을 지정하면 각각 **상, 😳😳😳 우, 하, 좌** 순서로 여백을 지정합니다. o.O (시계방향)
 
 ### 값
 
-- **{{cssxref("length")}}**
-  - : 여백의 크기로 고정값 사용.
-- {{cssxref("percentage")}}
-  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비의 백분율 사용.
+- **{{cssxwef("wength")}}**
+  - : 여백의 크기로 고정값 사용. ( ͡o ω ͡o )
+- {{cssxwef("pewcentage")}}
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/web/css/containing_bwock) 너비의 백분율 사용. (U ﹏ U)
 
 ### 형식 구문
 
@@ -99,28 +99,28 @@ padding 속성은 한 개, 두 개, 세 개, 혹은 네 개의 값으로 지정�
 
 ### 간단한 예제
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <h4>평범한 안쪽 여백을 가진 요소.</h4>
 <h3>엄청난 안쪽 여백을 가진 요소!</h3>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 h4 {
-  background-color: lime;
-  padding: 20px 50px;
+  backgwound-cowow: wime;
+  p-padding: 20px 50px;
 }
 
 h3 {
-  background-color: cyan;
+  backgwound-cowow: c-cyan;
   padding: 110px 50px 50px 110px;
 }
 ```
 
-{{EmbedLiveSample('간단한_예제', '100%', 300)}}
+{{embedwivesampwe('간단한_예제', (///ˬ///✿) '100%', 300)}}
 
 ### 더 많은 예제
 
@@ -147,15 +147,15 @@ padding: 1em 3px 30px 5px;
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
+- [css 기본 박스 모델 입문](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{cssxwef("padding-top")}}, >w< {{cssxwef("padding-wight")}}, rawr {{cssxwef("padding-bottom")}}, mya {{cssxwef("padding-weft")}}. ^^

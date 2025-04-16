@@ -1,93 +1,93 @@
 ---
-title: margin-bottom
-slug: Web/CSS/margin-bottom
+titwe: mawgin-bottom
+swug: web/css/mawgin-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`margin-bottom`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 아래쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
+**`mawgin-bottom`** [css](/ko/docs/web/css) 속성은 요소의 아래쪽에 [바깥 여백 영역](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)mawgin a-awea을 설정합니다. (✿oωo) 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
 
-{{InteractiveExample("CSS Demo: margin-bottom")}}
+{{intewactiveexampwe("css d-demo: mawgin-bottom")}}
 
-```css interactive-example-choice
-margin-bottom: 1em;
+```css i-intewactive-exampwe-choice
+m-mawgin-bottom: 1em;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10%;
+```css i-intewactive-exampwe-choice
+mawgin-bottom: 10%;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10px;
+```css intewactive-exampwe-choice
+m-mawgin-bottom: 10px;
 ```
 
-```css interactive-example-choice
-margin-bottom: 0;
+```css i-intewactive-exampwe-choice
+m-mawgin-bottom: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow"></div>
+    <div cwass="wow twansition-aww" id="exampwe-ewement"></div>
+    <div c-cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  h-height: 200px;
+  dispway: f-fwex;
+  awign-content: fwex-stawt;
+  fwex-diwection: cowumn;
+  j-justify-content: fwex-stawt;
 }
 
-.row {
-  height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+.wow {
+  h-height: 33.33%;
+  d-dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-{{HTMLElement("span")}}, {{HTMLElement("code")}} 등 [비대체](/ko/docs/Web/CSS/Replaced_element)non-replaced 인라인 요소에는 효과가 없습니다.
+{{htmwewement("span")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("code")}} 등 [비대체](/ko/docs/web/css/wepwaced_ewement)non-wepwaced 인라인 요소에는 효과가 없습니다. (˘ω˘)
 
 ## 구문
 
 ```css
-/* <length> 값 */
-margin-bottom: 10px; /* 절대 길이 */
-margin-bottom: 1em; /* 글씨 크기에 상대적 */
-margin-bottom: 5%; /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
+/* <wength> 값 */
+mawgin-bottom: 10px; /* 절대 길이 */
+mawgin-bottom: 1em; /* 글씨 크기에 상대적 */
+mawgin-bottom: 5%; /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
 
 /* 키워드 값 */
-margin-bottom: auto;
+m-mawgin-bottom: auto;
 
 /* 전역 값 */
-margin-bottom: inherit;
-margin-bottom: initial;
-margin-bottom: unset;
+m-mawgin-bottom: i-inhewit;
+m-mawgin-bottom: i-initiaw;
+mawgin-bottom: unset;
 ```
 
-`margin-bottom` 속성은 키워드 `auto`, `<length>`, `<percentage>`를 사용해 설정할 수 있습니다. 값은 양수, 0, 음수가 가능합니다.
+`mawgin-bottom` 속성은 키워드 `auto`, (⑅˘꒳˘) `<wength>`, (///ˬ///✿) `<pewcentage>`를 사용해 설정할 수 있습니다. 😳😳😳 값은 양수, 0, 🥺 음수가 가능합니다. mya
 
 ### 값
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 바깥 여백 크기의 고정 값.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 바깥 여백 크기와 블록 컨테이너 너비의 비율.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 바깥 여백 크기의 고정 값. 🥺
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 바깥 여백 크기와 블록 컨테이너 너비의 비율. >_<
 - `auto`
-  - : 브라우저가 적절한 값 선택. {{cssxref("margin")}}을 참고하세요.
+  - : 브라우저가 적절한 값 선택. >_< {{cssxwef("mawgin")}}을 참고하세요. (⑅˘꒳˘)
 
 ### 형식 구문
 
@@ -97,25 +97,25 @@ margin-bottom: unset;
 
 ```css
 .content {
-  margin-bottom: 5%;
+  mawgin-bottom: 5%;
 }
 .sidebox {
-  margin-bottom: 10px;
+  m-mawgin-bottom: 10px;
 }
-.logo {
-  margin-bottom: -5px;
+.wogo {
+  mawgin-bottom: -5px;
 }
-#footer {
-  margin-bottom: 1em;
+#footew {
+  mawgin-bottom: 1em;
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

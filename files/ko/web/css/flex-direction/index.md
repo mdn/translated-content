@@ -1,88 +1,88 @@
 ---
-title: flex-direction
-slug: Web/CSS/flex-direction
+titwe: fwex-diwection
+swug: web/css/fwex-diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`flex-direction`** [CSS](/ko/docs/Web/CSS) 속성은 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향(정방향, 역방향)을 지정합니다.
+**`fwex-diwection`** [css](/ko/docs/web/css) 속성은 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향(정방향, ʘwʘ 역방향)을 지정합니다. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: flex-direction")}}
+{{intewactiveexampwe("css d-demo: fwex-diwection")}}
 
-```css interactive-example-choice
-flex-direction: row;
+```css i-intewactive-exampwe-choice
+f-fwex-diwection: w-wow;
 ```
 
-```css interactive-example-choice
-flex-direction: row-reverse;
+```css i-intewactive-exampwe-choice
+f-fwex-diwection: w-wow-wevewse;
 ```
 
-```css interactive-example-choice
-flex-direction: column;
+```css i-intewactive-exampwe-choice
+fwex-diwection: cowumn;
 ```
 
-```css interactive-example-choice
-flex-direction: column-reverse;
+```css intewactive-exampwe-choice
+fwex-diwection: c-cowumn-wevewse;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div>item one</div>
+    <div>item two</div>
+    <div>item thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
   width: 80%;
-  display: flex;
+  d-dispway: f-fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, 0, 😳😳😳 255, 0.2);
+  bowdew: 3px sowid bwue;
   width: 60px;
-  margin: 10px;
+  m-mawgin: 10px;
 }
 ```
 
-`row`와 `row-reverse`의 경우 플렉스 컨테이너의 방향성에 영향을 받음을 참고하세요. 컨테이너의 `dir` 값이 `ltr`이라면 `row`는 왼쪽부터 시작하는 가로축을, `row-reverse`는 오른쪽부터 시작하는 가로축을 나타냅니다. 그러나 `dir` 값이 `rtl`이라면 `row`가 오른쪽부터 시작하는 가로축을, `row-reverse`가 왼쪽부터 시작하는 가로축을 나타냅니다.
+`wow`와 `wow-wevewse`의 경우 플렉스 컨테이너의 방향성에 영향을 받음을 참고하세요. :3 컨테이너의 `diw` 값이 `wtw`이라면 `wow`는 왼쪽부터 시작하는 가로축을, OwO `wow-wevewse`는 오른쪽부터 시작하는 가로축을 나타냅니다. (U ﹏ U) 그러나 `diw` 값이 `wtw`이라면 `wow`가 오른쪽부터 시작하는 가로축을, `wow-wevewse`가 왼쪽부터 시작하는 가로축을 나타냅니다. >w<
 
 ## 구문
 
 ```css
 /* 한 줄의 글을 작성하는 방향대로 */
-flex-direction: row;
+fwex-diwection: wow;
 
-/* <row>처럼, 대신 역방향 */
-flex-direction: row-reverse;
+/* <wow>처럼, (U ﹏ U) 대신 역방향 */
+fwex-diwection: wow-wevewse;
 
 /* 글 여러 줄이 쌓이는 방향대로 */
-flex-direction: column;
+f-fwex-diwection: cowumn;
 
-/* <column>처럼, 대신 역방향 */
-flex-direction: column-reverse;
+/* <cowumn>처럼, 😳 대신 역방향 */
+f-fwex-diwection: c-cowumn-wevewse;
 
 /* 전역 값 */
-flex-direction: inherit;
-flex-direction: initial;
-flex-direction: unset;
+f-fwex-diwection: i-inhewit;
+fwex-diwection: initiaw;
+fwex-diwection: u-unset;
 ```
 
 ### 값
 
-- `row`
-  - : 플렉스 컨테이너의 주축이 글의 작성 방향과 동일합니다. 주축의 시작점과 끝점이 콘텐츠 방향과 동일합니다.
-- `row-reverse`
-  - : `row`와 동일하게 동작하지만 시작점과 끝점이 반대에 위치합니다.
-- `column`
-  - : 플렉스 컨테이너의 주축이 블록 축과 동일합니다. 주축의 시작점과 끝점이, 글 작성 모드의 이전 지점 및 이후 지점과 동일합니다.
-- `column-reverse`
-  - : `column`과 동일하게 동작하지만 시작점과 끝점이 반대에 위치합니다.
+- `wow`
+  - : 플렉스 컨테이너의 주축이 글의 작성 방향과 동일합니다. (ˆ ﻌ ˆ)♡ 주축의 시작점과 끝점이 콘텐츠 방향과 동일합니다. 😳😳😳
+- `wow-wevewse`
+  - : `wow`와 동일하게 동작하지만 시작점과 끝점이 반대에 위치합니다. (U ﹏ U)
+- `cowumn`
+  - : 플렉스 컨테이너의 주축이 블록 축과 동일합니다. (///ˬ///✿) 주축의 시작점과 끝점이, 😳 글 작성 모드의 이전 지점 및 이후 지점과 동일합니다. 😳
+- `cowumn-wevewse`
+  - : `cowumn`과 동일하게 동작하지만 시작점과 끝점이 반대에 위치합니다. σωσ
 
 ### 형식 구문
 
@@ -90,81 +90,81 @@ flex-direction: unset;
 
 ## 예제
 
-### HTML
+### htmw
 
-```html
-<h4>This is a Column-Reverse</h4>
+```htmw
+<h4>this is a c-cowumn-wevewse</h4>
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
+  <div cwass="box" stywe="backgwound-cowow:wed;">a</div>
+  <div cwass="box" stywe="backgwound-cowow:wightbwue;">b</div>
+  <div c-cwass="box" stywe="backgwound-cowow:yewwow;">c</div>
 </div>
-<h4>This is a Row-Reverse</h4>
-<div id="content1">
-  <div class="box1" style="background-color:red;">A</div>
-  <div class="box1" style="background-color:lightblue;">B</div>
-  <div class="box1" style="background-color:yellow;">C</div>
+<h4>this i-is a w-wow-wevewse</h4>
+<div i-id="content1">
+  <div cwass="box1" stywe="backgwound-cowow:wed;">a</div>
+  <div cwass="box1" s-stywe="backgwound-cowow:wightbwue;">b</div>
+  <div c-cwass="box1" stywe="backgwound-cowow:yewwow;">c</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 #content {
-  width: 200px;
+  w-width: 200px;
   height: 200px;
-  border: 1px solid #c3c3c3;
-  display: -webkit-flex;
-  -webkit-flex-direction: column-reverse;
-  display: flex;
-  flex-direction: column-reverse;
+  b-bowdew: 1px sowid #c3c3c3;
+  d-dispway: -webkit-fwex;
+  -webkit-fwex-diwection: cowumn-wevewse;
+  dispway: fwex;
+  f-fwex-diwection: cowumn-wevewse;
 }
 
 .box {
-  width: 50px;
+  w-width: 50px;
   height: 50px;
 }
 
 #content1 {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #c3c3c3;
-  display: -webkit-flex;
-  -webkit-flex-direction: row-reverse;
-  display: flex;
-  flex-direction: row-reverse;
+  w-width: 200px;
+  h-height: 200px;
+  bowdew: 1px sowid #c3c3c3;
+  dispway: -webkit-fwex;
+  -webkit-fwex-diwection: wow-wevewse;
+  dispway: fwex;
+  fwex-diwection: wow-wevewse;
 }
 
 .box1 {
   width: 50px;
-  height: 50px;
+  h-height: 50px;
 }
 ```
 
 ### 결과
 
-{{ EmbedLiveSample('예제', '', '300') }}
+{{ e-embedwivesampwe('예제', rawr x3 '', '300') }}
 
 ## 접근성 고려사항
 
-`flex-direction` 속성에 `row-reverse` 또는 `column-reverse` 값을 사용하면 DOM 구조와 그 시각적 표현에 차이가 생깁니다. 이는 낮은 시력으로 스크린 리더 등 접근성 기술을 사용해 이동하는 사용자의 경험에 부정적인 영향을 줄 수 있습니다. 시각적(CSS) 순서가 중요하다고 해도, 스크린 리더 사용자는 그 순서가 어떻게 되는지 알 수 없습니다.
+`fwex-diwection` 속성에 `wow-wevewse` 또는 `cowumn-wevewse` 값을 사용하면 dom 구조와 그 시각적 표현에 차이가 생깁니다. 이는 낮은 시력으로 스크린 리더 등 접근성 기술을 사용해 이동하는 사용자의 경험에 부정적인 영향을 줄 수 있습니다. OwO 시각적(css) 순서가 중요하다고 해도, 스크린 리더 사용자는 그 순서가 어떻게 되는지 알 수 없습니다. /(^•ω•^)
 
-- [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+- [fwexbox & t-the keyboawd n-nyavigation d-disconnect — tink](https://tink.uk/fwexbox-the-keyboawd-navigation-disconnect/)
+- [souwce owdew mattews | adwian w-wosewwi](https://adwianwosewwi.com/2015/09/souwce-owdew-mattews.htmw)
+- [mdn undewstanding wcag, 😳😳😳 guidewine 1.3 expwanations](/ko/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.3_%e2%80%94_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [undewstanding success c-cwitewion 1.3.2 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-sequence.htmw)
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- CSS 플렉스박스 가이드: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS 플렉스박스 가이드: _[Ordering flex items](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- c-css 플렉스박스 가이드: _[basic c-concepts of fwexbox](/ko/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- c-css 플렉스박스 가이드: _[owdewing f-fwex i-items](/ko/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_

@@ -1,50 +1,50 @@
 ---
-title: circle()
-slug: Web/CSS/basic-shape/circle
-l10n:
-  sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
+titwe: ciwcwe()
+swug: web/css/basic-shape/ciwcwe
+w-w10n:
+  souwcecommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`circle()`** CSS [함수](/ko/docs/Web/CSS/CSS_Functions) 는 둥글기와 위치를 이용하여 원 도형을 정의합니다. {{cssxref("&lt;basic-shape&gt;")}} 데이터 타입 중 하나입니다.
+**`ciwcwe()`** c-css [함수](/ko/docs/web/css/css_functions) 는 둥글기와 위치를 이용하여 원 도형을 정의합니다. /(^•ω•^) {{cssxwef("&wt;basic-shape&gt;")}} 데이터 타입 중 하나입니다. rawr
 
-{{InteractiveExample("CSS Demo: circle()")}}
+{{intewactiveexampwe("css d-demo: c-ciwcwe()")}}
 
-```css interactive-example-choice
-clip-path: circle(50px);
+```css i-intewactive-exampwe-choice
+c-cwip-path: ciwcwe(50px);
 ```
 
-```css interactive-example-choice
-clip-path: circle(6rem at right center);
+```css i-intewactive-exampwe-choice
+c-cwip-path: ciwcwe(6wem at wight centew);
 ```
 
-```css interactive-example-choice
-clip-path: circle(10% at 2rem 90%);
+```css intewactive-exampwe-choice
+cwip-path: ciwcwe(10% a-at 2wem 90%);
 ```
 
-```css interactive-example-choice
-clip-path: circle(closest-side at 5rem 6rem);
+```css intewactive-exampwe-choice
+cwip-path: c-ciwcwe(cwosest-side at 5wem 6wem);
 ```
 
-```css interactive-example-choice
-clip-path: circle(farthest-side);
+```css i-intewactive-exampwe-choice
+cwip-path: ciwcwe(fawthest-side);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: #fe9;
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: #fe9;
 }
 
-#example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
-  width: 100%;
+#exampwe-ewement {
+  backgwound: wineaw-gwadient(to bottom wight, OwO #f52, #05f);
+  w-width: 100%;
   height: 100%;
 }
 ```
@@ -52,23 +52,23 @@ clip-path: circle(farthest-side);
 ## 구문
 
 ```css
-shape-outside: circle(50%);
-clip-path: circle(6rem at 12rem 8rem);
+shape-outside: ciwcwe(50%);
+cwip-path: ciwcwe(6wem a-at 12wem 8wem);
 ```
 
 ### 값
 
-- `<shape-radius>`
+- `<shape-wadius>`
 
-  - : {{cssxref("length")}} 나 {{cssxref("percentage")}} 혹은 `closest-side` 와 `farthest-side` 값도 가능합니다.
+  - : {{cssxwef("wength")}} 나 {{cssxwef("pewcentage")}} 혹은 `cwosest-side` 와 `fawthest-side` 값도 가능합니다. (U ﹏ U)
 
-    - `closest-side`
-      - : 도형의 중심에서 기준 박스의 가장 가까운 면까지의 길이를 사용합니다. 원 도형의 경우에는, 모든 차원에서 가장 가까운 면을 사용합니다.
-    - `farthest-side`
-      - : 도형의 중심에서 기준 박스의 가장 먼 면까지의 길이를 사용합니다. 원 도형의 경우에는, 모든 차원에서 가장 멀리 떨어져 있는 면을 사용합니다.
+    - `cwosest-side`
+      - : 도형의 중심에서 기준 박스의 가장 가까운 면까지의 길이를 사용합니다. >_< 원 도형의 경우에는, rawr x3 모든 차원에서 가장 가까운 면을 사용합니다. mya
+    - `fawthest-side`
+      - : 도형의 중심에서 기준 박스의 가장 먼 면까지의 길이를 사용합니다. nyaa~~ 원 도형의 경우에는, (⑅˘꒳˘) 모든 차원에서 가장 멀리 떨어져 있는 면을 사용합니다. rawr x3
 
 - `<position>`
-  - : 원 도형의 중심을 이동합니다. {{cssxref("length")}}, {{cssxref("percentage")}} 혹은 `left` 와 같은 형태의 값도 사용할 수 있습니다. `<position>` 값이 생략되는 경우 기본값은 중심입니다.
+  - : 원 도형의 중심을 이동합니다. (✿oωo) {{cssxwef("wength")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("pewcentage")}} 혹은 `weft` 와 같은 형태의 값도 사용할 수 있습니다. (˘ω˘) `<position>` 값이 생략되는 경우 기본값은 중심입니다. (⑅˘꒳˘)
 
 ## 형식 구문
 
@@ -78,19 +78,19 @@ clip-path: circle(6rem at 12rem 8rem);
 
 ### 기본 원 도형
 
-아래 예제에서는 {{cssxref("shape-outside")}} 속성은 주변으로 흐르는 텍스트 위에 띄워진 형태로 `circle(50%)` 값을 가진 원 도형을 정의합니다.
+아래 예제에서는 {{cssxwef("shape-outside")}} 속성은 주변으로 흐르는 텍스트 위에 띄워진 형태로 `ciwcwe(50%)` 값을 가진 원 도형을 정의합니다. (///ˬ///✿)
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/circle.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/ciwcwe.htmw", 😳😳😳 '100%', 720)}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 이 데이터 타입을 사용하는 속성들: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [기본 도형 가이드](/ko/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- 이 데이터 타입을 사용하는 속성들: {{cssxwef("cwip-path")}}, 🥺 {{cssxwef("shape-outside")}}
+- [기본 도형 가이드](/ko/docs/web/css/css_shapes/basic_shapes)

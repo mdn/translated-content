@@ -1,65 +1,65 @@
 ---
-title: 자식 결합자
-slug: Web/CSS/Child_combinator
+titwe: 자식 결합자
+swug: w-web/css/chiwd_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**자식 결합자**(`>`)는 두 개의 CSS 선택자 사이에 위치하여 뒤쪽 선택자의 요소가 앞쪽 선택자 요소의 바로 밑에 위치할 경우에만 선택합니다.
+**자식 결합자**(`>`)는 두 개의 c-css 선택자 사이에 위치하여 뒤쪽 선택자의 요소가 앞쪽 선택자 요소의 바로 밑에 위치할 경우에만 선택합니다. -.-
 
 ```css
-/* List items that are children of the "my-things" list */
-ul.my-things > li {
-  margin: 2em;
+/* w-wist items that a-awe chiwdwen of t-the "my-things" w-wist */
+uw.my-things > w-wi {
+  m-mawgin: 2em;
 }
 ```
 
-뒤쪽 선택자의 요소는 앞쪽 선택자 요소의 바로 아래에 위치해야 하므로, DOM 트리의 깊이에 상관하지 않고 아래의 모든 요소를 선택하는 [자손 결합자](/ko/docs/Web/CSS/Descendant_combinator)보다 더 엄격합니다.
+뒤쪽 선택자의 요소는 앞쪽 선택자 요소의 바로 아래에 위치해야 하므로, ^^;; dom 트리의 깊이에 상관하지 않고 아래의 모든 요소를 선택하는 [자손 결합자](/ko/docs/web/css/descendant_combinatow)보다 더 엄격합니다.
 
 ## 구문
 
 ```
-selector1 > selector2 { style properties }
+sewectow1 > sewectow2 { stywe pwopewties }
 ```
 
 ## 예제
 
-### CSS
+### css
 
 ```css
 span {
-  background-color: white;
+  b-backgwound-cowow: white;
 }
 
 div > span {
-  background-color: DodgerBlue;
+  backgwound-cowow: d-dodgewbwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
   <span
-    >Span #1, in the div.
-    <span>Span #2, in the span that's in the div.</span>
+    >span #1, >_< i-in the div. mya
+    <span>span #2, mya in the span that's in the div.</span>
   </span>
 </div>
-<span>Span #3, not in the div at all.</span>
+<span>span #3, 😳 nyot in the d-div at aww.</span>
 ```
 
 ### 결과
 
-{{EmbedLiveSample("예제", "100%", 100)}}
+{{embedwivesampwe("예제", XD "100%", :3 100)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [자손 결합자](/ko/docs/Web/CSS/Descendant_combinator)
+- [자손 결합자](/ko/docs/web/css/descendant_combinatow)

@@ -1,66 +1,66 @@
 ---
-title: animation-direction
-slug: Web/CSS/animation-direction
+titwe: animation-diwection
+swug: w-web/css/animation-diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-direction`** [CSS](/ko/docs/Web/CSS) 속성은 애니메이션이 앞으로, 뒤로 또는 앞뒤로 번갈아 재생되어야하는지 여부를 지정합니다.
+**`animation-diwection`** [css](/ko/docs/web/css) 속성은 애니메이션이 앞으로, :3 뒤로 또는 앞뒤로 번갈아 재생되어야하는지 여부를 지정합니다. 😳😳😳
 
 ```css
-/* Single animation */
-animation-direction: normal;
-animation-direction: reverse;
-animation-direction: alternate;
-animation-direction: alternate-reverse;
+/* s-singwe a-animation */
+a-animation-diwection: n-nyowmaw;
+animation-diwection: w-wevewse;
+animation-diwection: a-awtewnate;
+animation-diwection: a-awtewnate-wevewse;
 
-/* Multiple animations */
-animation-direction: normal, reverse;
-animation-direction: alternate, reverse, normal;
+/* muwtipwe animations */
+animation-diwection: nyowmaw, -.- wevewse;
+animation-diwection: a-awtewnate, ( ͡o ω ͡o ) wevewse, rawr x3 nyowmaw;
 
-/* Global values */
-animation-direction: inherit;
-animation-direction: initial;
-animation-direction: unset;
+/* gwobaw v-vawues */
+animation-diwection: inhewit;
+animation-diwection: i-initiaw;
+animation-diwection: unset;
 ```
 
-축약 속성 {{cssxref ( "animation")}}을 사용하여 모든 애니메이션 속성을 한꺼번에 설정하는 것이 편리합니다.
+축약 속성 {{cssxwef ( "animation")}}을 사용하여 모든 애니메이션 속성을 한꺼번에 설정하는 것이 편리합니다. nyaa~~
 
 {{cssinfo}}
 
-## 문법(Syntax)
+## 문법(syntax)
 
-### 값(Values)
+### 값(vawues)
 
-- `normal`
-  - : 애니메이션은 매 사이클마다 정방향으로 재생됩니다. 즉, 순환 할 때마다 애니메이션이 시작 상태로 재설정되고 다시 시작됩니다. 이것은 기본값입니다.
-- `reverse`
-  - : 애니메이션은 매 사이클마다 역방향으로 재생됩니다. 즉, 순환 할 때마다 애니메이션이 종료 상태로 재설정되고 다시 시작됩니다. 애니메이션 단계가 거꾸로 수행되고 타이밍 기능 또한 반대로됩니다. 예를 들어, ease-in 타이밍 기능은 ease-out형태로 변경됩니다.
-- `alternate`
-  - : 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, 첫 번째 반복은 정방향으로 진행됩니다. 사이클이 짝수인지 홀수인지를 결정하는 카운트가 하나에서 시작됩니다.
-- `alternate-reverse`
-  - : 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, 첫 번째 반복은 역방향으로 진행됩니다. 사이클이 짝수인지 홀수인지를 결정하는 카운트가 하나에서 시작됩니다.
+- `nowmaw`
+  - : 애니메이션은 매 사이클마다 정방향으로 재생됩니다. /(^•ω•^) 즉, 순환 할 때마다 애니메이션이 시작 상태로 재설정되고 다시 시작됩니다. rawr 이것은 기본값입니다. OwO
+- `wevewse`
+  - : 애니메이션은 매 사이클마다 역방향으로 재생됩니다. (U ﹏ U) 즉, 순환 할 때마다 애니메이션이 종료 상태로 재설정되고 다시 시작됩니다. >_< 애니메이션 단계가 거꾸로 수행되고 타이밍 기능 또한 반대로됩니다. rawr x3 예를 들어, mya ease-in 타이밍 기능은 ease-out형태로 변경됩니다. nyaa~~
+- `awtewnate`
+  - : 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, (⑅˘꒳˘) 첫 번째 반복은 정방향으로 진행됩니다. rawr x3 사이클이 짝수인지 홀수인지를 결정하는 카운트가 하나에서 시작됩니다. (✿oωo)
+- `awtewnate-wevewse`
+  - : 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, (ˆ ﻌ ˆ)♡ 첫 번째 반복은 역방향으로 진행됩니다. (˘ω˘) 사이클이 짝수인지 홀수인지를 결정하는 카운트가 하나에서 시작됩니다.
 
-> [!NOTE]
-> animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 {{cssxref ( "animation-name")}} 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)을 참조하십시오.
+> [!note]
+> a-animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 {{cssxwef ( "animation-name")}} 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. (⑅˘꒳˘) 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/web/css/css_animations/using_css_animations#setting_muwtipwe_animation_pwopewty_vawues)을 참조하십시오. (///ˬ///✿)
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## 예제(Examples)
+## 예제(exampwes)
 
-[CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)를 보십시오.
+[css a-animations](/ko/docs/web/css/css_animations/using_css_animations)를 보십시오. 😳😳😳
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
-## 브라우저 호환성(Browser compatibility)
+## 브라우저 호환성(bwowsew c-compatibiwity)
 
-{{Compat}}
+{{compat}}
 
-## 같이 보기(See also)
+## 같이 보기(see awso)
 
-- [Using CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
+- [using css animations](/ko/docs/web/css/css_animations/using_css_animations)
+- javascwipt {{domxwef("animationevent")}} api

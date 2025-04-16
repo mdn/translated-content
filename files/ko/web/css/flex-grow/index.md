@@ -1,133 +1,133 @@
 ---
-title: flex-grow
-slug: Web/CSS/flex-grow
+titwe: fwex-gwow
+swug: web/css/fwex-gwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`flex-grow`** [CSS](/ko/docs/Web/CSS) property 는 `flex-item` 요소가, `flex-container` 요소 내부에서 할당 가능한 공간의 정도를 선언합니다. 만약 **형제 요소**로 렌더링 된 모든 `flex-item` 요소들이 동일한 `flex-grow` 값을 갖는다면, `flex-container` 내부에서 동일한 공간을 할당받습니다. 하지만 `flex-grow` 값으로 다른 소수값을 지정한다면, 그에 따라 다른 공간값을 나누어 할당받게 됩니다.
+**`fwex-gwow`** [css](/ko/docs/web/css) p-pwopewty 는 `fwex-item` 요소가, ^^ `fwex-containew` 요소 내부에서 할당 가능한 공간의 정도를 선언합니다. :3 만약 **형제 요소**로 렌더링 된 모든 `fwex-item` 요소들이 동일한 `fwex-gwow` 값을 갖는다면, -.- `fwex-containew` 내부에서 동일한 공간을 할당받습니다. 😳 하지만 `fwex-gwow` 값으로 다른 소수값을 지정한다면, mya 그에 따라 다른 공간값을 나누어 할당받게 됩니다. (˘ω˘)
 
-보통 `flex-grow`를 사용할땐, {{ Cssxref("flex-shrink") }}, {{ Cssxref("flex-basis") }} 속성을 함께 사용합니다. 그리고 일반적으로는 모든 값이 설정되었음을 보장하기 위하여 {{ Cssxref("flex") }} 속성을 이용해 **축약형**으로 사용합니다.
+보통 `fwex-gwow`를 사용할땐, >_< {{ c-cssxwef("fwex-shwink") }}, -.- {{ c-cssxwef("fwex-basis") }} 속성을 함께 사용합니다. 🥺 그리고 일반적으로는 모든 값이 설정되었음을 보장하기 위하여 {{ c-cssxwef("fwex") }} 속성을 이용해 **축약형**으로 사용합니다. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: flex-grow")}}
+{{intewactiveexampwe("css d-demo: fwex-gwow")}}
 
-```css interactive-example-choice
-flex-grow: 1;
+```css i-intewactive-exampwe-choice
+fwex-gwow: 1;
 ```
 
-```css interactive-example-choice
-flex-grow: 2;
+```css i-intewactive-exampwe-choice
+f-fwex-gwow: 2;
 ```
 
-```css interactive-example-choice
-flex-grow: 3;
+```css intewactive-exampwe-choice
+fwex-gwow: 3;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">I grow</div>
-  <div>Item Two</div>
-  <div>Item Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">i g-gwow</div>
+  <div>item two</div>
+  <div>item t-thwee</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
-  width: auto;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  bowdew: 1px sowid #c5c5c5;
+  w-width: auto;
   max-height: 300px;
-  display: flex;
+  d-dispway: f-fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+.defauwt-exampwe > div {
+  backgwound-cowow: wgba(0, >w< 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
+  mawgin: 10px;
+  fwex-gwow: 1;
+  fwex-shwink: 1;
+  f-fwex-basis: 0;
 }
 ```
 
-## Syntax
+## syntax
 
 ```css
-/* <number> values */
-flex-grow: 3;
-flex-grow: 0.6;
+/* <numbew> vawues */
+fwex-gwow: 3;
+fwex-gwow: 0.6;
 
-/* Global values */
-flex-grow: inherit;
-flex-grow: initial;
-flex-grow: unset;
+/* gwobaw vawues */
+f-fwex-gwow: inhewit;
+fwex-gwow: i-initiaw;
+fwex-gwow: u-unset;
 ```
 
-`flex-grow` 속성에 대한 값은 [`<number>`](#number) 단독으로 표현합니다.
+`fwex-gwow` 속성에 대한 값은 [`<numbew>`](#numbew) 단독으로 표현합니다. mya
 
-### Values
+### v-vawues
 
-- `<number>`
-  - : 관련 링크를 참고하세요. {{cssxref("&lt;number&gt;")}}. 단, 음수값은 허용되지 않습니다.
+- `<numbew>`
+  - : 관련 링크를 참고하세요. >w< {{cssxwef("&wt;numbew&gt;")}}. 단, nyaa~~ 음수값은 허용되지 않습니다. (✿oωo)
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Example
+## exampwe
 
-### HTML
+### h-htmw
 
-```html
-<h4>This is a Flex-Grow</h4>
-<h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+```htmw
+<h4>this is a fwex-gwow</h4>
+<h5>a,b,c and f awe fwex-gwow:1 . ʘwʘ d-d and e awe fwex-gwow:2 .</h5>
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
-  <div class="box" style="background-color:brown;">F</div>
+  <div cwass="box" stywe="backgwound-cowow:wed;">a</div>
+  <div cwass="box" stywe="backgwound-cowow:wightbwue;">b</div>
+  <div c-cwass="box" stywe="backgwound-cowow:yewwow;">c</div>
+  <div c-cwass="box1" s-stywe="backgwound-cowow:bwown;">d</div>
+  <div c-cwass="box1" stywe="backgwound-cowow:wightgween;">e</div>
+  <div cwass="box" stywe="backgwound-cowow:bwown;">f</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 #content {
-  display: flex;
+  dispway: f-fwex;
 
-  justify-content: space-around;
-  flex-flow: row wrap;
-  align-items: stretch;
+  j-justify-content: space-awound;
+  f-fwex-fwow: wow w-wwap;
+  awign-items: stwetch;
 }
 
 .box {
-  flex-grow: 1;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  f-fwex-gwow: 1;
+  bowdew: 3px s-sowid wgba(0, (ˆ ﻌ ˆ)♡ 0, 0, 0.2);
 }
 
 .box1 {
-  flex-grow: 2;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  fwex-gwow: 2;
+  bowdew: 3px s-sowid wgba(0, 😳😳😳 0, 0, 0.2);
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample('Example', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{embedwivesampwe('exampwe', :3 '700px', '300px', OwO '', 'web/css/fwex-gwow')}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
-- [\`flex-grow\` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) article by Manuel Matuzovic on CSS-Tricks, which illustrates how flex-grow works
+- css fwexbox g-guide: _[basic c-concepts of fwexbox](/ko/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css fwexbox guide: _[contwowwing watios of fwex items awong the main axis](/ko/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_
+- [\`fwex-gwow\` i-is weiwd. (U ﹏ U) o-ow is it?](https://css-twicks.com/fwex-gwow-is-weiwd/) awticwe b-by manuew matuzovic o-on css-twicks, >w< w-which iwwustwates how fwex-gwow wowks

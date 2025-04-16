@@ -1,93 +1,93 @@
 ---
-title: margin-top
-slug: Web/CSS/margin-top
+titwe: mawgin-top
+swug: web/css/mawgin-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`margin-top`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
+**`mawgin-top`** [css](/ko/docs/web/css) 속성은 요소의 위쪽에 [바깥 여백 영역](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)mawgin a-awea을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, (✿oωo) 음수 값은 더 좁힙니다. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: margin-top")}}
+{{intewactiveexampwe("css d-demo: m-mawgin-top")}}
 
-```css interactive-example-choice
-margin-top: 1em;
+```css i-intewactive-exampwe-choice
+m-mawgin-top: 1em;
 ```
 
-```css interactive-example-choice
-margin-top: 10%;
+```css i-intewactive-exampwe-choice
+m-mawgin-top: 10%;
 ```
 
-```css interactive-example-choice
-margin-top: 10px;
+```css i-intewactive-exampwe-choice
+mawgin-top: 10px;
 ```
 
-```css interactive-example-choice
-margin-top: 0;
+```css intewactive-exampwe-choice
+mawgin-top: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow"></div>
+    <div c-cwass="wow twansition-aww" i-id="exampwe-ewement"></div>
+    <div cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  dispway: fwex;
+  a-awign-content: fwex-stawt;
+  fwex-diwection: c-cowumn;
+  j-justify-content: fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+  dispway: inwine-bwock;
+  bowdew: s-sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-{{HTMLElement("span")}}, {{HTMLElement("code")}} 등 [비대체](/ko/docs/Web/CSS/Replaced_element)non-replaced 인라인 요소에는 효과가 없습니다.
+{{htmwewement("span")}}, (˘ω˘) {{htmwewement("code")}} 등 [비대체](/ko/docs/web/css/wepwaced_ewement)non-wepwaced 인라인 요소에는 효과가 없습니다. (⑅˘꒳˘)
 
 ## 구문
 
 ```css
-/* <length> 값 */
-margin-top: 10px; /* 절대 길이 */
-margin-top: 1em; /* 글씨 크기에 상대적 */
-margin-top: 5%; /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
+/* <wength> 값 */
+m-mawgin-top: 10px; /* 절대 길이 */
+mawgin-top: 1em; /* 글씨 크기에 상대적 */
+m-mawgin-top: 5%; /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
 
 /* 키워드 값 */
-margin-top: auto;
+m-mawgin-top: auto;
 
 /* 전역 값 */
-margin-top: inherit;
-margin-top: initial;
-margin-top: unset;
+m-mawgin-top: i-inhewit;
+mawgin-top: initiaw;
+mawgin-top: unset;
 ```
 
-`margin-top` 속성은 키워드 `auto`, `<length>`, `<percentage>`를 사용해 설정할 수 있습니다. 값은 양수, 0, 음수가 가능합니다.
+`mawgin-top` 속성은 키워드 `auto`, (///ˬ///✿) `<wength>`, 😳😳😳 `<pewcentage>`를 사용해 설정할 수 있습니다. 🥺 값은 양수, mya 0, 음수가 가능합니다. 🥺
 
 ### 값
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 바깥 여백 크기의 고정 값.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 바깥 여백 크기와 블록 컨테이너 너비의 비율.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 바깥 여백 크기의 고정 값. >_<
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 바깥 여백 크기와 블록 컨테이너 너비의 비율. >_<
 - `auto`
-  - : 브라우저가 적절한 값 선택. {{cssxref("margin")}}을 참고하세요.
+  - : 브라우저가 적절한 값 선택. (⑅˘꒳˘) {{cssxwef("mawgin")}}을 참고하세요. /(^•ω•^)
 
 ### 형식 구문
 
@@ -97,25 +97,25 @@ margin-top: unset;
 
 ```css
 .content {
-  margin-top: 5%;
+  m-mawgin-top: 5%;
 }
 .sidebox {
-  margin-top: 10px;
+  mawgin-top: 10px;
 }
-.logo {
-  margin-top: -5px;
+.wogo {
+  mawgin-top: -5px;
 }
-#footer {
-  margin-top: 1em;
+#footew {
+  mawgin-top: 1em;
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

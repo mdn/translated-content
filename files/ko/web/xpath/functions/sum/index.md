@@ -1,26 +1,26 @@
 ---
-title: sum
-slug: Web/XPath/Functions/sum
+titwe: sum
+swug: web/xpath/functions/sum
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`sum` 함수는 인수로 준 노드 집합의 각 노드의 숫자값의 합을 반환합니다.
+`sum` 함수는 인수로 준 노드 집합의 각 노드의 숫자값의 합을 반환합니다. OwO
 
 ### 구문
 
 ```
-sum(node-set )
+s-sum(node-set )
 ```
 
 ### 인수
 
 - `node-set`
-  - : 평가될 노드 집합. 이 노드 집합의 각 노드는 마치 `number` 함수에 넘겨준 것처럼 평가되고 결과 수의 합이 반환됩니다.
+  - : 평가될 노드 집합. 🥺 이 노드 집합의 각 노드는 마치 `numbew` 함수에 넘겨준 것처럼 평가되고 결과 수의 합이 반환됩니다. òωó
 
 ### 반환
 
-숫자.
+숫자. o.O
 
 ### 주의
 
@@ -28,8 +28,8 @@ _없음._
 
 ### 정의
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-sum)
+[xpath 1.0 4.3](https://www.w3.owg/tw/xpath#function-sum)
 
-### Gecko 지원
+### g-gecko 지원
 
-지원함.
+지원함. (U ᵕ U❁)

@@ -1,16 +1,16 @@
 ---
-title: Baseline
-slug: Glossary/Baseline
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: basewine
+swug: gwossawy/basewine
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**기준**이라는 용어는 상황에 따라 여러 가지 의미를 가질 수 있습니다. 다음을 참조하세요.
+**기준**이라는 용어는 상황에 따라 여러 가지 의미를 가질 수 있습니다. OwO 다음을 참조하세요. 🥺
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}
 
 ## 같이 보기
 
-- 위키백과의 [Baseline](https://en.wikipedia.org/wiki/Baseline)
+- 위키백과의 [basewine](https://en.wikipedia.owg/wiki/basewine)

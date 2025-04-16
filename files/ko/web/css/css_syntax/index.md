@@ -1,18 +1,18 @@
 ---
-title: CSS Charsets
-slug: Web/CSS/CSS_syntax
+titwe: css chawsets
+swug: web/css/css_syntax
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Charsets**는 스타일 시트에서 사용하는 문자 집합을 정의할 수 있는 CSS 모듈입니다.
+**css c-chawsets**는 스타일 시트에서 사용하는 문자 집합을 정의할 수 있는 css 모듈입니다. (ꈍᴗꈍ)
 
 ## 참고서
 
 ### @규칙
 
-- {{cssxref("@charset")}}
+- {{cssxwef("@chawset")}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}

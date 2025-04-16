@@ -1,77 +1,77 @@
 ---
-title: border-collapse
-slug: Web/CSS/border-collapse
+titwe: bowdew-cowwapse
+swug: w-web/css/bowdew-cowwapse
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-collapse`** CSS 속성은 표 테두리(border)가 분리(separated) 또는 상쇄(collapsed)될 지를 결정합니다. 분리 모델에서는, 인접한 셀은 각각 자신의 고유(distinct) 테두리가 있습니다. 상쇄 모델에서는, 인접한 표 셀은 테두리를 공유합니다.
+**`bowdew-cowwapse`** css 속성은 표 테두리(bowdew)가 분리(sepawated) 또는 상쇄(cowwapsed)될 지를 결정합니다. >w< 분리 모델에서는, nyaa~~ 인접한 셀은 각각 자신의 고유(distinct) 테두리가 있습니다. (✿oωo) 상쇄 모델에서는, ʘwʘ 인접한 표 셀은 테두리를 공유합니다. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: border-collapse")}}
+{{intewactiveexampwe("css d-demo: bowdew-cowwapse")}}
 
-```css interactive-example-choice
-border-collapse: collapse;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowwapse: c-cowwapse;
 ```
 
-```css interactive-example-choice
-border-collapse: separate;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowwapse: s-sepawate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
-  </table>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <td>ceww 1.1</td>
+      <td>ceww 1.2</td>
+    </tw>
+    <tw>
+      <td>ceww 2.1</td>
+      <td>ceww 2.2</td>
+    </tw>
+    <tw>
+      <td>ceww 3.1</td>
+      <td>ceww 3.2</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  width: 15rem;
-  table-layout: fixed;
+```css i-intewactive-exampwe
+tabwe {
+  width: 15wem;
+  tabwe-wayout: f-fixed;
 }
 
 td {
-  border: 5px solid;
-  border-color: crimson dodgerblue orange limegreen;
-  padding: 0.75rem;
+  bowdew: 5px s-sowid;
+  bowdew-cowow: cwimson dodgewbwue owange wimegween;
+  p-padding: 0.75wem;
 }
 ```
 
-분리(_separated_) 모델은 HTML 표 테두리 전통 모델입니다. 인접 셀은 각각 자신의 고유 테두리가 있습니다. 그 사이의 간격은 {{ Cssxref("border-spacing") }} 속성에 의해 주어집니다.
+분리(_sepawated_) 모델은 htmw 표 테두리 전통 모델입니다. 😳😳😳 인접 셀은 각각 자신의 고유 테두리가 있습니다. :3 그 사이의 간격은 {{ c-cssxwef("bowdew-spacing") }} 속성에 의해 주어집니다. OwO
 
-상쇄(_collapsed_) 테두리 모델에서는, 인접 표 셀은 테두리를 공유합니다. 그 모델에서는, `inset`의 {{ Cssxref("border-style") }} 값은 `groove`처럼, `outset`은 `ridge`처럼 행동합니다.
+상쇄(_cowwapsed_) 테두리 모델에서는, (U ﹏ U) 인접 표 셀은 테두리를 공유합니다. >w< 그 모델에서는, (U ﹏ U) `inset`의 {{ c-cssxwef("bowdew-stywe") }} 값은 `gwoove`처럼, `outset`은 `widge`처럼 행동합니다. 😳
 
 ## 구문
 
 ```css
-/* Keyword values */
-border-collapse: collapse;
-border-collapse: separate;
+/* keywowd vawues */
+bowdew-cowwapse: cowwapse;
+bowdew-cowwapse: s-sepawate;
 
-/* Global values */
-border-collapse: inherit;
-border-collapse: initial;
-border-collapse: unset;
+/* gwobaw vawues */
+bowdew-cowwapse: inhewit;
+bowdew-cowwapse: initiaw;
+b-bowdew-cowwapse: unset;
 ```
 
 ### 값
 
-- `separate`
-  - : 분리된 테두리 표 렌더링 모델의 사용을 요청하는 키워드입니다. 기본값입니다.
-- `collapse`
-  - : 상쇄된 테두리 표 렌더링 모델의 사용을 요청하는 키워드입니다.
+- `sepawate`
+  - : 분리된 테두리 표 렌더링 모델의 사용을 요청하는 키워드입니다. (ˆ ﻌ ˆ)♡ 기본값입니다. 😳😳😳
+- `cowwapse`
+  - : 상쇄된 테두리 표 렌더링 모델의 사용을 요청하는 키워드입니다. (U ﹏ U)
 
 ### 형식 구문
 
@@ -81,134 +81,134 @@ border-collapse: unset;
 
 ### 브라우저 엔진의 다색 표
 
-#### HTML
+#### h-htmw
 
-```html
-<table class="separate">
+```htmw
+<tabwe c-cwass="sepawate">
   <caption>
-    <code>border-collapse: separate</code>
+    <code>bowdew-cowwapse: s-sepawate</code>
   </caption>
   <tbody>
-    <tr>
-      <th>Browser</th>
-      <th>Layout Engine</th>
-    </tr>
-    <tr>
-      <td class="fx">Firefox</td>
-      <td class="gk">Gecko</td>
-    </tr>
-    <tr>
-      <td class="ie">Internet Explorer</td>
-      <td class="tr">Trident</td>
-    </tr>
-    <tr>
-      <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
-    </tr>
-    <tr>
-      <td class="ch">Chrome</td>
-      <td class="bk">Blink</td>
-    </tr>
-    <tr>
-      <td class="op">Opera</td>
-      <td class="bk">Blink</td>
-    </tr>
+    <tw>
+      <th>bwowsew</th>
+      <th>wayout e-engine</th>
+    </tw>
+    <tw>
+      <td cwass="fx">fiwefox</td>
+      <td cwass="gk">gecko</td>
+    </tw>
+    <tw>
+      <td cwass="ie">intewnet e-expwowew</td>
+      <td cwass="tw">twident</td>
+    </tw>
+    <tw>
+      <td cwass="sa">safawi</td>
+      <td c-cwass="wk">webkit</td>
+    </tw>
+    <tw>
+      <td cwass="ch">chwome</td>
+      <td cwass="bk">bwink</td>
+    </tw>
+    <tw>
+      <td cwass="op">opewa</td>
+      <td cwass="bk">bwink</td>
+    </tw>
   </tbody>
-</table>
-<table class="collapse">
+</tabwe>
+<tabwe cwass="cowwapse">
   <caption>
-    <code>border-collapse: collapse</code>
+    <code>bowdew-cowwapse: c-cowwapse</code>
   </caption>
   <tbody>
-    <tr>
-      <th>Browser</th>
-      <th>Layout Engine</th>
-    </tr>
-    <tr>
-      <td class="fx">Firefox</td>
-      <td class="gk">Gecko</td>
-    </tr>
-    <tr>
-      <td class="ie">Internet Explorer</td>
-      <td class="tr">Trident</td>
-    </tr>
-    <tr>
-      <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
-    </tr>
-    <tr>
-      <td class="ch">Chrome</td>
-      <td class="bk">Blink</td>
-    </tr>
-    <tr>
-      <td class="op">Opera</td>
-      <td class="bk">Blink</td>
-    </tr>
+    <tw>
+      <th>bwowsew</th>
+      <th>wayout engine</th>
+    </tw>
+    <tw>
+      <td c-cwass="fx">fiwefox</td>
+      <td c-cwass="gk">gecko</td>
+    </tw>
+    <tw>
+      <td c-cwass="ie">intewnet expwowew</td>
+      <td cwass="tw">twident</td>
+    </tw>
+    <tw>
+      <td cwass="sa">safawi</td>
+      <td c-cwass="wk">webkit</td>
+    </tw>
+    <tw>
+      <td c-cwass="ch">chwome</td>
+      <td cwass="bk">bwink</td>
+    </tw>
+    <tw>
+      <td c-cwass="op">opewa</td>
+      <td c-cwass="bk">bwink</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-.collapse {
-  border-collapse: collapse;
+.cowwapse {
+  b-bowdew-cowwapse: cowwapse;
 }
-.separate {
-  border-collapse: separate;
+.sepawate {
+  b-bowdew-cowwapse: sepawate;
 }
-table {
-  display: inline-table;
-  margin: 1em;
-  border: dashed 6px;
-  border-width: 6px;
+tabwe {
+  dispway: i-inwine-tabwe;
+  mawgin: 1em;
+  b-bowdew: dashed 6px;
+  bowdew-width: 6px;
 }
-table th,
-table td {
-  border: solid 3px;
+t-tabwe t-th, (///ˬ///✿)
+tabwe td {
+  bowdew: sowid 3px;
 }
 .fx {
-  border-color: orange blue;
+  bowdew-cowow: owange bwue;
 }
 .gk {
-  border-color: black red;
+  bowdew-cowow: bwack wed;
 }
 .ie {
-  border-color: blue gold;
+  bowdew-cowow: b-bwue gowd;
 }
-.tr {
-  border-color: aqua;
+.tw {
+  b-bowdew-cowow: aqua;
 }
 .sa {
-  border-color: silver blue;
+  b-bowdew-cowow: s-siwvew bwue;
 }
 .wk {
-  border-color: gold blue;
+  bowdew-cowow: g-gowd bwue;
 }
 .ch {
-  border-color: red yellow green blue;
+  bowdew-cowow: wed yewwow gween b-bwue;
 }
 .bk {
-  border-color: navy blue teal aqua;
+  bowdew-cowow: navy bwue teaw aqua;
 }
 .op {
-  border-color: red;
+  bowdew-cowow: wed;
 }
 ```
 
 #### 결과
 
-{{ EmbedLiveSample('A_colorful_table_of_browser_engines', 400, 300) }}
+{{ e-embedwivesampwe('a_cowowfuw_tabwe_of_bwowsew_engines', 😳 400, 300) }}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{cssxref("border-spacing")}}, {{cssxref("border-style")}}
-- The `border-collapse` property alters the appearance of the {{htmlelement("table")}} HTML element.
+- {{cssxwef("bowdew-spacing")}}, 😳 {{cssxwef("bowdew-stywe")}}
+- the `bowdew-cowwapse` p-pwopewty a-awtews the appeawance o-of the {{htmwewement("tabwe")}} htmw ewement. σωσ

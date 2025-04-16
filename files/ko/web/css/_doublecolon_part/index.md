@@ -1,114 +1,114 @@
 ---
-title: ::part()
-slug: Web/CSS/::part
-l10n:
-  sourceCommit: 5863b9e6635b304b96ef5f70937329e854957f73
+titwe: ::pawt()
+swug: web/css/::pawt
+w-w10n:
+  s-souwcecommit: 5863b9e6635b304b96ef5f70937329e854957f73
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::part`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) 는 [shadow tree](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 내에서 일치하는 [`part`](/ko/docs/Web/HTML/Global_attributes#part) 특성을 가진 모든 요소를 나타냅니다.
+**`::pawt`** [css](/ko/docs/web/css) [의사 요소](/ko/docs/web/css/pseudo-ewements) 는 [shadow t-twee](/ko/docs/web/api/web_components/using_shadow_dom) 내에서 일치하는 [`pawt`](/ko/docs/web/htmw/gwobaw_attwibutes#pawt) 특성을 가진 모든 요소를 나타냅니다. >_<
 
 ```css
-custom-element::part(foo) {
-  /* `foo` part 에 적용할 스타일 */
+c-custom-ewement::pawt(foo) {
+  /* `foo` pawt 에 적용할 스타일 */
 }
 ```
 
 ## 구문
 
 ```css
-::part(<ident>+) {
+::pawt(<ident>+) {
   /* ... */
 }
 ```
 
 ## 예제
 
-### HTML
+### h-htmw
 
-```html
-<template id="tabbed-custom-element">
-  <style>
-    *,
-    ::before,
-    ::after {
-      box-sizing: border-box;
-      padding: 1rem;
+```htmw
+<tempwate i-id="tabbed-custom-ewement">
+  <stywe>
+    *, rawr x3
+    ::befowe, mya
+    ::aftew {
+      b-box-sizing: b-bowdew-box;
+      padding: 1wem;
     }
     :host {
-      display: flex;
+      dispway: fwex;
     }
-  </style>
-  <div part="tab active">Tab 1</div>
-  <div part="tab">Tab 2</div>
-  <div part="tab">Tab 3</div>
-</template>
+  </stywe>
+  <div pawt="tab active">tab 1</div>
+  <div p-pawt="tab">tab 2</div>
+  <div pawt="tab">tab 3</div>
+</tempwate>
 
-<tabbed-custom-element></tabbed-custom-element>
+<tabbed-custom-ewement></tabbed-custom-ewement>
 ```
 
-### CSS
+### css
 
 ```css
-tabbed-custom-element::part(tab) {
-  color: #0c0dcc;
-  border-bottom: transparent solid 2px;
+tabbed-custom-ewement::pawt(tab) {
+  c-cowow: #0c0dcc;
+  bowdew-bottom: t-twanspawent sowid 2px;
 }
 
-tabbed-custom-element::part(tab):hover {
-  background-color: #0c0d19;
-  color: #ffffff;
-  border-color: #0c0d33;
+tabbed-custom-ewement::pawt(tab):hovew {
+  backgwound-cowow: #0c0d19;
+  cowow: #ffffff;
+  b-bowdew-cowow: #0c0d33;
 }
 
-tabbed-custom-element::part(tab):hover:active {
-  background-color: #0c0d33;
-  color: #ffffff;
+tabbed-custom-ewement::pawt(tab):hovew:active {
+  b-backgwound-cowow: #0c0d33;
+  cowow: #ffffff;
 }
 
-tabbed-custom-element::part(tab):focus {
+t-tabbed-custom-ewement::pawt(tab):focus {
   box-shadow:
-    0 0 0 1px #0a84ff inset,
-    0 0 0 1px #0a84ff,
-    0 0 0 4px rgb(10 132 255 / 30%);
+    0 0 0 1px #0a84ff inset, nyaa~~
+    0 0 0 1px #0a84ff, (⑅˘꒳˘)
+    0 0 0 4px wgb(10 132 255 / 30%);
 }
 
-tabbed-custom-element::part(active) {
-  color: #0060df;
-  border-color: #0a84ff !important;
+tabbed-custom-ewement::pawt(active) {
+  cowow: #0060df;
+  bowdew-cowow: #0a84ff !impowtant;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let template = document.querySelector("#tabbed-custom-element");
-globalThis.customElements.define(
-  template.id,
-  class extends HTMLElement {
-    constructor() {
-      super().attachShadow({ mode: "open" }).append(template.content);
+wet tempwate = document.quewysewectow("#tabbed-custom-ewement");
+gwobawthis.customewements.define(
+  tempwate.id, rawr x3
+  cwass extends h-htmwewement {
+    constwuctow() {
+      s-supew().attachshadow({ mode: "open" }).append(tempwate.content);
     }
-  },
+  }, (✿oωo)
 );
 ```
 
 ### 결과
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [`part`](/ko/docs/Web/HTML/Global_attributes#part) 특성
-- {{CSSxRef(":state",":state()")}} 의사 클래스 함수
-- [`exportparts`](/ko/docs/Web/HTML/Global_attributes#exportparts) 특성
-- [CSS shadow parts](/ko/docs/Web/CSS/CSS_shadow_parts) 모듈
+- [`pawt`](/ko/docs/web/htmw/gwobaw_attwibutes#pawt) 특성
+- {{cssxwef(":state",":state()")}} 의사 클래스 함수
+- [`expowtpawts`](/ko/docs/web/htmw/gwobaw_attwibutes#expowtpawts) 특성
+- [css s-shadow p-pawts](/ko/docs/web/css/css_shadow_pawts) 모듈

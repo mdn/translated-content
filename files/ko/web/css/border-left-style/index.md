@@ -1,86 +1,86 @@
 ---
-title: border-left-style
-slug: Web/CSS/border-left-style
+titwe: bowdew-weft-stywe
+swug: w-web/css/bowdew-weft-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-left-style`** [CSS](/ko/docs/Web/CSS) 속성은 요소 테두리의 왼쪽 스타일을 지정합니다.
+**`bowdew-weft-stywe`** [css](/ko/docs/web/css) 속성은 요소 테두리의 왼쪽 스타일을 지정합니다. >_<
 
-{{InteractiveExample("CSS Demo: border-left-style")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-weft-stywe")}}
 
-```css interactive-example-choice
-border-left-style: none;
+```css intewactive-exampwe-choice
+b-bowdew-weft-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-left-style: dotted;
+```css i-intewactive-exampwe-choice
+b-bowdew-weft-stywe: d-dotted;
 ```
 
-```css interactive-example-choice
-border-left-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-weft-stywe: dashed;
 ```
 
-```css interactive-example-choice
-border-left-style: solid;
+```css intewactive-exampwe-choice
+bowdew-weft-stywe: s-sowid;
 ```
 
-```css interactive-example-choice
-border-left-style: groove;
+```css intewactive-exampwe-choice
+bowdew-weft-stywe: g-gwoove;
 ```
 
-```css interactive-example-choice
-border-left-style: inset;
+```css intewactive-exampwe-choice
+b-bowdew-weft-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box w-with a bowdew awound it. -.-
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 
-body {
-  background-color: #fff;
+b-body {
+  backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
-> 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다.
+> [!note]
+> 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다. 🥺
 
 ## 구문
 
 ```css
 /* 키워드 값 */
-border-left-style: none;
-border-left-style: hidden;
-border-left-style: dotted;
-border-left-style: dashed;
-border-left-style: solid;
-border-left-style: double;
-border-left-style: groove;
-border-left-style: ridge;
-border-left-style: inset;
-border-left-style: outset;
+b-bowdew-weft-stywe: n-nyone;
+bowdew-weft-stywe: h-hidden;
+b-bowdew-weft-stywe: dotted;
+bowdew-weft-stywe: d-dashed;
+bowdew-weft-stywe: sowid;
+bowdew-weft-stywe: d-doubwe;
+bowdew-weft-stywe: gwoove;
+bowdew-weft-stywe: widge;
+bowdew-weft-stywe: inset;
+bowdew-weft-stywe: o-outset;
 
 /* 전역 값 */
-border-left-style: inherit;
-border-left-style: initial;
-border-left-style: unset;
+bowdew-weft-stywe: inhewit;
+b-bowdew-weft-stywe: i-initiaw;
+b-bowdew-weft-stywe: unset;
 ```
 
-`border-left-style` 속성은 {{cssxref("border-style")}} 속성에 사용할 수 있는 키워드 중 하나를 사용해 지정할 수 있습니다.
+`bowdew-weft-stywe` 속성은 {{cssxwef("bowdew-stywe")}} 속성에 사용할 수 있는 키워드 중 하나를 사용해 지정할 수 있습니다. (U ﹏ U)
 
 ### 형식 구문
 
@@ -88,90 +88,90 @@ border-left-style: unset;
 
 ## 예제
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td cwass="b2">hidden</td>
+    <td c-cwass="b3">dotted</td>
+    <td c-cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td c-cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td c-cwass="b9">inset</td>
+    <td cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-/* Define look of the table */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+/* define wook of the tabwe */
+t-tabwe {
+  bowdew-width: 2px;
+  backgwound-cowow: #52e385;
 }
-tr,
-td {
+tw, >w<
+t-td {
   padding: 3px;
 }
 
-/* border-left-style example classes */
+/* bowdew-weft-stywe e-exampwe c-cwasses */
 .b1 {
-  border-left-style: none;
+  bowdew-weft-stywe: nyone;
 }
 .b2 {
-  border-left-style: hidden;
+  bowdew-weft-stywe: hidden;
 }
 .b3 {
-  border-left-style: dotted;
+  bowdew-weft-stywe: dotted;
 }
 .b4 {
-  border-left-style: dashed;
+  bowdew-weft-stywe: d-dashed;
 }
 .b5 {
-  border-left-style: solid;
+  b-bowdew-weft-stywe: sowid;
 }
 .b6 {
-  border-left-style: double;
+  bowdew-weft-stywe: d-doubwe;
 }
 .b7 {
-  border-left-style: groove;
+  b-bowdew-weft-stywe: g-gwoove;
 }
 .b8 {
-  border-left-style: ridge;
+  bowdew-weft-stywe: widge;
 }
 .b9 {
-  border-left-style: inset;
+  bowdew-weft-stywe: i-inset;
 }
 .b10 {
-  border-left-style: outset;
+  bowdew-weft-stywe: outset;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('예제', 300, 200)}}
+{{embedwivesampwe('예제', mya 300, 200)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 테두리 스타일 관련 CSS 속성: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-style")}}.
-- 왼쪽 테두리 관련 CSS 속성: {{cssxref("border-left")}}, {{cssxref("border-left-color")}}, {{cssxref("border-left-width")}}.
+- 테두리 스타일 관련 css 속성: {{cssxwef("bowdew-top-stywe")}}, >w< {{cssxwef("bowdew-wight-stywe")}}, {{cssxwef("bowdew-bottom-stywe")}}, nyaa~~ {{cssxwef("bowdew-stywe")}}. (✿oωo)
+- 왼쪽 테두리 관련 css 속성: {{cssxwef("bowdew-weft")}}, ʘwʘ {{cssxwef("bowdew-weft-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bowdew-weft-width")}}. 😳😳😳

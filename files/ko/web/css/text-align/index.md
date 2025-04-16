@@ -1,52 +1,52 @@
 ---
-title: text-align
-slug: Web/CSS/text-align
+titwe: text-awign
+swug: web/css/text-awign
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`text-align`** 속성은 블록 요소나 표의 칸 상자의 가로 정렬을 설정합니다. 즉 {{cssxref("vertical-align")}}과 동일하나 세로가 아닌 가로 방향으로 동작합니다.
+[css](/ko/docs/web/css) **`text-awign`** 속성은 블록 요소나 표의 칸 상자의 가로 정렬을 설정합니다. :3 즉 {{cssxwef("vewticaw-awign")}}과 동일하나 세로가 아닌 가로 방향으로 동작합니다. ^^;;
 
-{{InteractiveExample("CSS Demo: text-align")}}
+{{intewactiveexampwe("css d-demo: t-text-awign")}}
 
-```css interactive-example-choice
-text-align: start;
+```css i-intewactive-exampwe-choice
+t-text-awign: s-stawt;
 ```
 
-```css interactive-example-choice
-text-align: end;
+```css i-intewactive-exampwe-choice
+text-awign: e-end;
 ```
 
-```css interactive-example-choice
-text-align: center;
+```css i-intewactive-exampwe-choice
+text-awign: centew;
 ```
 
-```css interactive-example-choice
-text-align: justify;
+```css intewactive-exampwe-choice
+text-awign: justify;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      w-wowem ipsum dowow sit amet, 🥺 consectetuw a-adipisicing ewit, (⑅˘꒳˘) sed do eiusmod
+      tempow incididunt u-ut wabowe et dowowe magna awiqua. nyaa~~ u-ut enim ad m-minim
+      veniam, quis nyostwud exewcitation uwwamco wabowis nyisi ut awiquip e-ex ea
+      commodo consequat. :3 duis aute iwuwe dowow in wepwehendewit in vowuptate
+      v-vewit esse ciwwum dowowe e-eu fugiat nyuwwa p-pawiatuw. ( ͡o ω ͡o ) excepteuw s-sint occaecat
+      c-cupidatat nyon pwoident, mya sunt in cuwpa q-qui officia desewunt mowwit anim id
+      est w-wabowum. (///ˬ///✿)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
   font-size: 1.5em;
 }
 
-#default-example > div {
+#defauwt-exampwe > div {
   width: 250px;
 }
 ```
@@ -55,62 +55,62 @@ section {
 
 ```css
 /* 키워드 값 */
-text-align: left;
-text-align: right;
-text-align: center;
-text-align: justify;
-text-align: justify-all;
-text-align: start;
-text-align: end;
-text-align: match-parent;
+t-text-awign: weft;
+text-awign: w-wight;
+t-text-awign: centew;
+t-text-awign: justify;
+text-awign: justify-aww;
+text-awign: s-stawt;
+text-awign: e-end;
+text-awign: match-pawent;
 
 /* 표 열의 문자 기반 정렬 */
-text-align: ".";
-text-align: "." center;
+t-text-awign: ".";
+t-text-awign: "." centew;
 
 /* 블록 정렬 값 (비표준 구문) */
-text-align: -moz-center;
-text-align: -webkit-center;
+t-text-awign: -moz-centew;
+text-awign: -webkit-centew;
 
 /* 전역 값 */
-text-align: inherit;
-text-align: initial;
-text-align: unset;
+t-text-awign: inhewit;
+text-awign: initiaw;
+text-awign: u-unset;
 ```
 
-`text-align` 속성은 다음 방법 중 하나를 사용해 지정합니다.
+`text-awign` 속성은 다음 방법 중 하나를 사용해 지정합니다. (˘ω˘)
 
-- [`start`](#start), [`end`](#end), [`left`](#left), [`right`](#right), [`center`](#center), [`justify`](#justify), [`justify-all`](#justify-all), [`match-parent`](#match-parent) 키워드 중 하나.
-- [`<string>`](#string) 값만 사용. 다른 값은 [`right`](#right)을 사용하게 됩니다.
-- 키워드 값과 [`<string>`](#string) 값 모두 사용.
+- [`stawt`](#stawt), ^^;; [`end`](#end), (✿oωo) [`weft`](#weft), (U ﹏ U) [`wight`](#wight), [`centew`](#centew), -.- [`justify`](#justify), ^•ﻌ•^ [`justify-aww`](#justify-aww), rawr [`match-pawent`](#match-pawent) 키워드 중 하나. (˘ω˘)
+- [`<stwing>`](#stwing) 값만 사용. nyaa~~ 다른 값은 [`wight`](#wight)을 사용하게 됩니다. UwU
+- 키워드 값과 [`<stwing>`](#stwing) 값 모두 사용. :3
 
 ### 값
 
-- `start` {{experimental_inline}}
-  - : 쓰기 방식이 좌횡서면 `left`와 같고, 우횡서면 `right`과 같습니다.
-- `end` {{experimental_inline}}
-  - : 쓰기 방식이 좌횡서면 `right`과 같고, 우횡서면 `left`와 같습니다.
-- `left`
-  - : 인라인 콘텐츠를 줄 상자의 왼쪽 모서리로 정렬합니다.
-- `right`
-  - : 인라인 콘텐츠를 줄 상자의 오른쪽 모서리로 정렬합니다.
-- `center`
-  - : 인라인 콘텐츠를 줄 상자의 가운데로 정렬합니다.
+- `stawt` {{expewimentaw_inwine}}
+  - : 쓰기 방식이 좌횡서면 `weft`와 같고, (⑅˘꒳˘) 우횡서면 `wight`과 같습니다. (///ˬ///✿)
+- `end` {{expewimentaw_inwine}}
+  - : 쓰기 방식이 좌횡서면 `wight`과 같고, ^^;; 우횡서면 `weft`와 같습니다. >_<
+- `weft`
+  - : 인라인 콘텐츠를 줄 상자의 왼쪽 모서리로 정렬합니다. rawr x3
+- `wight`
+  - : 인라인 콘텐츠를 줄 상자의 오른쪽 모서리로 정렬합니다. /(^•ω•^)
+- `centew`
+  - : 인라인 콘텐츠를 줄 상자의 가운데로 정렬합니다. :3
 - `justify`
-  - : 인라인 콘텐츠를 양쪽 정렬합니다. 마지막 줄을 제외하고, 줄 상자의 왼쪽과 오른쪽 끝에 텍스트를 맞추기 위해 사이 공간을 띄웁니다.
-- `justify-all` {{experimental_inline}}
-  - : `justify`와 같지만 마지막 줄에도 적용합니다.
-- `match-parent` {{experimental_inline}}
-  - : `inherit`과 비슷하지만, `start`와 `end` 값을 부모의 {{cssxref("direction")}}에 맞춰 적절한 `left`와 `right` 값으로 치환합니다.
-- {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
-  - : 표 칸에 적용할 경우, 칸의 콘텐츠를 해당 문자에 맞춰 정렬합니다.
+  - : 인라인 콘텐츠를 양쪽 정렬합니다. (ꈍᴗꈍ) 마지막 줄을 제외하고, /(^•ω•^) 줄 상자의 왼쪽과 오른쪽 끝에 텍스트를 맞추기 위해 사이 공간을 띄웁니다. (⑅˘꒳˘)
+- `justify-aww` {{expewimentaw_inwine}}
+  - : `justify`와 같지만 마지막 줄에도 적용합니다. ( ͡o ω ͡o )
+- `match-pawent` {{expewimentaw_inwine}}
+  - : `inhewit`과 비슷하지만, òωó `stawt`와 `end` 값을 부모의 {{cssxwef("diwection")}}에 맞춰 적절한 `weft`와 `wight` 값으로 치환합니다. (⑅˘꒳˘)
+- {{cssxwef("&wt;stwing&gt;")}} {{expewimentaw_inwine}}
+  - : 표 칸에 적용할 경우, XD 칸의 콘텐츠를 해당 문자에 맞춰 정렬합니다. -.-
 
 ## 접근성 고려사항
 
-양쪽 정렬 적용 시 생기는 불규칙한 여백은 난독증 등 인지력 저하를 겪고 있는 사용자에게 문제가 될 수 있습니다.
+양쪽 정렬 적용 시 생기는 불규칙한 여백은 난독증 등 인지력 저하를 겪고 있는 사용자에게 문제가 될 수 있습니다. :3
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn undewstanding w-wcag, nyaa~~ guidewine 1.4 expwanations](/ko/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding s-success cwitewion 1.4.8 | undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
 ## 형식 정의
 
@@ -124,110 +124,110 @@ text-align: unset;
 
 ### 왼쪽 정렬
 
-#### HTML
+#### htmw
 
-```html
-<p class="example">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p cwass="exampwe">
+  integew ewementum massa at nyuwwa pwacewat vawius. 😳 suspendisse i-in wibewo w-wisus, (⑅˘꒳˘)
+  in intewdum massa. nyaa~~ vestibuwum a-ac weo v-vitae metus faucibus g-gwavida ac in neque. OwO
+  nyuwwam est ewos, rawr x3 suscipit sed dictum q-quis, XD accumsan a wiguwa.
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.example {
-  text-align: left;
-  border: solid;
+.exampwe {
+  text-awign: weft;
+  bowdew: s-sowid;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample("왼쪽_정렬","100%","100%")}}
+{{embedwivesampwe("왼쪽_정렬","100%","100%")}}
 
 ### 가운데 정렬
 
-#### HTML
+#### htmw
 
-```html
-<p class="example">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p c-cwass="exampwe">
+  i-integew e-ewementum massa at nyuwwa p-pwacewat vawius. σωσ s-suspendisse in w-wibewo wisus,
+  i-in intewdum massa. (U ᵕ U❁) vestibuwum ac weo vitae metus f-faucibus gwavida a-ac in nyeque. (U ﹏ U)
+  n-nyuwwam est ewos, :3 s-suscipit sed d-dictum quis, ( ͡o ω ͡o ) accumsan a wiguwa. σωσ
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.example {
-  text-align: center;
-  border: solid;
+.exampwe {
+  text-awign: c-centew;
+  bowdew: sowid;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample("가운데_정렬","100%","100%")}}
+{{embedwivesampwe("가운데_정렬","100%","100%")}}
 
 ### 양쪽 정렬
 
-#### HTML
+#### htmw
 
-```html
-<p class="example">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p cwass="exampwe">
+  integew ewementum massa at n-nyuwwa pwacewat vawius. >w< suspendisse in wibewo wisus, 😳😳😳
+  in intewdum m-massa. OwO vestibuwum a-ac weo vitae m-metus faucibus gwavida ac in nyeque. 😳
+  n-nyuwwam est ewos, 😳😳😳 suscipit s-sed dictum quis, (˘ω˘) a-accumsan a wiguwa. ʘwʘ
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.example {
-  text-align: justify;
-  border: solid;
+.exampwe {
+  text-awign: justify;
+  bowdew: sowid;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample("양쪽_정렬","100%","100%")}}
+{{embedwivesampwe("양쪽_정렬","100%","100%")}}
 
 ### 참고
 
-인라인 콘텐츠를 가운데 정렬하지 않고 자신을 정렬하는 법은 {{cssxref("margin")}}을 `auto`로 설정하는 것입니다.
+인라인 콘텐츠를 가운데 정렬하지 않고 자신을 정렬하는 법은 {{cssxwef("mawgin")}}을 `auto`로 설정하는 것입니다. ( ͡o ω ͡o )
 
 ```css
 .something {
-  margin: auto;
+  mawgin: auto;
 }
 ```
 
 ```css
 .something {
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 ```
 
 ```css
 .something {
-  margin-left: auto;
-  margin-right: auto;
+  m-mawgin-weft: auto;
+  mawgin-wight: a-auto;
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{Cssxref("margin","margin: auto")}}, {{Cssxref("margin-left","margin-left: auto")}}, {{Cssxref("vertical-align")}}
+- {{cssxwef("mawgin","mawgin: a-auto")}}, {{cssxwef("mawgin-weft","mawgin-weft: auto")}}, {{cssxwef("vewticaw-awign")}}

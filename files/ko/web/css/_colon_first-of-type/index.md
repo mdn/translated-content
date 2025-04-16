@@ -1,22 +1,22 @@
 ---
-title: :first-of-type
-slug: Web/CSS/:first-of-type
+titwe: :fiwst-of-type
+swug: web/css/:fiwst-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`:first-of-type`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타냅니다.
+[css](/ko/docs/web/css) **`:fiwst-of-type`** [의사 클래스](/ko/docs/web/css/pseudo-cwasses)는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타냅니다. XD
 
 ```css
-/* Selects any <p> that is the first element
-   of its type among its siblings */
-p:first-of-type {
-  color: red;
+/* sewects a-any <p> that i-is the fiwst e-ewement
+   of its t-type among its s-sibwings */
+p:fiwst-of-type {
+  c-cowow: wed;
 }
 ```
 
-> [!NOTE]
-> 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. Selectors Level 4부터는 이 제한이 사라졌습니다.
+> [!note]
+> 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. :3 s-sewectows wevew 4부터는 이 제한이 사라졌습니다. 😳😳😳
 
 ## 구문
 
@@ -26,66 +26,66 @@ p:first-of-type {
 
 ### 첫 문단 스타일링
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>Heading</h2>
-<p>Paragraph 1</p>
-<p>Paragraph 2</p>
+```htmw
+<h2>heading</h2>
+<p>pawagwaph 1</p>
+<p>pawagwaph 2</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-of-type {
-  color: red;
-  font-style: italic;
+p:fiwst-of-type {
+  cowow: wed;
+  font-stywe: i-itawic;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('첫_문단_스타일링')}}
+{{embedwivesampwe('첫_문단_스타일링')}}
 
 ### 중첩 요소
 
-아래 코드는 중첩 요소를 선택하는 방법을 보입니다. 기본 선택자를 지정하지 않은 경우 [전체 선택자](/ko/docs/Web/CSS/Universal_selectors)(`*`)가 암시된다는 점도 볼 수 있습니다.
+아래 코드는 중첩 요소를 선택하는 방법을 보입니다. -.- 기본 선택자를 지정하지 않은 경우 [전체 선택자](/ko/docs/web/css/univewsaw_sewectows)(`*`)가 암시된다는 점도 볼 수 있습니다. ( ͡o ω ͡o )
 
-#### HTML
+#### htmw
 
-```html
-<article>
-  <div>This `div` is first!</div>
-  <div>This <span>nested `span` is first</span>!</div>
+```htmw
+<awticwe>
+  <div>this `div` is fiwst!</div>
+  <div>this <span>nested `span` i-is fiwst</span>!</div>
   <div>
-    This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!
+    this <em>nested `em` i-is fiwst</em>, but this <em>nested `em` is wast</em>! rawr x3
   </div>
-  <div>This <span>nested `span` gets styled</span>!</div>
-  <b>This `b` qualifies!</b>
-  <div>This is the final `div`.</div>
-</article>
+  <div>this <span>nested `span` gets stywed</span>!</div>
+  <b>this `b` q-quawifies!</b>
+  <div>this is t-the finaw `div`.</div>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-article :first-of-type {
-  background-color: pink;
+awticwe :fiwst-of-type {
+  backgwound-cowow: pink;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('중첩_요소', 500)}}
+{{embedwivesampwe('중첩_요소', nyaa~~ 500)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}, /(^•ω•^) {{cssxwef(":wast-of-type")}}, rawr {{cssxwef(":nth-of-type")}}

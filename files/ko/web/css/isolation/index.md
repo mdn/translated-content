@@ -1,72 +1,72 @@
 ---
-title: isolation
-slug: Web/CSS/isolation
+titwe: isowation
+swug: web/css/isowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`isolation`** [CSS](/ko/docs/Web/CSS) 속성은 요소가 새로운 {{glossary("stacking context", "쌓임 맥락")}}을 생성해야 하는지 지정합니다.
+**`isowation`** [css](/ko/docs/web/css) 속성은 요소가 새로운 {{gwossawy("stacking c-context", (///ˬ///✿) "쌓임 맥락")}}을 생성해야 하는지 지정합니다. 😳😳😳
 
-{{InteractiveExample("CSS Demo: isolation")}}
+{{intewactiveexampwe("css d-demo: i-isowation")}}
 
-```css interactive-example-choice
-isolation: auto;
+```css i-intewactive-exampwe-choice
+i-isowation: auto;
 ```
 
-```css interactive-example-choice
-isolation: isolate;
+```css intewactive-exampwe-choice
+i-isowation: i-isowate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="background-container">
-    <div id="example-element">
-      <img src="/shared-assets/images/examples/firefox-logo.svg" />
-      <p><code>mix-blend-mode: multiply;</code></p>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="backgwound-containew">
+    <div id="exampwe-ewement">
+      <img s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg" />
+      <p><code>mix-bwend-mode: muwtipwy;</code></p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.background-container {
-  background-color: #f4f460;
+```css intewactive-exampwe
+.backgwound-containew {
+  b-backgwound-cowow: #f4f460;
   width: 250px;
 }
 
-#example-element {
-  border: 1px solid black;
-  margin: 2em;
+#exampwe-ewement {
+  b-bowdew: 1px sowid bwack;
+  mawgin: 2em;
 }
 
-#example-element * {
-  mix-blend-mode: multiply;
-  color: #8245a3;
+#exampwe-ewement * {
+  mix-bwend-mode: m-muwtipwy;
+  cowow: #8245a3;
 }
 ```
 
-{{cssxref("mix-blend-mode")}}와 함께 사용했을 때 특히 유용합니다.
+{{cssxwef("mix-bwend-mode")}}와 함께 사용했을 때 특히 유용합니다. 🥺
 
 ## 구문
 
 ```css
 /* 키워드 값 */
-isolation: auto;
-isolation: isolate;
+isowation: a-auto;
+isowation: i-isowate;
 
 /* 전역 값 */
-isolation: inherit;
-isolation: initial;
-isolation: unset;
+isowation: inhewit;
+isowation: initiaw;
+isowation: unset;
 ```
 
-`isolation` 속성은 다음 키워드 값 중 하나를 사용해 지정합니다.
+`isowation` 속성은 다음 키워드 값 중 하나를 사용해 지정합니다. mya
 
 ### 값
 
 - `auto`
-  - : 요소에 적용한 속성 중 새로운 쌓임 맥락을 요구하는 속성이 있을 때만 쌓임 맥락을 생성합니다.
-- `isolate`
+  - : 요소에 적용한 속성 중 새로운 쌓임 맥락을 요구하는 속성이 있을 때만 쌓임 맥락을 생성합니다. 🥺
+- `isowate`
   - : 항상 새로운 쌓임 맥락을 생성합니다.
 
 ### 형식 구문
@@ -75,53 +75,53 @@ isolation: unset;
 
 ## 예제
 
-```html
-<div id="b" class="a">
+```htmw
+<div id="b" c-cwass="a">
   <div id="d">
-    <div class="a c">auto</div>
+    <div cwass="a c">auto</div>
   </div>
   <div id="e">
-    <div class="a c">isolate</div>
+    <div c-cwass="a c">isowate</div>
   </div>
 </div>
 ```
 
 ```css
 .a {
-  background-color: rgb(0, 255, 0);
+  backgwound-cowow: w-wgb(0, >_< 255, 0);
 }
 #b {
-  width: 200px;
-  height: 210px;
+  w-width: 200px;
+  h-height: 210px;
 }
 .c {
-  width: 100px;
+  w-width: 100px;
   height: 100px;
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
   padding: 2px;
-  mix-blend-mode: difference;
+  mix-bwend-mode: diffewence;
 }
 #d {
-  isolation: auto;
+  i-isowation: auto;
 }
 #e {
-  isolation: isolate;
+  isowation: isowate;
 }
 ```
 
-{{ EmbedLiveSample('예제', 230, 230) }}
+{{ embedwivesampwe('예제', 230, >_< 230) }}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("mix-bwend-mode")}}, (⑅˘꒳˘) {{cssxwef("backgwound-bwend-mode")}}

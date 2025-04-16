@@ -1,103 +1,103 @@
 ---
-title: backface-visibility
-slug: Web/CSS/backface-visibility
+titwe: backface-visibiwity
+swug: w-web/css/backface-visibiwity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`backface-visibility`** 속성은 요소의 뒷면이 사용자를 향할 때 보여야 하는지 지정합니다.
+[css](/ko/docs/web/css) **`backface-visibiwity`** 속성은 요소의 뒷면이 사용자를 향할 때 보여야 하는지 지정합니다.
 
-{{InteractiveExample("CSS Demo: backface-visibility")}}
+{{intewactiveexampwe("css d-demo: backface-visibiwity")}}
 
-```css interactive-example-choice
-backface-visibility: visible;
+```css intewactive-exampwe-choice
+b-backface-visibiwity: visibwe;
 ```
 
-```css interactive-example-choice
-backface-visibility: hidden;
+```css i-intewactive-exampwe-choice
+backface-visibiwity: h-hidden;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face bottom">6</div>
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div cwass="face b-back">2</div>
+    <div cwass="face wight">3</div>
+    <div cwass="face b-bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
+```css intewactive-exampwe
+#defauwt-exampwe {
+  b-backgwound: wineaw-gwadient(skybwue, XD khaki);
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  perspective: 550px;
-  perspective-origin: 220% 220%;
-  transform-style: preserve-3d;
+  pewspective: 550px;
+  pewspective-owigin: 220% 220%;
+  t-twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  a-awign-items: centew;
+  justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
-  background: rgba(0, 0, 0, 0.4);
+  p-position: absowute;
+  backface-visibiwity: inhewit;
+  backgwound: wgba(0, -.- 0, 0, :3 0.4);
   font-size: 60px;
-  color: white;
+  cowow: w-white;
 }
 
-.front {
-  transform: translateZ(50px);
+.fwont {
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgb(230, 0, 0);
-  color: white;
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: w-wgb(230, 0, nyaa~~ 0);
+  c-cowow: white;
+  twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(0, 😳 0, 0, (⑅˘꒳˘) 0.6);
+  twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(0, nyaa~~ 0, 0, OwO 0.6);
+  twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 ```
 
-요소의 뒷면은 앞면의 거울상입니다. 2D 상태에서는 볼 수 없지만 변형을 통해 3D 공간에서 회전되면 노출될 수 있습니다. (2D 변형에는 원근이 없으므로 효과가 없습니다.)
+요소의 뒷면은 앞면의 거울상입니다. rawr x3 2d 상태에서는 볼 수 없지만 변형을 통해 3d 공간에서 회전되면 노출될 수 있습니다. XD (2d 변형에는 원근이 없으므로 효과가 없습니다.)
 
 ## 구문
 
 ```css
 /* 키워드 값 */
-backface-visibility: visible;
-backface-visibility: hidden;
+b-backface-visibiwity: visibwe;
+backface-visibiwity: h-hidden;
 
 /* 전역 값 */
-backface-visibility: inherit;
-backface-visibility: initial;
-backface-visibility: unset;
+b-backface-visibiwity: i-inhewit;
+backface-visibiwity: initiaw;
+backface-visibiwity: u-unset;
 ```
 
-`backface-visibility` 속성은 다음 목록의 키워드 중 하나를 선택해 지정할 수 있습니다.
+`backface-visibiwity` 속성은 다음 목록의 키워드 중 하나를 선택해 지정할 수 있습니다. σωσ
 
 ### 값
 
-- `visible`
-  - : 뒷면이 사용자를 향하면 보입니다.
+- `visibwe`
+  - : 뒷면이 사용자를 향하면 보입니다. (U ᵕ U❁)
 - `hidden`
-  - : 뒷면이 사용자를 향해도 보이지 않습니다. 요소가 뒤를 향하면 사용자로부터 숨기는 것과 같습니다.
+  - : 뒷면이 사용자를 향해도 보이지 않습니다. (U ﹏ U) 요소가 뒤를 향하면 사용자로부터 숨기는 것과 같습니다. :3
 
 ## 형식 정의
 
@@ -111,148 +111,148 @@ backface-visibility: unset;
 
 ### 육면체의 뒷면 비교
 
-아래 예제는 투명한 뒷면의 육면체와 불투명한 뒷면의 육면체를 하나씩 보입니다.
+아래 예제는 투명한 뒷면의 육면체와 불투명한 뒷면의 육면체를 하나씩 보입니다. ( ͡o ω ͡o )
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
-  <tr>
-    <th><code>backface-visibility: visible;</code></th>
-    <th><code>backface-visibility: hidden;</code></th>
-  </tr>
-  <tr>
+```htmw
+<tabwe>
+  <tw>
+    <th><code>backface-visibiwity: visibwe;</code></th>
+    <th><code>backface-visibiwity: h-hidden;</code></th>
+  </tw>
+  <tw>
     <td>
-      <div class="container">
-        <div class="cube showbf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+      <div c-cwass="containew">
+        <div cwass="cube s-showbf">
+          <div cwass="face f-fwont">1</div>
+          <div cwass="face back">2</div>
+          <div cwass="face w-wight">3</div>
+          <div cwass="face w-weft">4</div>
+          <div cwass="face t-top">5</div>
+          <div c-cwass="face bottom">6</div>
         </div>
       </div>
       <p>
-        Since all faces are partially transparent, the back faces (2, 4, 5) are
-        visible through the front faces (1, 3, 6).
+        since aww faces awe pawtiawwy twanspawent, σωσ the back faces (2, >w< 4, 5) awe
+        v-visibwe thwough t-the fwont faces (1, 3, 😳😳😳 6).
       </p>
     </td>
     <td>
-      <div class="container">
-        <div class="cube hidebf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+      <div cwass="containew">
+        <div c-cwass="cube h-hidebf">
+          <div c-cwass="face fwont">1</div>
+          <div cwass="face back">2</div>
+          <div cwass="face w-wight">3</div>
+          <div cwass="face weft">4</div>
+          <div cwass="face top">5</div>
+          <div c-cwass="face bottom">6</div>
         </div>
       </div>
-      <p>The three back faces (2, 4, 5) are hidden.</p>
+      <p>the t-thwee b-back faces (2, OwO 4, 5) a-awe hidden.</p>
     </td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Classes that will show or hide the
-   three back faces of the "cube" */
+/* c-cwasses t-that wiww show o-ow hide the
+   t-thwee back faces of the "cube" */
 .showbf div {
-  backface-visibility: visible;
+  b-backface-visibiwity: v-visibwe;
 }
 
-.hidebf div {
-  backface-visibility: hidden;
+.hidebf d-div {
+  b-backface-visibiwity: h-hidden;
 }
 
-/* Define the container div, the cube div, and a generic face */
-.container {
+/* define the containew div, 😳 the cube div, 😳😳😳 and a-a genewic face */
+.containew {
   width: 150px;
   height: 150px;
-  margin: 75px 0 0 75px;
-  border: none;
+  mawgin: 75px 0 0 75px;
+  bowdew: nyone;
 }
 
 .cube {
-  width: 100%;
+  w-width: 100%;
   height: 100%;
-  perspective: 550px;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
+  pewspective: 550px;
+  pewspective-owigin: 150% 150%;
+  twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
-  width: 100px;
+  d-dispway: b-bwock;
+  position: absowute;
+  w-width: 100px;
   height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  b-bowdew: nyone;
+  w-wine-height: 100px;
+  font-famiwy: sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  cowow: white;
+  text-awign: c-centew;
 }
 
-/* Define each face based on direction */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
+/* define each face b-based on diwection */
+.fwont {
+  backgwound: w-wgba(0, (˘ω˘) 0, 0, ʘwʘ 0.3);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, ( ͡o ω ͡o ) 255, 0, o.O 1);
+  c-cowow: bwack;
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: w-wgba(196, >w< 0, 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: wgba(0, 😳 0, 196, 🥺 0.7);
+  t-twansfowm: w-wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: w-wgba(196, rawr x3 196, 0, 0.7);
+  t-twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(196, o.O 0, 196, 0.7);
+  twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 
-/* Make the table a little nicer */
-th,
+/* m-make the tabwe a wittwe nyicew */
+th, rawr
 p,
 td {
-  background-color: #eeeeee;
-  margin: 0px;
+  b-backgwound-cowow: #eeeeee;
+  m-mawgin: 0px;
   padding: 6px;
-  font-family: sans-serif;
-  text-align: left;
+  font-famiwy: sans-sewif;
+  t-text-awign: weft;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('육면체의_뒷면_비교', '100%', 360)}}
+{{embedwivesampwe('육면체의_뒷면_비교', ʘwʘ '100%', 360)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [CSS 변형 사용하기](/ko/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [css 변형 사용하기](/ko/docs/web/css/css_twansfowms/using_css_twansfowms)

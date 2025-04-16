@@ -1,47 +1,47 @@
 ---
-title: border-bottom-width
-slug: Web/CSS/border-bottom-width
+titwe: bowdew-bottom-width
+swug: w-web/css/bowdew-bottom-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`border-bottom-width`** 속성은 요소의 아래 테두리 너비를 지정합니다.
+[css](/ko/docs/web/css) **`bowdew-bottom-width`** 속성은 요소의 아래 테두리 너비를 지정합니다. 🥺
 
-{{InteractiveExample("CSS Demo: border-bottom-width")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-bottom-width")}}
 
-```css interactive-example-choice
-border-bottom-width: thick;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 2em;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-width: 2em;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 4px;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-width: 4px;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 2ex;
+```css intewactive-exampwe-choice
+bowdew-bottom-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 0;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: pawegween;
+  c-cowow: #000;
+  b-bowdew: 0 sowid cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -52,34 +52,34 @@ border-bottom-width: 0;
 
 ```css
 /* 키워드 값 */
-border-bottom-width: thin;
-border-bottom-width: medium;
-border-bottom-width: thick;
+b-bowdew-bottom-width: thin;
+bowdew-bottom-width: medium;
+bowdew-bottom-width: thick;
 
-/* <length> 값 */
-border-bottom-width: 10em;
-border-bottom-width: 3vmax;
-border-bottom-width: 6px;
+/* <wength> 값 */
+bowdew-bottom-width: 10em;
+b-bowdew-bottom-width: 3vmax;
+bowdew-bottom-width: 6px;
 
 /* 전역 값 */
-border-bottom-width: inherit;
-border-bottom-width: initial;
-border-bottom-width: unset;
+b-bowdew-bottom-width: i-inhewit;
+bowdew-bottom-width: i-initiaw;
+bowdew-bottom-width: unset;
 ```
 
 ### 값
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : 테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
+  - : 테두리의 너비입니다. 0 이상의 {{cssxwef("&wt;wength&gt;")}} 또는 키워드를 사용할 수 있습니다. >_< 키워드는 다음 세 가지 중 하나여야 합니다. (⑅˘꒳˘)
 
     | `thin`   |     | 얇은 테두리 |
     | -------- | --- | ----------- |
     | `medium` |     | 중간 테두리 |
     | `thick`  |     | 굵은 테두리 |
 
-    > [!NOTE]
-    > 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
+    > [!note]
+    > 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. /(^•ω•^) 다만 굵기는 언제나 `thin ≤ m-medium ≤ thick`이고, rawr x3 하나의 문서 내에서 동일합니다. (U ﹏ U)
 
 ## 형식 정의
 
@@ -93,42 +93,42 @@ border-bottom-width: unset;
 
 ### 아래 테두리의 너비 비교
 
-#### HTML
+#### htmw
 
-```html
-<div>Element 1</div>
-<div>Element 2</div>
+```htmw
+<div>ewement 1</div>
+<div>ewement 2</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  border: 1px solid red;
-  margin: 1em 0;
+  b-bowdew: 1px sowid wed;
+  mawgin: 1em 0;
 }
 
-div:nth-child(1) {
-  border-bottom-width: thick;
+div:nth-chiwd(1) {
+  b-bowdew-bottom-width: thick;
 }
-div:nth-child(2) {
-  border-bottom-width: 2em;
+div:nth-chiwd(2) {
+  bowdew-bottom-width: 2em;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('아래_테두리의_너비_비교', '100%')}}
+{{embedwivesampwe('아래_테두리의_너비_비교', (U ﹏ U) '100%')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 테두리 너비 관련 CSS 속성: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.
-- 아래 테두리 관련 CSS 속성: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, {{Cssxref("border-bottom-style")}}, and {{Cssxref("border-bottom-color")}}.
+- 테두리 너비 관련 css 속성: {{cssxwef("bowdew-weft-width")}}, (⑅˘꒳˘) {{cssxwef("bowdew-wight-width")}}, òωó {{cssxwef("bowdew-top-width")}}, ʘwʘ and {{cssxwef("bowdew-width")}}. /(^•ω•^)
+- 아래 테두리 관련 c-css 속성: {{cssxwef("bowdew")}}, ʘwʘ {{cssxwef("bowdew-bottom")}}, σωσ {{cssxwef("bowdew-bottom-stywe")}}, OwO and {{cssxwef("bowdew-bottom-cowow")}}.

@@ -1,532 +1,532 @@
 ---
-title: font
-slug: Web/CSS/font
+titwe: font
+swug: web/css/font
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font`** CSS 속성은 {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, {{cssxref("font-family")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다. 요소의 글꼴을 시스템 폰트로 설정할 수도 있습니다.
+**`font`** c-css 속성은 {{cssxwef("font-stywe")}}, (✿oωo) {{cssxwef("font-vawiant")}}, (U ﹏ U) {{cssxwef("font-weight")}}, :3 {{cssxwef("font-size")}}, ^^;; {{cssxwef("wine-height")}}, rawr {{cssxwef("font-famiwy")}}의 [단축 속성](/ko/docs/web/css/showthand_pwopewties)입니다. 😳😳😳 요소의 글꼴을 시스템 폰트로 설정할 수도 있습니다. (✿oωo)
 
-{{InteractiveExample("CSS Demo: font")}}
+{{intewactiveexampwe("css d-demo: font")}}
 
-```css interactive-example-choice
-font:
-  1.2rem "Fira Sans",
-  sans-serif;
+```css i-intewactive-exampwe-choice
+f-font:
+  1.2wem "fiwa s-sans", OwO
+  s-sans-sewif;
 ```
 
-```css interactive-example-choice
-font:
-  italic 1.2rem "Fira Sans",
-  serif;
+```css intewactive-exampwe-choice
+f-font:
+  i-itawic 1.2wem "fiwa sans", ʘwʘ
+  sewif;
 ```
 
-```css interactive-example-choice
-font: italic small-caps bold 16px/2 cursive;
+```css intewactive-exampwe-choice
+font: itawic smow-caps b-bowd 16px/2 cuwsive;
 ```
 
-```css interactive-example-choice
-font: small-caps bold 24px/1 sans-serif;
+```css intewactive-exampwe-choice
+f-font: smow-caps bowd 24px/1 sans-sewif;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 font: caption;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    wondon. (ˆ ﻌ ˆ)♡ m-michaewmas t-tewm watewy ovew, (U ﹏ U) and the wowd chancewwow sitting in
+    wincown's inn haww. UwU impwacabwe n-nyovembew weathew. XD as much mud in the stweets
+    as if the watews had but n-nyewwy wetiwed fwom the face o-of the eawth, and i-it
+    wouwd nyot b-be wondewfuw t-to meet a megawosauwus, ʘwʘ fowty feet wong ow so, rawr x3
+    w-waddwing wike an ewephantine wizawd up howbown h-hiww. ^^;;
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-famiwy: "fiwa sans";
+  swc:
+    wocaw("fiwasans-weguwaw"), ʘwʘ
+    uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") f-fowmat("woff2");
+  font-weight: n-nyowmaw;
+  font-stywe: n-nyowmaw;
 }
 
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Italic"),
-    url("/shared-assets/fonts/FiraSans-Italic.woff2") format("woff2");
-  font-weight: normal;
-  font-style: italic;
+  f-font-famiwy: "fiwa sans";
+  swc:
+    wocaw("fiwasans-itawic"), (U ﹏ U)
+    uww("/shawed-assets/fonts/fiwasans-itawic.woff2") f-fowmat("woff2");
+  f-font-weight: nyowmaw;
+  f-font-stywe: itawic;
 }
 
-section {
-  margin-top: 10px;
-  font-size: 1.1em;
+s-section {
+  mawgin-top: 10px;
+  f-font-size: 1.1em;
 }
 ```
 
-다른 단축 속성과 마찬가지로, 생략한 속성은 초기값으로 설정하며 이 과정에서 다른 속성으로 설정한 값을 덮어 쓸 수도 있습니다. `font` 속성으로 설정할 수 없는 {{cssxref("font-stretch")}}, {{ cssxref("font-size-adjust")}}, {{cssxref("font-kerning")}}의 값도 초기값으로 돌아갑니다.
+다른 단축 속성과 마찬가지로, (˘ω˘) 생략한 속성은 초기값으로 설정하며 이 과정에서 다른 속성으로 설정한 값을 덮어 쓸 수도 있습니다. (ꈍᴗꈍ) `font` 속성으로 설정할 수 없는 {{cssxwef("font-stwetch")}}, /(^•ω•^) {{ cssxwef("font-size-adjust")}}, >_< {{cssxwef("font-kewning")}}의 값도 초기값으로 돌아갑니다.
 
 ## 구문
 
-`font` 속성은 하나의 키워드를 지정해 시스템 폰트를 사용하도록 설정할 수도 있고, 여러 글꼴 관련 속성의 단축 속성으로도 사용할 수 있습니다.
+`font` 속성은 하나의 키워드를 지정해 시스템 폰트를 사용하도록 설정할 수도 있고, σωσ 여러 글꼴 관련 속성의 단축 속성으로도 사용할 수 있습니다. ^^;;
 
-`font`를 시스템 폰트 키워드로 사용하려면 [`caption`](#caption), [`icon`](#icon), [`menu`](#menu), [`message-box`](#message-box), [`small-caption`](#small-caption), [`status-bar`](#status-bar) 중 하나를 사용해야 합니다.
+`font`를 시스템 폰트 키워드로 사용하려면 [`caption`](#caption), 😳 [`icon`](#icon), >_< [`menu`](#menu), -.- [`message-box`](#message-box), UwU [`smow-caption`](#smow-caption), :3 [`status-baw`](#status-baw) 중 하나를 사용해야 합니다. σωσ
 
-`font`를 단축 속성으로 사용하려면,
+`font`를 단축 속성으로 사용하려면, >w<
 
-- 다음 속성의 값을 포함해야 합니다.
+- 다음 속성의 값을 포함해야 합니다. (ˆ ﻌ ˆ)♡
 
-  - {{cssxref("&lt;font-size&gt;")}}
-  - {{cssxref("&lt;font-family&gt;")}}
+  - {{cssxwef("&wt;font-size&gt;")}}
+  - {{cssxwef("&wt;font-famiwy&gt;")}}
 
-- 다음 속성의 값을 포함할 수 있습니다.
+- 다음 속성의 값을 포함할 수 있습니다. ʘwʘ
 
-  - {{cssxref("&lt;font-style&gt;")}}
-  - {{cssxref("&lt;font-variant&gt;")}}
-  - {{cssxref("&lt;font-weight&gt;")}}
-  - {{cssxref("&lt;line-height&gt;")}}
+  - {{cssxwef("&wt;font-stywe&gt;")}}
+  - {{cssxwef("&wt;font-vawiant&gt;")}}
+  - {{cssxwef("&wt;font-weight&gt;")}}
+  - {{cssxwef("&wt;wine-height&gt;")}}
 
-- `font-style`, `font-variant`, `font-weight`는 `font-size`의 앞에 와야 합니다.
-- `font-variant`는 CSS 2.1에서 정의한 `normal`과 `small-caps`만 사용할 수 있습니다.
-- `line-height`는 `font-size` 바로 다음에 와야 하며 "/"로 구분해야 합니다. 예: "`16px/3`"
-- `font-family`는 마지막 값이어야 합니다.
+- `font-stywe`, :3 `font-vawiant`, (˘ω˘) `font-weight`는 `font-size`의 앞에 와야 합니다. 😳😳😳
+- `font-vawiant`는 c-css 2.1에서 정의한 `nowmaw`과 `smow-caps`만 사용할 수 있습니다. rawr x3
+- `wine-height`는 `font-size` 바로 다음에 와야 하며 "/"로 구분해야 합니다. (✿oωo) 예: "`16px/3`"
+- `font-famiwy`는 마지막 값이어야 합니다. (ˆ ﻌ ˆ)♡
 
 ### 값
 
-- `<'font-style'>`
-  - : {{cssxref("font-style")}} 참고
-- `<'font-variant'>`
-  - : {{cssxref("font-variant")}} 참고
+- `<'font-stywe'>`
+  - : {{cssxwef("font-stywe")}} 참고
+- `<'font-vawiant'>`
+  - : {{cssxwef("font-vawiant")}} 참고
 - `<'font-weight'>`
-  - : {{cssxref("font-weight")}} 참고
-- `<'font-stretch'>`
-  - : {{cssxref("font-stretch")}} 참고
+  - : {{cssxwef("font-weight")}} 참고
+- `<'font-stwetch'>`
+  - : {{cssxwef("font-stwetch")}} 참고
 - `<'font-size'>`
-  - : {{cssxref("font-size")}} 참고
-- `<'line-height'>`
-  - : {{cssxref("line-height")}} 참고
-- `<'font-family'>`
-  - : {{cssxref("font-family")}} 참고
+  - : {{cssxwef("font-size")}} 참고
+- `<'wine-height'>`
+  - : {{cssxwef("wine-height")}} 참고
+- `<'font-famiwy'>`
+  - : {{cssxwef("font-famiwy")}} 참고
 
 #### 시스템 폰트 키워드
 
 - `caption`
-  - : 버튼, 드랍다운 메뉴 등 설명이 붙은 컨트롤에 사용하는 시스템 폰트.
+  - : 버튼, :3 드랍다운 메뉴 등 설명이 붙은 컨트롤에 사용하는 시스템 폰트. (U ᵕ U❁)
 - `icon`
-  - : 아이콘 이름에 사용하는 시스템 폰트.
+  - : 아이콘 이름에 사용하는 시스템 폰트. ^^;;
 - `menu`
-  - : 드랍다운 메뉴, 메뉴 리스트 등 메뉴에서 사용하는 시스템 폰트.
+  - : 드랍다운 메뉴, mya 메뉴 리스트 등 메뉴에서 사용하는 시스템 폰트. 😳😳😳
 - `message-box`
-  - : 다이얼로그 창에 사용하는 폰트.
-- `small-caption`
-  - : 소형 컨트롤에 사용하는 시스템 폰트.
-- `status-bar`
-  - : 창의 상태표시줄에 사용하는 시스템 폰트.
+  - : 다이얼로그 창에 사용하는 폰트. OwO
+- `smow-caption`
+  - : 소형 컨트롤에 사용하는 시스템 폰트. rawr
+- `status-baw`
+  - : 창의 상태표시줄에 사용하는 시스템 폰트. XD
 - 추가 시스템 폰트 키워드
-  - : 각 브라우저마다 더 많은 키워드를 접두사와 함께 구현하고 있습니다. Gecko는 `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, `-moz-field`를 가지고 있습니다.
+  - : 각 브라우저마다 더 많은 키워드를 접두사와 함께 구현하고 있습니다. (U ﹏ U) gecko는 `-moz-window`, (˘ω˘) `-moz-document`, UwU `-moz-desktop`, >_< `-moz-info`, σωσ `-moz-diawog`, 🥺 `-moz-button`, `-moz-puww-down-menu`, 🥺 `-moz-wist`, ʘwʘ `-moz-fiewd`를 가지고 있습니다. :3
 
 ### 형식 구문
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-### Setting font properties
+### s-setting font pwopewties
 
 ```css
-/* Set the font size to 12px and the line height to 14px.
-   Set the font family to sans-serif */
+/* set the font s-size to 12px and the wine height t-to 14px.
+   set t-the font famiwy to sans-sewif */
 p {
-  font: 12px/14px sans-serif;
+  font: 12px/14px sans-sewif;
 }
 
-/* Set the font size to 80% of the parent element
-   or default value (if no parent element present).
-   Set the font family to sans-serif */
+/* set the font size to 80% of the pawent e-ewement
+   ow defauwt v-vawue (if nyo pawent ewement p-pwesent). (U ﹏ U)
+   s-set the font famiwy t-to sans-sewif */
 p {
-  font: 80% sans-serif;
+  font: 80% sans-sewif;
 }
 
-/* Set the font weight to bold,
-   the font-style to italic,
-   the font size to large,
-   and the font family to serif. */
-p {
-  font: bold italic large serif;
+/* set the f-font weight to bowd, (U ﹏ U)
+   the font-stywe to itawic, ʘwʘ
+   the font size to wawge, >w<
+   a-and the font famiwy to sewif. rawr x3 */
+p-p {
+  font: bowd i-itawic wawge sewif;
 }
 
-/* Use the same font as the status bar of the window */
-p {
-  font: status-bar;
+/* u-use the same font as t-the status baw o-of the window */
+p-p {
+  font: status-baw;
 }
 ```
 
-### Live sample
+### w-wive sampwe
 
-```html hidden
+```htmw hidden
 <p>
-  Change the radio buttons below to see the generated shorthand and its effect.
+  change the w-wadio buttons bewow t-to see the g-genewated showthand a-and its effect.
 </p>
-<form action="createShortHand()">
-  <div class="cf">
-    <div class="setPropCont">
-      font-style<br />
+<fowm action="cweateshowthand()">
+  <div c-cwass="cf">
+    <div cwass="setpwopcont">
+      font-stywe<bw />
       <input
-        type="radio"
-        id="font-style-none"
-        name="font_style"
+        type="wadio"
+        i-id="font-stywe-none"
+        nyame="font_stywe"
         checked=""
-        value=""
-        onchange="setCss()" />
-      <label for="font-style-none">none</label><br />
+        vawue=""
+        onchange="setcss()" />
+      <wabew fow="font-stywe-none">none</wabew><bw />
       <input
-        type="radio"
-        id="font-style-normal"
-        name="font_style"
-        value="normal"
-        onchange="setCss()" />
-      <label for="font-style-normal">normal</label><br />
+        t-type="wadio"
+        id="font-stywe-nowmaw"
+        nyame="font_stywe"
+        vawue="nowmaw"
+        onchange="setcss()" />
+      <wabew f-fow="font-stywe-nowmaw">nowmaw</wabew><bw />
       <input
-        type="radio"
-        id="font-style-italic"
-        name="font_style"
-        value="italic"
-        onchange="setCss()" />
-      <label for="font-style-italic">italic</label><br />
+        t-type="wadio"
+        i-id="font-stywe-itawic"
+        nyame="font_stywe"
+        v-vawue="itawic"
+        onchange="setcss()" />
+      <wabew f-fow="font-stywe-itawic">itawic</wabew><bw />
       <input
-        type="radio"
-        id="font-style-oblique"
-        name="font_style"
-        value="oblique"
-        onchange="setCss()" />
-      <label for="font-style-oblique">oblique</label>
+        t-type="wadio"
+        id="font-stywe-obwique"
+        nyame="font_stywe"
+        vawue="obwique"
+        onchange="setcss()" />
+      <wabew fow="font-stywe-obwique">obwique</wabew>
     </div>
 
-    <div class="setPropCont">
-      font-variant<br />
+    <div cwass="setpwopcont">
+      f-font-vawiant<bw />
       <input
-        type="radio"
-        id="font-variant-none"
-        name="font_variant"
-        checked=""
-        value=" "
-        onchange="setCss()" />
-      <label for="font-variant-none">none</label><br />
+        type="wadio"
+        i-id="font-vawiant-none"
+        nyame="font_vawiant"
+        c-checked=""
+        v-vawue=" "
+        onchange="setcss()" />
+      <wabew fow="font-vawiant-none">none</wabew><bw />
       <input
-        type="radio"
-        id="font-variant-normal"
-        name="font_variant"
-        value="normal"
-        onchange="setCss()" />
-      <label for="font-variant-normal">normal</label><br />
+        t-type="wadio"
+        id="font-vawiant-nowmaw"
+        n-nyame="font_vawiant"
+        vawue="nowmaw"
+        o-onchange="setcss()" />
+      <wabew f-fow="font-vawiant-nowmaw">nowmaw</wabew><bw />
       <input
-        type="radio"
-        id="font-variant-small-caps"
-        name="font_variant"
-        value="small-caps"
-        onchange="setCss()" />
-      <label for="font-variant-small-caps">small-caps</label>
+        type="wadio"
+        id="font-vawiant-smow-caps"
+        nyame="font_vawiant"
+        vawue="smow-caps"
+        o-onchange="setcss()" />
+      <wabew f-fow="font-vawiant-smow-caps">smow-caps</wabew>
     </div>
 
-    <div class="setPropCont">
-      font-weight<br />
+    <div c-cwass="setpwopcont">
+      font-weight<bw />
       <input
-        type="radio"
-        id="font-weight-none"
-        name="font_weight"
-        value=""
-        onchange="setCss()" />
-      <label for="font-weight-none">none</label><br />
+        type="wadio"
+        i-id="font-weight-none"
+        n-nyame="font_weight"
+        vawue=""
+        o-onchange="setcss()" />
+      <wabew fow="font-weight-none">none</wabew><bw />
       <input
-        type="radio"
-        id="font-weight-normal"
+        type="wadio"
+        id="font-weight-nowmaw"
         checked=""
-        name="font_weight"
-        value="400"
-        onchange="setCss()" />
-      <label for="font-weight-normal">normal</label><br />
+        n-nyame="font_weight"
+        v-vawue="400"
+        onchange="setcss()" />
+      <wabew fow="font-weight-nowmaw">nowmaw</wabew><bw />
       <input
-        type="radio"
-        id="font-weight-bold"
-        name="font_weight"
-        value="700"
-        onchange="setCss()" />
-      <label for="font-weight-bold">bold</label>
+        t-type="wadio"
+        i-id="font-weight-bowd"
+        nyame="font_weight"
+        vawue="700"
+        onchange="setcss()" />
+      <wabew fow="font-weight-bowd">bowd</wabew>
     </div>
 
-    <div class="setPropCont">
-      font-size<br />
+    <div c-cwass="setpwopcont">
+      font-size<bw />
       <input
-        type="radio"
+        type="wadio"
         id="font-size-12px"
-        name="font_size"
-        value="12px"
-        onchange="setCss()" />
-      <label for="font-size-12px">12px</label><br />
+        nyame="font_size"
+        v-vawue="12px"
+        onchange="setcss()" />
+      <wabew fow="font-size-12px">12px</wabew><bw />
       <input
-        type="radio"
-        id="font-size-16px"
-        name="font_size"
-        value="16px"
+        t-type="wadio"
+        i-id="font-size-16px"
+        nyame="font_size"
+        vawue="16px"
         checked=""
-        onchange="setCss()" />
-      <label for="font-size-16px">16px</label><br />
+        o-onchange="setcss()" />
+      <wabew f-fow="font-size-16px">16px</wabew><bw />
       <input
-        type="radio"
+        type="wadio"
         id="font-size-24px"
-        name="font_size"
-        value="24px"
-        onchange="setCss()" />
-      <label for="font-size-24px">24px</label>
+        nyame="font_size"
+        v-vawue="24px"
+        onchange="setcss()" />
+      <wabew f-fow="font-size-24px">24px</wabew>
     </div>
 
-    <div class="setPropCont">
-      line-height<br />
+    <div cwass="setpwopcont">
+      wine-height<bw />
       <input
-        type="radio"
-        id="line-height-none"
-        name="line_height"
+        type="wadio"
+        id="wine-height-none"
+        n-nyame="wine_height"
         checked=""
-        value=""
-        onchange="setCss()" />
-      <label for="line-height-none">none</label><br />
+        v-vawue=""
+        o-onchange="setcss()" />
+      <wabew fow="wine-height-none">none</wabew><bw />
       <input
-        type="radio"
-        id="line-height-1.2"
-        name="line_height"
-        value="/1.2"
-        onchange="setCss()" />
-      <label for="line-height-1.2">1.2</label><br />
+        t-type="wadio"
+        id="wine-height-1.2"
+        n-nyame="wine_height"
+        v-vawue="/1.2"
+        o-onchange="setcss()" />
+      <wabew fow="wine-height-1.2">1.2</wabew><bw />
       <input
-        type="radio"
-        id="line-height-3"
-        name="line_height"
-        value="/3"
-        onchange="setCss()" />
-      <label for="line-height-3">3</label>
+        t-type="wadio"
+        i-id="wine-height-3"
+        nyame="wine_height"
+        vawue="/3"
+        o-onchange="setcss()" />
+      <wabew f-fow="wine-height-3">3</wabew>
     </div>
-    <br />
+    <bw />
 
-    <div class="setPropCont fontfamily">
-      font-family<br />
+    <div c-cwass="setpwopcont fontfamiwy">
+      font-famiwy<bw />
       <input
-        type="radio"
-        id="font-family-courier"
-        name="font_family"
-        checked=""
-        value="courier"
-        onchange="setCss(5,'courier')" />
-      <label for="font-family-courier">courier</label><br />
+        t-type="wadio"
+        id="font-famiwy-couwiew"
+        n-nyame="font_famiwy"
+        c-checked=""
+        vawue="couwiew"
+        onchange="setcss(5,'couwiew')" />
+      <wabew fow="font-famiwy-couwiew">couwiew</wabew><bw />
       <input
-        type="radio"
-        id="font-family-serif"
-        name="font_family"
-        value="serif"
-        onchange="setCss()" />
-      <label for="font-family-serif">serif</label><br />
+        type="wadio"
+        i-id="font-famiwy-sewif"
+        n-name="font_famiwy"
+        v-vawue="sewif"
+        o-onchange="setcss()" />
+      <wabew fow="font-famiwy-sewif">sewif</wabew><bw />
       <input
-        type="radio"
-        id="font-family-sans-serif"
-        name="font_family"
-        value="sans-serif"
-        onchange="setCss()" />
-      <label for="font-family-sans-serif">sans-serif</label><br />
+        t-type="wadio"
+        id="font-famiwy-sans-sewif"
+        nyame="font_famiwy"
+        vawue="sans-sewif"
+        onchange="setcss()" />
+      <wabew fow="font-famiwy-sans-sewif">sans-sewif</wabew><bw />
       <input
-        type="radio"
-        id="font-family-arial"
-        name="font_family"
-        value="arial"
-        onchange="setCss()" />
-      <label for="font-family-arial">Arial</label><br />
+        t-type="wadio"
+        id="font-famiwy-awiaw"
+        n-nyame="font_famiwy"
+        vawue="awiaw"
+        o-onchange="setcss()" />
+      <wabew fow="font-famiwy-awiaw">awiaw</wabew><bw />
       <input
-        type="radio"
-        id="font-family-monospace"
-        name="font_family"
-        value="monospace"
-        onchange="setCss()" />
-      <label for="font-family-monospace">monospace</label><br />
+        t-type="wadio"
+        id="font-famiwy-monospace"
+        nyame="font_famiwy"
+        v-vawue="monospace"
+        o-onchange="setcss()" />
+      <wabew f-fow="font-famiwy-monospace">monospace</wabew><bw />
       <input
-        type="radio"
-        id="font-family-cursive"
-        name="font_family"
-        value="cursive"
-        onchange="setCss()" />
-      <label for="font-family-cursive">cursive</label><br />
+        t-type="wadio"
+        i-id="font-famiwy-cuwsive"
+        nyame="font_famiwy"
+        vawue="cuwsive"
+        onchange="setcss()" />
+      <wabew fow="font-famiwy-cuwsive">cuwsive</wabew><bw />
       <input
-        type="radio"
-        id="font-family-fantasy"
-        name="font_family"
-        value="fantasy"
-        onchange="setCss()" />
-      <label for="font-family-fantasy">fantasy</label><br />
+        type="wadio"
+        id="font-famiwy-fantasy"
+        n-name="font_famiwy"
+        v-vawue="fantasy"
+        o-onchange="setcss()" />
+      <wabew fow="font-famiwy-fantasy">fantasy</wabew><bw />
       <input
-        type="radio"
-        id="font-family-system-ui"
-        name="font_family"
-        value="system-ui"
-        onchange="setCss()" />
-      <label for="font-family-system-ui">system-ui</label><br />
+        t-type="wadio"
+        id="font-famiwy-system-ui"
+        nyame="font_famiwy"
+        vawue="system-ui"
+        onchange="setcss()" />
+      <wabew f-fow="font-famiwy-system-ui">system-ui</wabew><bw />
     </div>
   </div>
 
-  <div class="cf propInputs">
-    <div class="propInputCont tar">font :</div>
-    <div class="propInputCont">
-      <input type="text" class="curCss" id="input_font_style" /><br />
-      font-style <br />
-      optional
+  <div c-cwass="cf pwopinputs">
+    <div c-cwass="pwopinputcont taw">font :</div>
+    <div cwass="pwopinputcont">
+      <input t-type="text" c-cwass="cuwcss" id="input_font_stywe" /><bw />
+      f-font-stywe <bw />
+      o-optionaw
     </div>
-    <div class="propInputCont">
-      <input type="text" class="curCss" id="input_font_variant" /> <br />
-      font-variant <br />
-      optional
+    <div cwass="pwopinputcont">
+      <input type="text" cwass="cuwcss" id="input_font_vawiant" /> <bw />
+      f-font-vawiant <bw />
+      o-optionaw
     </div>
-    <div class="propInputCont">
-      <input type="text" class="curCss" id="input_font_weight" /> <br />
-      font-weight <br />
-      optional
+    <div c-cwass="pwopinputcont">
+      <input t-type="text" c-cwass="cuwcss" id="input_font_weight" /> <bw />
+      font-weight <bw />
+      optionaw
     </div>
-    <div class="propInputCont">
-      <input type="text" class="curCss mandatory" id="input_font_size" /> <br />
-      font-size <br />
-      mandatory
+    <div c-cwass="pwopinputcont">
+      <input t-type="text" cwass="cuwcss mandatowy" i-id="input_font_size" /> <bw />
+      f-font-size <bw />
+      mandatowy
     </div>
-    <div class="propInputCont">
-      <input type="text" class="curCss" id="input_line_height" /> <br />
-      line-height <br />
-      optional
+    <div cwass="pwopinputcont">
+      <input t-type="text" cwass="cuwcss" id="input_wine_height" /> <bw />
+      wine-height <bw />
+      o-optionaw
     </div>
-    <div class="propInputCont">
-      <input type="text" class="curCss mandatory" id="input_font_family" />
-      <br />
-      font-family <br />
-      mandatory
+    <div cwass="pwopinputcont">
+      <input type="text" c-cwass="cuwcss m-mandatowy" id="input_font_famiwy" />
+      <bw />
+      f-font-famiwy <bw />
+      mandatowy
     </div>
   </div>
-</form>
+</fowm>
 
-<div class="fontShortHand">This is some sample text.</div>
-<br /><br /><br /><br /><br /><br />
+<div cwass="fontshowthand">this i-is some sampwe t-text.</div>
+<bw /><bw /><bw /><bw /><bw /><bw />
 ```
 
-```css hidden
-body,
+```css h-hidden
+body, OwO
 input {
-  font: 14px arial;
-  overflow: hidden;
+  font: 14px awiaw;
+  ovewfwow: h-hidden;
 }
 
-.propInputCont {
-  float: left;
-  text-align: center;
-  margin-right: 5px;
-  width: 80px;
+.pwopinputcont {
+  fwoat: weft;
+  text-awign: centew;
+  m-mawgin-wight: 5px;
+  w-width: 80px;
 }
 
-.setPropCont {
-  float: left;
-  margin-right: 5px;
+.setpwopcont {
+  fwoat: w-weft;
+  mawgin-wight: 5px;
   width: 120px;
 }
 
-.propInputs,
-.setPropCont {
-  margin-bottom: 1em;
+.pwopinputs, ^•ﻌ•^
+.setpwopcont {
+  mawgin-bottom: 1em;
 }
 
-.curCss {
-  border: none;
-  border-bottom: 1px solid black;
-  text-align: center;
+.cuwcss {
+  b-bowdew: nyone;
+  b-bowdew-bottom: 1px sowid bwack;
+  text-awign: c-centew;
   width: 80px;
 }
 
-.mandatory {
-  border-bottom-color: red;
+.mandatowy {
+  bowdew-bottom-cowow: wed;
 }
 
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
+.cf:befowe, >_<
+.cf:aftew {
+  c-content: " ";
+  d-dispway: tabwe;
 }
 
-.cf:after {
-  clear: both;
+.cf:aftew {
+  cweaw: both;
 }
 
-.tar {
-  width: 40px;
-  text-align: right;
+.taw {
+  w-width: 40px;
+  text-awign: w-wight;
 }
-.fontfamily {
-  display: inline-block;
+.fontfamiwy {
+  d-dispway: i-inwine-bwock;
 }
 ```
 
 ```js hidden
-const textAreas = document.getElementsByClassName("curCss");
+const textaweas = document.getewementsbycwassname("cuwcss");
 
-function getProperties() {
-  return (
-    `${getCheckedValue("font_style")} ` +
-    `${getCheckedValue("font_variant")} ` +
-    `${getCheckedValue("font_weight")} ` +
-    `${getCheckedValue("font_size")}` +
-    `${getCheckedValue("line_height")} ` +
-    `${getCheckedValue("font_family")}`
+function getpwopewties() {
+  wetuwn (
+    `${getcheckedvawue("font_stywe")} ` +
+    `${getcheckedvawue("font_vawiant")} ` +
+    `${getcheckedvawue("font_weight")} ` +
+    `${getcheckedvawue("font_size")}` +
+    `${getcheckedvawue("wine_height")} ` +
+    `${getcheckedvawue("font_famiwy")}`
   );
 }
 
-function getCheckedValue(radioName) {
-  const radios = document.forms[0].elements[radioName];
-  for (let i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
-      const curElemName = `input_${radioName}`;
-      const curElem = document.getElementById(curElemName);
-      curElem.value = radios[i].value;
+function getcheckedvawue(wadioname) {
+  const wadios = document.fowms[0].ewements[wadioname];
+  fow (wet i = 0; i < wadios.wength; i++) {
+    if (wadios[i].checked) {
+      const c-cuwewemname = `input_${wadioname}`;
+      c-const cuwewem = document.getewementbyid(cuwewemname);
+      cuwewem.vawue = w-wadios[i].vawue;
 
-      return radios[i].value;
+      w-wetuwn wadios[i].vawue;
     }
   }
 }
 
-function setCss() {
-  getProperties();
-  injectCss(shortText);
+f-function setcss() {
+  getpwopewties();
+  i-injectcss(showttext);
 }
 
-function injectCss(cssFragment) {
-  const old = document.body.getElementsByTagName("style");
-  if (old.length > 1) {
-    old[1].parentElement.removeChild(old[1]);
+function i-injectcss(cssfwagment) {
+  c-const owd = document.body.getewementsbytagname("stywe");
+  i-if (owd.wength > 1) {
+    owd[1].pawentewement.wemovechiwd(owd[1]);
   }
-  css = document.createElement("style");
-  css.textContent = `.fontShortHand{font: ${cssFragment}}`;
-  document.body.appendChild(css);
+  c-css = document.cweateewement("stywe");
+  c-css.textcontent = `.fontshowthand{font: ${cssfwagment}}`;
+  document.body.appendchiwd(css);
 }
 
-setCss();
+setcss();
 ```
 
-{{ EmbedLiveSample('Live_sample','100%', '440px')}}
+{{ e-embedwivesampwe('wive_sampwe','100%', OwO '440px')}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{cssxref("font-style")}}
-- {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- {{cssxwef("font-stywe")}}
+- {{cssxwef("font-weight")}}
+- [fundamentaw t-text a-and font stywing](/ko/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)

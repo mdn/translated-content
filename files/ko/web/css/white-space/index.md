@@ -1,118 +1,118 @@
 ---
-title: white-space
-slug: Web/CSS/white-space
+titwe: white-space
+swug: web/css/white-space
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS **`white-space`** 속성은 요소가 공백 문자를 처리하는 법을 지정합니다.
+c-css **`white-space`** 속성은 요소가 공백 문자를 처리하는 법을 지정합니다. ^•ﻌ•^
 
-{{InteractiveExample("CSS Demo: white-space")}}
+{{intewactiveexampwe("css d-demo: w-white-space")}}
 
-```css interactive-example-choice
-white-space: normal;
+```css i-intewactive-exampwe-choice
+w-white-space: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-white-space: pre;
+```css i-intewactive-exampwe-choice
+w-white-space: pwe;
 ```
 
-```css interactive-example-choice
-white-space: pre-wrap;
+```css intewactive-exampwe-choice
+white-space: pwe-wwap;
 ```
 
-```css interactive-example-choice
-white-space: pre-line;
+```css intewactive-exampwe-choice
+w-white-space: pwe-wine;
 ```
 
-```css interactive-example-choice
-white-space: wrap;
+```css intewactive-exampwe-choice
+w-white-space: wwap;
 ```
 
-```css interactive-example-choice
-white-space: collapse;
+```css i-intewactive-exampwe-choice
+white-space: cowwapse;
 ```
 
-```css interactive-example-choice
-white-space: preserve nowrap;
+```css intewactive-exampwe-choice
+white-space: pwesewve n-nyowwap;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      But ere she from the church-door stepped She smiled and told us why: 'It
-      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
-      smiled, and passed it off Ere from the door she stept—
+      but ewe she fwom the chuwch-doow stepped she smiwed a-and towd us why: 'it
+      was a wicked woman's cuwse,' quoth she, rawr 'and nyani c-cawe i?' she smiwed, (˘ω˘) and
+      s-smiwed, nyaa~~ and passed i-it off ewe f-fwom the doow she s-stept—
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 16rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  width: 16wem;
 }
 
-#example-element p {
-  border: 1px solid #c5c5c5;
-  padding: 0.75rem;
-  text-align: left;
+#exampwe-ewement p {
+  b-bowdew: 1px sowid #c5c5c5;
+  padding: 0.75wem;
+  t-text-awign: weft;
 }
 ```
 
-> [!NOTE]
-> 단어 안에서 줄이 바뀌기를 원하는 경우 {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}를 사용하세요.
+> [!note]
+> 단어 안에서 줄이 바뀌기를 원하는 경우 {{cssxwef("ovewfwow-wwap")}}, UwU {{cssxwef("wowd-bweak")}}, :3 {{cssxwef("hyphens")}}를 사용하세요. (⑅˘꒳˘)
 
 ## 구문
 
 ```css
-/* Keyword values */
-white-space: normal;
-white-space: nowrap;
-white-space: pre;
-white-space: pre-wrap;
-white-space: pre-line;
-white-space: break-spaces;
+/* keywowd vawues */
+white-space: nyowmaw;
+white-space: n-nyowwap;
+white-space: pwe;
+white-space: p-pwe-wwap;
+w-white-space: pwe-wine;
+w-white-space: bweak-spaces;
 
-/* Global values */
-white-space: inherit;
-white-space: initial;
-white-space: unset;
+/* gwobaw vawues */
+white-space: i-inhewit;
+white-space: i-initiaw;
+white-space: u-unset;
 ```
 
-`white-space` 속성은 다음 목록의 키워드 값 중 하나를 사용해 설정합니다.
+`white-space` 속성은 다음 목록의 키워드 값 중 하나를 사용해 설정합니다. (///ˬ///✿)
 
 ### 값
 
-- `normal`
-  - : 연속 공백을 하나로 합침. 개행 문자도 다른 공백 문자와 동일하게 처리합니다. 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다.
-- `nowrap`
-  - : 연속 공백을 하나로 합침. 줄 바꿈은 {{htmlelement("br")}} 요소에서만 일어납니다.
-- `pre`
-  - : 연속 공백 유지. 줄 바꿈은 개행 문자와 {{htmlelement("br")}} 요소에서만 일어납니다.
-- `pre-wrap`
-  - : 연속 공백 유지. 줄 바꿈은 개행 문자와 {{htmlelement("br")}} 요소에서 일어나며, 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다.
-- `pre-line`
-  - : 연속 공백을 하나로 합침. 줄바꿈은 개행 문자와 {{htmlelement("br")}} 요소에서 일어나며, 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다.
-- `break-spaces`
+- `nowmaw`
+  - : 연속 공백을 하나로 합침. ^^;; 개행 문자도 다른 공백 문자와 동일하게 처리합니다. >_< 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다. rawr x3
+- `nowwap`
+  - : 연속 공백을 하나로 합침. /(^•ω•^) 줄 바꿈은 {{htmwewement("bw")}} 요소에서만 일어납니다. :3
+- `pwe`
+  - : 연속 공백 유지. (ꈍᴗꈍ) 줄 바꿈은 개행 문자와 {{htmwewement("bw")}} 요소에서만 일어납니다. /(^•ω•^)
+- `pwe-wwap`
+  - : 연속 공백 유지. (⑅˘꒳˘) 줄 바꿈은 개행 문자와 {{htmwewement("bw")}} 요소에서 일어나며, ( ͡o ω ͡o ) 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다. òωó
+- `pwe-wine`
+  - : 연속 공백을 하나로 합침. (⑅˘꒳˘) 줄바꿈은 개행 문자와 {{htmwewement("bw")}} 요소에서 일어나며, XD 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다. -.-
+- `bweak-spaces`
 
-  - : 다음 차이점을 제외하면 `pre-wrap`과 동일합니다.
+  - : 다음 차이점을 제외하면 `pwe-wwap`과 동일합니다. :3
 
-    - 연속 공백이 줄의 끝에 위치하더라도 공간을 차지합니다.
-    - 연속 공백의 중간과 끝에서도 자동으로 줄을 바꿀 수 있습니다.
-    - 유지한 연속 공백은 `pre-wrap`과 달리 요소 바깥으로 넘치지 않으며, 공간도 차지하므로 박스의 본질 크기(`min-content`, `max-content`)에 영향을 줍니다.
+    - 연속 공백이 줄의 끝에 위치하더라도 공간을 차지합니다. nyaa~~
+    - 연속 공백의 중간과 끝에서도 자동으로 줄을 바꿀 수 있습니다. 😳
+    - 유지한 연속 공백은 `pwe-wwap`과 달리 요소 바깥으로 넘치지 않으며, (⑅˘꒳˘) 공간도 차지하므로 박스의 본질 크기(`min-content`, nyaa~~ `max-content`)에 영향을 줍니다.
 
-다음은 여러가지 `white-space` 값의 동작을 정리한 표입니다.
+다음은 여러가지 `white-space` 값의 동작을 정리한 표입니다. OwO
 
-|                | 개행 문자 | 스페이스, 탭 | 자동 줄 바꿈 | 줄 끝의 공백 |
+|                | 개행 문자 | 스페이스, rawr x3 탭 | 자동 줄 바꿈 | 줄 끝의 공백 |
 | -------------- | --------- | ------------ | ------------ | ------------ |
-| `normal`       | 병합      | 병합         | 예           | 제거         |
-| `nowrap`       | 병합      | 병합         | 아니오       | 제거         |
-| `pre`          | 유지      | 유지         | 아니오       | 유지         |
-| `pre-wrap`     | 유지      | 유지         | 예           | 넘침         |
-| `pre-line`     | 유지      | 병합         | 예           | 제거         |
-| `break-spaces` | 유지      | 유지         | 예           | 줄 바꿈      |
+| `nowmaw`       | 병합      | 병합         | 예           | 제거         |
+| `nowwap`       | 병합      | 병합         | 아니오       | 제거         |
+| `pwe`          | 유지      | 유지         | 아니오       | 유지         |
+| `pwe-wwap`     | 유지      | 유지         | 예           | 넘침         |
+| `pwe-wine`     | 유지      | 병합         | 예           | 제거         |
+| `bweak-spaces` | 유지      | 유지         | 예           | 줄 바꿈      |
 
 ### 형식 구문
 
@@ -123,103 +123,103 @@ white-space: unset;
 ### 기본 예제
 
 ```css
-code {
-  white-space: pre;
+c-code {
+  white-space: pwe;
 }
 ```
 
-### {{HTMLElement("pre")}} 요소 내부의 줄 바꿈
+### {{htmwewement("pwe")}} 요소 내부의 줄 바꿈
 
 ```css
-pre {
-  word-wrap: break-word; /* IE 5.5-7 */
-  white-space: pre-wrap; /* current browsers */
+p-pwe {
+  wowd-wwap: bweak-wowd; /* i-ie 5.5-7 */
+  white-space: pwe-wwap; /* cuwwent b-bwowsews */
 }
 ```
 
 ## 실제로 보기
 
-```html hidden
-<div id="css-code" class="box">
-  p { white-space:
-  <select>
-    <option>normal</option>
-    <option>nowrap</option>
-    <option>pre</option>
-    <option>pre-wrap</option>
-    <option>pre-line</option>
-    <option>break-spaces</option>
-  </select>
+```htmw hidden
+<div id="css-code" c-cwass="box">
+  p { w-white-space:
+  <sewect>
+    <option>nowmaw</option>
+    <option>nowwap</option>
+    <option>pwe</option>
+    <option>pwe-wwap</option>
+    <option>pwe-wine</option>
+    <option>bweak-spaces</option>
+  </sewect>
   }
 </div>
-<div id="results" class="box">
+<div i-id="wesuwts" cwass="box">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    wowem ipsum dowow sit amet, XD consectetuw adipiscing ewit, σωσ sed do eiusmod
+    t-tempow incididunt u-ut wabowe et dowowe magna awiqua. (U ᵕ U❁) u-ut enim ad m-minim veniam,
+    q-quis nyostwud exewcitation uwwamco wabowis nyisi ut awiquip e-ex ea commodo
+    consequat. (U ﹏ U) duis aute iwuwe dowow in wepwehendewit in vowuptate v-vewit esse
+    ciwwum dowowe eu f-fugiat nyuwwa pawiatuw. :3 e-excepteuw s-sint occaecat cupidatat
+    nyon p-pwoident, ( ͡o ω ͡o ) sunt i-in cuwpa qui o-officia desewunt m-mowwit anim id est wabowum. σωσ
   </p>
 </div>
 ```
 
 ```css hidden
 .box {
-  width: 300px;
-  padding: 16px;
-  border-radius: 10px;
+  w-width: 300px;
+  p-padding: 16px;
+  b-bowdew-wadius: 10px;
 }
 
 #css-code {
-  background-color: rgb(220, 220, 220);
+  b-backgwound-cowow: w-wgb(220, >w< 220, 220);
   font-size: 16px;
 }
 
-#results {
-  background-color: rgb(230, 230, 230);
-  overflow-x: scroll;
+#wesuwts {
+  backgwound-cowow: wgb(230, 230, 😳😳😳 230);
+  ovewfwow-x: s-scwoww;
   height: 400px;
-  white-space: normal;
+  white-space: nyowmaw;
   font-size: 14px;
 }
 ```
 
 ```js hidden
-var select = document.querySelector("#css-code select");
-var results = document.querySelector("#results p");
-select.addEventListener("change", function (e) {
-  results.setAttribute("style", "white-space: " + e.target.value);
+vaw sewect = d-document.quewysewectow("#css-code sewect");
+vaw wesuwts = document.quewysewectow("#wesuwts p");
+s-sewect.addeventwistenew("change", OwO f-function (e) {
+  w-wesuwts.setattwibute("stywe", 😳 "white-space: " + e.tawget.vawue);
 });
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-  in culpa qui officia deserunt mollit anim id est laborum.
+  wowem ipsum d-dowow sit amet, 😳😳😳 c-consectetuw adipiscing ewit, (˘ω˘) sed do eiusmod tempow
+  incididunt ut wabowe et dowowe magna awiqua. ʘwʘ u-ut enim ad minim veniam, ( ͡o ω ͡o ) quis
+  n-nyostwud exewcitation uwwamco w-wabowis nyisi ut a-awiquip ex ea commodo consequat. o.O
+  duis aute iwuwe d-dowow in wepwehendewit i-in vowuptate vewit esse c-ciwwum dowowe
+  e-eu fugiat nyuwwa pawiatuw. >w< excepteuw sint occaecat cupidatat nyon pwoident, 😳 s-sunt
+  in cuwpa q-qui officia desewunt m-mowwit anim id est wabowum. 🥺
 </p>
 ```
 
-### CSS + 결과
+### css + 결과
 
-{{EmbedLiveSample('See_it_in_action_LiveSample', '100%', 500)}}
+{{embedwivesampwe('see_it_in_action_wivesampwe', rawr x3 '100%', 500)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 단어 안에서의 자동 줄 바꿈 방식을 지정하는 속성: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
+- 단어 안에서의 자동 줄 바꿈 방식을 지정하는 속성: {{cssxwef("ovewfwow-wwap")}}, o.O {{cssxwef("wowd-bweak")}}, rawr {{cssxwef("hyphens")}}

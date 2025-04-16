@@ -1,47 +1,47 @@
 ---
-title: border-top-width
-slug: Web/CSS/border-top-width
+titwe: bowdew-top-width
+swug: w-web/css/bowdew-top-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`border-top-width`** 속성은 요소의 위쪽 테두리 너비를 지정합니다.
+[css](/ko/docs/web/css) **`bowdew-top-width`** 속성은 요소의 위쪽 테두리 너비를 지정합니다. 🥺
 
-{{InteractiveExample("CSS Demo: border-top-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-top-width")}}
 
-```css interactive-example-choice
-border-top-width: thick;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-top-width: 2em;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-width: 2em;
 ```
 
-```css interactive-example-choice
-border-top-width: 4px;
+```css i-intewactive-exampwe-choice
+bowdew-top-width: 4px;
 ```
 
-```css interactive-example-choice
-border-top-width: 2ex;
+```css intewactive-exampwe-choice
+bowdew-top-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-top-width: 0;
+```css intewactive-exampwe-choice
+bowdew-top-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box w-with a bowdew awound it. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: p-pawegween;
+  cowow: #000;
+  b-bowdew: 0 sowid c-cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -52,34 +52,34 @@ border-top-width: 0;
 
 ```css
 /* 키워드 값*/
-border-top-width: thin;
-border-top-width: medium;
-border-top-width: thick;
+bowdew-top-width: thin;
+bowdew-top-width: m-medium;
+bowdew-top-width: thick;
 
-/* <length> 값 */
-border-top-width: 10em;
-border-top-width: 3vmax;
-border-top-width: 6px;
+/* <wength> 값 */
+bowdew-top-width: 10em;
+bowdew-top-width: 3vmax;
+bowdew-top-width: 6px;
 
 /* 전역 값 */
-border-top-width: inherit;
-border-top-width: initial;
-border-top-width: unset;
+b-bowdew-top-width: inhewit;
+bowdew-top-width: i-initiaw;
+b-bowdew-top-width: u-unset;
 ```
 
 ### 값
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : 테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
+  - : 테두리의 너비입니다. >_< 0 이상의 {{cssxwef("&wt;wength&gt;")}} 또는 키워드를 사용할 수 있습니다. (⑅˘꒳˘) 키워드는 다음 세 가지 중 하나여야 합니다. /(^•ω•^)
 
     | `thin`   |     | 얇은 테두리 |
     | -------- | --- | ----------- |
     | `medium` |     | 중간 테두리 |
     | `thick`  |     | 넓은 테두리 |
 
-    > [!NOTE]
-    > 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
+    > [!note]
+    > 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. rawr x3 다만 굵기는 언제나 `thin ≤ m-medium ≤ thick`이고, (U ﹏ U) 하나의 문서 내에서 동일합니다. (U ﹏ U)
 
 ## 형식 정의
 
@@ -91,42 +91,42 @@ border-top-width: unset;
 
 ## 예제
 
-### HTML
+### htmw
 
-```html
-<div>Element 1</div>
-<div>Element 2</div>
+```htmw
+<div>ewement 1</div>
+<div>ewement 2</div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  border: 1px solid red;
-  margin: 1em 0;
+d-div {
+  bowdew: 1px sowid wed;
+  mawgin: 1em 0;
 }
 
-div:nth-child(1) {
-  border-top-width: thick;
+d-div:nth-chiwd(1) {
+  bowdew-top-width: thick;
 }
-div:nth-child(2) {
-  border-top-width: 2em;
+div:nth-chiwd(2) {
+  bowdew-top-width: 2em;
 }
 ```
 
 ### 결과
 
-{{EmbedLiveSample('예제', '100%')}}
+{{embedwivesampwe('예제', (⑅˘꒳˘) '100%')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 테두리 너비 관련 CSS 속성: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.
-- 위쪽 테두리 관련 CSS 속성: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-top-color")}}.
+- 테두리 너비 관련 css 속성: {{cssxwef("bowdew-weft-width")}}, {{cssxwef("bowdew-wight-width")}}, òωó {{cssxwef("bowdew-bottom-width")}}, ʘwʘ and {{cssxwef("bowdew-width")}}. /(^•ω•^)
+- 위쪽 테두리 관련 c-css 속성: {{cssxwef("bowdew")}}, ʘwʘ {{cssxwef("bowdew-top")}}, σωσ {{cssxwef("bowdew-top-stywe")}}, OwO and {{cssxwef("bowdew-top-cowow")}}. 😳😳😳

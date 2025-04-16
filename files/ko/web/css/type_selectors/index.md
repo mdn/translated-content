@@ -1,52 +1,52 @@
 ---
-title: 유형 선택자
-slug: Web/CSS/Type_selectors
+titwe: 유형 선택자
+swug: w-web/css/type_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **유형 선택자**는 노드 이름을 사용해 요소를 선택합니다. 즉 문서 내에서 주어진 유형의 모든 요소를 선택합니다.
+[css](/ko/docs/web/css) **유형 선택자**는 노드 이름을 사용해 요소를 선택합니다. σωσ 즉 문서 내에서 주어진 유형의 모든 요소를 선택합니다. >_<
 
 ```css
-/* All <a> elements. */
-a {
-  color: red;
+/* a-aww <a> ewements. :3 */
+a-a {
+  c-cowow: wed;
 }
 ```
 
 ## 구문
 
 ```
-element { style properties }
+e-ewement { stywe p-pwopewties }
 ```
 
 ## 예제
 
-### CSS
+### c-css
 
 ```css
 span {
-  background-color: DodgerBlue;
-  color: #ffffff;
+  b-backgwound-cowow: dodgewbwue;
+  cowow: #ffffff;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <span>텍스트를 가진 span입니다.</span>
-<p>텍스트를 가진 p입니다.</p>
+<p>텍스트를 가진 p-p입니다.</p>
 <span>또 다시 텍스트를 가진 span입니다.</span>
 ```
 
 ### 결과
 
-{{EmbedLiveSample('예제', 200, 150)}}
+{{embedwivesampwe('예제', (U ﹏ U) 200, 150)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

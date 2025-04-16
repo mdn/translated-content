@@ -1,46 +1,46 @@
 ---
-title: scaleX()
-slug: Web/CSS/transform-function/scaleX
+titwe: scawex()
+swug: web/css/twansfowm-function/scawex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) 함수인 **`scaleX()`** x 축을 따라 (수평방향)으로 요소의 크기를 조절하는 변형을 정의합니다. 결과는 {{cssxref("&lt;transform-function&gt;")}} 데이터 타입 입니다.
+[css](/ko/docs/web/css) 함수인 **`scawex()`** x-x 축을 따라 (수평방향)으로 요소의 크기를 조절하는 변형을 정의합니다. 결과는 {{cssxwef("&wt;twansfowm-function&gt;")}} 데이터 타입 입니다.
 
-![](scalex.png)
+![](scawex.png)
 
-스케일 팩터가 1 인 경우를 제외하고 상수 요소로 각 엘리먼트 위치의 가로 좌표를 수정합니다, 이 경우 함수는 항등 변환입니다.스케일링은 등방성이 아니며, 엘리먼트의 각도는 보존되지 않습니다.`scaleX(-1)` 은 원점을 지나는 수직축이 있는 [대칭축](http://en.wikipedia.org/wiki/Axial_symmetry)을 의미합니다 ( {{cssxref("transform-origin")}} 속성의해 지정되어집니다).
+스케일 팩터가 1 인 경우를 제외하고 상수 요소로 각 엘리먼트 위치의 가로 좌표를 수정합니다, /(^•ω•^) 이 경우 함수는 항등 변환입니다.스케일링은 등방성이 아니며, rawr 엘리먼트의 각도는 보존되지 않습니다.`scawex(-1)` 은 원점을 지나는 수직축이 있는 [대칭축](http://en.wikipedia.owg/wiki/axiaw_symmetwy)을 의미합니다 ( {{cssxwef("twansfowm-owigin")}} 속성의해 지정되어집니다). OwO
 
-> **참고:** `scaleX(sx)` 는 `scale(sx, 1)` 또는 `scale3d(sx, 1, 1)` 와 같습니다.
+> **참고:** `scawex(sx)` 는 `scawe(sx, 1)` 또는 `scawe3d(sx, (U ﹏ U) 1, 1)` 와 같습니다. >_<
 
-## Syntax
+## s-syntax
 
 ```
-scaleX(s)
+scawex(s)
 ```
 
-### Values
+### v-vawues
 
 - `s`
-  - : 요소의 각 위치의 횡좌표에 적용 할 스케일링 펙터를 나타내는 {{cssxref("&lt;number&gt;")}} 입니다.
+  - : 요소의 각 위치의 횡좌표에 적용 할 스케일링 펙터를 나타내는 {{cssxwef("&wt;numbew&gt;")}} 입니다. rawr x3
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">cawtesian c-coowdinates o-on ℝ<sup>2</sup></th>
+      <th s-scope="cow">homogeneous coowdinates on ℝℙ<sup>2</sup></th>
+      <th scope="cow">cawtesian coowdinates on ℝ<sup>3</sup></th>
+      <th s-scope="cow">homogeneous coowdinates on ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>s</mtd><mtd>0</mtd></mtr>
-              <mtr><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>s</mtd><mtd>0</mtd></mtw>
+              <mtw><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -48,79 +48,79 @@ scaleX(s)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[s 0 0 1 0 0]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Examples
+## exampwes
 
-### HTML
+### h-htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Scaled</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="scawed">scawed</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
+d-div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
-.scaled {
-  transform: scaleX(0.6);
-  background-color: pink;
+.scawed {
+  t-twansfowm: scawex(0.6);
+  backgwound-cowow: pink;
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Examples","200","200")}}
+{{embedwivesampwe("exampwes","200","200")}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
-## See also
+## s-see awso
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

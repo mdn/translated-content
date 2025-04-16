@@ -1,48 +1,48 @@
 ---
-title: CSS counter styles
-slug: Web/CSS/CSS_counter_styles
-l10n:
-  sourceCommit: 1a3107dc1b77e3ece12b0a7d872dadbe95813956
+titwe: css countew stywes
+swug: w-web/css/css_countew_stywes
+w-w10n:
+  s-souwcecommit: 1a3107dc1b77e3ece12b0a7d872dadbe95813956
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS counter styles** 모듈을 사용하면 사용자 정의 카운터 스타일을 정의할 수 있습니다.
+**css c-countew stywes** 모듈을 사용하면 사용자 정의 카운터 스타일을 정의할 수 있습니다. òωó
 
 ## 참고서
 
 ### 속성
 
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("countew-weset")}}
 
 ### 함수
 
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxwef("symbows", o.O "symbows()")}}
 
 ### 규칙 지시자
 
-- {{cssxref("@counter-style")}}
+- {{cssxwef("@countew-stywe")}}
 
-  - {{cssxref("@counter-style/system","system")}}
-  - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - {{cssxref("@counter-style/negative", "negative")}}
-  - {{cssxref("@counter-style/prefix", "prefix")}}
-  - {{cssxref("@counter-style/suffix", "suffix")}}
-  - {{cssxref("@counter-style/range", "range")}}
-  - {{cssxref("@counter-style/pad", "pad")}}
-  - {{cssxref("@counter-style/speak-as", "speak-as")}}
-  - {{cssxref("@counter-style/fallback", "fallback")}}
+  - {{cssxwef("@countew-stywe/system","system")}}
+  - {{cssxwef("@countew-stywe/additive-symbows", (U ᵕ U❁) "additive-symbows")}}
+  - {{cssxwef("@countew-stywe/negative", (⑅˘꒳˘) "negative")}}
+  - {{cssxwef("@countew-stywe/pwefix", ( ͡o ω ͡o ) "pwefix")}}
+  - {{cssxwef("@countew-stywe/suffix", UwU "suffix")}}
+  - {{cssxwef("@countew-stywe/wange", rawr x3 "wange")}}
+  - {{cssxwef("@countew-stywe/pad", rawr "pad")}}
+  - {{cssxwef("@countew-stywe/speak-as", σωσ "speak-as")}}
+  - {{cssxwef("@countew-stywe/fawwback", σωσ "fawwback")}}
 
 ## 안내서
 
-- [CSS 카운터 사용하기](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - : CSS 카운터 속성을 사용하여 목록 카운터를 제어하는 방법을 설명합니다.
+- [css 카운터 사용하기](/ko/docs/web/css/css_countew_stywes/using_css_countews)
+  - : c-css 카운터 속성을 사용하여 목록 카운터를 제어하는 방법을 설명합니다. >_<
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

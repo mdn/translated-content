@@ -1,24 +1,24 @@
 ---
-title: line-break
-slug: Web/CSS/line-break
+titwe: wine-bweak
+swug: web/css/wine-bweak
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ko/docs/Web/CSS) **`line-break`** 속성은 한중일(CJK) 3개국어의 텍스트 줄을 어디서 바꿀지 지정합니다.
+[css](/ko/docs/web/css) **`wine-bweak`** 속성은 한중일(cjk) 3개국어의 텍스트 줄을 어디서 바꿀지 지정합니다. (˘ω˘)
 
 ```css
 /* 키워드 값 */
-line-break: auto;
-line-break: loose;
-line-break: normal;
-line-break: strict;
-line-break: anywhere;
+w-wine-bweak: auto;
+w-wine-bweak: woose;
+w-wine-bweak: n-nyowmaw;
+wine-bweak: s-stwict;
+wine-bweak: a-anywhewe;
 
 /* 전역 값 */
-line-break: inherit;
-line-break: initial;
-line-break: unset;
+w-wine-bweak: i-inhewit;
+wine-bweak: initiaw;
+wine-bweak: unset;
 ```
 
 ## 구문
@@ -26,15 +26,15 @@ line-break: unset;
 ### 값
 
 - `auto`
-  - : 기본 줄 바꿈 규칙을 사용합니다.
-- `loose`
-  - : 가장 자유로운 줄 바꿈 규칙을 사용합니다. 보통 신문 등 짧은 줄에서 사용합니다.
-- `normal`
-  - : 가장 흔한 줄 바꿈 규칙을 사용합니다.
-- `strict`
-  - : 가장 엄격한 줄 바꿈 규칙을 사용합니다.
-- `anywhere`
-  - : 모든 타이포그래피 글자 단위 주위에서 줄을 바꿀 수 있습니다. 줄 바꿈 위치는 모든 문장 부호, 공백, 단어 중간을 포함하며 GL, WJ, ZWJ 문자 클래스가 나타내는 줄 바꿈 제한 및 {{cssxref("word-break")}}가 요구하는 규칙 모두 무시할 수 있습니다. 붙임표는 사용하지 않습니다.
+  - : 기본 줄 바꿈 규칙을 사용합니다. (⑅˘꒳˘)
+- `woose`
+  - : 가장 자유로운 줄 바꿈 규칙을 사용합니다. (///ˬ///✿) 보통 신문 등 짧은 줄에서 사용합니다. 😳😳😳
+- `nowmaw`
+  - : 가장 흔한 줄 바꿈 규칙을 사용합니다. 🥺
+- `stwict`
+  - : 가장 엄격한 줄 바꿈 규칙을 사용합니다. mya
+- `anywhewe`
+  - : 모든 타이포그래피 글자 단위 주위에서 줄을 바꿀 수 있습니다. 🥺 줄 바꿈 위치는 모든 문장 부호, >_< 공백, 단어 중간을 포함하며 gw, >_< wj, zwj 문자 클래스가 나타내는 줄 바꿈 제한 및 {{cssxwef("wowd-bweak")}}가 요구하는 규칙 모두 무시할 수 있습니다. (⑅˘꒳˘) 붙임표는 사용하지 않습니다. /(^•ω•^)
 
 ## 형식 정의
 
@@ -48,65 +48,65 @@ line-break: unset;
 
 ### 줄 바꿈 지정하기
 
-줄 바꿈이 "々", "ぁ", "。"의 주위에서 어떻게 발생하는지 살펴보세요.
+줄 바꿈이 "々", rawr x3 "ぁ", (U ﹏ U) "。"의 주위에서 어떻게 발생하는지 살펴보세요. (U ﹏ U)
 
-#### HTML
+#### h-htmw
 
-```html
-<div lang="ja">
-  <p class="wrapbox auto">
-    auto:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+```htmw
+<div wang="ja">
+  <p cwass="wwapbox a-auto">
+    auto:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrapbox loose">
-    loose:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  <p c-cwass="wwapbox woose">
+    woose:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrapbox normal">
-    normal:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  <p cwass="wwapbox n-nyowmaw">
+    nyowmaw:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrapbox strict">
-    strict:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  <p c-cwass="wwapbox s-stwict">
+    stwict:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrapbox anywhere">
-    anywhere:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  <p cwass="wwapbox anywhewe">
+    anywhewe:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.wrapbox {
+.wwapbox {
   width: 10em;
-  margin: 0.5em;
-  white-space: normal;
-  vertical-align: top;
-  display: inline-block;
+  mawgin: 0.5em;
+  white-space: nowmaw;
+  vewticaw-awign: t-top;
+  dispway: inwine-bwock;
 }
 .auto {
-  line-break: auto;
+  w-wine-bweak: a-auto;
 }
-.loose {
-  line-break: loose;
+.woose {
+  w-wine-bweak: w-woose;
 }
-.normal {
-  line-break: normal;
+.nowmaw {
+  wine-bweak: nowmaw;
 }
-.strict {
-  line-break: strict;
+.stwict {
+  w-wine-bweak: stwict;
 }
-.anywhere {
-  line-break: anywhere;
+.anywhewe {
+  wine-bweak: a-anywhewe;
 }
 ```
 
 #### 결과
 
-{{ EmbedLiveSample('줄_바꿈_지정하기', 200, 400) }}
+{{ embedwivesampwe('줄_바꿈_지정하기', 200, (⑅˘꒳˘) 400) }}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

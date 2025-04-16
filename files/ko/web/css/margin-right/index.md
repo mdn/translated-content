@@ -1,99 +1,99 @@
 ---
-title: margin-right
-slug: Web/CSS/margin-right
+titwe: mawgin-wight
+swug: web/css/mawgin-wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`margin-right`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 오른쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
+**`mawgin-wight`** [css](/ko/docs/web/css) 속성은 요소의 오른쪽에 [바깥 여백 영역](/ko/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)mawgin a-awea을 설정합니다. 😳😳😳 양수 값은 인접 요소와 거리를 넓히고, mya 음수 값은 더 좁힙니다. 😳
 
-{{InteractiveExample("CSS Demo: margin-right")}}
+{{intewactiveexampwe("css d-demo: mawgin-wight")}}
 
-```css interactive-example-choice
-margin-right: 1em;
+```css i-intewactive-exampwe-choice
+m-mawgin-wight: 1em;
 ```
 
-```css interactive-example-choice
-margin-right: 10%;
+```css intewactive-exampwe-choice
+m-mawgin-wight: 10%;
 ```
 
-```css interactive-example-choice
-margin-right: 10px;
+```css i-intewactive-exampwe-choice
+m-mawgin-wight: 10px;
 ```
 
-```css interactive-example-choice
-margin-right: 0;
+```css i-intewactive-exampwe-choice
+mawgin-wight: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="col"></div>
-    <div class="col transition-all" id="example-element"></div>
-    <div class="col"></div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="cow"></div>
+    <div c-cwass="cow twansition-aww" id="exampwe-ewement"></div>
+    <div c-cwass="cow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
+  h-height: 200px;
+  dispway: fwex;
+  awign-content: fwex-stawt;
+  j-justify-content: fwex-stawt;
 }
 
-.col {
-  width: 33.33%;
-  border: solid #5b6dcd 10px;
-  background-color: rgba(229, 232, 252, 0.6);
-  flex-shrink: 0;
+.cow {
+  w-width: 33.33%;
+  b-bowdew: sowid #5b6dcd 10px;
+  backgwound-cowow: wgba(229, -.- 232, 252, 0.6);
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffc129;
-  background-color: rgba(255, 244, 219, 0.6);
+#exampwe-ewement {
+  bowdew: s-sowid 10px #ffc129;
+  backgwound-cowow: wgba(255, 🥺 244, 219, o.O 0.6);
 }
 ```
 
 ## 구문
 
 ```css
-/* <length> 값 */
-margin-right: 20px; /* 절대 길이 */
-margin-right: 1em; /* 글씨 크기에 상대적 */
-margin-right: 5%; /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
+/* <wength> 값 */
+mawgin-wight: 20px; /* 절대 길이 */
+mawgin-wight: 1em; /* 글씨 크기에 상대적 */
+mawgin-wight: 5%; /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
 
 /* 키워드 값 */
-margin-right: auto;
+m-mawgin-wight: auto;
 
 /* 전역 값 */
-margin-right: inherit;
-margin-right: initial;
-margin-right: unset;
+m-mawgin-wight: inhewit;
+m-mawgin-wight: i-initiaw;
+mawgin-wight: u-unset;
 ```
 
-`margin-right` 속성은 키워드 `auto`, `<length>`, `<percentage>`를 사용해 설정할 수 있습니다. 값은 양수, 0, 음수가 가능합니다.
+`mawgin-wight` 속성은 키워드 `auto`, /(^•ω•^) `<wength>`, nyaa~~ `<pewcentage>`를 사용해 설정할 수 있습니다. nyaa~~ 값은 양수, :3 0, 😳😳😳 음수가 가능합니다. (˘ω˘)
 
 ### 값
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 바깥 여백 크기의 고정 값.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 바깥 여백 크기와 블록 컨테이너 너비의 비율.
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 바깥 여백 크기와 블록 컨테이너 너비의 비율. ^^
 - `auto`
 
-  - : 사용한 레이아웃 모드에 따라 가로축 미사용 공간 너비의 일부를 바깥 여백에 할당. `margin-left`와 `margin-right`의 값이 모두 `auto`라면 너비를 양 여백에 동일하게 배정합니다. 아래 표가 가능한 여러 경우를 보입니다.
+  - : 사용한 레이아웃 모드에 따라 가로축 미사용 공간 너비의 일부를 바깥 여백에 할당. :3 `mawgin-weft`와 `mawgin-wight`의 값이 모두 `auto`라면 너비를 양 여백에 동일하게 배정합니다. -.- 아래 표가 가능한 여러 경우를 보입니다. 😳
 
-    | {{cssxref("display")}} 값                                                                         | {{cssxref("float")}} 값 | {{cssxref("position")}} 값 | `auto`의 계산 값                                                                                                                                                               | 설명                                                                                                  |
+    | {{cssxwef("dispway")}} 값                                                                         | {{cssxwef("fwoat")}} 값 | {{cssxwef("position")}} 값 | `auto`의 계산 값                                                                                                                                                               | 설명                                                                                                  |
     | ------------------------------------------------------------------------------------------------- | ----------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-    | `inline`, `inline-block`, `inline-table`                                                          | _any_                   | `static` or `relative`     | `0`                                                                                                                                                                            | 인라인 레이아웃 모드                                                                                  |
-    | `block`, `inline`, `inline-block`, `block`, `table`, `inline-table`, `list-item`, `table-caption` | _any_                   | `static` or `relative`     | `0`, except if both `margin-left` and `margin-right` are set to `auto`. In this case, it is set to the value centering the element inside its parent.                          | 블록 레이아웃 모드                                                                                    |
-    | `block`, `inline`, `inline-block`, `block`, `table`, `inline-table`, `list-item`, `table-caption` | `left` or `right`       | `static` or `relative`     | `0`                                                                                                                                                                            | 블록 레이아웃 모드 (플로팅 요소)                                                                      |
-    | _any_ `table-*`_, except_ `table-caption`                                                         | _any_                   | _any_                      | `0`                                                                                                                                                                            | 내부 `table-*` 요소는 바깥 여백을 가지지 않습니다. 대신 {{ cssxref("border-spacing") }}을 사용하세요. |
-    | _any, except `flex`,_ `inline-flex`_, or_ `table-*`                                               | _any_                   | _`fixed`_ or `absolute`    | `0`, except if both `margin-left` and `margin-right` are set to `auto`. In this case, it is set to the value centering the border area inside the available `width`, if fixed. | 절대위치 레이아웃 모드                                                                                |
-    | `flex`, `inline-flex`                                                                             | _any_                   | _any_                      | `0`, except if there is any positive horizontal free space. In this case, it is evenly distributed to all horizontal `auto` margins.                                           | 플렉스박스 레이아웃 모드                                                                              |
+    | `inwine`, mya `inwine-bwock`, (˘ω˘) `inwine-tabwe`                                                          | _any_                   | `static` ow `wewative`     | `0`                                                                                                                                                                            | 인라인 레이아웃 모드                                                                                  |
+    | `bwock`, >_< `inwine`, `inwine-bwock`, -.- `bwock`, 🥺 `tabwe`, `inwine-tabwe`, (U ﹏ U) `wist-item`, >w< `tabwe-caption` | _any_                   | `static` ow `wewative`     | `0`, mya e-except if both `mawgin-weft` and `mawgin-wight` awe set to `auto`. >w< in this case, nyaa~~ i-it is set to the vawue centewing the ewement inside its pawent. (✿oωo)                          | 블록 레이아웃 모드                                                                                    |
+    | `bwock`, ʘwʘ `inwine`, (ˆ ﻌ ˆ)♡ `inwine-bwock`, 😳😳😳 `bwock`, `tabwe`, :3 `inwine-tabwe`, OwO `wist-item`, (U ﹏ U) `tabwe-caption` | `weft` ow `wight`       | `static` ow `wewative`     | `0`                                                                                                                                                                            | 블록 레이아웃 모드 (플로팅 요소)                                                                      |
+    | _any_ `tabwe-*`_, >w< except_ `tabwe-caption`                                                         | _any_                   | _any_                      | `0`                                                                                                                                                                            | 내부 `tabwe-*` 요소는 바깥 여백을 가지지 않습니다. (U ﹏ U) 대신 {{ c-cssxwef("bowdew-spacing") }}을 사용하세요. 😳 |
+    | _any, (ˆ ﻌ ˆ)♡ except `fwex`,_ `inwine-fwex`_, 😳😳😳 o-ow_ `tabwe-*`                                               | _any_                   | _`fixed`_ o-ow `absowute`    | `0`, e-except if both `mawgin-weft` and `mawgin-wight` awe s-set to `auto`. (U ﹏ U) i-in this case, (///ˬ///✿) it is set to the v-vawue centewing t-the bowdew awea inside the avaiwabwe `width`, 😳 i-if fixed. 😳 | 절대위치 레이아웃 모드                                                                                |
+    | `fwex`, σωσ `inwine-fwex`                                                                             | _any_                   | _any_                      | `0`, e-except if thewe is any positive howizontaw fwee s-space. rawr x3 in this case, OwO it is evenwy d-distwibuted to aww howizontaw `auto` m-mawgins. /(^•ω•^)                                           | 플렉스박스 레이아웃 모드                                                                              |
 
 ### 형식 구문
 
@@ -103,22 +103,22 @@ margin-right: unset;
 
 ```css
 .content {
-  margin-right: 5%;
+  m-mawgin-wight: 5%;
 }
 .sidebox {
-  margin-right: 10px;
+  mawgin-wight: 10px;
 }
-.logo {
-  margin-right: -5px;
+.wogo {
+  mawgin-wight: -5px;
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

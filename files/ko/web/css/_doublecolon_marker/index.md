@@ -1,94 +1,94 @@
 ---
-title: ::marker
-slug: Web/CSS/::marker
-l10n:
-  sourceCommit: 679f5893a4734fd136b80140e13262422d76b123
+titwe: ::mawkew
+swug: web/css/::mawkew
+w-w10n:
+  s-souwcecommit: 679f5893a4734fd136b80140e13262422d76b123
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::marker`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 일반적으로 불릿 혹은 숫자를 포함하는 목록 요소의 마커 상자를 선택합니다. 이는 {{HTMLElement("li")}}와 {{HTMLElement("summary")}}처럼 [`display: list-item`](/ko/docs/Web/CSS/display)이 설정된 의사 요소나 일반 요소에서 동작합니다.
+**`::mawkew`** [css](/ko/docs/web/css) [의사 요소](/ko/docs/web/css/pseudo-ewements)는 일반적으로 불릿 혹은 숫자를 포함하는 목록 요소의 마커 상자를 선택합니다. ( ͡o ω ͡o ) 이는 {{htmwewement("wi")}}와 {{htmwewement("summawy")}}처럼 [`dispway: w-wist-item`](/ko/docs/web/css/dispway)이 설정된 의사 요소나 일반 요소에서 동작합니다. rawr x3
 
-{{InteractiveExample("CSS Demo: ::marker", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: ::mawkew", nyaa~~ "tabbed-showtew")}}
 
-```css interactive-example
-li::marker {
-  content: "✝ ";
-  font-size: 1.2em;
+```css i-intewactive-exampwe
+wi::mawkew {
+  c-content: "✝ ";
+  f-font-size: 1.2em;
 }
 ```
 
-```html interactive-example
-<p>Group known as Mercury Seven:</p>
-<ul>
-  <li>Malcolm Scott Carpenter</li>
-  <li>Leroy Gordon (Gordo) Cooper Jr.</li>
-  <li>John Herschel Glenn Jr.</li>
-  <li>Virgil Ivan (Gus) Grissom</li>
-  <li>Walter Marty (Wally) Schirra Jr.</li>
-  <li>Alan Bartlett Shepard Jr.</li>
-  <li>Donald Kent (Deke) Slayton</li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>gwoup known as mewcuwy seven:</p>
+<uw>
+  <wi>mawcowm scott cawpentew</wi>
+  <wi>wewoy gowdon (gowdo) c-coopew jw.</wi>
+  <wi>john hewschew g-gwenn jw.</wi>
+  <wi>viwgiw ivan (gus) g-gwissom</wi>
+  <wi>wawtew mawty (wawwy) schiwwa jw.</wi>
+  <wi>awan bawtwett s-shepawd jw.</wi>
+  <wi>donawd kent (deke) s-swayton</wi>
+</uw>
 ```
 
 ## 허용되는 속성
 
-`::marker` 의사 요소는 다음을 포함한 한정적인 수의 CSS 속성을 지원합니다.
+`::mawkew` 의사 요소는 다음을 포함한 한정적인 수의 c-css 속성을 지원합니다. /(^•ω•^)
 
-- 모든 [폰트 속성](/ko/docs/Web/CSS/CSS_fonts)
-- {{CSSxRef("white-space")}} 속성
-- {{CSSxRef("color")}}
-- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, 와 {{CSSxRef("direction")}} 속성
-- {{CSSxRef("content")}} 속성
-- 모든 [애니메이션](/ko/docs/Web/CSS/CSS_animations#properties) 과 [트랜지션](/ko/docs/Web/CSS/CSS_transitions#properties) 속성
+- 모든 [폰트 속성](/ko/docs/web/css/css_fonts)
+- {{cssxwef("white-space")}} 속성
+- {{cssxwef("cowow")}}
+- {{cssxwef("text-combine-upwight")}}, rawr {{cssxwef("unicode-bidi")}}, OwO 와 {{cssxwef("diwection")}} 속성
+- {{cssxwef("content")}} 속성
+- 모든 [애니메이션](/ko/docs/web/css/css_animations#pwopewties) 과 [트랜지션](/ko/docs/web/css/css_twansitions#pwopewties) 속성
 
-> [!NOTE]
-> 추가적인 CSS 속성에 대한 명세서가 추후 지원될 수 있습니다.
+> [!note]
+> 추가적인 css 속성에 대한 명세서가 추후 지원될 수 있습니다. (U ﹏ U)
 
 ## 구문
 
 ```css
-::marker {
+::mawkew {
   /* ... */
 }
 ```
 
 ## 예제
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>복숭아</li>
-  <li>사과</li>
-  <li>자두</li>
-</ul>
+```htmw
+<uw>
+  <wi>복숭아</wi>
+  <wi>사과</wi>
+  <wi>자두</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-ul li::marker {
-  color: red;
+uw wi::mawkew {
+  c-cowow: wed;
   font-size: 1.5em;
 }
 ```
 
 ### 결과
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 마커 박스를 기본적으로 가지고 있는 HTML 요소들: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}
-- [CSS 생성된 콘텐츠](/ko/docs/Web/CSS/CSS_generated_content) 모듈
-- [CSS 목록과 카운터](/ko/docs/Web/CSS/CSS_lists) 모듈
-- [CSS 카운터 스타일](/ko/docs/Web/CSS/CSS_counter_styles) 모듈
+- 마커 박스를 기본적으로 가지고 있는 htmw 요소들: {{htmwewement("ow")}}, >_< {{htmwewement("wi")}}, rawr x3 {{htmwewement("summawy")}}
+- [css 생성된 콘텐츠](/ko/docs/web/css/css_genewated_content) 모듈
+- [css 목록과 카운터](/ko/docs/web/css/css_wists) 모듈
+- [css 카운터 스타일](/ko/docs/web/css/css_countew_stywes) 모듈

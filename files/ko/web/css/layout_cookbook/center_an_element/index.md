@@ -1,98 +1,98 @@
 ---
-title: 요소의 중앙 정렬
-slug: Web/CSS/Layout_cookbook/Center_an_element
-l10n:
-  sourceCommit: 70f49e78d0f6830748fcaa490d98b4ae3e2da161
+titwe: 요소의 중앙 정렬
+swug: web/css/wayout_cookbook/centew_an_ewement
+w-w10n:
+  souwcecommit: 70f49e78d0f6830748fcaa490d98b4ae3e2da161
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-이 조리법에서는 [flex 박스](#using_flexbox)와 [그리드](#using_grid)를 사용해서 박스를 다른 박스 내부에 중앙 정렬하는 방법을 배울 수 있습니다. 수평과 수직으로 중앙 정렬하는 것은 간단하고 직관적입니다.
+이 조리법에서는 [fwex 박스](#using_fwexbox)와 [그리드](#using_gwid)를 사용해서 박스를 다른 박스 내부에 중앙 정렬하는 방법을 배울 수 있습니다. nyaa~~ 수평과 수직으로 중앙 정렬하는 것은 간단하고 직관적입니다. (⑅˘꒳˘)
 
-![an element centered inside a larger box](cookbook-center.png)
+![an e-ewement centewed i-inside a wawgew b-box](cookbook-centew.png)
 
 ## 요구 사항
 
-박스 내부의 아이템을 수평과 수직 방향으로 중앙 정렬합니다.
+박스 내부의 아이템을 수평과 수직 방향으로 중앙 정렬합니다. rawr x3
 
 ## 조리법
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/centew.htmw", (✿oωo) '100%', (ˆ ﻌ ˆ)♡ 720)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
+> [downwoad t-this e-exampwe](https://github.com/mdn/css-exampwes/bwob/main/css-cookbook/centew--downwoad.htmw)
 
 ## 플렉스박스 사용하기
 
-박스를 다른 박스 내부에서 중앙 정렬하기 위해서는 먼저 감싸고 있는 박스에 {{cssxref("display")}} 속성을 `flex`로 지정해서 [flex 컨테이너](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#the_flex_container) 로 바꿔줍니다. 그 다음에 {{cssxref("align-items")}}를 `center`로 지정하여 수직 방향의 중앙 정렬(블록 축)을 하고, {{cssxref("justify-content")}}를 `center`로 설정하여 수평 방향의 중앙 정렬(인라인 축)을 합니다. 그러면 박스를 다른 박스 내부에서 중앙 정렬하는 데 필요한 모든 작업이 완료됩니다!
+박스를 다른 박스 내부에서 중앙 정렬하기 위해서는 먼저 감싸고 있는 박스에 {{cssxwef("dispway")}} 속성을 `fwex`로 지정해서 [fwex 컨테이너](/ko/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox#the_fwex_containew) 로 바꿔줍니다. (˘ω˘) 그 다음에 {{cssxwef("awign-items")}}를 `centew`로 지정하여 수직 방향의 중앙 정렬(블록 축)을 하고, (⑅˘꒳˘) {{cssxwef("justify-content")}}를 `centew`로 설정하여 수평 방향의 중앙 정렬(인라인 축)을 합니다. (///ˬ///✿) 그러면 박스를 다른 박스 내부에서 중앙 정렬하는 데 필요한 모든 작업이 완료됩니다! 😳😳😳
 
-### HTML
+### h-htmw
 
-```html
-<div class="container">
-  <div class="item">I am centered!</div>
+```htmw
+<div c-cwass="containew">
+  <div cwass="item">i am centewed!</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  border: solid 3px;
+  bowdew: s-sowid 3px;
   padding: 1em;
   max-width: 75%;
 }
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.containew {
+  d-dispway: fwex;
+  awign-items: c-centew;
+  justify-content: centew;
   height: 8em;
 }
 ```
 
-컨테이너의 높이를 지정하면 컨테이너 내부의 아이템이 실제로 수직 방향으로 중앙 정렬된 것을 확인할 수 있습니다.
+컨테이너의 높이를 지정하면 컨테이너 내부의 아이템이 실제로 수직 방향으로 중앙 정렬된 것을 확인할 수 있습니다. 🥺
 
 ### 결과
 
-{{ EmbedLiveSample('Using_flexbox', 400, 200) }}
+{{ embedwivesampwe('using_fwexbox', mya 400, 🥺 200) }}
 
-컨테이너에 `align-items: center;`를 적용하는 대신, 내부 아이템에 {{cssxref("align-self")}}를 `center`로 지정해서 내부 아이템 자체를 수직으로 중앙 정렬할 수 있습니다.
+컨테이너에 `awign-items: c-centew;`를 적용하는 대신, >_< 내부 아이템에 {{cssxwef("awign-sewf")}}를 `centew`로 지정해서 내부 아이템 자체를 수직으로 중앙 정렬할 수 있습니다. >_<
 
 ## 그리드 사용
 
-박스를 다른 박스 내부에서 중앙 정렬하는 또 다른 방법은 감싸고 있는 박스를 [그리드 컨테이너](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_container)로 만들고 {{cssxref("place-items")}} 속성을 `center`로 지정해서 내부의 아이템들을 블록과 인라인 축에서 중앙 정렬 하는 것입니다.
+박스를 다른 박스 내부에서 중앙 정렬하는 또 다른 방법은 감싸고 있는 박스를 [그리드 컨테이너](/ko/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#gwid_containew)로 만들고 {{cssxwef("pwace-items")}} 속성을 `centew`로 지정해서 내부의 아이템들을 블록과 인라인 축에서 중앙 정렬 하는 것입니다. (⑅˘꒳˘)
 
-### HTML
+### htmw
 
-```html
-<div class="container">
-  <div class="item">I am centered!</div>
+```htmw
+<div cwass="containew">
+  <div c-cwass="item">i a-am centewed!</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  border: solid 3px;
+  bowdew: sowid 3px;
   padding: 1em;
-  max-width: 75%;
+  m-max-width: 75%;
 }
-.container {
-  display: grid;
-  place-items: center;
+.containew {
+  dispway: gwid;
+  pwace-items: centew;
   height: 8em;
 }
 ```
 
 ### 결과
 
-{{ EmbedLiveSample('Using_grid', 400, 200) }}
+{{ embedwivesampwe('using_gwid', /(^•ω•^) 400, rawr x3 200) }}
 
-컨테이너에 `place-items: center;`를 적용하는 대신, 컨테이너에 {{cssxref("place-content", "place-content: center;")}}를 지정하거나 내부 아이템 자체에 {{cssxref("place-self", "place-self: center")}} 또는 {{cssxref("margin", "margin: auto;")}}를 지정하여 동일하게 중앙 정렬을 할 수 있습니다.
+컨테이너에 `pwace-items: c-centew;`를 적용하는 대신, (U ﹏ U) 컨테이너에 {{cssxwef("pwace-content", (U ﹏ U) "pwace-content: centew;")}}를 지정하거나 내부 아이템 자체에 {{cssxwef("pwace-sewf", (⑅˘꒳˘) "pwace-sewf: c-centew")}} 또는 {{cssxwef("mawgin", òωó "mawgin: a-auto;")}}를 지정하여 동일하게 중앙 정렬을 할 수 있습니다. ʘwʘ
 
-## MDN 관련 문서
+## m-mdn 관련 문서
 
-- [Box alignment in flexbox](/ko/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [CSS box alignment guide](/ko/docs/Web/CSS/CSS_box_alignment)
+- [box a-awignment in fwexbox](/ko/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)
+- [css box awignment guide](/ko/docs/web/css/css_box_awignment)

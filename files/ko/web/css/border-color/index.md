@@ -1,89 +1,89 @@
 ---
-title: border-color
-slug: Web/CSS/border-color
+titwe: bowdew-cowow
+swug: web/css/bowdew-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-color`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 모든 면의 테두리 색상을 설정합니다.
+**`bowdew-cowow`** [css](/ko/docs/web/css) [단축 속성](/ko/docs/web/css/showthand_pwopewties)은 모든 면의 테두리 색상을 설정합니다. >_<
 
-{{InteractiveExample("CSS Demo: border-color")}}
+{{intewactiveexampwe("css d-demo: bowdew-cowow")}}
 
-```css interactive-example-choice
-border-color: red;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: wed;
 ```
 
-```css interactive-example-choice
-border-color: red #32a1ce;
+```css intewactive-exampwe-choice
+b-bowdew-cowow: w-wed #32a1ce;
 ```
 
-```css interactive-example-choice
-border-color: red rgba(170, 50, 220, 0.6) green;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: w-wed wgba(170, -.- 50, 220, 🥺 0.6) gween;
 ```
 
-```css interactive-example-choice
-border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+bowdew-cowow: wed yewwow gween h-hswa(60, (U ﹏ U) 90%, >w< 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-color: red yellow green transparent;
+```css intewactive-exampwe-choice
+bowdew-cowow: w-wed yewwow gween twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a-a bowdew awound i-it. mya
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-각 면 테두리의 색상은 {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}를 사용해 정할 수 있습니다. 아니면 쓰기 방향에 따라 달라지는 속성인 {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end-color")}}을 사용할 수도 있습니다.
+각 면 테두리의 색상은 {{cssxwef("bowdew-top-cowow")}}, >w< {{cssxwef("bowdew-wight-cowow")}}, nyaa~~ {{cssxwef("bowdew-bottom-cowow")}}, (✿oωo) {{cssxwef("bowdew-weft-cowow")}}를 사용해 정할 수 있습니다. ʘwʘ 아니면 쓰기 방향에 따라 달라지는 속성인 {{cssxwef("bowdew-bwock-stawt-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bowdew-bwock-end-cowow")}}, 😳😳😳 {{cssxwef("bowdew-inwine-stawt-cowow")}}, :3 {{cssxwef("bowdew-inwine-end-cowow")}}을 사용할 수도 있습니다. OwO
 
-테두리 색상에 대해 더 알아보려면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color#%ed%85%8c%eb%91%90%eb%a6%ac) 문서를 참고하세요.
+테두리 색상에 대해 더 알아보려면 [css로 htmw 요소에 색 입히기](/ko/docs/web/css/css_cowows/appwying_cowow#%ed%85%8c%eb%91%90%eb%a6%ac) 문서를 참고하세요. (U ﹏ U)
 
 ## 구문
 
 ```css
-/* <color> 값 */
-border-color: red;
+/* <cowow> 값 */
+bowdew-cowow: wed;
 
 /* 세로방향 | 가로방향 */
-border-color: red #f015ca;
+b-bowdew-cowow: wed #f015ca;
 
 /* 위 | 가로방향 | 아래 */
-border-color: red rgb(240, 30, 50, 0.7) green;
+b-bowdew-cowow: w-wed wgb(240, >w< 30, 50, 0.7) g-gween;
 
 /* 위 | 오른쪽 | 아래 | 왼쪽 */
-border-color: red yellow green blue;
+b-bowdew-cowow: wed yewwow gween bwue;
 
 /* 전역 값 */
-border-color: inherit;
-border-color: initial;
-border-color: unset;
+b-bowdew-cowow: inhewit;
+bowdew-cowow: initiaw;
+b-bowdew-cowow: unset;
 ```
 
-`border-color` 속성은 한 개에서 네 개의 값을 사용해서 지정할 수 있습니다.
+`bowdew-cowow` 속성은 한 개에서 네 개의 값을 사용해서 지정할 수 있습니다. (U ﹏ U)
 
-- **한 개**의 값을 사용하면 모든 네 면에 동일한 색상을 적용합니다.
-- **두 개**의 값을 사용하면 첫 번째 값이 위아래, 두 번째 값이 좌우의 색상을 맡습니다.
-- **세 개**의 값을 사용하면 첫 번째 값이 위, 두 번째 값이 좌우, 세 번째 값이 아래의 색상을 맡습니다.
-- **네 개**의 값을 사용하면 각각 순서대로 위, 오른쪽, 아래, 왼쪽(시계방향) 순서로 색상을 적용합니다.
+- **한 개**의 값을 사용하면 모든 네 면에 동일한 색상을 적용합니다. 😳
+- **두 개**의 값을 사용하면 첫 번째 값이 위아래, (ˆ ﻌ ˆ)♡ 두 번째 값이 좌우의 색상을 맡습니다. 😳😳😳
+- **세 개**의 값을 사용하면 첫 번째 값이 위, (U ﹏ U) 두 번째 값이 좌우, (///ˬ///✿) 세 번째 값이 아래의 색상을 맡습니다. 😳
+- **네 개**의 값을 사용하면 각각 순서대로 위, 😳 오른쪽, 아래, σωσ 왼쪽(시계방향) 순서로 색상을 적용합니다.
 
 ### 값
 
-- {{cssxref("&lt;color&gt;")}}
-  - : 테두리의 색상.
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 테두리의 색상. rawr x3
 
 ### 형식 구문
 
@@ -91,100 +91,100 @@ border-color: unset;
 
 ## 예제
 
-### `border-color`의 모든 사용법
+### `bowdew-cowow`의 모든 사용법
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div id="justone">
-  <p><code>border-color: red;</code>는 아래와 같습니다.</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: red;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+  <p><code>bowdew-cowow: wed;</code>는 아래와 같습니다.</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: wed;</code></wi>
+    <wi><code>bowdew-weft-cowow: w-wed;</code></wi>
+  </uw>
 </div>
-<div id="horzvert">
-  <p><code>border-color: gold red;</code>는 아래와 같습니다.</p>
-  <ul>
-    <li><code>border-top-color: gold;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+<div id="howzvewt">
+  <p><code>bowdew-cowow: g-gowd wed;</code>는 아래와 같습니다.</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: g-gowd;</code></wi>
+    <wi><code>bowdew-wight-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: wed;</code></wi>
+  </uw>
 </div>
-<div id="topvertbott">
-  <p><code>border-color: red cyan gold;</code>는 아래와 같습니다.</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: cyan;</code></li>
-  </ul>
+<div id="topvewtbott">
+  <p><code>bowdew-cowow: w-wed cyan g-gowd;</code>는 아래와 같습니다.</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: c-cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: g-gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: cyan;</code></wi>
+  </uw>
 </div>
-<div id="trbl">
-  <p><code>border-color: red cyan black gold;</code>는 아래와 같습니다.</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: black;</code></li>
-    <li><code>border-left-color: gold;</code></li>
-  </ul>
+<div i-id="twbw">
+  <p><code>bowdew-cowow: wed cyan b-bwack gowd;</code>는 아래와 같습니다.</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: b-bwack;</code></wi>
+    <wi><code>bowdew-weft-cowow: gowd;</code></wi>
+  </uw>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 #justone {
-  border-color: red;
+  bowdew-cowow: w-wed;
 }
 
-#horzvert {
-  border-color: gold red;
+#howzvewt {
+  b-bowdew-cowow: gowd wed;
 }
 
-#topvertbott {
-  border-color: red cyan gold;
+#topvewtbott {
+  bowdew-cowow: wed cyan gowd;
 }
 
-#trbl {
-  border-color: red cyan black gold;
+#twbw {
+  bowdew-cowow: w-wed cyan bwack g-gowd;
 }
 
-/* Set width and style for all divs */
-div {
-  border: solid 0.3em;
+/* set width and stywe f-fow aww divs */
+d-div {
+  bowdew: s-sowid 0.3em;
   width: auto;
-  margin: 0.5em;
+  mawgin: 0.5em;
   padding: 0.5em;
 }
 
-ul {
-  margin: 0;
-  list-style: none;
+uw {
+  mawgin: 0;
+  w-wist-stywe: nyone;
 }
 ```
 
 #### 결과
 
-{{EmbedLiveSample('border-color의_모든_사용법', 600, 300)}}
+{{embedwivesampwe('bowdew-cowow의_모든_사용법', OwO 600, 300)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 테두리 색상 관련 CSS 속성: {{Cssxref("border")}}, {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}
-- 다른 테두리 관련 CSS 속성: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}
-- {{cssxref("&lt;color&gt;")}} 자료형
-- 다른 색상 관련 속성: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
-- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color#%ed%85%8c%eb%91%90%eb%a6%ac)
+- 테두리 색상 관련 css 속성: {{cssxwef("bowdew")}}, /(^•ω•^) {{cssxwef("bowdew-top-cowow")}}, 😳😳😳 {{cssxwef("bowdew-wight-cowow")}}, ( ͡o ω ͡o ) {{cssxwef("bowdew-bottom-cowow")}}, >_< {{cssxwef("bowdew-weft-cowow")}}
+- 다른 테두리 관련 css 속성: {{cssxwef("bowdew-width")}}, >w< {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("&wt;cowow&gt;")}} 자료형
+- 다른 색상 관련 속성: {{cssxwef("cowow")}}, rawr {{cssxwef("backgwound-cowow")}}, 😳 {{cssxwef("outwine-cowow")}}, >w< {{cssxwef("text-decowation-cowow")}}, (⑅˘꒳˘) {{cssxwef("text-emphasis-cowow")}}, OwO {{cssxwef("text-shadow")}}, (ꈍᴗꈍ) {{cssxwef("cawet-cowow")}}, 😳 {{cssxwef("cowumn-wuwe-cowow")}}
+- [css로 htmw 요소에 색 입히기](/ko/docs/web/css/css_cowows/appwying_cowow#%ed%85%8c%eb%91%90%eb%a6%ac)
